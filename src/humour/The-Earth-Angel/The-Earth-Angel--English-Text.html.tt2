@@ -3,7 +3,6 @@
 [%- SET desc = "The Earth Angel - English Text" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

@@ -1,7 +1,6 @@
 [%- SET title = "Yachar’s Music" -%]
 [%- SET desc = "Yacher’s Music Restored from Jamendo" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect  %]

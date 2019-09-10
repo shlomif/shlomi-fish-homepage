@@ -2,7 +2,6 @@
 [%- SET desc = "Index to Shlomi Fish’s Essays" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% p_ArticleIndex__calc_string() %]

@@ -2,7 +2,6 @@
 [%- SET desc = "Linux Kernel patch to implement a first-come first-served (FCFS)-locking semantics for the flock()/fcntl() system calls." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>

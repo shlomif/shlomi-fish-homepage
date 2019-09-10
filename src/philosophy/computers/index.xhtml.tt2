@@ -2,7 +2,6 @@
 [%- SET desc = "Shlomi Fish’s Writings about Computing" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">

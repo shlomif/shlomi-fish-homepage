@@ -2,7 +2,6 @@
 [%- SET desc = "Greasemonkey Scripts by Shlomi Fish" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "ddg-highlight"  title = "DuckDuckGo Active Item: More visible red border"  href = "duckduckgo-better-highlight-active-result.user.js"  %]

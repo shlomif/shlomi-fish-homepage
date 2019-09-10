@@ -2,7 +2,6 @@
 [%- SET desc = "Directory for Aphorisms and Quotes by Shlomi Fish" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="original_aphorisms"><a href="[% base_path %]humour.html">Collection of Humorous Quotes</a></h2>

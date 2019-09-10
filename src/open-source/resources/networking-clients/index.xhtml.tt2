@@ -2,7 +2,6 @@
 [%- SET desc = "List of network clients: IM clients, FTP clients, dedicated IRC clients, web browsers, RSS aggregators, microblogging clients, E-mail clients, P2P clients" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

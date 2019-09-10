@@ -2,7 +2,6 @@
 [%- SET desc = "Freecell Solver is a set of APIs and command line programs, written in C, to solve deals of Freecell and similar variants of card Solitaire." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

@@ -1,7 +1,6 @@
 [%- SET title = "countdown - Delay, while Displaying the remaining time" -%]
 [%- SET desc = "countdown - a Perl program to delay an event while Displaying the remaining time (a better sleep (1))." -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

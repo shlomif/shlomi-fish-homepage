@@ -2,7 +2,6 @@
 [%- SET desc = "I’m giving private lessons in either High School topics (Mathematics, Computer Science, or Physics), or in computer-related topics (C/C++, Perl, WWW Programming, Unix and Linux). I live in Northern Tel-Aviv." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

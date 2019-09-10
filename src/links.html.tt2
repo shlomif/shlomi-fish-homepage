@@ -1,7 +1,6 @@
 [%- SET title = "My Cool Links List" -%]
 [%- SET desc = "Shlomi Fish’s Links List: contains links to various sites and pages." -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

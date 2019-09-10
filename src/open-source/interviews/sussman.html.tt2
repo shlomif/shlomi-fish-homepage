@@ -1,7 +1,6 @@
 [%- SET title = "Interview with Ben Collins-Sussman" -%]
 [%- SET desc = "Interview with Ben Collins-Sussman" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% path_slurp("screenplay-xml/rendered-html/sussman-interview.html") %]

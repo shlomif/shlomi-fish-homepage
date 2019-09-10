@@ -2,7 +2,6 @@
 [%- SET desc = "Why illegal drugs should be legalised, and why the prohibition on drugs and the “war on drugs” are the real drug problem." -%]
 [%- SET more_keywords = "drugs, drug, legalisation, legalization, legalise, legalize, narcotics, illegal, prohibition, prohibition on drugs" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% INCLUDE "pages/t2/philosophy/drug-legalisation.tt2" %]

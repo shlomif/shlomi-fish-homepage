@@ -2,7 +2,6 @@
 [%- SET desc = "sky - allow one to upload files to a remote host with a web service and give back the URL." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <div class="wrap-me">

@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s Articles and Essays" -%]
 [%- SET desc = "Shlomi Fish’s Articles and Essays: about computing, politics, general philosophy, education, etc." -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <section class="intro">

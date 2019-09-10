@@ -1,7 +1,6 @@
 [%- SET title = "Unixdoc - an Integrated Offline and Online Documentation Framework" -%]
 [%- SET desc = "Unixdoc - an Integrated Offline and Online Documentation Framework" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>

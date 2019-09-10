@@ -2,7 +2,6 @@
 [%- SET desc = "Patch for old versions of the GIMP to be able to perform gradient operations from within scripts and plug-ins." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2>Recent Note</h2>

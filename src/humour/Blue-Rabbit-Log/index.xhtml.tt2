@@ -1,7 +1,6 @@
 [%- SET title = "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" -%]
 [%- SET desc = "The Blue Rabbit Log - A Crazy Comedy about Tabletop Role-Playing Games" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro  %]

@@ -2,7 +2,6 @@
 [%- SET desc = "Coding Elements and anti-patterns that should be avoided in C and C++" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

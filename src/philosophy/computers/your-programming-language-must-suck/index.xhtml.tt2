@@ -2,7 +2,6 @@
 [%- SET desc = "An essay illustrating the design trade-offs in programming languages design and why some people will always be unhappy" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "text"  title = "The text"  %]

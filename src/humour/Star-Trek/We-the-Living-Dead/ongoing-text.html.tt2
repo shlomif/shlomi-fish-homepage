@@ -2,7 +2,6 @@
 [%- SET desc = "Fan Episode of Star Trek: Deep Space Nine where we discover the true essence of the Q Continuum, and meet some “living dead” and “vampires”. Also crossing Buffy, Judaism, computer geeks’ culture, and other influences." -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'we_the_living_dead') %]

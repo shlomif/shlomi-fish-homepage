@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s Humorous Collections of Facts" -%]
 [%- SET desc = "Funny facts about Chuck Norris, Summer Glau, Emma Watson, Buffy, Prof. Don Knuth, Larry Wall, XSLT (the epitome of Evil), the NSA, and Xena the Warrior Princess" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "factoids/common-out/tags.tt2" -%]
 

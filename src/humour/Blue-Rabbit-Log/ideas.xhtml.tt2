@@ -1,13 +1,14 @@
 [%- SET title = "Ideas for “The Blue Rabbit’s Log”" -%]
 [%- SET desc = "Random and unimplemented ideas for “The Blue Rabbit’s Log” series of screenplays for films that parody Fantasy Role Playing Games" -%]
 [%- SET xhtml1 = 1 %]
+
 [% BLOCK latemp_html_doctype %]
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 [% END %]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
+[% SET script_type=' type="text/javascript"' %]
 
 <h2 id="intro">Introduction</h2>
 

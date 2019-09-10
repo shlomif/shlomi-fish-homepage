@@ -2,7 +2,6 @@
 [%- SET desc = "Roll 4 dice, get rid of the lowest score - what is the mean of such throws?" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

@@ -3,7 +3,6 @@
 [%- SET more_keywords = "HTML, Homesite, Homepage, Home, Blog, Weblog, Tags, Categories, RSS" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="about">About this Document</h2>

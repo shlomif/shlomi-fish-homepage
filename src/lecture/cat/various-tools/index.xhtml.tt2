@@ -2,7 +2,6 @@
 [%- SET desc = "Technical talks about tools: Vim, GIMP, Lex and Yacc, the GNU Autotools, and Website Meta Language" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

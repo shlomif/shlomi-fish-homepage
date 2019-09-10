@@ -2,7 +2,6 @@
 [%- SET desc = "Collections of quotes in machine-readable formats with quotes by Shlomi Fish, some of his favourites, quotes from the #perl chat room, the ##programming chatroom, Joel on Software, the Friends T.V. show, factoids, and more" -%]
 [%- SET more_keywords = "fortune,unix,cookies,fortunes,xml,grammar,perl,freenode,iglu,linux,linux-il,paul graham,joel on software,quotes,quotations" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>

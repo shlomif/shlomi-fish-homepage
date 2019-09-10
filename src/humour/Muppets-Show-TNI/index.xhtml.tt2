@@ -2,7 +2,6 @@
 [%- SET desc = "Ideas for the next incarnation of The Muppet Show" -%]
 [%- SET more_keywords = "muppet,muppets,The Muppet Show" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]

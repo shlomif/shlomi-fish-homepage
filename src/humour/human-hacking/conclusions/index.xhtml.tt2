@@ -2,7 +2,6 @@
 [%- SET desc = "Conclusions and Reviews of the Human Hacking Field Guide" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

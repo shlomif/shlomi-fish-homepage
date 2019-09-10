@@ -2,7 +2,6 @@
 [%- SET desc = "Escape from GNU Autohell - why the GNU Autotools suck and why you should convert your project to CMake or a different better GNU Autotools alternative." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

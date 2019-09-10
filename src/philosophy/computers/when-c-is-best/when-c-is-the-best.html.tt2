@@ -3,7 +3,6 @@
 [%- SET more_keywords = "C,best,tool for the job,java,perl,ANSI C,C++,high level,low level,programming,languages" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

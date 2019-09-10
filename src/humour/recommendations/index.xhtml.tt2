@@ -2,7 +2,6 @@
 [%- SET desc = "Media Recommendations by Shlomi Fish" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h3 id="films"><a href="films/">Films</a></h3>

@@ -2,7 +2,6 @@
 [%- SET desc = "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Version 7" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'the_enemy') %]

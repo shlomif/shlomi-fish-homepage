@@ -2,7 +2,6 @@
 [%- SET desc = "A “Welcome to Linux” Presentation for teaching the basic use of Linux. It was later superseded by the Blitz presentation (written in the Hebrew language), but this presentation may still be of interest." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

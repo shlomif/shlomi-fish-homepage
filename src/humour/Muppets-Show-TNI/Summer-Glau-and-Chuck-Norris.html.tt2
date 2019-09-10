@@ -3,7 +3,6 @@
 [%- SET apply_screenplay_style = 1 -%]
 [%- SET more_keywords = "muppets, grammar nazis, Summer Glau, Chuck Norris, xkcd, Lucky Luke" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]

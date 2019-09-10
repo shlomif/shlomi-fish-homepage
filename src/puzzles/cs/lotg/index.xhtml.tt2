@@ -2,7 +2,6 @@
 [%- SET desc = "“Lotg” (originally standing for “Language of the Gods”) is a pseudocode I developed during my first year at the Technion. I wanted to develop such a code with a minimal set of instructions. Initially it had eight instructions, but I was able to reduce it to five. I believe it is Turing-complete. Here is an explanation of it." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

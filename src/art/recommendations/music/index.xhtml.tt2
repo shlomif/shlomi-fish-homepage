@@ -2,7 +2,6 @@
 [%- SET desc = "Recommendations of music albums I enjoyed." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="note">Note</h2>

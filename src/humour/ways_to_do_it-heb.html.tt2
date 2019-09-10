@@ -3,7 +3,6 @@
 [%- SET desc = "דרכים לעשות זאת על פי שפות התכנות של העולם" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 [% INCLUDE "pages/t2/humour/ways_to_do_it.tt2" %]
 

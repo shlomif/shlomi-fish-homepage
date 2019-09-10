@@ -2,7 +2,6 @@
 [%- SET desc = "Calculates the volume of a Dodecahedron, a Platonic solid with 12 identical sides that are themselves perfect pentagons." -%]
 [%- SET more_keywords = "volume, dodecahedron, pythagoran solid, solid, pythagoran, perfect, pentagons, 12, 5, geometry, mathematics, maths, math, spatial geometry" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "Inc/mathjax.tt2" -%]
 

@@ -2,7 +2,6 @@
 [%- SET desc = "This document will explain why it is a bad idea, in this day and age, to write a book that is not available online for everyone to see, link to, redistribute, and possibly modify." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">

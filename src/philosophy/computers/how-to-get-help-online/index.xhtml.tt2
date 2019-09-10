@@ -2,7 +2,6 @@
 [%- SET desc = "“How to Get Help Online” - Points to useful Internet Resources for Getting Help With One’s Problems and Questions - Probably Technical " -%]
 [%- SET more_keywords = "help, assist, assitance, stack overflow, stack exchange, questions, mailing lists, forums, search, google, duck duck go, guide, IRC, chat" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

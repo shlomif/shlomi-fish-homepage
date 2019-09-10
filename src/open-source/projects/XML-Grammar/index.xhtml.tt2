@@ -1,7 +1,6 @@
 [%- SET title = "The XML-Grammar Meta-Project" -%]
 [%- SET desc = "The XML-Grammar Meta-Project: XML-Grammar-Fiction, XML-Grammar-Screenplay, XML-Grammar-Fortune, etc." -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect  %]

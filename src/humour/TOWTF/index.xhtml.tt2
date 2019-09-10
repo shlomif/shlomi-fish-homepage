@@ -2,7 +2,6 @@
 [%- SET desc = "The six friends of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." -%]
 [%- SET more_keywords = "fountainhead,ayn rand,parody,spoof,humour,funny,screenplay,story,friends,television,tv,objectivism,randianism" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'tow_the_fountainhead') %]

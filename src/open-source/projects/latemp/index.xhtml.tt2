@@ -2,7 +2,6 @@
 [%- SET desc = "Latemp - A static site generator - based on Website Meta Language and other technologies - powerful but slow" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

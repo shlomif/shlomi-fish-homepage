@@ -2,7 +2,6 @@
 [%- SET desc = "The Muppets Show hosts the stars of Harry Potter as they battle “He Who Must Not Be Named 2” a.k.a “The Amazing Mumford”" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]

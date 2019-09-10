@@ -2,7 +2,6 @@
 [%- SET desc = "This presentation covers the evolution of Freecell Solver, an ANSI C library for solving some types of Solitaire games. It covers the algorithms, data structures and decisions that were implemented there." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

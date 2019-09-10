@@ -3,7 +3,6 @@
 [%- SET desc = "English text for a story about a hectic week in the life of an American graphics’ artist" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'pope_died_on_sunday') %]

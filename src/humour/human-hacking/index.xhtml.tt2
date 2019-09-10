@@ -2,7 +2,6 @@
 [%- SET desc = "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." -%]
 [%- SET more_keywords = "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'hhfg') %]

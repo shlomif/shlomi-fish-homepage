@@ -1,7 +1,6 @@
 [%- SET title = "Privacy Policy for the www.shlomifish.org Web Site" -%]
 [%- SET desc = "Privacy Policy for the www.shlomifish.org Web Site" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% SET self_link='<a href="http://www.shlomifish.org/">http://www.shlomifish.org/</a>' %]

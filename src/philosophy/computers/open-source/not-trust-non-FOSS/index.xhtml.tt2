@@ -2,7 +2,6 @@
 [%- SET desc = "An essay that explains why I do not trust non-open source software and would rather not depend on it." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

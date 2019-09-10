@@ -3,7 +3,6 @@
 [%- SET title = "האויב ואיך עזרתי להילחם בו" -%]
 [%- SET desc = "האויב ואיך עזרתי להילחם בו" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( "lang" => "he", ) %]

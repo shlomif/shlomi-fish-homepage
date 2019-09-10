@@ -2,7 +2,6 @@
 [%- SET desc = "Website META Language - an HTML preprocessor" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

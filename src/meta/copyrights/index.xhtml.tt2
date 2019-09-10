@@ -1,7 +1,6 @@
 [%- SET title = "Copyright Terms of Shlomi Fish’s Homesite" -%]
 [%- SET desc = "Copyright Terms of Shlomi Fish’s Homesite: Creative Commons licences, my interpretation of them, etc." -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

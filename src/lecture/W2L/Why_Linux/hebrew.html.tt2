@@ -3,7 +3,6 @@
 [%- SET desc = "מה לינוקס הוא בשבילי" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER hebrew_div  %]

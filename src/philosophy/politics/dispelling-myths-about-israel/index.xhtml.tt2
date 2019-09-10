@@ -2,7 +2,6 @@
 [%- SET desc = "There are many myths and misperceptions about Israel, that many people (often Americans) think. This document aims to dispel some of them." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

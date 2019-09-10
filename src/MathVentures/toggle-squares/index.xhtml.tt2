@@ -21,7 +21,6 @@
 </style>
 [% END %]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <script src="toggle-squares.js"></script>

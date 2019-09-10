@@ -2,7 +2,6 @@
 [%- SET desc = "Aphorisms, Quotes, Factoids, bits, parodical songs, stories and screenplays by Shlomi Fish" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <script src="[% base_path %]js/jquery.expander.min.js"></script>

@@ -4,7 +4,6 @@
 
 
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'the_enemy') %]

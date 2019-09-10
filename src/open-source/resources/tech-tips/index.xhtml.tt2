@@ -2,7 +2,6 @@
 [%- SET desc = "Shlomi Fish’s collection of tech/software tips from his blogs - concentrated in one place." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro  %]

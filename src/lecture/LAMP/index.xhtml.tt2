@@ -2,7 +2,6 @@
 [%- SET desc = "This is a presentation about web publishing using LAMP - Linux, Apache, MySQL and Perl/PHP/Python. LAMP is a diverse collection of technologies that allows setting up web and Internet services that are fully open source." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

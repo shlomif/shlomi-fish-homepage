@@ -3,7 +3,6 @@
 [%- SET apply_screenplay_style = 1 -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% path_slurp("screenplay-xml/rendered-html/Humanity-Movie.html") %]

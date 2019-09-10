@@ -1,7 +1,6 @@
 [%- SET title = "Emma Watson getting interviewed for a software developer job" -%]
 [%- SET desc = "Emma Watson getting interviewed for a software developer job" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% IF 0 %]

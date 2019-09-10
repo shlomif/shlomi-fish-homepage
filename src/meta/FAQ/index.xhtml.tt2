@@ -2,7 +2,6 @@
 [%- SET desc = "Shlomi Fish’s Frequently Asked Questions (FAQ) List" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% SET Technion = "<a href=\"http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology\">Technion</a>" %]

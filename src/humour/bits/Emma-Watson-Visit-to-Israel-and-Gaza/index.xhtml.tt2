@@ -1,7 +1,6 @@
 [%- SET title = "Emma Watson’s Visit to Israel and Gaza" -%]
 [%- SET desc = "Emma Watson’s Visit to Israel and Gaza - a fictional screenplay" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS emma_watson_intro  %]

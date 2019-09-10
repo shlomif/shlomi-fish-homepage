@@ -2,7 +2,6 @@
 [%- SET desc = "Shlomi Fish’s Advice for the Young: Live like you were going to die tomorrow, writing to learn and integrate, reverse your growth death" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% toc_div( ) %]

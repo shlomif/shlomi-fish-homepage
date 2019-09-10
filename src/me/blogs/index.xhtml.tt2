@@ -2,7 +2,6 @@
 [%- SET desc = "List of Weblogs/Blogs by Shlomi Fish." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc">

@@ -2,7 +2,6 @@
 [%- SET title = "$modname - perform bulk operations on Perl modules" -%]
 [%- SET desc = title -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect  %]

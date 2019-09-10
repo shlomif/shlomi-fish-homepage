@@ -2,7 +2,6 @@
 [%- SET desc = "A presentation about LM-Solve, that is a solver for a large number of simple-minded Logic mazes and puzzles written in Perl." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

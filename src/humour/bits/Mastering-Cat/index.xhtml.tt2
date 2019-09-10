@@ -2,7 +2,6 @@
 [%- SET desc = "Shlomi Fish is about to publish the O’Reilly book “Mastering cat” which details everything you wanted to know about the misunderstood UNIX command. “Mastering ‘cat’ is almost as difficult as herding cats.”" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <div style="float:right; border: green solid thin; padding: 0.5em; margin-left: 0.5em;">

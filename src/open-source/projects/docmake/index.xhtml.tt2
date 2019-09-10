@@ -1,7 +1,6 @@
 [%- SET title = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
 [%- SET desc = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect  %]

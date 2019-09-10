@@ -2,7 +2,6 @@
 [%- SET desc = "A lightning talk about the Mojolicious::Lite web-development framework that was originally given in a web “knowledge sharing meeting” about web-development micro-frameworks in the Metacafe offices in Tel-Aviv." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2><a href="mojolicious-slides.html">The Slides</a></h2>

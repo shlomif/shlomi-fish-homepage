@@ -2,7 +2,6 @@
 [%- SET desc = "Where to find the source code for www.shlomifish.org and how to build it." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <section class="h2">

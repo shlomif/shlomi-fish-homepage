@@ -2,7 +2,6 @@
 [%- SET desc = "Mirror of http://funroll-loops.info/ (“Gentoo is Rice”)" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <h2 id="about">About</h2>

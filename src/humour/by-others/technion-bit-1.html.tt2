@@ -2,7 +2,6 @@
 [%- SET title = "Technion Bit #1" -%]
 [%- SET desc = "Technion Bit #1 - recorded for posterity by Shlomi Fish" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER hebrew_div  %]

@@ -1,7 +1,6 @@
 [%- SET title = "The Pope Died on Sunday" -%]
 [%- SET desc = "A story about a hectic week in the life of an American graphics’s artist" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'pope_died_on_sunday') %]

@@ -2,7 +2,6 @@
 [%- SET desc = "Ways to do it According to the Programming Languages of the World" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 [% INCLUDE "pages/t2/humour/ways_to_do_it.tt2" %]
 

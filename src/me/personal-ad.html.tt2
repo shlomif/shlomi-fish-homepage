@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s Personal Ad" -%]
 [%- SET desc = "Shlomi Fish’s Personal Ad" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/shlomif_head_photo_tag.tt2" %]

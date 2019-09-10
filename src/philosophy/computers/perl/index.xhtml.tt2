@@ -2,7 +2,6 @@
 [%- SET desc = "Essays related to the Perl programming language: the Joy of Perl, Critique of where Perl 6 is heading, etc." -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

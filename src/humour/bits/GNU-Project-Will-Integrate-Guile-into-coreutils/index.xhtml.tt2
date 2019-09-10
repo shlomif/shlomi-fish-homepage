@@ -2,7 +2,6 @@
 [%- SET desc = "The GNU Project Will Integrate GNU Guile into GNU coreutils" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <img src="GNU-Guile-logo.min.svg" class="rfloaty" style="height:100px" alt="GNU Guile Logo" />

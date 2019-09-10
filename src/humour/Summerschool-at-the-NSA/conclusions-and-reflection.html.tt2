@@ -2,7 +2,6 @@
 [%- SET desc = "Reflection and conclusions about the screenplay Summerschool at the NSA which pities Sarah Michelle Gellar and Summer Glau (= the Hollywood actresses) against the U.S. National Security Agency (NSA)" -%]
 
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'summerschool_at_the_nsa') %]

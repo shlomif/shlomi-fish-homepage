@@ -1,7 +1,6 @@
 [%- SET title = "I accept Donations" -%]
 [%- SET desc = "Shlomi Fish is accepting monetary/goods donations" -%]
 
-[%- PROCESS "blocks.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 <p>

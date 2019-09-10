@@ -1059,11 +1059,7 @@ all: $(QP_VIM_IFACE)
 
 FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
 
-fastrender: $(FASTRENDER_DEPS) fastrender-wml fastrender-tt2 $(T2_FORTUNES_ALL__HTML)
-
-fastrender-wml: $(FASTRENDER_DEPS)
-	@echo $(MAKE) fastrender-wml
-	@$(call WML_RENDER,) $(T2_DOCS)
+fastrender: $(FASTRENDER_DEPS) fastrender-tt2 $(T2_FORTUNES_ALL__HTML)
 
 fastrender-tt2: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-tt2

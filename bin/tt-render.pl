@@ -68,6 +68,8 @@ GetOptions(
 my $LATEMP_SERVER = "t2";
 my $template      = Template->new(
     {
+        COMPILE_DIR  => "$ENV{TMPDIR}/shlomif-hp-tt2-cache",
+        COMPILE_EXT  => ".ttc",
         INCLUDE_PATH => [ ".", "./lib", ],
         POST_CHOMP   => 1,
         RELATIVE     => 1,

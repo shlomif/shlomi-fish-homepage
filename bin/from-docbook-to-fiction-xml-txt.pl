@@ -51,10 +51,10 @@ my $input_file = shift(@ARGV);
 
 my $doc = $parser->parse_file($input_file);
 
-my ($main_title) = $xpc->findnodes( q{/db:article/db:info/db:title}, $doc );
+my ($main_title)    = $xpc->findnodes( q{/db:article/db:info/db:title}, $doc );
 my $main_title_text = $main_title->textContent();
-my ($main_article) = $xpc->findnodes( q{/db:article}, $doc );
-my $main_id_text = $main_article->getAttributeNS( $xml_uri, "id" );
+my ($main_article)  = $xpc->findnodes( q{/db:article}, $doc );
+my $main_id_text    = $main_article->getAttributeNS( $xml_uri, "id" );
 
 my @sections = $xpc->findnodes( q{/db:article/db:section}, $doc );
 

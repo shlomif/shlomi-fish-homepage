@@ -743,6 +743,38 @@ EOF
     },
     {
         abstract => <<'EOF',
+EOF
+        id_base => "taylor_swift_facts",
+        img_alt => "Photo of Taylor Swift from the Wikipedia",
+        img_attribution =>
+            'https://en.wikipedia.org/wiki/File:TaylorSwiftApr09.jpg',
+        img_class    => "facts_logo taylor_swift",
+        img_src      => "\$(ROOT)/humour/bits/facts/images/tayswift-small.webp",
+        license_tag  => "cc_by_sa_british_blurb",
+        license_year => "2019",
+        links_wml    => <<'EOF',
+<ul>
+
+<li></li>
+
+</ul>
+EOF
+        meta_desc =>
+"Factoids about Taylor Swift, the singer-songwriter and entertainer",
+        nav_blocks_wml => <<'EOF',
+EOF
+        see_also_wml => <<'EOF',
+<p>
+<b>TODO</b>
+</p>
+EOF
+        short_id   => 'taylor_swift',
+        tabs_title => "Taylor Swift Facts",
+        title      => "Taylor Swift Facts",
+        url_base   => "Taylor-Swift",
+    },
+    {
+        abstract => <<'EOF',
 <p>
 <a href="http://en.wikipedia.org/wiki/Windows_Update">Windows Update</a> is
 a service offered by Microsoft to update components of its software.
@@ -1063,12 +1095,16 @@ my @content =
     map {
     my $id   = $_->id_base;
     my $path = $_->url_base();
-    map { "dest/t2/humour/bits/facts/${path}/index.html: $_\n" }
+    my $pre_incs_path =
+        "dest/pre-incs/t2/humour/bits/facts/${path}/index.xhtml";
+    map { +{ 'path' => $pre_incs_path, line => "$pre_incs_path: $_\n" } }
         @{ $deps{$id} }
     }
     sort { $a->short_id cmp $b->short_id } @pages;
 
-path("lib/factoids/deps.mak")->spew_utf8(@content);
+path("lib/factoids/deps.mak")
+    ->spew_utf8( ( join " ", "all:", map { $_->{path} } @content ) . "\n",
+    ( map { $_->{line} } @content ) );
 
 # No write_on_change() because we want it to have the time of the last run.
 path("lib/factoids/TIMESTAMP")->spew_utf8( time() );

@@ -743,6 +743,10 @@ EOF
     },
     {
         abstract => <<'EOF',
+<p>
+Facts about <a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>,
+a 1989-born American singer-songwriter.
+</p>
 EOF
         id_base => "taylor_swift_facts",
         img_alt => "Photo of Taylor Swift from the Wikipedia",
@@ -755,7 +759,11 @@ EOF
         links_wml    => <<'EOF',
 <ul>
 
-<li></li>
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=nfWlot6h_JM">Shake it Off</a>
+</p>
+</li>
 
 </ul>
 EOF

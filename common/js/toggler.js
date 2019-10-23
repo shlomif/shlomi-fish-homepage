@@ -39,7 +39,7 @@ function build_toggler(args) {
         if (! has_ls) {
             return;
         }
-        const in_storage = localStorage.getItem(toggle_sect_key);
+        let in_storage = localStorage.getItem(toggle_sect_key);
 
         if (in_storage == undefined) {
             in_storage = default_state;

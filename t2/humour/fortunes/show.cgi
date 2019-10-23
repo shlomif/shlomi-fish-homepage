@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import cgi
+import html
 import os.path
 import random
 import re
@@ -62,7 +62,7 @@ def main():
 
 
 def _invalid_mode(mode):
-    mode_esc = cgi.escape(mode, True)
+    mode_esc = html.escape(mode, True)
 
     _emit_error(
             title='Error! Invalid mode "%s"' % (mode_esc),
@@ -174,7 +174,7 @@ The fortune ID %s is not recognised.
 If you've reached this URL and think it should
 be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
 Fish (the Webmaster)</a> and let him know of this problem.
-</p>''' % (cgi.escape(str_id, True)))
+</p>''' % (html.escape(str_id, True)))
 
 
 if __name__ == "__main__":

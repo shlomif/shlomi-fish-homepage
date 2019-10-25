@@ -1,0 +1,34 @@
+[%- SET title = "Relicensing all the shlomifish.org body of works under CC-by" -%]
+[%- SET desc = "2019-Oct-25: Relicensing all the shlomifish.org body of works under Creative Commons Attribution 4.0 on condition that I get 10 million Euro" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects lim_width">
+
+[% toc_div( ) %]
+
+[% WRAPPER h2_section id = "summary"  title = "Summary"  %]
+
+<p>
+I, Shlomi Fish (a.k.a <a href="[% base_path %]me/rindolf/">"Rindolf"</a>)
+am hereby offering to relicense all the current public content that is hosted in
+<a href="https://github.com/shlomif/shlomi-fish-homepage">the site's
+main repository</a> and child repositories under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>, and is not too private or personal,
+on the condition that I receive 10 million <a
+href="https://www.xe.com/currency/eur-euro">Euro (EUR)</a> to my PayPal and/or
+bank account.
+</p>
+
+<p>
+I wish to set my intellectual children free to be reused and sublicensed,
+like any individual, corporation or any other organisation pleases but wish to
+have the financial freedom to survive for the forseeable future. I do not care
+if I get the money as many small donations, or as one large donation by a
+single rich benefactor.
+</p>
+
+[%- END -%]
+
+</div>
+
+[% END %]

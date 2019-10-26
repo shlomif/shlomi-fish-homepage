@@ -541,6 +541,13 @@ sub generic_get_params
                         title =>
 "The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
                     },
+                    {
+                        text => "Relicensing my Creative Works Portfolio",
+                        url =>
+                            "me/relicensing-my-entire-portfolio-under-cc-by/",
+                        title =>
+"Offer to relicense my whole body of creative works under CC-by if I get enough money",
+                    },
                 ],
             },
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Humour'),

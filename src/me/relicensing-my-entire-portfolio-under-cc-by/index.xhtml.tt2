@@ -7,14 +7,15 @@
 
 [% toc_div( ) %]
 
-[% WRAPPER h2_section id = "summary"  title = "Summary"  %]
+[% WRAPPER h2_section id = "summary"  title = "TL;DR Summary"  %]
 
 <p>
 I, Shlomi Fish (a.k.a <a href="[% base_path %]me/rindolf/">"Rindolf"</a>)
 am hereby offering to relicense all the current public content that is hosted in
 <a href="https://github.com/shlomif/shlomi-fish-homepage">the site's
-main repository</a> and child repositories under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>, and is not too private or personal,
-on the condition that I receive 10 million <a
+main repository</a> and child repositories, and is not too private or personal,
+under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-or-later</a>,
+on the condition that I receive at least 10 million <a
 href="https://www.xe.com/currency/eur-euro">Euro (EUR)</a> to my PayPal and/or
 bank account.
 </p>
@@ -26,6 +27,70 @@ have the financial freedom to survive for the foreseeable future. I do not care
 if I get the money as many small donations, or as one large donation by a
 single rich benefactor.
 </p>
+[%- END -%]
+
+[% WRAPPER h2_section id = "scope"  title = "Scope"  %]
+
+<p>
+The offer will affect the snapshot as of 27 October 2019 of
+<a href="https://github.com/shlomif/shlomi-fish-homepage/commit/d8f9c9059ec44eb3df8df6158a91f8175bb23e5d">commit
+d8f9c905 of the git repository</a> and will affect all original (but possibly fanfic):
+
+<ol>
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour/bits/facts/">factoids</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour/fortunes/">fortune cookies and quotes</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour.html">Aphorisms, Quotes and Captioned Images</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour/stories/">screenplays and novellas</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour/bits/">Originated Small Scale Works (funny bits)</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/philosophy/">Essays and works of amateur philosophy</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/lecture/">Original talks / presentations material</a> - slides, notes, etc.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/puzzles/">Puzzles, Riddles and Brainteasers</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/art/">Digital Artworks</a>
+</p>
+</li>
+
+</ol>
 
 [%- END -%]
 

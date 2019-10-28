@@ -1,0 +1,19 @@
+[%- SET title = "Putting Cards on the Table (2019-2020)" -%]
+[%- SET desc = "Putting Cards on the Table (2019-2020): codifying my philosophy in regards to everything I have to say: about self esteem, resourcefulness, being an action hero, not caring what other people think about you, and honesty." -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects">
+
+[% toc_div( ) %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/putting-cards-on-the-table-2019-2020",  %]
+
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/putting-cards-on-the-table-2019-2020.xhtml") %]
+
+</div>
+
+[% END %]

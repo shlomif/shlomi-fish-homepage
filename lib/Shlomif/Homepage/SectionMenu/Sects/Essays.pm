@@ -60,7 +60,13 @@ my $essays_tree_contents = {
 "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
                     title =>
                         "A snapshot of my personal philosophy as of March 2013",
-                }
+                },
+                {
+                    text => "Putting Cards on the Table (2019-2020)",
+                    url =>
+"src/philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
+                    title => "Update to my personal philosophy as of 2019-2020",
+                },
             ],
         },
         {

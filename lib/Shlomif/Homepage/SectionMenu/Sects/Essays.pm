@@ -64,7 +64,7 @@ my $essays_tree_contents = {
                 {
                     text => "Putting Cards on the Table (2019-2020)",
                     url =>
-"src/philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
+"philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
                     title => "Update to my personal philosophy as of 2019-2020",
                 },
             ],

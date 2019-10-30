@@ -673,7 +673,7 @@ for Government! [And I'm Not Joking As the Reader Shall See]”</a> - on Google+
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/User:Shlomif/Saladin_Style">“Saladin
+<a href="http://shlomifishswiki.branchable.com/Saladin_Style/">“Saladin
 Style”</a> - an executive summary — irresponsible and opinionated — about
 Saladin’s innovative approach to security, combat warfare, psychological
 warfare, and justice, that still has implications today.

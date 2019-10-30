@@ -3,11 +3,11 @@
 use strict;
 use warnings;
 use lib './lib';
-use HTML::Latemp::GenDeps ();
+use HTML::Latemp::GenDepsTT2 ();
 
-HTML::Latemp::GenDeps->new(
+HTML::Latemp::GenDepsTT2->new(
     {
-        src_dir => 't2',
+        src_dir => 'src',
         src_var => '$(T2_DEST)',
     }
 )->run;

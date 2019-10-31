@@ -84,7 +84,7 @@ my %reduced_sub_trees = (
                     },
                     {
                         text  => "TOW The Fountainhead",
-                        url   => "humour/TOWTF/",
+                        url   => "humour/TOneW-the-Fountainhead/",
                         title => "The One with the Fountainhead",
                     },
                     {

@@ -354,7 +354,7 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 
 DEST_HUMOUR_SELINA := $(DEST_HUMOUR)/Selina-Mandrake
 DEST_INTERVIEWS := $(T2_DEST)/open-source/interviews
-DEST_TOWTF := $(DEST_HUMOUR)/TOWTF
+DEST_TOWTF := $(DEST_HUMOUR)/TOneW-the-Fountainhead
 
 DEST_SPLAY_BlueRab1 := $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt
 DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt

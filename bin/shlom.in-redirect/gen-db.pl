@@ -38,7 +38,7 @@ my @urls = (
     },
     {
         id   => "towtf",
-        url  => "http://www.shlomifish.org/humour/TOWTF/",
+        url  => "http://www.shlomifish.org/humour/TOneW-the-Fountainhead/",
         desc => "The One With the Fountainhead",
     },
     {

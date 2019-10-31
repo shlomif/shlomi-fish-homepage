@@ -58,11 +58,12 @@ EOF
             logo_alt   => "The One With The Fountainhead Logo",
             logo_class => "towtf",
             logo_id    => "tow_the_fountainhead_logo",
-            logo_src   => "humour/TOWTF/images/towtf-logo-200px.jpg",
+            logo_src =>
+                "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
             logo_svg   => '//$SKIP',
             entry_id   => "fountainhead",
             entry_text => "The One with the Fountainhead",
-            href       => "humour/TOWTF/",
+            href       => "humour/TOneW-the-Fountainhead/",
             abstract   => <<'EOF',
 <p>
 A parody of Ayn Rand’s novel,

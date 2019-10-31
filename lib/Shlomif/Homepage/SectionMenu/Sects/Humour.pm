@@ -48,16 +48,18 @@ my $humour_tree_contents = {
                 },
                 {
                     text  => "TOW The Fountainhead",
-                    url   => "humour/TOWTF/",
+                    url   => "humour/TOneW-the-Fountainhead/",
                     title => "A Parody on “The Fountainhead” by Ayn Rand",
                     subs  => [
                         {
                             text => "Part 1",
-                            url  => "humour/TOWTF/TOW_Fountainhead_1.html",
+                            url =>
+"humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.html",
                         },
                         {
                             text => "Part 2",
-                            url  => "humour/TOWTF/TOW_Fountainhead_2.html",
+                            url =>
+"humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
                         },
                     ],
                 },

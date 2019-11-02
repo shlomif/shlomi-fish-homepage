@@ -1,0 +1,12 @@
+[%- SET title = "Why I will continue to write my real person fanfiction (fanfic)" -%]
+[%- SET desc = "Why I will continue to write my real person fanfiction (fanfic)" -%]
+[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+[% print_markdown(fn=>'lib/repos/my-real-person-fan-fiction/README.md') %]
+
+<h2 id="credits">Credits</h2>
+
+[% END %]

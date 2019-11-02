@@ -101,6 +101,16 @@ my $essays_tree_contents = {
             ],
         },
         {
+            text => "Culture, Art, and Entertainment",
+            url  => "philosophy/culture/",
+            subs => [
+                {
+                    text => "Dealing with Hypomanias",
+                    url  => "philosophy/culture/my-real-person-fan-fiction/",
+                },
+            ],
+        },
+        {
             text  => "Political Essays",
             url   => "philosophy/politics/",
             title => "Essays about Politics and Philosophical Politics",

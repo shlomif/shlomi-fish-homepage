@@ -93,6 +93,11 @@ my $essays_tree_contents = {
                         },
                     ],
                 },
+                {
+                    text => "Why Openly Bipolar People Should Not Be Medicated",
+                    url =>
+"philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/",
+                },
             ],
         },
         {

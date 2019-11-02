@@ -137,9 +137,14 @@ if ( not -e 'lib/c-begin/README.md' )
 }
 
 foreach my $repo (
-    'validate-your-html', 'how-to-share-code-online',
-    'shlomif-tech-diary', 'Shlomi-Fish-Back-to-my-Homepage-Logo',
+    'Shlomi-Fish-Back-to-my-Homepage-Logo',
+    'captioned-image--emma-watson-doesnt-need-a-wand',
     'XML-Grammar-Vered',
+    'how-to-share-code-online',
+    'my-real-person-fan-fiction',
+    'shlomif-tech-diary',
+    'validate-your-html',
+    'why-openly-bipolar-people-should-not-be-medicated',
 
     )
 {

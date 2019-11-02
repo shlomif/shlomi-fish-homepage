@@ -740,6 +740,7 @@ post to the “Joel on Software” forum</a> about
 
 [% WRAPPER h3_section id = "evilphish-emblem"  title = "What can you tell about the Fish Emblem on the top-left corner?"  %]
 
+<img src="[% base_path %]images/evilphish-svg.min.svg" alt="EvilPHish by Illiad" class="highlight" style="border:0;margin-bottom:0.5em;float:right;"/>
 <p>
 This is <a href="http://ars.userfriendly.org/cartoons/?id=20030803">EvilPHish</a>
 from the
@@ -769,6 +770,15 @@ they are familiar with, and with a memorable emblem such as EvilPHish.
 <p>
 You can also find <a href="[% base_path %]me/images/EvilPHish-Icon/">various
 versions</a> of the EvilPHish image for download and reuse.
+</p>
+
+<p>
+<b>Update:</b> There is now a <a href="[% base_path
+%]me/images/EvilPHish-Icon/svg/">vector graphics SVG version</a> courtesy of
+the amazing Marc Jeanmougin (Mc) and
+<a href="https://inkscape.org/">Inkscape</a>. It is placed under
+<a href="https://creativecommons.org/choose/zero/">CC0</a> but may be
+a derivative work of the original by Iliad.
 </p>
 
 [%- END -%]

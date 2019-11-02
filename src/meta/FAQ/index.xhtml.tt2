@@ -1788,7 +1788,14 @@ the case for me.
 </p>
 
 <p>
-The general consensus is that a celebrity generally allows himself or herself to be a subject of reuse in literature, and that includes me, Shlomi Fish.
+The general consensus is that a celebrity generally allows himself or herself
+to be a subject of reuse in literature, and that includes me, Shlomi Fish.
+</p>
+
+<p>
+<b>Update (2 November 2019):</b> I have now written a <a
+href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/">more
+comprehensive essay</a> about why writing real person fan fiction is good.
 </p>
 
 [%- END -%]
@@ -2169,6 +2176,20 @@ personally do not care too much about that.
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "why_xml"  title = "Why are you still using XML?"  %]
+
+<p>
+With the advent of <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
+and similar formats such as <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>,
+some <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=two-kinds-of-fools">hipster</a> geeks have proclaimed that XML-based grammers no
+longer have any legitimate use. However, while I use JSON and YAML for
+many tasks, I still find XML (and related technologies such as DocBook 5,
+XPath, RELAX NG, and XSLT ) of use. Part of the reason is that XML can be
+used to add markup to a substring of the text (like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
+</p>
+
+[%- END -%]
+
 [% WRAPPER h3_section id = "foss"  title = "About Free and Open Source Software (FOSS)"  %]
 
 [% WRAPPER h4_section id = "how_to_become_hacker"  title = "How can I become an open-source contributor?"  %]
@@ -2266,7 +2287,7 @@ in which case, see <a href="#help_me_crack">the question above</a> - I
 am certainly not one. Otherwise, it can mean a clever and competent enthusiast
 of a certain field of endeavour, primarily used by and for computer workers, but
 not exclusive to them. As <a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">I note</a> by inspiration
-from other sources hacking is at least millennia old.
+from other sources hacking is at least several millennia old.
 </p>
 
 <p>

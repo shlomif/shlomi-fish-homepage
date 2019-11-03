@@ -13,12 +13,18 @@
 from lxml import etree
 
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+ns = {"xml": XML_NS, }
 
 
 def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
     for list_elem in root.xpath("./list"):
-        print(list_elem.get("{}id".format(XML_NS)))
+        list_id = list_elem.get("{}id".format(XML_NS))
+        print(list_id)
+        found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(
+            list_id + '--startaddmore'), namespaces=ns)
+        if found_fact:
+            print("foo")
 
 
 main()

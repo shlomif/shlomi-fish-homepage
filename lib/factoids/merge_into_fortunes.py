@@ -12,6 +12,13 @@
 
 from lxml import etree
 
-root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
-for i in root.xpath("./list"):
-    print(i.get("title"))
+XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+
+
+def main():
+    root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
+    for list_elem in root.xpath("./list"):
+        print(list_elem.get("{}id".format(XML_NS)))
+
+
+main()

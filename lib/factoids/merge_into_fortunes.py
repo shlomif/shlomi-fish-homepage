@@ -9,3 +9,9 @@
 """
 
 """
+
+from lxml import etree
+
+root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
+for i in root.xpath("./list"):
+    print(i.get("title"))

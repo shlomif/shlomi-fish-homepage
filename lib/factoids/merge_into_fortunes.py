@@ -20,11 +20,14 @@ def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
     for list_elem in root.xpath("./list"):
         list_id = list_elem.get("{}id".format(XML_NS))
-        print(list_id)
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(
             list_id + '--startaddmore'), namespaces=ns)
         if found_fact:
-            print("foo")
+            print(list_id)
+            fact = found_fact[0]
+            while fact:
+                print(etree.tostring(fact))
+                fact = fact.getnext()
 
 
 main()

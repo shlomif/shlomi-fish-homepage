@@ -24,15 +24,20 @@ def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
     target_root = etree.parse("./t2/humour/fortunes/shlomif-factoids.xml")
     max_idxs = defaultdict(int)
+    max_idxs_ids = {}
     for targetelem in target_root.xpath("./list/fortune"):
         id_ = targetelem.get("id")
         match = re.match("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$", id_)
         if match:
             category = match.group(1)
             idx = int(match.group(2))
-            max_idxs[category] = max(max_idxs[category], idx)
+            if max_idxs[category] < idx:
+                max_idxs[category] = idx
+                max_idxs_ids[category] = id_
+
             print('ID: {} cat: {} idx: {}'.format(id_, category, idx))
     print(max_idxs)
+    print(max_idxs_ids)
     for list_elem in root.xpath("./list"):
         list_id = list_elem.get("{}id".format(XML_NS))
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(

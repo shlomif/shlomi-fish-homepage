@@ -26,7 +26,7 @@ def main():
     max_idxs = defaultdict(int)
     for targetelem in target_root.xpath("./list/fortune"):
         id_ = targetelem.get("id")
-        match = re.match("^[a-z\\-]+-fact-([a-z]+)-([0-9]+)$", id_)
+        match = re.match("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$", id_)
         if match:
             category = match.group(1)
             idx = int(match.group(2))

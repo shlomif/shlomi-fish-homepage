@@ -149,6 +149,20 @@ href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Put
 all the Cards on the Table (2013)”</a> (also by me) - mentions what is the
 second major battle that Chuck Norris lost.
 </p>
+
+<ul>
+
+<li>
+<p>
+<a
+href="$(ROOT)/philosophy/philosophy/putting-cards-on-the-table-2019-2020/">“Putting
+Cards on the Table (2019-2020)”</a> (also by me) - additional update on
+Chuck Norris and the facts.
+</p>
+</li>
+
+</ul>
+
 </li>
 
 </ul>

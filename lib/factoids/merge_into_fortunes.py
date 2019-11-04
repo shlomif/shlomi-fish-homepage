@@ -21,6 +21,10 @@ ns = {"xml": XML_NS, }
 
 def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
+    target_root = etree.parse("./t2/humour/fortunes/shlomif-factoids.xml")
+    for targetelem in target_root.xpath("./list/fortune"):
+        id_ = targetelem.get("id")
+        print('ID: {}'.format(id_))
     for list_elem in root.xpath("./list"):
         list_id = list_elem.get("{}id".format(XML_NS))
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(

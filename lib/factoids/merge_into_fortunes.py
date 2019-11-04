@@ -34,7 +34,7 @@ def main():
             while fact is not None:
                 facts_to_add.append(deepcopy(fact))
                 fact = fact.getnext()
-            print(facts_to_add)
+            print("\t{}".format(len(facts_to_add)))
 
 
 main()

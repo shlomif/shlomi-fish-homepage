@@ -80,14 +80,14 @@ https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fict
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Pope/"><i>The
+<a href="[% base_path %]humour/Pope/"><i>The
 Pope Died on Sunday</i></a> - a story in Hebrew under CC-by-sa.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/TheEnemy/"><i>The Enemy
+<a href="[% base_path %]humour/TheEnemy/"><i>The Enemy
 and How I Helped to Fight it</i></a> - the Hebrew version of this story
 is written in Fiction-Text.
 </p>
@@ -95,7 +95,7 @@ is written in Fiction-Text.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/human-hacking/"><i>The
+<a href="[% base_path %]humour/human-hacking/"><i>The
 Human Hacking Field Guide</i></a> - the Hebrew translation was written using
 Fiction-Text.
 </p>
@@ -119,7 +119,7 @@ in the <code>t/screenplay/data</code> directory in the distribution.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/TOneW-the-Fountainhead/">The One with the
+<a href="[% base_path %]humour/TOneW-the-Fountainhead/">The One with the
 Fountainhead</a> - original text, but fan fiction of the T.V. show
 <i>Friends</i>.
 </p>
@@ -127,14 +127,14 @@ Fountainhead</a> - original text, but fan fiction of the T.V. show
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/humanity/">Humanity - The
+<a href="[% base_path %]humour/humanity/">Humanity - The
 Movie</a> - all original text and concept. Under the CC-by-sa license.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star
 Trek - “We The Living Dead”</a> - all original text, but fan fiction of
 Star Trek.
 </p>
@@ -142,7 +142,7 @@ Star Trek.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/open-source/interviews/">Interviews with
+<a href="[% base_path %]open-source/interviews/">Interviews with
 Open Source People</a> - several interviews whose original hacky
 like-XML-but-not-quite source was converted to ScreenplayText and then
 rendered into XML and XHTML.
@@ -151,7 +151,7 @@ rendered into XML and XHTML.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html"><i>The
+<a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html"><i>The
 Hitchhiker’s Guide to Star Trek - The Next Generation</i></a> - David T. Lu’s
 and Mickey McCarter’s old parodical screenplay crosses <i>The
 Hitchhiker’s Guide to the Galaxy</i> and <i>Star Trek: The Next Generation</i>.
@@ -162,7 +162,7 @@ and from that translated into XHTML.
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Selina-Mandrake/"><i>Selina Mandrake
+<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake
 - The Slayer</i></a> - screenplay for a film in English. Original text, but
 fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture.
 </p>
@@ -170,13 +170,29 @@ fan-fiction of “Buffy the Vampire Slayer” and other works of popular culture
 
 <li>
 <p>
-<a href="http://www.shlomifish.org/humour/Summerschool-at-the-NSA/"><i>Summerschool
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> - screenplay for a short film in English. Original text
-and idea and not really fan-fiction, but features several real-life and
-well-known people (celebrities/etc.).
+and idea and real person fiction.
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]humour/Buffy/A-Few-Good-Slayers/">Buffy - a Few Good Slayer</a> - a Buffy fan fiction.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/Muppets-Show-TNI/">Muppets Show Fanfics</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/">“So, who the Hell is Qoheleth?”</a> - An Illustrated Screenplay
+</p>
+</li>
 </ul>
 
 [%- END -%]

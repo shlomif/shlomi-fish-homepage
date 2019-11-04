@@ -15,4 +15,10 @@ sub _exec
     return;
 }
 
+_exec(
+    [
+        qw#gmake -s -j16 -f lib/make/factoids.mak t2/humour/fortunes/shlomif-factoids.xml #
+    ],
+    'gmake'
+);
 _exec( [qw#gmake -s -j16 -C t2/humour/fortunes dats#], 'gmake' );

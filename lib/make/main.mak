@@ -473,6 +473,8 @@ T2_DEST_HTMLS_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_
 
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
+include lib/make/factoids.mak
+
 # The touch is to make sure we compile the .html.wml again.
 
 FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl

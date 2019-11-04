@@ -22,7 +22,8 @@ ns = {"xml": XML_NS, }
 
 def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
-    target_root = etree.parse("./t2/humour/fortunes/shlomif-factoids.xml")
+    target_root = etree.parse(
+        "./t2/humour/fortunes/proto--shlomif-factoids.xml")
     max_idxs = defaultdict(int)
     max_idxs_ids = {}
     for targetelem in target_root.xpath("./list/fortune"):
@@ -52,6 +53,8 @@ def main():
                 facts_to_add.append(deepcopy(fact))
                 fact = fact.getnext()
             print("\t{}".format(len(facts_to_add)))
+    with open("./t2/humour/fortunes/shlomif-factoids.xml", "wb") as f:
+        f.write(etree.tostring(target_root, pretty_print=True))
 
 
 main()

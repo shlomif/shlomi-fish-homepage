@@ -10,6 +10,9 @@
 
 """
 
+import re
+from copy import deepcopy
+
 from lxml import etree
 
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
@@ -23,11 +26,15 @@ def main():
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(
             list_id + '--startaddmore'), namespaces=ns)
         if found_fact:
-            print(list_id)
+            facts_basename = re.match(
+                '^([a-z_\\-]*)_facts$', list_id).group(1).replace('_', '-')
+            print(list_id, facts_basename)
             fact = found_fact[0]
-            while fact:
-                print(etree.tostring(fact))
+            facts_to_add = []
+            while fact is not None:
+                facts_to_add.append(deepcopy(fact))
                 fact = fact.getnext()
+            print(facts_to_add)
 
 
 main()

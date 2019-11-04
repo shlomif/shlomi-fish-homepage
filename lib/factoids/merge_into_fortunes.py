@@ -11,6 +11,7 @@
 """
 
 import re
+from collections import defaultdict
 from copy import deepcopy
 
 from lxml import etree
@@ -22,9 +23,16 @@ ns = {"xml": XML_NS, }
 def main():
     root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
     target_root = etree.parse("./t2/humour/fortunes/shlomif-factoids.xml")
+    max_idxs = defaultdict(int)
     for targetelem in target_root.xpath("./list/fortune"):
         id_ = targetelem.get("id")
-        print('ID: {}'.format(id_))
+        match = re.match("^[a-z\\-]+-fact-([a-z]+)-([0-9]+)$", id_)
+        if match:
+            category = match.group(1)
+            idx = int(match.group(2))
+            max_idxs[category] = max(max_idxs[category], idx)
+            print('ID: {} cat: {} idx: {}'.format(id_, category, idx))
+    print(max_idxs)
     for list_elem in root.xpath("./list"):
         list_id = list_elem.get("{}id".format(XML_NS))
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(

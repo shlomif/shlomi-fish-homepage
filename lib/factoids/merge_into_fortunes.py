@@ -43,9 +43,9 @@ def main():
                 max_idxs_ids[category] = id_
                 max_idxs_elems[category] = targetelem
 
-            print('ID: {} cat: {} idx: {}'.format(id_, category, idx))
-    print(max_idxs)
-    print(max_idxs_ids)
+            # print('ID: {} cat: {} idx: {}'.format(id_, category, idx))
+    # print(max_idxs)
+    # print(max_idxs_ids)
     for list_elem in root.xpath("./list"):
         list_id = list_elem.get("{}id".format(XML_NS))
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(
@@ -53,19 +53,20 @@ def main():
         if found_fact:
             facts_basename = re.match(
                 '^([a-z_\\-]*)_facts$', list_id).group(1).replace('_', '-')
-            print(list_id, facts_basename)
+            # print(list_id, facts_basename)
             fact = found_fact[0]
             facts_to_add = []
             while fact is not None:
                 facts_to_add.append(deepcopy(fact))
                 fact = fact.getnext()
-            print("\t{}".format(len(facts_to_add)))
+            # print("\t{}".format(len(facts_to_add)))
             target_idx = target_list.index(
                 target_list.xpath(
                     "./fortune[@id='{}']".format(
                         max_idxs_ids[facts_basename]))[0])
             full_name = FULL_NAMES[facts_basename]
             for idx, iter_fact in enumerate(facts_to_add):
+                author_str = 'Shlomi Fish'
                 newidx = idx + max_idxs[facts_basename] + 1
                 new_elem = etree.Element(
                     "fortune", id="{}-fact-{}-{}".format(
@@ -75,14 +76,14 @@ def main():
                         ))
                 meta = etree.SubElement(new_elem, "meta")
                 title = etree.SubElement(meta, "title")
-                title.text = "Shlomi Fish’s {} Fact #{}".format(
-                    full_name, newidx)
+                title.text = "{}’s {} Fact #{}".format(
+                    author_str, full_name, newidx)
                 quote = etree.SubElement(new_elem, "quote")
                 quote.insert(0, iter_fact.xpath(
                     "./lang[@xml:lang='en-US']/body", namespaces=ns)[0])
                 info = etree.SubElement(quote, "info")
                 author = etree.SubElement(info, "author")
-                author.text = "Shlomi Fish"
+                author.text = author_str
                 work = etree.SubElement(
                     info,
                     "work",
@@ -90,7 +91,7 @@ def main():
                     "humour/bits/facts/{}/".format(
                         full_name.replace(' ', '-')))
                 work.text = ("{} Facts by " +
-                             "Shlomi Fish and Friends").format(full_name)
+                             "{} and Friends").format(full_name, author_str)
                 target_list.insert(target_idx+idx+1, new_elem)
 
     with open("./t2/humour/fortunes/shlomif-factoids.xml", "wb") as f:

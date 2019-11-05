@@ -689,27 +689,30 @@ table.visible,
         margin: 10pt;
         */
     }
+}
 
-    blockquote {
-        border: grey thin solid;
-        padding: 0.5em;
-        font-style: italic;
-        margin-left: 0.5em;
+blockquote {
+    border: grey thin solid;
+    display: table-cell;
+    padding: 0.5em;
+    // font-style: italic;
+    margin-left: 0.5em;
 
-        p:first-child {
-            &:before {
-                content: "‶";
-            }
-
-            padding-top: 0;
-            margin-top: 0;
+    > p:first-child {
+        &:before {
+            content: "‶";
         }
 
-        .last:after {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    > p:last-child {
+        &:after {
             content: "″";
-            margin-bottom: 0;
-            padding-top: 0;
         }
+        margin-bottom: 0;
+        padding-top: 0;
     }
 }
 

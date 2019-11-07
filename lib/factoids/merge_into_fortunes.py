@@ -24,78 +24,86 @@ FULL_NAMES = {"chuck": "Chuck Norris",
               "taylor-swift": "Taylor Swift", }
 
 
-def main():
-    root = etree.parse("./lib/factoids/shlomif-factoids-lists.xml")
-    target_root = etree.parse(
-        "./t2/humour/fortunes/proto--shlomif-factoids.xml")
-    max_idxs = defaultdict(int)
-    max_idxs_ids = {}
-    max_idxs_elems = {}
-    target_list = target_root.xpath("./list")[0]
-    for targetelem in target_root.xpath("./list/fortune"):
-        id_ = targetelem.get("id")
-        match = re.match("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$", id_)
-        if match:
-            category = match.group(1)
-            idx = int(match.group(2))
-            if max_idxs[category] < idx:
-                max_idxs[category] = idx
-                max_idxs_ids[category] = id_
-                max_idxs_elems[category] = targetelem
+class FortunesMerger:
+    """docstring for FortunesMerger"""
+    def __init__(self, input_fn, merge_into_fn):
+        self.input_fn = input_fn
+        self.root = etree.parse(input_fn)
+        self.target_root = etree.parse(merge_into_fn)
+        self.max_idxs = defaultdict(int)
+        self.max_idxs_ids = {}
+        self.target_list = self.target_root.xpath("./list")[0]
+        for targetelem in self.target_root.xpath("./list/fortune"):
+            id_ = targetelem.get("id")
+            match = re.match("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$", id_)
+            if match:
+                category = match.group(1)
+                idx = int(match.group(2))
+                if self.max_idxs[category] < idx:
+                    self.max_idxs[category] = idx
+                    self.max_idxs_ids[category] = id_
 
-            # print('ID: {} cat: {} idx: {}'.format(id_, category, idx))
-    # print(max_idxs)
-    # print(max_idxs_ids)
-    for list_elem in root.xpath("./list"):
+    def process(self):
+        for list_elem in self.root.xpath("./list"):
+            self._process_list_elem(list_elem)
+
+    def _process_list_elem(self, list_elem):
         list_id = list_elem.get("{}id".format(XML_NS))
         found_fact = list_elem.xpath("./fact[@xml:id = '{}']".format(
             list_id + '--startaddmore'), namespaces=ns)
-        if found_fact:
-            facts_basename = re.match(
-                '^([a-z_\\-]*)_facts$', list_id).group(1).replace('_', '-')
-            # print(list_id, facts_basename)
-            fact = found_fact[0]
-            facts_to_add = []
-            while fact is not None:
-                facts_to_add.append(deepcopy(fact))
-                fact = fact.getnext()
-            # print("\t{}".format(len(facts_to_add)))
-            target_idx = target_list.index(
-                target_list.xpath(
-                    "./fortune[@id='{}']".format(
-                        max_idxs_ids[facts_basename]))[0])
-            full_name = FULL_NAMES[facts_basename]
-            for idx, iter_fact in enumerate(facts_to_add):
-                author_str = 'Shlomi Fish'
-                newidx = idx + max_idxs[facts_basename] + 1
-                new_elem = etree.Element(
-                    "fortune", id="{}-fact-{}-{}".format(
-                        "shlomif",
-                        facts_basename,
-                        newidx
-                        ))
-                meta = etree.SubElement(new_elem, "meta")
-                title = etree.SubElement(meta, "title")
-                title.text = "{}’s {} Fact #{}".format(
-                    author_str, full_name, newidx)
-                quote = etree.SubElement(new_elem, "quote")
-                quote.insert(0, iter_fact.xpath(
-                    "./lang[@xml:lang='en-US']/body", namespaces=ns)[0])
-                info = etree.SubElement(quote, "info")
-                author = etree.SubElement(info, "author")
-                author.text = author_str
-                work = etree.SubElement(
-                    info,
-                    "work",
-                    href="http://www.shlomifish.org/" +
-                    "humour/bits/facts/{}/".format(
-                        full_name.replace(' ', '-')))
-                work.text = ("{} Facts by " +
-                             "{} and Friends").format(full_name, author_str)
-                target_list.insert(target_idx+idx+1, new_elem)
+        if not found_fact:
+            return
+        facts_basename = re.match(
+            '^([a-z_\\-]*)_facts$', list_id).group(1).replace('_', '-')
+        # print(list_id, facts_basename)
+        fact = found_fact[0]
+        facts_to_add = []
+        while fact is not None:
+            facts_to_add.append(deepcopy(fact))
+            fact = fact.getnext()
+        # print("\t{}".format(len(facts_to_add)))
+        target_idx = self.target_list.index(
+            self.target_list.xpath(
+                "./fortune[@id='{}']".format(
+                    self.max_idxs_ids[facts_basename]))[0])
+        full_name = FULL_NAMES[facts_basename]
+        for idx, iter_fact in enumerate(facts_to_add):
+            author_str = 'Shlomi Fish'
+            newidx = idx + self.max_idxs[facts_basename] + 1
+            new_elem = etree.Element(
+                "fortune", id="{}-fact-{}-{}".format(
+                    "shlomif",
+                    facts_basename,
+                    newidx
+                    ))
+            meta = etree.SubElement(new_elem, "meta")
+            title = etree.SubElement(meta, "title")
+            title.text = "{}’s {} Fact #{}".format(
+                author_str, full_name, newidx)
+            quote = etree.SubElement(new_elem, "quote")
+            quote.insert(0, iter_fact.xpath(
+                "./lang[@xml:lang='en-US']/body", namespaces=ns)[0])
+            info = etree.SubElement(quote, "info")
+            author = etree.SubElement(info, "author")
+            author.text = author_str
+            work = etree.SubElement(
+                info,
+                "work",
+                href="http://www.shlomifish.org/" +
+                "humour/bits/facts/{}/".format(
+                    full_name.replace(' ', '-')))
+            work.text = ("{} Facts by " +
+                         "{} and Friends").format(full_name, author_str)
+            self.target_list.insert(target_idx+idx+1, new_elem)
 
+
+def main():
+    obj = FortunesMerger(
+        "./lib/factoids/shlomif-factoids-lists.xml",
+        "./t2/humour/fortunes/proto--shlomif-factoids.xml")
+    obj.process()
     with open("./t2/humour/fortunes/shlomif-factoids.xml", "wb") as f:
-        f.write(etree.tostring(target_root, pretty_print=True))
+        f.write(etree.tostring(obj.target_root, pretty_print=True))
 
 
 main()

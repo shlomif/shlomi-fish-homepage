@@ -774,6 +774,21 @@ blockquote {
     }
 }
 
+section.story {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    clear: right;
+}
+
+@if false {
+    * {
+        border: hotpink solid 1px;
+    }
+}
+
 .aphorisms {
     blockquote {
         margin-left: 3em;
@@ -809,10 +824,10 @@ blockquote {
 
     max-width: 40%;
     float: right;
-    clear: right;
+    // clear: right;
 
     &.enemy {
-        clear: right;
+        // clear: right;
     }
 
     &.buffy_few_good {

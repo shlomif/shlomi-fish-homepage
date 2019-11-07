@@ -491,10 +491,7 @@ sub _get_list_items_tags
 {
     my ( $class, $id ) = @_;
 
-    return [
-        @{ $class->_get_logo_tags($id) },
-        @{ $class->_get_abstract_tags($id) },
-    ];
+    return [ @{ $class->_get_abstract_tags($id) }, ];
 }
 
 sub _push_toc_h2
@@ -524,7 +521,6 @@ sub _get_common_top_elems
     my ( $class, $id ) = @_;
     my $ret = [
         @{ $class->_get_tagline_tags($id) },
-        @{ $class->_get_logo_tags($id) },
         sprintf( qq#<div class="%s abstract">\n#,
             $class->_get_story($id)->logo_class ),
         qq#<h2 id="abstract">Abstract</h2>\n#,
@@ -544,6 +540,7 @@ sub _get_story_entry_tags
     return [
         qq{<section class="story">\n},
         qq{<header>\n},
+        @{ $class->_get_logo_tags($id) },
         sprintf(
             qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,

@@ -525,8 +525,9 @@ EOF
 <p>
 <a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
 creator of the Perl programming language, and the inventor of the
-<a href="http://en.wikipedia.org/wiki/Patch_%%28Unix%%29">patch program</a>.
-These facts illustrate his “hacky” (= rule bending) awesomeness.
+<a href="http://en.wikipedia.org/wiki/Patch_%%28Unix%%29">patch program</a>,
+and of the <a href="https://en.wikipedia.org/wiki/Rn_(newsreader)">rn
+newsreader</a>. These facts illustrate his “hacky” (= rule bending) awesomeness.
 </p>
 
 

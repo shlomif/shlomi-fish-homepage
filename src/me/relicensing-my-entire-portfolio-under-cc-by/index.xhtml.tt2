@@ -5,7 +5,7 @@
 
 <div class="side_toc fancy_sects lim_width">
 
-[% toc_div( ) %]
+[% toc_div() %]
 
 [% WRAPPER h2_section id = "summary"  title = "TL;DR Summary"  %]
 
@@ -22,11 +22,11 @@ bank account.
 </p>
 
 <p>
-I wish to set my intellectual children free to be reused and sublicensed,
-like any individual, corporation or any other organisation pleases but wish to
-have the financial freedom to survive for the foreseeable future. I do not care
-if I get the money as many small donations, or as one large donation by a
-single rich benefactor, or something in between.
+I wish to set my intellectual children free to be reused and sublicensed, like
+any individual, corporation, or any other organisation pleases.  However, I
+wish to have the financial freedom to survive for the foreseeable future. I do
+not care if I get the money as many small donations, or as one large donation
+by a single rich benefactor, or as something in between.
 </p>
 
 [%- END -%]
@@ -42,54 +42,54 @@ fanfic):
 <ol>
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/bits/facts/">Factoids</a>
+<a href="[% base_path %]humour/bits/facts/">Factoids</a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/fortunes/">Fortune cookies and quotes</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://www.shlomifish.org/humour.html">Aphorisms, quotes and captioned images</a>
+<a href="[% base_path %]humour/fortunes/">Fortune cookies and quotes</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/stories/">Screenplays and novellas</a>
+<a href="[% base_path %]humour.html">Aphorisms, quotes and captioned images</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/bits/">Original small scale works (funny bits)</a>
+<a href="[% base_path %]humour/stories/">Screenplays and novellas</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/philosophy/">Essays and works of amateur philosophy</a>
+<a href="[% base_path %]humour/bits/">Original small scale works (funny bits)</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/lecture/">Original talks / presentations material</a> - slides, notes, etc.
+<a href="[% base_path %]philosophy/">Essays and works of amateur philosophy</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/puzzles/">Puzzles, riddles and brainteasers</a>
+<a href="[% base_path %]lecture/">Original talks / presentations material</a> - slides, notes, etc.
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/art/">Digital artworks</a>
+<a href="[% base_path %]puzzles/">Puzzles, riddles and brainteasers</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]art/">Digital artworks</a>
 </p>
 </li>
 

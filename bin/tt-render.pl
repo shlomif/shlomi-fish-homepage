@@ -199,7 +199,9 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
         my $args = shift;
 
         require Shlomif::MD;
-        return Shlomif::MD::as_text( $args->{fn} );
+        return Shlomif::MD::as_text( $args->{fn} ) =~
+            s#align="(left|right)"#style="float:$1;"#gr =~
+s#(<img )([^>]+)(>)#my ($s, $mid, $e)=($1, $2, $3);$mid.=" /" if $mid !~ m%/\s*\z%;$s.$mid.$e#egr;
     },
     longblank => <<'EOF',
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

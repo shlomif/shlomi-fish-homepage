@@ -137,15 +137,15 @@ if ( not -e 'lib/c-begin/README.md' )
 }
 
 foreach my $repo (
+    'Captioned-Image-Holocaust',
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
-    'captioned-image--emma-watson-doesnt-need-a-wand',
     'XML-Grammar-Vered',
+    'captioned-image--emma-watson-doesnt-need-a-wand',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',
-
     )
 {
     _git_task( 'lib/repos', $repo );

@@ -971,9 +971,13 @@ MY_NAME_IS_RINDOLF_SRC = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf.jp
 MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
+Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
 
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST)
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST)
+
+$(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png
+	gm convert $< $@
 
 $(OCT_2014_SGLAU_LET_PDF): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"

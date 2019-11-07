@@ -972,9 +972,16 @@ MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-2
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
 Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
+MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST)
+
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(MY_RPF_DEST_PIVOT)
+
+MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
+$(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
+	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
 
 $(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png
 	gm convert $< $@

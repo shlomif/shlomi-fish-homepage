@@ -11,14 +11,15 @@
 
 <p>
 I, Shlomi Fish (a.k.a <a href="[% base_path %]me/rindolf/">"Rindolf"</a>)
-am hereby offering to relicense all the current public content that is hosted in
-<a href="https://github.com/shlomif/shlomi-fish-homepage">the site's
-main repository</a> and child repositories, and is not too private or personal,
-under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-or-later</a>,
-on the condition that I receive at least 10 million <a
-href="https://www.xe.com/currency/eur-euro">Euro (EUR)</a> to my
-<a href="[% base_path %]meta/donate/">PayPal</a> and/or
-bank account.
+am hereby offering to relicense all the current public content that is hosted
+in <a href="https://github.com/shlomif/shlomi-fish-homepage">the site's main
+repository</a> and its child repositories (e.g <a
+href="https://github.com/shlomif/shlomi-fish-homepage/blob/d8f9c9059ec44eb3df8df6158a91f8175bb23e5d/bin/gen-docbook-make-helpers.pl#L149-L152">the
+ones in these lines</a>), and is not too private or personal, under <a
+href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-or-later</a>, on
+the condition that I receive at least 10 million <a
+href="https://www.xe.com/currency/eur-euro">Euro (EUR)</a> to my <a href="[%
+base_path %]meta/donate/">PayPal</a> and/or bank account.
 </p>
 
 <p>
@@ -94,6 +95,26 @@ fanfic):
 </li>
 
 </ol>
+
+[% WRAPPER h3_section id = "scope_excludes" title = "Particular Excludes"  %]
+
+<ol>
+
+<li>
+<p>
+<a href="[% base_path %]me/">Everything under <code>/me/</code></a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]meta/">Everything under <code>/meta/</code></a>
+</p>
+</li>
+
+</ol>
+
+[%- END -%]
 
 [%- END -%]
 

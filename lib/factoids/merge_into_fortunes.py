@@ -102,14 +102,19 @@ class FortunesMerger:
                      "{} and Friends").format(full_name, author_str)
         self.target_list.insert(target_idx+idx+1, new_elem)
 
+    def write_to_file(self, out_fn):
+        with open(out_fn, "wb") as f:
+            f.write(
+                etree.tostring(self.target_root, pretty_print=True))
+
 
 def main():
     xml_propagator = FortunesMerger(
         "./lib/factoids/shlomif-factoids-lists.xml",
         "./t2/humour/fortunes/proto--shlomif-factoids.xml")
     xml_propagator.process()
-    with open("./t2/humour/fortunes/shlomif-factoids.xml", "wb") as f:
-        f.write(etree.tostring(xml_propagator.target_root, pretty_print=True))
+    xml_propagator.write_to_file(
+        "./t2/humour/fortunes/shlomif-factoids.xml")
 
 
 main()

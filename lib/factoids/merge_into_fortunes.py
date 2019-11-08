@@ -7,7 +7,11 @@
 # Distributed under terms of the MIT license.
 
 """
+Merge / propagate recent items from the
+lib/factoids/shlomif-factoids-lists.xml file
+into t2/humour/fortunes/shlomif-factoids.xml .
 
+DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 """
 
 import re
@@ -25,7 +29,6 @@ FULL_NAMES = {"chuck": "Chuck Norris",
 
 
 class FortunesMerger:
-    """docstring for FortunesMerger"""
     def __init__(self, input_fn, merge_into_fn):
         self.input_fn = input_fn
         self.root = etree.parse(input_fn)
@@ -101,12 +104,12 @@ class FortunesMerger:
 
 
 def main():
-    obj = FortunesMerger(
+    xml_propagator = FortunesMerger(
         "./lib/factoids/shlomif-factoids-lists.xml",
         "./t2/humour/fortunes/proto--shlomif-factoids.xml")
-    obj.process()
+    xml_propagator.process()
     with open("./t2/humour/fortunes/shlomif-factoids.xml", "wb") as f:
-        f.write(etree.tostring(obj.target_root, pretty_print=True))
+        f.write(etree.tostring(xml_propagator.target_root, pretty_print=True))
 
 
 main()

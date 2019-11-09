@@ -226,6 +226,8 @@ sub calc_items
     return [ @old_news_items, @{ $self->calc_rss_items() } ];
 }
 
+=begin foo
+
 sub _wmlize
 {
     my $s = shift;
@@ -234,6 +236,15 @@ sub _wmlize
     $s =~ s#^[ \t]+##gms;
 
     return $s;
+}
+
+=end foo
+
+=cut
+
+sub _tt2_process_body
+{
+    return shift;
 }
 
 sub _format_date_human
@@ -263,7 +274,7 @@ sub get_item_html
         . $self->_format_date_human($date)
         . ( defined($title) ? ": $title" : "" )
         . "</h3>\n\n"
-        . _wmlize( $item->{'body'} )
+        . _tt2_process_body( $item->{'body'} )
         . qq{\n</$article>\n};
 }
 

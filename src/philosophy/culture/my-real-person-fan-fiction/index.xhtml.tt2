@@ -5,6 +5,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+<div class="fancy_sects side_toc">
+
+[% toc_div( ) %]
+
 <div class="markdown">
 
 [% print_markdown(fn=>'lib/repos/my-real-person-fan-fiction/README.md') %]
@@ -23,6 +27,8 @@
 </li>
 
 </ul>
+
+</div>
 
 [% END %]
 

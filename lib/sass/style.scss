@@ -153,12 +153,18 @@ body {
     }
 }
 
+@mixin navbarwrap_common {
+    height: auto;
+}
 .lim_width,
 #navbar_wrapper {
-    img,
+    img {
+        max-width: 200px;
+        @include navbarwrap_common;
+    }
     iframe {
         max-width: 99%;
-        height: auto;
+        @include navbarwrap_common;
     }
 }
 

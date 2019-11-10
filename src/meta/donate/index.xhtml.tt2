@@ -19,11 +19,29 @@ Working on these works required a lot of time and still requires a
 lot of time for maintenance. While working on such endeavours gives me a
 lot of pleasure, I still would like to see some financial benefit. That’s why
 I decided to ask for donations using PayPal. <b>So if what I created has
-benefited you in some way, please consider donating</b>. If you don’t want
+benefited you in some way, please consider donating</b>.
+</p>
+
+[% IF 0 %]
+<p>
+If you don’t want
 to make a direct monetary donation, you can also
 <a href="[% amazon_wishlist_link %]">purchase
 items out of my <b>Amazon.com wishlist</b></a>.
 </p>
+[% ELSE %]
+<p>
+<b>Note:</b> I no longer desire gifts of physical, paper-ware books because
+I see them as <a href="http://www.paulgraham.com/stuff.html">"stuff"</a>
+(also called "shmontses" or "pitchefkes" in Yiddish)  which I do not want. If
+you wish, you can buy me <a href="https://www.defectivebydesign.org/drm-free">DRM-free</a> files
+in <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> or
+<a href="https://en.wikipedia.org/wiki/PDF">PDF</a>,
+or a different open format that I can use on <a
+href="https://en.wikipedia.org/wiki/Linux#Desktop">desktop Linux</a> machine
+without installing any <a href="https://en.wikipedia.org/wiki/Proprietary_device_driver">binary blobs</a>.
+</p>
+[% END %]
 
 <p>
 How will I spend the money? On:

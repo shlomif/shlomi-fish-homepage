@@ -156,7 +156,13 @@ body {
 @mixin navbarwrap_common {
     height: auto;
 }
-.lim_width,
+.lim_width {
+    iframe {
+        max-width: 99%;
+        @include navbarwrap_common;
+    }
+}
+
 #navbar_wrapper {
     img {
         max-width: 200px;

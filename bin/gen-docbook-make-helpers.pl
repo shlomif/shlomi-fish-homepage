@@ -141,6 +141,7 @@ foreach my $repo (
     'Captioned-Image-Holocaust',
     'Captioned-Image-Nothing-Sexier',
     'Captioned-Image-Princess-Bride-Greek-Philosophers',
+    'Captioned-Image-Truly-You-Have',
     'Captioned-Image-Yo-NSA-Publish-or-Perish',
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
     'XML-Grammar-Vered',

@@ -521,6 +521,7 @@ sub _get_common_top_elems
     my ( $class, $id ) = @_;
     my $ret = [
         @{ $class->_get_tagline_tags($id) },
+        @{ $class->_get_logo_tags($id) },
         sprintf( qq#<div class="%s abstract">\n#,
             $class->_get_story($id)->logo_class ),
         qq#<h2 id="abstract">Abstract</h2>\n#,

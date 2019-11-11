@@ -973,16 +973,18 @@ Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
 Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
 Yo_NSA_DEST = $(T2_POST_DEST)/humour/images/NSA-publish-or-perish.svg.webp
+Philosophers_Pbride_DEST = $(T2_POST_DEST)/humour/images/philosophers-princess-bride.svg.webp
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
-
-
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT)
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST)
 
 MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
 $(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
+
+$(Philosophers_Pbride_DEST): lib/repos/Captioned-Image-Princess-Bride-Greek-Philosophers/philosophers-princess-bride.svg.webp
+	$(call COPY)
 
 $(Yo_NSA_DEST): lib/repos/Captioned-Image-Yo-NSA-Publish-or-Perish/NSA-publish-or-perish.svg.webp
 	$(call COPY)

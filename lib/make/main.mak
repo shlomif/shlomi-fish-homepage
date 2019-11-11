@@ -975,17 +975,21 @@ Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
 Yo_NSA_DEST = $(T2_POST_DEST)/humour/images/NSA-publish-or-perish.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST)/humour/images/philosophers-princess-bride.svg.webp
 Nothing_Sexier_DEST = $(T2_POST_DEST)/humour/images/Nothing-Sexier.svg.webp
+Slp_pinned_it_DEST = $(T2_POST_DEST)/humour/images/SLP-excerpt-pinned-it-on-me.webp
 Truly_you_have_DEST = $(T2_POST_DEST)/humour/images/Truly-You-Have.svg.webp
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST)
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST)
 
 MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
 $(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
 
 $(Nothing_Sexier_DEST): lib/repos/Captioned-Image-Nothing-Sexier/Nothing-Sexier.svg.webp
+	$(call COPY)
+
+$(Slp_pinned_it_DEST): lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me--400w.webp
 	$(call COPY)
 
 $(Truly_you_have_DEST): lib/repos/Captioned-Image-Truly-You-Have/Truly-You-Have.svg.webp

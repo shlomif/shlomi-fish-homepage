@@ -138,6 +138,7 @@ if ( not -e 'lib/c-begin/README.md' )
 
 foreach my $repo (
     'Captioned-Image-Holocaust',
+    'Captioned-Image-Yo-NSA-Publish-or-Perish',
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
     'XML-Grammar-Vered',
     'captioned-image--emma-watson-doesnt-need-a-wand',

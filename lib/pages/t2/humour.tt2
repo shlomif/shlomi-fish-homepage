@@ -2339,7 +2339,7 @@ That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/
 
 [% END %]
 
-[% WRAPPER github_captioned_image_joke id = "yo-nsa-publish-or-perish"  header = "Yo NSA, Publish or Perish"  repo_href = "http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish"  src = "${base_path}images/nsa-publish-or-perish.jpg"  alt = "Yo NSA, Publish or Perish"  %]
+[% WRAPPER github_captioned_image_joke id = "yo-nsa-publish-or-perish"  header = "Yo NSA, Publish or Perish"  repo_href = "http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish"  src = "${base_path}humour/images/NSA-publish-or-perish.svg.webp"  alt = "Yo NSA, Publish or Perish" %]
 
 <p>
 Also see <a href="[% base_path %]philosophy/SummerNSA/">the #SummerNSA initiative</a>.

@@ -20,8 +20,7 @@ my $text = scalar(io()->file($filename)->slurp());
 
 $text =~ s{<(/?h)(\d+)}{"<".$1.($2+1)}ge;
 
-$text =~ s{\A.*?(<div class="screenplay")}{$1}ms;
-substr($text, rindex($text, "</div>")) = "</div>";
+$text =~ s{\A.*?(<main class="screenplay")}{$1}ms;
+substr($text, rindex($text, "</main>")) = "</main>";
 
 io()->file($out_fn)->print($text);
-

@@ -1,0 +1,86 @@
+[%- SET title = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody" -%]
+[%- SET desc = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories__calc_common_top_elems(id => 'terminator_liberation') %]
+
+[% WRAPPER screenplay_read_online  %]
+<ul>
+
+[% PROCESS story_ongoing_episode_li base = "Terminator--Liberation",  %]
+
+<li>
+<p>
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Terminator-Liberation",  %]
+</p>
+</li>
+
+<li>
+<p>
+<a href="Terminator--Liberation.screenplay-text.txt">Source in Screenplay-Text
+format</a>
+</p>
+</li>
+
+</ul>
+[%- END -%]
+
+[% toc_div( ) %]
+
+<h2 id="licensing">Licensing</h2>
+
+<p>
+All the text in <i>“Terminator: Liberation”</i> is original, and as
+far as
+I’m concerned can be used under the terms of
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">the
+Creative Commons Attribution Noncommercial ShareAlike licence Unported (CC-by-nc-sa)</a>
+(either version 4.0, or at your option any later version), but like I said,
+the situation is more complicated than that.
+</p>
+
+<h2 id="links">Links</h2>
+
+<p>
+TBD.
+</p>
+
+<h2 id="credits">Credits</h2>
+
+<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand">Captioned image: "Emma Watson played Hermione in the Harry Potters but she doesn't need a wand to kick your ass."</a>.
+</p>
+</li>
+
+</ul>
+
+[% PROCESS links_to_judaism_and_israel  %]
+
+<h2 id="coverage">Coverage</h2>
+
+<h2 id="see_also">See Also</h2>
+
+<ul>
+
+<li>
+<p>
+<b>TODO : FILL IN</b>
+</p>
+</li>
+
+</ul>
+
+<h2 id="thanks">Thanks and Acknowledgements</h2>
+
+<p>
+<b>TODO: FILL IN.</b>
+</p>
+
+[% END %]

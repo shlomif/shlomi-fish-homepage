@@ -172,7 +172,7 @@ EOF
 This screenplay, a parody and reflection on
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
 Vampire Slayer</a> (both the movie and the show) and inspired by many
-other sources, is still under work, but is already in a usable state.
+other sources, is still work-in-progress, but is already in a usable state.
 </p>
 EOF
 
@@ -310,6 +310,29 @@ who provide him with many questions, including the million dollar question,
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
 and set in a time of great confusion — not unlike our own.
+</p>
+
+EOF
+        },
+        {
+            id         => 'terminator_liberation',
+            tagline    => "Tell about the Exodus. And the more, the better.",
+            logo_alt   => "“Terminator: Liberation” Logo",
+            logo_class => "terminator_liberation",
+            logo_id    => "terminator_liberation_logo",
+            logo_src =>
+                "humour/Terminator/Liberation/images/terminator_liberation.png",
+            logo_svg =>
+                "humour/Terminator/Liberation/images/terminator_liberation.svg",
+            entry_id   => "terminator--liberation",
+            entry_text => "Terminator: Liberation",
+            href       => "humour/Terminator/Liberation/",
+            abstract   => <<'EOF',
+<p class="terminator_liberation abstract">
+After <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a>
+started a new career as an <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/">an amateur actress</a> and filmed <a href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Selina Mandrake</i></a> starring her,
+she expected her visit to Tel Aviv during Passover (when <a href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place) to be
+exciting and eventful but not dangerous. <b>FILL IN</b>.
 </p>
 
 EOF

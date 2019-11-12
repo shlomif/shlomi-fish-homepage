@@ -215,6 +215,18 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
+                    text => "Terminator: Liberation - A Self-Referntial Parody",
+                    url  => "humour/Terminator/Liberation/",
+                    subs => [
+                        {
+                            text => "Ongoing Text",
+                            url =>
+"humour/Terminator/Liberation/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                    ],
+                },
+                {
                     text => "The Pope Died on Sunday",
                     url  => "humour/Pope/",
                     title =>

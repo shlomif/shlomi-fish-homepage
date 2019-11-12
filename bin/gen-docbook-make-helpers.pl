@@ -149,6 +149,7 @@ foreach my $repo (
     'captioned-image--emma-watson-doesnt-need-a-wand',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
+    'putting-cards-2019-2020',
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',

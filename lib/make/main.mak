@@ -971,6 +971,7 @@ MY_NAME_IS_RINDOLF_SRC = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf.jp
 MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
+DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
 Yo_NSA_DEST = $(T2_POST_DEST)/humour/images/NSA-publish-or-perish.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST)/humour/images/philosophers-princess-bride.svg.webp
@@ -981,7 +982,7 @@ Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST)/humour/images/Every-mighty-Klingon
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST) $(Klingon_Warrior_Sesame_DEST)
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST) $(Klingon_Warrior_Sesame_DEST) $(DnD_lances_cartoon_DEST)
 
 MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
 
@@ -993,6 +994,9 @@ $(Klingon_Warrior_Sesame_DEST): lib/repos/Captioned-Image-Every-mighty-Klingon-W
 
 $(Nothing_Sexier_DEST): lib/repos/Captioned-Image-Nothing-Sexier/Nothing-Sexier.svg.webp
 	$(call COPY)
+
+$(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
+	gm convert $< $@
 
 $(Slp_pinned_it_DEST): lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me--400w.webp
 	$(call COPY)

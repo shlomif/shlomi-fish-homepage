@@ -17,6 +17,7 @@ $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 $(DEST_SPLAY_ST_WeTheLiving): $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
 $(DEST_SPLAY_SummerNSA): $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
+$(DEST_SPLAY_Terminator_Liberation): $(SCREENPLAY_XML_TXT_DIR)/Terminator--Liberation.txt
 $(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
 $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt: $(SCREENPLAY_XML_TXT_DIR)/Buffy--a-Few-Good-Slayers.txt
 $(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt

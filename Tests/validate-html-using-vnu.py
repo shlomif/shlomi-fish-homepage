@@ -93,10 +93,15 @@ class MyTests(vnu_validator.VnuTest):
                 (?: by-others/oded-c/\\S+{ext}
                     |
                 Blue-Rabbit-Log/ideas\\.xhtml
+                    |
+                TheEnemy/The-Enemy-English-v7\\.raw{ext}
                 )
             )
                 |
             (?: me/resumes/Shlomi-Fish-Heb.*? )
+                |
+            (?: open-source/projects/Park-Lisp/
+                park-lisp-informal-spec.raw{ext})
                 |
             (?: work/.*? )
         )$

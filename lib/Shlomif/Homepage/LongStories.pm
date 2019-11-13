@@ -677,10 +677,17 @@ sub render_make_fragment
         }
     }
 
-    path("lib/make/long_stories.mak")
-        ->spew_utf8( @var_decls, "\n", @rules, "\n",
-        "art_slogans_targets: $deps\n\n",
-        );
+    path("lib/make/long_stories.mak")->spew_utf8(
+        @var_decls,
+        "\n",
+        @rules,
+        "\n",
+        "LONG_STORIES__SMALL_LOGO_PNGS = $deps\n\n",
+"LONG_STORIES__SMALL_LOGO_WEBPS = \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n\n",
+        "\$(LONG_STORIES__SMALL_LOGO_WEBPS): %.webp: %.png\n",
+        "\tgm convert \$< \$\@\n\n",
+"art_slogans_targets: \$(LONG_STORIES__SMALL_LOGO_PNGS) \$(LONG_STORIES__SMALL_LOGO_WEBPS)\n\n",
+    );
 }
 
 1;

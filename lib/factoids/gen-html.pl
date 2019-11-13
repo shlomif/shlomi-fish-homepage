@@ -721,7 +721,7 @@ at the NSA</i></a>.
 
 <p>
 Glau is notable for being the first non-fictional and <b>real-life female</b>,
-which is the subject of such facts here.
+who is the subject of such facts here.
 </p>
 
 EOF

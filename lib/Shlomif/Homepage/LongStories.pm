@@ -504,7 +504,8 @@ sub _get_logo_tags
     return [
         sprintf(
             qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,
-            $o->logo_id,  escape_html( _rel_url( $o->logo_src ) ),
+            $o->logo_id,
+            escape_html( _rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
             $o->logo_alt, $o->logo_class,
         ),
     ];

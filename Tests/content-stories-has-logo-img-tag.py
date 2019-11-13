@@ -17,7 +17,7 @@ class MyTests(unittest.TestCase):
         root = etree.HTML(open(input_fn, "rb").read())
         self.assertTrue(len(root.xpath(
             ".//img[@id='selina_mandrake_logo' and " +
-            "@src='images/Green-d10-dice.png']"
+            "@src='images/Green-d10-dice.webp']"
             )) == 1)
 
 

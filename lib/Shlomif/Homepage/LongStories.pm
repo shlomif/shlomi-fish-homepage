@@ -657,6 +657,7 @@ sub render_make_fragment
     my @var_decls;
     my @rules;
     my $deps = '';
+    my $pngs = '';
 
     foreach my $s (@_Stories)
     {
@@ -664,16 +665,30 @@ sub render_make_fragment
         my $logo_src = $s->logo_src;
         my $logo_svg = $s->logo_svg;
 
+        my $m_id = "${uc_id}__SMALL_LOGO_PNG";
+        if ( $logo_src =~ /\.png\z/ )
+        {
+            if ( $uc_id !~ /WE_THE_LIVING_DEAD/ )
+            {
+                push @var_decls, "$m_id = \$(T2_DEST)/$logo_src\n";
+            }
+        }
         if ( $logo_svg ne '//$SKIP' )
         {
-            my $m_id = "${uc_id}__SMALL_LOGO_PNG";
-
-            push @var_decls, "$m_id = \$(T2_DEST)/$logo_src\n";
             push @rules,
 "\$($m_id): \$(T2_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n\n"
                 ,;
 
             $deps .= " \$($m_id)";
+        }
+        else
+        {
+            if (1)
+            {
+                push @rules,
+                    "\$($m_id): \$(T2_SRC_DIR)/$logo_src\n\t\$(call COPY)\n\n",;
+            }
+            $pngs .= " \$($m_id)";
         }
     }
 
@@ -682,7 +697,7 @@ sub render_make_fragment
         "\n",
         @rules,
         "\n",
-        "LONG_STORIES__SMALL_LOGO_PNGS = $deps\n\n",
+        "LONG_STORIES__SMALL_LOGO_PNGS = $deps $pngs\n\n",
 "LONG_STORIES__SMALL_LOGO_WEBPS = \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n\n",
         "\$(LONG_STORIES__SMALL_LOGO_WEBPS): %.webp: %.png\n",
         "\tgm convert \$< \$\@\n\n",

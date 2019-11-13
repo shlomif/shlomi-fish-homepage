@@ -1114,6 +1114,11 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-tt2
 	perl bin/tt-render.pl
 
+T2_jpgs__BASE := $(filter $(T2_POST_DEST)/humour/bits/facts/%.jpg,$(T2_IMAGES_DEST))
+T2_jpgs__webps :=$(T2_jpgs__BASE:%.jpg=%.webp)
+$(T2_jpgs__webps): %.webp: %.jpg
+	gm convert $< $@
+
 T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
 T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
 T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
@@ -1124,7 +1129,7 @@ $(T2_SVGS__MIN): %.min.svg: %.svg
 $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC)
+min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC) $(T2_jpgs__webps)
 
 TEST_TARGETS = Tests/*.{py,t}
 

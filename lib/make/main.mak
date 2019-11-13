@@ -630,7 +630,7 @@ define EXPORT_INKSCAPE_PNG
 	$(OPTIPNG) $@
 endef
 
-include lib/make/long_sories.mak
+include lib/make/long_stories.mak
 
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(T2_DEST)/images/twitter-bird-light-bgs-20.png

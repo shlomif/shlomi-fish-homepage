@@ -677,7 +677,7 @@ sub render_make_fragment
         }
     }
 
-    path("lib/make/long_sories.mak")
+    path("lib/make/long_stories.mak")
         ->spew_utf8( @var_decls, "\n", @rules, "\n",
         "art_slogans_targets: $deps\n\n",
         );

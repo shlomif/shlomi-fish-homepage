@@ -23,16 +23,17 @@ my $art_tree_contents = {
             url  => "art/original-graphics/",
             subs => [
                 {
-                    text => "Back to my Homepage",
-                    url  => "art/bk2hp/",
-                    title =>
-"A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
-                },
-                {
                     text => "Back to my Homepage - 2nd Version",
                     url  => "art/back-to-my-homepage-2nd-ver/",
                     title =>
 "New Version of the Back to my Homepage logo done using Inkscape",
+                },
+                {
+                    skip => 1,
+                    text => "Back to my Homepage",
+                    url  => "art/bk2hp/",
+                    title =>
+"A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
                 },
                 {
                     text => "Linux Banner",

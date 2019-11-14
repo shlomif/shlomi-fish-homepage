@@ -982,13 +982,20 @@ Truly_you_have_DEST = $(T2_POST_DEST)/humour/images/Truly-You-Have.svg.webp
 Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST)/humour/images/Every-mighty-Klingon-Warrior.svg.webp
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
+OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST) $(Klingon_Warrior_Sesame_DEST) $(DnD_lances_cartoon_DEST)
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML) $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(MY_RPF_DEST_PIVOT) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST) $(Klingon_Warrior_Sesame_DEST) $(DnD_lances_cartoon_DEST) $(OPENLY_BIPOLAR_DEST_PIVOT)
 
 MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
 
 $(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
+
+OPENLY_BIPOLAR_SRC_DIR = lib/repos/why-openly-bipolar-people-should-not-be-medicated
+
+$(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENLY_BIPOLAR_DEST_DIR)
+	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
 
 $(Klingon_Warrior_Sesame_DEST): lib/repos/Captioned-Image-Every-mighty-Klingon-Warrior/Every-mighty-Klingon-Warrior.svg.webp
 	$(call COPY)

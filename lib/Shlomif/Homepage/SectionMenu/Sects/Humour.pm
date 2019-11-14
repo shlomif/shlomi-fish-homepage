@@ -215,7 +215,8 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "Terminator: Liberation - A Self-Referntial Parody",
+                    text =>
+                        "Terminator: Liberation - A Self-Referential Parody",
                     url  => "humour/Terminator/Liberation/",
                     subs => [
                         {

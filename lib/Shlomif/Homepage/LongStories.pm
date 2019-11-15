@@ -329,10 +329,15 @@ EOF
             href       => "humour/Terminator/Liberation/",
             abstract   => <<'EOF',
 <p class="terminator_liberation abstract">
-After <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a>
-started a new career as an <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/">an amateur actress</a> and filmed <a href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Selina Mandrake</i></a> starring her,
-she expected her visit to Tel Aviv during Passover (when <a href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place) to be
-exciting and eventful but not dangerous. <b>FILL IN</b>.
+A self-referential parody of the <a
+href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
+franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
+Watson</a> as herself and as the evil terminator Hanna, with <a
+href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
+Schwarzenegger</a> as himself and as the good terminator, that takes place in
+<a href="https://en.wikipedia.org/wiki/Tel_Aviv">Tel Aviv</a> during <a
+href="https://en.wikipedia.org/wiki/Passover">Passover</a> (when <a
+href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place).
 </p>
 
 EOF

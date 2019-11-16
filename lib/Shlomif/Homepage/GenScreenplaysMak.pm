@@ -61,7 +61,8 @@ EOF
             ;
         if ( defined( my $suburl = $d->{suburl} ) )
         {
-            my $target = "\$(DEST_HUMOUR)/$suburl/$doc_base.txt";
+            my $target_bn = $doc->{txt_target_bn} // "$doc_base.txt";
+            my $target    = "\$(DEST_HUMOUR)/$suburl/$target_bn";
             $copy_screenplay_mak .=
 qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
             push @copy_screenplay_mak__targets, $target;

@@ -11,7 +11,6 @@ $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Di
 $(DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 $(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
 $(DEST_SPLAY_ST_WeTheLiving): $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
-$(DEST_SPLAY_SummerNSA): $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
 $(DEST_SPLAY_Terminator_Liberation): $(SCREENPLAY_XML_TXT_DIR)/Terminator--Liberation.txt
 $(DEST__C_BAD_ELEMS_SRC): $(C_BAD_ELEMS_SRC)
 $(DOCBOOK4_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html

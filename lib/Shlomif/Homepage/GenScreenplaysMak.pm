@@ -24,6 +24,7 @@ sub _calc_screenplay_doc_makefile_lines
 
     my @epubs;
     my $copy_screenplay_mak = '';
+    my @copy_screenplay_mak__targets;
 
     foreach my $doc (@$docs)
     {
@@ -60,16 +61,19 @@ EOF
             ;
         if ( defined( my $suburl = $d->{suburl} ) )
         {
+            my $target = "\$(DEST_HUMOUR)/$suburl/$doc_base.txt";
             $copy_screenplay_mak .=
-qq^\$(DEST_HUMOUR)/$suburl/$doc_base.txt: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
+qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
+            push @copy_screenplay_mak__targets, $target;
         }
     }
 
     return +{
-        copy_screenplay_mak => $copy_screenplay_mak,
-        rec                 => $d,
-        lines               => \@ret,
-        epubs               => \@epubs,
+        copy_screenplay_mak          => $copy_screenplay_mak,
+        copy_screenplay_mak__targets => \@copy_screenplay_mak__targets,
+        rec                          => $d,
+        lines                        => \@ret,
+        epubs                        => \@epubs,
     };
 }
 
@@ -109,8 +113,21 @@ EOF
         map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-    path("lib/make/docbook/screenplays-copy-operations.mak")
-        ->spew_utf8( ( map { $_->{copy_screenplay_mak} } @records ) );
+    path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
+        ( map { $_->{copy_screenplay_mak} } @records ),
+        (
+            "SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS = ",
+            join(
+                " ",
+                (
+                    sort    { $a cmp $b }
+                        map { @{ $_->{copy_screenplay_mak__targets} } }
+                        @records
+                )
+            )
+        ),
+        "\n",
+    );
 
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
         ( map { @{ $_->{lines} } } @records ),

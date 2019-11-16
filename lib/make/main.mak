@@ -360,12 +360,11 @@ DEST_SPLAY_BlueRab1 := $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt
 DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 DEST_SPLAY_HUMANITY := $(DEST_HUMOUR)/humanity/Humanity-Movie.txt
 DEST_SPLAY_QOHELETH := $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
-DEST_SPLAY_SELINA := $(DEST_HUMOUR_SELINA)/selina-mandrake-the-slayer.txt
 DEST_SPLAY_SummerNSA := $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-the-nsa.screenplay-text.txt
 DEST_SPLAY_Terminator_Liberation := $(DEST_HUMOUR)/Terminator/Liberation/Terminator--Liberation.screenplay-text.txt
 
 
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_SPLAY_ST_WeTheLiving) $(DEST_SPLAY_SELINA) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_SPLAY_SummerNSA) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH) $(DEST_SPLAY_Terminator_Liberation)
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_SPLAY_ST_WeTheLiving) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_SPLAY_SummerNSA) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH) $(DEST_SPLAY_Terminator_Liberation)
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -1153,6 +1152,7 @@ T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
 
+screenplay_targets: $(SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS)
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets
 

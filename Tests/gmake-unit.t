@@ -34,9 +34,9 @@ sub dest_test
 
     # TEST
     dest_test(
-        'SCREENPLAY_SOURCES_ON_DEST',
+        'SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS',
 'humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
-        "SCREENPLAY_SOURCES_ON_DEST - Qoheleth",
+        "SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS - Qoheleth",
     );
 
     # TEST

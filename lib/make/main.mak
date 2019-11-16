@@ -972,13 +972,16 @@ MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-2
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
 DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
-Holocaust_DEST = $(T2_POST_DEST)/humour/images/Holocaust.webp
-Yo_NSA_DEST = $(T2_POST_DEST)/humour/images/NSA-publish-or-perish.svg.webp
-Philosophers_Pbride_DEST = $(T2_POST_DEST)/humour/images/philosophers-princess-bride.svg.webp
-Nothing_Sexier_DEST = $(T2_POST_DEST)/humour/images/Nothing-Sexier.svg.webp
-Slp_pinned_it_DEST = $(T2_POST_DEST)/humour/images/SLP-excerpt-pinned-it-on-me.webp
-Truly_you_have_DEST = $(T2_POST_DEST)/humour/images/Truly-You-Have.svg.webp
-Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST)/humour/images/Every-mighty-Klingon-Warrior.svg.webp
+
+T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
+
+Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
+Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
+Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
+Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
+Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
+Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
+Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/

@@ -23,6 +23,7 @@ sub _calc_screenplay_doc_makefile_lines
         ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
 
     my @epubs;
+    my $copy_screenplay_mak = '';
 
     foreach my $doc (@$docs)
     {
@@ -57,9 +58,19 @@ sub _calc_screenplay_doc_makefile_lines
 \texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; orig_dir="\$\$PWD"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
+        if ( defined( my $suburl = $d->{suburl} ) )
+        {
+            $copy_screenplay_mak .=
+qq^\$(DEST_HUMOUR)/$suburl/$doc_base.txt: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
+        }
     }
 
-    return +{ rec => $d, lines => \@ret, epubs => \@epubs };
+    return +{
+        copy_screenplay_mak => $copy_screenplay_mak,
+        rec                 => $d,
+        lines               => \@ret,
+        epubs               => \@epubs,
+    };
 }
 
 sub generate
@@ -98,6 +109,9 @@ EOF
         map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
+    path("lib/make/docbook/screenplays-copy-operations.mak")
+        ->spew_utf8( ( map { $_->{copy_screenplay_mak} } @records ) );
+
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
@@ -144,5 +158,4 @@ EOF
 }
 1;
 
-# __END__
-# # Below is stub documentation for your module. You'd better edit it!
+__END__

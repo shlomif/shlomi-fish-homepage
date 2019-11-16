@@ -13,7 +13,6 @@ $(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 $(DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 $(DEST_SPLAY_HUMANITY): $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
 $(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt
-$(DEST_SPLAY_SELINA): $(DEST_HUMOUR_SELINA)/%.txt: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 $(DEST_SPLAY_ST_WeTheLiving): $(SCREENPLAY_XML_TXT_DIR)/Star-Trek--We-the-Living-Dead.txt
 $(DEST_SPLAY_SummerNSA): $(SCREENPLAY_XML_TXT_DIR)/Summerschool-at-the-NSA.txt
 $(DEST_SPLAY_Terminator_Liberation): $(SCREENPLAY_XML_TXT_DIR)/Terminator--Liberation.txt

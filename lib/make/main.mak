@@ -1151,6 +1151,7 @@ TEST_TARGETS = Tests/*.{py,t}
 T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
 
 include lib/make/copies-generated-include.mak
+include lib/make/docbook/screenplays-copy-operations.mak
 
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets

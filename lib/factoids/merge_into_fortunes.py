@@ -27,6 +27,9 @@ FULL_NAMES = {"chuck": "Chuck Norris",
               "nsa": "NSA",
               "taylor-swift": "Taylor Swift", }
 
+ID_IS_FACTOID_RE = re.compile("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$")
+BASENAME_EXTRACT_RE = re.compile('^([a-z_\\-]*)_facts$')
+
 
 class FortunesMerger:
     def __init__(self, input_fn, merge_into_fn):
@@ -38,7 +41,7 @@ class FortunesMerger:
         self.target_list = self.target_root.xpath("./list")[0]
         for targetelem in self.target_root.xpath("./list/fortune"):
             id_ = targetelem.get("id")
-            match = re.match("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$", id_)
+            match = re.match(ID_IS_FACTOID_RE, id_)
             if match:
                 category = match.group(1)
                 idx = int(match.group(2))
@@ -57,7 +60,8 @@ class FortunesMerger:
         if not found_fact:
             return
         facts_basename = re.match(
-            '^([a-z_\\-]*)_facts$', list_id).group(1).replace('_', '-')
+            BASENAME_EXTRACT_RE,
+            list_id).group(1).replace('_', '-')
         fact = found_fact[0]
         facts_to_add = []
         while fact is not None:

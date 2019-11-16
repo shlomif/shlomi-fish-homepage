@@ -10,7 +10,7 @@ versions. This is similar to the
 <a href="http://nostalgia.wikipedia.org/">Nostalgia version</a> of Wikipedia.
 </p>
 
-<h2><a href="http://old-1998-site.shlomifish.org/">1998 Site</a></h2>
+[% WRAPPER h2_section id = "old1998"  title = "1998 Site" href="https://old-1998-site.shlomifish.org/" %]
 
 <p>
 My site at its infancy, around 1998, complete with an animated GIF of the
@@ -18,11 +18,15 @@ Technion hosting, and some broken pages, that would no longer validate as
 HTML, and a Spartan design.
 </p>
 
-<h2><a href="http://old-2005-site-t2.shlomifish.org/">2005 Site</a></h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "old2005"  title = "2005 Site" href="https://old-2005-site-t2.shlomifish.org/" %]
 
 <p>
 My site around 2005.
 </p>
+
+[%- END -%]
 
 [% WRAPPER h2_section id = "old2012"  title = "My site at 2012" href="https://old-2012-site.shlomifish.org/" %]
 
@@ -30,6 +34,7 @@ My site around 2005.
 Xena was the only female subject of my factoids, and I still called Selina
 Mandrake "Selena".
 </p>
+
 [%- END -%]
 
 [% END %]

@@ -9,7 +9,6 @@ $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pop
 $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
 $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-hebrew.txt
 $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
-$(DEST_SPLAY_BlueRab1): $(SCREENPLAY_XML_TXT_DIR)/Blue-Rabbit-Log-part-1.txt
 $(DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 $(DEST_SPLAY_HUMANITY): $(SCREENPLAY_XML_TXT_DIR)/Humanity-Movie.txt
 $(DEST_SPLAY_QOHELETH): $(SCREENPLAY_XML_TXT_DIR)/So-Who-the-Hell-is-Qoheleth.txt

@@ -356,7 +356,6 @@ DEST_HUMOUR_SELINA := $(DEST_HUMOUR)/Selina-Mandrake
 DEST_INTERVIEWS := $(T2_DEST)/open-source/interviews
 DEST_TOWTF := $(DEST_HUMOUR)/TOneW-the-Fountainhead
 
-DEST_SPLAY_BlueRab1 := $(DEST_HUMOUR)/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.txt
 DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 DEST_SPLAY_HUMANITY := $(DEST_HUMOUR)/humanity/Humanity-Movie.txt
 DEST_SPLAY_QOHELETH := $(DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt
@@ -364,7 +363,7 @@ DEST_SPLAY_SummerNSA := $(DEST_HUMOUR)/Summerschool-at-the-NSA/summerschool-at-t
 DEST_SPLAY_Terminator_Liberation := $(DEST_HUMOUR)/Terminator/Liberation/Terminator--Liberation.screenplay-text.txt
 
 
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_SPLAY_ST_WeTheLiving) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_BlueRab1) $(DEST_SPLAY_HHGG_STTNG) $(DEST_SPLAY_SummerNSA) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH) $(DEST_SPLAY_Terminator_Liberation)
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_TOWTF)/TOW_Fountainhead_1.txt $(DEST_TOWTF)/TOW_Fountainhead_2.txt $(DEST_SPLAY_HUMANITY) $(DEST_HUMOUR)/humanity/Humanity-Movie-hebrew.txt $(DEST_SPLAY_ST_WeTheLiving) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_HHGG_STTNG) $(DEST_SPLAY_SummerNSA) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt $(DEST_SPLAY_QOHELETH) $(DEST_SPLAY_Terminator_Liberation)
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt

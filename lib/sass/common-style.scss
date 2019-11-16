@@ -1040,10 +1040,13 @@ div.abstract {
     }
 }
 
-.who_is_qoheleth .screenplay_image {
-    float: none;
-    margin-left: 1em;
-    margin-bottom: 1em;
+.who_is_qoheleth,
+.terminator_liberation {
+    .screenplay_image {
+        float: none;
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
 }
 
 $ss_margin: 2em;

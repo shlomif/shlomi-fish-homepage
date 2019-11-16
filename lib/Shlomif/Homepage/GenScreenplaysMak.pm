@@ -10,12 +10,13 @@ use YAML::XS ();
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $screenplay_vcs_base_dir, $d ) = @_;
+    my ( $screenplay_vcs_base_dir, $record ) = @_;
 
-    my $base        = $d->{base};
-    my $github_repo = $d->{github_repo};
-    my $subdir      = $d->{subdir};
-    my $docs        = $d->{docs};
+    my $base        = $record->{base};
+    my $github_repo = $record->{github_repo};
+    my $subdir      = $record->{subdir};
+    my $docs        = $record->{docs};
+    my $suburl      = $record->{suburl};
 
     my $vcs_dir_var = "${base}__VCS_DIR";
 
@@ -59,7 +60,7 @@ sub _calc_screenplay_doc_makefile_lines
 \texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; orig_dir="\$\$PWD"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
-        if ( defined( my $suburl = $d->{suburl} ) )
+        if ( defined($suburl) )
         {
             my $target_bn = $doc->{txt_target_bn} // "$doc_base.txt";
             my $target    = "\$(DEST_HUMOUR)/$suburl/$target_bn";
@@ -72,7 +73,7 @@ qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
     return +{
         copy_screenplay_mak          => $copy_screenplay_mak,
         copy_screenplay_mak__targets => \@copy_screenplay_mak__targets,
-        rec                          => $d,
+        rec                          => $record,
         lines                        => \@ret,
         epubs                        => \@epubs,
     };

@@ -357,7 +357,7 @@ DEST_INTERVIEWS := $(T2_DEST)/open-source/interviews
 
 DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_SPLAY_ST_WeTheLiving) $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_HHGG_STTNG) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt
+SCREENPLAY_SOURCES_ON_DEST = $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_HHGG_STTNG) $(DEST_HUMOUR)/Buffy/A-Few-Good-Slayers/buffy--a-few-good-slayers.txt
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt

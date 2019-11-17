@@ -73,22 +73,6 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
     }
 }
 
-sub _page_to_obj
-{
-    my ($hash_ref) = @_;
-
-    my $ret;
-    eval { $ret = Shlomif::Homepage::FactoidsPages::Page->new($_); };
-
-    if ($@)
-    {
-        print "Failed at " . $hash_ref->{id_base} . "!\n";
-        die $@;
-    }
-
-    return $ret;
-}
-
 my @chuck_pages = (
     {
         abstract => <<'EOF',
@@ -988,6 +972,22 @@ EOF
     },
 );
 
+sub _page_to_obj
+{
+    my ($hash_ref) = @_;
+
+    my $ret;
+    eval { $ret = Shlomif::Homepage::FactoidsPages::Page->new($hash_ref); };
+
+    if ($@)
+    {
+        print "Failed at " . $hash_ref->{id_base} . "!\n";
+        die $@;
+    }
+
+    return $ret;
+}
+
 # Chuck at the beginning. In Soviet Russia at the end.
 my @pages_proto = ( @chuck_pages, @main_pages, @soviet_pages );
 
@@ -1116,15 +1116,22 @@ my $json_fn = 'lib/Shlomif/factoids-nav.json';
 
 write_on_change_no_utf8( scalar( path($json_fn) ), \$new_json, );
 
-my @content =
-    map {
-    my $id   = $_->id_base;
-    my $path = $_->url_base();
+sub _content__process_page
+{
+    my ($page) = @_;
+
+    my $id   = $page->id_base;
+    my $path = $page->url_base;
     my $pre_incs_path =
         "dest/pre-incs/t2/humour/bits/facts/${path}/index.xhtml";
-    map { +{ 'path' => $pre_incs_path, line => "$pre_incs_path: $_\n" } }
-        @{ $deps{$id} }
-    }
+    return [
+        map { +{ 'path' => $pre_incs_path, line => "$pre_incs_path: $_\n" } }
+            @{ $deps{$id} }
+    ];
+}
+
+my @content =
+    map  { @{ _content__process_page($_) }; }
     sort { $a->short_id cmp $b->short_id } @pages;
 
 path("lib/factoids/deps.mak")

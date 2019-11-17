@@ -11,15 +11,16 @@ use File::Update qw/ write_on_change write_on_change_no_utf8 /;
 use JSON::MaybeXS             ();
 use XML::LibXML               ();
 use XML::LibXML::XPathContext ();
-use XML::Grammar::Fortune 0.0600;
+use XML::Grammar::Fortune 0.0800;
 use Template                               ();
 use Shlomif::Homepage::FactoidsPages::Page ();
 use Carp::Always;
 
 my $p = XML::LibXML->new;
 
-my $xslt_path = XML::Grammar::Fortune->new->dist_path_slot(
-    "to_html_xslt_transform_basename");
+my $fortune_proc = XML::Grammar::Fortune->new;
+my $xslt_path =
+    $fortune_proc->dist_path_slot("to_html_xslt_transform_basename");
 
 my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 
@@ -34,14 +35,17 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 
         my $basename  = "$list_id--$lang";
         my $out_xhtml = "lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
-        system(
-            "xsltproc",      "--output",             "./$out_xhtml",
-            "--stringparam", 'filter-facts-list.id', $list_id,
-            "--stringparam", 'filter.lang',          $lang,
-            $xslt_path,      $facts_xml_path,
+        my $indiv_dom = $fortune_proc->perform_xslt_translation(
+            {
+                output_format => 'html',
+                source        => { dom => $dom },
+                output        => "dom",
+                xslt_params   => {
+                    'filter-facts-list.id' => "'$list_id'",
+                    'filter.lang'          => "'$lang'",
+                }
+            }
         );
-
-        my $indiv_dom = $p->parse_file($out_xhtml);
 
         my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
         $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );

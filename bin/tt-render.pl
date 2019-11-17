@@ -459,19 +459,27 @@ sub proc
 
     mkpath( File::Spec->catdir( @DEST, @fn[ 0 .. $#fn - 1 ] ) );
 
-    $vars->{base_path}           = $base_path;
-    $vars->{fn_path}             = $result;
-    $vars->{raw_fn_path}         = $result =~ s#(\A|/)index\.x?html\z#$1#r;
-    $vars->{leading_path_string} = $myinc->("breadcrumbs-trail");
-    $vars->{html_head_nav_links} = $myinc->("html_head_nav_links");
-    $vars->{shlomif_main_expanded_nav_bar} =
-        $myinc->("shlomif_main_expanded_nav_bar");
-    $vars->{nav_links_without_accesskey} =
-        $myinc->("shlomif_nav_links_renderer-with_accesskey=0");
-    $vars->{nav_links_with_accesskey} =
-        $myinc->("shlomif_nav_links_renderer-with_accesskey=1");
-    $vars->{nav_menu_html}      = $myinc->("main_nav_menu_html");
-    $vars->{sect_nav_menu_html} = $myinc->("sect-navmenu");
+    $vars->{base_path}   = $base_path;
+    $vars->{fn_path}     = $result;
+    $vars->{raw_fn_path} = $result =~ s#(\A|/)index\.x?html\z#$1#r;
+    my $set = sub {
+        my ( $name, $inc ) = @_;
+        $vars->{$name} = $myinc->($inc);
+        return;
+    };
+    $set->( 'leading_path_string',           "breadcrumbs-trail" );
+    $set->( 'html_head_nav_links',           "html_head_nav_links" );
+    $set->( 'shlomif_main_expanded_nav_bar', "shlomif_main_expanded_nav_bar" );
+    $set->(
+        'nav_links_without_accesskey',
+        "shlomif_nav_links_renderer-with_accesskey=0"
+    );
+    $set->(
+        'nav_links_with_accesskey',
+        "shlomif_nav_links_renderer-with_accesskey=1"
+    );
+    $set->( 'nav_menu_html',      "main_nav_menu_html" );
+    $set->( 'sect_nav_menu_html', "sect-navmenu" );
     my $html = '';
     $template->process( "src/$result.tt2", $vars, \$html, binmode => ':utf8', )
         or die $template->error();
@@ -486,25 +494,8 @@ sub proc
     {
         path( File::Spec->catfile( @DEST, @fn, ) )->spew_utf8($html);
     }
-
-=begin removed
-
-        elsif (
-            $basename !~ /~\z/
-            && ( !($basename =~ /\A\./ && $basename =~ /\.swp\z/) )
-            && ($basename ne 'process.pl')
-        )
-        {
-            copy($result->path,
-                File::Spec->catfile(@DEST,
-                    @{$result->dir_components()}, $basename),
-            );
-        }
-=end removed
-
-=cut
-
 }
+
 Parallel::ForkManager::Segmented->new->run(
     {
         items        => \@tt,

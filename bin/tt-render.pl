@@ -419,7 +419,6 @@ sub proc
 {
     my $result = shift;
     $::latemp_filename = $result;
-    my $myinc    = sub { return _inc( $result, shift ); };
     my $basename = basename($result);
     my @fn       = split m#/#, $result;
     my @fn_nav   = @fn;
@@ -464,7 +463,7 @@ sub proc
     $vars->{raw_fn_path} = $result =~ s#(\A|/)index\.x?html\z#$1#r;
     my $set = sub {
         my ( $name, $inc ) = @_;
-        $vars->{$name} = $myinc->($inc);
+        $vars->{$name} = _inc( $result, $inc );
         return;
     };
     $set->( 'leading_path_string',           "breadcrumbs-trail" );

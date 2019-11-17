@@ -1018,18 +1018,18 @@ my $tt2__img_tt_text = <<'END_OF_TEMPLATE';
 END_OF_TEMPLATE
 
 my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
-[% "\[\% BLOCK " %]facts__[% p.short_id() %] [% "\%\]" %]
+[% BLOCK facts__{{ p.short_id() }} %]
 
 <div class="facts_wrap">
-[% "\[\% INCLUDE facts__img__${p.short_id()} \%\]" %]
+[% INCLUDE facts__img__{{ p.short_id() }}%]
 
 <div class="desc">
-[% p.abstract_tt2() %]
+{{ p.abstract_tt2() }}
 </div>
 
 </div>
 
-[% "\[\% END \%\]" %]
+[% END %]
 END_OF_TEMPLATE
 
 foreach my $page (@pages)
@@ -1041,7 +1041,6 @@ foreach my $page (@pages)
     };
 
     # create Template object
-    my $template = Template->new($config);
     my $tt2__template =
         Template->new(
         +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
@@ -1087,7 +1086,7 @@ END_OF_TEMPLATE
     $tt2__template->process( \$tt2__tt_text,     $vars, \$tt2__out ) or die $!;
     $tt2__template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
         or die $!;
-    $template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
+    $tt2__template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
         or die $!;
     $tt2__template->process( \$tt2__main_page_tt, $vars,
         \$tt2__main_page_tag_list )

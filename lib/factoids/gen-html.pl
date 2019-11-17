@@ -18,13 +18,9 @@ use Carp::Always;
 
 my $p = XML::LibXML->new;
 
-my $fortune_proc = XML::Grammar::Fortune->new;
-my $xslt_path =
-    $fortune_proc->dist_path_slot("to_html_xslt_transform_basename");
-
+my $fortune_proc   = XML::Grammar::Fortune->new;
 my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
-
-my $dom = $p->parse_file($facts_xml_path);
+my $dom            = $p->parse_file($facts_xml_path);
 
 my %deps;
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
@@ -34,7 +30,6 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
         my $list_id = $list_node->value;
 
         my $basename  = "$list_id--$lang";
-        my $out_xhtml = "lib/factoids/indiv-lists-xhtmls/$basename.xhtml";
         my $indiv_dom = $fortune_proc->perform_xslt_translation(
             {
                 output_format => 'html',
@@ -66,7 +61,8 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
         my $node =
             $xpc->findnodes("//xhtml:div[\@class='main_facts_list']")->[0];
 
-        my $reduced_xhtml = "$out_xhtml.reduced";
+        my $reduced_xhtml =
+            "lib/factoids/indiv-lists-xhtmls/$basename.xhtml.reduced";
         write_on_change( scalar( path($reduced_xhtml) ),
             \( $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr ) );
         push @{ $deps{$list_id} }, $reduced_xhtml;
@@ -1102,9 +1098,10 @@ write_on_change(
 my $new_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
     [
         map {
+            my $page = $_;
             +{
-                url  => "humour/bits/facts/" . $_->url_base() . "/",
-                text => $_->title(),
+                url  => "humour/bits/facts/" . $page->url_base . "/",
+                text => $page->title,
             }
         } @pages
     ]

@@ -1012,16 +1012,13 @@ my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
 </section>
 END_OF_TEMPLATE
 
-my $tt2__img_tt_text = <<'END_OF_TEMPLATE';
+my $tt2__facts_blocks_tt_text = <<'END_OF_TEMPLATE';
 [% BLOCK facts__img__{{ p.short_id() }} %]
 
 <!-- Taken from {{ p.img_attribution() }} -->
 
 <img src="{{ p.img_src_tt2() }}" alt="{{ p.img_alt() }}" class="{{ p.img_class() }}" />
 [% END %]
-END_OF_TEMPLATE
-
-my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
 [% BLOCK facts__{{ p.short_id() }} %]
 
 <div class="facts_wrap">
@@ -1036,22 +1033,7 @@ my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
 [% END %]
 END_OF_TEMPLATE
 
-foreach my $page (@pages)
-{
-    # some useful options (see below for full list)
-    my $config = {
-        POST_CHOMP => 1,    # cleanup whitespace
-        EVAL_PERL  => 1,    # evaluate Perl code blocks
-    };
-
-    # create Template object
-    my $tt2__template =
-        Template->new(
-        +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
-
-    my $vars = { p => $page, };
-
-    my $tt2__tt_text = <<'END_OF_TEMPLATE';
+my $tt2__tt_text = <<'END_OF_TEMPLATE';
 [% SET title = "{{p.title() }}" %]
 [% SET desc = "{{p.meta_desc()}}" %]
 
@@ -1086,11 +1068,25 @@ foreach my $page (@pages)
 [% END %]
 END_OF_TEMPLATE
 
+foreach my $page (@pages)
+{
+    # some useful options (see below for full list)
+    my $config = {
+        POST_CHOMP => 1,    # cleanup whitespace
+        EVAL_PERL  => 1,    # evaluate Perl code blocks
+    };
+
+    # create Template object
+    my $tt2__template =
+        Template->new(
+        +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
+
+    my $vars = { p => $page, };
+
     my $tt2__out = '';
-    $tt2__template->process( \$tt2__tt_text,     $vars, \$tt2__out ) or die $!;
-    $tt2__template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
-        or die $!;
-    $tt2__template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
+    $tt2__template->process( \$tt2__tt_text, $vars, \$tt2__out ) or die $!;
+    $tt2__template->process( \$tt2__facts_blocks_tt_text, $vars,
+        \$tt2__tags_output )
         or die $!;
     $tt2__template->process( \$tt2__main_page_tt, $vars,
         \$tt2__main_page_tag_list )

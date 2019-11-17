@@ -1009,12 +1009,12 @@ my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
 END_OF_TEMPLATE
 
 my $tt2__img_tt_text = <<'END_OF_TEMPLATE';
-[% "\[\% BLOCK " %]facts__img__[% p.short_id() %] [% "\%\]" %]
+[% BLOCK facts__img__{{ p.short_id() }} %]
 
-<!-- Taken from [% p.img_attribution() %] -->
+<!-- Taken from {{ p.img_attribution() }} -->
 
-<img src="[% p.img_src_tt2() %]" alt="[% p.img_alt() %]" class="[% p.img_class() %]" />
-[% "\[\% END \%\]" %]
+<img src="{{ p.img_src_tt2() }}" alt="{{ p.img_alt() }}" class="{{ p.img_class() }}" />
+[% END %]
 END_OF_TEMPLATE
 
 my $tt2__tag_tt_text = <<'END_OF_TEMPLATE';
@@ -1084,8 +1084,8 @@ foreach my $page (@pages)
 END_OF_TEMPLATE
 
     my $tt2__out = '';
-    $tt2__template->process( \$tt2__tt_text, $vars, \$tt2__out ) or die $!;
-    $template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
+    $tt2__template->process( \$tt2__tt_text,     $vars, \$tt2__out ) or die $!;
+    $tt2__template->process( \$tt2__img_tt_text, $vars, \$tt2__tags_output )
         or die $!;
     $template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
         or die $!;

@@ -1001,9 +1001,9 @@ EOF
 my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
 <section class="h3">
 <header>
-<h3 id="facts-[% p.short_id() %]" class="facts"><a href="[% p.url_base() %]/">[% p.title() %]</a></h3>
+<h3 id="facts-{{ p.short_id() }}" class="facts"><a href="{{ p.url_base() }}/">{{ p.title() }}</a></h3>
 </header>
-[% "\[\% INCLUDE facts__${p.short_id()} \%\]" %]
+{{ "[% INCLUDE facts__${p.short_id()} %]" }}
 
 </section>
 END_OF_TEMPLATE
@@ -1089,7 +1089,8 @@ END_OF_TEMPLATE
         or die $!;
     $template->process( \$tt2__tag_tt_text, $vars, \$tt2__tags_output )
         or die $!;
-    $template->process( \$tt2__main_page_tt, $vars, \$tt2__main_page_tag_list )
+    $tt2__template->process( \$tt2__main_page_tt, $vars,
+        \$tt2__main_page_tag_list )
         or die $!;
     write_on_change(
         scalar( path( "lib/factoids/pages/" . $page->id_base() . '.tt2' ) ),

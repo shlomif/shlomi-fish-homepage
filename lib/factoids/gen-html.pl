@@ -246,8 +246,6 @@ the Vampire Slayer</i></a>, as created by
 Whedon</a> and portrayed by
 <a href="http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>.
 </p>
-
-
 EOF
         id_base => 'buffy_facts',
         img_alt =>

@@ -1000,6 +1000,18 @@ div.abstract {
         .main_title {
             th {
                 background-color: #ccf;
+                a {
+                    text-decoration: none;
+                    &:visited {
+                        color: darkgreen;
+                    }
+                    &:after {
+                        content: "] ";
+                    }
+                    &:before {
+                        content: " [";
+                    }
+                }
             }
         }
 

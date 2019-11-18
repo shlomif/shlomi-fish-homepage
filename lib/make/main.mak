@@ -481,7 +481,7 @@ FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(T2_FORTUNES_DIR)/prepare-xhtml-for-input.pl
 
 $(FORTUNES_SOURCE_WMLS): $(FORTUNES_LIST__DEPS)
-	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_wmls()'
+	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_tt2s();'
 
 $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT)
 	$(PERL) $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@

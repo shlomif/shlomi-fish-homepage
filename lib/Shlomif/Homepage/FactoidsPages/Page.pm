@@ -8,7 +8,7 @@ use MooX qw/late/;
 has [
     'abstract',  'id_base',    'img_alt',        'img_attribution',
     'img_class', 'img_src',    'license_tag',    'license_year',
-    'links_wml', 'meta_desc',  'nav_blocks_wml', 'see_also_wml',
+    'links_wml', 'meta_desc',  'nav_blocks_wml', 'see_also',
     'short_id',  'tabs_title', 'title',          'url_base',
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 my $re = qr#(?:nav_blocks)#;
@@ -33,15 +33,6 @@ sub img_src_tt2
     my ($self) = @_;
 
     return '[% base_path %]' . $self->img_src;
-}
-
-sub see_also_tt2
-{
-    my ($self) = @_;
-
-    my $ret = $self->see_also_wml;
-
-    return _tt2($ret);
 }
 
 sub links_tt2

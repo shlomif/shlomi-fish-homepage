@@ -158,7 +158,7 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -202,19 +202,19 @@ EOF
         meta_desc      => "In Soviet Russia, jokes laugh at you.",
         nav_blocks_wml => <<'EOF',
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris Facts</a> -
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris Facts</a> -
 another popular Internet meme.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/NSA/">NSA facts</a> - more
+<a href="[% base_path %]humour/bits/facts/NSA/">NSA facts</a> - more
 anti-authoritarianism stuff.
 </p>
 </li>
@@ -283,19 +283,19 @@ EOF
 <buffy_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Xena/">Xena Facts</a> - facts about Xena
+<a href="[% base_path %]humour/bits/facts/Xena/">Xena Facts</a> - facts about Xena
 the Warrior Princess (another tough chick).
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Clarissa/">Clarissa Darling Facts</a> - about
+<a href="[% base_path %]humour/bits/facts/Clarissa/">Clarissa Darling Facts</a> - about
 another pre-Buffy heroine.
 </p>
 </li>
@@ -311,14 +311,14 @@ Female Ass-Kickers</a>.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake
+<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake
 - The Slayer</i></a> - my own Buffy parody/anti-thesis/modernisation.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few
+<a href="[% base_path %]humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few
 Good Slayers</i></a> - a work-in-progress screenplay that is a more traditional
 Buffy fanfic. Set in a fork of the Buffy universe, and takes place in 2014/2015
 Sunnydale, where the Scooby Gang are adults, married men and women, parents,
@@ -328,7 +328,7 @@ and teachers/mentors.
 
 <li>
 <p>
-<a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> - another screenplay with a strong Buffy/Sarah Michelle
 Gellar theme.
 </p>
@@ -381,19 +381,19 @@ EOF
 "Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
         nav_blocks_wml => <<'EOF',
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Xena/">Xena Facts</a> -
+<a href="[% base_path %]humour/bits/facts/Xena/">Xena Facts</a> -
 about another pre-Buffy heroine.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
 herself.
 </p>
 </li>
@@ -430,7 +430,7 @@ EOF
 <harry_potter_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -489,7 +489,7 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -536,7 +536,7 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -578,26 +578,26 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <ol>
 
 <li>
 <p>
-<a href="$(ROOT)/humour.html#yo-nsa-publish-or-perish">“Yo
+<a href="[% base_path %]humour.html#yo-nsa-publish-or-perish">“Yo
 NSA, Publish or Perish!”</a> - captioned image by me.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=smg-next-film">“Sarah
+<a href="[% base_path %]humour/fortunes/show.cgi?id=smg-next-film">“Sarah
 Michelle Gellar’s Next Movie”</a> - old fortune cookie.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=kilmo-about-the-NSA">“kilmo
+<a href="[% base_path %]humour/fortunes/show.cgi?id=kilmo-about-the-NSA">“kilmo
 about the NSA”</a> - a sequel to the previous fortune cookie.
 </p>
 </li>
@@ -621,19 +621,19 @@ to yourself is a recipe for disaster.
 <li>
 
 <p>
-<a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i> - a screenplay</a>:
 </p>
 
 <blockquote>
 
-<: Shlomif::Homepage::LongStories->render_abstract('summerschool_at_the_nsa'); :>
+[% long_stories__calc_abstract(id => 'summerschool_at_the_nsa') %]
 
 </blockquote>
 
 </li>
 
-<li_SummerNSA_hashtag />
+[% PROCESS li_SummerNSA_hashtag %]
 
 <li>
 <p>
@@ -644,7 +644,7 @@ Why Summer Glau Will Be The Next Warrior Queen</a>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>
 </p>
 </li>
 
@@ -724,7 +724,7 @@ EOF
 <xkcd_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -766,7 +766,7 @@ EOF
 "Factoids about Taylor Swift, the singer-songwriter and entertainer",
         nav_blocks_wml => <<'EOF',
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -806,7 +806,7 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -857,33 +857,33 @@ EOF
         meta_desc      => "Factoids about Xena, the Warrior Princess",
         nav_blocks_wml => <<'EOF',
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <ul>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Clarissa/">Clarissa Darling Facts</a> - about
+<a href="[% base_path %]humour/bits/facts/Clarissa/">Clarissa Darling Facts</a> - about
 another pre-Buffy heroine.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
+<a href="[% base_path %]humour/bits/facts/Buffy/">Buffy Facts</a> - facts about Buffy
 herself.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Additions to
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Additions to
 Chuck Norris Facts</a> - more toughness.
 </p>
 </li>
 
 <li>
 <p>
-<a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> - about
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> - about
 a real-life female.
 </p>
 </li>
@@ -949,7 +949,7 @@ EOF
 <foss_nav_block />
 </nav_blocks>
 EOF
-        see_also_wml => <<'EOF',
+        see_also => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -1050,7 +1050,7 @@ my $tt2__tt_text = <<'END_OF_TEMPLATE';
 
 <h2 id="see_also">See Also</h2>
 
-{{ p.see_also_tt2() }}
+{{ p.see_also() }}
 
 {{ p.nav_blocks_tt2() }}
 

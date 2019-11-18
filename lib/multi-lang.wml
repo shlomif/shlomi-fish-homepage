@@ -1,9 +1,0 @@
-<set-var shlomif_lang="en" />
-
-<define-tag he endtag="required">
-<ifeq "<get-var shlomif_lang />" "he" "%body" "" />
-</define-tag>
-
-<define-tag en endtag="required">
-<ifeq "<get-var shlomif_lang />" "en" "%body" "" />
-</define-tag>

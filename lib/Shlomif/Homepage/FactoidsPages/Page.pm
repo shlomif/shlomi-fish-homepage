@@ -32,9 +32,7 @@ sub img_src_tt2
 {
     my ($self) = @_;
 
-    my $ret = $self->img_src;
-
-    return _tt2($ret);
+    return '[% base_path %]' . $self->img_src;
 }
 
 sub see_also_tt2

@@ -98,8 +98,8 @@ EOF
         img_alt => "Photo of Chuck Norris from the English Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
-        img_class => "facts_logo chuck_norris",
-        img_src => "\$(ROOT)/humour/bits/facts/images/chuck-norris-1-150w.webp",
+        img_class    => "facts_logo chuck_norris",
+        img_src      => "humour/bits/facts/images/chuck-norris-1-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2010",
         links_wml    => <<'EOF',
@@ -183,10 +183,9 @@ EOF
         img_alt => "Soviet Russia",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
-        img_class => "facts_logo in_soviet_russia",
-        img_src =>
-            "\$(ROOT)/humour/bits/facts/images/soviet-union-modified.min.svg",
-        license_tag  => "cc_by_sa_british_blurb",
+        img_class   => "facts_logo in_soviet_russia",
+        img_src     => "humour/bits/facts/images/soviet-union-modified.min.svg",
+        license_tag => "cc_by_sa_british_blurb",
         license_year => "2013",
         links_wml    => <<'EOF',
 <ul>
@@ -248,8 +247,7 @@ EOF
 "Photo of Buffy Summers from the show DVD via the English Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
         img_class       => "facts_logo buffy",
-        img_src =>
-"\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.webp",
+        img_src => "humour/bits/facts/images/SMG-as-buffy-from-wikipedia.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2013",
         links_wml    => <<'EOF',
@@ -359,7 +357,7 @@ EOF
         img_attribution =>
 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
         img_class    => "facts_logo clarissa",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/clarissa-150w.webp",
+        img_src      => "humour/bits/facts/images/clarissa-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2013",
         links_wml    => <<'EOF',
@@ -416,7 +414,7 @@ EOF
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
         img_class    => "facts_logo emma_watson",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/emwatson-small.webp",
+        img_src      => "humour/bits/facts/images/emwatson-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2014",
         links_wml    => <<'EOF',
@@ -462,7 +460,7 @@ EOF
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg',
         img_class    => "facts_logo knuth",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/knuth-small.webp",
+        img_src      => "humour/bits/facts/images/knuth-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2002",
         links_wml    => <<'EOF',
@@ -516,7 +514,7 @@ EOF
         img_alt => "Larry Wall",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
-        img_src      => "\$(ROOT)/humour/bits/facts/images/lwall-150w.webp",
+        img_src      => "humour/bits/facts/images/lwall-150w.webp",
         img_class    => "facts_logo larry_wall",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2007",
@@ -564,7 +562,7 @@ EOF
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
         img_class    => "facts_logo nsa",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/nsa-150w.png",
+        img_src      => "humour/bits/facts/images/nsa-150w.png",
         license_tag  => "cc_by_british_blurb",
         license_year => "2013",
         links_wml    => <<'EOF',
@@ -710,7 +708,7 @@ EOF
         img_attribution =>
 'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',
         img_class    => "facts_logo summer_glau",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/sglau-150w.webp",
+        img_src      => "humour/bits/facts/images/sglau-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2014",
         links_wml    => <<'EOF',
@@ -750,7 +748,7 @@ EOF
         img_attribution =>
             'https://en.wikipedia.org/wiki/File:TaylorSwiftApr09.jpg',
         img_class    => "facts_logo taylor_swift",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/tayswift-small.webp",
+        img_src      => "humour/bits/facts/images/tayswift-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2019",
         links_wml    => <<'EOF',
@@ -796,7 +794,7 @@ EOF
         img_attribution =>
             'https://openclipart.org/detail/230426/snail-silhouette',
         img_class    => "facts_logo windows_update",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/snail.min.svg",
+        img_src      => "humour/bits/facts/images/snail.min.svg",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2016",
         links_wml    => <<'EOF',
@@ -840,7 +838,7 @@ EOF
         img_attribution =>
 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
         img_class    => "facts_logo xena",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/xena-small.webp",
+        img_src      => "humour/bits/facts/images/xena-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2009",
         links_wml    => <<'EOF',
@@ -923,7 +921,7 @@ EOF
         img_attribution =>
 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
         img_class    => "facts_logo xslt",
-        img_src      => "\$(ROOT)/humour/bits/facts/images/XSLT.min.svg",
+        img_src      => "humour/bits/facts/images/XSLT.min.svg",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2009",
         links_wml    => <<'EOF',

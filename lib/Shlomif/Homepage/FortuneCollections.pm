@@ -5,7 +5,7 @@ use warnings;
 use 5.014;
 use utf8;
 
-use Shlomif::Homepage::FortuneCollections::Record;
+use Shlomif::Homepage::FortuneCollections::Record ();
 
 use Carp;
 use List::Util qw(max);

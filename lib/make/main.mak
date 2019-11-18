@@ -44,7 +44,7 @@ NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
 
 SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
 
-DOCS_COMMON_DEPS = lib/template.wml $(NAV_DATA_DEP)
+DOCS_COMMON_DEPS = $(NAV_DATA_DEP)
 
 FORTUNES_DIR = humour/fortunes
 T2_FORTUNES_DIR = $(T2_SRC_DIR)/$(FORTUNES_DIR)
@@ -474,8 +474,6 @@ T2_DEST_HTMLS_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
 include lib/make/factoids.mak
-
-# The touch is to make sure we compile the .html.wml again.
 
 FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(T2_FORTUNES_DIR)/prepare-xhtml-for-input.pl

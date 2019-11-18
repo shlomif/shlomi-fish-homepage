@@ -55,7 +55,7 @@ sub dest_test
         "found a file" );
 
     # TEST
-    gmake_test( 'T2_POST_DIRS_DEST', "$T2_POST_DEST/art/original-graphics",
+    gmake_test( 'SRC_POST_DIRS_DEST', "$T2_POST_DEST/art/original-graphics",
         "found a dir" );
 
     # TEST

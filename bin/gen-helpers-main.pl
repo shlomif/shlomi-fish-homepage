@@ -9,6 +9,95 @@ use File::Which qw/ which /;
 use Path::Tiny qw/ path /;
 use List::MoreUtils ();
 
+package Shlomif::Homepage::GenMakeHelpers;
+
+use parent 'HTML::Latemp::GenMakeHelpers';
+
+sub place_files_into_buckets
+{
+    my ( $self, $host, $files, $buckets ) = @_;
+
+FILE_LOOP:
+    foreach my $f (@$files)
+    {
+        foreach my $bucket (@$buckets)
+        {
+            if ( $bucket->{'filter'}->($f) )
+            {
+                if ( $host->{'id'} eq "common" )
+                {
+                    $self->_common_buckets->{ $bucket->{name} }->{$f} = 1;
+                }
+
+                if (
+                    ( $host->{'id'} eq "common" )
+                    || (
+                        !(
+                            $bucket->{'filter_out_common'} && exists(
+                                $self->_common_buckets->{ $bucket->{name} }
+                                    ->{$f}
+                            )
+                        )
+                    )
+                    )
+                {
+                    push @{ $bucket->{'results'} }, $bucket->{'map'}->($f);
+                }
+
+                next FILE_LOOP;
+            }
+        }
+        if ( $host->id ne 't2' )
+        {
+            die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
+                {
+                    'file' => $f,
+                    'host' => $host->id(),
+                }
+            );
+        }
+    }
+}
+
+sub get_initial_buckets
+{
+    my $self = shift;
+    my $host = shift;
+    print $host->source_dir;
+    my $is_t2 = $host->source_dir eq 't2';
+
+    return [
+        {
+            'name'   => "IMAGES",
+            'filter' => sub {
+                my $fn = shift;
+                return ( $fn !~ /\.(?:tt2|ttml|wml)\z/ )
+                    && ( -f $self->_make_path( $host, $fn ) );
+            },
+        },
+        {
+            'name'   => "DIRS",
+            'filter' => sub {
+                my $fn = shift;
+                return ( -d $self->_make_path( $host, $fn )
+                        and ( $is_t2 ? ( !-d ( 'src/' . $fn ) ) : 1 ) );
+            },
+            filter_out_common => 1,
+        },
+        {
+            'name'   => "DOCS",
+            'filter' => sub {
+                return shift() =~ /\.x?html\.tt2\z/;
+            },
+            'map' => sub {
+                return shift() =~ s#\.tt2\z##r;
+            },
+        },
+    ];
+}
+
+package main;
+
 sub _exec
 {
     my ( $cmd, $err ) = @_;
@@ -129,15 +218,18 @@ while ( my $next = $iter->() )
         push @tt, $s;
     }
 }
-my $generator = HTML::Latemp::GenMakeHelpers->new(
+
+my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     'hosts' => [
         map {
+            my $dir      = $_;
+            my $dest_dir = ( ( $dir eq 'src' ) ? 't2' : $dir );
             +{
-                'id'         => $_,
-                'source_dir' => $_,
-                'dest_dir'   => "\$(ALL_DEST_BASE)/$_"
+                'id'         => $dir,
+                'source_dir' => $dir,
+                'dest_dir'   => "\$(ALL_DEST_BASE)/$dest_dir",
             }
-        } (qw(common t2))
+        } (qw(common src t2))
     ],
     out_dir                    => $DIR,
     filename_lists_post_filter => sub {
@@ -164,7 +256,6 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
                     return [
                         sort keys %{
                             +{
-                                %src_dirs,
                                 map { $_ => 1 } @{ $ipp_filter->($filenames) }
                             }
                         }
@@ -179,14 +270,26 @@ my $generator = HTML::Latemp::GenMakeHelpers->new(
     },
 );
 
-$generator->process_all();
-
+eval { $generator->process_all(); };
+if ( my $Err = $@ )
+{
+    require Data::Dumper;
+    print Data::Dumper->new( [$Err] )->Dump;
+    die $Err;
+}
 my $r_fh = path("$DIR/rules.mak");
 my $text = $r_fh->slurp_utf8;
+my $H    = qr/SRC|T2/;
 $text =~
-s#^(\$\(T2_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call T2_INCLUDE_WML_RENDER)#ms
+s#^(\$\(($H)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_WML_RENDER)#gms
     or die "Cannot subt";
-$text =~ s#(T2_IMAGES_DEST\b[^\n]*?)\$\(T2_DEST\)#${1}\$(T2_POST_DEST)#gms
+$text =~ s#(($H)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
+    or die "Cannot subt";
+$text =~ s#^(T2_COMMON_(?:DIRS|IMAGES)_DEST =)[^\n]*(\n)#${1}${2}#gms
+    or die "Cannot subt";
+$text =~ s#^\$\(T2_DEST\):\n(?: [^\n]+\n)*##gms
+    or die "Cannot subt";
+$text =~ s#\.wml#.tt2#gms
     or die "Cannot subt";
 {
     my $needle = 'cp -f $< $@';

@@ -9,6 +9,7 @@ sub _exec
 
     if ( system(@$cmd) )
     {
+        print "@$cmd\n";
         die $err;
     }
     return;

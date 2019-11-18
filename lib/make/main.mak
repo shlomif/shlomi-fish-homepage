@@ -3,6 +3,7 @@ DEV = 0
 
 DEV_WML_FLAGS :=
 T2_POST_DEST = dest/post-incs/t2
+SRC_POST_DEST = $(T2_POST_DEST)
 
 ifeq ($(DEV),1)
 	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1
@@ -28,7 +29,9 @@ include lib/make/rules.mak
 
 BK2HP_SVG_SRC := $(T2_SRC_DIR)/$(BK2HP_SVG_BASE)
 
+SRC_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(SRC_DIRS))
 T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
+SRC_TARGETS += $(SRC_POST_DIRS_DEST)
 T2_TARGETS += $(T2_POST_DIRS_DEST)
 
 LATEMP_WML_FLAGS += $(DEV_WML_FLAGS)
@@ -52,7 +55,7 @@ SRC_FORTUNES_DIR = src/$(FORTUNES_DIR)
 
 include $(T2_FORTUNES_DIR)/fortunes-list.mak
 
-T2_ALL_DIRS_DEST = $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
+T2_ALL_DIRS_DEST = $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
 PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
@@ -93,7 +96,7 @@ T2_CLEAN_STAMP = lib/cache/STAMP.post-dest
 
 T2_CACHE_PREF = lib/cache/combined/t2
 
-GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(T2_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
+GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(SRC_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
 
 $(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"
@@ -104,11 +107,11 @@ sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
 
 site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 
-$(T2_POST_DIRS_DEST): %:
+$(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST): %:
 	mkdir -p $@
 	touch $@
 
-make-dirs: $(T2_POST_DIRS_DEST)
+make-dirs: $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST)
 
 make-dirs: $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS)
 
@@ -194,7 +197,7 @@ upload_hostgator: upload_deps
 $(T2_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(T2_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
-T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))
+SRC_DOCS_SRC = $(patsubst $(SRC_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
 
 t2_filt_file = $(filter $(T2_DEST)/$1,$(T2_DOCS_DEST))
 t2_filt = $(filter $(T2_DEST)/$1/%,$(T2_DOCS_DEST))

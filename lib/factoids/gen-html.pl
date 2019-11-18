@@ -102,7 +102,7 @@ EOF
         img_src      => "humour/bits/facts/images/chuck-norris-1-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2010",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -129,7 +129,7 @@ Turns 73</a> (again).
 <li>
 <p>
 <a
-href="$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
+href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
 all the Cards on the Table (2013)”</a> (also by me) - mentions what is the
 second major battle that Chuck Norris lost.
 </p>
@@ -139,7 +139,7 @@ second major battle that Chuck Norris lost.
 <li>
 <p>
 <a
-href="$(ROOT)/philosophy/philosophy/putting-cards-on-the-table-2019-2020/">“Putting
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/">“Putting
 Cards on the Table (2019-2020)”</a> (also by me) - additional update on
 Chuck Norris and the facts.
 </p>
@@ -187,7 +187,7 @@ EOF
         img_src     => "humour/bits/facts/images/soviet-union-modified.min.svg",
         license_tag => "cc_by_sa_british_blurb",
         license_year => "2013",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -250,7 +250,7 @@ EOF
         img_src => "humour/bits/facts/images/SMG-as-buffy-from-wikipedia.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2013",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -360,7 +360,7 @@ EOF
         img_src      => "humour/bits/facts/images/clarissa-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2013",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -417,10 +417,10 @@ EOF
         img_src      => "humour/bits/facts/images/emwatson-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2014",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
-<emma_watson_common_links />
+[% PROCESS emma_watson_common_links  %]
 
 </ul>
 EOF
@@ -463,7 +463,7 @@ EOF
         img_src      => "humour/bits/facts/images/knuth-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2002",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -518,7 +518,7 @@ EOF
         img_class    => "facts_logo larry_wall",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2007",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -565,7 +565,7 @@ EOF
         img_src      => "humour/bits/facts/images/nsa-150w.png",
         license_tag  => "cc_by_british_blurb",
         license_year => "2013",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -711,10 +711,10 @@ EOF
         img_src      => "humour/bits/facts/images/sglau-150w.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2014",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
-<summer_glau_common_links />
+[% PROCESS summer_glau_common_links %]
 
 </ul>
 EOF
@@ -751,7 +751,7 @@ EOF
         img_src      => "humour/bits/facts/images/tayswift-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2019",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -797,7 +797,7 @@ EOF
         img_src      => "humour/bits/facts/images/snail.min.svg",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2016",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 EOF
         meta_desc =>
 "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
@@ -841,7 +841,7 @@ EOF
         img_src      => "humour/bits/facts/images/xena-small.webp",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2009",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -924,7 +924,7 @@ EOF
         img_src      => "humour/bits/facts/images/XSLT.min.svg",
         license_tag  => "cc_by_sa_british_blurb",
         license_year => "2009",
-        links_wml    => <<'EOF',
+        links_tt2    => <<'EOF',
 <ul>
 
 <li>
@@ -936,7 +936,7 @@ refers to several resources.
 
 <li>
 <p>
-<a href="$(ROOT)/open-source/anti/SOAP/">“Links against SOAP”</a>
+<a href="[% base_path %]open-source/anti/SOAP/">“Links against SOAP”</a>
 - links to resources about a really evil XML technology.
 </p>
 </li>

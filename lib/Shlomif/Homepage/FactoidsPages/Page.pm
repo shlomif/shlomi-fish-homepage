@@ -28,13 +28,6 @@ s#<(li_SummerNSA_hashtag|summer_glau_common_links|rindolf_floaty_img|w2l_devel_t
     #egmrs;
 }
 
-sub abstract_tt2
-{
-    my $self = shift;
-
-    return _tt2( $self->abstract =~ s/%%/%/gr );
-}
-
 sub img_src_tt2
 {
     my ($self) = @_;

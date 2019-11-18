@@ -236,7 +236,7 @@ my @main_pages = (
 Facts about
 <a href="http://buffy.wikia.com/wiki/Buffy_Summers">Buffy Summers</a>,
 the main protagonist of the television show
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%%28TV_series%%29"><i>Buffy
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29"><i>Buffy
 the Vampire Slayer</i></a>, as created by
 <a href="http://en.wikipedia.org/wiki/Joss_Whedon">Joss
 Whedon</a> and portrayed by
@@ -353,8 +353,6 @@ Explains It All</i></a>, as created by
 and played by
 <a href="http://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a>.
 </p>
-
-
 EOF
         id_base => "clarissa_facts",
         img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
@@ -411,7 +409,7 @@ EOF
     },
     {
         abstract => <<'EOF',
-<emma_watson_intro_text />
+[% PROCESS emma_watson_intro_text %]
 EOF
         id_base => "emma_watson_facts",
         img_alt => "Photo of Emma Watson from the Wikipedia",
@@ -447,7 +445,8 @@ EOF
     {
         abstract => <<'EOF',
 <p>
-<a href="http://www-cs-staff.stanford.edu/~uno/">Don Knuth</a> is a professor
+<a href="http://www-cs-staff.stanford.edu/~uno/">Don Knuth</a> (born
+1938) is a professor
 Emeritus of Computer Science at Stanford University, and is the creator
 of <a href="http://en.wikipedia.org/wiki/TeX">TeX</a>, inventor of several
 important algorithms and author of
@@ -505,14 +504,13 @@ EOF
     {
         abstract => <<'EOF',
 <p>
-<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> is the
+<a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a> (born
+1954) is the
 creator of the Perl programming language, and the inventor of the
-<a href="http://en.wikipedia.org/wiki/Patch_%%28Unix%%29">patch program</a>,
+<a href="http://en.wikipedia.org/wiki/Patch_%28Unix%29">patch program</a>,
 and of the <a href="https://en.wikipedia.org/wiki/Rn_(newsreader)">rn
 newsreader</a>. These facts illustrate his “hacky” (= rule bending) awesomeness.
 </p>
-
-
 EOF
         id_base => "larry_wall_facts",
         img_alt => "Larry Wall",
@@ -697,7 +695,7 @@ Television series <i>The Sarah Connor Chronicles</i>. She
 is also notable for being featured in the online comics,
 <a href="https://en.wikipedia.org/wiki/Xkcd">xkcd</a>, and for being featured
 as a fictional version of herself in the realistic, political, fan-fiction,
-screenplay, <a href="$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool
+screenplay, <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a>.
 </p>
 
@@ -836,7 +834,6 @@ was created.
 I recall watching the show and enjoying it, though I found it a little silly.
 I also found the character of Xena to be more comical than strong.
 </p>
-
 EOF
         id_base => "xena_facts",
         img_alt => "Photo of Xena, the Warrior Princess",
@@ -916,7 +913,7 @@ These facts illustrate how <b>evil</b> XSLT (supposedly) is.
 <p>
 I think XSLT
 has many legitimate uses and can be pretty sweet, but
-<a href="$(ROOT)/humour/fortunes/show.cgi?id=sharp-sharp-programming-why-XSLT-is-so-evil">an
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-why-XSLT-is-so-evil">an
 IRC conversation we had on ##programming</a> started this meme and it
 seems cool.
 </p>
@@ -1019,7 +1016,7 @@ my $tt2__facts_blocks_tt_text = <<'END_OF_TEMPLATE';
 [% INCLUDE facts__img__{{ p.short_id() }}%]
 
 <div class="desc">
-{{ p.abstract_tt2() }}
+{{ p.abstract() }}
 </div>
 
 </div>

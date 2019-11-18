@@ -203,53 +203,7 @@ t2_filt_file = $(filter $(T2_DEST)/$1,$(T2_DOCS_DEST))
 t2_filt = $(filter $(T2_DEST)/$1/%,$(T2_DOCS_DEST))
 t2_src_filt = $(filter $(T2_SRC_DIR)/$1/%,$(T2_DOCS_SRC))
 
-T2_PHILOSOPHY_DOCS = \
-	$(call t2_filt,philosophy) \
-	$(call t2_filt,prog-evolution) \
-	$(call t2_filt,DeCSS)
-
-$(T2_PHILOSOPHY_DOCS): %: $(PHILOSOPHY_DEPS)
-
-T2_LECTURES_DOCS_SRC = $(call t2_src_filt,lecture/)
-
-$(T2_LECTURES_DOCS_SRC): $(T2_SRC_DIR)/lecture/%.wml: $(LECTURES_DEPS)
-	touch $@
-
-T2_SOFTWARE_DOCS_SRC = $(call t2_src_filt,open-source) \
-					   $(call t2_src_filt,jmikmod) \
-					   $(call t2_src_filt,grad-fu) \
-					   $(call t2_src_filt,no-ie) \
-					   $(call t2_src_filt,rindolf) \
-					   $(call t2_src_filt,rwlock)
-
-$(T2_SOFTWARE_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(SOFTWARE_DEPS)
-	touch $@
-
 #### Humour thing
-
-T2_HUMOUR_DOCS_DEST = \
-	$(call t2_filt,humour) \
-	$(call t2_filt_file,humour.html) \
-	$(call t2_filt_file,humour-heb.html) \
-	$(call t2_filt_file,wysiwyt.html) \
-	$(call t2_filt_file,wonderous.html)
-
-$(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
-
-T2_ART_DOCS_DEST = $(call t2_filt,art)
-
-$(T2_ART_DOCS_DEST): $(ART_DEPS)
-
-T2_PUZZLES_DOCS_SRC = $(call t2_src_filt,puzzles) $(call t2_src_filt,MathVentures) $(filter $(T2_SRC_DIR)/toggle.html.wml,$(T2_DOCS_SRC))
-
-$(T2_PUZZLES_DOCS_SRC): $(T2_SRC_DIR)/%.wml: $(PUZZLES_DEPS)
-	touch $@
-
-T2_META_DOCS_DEST = $(call t2_filt,meta)
-
-$(T2_META_DOCS_DEST): $(META_SUBSECT_DEPS)
-
-$(T2_HUMOUR_DOCS_DEST): $(HUMOUR_DEPS)
 
 rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl

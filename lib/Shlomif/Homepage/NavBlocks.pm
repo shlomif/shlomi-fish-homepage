@@ -13,10 +13,10 @@ our @EXPORT_OK = (
         )
 );
 
-use Shlomif::Homepage::NavBlocks::LocalLink;
-use Shlomif::Homepage::NavBlocks::GitHubLink;
-use Shlomif::Homepage::NavBlocks::FacebookLink;
-use Shlomif::Homepage::NavBlocks::ShlomifWikiLink;
+use Shlomif::Homepage::NavBlocks::LocalLink       ();
+use Shlomif::Homepage::NavBlocks::GitHubLink      ();
+use Shlomif::Homepage::NavBlocks::FacebookLink    ();
+use Shlomif::Homepage::NavBlocks::ShlomifWikiLink ();
 
 sub _l
 {
@@ -387,7 +387,7 @@ my %table_blocks = (
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('xkcd_facts'),
             ],
-        },
+        }
     ),
 );
 

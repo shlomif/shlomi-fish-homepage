@@ -39,6 +39,10 @@ my $meta_tree_contents = {
             ],
         },
         {
+            text => "Navigation Blocks",
+            url  => "meta/nav-blocks/blocks/",
+        },
+        {
             text  => "Copyrights Terms",
             title => "Copyright Terms of my site",
             url   => "meta/copyrights/",

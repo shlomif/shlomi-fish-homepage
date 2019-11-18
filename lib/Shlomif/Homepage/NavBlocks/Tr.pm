@@ -19,13 +19,15 @@ sub collect_local_links
 
 sub render
 {
-    my ( $self, $r ) = @_;
+    my ( $self, $args ) = @_;
+
+    my $r = $args->{renderer};
 
     return join '', map { "$_\n" } "<tr>",
         sprintf( qq{<td><b>%s</b></td>}, $self->title ),
         "<td>",
         "<ul>",
-        ( map { $r->render($_) } @{ $self->items } ),
+        ( map { $r->render( { %$args, obj => $_ } ) } @{ $self->items } ),
         "</ul>",
         "</td>",
         "</tr>",

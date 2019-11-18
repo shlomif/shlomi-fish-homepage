@@ -8,6 +8,13 @@ extends('Shlomif::Homepage::NavBlocks::Thingy');
 
 has 'title' => ( is => 'ro', isa => "Str", required => 1 );
 
+sub title_html
+{
+    my ( $self, $args ) = @_;
+
+    return $self->title;
+}
+
 sub collect_local_links
 {
     my $self = shift;
@@ -17,11 +24,11 @@ sub collect_local_links
 
 sub render
 {
-    my ( $self, $r ) = @_;
+    my ( $self, $args ) = @_;
 
     return join '',
         map { "$_\n" } sprintf( q{<tr class="%s">}, $self->css_class ),
-        sprintf( qq{<th colspan="2">%s</th>}, $self->title ),
+        sprintf( qq{<th colspan="2">%s</th>}, $self->title_html($args) ),
         "</tr>",
         ;
 }

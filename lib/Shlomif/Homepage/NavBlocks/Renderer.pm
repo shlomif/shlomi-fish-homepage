@@ -3,6 +3,7 @@ package Shlomif::Homepage::NavBlocks::Renderer;
 use strict;
 use warnings;
 use MooX (qw( late ));
+use Carp::Always;
 
 extends('Exporter');
 
@@ -23,9 +24,9 @@ sub render
 
 sub _non_cached_render
 {
-    my ( $self, $thingy ) = @_;
+    my ( $self, $args ) = @_;
 
-    return $thingy->render($self);
+    return $args->{'obj'}->render( { renderer => $self, %$args } );
 }
 
 1;

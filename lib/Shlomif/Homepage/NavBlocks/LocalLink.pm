@@ -16,7 +16,8 @@ has [
         )
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
-has 'title' => ( is => 'ro', isa => 'Str' );
+has 'title'   => ( is => 'ro', isa => 'Str' );
+has 'no_wrap' => ( is => 'ro', isa => 'Bool', defualt => '', );
 
 sub collect_local_links
 {
@@ -25,21 +26,36 @@ sub collect_local_links
     return [ $self->path ];
 }
 
+sub _li_p_wrap
+{
+    my ( $self, $text ) = @_;
+
+    return $self->no_wrap ? $text : "<li><p>$text</p></li>";
+}
+
 sub render
 {
-    my ( $self, $r ) = @_;
+    my ( $self, $args ) = @_;
 
+    return $self->_li_p_wrap( $self->_render_helper($args) );
+}
+
+sub _render_helper
+{
+    my ( $self, $args ) = @_;
+
+    my $r         = $args->{renderer};
     my $normalize = sub { return shift =~ s#/index\.x?html\z#/#gr };
 
     if ( $normalize->( $self->path ) eq $normalize->( _path_info() ) )
     {
-        return sprintf( q#<li><p><strong class="current">%s</strong></p></li>#,
+        return sprintf( q#<strong class="current">%s</strong>#,
             $self->inner_html(), );
     }
     else
     {
         return sprintf(
-            q#<li><p><a href="%s">%s</a></p></li>#,
+            q#<a href="%s">%s</a>#,
             escape_html( _rel_url( $self->path ) ),
             $self->inner_html(),
         );

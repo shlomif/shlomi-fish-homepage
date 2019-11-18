@@ -1,0 +1,17 @@
+[%- SET title = "Shlomi Fish’s Homesite’ Navigation Blocks" -%]
+[%- SET desc = "Shlomi Fish’s Homesite’ Navigation Blocks" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS buffy_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
+[% PROCESS foss_nav_block  %]
+[% PROCESS politics_nav_block  %]
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS xkcd_nav_block  %]
+
+[%- END -%]
+
+[% END %]

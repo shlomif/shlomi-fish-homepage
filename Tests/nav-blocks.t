@@ -15,6 +15,7 @@ use NavDataRender;
 
 use Shlomif::Homepage::NavBlocks::Renderer;
 use Shlomif::Homepage::NavBlocks;
+use Shlomif::Homepage::NavBlocks::TableBlock;
 
 use NavBlocks (qw( get_nav_block ));
 
@@ -55,7 +56,7 @@ sub _fn
 
         # TEST
         eq_or_diff(
-            $r->render($link),
+            $r->render( { obj => $link } ),
 q{<li><p><a href="../../humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</a></p></li>},
             "Render Local Link.",
         );
@@ -70,7 +71,7 @@ q{<li><p><a href="../../humour/Selina-Mandrake/ongoing-text.html">Ongoing Text</
 
         # TEST
         eq_or_diff(
-            $r->render($link),
+            $r->render( { obj => $link } ),
 q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">GitHub Repo</a></p></li>},
             "Render GitHub Link.",
         );
@@ -86,7 +87,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
 
         # TEST
         eq_or_diff(
-            $r->render($link),
+            $r->render( { obj => $link } ),
             q{<li><p><strong class="current">The Eternal Jew</strong></p></li>},
             "Render current link.",
         );
@@ -154,7 +155,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
 
         # TEST
         eq_or_diff(
-            $r->render($tr),
+            $r->render( { obj => $tr } ),
             <<'EOF',
 <tr>
 <td><b>Selina Mandrake - The Slayer</b></td>
@@ -200,7 +201,7 @@ EOF
 
         # TEST
         eq_or_diff(
-            $r->render($subdiv_tr),
+            $r->render( { obj => $subdiv_tr } ),
             <<'EOF',
 <tr class="subdiv">
 <th colspan="2">Screenplays</th>
@@ -211,6 +212,13 @@ EOF
     }
 
     {
+        my $table = Shlomif::Homepage::NavBlocks::TableBlock->new(
+            {
+                id    => "harry_potter_nav_block",
+                title => "Harry Potter/Emma Watson Fanfiction",
+                tr_s  => [],
+            },
+        );
         my $master_tr = Shlomif::Homepage::NavBlocks::Master_Tr->new(
             {
                 title => "Harry Potter/Emma Watson Fanfiction",
@@ -222,10 +230,10 @@ EOF
 
         # TEST
         eq_or_diff(
-            $r->render($master_tr),
+            $r->render( { obj => $master_tr, table => $table, } ),
             <<'EOF',
 <tr class="main_title">
-<th colspan="2">Harry Potter/Emma Watson Fanfiction</th>
+<th colspan="2">Harry Potter/Emma Watson Fanfiction <a href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
 </tr>
 EOF
             "Render Master_Tr",
@@ -254,12 +262,11 @@ foreach my $ext ( '', 'index.xhtml', )
 
     # TEST*$ext
     eq_or_diff(
-        [ $r->render($block) ],
-        [ <<'EOF', ],
+        [ $r->render( { obj => $block } ), ], [ <<'EOF', ],
 <div class="topical_nav_block" id="buffy_nav_block">
 <table>
 <tr class="main_title">
-<th colspan="2">Buffy Fanfiction</th>
+<th colspan="2">Buffy Fanfiction <a href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
 </tr>
 
 <tr class="subdiv">

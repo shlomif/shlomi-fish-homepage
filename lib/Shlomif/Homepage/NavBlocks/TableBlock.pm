@@ -18,13 +18,16 @@ sub collect_local_links
 
 sub render
 {
-    my ( $self, $r ) = @_;
+    my ( $self, $args ) = @_;
 
     return join '',
         map { "$_\n" }
         sprintf( q{<div class="topical_nav_block" id="%s">}, $self->id ),
-        "<table>",
-        ( map { $r->render($_); } @{ $self->tr_s } ),
+        "<table>", (
+        map {
+            $args->{renderer}->render( { table => $self, %$args, obj => $_, } );
+        } @{ $self->tr_s }
+        ),
         "</table>",
         "</div>",
         ;

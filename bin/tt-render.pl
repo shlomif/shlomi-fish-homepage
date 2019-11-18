@@ -39,7 +39,7 @@ sub _render_nav_block
 {
     my ($id) = @_;
 
-    return $nav_block_renderer->render( get_nav_block($id) );
+    return $nav_block_renderer->render( { obj => get_nav_block($id), } );
 }
 
 sub _print_nav_block

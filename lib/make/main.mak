@@ -23,7 +23,7 @@ include lib/make/shlomif_common.mak
 include lib/make/include.mak
 
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
-T2_IMAGES := $(filter-out $(BK2HP_SVG_BASE),$(T2_IMAGES)) $(BK2HP_SVG_BASE)
+T2_IMAGES += $(BK2HP_SVG_BASE)
 
 include lib/make/rules.mak
 

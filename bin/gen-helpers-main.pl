@@ -281,7 +281,7 @@ my $r_fh = path("$DIR/rules.mak");
 my $text = $r_fh->slurp_utf8;
 my $H    = qr/SRC|T2/;
 $text =~
-s#^(\$\(($H)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_WML_RENDER)#gms
+s#^(\$\(($H)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_TT2_RENDER)#gms
     or die "Cannot subt";
 $text =~ s#(($H)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
     or die "Cannot subt";

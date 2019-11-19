@@ -194,14 +194,6 @@ path("${DIR}copies-generated-include.mak")
 
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
-my $render = path('bin/render');
-$render->spew_utf8(
-    path('bin/render-source.pl')->slurp_utf8() =~ s#^(?:use lib[^\n]+\n)+#
-    "use lib \"" . (`wml-params-conf --show-privlib` =~ s%[\n\r]+\z%%r) . "\";\n";
-    #emrs
-);
-$render->chmod(0755);
-
 my $iter = path("./src")->iterator( { recurse => 1, } );
 my @tt;
 my %src_dirs;

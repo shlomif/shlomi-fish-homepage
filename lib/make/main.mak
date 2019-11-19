@@ -1,13 +1,8 @@
 # Whether this is the development environment
 DEV = 0
 
-DEV_WML_FLAGS :=
 T2_POST_DEST = dest/post-incs/t2
 SRC_POST_DEST = $(T2_POST_DEST)
-
-ifeq ($(DEV),1)
-	DEV_WML_FLAGS := -DLATEMP_IS_DEV_ENV=1
-endif
 
 ALL_DEST_BASE = dest/pre-incs
 
@@ -33,14 +28,6 @@ SRC_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(SRC_DIRS))
 T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
 SRC_TARGETS += $(SRC_POST_DIRS_DEST)
 T2_TARGETS += $(T2_POST_DIRS_DEST)
-
-LATEMP_WML_FLAGS += $(DEV_WML_FLAGS)
-WML_FLAGS += --passoption=2,-X3330 --passoption=2,-I../lib/ \
-	--passoption=3,-I../lib/ \
-	-I../lib/ $(LATEMP_WML_FLAGS) \
-	-p1-3,5,7,8 \
-	-DROOT~. -DLATEMP_THEME=sf.org1 \
-	-I $${HOME}/apps/wml
 
 NAV_DATA_DEP = lib/MyNavData.pm
 NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json

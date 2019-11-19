@@ -119,7 +119,8 @@ $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
 bulk-make-dirs:
-	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS)
+	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST)
+
 
 DEST_HUMOUR := $(T2_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
@@ -397,7 +398,7 @@ $(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(
 tidy: all
 	$(PERL) bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs bulk-make-dirs presentations_targets
+.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs +ulk-make-dirs presentations_targets
 
 # This copies all the .pdf's at once - not ideal, but still
 # working.

@@ -1115,6 +1115,10 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
+$(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fan-fiction/README.asciidoc
+	asciidoctor --backend=docbook5 -o $@.temp.xml $<
+	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoctor --backend=docbook5 -o $@.temp.xml $<
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@

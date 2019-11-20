@@ -5,12 +5,15 @@
 
 [%- WRAPPER wrap_html -%]
 
-<div class="markdown">
+<div class="side_toc fancy_sects">
 
-[% print_markdown(fn=>'lib/repos/my-real-person-fan-fiction/README.md') %]
+[% toc_div( ) %]
 
-</div>
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/my-real-person-fiction",  %]
 
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/my-real-person-fiction.xhtml") %]
 
 [%- WRAPPER links_sect -%]
 
@@ -25,5 +28,8 @@
 </ul>
 
 [% END %]
+
+</div>
+
 
 [% END %]

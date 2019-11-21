@@ -9,8 +9,6 @@
 
 [% toc_div( ) %]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/my-real-person-fiction",  %]
-
 <h2 id="content">Content</h2>
 
 [% path_slurp("docbook/5/rendered/my-real-person-fiction.xhtml") %]
@@ -28,6 +26,8 @@
 </ul>
 
 [% END %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/my-real-person-fiction",  %]
 
 </div>
 

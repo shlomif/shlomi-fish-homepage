@@ -1061,6 +1061,12 @@ div.abstract {
     }
 }
 
+.my_rpf.fancy_sects {
+    img {
+        float: left;
+    }
+}
+
 $ss_margin: 2em;
 
 @mixin mysection {

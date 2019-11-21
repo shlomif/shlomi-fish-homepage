@@ -46,8 +46,6 @@ T2_ALL_DIRS_DEST = $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(T2_DIRS_DEST) $(T2
 
 PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
-make-dirs: $(T2_ALL_DIRS_DEST)
-
 MAN_HTML = $(T2_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
@@ -95,16 +93,15 @@ $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST): %:
 	mkdir -p $@
 	touch $@
 
-make-dirs: $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST)
-
-make-dirs: $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS)
-
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
-bulk-make-dirs:
-	@mkdir -p $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST)
+ALL_DIRS := $(T2_ALL_DIRS_DEST) $(T2_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST) $(T2_POST_DIRS_DEST)
 
+bulk-make-dirs:
+	@mkdir -p $(ALL_DIRS)
+
+make-dirs: $(ALL_DIRS)
 
 DEST_HUMOUR := $(T2_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope

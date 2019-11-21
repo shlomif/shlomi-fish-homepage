@@ -3008,6 +3008,27 @@ My father’s mentor advice.
 [%- END -%]
 
 [%- END -%]
+
+[% WRAPPER eng_header_joke id = "pypy_booboo"  header = "A PyPy booboo"  %]
+
+[% WRAPPER quote  %]
+
+<p>
+When there is a PyPy booboo, then PyPy goes byebye!
+</p>
+
+[%- END -%]
+
+[% WRAPPER comment  %]
+<p>
+<a href="https://pypy.org/">PyPy</a> is a cool implementation of
+<a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python</a>
+which tends to run python code faster but has some bugs and quirks.
+On #perl6, we joked that it is so speedy due to <a href="https://mlp.fandom.com/wiki/Alicorns">Alicorn</a> magic.
+</p>
+[%- END -%]
+
+[%- END -%]
 </div>
 
 <h2 id="license">Copyright and Licence</h2>

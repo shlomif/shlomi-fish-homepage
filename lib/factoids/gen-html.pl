@@ -760,6 +760,18 @@ EOF
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gnu--think-big">#gnu conversation</a> that started the Taylor Swift facts trend.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]philosophy/culture/my-real-person-fan-fiction/#taylor_swift">Taylor Swift as an amateur</a>
+</p>
+</li>
+
 </ul>
 EOF
         meta_desc =>

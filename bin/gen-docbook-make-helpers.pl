@@ -140,6 +140,7 @@ foreach my $repo (
     'Captioned-Image-Every-mighty-Klingon-Warrior',
     'Captioned-Image-Holocaust',
     'Captioned-Image-Nothing-Sexier',
+    'Captioned-Image-One-does-not-Simply-cast-an-American-Actress',
     'Captioned-Image-Princess-Bride-Greek-Philosophers',
     'Captioned-Image-SLP-Pinned-It-On-Me',
     'Captioned-Image-Truly-You-Have',

@@ -22,6 +22,7 @@ $(HHFG_V2_IMAGES_DEST_FROM_VCS): $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/%: $(DOCBOO
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 $(Klingon_Warrior_Sesame_DEST): lib/repos/Captioned-Image-Every-mighty-Klingon-Warrior/Every-mighty-Klingon-Warrior.svg.webp
 $(Nothing_Sexier_DEST): lib/repos/Captioned-Image-Nothing-Sexier/Nothing-Sexier.svg.webp
+$(One_does_not_simply_cast_American_DEST): lib/repos/Captioned-Image-One-does-not-Simply-cast-an-American-Actress/one-does-not-simply-cast-an-american-actress.svg.webp
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(Philosophers_Pbride_DEST): lib/repos/Captioned-Image-Princess-Bride-Greek-Philosophers/philosophers-princess-bride.svg.webp
 $(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__SOURCE_PREFIX)/%

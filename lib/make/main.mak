@@ -916,6 +916,7 @@ Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
 Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
 Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
+One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
 Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
 Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
 Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp
@@ -926,7 +927,18 @@ OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
 
-all: $(MY_NAME_IS_RINDOLF_DEST) $(Shlomif_cutethulhu_DEST) $(Holocaust_DEST) $(Yo_NSA_DEST) $(Philosophers_Pbride_DEST) $(Nothing_Sexier_DEST) $(Truly_you_have_DEST) $(Slp_pinned_it_DEST) $(Klingon_Warrior_Sesame_DEST) $(DnD_lances_cartoon_DEST)
+all: \
+	$(DnD_lances_cartoon_DEST) \
+	$(Holocaust_DEST) \
+	$(Klingon_Warrior_Sesame_DEST) \
+	$(MY_NAME_IS_RINDOLF_DEST) \
+	$(Nothing_Sexier_DEST) \
+	$(One_does_not_simply_cast_American_DEST) \
+	$(Philosophers_Pbride_DEST) \
+	$(Shlomif_cutethulhu_DEST) \
+	$(Slp_pinned_it_DEST) \
+	$(Truly_you_have_DEST) \
+	$(Yo_NSA_DEST) \
 
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
 

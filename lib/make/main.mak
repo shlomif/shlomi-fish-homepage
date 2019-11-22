@@ -940,28 +940,10 @@ OPENLY_BIPOLAR_SRC_DIR = lib/repos/why-openly-bipolar-people-should-not-be-medic
 $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENLY_BIPOLAR_DEST_DIR)
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
 
-$(Klingon_Warrior_Sesame_DEST): lib/repos/Captioned-Image-Every-mighty-Klingon-Warrior/Every-mighty-Klingon-Warrior.svg.webp
-	$(call COPY)
-
-$(Nothing_Sexier_DEST): lib/repos/Captioned-Image-Nothing-Sexier/Nothing-Sexier.svg.webp
-	$(call COPY)
-
 $(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
 	gm convert $< $@
 
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
-	$(call COPY)
-
-$(Slp_pinned_it_DEST): lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me--400w.webp
-	$(call COPY)
-
-$(Truly_you_have_DEST): lib/repos/Captioned-Image-Truly-You-Have/Truly-You-Have.svg.webp
-	$(call COPY)
-
-$(Philosophers_Pbride_DEST): lib/repos/Captioned-Image-Princess-Bride-Greek-Philosophers/philosophers-princess-bride.svg.webp
-	$(call COPY)
-
-$(Yo_NSA_DEST): lib/repos/Captioned-Image-Yo-NSA-Publish-or-Perish/NSA-publish-or-perish.svg.webp
 	$(call COPY)
 
 $(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png

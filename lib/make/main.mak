@@ -905,6 +905,7 @@ Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
 Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
 One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
+One_does_not_simply_set_up_email_service = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-set-up-an-email-service.svg.webp
 Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
 Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
 Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp

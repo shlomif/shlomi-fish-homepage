@@ -760,6 +760,15 @@ EOF
 </p>
 </li>
 
+
+</ul>
+EOF
+        meta_desc =>
+"Factoids about Taylor Swift, the singer-songwriter and entertainer",
+        nav_blocks_tt2 => <<'EOF',
+EOF
+        see_also => <<'EOF',
+<ul>
 <li>
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gnu--think-big">#gnu conversation</a> that started the Taylor Swift facts trend.
@@ -772,16 +781,13 @@ EOF
 </p>
 </li>
 
-</ul>
-EOF
-        meta_desc =>
-"Factoids about Taylor Swift, the singer-songwriter and entertainer",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+<li>
 <p>
-<b>TODO</b>
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#Taylor_Swift">Taylor Swift as a Hacker Queen</a>
 </p>
+</li>
+
+</ul>
 EOF
         short_id   => 'taylor_swift',
         tabs_title => "Taylor Swift Facts",

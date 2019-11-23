@@ -1098,6 +1098,10 @@ $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fa
 	asciidoctor --backend=docbook5 -o $@.temp.xml $<
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 
+$(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
+	asciidoctor --backend=docbook5 -o $@.temp.xml $<
+	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	asciidoctor --backend=docbook5 -o $@.temp.xml $<
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@

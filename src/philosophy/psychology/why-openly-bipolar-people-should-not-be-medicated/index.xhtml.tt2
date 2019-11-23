@@ -5,8 +5,30 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% print_markdown(fn=>'lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.md') %]
+<div class="side_toc fancy_sects why_openly_bipolar">
 
-<h2 id="credits">Credits</h2>
+[% toc_div( ) %]
+
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/why-openly-bipolar-people-should-not-be-medicated.xhtml") %]
+
+[%- WRAPPER links_sect -%]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/why-openly-bipolar-people-should-not-be-medicated">Source Repository for this essay on GitHub</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/why-openly-bipolar-people-should-not-be-medicated",  %]
+
+</div>
 
 [% END %]

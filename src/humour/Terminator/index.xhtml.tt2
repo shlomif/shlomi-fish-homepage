@@ -1,0 +1,20 @@
+[%- SET title = "Terminator franchise fan‐fiction by Shlomi Fish" -%]
+[%- SET desc = "Terminator franchise fan‐fiction by Shlomi Fish" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p>
+This page contains a list of <a href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator franchise</a> fan‐fiction by Shlomi Fish.
+</p>
+
+[% WRAPPER h2_section id = "stories"  title = "The Stories"  %]
+
+[% WRAPPER h3_section id = "terminator_liberation"  href = "${base_path}humour/Terminator/Liberation/"  title="<i>Terminator: Liberation</i>" %]
+
+[% long_stories__calc_abstract(id => 'terminator_liberation') %]
+
+[%- END -%]
+
+[%- END -%]
+
+[% END %]

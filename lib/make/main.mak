@@ -923,6 +923,7 @@ all: \
 	$(MY_NAME_IS_RINDOLF_DEST) \
 	$(Nothing_Sexier_DEST) \
 	$(One_does_not_simply_cast_American_DEST) \
+	$(One_does_not_simply_set_up_email_service) \
 	$(Philosophers_Pbride_DEST) \
 	$(Shlomif_cutethulhu_DEST) \
 	$(Slp_pinned_it_DEST) \

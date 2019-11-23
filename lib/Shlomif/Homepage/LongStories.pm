@@ -674,7 +674,7 @@ sub render_make_fragment
         my $m_id = "${uc_id}__SMALL_LOGO_PNG";
         if ( $logo_src =~ /\.png\z/ )
         {
-            if ( $uc_id !~ /WE_THE_LIVING_DEAD/ )
+            if (1)    # if ( $uc_id !~ /WE_THE_LIVING_DEAD/ )
             {
                 push @var_decls, "$m_id = \$(T2_DEST)/$logo_src\n";
             }

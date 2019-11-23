@@ -3,6 +3,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+<div class="side_toc fancy_sects">
+
+[% toc_div( ) %]
+
 [% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
 
 [% WRAPPER about_sect  %]
@@ -129,5 +133,7 @@ Frenchman, just like Cardinal Richelieu.
 [% PROCESS buffy_nav_block  %]
 
 [%- END -%]
+
+</div>
 
 [% END %]

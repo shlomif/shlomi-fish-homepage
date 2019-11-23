@@ -3,6 +3,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+<div class="side_toc fancy_sects">
+
+[% toc_div( ) %]
+
 <h2 id="about">About</h2>
 
 <p>
@@ -98,5 +102,7 @@ similar enough to his role there.
 [% PROCESS politics_nav_block  %]
 
 [%- END -%]
+
+</div>
 
 [% END %]

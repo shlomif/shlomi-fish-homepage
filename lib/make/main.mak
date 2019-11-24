@@ -567,6 +567,11 @@ define EXPORT_INKSCAPE_PNG
 	$(OPTIPNG) $@
 endef
 
+define ASCIIDOCTOR_TO_DOCBOOK5
+	asciidoctor --backend=docbook5 -o $@.temp.xml $<
+	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+endef
+
 include lib/make/long_stories.mak
 
 PRINTER_ICON_PNG = $(T2_DEST)/images/printer_icon.png
@@ -1097,16 +1102,13 @@ $(T2_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
 $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fan-fiction/README.asciidoc
-	asciidoctor --backend=docbook5 -o $@.temp.xml $<
-	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 $(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
-	asciidoctor --backend=docbook5 -o $@.temp.xml $<
-	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
-	asciidoctor --backend=docbook5 -o $@.temp.xml $<
-	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
 
@@ -1120,17 +1122,17 @@ non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)
 $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-catb_copy = $(T2_DEST)/catb-heb.xhtml
-catb_copy_post = $(T2_POST_DEST)/catb-heb.xhtml
+CATB_COPY = $(T2_DEST)/catb-heb.xhtml
+CATB_COPY_POST = $(T2_POST_DEST)/catb-heb.xhtml
 
-$(catb_copy): t2/homesteading/catb-heb.xhtml
+$(CATB_COPY): t2/homesteading/catb-heb.xhtml
 	$(call COPY)
 
-all_deps: $(catb_copy)
+all_deps: $(CATB_COPY)
 
-$(catb_copy_post): $(catb_copy)
+$(CATB_COPY_POST): $(CATB_COPY)
 	$(call COPY)
 
-all: $(catb_copy_post)
+all: $(CATB_COPY_POST)
 
 copy_fortunes: $(T2_DEST_FORTUNES_many_files)

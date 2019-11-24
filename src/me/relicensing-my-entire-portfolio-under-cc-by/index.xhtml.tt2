@@ -10,7 +10,7 @@
 [% WRAPPER h2_section id = "summary"  title = "TL;DR Summary"  %]
 
 <p>
-I, Shlomi Fish (a.k.a <a href="[% base_path %]me/rindolf/">"Rindolf"</a>)
+I, Shlomi Fish (a.k.a <a href="[% base_path %]me/rindolf/">"Rindolf"</a>),
 am hereby offering to relicense all the current public content that is hosted
 in <a href="https://github.com/shlomif/shlomi-fish-homepage">the site's main
 repository</a> and its child repositories (e.g <a
@@ -95,6 +95,12 @@ fanfic) of these resources:
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]open-source/">The text pages of the software section.</a>
+</p>
+</li>
+
 </ol>
 
 [% WRAPPER h3_section id = "scope_excludes" title = "Particular Excludes"  %]
@@ -143,6 +149,15 @@ will be able to film my
 any licence they desire as long as I am attributed.
 </p>
 </li>
+
+<li>
+<p>
+Book publishers will be able to publish anthologies of my screenplays,
+stories, bits, aphorisms, essays, etc., including edited ones as long as
+they credit me.
+</p>
+</li>
+
 </ul>
 [%- END -%]
 

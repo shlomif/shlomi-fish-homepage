@@ -4,6 +4,11 @@ rebuild()
     (
         set -x
         set -e
+        ncpus="$(nproc)"
+        if test -z "$ncpus"
+        then
+            ncpus="4"
+        fi
         PATH="$PWD/bin/mod:$PATH"
         no_longer_needed_due_to_avoiding_recursive_make=false
         if $no_longer_needed_due_to_avoiding_recursive_make
@@ -21,14 +26,14 @@ rebuild()
         time git clean -dxf .
         time bash -x bin/install-npm-deps.sh
         time ./gen-helpers
-        # if ! gmake -j4 docbook_targets
-        # if ! gmake -j4 screenplay_epub_dests
-        if ! time gmake -j4 fastrender
+        # if ! gmake -j"$ncpus" docbook_targets
+        # if ! gmake -j"$ncpus" screenplay_epub_dests
+        if ! time gmake -j"$ncpus" fastrender
         then
             echo "docbook_targets failed"
             false
         fi
-        time gmake -j4 test
+        time gmake -j"$ncpus" test
     )
 }
 rebuild

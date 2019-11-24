@@ -152,6 +152,7 @@ foreach my $repo (
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
     'putting-cards-2019-2020',
+    'shlomif-business-card',
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',

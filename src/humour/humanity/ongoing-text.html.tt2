@@ -5,6 +5,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories__calc_common_top_elems(id => 'humanity') %]
+
 [% path_slurp("screenplay-xml/rendered-html/Humanity-Movie.html") %]
 
 [% PROCESS humanity_licensing  %]

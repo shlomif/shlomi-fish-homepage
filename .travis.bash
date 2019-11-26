@@ -32,7 +32,7 @@ then
         fi
     fi
     cpanm local::lib
-    eval "$(GIMME_GO_VERSION=1.11 gimme)"
+    eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
     cpanm App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml

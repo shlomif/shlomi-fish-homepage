@@ -122,7 +122,9 @@ body {
 
 #faux {
     @include body-background;
-    width: 100%;
+    @if false {
+        width: 100%;
+    }
 }
 
 /* This is for the breadcrumbs trail (= leading path) at the top. */

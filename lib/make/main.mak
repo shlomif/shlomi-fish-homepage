@@ -906,6 +906,7 @@ DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/
 T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
 
 Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
+Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
 Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
 Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
@@ -925,6 +926,7 @@ all: \
 	$(DnD_lances_cartoon_DEST) \
 	$(Holocaust_DEST) \
 	$(Klingon_Warrior_Sesame_DEST) \
+	$(Linux1_webp_DEST) \
 	$(MY_NAME_IS_RINDOLF_DEST) \
 	$(Nothing_Sexier_DEST) \
 	$(One_does_not_simply_cast_American_DEST) \
@@ -952,6 +954,9 @@ $(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-car
 
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
+
+$(Linux1_webp_DEST): t2/art/images/linux1.gif
+	gm convert $< -define webp:lossless=true $@
 
 $(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png
 	gm convert $< $@

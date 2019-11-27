@@ -897,8 +897,11 @@ OCT_2014_SGLAU_LET_DIR = $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014
 OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
 OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
-MY_NAME_IS_RINDOLF_SRC = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf.jpg
-MY_NAME_IS_RINDOLF_DEST = $(T2_POST_DEST)/me/rindolf/images/my-name-is-rindolf-200w.jpg
+RINDOLF_IMAGES_POST_DEST := $(T2_POST_DEST)/me/rindolf/images
+RPG_DICE_SET_SRC = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
+RPG_DICE_SET_DEST = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
+MY_NAME_IS_RINDOLF_SRC = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
+MY_NAME_IS_RINDOLF_DEST = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
 DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
@@ -932,6 +935,7 @@ all: \
 	$(One_does_not_simply_cast_American_DEST) \
 	$(One_does_not_simply_set_up_email_service) \
 	$(Philosophers_Pbride_DEST) \
+	$(RPG_DICE_SET_DEST) \
 	$(Shlomif_cutethulhu_DEST) \
 	$(Slp_pinned_it_DEST) \
 	$(Truly_you_have_DEST) \
@@ -969,6 +973,9 @@ $(OCT_2014_SGLAU_LET_HTML): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 	gm convert -resize '200' $< $@
+
+$(RPG_DICE_SET_DEST): $(RPG_DICE_SET_SRC)
+	gm convert -resize '300x' $< $@
 
 $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 	gm convert -resize '170x' $< $@

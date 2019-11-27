@@ -332,9 +332,9 @@ EOF
 A self-referential parody of the <a
 href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
 franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
-Watson</a> as herself and as the evil terminator Hanna, with <a
+Watson</a> as herself and as the evil terminator Hanna, and with <a
 href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
-Schwarzenegger</a> as himself and as the good terminator, that takes place in
+Schwarzenegger</a> as himself and as the good terminator Aharon, that takes place in
 <a href="https://en.wikipedia.org/wiki/Tel_Aviv">Tel Aviv</a> during <a
 href="https://en.wikipedia.org/wiki/Passover">Passover</a> (when <a
 href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place).

@@ -693,10 +693,13 @@ table.visible,
 
 blockquote {
     border: grey thin solid;
-    display: table-cell;
+    @if false {
+        display: table-cell;
+    }
     padding: 0.5em;
     // font-style: italic;
     margin-left: 0.5em;
+    overflow: scroll;
 
     @if false {
         > p:first-child {

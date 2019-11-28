@@ -3074,6 +3074,24 @@ anti-spam measurements.
 
 [%- END -%]
 
+[%- SET caption = "“Djee-En-You-slash-Linux…Marketing! You’re doing it GNU/right!”" -%]
+
+[% WRAPPER github_captioned_image_joke id = "GNU_slash_Linux"  header = "“Djee-En-You-Slash-Linux”"  repo_href = "https://github.com/shlomif/Captioned-Image-GNU-slash-Linux"  src = base_path _ "humour/images/gnu-slash-linux.svg.webp"  alt = caption %]
+
+
+[% WRAPPER quote  %]
+<p>
+[% caption %]
+</p>
+[%- END -%]
+
+<p>
+A naïve way to pronounce <a href="https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy">"GNU/Linux"</a>,
+and why it is a bad idea marketing-wise. Also see <a href="https://github.com/shlomif/fortune-mod/blob/6c73ebeb1498fea185380c2f3a30dc97bc4b3ab6/fortune-mod/datfiles/linux#L149-L159">Linus Torvalds about Linux having a cool name</a>.
+</p>
+
+[%- END -%]
+
 </div>
 
 <h2 id="license">Copyright and Licence</h2>

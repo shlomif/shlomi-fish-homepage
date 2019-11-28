@@ -908,25 +908,27 @@ DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/
 
 T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
 
+GNU_slash_Linux_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/gnu-slash-linux.svg.webp
 Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
-Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
-Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
-Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
-Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
-One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
-One_does_not_simply_set_up_email_service = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-set-up-an-email-service.svg.webp
-Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
-Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
 Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp
+Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
+Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
 OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
 OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
+One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
+One_does_not_simply_set_up_email_service = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-set-up-an-email-service.svg.webp
+Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
+Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
+Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
+Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
 
 all: \
 	$(DnD_lances_cartoon_DEST) \
+	$(GNU_slash_Linux_DEST) \
 	$(Holocaust_DEST) \
 	$(Klingon_Warrior_Sesame_DEST) \
 	$(Linux1_webp_DEST) \

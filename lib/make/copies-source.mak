@@ -1,6 +1,5 @@
 $(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(T2_SRC_DIR)/%/my_htaccess.conf
 $(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
-t2/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png: lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
 $(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
 $(DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt: $(FICTION_XML_TXT_DIR)/The-Pope-Died-on-Sunday-english.txt
@@ -15,6 +14,7 @@ $(DOCBOOK4_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 $(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
 $(EXPANDER_JS_DEST): $(EXPANDER_JS_SRC)
 $(FORTS_EPUB_DEST): $(FORTS_EPUB_SRC)
+$(GNU_slash_Linux_DEST): lib/repos/Captioned-Image-GNU-slash-Linux/gnu-slash-linux.svg.webp
 $(HHFG_HEB_V2_DEST): $(FICTION_XML_TXT_DIR)/human-hacking-field-guide-v2--hebrew.txt
 $(HHFG_HEB_V2_XSLT_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
 $(HHFG_V2_IMAGES_DEST): $(HHFG_V2_IMAGES_DEST_DIR)/%: $(DOCBOOK4_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml
@@ -39,3 +39,4 @@ $(TERM_LIBERATION_IMAGES__DEST): $(TERM_LIBERATION_IMAGES__DEST_PREFIX)/%: $(TER
 $(Truly_you_have_DEST): lib/repos/Captioned-Image-Truly-You-Have/Truly-You-Have.svg.webp
 $(Yo_NSA_DEST): lib/repos/Captioned-Image-Yo-NSA-Publish-or-Perish/NSA-publish-or-perish.svg.webp
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
+t2/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png: lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png

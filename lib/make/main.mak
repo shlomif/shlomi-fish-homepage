@@ -897,13 +897,19 @@ OCT_2014_SGLAU_LET_DIR = $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014
 OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
 OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
+all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
+
 RINDOLF_IMAGES_POST_DEST := $(T2_POST_DEST)/me/rindolf/images
+
 RPG_DICE_SET_SRC = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
 RPG_DICE_SET_DEST = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
+
 MY_NAME_IS_RINDOLF_SRC = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
 MY_NAME_IS_RINDOLF_DEST = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
+
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
+
 DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
 T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
@@ -911,12 +917,7 @@ T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
 GNU_slash_Linux_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/gnu-slash-linux.svg.webp
 Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
 Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp
-Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
-MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
-MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
-OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
-OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
 One_does_not_simply_set_up_email_service = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-set-up-an-email-service.svg.webp
 Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
@@ -924,26 +925,27 @@ Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.
 Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
 Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
 
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
-
 all: \
-	$(DnD_lances_cartoon_DEST) \
 	$(GNU_slash_Linux_DEST) \
 	$(Holocaust_DEST) \
 	$(Klingon_Warrior_Sesame_DEST) \
-	$(Linux1_webp_DEST) \
-	$(MY_NAME_IS_RINDOLF_DEST) \
 	$(Nothing_Sexier_DEST) \
 	$(One_does_not_simply_cast_American_DEST) \
 	$(One_does_not_simply_set_up_email_service) \
 	$(Philosophers_Pbride_DEST) \
-	$(RPG_DICE_SET_DEST) \
 	$(Shlomif_cutethulhu_DEST) \
 	$(Slp_pinned_it_DEST) \
 	$(Truly_you_have_DEST) \
 	$(Yo_NSA_DEST) \
 
+MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
+
+OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
+
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
+all: $(MY_NAME_IS_RINDOLF_DEST)
 
 MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
 
@@ -958,11 +960,16 @@ $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENL
 $(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
 	gm convert $< $@
 
+all: $(DnD_lances_cartoon_DEST)
+
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
 
+Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): t2/art/images/linux1.gif
 	gm convert $< -define webp:lossless=true $@
+
+all: $(Linux1_webp_DEST)
 
 $(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png
 	gm convert $< $@
@@ -978,6 +985,8 @@ $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 
 $(RPG_DICE_SET_DEST): $(RPG_DICE_SET_SRC)
 	gm convert -resize '300x' $< $@
+
+all: $(RPG_DICE_SET_DEST)
 
 $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 	gm convert -resize '170x' $< $@

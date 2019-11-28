@@ -914,30 +914,6 @@ DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/
 
 T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
 
-GNU_slash_Linux_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/gnu-slash-linux.svg.webp
-Holocaust_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Holocaust.webp
-Klingon_Warrior_Sesame_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Every-mighty-Klingon-Warrior.svg.webp
-Nothing_Sexier_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Nothing-Sexier.svg.webp
-One_does_not_simply_cast_American_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-cast-an-american-actress.svg.webp
-One_does_not_simply_set_up_email_service = $(T2_POST_DEST__HUMOUR_IMAGES)/one-does-not-simply-set-up-an-email-service.svg.webp
-Philosophers_Pbride_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/philosophers-princess-bride.svg.webp
-Slp_pinned_it_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/SLP-excerpt-pinned-it-on-me.webp
-Truly_you_have_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/Truly-You-Have.svg.webp
-Yo_NSA_DEST = $(T2_POST_DEST__HUMOUR_IMAGES)/NSA-publish-or-perish.svg.webp
-
-all: \
-	$(GNU_slash_Linux_DEST) \
-	$(Holocaust_DEST) \
-	$(Klingon_Warrior_Sesame_DEST) \
-	$(Nothing_Sexier_DEST) \
-	$(One_does_not_simply_cast_American_DEST) \
-	$(One_does_not_simply_set_up_email_service) \
-	$(Philosophers_Pbride_DEST) \
-	$(Shlomif_cutethulhu_DEST) \
-	$(Slp_pinned_it_DEST) \
-	$(Truly_you_have_DEST) \
-	$(Yo_NSA_DEST) \
-
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
@@ -971,9 +947,6 @@ $(Linux1_webp_DEST): t2/art/images/linux1.gif
 
 all: $(Linux1_webp_DEST)
 
-$(Holocaust_DEST): lib/repos/Captioned-Image-Holocaust/Holocaust.png
-	gm convert $< $@
-
 $(OCT_2014_SGLAU_LET_PDF): $(T2_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"
 
@@ -990,6 +963,8 @@ all: $(RPG_DICE_SET_DEST)
 
 $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 	gm convert -resize '170x' $< $@
+
+all: $(Shlomif_cutethulhu_DEST)
 
 ENEMY_STYLE = $(T2_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
 

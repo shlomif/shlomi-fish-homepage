@@ -1069,7 +1069,7 @@ div.abstract {
 .why_openly_bipolar.fancy_sects {
     img {
         float: left;
-        margin: 0.5em;
+        margin: 1em;
     }
 }
 
@@ -1101,6 +1101,15 @@ $ss_margin: 2em;
     section,
     .sub_section {
         @include mysection;
+    }
+    li {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    ol,
+    ul {
+        margin-left: 2em;
+        padding-left: 0;
     }
 }
 

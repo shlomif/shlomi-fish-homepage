@@ -105,8 +105,9 @@ my $essays_tree_contents = {
             url  => "philosophy/culture/",
             subs => [
                 {
-                    text => "Dealing with Hypomanias",
-                    url  => "philosophy/culture/my-real-person-fan-fiction/",
+                    text =>
+                        "Why I will continue to write my real person fiction",
+                    url => "philosophy/culture/my-real-person-fan-fiction/",
                 },
             ],
         },

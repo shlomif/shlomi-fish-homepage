@@ -194,27 +194,14 @@ foreach my $ext (qw/ xhtml pdf /)
         ( map { $_, $COPY, "\n" } path("${DIR}copies-source.mak")->lines_utf8 ),
         (
             map {
-                my $src = $_;
+                my $src = "lib/repos/$_";
                 ++$idx;
                 my $bn       = path($src)->basename;
                 my $dn       = path($src)->parent->stringify;
                 my $bn_var   = "CAPT_IMG_BN$idx";
                 my $dest_var = "CAPT_IMG_DEST_$idx";
 qq#$bn_var := $bn\n$dest_var := \$(T2_POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\nall: \$($dest_var)\n\n#;
-                }
-                split /\n/,
-            <<'EOF'
-lib/repos/Captioned-Image-Every-mighty-Klingon-Warrior/Every-mighty-Klingon-Warrior.svg.webp
-lib/repos/Captioned-Image-GNU-slash-Linux/gnu-slash-linux.svg.webp
-lib/repos/Captioned-Image-Holocaust/Holocaust.webp
-lib/repos/Captioned-Image-Nothing-Sexier/Nothing-Sexier.svg.webp
-lib/repos/Captioned-Image-One-does-not-Simply-cast-an-American-Actress/one-does-not-simply-cast-an-american-actress.svg.webp
-lib/repos/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service/one-does-not-simply-set-up-an-email-service.svg.webp
-lib/repos/Captioned-Image-Princess-Bride-Greek-Philosophers/philosophers-princess-bride.svg.webp
-lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me.webp
-lib/repos/Captioned-Image-Truly-You-Have/Truly-You-Have.svg.webp
-lib/repos/Captioned-Image-Yo-NSA-Publish-or-Perish/NSA-publish-or-perish.svg.webp
-EOF
+            } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
         )
     );
 }

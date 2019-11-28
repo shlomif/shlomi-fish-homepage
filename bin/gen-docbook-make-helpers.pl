@@ -137,16 +137,10 @@ if ( not -e 'lib/c-begin/README.md' )
 }
 
 foreach my $repo (
-    'Captioned-Image-Every-mighty-Klingon-Warrior',
-    'Captioned-Image-GNU-slash-Linux',
-    'Captioned-Image-Holocaust',
-    'Captioned-Image-Nothing-Sexier',
-    'Captioned-Image-One-does-not-Simply-cast-an-American-Actress',
-    'Captioned-Image-One-does-not-Simply-set-up-an-Email-Service',
-    'Captioned-Image-Princess-Bride-Greek-Philosophers',
-    'Captioned-Image-SLP-Pinned-It-On-Me',
-    'Captioned-Image-Truly-You-Have',
-    'Captioned-Image-Yo-NSA-Publish-or-Perish',
+    (
+        map { s#/[^/]*$##r }
+        path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
+    ),
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
     'XML-Grammar-Vered',
     'captioned-image--emma-watson-doesnt-need-a-wand',

@@ -1128,6 +1128,10 @@ h3 {
     margin: 1em;
 }
 
+.limit_imgs_width img {
+    max-width: 90%;
+}
+
 @import "self_link";
 @import "code_block";
 @import "treeview";

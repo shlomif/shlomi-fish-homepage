@@ -9,7 +9,7 @@
 
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 
-<div class="main_text side_toc">
+<div class="main_text side_toc limit_imgs_width">
 
 [% BLOCK joke %]
 [% content %]

@@ -51,7 +51,7 @@ XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <script src="../../js/main_all.js"></script>
 </head>
-<body>
+<body class="faq_indiv_entry">
 <div id="faux">
 <main class="main faq">
 '''

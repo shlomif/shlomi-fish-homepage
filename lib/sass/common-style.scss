@@ -1154,6 +1154,10 @@ h3 {
 }
 
 .faq {
+    img.faq_float {
+        float: right;
+        margin: 0 2em;
+    }
     header {
         > h2,
         > h3,
@@ -1168,6 +1172,21 @@ h3 {
 
 a.back_to_faq {
     @include faq_link;
+}
+
+.faq_indiv_entry {
+    img.faq_float {
+        margin: 2em;
+    }
+    footer {
+        background: #01698f;
+        clear: both;
+        margin-top: 2em;
+    }
+}
+
+body.faq_indiv_entry {
+    background-color: #e0ebef;
 }
 
 @import "self_link";

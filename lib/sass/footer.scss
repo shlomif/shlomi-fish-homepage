@@ -4,7 +4,9 @@ footer,
     color: white;
     font-family: Verdana, Geneva, sans-serif;
     clear: both;
-    margin-right: 30px;
+    @if false {
+        margin-right: 30px;
+    }
 
     // padding-top: 0.5em
     padding: 1em;

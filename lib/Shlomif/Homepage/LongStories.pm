@@ -2,14 +2,15 @@ package Shlomif::Homepage::LongStories;
 
 use strict;
 use warnings;
-
 use utf8;
+
+use Moo;
 
 use Path::Tiny qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use Text::WrapAsUtf8 qw/ print_utf8 /;
 
-use Shlomif::Homepage::LongStories::Story;
+use Shlomif::Homepage::LongStories::Story ();
 
 use parent ('Exporter');
 
@@ -460,7 +461,7 @@ my %_Stories_by_id = ( map { $_->id() => $_ } @_Stories );
 
 sub _get_story
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
     return $_Stories_by_id{$id}
         || die "Unknown story '$id'";
@@ -468,18 +469,18 @@ sub _get_story
 
 sub get_tagline
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    return $class->_get_story($id)->tagline;
+    return $self->_get_story($id)->tagline;
 }
 
 sub _get_tagline_tags
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
     my $tag_id    = 'tagline';
-    my $tag_title = $class->get_tagline($id);
-    $class->_push_toc_h2( { 'id' => $tag_id, 'body' => $tag_title, } );
+    my $tag_title = $self->get_tagline($id);
+    $self->_push_toc_h2( { 'id' => $tag_id, 'body' => $tag_title, } );
     return [ qq#<h2 id="$tag_id">#, $tag_title, qq#</h2>\n#, ];
 }
 
@@ -487,9 +488,9 @@ use Shlomif::Homepage::RelUrl qw/ _rel_url /;
 
 sub _get_abstract_tags
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    my $abstract = $class->_get_story($id)->abstract || die "No abstract";
+    my $abstract = $self->_get_story($id)->abstract || die "No abstract";
 
     $abstract =~ s#"\$\(ROOT\)/([^"]+?/)"#
                 q{"}
@@ -502,9 +503,9 @@ sub _get_abstract_tags
 
 sub _get_logo_tags
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    my $o = $class->_get_story($id);
+    my $o = $self->_get_story($id);
 
     return [
         sprintf(
@@ -518,14 +519,14 @@ sub _get_logo_tags
 
 sub _get_list_items_tags
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    return [ @{ $class->_get_abstract_tags($id) }, ];
+    return [ @{ $self->_get_abstract_tags($id) }, ];
 }
 
 sub _push_toc_h2
 {
-    my ( $class, $args ) = @_;
+    my ( $self, $args ) = @_;
     if ($::wml_xhtml_std_toc_section)
     {
         my @prev_sects = ($::wml_xhtml_std_toc_section);
@@ -547,30 +548,30 @@ sub _push_toc_h2
 
 sub _get_common_top_elems
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
     my $ret = [
-        @{ $class->_get_tagline_tags($id) },
-        @{ $class->_get_logo_tags($id) },
+        @{ $self->_get_tagline_tags($id) },
+        @{ $self->_get_logo_tags($id) },
         sprintf( qq#<div class="%s abstract">\n#,
-            $class->_get_story($id)->logo_class ),
+            $self->_get_story($id)->logo_class ),
         qq#<h2 id="abstract">Abstract</h2>\n#,
-        @{ $class->_get_abstract_tags($id) },
+        @{ $self->_get_abstract_tags($id) },
         qq{</div>\n},
     ];
-    $class->_push_toc_h2( { 'id' => 'abstract', 'body' => "Abstract", }, );
+    $self->_push_toc_h2( { 'id' => 'abstract', 'body' => "Abstract", }, );
     return $ret;
 }
 
 sub _get_story_entry_tags
 {
-    my ( $class, $id, $tag ) = @_;
+    my ( $self, $id, $tag ) = @_;
 
-    my $o = $class->_get_story($id);
+    my $o = $self->_get_story($id);
 
     return [
         qq{<section class="story">\n},
         qq{<header>\n},
-        @{ $class->_get_logo_tags($id) },
+        @{ $self->_get_logo_tags($id) },
         sprintf(
             qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
@@ -580,7 +581,7 @@ sub _get_story_entry_tags
             $tag,
         ),
         qq{</header>\n},
-        @{ $class->_get_list_items_tags($id) },
+        @{ $self->_get_list_items_tags($id) },
         $o->entry_extra_html(),
         qq{</section>\n}
     ];
@@ -588,72 +589,72 @@ sub _get_story_entry_tags
 
 sub _get_all_stories_entries_tags
 {
-    my ( $class, $tag ) = @_;
+    my ( $self, $tag ) = @_;
 
-    return [ map { @{ $class->_get_story_entry_tags( $_->id(), $tag ) } }
+    return [ map { @{ $self->_get_story_entry_tags( $_->id(), $tag ) } }
             @_Stories ];
 }
 
 sub calc_abstract
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    return join( "", @{ $class->_get_abstract_tags($id) } );
+    return join( "", @{ $self->_get_abstract_tags($id) } );
 }
 
 sub render_abstract
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    print_utf8( @{ $class->_get_abstract_tags($id) } );
+    print_utf8( @{ $self->_get_abstract_tags($id) } );
 
     return;
 }
 
 sub calc_logo
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    return join( '', @{ $class->_get_logo_tags($id) } );
+    return join( '', @{ $self->_get_logo_tags($id) } );
 }
 
 sub render_logo
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    print_utf8( @{ $class->_get_logo_tags($id) } );
+    print_utf8( @{ $self->_get_logo_tags($id) } );
 
     return;
 }
 
 sub calc_common_top_elems
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    return join( '', @{ $class->_get_common_top_elems($id) }, );
+    return join( '', @{ $self->_get_common_top_elems($id) }, );
 }
 
 sub render_common_top_elems
 {
-    my ( $class, $id ) = @_;
+    my ( $self, $id ) = @_;
 
-    print_utf8( @{ $class->_get_common_top_elems($id) }, );
+    print_utf8( @{ $self->_get_common_top_elems($id) }, );
 
     return;
 }
 
 sub calc_all_stories_entries
 {
-    my ( $class, $tag ) = @_;
+    my ( $self, $tag ) = @_;
 
-    return join( '', @{ $class->_get_all_stories_entries_tags($tag) }, );
+    return join( '', @{ $self->_get_all_stories_entries_tags($tag) }, );
 }
 
 sub render_all_stories_entries
 {
-    my ( $class, $tag ) = @_;
+    my ( $self, $tag ) = @_;
 
-    print_utf8( @{ $class->_get_all_stories_entries_tags($tag) }, );
+    print_utf8( @{ $self->_get_all_stories_entries_tags($tag) }, );
 
     return;
 }

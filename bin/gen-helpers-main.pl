@@ -120,7 +120,7 @@ copy( "lib/VimIface.pm", "lib/presentations/qp/common/VimIface.pm" );
 _exec_perl(
     [
         '-MShlomif::Homepage::LongStories', '-e',
-        'Shlomif::Homepage::LongStories->render_make_fragment()',
+        'Shlomif::Homepage::LongStories->new->render_make_fragment()',
     ],
     "LongStories render_make_fragment failed!"
 );

@@ -358,21 +358,22 @@ EOF
     long_stories__calc_all_stories_entries => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift() // {};
-        return Shlomif::Homepage::LongStories->calc_all_stories_entries(
+        return Shlomif::Homepage::LongStories->new->calc_all_stories_entries(
             $args->{tag} );
     },
     long_stories__calc_common_top_elems => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->calc_common_top_elems(
+        return Shlomif::Homepage::LongStories->new->calc_common_top_elems(
             $args->{id} );
     },
     long_stories__calc_abstract => sub {
         require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->calc_abstract( $args->{id} );
+        return Shlomif::Homepage::LongStories->new->calc_abstract(
+            $args->{id} );
     },
     shlomif_include_colorized_file => sub {
         require VimIface;
@@ -388,7 +389,7 @@ EOF
         require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->calc_logo( $args->{id} );
+        return Shlomif::Homepage::LongStories->new->calc_logo( $args->{id} );
     },
     p4n_lecture5_heb_notes => sub {
         return decode_utf8( scalar `bash bin/lecture5-txt2html.bash` );

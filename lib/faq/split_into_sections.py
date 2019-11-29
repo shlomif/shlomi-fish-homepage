@@ -52,10 +52,14 @@ XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
 <script src="../../js/main_all.js"></script>
 </head>
 <body>
+<div id="faux">
+<div id="container-all">
 <main class="main" id="main">
 '''
 
 XHTML_END_FMT = '''</main>
+</div>
+</div>
 <footer>
 <a href="../../"><img src="../../images/bk2hp-v2.min.svg" class=
 "bk2hp" alt="Back to my Homepage" /></a></footer>

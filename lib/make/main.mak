@@ -1055,6 +1055,8 @@ $(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC)
 
 $(FAQ_SECTS__SRC): $(T2_CLEAN_STAMP)
 
+all: $(FAQ_SECTS__PIVOT)
+
 fastrender: $(FASTRENDER_DEPS) fastrender-tt2 $(T2_FORTUNES_ALL__HTML)
 
 fastrender-tt2: $(FASTRENDER_DEPS)

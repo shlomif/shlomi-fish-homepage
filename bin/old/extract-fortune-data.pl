@@ -9,7 +9,7 @@ use List::Util qw/ first /;
 use YAML::XS qw/ LoadFile DumpFile /;
 
 use lib './lib';
-use Shlomif::Homepage::FortuneCollections;
+use Shlomif::Homepage::FortuneCollections ();
 
 my %d;
 
@@ -19,7 +19,8 @@ my $data = LoadFile($yaml_data_fn);
 
 my @fields = (qw(page_title meta_desc about_blurb));
 
-foreach my $r ( @{ Shlomif::Homepage::FortuneCollections->sorted_fortunes() } )
+foreach
+    my $r ( @{ Shlomif::Homepage::FortuneCollections->new->sorted_fortunes } )
 {
     my $id = $r->id();
 

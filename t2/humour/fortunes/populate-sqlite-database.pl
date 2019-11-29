@@ -10,10 +10,10 @@ my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 
 my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 
-use HTML::TreeBuilder::LibXML;
-use DBI;
+use HTML::TreeBuilder::LibXML ();
+use DBI                       ();
 
-use Shlomif::Homepage::FortuneCollections;
+use Shlomif::Homepage::FortuneCollections ();
 
 STDOUT->autoflush(1);
 
@@ -46,7 +46,8 @@ my $insert_sth = $dbh->prepare(
 "INSERT INTO fortune_cookies (collection_id, str_id, title, text) VALUES(?, ?, ?, ?)"
 );
 
-my $collections_aref = Shlomif::Homepage::FortuneCollections->sorted_fortunes();
+my $collections_aref =
+    Shlomif::Homepage::FortuneCollections->new->sorted_fortunes;
 
 {
     my $col_insert_sth = $dbh->prepare(<<'EOF');

@@ -5,6 +5,8 @@ use warnings;
 use 5.014;
 use utf8;
 
+use Moo;
+
 use Shlomif::Homepage::FortuneCollections::Record ();
 
 use Carp;
@@ -16,7 +18,7 @@ use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub _init_fortune
 {
-    my ( $class, $rec ) = @_;
+    my ( $self, $rec ) = @_;
 
     return Shlomif::Homepage::FortuneCollections::Record->new($rec);
 }
@@ -32,29 +34,28 @@ my @forts = ( map { __PACKAGE__->_init_fortune($_) } @$orig_fortunes_records, );
 
 sub get_fortune_records
 {
-    my ($class) = @_;
+    my ($self) = @_;
 
     return \@forts;
 }
 
 sub sorted_fortunes
 {
-    my ($class) = @_;
+    my ($self) = @_;
 
-    return [ sort { $a->id() cmp $b->id() }
-            @{ $class->get_fortune_records() } ];
+    return [ sort { $a->id() cmp $b->id() } @{ $self->get_fortune_records() } ];
 }
 
 sub nav_data
 {
-    my ($class) = @_;
+    my ($self) = @_;
 
-    return [ map { $_->nav_record() } @{ $class->get_fortune_records() } ];
+    return [ map { $_->nav_record() } @{ $self->get_fortune_records() } ];
 }
 
 sub calc_single_fortune_record_toc_entry
 {
-    my ( $class, $r ) = @_;
+    my ( $self, $r ) = @_;
 
     my $id   = $r->id;
     my $desc = $r->desc;
@@ -72,7 +73,7 @@ EOF
 
 sub print_single_fortune_record_toc_entry
 {
-    my ( $class, $r ) = @_;
+    my ( $self, $r ) = @_;
 
     my $id   = $r->id;
     my $desc = $r->desc;
@@ -92,7 +93,7 @@ EOF
 
 sub get_single_fortune_record_all_in_one_page_entry
 {
-    my ( $class, $r ) = @_;
+    my ( $self, $r ) = @_;
 
     my $id    = $r->id;
     my $title = $r->title;
@@ -107,12 +108,12 @@ EOF
 
 sub calc_fortune_records_toc
 {
-    my ($class) = @_;
+    my ($self) = @_;
     my $ret = '';
 
-    foreach my $r ( @{ $class->get_fortune_records() } )
+    foreach my $r ( @{ $self->get_fortune_records() } )
     {
-        $ret .= $class->calc_single_fortune_record_toc_entry($r);
+        $ret .= $self->calc_single_fortune_record_toc_entry($r);
     }
 
     return $ret;
@@ -120,11 +121,11 @@ sub calc_fortune_records_toc
 
 sub print_fortune_records_toc
 {
-    my ($class) = @_;
+    my ($self) = @_;
 
-    foreach my $r ( @{ $class->get_fortune_records() } )
+    foreach my $r ( @{ $self->get_fortune_records() } )
     {
-        $class->print_single_fortune_record_toc_entry($r);
+        $self->print_single_fortune_record_toc_entry($r);
     }
 
     return;
@@ -132,7 +133,7 @@ sub print_fortune_records_toc
 
 sub get_fortune_all_in_one_page_html_tt2
 {
-    my ($class) = @_;
+    my ($self) = @_;
     my $title = "Shlomi Fish Fortunes Collections - All in One Page";
 
     my $ret = <<"EOF";
@@ -142,7 +143,7 @@ sub get_fortune_all_in_one_page_html_tt2
 [%- SET title = "$title" -%]
 [%- SET desc = "$title" -%]
 
-@{[$class->_get_common_tt2]}
+@{[$self->_get_common_tt2]}
 
 [%- WRAPPER wrap_html -%]
 
@@ -151,7 +152,7 @@ sub get_fortune_all_in_one_page_html_tt2
 <ul>
 EOF
 
-    foreach my $r ( @{ $class->get_fortune_records() } )
+    foreach my $r ( @{ $self->get_fortune_records() } )
     {
 
         my $id    = $r->id();
@@ -168,9 +169,9 @@ FOO_EOF
     $ret .= "</ul>\n";
     $ret .= "</nav>\n";
 
-    foreach my $r ( @{ $class->get_fortune_records() } )
+    foreach my $r ( @{ $self->get_fortune_records() } )
     {
-        $ret .= $class->get_single_fortune_record_all_in_one_page_entry($r);
+        $ret .= $self->get_single_fortune_record_all_in_one_page_entry($r);
     }
 
     $ret .= "\n[% END %]\n";
@@ -183,7 +184,7 @@ my $deps_mtime_max =
 
 sub _print_if_update_needed
 {
-    my ( $class, $path, $contents_promise ) = @_;
+    my ( $self, $path, $contents_promise ) = @_;
 
     my $fh = path($path);
 
@@ -197,12 +198,12 @@ sub _print_if_update_needed
 
 sub write_fortune_all_in_one_page_to_file
 {
-    my ( $class, $filename ) = @_;
+    my ( $self, $filename ) = @_;
 
-    $class->_print_if_update_needed(
+    $self->_print_if_update_needed(
         $filename,
         sub {
-            return $class->get_fortune_all_in_one_page_html_tt2();
+            return $self->get_fortune_all_in_one_page_html_tt2();
         },
     );
 
@@ -222,7 +223,7 @@ EOF
 
 sub get_single_fortune_page_html_tt2
 {
-    my ( $class, $r ) = @_;
+    my ( $self, $r ) = @_;
 
     my $id    = $r->id();
     my $title = $r->title();
@@ -234,7 +235,7 @@ sub get_single_fortune_page_html_tt2
 [%- SET title = "@{[$r->page_title()]}" -%]
 [%- SET desc = "@{[$r->meta_desc()]}" -%]
 
-@{[$class->_get_common_tt2]}
+@{[$self->_get_common_tt2]}
 
 [%- WRAPPER wrap_html -%]
 
@@ -259,19 +260,18 @@ EOF
 
 sub print_all_fortunes_html_tt2s
 {
-    my ($class) = @_;
+    my ($self) = @_;
 
     my $dir = path("src/humour/fortunes");
 
     $dir->mkpath;
-    foreach my $r (
-        @{ Shlomif::Homepage::FortuneCollections->get_fortune_records() } )
+    foreach my $r ( @{ $self->get_fortune_records() } )
     {
         my $path = "$dir/@{[$r->id()]}.html.tt2";
-        $class->_print_if_update_needed(
+        $self->_print_if_update_needed(
             $path,
             sub {
-                return $class->get_single_fortune_page_html_tt2($r);
+                return $self->get_single_fortune_page_html_tt2($r);
             },
         );
     }
@@ -279,7 +279,7 @@ sub print_all_fortunes_html_tt2s
 
 sub write_epub_json
 {
-    my ( $class, $fn ) = @_;
+    my ( $self, $fn ) = @_;
 
     path($fn)->spew(
         JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
@@ -312,7 +312,7 @@ sub write_epub_json
                                 type   => 'text',
                                 source => ( $_->id() . ".xhtml" ),
                             }
-                        } @{ $class->get_fortune_records() },
+                        } @{ $self->get_fortune_records() },
                     ),
                 ],
                 toc => {

@@ -2,14 +2,13 @@
 
 use strict;
 use warnings;
-use Shlomif::Homepage::FortuneCollections;
+use Shlomif::Homepage::FortuneCollections ();
 
-my $filename = shift(@ARGV);
+my $filename          = shift(@ARGV);
+my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 
-Shlomif::Homepage::FortuneCollections->write_fortune_all_in_one_page_to_file(
-    $filename);
-Shlomif::Homepage::FortuneCollections->write_epub_json(
-    'lib/fortunes/xhtmls/book.json');
+$fortune_colls_obj->write_fortune_all_in_one_page_to_file($filename);
+$fortune_colls_obj->write_epub_json('lib/fortunes/xhtmls/book.json');
 
 __END__
 

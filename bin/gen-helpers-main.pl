@@ -129,7 +129,7 @@ _exec_perl(
     [
         '-MShlomif::Homepage::FortuneCollections',
         '-e',
-        'Shlomif::Homepage::FortuneCollections->print_all_fortunes_html_tt2s()',
+'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s()',
     ],
     "print_all_fortunes_html_tt2s failed!"
 );

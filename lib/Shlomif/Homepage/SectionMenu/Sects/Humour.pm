@@ -8,7 +8,7 @@ use utf8;
 
 use MyNavData;
 
-use Shlomif::Homepage::FortuneCollections;
+use Shlomif::Homepage::FortuneCollections ();
 use JSON::MaybeXS (qw( decode_json ));
 use Path::Tiny qw( path );
 
@@ -310,7 +310,8 @@ my $humour_tree_contents = {
                     url  => "humour/fortunes/",
                     title =>
 "Collection of Quotes by Me and Others in the UNIX Fortune Format",
-                    subs => Shlomif::Homepage::FortuneCollections->nav_data(),
+                    subs =>
+                        Shlomif::Homepage::FortuneCollections->new->nav_data,
                 },
                 {
                     text => "Collections of Facts",

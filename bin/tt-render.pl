@@ -151,8 +151,10 @@ sub cc_by_sa_license_british
 
 }
 
-use Shlomif::Homepage::LongStories ();
-my $long_stories = Shlomif::Homepage::LongStories->new;
+use Shlomif::Homepage::LongStories        ();
+use Shlomif::Homepage::FortuneCollections ();
+my $long_stories      = Shlomif::Homepage::LongStories->new;
+my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
@@ -182,10 +184,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
         return ShlomifFortunesMake->package_base;
     },
     print_fortune_records_toc => sub {
-        require Shlomif::Homepage::FortuneCollections;
-
-        return Shlomif::Homepage::FortuneCollections->calc_fortune_records_toc(
-        );
+        return $fortune_colls_obj->calc_fortune_records_toc();
     },
     print_front_page => sub {
         require Shlomif::Homepage::News;

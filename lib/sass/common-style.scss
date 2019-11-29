@@ -1143,6 +1143,33 @@ h3 {
     max-width: 90%;
 }
 
+@mixin faq_link {
+    &:after {
+        content: " ]";
+    }
+    &:before {
+        content: "[ ";
+    }
+    float: right;
+}
+
+.faq {
+    header {
+        > h2,
+        > h3,
+        > h4 {
+            display: inline;
+        }
+        a.indiv_node {
+            @include faq_link;
+        }
+    }
+}
+
+a.back_to_faq {
+    @include faq_link;
+}
+
 @import "self_link";
 @import "code_block";
 @import "treeview";

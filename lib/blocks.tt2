@@ -179,7 +179,7 @@ control and other resources.
 [% END %]
 [%- BLOCK h_section -%]
 <section class="[% h_class %]">
-[% UNLESS xhtml1 %]<header>[% END %]<[% h_tag %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_tag %]>[% UNLESS xhtml1 %]</header>[% END %]
+[% UNLESS xhtml1 %]<header>[% END %]<[% h_tag %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_tag %]>[% extra_h_header_contents || "" %][% UNLESS xhtml1 %]</header>[% END %]
 [% content %]
 </section>
 [%- END -%]

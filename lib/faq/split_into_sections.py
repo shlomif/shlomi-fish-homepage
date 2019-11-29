@@ -53,12 +53,10 @@ XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
 </head>
 <body>
 <div id="faux">
-<div id="container-all">
-<main class="main" id="main">
+<main class="main faq">
 '''
 
 XHTML_END_FMT = '''</main>
-</div>
 </div>
 <footer>
 <a href="../../"><img src="../../images/bk2hp-v2.min.svg" class=

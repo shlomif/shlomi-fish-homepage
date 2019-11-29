@@ -151,6 +151,8 @@ sub cc_by_sa_license_british
 
 }
 
+use Shlomif::Homepage::LongStories ();
+my $long_stories = Shlomif::Homepage::LongStories->new;
 my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
@@ -356,24 +358,18 @@ EOF
         return Shlomif::XmlFictionSlurp->my_calc($args);
     },
     long_stories__calc_all_stories_entries => sub {
-        require Shlomif::Homepage::LongStories;
         my $args = shift() // {};
-        return Shlomif::Homepage::LongStories->new->calc_all_stories_entries(
-            $args->{tag} );
+        return $long_stories->calc_all_stories_entries( $args->{tag} );
     },
     long_stories__calc_common_top_elems => sub {
-        require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->new->calc_common_top_elems(
-            $args->{id} );
+        return $long_stories->calc_common_top_elems( $args->{id} );
     },
     long_stories__calc_abstract => sub {
-        require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->new->calc_abstract(
-            $args->{id} );
+        return $long_stories->calc_abstract( $args->{id} );
     },
     shlomif_include_colorized_file => sub {
         require VimIface;
@@ -386,10 +382,9 @@ EOF
         );
     },
     long_stories__calc_logo => sub {
-        require Shlomif::Homepage::LongStories;
         my $args = shift;
 
-        return Shlomif::Homepage::LongStories->new->calc_logo( $args->{id} );
+        return $long_stories->calc_logo( $args->{id} );
     },
     p4n_lecture5_heb_notes => sub {
         return decode_utf8( scalar `bash bin/lecture5-txt2html.bash` );

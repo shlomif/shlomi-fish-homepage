@@ -1049,9 +1049,10 @@ FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
 FAQ_SECTS__DIR := $(T2_POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
+FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
 
-$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC)
-	python3 lib/faq/split_into_sections.py
+$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM)
+	python3 $(FAQ_SECTS__PROGRAM)
 
 $(FAQ_SECTS__SRC): $(T2_CLEAN_STAMP)
 

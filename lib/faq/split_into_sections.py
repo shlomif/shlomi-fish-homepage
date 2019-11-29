@@ -63,18 +63,24 @@ class FortunesMerger:
 
     def process(self):
         os.makedirs(OUT_DN, exist_ok=True)
-        for list_elem in self.root.xpath(
-                "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
-                "//xhtml:section", namespaces=ns):
-            header_tag = list_elem.xpath("./xhtml:header", namespaces=ns)[0]
 
-            h_tag = header_tag.xpath("./*[@id]", namespaces=ns)[0]
-            id_ = h_tag.xpath("./@id", namespaces=ns)[0]
-            header_text = h_tag.xpath("./text()", namespaces=ns)[0]
+        def _xpath(node, query):
+            return node.xpath(query, namespaces=ns)
+
+        def _first(node, query):
+            return _xpath(node, query)[0]
+        for list_elem in _xpath(
+                self.root,
+                "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
+                "//xhtml:section"):
+            header_tag = _first(list_elem, "./xhtml:header")
+
+            h_tag = _first(header_tag, "./*[@id]")
+            id_ = _first(h_tag, "./@id")
+            header_text = _first(h_tag, "./text()")
             header_esc = html.escape(header_text)
 
-            a_tag = header_tag.xpath(
-                "./xhtml:a[@class='indiv_node']", namespaces=ns)[0]
+            a_tag = _first(header_tag, "./xhtml:a[@class='indiv_node']")
             a_tag.set("class", "back_to_faq")
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])

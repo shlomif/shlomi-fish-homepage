@@ -14,6 +14,7 @@ into t2/humour/fortunes/shlomif-factoids.xml .
 DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 """
 
+import html
 import os
 import re
 
@@ -61,14 +62,15 @@ XHTML_END_FMT = '''</main>
 </body>
 </html>'''
 
+OUT_DN = "./dest/post-incs/t2/meta/FAQ"
+
 
 class FortunesMerger:
-    def __init__(self, input_fn, merge_into_fn):
+    def __init__(self, input_fn):
         self.input_fn = input_fn
         self.root = etree.parse(input_fn)
 
     def process(self):
-        OUT_DN = './faq-out'
         os.makedirs(OUT_DN, exist_ok=True)
         for list_elem in self.root.xpath(
                 "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
@@ -76,19 +78,20 @@ class FortunesMerger:
             h_tag = list_elem.xpath("./xhtml:header/*[@id]", namespaces=ns)[0]
             id_ = h_tag.xpath("./@id", namespaces=ns)[0]
             header_text = h_tag.xpath("./text()", namespaces=ns)[0]
+            header_esc = html.escape(header_text)
             # print([id_, header_text])
+            formats = {'title': header_esc}
             with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
-                f.write(XHTML_START_FMT.format(title=header_text) +
+                f.write(XHTML_START_FMT.format(**formats) +
                         etree.tostring(list_elem).decode('utf-8') +
-                        XHTML_END_FMT.format(title=header_text)
+                        XHTML_END_FMT.format(**formats)
                         )
             # print(etree.tostring(id_))
 
 
 def main():
     xml_propagator = FortunesMerger(
-        "./dest/post-incs/t2/meta/FAQ/index.xhtml",
-        "./t2/humour/fortunes/proto--shlomif-factoids.xml")
+        OUT_DN + "/index.xhtml")
     xml_propagator.process()
 
 

@@ -1046,6 +1046,15 @@ all: $(QP_VIM_IFACE)
 
 FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
 
+FAQ_SECTS__DIR := $(T2_POST_DEST)/meta/FAQ
+FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
+FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
+
+$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC)
+	python3 lib/faq/split_into_sections.py
+
+$(FAQ_SECTS__SRC): $(T2_CLEAN_STAMP)
+
 fastrender: $(FASTRENDER_DEPS) fastrender-tt2 $(T2_FORTUNES_ALL__HTML)
 
 fastrender-tt2: $(FASTRENDER_DEPS)

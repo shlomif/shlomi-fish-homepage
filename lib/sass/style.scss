@@ -53,7 +53,7 @@ pre {
 }
 
 body {
-    background: #01698f;
+    @include bottom_bg;
     padding: 1em;
 
     #container-all {

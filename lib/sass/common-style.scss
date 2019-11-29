@@ -1174,12 +1174,16 @@ a.back_to_faq {
     @include faq_link;
 }
 
+@mixin bottom_bg {
+    background: #01698f;
+}
+
 .faq_indiv_entry {
     img.faq_float {
         margin: 2em;
     }
     footer {
-        background: #01698f;
+        @include bottom_bg;
         clear: both;
         margin-top: 2em;
     }

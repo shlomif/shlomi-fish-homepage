@@ -7,16 +7,12 @@
 # Distributed under terms of the MIT license.
 
 """
-Merge / propagate recent items from the
-lib/factoids/shlomif-factoids-lists.xml file
-into t2/humour/fortunes/shlomif-factoids.xml .
-
-DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+Split Shlomi Fish's FAQ-list into individual
+sections or questions.
 """
 
 import html
 import os
-import re
 
 from lxml import etree
 from lxml.html import XHTML_NAMESPACE
@@ -27,13 +23,6 @@ ns = {
     "xhtml": XHTML_NS,
     "xml": XML_NS,
 }
-FULL_NAMES = {"chuck": "Chuck Norris",
-              "emma-watson": "Emma Watson",
-              "nsa": "NSA",
-              "taylor-swift": "Taylor Swift", }
-
-ID_IS_FACTOID_RE = re.compile("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$")
-BASENAME_EXTRACT_RE = re.compile('^([a-z_\\-]*)_facts$')
 
 XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>

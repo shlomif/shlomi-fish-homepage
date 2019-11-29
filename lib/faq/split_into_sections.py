@@ -77,10 +77,17 @@ class FortunesMerger:
         for list_elem in self.root.xpath(
                 "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
                 "//xhtml:section", namespaces=ns):
-            h_tag = list_elem.xpath("./xhtml:header/*[@id]", namespaces=ns)[0]
+            header_tag = list_elem.xpath("./xhtml:header", namespaces=ns)[0]
+
+            h_tag = header_tag.xpath("./*[@id]", namespaces=ns)[0]
             id_ = h_tag.xpath("./@id", namespaces=ns)[0]
             header_text = h_tag.xpath("./text()", namespaces=ns)[0]
             header_esc = html.escape(header_text)
+
+            a_tag = header_tag.xpath(
+                "./xhtml:a[@class='indiv_node']", namespaces=ns)[0]
+            a_tag.set("class", "back_to_faq")
+            a_tag.set("href", "./#"+id_)
             # print([id_, header_text])
             formats = {'title': header_esc}
             with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:

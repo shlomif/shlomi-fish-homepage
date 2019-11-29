@@ -14,6 +14,7 @@ into t2/humour/fortunes/shlomif-factoids.xml .
 DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 """
 
+import os
 import re
 
 from lxml import etree
@@ -40,11 +41,17 @@ class FortunesMerger:
         self.root = etree.parse(input_fn)
 
     def process(self):
+        OUT_DN = './faq-out'
+        os.makedirs(OUT_DN, exist_ok=True)
         for list_elem in self.root.xpath(
                 "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
                 "//xhtml:section", namespaces=ns):
-            id_ = list_elem.xpath("./xhtml:header/*/@id", namespaces=ns)
-            print(id_)
+            h_tag = list_elem.xpath("./xhtml:header/*[@id]", namespaces=ns)[0]
+            id_ = h_tag.xpath("./@id", namespaces=ns)[0]
+            header_text = h_tag.xpath("./text()", namespaces=ns)[0]
+            print([id_, header_text])
+            with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
+                f.write(etree.tostring(list_elem).decode('utf-8'))
             # print(etree.tostring(id_))
 
 

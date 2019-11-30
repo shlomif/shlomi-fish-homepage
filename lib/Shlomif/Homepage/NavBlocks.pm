@@ -203,6 +203,19 @@ my %tr_s = (
             ),
         ],
     ),
+    'muppets_grammar_nazis' => _tr(
+        title => "The Muppet Show - The Next Incarnation",
+        items => [
+            _fp(
+                path =>
+                    "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
+            ),
+            _github(
+                url =>
+'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',
+            ),
+        ],
+    ),
     'muppets_harry_potter' => _tr(
         title => "The Muppet Show - The Next Incarnation",
         items => [
@@ -382,8 +395,11 @@ my %table_blocks = (
             id   => 'xkcd_nav_block',
             tr_s => [
                 _master_tr( title => q{Summer Glau/xkcd Fanfiction}, ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                _subdiv_tr( title => q{#SummerNSA} ),
                 _get_tr('summer_nsa'),
+                _get_tr('SummerNSA_effort'),
+                _subdiv_tr( title => q{Other Screenplays}, ),
+                _get_tr('muppets_grammar_nazis'),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('xkcd_facts'),
             ],

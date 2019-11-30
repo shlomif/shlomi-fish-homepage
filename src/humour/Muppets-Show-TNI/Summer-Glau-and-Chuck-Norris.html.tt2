@@ -9,4 +9,10 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Summer-Glau-and-Chuck-Norris.html") %]
 
+[% WRAPPER nav_blocks %]
+
+[% PROCESS xkcd_nav_block %]
+
+[%- END -%]
+
 [% END %]

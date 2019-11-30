@@ -75,7 +75,7 @@ my @chuck_pages = (
 <p>
 These are additions to the
 <a href="https://en.wikipedia.org/wiki/Chuck_Norris_facts">Chuck
-Norris facts</a> by my Internet friends and by me. Most of them are kinda
+Norris facts</a> trend by my Internet friends and by me. Most of them are kinda
 geeky (or even computer geeky), but some are more generic.
 </p>
 
@@ -159,9 +159,16 @@ EOF
 [%- END -%]
 EOF
         see_also => <<'EOF',
+<ul>
+
+<li>
 <p>
-<b>TODO</b>
+<a href="[% base_path %]humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Chuck Norris
+and Summer Glau on the Muppet Show as two ruthless Grammar Nazis</a>
 </p>
+</li>
+
+</ul>
 EOF
         short_id   => 'chuck',
         tabs_title => "Chuck Norris Facts",
@@ -490,9 +497,14 @@ EOF
 [%- END -%]
 EOF
         see_also => <<'EOF',
+<ul>
+<li>
 <p>
-<b>TODO</b>
+<a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking Field Guide</i></a> -
+a story about open source developers (or "hackers").
 </p>
+</li>
+</ul>
 EOF
         short_id   => 'knuth',
         tabs_title => "Why Knuth is Not God",

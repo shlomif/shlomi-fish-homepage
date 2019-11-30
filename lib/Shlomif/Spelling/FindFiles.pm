@@ -6,7 +6,7 @@ use warnings;
 use MooX qw/late/;
 use List::MoreUtils qw/any/;
 
-use HTML::Spelling::Site::Finder;
+use HTML::Spelling::Site::Finder ();
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -61,7 +61,16 @@ sub list_htmls
             root_dir => $T2_POST_DEST,
             prune_cb => sub {
                 my ($path) = @_;
-                return any { $path =~ $_ } @prunes;
+                return (
+                    ( any { $path =~ $_ } @prunes )
+                        || (
+                        (
+                            $path =~
+m#\A\Q$T2_POST_DEST\E/meta/FAQ/([a-zA-Z0-9_\-\.]+)\.xhtml\z#
+                        )
+                        and ( $1 ne "index" )
+                        )
+                );
             },
         }
     )->list_all_htmls;

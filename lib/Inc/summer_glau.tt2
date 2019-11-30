@@ -2,13 +2,6 @@
 
 <li>
 <p>
-<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson “Facts”</a> -
-about another real-life girl.
-</p>
-</li>
-
-<li>
-<p>
 <a href="http://www.reddit.com/r/SummerGlau">/r/SummerGlau subreddit</a> -
 discussions of Summer Glau.
 </p>
@@ -16,16 +9,38 @@ discussions of Summer Glau.
 
 <li>
 <p>
-<a href="[% base_path %]humour/bits/facts/NSA/">NSA “Facts”</a> - related to the
-screenplay <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
-at the NSA</i></a> with many more links.
+<a href="http://www.youtube.com/watch?v=0SJskWeMG_U">Summer Glau as herself on
+the show <i>The Big Bang Theory</i></a> - very nice!
 </p>
+</li>
+
+[% END %]
+
+[% BLOCK summer_glau_see_also %]
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson “Facts”</a> -
+about another real-life girl.
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">Taylor Swift “Facts”</a> - also about a real-life female.
+</p>
+</li>
+
+</ul>
+
 </li>
 
 <li>
 <p>
-<a href="http://www.youtube.com/watch?v=0SJskWeMG_U">Summer Glau as herself on
-the show <i>The Big Bang Theory</i></a> - very nice!
+<a href="[% base_path %]humour/bits/facts/NSA/">NSA “Facts”</a> - related to the
+screenplay <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
+at the NSA</i></a> with many more links.
 </p>
 </li>
 

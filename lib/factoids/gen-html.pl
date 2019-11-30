@@ -737,9 +737,11 @@ EOF
 [%- END -%]
 EOF
         see_also => <<'EOF',
-<p>
-<b>TODO</b>
-</p>
+<ul>
+
+[% PROCESS summer_glau_see_also %]
+
+</ul>
 EOF
         short_id   => 'sglau',
         tabs_title => "Summer Glau Facts",
@@ -771,7 +773,6 @@ EOF
 <a href="https://www.youtube.com/watch?v=nfWlot6h_JM">Shake it Off</a>
 </p>
 </li>
-
 
 </ul>
 EOF

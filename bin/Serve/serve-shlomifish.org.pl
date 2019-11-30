@@ -3,13 +3,10 @@
 use strict;
 use warnings;
 
-use File::Spec;
+use ShlomifServe ();
 
-use ShlomifServe;
-
-ShlomifServe::serve(
-    'dir_to_serve' =>
-
-        # File::Spec->rel2abs("../../dest/t2-homepage/"),
-        "../../dest/t2-homepage/",
+ShlomifServe->new->serve(
+    {
+        'dir_to_serve' => "../../dest/t2-homepage/",
+    },
 );

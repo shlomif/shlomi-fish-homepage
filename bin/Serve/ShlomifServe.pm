@@ -3,13 +3,15 @@ package ShlomifServe;
 use strict;
 use warnings;
 
-use CGI;
-use MIME::Types;
+use Moo;
+
+use CGI         ();
+use MIME::Types ();
 
 sub serve
 {
-    my (%args) = (@_);
-    my $dir_to_serve = $args{'dir_to_serve'};
+    my ( $self, $args ) = (@_);
+    my $dir_to_serve = $args->{'dir_to_serve'};
 
     my $cgi       = CGI->new();
     my $mimetypes = MIME::Types->new();

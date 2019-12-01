@@ -7,7 +7,9 @@ body {
 }
 
 .jqtree-tree {
-    font-family: calibri, arial, helvetica, "helvetica neue", sans-serif;
+    @if false {
+        font-family: calibri, arial, helvetica, "helvetica neue", sans-serif;
+    }
     line-height: 1;
     position: relative;
     font-size: 12px;

@@ -261,16 +261,17 @@ EOF
             logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
             logo_svg   => '//$SKIP',
             entry_id   => "muppets-show-TNI",
-            entry_text => "The Muppets’ Show - The New Incarnation",
+            entry_text => "Muppets / Sesame Street Fanfic",
             href       => "humour/Muppets-Show-TNI/",
             abstract   => <<'EOF',
 <p class="muppets_show_tni abstract">
-A new incarnation of <a href="http://muppet.wikia.com/wiki/The_Muppet_Show"><b>The
-Muppets’ show</b></a>. Each show will cover a <b>theme</b> such
-as Harry Potter, or
+Fanfic episodes of <a href="http://muppet.wikia.com/wiki/The_Muppet_Show"><b>The
+Muppets’ show</b></a> or <a href="https://muppet.fandom.com/wiki/Sesame_Street">Sesame Street</a>.
+Each show will cover a <b>theme</b> such
+as <a href="$(ROOT)/humour/Muppets-Show-TNI/Harry-Potter.html"></a>Harry Potter, or
 <a href="$(ROOT)/humour/bits/facts/Summer-Glau/">Summer Glau</a> &amp;
 <a href="$(ROOT)/humour/bits/facts/Chuck-Norris/">Chuck Norris</a> as
-ruthless Grammar Nazis.
+two ruthless <a href="$(ROOT)/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Grammar Nazis</a>.
 </p>
 EOF
         },

@@ -3,15 +3,24 @@
 
 [%- WRAPPER wrap_html -%]
 
+<div class="side_toc fancy_sects">
+
+[% toc_div( ) %]
+
 [% WRAPPER nav_blocks  %]
 
-[% PROCESS buffy_nav_block  %]
-[% PROCESS harry_potter_nav_block  %]
-[% PROCESS foss_nav_block  %]
-[% PROCESS politics_nav_block  %]
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS xkcd_nav_block  %]
+[% FOREACH rec IN [ { "id" => "buffy", "title" => "Buffy", }, { "id" => "harry_potter", "title" => "Harry Potter", }, { "id" => "foss", "title" => "Free &amp; Open Source Software (FOSS)", }, { "id" => "politics", "title" => "Politics", }, { "id" => "star_trek", "title" => "Star Trek", }, { "id" => "xkcd", "title" => "xkcd", }, ] %]
+
+[% WRAPPER h2_section id= (rec.id _ "_sect") title=(rec.title) %]
+
+[% print_nav_block( name => rec.id) %]
 
 [%- END -%]
+
+[%- END -%]
+
+[%- END -%]
+
+</div>
 
 [% END %]

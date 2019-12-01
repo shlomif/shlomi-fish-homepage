@@ -67,6 +67,10 @@ my $EmWatson_visit_to_Gaza = _l(
     path       => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
 );
 
+my $muppets_github =
+    _github(
+    url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation', );
+
 my %tr_s = (
     'buffy_facts' => _tr(
         title => "“Facts”",
@@ -204,26 +208,24 @@ my %tr_s = (
         ],
     ),
     'muppets_grammar_nazis' => _tr(
-        title => "The Muppet Show - The Next Incarnation",
+        title => "Muppets Fanfiction",
         items => [
-            _fp(
+            _l(
+                inner_html => "Grammar Nazis",
                 path =>
                     "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
             ),
-            _github(
-                url =>
-'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',
-            ),
+            $muppets_github,
         ],
     ),
     'muppets_harry_potter' => _tr(
-        title => "The Muppet Show - The Next Incarnation",
+        title => "Muppets Fanfiction",
         items => [
-            _fp( path => "humour/Muppets-Show-TNI/Harry-Potter.html", ),
-            _github(
-                url =>
-'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation',
+            _l(
+                inner_html => "Harry Potter on Sesame Street",
+                path       => "humour/Muppets-Show-TNI/Harry-Potter.html",
             ),
+            $muppets_github,
         ],
     ),
     'selina_mandrake' => _tr(

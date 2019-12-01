@@ -260,18 +260,6 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text  => "Road to Heaven",
-                    url   => "humour/RoadToHeaven/",
-                    title => "The Road to Heaven is Paved with Bad Intentions",
-                    subs  => [
-                        {
-                            skip => 1,
-                            text => "Abstract",
-                            url  => "humour/RoadToHeaven/abstract.xhtml",
-                        },
-                    ],
-                },
-                {
                     text  => "The Earth Angel",
                     url   => "humour/The-Earth-Angel/",
                     title => "TODO: FILL IN",
@@ -280,6 +268,18 @@ my $humour_tree_contents = {
                             text => "Ongoing Text",
                             url =>
 "humour/The-Earth-Angel/The-Earth-Angel--English-Text.html",
+                        },
+                    ],
+                },
+                {
+                    text  => "Road to Heaven",
+                    url   => "humour/RoadToHeaven/",
+                    title => "The Road to Heaven is Paved with Bad Intentions",
+                    subs  => [
+                        {
+                            skip => 1,
+                            text => "Abstract",
+                            url  => "humour/RoadToHeaven/abstract.xhtml",
                         },
                     ],
                 },

@@ -92,6 +92,28 @@ Read the screenplays to find out.
 EOF
         },
         {
+            id         => 'humanity',
+            tagline    => "Intelligent (?) and Conscious (?)",
+            logo_alt   => "Humanity Logo",
+            logo_class => "humanity",
+            logo_id    => "humanity_logo",
+            logo_src   => "humour/humanity/images/humanity-logo-small.png",
+            logo_svg   => 'humour/humanity/images/humanity-logo.svg',
+            entry_id   => "humanity",
+            entry_text => "Humanity",
+            href       => "humour/humanity/",
+            abstract   => <<'EOF',
+<p class="humanity abstract">
+Humanity is a screenplay for a movie
+that aims to be a parody about humanity and modern life in particular. It
+tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/Semitic">Semitic</a> city in
+<a href="http://en.wikipedia.org/wiki/Canaan">Canaan</a> circa the year
+500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
+(OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
+</p>
+EOF
+        },
+        {
             id         => 'hhfg',
             tagline    => "Who said girls can’t code?",
             logo_alt   => "Human Hacking Field Guide Logo",
@@ -345,51 +367,34 @@ href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place).
 EOF
         },
         {
-            id         => 'humanity',
-            tagline    => "Intelligent (?) and Conscious (?)",
-            logo_alt   => "Humanity Logo",
-            logo_class => "humanity",
-            logo_id    => "humanity_logo",
-            logo_src   => "humour/humanity/images/humanity-logo-small.png",
-            logo_svg   => 'humour/humanity/images/humanity-logo.svg',
-            entry_id   => "humanity",
-            entry_text => "Humanity",
-            href       => "humour/humanity/",
+            id => 'pope_died_on_sunday',
+            tagline =>
+                "And so starts what appears to be an ordinary week… or not!",
+            logo_alt   => "“The Pope Died on Sunday” Logo",
+            logo_class => "pope_died_on_sunday",
+            logo_id    => "pope_died_on_sunday_logo",
+            logo_src   => "humour/Pope/images/pope-logo-small.png",
+            logo_svg   => 'humour/Pope/images/pope-logo.svg',
+            entry_id   => "pope-died-on-sunday",
+            entry_text => "The Pope Died on Sunday",
+            href       => "humour/Pope/",
             abstract   => <<'EOF',
-<p class="humanity abstract">
-Humanity is a screenplay for a movie
-that aims to be a parody about humanity and modern life in particular. It
-tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/Semitic">Semitic</a> city in
-<a href="http://en.wikipedia.org/wiki/Canaan">Canaan</a> circa the year
-500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
-(OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
-</p>
-EOF
-        },
-        {
-            id         => 'the_earth_angel',
-            tagline    => "TODO FILL IN",
-            logo_alt   => "The Earth Angel Logo",
-            logo_class => "the_earth_angel",
-            logo_id    => "the_earth_angel_logo",
-            logo_src =>
-                "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
-            logo_svg =>
-                'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
-            entry_id   => "the-earth-angel",
-            entry_text => "The Earth Angel",
-            href       => "humour/The-Earth-Angel/",
-            abstract   => <<'EOF',
-<p>
-A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
-Angeles teaches a copyrights attorney all about life.
+<p class="pope_died_on_sunday abstract">
+Rachel Southern, an American graphic artist who lives and works in
+<a href="https://en.wikipedia.org/wiki/Milwaukee">Milwaukee</a>, did not expect the week following the death of the Roman Catholic
+Pope to be particularly notable for her, but boy was she wrong!
 </p>
 
-<p>
-It seems that I found writing most of this redundant, due to
-<i>Summerschool at the NSA</i> and later <i>Buffy: A Few Good Slayers</i>,
-but I’m keeping what I have written so far of it for posterity in its
-preliminary state.
+<p class="pope_died_on_sunday abstract">
+From meeting a guy she really liked, to her best friend almost ruining a date
+with him, to her family coming to visit, to helping organise a “fashion-play”,
+to pondering the answer to the question of Life, the Universe, and
+Everything — Rachel’s week proved to be one of the most hectic in her life.
+</p>
+
+<p class="pope_died_on_sunday abstract">
+This story is still incomplete, and only a relatively small part of it has
+been written.
 </p>
 
 EOF
@@ -423,34 +428,29 @@ Work in progress.
 EOF
         },
         {
-            id => 'pope_died_on_sunday',
-            tagline =>
-                "And so starts what appears to be an ordinary week… or not!",
-            logo_alt   => "“The Pope Died on Sunday” Logo",
-            logo_class => "pope_died_on_sunday",
-            logo_id    => "pope_died_on_sunday_logo",
-            logo_src   => "humour/Pope/images/pope-logo-small.png",
-            logo_svg   => 'humour/Pope/images/pope-logo.svg',
-            entry_id   => "pope-died-on-sunday",
-            entry_text => "The Pope Died on Sunday",
-            href       => "humour/Pope/",
+            id         => 'the_earth_angel',
+            tagline    => "TODO FILL IN",
+            logo_alt   => "The Earth Angel Logo",
+            logo_class => "the_earth_angel",
+            logo_id    => "the_earth_angel_logo",
+            logo_src =>
+                "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
+            logo_svg =>
+                'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
+            entry_id   => "the-earth-angel",
+            entry_text => "The Earth Angel",
+            href       => "humour/The-Earth-Angel/",
             abstract   => <<'EOF',
-<p class="pope_died_on_sunday abstract">
-Rachel Southern, an American graphic artist who lives and works in
-<a href="https://en.wikipedia.org/wiki/Milwaukee">Milwaukee</a>, did not expect the week following the death of the Roman Catholic
-Pope to be particularly notable for her, but boy was she wrong!
+<p>
+A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
+Angeles teaches a copyrights attorney all about life.
 </p>
 
-<p class="pope_died_on_sunday abstract">
-From meeting a guy she really liked, to her best friend almost ruining a date
-with him, to her family coming to visit, to helping organise a “fashion-play”,
-to pondering the answer to the question of Life, the Universe, and
-Everything — Rachel’s week proved to be one of the most hectic in her life.
-</p>
-
-<p class="pope_died_on_sunday abstract">
-This story is still incomplete, and only a relatively small part of it has
-been written.
+<p>
+It seems that I found writing most of this redundant, due to
+<i>Summerschool at the NSA</i> and later <i>Buffy: A Few Good Slayers</i>,
+but I’m keeping what I have written so far of it for posterity in its
+preliminary state.
 </p>
 
 EOF

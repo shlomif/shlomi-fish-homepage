@@ -84,11 +84,6 @@ my $humour_tree_contents = {
                             url   => "humour/humanity/songs/",
                             title => "Recordings of Songs from the Screenplay",
                         },
-                        {
-                            text => "“Buy the Fish” Song in Hebrew",
-                            url =>
-                                "humour/humanity/buy-the-fish-in-hebrew.html",
-                        },
                     ],
                 },
                 {
@@ -180,9 +175,9 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text  => "The Muppets Show TNI",
+                    text  => "Muppets Fan Fiction",
                     url   => "humour/Muppets-Show-TNI/",
-                    title => "The Next Incarnation of The Muppets’ Show",
+                    title => "The Muppets Show / Sesame Street Fan Fiction",
                     subs  => [
                         {
                             text => "Harry Potter",
@@ -192,6 +187,8 @@ my $humour_tree_contents = {
                             text => "Summer Glau and Chuck Norris",
                             url =>
 "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
+                            title =>
+"Summer Glau &amp; Chuck Norris as Grammar Nazis",
                         },
                         {
                             text => "Jennifer Lawrence",

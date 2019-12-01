@@ -1,5 +1,7 @@
 body {
-    font-family: calibri, arial, helvetica, "helvetica neue", sans-serif;
+    @if false {
+        font-family: calibri, arial, helvetica, "helvetica neue", sans-serif;
+    }
     margin: 0;
     padding: 0;
 }

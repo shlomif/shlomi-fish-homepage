@@ -1,6 +1,6 @@
-[%- SET title = "The Muppets’ Show - The Next Incarnation" -%]
-[%- SET desc = "Ideas for the next incarnation of The Muppet Show" -%]
-[%- SET more_keywords = "muppet,muppets,The Muppet Show" -%]
+[%- SET title = "Muppets: Fan Fiction" -%]
+[%- SET desc = "Fan fiction screeenplays for The Muppet Show or Sesame Street" -%]
+[%- SET more_keywords = "muppet,muppets,The Muppet Show,fanfic,fan fiction,crossovers,screeenplays,screeenplay" -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -22,7 +22,7 @@
 <ul>
 
 <li>
-[% PROCESS screenplay_github_repo     url = "http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation",  %]
+[% PROCESS screenplay_github_repo url = "http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation", %]
 </li>
 
 </ul>

@@ -7,10 +7,10 @@ use Test::Differences (qw(eq_or_diff));
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 # TEST
-eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' $T2_POST_DEST`),
+eq_or_diff( scalar(`ag -i 'penguin\\.org\\.il' $SRC_POST_DEST`),
     '', "No deprecated (hijacked/etc.) domains." );
 __END__
 

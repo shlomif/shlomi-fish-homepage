@@ -7,10 +7,10 @@ use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
-    my $content = path("$T2_POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
+    my $content = path("$SRC_POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
 
     # TEST
     like(
@@ -20,13 +20,13 @@ my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     );
 
     # TEST
-    ok( scalar( -e "$T2_POST_DEST/humour/fortunes/tinic.dat" ),
+    ok( scalar( -e "$SRC_POST_DEST/humour/fortunes/tinic.dat" ),
         ".dat file exists." );
 
     # TEST
     cmp_ok(
         scalar(
-            -s "$T2_POST_DEST/humour/fortunes/fortunes-shlomif-lookup.sqlite3"
+            -s "$SRC_POST_DEST/humour/fortunes/fortunes-shlomif-lookup.sqlite3"
         ),
         ">", 1024,
         "sqlite database is there"

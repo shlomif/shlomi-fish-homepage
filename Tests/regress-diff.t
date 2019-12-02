@@ -7,9 +7,9 @@ use Test::Differences qw(eq_or_diff);
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
-my $src = $T2_POST_DEST;
+my $src = $SRC_POST_DEST;
 
 my $good = '../GOOD-post-inc/t2';
 

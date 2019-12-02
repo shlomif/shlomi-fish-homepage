@@ -8,10 +8,10 @@ use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
-    my $fh = path("$T2_POST_DEST/humour/fortunes/show.cgi");
+    my $fh = path("$SRC_POST_DEST/humour/fortunes/show.cgi");
 
     # TEST
     ok( -x $fh, "show.cgi is executable." );

@@ -9,9 +9,9 @@ use HTML::Latemp::Local::Paths ();
 use Test::More tests => 2;
 use Path::Tiny qw/ path /;
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 {
-    my $content = path("$T2_POST_DEST/MANIFEST.html")->slurp_utf8;
+    my $content = path("$SRC_POST_DEST/MANIFEST.html")->slurp_utf8;
 
     # TEST
     like( $content, qr#<a href="humour/fortunes/\.htaccess">#, "MANIFEST" );

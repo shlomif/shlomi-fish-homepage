@@ -9,12 +9,12 @@ use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
     my $content =
         path(
-        "$T2_POST_DEST/lecture/Perl/Newbies/lecture2/useful_funcs/sort/cmp.html"
+"$SRC_POST_DEST/lecture/Perl/Newbies/lecture2/useful_funcs/sort/cmp.html"
     )->slurp_utf8;
 
     my $needle = <<'EOF';
@@ -29,7 +29,7 @@ EOF
 
 {
     my $content =
-        path("$T2_POST_DEST/lecture/Perl/Newbies/lecture2/style.css")
+        path("$SRC_POST_DEST/lecture/Perl/Newbies/lecture2/style.css")
         ->slurp_utf8;
 
     my $needle = 'color:';

@@ -1,12 +1,12 @@
 # Whether this is the development environment
 DEV = 0
 
-T2_POST_DEST = dest/post-incs/t2
-SRC_POST_DEST = $(T2_POST_DEST)
+SRC_POST_DEST := dest/post-incs/t2
+T2_POST_DEST := $(SRC_POST_DEST)
 
-ALL_DEST_BASE = dest/pre-incs
+ALL_DEST_BASE := dest/pre-incs
 
-MATHJAX_SOURCE_README = lib/js/MathJax/README.md
+MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
@@ -1018,18 +1018,18 @@ all_deps: $(TECH_TIPS_OUT)
 $(SRC_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
 $(SRC_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
 
-all: $(SRC_CLEAN_STAMP) $(T2_POST_DEST_SHOW_CGI)
+all: $(SRC_CLEAN_STAMP)
 
-$(SRC_FORTUNES_ALL__HTML__POST) $(T2_POST_DEST_SHOW_CGI): $(SRC_CLEAN_STAMP)
+$(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(SRC_DEST) --dest-dir=$(SRC_POST_DEST) --
-STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(SRC_DEST)/?=='
+STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(SRC_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
-	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README)
+	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(SRC_POST_DEST)/
 	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
 	rsync -a $(SRC_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)
@@ -1040,7 +1040,7 @@ QP_VIM_IFACE := lib/presentations/qp/common/$(VIM_IFACE_BN)
 
 all: $(QP_VIM_IFACE)
 
-FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
+FASTRENDER_DEPS := $(SRC_DOCS_SRC) all_deps
 
 FAQ_SECTS__DIR := $(SRC_POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml

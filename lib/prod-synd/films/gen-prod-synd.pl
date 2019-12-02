@@ -7,7 +7,7 @@ use Shlomif::Homepage::Amazon::Obj;
 
 Shlomif::Homepage::Amazon::Obj->new(
     {
-        wml_dir      => "t2/humour/recommendations/films",
+        wml_dir      => "src/humour/recommendations/films",
         lib_dir      => "lib/prod-synd/films",
         xml_basename => "shlomi-fish-films-recommendations.xml",
     }

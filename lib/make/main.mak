@@ -37,10 +37,9 @@ SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-commo
 DOCS_COMMON_DEPS = $(NAV_DATA_DEP)
 
 FORTUNES_DIR = humour/fortunes
-T2_FORTUNES_DIR = $(T2_SRC_DIR)/$(FORTUNES_DIR)
-SRC_FORTUNES_DIR = src/$(FORTUNES_DIR)
+SRC_FORTUNES_DIR = $(SRC_SRC_DIR)/$(FORTUNES_DIR)
 
-include $(T2_FORTUNES_DIR)/fortunes-list.mak
+include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
 T2_ALL_DIRS_DEST = $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(T2_DIRS_DEST) $(T2_COMMON_DIRS_DEST)
 
@@ -50,6 +49,7 @@ MAN_HTML = $(T2_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET = $(T2_DEST)/meta/site-source/INSTALL
 T2_DEST_FORTUNES_DIR = $(T2_DEST)/$(FORTUNES_DIR)
+SRC_DEST_FORTUNES_DIR = $(T2_DEST_FORTUNES_DIR)
 T2_POST_DEST_FORTUNES_DIR = $(T2_POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.xhtml
 
@@ -108,38 +108,38 @@ DEST_POPE := $(DEST_HUMOUR)/Pope
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-T2_DEST_SHOW_CGI = $(T2_DEST_FORTUNES_DIR)/show.cgi
-T2_POST_DEST_SHOW_CGI = $(T2_POST_DEST_FORTUNES_DIR)/show.cgi
-T2_SRC_FORTUNE_SHOW_SCRIPT = $(T2_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
-T2_SRC_FORTUNE_SHOW_PY = $(T2_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
-T2_SRC_BOTTLE = $(T2_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
-T2_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(T2_DEST_FORTUNES_DIR)/show-cgi.txt
-T2_DEST_FORTUNE_BOTTLE = $(T2_DEST_FORTUNES_DIR)/bottle.py
+SRC_DEST_SHOW_CGI = $(SRC_DEST_FORTUNES_DIR)/show.cgi
+SRC_POST_DEST_SHOW_CGI = $(SRC_POST_DEST_FORTUNES_DIR)/show.cgi
+SRC_SRC_FORTUNE_SHOW_SCRIPT = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
+SRC_SRC_FORTUNE_SHOW_PY = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
+SRC_SRC_BOTTLE = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
+SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(SRC_DEST_FORTUNES_DIR)/show-cgi.txt
+SRC_DEST_FORTUNE_BOTTLE = $(SRC_DEST_FORTUNES_DIR)/bottle.py
 
 htacc = $(addsuffix /.htaccess,$(1))
-T2_FORTUNES_DIR_HTACCESS = $(call htacc,$(T2_DEST_FORTUNES_DIR))
+SRC_FORTUNES_DIR_HTACCESS = $(call htacc,$(SRC_DEST_FORTUNES_DIR))
 
 ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(addprefix $(T2_DEST)/,lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 
-$(T2_FORTUNES_DIR)/my_htaccess.conf: $(T2_FORTUNES_DIR)/gen-htaccess.pl
-	(cd $(T2_FORTUNES_DIR) && gmake)
+$(SRC_FORTUNES_DIR)/my_htaccess.conf: $(SRC_FORTUNES_DIR)/gen-htaccess.pl
+	(cd $(SRC_FORTUNES_DIR) && gmake)
 
-$(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
+$(SRC_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -Ilib $< $@
 
-T2_DEST_FORTUNES := $(patsubst $(T2_FORTUNES_DIR)/%,$(T2_DEST_FORTUNES_DIR)/%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
+SRC_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(SRC_DEST_FORTUNES_DIR)/%,$(wildcard $(SRC_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
 chmod_copy = $(call COPY) ; chmod +x $@
 
-$(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
+$(SRC_DEST_SHOW_CGI): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-$(T2_SRC_FORTUNE_SHOW_PY): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
+$(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-$(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
+$(SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
@@ -221,7 +221,7 @@ $(DEST_HUMOUR)/recommendations/films/index.xhtml: $(PROD_SYND_FILMS_INC)
 
 all_deps: $(PROD_SYND_FILMS_INC)
 
-$(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
+$(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
 SCREENPLAY_DOCS_ADDITIONS = \
@@ -363,7 +363,7 @@ $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HT
 $(T2_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
-all_deps: $(T2_FORTUNES_ALL_WML)
+all_deps: $(SRC_FORTUNES_ALL_WML)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
@@ -394,28 +394,28 @@ FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
 FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
 
 FORTUNES_XMLS_BASE = $(addsuffix .xml,$(FORTUNES_FILES_BASE))
-FORTUNES_XMLS_SRC = $(addprefix $(T2_FORTUNES_DIR)/,$(FORTUNES_XMLS_BASE))
-FORTUNES_XHTMLS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
-FORTUNES_XHTMLS_TOCS = $(patsubst $(T2_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.toc-xhtml,$(FORTUNES_XMLS_SRC))
+FORTUNES_XMLS_SRC = $(addprefix $(SRC_FORTUNES_DIR)/,$(FORTUNES_XMLS_BASE))
+FORTUNES_XHTMLS = $(patsubst $(SRC_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.xhtml,$(FORTUNES_XMLS_SRC))
+FORTUNES_XHTMLS_TOCS = $(patsubst $(SRC_FORTUNES_DIR)/%.xml,$(FORTUNES_XHTMLS_DIR)/%.toc-xhtml,$(FORTUNES_XMLS_SRC))
 FORTUNES_SOURCE_WMLS = $(patsubst %,$(SRC_FORTUNES_DIR)/%.html.tt2,$(FORTUNES_FILES_BASE))
-FORTUNES_DEST_HTMLS = $(patsubst $(SRC_FORTUNES_DIR)/%.html.tt2,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_SOURCE_WMLS))
+FORTUNES_DEST_HTMLS = $(patsubst $(SRC_FORTUNES_DIR)/%.html.tt2,$(SRC_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_SOURCE_WMLS))
 FORTUNES_XHTMLS__COMPRESSED = $(patsubst %.xhtml,%.compressed.xhtml,$(FORTUNES_XHTMLS))
 FORTUNES_XHTMLS__FOR_INPUT_PORTIONS = $(patsubst %.xhtml,%.xhtml-for-input,$(FORTUNES_XHTMLS))
-FORTUNES_WMLS_HTMLS = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+FORTUNES_WMLS_HTMLS = $(patsubst %,$(SRC_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 FORTUNES_TEXTS = $(patsubst %.xml,%,$(FORTUNES_XMLS_SRC))
-FORTUNES_ATOM_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.atom
-FORTUNES_RSS_FEED = $(T2_FORTUNES_DIR)/fortunes-shlomif-all.rss
+FORTUNES_ATOM_FEED = $(SRC_FORTUNES_DIR)/fortunes-shlomif-all.atom
+FORTUNES_RSS_FEED = $(SRC_FORTUNES_DIR)/fortunes-shlomif-all.rss
 FORTUNES_SQLITE_BASENAME := fortunes-shlomif-lookup.sqlite3
-T2_DEST_FORTUNES_SQLITE_DB = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
-FORTUNES_SQLITE_DB = $(T2_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
-T2_DEST_HTMLS_FORTUNES = $(patsubst %,$(T2_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
+SRC_DEST_FORTUNES_SQLITE_DB = $(SRC_DEST_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
+FORTUNES_SQLITE_DB = $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
+SRC_DEST_HTMLS_FORTUNES = $(patsubst %,$(SRC_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
 include lib/make/factoids.mak
 
-FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(T2_FORTUNES_DIR)/convert-to-xhtml.pl
-FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(T2_FORTUNES_DIR)/prepare-xhtml-for-input.pl
+FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
+FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(SRC_FORTUNES_DIR)/prepare-xhtml-for-input.pl
 
 $(FORTUNES_SOURCE_WMLS): $(FORTUNES_LIST__DEPS)
 	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;'
@@ -423,39 +423,39 @@ $(FORTUNES_SOURCE_WMLS): $(FORTUNES_LIST__DEPS)
 $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT)
 	$(PERL) $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
 
-$(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
+$(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(SRC_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
 	$(PERL) $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
 
 FORTUNES_XML_TO_XHTML_TOC_XSLT = lib/fortunes/fortune-xml-to-xhtml-toc.xslt
 
-$(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(T2_FORTUNES_DIR)/%.xml $(FORTUNES_XML_TO_XHTML_TOC_XSLT)
+$(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(SRC_FORTUNES_DIR)/%.xml $(FORTUNES_XML_TO_XHTML_TOC_XSLT)
 	xsltproc $(FORTUNES_XML_TO_XHTML_TOC_XSLT) $< | \
 	$(PERL) -0777 -lapE 's#\A.*?<ul[^>]*?>#<ul>#ms; s#^[ \t]+##gms; s#[ \t]+$$##gms' - > \
 	$@
 
-$(FORTUNES_WMLS_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
+$(FORTUNES_WMLS_HTMLS): $(SRC_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
 
 FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
 
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
-$(FORTUNES_TEXTS): $(T2_FORTUNES_DIR)/%: $(T2_FORTUNES_DIR)/%.xml
-	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
-	$(PERL) $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
+$(FORTUNES_TEXTS): $(SRC_FORTUNES_DIR)/%: $(SRC_FORTUNES_DIR)/%.xml
+	bash $(SRC_FORTUNES_DIR)/run-validator.bash $< && \
+	$(PERL) $(SRC_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
-$(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(T2_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
-	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(T2_FORTUNES_DIR)
+$(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(SRC_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
+	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(SRC_FORTUNES_DIR)
 
-$(FORTUNES_SQLITE_DB): $(T2_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_LIST__DEPS)
+$(FORTUNES_SQLITE_DB): $(SRC_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_LIST__DEPS)
 	$(PERL) -Ilib $<
 
-$(FORTUNES_TARGET): $(SRC_FORTUNES_DIR)/index.xhtml.tt2 $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile $(T2_FORTUNES_DIR)/ver.txt
+$(FORTUNES_TARGET): $(SRC_FORTUNES_DIR)/index.xhtml.tt2 $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(SRC_FORTUNES_DIR)/Makefile $(SRC_FORTUNES_DIR)/ver.txt
 
 # TODO : extract a macro for this and the rule below.
-$(FORTUNES_DEST_HTMLS): $(T2_DEST_FORTUNES_DIR)/%.html: lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
+$(FORTUNES_DEST_HTMLS): $(SRC_DEST_FORTUNES_DIR)/%.html: lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
 
-$(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
+$(SRC_FORTUNES_ALL__TEMP__HTML): $(SRC_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
 
 $(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
@@ -463,7 +463,7 @@ FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 
 FORTS_EPUB_BASENAME = fortunes-shlomif.epub
-FORTS_EPUB_DEST = $(T2_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
+FORTS_EPUB_DEST = $(SRC_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
 FORTS_EPUB_SRC = $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
 
 $(FORTS_EPUB_SRC): fortunes-target
@@ -471,7 +471,7 @@ $(FORTS_EPUB_SRC): fortunes-target
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(T2_DEST_SHOW_CGI) $(T2_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(SRC_DEST_SHOW_CGI) $(SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
 
 $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \
@@ -493,17 +493,17 @@ $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-pro
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 
-lib/htmls/The-Enemy-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 all_deps: lib/htmls/The-Enemy-English-rev5.html-part
 
-lib/htmls/The-Enemy-English-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 
-lib/htmls/The-Enemy-English-rev6.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
 DOCBOOK4_HHFG_IMAGES_RAW = \
@@ -588,7 +588,7 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 
 art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(DEST_HTML_6_LOGO_PNG)
 
-$(DEST_HTML_6_LOGO_PNG): $(T2_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
+$(DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
@@ -597,7 +597,7 @@ DEST_FIERY_Q_PNG = $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.pn
 
 all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON) $(DEST_FIERY_Q_PNG)
 
-$(DEST_WINDOWS_UPDATE_SNAIL_ICON): $(T2_SRC_DIR)/humour/bits/facts/images/snail.svg
+$(DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
 	inkscape --export-width=200 --export-png="$@" $<
 	$(OPTIPNG) $@
 
@@ -617,7 +617,7 @@ $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	inkscape --export-width=30 --export-png="$@" $<
 	$(OPTIPNG) $@
 
-$(HHFG_SMALL_BANNER_AD_PNG): $(T2_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
+$(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
 	gm convert -resize '50%' $< $@
 	$(OPTIPNG) $@
 
@@ -1092,7 +1092,7 @@ min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(
 
 TEST_TARGETS = Tests/*.{py,t}
 
-T2_DEST_FORTUNES_many_files := $(T2_DEST_FORTUNES) $(T2_DEST_FORTUNES_SQLITE_DB)
+SRC_DEST_FORTUNES_many_files := $(SRC_DEST_FORTUNES) $(SRC_DEST_FORTUNES_SQLITE_DB)
 
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
@@ -1136,7 +1136,7 @@ JSON_RES_DEST := $(T2_DEST)/$(JSON_RES_BASE).json
 $(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
 
-non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)
+non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 
 $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
@@ -1154,4 +1154,4 @@ $(CATB_COPY_POST): $(CATB_COPY)
 
 all: $(CATB_COPY_POST)
 
-copy_fortunes: $(T2_DEST_FORTUNES_many_files)
+copy_fortunes: $(SRC_DEST_FORTUNES_many_files)

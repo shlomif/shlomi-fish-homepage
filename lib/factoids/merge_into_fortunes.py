@@ -9,7 +9,7 @@
 """
 Merge / propagate recent items from the
 lib/factoids/shlomif-factoids-lists.xml file
-into t2/humour/fortunes/shlomif-factoids.xml .
+into src/humour/fortunes/shlomif-factoids.xml .
 
 DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 """
@@ -113,12 +113,13 @@ class FortunesMerger:
 
 
 def main():
+    FORTS_DIR = "./src/humour/fortunes"
     xml_propagator = FortunesMerger(
         "./lib/factoids/shlomif-factoids-lists.xml",
-        "./t2/humour/fortunes/proto--shlomif-factoids.xml")
+        "{}/proto--shlomif-factoids.xml".format(FORTS_DIR))
     xml_propagator.process()
     xml_propagator.write_to_file(
-        "./t2/humour/fortunes/shlomif-factoids.xml")
+        "{}/shlomif-factoids.xml".format(FORTS_DIR))
 
 
 main()

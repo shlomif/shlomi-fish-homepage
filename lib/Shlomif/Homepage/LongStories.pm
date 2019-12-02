@@ -684,7 +684,7 @@ sub render_make_fragment
         if ( $logo_svg ne '//$SKIP' )
         {
             push @rules,
-"\$($m_id): \$(T2_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n\n"
+"\$($m_id): \$(SRC_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n\n"
                 ,;
 
             $deps .= " \$($m_id)";
@@ -694,7 +694,8 @@ sub render_make_fragment
             if (1)
             {
                 push @rules,
-                    "\$($m_id): \$(T2_SRC_DIR)/$logo_src\n\t\$(call COPY)\n\n",;
+                    "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n\n"
+                    ,;
             }
             $pngs .= " \$($m_id)";
         }

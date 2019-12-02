@@ -179,7 +179,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
         return Shlomif::Homepage::ArticleIndex->new->calc_string();
     },
     p_ShlomifFortunesMake__package_base => sub {
-        use lib './t2/humour/fortunes/';
+        use lib './src/humour/fortunes/';
         use ShlomifFortunesMake;
         return ShlomifFortunesMake->package_base;
     },

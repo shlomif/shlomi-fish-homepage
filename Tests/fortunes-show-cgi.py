@@ -36,7 +36,7 @@ import sys
 import unittest
 
 from webtest import TestApp
-sys.path.append('./t2/humour/fortunes/')
+sys.path.append('./src/humour/fortunes/')
 import fortunes_show  # noqa:E402
 
 

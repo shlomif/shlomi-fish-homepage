@@ -1068,6 +1068,16 @@ T2_jpgs__webps :=$(T2_jpgs__BASE:%.jpg=%.webp)
 $(T2_jpgs__webps): %.webp: %.jpg
 	gm convert $< $@
 
+SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
+SRC_SVGS__MIN := $(SRC_SVGS__BASE:%.svg=%.min.svg)
+SRC_SVGS__svgz := $(SRC_SVGS__BASE:%.svg=%.svgz)
+
+$(SRC_SVGS__MIN): %.min.svg: %.svg
+	minify --svg-decimals 3 -o $@ $<
+
+$(SRC_SVGS__svgz): %.svgz: %.min.svg
+	gzip --best -n < $< > $@
+
 T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
 T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
 T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
@@ -1078,7 +1088,7 @@ $(T2_SVGS__MIN): %.min.svg: %.svg
 $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-min_svgs: $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC) $(T2_jpgs__webps)
+min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC) $(T2_jpgs__webps)
 
 TEST_TARGETS = Tests/*.{py,t}
 

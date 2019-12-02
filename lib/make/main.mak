@@ -52,7 +52,6 @@ FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
 SRC_FORTUNES_ALL__HTML = $(SRC_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 SRC_FORTUNES_ALL__HTML__POST = $(SRC_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
-T2_FORTUNES_ALL__TEMP__HTML = $(SRC_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
 SECTS_DEPS__DIR := lib/Shlomif/Homepage/SectionMenu/Sects
 SECTION_MENU_DEPS := lib/Shlomif/Homepage/SectionMenu.pm
@@ -69,19 +68,19 @@ ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_
 
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
-T2_CACHE_ALL_STAMP = lib/cache/STAMP.sects-includes
-T2_CLEAN_STAMP = lib/cache/STAMP.post-dest
+SRC_CACHE_ALL_STAMP = lib/cache/STAMP.sects-includes
+SRC_CLEAN_STAMP = lib/cache/STAMP.post-dest
 
 T2_CACHE_PREF = lib/cache/combined/t2
 
 GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(SRC_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
 
-$(T2_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
+$(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"
 	@$(GEN_CACHE_CMD)
 	touch $@
 
-sects_cache: make-dirs $(T2_CACHE_ALL_STAMP)
+sects_cache: make-dirs $(SRC_CACHE_ALL_STAMP)
 
 site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 
@@ -1017,9 +1016,9 @@ all_deps: $(TECH_TIPS_OUT)
 $(SRC_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
 $(SRC_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
 
-all: $(T2_CLEAN_STAMP) $(T2_POST_DEST_SHOW_CGI)
+all: $(SRC_CLEAN_STAMP) $(T2_POST_DEST_SHOW_CGI)
 
-$(SRC_FORTUNES_ALL__HTML__POST) $(T2_POST_DEST_SHOW_CGI): $(T2_CLEAN_STAMP)
+$(SRC_FORTUNES_ALL__HTML__POST) $(T2_POST_DEST_SHOW_CGI): $(SRC_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(SRC_DEST) --dest-dir=$(SRC_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(SRC_DEST)/?=='
@@ -1027,7 +1026,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
+$(SRC_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
 	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(SRC_POST_DEST)/
 	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
@@ -1049,7 +1048,7 @@ FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
 $(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM)
 	python3 $(FAQ_SECTS__PROGRAM)
 
-$(FAQ_SECTS__SRC): $(T2_CLEAN_STAMP)
+$(FAQ_SECTS__SRC): $(SRC_CLEAN_STAMP)
 
 all: $(FAQ_SECTS__PIVOT)
 

@@ -6,8 +6,8 @@ use Test::More tests => 7;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
-my $T2_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
-my $T2_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $SRC_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
+my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 delete $ENV{MAKEFLAGS};
 
@@ -24,7 +24,7 @@ sub dest_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
-    return gmake_test( $var, "$T2_DEST/$word", $blurb );
+    return gmake_test( $var, "$SRC_DEST/$word", $blurb );
 }
 
 {
@@ -55,13 +55,13 @@ sub dest_test
         "found a file" );
 
     # TEST
-    gmake_test( 'SRC_POST_DIRS_DEST', "$T2_POST_DEST/art/original-graphics",
+    gmake_test( 'SRC_POST_DIRS_DEST', "$SRC_POST_DEST/art/original-graphics",
         "found a dir" );
 
     # TEST
     gmake_test(
         'SRC_SVGS__svgz',
-        "$T2_POST_DEST/images/bk2hp-v2.svgz",
+        "$SRC_POST_DEST/images/bk2hp-v2.svgz",
         "bk2hp-v2 svg is present."
     );
 }

@@ -1,4 +1,4 @@
-$(ALL_HTACCESSES): $(T2_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
+$(ALL_HTACCESSES): $(SRC_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
 $(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
 $(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
 $(DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
@@ -22,7 +22,7 @@ $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(QOHELETH_IMAGES__DEST): $(QOHELETH_IMAGES__DEST_PREFIX)/%: $(QOHELETH_IMAGES__SOURCE_PREFIX)/%
 $(QP_VIM_IFACE): lib/$(VIM_IFACE_BN)
-$(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(T2_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl
+$(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(SRC_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 $(SRC_DEST_FORTUNES_many_files): $(SRC_DEST)/%: $(SRC_SRC_DIR)/%

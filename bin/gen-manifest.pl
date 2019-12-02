@@ -10,9 +10,9 @@ use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $T2_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
+my $SRC_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
 
-open my $m, '>', "$T2_DEST/MANIFEST.html";
+open my $m, '>', "$SRC_DEST/MANIFEST.html";
 
 $m->print(<<'EOF');
 <?xml version="1.0" encoding="utf-8"?>
@@ -28,7 +28,7 @@ $m->print(<<'EOF');
 EOF
 
 {
-    my $ffo = File::Find::Object->new( {}, $T2_DEST, );
+    my $ffo = File::Find::Object->new( {}, $SRC_DEST, );
 
     while ( my $r = $ffo->next_obj() )
     {

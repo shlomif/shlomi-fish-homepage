@@ -162,7 +162,7 @@ Shlomif::Homepage::GenScreenplaysMak->new->generate(
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => \&_git_task } );
 
 HTML::Latemp::DocBook::GenMake->new(
-    { dest_var => '$(T2_DEST)', post_dest_var => '$(T2_POST_DEST)' } )
+    { dest_var => '$(SRC_DEST)', post_dest_var => '$(T2_POST_DEST)' } )
     ->generate;
 Shlomif::Homepage::GenQuadPresMak->new->generate;
 HTML::Latemp::GenWmlHSects->new->run;

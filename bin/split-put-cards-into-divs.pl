@@ -11,8 +11,8 @@ use XML::LibXML;
 use HTML::Latemp::Local::Paths;
 use Shlomif::DocBookClean;
 
-my $T2_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
-my $dom     = XML::LibXML->load_xml( location =>
+my $SRC_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
+my $dom      = XML::LibXML->load_xml( location =>
         'lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml' );
 
 sub _xpc
@@ -59,6 +59,6 @@ EOF
     Shlomif::DocBookClean::cleanup_docbook( \$contents );
 
     path(
-qq#$T2_DEST/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
+qq#$SRC_DEST/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
     )->spew_utf8($contents);
 }

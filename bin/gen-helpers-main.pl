@@ -235,44 +235,13 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
                 'source_dir' => $dir,
                 'dest_dir'   => "\$(ALL_DEST_BASE)/$dest_dir",
             }
-        } (qw(common src t2))
+        } (qw(common src))
     ],
     out_dir                    => $DIR,
     filename_lists_post_filter => sub {
-        my ($args)     = @_;
-        my $is_bucket  = sub { return $args->{bucket} eq shift; };
-        my $filenames  = $args->{filenames};
-        my $ipp_filter = sub {
-            return [ grep { not /\Aipp\.\S*\z/ } @{ shift @_ } ];
-        };
-        my $results = sub {
-            if ( $args->{host} eq 't2' )
-            {
-                if ( $is_bucket->('DOCS') )
-                {
-                    return $ipp_filter->( $filenames, );
-                }
-                if ( $is_bucket->('IMAGES') )
-                {
-                    return [ grep { $_ ne 'humour/fortunes/show.cgi' }
-                            @$filenames ];
-                }
-                if ( $is_bucket->('DIRS') )
-                {
-                    return [
-                        sort keys %{
-                            +{
-                                map { $_ => 1 } @{ $ipp_filter->($filenames) }
-                            }
-                        }
-                    ];
-                }
-            }
-            return $filenames;
-            }
-            ->();
-
-        return [ grep { not m#\Ahumour/fortunes/\S+\.tar\.gz\z# } @$results ];
+        my ($args) = @_;
+        my $filenames = $args->{filenames};
+        return [ grep { not m#\Ahumour/fortunes/\S+\.tar\.gz\z# } @$filenames ];
     },
 );
 
@@ -285,15 +254,11 @@ if ( my $Err = $@ )
 }
 my $r_fh = path("$DIR/rules.mak");
 my $text = $r_fh->slurp_utf8;
-my $H    = qr/SRC|T2/;
+my $H    = qr/SRC/;
 $text =~
 s#^(\$\(($H)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_TT2_RENDER)#gms
     or die "Cannot subt";
 $text =~ s#(($H)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
-    or die "Cannot subt";
-$text =~ s#^(T2_COMMON_(?:DIRS|IMAGES)_DEST =)[^\n]*(\n)#${1}${2}#gms
-    or die "Cannot subt";
-$text =~ s#^\$\(T2_DEST\):\n(?: [^\n]+\n)*##gms
     or die "Cannot subt";
 $text =~ s#\.wml#.tt2#gms
     or die "Cannot subt";

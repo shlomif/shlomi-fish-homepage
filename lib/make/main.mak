@@ -834,7 +834,6 @@ PRINTABLE_DEST_DIR := dest/printable
 PRINTABLE_RESUMES__HTML__PIVOT = $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
 PRINTABLE_RESUMES__HTML = $(PRINTABLE_RESUMES__HTML__PIVOT) $(addprefix $(PRINTABLE_DEST_DIR)/,Shlomi-Fish-English-Resume.html Shlomi-Fish-Heb-Resume.html Shlomi-Fish-Resume-as-Software-Dev.html)
 
-
 printable_resumes__html : $(PRINTABLE_RESUMES__HTML__PIVOT)
 
 PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
@@ -1124,7 +1123,7 @@ JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
 
 JSON_RES_DEST := $(T2_DEST)/$(JSON_RES_BASE).json
 
-$(JSON_RES_DEST): $(T2_SRC_DIR)/$(JSON_RES_BASE).yaml
+$(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
 
 non_latemp_targets: $(JSON_RES_DEST) $(T2_SRC_FORTUNE_SHOW_PY)

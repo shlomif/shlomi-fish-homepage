@@ -174,9 +174,9 @@ $(SRC_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd l
 
 SRC_DOCS_SRC = $(patsubst $(SRC_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
 
-t2_filt_file = $(filter $(SRC_DEST)/$1,$(T2_DOCS_DEST))
-t2_filt = $(filter $(SRC_DEST)/$1/%,$(T2_DOCS_DEST))
-t2_src_filt = $(filter $(T2_SRC_DIR)/$1/%,$(T2_DOCS_SRC))
+t2_filt_file = $(filter $(SRC_DEST)/$1,$(SRC_DOCS_DEST))
+t2_filt = $(filter $(SRC_DEST)/$1/%,$(SRC_DOCS_DEST))
+t2_src_filt = $(filter $(SRC_SRC_DIR)/$1/%,$(SRC_DOCS_SRC))
 
 #### Humour thing
 
@@ -855,7 +855,7 @@ FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD = $(PERL) $(FACTOIDS_RENDER_SCRIPT)
 
-# FACTOIDS_DOCS_DEST = $(filter $(DEST_HUMOUR)/bits/facts/%,$(T2_DOCS_DEST))
+# FACTOIDS_DOCS_DEST = $(filter $(DEST_HUMOUR)/bits/facts/%,$(SRC_DOCS_DEST))
 
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
@@ -971,7 +971,7 @@ tags:
 
 SRC_CACHE_PREFIX := lib/cache/combined/t2
 
-$(T2_DOCS_DEST): $(SRC_DEST)/%: \
+$(SRC_DOCS_DEST): $(SRC_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/breadcrumbs-trail \
 	$(SRC_CACHE_PREFIX)/%/html_head_nav_links \
 	$(SRC_CACHE_PREFIX)/%/main_nav_menu_html \
@@ -1026,8 +1026,8 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
-	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
+	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(SRC_POST_DEST)/
 	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
 	rsync -a $(SRC_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)

@@ -1063,9 +1063,9 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-tt2
 	perl bin/tt-render.pl
 
-T2_jpgs__BASE := $(filter $(T2_POST_DEST)/humour/bits/facts/%.jpg,$(T2_IMAGES_DEST))
-T2_jpgs__webps :=$(T2_jpgs__BASE:%.jpg=%.webp)
-$(T2_jpgs__webps): %.webp: %.jpg
+SRC_jpgs__BASE := $(filter $(SRC_POST_DEST)/humour/bits/facts/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__webps :=$(SRC_jpgs__BASE:%.jpg=%.webp)
+$(SRC_jpgs__webps): %.webp: %.jpg
 	gm convert $< $@
 
 SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
@@ -1078,17 +1078,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-T2_SVGS__BASE := $(filter %.svg,$(T2_IMAGES_DEST))
-T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
-T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
-
-$(T2_SVGS__MIN): %.min.svg: %.svg
-	minify --svg-decimals 3 -o $@ $<
-
-$(T2_SVGS__svgz): %.svgz: %.min.svg
-	gzip --best -n < $< > $@
-
-min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(T2_SVGS__MIN) $(T2_SVGS__svgz) $(BK2HP_SVG_SRC) $(T2_jpgs__webps)
+min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps)
 
 TEST_TARGETS = Tests/*.{py,t}
 

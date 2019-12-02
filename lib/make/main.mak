@@ -278,9 +278,7 @@ $(SCREENPLAY_XML_FOR_OOO_XHTML_DIR)/%.xhtml: $(SCREENPLAY_XML_HTML_DIR)/%.html
 	< $< $(PERL) -lne 'print unless m{\A<\?xml}' > $@
 
 $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	$(PERL) -MXML::Grammar::Screenplay::App::FromProto -e 'run()' -- \
-	-o $@ $<
-	$(PERL) -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) bin/screenplay-text-to-xml.pl -o $@ $<
 
 DEST_HUMOUR_SELINA := $(DEST_HUMOUR)/Selina-Mandrake
 DEST_INTERVIEWS := $(SRC_DEST)/open-source/interviews

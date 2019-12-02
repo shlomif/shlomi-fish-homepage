@@ -295,9 +295,7 @@ HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postp
 FICTION_TEXT_SOURCES_ON_DEST = $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
-	$(PERL) -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
-	-o $@ $<
-	$(PERL) -i -lape 's/\s+$$//' $@
+	$(PERL) bin/fiction-text-to-xml.pl -o $@ $<
 
 HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
 HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)

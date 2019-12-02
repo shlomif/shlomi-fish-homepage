@@ -483,7 +483,7 @@ HACKING_DOC = $(T2_DEST)/open-source/resources/how-to-contribute-to-my-projects/
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
-$(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+$(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
@@ -648,7 +648,7 @@ LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(T2_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC
 lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
-$(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: $(T2_SRC_DIR)/%.scm
+$(LC_PRES_DEST_HTMLS): $(SRC_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
 	text-vimcolor --format html --full-page $< --output $@
 	$(PERL) bin/fix-vimcolor.pl $@
 
@@ -717,7 +717,7 @@ $(T2_DEST)/work/hire-me/index.xhtml $(T2_DEST)/work/hire-me/hebrew.html: lib/pag
 
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 
-$(T2_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(T2_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
+$(SRC_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
 
 $(T2_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
 

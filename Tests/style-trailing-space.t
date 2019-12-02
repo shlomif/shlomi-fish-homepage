@@ -21,7 +21,7 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             abs_path_prune_re => qr%
             \A(?:
             (?:
-            (?:\Q$T2_POST_DEST\E|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
+            (?:\Q$T2_POST_DEST\E|src|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
             )
             |
             (?:dest/?)

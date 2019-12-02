@@ -269,9 +269,7 @@ SCREENPLAY_XML_FOR_OOO_XHTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_FOR_OOO_
 splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS) $(SCREENPLAY_XML_EPUBS)
 
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
-	$(PERL) -MXML::Grammar::Screenplay::App::ToHTML -e 'run()' -- \
-	-o $@ $<
-	$(PERL) -lpi -e 's/[ \t]+\z//' $@
+	$(PERL) bin/screenplay-xml-to-html.pl -o $@ $<
 
 $(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html: $(SCREENPLAY_XML_HTML_DIR)/%.html
 	./bin/extract-screenplay-xml-html.pl -o $@ $<

@@ -171,7 +171,7 @@ sub letter_fn
 {
     my $ext = shift;
     return
-        "t2/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$ext";
+        "src/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.$ext";
 }
 
 sub letter_io

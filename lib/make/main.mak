@@ -71,8 +71,6 @@ FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 SRC_CACHE_ALL_STAMP = lib/cache/STAMP.sects-includes
 SRC_CLEAN_STAMP = lib/cache/STAMP.post-dest
 
-T2_CACHE_PREF = lib/cache/combined/t2
-
 GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(SRC_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
 
 $(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
@@ -971,14 +969,16 @@ $(ENEMY_STYLE):
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
 
+SRC_CACHE_PREFIX := lib/cache/combined/t2
+
 $(T2_DOCS_DEST): $(SRC_DEST)/%: \
-	$(T2_CACHE_PREF)/%/breadcrumbs-trail \
-	$(T2_CACHE_PREF)/%/html_head_nav_links \
-	$(T2_CACHE_PREF)/%/main_nav_menu_html \
-	$(T2_CACHE_PREF)/%/page_url \
-	$(T2_CACHE_PREF)/%/sect-navmenu \
-	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey= \
-	$(T2_CACHE_PREF)/%/shlomif_nav_links_renderer-with_accesskey=1 \
+	$(SRC_CACHE_PREFIX)/%/breadcrumbs-trail \
+	$(SRC_CACHE_PREFIX)/%/html_head_nav_links \
+	$(SRC_CACHE_PREFIX)/%/main_nav_menu_html \
+	$(SRC_CACHE_PREFIX)/%/page_url \
+	$(SRC_CACHE_PREFIX)/%/sect-navmenu \
+	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
+	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
 SRC_MODS_DIR = lib/assets/mods
 

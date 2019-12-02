@@ -5,7 +5,7 @@ use warnings;
 
 package XML::Grammar::Fortune::FromText;
 
-use XML::Writer;
+use XML::Writer ();
 
 use List::MoreUtils (qw(any));
 

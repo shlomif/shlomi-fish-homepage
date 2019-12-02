@@ -17,7 +17,7 @@ while (<>)
     elsif (m{\A  *<title>\Q$title_str\E</title>}ms)
     {
         s{\Q$title_str\E}{Excerpt from the TV Show "Friends" - #$count};
-        $count++;
+        ++$count;
     }
 }
 continue

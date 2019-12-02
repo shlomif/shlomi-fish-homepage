@@ -117,9 +117,8 @@ foreach my $basename (@file_bases)
     }
     continue
     {
-        $idx++;
-
-        $global_idx++;
+        ++$idx;
+        ++$global_idx;
     }
 }
 

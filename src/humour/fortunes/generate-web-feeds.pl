@@ -1,10 +1,8 @@
 use strict;
 use warnings;
 
-use Cwd;
-use File::Spec;
-use String::ShellQuote;
-use Getopt::Long;
+use File::Spec ();
+use Getopt::Long qw/ GetOptions /;
 
 my $master_url = "http://www.shlomifish.org/humour/fortunes/";
 
@@ -16,7 +14,7 @@ GetOptions(
     "atom=s" => \$atom_arg,
     "dir=s"  => \$dir_arg,
     "rss=s"  => \$rss_arg,
-);
+) or die "Getopt::Long failed - $!";
 
 my $abs_dir  = File::Spec->rel2abs($dir_arg);
 my $abs_atom = File::Spec->rel2abs($atom_arg);

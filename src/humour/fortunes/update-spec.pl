@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Getopt::Long;
+use Getopt::Long qw/ GetOptions /;
 
 my ( $in_fn, $out_fn, $ver );
 
@@ -11,7 +11,7 @@ GetOptions(
     "i|input=s"  => \$in_fn,
     "o|output=s" => \$out_fn,
     "ver=s"      => \$ver,
-);
+) or die "Getopt::Long failed - $!";
 
 foreach my $param ( $in_fn, $out_fn, $ver )
 {

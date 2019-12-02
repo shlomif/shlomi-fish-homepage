@@ -487,7 +487,7 @@ $(MOJOLICIOUS_LECTURE_SLIDE1): $(T2_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
-$(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
+$(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
@@ -1116,7 +1116,7 @@ $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fa
 $(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
-$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(T2_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
+$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume

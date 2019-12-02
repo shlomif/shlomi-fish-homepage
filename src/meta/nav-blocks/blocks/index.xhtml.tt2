@@ -9,7 +9,7 @@
 
 [% WRAPPER nav_blocks  %]
 
-[% FOREACH rec IN [ { "id" => "buffy", "title" => "Buffy", }, { "id" => "harry_potter", "title" => "Harry Potter", }, { "id" => "foss", "title" => "Free &amp; Open Source Software (FOSS)", }, { "id" => "politics", "title" => "Politics", }, { "id" => "star_trek", "title" => "Star Trek", }, { "id" => "xkcd", "title" => "xkcd", }, ] %]
+[% FOREACH rec IN [ { "id" => "buffy", "title" => "Buffy", }, { "id" => "harry_potter", "title" => "Harry Potter", }, { "id" => "foss", "title" => "Free &amp; Open Source Software (FOSS)", }, { "id" => "politics", "title" => "Politics", }, { "id" => "star_trek", "title" => "Star Trek", }, { "id" => "xkcd", "title" => "Summer Glau/xkcd", }, ] %]
 
 [% WRAPPER h2_section id= (rec.id _ "_sect") title=(rec.title) %]
 

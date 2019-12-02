@@ -39,24 +39,21 @@ SRC_FORTUNES_DIR = $(SRC_SRC_DIR)/$(FORTUNES_DIR)
 
 include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
-T2_ALL_DIRS_DEST = $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST)
-
 PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
 MAN_HTML = $(SRC_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET = $(SRC_DEST)/meta/site-source/INSTALL
-T2_DEST_FORTUNES_DIR = $(SRC_DEST)/$(FORTUNES_DIR)
-SRC_DEST_FORTUNES_DIR = $(T2_DEST_FORTUNES_DIR)
-T2_POST_DEST_FORTUNES_DIR = $(T2_POST_DEST)/$(FORTUNES_DIR)
-FORTUNES_TARGET =  $(T2_DEST_FORTUNES_DIR)/index.xhtml
+SRC_DEST_FORTUNES_DIR = $(SRC_DEST)/$(FORTUNES_DIR)
+T2_POST_DEST_FORTUNES_DIR = $(SRC_POST_DEST)/$(FORTUNES_DIR)
+FORTUNES_TARGET =  $(SRC_DEST_FORTUNES_DIR)/index.xhtml
 
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
 FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
 T2_FORTUNES_ALL_WML = $(SRC_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE).tt2
-T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
+T2_FORTUNES_ALL__HTML = $(SRC_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__HTML__POST = $(T2_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
-T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
+T2_FORTUNES_ALL__TEMP__HTML = $(SRC_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
 SECTS_DEPS__DIR := lib/Shlomif/Homepage/SectionMenu/Sects
 SECTION_MENU_DEPS := lib/Shlomif/Homepage/SectionMenu.pm
@@ -96,7 +93,7 @@ $(SRC_POST_DIRS_DEST): %:
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
-ALL_DIRS := $(T2_ALL_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST)
+ALL_DIRS := $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST)
 
 bulk-make-dirs:
 	@mkdir -p $(ALL_DIRS)
@@ -119,7 +116,7 @@ SRC_DEST_FORTUNE_BOTTLE = $(SRC_DEST_FORTUNES_DIR)/bottle.py
 htacc = $(addsuffix /.htaccess,$(1))
 SRC_FORTUNES_DIR_HTACCESS = $(call htacc,$(SRC_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES = $(call htacc,$(T2_DEST_FORTUNES_DIR) $(addprefix $(SRC_DEST)/,lecture/PostgreSQL-Lecture))
+ALL_HTACCESSES = $(call htacc,$(SRC_DEST_FORTUNES_DIR) $(addprefix $(SRC_DEST)/,lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 
@@ -148,7 +145,7 @@ ifeq ($(UPLOAD_MATHJAX),1)
 	RSYNC_EXCLUDES :=
 endif
 
-UPLOAD = (cd $(T2_POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
+UPLOAD = (cd $(SRC_POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
 
 upload_deps: all
 
@@ -556,7 +553,7 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-ART_SLOGANS_PATHS = $(addprefix $(T2_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PATHS = $(addprefix $(SRC_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
@@ -689,7 +686,7 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 
 GEN_STYLE_CSS_FILES = style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
-T2_CSS_TARGETS = $(addprefix $(T2_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
+T2_CSS_TARGETS = $(addprefix $(SRC_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(T2_CSS_TARGETS)
 
@@ -700,16 +697,16 @@ SASS_CMD = sass --style $(SASS_STYLE)
 FORT_SASS_DEPS = lib/sass/fortunes.scss
 COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss
 
-$(T2_CSS_TARGETS): $(T2_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
+$(T2_CSS_TARGETS): $(SRC_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
-$(T2_POST_DEST)/style.css $(T2_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
+$(SRC_POST_DEST)/style.css $(SRC_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
 
-$(T2_POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
+$(SRC_POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
 
-$(T2_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
+$(SRC_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
-$(T2_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
+$(SRC_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
 $(SRC_DEST)/personal.html $(SRC_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
 $(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.tt2
@@ -898,7 +895,7 @@ OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
 
-RINDOLF_IMAGES_POST_DEST := $(T2_POST_DEST)/me/rindolf/images
+RINDOLF_IMAGES_POST_DEST := $(SRC_POST_DEST)/me/rindolf/images
 
 RPG_DICE_SET_SRC = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
 RPG_DICE_SET_DEST = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
@@ -907,16 +904,16 @@ MY_NAME_IS_RINDOLF_SRC = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
 MY_NAME_IS_RINDOLF_DEST = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
 
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
-Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
+Shlomif_cutethulhu_DEST = $(SRC_POST_DEST)/images/shlomif-cutethulhu-small.webp
 
-DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
+DnD_lances_cartoon_DEST = $(SRC_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
-SRC_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
+SRC_POST_DEST__HUMOUR_IMAGES := $(SRC_POST_DEST)/humour/images
 
-MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_DIR = $(SRC_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
-OPENLY_BIPOLAR_DEST_DIR = $(T2_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_DIR = $(SRC_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
 OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
@@ -940,7 +937,7 @@ all: $(DnD_lances_cartoon_DEST)
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
 
-Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
+Linux1_webp_DEST = $(SRC_POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
 	gm convert $< -define webp:lossless=true $@
 
@@ -1025,7 +1022,7 @@ all: $(T2_CLEAN_STAMP) $(T2_POST_DEST_SHOW_CGI)
 
 $(T2_FORTUNES_ALL__HTML__POST) $(T2_POST_DEST_SHOW_CGI): $(T2_CLEAN_STAMP)
 
-PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(SRC_DEST) --dest-dir=$(T2_POST_DEST) --
+PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(SRC_DEST) --dest-dir=$(SRC_POST_DEST) --
 STRIP_T2_DEST := $(PERL) -lpe 's=\A(?:./)?$(SRC_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
@@ -1033,9 +1030,9 @@ WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
 $(T2_CLEAN_STAMP): $(T2_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(T2_DEST_SHOW_CGI)
 	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(T2_SRC_DIR)/catb-heb.html | $(STRIP_T2_DEST) | $(PROC_INCLUDES_COMMON)
-	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(T2_POST_DEST)/
-	find $(T2_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
-	rsync -a $(SRC_DEST)/$(WMLect_PATH)/ $(T2_POST_DEST)/$(WMLect_PATH)
+	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(SRC_POST_DEST)/
+	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
+	rsync -a $(SRC_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)
 	touch $@
 
 VIM_IFACE_BN := VimIface.pm
@@ -1045,7 +1042,7 @@ all: $(QP_VIM_IFACE)
 
 FASTRENDER_DEPS := $(T2_DOCS_SRC) all_deps
 
-FAQ_SECTS__DIR := $(T2_POST_DEST)/meta/FAQ
+FAQ_SECTS__DIR := $(SRC_POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
 FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
@@ -1132,7 +1129,7 @@ $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECT
 	$(PERL) $<
 
 CATB_COPY = $(SRC_DEST)/catb-heb.xhtml
-CATB_COPY_POST = $(T2_POST_DEST)/catb-heb.xhtml
+CATB_COPY_POST = $(SRC_POST_DEST)/catb-heb.xhtml
 
 $(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml
 	$(call COPY)

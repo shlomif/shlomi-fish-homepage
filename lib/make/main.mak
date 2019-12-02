@@ -60,16 +60,18 @@ T2_FORTUNES_ALL__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
 T2_FORTUNES_ALL__HTML__POST = $(T2_POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 T2_FORTUNES_ALL__TEMP__HTML = $(T2_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
-SECTION_MENU_DEPS = lib/Shlomif/Homepage/SectionMenu.pm
-PHILOSOPHY_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Essays.pm
-LECTURES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Lectures.pm
-SOFTWARE_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Software.pm
-HUMOUR_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm
-META_SUBSECT_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Meta.pm
-PUZZLES_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Puzzles.pm
-ART_DEPS = $(SECTION_MENU_DEPS) lib/Shlomif/Homepage/SectionMenu/Sects/Art.pm
+SECTS_DEPS__DIR := lib/Shlomif/Homepage/SectionMenu/Sects
+SECTION_MENU_DEPS := lib/Shlomif/Homepage/SectionMenu.pm
 
-ALL_SUBSECTS_DEPS = $(PHILOSOPHY_DEPS) $(LECTURES_DEPS) $(SOFTWARE_DEPS) $(HUMOUR_DEPS) $(META_SUBSECT_DEPS) $(PUZZLES_DEPS) $(ART_DEPS)
+ART_DEPS := $(SECTS_DEPS__DIR)/Art.pm
+HUMOUR_DEPS := $(SECTS_DEPS__DIR)/Humour.pm
+LECTURES_DEPS := $(SECTS_DEPS__DIR)/Lectures.pm
+META_SUBSECT_DEPS := $(SECTS_DEPS__DIR)/Meta.pm
+PHILOSOPHY_DEPS := $(SECTS_DEPS__DIR)/Essays.pm
+PUZZLES_DEPS := $(SECTS_DEPS__DIR)/Puzzles.pm
+SOFTWARE_DEPS := $(SECTS_DEPS__DIR)/Software.pm
+
+ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_DEPS) $(PHILOSOPHY_DEPS) $(PUZZLES_DEPS) $(SECTION_MENU_DEPS) $(SOFTWARE_DEPS)
 
 FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
 
@@ -889,7 +891,7 @@ all: $(LC_LECTURE_ARC)
 $(LC_LECTURE_ARC): $(LC_LECTURE_ARC_DIR)/Lambda-Calculus/slides/funcs.scm.html
 	(cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-03-31T10:00:00Z Lambda-Calculus/slides/* && tar -cavf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
 
-lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
+$(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
 
 OCT_2014_SGLAU_LET_DIR = $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10

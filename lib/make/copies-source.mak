@@ -28,6 +28,6 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 $(SRC_DEST_FORTUNES_many_files): $(SRC_DEST)/%: $(SRC_SRC_DIR)/%
 $(SRC_SRC_DIR)/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png: lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
 $(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)
-$(T2_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
+$(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
 $(TERM_LIBERATION_IMAGES__DEST): $(TERM_LIBERATION_IMAGES__DEST_PREFIX)/%: $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/%
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js

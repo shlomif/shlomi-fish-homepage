@@ -47,15 +47,12 @@ FILE_LOOP:
                 next FILE_LOOP;
             }
         }
-        if ( $host->id ne 't2' )
-        {
-            die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
-                {
-                    'file' => $f,
-                    'host' => $host->id(),
-                }
-            );
-        }
+        die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
+            {
+                'file' => $f,
+                'host' => $host->id(),
+            }
+        );
     }
 }
 
@@ -63,8 +60,6 @@ sub get_initial_buckets
 {
     my $self = shift;
     my $host = shift;
-    print $host->source_dir;
-    my $is_t2 = $host->source_dir eq 't2';
 
     return [
         {
@@ -79,8 +74,7 @@ sub get_initial_buckets
             'name'   => "DIRS",
             'filter' => sub {
                 my $fn = shift;
-                return ( -d $self->_make_path( $host, $fn )
-                        and ( $is_t2 ? ( !-d ( 'src/' . $fn ) ) : 1 ) );
+                return ( -d $self->_make_path( $host, $fn ) );
             },
             filter_out_common => 1,
         },
@@ -200,7 +194,7 @@ foreach my $ext (qw/ xhtml pdf /)
                 my $dn       = path($src)->parent->stringify;
                 my $bn_var   = "CAPT_IMG_BN$idx";
                 my $dest_var = "CAPT_IMG_DEST_$idx";
-qq#$bn_var := $bn\n$dest_var := \$(T2_POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\nall: \$($dest_var)\n\n#;
+qq#$bn_var := $bn\n$dest_var := \$(SRC_POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\nall: \$($dest_var)\n\n#;
             } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
         )
     );

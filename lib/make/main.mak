@@ -913,7 +913,7 @@ Shlomif_cutethulhu_DEST = $(T2_POST_DEST)/images/shlomif-cutethulhu-small.webp
 
 DnD_lances_cartoon_DEST = $(T2_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
-T2_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
+SRC_POST_DEST__HUMOUR_IMAGES := $(T2_POST_DEST)/humour/images
 
 MY_RPF_DEST_DIR = $(T2_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp

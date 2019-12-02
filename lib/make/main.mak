@@ -328,7 +328,7 @@ TERM_LIBERATION_IMAGES__DEST_PREFIX = $(DEST_HUMOUR)/Terminator/Liberation/image
 TERM_LIBERATION_IMAGES__SOURCE = $(addprefix $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
 TERM_LIBERATION_IMAGES__DEST = $(addprefix $(TERM_LIBERATION_IMAGES__DEST_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
 
-$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(T2_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
+$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(SRC_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
@@ -362,7 +362,7 @@ all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 $(SRC_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
-# Rebuild the pages containing the links to $(T2_SRC_DIR)/humour/stories upon changing
+# Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
 
 $(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.tt2
@@ -682,9 +682,9 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 
 GEN_STYLE_CSS_FILES = style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
-T2_CSS_TARGETS = $(addprefix $(SRC_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
+SRC_CSS_TARGETS := $(addprefix $(SRC_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
-css_targets: $(T2_CSS_TARGETS)
+css_targets: $(SRC_CSS_TARGETS)
 
 SASS_STYLE = compressed
 # SASS_STYLE = expanded
@@ -693,7 +693,7 @@ SASS_CMD = sass --style $(SASS_STYLE)
 FORT_SASS_DEPS = lib/sass/fortunes.scss
 COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss
 
-$(T2_CSS_TARGETS): $(SRC_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
+$(SRC_CSS_TARGETS): $(SRC_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
 $(SRC_POST_DEST)/style.css $(SRC_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
@@ -764,23 +764,25 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(SRC_DEST)/%-pl.txt
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
-T2_DEST_IMAGES_DIR = $(SRC_DEST)/images
+SRC_DEST_IMAGES_DIR := $(SRC_DEST)/images
 
-SVG_NAV_IMAGES = \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-left-disabled.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-left-pressed.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-left.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-right-disabled.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-right-pressed.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-right.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-up-disabled.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-up-pressed.svg \
-	$(T2_DEST_IMAGES_DIR)/sect-arr-up.svg
+SVG_NAV_IMAGES__PROTO := \
+	sect-arr-left-disabled.svg \
+	sect-arr-left-pressed.svg \
+	sect-arr-left.svg \
+	sect-arr-right-disabled.svg \
+	sect-arr-right-pressed.svg \
+	sect-arr-right.svg \
+	sect-arr-up-disabled.svg \
+	sect-arr-up-pressed.svg \
+	sect-arr-up.svg
+
+SVG_NAV_IMAGES := $(addprefix $(SRC_DEST_IMAGES_DIR)/,$(SVG_NAV_IMAGES__PROTO))
 
 svg_nav_images: $(SVG_NAV_IMAGES)
 
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
-	$(PERL) $< $(T2_DEST_IMAGES_DIR)
+	$(PERL) $< $(SRC_DEST_IMAGES_DIR)
 
 NAV_DATA_AS_JSON = $(SRC_DEST)/_data/nav.json
 

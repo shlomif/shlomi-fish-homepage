@@ -18,11 +18,11 @@ include lib/make/shlomif_common.mak
 include lib/make/include.mak
 
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
-T2_IMAGES += $(BK2HP_SVG_BASE)
+SRC_IMAGES += $(BK2HP_SVG_BASE)
 
 include lib/make/rules.mak
 
-BK2HP_SVG_SRC := $(T2_SRC_DIR)/$(BK2HP_SVG_BASE)
+BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
 SRC_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(SRC_DIRS))
 T2_POST_DIRS_DEST = $(addprefix $(T2_POST_DEST)/,$(T2_DIRS))
@@ -207,7 +207,7 @@ all_deps: $(PROD_SYND_MUSIC_INC)
 GPERL = $(PERL) -Ilib
 GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 
-$(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(T2_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
+$(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
 $(T2_DEST)/philosophy/books-recommends/index.xhtml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
@@ -932,7 +932,7 @@ OPENLY_BIPOLAR_SRC_DIR = lib/repos/why-openly-bipolar-people-should-not-be-medic
 $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENLY_BIPOLAR_DEST_DIR)
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
 
-$(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
+$(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
 	gm convert $< $@
 
 all: $(DnD_lances_cartoon_DEST)
@@ -941,7 +941,7 @@ lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-ca
 	$(call COPY)
 
 Linux1_webp_DEST = $(T2_POST_DEST)/art/images/linux1.webp
-$(Linux1_webp_DEST): t2/art/images/linux1.gif
+$(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
 	gm convert $< -define webp:lossless=true $@
 
 all: $(Linux1_webp_DEST)

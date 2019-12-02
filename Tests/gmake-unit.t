@@ -60,7 +60,7 @@ sub dest_test
 
     # TEST
     gmake_test(
-        'T2_SVGS__svgz',
+        'SRC_SVGS__svgz',
         "$T2_POST_DEST/images/bk2hp-v2.svgz",
         "bk2hp-v2 svg is present."
     );

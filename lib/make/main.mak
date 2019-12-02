@@ -1134,7 +1134,7 @@ $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECT
 CATB_COPY = $(T2_DEST)/catb-heb.xhtml
 CATB_COPY_POST = $(T2_POST_DEST)/catb-heb.xhtml
 
-$(CATB_COPY): t2/homesteading/catb-heb.xhtml
+$(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml
 	$(call COPY)
 
 all_deps: $(CATB_COPY)

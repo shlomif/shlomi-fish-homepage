@@ -12,14 +12,6 @@ use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 use Shlomif::Homepage::LongStories::Story ();
 
-use parent ('Exporter');
-
-our @EXPORT_OK = (
-    qw(
-        get_nav_block
-        )
-);
-
 my @_Stories = (
     map { Shlomif::Homepage::LongStories::Story->new($_) } (
         {

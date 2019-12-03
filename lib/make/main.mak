@@ -635,8 +635,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(SRC_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
-	text-vimcolor --format html --full-page $< --output $@
-	$(PERL) bin/fix-vimcolor.pl $@
+	$(PERL) bin/text-vimcolor-xhtml5.pl $< $@
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \

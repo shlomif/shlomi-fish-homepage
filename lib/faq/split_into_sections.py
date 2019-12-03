@@ -46,6 +46,21 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 {body}</main>
 </div>
 <footer>
+<div class="foot_left">
+<ul class="bt_nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../me/">About</a></li>
+<li><a href="../../me/contact-me/">Contact Us</a></li>
+<li><a href="../../meta/privacy-policy/">Privacy Policy</a></li>
+<li><a href="../../meta/anti-spam-policy/">Anti-Spam
+Policy</a></li>
+<li><a href="../../meta/FAQ/" title=
+"Frequently asked questions list">FAQ</a></li>
+<li><a href="../../me/blogs/">RSS/Atom Feeds</a></li>
+</ul>
+<p>Written, designed, and maintained by Shlomi Fish, <a href=
+"mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
+</div>
 <a href="../../"><img src="../../images/bk2hp-v2.min.svg" class=
 "bk2hp" alt="Back to my Homepage" /></a></footer>
 </body>
@@ -97,4 +112,5 @@ def main():
     splitter.process()
 
 
-main()
+if __name__ == '__main__':
+    main()

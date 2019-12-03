@@ -331,23 +331,8 @@ EOF
 
         return cpan_dist( { %$args, body => $args->{d} } );
     },
-    retrieved_slurp => \&retrieved_slurp,
-    path_slurp      => \&path_slurp,
-    p4n_slurp       => sub {
-        my $idx = shift;
-        return path(
-            "lib/tutorials/perl-for-newbies/lect$idx-all-in-one/index.html")
-            ->slurp_utf8() =~ s{.*<body[^>]*>}{}mrs =~ s{< / body >.*}{}mrsx;
-    },
-    book_info => sub {
-        require PerlBegin::Books;
-        return PerlBegin::Books->book_info(shift);
-    },
-    files_and_dirs => sub {
-        require PerlBegin::TopicsExamples::FilesAndDirs;
-
-        return PerlBegin::TopicsExamples::FilesAndDirs->_run();
-    },
+    retrieved_slurp                  => \&retrieved_slurp,
+    path_slurp                       => \&path_slurp,
     p__Shlomif_XmlFictionSlurp_slurp => sub {
         require Shlomif::XmlFictionSlurp;
         my $args = shift() // {};

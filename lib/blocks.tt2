@@ -843,7 +843,15 @@ of an EvilPHish”</a> cartoon of
 </p>
 </div>
 
+[% IF raw_fn_path %]
 <a href="[% base_path || "./" %]"><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
+[% ELSE %]
+<div class="rightalign">
+<a href="[% base_path %]meta/hosting/#hostgator"><img src="[% base_path %]images/hostgator.png"
+   alt="Hosted at HostGator" class="highlight" style="border : 0"
+   title="Hosted at HostGator" /></a>
+</div>
+[% END %]
 [% IF xhtml1 %]
 </div>
 [% ELSE %]

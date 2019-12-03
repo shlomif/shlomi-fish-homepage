@@ -54,7 +54,7 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 OUT_DN = "./dest/post-incs/t2/meta/FAQ"
 
 
-class FortunesMerger:
+class FaqSplitter:
     def __init__(self, input_fn):
         self.input_fn = input_fn
         self.root = etree.parse(input_fn)
@@ -92,9 +92,9 @@ class FortunesMerger:
 
 
 def main():
-    xml_propagator = FortunesMerger(
+    splitter = FaqSplitter(
         OUT_DN + "/index.xhtml")
-    xml_propagator.process()
+    splitter.process()
 
 
 main()

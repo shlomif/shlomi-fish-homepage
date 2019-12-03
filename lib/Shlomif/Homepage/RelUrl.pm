@@ -3,7 +3,7 @@ package Shlomif::Homepage::RelUrl;
 use strict;
 use warnings;
 
-use parent ('Exporter');
+use parent 'Exporter';
 
 our @EXPORT_OK = (qw( _path_info _rel_url ));
 

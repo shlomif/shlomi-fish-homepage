@@ -479,18 +479,20 @@ $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-pro
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 
+extract_gzipped_xhtml = gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
+
 lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
+	$(call extract_gzipped_xhtml)
 
 all_deps: lib/htmls/The-Enemy-English-rev5.html-part
 
 lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
+	$(call extract_gzipped_xhtml)
 
 all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 
 lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
-	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
+	$(call extract_gzipped_xhtml)
 
 DOCBOOK4_HHFG_IMAGES_RAW = \
 	background-image.png \

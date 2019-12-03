@@ -486,7 +486,7 @@ sub proc
     }
     else
     {
-        path( File::Spec->catfile( @DEST, @fn, ) )->spew_utf8($html);
+        path( @DEST, @fn, )->spew_utf8($html);
     }
 }
 

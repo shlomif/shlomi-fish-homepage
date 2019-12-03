@@ -17,7 +17,7 @@ sub _is_slash_terminated
     return ( ( $string =~ m#/\z# ) ? 1 : 0 );
 }
 
-use HTML::Widgets::NavMenu::Url;
+use HTML::Widgets::NavMenu::Url ();
 
 sub _text_to_url_obj
 {

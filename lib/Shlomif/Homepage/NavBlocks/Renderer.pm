@@ -2,10 +2,8 @@ package Shlomif::Homepage::NavBlocks::Renderer;
 
 use strict;
 use warnings;
-use MooX (qw( late ));
+use MooX qw( late );
 use Carp::Always;
-
-extends('Exporter');
 
 has 'host' => ( is => 'ro', isa => 'Str', required => 1 );
 

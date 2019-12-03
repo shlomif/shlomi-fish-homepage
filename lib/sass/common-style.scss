@@ -1192,6 +1192,10 @@ a.back_to_faq {
 
 body.faq_indiv_entry {
     background-color: #e0ebef;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 @import "self_link";

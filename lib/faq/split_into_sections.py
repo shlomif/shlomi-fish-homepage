@@ -77,23 +77,23 @@ class FaqSplitter:
     def process(self):
         os.makedirs(OUT_DN, exist_ok=True)
 
-        def _xpath(node, query):
+        def xpath(node, query):
             return node.xpath(query, namespaces=ns)
 
-        def _first(node, query):
-            return _xpath(node, query)[0]
-        for list_elem in _xpath(
+        def first(node, query):
+            return xpath(node, query)[0]
+        for list_elem in xpath(
                 self.root,
                 "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
                 "//xhtml:section"):
-            header_tag = _first(list_elem, "./xhtml:header")
+            header_tag = first(list_elem, "./xhtml:header")
 
-            h_tag = _first(header_tag, "./*[@id]")
-            id_ = _first(h_tag, "./@id")
-            header_text = _first(h_tag, "./text()")
+            h_tag = first(header_tag, "./*[@id]")
+            id_ = first(h_tag, "./@id")
+            header_text = first(h_tag, "./text()")
             header_esc = html.escape(header_text)
 
-            a_tag = _first(header_tag, "./xhtml:a[@class='indiv_node']")
+            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
             a_tag.set("class", "back_to_faq")
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])

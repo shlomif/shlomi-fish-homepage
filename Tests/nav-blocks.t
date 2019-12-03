@@ -11,13 +11,11 @@ use Test::Differences (qw(eq_or_diff));
 use lib './Tests/lib';
 use lib './lib';
 
-use NavDataRender;
-
-use Shlomif::Homepage::NavBlocks::Renderer;
-use Shlomif::Homepage::NavBlocks;
-use Shlomif::Homepage::NavBlocks::TableBlock;
-
-use NavBlocks (qw( get_nav_block ));
+use NavDataRender                            ();
+use Shlomif::Homepage::NavBlocks::Renderer   ();
+use Shlomif::Homepage::NavBlocks             ();
+use Shlomif::Homepage::NavBlocks::TableBlock ();
+use NavBlocks                                ();
 
 our $latemp_filename;
 
@@ -258,7 +256,7 @@ foreach my $ext ( '', 'index.xhtml', )
         }
     );
 
-    my $block = get_nav_block('buffy');
+    my $block = NavBlocks->new->get_nav_block('buffy');
 
     # TEST*$ext
     eq_or_diff(

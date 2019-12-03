@@ -2,16 +2,9 @@ package Shlomif::Homepage::NavBlocks;
 
 use strict;
 use warnings;
-
 use utf8;
 
-use parent ('Exporter');
-
-our @EXPORT_OK = (
-    qw(
-        get_nav_block
-        )
-);
+use Moo;
 
 use Shlomif::Homepage::NavBlocks::LocalLink       ();
 use Shlomif::Homepage::NavBlocks::GitHubLink      ();
@@ -411,7 +404,7 @@ my %table_blocks = (
 
 sub get_nav_block
 {
-    my ($id) = @_;
+    my ( $self, $id ) = @_;
 
     return (
         $table_blocks{$id} // do { Carp::confess "Unknown ID $id." }

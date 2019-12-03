@@ -3,19 +3,14 @@ package NavBlocks;
 use strict;
 use warnings;
 use utf8;
-use parent ('Exporter');
-use Carp   ();
+use Carp ();
 
-our @EXPORT_OK = (
-    qw(
-        get_nav_block
-        )
-);
+use Moo;
 
-use Shlomif::Homepage::NavBlocks::LocalLink;
-use Shlomif::Homepage::NavBlocks::GitHubLink;
-use Shlomif::Homepage::NavBlocks::FacebookLink;
-use Shlomif::Homepage::NavBlocks::ShlomifWikiLink;
+use Shlomif::Homepage::NavBlocks::LocalLink       ();
+use Shlomif::Homepage::NavBlocks::GitHubLink      ();
+use Shlomif::Homepage::NavBlocks::FacebookLink    ();
+use Shlomif::Homepage::NavBlocks::ShlomifWikiLink ();
 
 sub _l
 {
@@ -375,7 +370,7 @@ my %table_blocks = (
 
 sub get_nav_block
 {
-    my ($id) = @_;
+    my ( $self, $id ) = @_;
 
     return (
         $table_blocks{$id} // do { Carp::confess "Unknown ID $id." }

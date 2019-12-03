@@ -20,12 +20,9 @@ my $latemp_acroman = HTML::Latemp::Acronyms->new;
 $Shlomif::Homepage::in_nav_block = undef();
 
 use Shlomif::Homepage::NavBlocks::Renderer ();
-use Shlomif::Homepage::NavBlocks (
-    qw(
-        get_nav_block
-        )
-);
+use Shlomif::Homepage::NavBlocks           ();
 
+my $nav_blocks         = Shlomif::Homepage::NavBlocks->new;
 my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
     {
         host => 't2',
@@ -36,7 +33,8 @@ sub _render_nav_block
 {
     my ($id) = @_;
 
-    return $nav_block_renderer->render( { obj => get_nav_block($id), } );
+    return $nav_block_renderer->render(
+        { obj => $nav_blocks->get_nav_block($id), } );
 }
 
 sub _print_nav_block

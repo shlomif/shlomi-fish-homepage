@@ -9,9 +9,6 @@ use lib './lib';
 use Template                         ();
 use Parallel::ForkManager::Segmented ();
 
-use File::Basename qw( basename );
-use File::Path qw( mkpath );
-use File::Spec ();
 use Path::Tiny qw/ path /;
 use Encode qw/ decode_utf8 /;
 use Getopt::Long qw/ GetOptions /;
@@ -155,7 +152,7 @@ use Shlomif::Homepage::LongStories        ();
 use Shlomif::Homepage::FortuneCollections ();
 my $long_stories      = Shlomif::Homepage::LongStories->new;
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
-my @DEST = ( File::Spec->curdir(), "dest", "pre-incs", $LATEMP_SERVER, );
+my @DEST              = ( '.', "dest", "pre-incs", $LATEMP_SERVER, );
 my $base_path;
 my $vars = +{
     ( $printable ? ( PRINTABLE => 1 ) : () ),
@@ -414,9 +411,8 @@ sub proc
 {
     my $result = shift;
     $::latemp_filename = $result;
-    my $basename = basename($result);
-    my @fn       = split m#/#, $result;
-    my @fn_nav   = @fn;
+    my @fn     = split m#/#, $result;
+    my @fn_nav = @fn;
     if ( $fn_nav[-1] =~ m#\Aindex\.x?html\z# )
     {
         $fn_nav[-1] = '';
@@ -450,8 +446,6 @@ sub proc
             }
             my $text = $nav_links_renderer->get_total_html(@params);
 =cut
-
-    mkpath( File::Spec->catdir( @DEST, @fn[ 0 .. $#fn - 1 ] ) );
 
     $vars->{base_path}   = $base_path;
     $vars->{fn_path}     = $result;

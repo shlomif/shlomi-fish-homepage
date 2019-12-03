@@ -428,8 +428,7 @@ $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
 
 $(FORTUNES_TEXTS): $(SRC_FORTUNES_DIR)/%: $(SRC_FORTUNES_DIR)/%.xml
-	bash $(SRC_FORTUNES_DIR)/run-validator.bash $< && \
-	$(PERL) $(SRC_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
+	$(PERL) $(SRC_FORTUNES_DIR)/validate-and-convert-to-plaintext.pl $< $@
 
 $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(SRC_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
 	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(SRC_FORTUNES_DIR)

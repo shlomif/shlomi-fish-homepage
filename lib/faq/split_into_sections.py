@@ -24,7 +24,7 @@ ns = {
     "xml": XML_NS,
 }
 
-XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
+SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
@@ -43,9 +43,7 @@ XHTML_START_FMT = '''<?xml version="1.0" encoding="utf-8"?>
 <body class="faq_indiv_entry">
 <div id="faux">
 <main class="main faq">
-'''
-
-XHTML_END_FMT = '''</main>
+{body}</main>
 </div>
 <footer>
 <a href="../../"><img src="../../images/bk2hp-v2.min.svg" class=
@@ -84,12 +82,12 @@ class FortunesMerger:
             a_tag.set("class", "back_to_faq")
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])
-            formats = {'title': header_esc}
+            formats = {
+                'title': header_esc,
+                'body': etree.tostring(list_elem).decode('utf-8'),
+            }
             with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
-                f.write(XHTML_START_FMT.format(**formats) +
-                        etree.tostring(list_elem).decode('utf-8') +
-                        XHTML_END_FMT.format(**formats)
-                        )
+                f.write(SECTION_FORMAT.format(**formats))
             # print(etree.tostring(id_))
 
 

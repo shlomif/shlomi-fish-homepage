@@ -1168,3 +1168,19 @@ path("lib/factoids/deps.mak")
 
 # No write_on_change() because we want it to have the time of the last run.
 path("lib/factoids/TIMESTAMP")->spew_utf8( time() );
+
+__END__
+
+=head1 AUTHOR
+
+Shlomi Fish <shlomif@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2014 by Shlomi Fish.
+
+This is free software, licensed under:
+
+  The Apache License, Version 2.0, January 2004
+
+=cut

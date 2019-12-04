@@ -4,6 +4,19 @@ rebuild()
     (
         set -x
         set -e
+        _gmake_target()
+        {
+            local tgt="$1"
+            shift
+
+            if ! time gmake -j"$ncpus" "$tgt"
+            then
+                echo "$tgt failed"
+                false
+                return -1
+            fi
+            return 0
+        }
         ncpus="$(nproc)"
         if test -z "$ncpus"
         then
@@ -28,12 +41,9 @@ rebuild()
         time ./gen-helpers
         # if ! gmake -j"$ncpus" docbook_targets
         # if ! gmake -j"$ncpus" screenplay_epub_dests
-        if ! time gmake -j"$ncpus" fastrender
-        then
-            echo "docbook_targets failed"
-            false
-        fi
-        time gmake -j"$ncpus" test
+        _gmake_target copy_images_target
+        _gmake_target fastrender
+        _gmake_target test
     )
 }
 rebuild

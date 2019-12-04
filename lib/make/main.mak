@@ -1056,6 +1056,8 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-tt2
 	perl bin/tt-render.pl
 
+copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
+
 SRC_jpgs__BASE := $(filter $(SRC_POST_DEST)/humour/bits/facts/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__webps :=$(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg

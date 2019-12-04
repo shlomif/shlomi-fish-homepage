@@ -1033,6 +1033,7 @@ my $TT2__MAIN_PAGE_TT = <<'END_OF_TEMPLATE';
 END_OF_TEMPLATE
 
 my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
+{{ FOREACH p IN pages }}
 [% BLOCK facts__img__{{ p.short_id() }} %]
 
 <!-- Taken from {{ p.img_attribution() }} -->
@@ -1051,6 +1052,7 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 </div>
 
 [% END %]
+{{ END }}
 END_OF_TEMPLATE
 
 my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
@@ -1088,18 +1090,20 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 [% END %]
 END_OF_TEMPLATE
 
+# some useful options (see below for full list)
+my $config = {
+    POST_CHOMP => 1,    # cleanup whitespace
+    EVAL_PERL  => 1,    # evaluate Perl code blocks
+};
+
+# create Template object
+my $tt2__template =
+    Template->new( +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
+$tt2__template->process( \$TT2__FACTS_BLOCKS_TT_TEXT, { pages => \@pages, },
+    \$tt2__tags_output )
+    or die $!;
 foreach my $page (@pages)
 {
-    # some useful options (see below for full list)
-    my $config = {
-        POST_CHOMP => 1,    # cleanup whitespace
-        EVAL_PERL  => 1,    # evaluate Perl code blocks
-    };
-
-    # create Template object
-    my $tt2__template =
-        Template->new(
-        +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
 
     my $vars = { p => $page, };
 
@@ -1117,9 +1121,6 @@ foreach my $page (@pages)
             );
         }
     ) or die $!;
-    $tt2__template->process( \$TT2__FACTS_BLOCKS_TT_TEXT, $vars,
-        \$tt2__tags_output )
-        or die $!;
     $tt2__template->process( \$TT2__MAIN_PAGE_TT, $vars,
         \$tt2__main_page_tag_list )
         or die $!;

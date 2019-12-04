@@ -1163,7 +1163,7 @@ my @content =
     sort { $a->short_id cmp $b->short_id } @pages;
 
 path("lib/factoids/deps.mak")
-    ->spew_utf8( ( join " ", "all:", map { $_->{path} } @content ) . "\n",
+    ->spew_utf8( join( " ", "all:", map { $_->{path} } @content ) . "\n",
     ( map { $_->{line} } @content ) );
 
 # No write_on_change() because we want it to have the time of the last run.

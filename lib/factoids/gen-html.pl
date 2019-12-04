@@ -1013,26 +1013,9 @@ my @pages_proto = ( @chuck_pages, @main_pages, @soviet_pages );
 
 my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
-my $tt2__tags_output = <<'EOF';
+my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 [% PROCESS "Inc/emma_watson.tt2" %]
 
-EOF
-
-my $tt2__main_page_tag_list = <<'EOF';
-[% BLOCK facts__list %]
-EOF
-
-my $TT2__MAIN_PAGE_TT = <<'END_OF_TEMPLATE';
-<section class="h3">
-<header>
-<h3 id="facts-{{ p.short_id() }}" class="facts"><a href="{{ p.url_base() }}/">{{ p.title() }}</a></h3>
-</header>
-{{ "[% INCLUDE facts__${p.short_id()} %]" }}
-
-</section>
-END_OF_TEMPLATE
-
-my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 {{ FOREACH p IN pages }}
 [% BLOCK facts__img__{{ p.short_id() }} %]
 
@@ -1053,6 +1036,18 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 
 [% END %]
 {{ END }}
+
+[% BLOCK facts__list %]
+{{ FOREACH p IN pages }}
+<section class="h3">
+<header>
+<h3 id="facts-{{ p.short_id() }}" class="facts"><a href="{{ p.url_base() }}/">{{ p.title() }}</a></h3>
+</header>
+{{ "[% INCLUDE facts__${p.short_id()} %]" }}
+
+</section>
+{{ END }}
+[% END %]
 END_OF_TEMPLATE
 
 my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
@@ -1099,12 +1094,8 @@ my $config = {
 # create Template object
 my $tt2__template =
     Template->new( +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
-$tt2__template->process( \$TT2__FACTS_BLOCKS_TT_TEXT, { pages => \@pages, },
-    \$tt2__tags_output )
-    or die $!;
 foreach my $page (@pages)
 {
-
     my $vars = { p => $page, };
 
     $tt2__template->process(
@@ -1121,15 +1112,20 @@ foreach my $page (@pages)
             );
         }
     ) or die $!;
-    $tt2__template->process( \$TT2__MAIN_PAGE_TT, $vars,
-        \$tt2__main_page_tag_list )
-        or die $!;
 }
 
-write_on_change(
-    scalar( path("lib/factoids/common-out/tags.tt2") ),
-    \( $tt2__tags_output . $tt2__main_page_tag_list . "\n[% END %]\n" ),
-);
+$tt2__template->process(
+    \$TT2__FACTS_BLOCKS_TT_TEXT,
+    { pages => \@pages, },
+    sub {
+        my ($out_str) = @_;
+
+        write_on_change( scalar( path("lib/factoids/common-out/tags.tt2") ),
+            \($out_str), );
+    },
+    )
+
+    or die $!;
 
 my $new_json = JSON::MaybeXS->new(
     utf8      => 1,

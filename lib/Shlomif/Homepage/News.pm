@@ -244,7 +244,10 @@ sub _wmlize
 
 sub _tt2_process_body
 {
-    return shift;
+    return (
+        shift(@_) =~
+s{\Qhttp://www.reddit.com/r/TMNT/comments/2d9fo7/postrelease_movie_discussion_thread_2/ck3khga\E}{https://is.gd/m4kZrJ}gr
+    );
 }
 
 sub _format_date_human

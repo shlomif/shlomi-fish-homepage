@@ -2,6 +2,10 @@
 
 @import "common-style";
 
+@mixin body-background {
+    background-color: #e0ebef;
+}
+
 $top_height: 80px;
 
 #header {
@@ -58,18 +62,31 @@ body {
 
     #container-all {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 3fr);
         position: relative;
+    }
+    #main {
+        @include cell;
+        grid-column: 2 / 6;
+        grid-row: 2;
+
+        &.novis {
+            grid-column: 1 / 6;
+        }
     }
 
     #show_navbar {
+        @include cell;
         * {
             vertical-align: middle;
         }
-        width: 100%;
+        // width: 100%;
+        grid-column: 1 / 6;
+        grid-row: 1;
 
         &.on {
-            width: 20%;
+            grid-column: 1;
+            // width: 20%;
         }
 
         .logo {
@@ -78,6 +95,15 @@ body {
             width: auto;
         }
     }
+    #navbar_wrapper {
+        @include cell;
+        grid-row: 2;
+        grid-column: 1;
+        &.novis {
+            display: none;
+        }
+    }
+
     #navbar_wrapper,
     #show_navbar {
         padding: 1em;
@@ -88,19 +114,24 @@ body {
         }
     }
 
-    #navbar_wrapper {
-        grid-column: 1 / 2;
-        grid-row: 1;
-        @include cell;
+    // #navbar_wrapper {
+    @if false {
+        #show_navbar {
+            grid-column: 1 / 2;
+            grid-row: 1;
+            @include cell;
+        }
     }
 
     #main {
-        grid-column: 2 / 6;
-        grid-row: 1;
+        @if false {
+            grid-column: 2 / 6;
+            grid-row: 1;
 
-        @include cell;
+            @include cell;
+        }
         &.novis {
-            grid-column: 1 / 6;
+            // grid-column: 1 / 6;
         }
 
         .news *,
@@ -114,10 +145,6 @@ body {
             // word-wrap: break-word;
         }
     }
-}
-
-@mixin body-background {
-    background-color: #e0ebef;
 }
 
 #faux {
@@ -192,29 +219,31 @@ img.bizcard {
 @media (max-width: 900px) {
     body {
         #container-all {
+            @include body-background;
             display: grid;
-            grid-template-columns: repeat(1, 2fr);
+            grid-template-columns: repeat(1, 3fr);
             position: relative;
         }
         #navbar_wrapper {
             @include body-background;
             grid-column: 1 / 1;
-            grid-row: 1;
+            grid-row: 2;
             /* border: 2px black solid; */
             /* position: absolute; */
         }
         #main {
+            @include body-background;
             grid-column: 1 / 1;
-            grid-row: 2;
+            grid-row: 3;
 
             &.novis {
                 grid-column: 1 / 1;
             }
         }
         #show_navbar {
-            &.on {
-                width: 100%;
-            }
+            grid-column: 1 / 1;
+            grid-row: 1;
+            width: 100%;
         }
     }
 }

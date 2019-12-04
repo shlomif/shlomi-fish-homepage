@@ -655,7 +655,6 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 </div>
 
 <div id="faux">
-<button id="show_navbar" class="on">Hide NavBar ⬈</button>
 <p class="invisible">
 <a href="#main">Go to main content</a>
 </p>
@@ -663,7 +662,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 <a href="#navbar">Go to the navigation</a>
 </p>
 <div id="container-all">
-
+<button id="show_navbar" class="on">Hide NavBar ⬈</button>
 <main class="main" id="main">
 [%sect_nav_menu_html%]
 [% IF rtl_layout %]

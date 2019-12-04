@@ -190,10 +190,32 @@ img.bizcard {
 }
 
 @media (max-width: 900px) {
-    #navbar_wrapper {
-        @include body-background;
-        /* border: 2px black solid; */
-        /* position: absolute; */
+    body {
+        #container-all {
+            display: grid;
+            grid-template-columns: repeat(1, 2fr);
+            position: relative;
+        }
+        #navbar_wrapper {
+            @include body-background;
+            grid-column: 1 / 1;
+            grid-row: 1;
+            /* border: 2px black solid; */
+            /* position: absolute; */
+        }
+        #main {
+            grid-column: 1 / 1;
+            grid-row: 2;
+
+            &.novis {
+                grid-column: 1 / 1;
+            }
+        }
+        #show_navbar {
+            &.on {
+                width: 100%;
+            }
+        }
     }
 }
 

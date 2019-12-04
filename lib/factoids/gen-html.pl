@@ -438,9 +438,11 @@ EOF
 [%- END -%]
 EOF
         see_also => <<'EOF',
-<p>
-<b>TODO</b>
-</p>
+<ul>
+
+[% PROCESS emma_watson__see_also  %]
+
+</ul>
 EOF
         short_id   => 'emma_watson',
         tabs_title => "Emma Watson Facts",

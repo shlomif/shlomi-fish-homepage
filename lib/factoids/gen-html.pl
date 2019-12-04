@@ -1094,38 +1094,36 @@ my $config = {
 # create Template object
 my $tt2__template =
     Template->new( +{ %$config, START_TAG => "\\{\\{", END_TAG => "\\}\\}", } );
-foreach my $page (@pages)
-{
-    my $vars = { p => $page, };
 
+sub _write_processed
+{
+    my ( $TT2, $vars, $path ) = @_;
     $tt2__template->process(
-        \$TT2__TT_TEXT,
-        $vars,
+        $TT2, $vars,
         sub {
             my ($out_str) = @_;
 
-            write_on_change(
-                scalar(
-                    path( "lib/factoids/pages/" . $page->id_base() . '.tt2' )
-                ),
-                \$out_str,
-            );
+            write_on_change( scalar( path($path) ), \$out_str, );
         }
     ) or die $!;
+
+    return;
 }
 
-$tt2__template->process(
+foreach my $page (@pages)
+{
+    _write_processed(
+        \$TT2__TT_TEXT,
+        { p => $page, },
+        "lib/factoids/pages/" . $page->id_base() . '.tt2'
+    );
+}
+
+_write_processed(
     \$TT2__FACTS_BLOCKS_TT_TEXT,
     { pages => \@pages, },
-    sub {
-        my ($out_str) = @_;
-
-        write_on_change( scalar( path("lib/factoids/common-out/tags.tt2") ),
-            \($out_str), );
-    },
-    )
-
-    or die $!;
+    "lib/factoids/common-out/tags.tt2",
+);
 
 my $new_json = JSON::MaybeXS->new(
     utf8      => 1,

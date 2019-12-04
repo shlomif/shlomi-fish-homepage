@@ -1022,7 +1022,7 @@ my $tt2__main_page_tag_list = <<'EOF';
 [% BLOCK facts__list %]
 EOF
 
-my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
+my $TT2__MAIN_PAGE_TT = <<'END_OF_TEMPLATE';
 <section class="h3">
 <header>
 <h3 id="facts-{{ p.short_id() }}" class="facts"><a href="{{ p.url_base() }}/">{{ p.title() }}</a></h3>
@@ -1032,7 +1032,7 @@ my $tt2__main_page_tt = <<'END_OF_TEMPLATE';
 </section>
 END_OF_TEMPLATE
 
-my $tt2__facts_blocks_tt_text = <<'END_OF_TEMPLATE';
+my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 [% BLOCK facts__img__{{ p.short_id() }} %]
 
 <!-- Taken from {{ p.img_attribution() }} -->
@@ -1053,7 +1053,7 @@ my $tt2__facts_blocks_tt_text = <<'END_OF_TEMPLATE';
 [% END %]
 END_OF_TEMPLATE
 
-my $tt2__tt_text = <<'END_OF_TEMPLATE';
+my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 [% SET title = "{{p.title() }}" %]
 [% SET desc = "{{p.meta_desc()}}" %]
 
@@ -1103,17 +1103,26 @@ foreach my $page (@pages)
 
     my $vars = { p => $page, };
 
-    my $tt2__out = '';
-    $tt2__template->process( \$tt2__tt_text, $vars, \$tt2__out ) or die $!;
-    $tt2__template->process( \$tt2__facts_blocks_tt_text, $vars,
+    $tt2__template->process(
+        \$TT2__TT_TEXT,
+        $vars,
+        sub {
+            my ($out_str) = @_;
+
+            write_on_change(
+                scalar(
+                    path( "lib/factoids/pages/" . $page->id_base() . '.tt2' )
+                ),
+                \$out_str,
+            );
+        }
+    ) or die $!;
+    $tt2__template->process( \$TT2__FACTS_BLOCKS_TT_TEXT, $vars,
         \$tt2__tags_output )
         or die $!;
-    $tt2__template->process( \$tt2__main_page_tt, $vars,
+    $tt2__template->process( \$TT2__MAIN_PAGE_TT, $vars,
         \$tt2__main_page_tag_list )
         or die $!;
-    write_on_change(
-        scalar( path( "lib/factoids/pages/" . $page->id_base() . '.tt2' ) ),
-        \$tt2__out, );
 }
 
 write_on_change(
@@ -1121,7 +1130,10 @@ write_on_change(
     \( $tt2__tags_output . $tt2__main_page_tag_list . "\n[% END %]\n" ),
 );
 
-my $new_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )->encode(
+my $new_json = JSON::MaybeXS->new(
+    utf8      => 1,
+    canonical => 1
+)->encode(
     [
         map {
             my $page = $_;

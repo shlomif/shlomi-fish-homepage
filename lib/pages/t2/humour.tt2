@@ -93,7 +93,7 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 
 [% IF lang == "heb" %][% INCLUDE heb_list_h2  %][% ELSE %][% INCLUDE eng_list_h2  %][% END %]
 
-<div class="aphorisms wrap-me lim_width">
+<div class="aphorisms wrap-me lim_width limit_imgs_width">
 
 [% WRAPPER eng_header_joke id = "jewish_deduction"  header = "A Jewish Deduction"  %]
 
@@ -3094,6 +3094,8 @@ and why it is a bad idea marketing-wise. Also see <a href="https://github.com/sh
 
 </div>
 
+<div class="english">
+
 <h2 id="license">Copyright and Licence</h2>
 
 [% cc_by_sa_british_blurb( "year" => "2002", ) %]
@@ -3108,6 +3110,8 @@ and why it is a bad idea marketing-wise. Also see <a href="https://github.com/sh
 </p>
 </li>
 </ul>
+
+</div>
 
 </div>
 

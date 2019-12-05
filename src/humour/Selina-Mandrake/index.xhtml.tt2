@@ -49,20 +49,10 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 
 [% toc_div( ) %]
 
-<script>
-$(function() {
-    $(".accordion").accordion({
-        collapsible: true,
-        active: false
-    });
-});
-</script>
-
 <div class="accordion">
 
-<h2 id="audio">Audio (= Dramatic Reading of the Screenplay)</h2>
+[% WRAPPER h2_section id = "audio" title = "Audio (= Dramatic Reading of the Screenplay)"  %]
 
-<div>
 <p>
 You can find audio files of some work-in-progress
 <a href="http://soundcloud.com/shlomif/selina-mandrake-the-slayer"><strong>dramatic
@@ -73,11 +63,10 @@ and has a heavy Hebrew Israeli accent and diction. They are recorded using
 Their licence is also the Creative Commons Attribution ShareAlike licence
 (CC-by-sa). Share, remix and enjoy!
 </p>
-</div>
 
-<h2 id="buffy_fanfiction_wiki"><a href="http://buffyfanfiction.wikia.com/">Information on the Buffy Fan Fiction Wiki</a></h2>
+[% END %]
 
-<div>
+[% WRAPPER h2_section id = "buffy_fanfiction_wiki" title = "Information on the Buffy Fan Fiction Wiki" href="http://buffyfanfiction.wikia.com/" %]
 
 <ul>
 
@@ -113,9 +102,7 @@ Mandrake</a> - about the protagonist.
 
 </ul>
 
-</div>
-
-</div>
+[% END %]
 
 <div class="fancy_sects">
 

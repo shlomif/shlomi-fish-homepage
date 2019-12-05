@@ -1140,9 +1140,14 @@ h3 {
     margin: 1em;
 }
 
-.limit_imgs_width img,
-.lim_width img {
-    max-width: 90%;
+.limit_imgs_width,
+.lim_width {
+    img {
+        max-width: 90%;
+    }
+    pre {
+        overflow: scroll;
+    }
 }
 
 @mixin faq_link {

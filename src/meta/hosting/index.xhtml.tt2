@@ -18,10 +18,17 @@ I believe) is quite confusing. But otherwise, I'm very happy.
 
 <h3 id="affiliate">Affiliate Banner</h3>
 
+[% IF 1 %]
+<p>
+<a
+href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=shlomif-">HostGator
+Web Hosting; Unlimited Bandwidth; Unlimited Disk Space; Free Website Builder</a>
+</p>
+[% ELSE %]
 <p>
 <a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=shlomif-"><img src="https://tracking.hostgator.com/img/Green/300x250.gif" class="bless" alt="HostGator Web Hosting; Unlimited Bandwidth; Unlimited DiskSpace; Free Website Builder"/></a>
 </p>
-
+[% END %]
 <p>
 <b>Disclosure:</b> HostGator benefits me financially for successful signups
 using this affiliate link.

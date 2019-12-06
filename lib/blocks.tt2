@@ -663,7 +663,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 </p>
 <div id="container-all">
 <button id="show_navbar" class="on">Hide NavBar ⬈</button>
-<main class="main" id="main">
+<main class="main [% IF apply_screenplay_style %]screenplay_style[% END %]" id="main">
 [%sect_nav_menu_html%]
 [% IF rtl_layout %]
 <div class="hebrew" xml:lang="he-IL">
@@ -875,6 +875,10 @@ of an EvilPHish”</a> cartoon of
 [% SET nav_tag='nav' %]
 [% END %]
 [%- PROCESS start_html -%]
+[%- IF apply_screenplay_style -%]
+[%- toc_div( ) -%]
+[%- END -%]
+
 [% content %]
 [%- PROCESS end_html -%]
 [%- END -%]

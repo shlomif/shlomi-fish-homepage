@@ -95,7 +95,7 @@ body {
             width: auto;
         }
     }
-    #navbar_wrapper {
+    #navbar {
         @include cell;
         grid-row: 2;
         grid-column: 1;
@@ -104,7 +104,7 @@ body {
         }
     }
 
-    #navbar_wrapper,
+    #navbar,
     #show_navbar {
         padding: 1em;
 
@@ -183,7 +183,7 @@ img.max_width {
     @include max_width_lim_common;
 }
 
-#navbar_wrapper {
+#navbar {
     img {
         max-width: 200px;
         @include navbarwrap_common;
@@ -215,7 +215,7 @@ img.bizcard {
             grid-template-columns: repeat(1, 3fr);
             position: relative;
         }
-        #navbar_wrapper {
+        #navbar {
             @include body-background;
             grid-column: 1 / 1;
             grid-row: 2;

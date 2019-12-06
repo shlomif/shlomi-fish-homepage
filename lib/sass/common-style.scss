@@ -736,6 +736,9 @@ blockquote {
 .rfloaty {
     float: right;
     margin: 1em;
+    &.h {
+        height: 100px;
+    }
 }
 
 /* Graphic Designs on /art/ */
@@ -1209,6 +1212,35 @@ body.faq_indiv_entry {
     }
     .leading_path {
         padding-bottom: 1em;
+    }
+}
+
+.math_illus {
+    float: right;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+.math_angels {
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.lim_width .bk2hp {
+    margin-bottom: 1.5em;
+    height: 140px;
+}
+.lim_width .dnd_cartoon {
+    margin-bottom: 1.5em;
+}
+
+img[alt="Creative Commons Licence"] {
+    border-width: 0;
+}
+
+.film_casts {
+    h3,
+    div.cl {
+        clear: right;
     }
 }
 

@@ -459,7 +459,7 @@ certificates.
 [% BLOCK old_non_rdfa_licence %]
 <p>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-alt="Creative Commons License" style="border-width:0"
+alt="Creative Commons License"
 src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span
 xmlns:dc="http://purl.org/dc/elements/1.1/">The
 Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#">Shlomi
@@ -477,7 +477,7 @@ rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
 
 [% BLOCK rdfa_enabled_licence %]
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="[% base_path %]images/CC-by-nc-sa-88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" src="[% base_path %]images/CC-by-nc-sa-88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
 </p>
 [% END %]
 

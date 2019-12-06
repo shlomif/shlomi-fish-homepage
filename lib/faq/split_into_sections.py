@@ -41,6 +41,14 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <script src="../../js/main_all.js"></script>
 </head>
 <body class="faq_indiv_entry">
+<div class="header" id="header">
+<div class="leading_path"><a href="../../">Shlomi Fish’s
+Homepage</a> → <a href="../" title=
+"Information about this Site">Meta Info</a> → <a href="./" title=
+"Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
+→ <b>{title}</b>
+</div>
+</div>
 <div id="faux">
 <main class="main faq">
 {body}</main>

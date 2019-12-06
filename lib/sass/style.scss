@@ -167,11 +167,20 @@ body {
 @mixin navbarwrap_common {
     height: auto;
 }
+
+@mixin max_width_lim_common {
+    max-width: 99%;
+    @include navbarwrap_common;
+}
+
 .lim_width {
     iframe {
-        max-width: 99%;
-        @include navbarwrap_common;
+        @include max_width_lim_common;
     }
+}
+
+img.max_width {
+    @include max_width_lim_common;
 }
 
 #navbar_wrapper {

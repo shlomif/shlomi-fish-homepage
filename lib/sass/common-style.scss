@@ -983,6 +983,10 @@ div.abstract {
     margin-bottom: 1em;
 
     @include rounded_corners(5px);
+
+    .bold {
+        font-weight: 400;
+    }
 }
 
 .cv_highlights {
@@ -1246,6 +1250,10 @@ img[alt="Creative Commons Licence"] {
 
 h2.puz_sol {
     margin-top: 50em;
+}
+
+ol.plain {
+    list-style: none;
 }
 
 @import "self_link";

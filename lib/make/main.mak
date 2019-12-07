@@ -560,6 +560,7 @@ endef
 define ASCIIDOCTOR_TO_DOCBOOK5
 	asciidoctor --backend=docbook5 -o $@.temp.xml $<
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+	python3 bin/add-homepage-uri-to-asciidoc-generated-docbook5.py $@
 endef
 
 include lib/make/long_stories.mak

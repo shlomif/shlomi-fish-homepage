@@ -6,10 +6,6 @@
 #
 # Distributed under terms of the MIT license.
 
-"""
-Split Shlomi Fish's FAQ-list into individual
-sections or questions.
-"""
 import sys
 
 from lxml import etree
@@ -17,8 +13,8 @@ from lxml.html import XHTML_NAMESPACE
 
 XHTML_NS = XHTML_NAMESPACE
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-DOCBOOK5_NS = "{http://docbook.org/ns/docbook}"
-XLINK_NS = "{http://www.w3.org/1999/xlink}"
+DOCBOOK5_NS = "http://docbook.org/ns/docbook"
+XLINK_NS = "http://www.w3.org/1999/xlink"
 ns = {
     "db": DOCBOOK5_NS,
     "xhtml": XHTML_NS,
@@ -38,16 +34,16 @@ class Docbook5AddHomepage:
 
         def first(node, query):
             return xpath(node, query)[0]
-        affiliation = first(
+        author = first(
             self.root,
-            "//db:article/db:info/db:author/db:affiliation")
-        if not len(affiliation, "./uri[@db:type='homepage']"):
+            "db:info/db:author")
+        if not len(xpath(author, "./uri[@db:type='homepage']")):
             new_elem = etree.Element(
                     "uri", type="homepage",
             )
-            new_elem.set(XLINK_NS+"href", "https://www.shlomifish.org/")
+            new_elem.set("{"+XLINK_NS+"}href", "https://www.shlomifish.org/")
             new_elem.text = "Shlomi Fish’s Homepage"
-            affiliation.append(new_elem)
+            author.append(new_elem)
         self.root.write(self.input_fn)
 
 

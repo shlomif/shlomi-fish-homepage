@@ -37,13 +37,17 @@ class Docbook5AddHomepage:
         author = first(
             self.root,
             "db:info/db:author")
-        if not len(xpath(author, "./uri[@db:type='homepage']")):
+        if not len(xpath(author, "./db:affiliation")):
+            e1 = etree.Element("{"+DOCBOOK5_NS+"}affiliation")
+            e2 = etree.Element("{"+DOCBOOK5_NS+"}address")
             new_elem = etree.Element(
                     "uri", type="homepage",
             )
             new_elem.set("{"+XLINK_NS+"}href", "https://www.shlomifish.org/")
             new_elem.text = "Shlomi Fish’s Homepage"
-            author.append(new_elem)
+            e2.append(new_elem)
+            e1.append(e2)
+            author.append(e1)
         self.root.write(self.input_fn)
 
 

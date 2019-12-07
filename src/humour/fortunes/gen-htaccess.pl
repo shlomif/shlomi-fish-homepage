@@ -24,7 +24,7 @@ foreach my $base (@basenames)
 {
     foreach my $ext ( '', '.xml', '.xhtml' )
     {
-        my $type = $ext eq '' ? "ForceType text/plain\n" : '';
+        my $type = ( ( $ext eq '' ) ? "ForceType text/plain\n" : '' );
         $o->print(<<"EOF");
 <Files "$base$ext">
 ${type}        Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; rel=\\"canonical\\""

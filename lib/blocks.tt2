@@ -876,7 +876,7 @@ of an EvilPHish”</a> cartoon of
 [% END %]
 [%- PROCESS start_html -%]
 [%- IF apply_screenplay_style -%]
-[%- toc_div( ) -%]
+[%- toc_div( collapse => "true", ) -%]
 [%- END -%]
 
 [% content %]

@@ -47,16 +47,16 @@ of File::Find.
 
 [% WRAPPER h3_section id = "links-file-find-object"  title = "For File-Find-Object"  %]
 
-[% WRAPPER bitbucket_cpan_dist_links     dist = "File-Find-Object"
-    bitbucket_url = "https://bitbucket.org/shlomif/perl-file-find-object"
+[% WRAPPER github_cpan_dist_links     dist = "File-Find-Object"
+    github_url = "https://github.com/shlomif/perl-file-find-object"
     freecode_url = "http://freecode.com/projects/file-find-object/"  %]
 [%- END -%]
 [%- END -%]
 
 [% WRAPPER h3_section id = "links-file-find-object-rule"  title = "File-Find-Object-Rule"  %]
 
-[% WRAPPER bitbucket_cpan_dist_links     dist = "File-Find-Object-Rule"
-    bitbucket_url = "https://bitbucket.org/shlomif/perl-file-find-object-rule"  %]
+[% WRAPPER github_cpan_dist_links     dist = "File-Find-Object-Rule"
+    github_url = "https://github.com/shlomif/perl-file-find-object-rule"  %]
 [%- END -%]
 [%- END -%]
 

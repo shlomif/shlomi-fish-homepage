@@ -429,11 +429,13 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 
 [%- BLOCK start_html -%]
 <?xml version="1.0" encoding="utf-8"?>
+
 [% TRY %]
 [% INCLUDE latemp_html_doctype %]
 [% CATCH file %]
 <!DOCTYPE html>
 [% END %]
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]">
 <head>
 <title>[% title %]</title>
@@ -455,10 +457,12 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 [% INCLUDE "Inc/head_javascripts.tt2" %]
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
+
 [% TRY %]
 [% INCLUDE page_extra_head_elements %]
 [% CATCH file %]
 [% END %]
+
 [% IF apply_screenplay_style %]
 <link rel="stylesheet" href="[% base_path %]screenplay.css" media="screen" />
 [% END %]
@@ -467,10 +471,12 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 <body[% body_params %]>
 
 <div class="header" id="header">
+
 [%- IF 0 -%]
 <div class="banner">
 </div>
 [%- END -%]
+
 <div class="leading_path">
 [% leading_path_string %]
 </div>

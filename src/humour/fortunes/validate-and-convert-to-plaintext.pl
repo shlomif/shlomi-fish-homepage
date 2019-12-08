@@ -12,8 +12,8 @@ my $html_fn = $xml_fn;
 
 my $abs_xml_fn = File::Spec->rel2abs($xml_fn);
 
-XML::Grammar::Fortune->new( { mode  => "validate" } )
-    ->run(                  { input => $abs_xml_fn } );
+XML::Grammar::Fortune->new( { mode => "validate" } )
+    ->run( { input => $abs_xml_fn } );
 my $abs_out_fn = File::Spec->rel2abs($out_fn);
 
 {

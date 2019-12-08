@@ -118,8 +118,8 @@ parameters.) to install Perl modules.
 
 [% WRAPPER h3_section id = "links-module-format"  title="For $modname" %]
 
-[% WRAPPER bitbucket_cpan_dist_links     dist = modname
-    bitbucket_url = "http://bitbucket.org/shlomif/web-cpan"
+[% WRAPPER github_cpan_dist_links     dist = modname
+    github_url = "https://github.com/shlomif/perl-Module-Format"
     freecode_url = "http://freecode.com/projects/module-format"  %]
 [%- END -%]
 [%- END -%]

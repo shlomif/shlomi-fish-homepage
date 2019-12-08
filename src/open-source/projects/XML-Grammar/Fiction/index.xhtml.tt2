@@ -46,9 +46,9 @@ for various tasks.
 
 [% WRAPPER h3_section id = "links-xml-grammar-fiction"  title="For ${cpan_dist}" %]
 
-[% WRAPPER bitbucket_cpan_dist_links     dist="${cpan_dist}"
+[% WRAPPER github_cpan_dist_links     dist="${cpan_dist}"
     freecode_url="http://freecode.com/projects/xml-grammar-fiction/"
-    bitbucket_url="https://bitbucket.org/shlomif/fiction-xml" %]
+    github_url="https://github.com/shlomif/fiction-xml" %]
 [%- END -%]
 
 [%- END -%]
@@ -60,10 +60,6 @@ for various tasks.
 [% WRAPPER h2_section id = "examples"  title = "Examples"  %]
 
 [% WRAPPER h3_section id = "fiction_examples"  title = "Fiction-Text Examples"  %]
-
-[% BLOCK __OLD__url_to_data_examples %]
-https://bitbucket.org/shlomif/fiction-xml/src/perl/modules/XML-Grammar-Fiction/t/[% base %]/data/proto-text/
-[% END %]
 
 [% BLOCK url_to_data_examples %]
 https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fiction/t/[% base %]/data/proto-text

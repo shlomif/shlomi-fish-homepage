@@ -201,31 +201,37 @@ License</a>, a permissive software licence.
 [% END %]
 
 [% END %]
+
 [%- BLOCK about_sect -%]
 [%- WRAPPER h2_section id="about" title="About" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
+
 [%- BLOCK links_sect -%]
 [%- WRAPPER h2_section id="links" title="Links" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
+
 [%- BLOCK news_sect -%]
 [%- WRAPPER h2_section id="news" title="News" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
+
 [%- BLOCK see_also -%]
 [%- WRAPPER h2_section id="see_also" title="See Also" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
+
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
 [% cc_by_british_blurb(year=year) %]
 [%- END -%]
 [%- END -%]
+
 [% BLOCK cc_by_nc_sa_british_blurb %]
 
 <p>
@@ -245,16 +251,18 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
 
 [% END %]
+
 [%- BLOCK mailto_link_to_self -%]
 <a href="mailto:[% email %]">[% email %]</a>
 [%- END -%]
+
 [%- BLOCK note -%]
 <section class="note">
 [% content %]
 </section>
 [%- END -%]
-[% BLOCK docbook_formats %]
 
+[% BLOCK docbook_formats %]
 <section class="docbook_formats h2">
 
 <h2 id="[% h2_id %]">[% h2_text %]</h2>
@@ -289,10 +297,9 @@ page per section.
 </ul>
 
 </section>
-
 [% END %]
-[% BLOCK under_construction_note %]
 
+[% BLOCK under_construction_note %]
 [% WRAPPER note  %]
 
 <header>
@@ -306,13 +313,10 @@ publicly linked to. Please send comments to
 </p>
 
 [%- END -%]
-
 [% END %]
 
 [% BLOCK docbook_formats_w_base %]
-
 [% INCLUDE docbook_formats h2_id=h2_id h2_text=h2_text indiv_href=base _ "/" epub_href=base _".epub" orig_xml_href=base _".xml" pdf_href=base _".pdf" %]
-
 [% END %]
 
 [% PROCESS "common_art.tt2" %]
@@ -329,8 +333,8 @@ publicly linked to. Please send comments to
 [%- BLOCK cpan_dist -%]
 <a href="http://metacpan.org/release/[% d %]">[% content %]</a>
 [%- END -%]
-[% BLOCK home_pages_on_forges %]
 
+[% BLOCK home_pages_on_forges %]
 <div class="sub_section">
 <p>
 <a href="[% base_path %]open-source/projects/">Open Source Projects</a> I initiated. Mostly small to
@@ -388,7 +392,6 @@ the public.
 </p>
 
 </div>
-
 [% END %]
 
 [%- BLOCK pdoc -%]
@@ -420,19 +423,10 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 
 [% END %]
 
-[%- SET openstudy_group_url = "http://openstudy.com/study-groups/Perl+For+Beginners+-+Perl-begin.org" -%]
-[% BLOCK openstudy_button %]
-
-<p class="study_group">
-<a href="[% openstudy_group_url %]"
-title="Study group for Perl Beginners: ask questions, get answers and share studypads"><img src="[% base_path %]images/study-group.png" alt="Join the Study Group"/></a>
-</p>
-
-[%- END -%]
-
 [% BLOCK url_body_link %]
 <a href="[% href %]">[% href %]</a>
 [% END %]
+
 [%- BLOCK start_html -%]
 <?xml version="1.0" encoding="utf-8"?>
 [% TRY %]
@@ -458,7 +452,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 [%- IF 0 -%]
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 [%- END -%]
-[% # Let browser know website is optimized for mobile
+[% # Let the browser know that the website is optimized for mobile
 %]
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 [% IF is_dev %]
@@ -529,6 +523,7 @@ title="Study group for Perl Beginners: ask questions, get answers and share stud
 [% content %]
 </div>
 [% END %]
+
 [%- BLOCK end_html -%]
 <script [% script_type %]>
 shlomif_load_nav("[% raw_fn_path %]");

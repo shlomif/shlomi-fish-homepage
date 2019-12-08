@@ -1257,6 +1257,16 @@ ol.plain {
     list-style: none;
 }
 
+.mastering-cat-cover {
+    float: right;
+    border: green solid thin;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    img {
+        border: 0;
+    }
+}
+
 @import "self_link";
 @import "code_block";
 @import "treeview";

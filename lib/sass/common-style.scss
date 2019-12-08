@@ -1267,6 +1267,25 @@ ol.plain {
     }
 }
 
+.small {
+    font-size: 0.8em;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+img.rindolf {
+    float: right;
+    margin: 0 2em;
+}
+.evilphish {
+    border: 0;
+    margin: 0.5em;
+    float: right;
+    max-width: 70%;
+}
+
 @import "self_link";
 @import "code_block";
 @import "treeview";

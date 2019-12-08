@@ -445,30 +445,14 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 <meta name="author" content="Shlomi Fish"/>
 <meta name="description" content="[% desc || title %]"/>
 <meta name="keywords" content="Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Software[% more_keywords ? (", " _ more_keywords) : "" %]"/>
-<link rel="stylesheet" href="[% base_path %]style.css" media= "screen" title="Normal" />
+<link rel="stylesheet" href="[% base_path %]style.css" media="screen" title="Normal" />
 <link rel="stylesheet" href="[% base_path %]print.css" media="print" />
 <link rel="shortcut icon" href="[% base_path %]favicon.ico" type="image/x-icon" />
 [%- html_head_nav_links -%]
-[%- IF 0 -%]
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-[%- END -%]
 [% # Let the browser know that the website is optimized for mobile
 %]
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-[% IF is_dev %]
-<script  [% script_type %] src="[% base_path %]js/jq.js"></script>
-<script  [% script_type %] src="[% base_path %]js/jquery.treeview.min.js"></script>
-<script  [% script_type %] src="[% base_path %]js/toggler.js"></script>
-<script  [% script_type %] src="[% base_path %]js/toggle_sect.js"></script>
-<script  [% script_type %] src="[% base_path %]js/tree.jq.js"></script>
-<script  [% script_type %] src="[% base_path %]js/jquery.cookie.js"></script>
-<script  [% script_type %] src="[% base_path %]js/to-jqtree.js"></script>
-<script  [% script_type %] src="[% base_path %]js/to-jqtree-2.js"></script>
-<script  [% script_type %] src="[% base_path %]js/selfl.js"></script>
-<script  [% script_type %] src="[% base_path %]js/sub_menu.js"></script>
-[% ELSE %]
-<script  [% script_type %] src="[% base_path %]js/main_all.js"></script>
-[% END %]
+[% INCLUDE "Inc/head_javascripts.tt2" %]
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
 [% TRY %]

@@ -557,7 +557,8 @@ Wiki</a></li>
 "The Perl Beginners' Site" class="bless"><img src=
 "[% base_path %]images/perl-begin.png" alt="The Perl Beginners' Site" class=
 "bless" /></a></p>
-[% IF xhtml1 %]
+
+[%- IF xhtml1 %]
 <p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless">
 <img class="highlight bless" src="[% base_path %]images/xh11-btn.png" alt="Valid XHTML 1.1!"/></p>
 [% ELSE %]
@@ -565,14 +566,17 @@ Wiki</a></li>
 "Valid XHTML 1.0!" class="bless"><img class="highlight bless" src=
 "[% base_path %]images/valid-xhtml10.png" alt="Valid XHTML 1.0!" height="31"
 width="88" /></a></p>
-[% END %]
+[% END -%]
+
 <p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
 class="bless"><img class="highlight bless" src="[% base_path %]images/css-btn.png"
 alt="Valid CSS!" /></a></p>
-[% TRY %]
+
+[%- TRY %]
 [% INCLUDE page_blog_roll %]
 [% CATCH file %]
-[% END %]
+[% END -%]
+
 (((((include "shlomif_elsewhere.htmlish")))))
 <div class="elsew_on_web">
 <ul>
@@ -628,11 +632,13 @@ deviantART</a></p>
 </div>
 </div>
 </div>
+
 [% IF xhtml1 %]
 <div class="footer" id="footer">
 [% ELSE %]
 <footer id="footer">
 [% END %]
+
 <hr />
 
 <div class="righty">
@@ -663,7 +669,7 @@ of an EvilPHish”</a> cartoon of
 </p>
 </div>
 
-[% IF raw_fn_path %]
+[%- IF raw_fn_path %]
 <a href="[% base_path || "./" %]"><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage" /></a>
 [% ELSE %]
 <div class="rightalign">
@@ -671,25 +677,30 @@ of an EvilPHish”</a> cartoon of
    alt="Hosted at HostGator" class="highlight" style="border : 0"
    title="Hosted at HostGator" /></a>
 </div>
-[% END %]
-[% IF xhtml1 %]
+[% END -%]
+
+[%- IF xhtml1 %]
 </div>
 [% ELSE %]
 </footer>
-[% END %]
-	</body>
+[% END -%]
+
+</body>
 </html>
 [%- END -%]
 
 [%- BLOCK wrap_html -%]
+
 [% IF rtl_layout %]
 [% SET is_hebrew = 1 %]
 [% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '</div>' %]
 [% END %]
+
 [% IF is_hebrew %]
 [% SET body_params = body_params _ " onload=\"langLoad()\"" %]
 [% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '<script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
 [% END %]
+
 [% IF xhtml1 %]
 [% SET script_type=' type="text/javascript"' %]
 [% SET nav_tag='div' %]
@@ -697,13 +708,17 @@ of an EvilPHish”</a> cartoon of
 [% SET script_type=' ' %]
 [% SET nav_tag='nav' %]
 [% END %]
+
 [%- PROCESS start_html -%]
+
 [%- IF apply_screenplay_style -%]
 [%- toc_div( collapse => "true", ) -%]
 [%- END -%]
 
 [% content %]
+
 [%- PROCESS end_html -%]
+
 [%- END -%]
 
 [%-# vim:ft=tt2html:

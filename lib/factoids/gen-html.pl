@@ -1161,7 +1161,7 @@ sub _content__process_page
 }
 
 my @content =
-    map  { @{ _content__process_page($_) }; }
+    map { @{ _content__process_page($_) }; }
     sort { $a->short_id cmp $b->short_id } @pages;
 
 path("lib/factoids/deps.mak")

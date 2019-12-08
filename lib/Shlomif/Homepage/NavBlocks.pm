@@ -280,7 +280,7 @@ my %tr_s = (
         items => [
             _fp( path => "humour/TheEnemy/", ),
             _ontext( path => "humour/TheEnemy/The-Enemy-English-v7.html", ),
-            _github( url => 'http://bitbucket.org/shlomif/the-enemy', ),
+            _github( url => 'http://github.com/shlomif/the-enemy', ),
         ],
     ),
     'xkcd_facts' => _tr(

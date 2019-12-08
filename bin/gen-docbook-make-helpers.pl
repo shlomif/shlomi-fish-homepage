@@ -45,10 +45,12 @@ sub _github_clone
     my $clone_into = $git_clones_dir->child($repo);
     my $link       = "$into_dir/$repo";
 
-    my @prefix =
-        (
-        ( $type eq 'bitbucket_hg' ) ? ( 'hg', 'clone' ) : ( 'git', 'clone' ) );
-    my @cmd = ( @prefix, $url, $clone_into );
+    if ( $type eq 'bitbucket_hg' )
+    {
+        Carp::confess("bitbucket_hg is going away!");
+    }
+    my @prefix = ( 'git', 'clone' );
+    my @cmd    = ( @prefix, $url, $clone_into );
 
     if ( !-e $clone_into )
     {

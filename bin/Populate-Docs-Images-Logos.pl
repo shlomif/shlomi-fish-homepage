@@ -38,6 +38,7 @@ sub _github_clone
     }
     elsif ( $type eq 'bitbucket_hg' )
     {
+        Carp::confess("bitbucket_hg is going away!");
         $cmd = 'hg';
         if ( $ENV{BITBUCKET_USERS} =~ m/,\Q$gh_username\E,/ )
         {

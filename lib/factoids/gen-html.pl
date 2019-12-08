@@ -952,7 +952,7 @@ EOF
         id_base => "xslt_facts",
         img_alt => "XSLT Logo",
         img_attribution =>
-'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
+'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/humour/bits/facts/images/XSLT.svg',
         img_class     => "facts_logo xslt",
         img_src       => "humour/bits/facts/images/XSLT.min.svg",
         license_macro => "cc_by_sa_british_blurb",

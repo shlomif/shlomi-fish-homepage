@@ -44,8 +44,8 @@ Maniac Downloader from the CPAN</a>
 
 [% WRAPPER h2_section id = "project-links"  title = "Project Links"  %]
 
-[% WRAPPER bitbucket_cpan_dist_links     dist = "App-ManiacDownloader"
-    bitbucket_url = "https://bitbucket.org/shlomif/maniac-downloader"
+[% WRAPPER github_cpan_dist_links     dist = "App-ManiacDownloader"
+    github_url = "https://github.com/shlomif/maniac-downloader"
     freecode_url = "http://freecode.com/projects/maniac-downloader/"  %]
 
 [% END %]

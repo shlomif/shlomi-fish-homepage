@@ -7,11 +7,11 @@ Follow the following steps to build the homesite:
 3. Install perl 5.16.x (or later) in case it's not already installed. You
 should have a package for for your system.
 
-4. Install Website Meta Language (version 2.0.12 or later):
+4. Install Website Meta Language (version 2.24.0 or later):
 
-https://bitbucket.org/shlomif/website-meta-language/downloads
+https://github.com/thewml/website-meta-language/releases
 
-5. Run and configure CPAN (see - http://perl-begin.org/topics/cpan/ )
+5. Run and configure CPAN (see - https://perl-begin.org/topics/cpan/ )
 and type:
 
 ```bash

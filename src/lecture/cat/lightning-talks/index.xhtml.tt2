@@ -1,8 +1,9 @@
 [%- SET title = "Lightning Talks" -%]
 [%- SET desc = "Short (~ 5 minute) slides for presentations" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% PROCESS "Inc/lectures.tt2" %]
 
 <p>
 These are <a href="http://perl.plover.com/lt/lightning-talks.html">lightning

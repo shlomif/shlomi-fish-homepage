@@ -2,6 +2,7 @@
 [%- SET desc = "Slides and material for technical presentations given by Shlomi Fish. Linux, Perl, Web publishing, software management, software development." -%]
 
 [%- WRAPPER wrap_html -%]
+[% PROCESS "Inc/lectures.tt2" %]
 
 <div class="fancy_sects side_toc">
 

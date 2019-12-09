@@ -1,0 +1,30 @@
+[% BLOCK lightning_talks_list %]
+
+<ul>
+<li>
+<a href="[% base_path %]lecture/mini/mdda/">Meta-Data Database Access</a>
+</li>
+<li>
+<a href="[% base_path %]lecture/Perl/Graham-Function/">Presentation about Finding the
+Graham Function</a>
+</li>
+<li>
+<a href="[% base_path %]lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
+Templating System for Perl</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Opt-Multi-Task-in-PDL" %]">Optimising Multitasking in
+PDL</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Test-Run" %]">Test::Run - a New and Improved Test Harness</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Too-Many-Ways" %]">There are too Many Ways to Do it</a>
+</li>
+<li>
+<a href="[% PROCESS t2_lect url = "Mojolicious" %]">Mojolicious and Mojolicious::Lite</a> -
+a presentation about the web-development frameworks.
+</li>
+</ul>
+[% END %]

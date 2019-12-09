@@ -1,0 +1,7 @@
+[%- BLOCK mailto_link_to_self -%]
+<a href="mailto:[% email %]">[% email %]</a>
+[%- END -%]
+
+[%- BLOCK main_email_mailto -%]
+[% PROCESS mailto_link_to_self email=main_email %]
+[%- END -%]

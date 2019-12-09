@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 <p>
-<b>From:</b> Shlomi Fish &lt;[% PROCESS mailto_link_to_self email=main_email %]&gt;<br />
+<b>From:</b> Shlomi Fish &lt;[% PROCESS main_email_mailto %]&gt;<br />
 <b>To:</b> writers<br />
 <b>Subject:</b> WOW: Introducing Myself (Shlomi Fish)<br />
 <b>Date:</b> Thu, 16 Sep 2004 17:34:11 +0300<br />

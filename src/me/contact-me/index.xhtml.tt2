@@ -21,7 +21,7 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 <dt>Homepage:</dt>
 <dd>[% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]</dd>
 <dt>E-mail:</dt>
-<dd>[% PROCESS mailto_link_to_self email=main_email %]</dd>
+<dd>[% PROCESS main_email_mailto %]</dd>
 <dt>Name in Hebrew:</dt>
 <dd>שלומי פיש</dd>
 <dt>Instant Messaging:</dt>

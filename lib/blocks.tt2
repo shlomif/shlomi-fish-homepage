@@ -1,3 +1,5 @@
+[% PROCESS "Inc/email.tt2" %]
+
 [% SET html_lang = "en-US" %]
 [% SET HEBREW_XML_LANG_SCRIPT = '' %]
 
@@ -32,7 +34,7 @@
 
 <p>
 Written, designed, and maintained by Shlomi Fish,
-[% PROCESS mailto_link_to_self email="shlomif@shlomifish.org" -%].
+[% PROCESS main_email_mailto -%].
 </p>
 [% END %]
 
@@ -223,10 +225,6 @@ explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
 
 [% END %]
-
-[%- BLOCK mailto_link_to_self -%]
-<a href="mailto:[% email %]">[% email %]</a>
-[%- END -%]
 
 [%- BLOCK note -%]
 <section class="note">

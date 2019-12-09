@@ -3,6 +3,7 @@
 
 
 [%- WRAPPER wrap_html -%]
+[% PROCESS "Inc/open_source.tt2" %]
 
 [% toc_div( ) %]
 

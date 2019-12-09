@@ -41,6 +41,7 @@ Written, designed, and maintained by Shlomi Fish,
 [%- BLOCK rellink -%]
 [% base_path _ url %]
 [%- END -%]
+
 [% BLOCK w2l_talks_list %]
 <ul>
 <li>
@@ -131,6 +132,7 @@ control and other resources.
 </ul>
 
 [% END %]
+
 [% BLOCK qp_lect %]
 
 <li>
@@ -151,19 +153,22 @@ control and other resources.
 </p>
 </li>
 [% END %]
+
 [% PROCESS "h_sections.tt2" %]
+
 [%- BLOCK intro -%]
 [%- WRAPPER h2_section id="intro" title="Introduction" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
+
 [%- BLOCK licence_sect -%]
 [%- WRAPPER h2_section id="licence" title="Licence" -%]
 [% content %]
 [%- END -%]
 [%- END -%]
-[% BLOCK x11_licence %]
 
+[% BLOCK x11_licence %]
 [% WRAPPER licence_sect %]
 
 <p>
@@ -173,7 +178,6 @@ License</a>, a permissive software licence.
 </p>
 
 [% END %]
-
 [% END %]
 
 [%- BLOCK about_sect -%]
@@ -371,27 +375,6 @@ the public.
 [%- BLOCK pdoc_f -%]
 <a href="http://perldoc.perl.org/functions/[% f %].html">[% content %]</a>
 [%- END -%]
-
-[% BLOCK factoids_frame %]
-
-<div class="bordered">
-
-<h2 id="facts"><a href="[% base_path %]humour/bits/facts/">Collections of “Facts”</a></h2>
-
-<p>
-Starting from the meme of the
-<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris facts</a>
-and continuing to other people or things, such as
-<a href="[% base_path %]humour/bits/facts/Larry-Wall/">Larry Wall</a>,
-<a href="[% base_path %]humour/bits/facts/Xena/">Xena the Warrior Princess</a>,
-<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>,
-and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
-<a href="[% base_path %]humour/bits/facts/NSA/">the NSA</a>.
-</p>
-
-</div>
-
-[% END %]
 
 [% BLOCK url_body_link %]
 <a href="[% href %]">[% href %]</a>

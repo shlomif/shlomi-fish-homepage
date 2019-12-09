@@ -10,7 +10,7 @@ so if the database schema changes, the changes will be relatively minimal.
 </p>
 
 <ul>
-[% PROCESS qp_lect dir = "slides",  %]
+[% PROCESS eng_qp_lect %]
 </ul>
 
 [% END %]

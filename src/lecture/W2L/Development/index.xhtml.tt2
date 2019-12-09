@@ -10,7 +10,7 @@ me.
 </p>
 
 <ul>
-[% PROCESS qp_lect dir = "slides",  %]
+[% PROCESS eng_qp_lect %]
 </ul>
 
 [% PROCESS "presentations/qp/common/licenses.tt2" %]

@@ -38,27 +38,6 @@ Written, designed, and maintained by Shlomi Fish,
 [% base_path _ url %]
 [%- END -%]
 
-[% BLOCK bitbucket_cpan_dist_links %]
-<ul>
-
-<li>
-<a href="[% bitbucket_url %]">Bitbucket.org
-Repository</a> - contains version control and other resources.
-</li>
-
-<li>
-<a href="http://metacpan.org/release/[% dist %]">[% dist
-%] on MetaCPAN</a> - download, documentation, browsing and information.
-</li>
-
-[% IF freecode_url %]<li><a href="[% freecode_url %]">Freecode Record</a></li>[% END %]
-
-[% content %]
-
-</ul>
-
-[% END %]
-
 [% BLOCK github_cpan_dist_links %]
 <ul>
 
@@ -77,26 +56,6 @@ control and other resources.
 [% content %]
 
 </ul>
-[% END %]
-
-[% BLOCK shlomif_docbook_doc_text %]
-[% IF NOT level %][% SET level=2 %][% END %]
-[% IF dir %][% SET dir = dir _ "/" %][% END %]
-
-<h[% level %] id="[% doc %]-formats">Formats</h[% level %]>
-
-<ul>
-<li><a href="[% dir %][% doc %]/">HTML (read online)</a></li>
-<li><a href="[% dir %][% doc %].pdf">Acrobat Reader (PDF)</a></li>
-<li><a href="[% dir %][% doc %].rtf">MS Word RTF</a></li>
-</ul>
-
-<h[% level %] id="[% doc %]-sources">DocBook/XML Sources</h[% level %]>
-
-<ul>
-<li><a href="[% dir %][% doc %].xml">XML Source</a></li>
-</ul>
-
 [% END %]
 
 [% BLOCK qp_lect %]
@@ -118,6 +77,10 @@ control and other resources.
 <a href="[% dir %]/src.tar.gz">Quad-Pres Source for the Lecture</a>
 </p>
 </li>
+[% END %]
+
+[% BLOCK eng_qp_lect %]
+[% PROCESS qp_lect dir = "slides", %]
 [% END %]
 
 [% PROCESS "h_sections.tt2" %]

@@ -1,3 +1,24 @@
 [%- IF 0 -%]
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 [%- END -%]
+
+[% BLOCK bitbucket_cpan_dist_links %]
+<ul>
+
+<li>
+<a href="[% bitbucket_url %]">Bitbucket.org
+Repository</a> - contains version control and other resources.
+</li>
+
+<li>
+<a href="http://metacpan.org/release/[% dist %]">[% dist
+%] on MetaCPAN</a> - download, documentation, browsing and information.
+</li>
+
+[% IF freecode_url %]<li><a href="[% freecode_url %]">Freecode Record</a></li>[% END %]
+
+[% content %]
+
+</ul>
+
+[% END %]

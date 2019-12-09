@@ -3,6 +3,7 @@
 
 
 [%- WRAPPER wrap_html -%]
+[% PROCESS "Inc/lectures.tt2" %]
 
 <p>
 These are presentations that have been given as part of the Israeli

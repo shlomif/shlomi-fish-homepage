@@ -3,10 +3,6 @@
 [% SET html_lang = "en-US" %]
 [% SET HEBREW_XML_LANG_SCRIPT = '' %]
 
-[% BLOCK t2_lect %]
-[% base_path %]lecture/Perl/Lightning/[% url %]/
-[% END %]
-
 [% BLOCK webmaster_footer %]
 <ul class="bt_nav">
 <li>
@@ -41,36 +37,6 @@ Written, designed, and maintained by Shlomi Fish,
 [%- BLOCK rellink -%]
 [% base_path _ url %]
 [%- END -%]
-
-[% BLOCK w2l_talks_list %]
-<ul>
-<li>
-<a href="[% base_path %]lecture/W2L/Basic_Use/">Basic Use</a>
-</li>
-<li>
-<a href="[% base_path %]lecture/W2L/Network/">Networking in Linux</a> - content authored by
-Shachar Reindel.
-</li>
-<li>
-<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Development/",  %]">Development
-under Linux</a> - the content of this presentation was originally authored
-by Meir Maor. <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Technion/",  %]">An older incarnation of this
-presentation</a> is also available.
-</li>
-<li>
-<a href="[% base_path %]lecture/W2L/Why_Linux/">What Linux is to Me</a>
-</li>
-<li>
-<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Blitz/",  %]">The Blitz Lecture (in
-Hebrew)</a> - getting up to speed with Linux.
-</li>
-<li>
-<a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Mini-Intro/",  %]">The Mini-Intro
-Lecture (in Hebrew)</a> - getting up to speed with Linux. (More modernised
-version of the Blitz).
-</li>
-</ul>
-[% END %]
 
 [% BLOCK bitbucket_cpan_dist_links %]
 <ul>

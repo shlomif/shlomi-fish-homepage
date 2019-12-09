@@ -386,15 +386,16 @@ my $INC_SUFFIX = qq#")))))\n#;
 
 sub _inc
 {
-    my ( $result, $id ) = @_;
-    return sprintf( "%s/%s/%s%s", $INC_PREF, $result, $id, $INC_SUFFIX );
+    my ( $input_tt2_page_path, $id ) = @_;
+    return sprintf( "%s/%s/%s%s",
+        $INC_PREF, $input_tt2_page_path, $id, $INC_SUFFIX );
 }
 
 sub proc
 {
-    my $result = shift;
-    $::latemp_filename = $result;
-    my @fn     = split m#/#, $result;
+    my $input_tt2_page_path = shift;
+    $::latemp_filename = $input_tt2_page_path;
+    my @fn     = split m#/#, $input_tt2_page_path;
     my @fn_nav = @fn;
     if ( $fn_nav[-1] =~ m#\Aindex\.x?html\z# )
     {
@@ -431,11 +432,11 @@ sub proc
 =cut
 
     $vars->{base_path}   = $base_path;
-    $vars->{fn_path}     = $result;
-    $vars->{raw_fn_path} = $result =~ s#(\A|/)index\.x?html\z#$1#r;
+    $vars->{fn_path}     = $input_tt2_page_path;
+    $vars->{raw_fn_path} = $input_tt2_page_path =~ s#(\A|/)index\.x?html\z#$1#r;
     my $set = sub {
         my ( $name, $inc ) = @_;
-        $vars->{$name} = _inc( $result, $inc );
+        $vars->{$name} = _inc( $input_tt2_page_path, $inc );
         return;
     };
     $set->( 'leading_path_string',           "breadcrumbs-trail" );
@@ -452,7 +453,8 @@ sub proc
     $set->( 'nav_menu_html',      "main_nav_menu_html" );
     $set->( 'sect_nav_menu_html', "sect-navmenu" );
     my $html = '';
-    $template->process( "src/$result.tt2", $vars, \$html, binmode => ':utf8', )
+    $template->process( "src/$input_tt2_page_path.tt2",
+        $vars, \$html, binmode => ':utf8', )
         or die $template->error();
 
     $toc->add_toc( \$html );

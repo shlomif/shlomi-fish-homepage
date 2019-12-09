@@ -77,6 +77,7 @@ control and other resources.
 <a href="[% dir %]/src.tar.gz">Quad-Pres Source for the Lecture</a>
 </p>
 </li>
+
 [% END %]
 
 [% BLOCK eng_qp_lect %]
@@ -84,18 +85,7 @@ control and other resources.
 [% END %]
 
 [% PROCESS "h_sections.tt2" %]
-
-[%- BLOCK intro -%]
-[%- WRAPPER h2_section id="intro" title="Introduction" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK licence_sect -%]
-[%- WRAPPER h2_section id="licence" title="Licence" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
+[% PROCESS "Inc/common_sections.tt2" %]
 
 [% BLOCK x11_licence %]
 [% WRAPPER licence_sect %]
@@ -108,30 +98,6 @@ License</a>, a permissive software licence.
 
 [% END %]
 [% END %]
-
-[%- BLOCK about_sect -%]
-[%- WRAPPER h2_section id="about" title="About" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK links_sect -%]
-[%- WRAPPER h2_section id="links" title="Links" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK news_sect -%]
-[%- WRAPPER h2_section id="news" title="News" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK see_also -%]
-[%- WRAPPER h2_section id="see_also" title="See Also" -%]
-[% content %]
-[%- END -%]
-[%- END -%]
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]

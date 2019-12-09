@@ -5,6 +5,7 @@ use warnings;
 use autodie;
 use utf8;
 
+use Carp ();
 use Path::Tiny qw/ cwd path /;
 use Parallel::ForkManager ();
 use lib './lib';
@@ -35,7 +36,8 @@ sub _github_clone
 
     if ( $type eq 'bitbucket_hg' )
     {
-        $url = qq#https://$gh_username\@bitbucket.org/$gh_username/$repo#;
+        # $url = qq#https://$gh_username\@bitbucket.org/$gh_username/$repo#;
+        Carp::confess("bitbucket_hg is going away!");
     }
     else
     {
@@ -45,10 +47,6 @@ sub _github_clone
     my $clone_into = $git_clones_dir->child($repo);
     my $link       = "$into_dir/$repo";
 
-    if ( $type eq 'bitbucket_hg' )
-    {
-        Carp::confess("bitbucket_hg is going away!");
-    }
     my @prefix = ( 'git', 'clone' );
     my @cmd    = ( @prefix, $url, $clone_into );
 

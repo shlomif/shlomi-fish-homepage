@@ -96,8 +96,8 @@ version of the Blitz).
 </li>
 </ul>
 [% END %]
-[% BLOCK bitbucket_cpan_dist_links %]
 
+[% BLOCK bitbucket_cpan_dist_links %]
 <ul>
 
 <li>
@@ -117,8 +117,8 @@ Repository</a> - contains version control and other resources.
 </ul>
 
 [% END %]
-[% BLOCK github_cpan_dist_links %]
 
+[% BLOCK github_cpan_dist_links %]
 <ul>
 
 <li>
@@ -136,8 +136,8 @@ control and other resources.
 [% content %]
 
 </ul>
-
 [% END %]
+
 [% BLOCK shlomif_docbook_doc_text %]
 [% IF NOT level %][% SET level=2 %][% END %]
 [% IF dir %][% SET dir = dir _ "/" %][% END %]

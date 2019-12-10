@@ -131,7 +131,12 @@ EOF
         "\n",
     );
 
+    my $CLEAN_NAMESPACES_FUNC_NAME = 'SCREENPLAYS_CLEAN_XML_NS';
+    my $CLEAN_NAMESPACES_FUNC__BODY =
+        qq{\$1 \$(PERL) -lp bin/screenplay-xml-remove-ns.pl < \$< > \$\@};
+
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
+        ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
         ( map { "\t$_->{base} \\\n" } map { @{ $_->{rec}->{docs} } } @records ),
@@ -153,10 +158,12 @@ EOF
                 my $heb_filt = '';
                 if ( $x =~ /hebrew/ )
                 {
-                    $heb_filt = "DIR=rtl ";
+                    $heb_filt = "DIR=rtl";
                 }
-                "$_: \$(SCREENPLAY_XML_HTML_DIR)/" . $x
-                    . qq{\n\t${heb_filt}perl -lpE 'do { s#\\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\\E##; my \$\$d = \$\$ENV{DIR}; \$\$d and s/(<html )/\$\$1dir="\$\$d" /; } if m#^<html #ms' < \$< > \$\@\n\n}
+                "$_: \$(SCREENPLAY_XML_HTML_DIR)/"
+                    . $x
+                    . sprintf( "\n\t\$(call %s,%s)\n\n",
+                    $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
             } @_htmls_files
         ),
     );

@@ -21,6 +21,10 @@ BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 
 include lib/make/rules.mak
+include lib/factoids/deps.mak
+include lib/make/factoids.mak
+include lib/make/docbook/sf-fictions-list.mak
+
 
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
@@ -233,8 +237,6 @@ FICTION_DOCS_ADDITIONS = \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7
 
-include lib/make/docbook/sf-fictions-list.mak
-
 FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
 SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
@@ -400,8 +402,6 @@ FORTUNES_SQLITE_DB = $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 SRC_DEST_HTMLS_FORTUNES = $(patsubst %,$(SRC_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
-
-include lib/make/factoids.mak
 
 FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(SRC_FORTUNES_DIR)/prepare-xhtml-for-input.pl
@@ -860,8 +860,6 @@ $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-l
 	$(FACTOIDS_GEN_CMD)
 
 all: $(FACTOIDS_TIMESTAMP)
-
-include lib/factoids/deps.mak
 
 # $(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
 

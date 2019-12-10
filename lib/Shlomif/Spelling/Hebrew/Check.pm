@@ -12,6 +12,8 @@ use MooX qw/late/;
 use Shlomif::Spelling::Hebrew::Whitelist   ();
 use Shlomif::Spelling::Hebrew::SiteChecker ();
 
+use Text::Hspell ();
+
 has obj => (
     is      => 'ro',
     default => sub {
@@ -20,23 +22,7 @@ has obj => (
             . "/Shlomif-Spelling-Hebrew-SiteChecker-Inline/" );
         path($dir)->mkpath;
 
-        my $code = <<'EOF';
-import HspellPy
-
-class HspellPyWrapper:
-    def __init__(self):
-        self._hspell = HspellPy.Hspell(linguistics=True)
-
-    def check_word(self, word):
-        return self._hspell.check_word(word);
-EOF
-        require Inline;
-        Inline->import(
-            Python    => $code,
-            directory => $dir,
-        );
-        my $hspell =
-            Inline::Python::Object->new( '__main__', 'HspellPyWrapper' );
+        my $hspell = Text::Hspell->new;
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>

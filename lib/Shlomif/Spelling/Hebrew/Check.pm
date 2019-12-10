@@ -33,9 +33,10 @@ has obj => (
         my $code = <<'EOF';
 import HspellPy
 
-speller = HspellPy.Hspell(linguistics=True)
+def create_hspell_instance(args):
+    return HspellPy.Hspell(linguistics=True)
 
-def hspell_check(word):
+def hspell_check(speller, word):
     try:
         ret = speller.check_word(word);
     except Exception:
@@ -47,6 +48,7 @@ EOF
             Python    => $code,
             directory => $dir,
         );
+        my $hspell = create_hspell_instance( +{} );
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>
@@ -55,7 +57,7 @@ EOF
                     scalar( Shlomif::Spelling::Hebrew::Whitelist->new() ),
                 check_word_cb => sub {
                     my ($word) = @_;
-                    return hspell_check($word);
+                    return hspell_check( $hspell, $word );
                 },
             }
         );

@@ -18,9 +18,17 @@
 
 [% BLOCK header_joke %]
 [% WRAPPER joke  %]
+
+<article class="h3 joke">
+
+<header>
 <h3 id="[% id %]">[% header %]</h3>
+</header>
 
 [% content %]
+
+</article>
+
 [%- END -%]
 [% END %]
 

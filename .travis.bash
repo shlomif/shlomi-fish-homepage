@@ -31,6 +31,7 @@ then
             sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
         fi
     fi
+    export INLINE_PYTHON_EXECUTABLE="$(which python3)"
     cpanm local::lib
     eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify

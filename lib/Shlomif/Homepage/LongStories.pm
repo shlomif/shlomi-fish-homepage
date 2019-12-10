@@ -670,7 +670,7 @@ sub render_make_fragment
         {
             if (1)    # if ( $uc_id !~ /WE_THE_LIVING_DEAD/ )
             {
-                push @var_decls, "$m_id = \$(SRC_DEST)/$logo_src\n";
+                push @var_decls, "$m_id := \$(SRC_DEST)/$logo_src\n";
             }
         }
         if ( $logo_svg ne '//$SKIP' )
@@ -698,8 +698,8 @@ sub render_make_fragment
         "\n",
         @rules,
         "\n",
-        "LONG_STORIES__SMALL_LOGO_PNGS = $deps $pngs\n\n",
-"LONG_STORIES__SMALL_LOGO_WEBPS = \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n\n",
+        "LONG_STORIES__SMALL_LOGO_PNGS := $deps $pngs\n\n",
+"LONG_STORIES__SMALL_LOGO_WEBPS := \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n\n",
         "\$(LONG_STORIES__SMALL_LOGO_WEBPS): %.webp: %.png\n",
         "\tgm convert \$< \$\@\n\n",
 "art_slogans_targets: \$(LONG_STORIES__SMALL_LOGO_PNGS) \$(LONG_STORIES__SMALL_LOGO_WEBPS)\n\n",

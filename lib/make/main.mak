@@ -24,7 +24,7 @@ include lib/make/rules.mak
 include lib/factoids/deps.mak
 include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
-
+include lib/make/long_stories.mak
 
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
@@ -562,8 +562,6 @@ define ASCIIDOCTOR_TO_DOCBOOK5
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 	python3 bin/add-homepage-uri-to-asciidoc-generated-docbook5.py $@
 endef
-
-include lib/make/long_stories.mak
 
 PRINTER_ICON_PNG = $(SRC_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG = $(SRC_DEST)/images/twitter-bird-light-bgs-20.png

@@ -184,19 +184,27 @@ foreach my $ext (qw/ xhtml pdf /)
 {
     my $idx  = -1;
     my $COPY = qq#\t\$(call COPY)\n#;
+
+    my %all_deps;
+    my @captioned_images = (
+        map {
+            my $src = "lib/repos/$_";
+            ++$idx;
+            my $bn       = path($src)->basename;
+            my $dn       = path($src)->parent->stringify;
+            my $bn_var   = "CAPT_IMG_BN$idx";
+            my $dest_var = "CAPT_IMG_DEST_$idx";
+            $all_deps{"\$($dest_var)"} = 1;
+qq#$bn_var := $bn\n$dest_var := \$(SRC_POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\n#;
+        } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
+    );
     path("${DIR}copies-generated-include.mak")->spew_utf8(
-        ( map { $_, $COPY, "\n" } path("${DIR}copies-source.mak")->lines_utf8 ),
         (
-            map {
-                my $src = "lib/repos/$_";
-                ++$idx;
-                my $bn       = path($src)->basename;
-                my $dn       = path($src)->parent->stringify;
-                my $bn_var   = "CAPT_IMG_BN$idx";
-                my $dest_var = "CAPT_IMG_DEST_$idx";
-qq#$bn_var := $bn\n$dest_var := \$(SRC_POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\nall: \$($dest_var)\n\n#;
-            } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
-        )
+            map { $_ . $COPY . "\n" }
+                path("${DIR}copies-source.mak")->lines_utf8
+        ),
+        @captioned_images,
+        "all: " . join( " ", sort keys %all_deps ) . "\n\n"
     );
 }
 

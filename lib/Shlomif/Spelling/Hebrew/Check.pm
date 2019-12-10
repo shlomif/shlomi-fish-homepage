@@ -33,22 +33,20 @@ has obj => (
         my $code = <<'EOF';
 import HspellPy
 
-def create_hspell_instance(args):
-    return HspellPy.Hspell(linguistics=True)
+class HspellPyWrapper:
+    def __init__(self):
+        self._hspell = HspellPy.Hspell(linguistics=True)
 
-def hspell_check(speller, word):
-    try:
-        ret = speller.check_word(word);
-    except Exception:
-        ret = False
-    return ret
+    def check_word(self, word):
+        return self._hspell.check_word(word);
 EOF
         require Inline;
         Inline->import(
             Python    => $code,
             directory => $dir,
         );
-        my $hspell = create_hspell_instance( +{} );
+        my $hspell =
+            Inline::Python::Object->new( '__main__', 'HspellPyWrapper' );
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
                 timestamp_cache_fn =>
@@ -57,7 +55,7 @@ EOF
                     scalar( Shlomif::Spelling::Hebrew::Whitelist->new() ),
                 check_word_cb => sub {
                     my ($word) = @_;
-                    return hspell_check( $hspell, $word );
+                    return $hspell->check_word($word);
                 },
             }
         );

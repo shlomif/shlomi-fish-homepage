@@ -5,8 +5,6 @@ use warnings;
 use autodie;
 use utf8;
 
-use Path::Tiny qw/ path /;
-
 use MooX qw/late/;
 
 use Shlomif::Spelling::Hebrew::Whitelist   ();
@@ -18,9 +16,6 @@ has obj => (
     is      => 'ro',
     default => sub {
         my ($self) = @_;
-        my $dir = ( ( $ENV{TMPDIR} // "/tmp" )
-            . "/Shlomif-Spelling-Hebrew-SiteChecker-Inline/" );
-        path($dir)->mkpath;
 
         my $hspell = Text::Hspell->new;
         return Shlomif::Spelling::Hebrew::SiteChecker->new(

@@ -15,6 +15,7 @@ use XML::Grammar::Fortune 0.0800;
 use Template                               ();
 use Shlomif::Homepage::FactoidsPages::Page ();
 use Carp::Always;
+use List::Util qw/ uniqstr /;
 
 my $p = XML::LibXML->new;
 
@@ -1155,8 +1156,11 @@ sub _content__process_page
     my $pre_incs_path =
         "dest/pre-incs/t2/humour/bits/facts/${path}/index.xhtml";
     return [
-        map { +{ 'path' => $pre_incs_path, line => "$pre_incs_path: $_\n" } }
-            @{ $deps{$id} }
+        +{
+            'path' => $pre_incs_path,
+            line   => "$pre_incs_path: "
+                . join( " ", uniqstr( sort @{ $deps{$id} } ) ) . "\n",
+        },
     ];
 }
 

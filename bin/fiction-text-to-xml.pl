@@ -56,7 +56,7 @@ version 0.18.0
 =head1 SYNOPSIS
 
     perl -MXML::Grammar::Fiction::App::FromProto -e 'run()' -- \
-	-o "$OUTPUT_FILE" "$INPUT_FILE"
+    -o "$OUTPUT_FILE" "$INPUT_FILE"
 
 =head1 NAME
 

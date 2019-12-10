@@ -235,7 +235,12 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     filename_lists_post_filter => sub {
         my ($args) = @_;
         my $filenames = $args->{filenames};
-        return [ grep { not m#\Ahumour/fortunes/\S+\.tar\.gz\z# } @$filenames ];
+        return [
+            grep {
+                not(   m#\Ahumour/fortunes/\S+\.tar\.gz\z#
+                    || m#\Aimages/bk2hp-v2\.(?:svgz?|min\.svg)\z# )
+            } @$filenames
+        ];
     },
 );
 

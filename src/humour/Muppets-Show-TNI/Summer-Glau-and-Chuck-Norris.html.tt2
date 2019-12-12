@@ -1,13 +1,47 @@
 [%- SET title = "Muppets: Summer Glau &amp; Chuck Norris as Grammar Nazis" -%]
 [%- SET desc = "The Muppets Show hosts Summer Glau and Chuck Norris mashing up xkcd, Ozy and Millie’s Grammar Nazis, Chuck Norris Facts, Summer Glau Facts, etc." -%]
 [%- SET apply_screenplay_style = 1 -%]
-[%- SET more_keywords = "muppets, grammar nazis, Summer Glau, Chuck Norris, xkcd, Lucky Luke" -%]
+[%- SET more_keywords = "muppets, grammar nazis, Summer Glau, Chuck Norris, xkcd, Lucky Luke, Ozy and Millie, O&amp;M" -%]
 
 [%- WRAPPER wrap_html -%]
 
 [% long_stories__calc_common_top_elems(id => 'muppets_show_tni') %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Summer-Glau-and-Chuck-Norris.html") %]
+
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://muppet.fandom.com/wiki/The_Muppet_Show">The Muppet Show</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://shlomif.livejournal.com/53966.html">"The Grammar Nazis’ Conspiracy"</a> - a discussion prompted by <a href="https://ozyandmillie.org/comic/ozy-and-millie-2086/">an Ozy &amp; Millie cartoon</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://xkcd.com/406/">xkcd: Venting</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris Facts</a>
+and <a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a>
+</p>
+</li>
+
+</ul>
+
+
+[% END %]
 
 [% WRAPPER nav_blocks %]
 

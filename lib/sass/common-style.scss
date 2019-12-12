@@ -1290,6 +1290,23 @@ img.rindolf {
     float: right;
     max-width: 70%;
 }
+@mixin img_align__cell {
+    vertical-align: top;
+    display: table-cell;
+}
+
+.img_align {
+    display: table-row;
+    > .text {
+        @include img_align__cell;
+        width: auto;
+    }
+    > img {
+        @include img_align__cell;
+        max-height: 300px;
+        width: 100%;
+    }
+}
 
 @import "self_link";
 @import "code_block";

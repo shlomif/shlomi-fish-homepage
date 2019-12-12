@@ -51,12 +51,20 @@
 </div>
 [% END %]
 
-<img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" style="float:left;width:20%;"/>
+
+[% BLOCK cartoon_img %]
+<img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" />
+[% END %]
 
 [% BLOCK eng_intro %]
 
+<section class="intro">
+<header>
 <h2 id="intro">Introduction</h2>
-
+</header>
+<div class="img_align">
+[% INCLUDE cartoon_img %]
+<div class="text">
 <p>
 This is a growing collection of aphorisms and funny bits I came up with
 throughout the years. They are arranged in roughly chronological order.
@@ -65,11 +73,22 @@ throughout the years. They are arranged in roughly chronological order.
 <p>
 You can also find them and others <a href="[% base_path %]humour/fortunes/">in machine-readable UNIX fortune cookies collections</a>.
 </p>
+
+</div>
+
+</div>
+
+</section>
+
 [% END %]
 
 [% BLOCK heb_intro %]
 
+<section class="intro">
+<header>
 <h2 id="intro">מבוא</h2>
+[% INCLUDE cartoon_img %]
+</header>
 
 <p>
 זהו מקבץ של אמרות שפר ומשפטים מצחיקים או משעשעים קטנים שחשבתי עליהם
@@ -83,6 +102,8 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 <a href="[% base_path %]humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
 מבוססות XML הניתנות לקריאה על ידי מכונה.
 </p>
+
+</section>
 
 [% END %]
 

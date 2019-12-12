@@ -21,6 +21,7 @@
 }
 
 body.faq_indiv_entry {
+    margin: 0;
     background-color: #e0ebef;
     min-height: 100vh;
     display: grid;
@@ -37,11 +38,11 @@ body.faq_indiv_entry {
         @if false {
             padding-top: 0;
             padding-bottom: 1em;
+            grid-gap: 5px;
         }
         display: grid;
         grid-auto-flow: column;
         justify-content: left;
-        grid-gap: 5px;
         align-items: end;
     }
     .leading_path {

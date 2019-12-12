@@ -1,0 +1,18 @@
+@mixin bottom_bg {
+    background: #01698f;
+}
+
+@mixin body-background {
+    background-color: #e0ebef;
+}
+
+@mixin faq_link {
+    &:after {
+        content: " ]";
+    }
+    &:before {
+        content: "[ ";
+    }
+    padding: 0.3em;
+    float: right;
+}

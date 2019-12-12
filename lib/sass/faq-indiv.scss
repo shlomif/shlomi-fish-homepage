@@ -1,6 +1,10 @@
-// @import "smoked-wp-theme"
-
-@import "common-style";
+// @import "common-style";
+@import "mixins";
+@import "common-body";
+@import "bk2hp";
+@import "footer";
+@import "main-element";
+@import "faq-common";
 
 .faq_indiv_entry {
     img.faq_float {

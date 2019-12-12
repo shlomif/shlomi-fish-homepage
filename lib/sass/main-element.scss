@@ -1,0 +1,27 @@
+.main,
+main {
+    padding: 1em;
+
+    img {
+        margin-right: 1em;
+    }
+
+    li {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+    }
+
+    .hebrew {
+        li {
+            // Removed due to the facts displayed with bullets on separate
+            // lines:
+            //
+            // overflow: hidden
+            // list-style-position: inside
+        }
+
+        ul li {
+            list-style-type: disc;
+        }
+    }
+}

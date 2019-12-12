@@ -3,6 +3,10 @@
 @import "common-body";
 @import "common-with-print";
 @import "lang_switch";
+@import "mixins";
+@import "bk2hp";
+@import "main-element";
+@import "faq-common";
 
 :link:hover,
 :visited:hover,
@@ -12,13 +16,6 @@ img.highlight:hover,
     background-color: #90ee90;
 
     /* LightGreen */
-}
-
-.bk2hp {
-    border: 0;
-    padding: 15px;
-    height: 140px;
-    max-width: 90%;
 }
 
 .navbar {
@@ -84,38 +81,6 @@ img.highlight:hover,
 
 div.rightalign {
     text-align: right;
-}
-
-/*  Make sure the links inside the navigation bar are highlited
- *  with a different colour. That's CSS 2.
- *  http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html */
-
-.main,
-main {
-    padding: 1em;
-
-    img {
-        margin-right: 1em;
-    }
-
-    li {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
-    }
-
-    .hebrew {
-        li {
-            // Removed due to the facts displayed with bullets on separate
-            // lines:
-            //
-            // overflow: hidden
-            // list-style-position: inside
-        }
-
-        ul li {
-            list-style-type: disc;
-        }
-    }
 }
 
 ul.noindent {
@@ -1162,42 +1127,6 @@ h3 {
     }
 }
 
-@mixin faq_link {
-    &:after {
-        content: " ]";
-    }
-    &:before {
-        content: "[ ";
-    }
-    padding: 0.3em;
-    float: right;
-}
-
-.faq {
-    img.faq_float {
-        float: right;
-        margin: 0 2em;
-    }
-    header {
-        > h2,
-        > h3,
-        > h4 {
-            display: inline;
-        }
-        a.indiv_node {
-            @include faq_link;
-        }
-    }
-}
-
-a.back_to_faq {
-    @include faq_link;
-}
-
-@mixin bottom_bg {
-    background: #01698f;
-}
-
 .math_illus {
     float: right;
     margin-left: 0.5em;
@@ -1207,10 +1136,6 @@ a.back_to_faq {
     width: 90%;
     margin-top: 1em;
     margin-bottom: 1em;
-}
-.lim_width .bk2hp {
-    margin-bottom: 1.5em;
-    height: 140px;
 }
 .lim_width .dnd_cartoon {
     margin-bottom: 1.5em;
@@ -1294,10 +1219,6 @@ img.rindolf {
 @import "code_block";
 @import "treeview";
 @import "footer";
-
-@mixin body-background {
-    background-color: #e0ebef;
-}
 
 $top_height: 80px;
 

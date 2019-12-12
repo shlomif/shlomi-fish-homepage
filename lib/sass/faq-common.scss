@@ -1,0 +1,20 @@
+.faq {
+    img.faq_float {
+        float: right;
+        margin: 0 2em;
+    }
+    header {
+        > h2,
+        > h3,
+        > h4 {
+            display: inline;
+        }
+        a.indiv_node {
+            @include faq_link;
+        }
+    }
+}
+
+a.back_to_faq {
+    @include faq_link;
+}

@@ -9,7 +9,7 @@
 
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 
-<div class="jokes main_text side_toc limit_imgs_width">
+<div class="main_text side_toc">
 
 [% BLOCK joke %]
 [% content %]
@@ -119,7 +119,7 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 <h2 id="list">רשימת אמרות השפר</h2>
 [% END %]
 
-[% IF lang == "heb" %][% INCLUDE heb_list_h2  %][% ELSE %][% INCLUDE eng_list_h2  %][% END %]
+[% IF lang == "heb" %][% INCLUDE heb_list_h2 %][% ELSE %][% INCLUDE eng_list_h2  %][% END %]
 
 <div class="aphorisms wrap-me lim_width limit_imgs_width">
 

@@ -1,93 +1,93 @@
 ---
 images:
-- style.css
-- somerights20.gif
-- testing/demo/Add1.pm
-- testing/demo/add1-test-2.pl
-- testing/demo/add1-test.pl
-- testing/demo/Add2.pm
-- testing/demo/add2-test-2.pl
-- testing/demo/Test-More-1.t
-- module-build-and-starter/module-starter.help.txt
-- module-build-and-starter/perl-Build-PL-1-output.txt
-- module-build-and-starter/perl-Build-and-Build-test-1.txt
-- version-control/MyModule.pm
+    - style.css
+    - somerights20.gif
+    - testing/demo/Add1.pm
+    - testing/demo/add1-test-2.pl
+    - testing/demo/add1-test.pl
+    - testing/demo/Add2.pm
+    - testing/demo/add2-test-2.pl
+    - testing/demo/Test-More-1.t
+    - module-build-and-starter/module-starter.help.txt
+    - module-build-and-starter/perl-Build-PL-1-output.txt
+    - module-build-and-starter/perl-Build-and-Build-test-1.txt
+    - version-control/MyModule.pm
 subs:
-- title: Introduction
-  url: intro.html
-- subs:
-  - title: Motivation for Testing
-    url: motivation.html
-  - subs:
-    - title: Test::More
-      url: test-more.html
-    - title: ./Build test
-      url: Build-test.html
-    title: Demo
-    url: demo
-  - title: 'Types of Tests: Unit Tests, Integration Tests, System Tests'
-    url: types.html
-  - title: Mocking
-    url: mocking.html
-  title: Automated Testing
-  url: testing
-- subs:
-  - title: Motivation for Version Control
-    url: motivation.html
-  - title: Demo of Mercurial
-    url: mercurial-demo.html
-  title: Version Control
-  url: version-control
-- subs:
-  - title: Example
-    url: example.html
-  - title: Motivation
-    url: motivation.html
-  - title: Accessor modules on the CPAN
-    url: cpan-modules.html
-  title: Class Accessors
-  url: accessors
-- subs:
-  - title: use base
-    url: use-base.html
-  - title: Lexical Filehandles
-    url: lexical-filehandles.html
-  title: Useful Features in Recent Perls
-  url: new-features
-- subs:
-  - title: Use and Abuse
-    url: use-and-abuse.html
-  title: The local keyword
-  url: local-keyword
-- subs:
-  - title: POD Demonstration
-    url: demo.html
-  - title: Testing and Verifying POD
-    url: pod-testing.html
-  - title: Literate Programming
-    url: literate-programming.html
-  - title: POD Extensions
-    url: extensions.html
-  title: Using POD for Documentation
-  url: pod-documentation
-- subs:
-  - title: The Module-Starter Invocation Command
-    url: invocation.html
-  - title: Module-Build commands
-    url: commands.html
-  - title: Adding meaningful code
-    url: coding.html
-  - title: Getting rid of the boilerplate
-    url: boilerplate.html
-  - title: Additional Resources
-    url: additional-resources.html
-  title: Module-Build and Module-Starter
-  url: module-build-and-starter
-- subs:
-  - title: Links
-    url: links.html
-  - title: Thanks
-    url: thanks.html
-  title: Conclusion
-  url: conclusion
+    - title: Introduction
+      url: intro.html
+    - subs:
+          - title: Motivation for Testing
+            url: motivation.html
+          - subs:
+                - title: Test::More
+                  url: test-more.html
+                - title: ./Build test
+                  url: Build-test.html
+            title: Demo
+            url: demo
+          - title: "Types of Tests: Unit Tests, Integration Tests, System Tests"
+            url: types.html
+          - title: Mocking
+            url: mocking.html
+      title: Automated Testing
+      url: testing
+    - subs:
+          - title: Motivation for Version Control
+            url: motivation.html
+          - title: Demo of Mercurial
+            url: mercurial-demo.html
+      title: Version Control
+      url: version-control
+    - subs:
+          - title: Example
+            url: example.html
+          - title: Motivation
+            url: motivation.html
+          - title: Accessor modules on the CPAN
+            url: cpan-modules.html
+      title: Class Accessors
+      url: accessors
+    - subs:
+          - title: use base
+            url: use-base.html
+          - title: Lexical Filehandles
+            url: lexical-filehandles.html
+      title: Useful Features in Recent Perls
+      url: new-features
+    - subs:
+          - title: Use and Abuse
+            url: use-and-abuse.html
+      title: The local keyword
+      url: local-keyword
+    - subs:
+          - title: POD Demonstration
+            url: demo.html
+          - title: Testing and Verifying POD
+            url: pod-testing.html
+          - title: Literate Programming
+            url: literate-programming.html
+          - title: POD Extensions
+            url: extensions.html
+      title: Using POD for Documentation
+      url: pod-documentation
+    - subs:
+          - title: The Module-Starter Invocation Command
+            url: invocation.html
+          - title: Module-Build commands
+            url: commands.html
+          - title: Adding meaningful code
+            url: coding.html
+          - title: Getting rid of the boilerplate
+            url: boilerplate.html
+          - title: Additional Resources
+            url: additional-resources.html
+      title: Module-Build and Module-Starter
+      url: module-build-and-starter
+    - subs:
+          - title: Links
+            url: links.html
+          - title: Thanks
+            url: thanks.html
+      title: Conclusion
+      url: conclusion
 title: '"Perl for Perl Newbies" - Part 5 - Good Programming Practices'

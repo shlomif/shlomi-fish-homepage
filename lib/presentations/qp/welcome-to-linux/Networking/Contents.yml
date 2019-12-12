@@ -1,57 +1,57 @@
 ---
 images:
-- style.css
-- 7layer.gif
+    - style.css
+    - 7layer.gif
 subs:
-- title: Lecture Goals
-  url: goals.html
-- title: The OSI 7 Layers Model
-  url: osi.html
-- subs:
-  - title: Ethernet
-    url: ethernet.html
-  - title: Dial-Up Modem Connection
-    url: dial-up.html
-  - title: Cable TV/ADSL link
-    url: cable-adsl.html
-  - title: Wireless (WiFi)
-    url: wifi.html
-  title: Layer I - the Physical Layer
-  url: layer1
-- subs:
-  - title: PPP
-    url: ppp.html
-  - subs:
-    - title: ADSL and Cable under Linux
-      url: adsl.html
-    - title: DHCP
-      url: dhcp.html
-    - title: Back to Cable TV Connections...
-      url: pptp-l2tp.html
-    title: VPN - PPTP, PPPoE and L2TP
-    url: pptp-pppoe
-  title: Layer II - the Data Link Layer
-  url: layer2
-- subs:
-  - title: Layer 3 Protocols
-    url: ip.html
-  - title: The IPv4 Protocol
-    url: ipv4-protocol.html
-  - title: Masquerading
-    url: masquerading.html
-  title: Layer III - the Network Layer
-  url: layer3
-- subs:
-  - title: Firewalls
-    url: firewalls.html
-  title: Layer IV - the Transport Layer
-  url: layer4
-- title: Layer V - the Session Layer
-  url: layer5.html
-- title: Layer VI - the Presentation Layer
-  url: layer6.html
-- title: Layer VII - the Application Layer
-  url: layer7.html
-- title: Bibliography
-  url: bibliography.html
+    - title: Lecture Goals
+      url: goals.html
+    - title: The OSI 7 Layers Model
+      url: osi.html
+    - subs:
+          - title: Ethernet
+            url: ethernet.html
+          - title: Dial-Up Modem Connection
+            url: dial-up.html
+          - title: Cable TV/ADSL link
+            url: cable-adsl.html
+          - title: Wireless (WiFi)
+            url: wifi.html
+      title: Layer I - the Physical Layer
+      url: layer1
+    - subs:
+          - title: PPP
+            url: ppp.html
+          - subs:
+                - title: ADSL and Cable under Linux
+                  url: adsl.html
+                - title: DHCP
+                  url: dhcp.html
+                - title: Back to Cable TV Connections...
+                  url: pptp-l2tp.html
+            title: VPN - PPTP, PPPoE and L2TP
+            url: pptp-pppoe
+      title: Layer II - the Data Link Layer
+      url: layer2
+    - subs:
+          - title: Layer 3 Protocols
+            url: ip.html
+          - title: The IPv4 Protocol
+            url: ipv4-protocol.html
+          - title: Masquerading
+            url: masquerading.html
+      title: Layer III - the Network Layer
+      url: layer3
+    - subs:
+          - title: Firewalls
+            url: firewalls.html
+      title: Layer IV - the Transport Layer
+      url: layer4
+    - title: Layer V - the Session Layer
+      url: layer5.html
+    - title: Layer VI - the Presentation Layer
+      url: layer6.html
+    - title: Layer VII - the Application Layer
+      url: layer7.html
+    - title: Bibliography
+      url: bibliography.html
 title: Networking in Linux Lecture

@@ -1,51 +1,51 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- subs:
-  - title: First Encounter with the Logic Mazes
-    url: first_encounter.html
-  - title: Two Initial Scripts
-    url: two_initial_scripts.html
-  - title: First Version of LM-Solve
-    url: first_version.html
-  - title: LM-Solve 0.4.0 and 0.6.0
-    url: next_versions.html
-  - title: No BitKeeper for you!
-    url: no_bitkeeper.html
-  - title: Recent Work
-    url: recent_work.html
-  title: History
-  url: history
-- subs:
-  - title: Makefile.PL
-    url: Makefile-PL.html
-  - title: Getopt::Long
-    url: Getopt.html
-  - title: POD, Pod::Usage and Friends
-    url: pod.html
-  - title: Writing an RPM Spec
-    url: RPM-Spec.html
-  title: Technologies used by LM-Solve
-  url: technologies
-- subs:
-  - title: Multiple Solvers Implementation
-    url: base-derived.html
-  - title: Registry
-    url: registry.html
-  - title: The Input Module
-    url: input.html
-  title: Architecture of LM-Solve
-  url: architecture
-- images:
-  - hex_swamps_proto_game.png
-  subs:
-  - title: The Hex Swamps Conundrum
-    url: hex_swamps.html
-  - title: Recursion Limit
-    url: recursion_limit.html
-  title: Exotic Bugs
-  url: exotic-bugs
-- title: Links and References
-  url: links.html
+    - subs:
+          - title: First Encounter with the Logic Mazes
+            url: first_encounter.html
+          - title: Two Initial Scripts
+            url: two_initial_scripts.html
+          - title: First Version of LM-Solve
+            url: first_version.html
+          - title: LM-Solve 0.4.0 and 0.6.0
+            url: next_versions.html
+          - title: No BitKeeper for you!
+            url: no_bitkeeper.html
+          - title: Recent Work
+            url: recent_work.html
+      title: History
+      url: history
+    - subs:
+          - title: Makefile.PL
+            url: Makefile-PL.html
+          - title: Getopt::Long
+            url: Getopt.html
+          - title: POD, Pod::Usage and Friends
+            url: pod.html
+          - title: Writing an RPM Spec
+            url: RPM-Spec.html
+      title: Technologies used by LM-Solve
+      url: technologies
+    - subs:
+          - title: Multiple Solvers Implementation
+            url: base-derived.html
+          - title: Registry
+            url: registry.html
+          - title: The Input Module
+            url: input.html
+      title: Architecture of LM-Solve
+      url: architecture
+    - images:
+          - hex_swamps_proto_game.png
+      subs:
+          - title: The Hex Swamps Conundrum
+            url: hex_swamps.html
+          - title: Recursion Limit
+            url: recursion_limit.html
+      title: Exotic Bugs
+      url: exotic-bugs
+    - title: Links and References
+      url: links.html
 title: LM-Solve - A Logic Mazes Solver

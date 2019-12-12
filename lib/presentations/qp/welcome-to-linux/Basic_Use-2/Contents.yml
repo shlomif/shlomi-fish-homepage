@@ -1,84 +1,84 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- images:
-  - k.png
-  - folder_home.png
-  - workspaces_pager.png
-  - desktop.png
-  subs:
-  - title: Similarities to Windows
-    url: similarities.html
-  - title: The Workspaces
-    url: workspaces.html
-  - title: Show the Desktop
-    url: show_desktop.html
-  - images:
-    - klipper.png
-    subs:
-    - title: Klipper
-      url: klipper.html
-    title: Cut and Paste in X-Windows
-    url: cut_n_paste
-  title: X-Windows and KDE
-  url: x
-- images:
-  - konsole.png
-  subs:
-  - title: Opening a Console Window
-    url: opening.html
-  - title: Exiting from a Console Window
-    url: exiting.html
-  - title: The Command Loop
-    url: cmd_loop.html
-  - title: Shell Goodies
-    url: goodies.html
-  - title: Filesystem Basics
-    url: filesystem.html
-  - title: Common Commands
-    url: common_cmds.html
-  title: The Linux Console
-  url: console
-- subs:
-  - title: The Man Pages
-    url: man.html
-  - title: Apropos
-    url: apropos.html
-  - title: The "Info" manuals
-    url: info.html
-  - title: The on-line HOWTO's
-    url: howtos.html
-  - title: Internet Resources
-    url: internet.html
-  title: Getting Help
-  url: help
-- subs:
-  - title: On Mandrake
-    url: mandrake.html
-  - title: On Red Hat
-    url: redhat.html
-  title: Configuration Tools
-  url: config
-- subs:
-  - title: Invoking Vi
-    url: invocation.html
-  - title: Command Mode and Editing Mode
-    url: cmd_and_edit.html
-  - title: Exiting from Vi
-    url: exiting.html
-  - title: Entering and Exiting from Editing Mode
-    url: edit_mode.html
-  - title: Deleting Text
-    url: deleting.html
-  - title: Saving the File
-    url: saving.html
-  - title: Exiting without saving changes
-    url: rollback.html
-  - title: Copy and Paste
-    url: copy_and_paste.html
-  title: Editing with Vi
-  url: vi
-- title: Links and References
-  url: links.html
+    - images:
+          - k.png
+          - folder_home.png
+          - workspaces_pager.png
+          - desktop.png
+      subs:
+          - title: Similarities to Windows
+            url: similarities.html
+          - title: The Workspaces
+            url: workspaces.html
+          - title: Show the Desktop
+            url: show_desktop.html
+          - images:
+                - klipper.png
+            subs:
+                - title: Klipper
+                  url: klipper.html
+            title: Cut and Paste in X-Windows
+            url: cut_n_paste
+      title: X-Windows and KDE
+      url: x
+    - images:
+          - konsole.png
+      subs:
+          - title: Opening a Console Window
+            url: opening.html
+          - title: Exiting from a Console Window
+            url: exiting.html
+          - title: The Command Loop
+            url: cmd_loop.html
+          - title: Shell Goodies
+            url: goodies.html
+          - title: Filesystem Basics
+            url: filesystem.html
+          - title: Common Commands
+            url: common_cmds.html
+      title: The Linux Console
+      url: console
+    - subs:
+          - title: The Man Pages
+            url: man.html
+          - title: Apropos
+            url: apropos.html
+          - title: The "Info" manuals
+            url: info.html
+          - title: The on-line HOWTO's
+            url: howtos.html
+          - title: Internet Resources
+            url: internet.html
+      title: Getting Help
+      url: help
+    - subs:
+          - title: On Mandrake
+            url: mandrake.html
+          - title: On Red Hat
+            url: redhat.html
+      title: Configuration Tools
+      url: config
+    - subs:
+          - title: Invoking Vi
+            url: invocation.html
+          - title: Command Mode and Editing Mode
+            url: cmd_and_edit.html
+          - title: Exiting from Vi
+            url: exiting.html
+          - title: Entering and Exiting from Editing Mode
+            url: edit_mode.html
+          - title: Deleting Text
+            url: deleting.html
+          - title: Saving the File
+            url: saving.html
+          - title: Exiting without saving changes
+            url: rollback.html
+          - title: Copy and Paste
+            url: copy_and_paste.html
+      title: Editing with Vi
+      url: vi
+    - title: Links and References
+      url: links.html
 title: Linux' Basic Use

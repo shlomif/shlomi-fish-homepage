@@ -1,93 +1,93 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- subs:
-  - subs:
-    - title: Common Strategies
-      url: strategies.html
-    title: Rules of the Game
-    url: rules
-  - title: Copyrights and Disclaimer
-    url: disclaimer.html
-  title: Introduction
-  url: intro
-- subs:
-  - title: The Scan that was used
-    url: scan.html
-  title: Freecell Solver 0.2's Architecture
-  url: '0.2'
-- subs:
-  - title: Initial Perl Version - Flat List
-    url: list.html
-  - title: First C Version - Sorted Array
-    url: qsorted_sort_margin.html
-  - title: Binary-Search-Based Merge to Add the Sort Margin
-    url: b_search_merge.html
-  - title: Array of Pointers
-    url: array_of_ptrs.html
-  - title: A Balanced Binary Tree
-    url: balanced_binary_tree.html
-  - subs:
-    - title: The Choice of a Hash Function
-      url: function.html
-    - title: Hash Optimizations
-      url: optimizations.html
-    title: A Hash Table
-    url: hash
-  title: Evolution of the States' Collection
-  url: states_collection
-- subs:
-  - title: Meta-Moves (instead of Atomic ones)
-    url: meta.html
-  - title: Stack to Stack Moves
-    url: stack-to-stack.html
-  - title: More Moves Generalization
-    url: generalization.html
-  - title: Non-Solvable Deals
-    url: non-solvable-deals.html
-  title: Moves Management
-  url: moves
-- subs:
-  - title: Specifying the Order of Tests
-    url: tests_order.html
-  - title: Best-First Search
-    url: befs.html
-  - title: Soft DFS
-    url: soft_dfs.html
-  - title: The BrFS Optimization Scan
-    url: brfs_optimization.html
-  title: Scanning
-  url: scans
-- subs:
-  - title: Reducing the Data Type Bit-Width
-    url: data_type_diet.html
-  - title: Pointers to Stacks
-    url: ptrs_to_stacks.html
-  - subs:
-    - title: Solution
-      url: solution.html
-    title: Remembering the Original Stack and Freecell Locations
-    url: original_indices
-  title: The State Representation
-  url: state_representation
-- title: Board Auto-Generators
-  url: board_gen.html
-- title: Why not C++?
-  url: why_not_cpp.html
-- title: The fc-solve-discuss flame-war
-  url: flame_war.html
-- title: The story of the user API
-  url: api.html
-- title: Auto-confisication and Friends
-  url: autoconf.html
-- title: The Freshmeat Effect (and how to avoid it)
-  url: freshmeat_effect.html
-- subs:
-  - title: Links and References
-    url: links.html
-  - title: Freecell Solver - EoaCP - The Book
-    url: book.html
-  title: Finale
-  url: finale
+    - subs:
+          - subs:
+                - title: Common Strategies
+                  url: strategies.html
+            title: Rules of the Game
+            url: rules
+          - title: Copyrights and Disclaimer
+            url: disclaimer.html
+      title: Introduction
+      url: intro
+    - subs:
+          - title: The Scan that was used
+            url: scan.html
+      title: Freecell Solver 0.2's Architecture
+      url: "0.2"
+    - subs:
+          - title: Initial Perl Version - Flat List
+            url: list.html
+          - title: First C Version - Sorted Array
+            url: qsorted_sort_margin.html
+          - title: Binary-Search-Based Merge to Add the Sort Margin
+            url: b_search_merge.html
+          - title: Array of Pointers
+            url: array_of_ptrs.html
+          - title: A Balanced Binary Tree
+            url: balanced_binary_tree.html
+          - subs:
+                - title: The Choice of a Hash Function
+                  url: function.html
+                - title: Hash Optimizations
+                  url: optimizations.html
+            title: A Hash Table
+            url: hash
+      title: Evolution of the States' Collection
+      url: states_collection
+    - subs:
+          - title: Meta-Moves (instead of Atomic ones)
+            url: meta.html
+          - title: Stack to Stack Moves
+            url: stack-to-stack.html
+          - title: More Moves Generalization
+            url: generalization.html
+          - title: Non-Solvable Deals
+            url: non-solvable-deals.html
+      title: Moves Management
+      url: moves
+    - subs:
+          - title: Specifying the Order of Tests
+            url: tests_order.html
+          - title: Best-First Search
+            url: befs.html
+          - title: Soft DFS
+            url: soft_dfs.html
+          - title: The BrFS Optimization Scan
+            url: brfs_optimization.html
+      title: Scanning
+      url: scans
+    - subs:
+          - title: Reducing the Data Type Bit-Width
+            url: data_type_diet.html
+          - title: Pointers to Stacks
+            url: ptrs_to_stacks.html
+          - subs:
+                - title: Solution
+                  url: solution.html
+            title: Remembering the Original Stack and Freecell Locations
+            url: original_indices
+      title: The State Representation
+      url: state_representation
+    - title: Board Auto-Generators
+      url: board_gen.html
+    - title: Why not C++?
+      url: why_not_cpp.html
+    - title: The fc-solve-discuss flame-war
+      url: flame_war.html
+    - title: The story of the user API
+      url: api.html
+    - title: Auto-confisication and Friends
+      url: autoconf.html
+    - title: The Freshmeat Effect (and how to avoid it)
+      url: freshmeat_effect.html
+    - subs:
+          - title: Links and References
+            url: links.html
+          - title: Freecell Solver - EoaCP - The Book
+            url: book.html
+      title: Finale
+      url: finale
 title: Freecell Solver - Evolution of a C Program

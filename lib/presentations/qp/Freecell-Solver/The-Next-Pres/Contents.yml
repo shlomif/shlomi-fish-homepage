@@ -1,57 +1,57 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- subs:
-  - title: Hard Threads and Soft Threads
-    url: ht-st.html
-  - subs:
-    - title: Naive Approach - Scan Switching
-      url: switch.html
-    - title: More Sophisticated - Prelude
-      url: prelude.html
-    - title: Optimization Algorithm
-      url: opt-algorithm.html
-    title: Generating the Best Meta Scan
-    url: best-meta-scan
-  title: Multi-Tasking
-  url: multi-tasking
-- subs:
-  - title: Copy on Write Stacks
-    url: cow.html
-  - title: Compact Allocation using Memory Pools
-    url: compact-alloc.html
-  - title: Result
-    url: result.html
-  title: Indirect Stack States Optimizations
-  url: indirect-ss-opt
-- subs:
-  - title: Generic Function for CL Processing
-    url: generic-func.html
-  - title: --read-from-file
-    url: read-from-file.html
-  - title: Solver Presets
-    url: presets.html
-  - title: Recycling Solver Instances
-    url: recycle.html
-  title: Command Line Processing
-  url: cmd-line
-- subs:
-  - title: The Problem
-    url: problem.html
-  - title: The Solution
-    url: solution.html
-  title: Freecell Pro Interoperability
-  url: fc-pro
-- title: To Parent Links
-  url: parent-links.html
-- title: The Michael Mann "Fork"
-  url: michael-mann.html
-- subs:
-  - title: To Do
-    url: to-do.html
-  - title: My Involvement
-    url: my-involvement.html
-  title: Future Directions
-  url: future
+    - subs:
+          - title: Hard Threads and Soft Threads
+            url: ht-st.html
+          - subs:
+                - title: Naive Approach - Scan Switching
+                  url: switch.html
+                - title: More Sophisticated - Prelude
+                  url: prelude.html
+                - title: Optimization Algorithm
+                  url: opt-algorithm.html
+            title: Generating the Best Meta Scan
+            url: best-meta-scan
+      title: Multi-Tasking
+      url: multi-tasking
+    - subs:
+          - title: Copy on Write Stacks
+            url: cow.html
+          - title: Compact Allocation using Memory Pools
+            url: compact-alloc.html
+          - title: Result
+            url: result.html
+      title: Indirect Stack States Optimizations
+      url: indirect-ss-opt
+    - subs:
+          - title: Generic Function for CL Processing
+            url: generic-func.html
+          - title: --read-from-file
+            url: read-from-file.html
+          - title: Solver Presets
+            url: presets.html
+          - title: Recycling Solver Instances
+            url: recycle.html
+      title: Command Line Processing
+      url: cmd-line
+    - subs:
+          - title: The Problem
+            url: problem.html
+          - title: The Solution
+            url: solution.html
+      title: Freecell Pro Interoperability
+      url: fc-pro
+    - title: To Parent Links
+      url: parent-links.html
+    - title: The Michael Mann "Fork"
+      url: michael-mann.html
+    - subs:
+          - title: To Do
+            url: to-do.html
+          - title: My Involvement
+            url: my-involvement.html
+      title: Future Directions
+      url: future
 title: Freecell Solver - The Next Presentation

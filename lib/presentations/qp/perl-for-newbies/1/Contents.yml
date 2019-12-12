@@ -1,118 +1,118 @@
 ---
 images:
-- somerights20.gif
-- style.css
-- conditionals/name_abc.pl
-- conditionals/even_numbers.pl
-- conditionals/letter_a.pl
-- conditionals/range.pl
-- conditionals/string_compare.pl
-- conditionals/non_div3_numbers.pl
-- conditionals/elsif.pl
-- variables/plus-equal2.pl
-- variables/plus-equal1.pl
-- variables/var1.pl
-- arrays/comma2.pl
-- arrays/x.pl
-- arrays/foreach/foreach.pl
-- arrays/pop2.pl
-- arrays/push.pl
-- arrays/pop.pl
-- arrays/join.pl
-- arrays/shift.pl
-- arrays/primes1.pl
-- arrays/comma1.pl
-- arrays/primes2.pl
-- arrays/reverse.pl
-- for_loop/multiplication_board.pl
-- for_loop/1to100.pl
-- input/input1.pl
-- input/input2.pl
-- while/all_as.pl
-- while/all_as_with_last.pl
-- while/power_of_2.pl
-- while/pyramid1.pl
-- output/hello.pl
-- output/oftf1.pl
-- output/oftf2.pl
-- expressions/strings/strings_and_numbers.pl
-- expressions/strings/escape.pl
-- expressions/length.pl
-- expressions/int.pl
-- expressions/operators.pl
-- expressions/operators.out.txt
-- expressions/substr2.pl
-- expressions/substr.pl
-- expressions/substr.out.txt
-- expressions/concat.pl
+    - somerights20.gif
+    - style.css
+    - conditionals/name_abc.pl
+    - conditionals/even_numbers.pl
+    - conditionals/letter_a.pl
+    - conditionals/range.pl
+    - conditionals/string_compare.pl
+    - conditionals/non_div3_numbers.pl
+    - conditionals/elsif.pl
+    - variables/plus-equal2.pl
+    - variables/plus-equal1.pl
+    - variables/var1.pl
+    - arrays/comma2.pl
+    - arrays/x.pl
+    - arrays/foreach/foreach.pl
+    - arrays/pop2.pl
+    - arrays/push.pl
+    - arrays/pop.pl
+    - arrays/join.pl
+    - arrays/shift.pl
+    - arrays/primes1.pl
+    - arrays/comma1.pl
+    - arrays/primes2.pl
+    - arrays/reverse.pl
+    - for_loop/multiplication_board.pl
+    - for_loop/1to100.pl
+    - input/input1.pl
+    - input/input2.pl
+    - while/all_as.pl
+    - while/all_as_with_last.pl
+    - while/power_of_2.pl
+    - while/pyramid1.pl
+    - output/hello.pl
+    - output/oftf1.pl
+    - output/oftf2.pl
+    - expressions/strings/strings_and_numbers.pl
+    - expressions/strings/escape.pl
+    - expressions/length.pl
+    - expressions/int.pl
+    - expressions/operators.pl
+    - expressions/operators.out.txt
+    - expressions/substr2.pl
+    - expressions/substr.pl
+    - expressions/substr.out.txt
+    - expressions/concat.pl
 subs:
-- subs:
-  - title: The capabilities of Perl
-    url: capabilities.html
-  - title: A brief history of Perl
-    url: history.html
-  - title: The perl development cycle
-    url: devel_cycle.html
-  title: Introduction
-  url: intro
-- subs:
-  - title: More about semicolons
-    url: semicolons.html
-  title: Basic Output (The "Hello World" program)
-  url: output
-- subs:
-  - title: Operators and Precedence
-    url: operators.html
-  - title: Functions
-    url: functions.html
-  - subs:
-    - title: Escape Sequences
-      url: escape.html
-    title: More about strings
-    url: strings
-  title: Expressions
-  url: expressions
-- subs:
-  - title: '"+=" and friends'
-    url: plus-equal.html
-  title: Variables
-  url: variables
-- title: Input
-  url: input.html
-- title: The For Loop
-  url: for_loop.html
-- subs:
-  - title: Numerical Comparison Operators
-    url: numerical.html
-  - title: String Comparison Operators
-    url: string.html
-  - title: Boolean Operators
-    url: boolean.html
-  - title: True Expressions vs. False Expressions
-    url: true_vs_false.html
-  - title: elsif
-    url: elsif.html
-  title: Conditionals
-  url: conditionals
-- subs:
-  - title: last and next
-    url: last_and_next.html
-  title: The While Loop
-  url: while
-- subs:
-  - title: The ',' operator
-    url: comma.html
-  - title: Negative Indexes
-    url: negative_indexes.html
-  - subs:
-    - title: The for keyword and the .. operator
-      url: for_and_dotdot.html
-    title: The foreach loop
-    url: foreach
-  - title: Built-In Array Functions
-    url: functions.html
-  - title: The x operator
-    url: x.html
-  title: Arrays
-  url: arrays
+    - subs:
+          - title: The capabilities of Perl
+            url: capabilities.html
+          - title: A brief history of Perl
+            url: history.html
+          - title: The perl development cycle
+            url: devel_cycle.html
+      title: Introduction
+      url: intro
+    - subs:
+          - title: More about semicolons
+            url: semicolons.html
+      title: Basic Output (The "Hello World" program)
+      url: output
+    - subs:
+          - title: Operators and Precedence
+            url: operators.html
+          - title: Functions
+            url: functions.html
+          - subs:
+                - title: Escape Sequences
+                  url: escape.html
+            title: More about strings
+            url: strings
+      title: Expressions
+      url: expressions
+    - subs:
+          - title: '"+=" and friends'
+            url: plus-equal.html
+      title: Variables
+      url: variables
+    - title: Input
+      url: input.html
+    - title: The For Loop
+      url: for_loop.html
+    - subs:
+          - title: Numerical Comparison Operators
+            url: numerical.html
+          - title: String Comparison Operators
+            url: string.html
+          - title: Boolean Operators
+            url: boolean.html
+          - title: True Expressions vs. False Expressions
+            url: true_vs_false.html
+          - title: elsif
+            url: elsif.html
+      title: Conditionals
+      url: conditionals
+    - subs:
+          - title: last and next
+            url: last_and_next.html
+      title: The While Loop
+      url: while
+    - subs:
+          - title: The ',' operator
+            url: comma.html
+          - title: Negative Indexes
+            url: negative_indexes.html
+          - subs:
+                - title: The for keyword and the .. operator
+                  url: for_and_dotdot.html
+            title: The foreach loop
+            url: foreach
+          - title: Built-In Array Functions
+            url: functions.html
+          - title: The x operator
+            url: x.html
+      title: Arrays
+      url: arrays
 title: '"Perl for Perl Newbies" - Part 1'

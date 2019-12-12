@@ -1,38 +1,38 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- title: Introduction
-  url: intro.html
-- title: The History of QuaD-Pres
-  url: history.html
-- title: Quad-Pres Features
-  url: features.html
-- images:
-  - logo-wml.png
-  subs:
-  - title: Setting Up
-    url: setting-up.html
-  - title: The Contents.pm File
-    url: Contents.pm.html
-  - title: An Individual Page
-    url: page.html
-  - title: Including Images
-    url: images.html
-  title: Usage
-  url: usage
-- subs:
-  - title: An Individual Page
-    url: page.html
-  - title: The Render Modes
-    url: render-modes.html
-  title: Using QuaD-Pres without Website Meta Language
-  url: no_wml
-- subs:
-  - title: Sample Presentations
-    url: samples.html
-  - title: Links
-    url: links.html
-  title: Finale
-  url: finale
+    - title: Introduction
+      url: intro.html
+    - title: The History of QuaD-Pres
+      url: history.html
+    - title: Quad-Pres Features
+      url: features.html
+    - images:
+          - logo-wml.png
+      subs:
+          - title: Setting Up
+            url: setting-up.html
+          - title: The Contents.pm File
+            url: Contents.pm.html
+          - title: An Individual Page
+            url: page.html
+          - title: Including Images
+            url: images.html
+      title: Usage
+      url: usage
+    - subs:
+          - title: An Individual Page
+            url: page.html
+          - title: The Render Modes
+            url: render-modes.html
+      title: Using QuaD-Pres without Website Meta Language
+      url: no_wml
+    - subs:
+          - title: Sample Presentations
+            url: samples.html
+          - title: Links
+            url: links.html
+      title: Finale
+      url: finale
 title: QuaD-Pres - A Perl-based Tool for Presentation

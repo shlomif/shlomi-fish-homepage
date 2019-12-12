@@ -1,52 +1,52 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- title: The Linux Development process
-  url: devel-process.html
-- subs:
-  - title: Text Nuances
-    url: text-nuances.html
-  - title: Recommended Editors for Beginners
-    url: editors.html
-  - title: Advanced Editors
-    url: advanced-editors.html
-  title: Editing Text using Text Editors
-  url: text-editing
-- subs:
-  - title: Important gcc Flags
-    url: flags.html
-  - title: g++
-    url: gpp.html
-  title: Use of gcc/g++
-  url: gcc
-- subs:
-  - title: Makefile Basics
-    url: basics.html
-  - title: Makefile Variables
-    url: variables.html
-  - title: Final Notes
-    url: notes.html
-  title: Writing Makefiles
-  url: makefiles
-- subs:
-  - title: Basic gdb Commands
-    url: basics_cmds.html
-  - subs:
-    - title: DDD Debugging Tips
-      url: tips.html
-    title: DDD - The Data Display Debugger
-    url: ddd
-  title: The gdb Debugger
-  url: gdb
-- subs:
-  - title: More Valgrind
-    url: more.html
-  title: valgrind - a Memory Problems Detector
-  url: valgrind
-- subs:
-  - title: The Various Available Alternatives
-    url: alternatives.html
-  title: Integrated Development Environments
-  url: IDEs
+    - title: The Linux Development process
+      url: devel-process.html
+    - subs:
+          - title: Text Nuances
+            url: text-nuances.html
+          - title: Recommended Editors for Beginners
+            url: editors.html
+          - title: Advanced Editors
+            url: advanced-editors.html
+      title: Editing Text using Text Editors
+      url: text-editing
+    - subs:
+          - title: Important gcc Flags
+            url: flags.html
+          - title: g++
+            url: gpp.html
+      title: Use of gcc/g++
+      url: gcc
+    - subs:
+          - title: Makefile Basics
+            url: basics.html
+          - title: Makefile Variables
+            url: variables.html
+          - title: Final Notes
+            url: notes.html
+      title: Writing Makefiles
+      url: makefiles
+    - subs:
+          - title: Basic gdb Commands
+            url: basics_cmds.html
+          - subs:
+                - title: DDD Debugging Tips
+                  url: tips.html
+            title: DDD - The Data Display Debugger
+            url: ddd
+      title: The gdb Debugger
+      url: gdb
+    - subs:
+          - title: More Valgrind
+            url: more.html
+      title: valgrind - a Memory Problems Detector
+      url: valgrind
+    - subs:
+          - title: The Various Available Alternatives
+            url: alternatives.html
+      title: Integrated Development Environments
+      url: IDEs
 title: Software Development on Linux

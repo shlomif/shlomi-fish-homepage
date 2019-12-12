@@ -1,86 +1,86 @@
 ---
 images:
-- style.css
-- somerights20.gif
-- and_or/open-or.pl
-- and_or/shift-or.pl
-- and_or/sort-or.pl
-- exceptions/die-eval.pl
-- processes/count-dirs.pl
-- processes/open1.pl
-- processes/open2.pl
-- processes/system.pl
-- sprintf/conv-examples.pl
-- sprintf/flags-examples.pl
-- sprintf/sprintf1.pl
-- sprintf/width.pl
-- string-forms/here-doc.pl
-- string-forms/q_qq-examples.pl
-- system-funcs/rot13.pl
-- system-funcs/r.pl
-- system-funcs/search-mp3s.pl
+    - style.css
+    - somerights20.gif
+    - and_or/open-or.pl
+    - and_or/shift-or.pl
+    - and_or/sort-or.pl
+    - exceptions/die-eval.pl
+    - processes/count-dirs.pl
+    - processes/open1.pl
+    - processes/open2.pl
+    - processes/system.pl
+    - sprintf/conv-examples.pl
+    - sprintf/flags-examples.pl
+    - sprintf/sprintf1.pl
+    - sprintf/width.pl
+    - string-forms/here-doc.pl
+    - string-forms/q_qq-examples.pl
+    - system-funcs/rot13.pl
+    - system-funcs/r.pl
+    - system-funcs/search-mp3s.pl
 subs:
-- subs:
-  - title: Manual Compilation
-    url: manual.html
-  - title: The -MCPAN Interface
-    url: mcpan.html
-  title: CPAN Modules
-  url: cpan
-- subs:
-  - title: Supported Conversions
-    url: conversions.html
-  - title: Flags to the conversions
-    url: flags.html
-  - title: Width and Max Width
-    url: width.html
-  title: The sprintf function
-  url: sprintf
-- subs:
-  - title: q{}, qq{} and Friends
-    url: q_qq.html
-  - title: Here Document
-    url: here_doc.html
-  title: Alternate Forms for Writing Strings
-  url: string-forms
-- subs:
-  - title: The system() Command
-    url: system.html
-  - title: Trapping Command Output with `...`
-    url: backticks.html
-  - title: open() for Command Execution
-    url: opens.html
-  - title: String::ShellQuote
-    url: string-shellquote.html
-  title: Executing Other Processes
-  url: processes
-- subs:
-  - title: For sort()
-    url: sort.html
-  - title: The "and" and "or" Operators
-    url: english_and_or.html
-  title: More about || and &amp;&amp;
-  url: and_or
-- subs:
-  - title: die and eval
-    url: die_and_eval.html
-  - title: The Carp module
-    url: carp.html
-  - title: The Error.pm module
-    url: error.pm.html
-  title: Exceptions
-  url: exceptions
-- subs:
-  - title: Directory Input Routines
-    url: dir.html
-  - title: Random File I/O
-    url: random_io.html
-  - title: File Tests (-e, -d...)
-    url: file-tests.html
-  - title: chdir(), getcwd() and mkdir().
-    url: chdir_getcwd_mkdir.html
-  - title: The stat() Function
-    url: stat.html
-  title: More System Functions
-  url: system-funcs
+    - subs:
+          - title: Manual Compilation
+            url: manual.html
+          - title: The -MCPAN Interface
+            url: mcpan.html
+      title: CPAN Modules
+      url: cpan
+    - subs:
+          - title: Supported Conversions
+            url: conversions.html
+          - title: Flags to the conversions
+            url: flags.html
+          - title: Width and Max Width
+            url: width.html
+      title: The sprintf function
+      url: sprintf
+    - subs:
+          - title: q{}, qq{} and Friends
+            url: q_qq.html
+          - title: Here Document
+            url: here_doc.html
+      title: Alternate Forms for Writing Strings
+      url: string-forms
+    - subs:
+          - title: The system() Command
+            url: system.html
+          - title: Trapping Command Output with `...`
+            url: backticks.html
+          - title: open() for Command Execution
+            url: opens.html
+          - title: String::ShellQuote
+            url: string-shellquote.html
+      title: Executing Other Processes
+      url: processes
+    - subs:
+          - title: For sort()
+            url: sort.html
+          - title: The "and" and "or" Operators
+            url: english_and_or.html
+      title: More about || and &amp;&amp;
+      url: and_or
+    - subs:
+          - title: die and eval
+            url: die_and_eval.html
+          - title: The Carp module
+            url: carp.html
+          - title: The Error.pm module
+            url: error.pm.html
+      title: Exceptions
+      url: exceptions
+    - subs:
+          - title: Directory Input Routines
+            url: dir.html
+          - title: Random File I/O
+            url: random_io.html
+          - title: File Tests (-e, -d...)
+            url: file-tests.html
+          - title: chdir(), getcwd() and mkdir().
+            url: chdir_getcwd_mkdir.html
+          - title: The stat() Function
+            url: stat.html
+      title: More System Functions
+      url: system-funcs
 title: '"Perl for Perl Newbies" - Part 4'

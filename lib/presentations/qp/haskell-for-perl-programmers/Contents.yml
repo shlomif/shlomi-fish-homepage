@@ -1,37 +1,37 @@
 ---
 images:
-- style.css
+    - style.css
 subs:
-- title: Introduction
-  url: intro.html
-- subs:
-  - title: Recursion
-    url: recursion.html
-  - title: Lists
-    url: lists.html
-  title: Basic Examples
-  url: basic
-- subs:
-  - title: Fibonacci with Lists
-    url: fibonacci.html
-  - title: Primes (with low efficiency)
-    url: primes1.html
-  - title: Primes (with better efficiency)
-    url: primes2.html
-  title: Infinite Lists
-  url: infinite_lists
-- subs:
-  - title: Examples
-    url: examples.html
-  - title: Multi-map Function
-    url: multimap.html
-  title: List and String Manipulation Routines
-  url: list_manip
-- subs:
-  - title: Histogram
-    url: histogram.html
-  - title: Hash
-    url: hash.html
-  title: Arrays
-  url: arrays
+    - title: Introduction
+      url: intro.html
+    - subs:
+          - title: Recursion
+            url: recursion.html
+          - title: Lists
+            url: lists.html
+      title: Basic Examples
+      url: basic
+    - subs:
+          - title: Fibonacci with Lists
+            url: fibonacci.html
+          - title: Primes (with low efficiency)
+            url: primes1.html
+          - title: Primes (with better efficiency)
+            url: primes2.html
+      title: Infinite Lists
+      url: infinite_lists
+    - subs:
+          - title: Examples
+            url: examples.html
+          - title: Multi-map Function
+            url: multimap.html
+      title: List and String Manipulation Routines
+      url: list_manip
+    - subs:
+          - title: Histogram
+            url: histogram.html
+          - title: Hash
+            url: hash.html
+      title: Arrays
+      url: arrays
 title: Haskell for Perl Programmers

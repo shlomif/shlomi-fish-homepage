@@ -1202,22 +1202,31 @@ a.back_to_faq {
     img.faq_float {
         margin: 2em;
     }
+    #faux {
+        grid-row: 2;
+    }
     footer {
         @include bottom_bg;
+        grid-row: 3;
         clear: both;
         margin-top: 2em;
+        padding-bottom: 1em;
     }
 }
 
 body.faq_indiv_entry {
     background-color: #e0ebef;
     min-height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-rows: 200px 1fr 300px;
+    height: 100vh;
+    @if false {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
     #header {
         @include bottom_bg;
+        grid-row: 1;
     }
     .leading_path {
         padding-bottom: 1em;

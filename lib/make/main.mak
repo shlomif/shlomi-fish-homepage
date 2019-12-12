@@ -675,7 +675,7 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	< $< $(PERL) -pe 's!^\+!!' > $@
 
-GEN_STYLE_CSS_FILES = style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
+GEN_STYLE_CSS_FILES = faq-indiv.css style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
 SRC_CSS_TARGETS := $(addprefix $(SRC_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 

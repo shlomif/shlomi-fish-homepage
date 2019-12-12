@@ -1,0 +1,165 @@
+// @import "smoked-wp-theme"
+
+@import "common-style";
+
+.faq_indiv_entry {
+    img.faq_float {
+        margin: 2em;
+    }
+    #faux {
+        // grid-row: 2;
+    }
+    footer {
+        @include bottom_bg;
+        // grid-row: 3;
+        clear: both;
+        @if false {
+            margin-top: 2em;
+            padding-bottom: 2em;
+        }
+    }
+}
+
+body.faq_indiv_entry {
+    background-color: #e0ebef;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr 300px;
+    height: 100vh;
+    @if false {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    #header {
+        @include bottom_bg;
+        // grid-row: 1;
+        // height: 20px;
+        @if false {
+            padding-top: 0;
+            padding-bottom: 1em;
+        }
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: left;
+        grid-gap: 5px;
+        align-items: end;
+    }
+    .leading_path {
+        @if false {
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+    }
+}
+@mixin body-background {
+    background-color: #e0ebef;
+}
+
+$top_height: 80px;
+
+#header {
+    // padding-top: $top_height;
+}
+
+@mixin wrap {
+    // word-break: break-all;
+
+    overflow-wrap: break-word;
+    // word-wrap: break-word;
+    word-wrap: normal;
+}
+
+#faux {
+    @include body-background;
+}
+
+/* This is for the breadcrumbs trail (= leading path) at the top. */
+.leading_path {
+    color: white;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    @if false {
+        margin-bottom: 0.2em;
+        padding-left: 0.2em;
+        padding-top: 0.1em;
+        padding-bottom: 0.15em;
+        margin-right: 10pt;
+    }
+
+    a {
+        text-decoration: underline;
+        font-weight: bold;
+
+        &:link {
+            color: white;
+        }
+
+        &:visited {
+            color: #ff8800;
+        }
+
+        &:hover {
+            color: #40ff40;
+            background-color: transparent;
+        }
+    }
+}
+
+@mixin navbarwrap_common {
+    height: auto;
+}
+
+@mixin max_width_lim_common {
+    max-width: 99%;
+    @include navbarwrap_common;
+}
+
+.lim_width {
+    iframe {
+        @include max_width_lim_common;
+    }
+}
+
+img.max_width {
+    @include max_width_lim_common;
+
+    &.h6 {
+        float: right;
+        margin: 0.3em;
+    }
+}
+
+#navbar {
+    img {
+        max-width: 200px;
+        @include navbarwrap_common;
+    }
+    iframe {
+        max-width: 99%;
+        @include navbarwrap_common;
+    }
+}
+
+img.bizcard {
+    background-color: white;
+    border: 0.5em black solid;
+    border-radius: 0.35em;
+    max-width: 80%;
+}
+
+.read-more,
+.read-less {
+    display: block;
+    margin-top: 2em;
+}
+
+@import "footer";
+@import "jqtree";
+
+*:focus {
+    outline: red solid 2px;
+}
+
+* {
+    // outline: hotpink solid 2px;
+}

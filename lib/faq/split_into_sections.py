@@ -32,7 +32,7 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <meta charset="utf-8" />
 <meta name="description" content=
 "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
-<link rel="stylesheet" href="../../style.css" media="screen" title=
+<link rel="stylesheet" href="../../faq-indiv.css" media="screen" title=
 "Normal" />
 <link rel="stylesheet" href="../../print.css" media="print" />
 <link rel="shortcut icon" href="../../favicon.ico" type=

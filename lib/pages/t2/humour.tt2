@@ -87,8 +87,10 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 <section class="intro">
 <header>
 <h2 id="intro">מבוא</h2>
-[% INCLUDE cartoon_img %]
 </header>
+<div class="img_align">
+[% INCLUDE cartoon_img %]
+<div class="text">
 
 <p>
 זהו מקבץ של אמרות שפר ומשפטים מצחיקים או משעשעים קטנים שחשבתי עליהם
@@ -102,6 +104,10 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 <a href="[% base_path %]humour/fortunes/">כמקבצים של עוגיות מזל ליוניקס</a>
 מבוססות XML הניתנות לקריאה על ידי מכונה.
 </p>
+
+</div>
+
+</div>
 
 </section>
 

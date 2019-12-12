@@ -115,7 +115,7 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 
 [% IF lang == "heb" %][% INCLUDE heb_intro  %][% ELSE %][% INCLUDE eng_intro  %][% END %]
 
-[% IF lang == "heb" %][% toc_div( "lang" => "he", ) %][% ELSE %][% toc_div( ) %][% END %]
+[% lang == "heb" ? toc_div( "lang" => "he", ) : toc_div() %]
 
 [% BLOCK eng_list_h2 %]
 <h2 id="list">List of Aphorisms</h2>

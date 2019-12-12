@@ -1198,7 +1198,6 @@ a.back_to_faq {
     background: #01698f;
 }
 
-
 .math_illus {
     float: right;
     margin-left: 0.5em;
@@ -1281,6 +1280,14 @@ img.rindolf {
         max-height: 300px;
         width: 100%;
     }
+}
+
+*:focus {
+    outline: red solid 2px;
+}
+
+* {
+    // outline: hotpink solid 2px;
 }
 
 @import "self_link";

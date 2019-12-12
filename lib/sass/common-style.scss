@@ -1295,6 +1295,12 @@ img.rindolf {
 @import "treeview";
 @import "footer";
 
+@mixin body-background {
+    background-color: #e0ebef;
+}
+
+$top_height: 80px;
+
 @mixin navbarwrap_common {
     height: auto;
 }

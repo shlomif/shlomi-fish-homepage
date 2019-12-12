@@ -906,6 +906,9 @@ section.story {
     @include rounded_corners(10px);
 }
 
+.jokes article {
+    @include highlight_div_frame;
+}
 .screenplay.read,
 .docbook_formats {
     @include highlight_div_frame;
@@ -1280,6 +1283,7 @@ img.rindolf {
     float: right;
     margin: 0 2em;
 }
+
 .evilphish {
     border: 0;
     margin: 0.5em;

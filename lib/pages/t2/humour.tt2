@@ -9,17 +9,16 @@
 
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 
-<div class="main_text side_toc limit_imgs_width">
+<div class="jokes main_text side_toc limit_imgs_width">
 
 [% BLOCK joke %]
 [% content %]
-<hr class="joke"/>
 [% END %]
 
 [% BLOCK header_joke %]
 [% WRAPPER joke  %]
 
-<article class="h3 joke">
+<article>
 
 <header>
 <h3 id="[% id %]">[% header %]</h3>

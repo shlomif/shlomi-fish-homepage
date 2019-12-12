@@ -1294,3 +1294,51 @@ img.rindolf {
 @import "code_block";
 @import "treeview";
 @import "footer";
+
+@mixin navbarwrap_common {
+    height: auto;
+}
+
+@mixin max_width_lim_common {
+    max-width: 99%;
+    @include navbarwrap_common;
+}
+
+.lim_width {
+    iframe {
+        @include max_width_lim_common;
+    }
+}
+
+img.max_width {
+    @include max_width_lim_common;
+
+    &.h6 {
+        float: right;
+        margin: 0.3em;
+    }
+}
+
+#navbar {
+    img {
+        max-width: 200px;
+        @include navbarwrap_common;
+    }
+    iframe {
+        max-width: 99%;
+        @include navbarwrap_common;
+    }
+}
+
+img.bizcard {
+    background-color: white;
+    border: 0.5em black solid;
+    border-radius: 0.35em;
+    max-width: 80%;
+}
+
+.read-more,
+.read-less {
+    display: block;
+    margin-top: 2em;
+}

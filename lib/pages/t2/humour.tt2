@@ -1,3 +1,5 @@
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+
 [% IF lang == "eng" %]
 [%- SET title = "Shlomi Fish’s Aphorisms and Quotes Collection" -%]
 [% ELSE %]
@@ -10,47 +12,6 @@
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 
 <div class="main_text side_toc">
-
-[% BLOCK joke %]
-[% content %]
-[% END %]
-
-[% BLOCK header_joke %]
-[% WRAPPER joke  %]
-
-<article>
-
-<header>
-<h3 id="[% id %]">[% header %]</h3>
-</header>
-
-[% content %]
-
-</article>
-
-[%- END -%]
-[% END %]
-
-[% BLOCK eng_header_joke %]
-[% IF lang == "eng" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
-[% END %]
-
-[% BLOCK heb_header_joke %]
-[% IF lang == "heb" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
-[% END %]
-
-[% BLOCK quote %]
-<blockquote>
-[% content %]
-</blockquote>
-[% END %]
-
-[% BLOCK comment %]
-<div class="comment">
-[% content %]
-</div>
-[% END %]
-
 
 [% BLOCK cartoon_img %]
 <img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" />
@@ -2352,26 +2313,6 @@ That may work better in Hebrew where we have <a href="http://www.safa-ivrit.org/
 </p>
 
 [%- END -%]
-
-[% BLOCK github_captioned_image_joke %]
-
-[% WRAPPER eng_header_joke id=id header=header %]
-
-<img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %] /><br />
-
-<ul>
-<li>
-<p>
-<a href="[% repo_href %]">VCS Repository for the Sources</a>
-</p>
-</li>
-</ul>
-
-[% content %]
-
-[%- END -%]
-
-[% END %]
 
 [% WRAPPER github_captioned_image_joke id = "yo-nsa-publish-or-perish"  header = "Yo NSA, Publish or Perish"  repo_href = "http://github.com/shlomif/Captioned-Image-Yo-NSA-Publish-or-Perish"  src = "${base_path}humour/images/NSA-publish-or-perish.svg.webp"  alt = "Yo NSA, Publish or Perish" %]
 

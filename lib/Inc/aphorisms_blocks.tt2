@@ -1,0 +1,59 @@
+[% BLOCK joke %]
+[% content %]
+[% END %]
+
+[% BLOCK header_joke %]
+[% WRAPPER joke  %]
+
+<article>
+
+<header>
+<h3 id="[% id %]">[% header %]</h3>
+</header>
+
+[% content %]
+
+</article>
+
+[%- END -%]
+[% END %]
+
+[% BLOCK eng_header_joke %]
+[% IF lang == "eng" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
+[% END %]
+
+[% BLOCK heb_header_joke %]
+[% IF lang == "heb" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
+[% END %]
+
+[% BLOCK quote %]
+<blockquote>
+[% content %]
+</blockquote>
+[% END %]
+
+[% BLOCK comment %]
+<div class="comment">
+[% content %]
+</div>
+[% END %]
+
+[% BLOCK github_captioned_image_joke %]
+
+[% WRAPPER eng_header_joke id=id header=header %]
+
+<img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %] /><br />
+
+<ul>
+<li>
+<p>
+<a href="[% repo_href %]">VCS Repository for the Sources</a>
+</p>
+</li>
+</ul>
+
+[% content %]
+
+[%- END -%]
+
+[% END %]

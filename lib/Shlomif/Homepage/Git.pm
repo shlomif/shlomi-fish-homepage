@@ -84,6 +84,12 @@ sub github_shlomif_clone
     );
 }
 
+sub sys_task
+{
+    my ( $self, $args ) = @_;
+    return $self->task( sub { system( @{ $args->{cmd} } ); return; } );
+}
+
 sub end
 {
     my $self = shift;

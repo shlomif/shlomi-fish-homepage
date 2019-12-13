@@ -321,6 +321,11 @@ my $humour_tree_contents = {
 "Collections of funny factoids about various people and things",
                     subs => decode_json( path($json_data_fn)->slurp_raw ),
                 },
+                {
+                    text  => "Image Macros",
+                    url   => "humour/image-macros/",
+                    title => "Captioned Images (a.k.a “Memes”)",
+                },
             ],
         },
         {

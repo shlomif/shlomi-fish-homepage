@@ -19,7 +19,7 @@
 [% END %]
 
 [% BLOCK eng_header_joke %]
-[% IF lang == "eng" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
+[% IF ( lang == "eng" and (isa_captioned_image or !captioned_images_only)) %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
 [% END %]
 
 [% BLOCK heb_header_joke %]
@@ -40,7 +40,7 @@
 
 [% BLOCK github_captioned_image_joke %]
 
-[% WRAPPER eng_header_joke id=id header=header %]
+[% WRAPPER eng_header_joke id=id isa_captioned_image="1" header=header %]
 
 <img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %] /><br />
 

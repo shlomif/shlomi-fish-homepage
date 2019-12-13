@@ -1,7 +1,12 @@
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
 [% IF lang == "eng" %]
+[% IF captioned_images_only %]
+[%- SET title = "Shlomi Fish’s Image Macros (a.k.a “Captioned Images” or “Memes”)" -%]
+[% ELSE %]
 [%- SET title = "Shlomi Fish’s Aphorisms and Quotes Collection" -%]
+[%- END -%]
+
 [% ELSE %]
 [%- SET title = "מקבץ אמרות השפר והציטוטים של שלומי פיש" %]
 [% SET rtl_layout = "1" %]
@@ -9,7 +14,9 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% IF (! captioned_images_only) %]
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
+[%- END -%]
 
 <div class="main_text side_toc">
 
@@ -74,12 +81,46 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 
 [% END %]
 
-[% IF lang == "heb" %][% INCLUDE heb_intro  %][% ELSE %][% INCLUDE eng_intro  %][% END %]
+[% BLOCK captioned_images_only__intro %]
+
+<section class="intro">
+<header>
+<h2 id="intro">Introduction</h2>
+</header>
+<div class="img_align">
+[% INCLUDE cartoon_img %]
+<div class="text">
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Image_macro">Image macros</a> I have made.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+[% END %]
+
+[% IF lang == "heb" %]
+[% INCLUDE heb_intro  %]
+[% ELSE %]
+[% IF captioned_images_only %]
+[% INCLUDE captioned_images_only__intro %]
+[%- ELSE -%]
+[% INCLUDE eng_intro  %]
+[% END %]
+[%- END -%]
 
 [% lang == "heb" ? toc_div( "lang" => "he", ) : toc_div() %]
 
 [% BLOCK eng_list_h2 %]
+[% IF captioned_images_only %]
+<h2 id="list">List of Image Macros</h2>
+[% ELSE %]
 <h2 id="list">List of Aphorisms</h2>
+[% END %]
 [% END %]
 
 [% BLOCK heb_list_h2 %]

@@ -108,22 +108,14 @@ sub _exec_perl
 }
 
 path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
-_exec_perl(
-    [
-        '-MShlomif::Homepage::LongStories', '-e',
-        'Shlomif::Homepage::LongStories->new->render_make_fragment()',
-    ],
-    "LongStories render_make_fragment failed!"
-);
 
-_exec_perl(
-    [
-        '-MShlomif::Homepage::FortuneCollections',
-        '-e',
-'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s()',
-    ],
-    "print_all_fortunes_html_tt2s failed!"
-);
+require lib;
+lib->import("./lib");
+
+require Shlomif::Homepage::LongStories;
+Shlomif::Homepage::LongStories->new->render_make_fragment;
+require Shlomif::Homepage::FortuneCollections;
+Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;
 
 _exec_perl(
     [
@@ -252,11 +244,12 @@ if ( my $Err = $@ )
 }
 my $r_fh = path("$DIR/rules.mak");
 my $text = $r_fh->slurp_utf8;
-my $H    = qr/SRC/;
+my $HOST = qr/SRC/;
 $text =~
-s#^(\$\(($H)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_TT2_RENDER)#gms
+s#^(\$\(($HOST)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_TT2_RENDER)#gms
     or die "Cannot subt";
-$text =~ s#(($H)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
+$text =~
+    s#(($HOST)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
     or die "Cannot subt";
 $text =~ s#\.wml#.tt2#gms
     or die "Cannot subt";

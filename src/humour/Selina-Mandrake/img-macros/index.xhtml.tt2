@@ -13,7 +13,7 @@
 
 <div class="aphorisms wrap-me lim_width limit_imgs_width">
 
-[% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Wandless Emma Watson"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
+[% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Emma Watson does not need a wand"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
 
 [% WRAPPER quote  %]
 <p>
@@ -22,6 +22,9 @@
 [%- END -%]
 
 <p>
+In <a href="../"><i>Selina</i></a>, the titular protagonist (whom I want to be played
+by Emma Watson) is able to "kick ass" (or "slay" and/or "dispel") without needing
+a wand or any other violent weapon.
 </p>
 
 [%- END -%]

@@ -30,51 +30,43 @@ sub _git_task
     return;
 }
 
-if ( not -e 'lib/js/MathJax/README.md' )
-{
-    $git_obj->sys_task(
-        {
-            cmd => [
+$git_obj->sys_task(
+    {
+        pivot_path => 'lib/js/MathJax/README.md',
+        cmd        => [
 'cd lib/js && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
-            ]
-        }
-    );
-}
+        ]
+    }
+);
 
-if ( not -e 'lib/js/jquery-expander' )
-{
-    $git_obj->sys_task(
-        {
-            cmd => [
+$git_obj->sys_task(
+    {
+        pivot_path => 'lib/js/jquery-expander',
+        cmd        => [
 'cd lib/js && git clone https://github.com/kswedberg/jquery-expander'
-            ]
-        }
-    );
-}
-if ( not -e 'lib/ebookmaker/README.md' )
-{
-    # Broken due to the bug in this pull-request:
-    #    - https://github.com/setanta/ebookmaker/pull/7
-    #
-    # I switched to my fork for now.
-    #
-    # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
-    $git_obj->sys_task(
-        {
-            cmd => ['cd lib && git clone https://github.com/shlomif/ebookmaker']
-        }
-    );
-}
+        ]
+    }
+);
 
-if ( not -e 'lib/c-begin/README.md' )
-{
-    $git_obj->sys_task(
-        {
-            cmd =>
-                ['cd lib && git clone https://github.com/shlomif/c-begin.git']
-        }
-    );
-}
+# Broken due to the bug in this pull-request:
+#    - https://github.com/setanta/ebookmaker/pull/7
+#
+# I switched to my fork for now.
+#
+# system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
+$git_obj->sys_task(
+    {
+        pivot_path => 'lib/ebookmaker/README.md',
+        cmd => ['cd lib && git clone https://github.com/shlomif/ebookmaker']
+    }
+);
+
+$git_obj->sys_task(
+    {
+        pivot_path => 'lib/c-begin/README.md',
+        cmd => ['cd lib && git clone https://github.com/shlomif/c-begin.git']
+    }
+);
 
 foreach my $repo (
     (

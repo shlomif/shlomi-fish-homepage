@@ -87,6 +87,10 @@ sub github_shlomif_clone
 sub sys_task
 {
     my ( $self, $args ) = @_;
+    if ( -e $args->{pivot_path} )
+    {
+        return;
+    }
     return $self->task( sub { system( @{ $args->{cmd} } ); return; } );
 }
 

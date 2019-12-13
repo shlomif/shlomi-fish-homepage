@@ -137,7 +137,7 @@ my $humour_tree_contents = {
                         },
                         {
                             text => "Image Macros (“Memes”)",
-                            url  => "humour/Selina-Mandrake/img-macros/",
+                            url  => "humour/Selina-Mandrake/image-macros/",
                         },
                     ],
                 },

@@ -94,6 +94,22 @@ sub sys_task
     return $self->task( sub { system( @{ $args->{cmd} } ); return; } );
 }
 
+sub git_task
+{
+    my ( $self, $d, $bn ) = @_;
+    return
+        if -e "$d/$bn";
+    return $self->task( sub { $self->github_shlomif_clone( $d, $bn ); return; }
+    );
+}
+
+sub calc_git_task_cb
+{
+    my $self = shift;
+
+    return sub { return $self->git_task(@_); };
+}
+
 sub end
 {
     my $self = shift;

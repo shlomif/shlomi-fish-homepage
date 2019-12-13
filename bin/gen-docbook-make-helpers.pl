@@ -19,16 +19,7 @@ my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $git_obj = Shlomif::Homepage::Git->new;
 
-sub _git_task
-{
-    my ( $d, $bn ) = @_;
-    if ( not -e "$d/$bn" )
-    {
-        return $git_obj->task(
-            sub { $git_obj->github_shlomif_clone( $d, $bn ); return; } );
-    }
-    return;
-}
+my $git_task = $git_obj->calc_git_task_cb;
 
 $git_obj->sys_task(
     {
@@ -85,13 +76,13 @@ foreach my $repo (
     'why-openly-bipolar-people-should-not-be-medicated',
     )
 {
-    _git_task( 'lib/repos', $repo );
+    $git_task->( 'lib/repos', $repo );
 }
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(
-    { git_task => \&_git_task } );
+    { git_task => $git_task, } );
 
-Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => \&_git_task } );
+Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
 
 HTML::Latemp::DocBook::GenMake->new(
     { dest_var => '$(SRC_DEST)', post_dest_var => '$(SRC_POST_DEST)' } )

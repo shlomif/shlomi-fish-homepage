@@ -22,8 +22,8 @@ has 'bottom_code'  => ( is => 'rw', isa => 'Maybe[Str]', required => 1, );
 has 'current_host' => ( is => 'rw', isa => 'Str',        required => 1, );
 has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
 has 'nav_menu'     => ( is => 'rw', );
-has 'path_info'    => ( is => 'rw', isa => 'Str',        required => 1, );
-has 'results'      => (
+has 'path_info' => ( is => 'rw', isa => 'Str', required => 1, );
+has 'results'   => (
     is      => 'ro',
     isa     => 'HashRef',
     lazy    => 1,

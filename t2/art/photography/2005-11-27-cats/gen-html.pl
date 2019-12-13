@@ -69,8 +69,8 @@ foreach my $dir ( $target_dir, $photos_dir, $thumbs_dir )
 #        @{$dir}
 #    ));
 
-my @filenames    = ( map  { sprintf( "img_%04d.jpg", $_ ) } keys(%images) );
-my @files_sorted = ( sort { $a cmp $b } @filenames );
+my @filenames     = ( map { sprintf( "img_%04d.jpg", $_ ) } keys(%images) );
+my @files_sorted  = ( sort { $a cmp $b } @filenames );
 my @files_records = ( map { +{ fn => $_, get_record($_), } } @files_sorted );
 
 my $d = Data::Dumper->new( [ \@files_records ] );

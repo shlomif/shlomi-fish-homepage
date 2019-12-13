@@ -4,10 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.5.0;
-use File::Copy qw/ copy /;
-use File::Which qw/ which /;
 use Path::Tiny qw/ path /;
-use List::MoreUtils ();
 
 package Shlomif::Homepage::GenMakeHelpers;
 
@@ -16,7 +13,8 @@ use parent 'HTML::Latemp::GenMakeHelpers';
 sub place_files_into_buckets
 {
     my ( $self, $host, $files, $buckets ) = @_;
-
+    my $host_id   = $host->{'id'};
+    my $is_common = ( $host_id eq "common" );
 FILE_LOOP:
     foreach my $f (@$files)
     {
@@ -24,13 +22,13 @@ FILE_LOOP:
         {
             if ( $bucket->{'filter'}->($f) )
             {
-                if ( $host->{'id'} eq "common" )
+                if ($is_common)
                 {
                     $self->_common_buckets->{ $bucket->{name} }->{$f} = 1;
                 }
 
                 if (
-                    ( $host->{'id'} eq "common" )
+                    $is_common
                     || (
                         !(
                             $bucket->{'filter_out_common'} && exists(
@@ -50,7 +48,7 @@ FILE_LOOP:
         die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
             {
                 'file' => $f,
-                'host' => $host->id(),
+                'host' => $host_id,
             }
         );
     }
@@ -58,8 +56,7 @@ FILE_LOOP:
 
 sub get_initial_buckets
 {
-    my $self = shift;
-    my $host = shift;
+    my ( $self, $host ) = @_;
 
     return [
         {
@@ -110,7 +107,7 @@ sub _exec_perl
     return _exec( [ $^X, '-Ilib', @$cmd ], $err );
 }
 
-copy( "lib/VimIface.pm", "lib/presentations/qp/common/VimIface.pm" );
+path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
 _exec_perl(
     [
         '-MShlomif::Homepage::LongStories', '-e',
@@ -212,18 +209,12 @@ path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 my $iter = path("./src")->iterator( { recurse => 1, } );
 my @tt;
-my %src_dirs;
 while ( my $next = $iter->() )
 {
     my $s = "$next";
-    $s =~ s#\A(\./)?src/##;
-    if ( -d $next )
+    if ( ( not -d $next ) and $s =~ s#\.tt2\z## )
     {
-        $src_dirs{$s} = 1;
-    }
-    elsif ( $s =~ s#\.tt2\z## )
-    {
-        push @tt, $s;
+        push @tt, ( $s =~ s#\A(\./)?src/##r );
     }
 }
 
@@ -278,8 +269,4 @@ $r_fh->spew_utf8($text);
 push @tt, "humour/fortunes/all-in-one.uncompressed.html";
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
-_my_system( [ 'gmake', 'bulk-make-dirs' ] );
-_my_system( [ 'gmake', 'sects_cache' ] );
-
-# For https://reproducible-builds.org/
-_my_system( [ 'gmake', 'mathjax_dest' ] );
+_my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );

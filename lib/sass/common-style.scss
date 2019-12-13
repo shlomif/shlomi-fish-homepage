@@ -761,6 +761,10 @@ section.story {
     margin-top: 0.5em;
     padding: 0.5em;
     clear: right;
+
+    &:hover {
+        border-color: darkgreen;
+    }
 }
 
 @if false {

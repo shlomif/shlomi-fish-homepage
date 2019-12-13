@@ -3009,33 +3009,9 @@ On #perl6, we joked that it is so speedy due to <a href="https://mlp.fandom.com/
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "cast_an_American_actress"  header = "“One does not simply cast an American actress for a Britishwoman’s role.”"  repo_href = "http://github.com/shlomif/Captioned-Image-One-does-not-Simply-cast-an-American-Actress"  src = base_path _ "humour/images/one-does-not-simply-cast-an-american-actress.svg.webp"  alt = "“One does not simply cast an American actress for a Britishwoman’s role.”"    %]
+[% PROCESS "Inc/emma_watson_img_macros_blocks.tt2" %]
 
-[% WRAPPER quote  %]
-<p>
-“One does not simply cast an American actress for a Britishwoman’s role.”
-</p>
-[%- END -%]
-
-<p>
-This was inspired by a <a href="https://twitter.com/shlomif/status/1174368159060627456">a Twitter conversation</a>
-where some people suggested that I should consider casting <a href="https://en.wikipedia.org/wiki/Emma_Stone">Emma Stone</a> instead of Emma Watson
-for <a href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html#selina">the role of Selina</a>
-in my <a href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i></a>
-film.
-</p>
-
-<p> It is not quite accurate because Renée Zellweger played Bridget Jones in <a
-href="https://en.wikipedia.org/wiki/Bridget_Jones%27s_Diary_(film)">Bridget
-Jones’ Diary</a>, Anne Hathaway played Jane Austen in <a
-href="https://en.wikipedia.org/wiki/Becoming_Jane">Becoming Jane</a>, and
-Gwyneth Paltrow played an Englishwoman in <a
-href="https://en.wikipedia.org/wiki/Shakespeare_in_Love">Shakespeare in
-Love</a>. The real issue is that I believe Emma Watson is the only actress who
-can play Selina, and may have kind of modelled and adapted the character of
-Selina after her, having deviated from my original concept of her.</p>
-
-[%- END -%]
+[% INCLUDE cast_american_as_a_britishwoman %]
 
 [% WRAPPER github_captioned_image_joke id = "set_up_email_service"  header = "“One does not simply set up an E-mail service.”"  repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service"  src = base_path _ "humour/images/one-does-not-simply-set-up-an-email-service.svg.webp"  alt = "“One does not simply set up an E-mail service.”" %]
 

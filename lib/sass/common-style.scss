@@ -1269,3 +1269,11 @@ img.bizcard {
     display: block;
     margin-top: 2em;
 }
+
+.long_stories {
+    > section {
+        @if false {
+            @include indent;
+        }
+    }
+}

@@ -68,3 +68,41 @@ $navbar_margin: 0.5em;
 
     @include rounded_corners(10px);
 }
+
+$ss_margin: 2em;
+
+@mixin mysection {
+    margin-top: $ss_margin;
+    margin-left: 0.5em;
+
+    // margin-bottom: $ss_margin
+    padding-left: 1em;
+    border-left: black solid 3px;
+    padding-top: 0.3em;
+
+    // padding-bottom: 0.3em
+    // border-radius: 5pt
+    &:hover {
+        border-left-color: #555555;
+    }
+
+    > p:last-child,
+    > ul:last-child > li:last-child > p:last-child,
+    > ol:last-child > li:last-child > p:last-child {
+        padding-bottom: 1em;
+    }
+}
+
+@mixin img_align__cell {
+    vertical-align: top;
+    display: table-cell;
+}
+
+@mixin navbarwrap_common {
+    height: auto;
+}
+
+@mixin max_width_lim_common {
+    max-width: 99%;
+    @include navbarwrap_common;
+}

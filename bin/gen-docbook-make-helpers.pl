@@ -6,71 +6,25 @@ use autodie;
 use utf8;
 
 use Carp ();
-use Path::Tiny qw/ cwd path /;
+use Path::Tiny qw/ path /;
 use Parallel::ForkManager ();
 use lib './lib';
 use HTML::Latemp::GenWmlHSects           ();
 use HTML::Latemp::DocBook::GenMake       ();
+use Shlomif::Homepage::Git               ();
 use Shlomif::Homepage::GenQuadPresMak    ();
 use Shlomif::Homepage::GenFictionsMak    ();
 use Shlomif::Homepage::GenScreenplaysMak ();
 
 my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
-my $cwd            = cwd();
-my $upper_dir      = $cwd->parent;
-my $git_clones_dir = $upper_dir->child( $cwd->basename . "--clones" );
-$git_clones_dir->mkpath;
-
-sub _github_clone
-{
-    my $args = shift;
-
-    my $type = $args->{'type'} // 'github_git';
-
-    my $gh_username = $args->{'username'};
-    my $repo        = $args->{'repo'};
-    my $into_dir    = $args->{'into_dir'};
-
-    my $url;
-
-    if ( $type eq 'bitbucket_hg' )
-    {
-        # $url = qq#https://$gh_username\@bitbucket.org/$gh_username/$repo#;
-        Carp::confess("bitbucket_hg is going away!");
-    }
-    else
-    {
-        $url = "https://github.com/$gh_username/$repo.git";
-    }
-
-    my $clone_into = $git_clones_dir->child($repo);
-    my $link       = "$into_dir/$repo";
-
-    my @prefix = ( 'git', 'clone' );
-    my @cmd    = ( @prefix, $url, $clone_into );
-
-    if ( !-e $clone_into )
-    {
-        print "@cmd\n";
-        if ( system(@cmd) )
-        {
-            die "git clone [@cmd] failed!";
-        }
-    }
-    if ( !-e $link )
-    {
-        symlink( $clone_into, $link );
-    }
-
-    return;
-}
+my $git_obj = Shlomif::Homepage::Git->new;
 
 sub _github_shlomif_clone
 {
     my ( $into_dir, $repo ) = @_;
 
-    return _github_clone(
+    return $git_obj->github_clone(
         {
             username => 'shlomif',
             into_dir => $into_dir,

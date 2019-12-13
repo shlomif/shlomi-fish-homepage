@@ -7,11 +7,25 @@ use Moo;
 
 use Carp ();
 use Path::Tiny qw/ cwd /;
+use Parallel::ForkManager ();
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
 my $git_clones_dir = $upper_dir->child( $cwd->basename . "--clones" );
 $git_clones_dir->mkpath;
+
+my $pm = Parallel::ForkManager->new(20);
+
+sub task
+{
+    my ( $self, $cb ) = @_;
+    if ( not $pm->start )
+    {
+        $cb->();
+        $pm->finish;
+    }
+    return;
+}
 
 sub github_clone
 {
@@ -68,6 +82,15 @@ sub github_shlomif_clone
             repo     => $repo,
         }
     );
+}
+
+sub end
+{
+    my $self = shift;
+
+    $pm->wait_all_children;
+
+    return;
 }
 
 1;

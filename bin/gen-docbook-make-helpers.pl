@@ -7,7 +7,6 @@ use utf8;
 
 use Carp ();
 use Path::Tiny qw/ path /;
-use Parallel::ForkManager ();
 use lib './lib';
 use HTML::Latemp::GenWmlHSects           ();
 use HTML::Latemp::DocBook::GenMake       ();
@@ -20,23 +19,10 @@ my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $git_obj = Shlomif::Homepage::Git->new;
 
-my $pm = Parallel::ForkManager->new(20);
-
-sub _task(&)
-{
-    my $cb = shift;
-    if ( not $pm->start )
-    {
-        $cb->();
-        $pm->finish;
-    }
-    return;
-}
-
 sub _sys_task
 {
     my @x = @_;
-    return _task { system(@x); };
+    return $git_obj->task( sub { system(@x); return; } );
 }
 
 sub _git_task
@@ -44,7 +30,8 @@ sub _git_task
     my ( $d, $bn ) = @_;
     if ( not -e "$d/$bn" )
     {
-        return _task { $git_obj->github_shlomif_clone( $d, $bn ); };
+        return $git_obj->task(
+            sub { $git_obj->github_shlomif_clone( $d, $bn ); return; } );
     }
     return;
 }
@@ -108,4 +95,4 @@ HTML::Latemp::DocBook::GenMake->new(
 Shlomif::Homepage::GenQuadPresMak->new->generate;
 HTML::Latemp::GenWmlHSects->new->run;
 
-$pm->wait_all_children;
+$git_obj->end;

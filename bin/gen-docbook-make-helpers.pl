@@ -8,14 +8,11 @@ use utf8;
 use Carp ();
 use Path::Tiny qw/ path /;
 use lib './lib';
-use HTML::Latemp::GenWmlHSects           ();
 use HTML::Latemp::DocBook::GenMake       ();
 use Shlomif::Homepage::Git               ();
 use Shlomif::Homepage::GenQuadPresMak    ();
 use Shlomif::Homepage::GenFictionsMak    ();
 use Shlomif::Homepage::GenScreenplaysMak ();
-
-my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $git_obj = Shlomif::Homepage::Git->new;
 
@@ -88,6 +85,5 @@ HTML::Latemp::DocBook::GenMake->new(
     { dest_var => '$(SRC_DEST)', post_dest_var => '$(SRC_POST_DEST)' } )
     ->generate;
 Shlomif::Homepage::GenQuadPresMak->new->generate;
-HTML::Latemp::GenWmlHSects->new->run;
 
 $git_obj->end;

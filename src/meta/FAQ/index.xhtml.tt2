@@ -2528,8 +2528,8 @@ With the advent of <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
 and similar formats such as <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>,
 some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hipster</a> geeks have proclaimed that XML-based grammars no
 longer have any legitimate use. However, while I use JSON and YAML for
-many tasks, I still find XML (and related technologies such as DocBook 5,
-XPath, RELAX NG, and XSLT ) of use. Part of the reason is that XML can be
+many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
+<a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
 used to add markup to a substring of the text (like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
 </p>
 
@@ -2814,6 +2814,38 @@ Another factor that makes my repositories more numerous is the fact that I use i
 repositories for <a href="https://en.wikipedia.org/wiki/Image_macro">image macros</a>,
 for stories and screenplays, and for some essays. I am not a big fan of the
 <a href="https://en.wikipedia.org/wiki/Monorepo">"monorepo"</a> strategy.
+</p>
+
+[%- END -%]
+
+[% WRAPPER faq_h4_section id = "why_perl"  title = "Why are you still using Perl? Can't you rewrite all your Perl code in Python / JavaScript / TypeScript / Erlang / Intercal / etc.?"  %]
+
+<p>
+It is true that Perl 5 has somewhat fallen out of favour, but as much as I like Python
+(and I do), I still like Perl. One cannot rewrite their entire codebase in [insert hyped
+language/stack/framework/technology of the present] every 6 months or so. Back
+when I was interested in learning <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>
+some of its enthusiasts implied I should use <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">Rails</a>
+for my sites. And guess what? The Rails and Ruby craze and hype are gone and
+<a href="[% base_path %]humour/fortunes/show.cgi?id=compiling-a-C-program-from-20-years-ago">Rails has its share of issues</a>
+and I'm glad my site was not converted to a Rails application.
+It can also happen to <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gamedev--everything-is-dead">node.js, Python</a>, PHP, or WordPress.
+</p>
+
+<p>
+Currently <a href="https://dev.perl.org/perl5/">perl5</a> is quite actively developed
+with annual major releases, and with as little <a href="http://blogs.perl.org/users/aristotle/2013/06/decade-scale.html">backward compatibility broken</a> as possible. The
+<a href="https://en.wikipedia.org/wiki/CPAN">CPAN</a> ecosystem is not quite as
+active as <a href="https://en.wikipedia.org/wiki/Python_Package_Index">PyPI</a>
+or <a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a>, but still proves
+useful often, and also avoids breaking backward compatibility as much as possible.
+Moreover, I can make use of modules and libraries in other languages using
+<a href="https://metacpan.org/pod/distribution/Inline/lib/Inline.pod">the Inline::* family</a>
+and other <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFIs</a>.
+</p>
+
+<p>
+Note that I also write some new code in Python, Julia, bash, C, C++ or other languages.
 </p>
 
 [%- END -%]

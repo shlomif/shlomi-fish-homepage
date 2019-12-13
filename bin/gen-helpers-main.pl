@@ -13,37 +13,35 @@ use parent 'HTML::Latemp::GenMakeHelpers';
 sub place_files_into_buckets
 {
     my ( $self, $host, $files, $buckets ) = @_;
-    my $host_id   = $host->{'id'};
-    my $is_common = ( $host_id eq "common" );
+    my $host_id         = $host->{'id'};
+    my $is_common       = ( $host_id eq "common" );
+    my $_common_buckets = $self->_common_buckets;
 FILE_LOOP:
     foreach my $f (@$files)
     {
+    BUCKETS:
         foreach my $bucket (@$buckets)
         {
-            if ( $bucket->{'filter'}->($f) )
+            next BUCKETS if not $bucket->{'filter'}->($f);
+            if ($is_common)
             {
-                if ($is_common)
-                {
-                    $self->_common_buckets->{ $bucket->{name} }->{$f} = 1;
-                }
-
-                if (
-                    $is_common
-                    || (
-                        !(
-                            $bucket->{'filter_out_common'} && exists(
-                                $self->_common_buckets->{ $bucket->{name} }
-                                    ->{$f}
-                            )
-                        )
-                    )
-                    )
-                {
-                    push @{ $bucket->{'results'} }, $bucket->{'map'}->($f);
-                }
-
-                next FILE_LOOP;
+                $_common_buckets->{ $bucket->{name} }->{$f} = 1;
             }
+
+            if (
+                $is_common
+                || (
+                    !(
+                        $bucket->{'filter_out_common'}
+                        && exists( $_common_buckets->{ $bucket->{name} }->{$f} )
+                    )
+                )
+                )
+            {
+                push @{ $bucket->{'results'} }, $bucket->{'map'}->($f);
+            }
+
+            next FILE_LOOP;
         }
         die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
             {
@@ -63,7 +61,7 @@ sub get_initial_buckets
             'name'   => "IMAGES",
             'filter' => sub {
                 my $fn = shift;
-                return ( $fn !~ /\.(?:tt2|ttml|wml)\z/ )
+                return ( $fn !~ /\.tt2\z/ )
                     && ( -f $self->_make_path( $host, $fn ) );
             },
         },

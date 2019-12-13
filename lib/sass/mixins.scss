@@ -16,3 +16,55 @@
     padding: 0.3em;
     float: right;
 }
+
+@mixin indent {
+    margin-left: 3em;
+}
+
+/* Style for the google search box */
+
+$navbar_margin: 0.5em;
+
+@mixin navbar_box {
+    border: 1.5pt solid #207020;
+    margin-bottom: 0.5cm;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+
+    h2 {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    p {
+        margin: $navbar_margin;
+    }
+}
+
+@mixin logo_margin {
+    margin-top: 1em;
+}
+
+@mixin logo_image {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include logo_margin;
+}
+
+@mixin highlight_div_frame {
+    border: 2pt solid darkgreen;
+    padding: 1em;
+    margin-bottom: 2em;
+    overflow: hidden;
+
+    @include rounded_corners(10px);
+}

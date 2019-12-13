@@ -63,7 +63,6 @@ foreach my $repo (
     ),
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
     'XML-Grammar-Vered',
-    'captioned-image--emma-watson-doesnt-need-a-wand',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
     'putting-cards-2019-2020',

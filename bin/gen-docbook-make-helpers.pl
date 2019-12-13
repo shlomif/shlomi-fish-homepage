@@ -20,19 +20,6 @@ my $global_username = $ENV{LOGNAME} || $ENV{USER} || getpwuid($<);
 
 my $git_obj = Shlomif::Homepage::Git->new;
 
-sub _github_shlomif_clone
-{
-    my ( $into_dir, $repo ) = @_;
-
-    return $git_obj->github_clone(
-        {
-            username => 'shlomif',
-            into_dir => $into_dir,
-            repo     => $repo,
-        }
-    );
-}
-
 my $pm = Parallel::ForkManager->new(20);
 
 sub _task(&)
@@ -57,7 +44,7 @@ sub _git_task
     my ( $d, $bn ) = @_;
     if ( not -e "$d/$bn" )
     {
-        return _task { _github_shlomif_clone( $d, $bn ); };
+        return _task { $git_obj->github_shlomif_clone( $d, $bn ); };
     }
     return;
 }

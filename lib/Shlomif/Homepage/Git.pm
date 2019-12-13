@@ -57,6 +57,19 @@ sub github_clone
     return;
 }
 
+sub github_shlomif_clone
+{
+    my ( $self, $into_dir, $repo ) = @_;
+
+    return $self->github_clone(
+        {
+            username => 'shlomif',
+            into_dir => $into_dir,
+            repo     => $repo,
+        }
+    );
+}
+
 1;
 
 # __END__

@@ -133,7 +133,11 @@ my $humour_tree_contents = {
                         {
                             text  => "Cast",
                             url   => "humour/Selina-Mandrake/cast.html",
-                            title => "Who I want to play each character?",
+                            title => "Who I want to play each character",
+                        },
+                        {
+                            text => "Image Macros (“Memes”)",
+                            url  => "humour/Selina-Mandrake/img-macros/",
                         },
                     ],
                 },

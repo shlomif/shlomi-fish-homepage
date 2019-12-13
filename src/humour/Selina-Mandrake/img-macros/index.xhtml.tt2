@@ -1,0 +1,39 @@
+[%- SET title = "Selina Mandrake - The Slayer - Image Macros (“memes”)" -%]
+
+[%- PROCESS "stories/selina-common.tt2" -%]
+[%- PROCESS "Inc/jqui_tabs.tt2" -%]
+
+[%- WRAPPER wrap_html -%]
+[%- SET lang = "eng" -%]
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+
+[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
+
+[%- SET caption = "Emma Watson played Hermione in the Harry Potters, but she doesn't need a wand to kick your ass." -%]
+
+<div class="aphorisms wrap-me lim_width limit_imgs_width">
+
+[% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Wandless Emma Watson"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
+
+[% WRAPPER quote  %]
+<p>
+[% caption %]
+</p>
+[%- END -%]
+
+<p>
+</p>
+
+[%- END -%]
+
+</div>
+
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS buffy_nav_block  %]
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
+
+[%- END -%]
+
+[% END %]

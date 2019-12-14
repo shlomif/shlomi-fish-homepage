@@ -24,8 +24,6 @@
 
 [% BLOCK nav_blocks %]
 
-[% in_nav_block_set() %]
-
 <div class="nav_blocks">
 
 <h2 id="nav_blocks">Navigation Blocks</h2>
@@ -33,7 +31,5 @@
 [% content %]
 
 </div>
-
-[% in_nav_block_unset() %]
 
 [% END %]

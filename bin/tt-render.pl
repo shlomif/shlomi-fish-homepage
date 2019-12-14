@@ -11,8 +11,6 @@ use Parallel::ForkManager::Segmented ();
 use Path::Tiny qw/ path /;
 use Getopt::Long qw/ GetOptions /;
 
-$Shlomif::Homepage::in_nav_block = undef();
-
 use Shlomif::Homepage::TTRender ();
 my $printable;
 my @filenames;
@@ -25,13 +23,11 @@ GetOptions(
 my $obj = Shlomif::Homepage::TTRender->new(
     { printable => $printable, stdout => $stdout, } );
 
-my $LATEMP_SERVER = "t2";
-my @tt;
-
 if ( !@filenames )
 {
     @filenames = path("lib/make/tt2.txt")->lines_raw( { chomp => 1 } );
 }
+
 Parallel::ForkManager::Segmented->new->run(
     {
         #         disable_fork => 1,

@@ -150,7 +150,7 @@ sub proc
 
 Parallel::ForkManager::Segmented->new->run(
     {
-        disable_fork => 1,
+        #         disable_fork => 1,
         items        => \@tt,
         nproc        => 1,
         batch_size   => 100,

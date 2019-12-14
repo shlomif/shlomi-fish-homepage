@@ -298,7 +298,7 @@ discrimination angle.
 
 [% WRAPPER licence_sect  %]
 
-[% cc_by_british_blurb( "year" => "2006", ) %]
+[% license_obj.by_british_blurb( "year" => "2006", ) %]
 
 <p>
 Note that the image at the top is taken out of the

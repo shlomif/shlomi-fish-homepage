@@ -121,7 +121,7 @@ Israel has the 21st highest life expectancy in the world.</a>
 
 [% WRAPPER licence_sect  %]
 
-[% cc_by_british_blurb( "year" => "2007", ) %]
+[% license_obj.by_british_blurb( "year" => "2007", ) %]
 
 [%- END -%]
 

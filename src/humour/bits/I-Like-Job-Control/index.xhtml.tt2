@@ -122,6 +122,6 @@ So kill another pid with this UID...
 
 <h2 id="license">Copyright and Licence</h2>
 
-[% cc_by_sa_british_blurb( "year" => "2000", ) %]
+[% license_obj.by_sa_british_blurb( "year" => "2000", ) %]
 
 [% END %]

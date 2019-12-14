@@ -38,7 +38,7 @@ and the Gaza strip?
 
 <h2 id="license">Copyright and Licence</h2>
 
-[% PROCESS cc_by_nc_sa_british_blurb year = "2014",  %]
+[% license_obj.by_nc_sa_british_blurb (year => "2014")  %]
 
 <h2 id="reception">What other people are saying</h2>
 

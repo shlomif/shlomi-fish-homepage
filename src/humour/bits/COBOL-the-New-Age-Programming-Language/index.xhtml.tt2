@@ -223,7 +223,7 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 
 <h2 id="license">Copyright and Licence</h2>
 
-[% cc_by_sa_british_blurb( "year" => "2010", ) %]
+[% license_obj.by_sa_british_blurb( "year" => "2010", ) %]
 
 <h2 id="links">Links</h2>
 

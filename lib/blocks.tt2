@@ -101,29 +101,9 @@ License</a>, a permissive software licence.
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
-[% cc_by_british_blurb(year=year) %]
+[% license_obj.by_british_blurb(year=year) %]
 [%- END -%]
 [%- END -%]
-
-[% BLOCK cc_by_nc_sa_british_blurb %]
-
-<p>
-This document is Copyright by Shlomi Fish, [% year %], and is made
-available under the
-terms of <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/">the Creative Commons
-Attribution Noncommercial ShareAlike License 3.0 Unported</a> (or at your
-option any later version).
-</p>
-
-<p>
-For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
-and see <a href="http://www.shlomifish.org/meta/copyrights/">the
-explicit requirements</a> that are being spelt from abiding by that licence.
-</p>
-
-[% END %]
 
 [%- BLOCK note -%]
 <section class="note">

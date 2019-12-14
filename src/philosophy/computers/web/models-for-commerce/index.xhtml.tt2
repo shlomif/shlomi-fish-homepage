@@ -75,7 +75,7 @@ it will be very profitable.
 
 <h3 id="licence">Licence</h3>
 
-[% PROCESS cc_by_nc_sa_british_blurb year = "2015",  %]
+[% license_obj.by_nc_sa_british_blurb (year => "2015")  %]
 
 <h2 id="see_also">See Also</h2>
 

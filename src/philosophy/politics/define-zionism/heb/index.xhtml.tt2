@@ -245,7 +245,7 @@
 
 [% WRAPPER h2_section id = "licence"  title = "רישיון"  %]
 
-[% cc_by_hebrew_blurb( year=>"2006") %]
+[% license_obj.by_hebrew_blurb( year=>"2006") %]
 
 <p>
 שימו לב שהתמונה למעלה לקוחה מרצועת הקומיקס

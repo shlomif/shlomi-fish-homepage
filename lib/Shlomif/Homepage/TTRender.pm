@@ -12,13 +12,15 @@ use Template                              ();
 use HTML::Latemp::Acronyms                ();
 use Shlomif::Homepage::CPAN_Links         ();
 use Shlomif::Homepage::FortuneCollections ();
+use Shlomif::Homepage::LicenseBlurbs      ();
 use Shlomif::Homepage::LongStories        ();
 use HTML::Latemp::AddToc                  ();
 
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
-my $cpan = Shlomif::Homepage::CPAN_Links->new;
+my $cpan    = Shlomif::Homepage::CPAN_Links->new;
+my $license = Shlomif::Homepage::LicenseBlurbs->new;
 
 my $base_path;
 
@@ -67,45 +69,9 @@ sub path_slurp
     return slurp( "lib/" . shift );
 }
 
-sub cc_by_sa_british_blurb
-{
-    my $args = shift;
-    my $year = $args->{year};
-
-    return <<"EOF";
-<p>
-This document is Copyright by Shlomi Fish, $year, and is available
-under the
-terms of <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
-Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
-later version).
-</p>
-
-<p>
-For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
-and see <a href="http://www.shlomifish.org/meta/copyrights/">the
-explicit requirements</a> that are being spelt from abiding by that licence.
-</p>
-EOF
-}
-
-sub cc_by_sa_license_british
-{
-    my $args = shift() // {};
-
-    my $head_tag = $args->{head_tag} // 'h3';
-
-    return qq#
-<$head_tag id="license">Copyright and Licence</$head_tag># .
-
-        cc_by_sa_british_blurb($args);
-
-}
-
 my $vars = +{
-    cpan => $cpan,
+    cpan        => $cpan,
+    license_obj => $license,
     mytan =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
     d2url            => "http://divisiontwo.shlomifish.org/",
@@ -163,60 +129,8 @@ EOF
 
         return $latemp_acroman->abbr( { key => $args->{key}, } )->{html};
     },
-    shlomif_cpan             => $shlomif_cpan,
-    cc_by_sa_british_blurb   => \&cc_by_sa_british_blurb,
-    cc_by_sa_license_british => \&cc_by_sa_license_british,
-    cc_by_british_blurb      => sub {
-        my $args = shift;
-
-        my $year = $args->{year};
-
-        return <<"EOF";
-<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
-
-<p>
-This document is Copyright by Shlomi Fish, $year, and is available
-under the
-terms of <a rel="license"
-href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
-Attribution License 3.0 Unported</a> (or at your option any
-later version of that licence).
-</p>
-
-<p>
-For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
-and see <a href="http://www.shlomifish.org/meta/copyrights/">the
-explicit requirements</a> that are being spelt from abiding by that licence.
-</p>
-EOF
-    },
-    cc_by_hebrew_blurb => sub {
-        my $args = shift;
-
-        my $year = $args->{year};
-
-        return <<"EOF";
-<p><a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img alt="Creative Commons License" class="bless" src="${base_path}images/somerights20.png"/></a></p>
-
-<p>
-זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת ${year},
-תחת תנאי
-<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he">הרישיון
-ייחוס 2.5 לא מותאם של קריאייטיב קומונס Creative Commons)</a>
-(או לשיקולכם כל גרסה מאוחרת יותר של אותו הרישיון.)
-</p>
-
-<p>
-בשביל לרכוש זכויות נוספות, אנא צרו קשר עם
-<a href="http://www.shlomifish.org/me/contact-me/">שלומי פיש</a>
-ושימו לב
-<a href="http://www.shlomifish.org/meta/copyrights/">לדרישות המפורשות</a>
-שהוא דורש כדי לעמוד בתנאי הרישיון הזה.
-</p>
-EOF
-    },
-    toc_div => sub {
+    shlomif_cpan => $shlomif_cpan,
+    toc_div      => sub {
         my %args = %{ shift() // {} };
         $args{head_tag} //= 'h2';
         $args{lang}     //= 'en';
@@ -367,7 +281,8 @@ sub proc
         ( '../' x ( scalar(@fn) - 1 ) );
     my $fn2 = join( '/', @fn_nav ) || '/';
 
-    $vars->{base_path}   = $base_path;
+    $vars->{base_path} = $base_path;
+    $license->base_path($base_path);
     $vars->{fn_path}     = $input_tt2_page_path;
     $vars->{raw_fn_path} = $input_tt2_page_path =~ s#(\A|/)index\.x?html\z#$1#r;
     my $set = sub {

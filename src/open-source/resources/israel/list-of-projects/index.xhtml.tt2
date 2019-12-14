@@ -500,6 +500,6 @@ the site of the Knesset, the Israeli parliament.
 
 <h2 id="licence">Licence</h2>
 
-[% cc_by_british_blurb( "year" => "2011", ) %]
+[% license_obj.by_british_blurb( "year" => "2011", ) %]
 
 [% END %]

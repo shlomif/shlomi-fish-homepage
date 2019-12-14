@@ -43,7 +43,7 @@ Last Updated:
 
 [% WRAPPER h3_section id = "licence"  title = "Licence"  %]
 
-[% cc_by_british_blurb( "year" => "2006", ) %]
+[% license_obj.by_british_blurb( "year" => "2006", ) %]
 
 [%- END -%]
 

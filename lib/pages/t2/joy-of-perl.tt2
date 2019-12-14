@@ -21,7 +21,7 @@ table of contents)
 
 [% WRAPPER h2_section id = "license"  title = "Licence"  %]
 
-[% cc_by_british_blurb( "year" => "2003", ) %]
+[% license_obj.by_british_blurb( "year" => "2003", ) %]
 
 [%- END -%]
 

@@ -106,6 +106,6 @@ the start of the campaign, “please help spread the word about this campaign
 so everyone can enjoy the finest crop of the world’s spam.”.
 </p>
 
-[% cc_by_sa_license_british( "year" => "2007", head_tag => "h2", ) %]
+[% license_obj.by_sa_license_british( "year" => "2007", head_tag => "h2", ) %]
 
 [% END %]

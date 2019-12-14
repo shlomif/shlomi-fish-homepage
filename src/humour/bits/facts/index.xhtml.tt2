@@ -31,6 +31,33 @@ friends seem to, so don't worry if you do not.
 
 </section>
 
+[% WRAPPER h2_section id = "sources" title = "Source Files and Code" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/factoids/shlomif-factoids-lists.xml">XML Source</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/factoids/gen-html.pl">gen-html.pl</a> - Perl 5 program to generate the .html.tt2 pages.
+</p>
+</li>
+
+<li>
+<p>
+[% cpan_self_dist( "d" => "XML-Grammar-Fortune") %] - render the XML into XHTML5 using
+XSLT.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 <section class="thanks">
 
 <h2 id="thanks" class="facts">Thanks</h2>

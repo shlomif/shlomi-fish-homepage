@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 use 5.014;
-use utf8;
 
 use lib './lib';
 use Parallel::ForkManager::Segmented ();
@@ -19,7 +18,7 @@ GetOptions(
     'printable!' => \$printable,
     'stdout!'    => \$stdout,
     'fn=s'       => \@filenames,
-);
+) or die $!;
 my $obj = Shlomif::Homepage::TTRender->new(
     { printable => $printable, stdout => $stdout, } );
 
@@ -31,9 +30,16 @@ if ( !@filenames )
 Parallel::ForkManager::Segmented->new->run(
     {
         #         disable_fork => 1,
-        items        => \@filenames,
-        nproc        => 1,
-        batch_size   => 100,
-        process_item => sub { return $obj->proc(shift); },
+        items         => \@filenames,
+        nproc         => 1,
+        batch_size    => 100,
+        process_batch => sub {
+            my ($aref) = @_;
+            foreach my $fn (@$aref)
+            {
+                $obj->proc($fn);
+            }
+            return;
+        },
     }
 );

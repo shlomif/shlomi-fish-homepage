@@ -177,7 +177,7 @@ annoying.
 Again</h3>
 
 <p>
-The CPAN Module [% cpan_self_dist( "d" => "HTML-WikiConverter", ) %] allows
+The CPAN Module [% cpan.self_dist( "d" => "HTML-WikiConverter", ) %] allows
 one to convert HTML to the formats of most popular Wikis. DocBook/XML
 and POD can generate HTML, which means they can be fed to it in turn.
 </p>

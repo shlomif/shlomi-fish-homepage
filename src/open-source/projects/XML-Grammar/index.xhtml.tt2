@@ -70,14 +70,14 @@ plain-text from them.
 </li>
 
 <li>
-[% cpan_self_dist( "d" => "XML-Grammar-ProductsSyndication", ) %] -
+[% cpan.self_dist( "d" => "XML-Grammar-ProductsSyndication", ) %] -
 an XML grammar for creating lists of products. See
 <a href="[% base_path %]recommendations/">my recommendations page</a> for examples.
 </li>
 
 <li>
 <p>
-[% cpan_self_dist( "d" => "XML-Grammar-Vered", ) %] -
+[% cpan.self_dist( "d" => "XML-Grammar-Vered", ) %] -
 an XML grammar for managing some technical documents.
 </p>
 </li>

@@ -10,6 +10,7 @@ use Path::Tiny qw/ path /;
 
 use Template                              ();
 use HTML::Latemp::Acronyms                ();
+use Shlomif::Homepage::CPAN_Links         ();
 use Shlomif::Homepage::FortuneCollections ();
 use Shlomif::Homepage::LongStories        ();
 use HTML::Latemp::AddToc                  ();
@@ -17,24 +18,7 @@ use HTML::Latemp::AddToc                  ();
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
-sub cpan_dist
-{
-    my $args = shift;
-    return
-        qq#<a href="http://metacpan.org/release/$args->{d}">$args->{body}</a>#;
-}
-
-sub cpan_homepage
-{
-    my $args = shift();
-    return qq#http://metacpan.org/author/\U$args->{who}\E#;
-}
-
-sub cpan_mod
-{
-    my %args = @_;
-    return qq#<a href="http://metacpan.org/module/$args{m}">$args{body}</a>#;
-}
+my $cpan = Shlomif::Homepage::CPAN_Links->new;
 
 my $base_path;
 
@@ -66,7 +50,7 @@ sub _render_nav_block
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 my $latemp_acroman    = HTML::Latemp::Acronyms->new;
 my $long_stories      = Shlomif::Homepage::LongStories->new;
-my $shlomif_cpan      = cpan_homepage( +{ who => 'shlomif' } );
+my $shlomif_cpan      = $cpan->homepage( +{ who => 'shlomif' } );
 
 sub slurp
 {
@@ -121,6 +105,7 @@ sub cc_by_sa_license_british
 }
 
 my $vars = +{
+    cpan => $cpan,
     mytan =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
     d2url            => "http://divisiontwo.shlomifish.org/",
@@ -179,7 +164,6 @@ EOF
         return $latemp_acroman->abbr( { key => $args->{key}, } )->{html};
     },
     shlomif_cpan             => $shlomif_cpan,
-    cpan_homepage            => \&cpan_homepage,
     cc_by_sa_british_blurb   => \&cc_by_sa_british_blurb,
     cc_by_sa_license_british => \&cc_by_sa_license_british,
     cc_by_british_blurb      => sub {
@@ -260,16 +244,6 @@ EOF
         return qq#http://perl.net.au/wiki/Beginners#
             . ( $args->{url} ? '/' . $args->{url} : '' );
     },
-    cpan_self_mod => sub {
-        my $args = shift;
-
-        return cpan_mod( %$args, body => $args->{'m'} );
-    },
-    cpan_b_self_dist => sub {
-        my $args = shift;
-
-        return cpan_dist( { %$args, body => "<b>$args->{d}</b>", } );
-    },
     irc_channel => sub {
         my $args = shift;
 
@@ -290,11 +264,6 @@ EOF
               "<a href=\"irc://"
             . $servers{$net}
             . "/%23$chan\"><code>#$chan</code></a>";
-    },
-    cpan_self_dist => sub {
-        my $args = shift;
-
-        return cpan_dist( { %$args, body => $args->{d} } );
     },
     retrieved_slurp                  => \&retrieved_slurp,
     path_slurp                       => \&path_slurp,

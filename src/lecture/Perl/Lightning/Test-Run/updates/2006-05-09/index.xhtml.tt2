@@ -8,8 +8,8 @@
 
 <p>
 The colour-summaries lines were released on CPAN as [%
-cpan_self_dist( "d" => "Test-Run-Plugin-ColorSummary", ) %] and [%
-cpan_self_dist( "d" => "Test-Run-CmdLine-Plugin-ColorSummary", ) %].
+cpan.self_dist( "d" => "Test-Run-Plugin-ColorSummary", ) %] and [%
+cpan.self_dist( "d" => "Test-Run-CmdLine-Plugin-ColorSummary", ) %].
 They now allow configuring the colour in which the summary would be displayed.
 </p>
 
@@ -81,7 +81,7 @@ module which has a good test coverage.
 <h2>Test-Run-TAP-Model</h2>
 
 <p>
-The [% cpan_self_dist( "d" => "Test-Tap-Model", ) %] was
+The [% cpan.self_dist( "d" => "Test-Tap-Model", ) %] was
 adapted to Test::Run, after a talk with one of its developers.
 </p>
 

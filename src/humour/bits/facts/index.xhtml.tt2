@@ -49,7 +49,7 @@ friends seem to, so don't worry if you do not.
 
 <li>
 <p>
-[% cpan_self_dist( "d" => "XML-Grammar-Fortune") %] - render the XML into XHTML5 using
+[% cpan.self_dist( "d" => "XML-Grammar-Fortune") %] - render the XML into XHTML5 using
 XSLT.
 </p>
 </li>

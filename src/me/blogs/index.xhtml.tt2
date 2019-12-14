@@ -157,7 +157,7 @@ If you’re interested in different ways to mix-and-match such feeds look at:
 <ol>
 
 <li>
-[% cpan_self_dist( "d" => "XML-Feed", ) %] - a Perl-based
+[% cpan.self_dist( "d" => "XML-Feed", ) %] - a Perl-based
 CPAN module to mix, match and manipulate feeds of various formats.
 </li>
 

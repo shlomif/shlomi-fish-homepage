@@ -64,7 +64,7 @@ nor requires it.
 </li>
 
 <li>
-[% cpan_self_dist( "d" => "HTTP-Proxy", ) %] - an
+[% cpan.self_dist( "d" => "HTTP-Proxy", ) %] - an
 excellent CPAN module for building your own HTTP proxies in Perl.
 </li>
 

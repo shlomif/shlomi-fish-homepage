@@ -20,7 +20,7 @@ Quiz-of-the-Week</a> that was done about it.
 <li>
 <a href="http://use.perl.org/~Shlomi+Fish/journal/32132">A blog entry</a> I
 wrote about
-[% cpan_self_dist( "d" => "Math-GrahamFunction", ) %],
+[% cpan.self_dist( "d" => "Math-GrahamFunction", ) %],
 which is a CPAN module, that is derived from the original code.
 </li>
 </ul>

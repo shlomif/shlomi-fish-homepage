@@ -1846,7 +1846,7 @@ See <a href="#how_site_is_generated">above</a> - most of the site is generated
 using code and data and is served as static content on the server. There are
 about three
 [% my_acronym( "key" => "CGI",) %] scripts written in Perl 5 using
-[% cpan_self_dist( "d" => "CGI-Minimal", ) %] but they do not serve most of the content.
+[% cpan.self_dist( "d" => "CGI-Minimal", ) %] but they do not serve most of the content.
 </p>
 
 <p>

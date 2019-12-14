@@ -81,7 +81,7 @@ to the modifications disclaimed.
 
 [% WRAPPER news_sect  %]
 
-[% SET xsac=cpan_self_dist( "d" => "Class-XSAccessor", ) %]
+[% SET xsac=cpan.self_dist( "d" => "Class-XSAccessor", ) %]
 [% WRAPPER h3_section id = "news-2009-06-26"  title = "2009-06-26: File-Find-Object-Rule Version 0.0300"  %]
 
 <p>
@@ -114,7 +114,7 @@ shortly.
 </p>
 
 <p>
-One thing to note is that we are now using [% xsac %] instead of [% cpan_self_dist( "d" => "Class-Accessor", ) %],
+One thing to note is that we are now using [% xsac %] instead of [% cpan.self_dist( "d" => "Class-Accessor", ) %],
 because the conversion yielded a substantial increase in speed. More
 information can be found in the Changes file in the distribution.
 </p>

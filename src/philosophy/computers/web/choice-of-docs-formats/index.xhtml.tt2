@@ -88,7 +88,7 @@ Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
 <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
 formats. It cannot be directly translated to plain text, but can through
 an intermediate format. POD can be translated into DocBook/XML using
-[% cpan_self_mod( "m" => "Pod::PseudoPod::DocBook", ) %].
+[% cpan.self_mod( "m" => "Pod::PseudoPod::DocBook", ) %].
 </p>
 
 <p>

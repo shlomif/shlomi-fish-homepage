@@ -16,20 +16,17 @@ $Shlomif::Homepage::in_nav_block = undef();
 use Shlomif::Homepage::TTRender ();
 my $printable;
 my @filenames;
-my $obj = Shlomif::Homepage::TTRender->new;
+my $stdout;
 GetOptions(
     'printable!' => \$printable,
-    'stdout!'    => scalar( $obj->get_stdout_ref ),
+    'stdout!'    => \$stdout,
     'fn=s'       => \@filenames,
 );
+my $obj = Shlomif::Homepage::TTRender->new(
+    { printable => $printable, stdout => $stdout, } );
 
 my $LATEMP_SERVER = "t2";
 my @tt;
-$obj->calc_vars(
-    {
-        printable => $printable,
-    }
-);
 
 if ( !@filenames )
 {
@@ -41,6 +38,6 @@ Parallel::ForkManager::Segmented->new->run(
         items        => \@filenames,
         nproc        => 1,
         batch_size   => 100,
-        process_item => \&Shlomif::Homepage::TTRender::proc,
+        process_item => sub { return $obj->proc(shift); },
     }
 );

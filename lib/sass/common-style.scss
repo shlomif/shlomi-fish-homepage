@@ -823,6 +823,7 @@ section.story {
 
 .aphorisms article {
     @include highlight_div_frame;
+    width: 70%;
 }
 .screenplay.read,
 .docbook_formats {

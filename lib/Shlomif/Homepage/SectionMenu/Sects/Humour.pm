@@ -93,6 +93,11 @@ my $humour_tree_contents = {
 "Story about Teenage Computer Enthusiasts in 2005’s Los Angeles",
                     subs => [
                         {
+                            text  => "English Text",
+                            url   => "humour/human-hacking/english-v2.html",
+                            title => "Text of the English original",
+                        },
+                        {
                             text => "Conclusions and Reviews",
                             url  => "humour/human-hacking/conclusions/",
                         },

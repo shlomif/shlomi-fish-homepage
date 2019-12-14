@@ -1,0 +1,23 @@
+[%- SET title = "The Human Hacking Field Guide - English Text" -%]
+[%- SET desc = "The Human Hacking Field Guide - a story about teenagers in 2005 Los Angeles who deal with open source software development." -%]
+[%- SET more_keywords = "open, source, open source, free software, foss, floss, hacking, hacker, female geeks, hackers, story, novella, humor, humour, creative commons, cc, female hackers, english, hebrew, los angeles, california" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories__calc_common_top_elems(id => 'hhfg') %]
+
+[% toc_div( ) %]
+
+<div class="side_toc story wrap-me">
+
+[% path_slurp("docbook/5/rendered/human-hacking-field-guide-v2--english.xhtml") %]
+
+</div>
+
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS foss_nav_block  %]
+
+[%- END -%]
+
+[% END %]

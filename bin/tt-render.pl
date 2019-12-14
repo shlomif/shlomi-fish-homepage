@@ -25,25 +25,20 @@ GetOptions(
 
 my $LATEMP_SERVER = "t2";
 my @tt;
-my $vars = $obj->calc_vars(
+$obj->calc_vars(
     {
         printable => $printable,
     }
 );
 
-if (@filenames)
+if ( !@filenames )
 {
-    @tt = @filenames;
-}
-else
-{
-    @tt = path("lib/make/tt2.txt")->lines_raw;
-    chomp @tt;
+    @filenames = path("lib/make/tt2.txt")->lines_raw( { chomp => 1 } );
 }
 Parallel::ForkManager::Segmented->new->run(
     {
         #         disable_fork => 1,
-        items        => \@tt,
+        items        => \@filenames,
         nproc        => 1,
         batch_size   => 100,
         process_item => \&Shlomif::Homepage::TTRender::proc,

@@ -70,16 +70,16 @@ sub _inc
 
 my $base_path_ref = $obj->get_base_path_ref;
 
+my %INDEX = ( map { $_ => 1 } 'index.html', 'index.xhtml' );
+
 sub proc
 {
     my $input_tt2_page_path = shift;
     $::latemp_filename = $input_tt2_page_path;
     my @fn     = split m#/#, $input_tt2_page_path;
     my @fn_nav = @fn;
-    if ( $fn_nav[-1] =~ m#\Aindex\.x?html\z# )
-    {
-        $fn_nav[-1] = '';
-    }
+    my $tail   = \$fn_nav[-1];
+    $$tail = '' if ( exists $INDEX{$$tail} );
     $$base_path_ref =
         ( '../' x ( scalar(@fn) - 1 ) );
     my $fn2 = join( '/', @fn_nav ) || '/';

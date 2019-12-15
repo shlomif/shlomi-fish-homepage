@@ -560,7 +560,6 @@ endef
 define ASCIIDOCTOR_TO_DOCBOOK5
 	asciidoctor --backend=docbook5 -o $@.temp.xml $<
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
-	python3 bin/add-homepage-uri-to-asciidoc-generated-docbook5.py $@
 endef
 
 PRINTER_ICON_PNG = $(SRC_DEST)/images/printer_icon.png

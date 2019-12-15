@@ -2,7 +2,6 @@ package Shlomif::Homepage::News;
 
 use strict;
 use warnings;
-
 use utf8;
 
 use Carp ();
@@ -12,11 +11,9 @@ use Text::WrapAsUtf8 qw/ print_utf8 /;
 use Path::Tiny qw( path );
 
 has 'dir' => (
-    is      => 'ro',
-    isa     => 'Str',
-    default => sub {
-        return "../lib/feeds/shlomif_hsite";
-    }
+    is       => 'ro',
+    isa      => 'Str',
+    required => 1,
 );
 
 has 'num_on_front' => ( is => 'ro', isa => 'Int', default => sub { 7; } );
@@ -26,7 +23,8 @@ has 'items' => (
     isa     => 'ArrayRef',
     default => sub {
         return shift->calc_items();
-    }
+    },
+    lazy => 1,
 );
 
 has '_is_html5' => (
@@ -303,29 +301,6 @@ sub render_old
     my @items = @{ $self->items() };
     return $self->render_items(
         [ reverse( @items[ 0 .. ( @items - $self->num_on_front() ) ] ) ] );
-}
-
-sub _printy
-{
-    my ( $class, $meth ) = @_;
-
-    print_utf8( $class->new->$meth );
-
-    return;
-}
-
-sub print_front_page
-{
-    my ($class) = @_;
-
-    return $class->_printy('render_front_page');
-}
-
-sub print_old_news
-{
-    my ($class) = @_;
-
-    return $class->_printy('render_old');
 }
 
 1;

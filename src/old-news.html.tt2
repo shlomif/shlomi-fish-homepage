@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% print_old_news() %]
+[% news_obj.render_old_news() %]
 
 <h3 class="newsitem">30-Oct-2004</h3>
 

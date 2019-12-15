@@ -8,13 +8,14 @@ use Encode qw/ decode_utf8 /;
 use Moo;
 use Path::Tiny qw/ path /;
 
-use Template                              ();
 use HTML::Latemp::Acronyms                ();
+use HTML::Latemp::AddToc                  ();
 use Shlomif::Homepage::CPAN_Links         ();
 use Shlomif::Homepage::FortuneCollections ();
 use Shlomif::Homepage::LicenseBlurbs      ();
 use Shlomif::Homepage::LongStories        ();
-use HTML::Latemp::AddToc                  ();
+use Shlomif::Homepage::News               ();
+use Template                              ();
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
@@ -56,6 +57,7 @@ my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 my $latemp_acroman    = HTML::Latemp::Acronyms->new;
 my $long_stories      = Shlomif::Homepage::LongStories->new;
 my $shlomif_cpan      = $cpan->homepage( +{ who => 'shlomif' } );
+my $news = Shlomif::Homepage::News->new( { dir => "lib/feeds/shlomif_hsite" } );
 
 sub slurp
 {
@@ -80,6 +82,7 @@ has vars => (
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
             cpan        => $cpan,
             license_obj => $license,
+            news_obj    => $news,
             mytan =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url           => "http://divisiontwo.shlomifish.org/",
@@ -98,16 +101,6 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             },
             print_fortune_records_toc => sub {
                 return $fortune_colls_obj->calc_fortune_records_toc();
-            },
-            print_front_page => sub {
-                require Shlomif::Homepage::News;
-                return Shlomif::Homepage::News->new(
-                    { dir => "lib/feeds/shlomif_hsite" } )->render_front_page;
-            },
-            print_old_news => sub {
-                require Shlomif::Homepage::News;
-                return Shlomif::Homepage::News->new(
-                    { dir => "lib/feeds/shlomif_hsite" } )->render_old;
             },
             print_markdown => sub {
                 my $args = shift;

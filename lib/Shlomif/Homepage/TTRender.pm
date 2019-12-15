@@ -18,6 +18,7 @@ use Shlomif::Homepage::LongStories         ();
 use Shlomif::Homepage::NavBlocks           ();
 use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
+use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
 use Shlomif::Homepage::TocDiv              ();
 use Shlomif::MD                            ();
 use Shlomif::XmlFictionSlurp               ();
@@ -124,9 +125,8 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                     )
                 );
             },
-            p4n_lecture5_heb_notes => sub {
-                return decode_utf8( scalar `bash bin/lecture5-txt2html.bash` );
-            },
+            p4n_lecture5_heb_notes =>
+                \&Shlomif::Homepage::P4N_Lect5_HebNotes::calc,
         };
     }
 );

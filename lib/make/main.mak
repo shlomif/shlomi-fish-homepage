@@ -704,7 +704,7 @@ $(SRC_DEST)/work/hire-me/index.xhtml $(SRC_DEST)/work/hire-me/hebrew.html: lib/p
 
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 
-$(SRC_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt bin/lecture5-txt2html.bash
+$(SRC_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt
 
 $(SRC_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
 

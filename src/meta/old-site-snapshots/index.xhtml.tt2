@@ -20,8 +20,9 @@ versions. This is similar to the
 
 <p>
 My site at its infancy, around 1998, complete with an animated GIF of the
-Technion hosting, and some broken pages, that would no longer validate as
-HTML, and a Spartan design.
+Technion hosting, and some broken pages, that would no longer <a href="[%
+base_path %]philosophy/computers/web/validate-your-html/">validate as
+HTML</a>, and a Spartan design.
 </p>
 
 [%- END -%]
@@ -37,8 +38,10 @@ My site around 2005.
 [% WRAPPER h2_section id = "old2012"  title = "My site at 2012" href="https://old-2012-site.shlomifish.org/" %]
 
 <p>
-Xena was the only female subject of my factoids, and I still called Selina
-Mandrake "Selena".
+Xena was the only female subject of <a href="[% base_path
+%]humour/bits/facts/">my factoids</a>, and I still spelled <a
+href="[% base_path %]humour/Selina-Mandrake/">Selina
+Mandrake</a> “Selena”.
 </p>
 
 [%- END -%]

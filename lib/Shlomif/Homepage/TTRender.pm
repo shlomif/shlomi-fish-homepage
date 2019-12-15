@@ -26,6 +26,30 @@ use VimIface                               ();
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
+sub _toc_div
+{
+    my %args = %{ shift() // {} };
+    $args{head_tag} //= 'h2';
+    $args{lang}     //= 'en';
+    my $lang_attr =
+        $args{lang} eq 'en'
+        ? "lang=\"en\""
+        : "lang=\"he\"";
+    my $title =
+        $args{lang} eq 'en'
+        ? "Table of Contents"
+        : "תוכן העניינים";
+
+    my $head = "<$args{head_tag} id=\"toc\">$title</$args{head_tag}>";
+    $head = '';
+    my $details = "<summary>$title</summary>";
+    my $c =
+        $args{collapse}
+        ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\" /></details>"
+        : "$head<toc $lang_attr />";
+    return qq#<nav class="page_toc">$c</nav>#;
+}
+
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
@@ -108,30 +132,8 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                     ->{html};
             },
             shlomif_cpan => $shlomif_cpan,
-            toc_div      => sub {
-                my %args = %{ shift() // {} };
-                $args{head_tag} //= 'h2';
-                $args{lang}     //= 'en';
-                my $lang_attr =
-                    $args{lang} eq 'en'
-                    ? "lang=\"en\""
-                    : "lang=\"he\"";
-                my $title =
-                    $args{lang} eq 'en'
-                    ? "Table of Contents"
-                    : "תוכן העניינים";
-
-                my $head =
-                    "<$args{head_tag} id=\"toc\">$title</$args{head_tag}>";
-                $head = '';
-                my $details = "<summary>$title</summary>";
-                my $c =
-                    $args{collapse}
-                    ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\" /></details>"
-                    : "$head<toc $lang_attr />";
-                return qq#<nav class="page_toc">$c</nav>#;
-            },
-            irc_channel => sub {
+            toc_div      => \&_toc_div,
+            irc_channel  => sub {
                 my $args = shift;
 
                 my $net     = $args->{net};

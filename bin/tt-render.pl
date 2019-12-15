@@ -5,20 +5,22 @@ use warnings;
 use 5.014;
 
 use lib './lib';
-use Parallel::ForkManager::Segmented ();
 
-use Path::Tiny qw/ path /;
 use Getopt::Long qw/ GetOptions /;
-
+use Parallel::ForkManager::Segmented ();
+use Path::Tiny qw/ path /;
 use Shlomif::Homepage::TTRender ();
+
 my $printable;
-my @filenames;
 my $stdout;
+my @filenames;
+
 GetOptions(
+    'fn=s'       => \@filenames,
     'printable!' => \$printable,
     'stdout!'    => \$stdout,
-    'fn=s'       => \@filenames,
 ) or die $!;
+
 my $obj = Shlomif::Homepage::TTRender->new(
     { printable => $printable, stdout => $stdout, } );
 

@@ -364,7 +364,7 @@ If we have this sample Fiction-Text document:
 </p>
 
 [% WRAPPER shlomif_code_block %]
-[% shlomif_include_colorized_file(filename=>"lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt") %]
+[% shlomif_include_colorized_file(fn=>"lib/fiction-xml/txt/fiction-text-example-for-X-G-Fiction-demo.txt") %]
 [% END %]
 
 <p>
@@ -387,7 +387,7 @@ If we have this sample screenplay:
 </p>
 
 [% WRAPPER shlomif_code_block %]
-[% shlomif_include_colorized_file(filename=>"lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt") %]
+[% shlomif_include_colorized_file(fn=>"lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt") %]
 [% END %]
 
 <p>

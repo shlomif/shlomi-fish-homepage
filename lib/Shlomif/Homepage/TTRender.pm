@@ -75,6 +75,17 @@ sub path_slurp
     return slurp( "lib/" . shift );
 }
 
+sub _shlomif_include_colorized_file
+{
+    my $args = shift;
+
+    return decode_utf8(
+        VimIface::get_syntax_highlighted_html_from_file(
+            +{ 'filename' => $args->{fn}, }
+        )
+    );
+}
+
 has vars => (
     is      => 'ro',
     default => sub {
@@ -116,15 +127,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             retrieved_slurp   => \&retrieved_slurp,
             path_slurp        => \&path_slurp,
             xml_fiction_slurp => $xml_fiction_slurp,
-            shlomif_include_colorized_file => sub {
-                my $args = shift;
-
-                return decode_utf8(
-                    VimIface::get_syntax_highlighted_html_from_file(
-                        +{ 'filename' => $args->{filename}, }
-                    )
-                );
-            },
+            shlomif_include_colorized_file => \&_shlomif_include_colorized_file,
             p4n_lecture5_heb_notes =>
                 \&Shlomif::Homepage::P4N_Lect5_HebNotes::calc,
         };

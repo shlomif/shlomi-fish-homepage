@@ -9,12 +9,11 @@ use Moo;
 
 use Shlomif::Homepage::FortuneCollections::Record ();
 
-use Carp;
-use List::Util qw(max);
-use YAML::XS (qw(LoadFile));
 use JSON::MaybeXS ();
+use List::Util qw(max);
 use Path::Tiny qw/ path /;
-use Text::WrapAsUtf8 qw/ print_utf8 /;
+use Shlomif::FindLib ();
+use YAML::XS (qw(LoadFile));
 
 sub _init_fortune
 {
@@ -22,8 +21,6 @@ sub _init_fortune
 
     return Shlomif::Homepage::FortuneCollections::Record->new($rec);
 }
-
-use Shlomif::FindLib ();
 
 my $yaml_data_fn =
     Shlomif::FindLib->rel_path( [ 'Shlomif', 'fortunes-meta-data.yml' ] );
@@ -69,26 +66,6 @@ $desc
 </p>
 </li>
 EOF
-}
-
-sub print_single_fortune_record_toc_entry
-{
-    my ( $self, $r ) = @_;
-
-    my $id   = $r->id;
-    my $desc = $r->desc;
-
-    print_utf8( <<"EOF" );
-<li>
-<p>
-<a href="$id.html"><b>$id</b></a>
-(<a href="$id.xml">XML</a>, <a href="$id">Plaintext</a>) -
-$desc
-</p>
-</li>
-EOF
-
-    return;
 }
 
 sub get_single_fortune_record_all_in_one_page_entry

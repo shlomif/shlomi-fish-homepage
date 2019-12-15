@@ -3,35 +3,14 @@
 use strict;
 use warnings;
 
-use lib './Tests/lib';
 use lib './lib';
 
+use Encode qw/ encode_utf8 /;
 use Test::Differences (qw(eq_or_diff));
 use Test::More tests => 1;
-use Data::Dumper;
-use String::ShellQuote;
-use File::Spec;
-use File::Temp qw( tempdir );
-use Test::Trap
-    qw( trap $trap :flow:stderr(systemsafe):stdout(systemsafe):warn );
+use Shlomif::XmlFictionSlurp ();
 
-use Shlomif::XmlFictionSlurp;
-
-{
-    trap
-    {
-        Shlomif::XmlFictionSlurp->my_slurp(
-            +{
-                fn       => 'Tests/data/fict1.xml',
-                index_id => 'fiction_text_index',
-            }
-        );
-    };
-
-    # TEST
-    eq_or_diff(
-        $trap->stdout(),
-        <<'EOF',
+my $WANT = <<'EOF';
 
 <div xml:lang="en" class="article">
 <div class="titlepage">
@@ -70,8 +49,16 @@ use Shlomif::XmlFictionSlurp;
 </div>
 </div>
 EOF
-        "->my_slurp()",
+{
+    my $got = Shlomif::XmlFictionSlurp->new->my_calc(
+        +{
+            fn       => 'Tests/data/fict1.xml',
+            index_id => 'fiction_text_index',
+        }
     );
+
+    # TEST
+    eq_or_diff( encode_utf8($got), $WANT, "->my_calc()", );
 }
 
 =head1 COPYRIGHT AND LICENSE

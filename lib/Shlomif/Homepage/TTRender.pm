@@ -155,7 +155,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             path_slurp                       => \&path_slurp,
             p__Shlomif_XmlFictionSlurp_slurp => sub {
                 my $args = shift() // {};
-                return Shlomif::XmlFictionSlurp->my_calc($args);
+                return Shlomif::XmlFictionSlurp->new->my_calc($args);
             },
             shlomif_include_colorized_file => sub {
                 my $args = shift;

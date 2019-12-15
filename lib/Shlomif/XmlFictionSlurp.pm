@@ -3,12 +3,13 @@ package Shlomif::XmlFictionSlurp;
 use strict;
 use warnings;
 
+use Moo;
+
 use Path::Tiny qw/ path /;
-use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub my_calc
 {
-    my ( $class, $args ) = @_;
+    my ( $self, $args ) = @_;
 
     my $fn       = $args->{fn};
     my $index_id = $args->{index_id};
@@ -20,15 +21,6 @@ sub my_calc
     $text =~ s#^[ \t]+(<)#$1#gms;
 
     return $text;
-}
-
-sub my_slurp
-{
-    my ( $class, $args ) = @_;
-
-    print_utf8( $class->my_calc($args) );
-
-    return;
 }
 
 1;

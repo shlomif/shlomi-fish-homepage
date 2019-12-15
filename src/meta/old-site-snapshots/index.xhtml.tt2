@@ -4,11 +4,17 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER intro %]
+
 <p>
 This page links to old snapshots of my site, so you can witness its old
 versions. This is similar to the
 <a href="http://nostalgia.wikipedia.org/">Nostalgia version</a> of Wikipedia.
 </p>
+
+[%- END -%]
+
+[% toc_div( ) %]
 
 [% WRAPPER h2_section id = "old1998"  title = "1998 Site" href="https://old-1998-site.shlomifish.org/" %]
 

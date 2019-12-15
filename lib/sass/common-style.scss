@@ -823,7 +823,7 @@ section.story {
 
 .aphorisms article {
     @include highlight_div_frame;
-    width: 70%;
+    width: 65%;
 }
 .screenplay.read,
 .docbook_formats {
@@ -867,7 +867,7 @@ div.abstract {
         clear: right;
         float: right;
         font-size: 85%;
-        width: 35%;
+        width: 27%;
         max-width: 25em;
 
         $border: black solid 3px;

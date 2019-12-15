@@ -8,14 +8,20 @@ use Encode qw/ decode_utf8 /;
 use Moo;
 use Path::Tiny qw/ path /;
 
-use HTML::Latemp::Acronyms                ();
-use HTML::Latemp::AddToc                  ();
-use Shlomif::Homepage::CPAN_Links         ();
-use Shlomif::Homepage::FortuneCollections ();
-use Shlomif::Homepage::LicenseBlurbs      ();
-use Shlomif::Homepage::LongStories        ();
-use Shlomif::Homepage::News               ();
-use Template                              ();
+use HTML::Latemp::Acronyms                 ();
+use HTML::Latemp::AddToc                   ();
+use Shlomif::Homepage::ArticleIndex        ();
+use Shlomif::Homepage::CPAN_Links          ();
+use Shlomif::Homepage::FortuneCollections  ();
+use Shlomif::Homepage::LicenseBlurbs       ();
+use Shlomif::Homepage::LongStories         ();
+use Shlomif::Homepage::NavBlocks           ();
+use Shlomif::Homepage::NavBlocks::Renderer ();
+use Shlomif::Homepage::News                ();
+use Shlomif::MD                            ();
+use Shlomif::XmlFictionSlurp               ();
+use Template                               ();
+use VimIface                               ();
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
@@ -34,9 +40,6 @@ sub get_base_path_ref
 
     return \$base_path;
 }
-
-use Shlomif::Homepage::NavBlocks::Renderer ();
-use Shlomif::Homepage::NavBlocks           ();
 
 my $nav_blocks         = Shlomif::Homepage::NavBlocks->new;
 my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -92,12 +95,11 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 return _render_nav_block( $args->{name} );
             },
             p_ArticleIndex__calc_string => sub {
-                require Shlomif::Homepage::ArticleIndex;
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();
             },
             p_ShlomifFortunesMake__package_base => sub {
-                use lib './src/humour/fortunes/';
-                use ShlomifFortunesMake;
+                lib->import('./src/humour/fortunes/');
+                require ShlomifFortunesMake;
                 return ShlomifFortunesMake->package_base;
             },
             print_fortune_records_toc => sub {
@@ -106,7 +108,6 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             print_markdown => sub {
                 my $args = shift;
 
-                require Shlomif::MD;
                 return Shlomif::MD::as_text( $args->{fn} ) =~
                     s#align="(left|right)"#style="float:$1;"#gr =~
 s#(<img )([^>]+)(>)#my ($s, $mid, $e)=($1, $2, $3);$mid.=" /" if $mid !~ m%/\s*\z%;$s.$mid.$e#egr;
@@ -178,12 +179,10 @@ EOF
             retrieved_slurp                  => \&retrieved_slurp,
             path_slurp                       => \&path_slurp,
             p__Shlomif_XmlFictionSlurp_slurp => sub {
-                require Shlomif::XmlFictionSlurp;
                 my $args = shift() // {};
                 return Shlomif::XmlFictionSlurp->my_calc($args);
             },
             shlomif_include_colorized_file => sub {
-                require VimIface;
                 my $args = shift;
 
                 return decode_utf8(

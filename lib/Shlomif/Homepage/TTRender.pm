@@ -34,13 +34,6 @@ my $license = Shlomif::Homepage::LicenseBlurbs->new;
 
 my $base_path;
 
-sub get_base_path_ref
-{
-    my ($self) = @_;
-
-    return \$base_path;
-}
-
 my $nav_blocks         = Shlomif::Homepage::NavBlocks->new;
 my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
     {
@@ -104,16 +97,10 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 return ShlomifFortunesMake->package_base;
             },
             fortune_colls_obj => $fortune_colls_obj,
-            print_markdown    => sub {
-                my $args = shift;
-
-                return Shlomif::MD::as_text( $args->{fn} ) =~
-                    s#align="(left|right)"#style="float:$1;"#gr =~
-s#(<img )([^>]+)(>)#my ($s, $mid, $e)=($1, $2, $3);$mid.=" /" if $mid !~ m%/\s*\z%;$s.$mid.$e#egr;
-            },
-            longblank  => $LONGBLANK,
-            main_email => 'shlomif@shlomifish.org',
-            my_acronym => sub {
+            print_markdown    => \&Shlomif::MD::as_fixed_xhtml5,
+            longblank         => $LONGBLANK,
+            main_email        => 'shlomif@shlomifish.org',
+            my_acronym        => sub {
                 my $args = shift;
 
                 return $latemp_acroman->abbr( { key => $args->{key}, } )

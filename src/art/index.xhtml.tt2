@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc lim_width">
-[% toc_div( ) %]
+[% default_toc %]
 <section>
 <h2 id="intro">Introduction</h2>
 

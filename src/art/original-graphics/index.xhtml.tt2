@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc lim_width">
-[% toc_div( ) %]
+[% default_toc %]
 
 [% PROCESS common_art__graphics_design  %]
 </div>

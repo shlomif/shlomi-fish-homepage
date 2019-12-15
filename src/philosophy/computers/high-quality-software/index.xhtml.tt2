@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc fancy_sects">
-[% toc_div( ) %]
+[% default_toc %]
 
 [% WRAPPER note  %]
 <h2 id="note">Note (24-May-2008)</h2>

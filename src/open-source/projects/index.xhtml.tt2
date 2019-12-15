@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/open_source.tt2" %]
 
-[% toc_div( ) %]
+[% default_toc %]
 
 <h2 id="forges_home_pages">My home pages on Various Software Development Hubs (Forges)</h2>
 

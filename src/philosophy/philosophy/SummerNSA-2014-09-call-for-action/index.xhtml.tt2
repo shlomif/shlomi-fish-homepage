@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% toc_div( ) %]
+[% default_toc %]
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/SummerNSA-2014-09-call-for-action",  %]
 

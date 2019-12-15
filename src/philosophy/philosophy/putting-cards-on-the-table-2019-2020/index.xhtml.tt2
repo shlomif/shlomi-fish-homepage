@@ -6,7 +6,7 @@
 
 <div class="side_toc fancy_sects">
 
-[% toc_div( ) %]
+[% default_toc %]
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "putting-cards-on-the-table-2019-2020",  %]
 

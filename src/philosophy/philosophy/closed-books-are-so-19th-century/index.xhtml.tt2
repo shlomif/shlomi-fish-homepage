@@ -6,7 +6,7 @@
 
 <div class="side_toc fancy_sects">
 
-[% toc_div( ) %]
+[% default_toc %]
 
 [% WRAPPER h2_section id = "abstract"  title = "Abstract"  %]
 

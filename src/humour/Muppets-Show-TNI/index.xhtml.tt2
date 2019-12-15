@@ -15,7 +15,7 @@
 [% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence",  %]
 </ul>
 
-[% toc_div( ) %]
+[% default_toc %]
 
 <h2 id="sources">Sources</h2>
 

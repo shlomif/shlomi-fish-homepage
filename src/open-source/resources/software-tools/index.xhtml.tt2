@@ -14,7 +14,7 @@
 [% END %]
 [% END %]
 
-[% toc_div( ) %]
+[% default_toc %]
 
 <div class="software_build">
 [% WRAPPER h2_section id = "build"  title = "Software Building"  %]

@@ -7,7 +7,7 @@
 
 [% long_stories.calc_common_top_elems(id => 'pope_died_on_sunday') %]
 
-[% toc_div( ) %]
+[% default_toc %]
 
 <p><b>By:</b> Shlomi Fish</p>
 

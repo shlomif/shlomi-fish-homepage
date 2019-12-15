@@ -6,7 +6,7 @@
 
 [% long_stories.calc_common_top_elems(id => 'hhfg') %]
 
-[% toc_div( ) %]
+[% default_toc %]
 
 <div class="side_toc story wrap-me">
 

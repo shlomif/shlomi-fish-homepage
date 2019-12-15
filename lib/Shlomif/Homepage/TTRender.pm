@@ -18,6 +18,7 @@ use Shlomif::Homepage::LongStories         ();
 use Shlomif::Homepage::NavBlocks           ();
 use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
+use Shlomif::Homepage::TocDiv              ();
 use Shlomif::MD                            ();
 use Shlomif::XmlFictionSlurp               ();
 use Template                               ();
@@ -26,35 +27,12 @@ use VimIface                               ();
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
-sub _toc_div
-{
-    my %args = %{ shift() // {} };
-    $args{head_tag} //= 'h2';
-    $args{lang}     //= 'en';
-    my $lang_attr =
-        $args{lang} eq 'en'
-        ? "lang=\"en\""
-        : "lang=\"he\"";
-    my $title =
-        $args{lang} eq 'en'
-        ? "Table of Contents"
-        : "תוכן העניינים";
-
-    my $head = "<$args{head_tag} id=\"toc\">$title</$args{head_tag}>";
-    $head = '';
-    my $details = "<summary>$title</summary>";
-    my $c =
-        $args{collapse}
-        ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\" /></details>"
-        : "$head<toc $lang_attr />";
-    return qq#<nav class="page_toc">$c</nav>#;
-}
-
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
-my $cpan    = Shlomif::Homepage::CPAN_Links->new;
-my $license = Shlomif::Homepage::LicenseBlurbs->new;
+my $DEFAULT_TOC_DIV = Shlomif::Homepage::TocDiv::toc_div();
+my $cpan            = Shlomif::Homepage::CPAN_Links->new;
+my $license         = Shlomif::Homepage::LicenseBlurbs->new;
 
 my $base_path;
 
@@ -132,7 +110,8 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                     ->{html};
             },
             shlomif_cpan => $shlomif_cpan,
-            toc_div      => \&_toc_div,
+            default_toc  => $DEFAULT_TOC_DIV,
+            toc_div      => \&Shlomif::Homepage::TocDiv::toc_div,
             irc_channel  => sub {
                 my $args = shift;
 

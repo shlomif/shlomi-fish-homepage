@@ -109,33 +109,12 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 return $latemp_acroman->abbr( { key => $args->{key}, } )
                     ->{html};
             },
-            shlomif_cpan => $shlomif_cpan,
-            default_toc  => $DEFAULT_TOC_DIV,
-            toc_div      => \&Shlomif::Homepage::TocDiv::toc_div,
-            irc_channel  => sub {
-                my $args = shift;
-
-                my $net     = $args->{net};
-                my $chan    = $args->{chan};
-                my %servers = (
-                    'freenode' => "irc.freenode.net",
-                    'efnet'    => "irc.Prison.NET",
-                    'oftc'     => "irc.oftc.net",
-                    'undernet' => "us.undernet.org",
-                    'ircnet'   => "ircnet.demon.co.uk",
-                );
-                if ( !exists( $servers{$net} ) )
-                {
-                    die "Unknown network!";
-                }
-                return
-                      "<a href=\"irc://"
-                    . $servers{$net}
-                    . "/%23$chan\"><code>#$chan</code></a>";
-            },
-            retrieved_slurp                => \&retrieved_slurp,
-            path_slurp                     => \&path_slurp,
-            xml_fiction_slurp              => $xml_fiction_slurp,
+            shlomif_cpan      => $shlomif_cpan,
+            default_toc       => $DEFAULT_TOC_DIV,
+            toc_div           => \&Shlomif::Homepage::TocDiv::toc_div,
+            retrieved_slurp   => \&retrieved_slurp,
+            path_slurp        => \&path_slurp,
+            xml_fiction_slurp => $xml_fiction_slurp,
             shlomif_include_colorized_file => sub {
                 my $args = shift;
 

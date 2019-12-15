@@ -56,7 +56,7 @@ Individual HTML pages for the fortune collection:
 </p>
 
 <ul>
-[% print_fortune_records_toc() %]
+[% fortune_colls_obj.calc_fortune_records_toc() %]
 </ul>
 </li>
 

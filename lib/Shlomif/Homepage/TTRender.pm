@@ -61,6 +61,7 @@ my $latemp_acroman    = HTML::Latemp::Acronyms->new;
 my $long_stories      = Shlomif::Homepage::LongStories->new;
 my $shlomif_cpan      = $cpan->homepage( +{ who => 'shlomif' } );
 my $news = Shlomif::Homepage::News->new( { dir => "lib/feeds/shlomif_hsite" } );
+my $LONGBLANK = ( "<br/>" x 72 );
 
 sub slurp
 {
@@ -102,22 +103,15 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 require ShlomifFortunesMake;
                 return ShlomifFortunesMake->package_base;
             },
-            print_fortune_records_toc => sub {
-                return $fortune_colls_obj->calc_fortune_records_toc();
-            },
-            print_markdown => sub {
+            fortune_colls_obj => $fortune_colls_obj,
+            print_markdown    => sub {
                 my $args = shift;
 
                 return Shlomif::MD::as_text( $args->{fn} ) =~
                     s#align="(left|right)"#style="float:$1;"#gr =~
 s#(<img )([^>]+)(>)#my ($s, $mid, $e)=($1, $2, $3);$mid.=" /" if $mid !~ m%/\s*\z%;$s.$mid.$e#egr;
             },
-            longblank => <<'EOF',
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-EOF
+            longblank  => $LONGBLANK,
             main_email => 'shlomif@shlomifish.org',
             my_acronym => sub {
                 my $args = shift;
@@ -148,12 +142,6 @@ EOF
                     ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\" /></details>"
                     : "$head<toc $lang_attr />";
                 return qq#<nav class="page_toc">$c</nav>#;
-            },
-            wiki_link => sub {
-                my $args = shift() // {};
-
-                return qq#http://perl.net.au/wiki/Beginners#
-                    . ( $args->{url} ? '/' . $args->{url} : '' );
             },
             irc_channel => sub {
                 my $args = shift;

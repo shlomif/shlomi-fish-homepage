@@ -119,18 +119,6 @@ sub calc_fortune_records_toc
     return $ret;
 }
 
-sub print_fortune_records_toc
-{
-    my ($self) = @_;
-
-    foreach my $r ( @{ $self->get_fortune_records() } )
-    {
-        $self->print_single_fortune_record_toc_entry($r);
-    }
-
-    return;
-}
-
 sub get_fortune_all_in_one_page_html_tt2
 {
     my ($self) = @_;

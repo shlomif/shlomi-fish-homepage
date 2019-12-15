@@ -372,7 +372,7 @@ Then after converting it to XML and then to XHTML we get this:
 </p>
 
 <div class="fiction_xml">
-[% p__Shlomif_XmlFictionSlurp_slurp(
+[% xml_fiction_slurp.my_calc(
         fn => 'lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
         index_id => 'fiction_text_index',
     ) %]
@@ -394,7 +394,7 @@ If we have this sample screenplay:
 Then after converting it to XML and then to XHTML we get this:
 </p>
 
-[% p__Shlomif_XmlFictionSlurp_slurp(
+[% xml_fiction_slurp.my_calc(
     fn =>'lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html',
     index_id => 'screenplay_text_index',
     )

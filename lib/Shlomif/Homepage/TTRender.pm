@@ -54,7 +54,8 @@ my $latemp_acroman    = HTML::Latemp::Acronyms->new;
 my $long_stories      = Shlomif::Homepage::LongStories->new;
 my $shlomif_cpan      = $cpan->homepage( +{ who => 'shlomif' } );
 my $news = Shlomif::Homepage::News->new( { dir => "lib/feeds/shlomif_hsite" } );
-my $LONGBLANK = ( "<br/>" x 72 );
+my $LONGBLANK         = ( "<br/>" x 72 );
+my $xml_fiction_slurp = Shlomif::XmlFictionSlurp->new;
 
 sub slurp
 {
@@ -151,12 +152,9 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                     . $servers{$net}
                     . "/%23$chan\"><code>#$chan</code></a>";
             },
-            retrieved_slurp                  => \&retrieved_slurp,
-            path_slurp                       => \&path_slurp,
-            p__Shlomif_XmlFictionSlurp_slurp => sub {
-                my $args = shift() // {};
-                return Shlomif::XmlFictionSlurp->new->my_calc($args);
-            },
+            retrieved_slurp                => \&retrieved_slurp,
+            path_slurp                     => \&path_slurp,
+            xml_fiction_slurp              => $xml_fiction_slurp,
             shlomif_include_colorized_file => sub {
                 my $args = shift;
 

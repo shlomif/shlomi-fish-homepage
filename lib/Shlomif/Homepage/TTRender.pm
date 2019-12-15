@@ -80,9 +80,10 @@ has vars => (
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
-            cpan        => $cpan,
-            license_obj => $license,
-            news_obj    => $news,
+            cpan         => $cpan,
+            license_obj  => $license,
+            long_stories => $long_stories,
+            news_obj     => $news,
             mytan =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url           => "http://divisiontwo.shlomifish.org/",
@@ -181,20 +182,6 @@ EOF
                 my $args = shift() // {};
                 return Shlomif::XmlFictionSlurp->my_calc($args);
             },
-            long_stories__calc_all_stories_entries => sub {
-                my $args = shift() // {};
-                return $long_stories->calc_all_stories_entries( $args->{tag} );
-            },
-            long_stories__calc_common_top_elems => sub {
-                my $args = shift;
-
-                return $long_stories->calc_common_top_elems( $args->{id} );
-            },
-            long_stories__calc_abstract => sub {
-                my $args = shift;
-
-                return $long_stories->calc_abstract( $args->{id} );
-            },
             shlomif_include_colorized_file => sub {
                 require VimIface;
                 my $args = shift;
@@ -204,11 +191,6 @@ EOF
                         +{ 'filename' => $args->{filename}, }
                     )
                 );
-            },
-            long_stories__calc_logo => sub {
-                my $args = shift;
-
-                return $long_stories->calc_logo( $args->{id} );
             },
             p4n_lecture5_heb_notes => sub {
                 return decode_utf8( scalar `bash bin/lecture5-txt2html.bash` );

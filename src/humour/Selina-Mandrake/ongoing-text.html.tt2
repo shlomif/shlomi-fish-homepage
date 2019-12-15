@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
+[% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
 
 [% path_slurp("screenplay-xml/rendered-html/selina-mandrake-the-slayer.html") %]
 

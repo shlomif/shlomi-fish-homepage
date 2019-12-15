@@ -7,7 +7,7 @@
 
 [% toc_div( ) %]
 
-[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
+[% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
 
 [% WRAPPER about_sect  %]
 

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'who_is_qoheleth') %]
+[% long_stories.calc_common_top_elems(id => 'who_is_qoheleth') %]
 
 [% WRAPPER screenplay_read_online  %]
 <ul>

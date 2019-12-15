@@ -11,7 +11,7 @@ This page contains a list of <a href="https://terminator.fandom.com/wiki/Termina
 
 [% WRAPPER h3_section id = "terminator_liberation"  href = "${base_path}humour/Terminator/Liberation/"  title="<i>Terminator: Liberation</i>" %]
 
-[% long_stories__calc_abstract(id => 'terminator_liberation') %]
+[% long_stories.calc_abstract(id => 'terminator_liberation') %]
 
 [%- END -%]
 

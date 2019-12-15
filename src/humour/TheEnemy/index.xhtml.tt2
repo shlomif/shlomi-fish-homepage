@@ -6,7 +6,7 @@
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'the_enemy') %]
+[% long_stories.calc_common_top_elems(id => 'the_enemy') %]
 
 <p>
 It’s a political satire, but one that is universal in its message, and

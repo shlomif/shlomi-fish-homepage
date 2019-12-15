@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'hhfg') %]
+[% long_stories.calc_common_top_elems(id => 'hhfg') %]
 
 [% toc_div( ) %]
 

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'tow_the_fountainhead') %]
+[% long_stories.calc_common_top_elems(id => 'tow_the_fountainhead') %]
 
 [% WRAPPER screenplay_read_online  %]
 

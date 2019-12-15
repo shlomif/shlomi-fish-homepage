@@ -7,7 +7,7 @@
 [%- SET lang = "eng" -%]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
-[% long_stories__calc_common_top_elems(id => 'selina_mandrake') %]
+[% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
 
 <div class="aphorisms wrap-me lim_width limit_imgs_width">
 

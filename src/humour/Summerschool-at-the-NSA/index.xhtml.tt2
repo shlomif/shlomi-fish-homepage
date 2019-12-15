@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 [%- PROCESS "Inc/summer_glau.tt2" -%]
-[% long_stories__calc_common_top_elems(id => 'summerschool_at_the_nsa') %]
+[% long_stories.calc_common_top_elems(id => 'summerschool_at_the_nsa') %]
 
 <p>
 This informal screenplay (which was not produced or filmed yet) is surrealist

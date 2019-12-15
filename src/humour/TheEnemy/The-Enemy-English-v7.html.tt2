@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'the_enemy') %]
+[% long_stories.calc_common_top_elems(id => 'the_enemy') %]
 
 <p>
 <b>Written and Translated By:</b> Shlomi Fish<br />

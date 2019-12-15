@@ -454,7 +454,9 @@ my %_Stories_by_id = ( map { $_->id() => $_ } @_Stories );
 
 sub _get_story
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
+
+    my $id = $args->{id};
 
     return $_Stories_by_id{$id}
         || die "Unknown story '$id'";
@@ -557,14 +559,17 @@ sub _get_common_top_elems
 
 sub _get_story_entry_tags
 {
-    my ( $self, $id, $tag ) = @_;
+    my ( $self, $args ) = @_;
 
-    my $o = $self->_get_story($id);
+    my $id  = $args->{id};
+    my $tag = $args->{tag};
+
+    my $o = $self->_get_story($args);
 
     return [
         qq{<section class="story">\n},
         qq{<header>\n},
-        @{ $self->_get_logo_tags($id) },
+        @{ $self->_get_logo_tags($args) },
         sprintf(
             qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
@@ -574,7 +579,7 @@ sub _get_story_entry_tags
             $tag,
         ),
         qq{</header>\n},
-        @{ $self->_get_list_items_tags($id) },
+        @{ $self->_get_list_items_tags($args) },
         $o->entry_extra_html(),
         qq{</section>\n}
     ];
@@ -584,8 +589,15 @@ sub _get_all_stories_entries_tags
 {
     my ( $self, $tag ) = @_;
 
-    return [ map { @{ $self->_get_story_entry_tags( $_->id(), $tag ) } }
-            @_Stories ];
+    return [
+        map {
+            @{
+                $self->_get_story_entry_tags(
+                    { id => $_->id(), tag => $tag->{tag}, }
+                )
+            }
+        } @_Stories
+    ];
 }
 
 sub calc_abstract
@@ -645,9 +657,9 @@ sub calc_all_stories_entries
 
 sub render_all_stories_entries
 {
-    my ( $self, $tag ) = @_;
+    my ( $self, $args ) = @_;
 
-    print_utf8( @{ $self->_get_all_stories_entries_tags($tag) }, );
+    print_utf8( @{ $self->_get_all_stories_entries_tags($args) }, );
 
     return;
 }

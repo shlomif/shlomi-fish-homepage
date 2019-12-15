@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_logo(id => 'hhfg') %]
+[% long_stories.calc_logo(id => 'hhfg') %]
 
 <div class="side_toc">
 

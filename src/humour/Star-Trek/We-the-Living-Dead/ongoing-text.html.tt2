@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'we_the_living_dead') %]
+[% long_stories.calc_common_top_elems(id => 'we_the_living_dead') %]
 
 [% path_slurp("screenplay-xml/rendered-html/Star-Trek--We-the-Living-Dead.html") %]
 

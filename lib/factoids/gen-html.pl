@@ -642,7 +642,7 @@ at the NSA</i> - a screenplay</a>:
 
 <blockquote>
 
-[% long_stories__calc_abstract(id => 'summerschool_at_the_nsa') %]
+[% long_stories.calc_abstract(id => 'summerschool_at_the_nsa') %]
 
 </blockquote>
 

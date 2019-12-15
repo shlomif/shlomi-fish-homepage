@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'buffy_a_few_good_slayers') %]
+[% long_stories.calc_common_top_elems(id => 'buffy_a_few_good_slayers') %]
 
 [% WRAPPER screenplay_read_online  %]
 <ul>

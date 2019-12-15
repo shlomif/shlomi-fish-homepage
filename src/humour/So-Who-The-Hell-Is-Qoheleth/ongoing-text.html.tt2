@@ -5,9 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories__calc_common_top_elems(id => 'who_is_qoheleth') %]
-
-
+[% long_stories.calc_common_top_elems(id => 'who_is_qoheleth') %]
 
 <div class="who_is_qoheleth">
 [% path_slurp("screenplay-xml/rendered-html/So-Who-the-Hell-is-Qoheleth.html") %]

@@ -13,8 +13,6 @@ use HTML::Widgets::NavMenu::JQueryTreeView;
 use URI::Escape qw(uri_escape);
 use MyNavLinks;
 
-use Text::WrapAsUtf8 qw/ print_utf8 /;
-
 sub nav_data_render
 {
     my ( $class, $args ) = @_;
@@ -73,13 +71,6 @@ sub get_breadcrumbs_trail_unconditionally
         ( map { $render_leading_path_component->($_) } @$total_leading_path ) );
 }
 
-sub render_breadcrumbs_trail_unconditionally
-{
-    my ( $class, $args ) = @_;
-
-    print_utf8( $class->get_breadcrumbs_trail_unconditionally($args) );
-}
-
 sub get_html_head_nav_links
 {
     my ( $class, $args ) = @_;
@@ -103,15 +94,6 @@ sub get_html_head_nav_links
     return join '', @ret;
 }
 
-sub render_html_head_nav_links
-{
-    my ( $class, $args ) = @_;
-
-    print_utf8( $class->get_html_head_nav_links );
-
-    return;
-}
-
 sub calc_page_url
 {
     my ($class) = @_;
@@ -125,13 +107,6 @@ sub calc_esc_page_url
     my ($class) = @_;
 
     return escape_html( uri_escape( $class->calc_page_url() ) );
-}
-
-sub print_page_url
-{
-    my ($class) = @_;
-
-    print $class->calc_esc_page_url;
 }
 
 1;

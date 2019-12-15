@@ -6,8 +6,7 @@ use utf8;
 
 use Carp ();
 use MooX qw( late );
-use DateTime;
-use Text::WrapAsUtf8 qw/ print_utf8 /;
+use DateTime ();
 use Path::Tiny qw( path );
 
 has 'dir' => (

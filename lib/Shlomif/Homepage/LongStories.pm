@@ -8,7 +8,6 @@ use Moo;
 
 use Path::Tiny qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 use Shlomif::Homepage::LongStories::Story ();
 
@@ -607,29 +606,11 @@ sub calc_abstract
     return join( "", @{ $self->_get_abstract_tags($id) } );
 }
 
-sub render_abstract
-{
-    my ( $self, $id ) = @_;
-
-    print_utf8( @{ $self->_get_abstract_tags($id) } );
-
-    return;
-}
-
 sub calc_logo
 {
     my ( $self, $id ) = @_;
 
     return join( '', @{ $self->_get_logo_tags($id) } );
-}
-
-sub render_logo
-{
-    my ( $self, $id ) = @_;
-
-    print_utf8( @{ $self->_get_logo_tags($id) } );
-
-    return;
 }
 
 sub calc_common_top_elems
@@ -639,29 +620,11 @@ sub calc_common_top_elems
     return join( '', @{ $self->_get_common_top_elems($id) }, );
 }
 
-sub render_common_top_elems
-{
-    my ( $self, $id ) = @_;
-
-    print_utf8( @{ $self->_get_common_top_elems($id) }, );
-
-    return;
-}
-
 sub calc_all_stories_entries
 {
     my ( $self, $tag ) = @_;
 
     return join( '', @{ $self->_get_all_stories_entries_tags($tag) }, );
-}
-
-sub render_all_stories_entries
-{
-    my ( $self, $args ) = @_;
-
-    print_utf8( @{ $self->_get_all_stories_entries_tags($args) }, );
-
-    return;
 }
 
 sub render_make_fragment

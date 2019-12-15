@@ -31,7 +31,7 @@ Parallel::ForkManager::Segmented->new->run(
     {
         #         disable_fork => 1,
         items         => \@filenames,
-        nproc         => 1,
+        nproc         => 4,
         batch_size    => 100,
         process_batch => sub {
             my ($aref) = @_;

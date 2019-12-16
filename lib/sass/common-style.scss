@@ -1118,15 +1118,24 @@ img.rindolf {
 }
 
 .img_align {
-    display: table-row;
+    // display: table-row;
+    display: flex;
     > .text {
         @include img_align__cell;
-        width: auto;
+        order: 2;
+        // width: auto;
     }
     > img {
         @include img_align__cell;
         max-height: 300px;
-        width: 100%;
+        // width: 100%;
+    }
+    &:after {
+        content: "";
+        order: 1;
+        @if false {
+            flex-grow: 1;
+        }
     }
 }
 

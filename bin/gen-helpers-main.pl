@@ -251,10 +251,6 @@ $text =~
     or die "Cannot subt";
 $text =~ s#\.wml#.tt2#gms
     or die "Cannot subt";
-{
-    my $needle = 'cp -f $< $@';
-    $text =~ s#^\t\Q$needle\E$#\t\$(call COPY)#gms;
-}
 
 $r_fh->spew_utf8($text);
 push @tt, "humour/fortunes/all-in-one.uncompressed.html";

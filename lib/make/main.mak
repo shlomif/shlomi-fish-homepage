@@ -19,6 +19,7 @@ include lib/make/include.mak
 
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
+LATEMP_COPY = $(COPY)
 
 include lib/make/rules.mak
 include lib/factoids/deps.mak

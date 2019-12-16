@@ -4,20 +4,24 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="original_aphorisms"><a href="[% base_path %]humour.html">Collection of Humorous Quotes</a></h2>
+[% WRAPPER h2_section id = "original_aphorisms" title = "Collection of Humorous Quotes" href="${base_path}/humour.html"  %]
 
 <p>
 A collection of humorous or insightful quotes of my own (or of people I know).
 Regularly updated.
 </p>
 
-<h2 id="fortune_cookies"><a href="[% base_path %]humour/fortunes/">Fortune Cookies</a></h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "fortune_cookies" title = "Fortunes Cookies" href="${base_path}/humour/fortunes"  %]
 
 <p>
 Quotes I like or came up with, in an XML-based format that generates plaintext
 and HTML. Regularly updated with funny or insightful [% my_acronym( "key" => "IRC",) %] conversations,
 original quotes, and factoids and favourite quotes.
 </p>
+
+[% END %]
 
 [% WRAPPER h2_section id = "facts" title = "Collections of “Facts”" href="${base_path}humour/bits/facts/" sect_class="bordered" %]
 

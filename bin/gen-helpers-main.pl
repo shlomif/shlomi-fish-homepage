@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use HTML::Latemp::GenMakeHelpers v0.5.0;
+use HTML::Latemp::GenMakeHelpers v0.8.0;
 use Path::Tiny qw/ path /;
 
 package Shlomif::Homepage::GenMakeHelpers;
@@ -231,6 +231,21 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
             } @$filenames
         ];
     },
+    out_docs_ext          => '.tt2',
+    docs_build_command_cb => sub {
+        my ( $obj, $args ) = @_;
+        return sprintf(
+            '$(call %s%s_INCLUDE_TT2_RENDER)',
+            uc( $args->{host}->id ),
+            $args->{is_common} ? "_COMMON" : ""
+        );
+    },
+    images_dest_varname_cb => sub {
+        my ( $obj, $args ) = @_;
+        return sprintf( '%s%s_DEST',
+            uc( $args->{host}->id ),
+            ( $args->{is_common} ? '' : '_POST' ) );
+    },
 );
 
 eval { $generator->process_all(); };
@@ -240,19 +255,6 @@ if ( my $Err = $@ )
     print Data::Dumper->new( [$Err] )->Dump;
     die $Err;
 }
-my $r_fh = path("$DIR/rules.mak");
-my $text = $r_fh->slurp_utf8;
-my $HOST = qr/SRC/;
-$text =~
-s#^(\$\(($HOST)_DOCS_DEST\)[^\n]+\n\t)[^\n]+#${1}\$(call ${2}_INCLUDE_TT2_RENDER)#gms
-    or die "Cannot subt";
-$text =~
-    s#(($HOST)_IMAGES_DEST\b[^\n]*?)\$\(\2_DEST\)#${1}\$(${2}_POST_DEST)#gms
-    or die "Cannot subt";
-$text =~ s#\.wml#.tt2#gms
-    or die "Cannot subt";
-
-$r_fh->spew_utf8($text);
 push @tt, "humour/fortunes/all-in-one.uncompressed.html";
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 

@@ -1,4 +1,3 @@
-// @import "common-style";
 @import "mixins";
 @import "common-body";
 @import "bk2hp";
@@ -10,12 +9,8 @@
     img.faq_float {
         margin: 2em;
     }
-    #faux {
-        // grid-row: 2;
-    }
     footer {
         @include bottom_bg;
-        // grid-row: 3;
         clear: both;
         @if false {
             margin-top: 2em;
@@ -37,8 +32,6 @@ body.faq_indiv_entry {
     }
     #header {
         @include bottom_bg;
-        // grid-row: 1;
-        // height: 20px;
         @if false {
             padding-top: 0;
             padding-bottom: 1em;
@@ -58,18 +51,6 @@ body.faq_indiv_entry {
     img {
         max-height: 100px;
     }
-}
-
-#header {
-    // padding-top: $top_height;
-}
-
-@mixin wrap {
-    // word-break: break-all;
-
-    overflow-wrap: break-word;
-    // word-wrap: break-word;
-    word-wrap: normal;
 }
 
 #faux {

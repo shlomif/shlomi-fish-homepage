@@ -29,7 +29,7 @@ body.faq_indiv_entry {
     background-color: #e0ebef;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 50px 1fr minmax(300px, min-content);
+    grid-template-rows: 150px 1fr minmax(300px, min-content);
     @if false {
         height: 100vh;
         flex-flow: column nowrap;
@@ -54,6 +54,9 @@ body.faq_indiv_entry {
             padding-bottom: 1em;
             margin-bottom: 1em;
         }
+    }
+    img {
+        max-height: 100px;
     }
 }
 

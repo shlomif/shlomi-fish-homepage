@@ -7,9 +7,7 @@
 <script src="[% base_path %]js/jquery.expander.min.js"></script>
 <script src="[% base_path %]js/my-expander.js"></script>
 
-<section class="h2">
-
-<h2 id="intro">What you can find here</h2>
+[% WRAPPER h2_section id = "intro" title = "What you can find here" %]
 
 <p>
 You can read the humorous works that I have placed here, including:
@@ -52,10 +50,9 @@ They are usually under
 licences.
 </p>
 
-</section>
+[% END %]
 
-<section>
-<h2 id="large-scale"><a href="stories/">Large-scale Creations</a></h2>
+[% WRAPPER h2_section id = "large-scale" title = "Large-scale Creations" href = "stories/" %]
 
 <div class="sub_section">
 
@@ -65,21 +62,22 @@ licences.
 
 </div>
 
-</section>
+[% END %]
 
-<section>
-
-<h2 id="quotes"><a href="aphorisms/">Aphorisms &amp; Quotes</a></h2>
+[% WRAPPER h2_section id = "quotes" title = "Aphorisms &amp; Quotes" href = "aphorisms/" %]
 
 <div class="sub_section">
-<h3 id="quotes-collection"><a href="../humour.html">Collection of My Quotes and Aphorisms</a></h3>
+
+[% WRAPPER h3_section id = "quotes-collection" title = "Collection of My Quotes and Aphorisms" href = "../humour.html" %]
 
 <p>
 A collection of funny or insightful bits and pieces I wrote and collected
 throughout the years.
 </p>
 
-<h3 id="fortunes"><a href="[% base_path %]humour/fortunes/">Fortune Cookies Collection</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "fortunes" title = "Fortune Cookies Collection" href = "${base_path}humour/fortunes/" %]
 
 <p>
 A collection of files for the UNIX fortune program (that can also be read with
@@ -87,8 +85,9 @@ a naked eye) that consist of several collections of funny or enlightening
 quotes.
 </p>
 
-<h3 id="factoids"><a href="[% base_path %]humour/bits/facts/">Factoids about
-people and things (Chuck Norris/etc.)</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "factoids" title = "Factoids about people and things (Chuck Norris/etc.)" href = "${base_path}humour/bits/facts/" %]
 
 <p>
 My own contribution to the factoids meme, with facts about
@@ -103,13 +102,13 @@ the Vampire Slayer</i>), <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</
 and more.
 </p>
 
+[% END %]
+
 </div>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="small-scale"><a href="[% base_path %]humour/bits/">Small-scale Creations</a></h2>
+[% WRAPPER h2_section id = "small-scale" title = "Small-scale Creations" href = "${base_path}humour/bits/" %]
 
 <div class="sub_section">
 Small scale creations - often just a pageful or two.
@@ -119,11 +118,9 @@ Than One Way to Do It”</a> to other programming languages,
 spam E-mail</a>, and lots of other stuff.
 </div>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="by-others"><a href="by-others/">By Others</a></h2>
+[% WRAPPER h2_section id = "by-others" title = "By Others" href = "by-others/" %]
 
 <div class="sub_section">
 
@@ -134,11 +131,9 @@ Humorous creations by other people that are kept here for posterity.
 
 </div>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="recommendations"><a href="recommendations/">Media Recommendations</a></h2>
+[% WRAPPER h2_section id = "recommendations" title = "Media Recommendations" href = "recommendations/" %]
 
 <div class="sub_section">
 
@@ -148,7 +143,7 @@ Media Recommendations of films, fiction books, etc.
 
 </div>
 
-</section>
+[% END %]
 
 <script>
 shf_expand("div.collapse", 1200);

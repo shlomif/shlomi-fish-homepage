@@ -42,7 +42,7 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 </head>
 <body class="faq_indiv_entry">
 <div class="header" id="header">
-<a href="../../"><img src="../../images/evilphish-svg.min.svg"
+<a href="../../"><img src="../../images/evilphish.png"
 alt="EvilPHish site logo"/></a>
 <div class="leading_path"><a href="../../">Shlomi Fish’s
 Homepage</a> → <a href="../" title=

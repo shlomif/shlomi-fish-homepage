@@ -32,19 +32,19 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <meta charset="utf-8" />
 <meta name="description" content=
 "Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
-<link rel="stylesheet" href="../../faq-indiv.css" media="screen" title=
+<link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen" title=
 "Normal" />
-<link rel="stylesheet" href="../../print.css" media="print" />
-<link rel="shortcut icon" href="../../favicon.ico" type=
+<link rel="stylesheet" href="{base_path}print.css" media="print" />
+<link rel="shortcut icon" href="{base_path}favicon.ico" type=
 "image/x-icon" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<script src="../../js/main_all.js"></script>
+<script src="{base_path}js/main_all.js"></script>
 </head>
 <body class="faq_indiv_entry">
 <div class="header" id="header">
-<a href="../../"><img src="../../images/evilphish.png"
+<a href="{base_path}"><img src="{base_path}images/evilphish.png"
 alt="EvilPHish site logo"/></a>
-<div class="leading_path"><a href="../../">Shlomi Fish’s
+<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
 Homepage</a> → <a href="../" title=
 "Information about this Site">Meta Info</a> → <a href="./" title=
 "Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
@@ -58,21 +58,21 @@ Homepage</a> → <a href="../" title=
 <footer>
 <div class="foot_left">
 <ul class="bt_nav">
-<li><a href="../../">Home</a></li>
-<li><a href="../../me/">About</a></li>
-<li><a href="../../me/contact-me/">Contact Us</a></li>
-<li><a href="../../meta/privacy-policy/">Privacy Policy</a></li>
-<li><a href="../../meta/anti-spam-policy/">Anti-Spam
+<li><a href="{base_path}">Home</a></li>
+<li><a href="{base_path}me/">About</a></li>
+<li><a href="{base_path}me/contact-me/">Contact Us</a></li>
+<li><a href="{base_path}meta/privacy-policy/">Privacy Policy</a></li>
+<li><a href="{base_path}meta/anti-spam-policy/">Anti-Spam
 Policy</a></li>
-<li><a href="../../meta/FAQ/" title=
+<li><a href="{base_path}meta/FAQ/" title=
 "Frequently asked questions list">FAQ</a></li>
-<li><a href="../../me/blogs/">RSS/Atom Feeds</a></li>
+<li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
 </ul>
 <p>Written, designed, and maintained by Shlomi Fish, <a href=
 "mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
 </div>
-<a href="../../"><img src="../../images/bk2hp-v2.min.svg" class=
-"bk2hp" alt="Back to my Homepage" /></a></footer>
+<a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
+"bk2hp" alt="Back to my Homepage"/></a></footer>
 </body>
 </html>'''
 
@@ -108,8 +108,9 @@ class FaqSplitter:
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])
             formats = {
-                'title': header_esc,
+                'base_path': "../../",
                 'body': etree.tostring(list_elem).decode('utf-8'),
+                'title': header_esc,
             }
             with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
                 f.write(SECTION_FORMAT.format(**formats))

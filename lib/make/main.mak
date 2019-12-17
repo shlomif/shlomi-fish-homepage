@@ -27,6 +27,8 @@ include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
 include lib/make/long_stories.mak
 
+SRC_COMMON_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(COMMON_DIRS))
+
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
 SRC_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(SRC_DIRS))
@@ -94,7 +96,7 @@ $(SRC_POST_DIRS_DEST): %:
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
-ALL_DIRS := $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST)
+ALL_DIRS := $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(SRC_COMMON_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST)
 
 bulk-make-dirs:
 	@mkdir -p $(ALL_DIRS)

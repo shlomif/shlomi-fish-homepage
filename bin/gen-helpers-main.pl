@@ -242,9 +242,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     },
     images_dest_varname_cb => sub {
         my ( $obj, $args ) = @_;
-        return sprintf( '%s%s_DEST',
-            uc( $args->{host}->id ),
-            ( $args->{is_common} ? '' : '_POST' ) );
+        return sprintf( '%s%s_DEST', uc( $args->{host}->id ), '_POST', );
     },
 );
 

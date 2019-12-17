@@ -41,15 +41,17 @@ body.faq_indiv_entry {
         grid-auto-flow: column;
         justify-content: left;
         align-items: end;
+
+        img {
+            margin: 0.5em;
+            max-height: 100px;
+        }
     }
     .leading_path {
         @if false {
             padding-bottom: 1em;
             margin-bottom: 1em;
         }
-    }
-    img {
-        max-height: 100px;
     }
 }
 

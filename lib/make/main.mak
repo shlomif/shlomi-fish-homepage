@@ -287,11 +287,11 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(PERL) bin/screenplay-text-to-xml.pl -o $@ $<
 
 POST_DEST_HUMOUR_SELINA := $(POST_DEST_HUMOUR)/Selina-Mandrake
-DEST_INTERVIEWS := $(SRC_DEST)/open-source/interviews
+POST_DEST_INTERVIEWS := $(SRC_POST_DEST)/open-source/interviews
 
-DEST_SPLAY_HHGG_STTNG := $(DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
+POST_DEST_SPLAY_HHGG_STTNG := $(POST_DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
-SCREENPLAY_SOURCES_ON_DEST = $(DEST_INTERVIEWS)/ae-interview.txt $(DEST_INTERVIEWS)/sussman-interview.txt $(DEST_SPLAY_HHGG_STTNG)
+SCREENPLAY_SOURCES_ON_POST_DEST = $(POST_DEST_INTERVIEWS)/ae-interview.txt $(POST_DEST_INTERVIEWS)/sussman-interview.txt $(POST_DEST_SPLAY_HHGG_STTNG)
 
 HHFG_DIR = $(DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
@@ -521,7 +521,7 @@ HHFG_V2_IMAGES_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/,
 docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS) $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css
 
 $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css: lib/docbook/5/indiv-nodes/human-hacking-field-guide-v2--english/docbook.css
-	mkdir -p "$$(dirname "$@")"
+	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)
 	cp -f $< $@
 
 $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/index.xhtml
@@ -725,7 +725,7 @@ pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 
 hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_POST_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
 
 $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(DEST_HTML_TUT_BASE)

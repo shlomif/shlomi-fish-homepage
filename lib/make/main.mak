@@ -744,13 +744,13 @@ update_html_tut_hg:
 
 include lib/make/deps.mak
 
-MATHJAX_DEST_DIR = $(SRC_DEST)/js/MathJax
+MATHJAX_DEST_DIR = $(SRC_POST_DEST)/js/MathJax
 MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
 $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	rsync -r --exclude='**/.git/**' lib/js/MathJax/ $(SRC_DEST)/js/MathJax/
+	rsync -r --exclude='**/.git/**' lib/js/MathJax/ $(MATHJAX_DEST_DIR)/
 	rm -fr $(MATHJAX_DEST_DIR)/.git
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
 	rm -fr $(MATHJAX_DEST_DIR)/test

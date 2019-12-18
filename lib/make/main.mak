@@ -96,13 +96,6 @@ $(SRC_POST_DIRS_DEST): %:
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
-ALL_DIRS := $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(SRC_COMMON_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST)
-
-bulk-make-dirs:
-	@mkdir -p $(ALL_DIRS)
-
-make-dirs: $(ALL_DIRS)
-
 DEST_HUMOUR := $(SRC_DEST)/humour
 POST_DEST_HUMOUR := $(SRC_POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
@@ -533,6 +526,13 @@ DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 include lib/make/docbook/sf-docbook-common.mak
 include lib/make/docbook/sf-fictions.mak
+
+ALL_DIRS := $(SRC_DIRS_DEST) $(SRC_COMMON_DIRS_DEST) $(SRC_COMMON_POST_DIRS_DEST) $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS) $(SRC_POST_DIRS_DEST) $(DOCBOOK5_INDIVIDUAL_XHTML__POST_DEST__DIRS)
+
+bulk-make-dirs:
+	@mkdir -p $(ALL_DIRS)
+
+make-dirs: $(ALL_DIRS)
 
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml

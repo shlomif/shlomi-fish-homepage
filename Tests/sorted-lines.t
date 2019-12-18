@@ -8,5 +8,10 @@ use Test::File::IsSorted ();
 
 # TEST
 Test::File::IsSorted::are_sorted(
-    [ ".gitignore", "lib/Shlomif/Homepage/captioned-images.txt" ],
-    "Files are sorted" );
+    [
+        ".gitignore",
+        "lib/make/copies-source.mak",
+        "lib/Shlomif/Homepage/captioned-images.txt"
+    ],
+    "Files are sorted"
+);

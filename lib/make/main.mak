@@ -106,8 +106,9 @@ make-dirs: $(ALL_DIRS)
 DEST_HUMOUR := $(SRC_DEST)/humour
 POST_DEST_HUMOUR := $(SRC_POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
-all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
-all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
+POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
+all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
+all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 SRC_DEST_SHOW_CGI = $(SRC_DEST_FORTUNES_DIR)/show.cgi
 SRC_POST_DEST_SHOW_CGI = $(SRC_POST_DEST_FORTUNES_DIR)/show.cgi
@@ -293,12 +294,12 @@ POST_DEST_SPLAY_HHGG_STTNG := $(POST_DEST_HUMOUR)/by-others/hitchhiker-guide-to-
 
 SCREENPLAY_SOURCES_ON_POST_DEST = $(POST_DEST_INTERVIEWS)/ae-interview.txt $(POST_DEST_INTERVIEWS)/sussman-interview.txt $(POST_DEST_SPLAY_HHGG_STTNG)
 
-HHFG_DIR = $(DEST_HUMOUR)/human-hacking
+HHFG_DIR = $(POST_DEST_HUMOUR)/human-hacking
 HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
-HHFG_HEB_V2_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
-HHFG_HEB_V2_XSLT_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
+HHFG_HEB_V2_POST_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
+HHFG_HEB_V2_XSLT_POST_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
 
-FICTION_TEXT_SOURCES_ON_DEST = $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_DEST) $(HHFG_HEB_V2_XSLT_DEST) $(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
+FICTION_TEXT_SOURCES_ON_POST_DEST = $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_POST_DEST) $(HHFG_HEB_V2_XSLT_POST_DEST) $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
 translate_fiction_text_to_xml = $(PERL) bin/fiction-text-to-xml.pl -o $@ $<
 
@@ -725,7 +726,7 @@ pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 
 hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
-screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_POST_DEST) $(FICTION_TEXT_SOURCES_ON_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
+screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_POST_DEST) $(FICTION_TEXT_SOURCES_ON_POST_DEST) $(SCREENPLAY_XML_FOR_OOO_XHTMLS) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
 
 $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(DEST_HTML_TUT_BASE)

@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 3;
+use Test::More tests => 5;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
@@ -30,6 +30,22 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
         ),
         ">", 1024,
         "sqlite database is there"
+    );
+
+    # TEST
+    ok(
+        scalar(
+            -f "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.db-postproc.xslt"
+        ),
+        "hhfg xslt exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            -f "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.txt"
+        ),
+        "hhfg hebrew txt exists",
     );
 }
 

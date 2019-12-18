@@ -104,7 +104,7 @@ sub generate
                     base      => "human-hacking-field-guide-v2--hebrew",
                     type      => "fiction-text",
                     suf       => "HEB",
-                    dest_expr => q#$(HHFG_HEB_V2_DEST)#,
+                    dest_expr => q#$(HHFG_HEB_V2_POST_DEST)#,
                 },
             ],
         },
@@ -118,14 +118,14 @@ sub generate
                     type => "fiction-text",
                     suf  => "ENG",
                     dest_expr =>
-                        q#$(DEST_POPE)/The-Pope-Died-on-Sunday-english.txt#,
+q#$(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt#,
                 },
                 {
                     base => "The-Pope-Died-on-Sunday-hebrew",
                     type => "fiction-text",
                     suf  => "HEB",
                     dest_expr =>
-                        q#$(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt#,
+                        q#$(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt#,
                 },
             ],
         },

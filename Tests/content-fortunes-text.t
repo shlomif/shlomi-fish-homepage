@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 5;
+use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
@@ -46,6 +46,26 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
             -f "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.txt"
         ),
         "hhfg hebrew txt exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            (
+                -s "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide/background-image.png"
+            ) > 40
+        ),
+        "hhfg png exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            (
+                -s "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-v2/docbook.css"
+            ) > 20
+        ),
+        "hhfg-v2 docbook.css exists",
     );
 }
 

@@ -1,5 +1,6 @@
 $(ALL_HTACCESSES): $(SRC_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
 $(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
+$(DEST_FIERY_Q_PNG): lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
 $(DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
 $(DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
@@ -23,8 +24,7 @@ $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(SRC_DEST)/%-pl.txt: $(SRC_SRC_DI
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 $(SRC_DEST_FORTUNES_many_files): $(SRC_DEST)/%: $(SRC_SRC_DIR)/%
-$(SRC_SRC_DIR)/humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png: lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
-$(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
+$(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)
 $(TERM_LIBERATION_IMAGES__DEST): $(TERM_LIBERATION_IMAGES__DEST_PREFIX)/%: $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/%
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js

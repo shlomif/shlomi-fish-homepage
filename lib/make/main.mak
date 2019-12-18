@@ -104,6 +104,7 @@ bulk-make-dirs:
 make-dirs: $(ALL_DIRS)
 
 DEST_HUMOUR := $(SRC_DEST)/humour
+POST_DEST_HUMOUR := $(SRC_POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
@@ -584,7 +585,6 @@ $(DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 	$(OPTIPNG) $@
 
 DEST_WINDOWS_UPDATE_SNAIL_ICON = $(DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
-DEST_FIERY_Q_PNG = $(DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 
 all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON) $(DEST_FIERY_Q_PNG)
 
@@ -901,7 +901,7 @@ Shlomif_cutethulhu_DEST = $(SRC_POST_DEST)/images/shlomif-cutethulhu-small.webp
 
 DnD_lances_cartoon_DEST = $(SRC_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
-SRC_POST_DEST__HUMOUR_IMAGES := $(SRC_POST_DEST)/humour/images
+SRC_POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
 
 MY_RPF_DEST_DIR = $(SRC_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
@@ -1077,6 +1077,7 @@ min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps)
 TEST_TARGETS = Tests/*.{py,t}
 
 SRC_DEST_FORTUNES_many_files := $(SRC_DEST_FORTUNES) $(SRC_DEST_FORTUNES_SQLITE_DB)
+DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak

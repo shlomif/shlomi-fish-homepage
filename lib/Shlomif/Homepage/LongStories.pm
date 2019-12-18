@@ -627,6 +627,16 @@ sub calc_all_stories_entries
     return join( '', @{ $self->_get_all_stories_entries_tags($tag) }, );
 }
 
+my %png_stories = (
+    map { $_ => 1 }
+        qw#
+        muppets_show_tni
+        selina_mandrake
+        summerschool_at_the_nsa
+        we_the_living_dead
+        #
+);
+
 sub render_make_fragment
 {
     my @var_decls;
@@ -645,7 +655,7 @@ sub render_make_fragment
         {
             if (1)    # if ( $uc_id !~ /WE_THE_LIVING_DEAD/ )
             {
-                push @var_decls, "$m_id := \$(SRC_DEST)/$logo_src\n";
+                push @var_decls, "$m_id := \$(SRC_POST_DEST)/$logo_src\n";
             }
         }
         if ( $logo_svg ne '//$SKIP' )
@@ -658,7 +668,7 @@ sub render_make_fragment
         }
         else
         {
-            if (1)
+            if ( not exists $png_stories{ $s->id } )
             {
                 push @rules,
                     "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n\n"

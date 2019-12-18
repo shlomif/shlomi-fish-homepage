@@ -573,29 +573,29 @@ define ASCIIDOCTOR_TO_DOCBOOK5
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 endef
 
-PRINTER_ICON_PNG = $(SRC_DEST)/images/printer_icon.png
-TWITTER_ICON_20_PNG = $(SRC_DEST)/images/twitter-bird-light-bgs-20.png
-HHFG_SMALL_BANNER_AD_PNG = $(DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
+PRINTER_ICON_PNG = $(SRC_POST_DEST)/images/printer_icon.png
+TWITTER_ICON_20_PNG = $(SRC_POST_DEST)/images/twitter-bird-light-bgs-20.png
+HHFG_SMALL_BANNER_AD_PNG = $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
-BK2HP_NEW_PNG = $(SRC_DEST)/images/bk2hp.png
+BK2HP_NEW_PNG = $(SRC_POST_DEST)/images/bk2hp.png
 
-DEST_HTML_6_LOGO_PNG = $(DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
+POST_DEST_HTML_6_LOGO_PNG = $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	gm convert -matte -bordercolor none -border 5 $< $@
 	$(OPTIPNG) $@
 
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(DEST_HTML_6_LOGO_PNG)
+art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(POST_DEST_HTML_6_LOGO_PNG)
 
-$(DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
+$(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
-DEST_WINDOWS_UPDATE_SNAIL_ICON = $(DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
+POST_DEST_WINDOWS_UPDATE_SNAIL_ICON = $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
 
-all: $(DEST_WINDOWS_UPDATE_SNAIL_ICON) $(DEST_FIERY_Q_PNG)
+all: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
 
-$(DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
+$(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
 	inkscape --export-width=200 --export-png="$@" $<
 	$(OPTIPNG) $@
 

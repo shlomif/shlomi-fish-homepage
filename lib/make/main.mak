@@ -1082,7 +1082,7 @@ DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fier
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
 
-screenplay_targets: $(SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS)
+screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets
 

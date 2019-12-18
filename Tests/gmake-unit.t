@@ -20,6 +20,13 @@ sub gmake_test
         qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 
+sub post_dest_test
+{
+    my ( $var, $word, $blurb ) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    return gmake_test( $var, "$SRC_POST_DEST/$word", $blurb );
+}
+
 sub dest_test
 {
     my ( $var, $word, $blurb ) = @_;
@@ -33,8 +40,8 @@ sub dest_test
         "DOCBOOK5_EPUB_DIR" );
 
     # TEST
-    dest_test(
-        'SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS',
+    post_dest_test(
+        'SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS',
 'humour/So-Who-The-Hell-Is-Qoheleth/So-Who-The-Hell-Is-Qoheleth.screenplay-text.txt',
         "SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS - Qoheleth",
     );
@@ -55,13 +62,10 @@ sub dest_test
         "found a file" );
 
     # TEST
-    gmake_test( 'SRC_POST_DIRS_DEST', "$SRC_POST_DEST/art/original-graphics",
+    post_dest_test( 'SRC_POST_DIRS_DEST', "art/original-graphics",
         "found a dir" );
 
     # TEST
-    gmake_test(
-        'SRC_SVGS__svgz',
-        "$SRC_POST_DEST/images/bk2hp-v2.svgz",
-        "bk2hp-v2 svg is present."
-    );
+    post_dest_test( 'SRC_SVGS__svgz', "images/bk2hp-v2.svgz",
+        "bk2hp-v2 svg is present." );
 }

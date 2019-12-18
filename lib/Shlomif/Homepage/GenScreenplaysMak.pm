@@ -63,7 +63,7 @@ EOF
         if ( defined($suburl) )
         {
             my $target_bn = $doc->{txt_target_bn} // "$doc_base.txt";
-            my $target    = "\$(DEST_HUMOUR)/$suburl/$target_bn";
+            my $target    = "\$(POST_DEST_HUMOUR)/$suburl/$target_bn";
             $copy_screenplay_mak .=
 qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
             push @copy_screenplay_mak__targets, $target;
@@ -118,7 +118,7 @@ EOF
     path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
         ( map { $_->{copy_screenplay_mak} } @records ),
         (
-            "SCREENPLAY_SOURCES_ON_DEST__EXTRA_TARGETS = ",
+            "SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS = ",
             join(
                 " ",
                 (

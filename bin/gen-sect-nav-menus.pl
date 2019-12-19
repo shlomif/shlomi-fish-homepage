@@ -6,23 +6,15 @@ use warnings;
 use lib './lib';
 
 use Carp::Always;
-use File::Basename qw/ dirname /;
-use Path::Tiny qw/ path /;
-use NavSectMenuRender ();
-use NavDataRender     ();
-use MyNavData         ();
-use MyNavData::Hosts  ();
-use URI::Escape qw(uri_escape);
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Parallel::ForkManager::Segmented ();
-
-sub get_page_path
-{
-    my $filename = "<get-var filename />";
-    $filename =~ s{index\.x?html$}{};
-
-    return $filename;
-}
+use HTML::Widgets::NavMenu::JQueryTreeView ();
+use MyNavData                              ();
+use MyNavData::Hosts                       ();
+use NavDataRender                          ();
+use NavSectMenuRender                      ();
+use Parallel::ForkManager::Segmented       ();
+use Path::Tiny qw/ path /;
+use URI::Escape qw(uri_escape);
 
 sub get_root
 {
@@ -56,7 +48,8 @@ sub _out
 my $hosts = MyNavData::Hosts::get_hosts();
 foreach my $host (qw(t2 vipe))
 {
-    my $hostp = "lib/cache/combined/$host";
+    my $host_base_url = $hosts->{$host}->{base_url};
+    my $hostp         = "lib/cache/combined/$host";
 
     Parallel::ForkManager::Segmented->new->run(
         {
@@ -168,11 +161,7 @@ foreach my $host (qw(t2 vipe))
                     'page_url',
                     sub {
                         return \(
-                            escape_html(
-                                uri_escape(
-                                    $hosts->{$host}->{base_url} . $url
-                                )
-                            )
+                            escape_html( uri_escape( $host_base_url . $url ) )
                         );
                     }
                 );

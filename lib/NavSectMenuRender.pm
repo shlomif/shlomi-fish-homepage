@@ -6,7 +6,6 @@ use warnings;
 use utf8;
 
 use MyNavData;
-use HTML::Widgets::NavMenu::JQueryTreeView;
 
 use Shlomif::Homepage::SectionMenu::Manager;
 

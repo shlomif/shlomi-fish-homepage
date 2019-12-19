@@ -788,7 +788,7 @@ svg_nav_images: $(SVG_NAV_IMAGES)
 $(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
 	$(PERL) $< $(SRC_DEST_IMAGES_DIR)
 
-NAV_DATA_AS_JSON = $(SRC_DEST)/_data/nav.json
+NAV_DATA_AS_JSON = $(SRC_POST_DEST)/_data/nav.json
 
 generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 

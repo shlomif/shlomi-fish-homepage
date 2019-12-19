@@ -8,7 +8,7 @@ use Carp::Always;
 use Getopt::Long qw(GetOptions);
 use Path::Tiny qw/ path /;
 
-use Shlomif::Homepage::NavData::JSON;
+use Shlomif::Homepage::NavData::JSON ();
 
 my $output_fn;
 

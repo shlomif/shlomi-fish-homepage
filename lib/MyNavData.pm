@@ -296,11 +296,6 @@ my %reduced_sub_trees = (
 "Various Essays and Articles about Technology and Philosophy in General",
         subs => [
             {
-                text  => "Index to Essays",
-                url   => "philosophy/Index/",
-                title => "Index to Essays and Articles I wrote.",
-            },
-            {
                 text => "General Philosophy",
                 url  => "philosophy/philosophy/",
                 expand =>
@@ -348,6 +343,11 @@ my %reduced_sub_trees = (
                 title => "Essays about Politics and "
                     . "Philosophical Politics",
                 expand => { re => "^philosophy/politics/", },
+            },
+            {
+                text  => "Index to Essays",
+                url   => "philosophy/Index/",
+                title => "Index to Essays and Articles I wrote.",
             },
         ],
     },

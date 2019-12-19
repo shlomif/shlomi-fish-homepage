@@ -17,11 +17,6 @@ my $essays_tree_contents = {
             title => "Nav Menu for Shlomi Fish’s Essays",
         },
         {
-            text  => "Index to Essays",
-            url   => "philosophy/Index/",
-            title => "Index to Essays and Articles I wrote.",
-        },
-        {
             text  => "Book Reviews",
             url   => "philosophy/books-recommends/",
             title => "Reviews of Books I read.",
@@ -560,6 +555,11 @@ my $essays_tree_contents = {
 "An Integrated Offline and Online Documentation Framework",
                 },
             ],
+        },
+        {
+            text  => "Index to Essays",
+            url   => "philosophy/Index/",
+            title => "Index to Essays and Articles I wrote.",
         },
         {
             text => "By Others",

@@ -759,7 +759,7 @@ $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 
 SCRIPTS_WITH_OFFENDING_EXTENSIONS = MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(SRC_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
+SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(SRC_POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 

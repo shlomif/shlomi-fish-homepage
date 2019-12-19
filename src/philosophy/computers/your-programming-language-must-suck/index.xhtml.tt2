@@ -7,7 +7,7 @@
 [% WRAPPER h2_section id = "text"  title = "The text"  %]
 
 <p>
-All <a href="https://en.wikipedia.org/wiki/Programming_language">languages</a>
+All <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>
 of the world suck. If you require people to declare variables
 (like in Pascal, C, <a
     href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
@@ -18,7 +18,8 @@ variable declarations, then you get various weird side-effects of the implicit
 scoping. If you use curly braces for scoping, then you'll have to type more and
 there's more clutter. With indentation-based scoping (like in Python), you'll
 find it hard to introduce multiple-expression <a
-    href="http://en.wikipedia.org/wiki/Lambda_calculus#First-class_functions">lambdas</a> and <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">some other problems</a>.
+href="http://en.wikipedia.org/wiki/Lambda_calculus#First-class_functions">lambdas</a> and will
+have <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">some other problems</a>.
 </p>
 
 <p>
@@ -42,11 +43,13 @@ they are often useful together.
 suffer from many subtle errors&#160;; Statically typed languages (like Haskell)
 are less expressive and it seems that about one third of the language design
 papers published on <a href="http://lambda-the-ultimate.org/">Lambda the
-    Ultimate</a> are about various funky extensions to the Haskell type system
+Ultimate</a> are about various funky extensions to the Haskell type system
 to allow for better expressiveness.
 </p>
 
-<p>Purely functional languages have no
+<p> <a
+href="https://en.wikipedia.org/wiki/Purely_functional_programming">Purely
+functional</a> languages have no
 assignment and most people find them harder, in part because the world around
 us has a lot of state, and they also need to do funky compiler tricks to make
 you feel like you don't need assignment. Non-functional languages have
@@ -63,12 +66,13 @@ has a dedicated <a href="https://en.wikipedia.org/wiki/Regular_expression">regul
 parser. PHP and Java use strings for them, and require weird escaping and
 backslashing rules to interpolate the sub-regexes inside them. And if you
 incorporate a first-order syntax for regular expressions, then people will want
-similar first-order syntaxes for <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, for XML (like some recent versions of
-Visual Basic .NET have), and for all other grammars you may need to embed.</p>
+similar first-order syntaxes for <a
+href="https://en.wikipedia.org/wiki/XPath">XPath</a>, for XML (like some recent
+versions of Visual Basic .NET have), and for all other grammars you may need to embed.</p>
 
 <p>Finally, many people absolutely hate all the clutter created by the leading
 <a
-    href="http://en.wikipedia.org/wiki/Sigil_%28computer_programming%29">sigils</a>
+href="http://en.wikipedia.org/wiki/Sigil_%28computer_programming%29">sigils</a>
 of Perl 5 (the <code>$</code>, <code>@</code>, etc.), and similar languages, but they allow for much
 better backward compatibility, facilitate the so-called "interpolation" (=
 embedding inside strings), and also give some important visual cues when
@@ -84,13 +88,13 @@ exclude, etc. However, many of these design decisions are not 100% advantages
 or 100% disadvantages, but in fact trade-offs, and many people will question
 them and be unhappy. You can never please all the people. So make a design
 decision, and stick with it, and realise that <b>your programming language must
-    suck</b>, but that it may suck less for some tasks, or for some people.</p>
+suck</b>, but that it may suck less for some tasks, or for some people.</p>
 
 <p>Joel on Software <a
-    href="http://www.joelonsoftware.com/items/2003/10/15.html">refers</a> to
+href="http://www.joelonsoftware.com/items/2003/10/15.html">refers</a> to
 the book <a
-    href="http://www.amazon.com/exec/obidos/ASIN/1400040507/joelonsoftware/ref=nosim"><i>Small
-        Things Considered: Why There Is No Perfect Design</i></a>, which I have
+href="http://www.amazon.com/exec/obidos/ASIN/1400040507/joelonsoftware/ref=nosim"><i>Small
+Things Considered: Why There Is No Perfect Design</i></a>, which I have
 not read, but I've concluded it holds for programming language design.
 Moreover, even when writing code, we run into many trade-offs. For example, if
 our methods or functions are very short, then they are easier to over-ride and

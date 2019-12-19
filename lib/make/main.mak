@@ -102,12 +102,11 @@ POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-SRC_DEST_SHOW_CGI = $(SRC_DEST_FORTUNES_DIR)/show.cgi
 SRC_POST_DEST_SHOW_CGI = $(SRC_POST_DEST_FORTUNES_DIR)/show.cgi
 SRC_SRC_FORTUNE_SHOW_SCRIPT = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 SRC_SRC_FORTUNE_SHOW_PY = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
 SRC_SRC_BOTTLE = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
-SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(SRC_DEST_FORTUNES_DIR)/show-cgi.txt
+SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(SRC_POST_DEST_FORTUNES_DIR)/show-cgi.txt
 SRC_DEST_FORTUNE_BOTTLE = $(SRC_DEST_FORTUNES_DIR)/bottle.py
 
 htacc = $(addsuffix /.htaccess,$(1))
@@ -127,14 +126,11 @@ SRC_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(SRC_DEST_FORTUNES_DIR)/%
 
 chmod_copy = $(call COPY) ; chmod +x $@
 
-$(SRC_DEST_SHOW_CGI): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call chmod_copy)
-
 $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-$(SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call chmod_copy)
+$(SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
+	$(call COPY)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 
@@ -456,7 +452,7 @@ $(FORTS_EPUB_SRC): fortunes-target
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(SRC_DEST_SHOW_CGI) $(SRC_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
 
 $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \

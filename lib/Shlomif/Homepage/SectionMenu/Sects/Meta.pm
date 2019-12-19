@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use MyNavData;
+use MyNavData::Hosts ();
 
 my $meta_tree_contents = {
     host        => "t2",
@@ -78,7 +78,7 @@ my $meta_tree_contents = {
 sub get_params
 {
     return (
-        hosts         => MyNavData::get_hosts(),
+        hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $meta_tree_contents,
     );
 }

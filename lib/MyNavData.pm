@@ -1,27 +1,14 @@
 package MyNavData;
 
+use autodie;
 use strict;
 use warnings;
-
 use utf8;
 
-use Carp;
+use Carp ();
 
-use Shlomif::Homepage::SectionMenu;
-
-my $hosts = {
-    t2 => {
-        base_url => "http://www.shlomifish.org/",
-    },
-    vipe => {
-        base_url => "http://www.shlomifish.org/Vipe/",
-    },
-};
-
-sub get_hosts
-{
-    return $hosts;
-}
+use Shlomif::Homepage::SectionMenu ();
+use MyNavData::Hosts               ();
 
 my @personal_expand = ( expand => { bool => 1, capt => 0, }, );
 my @humour_expand =
@@ -612,7 +599,7 @@ sub generic_get_params
     };
 
     return (
-        hosts         => $hosts,
+        hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $tree_contents,
     );
 }

@@ -7,8 +7,9 @@ use utf8;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
-use MyNavData;
-use HTML::Widgets::NavMenu::JQueryTreeView;
+use MyNavData                              ();
+use MyNavData::Hosts                       ();
+use HTML::Widgets::NavMenu::JQueryTreeView ();
 
 use URI::Escape qw(uri_escape);
 use MyNavLinks;
@@ -94,11 +95,13 @@ sub get_html_head_nav_links
     return join '', @ret;
 }
 
+my $hosts = MyNavData::Hosts::get_hosts();
+
 sub calc_page_url
 {
     my ($class) = @_;
 
-    return MyNavData::get_hosts()->{ $::nav_bar->current_host() }->{'base_url'}
+    return $hosts->{ $::nav_bar->current_host() }->{'base_url'}
         . $::nav_bar->path_info();
 }
 

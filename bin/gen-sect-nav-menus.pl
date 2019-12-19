@@ -11,6 +11,7 @@ use Path::Tiny qw/ path /;
 use NavSectMenuRender ();
 use NavDataRender     ();
 use MyNavData         ();
+use MyNavData::Hosts  ();
 use URI::Escape qw(uri_escape);
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use Parallel::ForkManager::Segmented ();
@@ -52,7 +53,7 @@ sub _out
 
 # At least temporarily disable Parallel::ForkManager because it causes
 # the main process to exit before all the work is done.
-
+my $hosts = MyNavData::Hosts::get_hosts();
 foreach my $host (qw(t2 vipe))
 {
     my $hostp = "lib/cache/combined/$host";
@@ -169,8 +170,7 @@ foreach my $host (qw(t2 vipe))
                         return \(
                             escape_html(
                                 uri_escape(
-                                    MyNavData::get_hosts()->{$host}->{base_url}
-                                        . $url
+                                    $hosts->{$host}->{base_url} . $url
                                 )
                             )
                         );

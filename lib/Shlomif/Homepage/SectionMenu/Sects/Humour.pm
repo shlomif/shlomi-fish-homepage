@@ -6,7 +6,7 @@ use warnings;
 use Shlomif::FindLib ();
 use utf8;
 
-use MyNavData;
+use MyNavData::Hosts ();
 
 use Shlomif::Homepage::FortuneCollections ();
 use JSON::MaybeXS (qw( decode_json ));
@@ -615,7 +615,7 @@ my $humour_tree_contents = {
 sub get_params
 {
     return (
-        hosts         => MyNavData::get_hosts(),
+        hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $humour_tree_contents,
     );
 }

@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use MyNavData;
+use MyNavData::Hosts ();
 
 my $puzzles_tree_contents = {
     host        => "t2",
@@ -134,7 +134,7 @@ my $puzzles_tree_contents = {
 sub get_params
 {
     return (
-        hosts         => MyNavData::get_hosts(),
+        hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $puzzles_tree_contents,
     );
 }

@@ -765,23 +765,7 @@ plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS
 
 SRC_DEST_IMAGES_DIR := $(SRC_DEST)/images
 
-SVG_NAV_IMAGES__PROTO := \
-	sect-arr-left-disabled.svg \
-	sect-arr-left-pressed.svg \
-	sect-arr-left.svg \
-	sect-arr-right-disabled.svg \
-	sect-arr-right-pressed.svg \
-	sect-arr-right.svg \
-	sect-arr-up-disabled.svg \
-	sect-arr-up-pressed.svg \
-	sect-arr-up.svg
-
-SVG_NAV_IMAGES := $(addprefix $(SRC_DEST_IMAGES_DIR)/,$(SVG_NAV_IMAGES__PROTO))
-
-svg_nav_images: $(SVG_NAV_IMAGES)
-
-$(SVG_NAV_IMAGES): lib/images/navigation/section/sect-nav-arrows.pl
-	$(PERL) $< $(SRC_DEST_IMAGES_DIR)
+svg_nav_images:
 
 NAV_DATA_AS_JSON = $(SRC_POST_DEST)/_data/nav.json
 

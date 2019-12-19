@@ -208,6 +208,10 @@ while ( my $next = $iter->() )
     }
 }
 
+my $IMAGES_SRC = path('./src/images');
+_my_system(
+    [ $^X, 'lib/images/navigation/section/sect-nav-arrows.pl', "$IMAGES_SRC", ]
+);
 my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     'hosts' => [
         map {

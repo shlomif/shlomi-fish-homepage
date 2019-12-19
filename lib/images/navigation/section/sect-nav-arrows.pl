@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 
+# Need to import stuff
 use SVG;
 use Path::Tiny qw/ path /;
 

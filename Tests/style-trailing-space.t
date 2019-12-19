@@ -24,6 +24,8 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             (?:\Q$SRC_POST_DEST\E|src|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
             )
             |
+            bower_components
+            |
             (?:dest/?)
             |
             lib/ebookmaker/\.git

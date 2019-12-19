@@ -9,6 +9,7 @@
 (
 set -e -x
 npm install
+PATH="$PATH:`pwd`/node_modules/.bin"
 bower install
 exit
 

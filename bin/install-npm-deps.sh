@@ -7,7 +7,9 @@
 #
     # hackmyresume \
 (
+set -e -x
 npm install
+bower install
 exit
 
 ########### Not needed due to package.json .

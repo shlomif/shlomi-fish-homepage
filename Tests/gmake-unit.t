@@ -54,11 +54,11 @@ sub dest_test
     );
 
     # TEST
-    dest_test( 'DEST_ZIP_MODS', 'Iglu/shlomif/mods/dreams2.xm.zip',
+    post_dest_test( 'POST_DEST_ZIP_MODS', 'Iglu/shlomif/mods/dreams2.xm.zip',
         "found a file" );
 
     # TEST
-    dest_test( 'DEST_XZ_MODS', 'Iglu/shlomif/mods/focus.mod.xz',
+    post_dest_test( 'POST_DEST_XZ_MODS', 'Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
 
     # TEST

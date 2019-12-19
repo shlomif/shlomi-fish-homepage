@@ -986,17 +986,17 @@ MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 ZIP_MODS = $(addsuffix .zip,$(MODS))
 XZ_MODS = $(addsuffix .xz,$(MODS))
 
-DEST_MODS_DIR = $(SRC_DEST)/Iglu/shlomif/mods
-dest_mods = $(addprefix $(DEST_MODS_DIR)/,$(1))
-DEST_ZIP_MODS = $(call dest_mods,$(ZIP_MODS))
-DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
+POST_DEST_MODS_DIR = $(SRC_POST_DEST)/Iglu/shlomif/mods
+dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
+POST_DEST_ZIP_MODS = $(call dest_mods,$(ZIP_MODS))
+POST_DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
 
-mod_files: $(DEST_ZIP_MODS) $(DEST_XZ_MODS)
+mod_files: $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 
-$(DEST_XZ_MODS): $(DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
+$(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 	xz -9 --extreme < $< > $@
 
-$(DEST_ZIP_MODS): $(DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
+$(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	bn='$(patsubst $(SRC_MODS_DIR)/%,%,$<)'; \
 	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@

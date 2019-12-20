@@ -3,22 +3,13 @@
 use strict;
 use warnings;
 use autodie;
+use lib './lib';
+use Shlomif::MySystem qw/ my_system /;
 
-sub _exec
-{
-    my ( $cmd, $err ) = @_;
-
-    if ( system(@$cmd) )
-    {
-        die $err;
-    }
-    return;
-}
-
-_exec(
+my_system(
     [
         qw#gmake -s -j16 -f lib/make/factoids.mak src/humour/fortunes/shlomif-factoids.xml #
     ],
     'gmake -f lib/make/factoids.mak'
 );
-_exec( [qw#gmake -s -j16 -C src/humour/fortunes dats#], 'gmake -C' );
+my_system( [qw#gmake -s -j16 -C src/humour/fortunes dats#], 'gmake -C' );

@@ -2,24 +2,15 @@
 
 use strict;
 use warnings;
+use autodie;
+use lib './lib';
+use Shlomif::MySystem qw/ my_exec_perl my_system /;
 
-sub _exec
-{
-    my ( $cmd, $err ) = @_;
+my_exec_perl( ['bin/my-cookiecutter.pl'], 'cookiecutter failed.' );
 
-    if ( system(@$cmd) )
-    {
-        print "@$cmd\n";
-        die $err;
-    }
-    return;
-}
-
-_exec( [ $^X, 'bin/my-cookiecutter.pl' ], 'cookiecutter failed.' );
-
-_exec( [ "gmake", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
+my_system( [ "gmake", "--silent", "-f", "lib/make/build-deps/build-deps.mak" ],
     "build-deps failed!" );
-_exec( [ $^X, './bin/gen-helpers-main.pl' ], "gen-helpers-main.pl failed." );
+my_exec_perl( ['bin/gen-helpers-main.pl'], "gen-helpers-main.pl failed." );
 
 __END__
 

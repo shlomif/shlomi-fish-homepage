@@ -2,19 +2,11 @@
 
 use strict;
 use warnings;
+use autodie;
+use lib './lib';
+use Shlomif::MySystem qw/ my_system /;
 
-sub _exec
-{
-    my ( $cmd, $err ) = @_;
-
-    if ( system(@$cmd) )
-    {
-        die $err;
-    }
-    return;
-}
-
-_exec(
+my_system(
     [
         'cookiecutter', '-f', '--no-input',
         'gh:shlomif/cookiecutter--shlomif-latemp-sites',

@@ -87,23 +87,8 @@ sub get_initial_buckets
 
 package main;
 
-sub _exec
-{
-    my ( $cmd, $err ) = @_;
-
-    if ( system(@$cmd) )
-    {
-        die $err;
-    }
-    return;
-}
-
-sub _exec_perl
-{
-    my ( $cmd, $err ) = @_;
-
-    return _exec( [ $^X, '-Ilib', @$cmd ], $err );
-}
+use lib './lib';
+use Shlomif::MySystem qw/ my_system my_exec_perl /;
 
 path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
 
@@ -115,7 +100,7 @@ Shlomif::Homepage::LongStories->new->render_make_fragment;
 require Shlomif::Homepage::FortuneCollections;
 Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;
 
-_exec_perl(
+my_exec_perl(
     [
         'bin/gen-forts-all-in-one-page.pl',
         'src/humour/fortunes/all-in-one.uncompressed.html.tt2',
@@ -125,27 +110,14 @@ _exec_perl(
 
 my $DIR = "lib/make/";
 
-sub _my_system
-{
-    my $cmd = shift;
-
-    print join( ' ', @$cmd ), "\n";
-    if ( system { $cmd->[0] } (@$cmd) )
-    {
-        die "<<@$cmd>> failed.";
-    }
-}
-
 # [ $^X, "./bin/gen-fortunes.pl" ],
 
 foreach my $cmd (
-    [ $^X, "./bin/gen-docbook-make-helpers.pl" ],
-    [ $^X, "./lib/factoids/gen-html.pl" ],
-    [ $^X, "./bin/gen-fortunes-dats.pl" ],
-    [ $^X, "./bin/gen-deps-mak.pl" ],
+    ["./bin/gen-docbook-make-helpers.pl"], ["./lib/factoids/gen-html.pl"],
+    ["./bin/gen-fortunes-dats.pl"],        ["./bin/gen-deps-mak.pl"],
     )
 {
-    _my_system($cmd);
+    my_exec_perl($cmd);
 }
 
 sub letter_fn
@@ -209,7 +181,7 @@ while ( my $next = $iter->() )
 }
 
 my $IMAGES_SRC = path('./src/images');
-_my_system(
+my_system(
     [ $^X, 'lib/images/navigation/section/sect-nav-arrows.pl', "$IMAGES_SRC", ]
 );
 my $generator = Shlomif::Homepage::GenMakeHelpers->new(
@@ -260,4 +232,4 @@ if ( my $Err = $@ )
 push @tt, "humour/fortunes/all-in-one.uncompressed.html";
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
-_my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );
+my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );

@@ -10,9 +10,9 @@ use HTML::Spelling::Site::Finder ();
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
-my @prunes = ( qr#^\Q$SRC_POST_DEST\E/MANIFEST\.html$#, );
+my @prunes = ( qr#^\Q$POST_DEST\E/MANIFEST\.html$#, );
 
 sub list_htmls
 {
@@ -20,7 +20,7 @@ sub list_htmls
 
     return HTML::Spelling::Site::Finder->new(
         {
-            root_dir => $SRC_POST_DEST,
+            root_dir => $POST_DEST,
             prune_cb => sub {
                 my ($path) = @_;
 

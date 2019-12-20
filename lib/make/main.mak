@@ -1,8 +1,9 @@
 # Whether this is the development environment
 DEV = 0
 
-SRC_POST_DEST := dest/post-incs/t2
-T2_POST_DEST := $(SRC_POST_DEST)
+POST_DEST := dest/post-incs/t2
+SRC_POST_DEST := $(POST_DEST)
+T2_POST_DEST := $(POST_DEST)
 
 ALL_DEST_BASE := dest/pre-incs
 
@@ -29,11 +30,11 @@ include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
 include lib/make/long_stories.mak
 
-SRC_COMMON_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(COMMON_DIRS))
+SRC_COMMON_POST_DIRS_DEST = $(addprefix $(POST_DEST)/,$(COMMON_DIRS))
 
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
-SRC_POST_DIRS_DEST = $(addprefix $(SRC_POST_DEST)/,$(SRC_DIRS))
+SRC_POST_DIRS_DEST = $(addprefix $(POST_DEST)/,$(SRC_DIRS))
 SRC_TARGETS += $(SRC_POST_DIRS_DEST)
 
 NAV_DATA_DEP = lib/MyNavData.pm
@@ -52,9 +53,9 @@ PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
 MAN_HTML = $(PRE_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
-SITE_SOURCE_INSTALL_TARGET = $(SRC_POST_DEST)/meta/site-source/INSTALL
+SITE_SOURCE_INSTALL_TARGET = $(POST_DEST)/meta/site-source/INSTALL
 SRC_DEST_FORTUNES_DIR = $(PRE_DEST)/$(FORTUNES_DIR)
-SRC_POST_DEST_FORTUNES_DIR = $(SRC_POST_DEST)/$(FORTUNES_DIR)
+SRC_POST_DEST_FORTUNES_DIR = $(POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(SRC_DEST_FORTUNES_DIR)/index.xhtml
 
 FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
@@ -99,7 +100,7 @@ $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
 DEST_HUMOUR := $(PRE_DEST)/humour
-POST_DEST_HUMOUR := $(SRC_POST_DEST)/humour
+POST_DEST_HUMOUR := $(POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
 POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
@@ -141,7 +142,7 @@ ifeq ($(UPLOAD_MATHJAX),1)
 	RSYNC_EXCLUDES :=
 endif
 
-UPLOAD = (cd $(SRC_POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
+UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
 
 upload_deps: all
 
@@ -279,7 +280,7 @@ $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
 	$(PERL) bin/screenplay-text-to-xml.pl -o $@ $<
 
 POST_DEST_HUMOUR_SELINA := $(POST_DEST_HUMOUR)/Selina-Mandrake
-POST_DEST_INTERVIEWS := $(SRC_POST_DEST)/open-source/interviews
+POST_DEST_INTERVIEWS := $(POST_DEST)/open-source/interviews
 
 POST_DEST_SPLAY_HHGG_STTNG := $(POST_DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
@@ -540,7 +541,7 @@ make-dirs: $(ALL_DIRS)
 
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
-DEST__C_BAD_ELEMS = $(SRC_POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+DEST__C_BAD_ELEMS = $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
@@ -555,7 +556,7 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-ART_SLOGANS_PATHS = $(addprefix $(SRC_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PATHS = $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
@@ -571,11 +572,11 @@ define ASCIIDOCTOR_TO_DOCBOOK5
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 endef
 
-PRINTER_ICON_PNG = $(SRC_POST_DEST)/images/printer_icon.png
-TWITTER_ICON_20_PNG = $(SRC_POST_DEST)/images/twitter-bird-light-bgs-20.png
+PRINTER_ICON_PNG = $(POST_DEST)/images/printer_icon.png
+TWITTER_ICON_20_PNG = $(POST_DEST)/images/twitter-bird-light-bgs-20.png
 HHFG_SMALL_BANNER_AD_PNG = $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
-BK2HP_NEW_PNG = $(SRC_POST_DEST)/images/bk2hp.png
+BK2HP_NEW_PNG = $(POST_DEST)/images/bk2hp.png
 
 POST_DEST_HTML_6_LOGO_PNG = $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
@@ -684,7 +685,7 @@ lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/
 
 GEN_STYLE_CSS_FILES = faq-indiv.css style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
-SRC_CSS_TARGETS := $(addprefix $(SRC_POST_DEST)/,$(GEN_STYLE_CSS_FILES))
+SRC_CSS_TARGETS := $(addprefix $(POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(SRC_CSS_TARGETS)
 
@@ -695,16 +696,16 @@ SASS_CMD = sass --style $(SASS_STYLE)
 FORT_SASS_DEPS = lib/sass/fortunes.scss
 COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
 
-$(SRC_CSS_TARGETS): $(SRC_POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
+$(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
 
-$(SRC_POST_DEST)/style.css $(SRC_POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
+$(POST_DEST)/style.css $(POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
 
-$(SRC_POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
+$(POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
 
-$(SRC_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
+$(POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
-$(SRC_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
+$(POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
 $(PRE_DEST)/personal.html $(PRE_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
 $(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.tt2
@@ -749,7 +750,7 @@ update_html_tut_hg:
 
 include lib/make/deps.mak
 
-MATHJAX_DEST_DIR = $(SRC_POST_DEST)/js/MathJax
+MATHJAX_DEST_DIR = $(POST_DEST)/js/MathJax
 MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
 
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
@@ -762,7 +763,7 @@ $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 
 SCRIPTS_WITH_OFFENDING_EXTENSIONS = MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(SRC_POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
+SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
@@ -770,7 +771,7 @@ SRC_DEST_IMAGES_DIR := $(PRE_DEST)/images
 
 svg_nav_images:
 
-NAV_DATA_AS_JSON = $(SRC_POST_DEST)/_data/nav.json
+NAV_DATA_AS_JSON = $(POST_DEST)/_data/nav.json
 
 generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 
@@ -780,10 +781,10 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 JQTREE_SRC := common/js/tree.jquery.js
-JQTREE_MIN_DEST := $(SRC_POST_DEST)/js/tree.jq.js
-MAIN_TOTAL_MIN_JS_DEST := $(SRC_POST_DEST)/js/main_all.js
-EXPANDER_MIN_JS_DEST := $(SRC_POST_DEST)/js/jquery.expander.min.js
-EXPANDER_JS_DEST := $(SRC_POST_DEST)/js/jquery.expander.js
+JQTREE_MIN_DEST := $(POST_DEST)/js/tree.jq.js
+MAIN_TOTAL_MIN_JS_DEST := $(POST_DEST)/js/main_all.js
+EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
+EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
 MULTI_YUI = ./bin/Run-YUI-Compressor
 
@@ -877,7 +878,7 @@ OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
 
-RINDOLF_IMAGES_POST_DEST := $(SRC_POST_DEST)/me/rindolf/images
+RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
 
 RPG_DICE_SET_SRC = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
 RPG_DICE_SET_DEST = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
@@ -886,16 +887,16 @@ MY_NAME_IS_RINDOLF_SRC = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
 MY_NAME_IS_RINDOLF_DEST = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
 
 Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
-Shlomif_cutethulhu_DEST = $(SRC_POST_DEST)/images/shlomif-cutethulhu-small.webp
+Shlomif_cutethulhu_DEST = $(POST_DEST)/images/shlomif-cutethulhu-small.webp
 
-DnD_lances_cartoon_DEST = $(SRC_POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
+DnD_lances_cartoon_DEST = $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
 SRC_POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
 
-MY_RPF_DEST_DIR = $(SRC_POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_DIR = $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
 
-OPENLY_BIPOLAR_DEST_DIR = $(SRC_POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_DIR = $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
 OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
@@ -919,7 +920,7 @@ all: $(DnD_lances_cartoon_DEST)
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
 
-Linux1_webp_DEST = $(SRC_POST_DEST)/art/images/linux1.webp
+Linux1_webp_DEST = $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
 	gm convert $< -define webp:lossless=true $@
 
@@ -973,7 +974,7 @@ MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 ZIP_MODS = $(addsuffix .zip,$(MODS))
 XZ_MODS = $(addsuffix .xz,$(MODS))
 
-POST_DEST_MODS_DIR = $(SRC_POST_DEST)/Iglu/shlomif/mods
+POST_DEST_MODS_DIR = $(POST_DEST)/Iglu/shlomif/mods
 dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
 POST_DEST_ZIP_MODS = $(call dest_mods,$(ZIP_MODS))
 POST_DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
@@ -1006,7 +1007,7 @@ all: $(SRC_CLEAN_STAMP)
 
 $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 
-PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(PRE_DEST) --dest-dir=$(SRC_POST_DEST) --
+PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(PRE_DEST) --dest-dir=$(POST_DEST) --
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
@@ -1014,9 +1015,9 @@ WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
 $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
-	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(SRC_POST_DEST)/
-	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
-	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)
+	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
+	find $(POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
+	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 
 VIM_IFACE_BN := VimIface.pm
@@ -1026,7 +1027,7 @@ all: $(QP_VIM_IFACE)
 
 FASTRENDER_DEPS := $(SRC_DOCS_SRC) all_deps
 
-FAQ_SECTS__DIR := $(SRC_POST_DEST)/meta/FAQ
+FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
 FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
@@ -1046,7 +1047,7 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 
 copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
-SRC_jpgs__BASE := $(filter $(SRC_POST_DEST)/humour/bits/facts/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/facts/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__webps :=$(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
 	gm convert $< $@
@@ -1106,7 +1107,7 @@ $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/op
 
 JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
 
-JSON_RES_DEST := $(SRC_POST_DEST)/$(JSON_RES_BASE).json
+JSON_RES_DEST := $(POST_DEST)/$(JSON_RES_BASE).json
 
 $(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
@@ -1117,7 +1118,7 @@ $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECT
 	$(PERL) $<
 
 CATB_COPY = $(PRE_DEST)/catb-heb.xhtml
-CATB_COPY_POST = $(SRC_POST_DEST)/catb-heb.xhtml
+CATB_COPY_POST = $(POST_DEST)/catb-heb.xhtml
 
 $(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml
 	$(call COPY)

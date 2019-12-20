@@ -9,10 +9,10 @@ use HTML::Latemp::Local::Paths ();
 use Test::More tests => 1;
 use Path::Tiny qw/ path /;
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 {
     my $content =
-        path("$SRC_POST_DEST/lecture/Vim/beginners/slides/slide24.html")
+        path("$POST_DEST/lecture/Vim/beginners/slides/slide24.html")
         ->slurp_utf8;
 
     # TEST

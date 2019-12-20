@@ -22,8 +22,8 @@ package main;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
-my %whitelist     = ( map { $_ => 1 } (), );
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my %whitelist = ( map { $_ => 1 } (), );
 
 Test::HTML::Tidy::Recursive::Tidy5->new(
     {
@@ -32,9 +32,9 @@ Test::HTML::Tidy::Recursive::Tidy5->new(
             return not(
                 exists $whitelist{$fn}
                 or $fn =~
-                m#\A \Q$SRC_POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
+                m#\A \Q$POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
             );
         },
-        targets => [$SRC_POST_DEST],
+        targets => [$POST_DEST],
     }
 )->run;

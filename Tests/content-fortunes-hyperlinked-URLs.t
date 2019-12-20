@@ -7,12 +7,11 @@ use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths;
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
     my $content =
-        path("$SRC_POST_DEST/humour/fortunes/sharp-programming.html")
-        ->slurp_utf8;
+        path("$POST_DEST/humour/fortunes/sharp-programming.html")->slurp_utf8;
 
     # TEST
     like(

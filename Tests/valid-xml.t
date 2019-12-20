@@ -10,7 +10,7 @@ use XML::LibXML ();
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 extends('Test::HTML::Tidy::Recursive');
 
@@ -39,9 +39,9 @@ Test::HTML::Tidy::Recursive::XML->new(
             return not(
                 exists $whitelist{$fn}
                 or $fn =~
-                m#\A \Q$SRC_POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
+                m#\A \Q$POST_DEST\E (?: MathVentures | js/jquery-ui/ ) #x,
             );
         },
-        targets => [$SRC_POST_DEST],
+        targets => [$POST_DEST],
     }
 )->run;

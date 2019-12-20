@@ -9,7 +9,7 @@ use Test::TrailingSpace 0.0201;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
 
@@ -21,7 +21,7 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             abs_path_prune_re => qr%
             \A(?:
             (?:
-            (?:\Q$SRC_POST_DEST\E|src|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
+            (?:\Q$POST_DEST\E|src|t2)/(?:lecture/(?:CMake|HTML-Tutorial/v1/xhtml1/hebrew)|(?:js/MathJax.*?\z))
             )
             |
             bower_components

@@ -6,8 +6,8 @@ use Test::More tests => 7;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $PRE_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $PRE_DEST  = HTML::Latemp::Local::Paths->new->t2_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 delete $ENV{MAKEFLAGS};
 
@@ -24,7 +24,7 @@ sub post_dest_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
-    return gmake_test( $var, "$SRC_POST_DEST/$word", $blurb );
+    return gmake_test( $var, "$POST_DEST/$word", $blurb );
 }
 
 sub dest_test

@@ -5,12 +5,12 @@ use warnings;
 use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
-use HTML::Latemp::Local::Paths;
+use HTML::Latemp::Local::Paths ();
 
-my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
-    my $content = path("$SRC_POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
+    my $content = path("$POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
 
     # TEST
     like(
@@ -20,13 +20,13 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     );
 
     # TEST
-    ok( scalar( -e "$SRC_POST_DEST/humour/fortunes/tinic.dat" ),
+    ok( scalar( -e "$POST_DEST/humour/fortunes/tinic.dat" ),
         ".dat file exists." );
 
     # TEST
     cmp_ok(
         scalar(
-            -s "$SRC_POST_DEST/humour/fortunes/fortunes-shlomif-lookup.sqlite3"
+            -s "$POST_DEST/humour/fortunes/fortunes-shlomif-lookup.sqlite3"
         ),
         ">", 1024,
         "sqlite database is there"
@@ -35,7 +35,7 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     # TEST
     ok(
         scalar(
-            -f "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.db-postproc.xslt"
+            -f "$POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.db-postproc.xslt"
         ),
         "hhfg xslt exists",
     );
@@ -43,7 +43,7 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     # TEST
     ok(
         scalar(
-            -f "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.txt"
+            -f "$POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.txt"
         ),
         "hhfg hebrew txt exists",
     );
@@ -52,7 +52,7 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     ok(
         scalar(
             (
-                -s "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide/background-image.png"
+                -s "$POST_DEST/humour/human-hacking/human-hacking-field-guide/background-image.png"
             ) > 40
         ),
         "hhfg png exists",
@@ -62,7 +62,7 @@ my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     ok(
         scalar(
             (
-                -s "$SRC_POST_DEST/humour/human-hacking/human-hacking-field-guide-v2/docbook.css"
+                -s "$POST_DEST/humour/human-hacking/human-hacking-field-guide-v2/docbook.css"
             ) > 20
         ),
         "hhfg-v2 docbook.css exists",

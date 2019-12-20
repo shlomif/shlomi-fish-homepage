@@ -81,8 +81,7 @@ Shlomif::Homepage::GenScreenplaysMak->new->generate(
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
 
 HTML::Latemp::DocBook::GenMake->new(
-    { dest_var => '$(PRE_DEST)', post_dest_var => '$(SRC_POST_DEST)' } )
-    ->generate;
+    { dest_var => '$(PRE_DEST)', post_dest_var => '$(POST_DEST)' } )->generate;
 Shlomif::Homepage::GenQuadPresMak->new->generate;
 
 $git_obj->end;

@@ -94,23 +94,23 @@ sub generate
     );
     my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
     my $epub_dests         = <<'EOF';
-$(SRC_POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
-$(SRC_POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
-$(SRC_POST_DEST)/humour/humanity/Humanity-Movie.epub \
-$(SRC_POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
-$(SRC_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
-$(SRC_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
-$(SRC_POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
-$(SRC_POST_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
-$(SRC_POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
-$(SRC_POST_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
-$(SRC_POST_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
-$(SRC_POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
-$(SRC_POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
-$(SRC_POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
+$(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
+$(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
+$(POST_DEST)/humour/humanity/Humanity-Movie.epub \
+$(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
+$(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
+$(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
+$(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
+$(POST_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
+$(POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
+$(POST_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
+$(POST_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
+$(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
+$(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
+$(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
 EOF
 
-    my @_files = ( $epub_dests =~ /(\$\(SRC_POST_DEST\)\S+)/g );
+    my @_files = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
     my @_htmls_files =
         map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
 

@@ -29,13 +29,17 @@ if ! m 2>&1 | perl bin/filter-make.pl ; then
     exit -1
 fi
 
-export HARNESS_VERBOSE=1
-if test -n "$HARNESS_PLUGINS"
+test_target='test'
+if false
 then
-    unset HARNESS_PLUGINS
+    export HARNESS_VERBOSE=1
+    if test -n "$HARNESS_PLUGINS"
+    then
+        unset HARNESS_PLUGINS
+    fi
+    test_target='runtest'
 fi
-if ! m runtest ; then
-    echo "Error in executing make runtest." 1>&2
-    # python3 -m trace --trace Tests/content-image-macros-image-widths.py
+if ! m $test_target ; then
+    echo "Error in executing make $test_target." 1>&2
     exit -1
 fi

@@ -29,8 +29,9 @@ if ! m 2>&1 | perl bin/filter-make.pl ; then
     exit -1
 fi
 
-if ! m test ; then
-    echo "Error in executing make test." 1>&2
-    python3 -m trace --trace Tests/content-image-macros-image-widths.py
+export HARNESS_VERBOSE=1
+if ! m runtest ; then
+    echo "Error in executing make runtest." 1>&2
+    # python3 -m trace --trace Tests/content-image-macros-image-widths.py
     exit -1
 fi

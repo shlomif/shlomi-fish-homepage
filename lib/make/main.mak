@@ -777,10 +777,10 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 $(SRC_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 JQTREE_SRC := common/js/tree.jquery.js
-JQTREE_MIN_DEST := $(SRC_DEST)/js/tree.jq.js
-MAIN_TOTAL_MIN_JS_DEST := $(SRC_DEST)/js/main_all.js
-EXPANDER_MIN_JS_DEST := $(SRC_DEST)/js/jquery.expander.min.js
-EXPANDER_JS_DEST := $(SRC_DEST)/js/jquery.expander.js
+JQTREE_MIN_DEST := $(SRC_POST_DEST)/js/tree.jq.js
+MAIN_TOTAL_MIN_JS_DEST := $(SRC_POST_DEST)/js/main_all.js
+EXPANDER_MIN_JS_DEST := $(SRC_POST_DEST)/js/jquery.expander.min.js
+EXPANDER_JS_DEST := $(SRC_POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
 MULTI_YUI = ./bin/Run-YUI-Compressor
 

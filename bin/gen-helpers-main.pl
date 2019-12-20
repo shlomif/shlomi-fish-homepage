@@ -230,7 +230,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         my $filenames = $args->{filenames};
         return [
             grep {
-                not(   m#\Ahumour/fortunes/\S+\.tar\.gz\z#
+                not(   m#\Ahumour/fortunes/\S+(?:\.tar\.gz|\.sqlite3)\z#
                     || m#\Aimages/bk2hp-v2\.(?:svgz?|min\.svg)\z# )
             } @$filenames
         ];

@@ -44,7 +44,7 @@ then
     cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-    sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator HspellPy WebTest Zenfilter
+    sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator HspellPy Pillow WebTest Zenfilter
     perl bin/my-cookiecutter.pl
     deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint

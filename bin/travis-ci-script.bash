@@ -31,5 +31,6 @@ fi
 
 if ! m test ; then
     echo "Error in executing make test." 1>&2
+    python3 -m trace --trace Tests/content-image-macros-image-widths.py
     exit -1
 fi

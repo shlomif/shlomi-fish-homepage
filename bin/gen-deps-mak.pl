@@ -8,6 +8,6 @@ use HTML::Latemp::GenDepsTT2 ();
 HTML::Latemp::GenDepsTT2->new(
     {
         src_dir => 'src',
-        src_var => '$(SRC_DEST)',
+        src_var => '$(PRE_DEST)',
     }
 )->run;

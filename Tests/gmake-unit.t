@@ -4,9 +4,9 @@ use strict;
 use warnings;
 use Test::More tests => 7;
 use lib './lib';
-use HTML::Latemp::Local::Paths;
+use HTML::Latemp::Local::Paths ();
 
-my $SRC_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
+my $PRE_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
 my $SRC_POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 delete $ENV{MAKEFLAGS};
@@ -31,7 +31,7 @@ sub dest_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
-    return gmake_test( $var, "$SRC_DEST/$word", $blurb );
+    return gmake_test( $var, "$PRE_DEST/$word", $blurb );
 }
 
 {

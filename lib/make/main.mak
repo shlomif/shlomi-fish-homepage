@@ -21,6 +21,9 @@ BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 
 include lib/make/rules.mak
+
+PRE_DEST = $(SRC_DEST)
+
 include lib/factoids/deps.mak
 include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
@@ -47,10 +50,10 @@ include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
 PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
-MAN_HTML = $(SRC_DEST)/MANIFEST.html
+MAN_HTML = $(PRE_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET = $(SRC_POST_DEST)/meta/site-source/INSTALL
-SRC_DEST_FORTUNES_DIR = $(SRC_DEST)/$(FORTUNES_DIR)
+SRC_DEST_FORTUNES_DIR = $(PRE_DEST)/$(FORTUNES_DIR)
 SRC_POST_DEST_FORTUNES_DIR = $(SRC_POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(SRC_DEST_FORTUNES_DIR)/index.xhtml
 
@@ -95,7 +98,7 @@ $(SRC_POST_DIRS_DEST): %:
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
 	mkdir -p $@
 
-DEST_HUMOUR := $(SRC_DEST)/humour
+DEST_HUMOUR := $(PRE_DEST)/humour
 POST_DEST_HUMOUR := $(SRC_POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
 POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
@@ -112,7 +115,7 @@ SRC_DEST_FORTUNE_BOTTLE = $(SRC_DEST_FORTUNES_DIR)/bottle.py
 htacc = $(addsuffix /.htaccess,$(1))
 SRC_FORTUNES_DIR_HTACCESS = $(call htacc,$(SRC_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES = $(call htacc,$(SRC_DEST_FORTUNES_DIR) $(addprefix $(SRC_DEST)/,lecture/PostgreSQL-Lecture))
+ALL_HTACCESSES = $(call htacc,$(SRC_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 
@@ -166,13 +169,13 @@ upload_all: upload upload_var upload_local upload_beta
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')
 
-$(SRC_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
-$(SRC_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
+$(PRE_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
+$(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
-SRC_DOCS_SRC = $(patsubst $(SRC_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
+SRC_DOCS_SRC = $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
 
-t2_filt_file = $(filter $(SRC_DEST)/$1,$(SRC_DOCS_DEST))
-t2_filt = $(filter $(SRC_DEST)/$1/%,$(SRC_DOCS_DEST))
+t2_filt_file = $(filter $(PRE_DEST)/$1,$(SRC_DOCS_DEST))
+t2_filt = $(filter $(PRE_DEST)/$1/%,$(SRC_DOCS_DEST))
 t2_src_filt = $(filter $(SRC_SRC_DIR)/$1/%,$(SRC_DOCS_SRC))
 
 #### Humour thing
@@ -190,7 +193,7 @@ PROD_SYND_NON_FICTION_BOOKS_INC = $(PROD_SYND_NON_FICTION_BOOKS_DIR)/include-me.
 PROD_SYND_FILMS_DIR = lib/prod-synd/films
 PROD_SYND_FILMS_INC = $(PROD_SYND_FILMS_DIR)/include-me.html
 
-$(SRC_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
+$(PRE_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
 
 all_deps: $(PROD_SYND_MUSIC_INC)
 
@@ -200,7 +203,7 @@ GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-$(SRC_DEST)/philosophy/books-recommends/index.xhtml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
+$(PRE_DEST)/philosophy/books-recommends/index.xhtml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
 all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 
@@ -324,11 +327,11 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
-# Rebuild the embedded docbook4 pages in the $(SRC_DEST) after they are
+# Rebuild the embedded docbook4 pages in the $(PRE_DEST) after they are
 # modified.
 
 PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
-PUT_CARDS_2013_DEST = $(SRC_DEST)/philosophy/philosophy/put-cards-2013.xhtml
+PUT_CARDS_2013_DEST = $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
 PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
 
@@ -344,14 +347,14 @@ HOW_TO_GET_HELP_2013_XHTML_STRIPPED = $(HOW_TO_GET_HELP_2013_XHTML).processed-st
 $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HTML_BIN)
 	$(call strip_html)
 
-$(SRC_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
+$(PRE_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 all_deps: $(SRC_FORTUNES_ALL_WML)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
-$(SRC_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
+$(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
 
 # Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
@@ -458,9 +461,9 @@ $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \
 	optipng "$@"
 
-MOJOLICIOUS_LECTURE_SLIDE1 = $(SRC_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
+MOJOLICIOUS_LECTURE_SLIDE1 = $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
-HACKING_DOC = $(SRC_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
+HACKING_DOC = $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
@@ -636,12 +639,12 @@ LC_PRES_SCMS = \
 	output_vars.scm \
 	shriram.scm \
 
-LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(SRC_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
+LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
 
 lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
-$(LC_PRES_DEST_HTMLS): $(SRC_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
+$(LC_PRES_DEST_HTMLS): $(PRE_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
 	$(PERL) bin/text-vimcolor-xhtml5.pl $< $@
 
 SPORK_LECTURES_BASENAMES = \
@@ -656,11 +659,11 @@ START_html := /start.html
 SLIDES_start := /slides$(START_html)
 SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
 GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
-GFUNC_PRES_DEST = $(SRC_DEST)/lecture/Perl/Graham-Function
+GFUNC_PRES_DEST = $(PRE_DEST)/lecture/Perl/Graham-Function
 GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)$(SLIDES_start)
 GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)$(SLIDES_start)
 
-SPORK_LECTURES_DESTS := $(addprefix $(SRC_DEST)/lecture/,$(SPORK_LECTURES_BASENAMES))
+SPORK_LECTURES_DESTS := $(addprefix $(PRE_DEST)/lecture/,$(SPORK_LECTURES_BASENAMES))
 SPORK_LECTURES_DEST_STARTS := $(addsuffix $(SLIDES_start),$(SPORK_LECTURES_DESTS))
 SPORK_LECTURES_BASE_STARTS := $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start),$(SPORK_LECTURES_BASENAMES))
 
@@ -668,7 +671,7 @@ graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)
 
 start_html = $(patsubst %$(START_html),%/,$1)
 
-$(SPORK_LECTURES_DEST_STARTS) : $(SRC_DEST)/lecture/%$(START_html): $(SPORK_LECTS_SOURCE_BASE)/%$(START_html)
+$(SPORK_LECTURES_DEST_STARTS) : $(PRE_DEST)/lecture/%$(START_html): $(SPORK_LECTS_SOURCE_BASE)/%$(START_html)
 	rsync -a $(call start_html,$<) $(call start_html,$@)
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml
@@ -703,22 +706,22 @@ $(SRC_POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
 $(SRC_POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
-$(SRC_DEST)/personal.html $(SRC_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
+$(PRE_DEST)/personal.html $(PRE_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
 $(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.tt2
-$(SRC_DEST)/work/hire-me/index.xhtml $(SRC_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.tt2
+$(PRE_DEST)/work/hire-me/index.xhtml $(PRE_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.tt2
 
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 
-$(SRC_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt
+$(PRE_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt
 
-$(SRC_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
+$(PRE_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
 
 HTML_TUT_BASE = lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
 
 HTML_TUT_HEB_DIR = $(HTML_TUT_BASE)/hebrew-html-tutorial
 HTML_TUT_HEB_DB = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
 HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
-DEST_HTML_TUT_BASE = $(SRC_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
+DEST_HTML_TUT_BASE = $(PRE_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
 DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.xhtml
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST) $(QOHELETH_IMAGES__POST_DEST) $(TERM_LIBERATION_IMAGES__POST_DEST)
@@ -763,7 +766,7 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(SRC_POST_DEST)/%-p
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
-SRC_DEST_IMAGES_DIR := $(SRC_DEST)/images
+SRC_DEST_IMAGES_DIR := $(PRE_DEST)/images
 
 svg_nav_images:
 
@@ -774,7 +777,7 @@ generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepage/NavData/JSON.pm $(ALL_SUBSECTS_DEPS)
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
-$(SRC_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
+$(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 JQTREE_SRC := common/js/tree.jquery.js
 JQTREE_MIN_DEST := $(SRC_POST_DEST)/js/tree.jq.js
@@ -819,15 +822,15 @@ PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
 $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 	libreoffice --writer --headless --convert-to docx --outdir $(PRINTABLE_DEST_DIR) $<
 
-$(PRINTABLE_RESUMES__HTML__PIVOT): $(SRC_DEST)/SFresume.html $(SRC_DEST)/SFresume_detailed.html $(SRC_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(SRC_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
+$(PRINTABLE_RESUMES__HTML__PIVOT): $(PRE_DEST)/SFresume.html $(PRE_DEST)/SFresume_detailed.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
-	$(PERL) -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(SRC_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > $(PRINTABLE_DEST_DIR)/Shlomi-Fish-Heb-Resume.html
+	$(PERL) -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(PRE_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > $(PRINTABLE_DEST_DIR)/Shlomi-Fish-Heb-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume_detailed.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
 
 resumes: $(PRINTABLE_RESUMES__DOCX)
 
-PUT_CARDS_2013_DEST_INDIV = $(SRC_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
+PUT_CARDS_2013_DEST_INDIV = $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
 PUT_CARDS_2013_INDIV_SCRIPT = bin/split-put-cards-into-divs.pl
 
 all: $(PUT_CARDS_2013_DEST_INDIV)
@@ -857,7 +860,7 @@ $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
 
 LC_LECTURE_ARC_BASE = Lambda-Calculus.tar.gz
-LC_LECTURE_ARC_DIR = $(SRC_DEST)/lecture
+LC_LECTURE_ARC_DIR = $(PRE_DEST)/lecture
 LC_LECTURE_ARC = $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 
 all: $(LC_LECTURE_ARC)
@@ -941,7 +944,7 @@ $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 
 all: $(Shlomif_cutethulhu_DEST)
 
-ENEMY_STYLE = $(SRC_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
+ENEMY_STYLE = $(PRE_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
 
 all: $(ENEMY_STYLE)
 
@@ -954,7 +957,7 @@ tags:
 
 SRC_CACHE_PREFIX := lib/cache/combined/t2
 
-$(SRC_DOCS_DEST): $(SRC_DEST)/%: \
+$(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/breadcrumbs-trail \
 	$(SRC_CACHE_PREFIX)/%/html_head_nav_links \
 	$(SRC_CACHE_PREFIX)/%/main_nav_menu_html \
@@ -993,27 +996,27 @@ TECH_TIPS_OUT = lib/repos/shlomif-tech-diary--tech-tips.xhtml
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
 
-$(SRC_DEST)/open-source/resources/tech-tips/index.xhtml: $(TECH_TIPS_OUT)
+$(PRE_DEST)/open-source/resources/tech-tips/index.xhtml: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)
 
-$(SRC_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
-$(SRC_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
+$(PRE_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
+$(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
 
 all: $(SRC_CLEAN_STAMP)
 
 $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 
-PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(SRC_DEST) --dest-dir=$(SRC_POST_DEST) --
-STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(SRC_DEST)/?=='
+PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(PRE_DEST) --dest-dir=$(SRC_POST_DEST) --
+STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
 $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README)
-	$(call find_htmls,$(SRC_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
-	rsync --exclude '*.html' --exclude '*.xhtml' -a $(SRC_DEST)/ $(SRC_POST_DEST)/
+	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
+	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(SRC_POST_DEST)/
 	find $(SRC_POST_DEST) -name '*.epub' | xargs -n 1 -P 4 strip-nondeterminism --type zip
-	rsync -a $(SRC_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)
+	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(SRC_POST_DEST)/$(WMLect_PATH)
 	touch $@
 
 VIM_IFACE_BN := VimIface.pm
@@ -1086,7 +1089,7 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	fi
 	$(PERL) -i -lape 's/\s+$$//' $@
 
-$(SRC_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
+$(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
 	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
@@ -1113,7 +1116,7 @@ non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-CATB_COPY = $(SRC_DEST)/catb-heb.xhtml
+CATB_COPY = $(PRE_DEST)/catb-heb.xhtml
 CATB_COPY_POST = $(SRC_POST_DEST)/catb-heb.xhtml
 
 $(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml

@@ -91,7 +91,7 @@ EOF
 -DROOT~src --passoption=2,-X3330 -DTHEME=shlomif-text
 EOF
 
-        my $ini_dest_dir = qq#[% ENV.SRC_DEST %]/$dest_dir#;
+        my $ini_dest_dir = qq#[% ENV.PRE_DEST %]/$dest_dir#;
         path("$dir/quadpres.ini")->spew_utf8(<<"EOF");
 [quadpres]
 tt_server_dest_dir=$ini_dest_dir

@@ -1,4 +1,4 @@
-$(ALL_HTACCESSES): $(SRC_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
+$(ALL_HTACCESSES): $(PRE_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
 $(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
 $(DEST_FIERY_Q_PNG): lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
 $(DEST__C_BAD_ELEMS): $(C_BAD_ELEMS_SRC)
@@ -23,7 +23,7 @@ $(QP_VIM_IFACE): lib/$(VIM_IFACE_BN)
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(SRC_POST_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl
 $(SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST): $(SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE)
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
-$(SRC_DEST_FORTUNES_many_files): $(SRC_DEST)/%: $(SRC_SRC_DIR)/%
+$(SRC_DEST_FORTUNES_many_files): $(PRE_DEST)/%: $(SRC_SRC_DIR)/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
 $(SRC_POST_DEST_FORTUNES_many_files): $(SRC_POST_DEST)/%: $(SRC_SRC_DIR)/%
 $(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)

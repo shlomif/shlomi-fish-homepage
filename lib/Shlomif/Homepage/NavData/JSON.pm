@@ -6,14 +6,12 @@ use warnings;
 use JSON::MaybeXS qw( decode_json );
 use Path::Tiny qw/ path /;
 
-use MyNavData;
+use MyNavData                                              ();
+use HTML::Widgets::NavMenu::ToJSON                         ();
+use HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML ();
+use HTML::Latemp::Local::Paths                             ();
 
-use HTML::Widgets::NavMenu::ToJSON;
-use HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML;
-
-use HTML::Latemp::Local::Paths;
-
-my $SRC_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
+my $PRE_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
 my %keys_briefing = (
     subs   => 's',
     id     => 'i',
@@ -101,7 +99,7 @@ sub output_fully_expanded_as_json
     my $brief_keys_json = JSON::MaybeXS->new( utf8 => 1, canonical => 1 )
         ->encode($brief_keys_data);
 
-    path("$SRC_DEST/_data/n.json")->spew($brief_keys_json);
+    path("$PRE_DEST/_data/n.json")->spew($brief_keys_json);
 
     return $verbose_keys_json;
 }

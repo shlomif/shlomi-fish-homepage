@@ -49,7 +49,7 @@ PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
 
 MAN_HTML = $(SRC_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
-SITE_SOURCE_INSTALL_TARGET = $(SRC_DEST)/meta/site-source/INSTALL
+SITE_SOURCE_INSTALL_TARGET = $(SRC_POST_DEST)/meta/site-source/INSTALL
 SRC_DEST_FORTUNES_DIR = $(SRC_DEST)/$(FORTUNES_DIR)
 SRC_POST_DEST_FORTUNES_DIR = $(SRC_POST_DEST)/$(FORTUNES_DIR)
 FORTUNES_TARGET =  $(SRC_DEST_FORTUNES_DIR)/index.xhtml
@@ -537,12 +537,12 @@ make-dirs: $(ALL_DIRS)
 
 FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
-DEST__C_BAD_ELEMS_SRC = $(SRC_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+DEST__C_BAD_ELEMS = $(SRC_POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
 
-all: $(DEST__C_BAD_ELEMS_SRC)
+all: $(DEST__C_BAD_ELEMS)
 
 ART_SLOGANS_DOCS = \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
@@ -1103,7 +1103,7 @@ $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/op
 
 JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
 
-JSON_RES_DEST := $(SRC_DEST)/$(JSON_RES_BASE).json
+JSON_RES_DEST := $(SRC_POST_DEST)/$(JSON_RES_BASE).json
 
 $(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
 	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@

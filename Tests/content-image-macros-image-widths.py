@@ -30,10 +30,12 @@ class MyTests(unittest.TestCase):
             m = re.match(
                 "^\\.\\./\\.\\./(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)
+            path = m[1]
+            self.assertTrue(re.match(".*\\.webp$", path))
             self.assertEqual(
-                Image.open("./dest/post-incs/t2/" + m[1]).size[0],
+                Image.open("./dest/post-incs/t2/" + path).size[0],
                 WIDTH,
-                "image {} has WIDTH={}".format(m[1], WIDTH)
+                "image {} has WIDTH={}".format(path, WIDTH)
                 )
 
 

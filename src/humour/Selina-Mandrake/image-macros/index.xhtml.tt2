@@ -10,36 +10,9 @@
 [% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
 
 <div class="aphorisms wrap-me lim_width limit_imgs_width">
-
-[%- SET caption = "Emma Watson played Hermione in the Harry Potters, but she doesn't need a wand to kick your ass." -%]
-
-[% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Emma Watson does not need a wand"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
-
-[% WRAPPER quote %]
-<p>
-[% caption %]
-</p>
-[%- END -%]
-
-<p>
-In <a href="../"><i>Selina Mandrake</i></a>, the titular protagonist (whom I want to be
-<a href="../cast.html#selina">played
-by Emma Watson</a>) is able to "kick ass" (or "slay" and/or "dispel") without needing
-a wand or any other violent weapon.
-</p>
-
-<p>
-This captioned image was originally conceived for use in
-<a href="[% base_path %]humour/Terminator/Liberation/">a different screenplay</a>
-and has later provided inspiration for
-<a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html#the-guide-after-the-three">a
-scene in <i>Selina</i></a>.
-</p>
-
-[%- END -%]
-
 [% PROCESS "Inc/emma_watson_img_macros_blocks.tt2" %]
 
+[% INCLUDE wandless_emma_watson__image_macro %]
 [% INCLUDE cast_american_as_a_britishwoman %]
 
 </div>

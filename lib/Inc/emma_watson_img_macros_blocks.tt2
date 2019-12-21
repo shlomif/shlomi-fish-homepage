@@ -1,3 +1,34 @@
+[% BLOCK wandless_emma_watson__image_macro %]
+
+[%- SET caption = "Emma Watson played Hermione in the Harry Potters, but she doesn't need a wand to kick your ass." -%]
+
+[% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Emma Watson does not need a wand"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
+
+[% WRAPPER quote %]
+<p>
+[% caption %]
+</p>
+[%- END -%]
+
+<p>
+In <a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake</i></a>, the titular protagonist (whom I want to be
+<a href="[% base_path %]humour/Selina-Mandrake/cast.html#selina">played
+by Emma Watson</a>) is able to "kick ass" (or "slay" and/or "dispel") without needing
+a wand or any other violent weapon.
+</p>
+
+<p>
+This captioned image was originally conceived for use in
+<a href="[% base_path %]humour/Terminator/Liberation/">a different screenplay</a>
+and has later provided inspiration for
+<a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html#the-guide-after-the-three">a
+scene in <i>Selina</i></a>.
+</p>
+
+[%- END -%]
+
+[%- END -%]
+
 [% BLOCK cast_american_as_a_britishwoman %]
 
 [% WRAPPER github_captioned_image_joke id = "cast_an_American_actress"  header = "“One does not simply cast an American actress for a Britishwoman’s role.”"  repo_href = "http://github.com/shlomif/Captioned-Image-One-does-not-Simply-cast-an-American-Actress"  src = base_path _ "humour/images/one-does-not-simply-cast-an-american-actress.svg.webp"  alt = "“One does not simply cast an American actress for a Britishwoman’s role.”"    %]

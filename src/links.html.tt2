@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET NSFW = my_acronym( "key" => "NSFW",) %]
+
 [% default_toc %]
 
 <div class="fancy_sects">
@@ -1206,10 +1208,32 @@ from <i>Not Another Teen Movie</i></a> - funny but better than many serious ones
 </p>
 </li>
 
-
 </ul>
 
 </section>
+
+[% WRAPPER h4_section id = "rule_bending" title = "Rule bending ; “do what you want” ; hacking"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=d2RZXeQc5HU">“Highway to hell” cover by Jess Greenberg</a> (somewhat
+[% NSFW %]; "boobs") - a great cover of the song.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=4gms1fjqmak">She Moves: "Breaking All The Rules"</a> - a 1990s
+song that was somewhat popular on MTV, which I am still fond of.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 </section>
 <section>
 

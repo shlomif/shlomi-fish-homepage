@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="doc">The Main Document</h2>
+[% WRAPPER h2_section id = "doc" title = "The Main Document" %]
 
 <p>
 This is a list of some business models for Web-based commerce that do not
@@ -71,13 +71,26 @@ One can also set up non-intrusive ads like those provided by
 it will be very profitable.
 </p>
 </li>
+
+<li>
+<p>
+Give relatively low quality versions of the artworks, free of charge and
+charge money for access to higher quality versions, e.g like
+<a href="https://en.wikipedia.org/wiki/Ghosts_I%E2%80%93IV"><i>Ghosts I-IV</i></a>
+by Nine Inch Nails.
+</p>
+</li>
 </ol>
 
-<h3 id="licence">Licence</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_nc_sa_british_blurb (year => "2015")  %]
 
-<h2 id="see_also">See Also</h2>
+[% END %]
+
+[% WRAPPER see_also %]
 
 <ul>
 
@@ -90,21 +103,25 @@ support for open source”</a> - a comprehensive document on GitHub.
 
 </ul>
 
-<h2 id="meta">Document Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
 Written By:
 </dt>
 <dd>
-<a href="http://www.shlomifish.org/">Shlomi Fish</a>
+<a href="https://www.shlomifish.org/">Shlomi Fish</a>
 </dd>
 <dt>
 Last Updated:
 </dt>
 <dd>
-26-August-2015
+21-December-2019
 </dd>
 </dl>
+
+[% END %]
 
 [% END %]

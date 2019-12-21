@@ -1,7 +1,6 @@
 [%- SET title = "libtap Maintenance" -%]
 [%- SET desc = "Maintenance version of libtap" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -9,6 +8,21 @@ libtap is a library to implement <a href="http://testanything.org/">the
 Test Anything Protocol</a> for C originally created by Nik Clayton. This is a
 maintenance branch by me (= Shlomi Fish).
 </p>
+
+[% WRAPPER note  %]
+
+<header>
+<h2 id="note">Note</h2>
+</header>
+
+<p>
+I would now recommend using <a href="https://cmocka.org/">cmocka</a>
+instead of either this libtap or the
+<a href="https://github.com/zorgnax/libtap">different one on
+GitHub</a>. I've converted my test suites to cmocka.
+</p>
+
+[%- END -%]
 
 <h2 id="download">Download</h2>
 

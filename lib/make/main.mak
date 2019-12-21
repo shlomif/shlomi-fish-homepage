@@ -1047,9 +1047,14 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 
 copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
-SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/facts/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__webps :=$(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
+	gm convert $< $@
+
+SRC_pngs__BASE := $(filter $(POST_DEST)/humour/bits/%.png,$(SRC_IMAGES_DEST))
+SRC_pngs__webps :=$(SRC_pngs__BASE:%.png=%.webp)
+$(SRC_pngs__webps): %.webp: %.png
 	gm convert $< $@
 
 SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
@@ -1062,7 +1067,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps)
+min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps)
 
 TEST_TARGETS = Tests/*.{py,t}
 

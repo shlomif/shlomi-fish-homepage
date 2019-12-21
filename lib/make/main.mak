@@ -1048,12 +1048,13 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
 SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
-SRC_jpgs__webps :=$(SRC_jpgs__BASE:%.jpg=%.webp)
+SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
 	gm convert $< $@
 
 SRC_pngs__BASE := $(filter $(POST_DEST)/humour/bits/%.png,$(SRC_IMAGES_DEST))
-SRC_pngs__webps :=$(SRC_pngs__BASE:%.png=%.webp)
+SRC_pngs__BASE += $(POST_DEST_HTML_6_LOGO_PNG)
+SRC_pngs__webps := $(SRC_pngs__BASE:%.png=%.webp)
 $(SRC_pngs__webps): %.webp: %.png
 	gm convert $< $@
 

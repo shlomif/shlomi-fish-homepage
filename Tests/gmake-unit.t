@@ -62,8 +62,7 @@ sub dest_test
         "found a file" );
 
     # TEST
-    post_dest_test( 'SRC_POST_DIRS_DEST', "art/original-graphics",
-        "found a dir" );
+    post_dest_test( 'POST_DEST_DIRS', "art/original-graphics", "found a dir" );
 
     # TEST
     post_dest_test( 'SRC_SVGS__svgz', "images/bk2hp-v2.svgz",

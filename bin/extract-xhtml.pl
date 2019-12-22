@@ -5,9 +5,9 @@ use warnings;
 
 use lib './lib';
 
-use XML::LibXML;
-use XML::LibXML::XPathContext;
-use Getopt::Long;
+use XML::LibXML               ();
+use XML::LibXML::XPathContext ();
+use Getopt::Long qw/ GetOptions /;
 use Path::Tiny qw/ path /;
 
 use Shlomif::DocBookClean ();
@@ -34,7 +34,7 @@ $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
     Shlomif::DocBookClean::cleanup_docbook( \$s );
 
     $s =~ s{\A.*?<body[^>]*>}{}ms;
-    $s =~ s{</body>(?:</html>)?\z}{};
+    $s =~ s{</body>\s*(?:</html>)?\s*\z}{}ms;
 
     $s =~ s{<h1[^>]*>.*?</h1>}{}sm;
 

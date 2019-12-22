@@ -394,7 +394,6 @@ FORTUNES_RSS_FEED = $(SRC_FORTUNES_DIR)/fortunes-shlomif-all.rss
 FORTUNES_SQLITE_BASENAME := fortunes-shlomif-lookup.sqlite3
 POST_DEST_FORTUNES_SQLITE_DB = $(POST_DEST_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 FORTUNES_SQLITE_DB = $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
-SRC_DEST_HTMLS_FORTUNES = $(patsubst %,$(PRE_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
@@ -764,8 +763,6 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(POST_DEST)/%-pl.tx
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
-SRC_DEST_IMAGES_DIR := $(PRE_DEST)/images
-
 svg_nav_images:
 
 NAV_DATA_AS_JSON = $(POST_DEST)/_data/nav.json
@@ -841,8 +838,6 @@ FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD = $(PERL) $(FACTOIDS_RENDER_SCRIPT)
 
-# FACTOIDS_DOCS_DEST = $(filter $(DEST_HUMOUR)/bits/facts/%,$(SRC_DOCS_DEST))
-
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
 
@@ -888,7 +883,7 @@ Shlomif_cutethulhu_DEST = $(POST_DEST)/images/shlomif-cutethulhu-small.webp
 
 DnD_lances_cartoon_DEST = $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
-SRC_POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
+POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
 
 MY_RPF_DEST_DIR = $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
 MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp

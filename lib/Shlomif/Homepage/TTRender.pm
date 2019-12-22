@@ -7,6 +7,7 @@ use utf8;
 use Encode qw/ decode_utf8 /;
 use Moo;
 use Path::Tiny qw/ path /;
+use YAML::XS ();
 
 use HTML::Latemp::Acronyms                 ();
 use HTML::Latemp::AddToc                   ();
@@ -53,9 +54,11 @@ sub _render_nav_block
 }
 
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
-my $latemp_acroman    = HTML::Latemp::Acronyms->new;
-my $long_stories      = Shlomif::Homepage::LongStories->new;
-my $shlomif_cpan      = $cpan->homepage( +{ who => 'shlomif' } );
+my $ACRONYMS_FN       = "lib/acronyms/list1.yaml";
+my $latemp_acroman    = HTML::Latemp::Acronyms->new(
+    dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
+my $long_stories = Shlomif::Homepage::LongStories->new;
+my $shlomif_cpan = $cpan->homepage( +{ who => 'shlomif' } );
 my $news = Shlomif::Homepage::News->new( { dir => "lib/feeds/shlomif_hsite" } );
 my $LONGBLANK         = ( "<br/>" x 72 );
 my $xml_fiction_slurp = Shlomif::XmlFictionSlurp->new;

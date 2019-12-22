@@ -4,22 +4,13 @@ use strict;
 use warnings;
 use 5.014;
 
-use Carp     ();
-use YAML::XS ();
+use Carp ();
 
 use Moo;
 
-my $FN = "lib/acronyms/list1.yaml";
-
-has '_dict' => (
-    is      => 'ro',
-    lazy    => 1,
-    default => sub {
-        return (
-            eval { YAML::XS::LoadFile($FN) }
-                or YAML::XS::LoadFile("../$FN")
-        );
-    }
+has 'dict' => (
+    is       => 'ro',
+    required => 1,
 );
 
 sub abbr
@@ -29,7 +20,7 @@ sub abbr
     my $key     = $args->{key};
     my $no_link = $args->{no_link};
 
-    my $rec = $self->_dict->{$key};
+    my $rec = $self->dict->{$key};
 
     if ( !defined $rec )
     {

@@ -1,12 +1,9 @@
 [%- SET title = "Software Resources Pages" -%]
 [%- SET desc = "Software Resources Pages - lists of prominent alternatives, and beginner and adovcacy sites" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<section class="h2">
-
-<h2 id="lists">Curated Lists and Directories of Software Applications</h2>
+[% WRAPPER h2_section id = "lists" title = "Curated Lists and Directories of Software Applications" %]
 
 <div class="sub_section">
 
@@ -107,11 +104,9 @@ Linas Vepstas and reflects the state of Linux software as of the late 1990s.
 
 </section>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="beginners_sites">Topical Portals, and Beginners’ Sites</h2>
+[% WRAPPER h2_section id = "beginners_sites" title = "Topical Portals, and Beginners’ Sites" %]
 
 <div class="sub_section">
 
@@ -137,22 +132,18 @@ and configurable text editor.
 
 </div>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2><a href="tech-tips/">Collection of Tech Tips</a></h2>
+[% WRAPPER h2_section id = "tech-tips" title = "Collection of Tech Tips" href = "tech-tips/" %]
 
 <p>
 My collection of technical/software-related tips as concentrated from the
 individual entries on my weblogs.
 </p>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2><a href="israel/">Israeli-Related FOSS Resources</a></h2>
+[% WRAPPER h2_section id = "israeli-foss" title = "Israeli-Related FOSS Resources" href = "israel/" %]
 
 <div class="sub_section">
 
@@ -177,28 +168,24 @@ Hackers-IL.
 
 </div>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2><a href="../favourite/">Favourite Free Software</a></h2>
+[% WRAPPER h2_section id = "favourite-foss" title = "Favourite Free Software" href = "../favourite/" %]
 
 <p>
 This contains a list of some of my favourite free software packages out
 there.
 </p>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2><a href="../interviews/">Interviews with Open Source People</a></h2>
+[% WRAPPER h2_section id = "interviews" title = "Interviews with Open Source People" href = "../interviews/" %]
 
 <p>
 These are a collection of interviews I conducted with people of the open
 source community.
 </p>
 
-</section>
+[% END %]
 
 [% END %]

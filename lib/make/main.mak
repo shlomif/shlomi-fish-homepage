@@ -106,12 +106,10 @@ POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-SRC_POST_DEST_SHOW_CGI = $(POST_DEST_FORTUNES_DIR)/show.cgi
 SRC_SRC_FORTUNE_SHOW_SCRIPT = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 SRC_SRC_FORTUNE_SHOW_PY = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
 SRC_SRC_BOTTLE = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
-SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
-SRC_DEST_FORTUNE_BOTTLE = $(PRE_DEST_FORTUNES_DIR)/bottle.py
+POST_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
 
 htacc = $(addsuffix /.htaccess,$(1))
 SRC_FORTUNES_DIR_HTACCESS = $(call htacc,$(PRE_DEST_FORTUNES_DIR))
@@ -126,14 +124,14 @@ $(SRC_FORTUNES_DIR)/my_htaccess.conf: $(SRC_FORTUNES_DIR)/gen-htaccess.pl
 $(SRC_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -Ilib $< $@
 
-SRC_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(PRE_DEST_FORTUNES_DIR)/%,$(wildcard $(SRC_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
+PRE_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(PRE_DEST_FORTUNES_DIR)/%,$(wildcard $(SRC_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
 chmod_copy = $(call COPY) ; chmod +x $@
 
 $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-$(SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
+$(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call COPY)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
@@ -456,7 +454,7 @@ $(FORTS_EPUB_SRC): fortunes-target
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(SRC_POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER)
 
 $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \
@@ -1071,8 +1069,8 @@ min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps)
 
 TEST_TARGETS = Tests/*.{py,t}
 
-SRC_DEST_FORTUNES_many_files := $(SRC_DEST_FORTUNES)
-SRC_POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
+PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
+POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
 DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 
 include lib/make/copies-generated-include.mak
@@ -1135,4 +1133,4 @@ $(CATB_COPY_POST): $(CATB_COPY)
 
 all: $(CATB_COPY_POST)
 
-copy_fortunes: $(SRC_DEST_FORTUNES_many_files) $(SRC_POST_DEST_FORTUNES_many_files)
+copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)

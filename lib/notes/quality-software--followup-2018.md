@@ -1,3 +1,6 @@
+**Note:** there is a similar essay on [software disenchantment](https://tonsky.me/blog/disenchantment/)
+and probably many other similar ones.
+
 * Essay: reflections on how software quality has improved/worsened.
     - Follow-up on http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/
     - Follow-up on https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed

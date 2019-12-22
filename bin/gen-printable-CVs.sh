@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 dest="dest/printable"
 
 tt2__render_i_o()

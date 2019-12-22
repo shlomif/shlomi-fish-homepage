@@ -10,7 +10,7 @@ use XML::LibXML::XPathContext;
 use Getopt::Long;
 use Path::Tiny qw/ path /;
 
-use Shlomif::DocBookClean;
+use Shlomif::DocBookClean ();
 
 my $out_fn;
 
@@ -31,12 +31,12 @@ $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
 
     my $s = $body_node->toString();
 
-    $s =~ s{\A<body[^>]*>}{}sm;
-    $s =~ s{</body>\z}{};
+    Shlomif::DocBookClean::cleanup_docbook( \$s );
+
+    $s =~ s{\A.*?<body[^>]*>}{}ms;
+    $s =~ s{</body>(?:</html>)?\z}{};
 
     $s =~ s{<h1[^>]*>.*?</h1>}{}sm;
-
-    Shlomif::DocBookClean::cleanup_docbook( \$s );
 
     $s =~ s#<span>\s*</span>##gms;
     $s =~ s#<span style="[^"]*" */>##gms;

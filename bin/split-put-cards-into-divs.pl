@@ -7,9 +7,9 @@ use lib './lib';
 use utf8;
 
 use Path::Tiny qw/ path /;
-use XML::LibXML;
-use HTML::Latemp::Local::Paths;
-use Shlomif::DocBookClean;
+use XML::LibXML                ();
+use HTML::Latemp::Local::Paths ();
+use Shlomif::DocBookClean      ();
 
 my $PRE_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
 my $dom      = XML::LibXML->load_xml( location =>

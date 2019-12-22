@@ -11,7 +11,7 @@ use XML::LibXML::XPathContext;
 use Getopt::Long;
 use Path::Tiny qw/ path /;
 
-use Shlomif::DocBookClean;
+use Shlomif::DocBookClean ();
 
 my $out_fn;
 
@@ -24,10 +24,10 @@ my $filename = shift(@ARGV)
 {
     my $s = path($filename)->slurp_utf8;
 
-    $s =~ s{\A.*?<body[^>]*>}{}sm;
-    $s =~ s{</body>.*\z}{}ms;
-
     Shlomif::DocBookClean::cleanup_docbook( \$s );
+
+    $s =~ s{\A.*?<body[^>]*>}{}ms;
+    $s =~ s{</body>.*\z}{}ms;
 
     # Fixed in Perl 6...
     $s =~ s{<(/?)h(\d)}{"<".$1."h".($2+1)}ge;

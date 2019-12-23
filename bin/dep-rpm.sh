@@ -8,4 +8,5 @@
 
 perl bin/gen-rpm-for-build-deps -o f.spec
 rpmbuild -ba f.spec
-sudo urpmi --auto --keep --resume --noclean --no-recommends --downloader wget --wget-options -c /home/shlomif/progs/Rpms/RPMS/noarch/task-shlomif-homesite-0.0.1-1.mga7.noarch.rpm
+# sudo urpmi --auto --keep --resume --noclean --no-recommends --downloader wget --wget-options -c /home/shlomif/progs/Rpms/RPMS/noarch/task-shlomif-homesite-0.0.1-1.mga7.noarch.rpm
+sudo dnf -y install /home/shlomif/progs/Rpms/RPMS/noarch/task-shlomif-homesite-0.0.1-1.mga8.noarch.rpm

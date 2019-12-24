@@ -1,7 +1,7 @@
 'use strict';
 
-let toggle_sect_key = 'shlomifish.org_section_navigation_menu_shown';
-let toggle_main_key = 'shlomifish.org_main_navigation_menu_shown';
+const toggle_sect_key = 'shlomifish.org_section_navigation_menu_shown';
+const toggle_main_key = 'shlomifish.org_main_navigation_menu_shown';
 
 function build_sect_nav_menu_toggler() {
     build_toggler({
@@ -29,10 +29,10 @@ function build_main_nav_menu_toggler() {
 
 $(document).ready(function() {
     if (false) {
-    $('#sect_menu_wrapper > ul').tree({
-        autoEscape: false,
-        autoOpen: false,
-    });
+        $('#sect_menu_wrapper > ul').tree({
+            autoEscape: false,
+            autoOpen: false,
+        });
     }
 
     build_sect_nav_menu_toggler();

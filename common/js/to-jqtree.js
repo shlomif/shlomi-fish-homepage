@@ -8,7 +8,7 @@
 // Taken from http://stackoverflow.com/questions/202605/repeat-string-javascript
 function myrepeat(s, count) {
     if (count < 1) return '';
-    var result = '', pattern = s.valueOf();
+    let result = '', pattern = s.valueOf();
     while (count > 0) {
         if (count & 1) result += pattern;
         count >>= 1, pattern += pattern;
@@ -16,38 +16,12 @@ function myrepeat(s, count) {
     return result;
 }
 
-if (!Array.prototype.map)
-{
-  Array.prototype.map = function(fun /*, thisp */)
-  {
-    "use strict";
-
-    if (this === void 0 || this === null)
-      throw new TypeError();
-
-    var t = Object(this);
-    var len = t.length >>> 0;
-    if (typeof fun !== "function")
-      throw new TypeError();
-
-    var res = new Array(len);
-    var thisp = arguments[1];
-    for (var i = 0; i < len; i++)
-    {
-      if (i in t)
-        res[i] = fun.call(thisp, t[i], i, t);
-    }
-
-    return res;
-  };
-}
-
 function get_base_relative_path (args) {
-    var rel_path = args.rel_path;
+    const rel_path = args.rel_path;
 
     //var rel_path = current.substring(base.length);
 
-    var count = (rel_path.match(/\//g)||[]).length;
+    const count = (rel_path.match(/\//g)||[]).length;
 
     /*
     if (rel_path.match(/[^\/]$/))
@@ -63,7 +37,7 @@ function get_relative_path (args) {
 }
 
 function shlomif_get_relative_path_callback(rel_path) {
-    var prefix = get_base_relative_path({ rel_path: rel_path });
+    const prefix = get_base_relative_path({ rel_path: rel_path });
     return function (to) {
         return prefix + to;
     };
@@ -80,31 +54,30 @@ function escape_html (str) {
 }
 
 function calc_jqtree_data_from_html_w_nav_menu_json (args) {
-    var rel_path = args.rel_path;
+    const rel_path = args.rel_path;
+    const _get_rel = shlomif_get_relative_path_callback(rel_path);
 
-    var _get_rel = shlomif_get_relative_path_callback(rel_path);
-
-    var _recurse;
+    let _recurse;
 
     _recurse = function(sub_tree) {
         if ($.isArray(sub_tree)) {
             return sub_tree.map(_recurse);
         }
 
-        var title_attr = '';
+        let title_attr = '';
 
         if ('title' in sub_tree) {
             title_attr = ' title="' + sub_tree['title'] + '"'
         }
 
-        var label = (sub_tree['url'] == rel_path)
-            ? "<b>" + sub_tree['text'] + "</b>"
-            : ("<a href=\"" +
+        const label = ((sub_tree['url'] === rel_path) ?
+            ("<b>" + sub_tree['text'] + "</b>") :
+            ("<a href=\"" +
                 escape_html(_get_rel(sub_tree['url'])) + "\"" + title_attr +
                 ">" + sub_tree['text'] + "</a>"
-                );
+                ));
 
-        var ret = {
+        const ret = {
             id: parseInt(sub_tree['id']),
             label: label
         };

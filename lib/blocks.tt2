@@ -470,11 +470,6 @@ of an EvilPHish”</a> cartoon of
 [% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '</div>' %]
 [% END %]
 
-[% IF is_hebrew %]
-[% SET body_params = body_params _ " onload=\"langLoad()\"" %]
-[% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '<script src="' _ base_path _ 'js/moz-lang.js"></script>' %]
-[% END %]
-
 [% IF xhtml1 %]
 [% SET script_type=' type="text/javascript"' %]
 [% SET nav_tag='div' %]

@@ -774,8 +774,6 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
-JQTREE_SRC := common/js/tree.jquery.js
-JQTREE_MIN_DEST := $(POST_DEST)/js/tree.jq.js
 MAIN_TOTAL_MIN_JS_DEST := $(POST_DEST)/js/main_all.js
 EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
@@ -798,10 +796,7 @@ MAIN_TOTAL_MIN_JS__SOURCES = \
 	common/js/selfl.js \
 	common/js/sub_menu.js \
 
-$(JQTREE_MIN_DEST): $(JQTREE_SRC) $(MULTI_YUI)
-	$(MULTI_YUI) -o $@ $(JQTREE_SRC)
-
-minified_javascripts: $(JQTREE_MIN_DEST) $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
+minified_javascripts: $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)

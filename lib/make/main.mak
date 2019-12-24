@@ -786,11 +786,9 @@ $(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
 # Must not be sorted!
 MAIN_TOTAL_MIN_JS__SOURCES = \
 	bower_components/jquery/dist/jquery.min.js \
-	common/js/jquery.treeview.min.js \
 	common/js/toggler.js \
 	common/js/toggle_sect.js \
 	bower_components/jqTree/tree.jquery.js \
-	common/js/jquery.cookie.js \
 	common/js/to-jqtree.js \
 	common/js/to-jqtree-2.js \
 	common/js/selfl.js \

@@ -7,19 +7,11 @@ function set_N(new_n) {
 }
 
 function get_min(x) {
-    if (x - 1 < 0) {
-        return 0;
-    } else {
-        return x - 1;
-    }
+    return Math.max(x - 1, 0);
 }
 
 function get_max(x) {
-    if (x + 1 > N_squares - 1) {
-        return N_squares-1;
-    } else {
-        return x + 1;
-    }
+    return Math.min(x + 1, N_squares - 1);
 }
 
 function press_button(x, y) {

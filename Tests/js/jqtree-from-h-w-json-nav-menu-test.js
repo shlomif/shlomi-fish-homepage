@@ -1,8 +1,6 @@
 "use strict";
-/*
- * Tests for the jQtree generation routines.
- * Copyright by Shlomi Fish, 2012.
- * */
+// Tests for the jQtree generation routines.
+// Copyright by Shlomi Fish, 2012 - see LICENSE.md
 
 function test_nav_menu_generation()
 {
@@ -92,7 +90,7 @@ function test_nav_menu_generation()
         );
 
         {
-            var input = [
+            const input = [
             {
                 id: 1,
                 "text": 'Shlomi Fish',
@@ -114,7 +112,7 @@ function test_nav_menu_generation()
             ];
 
             // TEST
-            var expected = [
+            const expected = [
             {
                 id: 1,
                 label: '<a href="./../">Shlomi Fish</a>',
@@ -144,7 +142,7 @@ function test_nav_menu_generation()
         }
 
         {
-            var input = [
+            const input = [
             {
                 id: 1,
                 "text": 'Shlomi Fish',
@@ -187,7 +185,7 @@ function test_nav_menu_generation()
             ];
 
             // TEST
-            var expected = [
+            const expected = [
             {
                 id: 1,
                 label: '<a href="./../../">Shlomi Fish</a>',

@@ -1,5 +1,5 @@
 # Whether this is the development environment
-DEV = 0
+DEV ?= 0
 
 POST_DEST := dest/post-incs/t2
 SRC_POST_DEST := $(POST_DEST)
@@ -23,45 +23,45 @@ SRC_IMAGES += $(BK2HP_SVG_BASE)
 
 include lib/make/rules.mak
 
-PRE_DEST = $(SRC_DEST)
+PRE_DEST := $(SRC_DEST)
 
 include lib/factoids/deps.mak
 include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
 include lib/make/long_stories.mak
 
-COMMON_POST_DEST_DIRS = $(addprefix $(POST_DEST)/,$(COMMON_DIRS))
+COMMON_POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(COMMON_DIRS))
 
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
-POST_DEST_DIRS = $(addprefix $(POST_DEST)/,$(SRC_DIRS))
+POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(SRC_DIRS))
 SRC_TARGETS += $(POST_DEST_DIRS)
 
-NAV_DATA_DEP = lib/MyNavData.pm
-NAV_DATA_AS_JSON_BIN = bin/nav-data-as-json
+NAV_DATA_DEP := lib/MyNavData.pm
+NAV_DATA_AS_JSON_BIN := bin/nav-data-as-json
 
-SCREENPLAY_COMMON_INC_DIR = $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
+SCREENPLAY_COMMON_INC_DIR := $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
 
-DOCS_COMMON_DEPS = $(NAV_DATA_DEP)
+DOCS_COMMON_DEPS := $(NAV_DATA_DEP)
 
-FORTUNES_DIR = humour/fortunes
-SRC_FORTUNES_DIR = $(SRC_SRC_DIR)/$(FORTUNES_DIR)
+FORTUNES_DIR := humour/fortunes
+SRC_FORTUNES_DIR := $(SRC_SRC_DIR)/$(FORTUNES_DIR)
 
 include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
-PROCESS_ALL_INCLUDES__NON_INPLACE = $(PERL) bin/post-incs-v2.pl
+PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) bin/post-incs-v2.pl
 
-MAN_HTML = $(PRE_DEST)/MANIFEST.html
-GEN_SECT_NAV_MENUS = ./bin/gen-sect-nav-menus.pl
-SITE_SOURCE_INSTALL_TARGET = $(POST_DEST)/meta/site-source/INSTALL
-PRE_DEST_FORTUNES_DIR = $(PRE_DEST)/$(FORTUNES_DIR)
-POST_DEST_FORTUNES_DIR = $(POST_DEST)/$(FORTUNES_DIR)
-FORTUNES_TARGET =  $(PRE_DEST_FORTUNES_DIR)/index.xhtml
+MAN_HTML := $(PRE_DEST)/MANIFEST.html
+GEN_SECT_NAV_MENUS := ./bin/gen-sect-nav-menus.pl
+SITE_SOURCE_INSTALL_TARGET := $(POST_DEST)/meta/site-source/INSTALL
+PRE_DEST_FORTUNES_DIR := $(PRE_DEST)/$(FORTUNES_DIR)
+POST_DEST_FORTUNES_DIR := $(POST_DEST)/$(FORTUNES_DIR)
+FORTUNES_TARGET :=  $(PRE_DEST_FORTUNES_DIR)/index.xhtml
 
-FORTUNES_ALL_IN_ONE__BASE = all-in-one.html
-FORTUNES_ALL_IN_ONE__TEMP__BASE = all-in-one.uncompressed.html
-SRC_FORTUNES_ALL__HTML = $(PRE_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
-SRC_FORTUNES_ALL__HTML__POST = $(POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
+FORTUNES_ALL_IN_ONE__BASE := all-in-one.html
+FORTUNES_ALL_IN_ONE__TEMP__BASE := all-in-one.uncompressed.html
+SRC_FORTUNES_ALL__HTML := $(PRE_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__BASE)
+SRC_FORTUNES_ALL__HTML__POST := $(POST_DEST_FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE)
 
 SECTS_DEPS__DIR := lib/Shlomif/Homepage/SectionMenu/Sects
 SECTION_MENU_DEPS := lib/Shlomif/Homepage/SectionMenu.pm
@@ -76,10 +76,10 @@ SOFTWARE_DEPS := $(SECTS_DEPS__DIR)/Software.pm
 
 ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_DEPS) $(PHILOSOPHY_DEPS) $(PUZZLES_DEPS) $(SECTION_MENU_DEPS) $(SOFTWARE_DEPS)
 
-FACTOIDS_NAV_JSON = lib/Shlomif/factoids-nav.json
+FACTOIDS_NAV_JSON := lib/Shlomif/factoids-nav.json
 
-SRC_CACHE_ALL_STAMP = lib/cache/STAMP.sects-includes
-SRC_CLEAN_STAMP = lib/cache/STAMP.post-dest
+SRC_CACHE_ALL_STAMP := lib/cache/STAMP.sects-includes
+SRC_CLEAN_STAMP := lib/cache/STAMP.post-dest
 
 GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(SRC_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
 
@@ -106,15 +106,15 @@ POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-SRC_SRC_FORTUNE_SHOW_SCRIPT = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
-SRC_SRC_FORTUNE_SHOW_PY = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
-SRC_SRC_BOTTLE = $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
-POST_DEST_FORTUNE_SHOW_SCRIPT_TXT = $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
+SRC_SRC_FORTUNE_SHOW_SCRIPT := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
+SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
+SRC_SRC_BOTTLE := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
+POST_DEST_FORTUNE_SHOW_SCRIPT_TXT := $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
 
 htacc = $(addsuffix /.htaccess,$(1))
-SRC_FORTUNES_DIR_HTACCESS = $(call htacc,$(PRE_DEST_FORTUNES_DIR))
+SRC_FORTUNES_DIR_HTACCESS := $(call htacc,$(PRE_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES = $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,lecture/PostgreSQL-Lecture))
+ALL_HTACCESSES := $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,lecture/PostgreSQL-Lecture))
 
 htaccesses_target: $(ALL_HTACCESSES)
 

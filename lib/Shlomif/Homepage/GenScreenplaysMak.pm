@@ -21,7 +21,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $vcs_dir_var = "${base}__VCS_DIR";
 
     my @ret =
-        ("$vcs_dir_var = $screenplay_vcs_base_dir/$github_repo/$subdir\n");
+        ("$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n");
 
     my @epubs;
     my $copy_screenplay_mak = '';
@@ -45,12 +45,12 @@ sub _calc_screenplay_doc_makefile_lines
 
         push @epubs, $epub_dest_varname;
 
-        push @ret, "$src_vcs_dir_var = \$($vcs_dir_var)/screenplay\n\n",
-"$src_varname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
-"$src_xhtmlname = \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n\n",
-"$dest_xhtmlname = \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n\n",
-            "$dest_varname = \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
-"$epub_dest_varname = \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
+        push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n\n",
+"$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
+"$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n\n",
+"$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n\n",
+            "$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
+"$epub_dest_varname := \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" ),
@@ -138,12 +138,12 @@ EOF
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         ( map { @{ $_->{lines} } } @records ),
-        "\n\nSCREENPLAY_DOCS_FROM_GEN = \\\n",
+        "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
         ( map { "\t$_->{base} \\\n" } map { @{ $_->{rec}->{docs} } } @records ),
-        "\n\nSCREENPLAY_DOCS__DEST_EPUBS = \\\n",
+        "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n\n",
-        "$epub_dests_varname = \\\n$epub_dests$_htmls_dests\n\n",
+        "$epub_dests_varname := \\\n$epub_dests$_htmls_dests\n\n",
         (
             map {
                       "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"

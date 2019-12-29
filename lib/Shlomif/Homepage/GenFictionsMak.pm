@@ -18,7 +18,7 @@ sub _calc_fiction_story_makefile_lines
 
     my $vcs_dir_var = "${base}__VCS_DIR";
 
-    my @ret = ("$vcs_dir_var = \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n");
+    my @ret = ("$vcs_dir_var := \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n");
 
     foreach my $doc ( @{ $d->{docs} } )
     {
@@ -54,8 +54,8 @@ sub _calc_fiction_story_makefile_lines
         }
 
         push @ret,
-"$src_varname = \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n\n",
-            "$from_vcs_varname = \$($dest_dir_var)/$doc_base.$dest_suffix\n\n",
+"$src_varname := \$($vcs_dir_var)/$subdir/text/$doc_base.$src_suffix\n",
+            "$from_vcs_varname := \$($dest_dir_var)/$doc_base.$dest_suffix\n\n",
             "\$($from_vcs_varname): \$($src_varname)\n\t\$(call $make_cmd)\n\n";
         if ( defined $dest_expr )
         {

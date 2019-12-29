@@ -412,7 +412,7 @@ $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(
 $(FORTUNES_XHTMLS): $(FORTUNES_XHTMLS_DIR)/%.xhtml : $(SRC_FORTUNES_DIR)/%.xml $(FORTUNES_CONVERT_TO_XHTML_SCRIPT)
 	$(PERL) $(FORTUNES_CONVERT_TO_XHTML_SCRIPT) $< $@
 
-FORTUNES_XML_TO_XHTML_TOC_XSLT = lib/fortunes/fortune-xml-to-xhtml-toc.xslt
+FORTUNES_XML_TO_XHTML_TOC_XSLT := lib/fortunes/fortune-xml-to-xhtml-toc.xslt
 
 $(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(SRC_FORTUNES_DIR)/%.xml $(FORTUNES_XML_TO_XHTML_TOC_XSLT)
 	xsltproc $(FORTUNES_XML_TO_XHTML_TOC_XSLT) $< | \
@@ -421,7 +421,7 @@ $(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(SRC_FORTUNES_DIR
 
 $(FORTUNES_WMLS_HTMLS): $(PRE_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
 
-FORTUNES_TIDY = tidy -asxhtml -utf8 -quiet
+FORTUNES_TIDY := tidy -asxhtml -utf8 -quiet
 
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true
@@ -444,12 +444,12 @@ $(SRC_FORTUNES_ALL__TEMP__HTML): $(SRC_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(F
 
 $(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
-FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
-FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
+FORTS_EPUB_COVER := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
+FORTS_EPUB_SVG   := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 
-FORTS_EPUB_BASENAME = fortunes-shlomif.epub
-FORTS_EPUB_DEST = $(PRE_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
-FORTS_EPUB_SRC = $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
+FORTS_EPUB_BASENAME := fortunes-shlomif.epub
+FORTS_EPUB_DEST := $(PRE_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
+FORTS_EPUB_SRC := $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
 
 $(FORTS_EPUB_SRC): fortunes-target
 	cd $(FORTUNES_XHTMLS_DIR) && ebookmaker --output $(FORTS_EPUB_BASENAME) book.json
@@ -462,9 +462,9 @@ $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
 	inkscape --export-width=600 --export-png="$@" $< && \
 	optipng "$@"
 
-MOJOLICIOUS_LECTURE_SLIDE1 = $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
+MOJOLICIOUS_LECTURE_SLIDE1 := $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
-HACKING_DOC = $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
+HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
@@ -493,7 +493,7 @@ all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	$(call extract_gzipped_xhtml)
 
-DOCBOOK4_HHFG_IMAGES_RAW = \
+DOCBOOK4_HHFG_IMAGES_RAW := \
 	background-image.png \
 	background-shlomif.png \
 	bottom-shlomif.png \
@@ -503,18 +503,18 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK4_HHFG_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
-DOCBOOK4_HHFG_POST_DEST_DIR = $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK4_HHFG_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK4_HHFG_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 
-HHFG_V2_IMAGES_DEST_DIR_FROM_VCS = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
-HHFG_V2_IMAGES_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
+HHFG_V2_IMAGES_DEST_DIR_FROM_VCS := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
+HHFG_V2_IMAGES_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
 
-HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS = $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
-HHFG_V2_IMAGES_POST_DEST_DIR = $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
-HHFG_V2_IMAGES_POST_DEST = $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
-HHFG_V2_IMAGES_POST_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
+HHFG_V2_IMAGES_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
+HHFG_V2_IMAGES_POST_DEST := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_POST_DEST_FROM_VCS := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 HHFG_V2_DOCBOOK_css := $(HHFG_V2_IMAGES_POST_DEST_DIR)/docbook.css
-DOCBOOK4_HHFG_IMAGES_POST_DEST = $(addprefix $(DOCBOOK4_HHFG_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+DOCBOOK4_HHFG_IMAGES_POST_DEST := $(addprefix $(DOCBOOK4_HHFG_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
 
 docbook_hhfg_images:  $(HHFG_V2_IMAGES_POST_DEST) $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS) $(HHFG_V2_DOCBOOK_css) $(DOCBOOK4_HHFG_IMAGES_POST_DEST)
 
@@ -538,16 +538,16 @@ bulk-make-dirs:
 
 make-dirs: $(ALL_DIRS)
 
-FICTION_DB5S = $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
-C_BAD_ELEMS_SRC = lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
-DEST__C_BAD_ELEMS = $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+FICTION_DB5S := $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
+C_BAD_ELEMS_SRC := lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
 
 all: $(DEST__C_BAD_ELEMS)
 
-ART_SLOGANS_DOCS = \
+ART_SLOGANS_DOCS := \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
 	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
 	dont-believe-in-fairies/dont-believe-in-fairies  \
@@ -555,11 +555,11 @@ ART_SLOGANS_DOCS = \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
 
-ART_SLOGANS_PATHS = $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
-ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
-ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
-OPTIPNG = optipng -o7 -quiet
+OPTIPNG := optipng -o7 -quiet
 
 define EXPORT_INKSCAPE_PNG
 	inkscape --export-width=200 --export-png="$@" $<

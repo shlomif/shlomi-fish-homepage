@@ -1,8 +1,8 @@
 [%- USE String -%]
 [% top_header %]
 
-QUADPRES_EXE = quadp
-QUADPRES_COMMON_INC_DIR = $(PWD)/lib/presentations/qp/common/
+QUADPRES_EXE := quadp
+QUADPRES_COMMON_INC_DIR := $(PWD)/lib/presentations/qp/common/
 QUADPRES__WML_OPTS := --passoption=3,-I$(QUADPRES_COMMON_INC_DIR) -I$(QUADPRES_COMMON_INC_DIR) --passoption=8,--nosharp --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-3,5,7,8 -q
 
 [% SET pres_targets = [] %]
@@ -18,19 +18,19 @@ QUADPRES__WML_OPTS := --passoption=3,-I$(QUADPRES_COMMON_INC_DIR) -I$(QUADPRES_C
 [% SET val = quadp_presentations.$l_base %]
 [% SET files = val.src_files %]
 
-[% v %]_BASE = [% val.src_dir %]
+[% v %]_BASE := [% val.src_dir %]
 [% SET stamp = v _ "_STAMP" %]
 [% SET vstamp = "\$(" _ stamp _ ")" %]
-[% stamp %] = $([% v %]_BASE)/FINISH_STAMP
+[% stamp %] := $([% v %]_BASE)/FINISH_STAMP
 
-[% v %]_DEPS = $(patsubst %,$([% v %]_BASE)/%,Contents.pm Contents.yml template.wml)
-[% v %]_DEST = $(PRE_DEST)/[% val.dest_dir %]
-[% v %]_DEST_all_in_one_html_dir = $(PRE_DEST)/[% val.all_in_one_html_dir %]
-[% v %]_DEST_INDEX = $([% v %]_DEST)/index.html
-[% v %]_DEST_all_in_one_html_dir_INDEX = $([% v %]_DEST_all_in_one_html_dir)/index.html
-[% v %]_files = [% files.join(" ") %]
-[% v %]_DEST_FILES = $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
-[% v %]_SRC_FILES = $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
+[% v %]_DEPS := $(patsubst %,$([% v %]_BASE)/%,Contents.pm Contents.yml template.wml)
+[% v %]_DEST := $(PRE_DEST)/[% val.dest_dir %]
+[% v %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% val.all_in_one_html_dir %]
+[% v %]_DEST_INDEX := $([% v %]_DEST)/index.html
+[% v %]_DEST_all_in_one_html_dir_INDEX := $([% v %]_DEST_all_in_one_html_dir)/index.html
+[% v %]_files := [% files.join(" ") %]
+[% v %]_DEST_FILES := $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
+[% v %]_SRC_FILES := $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
 
 [% SET targets = "\$(" _ v _ "_DEST_INDEX) \$(" _ v _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ v _ "_DEST_FILES)" %]
 [% pres_targets_files.push(targets) %]
@@ -48,7 +48,7 @@ QUADPRES__WML_OPTS := --passoption=3,-I$(QUADPRES_COMMON_INC_DIR) -I$(QUADPRES_C
 
 $([% v %]_DEST_INDEX) $([% v %]_DEST_FILES): [% vstamp %]
 
-[% v %]_SRC_all_in_one_html_dir = $([% v %]_BASE)/all-in-one
+[% v %]_SRC_all_in_one_html_dir := $([% v %]_BASE)/all-in-one
 
 $([% v %]_SRC_all_in_one_html_dir)/index.html: [% vstamp %]
 

@@ -571,13 +571,13 @@ define ASCIIDOCTOR_TO_DOCBOOK5
 	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
 endef
 
-PRINTER_ICON_PNG = $(POST_DEST)/images/printer_icon.png
-TWITTER_ICON_20_PNG = $(POST_DEST)/images/twitter-bird-light-bgs-20.png
-HHFG_SMALL_BANNER_AD_PNG = $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
+PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
+TWITTER_ICON_20_PNG := $(POST_DEST)/images/twitter-bird-light-bgs-20.png
+HHFG_SMALL_BANNER_AD_PNG := $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
-BK2HP_NEW_PNG = $(POST_DEST)/images/bk2hp.png
+BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 
-POST_DEST_HTML_6_LOGO_PNG = $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
+POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	gm convert -matte -bordercolor none -border 5 $< $@
@@ -589,7 +589,7 @@ $(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 	inkscape --export-dpi=60 --export-area-page --export-png="$@" "$<"
 	$(OPTIPNG) $@
 
-POST_DEST_WINDOWS_UPDATE_SNAIL_ICON = $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
+POST_DEST_WINDOWS_UPDATE_SNAIL_ICON := $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
 
 all: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
 
@@ -617,9 +617,9 @@ $(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-
 	gm convert -resize '50%' $< $@
 	$(OPTIPNG) $@
 
-LC_PRES_PATH = lecture/Lambda-Calculus/slides
+LC_PRES_PATH := lecture/Lambda-Calculus/slides
 
-LC_PRES_SCMS = \
+LC_PRES_SCMS := \
 	cond_funcs_loops.scm \
 	cond.scm \
 	funcs.scm \
@@ -639,7 +639,7 @@ LC_PRES_SCMS = \
 	output_vars.scm \
 	shriram.scm \
 
-LC_PRES_DEST_HTMLS = $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
+LC_PRES_DEST_HTMLS := $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
 
 lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
@@ -647,7 +647,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 $(LC_PRES_DEST_HTMLS): $(PRE_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
 	$(PERL) bin/text-vimcolor-xhtml5.pl $< $@
 
-SPORK_LECTURES_BASENAMES = \
+SPORK_LECTURES_BASENAMES := \
 	Perl/Graham-Function \
 	Perl/Lightning/Opt-Multi-Task-in-PDL \
 	Perl/Lightning/Test-Run \
@@ -657,11 +657,11 @@ SPORK_LECTURES_BASENAMES = \
 
 START_html := /start.html
 SLIDES_start := /slides$(START_html)
-SPORK_LECTS_SOURCE_BASE = lib/presentations/spork
-GFUNC_PRES_BASE = $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
-GFUNC_PRES_DEST = $(PRE_DEST)/lecture/Perl/Graham-Function
-GFUNC_PRES_BASE_START = $(GFUNC_PRES_BASE)$(SLIDES_start)
-GFUNC_PRES_DEST_START = $(GFUNC_PRES_DEST)$(SLIDES_start)
+SPORK_LECTS_SOURCE_BASE := lib/presentations/spork
+GFUNC_PRES_BASE := $(SPORK_LECTS_SOURCE_BASE)/Perl/Graham-Function
+GFUNC_PRES_DEST := $(PRE_DEST)/lecture/Perl/Graham-Function
+GFUNC_PRES_BASE_START := $(GFUNC_PRES_BASE)$(SLIDES_start)
+GFUNC_PRES_DEST_START := $(GFUNC_PRES_DEST)$(SLIDES_start)
 
 SPORK_LECTURES_DESTS := $(addprefix $(PRE_DEST)/lecture/,$(SPORK_LECTURES_BASENAMES))
 SPORK_LECTURES_DEST_STARTS := $(addsuffix $(SLIDES_start),$(SPORK_LECTURES_DESTS))
@@ -682,18 +682,18 @@ $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
 	< $< $(PERL) -pe 's!^\+!!' > $@
 
-GEN_STYLE_CSS_FILES = faq-indiv.css style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
+GEN_STYLE_CSS_FILES := faq-indiv.css style.css fortunes.css fortunes_show.css fort_total.css style-404.css screenplay.css jqui-override.css print.css
 
 SRC_CSS_TARGETS := $(addprefix $(POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 
 css_targets: $(SRC_CSS_TARGETS)
 
-SASS_STYLE = compressed
-# SASS_STYLE = expanded
-SASS_CMD = sass --style $(SASS_STYLE)
+SASS_STYLE := compressed
+# SASS_STYLE := expanded
+SASS_CMD := sass --style $(SASS_STYLE)
 
-FORT_SASS_DEPS = lib/sass/fortunes.scss
-COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
+FORT_SASS_DEPS := lib/sass/fortunes.scss
+COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
 
 $(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
@@ -716,13 +716,13 @@ $(PRE_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture
 
 $(PRE_DEST)/philosophy/by-others/perlcast-transcript--tom-limoncelli-interview/index.xhtml: lib/htmls/from-mediawiki/processed/Perlcast_Transcript_-_Interview_with_Tom_Limoncelli.html
 
-HTML_TUT_BASE = lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
+HTML_TUT_BASE := lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
 
-HTML_TUT_HEB_DIR = $(HTML_TUT_BASE)/hebrew-html-tutorial
-HTML_TUT_HEB_DB = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
-HTML_TUT_HEB_TT = $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
-DEST_HTML_TUT_BASE = $(PRE_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
-DEST_HTML_TUT = $(DEST_HTML_TUT_BASE)/index.xhtml
+HTML_TUT_HEB_DIR := $(HTML_TUT_BASE)/hebrew-html-tutorial
+HTML_TUT_HEB_DB := $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
+HTML_TUT_HEB_TT := $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
+DEST_HTML_TUT_BASE := $(PRE_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
+DEST_HTML_TUT := $(DEST_HTML_TUT_BASE)/index.xhtml
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST) $(QOHELETH_IMAGES__POST_DEST) $(TERM_LIBERATION_IMAGES__POST_DEST)
 
@@ -749,8 +749,8 @@ update_html_tut_hg:
 
 include lib/make/deps.mak
 
-MATHJAX_DEST_DIR = $(POST_DEST)/js/MathJax
-MATHJAX_DEST_README = $(MATHJAX_DEST_DIR)/README.md
+MATHJAX_DEST_DIR := $(POST_DEST)/js/MathJax
+MATHJAX_DEST_README := $(MATHJAX_DEST_DIR)/README.md
 
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
@@ -760,15 +760,15 @@ $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
 	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
 	rm -fr $(MATHJAX_DEST_DIR)/test
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS = MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
+SCRIPTS_WITH_OFFENDING_EXTENSIONS := MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 
-SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS = $(patsubst %.pl,$(POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
+SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS := $(patsubst %.pl,$(POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
 
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
 svg_nav_images:
 
-NAV_DATA_AS_JSON = $(POST_DEST)/_data/nav.json
+NAV_DATA_AS_JSON := $(POST_DEST)/_data/nav.json
 
 generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 
@@ -781,13 +781,13 @@ MAIN_TOTAL_MIN_JS_DEST := $(POST_DEST)/js/main_all.js
 EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
-MULTI_YUI = ./bin/Run-YUI-Compressor
+MULTI_YUI := ./bin/Run-YUI-Compressor
 
 $(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
 	$(MULTI_YUI) -o $@ $<
 
 # Must not be sorted!
-MAIN_TOTAL_MIN_JS__SOURCES = \
+MAIN_TOTAL_MIN_JS__SOURCES := \
 	bower_components/jquery/dist/jquery.min.js \
 	common/js/toggler.js \
 	common/js/toggle_sect.js \
@@ -803,12 +803,12 @@ $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
 
 PRINTABLE_DEST_DIR := dest/printable
-PRINTABLE_RESUMES__HTML__PIVOT = $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
-PRINTABLE_RESUMES__HTML = $(PRINTABLE_RESUMES__HTML__PIVOT) $(addprefix $(PRINTABLE_DEST_DIR)/,Shlomi-Fish-English-Resume.html Shlomi-Fish-Heb-Resume.html Shlomi-Fish-Resume-as-Software-Dev.html)
+PRINTABLE_RESUMES__HTML__PIVOT := $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
+PRINTABLE_RESUMES__HTML := $(PRINTABLE_RESUMES__HTML__PIVOT) $(addprefix $(PRINTABLE_DEST_DIR)/,Shlomi-Fish-English-Resume.html Shlomi-Fish-Heb-Resume.html Shlomi-Fish-Resume-as-Software-Dev.html)
 
 printable_resumes__html : $(PRINTABLE_RESUMES__HTML__PIVOT)
 
-PRINTABLE_RESUMES__DOCX = $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
+PRINTABLE_RESUMES__DOCX := $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
 
 $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 	libreoffice --writer --headless --convert-to docx --outdir $(PRINTABLE_DEST_DIR) $<
@@ -821,18 +821,18 @@ $(PRINTABLE_RESUMES__HTML__PIVOT): $(PRE_DEST)/SFresume.html $(PRE_DEST)/SFresum
 
 resumes: $(PRINTABLE_RESUMES__DOCX)
 
-PUT_CARDS_2013_DEST_INDIV = $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
-PUT_CARDS_2013_INDIV_SCRIPT = bin/split-put-cards-into-divs.pl
+PUT_CARDS_2013_DEST_INDIV := $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
+PUT_CARDS_2013_INDIV_SCRIPT := bin/split-put-cards-into-divs.pl
 
 all: $(PUT_CARDS_2013_DEST_INDIV)
 
 $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
 	$(PERL) $(PUT_CARDS_2013_INDIV_SCRIPT)
 
-FACTOIDS_RENDER_SCRIPT = lib/factoids/gen-html.pl
-FACTOIDS_TIMESTAMP = lib/factoids/TIMESTAMP
-FACTOIDS_GENERATED_FILES = lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
-FACTOIDS_GEN_CMD = $(PERL) $(FACTOIDS_RENDER_SCRIPT)
+FACTOIDS_RENDER_SCRIPT := lib/factoids/gen-html.pl
+FACTOIDS_TIMESTAMP := lib/factoids/TIMESTAMP
+FACTOIDS_GENERATED_FILES := lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
+FACTOIDS_GEN_CMD := $(PERL) $(FACTOIDS_RENDER_SCRIPT)
 
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
@@ -848,9 +848,9 @@ manifest_html: $(MAN_HTML)
 $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
 
-LC_LECTURE_ARC_BASE = Lambda-Calculus.tar.gz
-LC_LECTURE_ARC_DIR = $(PRE_DEST)/lecture
-LC_LECTURE_ARC = $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
+LC_LECTURE_ARC_BASE := Lambda-Calculus.tar.gz
+LC_LECTURE_ARC_DIR := $(PRE_DEST)/lecture
+LC_LECTURE_ARC := $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 
 all: $(LC_LECTURE_ARC)
 
@@ -860,42 +860,42 @@ $(LC_LECTURE_ARC): $(LC_LECTURE_ARC_DIR)/Lambda-Calculus/slides/funcs.scm.html
 $(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
 
-OCT_2014_SGLAU_LET_DIR = $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
-OCT_2014_SGLAU_LET_PDF = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
-OCT_2014_SGLAU_LET_HTML = $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
+OCT_2014_SGLAU_LET_DIR := $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
+OCT_2014_SGLAU_LET_PDF := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
+OCT_2014_SGLAU_LET_HTML := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
 
 all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
 
 RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
 
-RPG_DICE_SET_SRC = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
-RPG_DICE_SET_DEST = $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
+RPG_DICE_SET_SRC := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
+RPG_DICE_SET_DEST := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
 
-MY_NAME_IS_RINDOLF_SRC = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
-MY_NAME_IS_RINDOLF_DEST = $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
+MY_NAME_IS_RINDOLF_SRC := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
+MY_NAME_IS_RINDOLF_DEST := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
 
-Shlomif_cutethulhu_SRC = common/images/shlomif-cutethulhu.webp
-Shlomif_cutethulhu_DEST = $(POST_DEST)/images/shlomif-cutethulhu-small.webp
+Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
+Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
 
-DnD_lances_cartoon_DEST = $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
+DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
 POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
 
-MY_RPF_DEST_DIR = $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
-MY_RPF_DEST_PIVOT = $(MY_RPF_DEST_DIR)/euler.webp
+MY_RPF_DEST_DIR := $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_PIVOT := $(MY_RPF_DEST_DIR)/euler.webp
 
-OPENLY_BIPOLAR_DEST_DIR = $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
-OPENLY_BIPOLAR_DEST_PIVOT = $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
+OPENLY_BIPOLAR_DEST_DIR := $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_PIVOT := $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
 all: $(MY_NAME_IS_RINDOLF_DEST)
 
-MY_RPF_SRC_DIR = lib/repos/my-real-person-fan-fiction
+MY_RPF_SRC_DIR := lib/repos/my-real-person-fan-fiction
 
 $(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
 
-OPENLY_BIPOLAR_SRC_DIR = lib/repos/why-openly-bipolar-people-should-not-be-medicated
+OPENLY_BIPOLAR_SRC_DIR := lib/repos/why-openly-bipolar-people-should-not-be-medicated
 
 $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENLY_BIPOLAR_DEST_DIR)
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
@@ -908,7 +908,7 @@ all: $(DnD_lances_cartoon_DEST)
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
 
-Linux1_webp_DEST = $(POST_DEST)/art/images/linux1.webp
+Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
 	gm convert $< -define webp:lossless=true $@
 
@@ -933,7 +933,7 @@ $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 
 all: $(Shlomif_cutethulhu_DEST)
 
-ENEMY_STYLE = $(PRE_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
+ENEMY_STYLE := $(PRE_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
 
 all: $(ENEMY_STYLE)
 
@@ -955,17 +955,17 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
-SRC_MODS_DIR = lib/assets/mods
+SRC_MODS_DIR := lib/assets/mods
 
 MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
 
-ZIP_MODS = $(addsuffix .zip,$(MODS))
-XZ_MODS = $(addsuffix .xz,$(MODS))
+ZIP_MODS := $(addsuffix .zip,$(MODS))
+XZ_MODS := $(addsuffix .xz,$(MODS))
 
-POST_DEST_MODS_DIR = $(POST_DEST)/Iglu/shlomif/mods
+POST_DEST_MODS_DIR := $(POST_DEST)/Iglu/shlomif/mods
 dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
-POST_DEST_ZIP_MODS = $(call dest_mods,$(ZIP_MODS))
-POST_DEST_XZ_MODS = $(call dest_mods,$(XZ_MODS))
+POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
+POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
 
 mod_files: $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 
@@ -977,10 +977,10 @@ $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@
 
-TECH_BLOG_DIR = lib/repos/shlomif-tech-diary
-TECH_TIPS_SCRIPT = $(TECH_BLOG_DIR)/extract-tech-tips.pl
-TECH_TIPS_INPUTS = $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
-TECH_TIPS_OUT = lib/repos/shlomif-tech-diary--tech-tips.xhtml
+TECH_BLOG_DIR := lib/repos/shlomif-tech-diary
+TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl
+TECH_TIPS_INPUTS := $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
+TECH_TIPS_OUT := lib/repos/shlomif-tech-diary--tech-tips.xhtml
 
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
@@ -1058,7 +1058,7 @@ $(SRC_SVGS__svgz): %.svgz: %.min.svg
 
 min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps)
 
-TEST_TARGETS = Tests/*.{py,t}
+TEST_TARGETS := Tests/*.{py,t}
 
 PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
 POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
@@ -1099,7 +1099,7 @@ $(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
-JSON_RES_BASE = me/resumes/Shlomi-Fish-Resume.jsonresume
+JSON_RES_BASE := me/resumes/Shlomi-Fish-Resume.jsonresume
 
 JSON_RES_DEST := $(POST_DEST)/$(JSON_RES_BASE).json
 
@@ -1111,8 +1111,8 @@ non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-CATB_COPY = $(PRE_DEST)/catb-heb.xhtml
-CATB_COPY_POST = $(POST_DEST)/catb-heb.xhtml
+CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
+CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
 
 $(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml
 	$(call COPY)

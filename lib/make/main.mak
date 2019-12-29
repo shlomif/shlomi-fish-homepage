@@ -171,7 +171,7 @@ upload_hostgator: upload_deps
 $(PRE_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
-SRC_DOCS_SRC = $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
+SRC_DOCS_SRC := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
 
 t2_filt_file = $(filter $(PRE_DEST)/$1,$(SRC_DOCS_DEST))
 t2_filt = $(filter $(PRE_DEST)/$1/%,$(SRC_DOCS_DEST))
@@ -183,21 +183,23 @@ rss:
 	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
-PROD_SYND_MUSIC_DIR = lib/prod-synd/music
-PROD_SYND_MUSIC_INC = $(PROD_SYND_MUSIC_DIR)/include-me.html
+prod_sync_inc = $(1)/include-me.html
 
-PROD_SYND_NON_FICTION_BOOKS_DIR = lib/prod-synd/non-fiction-books
-PROD_SYND_NON_FICTION_BOOKS_INC = $(PROD_SYND_NON_FICTION_BOOKS_DIR)/include-me.html
+PROD_SYND_MUSIC_DIR := lib/prod-synd/music
+PROD_SYND_MUSIC_INC := $(call prod_sync_inc,$(PROD_SYND_MUSIC_DIR))
 
-PROD_SYND_FILMS_DIR = lib/prod-synd/films
-PROD_SYND_FILMS_INC = $(PROD_SYND_FILMS_DIR)/include-me.html
+PROD_SYND_NON_FICTION_BOOKS_DIR := lib/prod-synd/non-fiction-books
+PROD_SYND_NON_FICTION_BOOKS_INC := $(call prod_sync_inc,$(PROD_SYND_NON_FICTION_BOOKS_DIR))
+
+PROD_SYND_FILMS_DIR := lib/prod-synd/films
+PROD_SYND_FILMS_INC := $(call prod_sync_inc,$(PROD_SYND_FILMS_DIR))
 
 $(PRE_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
 
 all_deps: $(PROD_SYND_MUSIC_INC)
 
 GPERL = $(PERL) -Ilib
-GPERL_DEPS = lib/Shlomif/Homepage/Amazon/Obj.pm
+GPERL_DEPS := lib/Shlomif/Homepage/Amazon/Obj.pm
 
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
@@ -216,7 +218,23 @@ all_deps: $(PROD_SYND_FILMS_INC)
 $(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-SCREENPLAY_DOCS_ADDITIONS = \
+SCREENPLAY_XML_BASE_DIR := lib/screenplay-xml
+SCREENPLAY_XML_EPUB_DIR := $(SCREENPLAY_XML_BASE_DIR)/epub
+SCREENPLAY_XML_XML_DIR := $(SCREENPLAY_XML_BASE_DIR)/xml
+SCREENPLAY_XML_TXT_DIR := $(SCREENPLAY_XML_BASE_DIR)/txt
+SCREENPLAY_XML_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/html
+SCREENPLAY_XML_FOR_OOO_XHTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/for-ooo-xhtml
+SCREENPLAY_XML_RENDERED_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/rendered-html
+
+FICTION_XML_BASE_DIR := lib/fiction-xml
+FICTION_XML_XML_DIR := $(FICTION_XML_BASE_DIR)/xml
+FICTION_XML_TXT_DIR := $(FICTION_XML_BASE_DIR)/txt
+FICTION_XML_DB5_XSLT_DIR := $(FICTION_XML_BASE_DIR)/docbook5-post-proc
+FICTION_XML_TEMP_DB5_DIR := $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
+
+include lib/make/docbook/sf-screenplays.mak
+
+SCREENPLAY_DOCS_ADDITIONS := \
 	ae-interview \
 	Emma-Watson-applying-for-a-software-dev-job \
 	Emma-Watson-visit-to-Israel-and-Gaza \
@@ -225,43 +243,28 @@ SCREENPLAY_DOCS_ADDITIONS = \
 	Mighty-Boosh--Ape-of-Death--Scenes \
 	sussman-interview
 
-SCREENPLAY_DOCS = $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
+SCREENPLAY_DOCS := $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
 
-FICTION_DOCS_ADDITIONS = \
+FICTION_DOCS_ADDITIONS := \
 	fiction-text-example-for-X-G-Fiction-demo \
 	The-Enemy-Hebrew-rev6 \
 	The-Enemy-Hebrew-v7
 
-FICTION_DOCS = $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
+FICTION_DOCS := $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
 
-SCREENPLAY_XML_BASE_DIR = lib/screenplay-xml
-SCREENPLAY_XML_EPUB_DIR = $(SCREENPLAY_XML_BASE_DIR)/epub
-SCREENPLAY_XML_XML_DIR = $(SCREENPLAY_XML_BASE_DIR)/xml
-SCREENPLAY_XML_TXT_DIR = $(SCREENPLAY_XML_BASE_DIR)/txt
-SCREENPLAY_XML_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/html
-SCREENPLAY_XML_FOR_OOO_XHTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/for-ooo-xhtml
-SCREENPLAY_XML_RENDERED_HTML_DIR = $(SCREENPLAY_XML_BASE_DIR)/rendered-html
-
-FICTION_XML_BASE_DIR = lib/fiction-xml
-FICTION_XML_XML_DIR = $(FICTION_XML_BASE_DIR)/xml
-FICTION_XML_TXT_DIR = $(FICTION_XML_BASE_DIR)/txt
-FICTION_XML_DB5_XSLT_DIR = $(FICTION_XML_BASE_DIR)/docbook5-post-proc
-FICTION_XML_TEMP_DB5_DIR = $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
-
-SCREENPLAY_XMLS = $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
-FICTION_XMLS = $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIONS))
+SCREENPLAY_XMLS := $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
+FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIONS))
 
 all: splay
 
 include lib/make/docbook/sf-homepage-quadpres-generated.mak
-include lib/make/docbook/sf-screenplays.mak
 
 screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
 
-SCREENPLAY_RENDERED_HTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_RENDERED_HTML_DIR),html)
-SCREENPLAY_XML_HTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_HTML_DIR),html)
-SCREENPLAY_XML_EPUBS = $(patsubst %,$(SCREENPLAY_XML_EPUB_DIR)/%.epub,$(SCREENPLAY_DOCS_FROM_GEN))
-SCREENPLAY_XML_FOR_OOO_XHTMLS = $(call screenplay_docs,$(SCREENPLAY_XML_FOR_OOO_XHTML_DIR),xhtml)
+SCREENPLAY_RENDERED_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_RENDERED_HTML_DIR),html)
+SCREENPLAY_XML_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_HTML_DIR),html)
+SCREENPLAY_XML_EPUBS := $(patsubst %,$(SCREENPLAY_XML_EPUB_DIR)/%.epub,$(SCREENPLAY_DOCS_FROM_GEN))
+SCREENPLAY_XML_FOR_OOO_XHTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_FOR_OOO_XHTML_DIR),xhtml)
 
 splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS) $(SCREENPLAY_XML_EPUBS)
 
@@ -282,44 +285,44 @@ POST_DEST_INTERVIEWS := $(POST_DEST)/open-source/interviews
 
 POST_DEST_SPLAY_HHGG_STTNG := $(POST_DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
 
-SCREENPLAY_SOURCES_ON_POST_DEST = $(POST_DEST_INTERVIEWS)/ae-interview.txt $(POST_DEST_INTERVIEWS)/sussman-interview.txt $(POST_DEST_SPLAY_HHGG_STTNG)
+SCREENPLAY_SOURCES_ON_POST_DEST := $(POST_DEST_INTERVIEWS)/ae-interview.txt $(POST_DEST_INTERVIEWS)/sussman-interview.txt $(POST_DEST_SPLAY_HHGG_STTNG)
 
-HHFG_DIR = $(POST_DEST_HUMOUR)/human-hacking
-HHFG_HEB_V2_TXT = human-hacking-field-guide-hebrew-v2.txt
-HHFG_HEB_V2_POST_DEST = $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
-HHFG_HEB_V2_XSLT_POST_DEST = $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
+HHFG_DIR := $(POST_DEST_HUMOUR)/human-hacking
+HHFG_HEB_V2_TXT := human-hacking-field-guide-hebrew-v2.txt
+HHFG_HEB_V2_POST_DEST := $(HHFG_DIR)/$(HHFG_HEB_V2_TXT)
+HHFG_HEB_V2_XSLT_POST_DEST := $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db-postproc.xslt
 
-FICTION_TEXT_SOURCES_ON_POST_DEST = $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_POST_DEST) $(HHFG_HEB_V2_XSLT_POST_DEST) $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
+FICTION_TEXT_SOURCES_ON_POST_DEST := $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_POST_DEST) $(HHFG_HEB_V2_XSLT_POST_DEST) $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
 translate_fiction_text_to_xml = $(PERL) bin/fiction-text-to-xml.pl -o $@ $<
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	$(call translate_fiction_text_to_xml)
 
-HHGG_CONVERT_SCRIPT_FN = convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
-HHGG_CONVERT_SCRIPT_SRC = bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
-HHGG_CONVERT_SCRIPT_DEST = $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
+HHGG_CONVERT_SCRIPT_FN := convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
+HHGG_CONVERT_SCRIPT_SRC := bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
+HHGG_CONVERT_SCRIPT_DEST := $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
-FRON_IMAGE_BASE = fron-demon-illustration-small-indexed.png
-SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE = $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
-SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST = $(POST_DEST_HUMOUR_SELINA)/images/$(FRON_IMAGE_BASE)
+FRON_IMAGE_BASE := fron-demon-illustration-small-indexed.png
+SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE := $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST := $(POST_DEST_HUMOUR_SELINA)/images/$(FRON_IMAGE_BASE)
 
-QOHELETH_IMAGES__BASE = sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg
+QOHELETH_IMAGES__BASE := sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg
 
-QOHELETH_IMAGES__SOURCE_PREFIX = $(SO_WHO_THE_HELL_IS_QOHELETH__VCS_DIR)/graphics
-QOHELETH_IMAGES__POST_DEST_PREFIX = $(POST_DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
+QOHELETH_IMAGES__SOURCE_PREFIX := $(SO_WHO_THE_HELL_IS_QOHELETH__VCS_DIR)/graphics
+QOHELETH_IMAGES__POST_DEST_PREFIX := $(POST_DEST_HUMOUR)/So-Who-The-Hell-Is-Qoheleth/images
 
-QOHELETH_IMAGES__SOURCE = $(addprefix $(QOHELETH_IMAGES__SOURCE_PREFIX)/,$(QOHELETH_IMAGES__BASE))
-QOHELETH_IMAGES__POST_DEST = $(addprefix $(QOHELETH_IMAGES__POST_DEST_PREFIX)/,$(QOHELETH_IMAGES__BASE))
+QOHELETH_IMAGES__SOURCE := $(addprefix $(QOHELETH_IMAGES__SOURCE_PREFIX)/,$(QOHELETH_IMAGES__BASE))
+QOHELETH_IMAGES__POST_DEST := $(addprefix $(QOHELETH_IMAGES__POST_DEST_PREFIX)/,$(QOHELETH_IMAGES__BASE))
 
-TERM_LIBERATION_IMAGES__BASE = emma-watson-wandless.svg.webp
-TERM_LIBERATION_IMAGES__SOURCE_PREFIX = $(TERMINATOR_LIBERATION__VCS_DIR)/graphics
-TERM_LIBERATION_IMAGES__POST_DEST_PREFIX = $(POST_DEST_HUMOUR)/Terminator/Liberation/images
+TERM_LIBERATION_IMAGES__BASE := emma-watson-wandless.svg.webp
+TERM_LIBERATION_IMAGES__SOURCE_PREFIX := $(TERMINATOR_LIBERATION__VCS_DIR)/graphics
+TERM_LIBERATION_IMAGES__POST_DEST_PREFIX := $(POST_DEST_HUMOUR)/Terminator/Liberation/images
 
-TERM_LIBERATION_IMAGES__SOURCE = $(addprefix $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
-TERM_LIBERATION_IMAGES__POST_DEST = $(addprefix $(TERM_LIBERATION_IMAGES__POST_DEST_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
+TERM_LIBERATION_IMAGES__SOURCE := $(addprefix $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
+TERM_LIBERATION_IMAGES__POST_DEST := $(addprefix $(TERM_LIBERATION_IMAGES__POST_DEST_PREFIX)/,$(TERM_LIBERATION_IMAGES__BASE))
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(SRC_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
@@ -329,19 +332,19 @@ screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 # Rebuild the embedded docbook4 pages in the $(PRE_DEST) after they are
 # modified.
 
-PUT_CARDS_2013_XHTML = lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
-PUT_CARDS_2013_DEST = $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
+PUT_CARDS_2013_XHTML := lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
+PUT_CARDS_2013_DEST := $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
-PUT_CARDS_2013_XHTML_STRIPPED = $(PUT_CARDS_2013_XHTML).processed-stripped
+PUT_CARDS_2013_XHTML_STRIPPED := $(PUT_CARDS_2013_XHTML).processed-stripped
 
-STRIP_HTML_BIN = bin/processors/strip-html-overhead.pl
+STRIP_HTML_BIN := bin/processors/strip-html-overhead.pl
 strip_html = $(PERL) $(STRIP_HTML_BIN) < $< > $@
 
 $(PUT_CARDS_2013_XHTML_STRIPPED): $(PUT_CARDS_2013_XHTML) $(STRIP_HTML_BIN)
 	$(call strip_html)
 
-HOW_TO_GET_HELP_2013_XHTML = lib/pages/t2/philosophy/how-to-get-help-online.xhtml
-HOW_TO_GET_HELP_2013_XHTML_STRIPPED = $(HOW_TO_GET_HELP_2013_XHTML).processed-stripped
+HOW_TO_GET_HELP_2013_XHTML := lib/pages/t2/philosophy/how-to-get-help-online.xhtml
+HOW_TO_GET_HELP_2013_XHTML_STRIPPED := $(HOW_TO_GET_HELP_2013_XHTML).processed-stripped
 
 $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HTML_BIN)
 	$(call strip_html)
@@ -374,10 +377,10 @@ $(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	mkdir -p $@
 	rsync -r $< $@
 
-FORTUNES_XHTMLS_DIR = lib/fortunes/xhtmls
+FORTUNES_XHTMLS_DIR := lib/fortunes/xhtmls
 
-FORTUNES_LIST_PM = lib/Shlomif/Homepage/FortuneCollections.pm
-FORTUNES_LIST__DEPS = $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
+FORTUNES_LIST_PM := lib/Shlomif/Homepage/FortuneCollections.pm
+FORTUNES_LIST__DEPS := $(FORTUNES_LIST_PM) lib/Shlomif/fortunes-meta-data.yml
 
 FORTUNES_XMLS_BASE := $(addsuffix .xml,$(FORTUNES_FILES_BASE))
 FORTUNES_XMLS_SRC := $(addprefix $(SRC_FORTUNES_DIR)/,$(FORTUNES_XMLS_BASE))
@@ -397,8 +400,8 @@ FORTUNES_SQLITE_DB := $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 
 fortunes-compile-xmls: $(FORTUNES_SOURCE_WMLS) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
 
-FORTUNES_CONVERT_TO_XHTML_SCRIPT = $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
-FORTUNES_PREPARE_FOR_INPUT_SCRIPT = $(SRC_FORTUNES_DIR)/prepare-xhtml-for-input.pl
+FORTUNES_CONVERT_TO_XHTML_SCRIPT := $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
+FORTUNES_PREPARE_FOR_INPUT_SCRIPT := $(SRC_FORTUNES_DIR)/prepare-xhtml-for-input.pl
 
 $(FORTUNES_SOURCE_WMLS): $(FORTUNES_LIST__DEPS)
 	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;'

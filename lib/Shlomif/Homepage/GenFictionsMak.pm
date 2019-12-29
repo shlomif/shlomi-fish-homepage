@@ -151,12 +151,20 @@ FICT:
             }
         } @$fiction_data
     );
+    my $dir  = path("lib/make/docbook");
+    my $spew = sub {
+        my ( $fn, $strs ) = @_;
+        return $dir->child($fn)->spew_utf8(@$strs);
+    };
 
-    path("lib/make/docbook/sf-fictions.mak")
-        ->spew_utf8( "FICTION_VCS_BASE_DIR = $fiction_vcs_base_dir\n\n", @o );
-
-    path("lib/make/docbook/sf-fictions-list.mak")
-        ->spew_utf8( "FICTION_DOCS_FROM_GEN = @fiction_docs_basenames\n", );
+    $spew->(
+        "sf-fictions.mak",
+        [ "FICTION_VCS_BASE_DIR := $fiction_vcs_base_dir\n\n", @o ],
+    );
+    $spew->(
+        "sf-fictions-list.mak",
+        ["FICTION_DOCS_FROM_GEN := @fiction_docs_basenames\n"],
+    );
 
     return;
 }

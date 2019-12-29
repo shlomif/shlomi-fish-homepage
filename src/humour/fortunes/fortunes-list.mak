@@ -1,4 +1,4 @@
-FORTUNES_FILES_BASE = \
+FORTUNES_FILES_BASE := \
 	bbt \
 	friends \
 	joel-on-software \

@@ -6,6 +6,27 @@
 
 <div class="lim_width">
 
+[%- WRAPPER note -%]
+
+<header>
+<h2 id="note">Note</h2>
+</header>
+
+<p>
+There is a <a href="[% base_path %]art/back-to-my-homepage-2nd-ver/"><b>a new version</b></a>
+of this logo, which was made using Inkscape and other open source software, and which
+is available as [% my_acronym( "key" => "SVG" ) %]. It is also free of the artefacts which are
+present in this version.
+</p>
+
+<p>
+I can no longer open the Corel-Draw input files, which is yet another reason why
+relying on <a href="https://en.wikipedia.org/wiki/Proprietary_format">proprietary formats</a>
+is a bad idea.
+</p>
+
+[% END %]
+
 <img src="../../images/bk2hp_old.png" alt="Back to my homepage" class="dnd_cartoon" />
 
 <p>

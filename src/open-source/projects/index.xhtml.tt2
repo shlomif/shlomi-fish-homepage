@@ -28,8 +28,7 @@ Freecell and similar Solitaire variants.
 An open source and feature-rich collection of Solitaire games.
 </p>
 
-<h3 id="japanese-puzzle-games"><a href="japanese-puzzle-games/">Solvers and
-Generators for Japanese Puzzle Games</a></h3>
+[% WRAPPER h3_section id="japanese-puzzle-games" href="japanese-puzzle-games/" title="Solvers and Generators for Japanese Puzzle Games" %]
 
 <p>
 Japanese puzzle games such as
@@ -40,7 +39,9 @@ started working on some solvers and generators for such games, and some of
 them are in a usable condition.
 </p>
 
-<h3 id="black-hole-solitaire-solver"><a href="black-hole-solitaire-solver/">“Black Hole” Solitaire Solver</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="black-hole-solitaire-solver" href="black-hole-solitaire-solver/" title="“Black Hole” Solitaire Solver" %]
 
 <p>
 Solvers for
@@ -50,19 +51,25 @@ Solitaire</a>, and
 in a Row Solitaire</a>, which are variants of Patience.
 </p>
 
-<h3 id="lm-solve"><a href="[% base_path %]lm-solve/">LM-Solve</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="lm-solve" href="${base_path}lm-solve/" title="LM-Solve" %]
 
 <p>
 An automatic solver for <a href="http://www.logicmazes.com/">Logic Mazes</a>
 written in Perl.
 </p>
 
-<h3 id="ksokoban"><a href="ksokoban/">KSokoban Maintenance Branch</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="ksokoban" href="ksokoban/" title="KSokoban Maintenance Branch" %]
 
 <p>
 Porting KSokoban, the port of Sokoban to the KDE project to KDE 4 and KDE
 Frameworks 5.
 </p>
+
+[% END %]
 
 </div>
 
@@ -70,12 +77,14 @@ Frameworks 5.
 
 <div class="sub_section">
 
-<h3 id="website-meta-lang"><a href="website-meta-language/">Website META Language</a></h3>
+[% WRAPPER h3_section id="website-meta-lang" href="website-meta-language/" title="Website META Language" %]
 
 <p>
 An offline preprocessor for HTML and XHTML sites, originated by Ralf S.
 Engelschall and later maintained by Denis Barbier. I am the current maintainer.
 </p>
+
+[% END %]
 
 <div class="sub_section">
 
@@ -101,7 +110,7 @@ preparing HTML presentations. Based on
 
 </div>
 
-<h3 id="xml-grammar"><a href="XML-Grammar/">The XML-Grammar Meta-Project</a></h3>
+[% WRAPPER h3_section id="xml-grammar" href="XML-Grammar/" title="The XML-Grammar Meta-Project" %]
 
 <p>
 A project that maintains several XML grammars for various tasks, including
@@ -109,18 +118,24 @@ translators to HTML or other formats, plaintext formats that translate into
 them, etc.
 </p>
 
-<h3 id="web-cpan"><a href="http://web-cpan.shlomifish.org/">Web-CPAN</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="web-cpan" href="https://web-cpan.shlomifish.org/" title="Web-CPAN" %]
 
 <p>
 A collection of web-related Perl CPAN modules.
 </p>
 
-<h3 id="docmake"><a href="docmake/">docmake</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="docmake" href="docmake/" title="docmake" %]
 
 <p>
 A tool to convert DocBook/XML to its final formats. Was written as a saner
 alternative to <code>xmlto</code>.
 </p>
+
+[% END %]
 
 </div>
 
@@ -128,15 +143,16 @@ alternative to <code>xmlto</code>.
 
 <div class="sub_section">
 
-<h3 id="file-dir-dumper"><a href="File-Dir-Dumper/">File-Dir-Dumper</a></h3>
+[% WRAPPER h3_section id="file-dir-dumper" href="File-Dir-Dumper/" title="File-Dir-Dumper" %]
 
 <p>
 Dumps a directory structure (without the file contents themselves) into a
 serialised file format, to allow for restoring and comparing.
 </p>
 
+[% END %]
 
-<h3 id="File-Find-Object"><a href="File-Find-Object/">File-Find-Object</a></h3>
+[% WRAPPER h3_section id="File-Find-Object" href="File-Find-Object/" title="File-Find-Object" %]
 
 <p>
 A directory traverser for Perl, that provides an object-oriented interface,
@@ -144,7 +160,9 @@ that can be instantiated, and that can be suspended and resumed. (Originally by
 Nanardon.)
 </p>
 
-<h3 id="Module-Format"><a href="Module-Format/">Module-Format</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="Module-Format" href="Module-Format/" title="Module-Format" %]
 
 <p>
 A CPAN module to convert between the various popular ways to notate
@@ -152,15 +170,18 @@ Perl modules and distributions. Allows all of them to be used in input to
 command-line tools.
 </p>
 
-<h3 id="kernel-config-search-enhancement"><a href="linux-kernel/xconfig-search/">Linux
-Kernel Configuration Search Enhancement</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="kernel-config-search-enhancement" href="linux-kernel/xconfig-search/" title="Linux Kernel Configuration Search Enhancement" %]
 
 <p>
 A patch that enhances the Linux kernel configuration search by adding keywords
 search and regular expression search.
 </p>
 
-<h3 id="countdown"><a href="countdown/">countdown</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="countdown" href="countdown/" title="countdown" %]
 
 <p>
 Delay for a certain number of seconds while displaying the amount of remaining
@@ -168,7 +189,9 @@ time. Similar to the UNIX sleep command, only less frustrating for interactive
 use.
 </p>
 
-<h3 id="sky"><a href="sky/">sky</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="sky" href="sky/" title="sky" %]
 
 <p>
 sky is a wrapper around uploaders such as
@@ -177,11 +200,15 @@ to a remote host with a web service, and gives you a URL that will allow other
 people to download it immediately.
 </p>
 
-<h3 id="maniac-downloader"><a href="maniac-downloader/">Maniac Downloader</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="maniac-downloader" href="maniac-downloader/" title="Maniac Downloader" %]
 
 <p>
 A download accelerator with a key improvement.
 </p>
+
+[% END %]
 
 </div>
 
@@ -189,15 +216,16 @@ A download accelerator with a key improvement.
 
 <div class="sub_section">
 
-<h3 id="test.pm-converter"><a href="Test.pm-Converter/">Convert from Test.pm</a></h3>
+[% WRAPPER h3_section id="test.pm-converter" href="Test.pm-Converter/" title="Convert from Test.pm" %]
 
 <p>
 A script to convert the old Perl Test.pm-based test programs to the
 more modern Test::More.
 </p>
 
+[% END %]
 
-<h3 id="libtap"><a href="libtap/">libtap Maintenance</a></h3>
+[% WRAPPER h3_section id="libtap" href="libtap/" title="libtap Maintenance" %]
 
 <p>
 libtap is a C library for writing automated tests that output the
@@ -205,25 +233,27 @@ libtap is a C library for writing automated tests that output the
 allows for heterogeneous test suites. I adopted libtap and maintain it.
 </p>
 
+[% END %]
+
 </div>
 
-<h2 id="ip-noise"><a href="http://comnet.technion.ac.il/~cn1w02/">IP-Noise Simulator</a></h2>
+[% WRAPPER h2_section id="ip-noise" href="http://comnet.technion.ac.il/~cn1w02/" title="IP-Noise Simulator" %]
 
 <p>
 A simulator for IP-Noise for Linux systems based on the Linux Kernel version
 2.4.x or above.
 </p>
 
-<h2 id="mikmod"><a href="mikmod/">MikMod - a module files’ player</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id="mikmod" href="mikmod/" title="MikMod - a module files’ player" %]
 
 <p>
 An open-source player for music module files, written in portable C. Adopted
 from a series of maintainers.
 </p>
 
-<div class="sub_section">
-
-<h3 id="jmikmod"><a href="[% base_path %]jmikmod/">MikMod for Java</a></h3>
+[% WRAPPER h3_section id="jmikmod" href="${base_path}jmikmod/" title="MikMod for Java" %]
 
 <p>
 A port of the well-known MOD player
@@ -231,32 +261,37 @@ A port of the well-known MOD player
 (that was originally written in ANSI C) to Java.
 </p>
 
-</div>
+[% END %]
 
+[% END %]
 
-<h2 id="rwlock"><a href="[% base_path %]rwlock/">A First-Come First-Served
-Readers/Writers Lock</a></h2>
+[% WRAPPER h2_section id="rwlock" href="${base_path}rwlock/" title="A First-Come First-Served Readers/Writers Lock" %]
 
 <p>
 An implementation of it for POSIX Threads, which can also be used as a
 reference implementation.
 </p>
 
-<h2 id="psets"><a href="problem-sets-and-cp/">Activity on Problem Sets and
-Competitive Programming Sites</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id="psets" href="problem-sets-and-cp/" title="Activity on Problem Sets and Competitive Programming Sites" %]
 
 <p>
 Solutions to some online challenge / riddles sites.
 </p>
 
-<h2 id="conf"><a href="conf/">Personal Configuration Files</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id="conf" href="conf/" title="Personal Configuration Files" %]
 
 <p>
 These are configuration files of various programs I’m using on my home
 machines.
 </p>
 
-<h2 id="no-longer-of-interest">Projects that are no longer of interest</h2>
+[% END %]
+
+[% WRAPPER h2_section id="no-longer-of-interest" title="Projects that are no longer of interest"%]
 
 <div class="sub_section">
 
@@ -268,7 +303,7 @@ Mozilla-based browsers. No longer of interest because yjobs.co.il now works
 fine in Firefox and other standards-compliant browsers without it.
 </p>
 
-<h3 id="gradient-fu"><a href="[% base_path %]grad-fu/">Gradient-Fu Patch for the GIMP</a></h3>
+[% WRAPPER h3_section id="gradient-fu" href="${base_path}grad-fu/" title="Gradient-Fu Patch for the GIMP" %]
 
 <p>
 A patch for Gimp 1.2.x that exposes gradient editing to the procedural database
@@ -276,6 +311,10 @@ and to scripting interfaces. A newer version of this patch has been integrated
 into GIMP 2.2.x and above and is built-in there.
 </p>
 
+[% END %]
+
 </div>
+
+[% END %]
 
 [% END %]

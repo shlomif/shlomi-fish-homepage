@@ -3,9 +3,22 @@ function! Foo()
     return '<'.submatch(1).'_section id="'.submatch(2).'" title="'.submatch(3)."\">"
 endfunction
 
+function! Foo()
+    let @e='[% END %]'
+    return '[% WRAPPER '.submatch(1).'_section id="'.submatch(2).'" title="'.submatch(3)."\"%]"
+endfunction
+
 function! Foo_link()
     let @e='</'.submatch(1).'_section>'
     return '<'.submatch(1).'_section id="'.submatch(2).'" href="' .submatch(3). '" title="'.submatch(4)."\">"
+endfunction
+
+function! Foo_link()
+    let @e='[% END %]'
+    let ret_ = '[% WRAPPER '.submatch(1).'_section id="'.submatch(2).'" href="' .submatch(3). '" title="'.submatch(4)."\" %]"
+    let ret_ = substitute(ret_, "\\v\\[\\% *base_path *\\%\\]", "\${base_path}", "")
+
+    return ret_
 endfunction
 
 function! Replace_Sect(myid, title, repl)

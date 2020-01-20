@@ -75,7 +75,8 @@ boards</a>
 </li>
 </ul>
 
-<h2 id="One_Dimensional_Board">Analysis of a 1-D Toggle-board</h2>
+[% WRAPPER h2_section id="One_Dimensional_Board" title="Analysis of a 1-D Toggle-board"%]
+
 <pre>
 First, I’ll prove some analogous statements about a one-dimensional
 toggle-squares board, i.e: conjectures that apply to the set of rows of size
@@ -92,7 +93,7 @@ space (or vector field) {0,1}^n where the operations in the set {0,1} are
 XOR for ‘+’ and AND for ‘*’.
 </pre>
 
-<h3 id="lemma1">Lemma 1</h3>
+[% WRAPPER h3_section id="lemma1" title="Lemma 1"%]
 
 <p>
 A 1-D toggle field is solvable for every state if (and only if)
@@ -114,7 +115,9 @@ and one 1, are solvable. Since this is a basis of {1,0}^N then every state
 is solvable. (i.e contained in Sp{Presses} )
 </pre>
 
-<h3 id="lemma2">Lemma 2</h3>
+[% END %]
+
+[% WRAPPER h3_section id="lemma2" title="Lemma 2"%]
 
 <p>
 A 1-D toggle field of size N is solvable for every state if N = 3k
@@ -198,13 +201,18 @@ and thus the dimension of the span is less than n, and so not every state is
 included in it, and is solvable.
 </pre>
 
-<h2 id="Two-Dimensional-Board">Analysis of 2-D Boards</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id="Two-Dimensional-Board" title="Analysis of 2-D Boards"%]
 
 <p>
 Now for the actual proofs:
 </p>
 
-<h3 id="theorem1">Theorem 1</h3>
+[% WRAPPER h3_section id="theorem1" title="Theorem 1"%]
+
 <p>
 2-D (3k+2) * (3k+2) boards are not solvable for every state.
 </p>
@@ -227,7 +235,9 @@ presses on the block, much less the entire board can be solved for every
 state.
 </pre>
 
-<h3 id="theorem2">Theorem 2</h3>
+[% END %]
+
+[% WRAPPER h3_section id="theorem2" title="Theorem 2"%]
 
 <p>
 2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solvable for
@@ -306,7 +316,10 @@ Diagram:
 .        .        .        .        .        .
 </pre>
 
-<h3 id="theorem3">Theorem 3</h3>
+[% END %]
+
+[% WRAPPER h3_section id="theorem3" title="Theorem 3"%]
+
 <p>
 Solvable states of 3k+2 boards can be solved by the one-way
 algorithm.
@@ -329,7 +342,9 @@ filled because it’s a column-wise contradiction of Lemma 1. Therefore, it
 will also be cleared.
 </pre>
 
-<h3 id="theorem4">Theorem 4:</h3>
+[% END %]
+
+[% WRAPPER h3_section id="theorem4" title="Theorem 4:"%]
 
 <p>
 A 2-D board of size (3k) * (3k) can be solved by using the two-way
@@ -406,7 +421,9 @@ of the leftmost filled square, one gets to the 0...11 state, which is
 afterwards cleared.
 </pre>
 
-<h3 id="theorem5">Theorem 5:</h3>
+[% END %]
+
+[% WRAPPER h3_section id="theorem5" title="Theorem 5:"%]
 
 <p>
 A 2-D board of size (3k+1)*(3k+1) can be cleared by an
@@ -451,7 +468,11 @@ press those cells and it will be be moved to
 0000000
 </pre>
 
-<h2 id="dim_press_span">The Dimension of the Presses Span in 3k+2 boards</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id="dim_press_span" title="The Dimension of the Presses Span in 3k+2 boards"%]
 
 <pre>
 (3k+2)*(3k+2) boards are not solvable for every state. The solvable
@@ -501,7 +522,9 @@ vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
 span the space of the solvable states of (3k+2) boards.
 </pre>
 
-<h2 id="efficiency">A Note about Efficiency</h2>
+[% END %]
+
+[% WRAPPER h2_section id="efficiency" title="A Note about Efficiency"%]
 
 <pre>
 I believe the previous section showed that the 1w-1w algorithm for
@@ -518,5 +541,7 @@ However, I believe it is agreeable that it is the simplest algorithm
 (yet) regarding “CPU” requirement and growing complexity, and has the
 advantage that it can be utilized without the aid of a computer.
 </pre>
+
+[% END %]
 
 [% END %]

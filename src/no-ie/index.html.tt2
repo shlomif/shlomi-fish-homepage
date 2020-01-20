@@ -102,9 +102,9 @@ browser to browse my sites, trust me - you’ll like it. Theoretically, these
 pages should have looked OK, but if they don’t - blame Microsoft not me.
 </p>
 
-<h2 id="the-links">Links</h2>
+[% WRAPPER h2_section id="the-links" title="Links"%]
 
-<h3 id="other-anti-msie-resources">Other Anti-MSIE Resources</h3>
+[% WRAPPER h3_section id="other-anti-msie-resources" title="Other Anti-MSIE Resources"%]
 
 <ul>
 <li>
@@ -622,7 +622,9 @@ Israel</i> blog in Hebrew ; 24-November-2013) - about Microsoft
 
 </ul>
 
-<h3>Alternative Browsers</h3>
+[% END %]
+
+[% WRAPPER h3_section id="alternatives" title="Alternative Browsers"%]
 
 <ul>
 <li>
@@ -660,7 +662,11 @@ default.
 </li>
 </ul>
 
-<h2 id="jokes">Jokes</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id="jokes" title="Jokes"%]
 
 <ul>
 
@@ -694,14 +700,20 @@ NOT SPELL GOOGLE WRONG</a> - video on YouTube.
 </li>
 </ul>
 
-<h2 id="version_control_id">Version Control ID</h2>
+[% END %]
+
+[% WRAPPER h2_section id="version_control_id" title="Version Control ID"%]
 
 <p>
 <i class="vercon">$Id$</i>
 </p>
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id="licence" title="Licence"%]
 
 [% license_obj.by_british_blurb( "year" => "2012", ) %]
+
+[% END %]
 
 [% END %]

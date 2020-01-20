@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id="note" title="Note"%]
 
 <p>
 I was originally forwarded an E-mail containing this joke, which was sent by
@@ -18,8 +18,9 @@ different list of 20 things a Klingon programmer would say</a> on gradha's
 site.
 </p>
 
-<h2 id="content">Top 12 things likely to be overheard if you had a Klingon
-Programmer</h2>
+[% END %]
+
+[% WRAPPER h2_section id="content" title="Top 12 things likely to be overheard if you had a Klingon Programmer"%]
 
 <p>
 12) "Specifications are for the weak and timid!"
@@ -78,5 +79,7 @@ stand!"
 1) "Our users will know fear and cower before our software! Ship it! Ship it
 and let them flee like the dogs they are!"
 </p>
+
+[% END %]
 
 [% END %]

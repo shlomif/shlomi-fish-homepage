@@ -34,4 +34,20 @@ make ; notifier notify --msg "Finished building the software project"
 
 [%- END -%]
 
+[% WRAPPER h2_section id="server" title="The server" %]
+
+[% WRAPPER github_cpan_dist_links     dist = "App-Notifier-Service"
+    github_url = "https://github.com/shlomif/app-notifier"
+     %]
+
+[%- END -%]
+
+<p>
+An HTTP service, implemented using <a href="https://metacpan.org/pod/Dancer2">Dancer2</a>
+that listens for notifier events and invokes an event hook (such as a program
+displaying a video along with the notified message).
+</p>
+
+[%- END -%]
+
 [%- END -%]

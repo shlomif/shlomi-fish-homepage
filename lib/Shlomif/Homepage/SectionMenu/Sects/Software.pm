@@ -183,6 +183,12 @@ my $software_tree_contents = {
 "Delay for a certain seconds, while displaying the remaining time",
                 },
                 {
+                    text => "Notifier-Apps",
+                    url  => "open-source/projects/notifier-apps/",
+                    title =>
+"A simple client/server HTTP-based applications for desktop notifications",
+                },
+                {
                     text  => "sky",
                     url   => "open-source/projects/sky/",
                     title => "Upload a file and get a URL back.",

@@ -1,0 +1,37 @@
+[%- SET title = "Notifier-Apps: Client/Server HTTP-based desktop notifications" -%]
+[%- SET desc = "Notifier-Apps: Client/Server HTTP-based desktop notifications for knowing when a program finished running, or an event occurred." -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p>
+There are the following components:
+</p>
+
+[% WRAPPER h2_section id="client" title="The client" %]
+
+[% WRAPPER github_cpan_dist_links     dist = "App-Notifier-Client"
+    github_url = "https://github.com/shlomif/app-notifier"
+     %]
+
+[%- END -%]
+
+<p>
+A command line client written in Perl 5 that sends a message using HTTP
+and JSON to a URL hosting the server. E.g:
+</p>
+
+<pre>
+notifier notify --msg "Finished building the software project"
+</pre>
+
+<p>
+This can be used in shells using an idiom like:
+</p>
+
+<pre>
+make ; notifier notify --msg "Finished building the software project"
+</pre>
+
+[%- END -%]
+
+[%- END -%]

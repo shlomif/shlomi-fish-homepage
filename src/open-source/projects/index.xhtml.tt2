@@ -45,6 +45,7 @@ them are in a usable condition.
 
 <p>
 Solvers for
+<a href="https://en.wikipedia.org/wiki/Golf_(patience)">Golf</a>,
 <a href="http://en.wikipedia.org/wiki/Black_Hole_%28solitaire%29">Black Hole
 Solitaire</a>, and
 <a href="http://en.wikipedia.org/wiki/All_in_a_Row_%28Solitaire%29">All
@@ -188,6 +189,15 @@ search and regular expression search.
 Delay for a certain number of seconds while displaying the amount of remaining
 time. Similar to the UNIX sleep command, only less frustrating for interactive
 use.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="notifier-apps" href="notifier-apps/" title="Notifier-Apps" %]
+
+<p>
+An HTTP / JSON - based client/server based programs to notify on events (such as
+a finished build or an appointment.
 </p>
 
 [% END %]

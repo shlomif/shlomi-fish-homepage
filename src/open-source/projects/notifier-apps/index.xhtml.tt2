@@ -48,6 +48,30 @@ that listens for notifier events and invokes an event hook (such as a program
 displaying a video along with the notified message).
 </p>
 
+<p>
+One should run it on the local desktop where one wishes to be notified of the events.
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id="event_handler" title="The event handler" %]
+
+<p>
+The server can be configured to invoke any arbitrary command as an event
+handler for when a notification arrives. Previously I used to invoke
+<a href="https://techbase.kde.org/Development/Tutorials/Shell_Scripting_with_KDE_Dialogs">kdialog</a>
+or <a href="https://linux.die.net/man/1/xmessage">xmessage</a>
+along with <a href="https://en.wikipedia.org/wiki/Mpv_(media_player)">mpv</a>
+but it was less than ideal.
+</p>
+
+<p>
+As a result, I wrote a <a href="https://github.com/shlomif/shlomif-computer-settings/blob/master/shlomif-settings/home-bin-executables/bin/notifier-event-show-hook--pyqt5.py">custom event handler</a>
+using python-vlc and PyQt5 (largely derived from an example in the python-vlc
+repository) that can be invoked by the server. (I guess it is <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">ship
+of Theseus</a> all over again.)
+</p>
+
 [%- END -%]
 
 [%- END -%]

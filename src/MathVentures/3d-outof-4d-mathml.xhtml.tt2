@@ -23,7 +23,7 @@ numbers are considerably less frequent than mid-range ones.
 </p>
 
 <p>
-Yet, this method, which is highly random, often results that the scores are
+Yet, this method, which is highly random, often results with scores which are
 unsuitable for what the player planned the character to be or simply too
 low. Therefore, there are several alternative methods to generate scores
 which are better as far as the player is concerned. One of the common ones,
@@ -395,20 +395,28 @@ class="MathClass-bin">&#x22C5;</mo><mn>4</mn></mrow></mfenced></mrow>
 ><mn>6</mn></mrow><mrow
 ><mn>4</mn></mrow></msup
 ></mrow></mfrac>                 </math>
-</p><!--l. 86--><p class="noindent" >From the 3rd least dice onward, this method gets more and more complicated because we have to consider 3
+</p><!--l. 86-->
+
+<p>From the 3rd least dice onward, this method gets more and more complicated because we have to consider 3
 different cases for every point we subtract, 4 cases for the fourth die, and so on. If anyone has an idea on how to
 improve this method, or can suggest an alternative method which is simpler as more and more dice are removed
 by order, please let me know and I&#x2019;ll post it here.
-</p><!--l. 93--><p class="noindent" >I, for my part, am no longer interested in this problem, and do not deal with it, at least not until I extend my
+</p><!--l. 93--><p>I, for my part, am no longer interested in this problem, and do not deal with it, at least not until I extend my
 knowledge in Combinatorics and the Theory of Probability.
-</p><!--l. 97--><p class="noindent" >A final note: you can find a C program, not unlike the one my friend used, that calculates the average of such
-throws <span
-class="cmbx-10">TODO Link me here</span>. It can do that for any number of dice with any number of sides, and while
+</p><!--l. 97--><p>A final note: you can find a C program, not unlike the one my friend used, that calculates the average of such
+throws <a href="calc_dice_average.c">here</a>
+and I created <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/MathVentures/calc_dice_average.py">a
+Python 3 port</a> more recently (2020)
+. It can do that for any number of dice with any number of sides, and while
 eliminating any number of minimal dice. &#x00A1;/p&#x00BF;
-</p><!--l. 104--><p class="noindent" >The program is quite stupid and merely iterates over all the different throws, and adds the sum of
+</p><!--l. 104-->
+
+<p>The program is quite stupid and merely iterates over all the different throws, and adds the sum of
 every throw to the total. It becomes less efficient as the number of sides and/or the number of dice
 increases.
-</p><!--l. 109--><p class="noindent" >Writing a program that implements my method <span
+</p>
+
+<p>Writing a program that implements my method <span
 class="cmbx-10">for any number of removed dice </span>is a bit complicated
 because the formula itself gets more and more complicated. Maybe I&#x2019;ll get to it one day.
 </p>

@@ -12,7 +12,7 @@ use HTML::Latemp::Local::Paths ();
 
 my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
-my @prunes = ( qr#^\Q$POST_DEST\E/MANIFEST\.html$#, );
+my @prunes = ( qr#\A\Q$POST_DEST\E/MANIFEST\.html\z#, );
 
 sub list_htmls
 {

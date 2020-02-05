@@ -1,7 +1,6 @@
 [%- SET title = "This Site’s Source Code" -%]
 [%- SET desc = "Where to find the source code for www.shlomifish.org and how to build it." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <section class="h2">
@@ -157,6 +156,25 @@ systems.
 <li>
 <p>
 <a href="https://en.wikipedia.org/wiki/GraphicsMagick">GraphicsMagick</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/release/Template-Toolkit">Template Toolkit</a> - version 2.x/3.x.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/Parallel::ForkManager">Parallel::ForkManager</a> - and
+<a href="https://metacpan.org/pod/Parallel::ForkManager::Segmented">Parallel::ForkManager::Segmented</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/validator/validator">The "Nu" HTML Validator</a>
 </p>
 </li>
 </ul>

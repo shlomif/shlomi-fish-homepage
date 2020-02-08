@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "original_aphorisms" title = "Collection of Humorous Quotes" href="${base_path}/humour.html"  %]
+[% WRAPPER h2_section id = "original_aphorisms" title = "Collection of Humorous Quotes" href="${base_path}humour.html"  %]
 
 <p>
 A collection of humorous or insightful quotes of my own (or of people I know).
@@ -13,7 +13,7 @@ Regularly updated.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "fortune_cookies" title = "Fortunes Cookies" href="${base_path}/humour/fortunes"  %]
+[% WRAPPER h2_section id = "fortune_cookies" title = "Fortunes Cookies" href="${base_path}humour/fortunes"  %]
 
 <p>
 Quotes I like or came up with, in an XML-based format that generates plaintext

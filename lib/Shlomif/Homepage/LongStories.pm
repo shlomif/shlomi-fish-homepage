@@ -486,7 +486,7 @@ sub _get_abstract_tags
 
     my $abstract = $self->_get_story($id)->abstract || die "No abstract";
 
-    $abstract =~ s#"\$\(ROOT\)/([^"]+?/)"#
+    $abstract =~ s#"\$\(ROOT\)/([^"]+?)"#
                 q{"}
                 . _rel_url($1)
                 . q{"}

@@ -152,11 +152,17 @@ A nice [% my_acronym( "key" => "IRC",) %] client for X-Windows. <a href="http://
 is a more actively maintained fork, which I now prefer.
 </p>
 
-<h3 id="icewm"><a href="http://www.icewm.org/">IceWM</a></h3>
+<h3 id="icewm"><a href="https://github.com/ice-wm/icewm">IceWM</a></h3>
 
 <p>
-IceWM is a lightweight but functional window manager for X-Windows. It has been
-undermaintained for many years now, though.
+IceWM is a lightweight but functional window manager for X-Windows. Maintenance
+of it resumed recently (February 2020).
+</p>
+
+<h3 id="jwm"><a href="https://joewing.net/projects/jwm/">JWM</a></h3>
+
+<p>
+JWM (Joe's Window Manager) is a lightweight window manager for X-Windows.
 </p>
 
 <h3 id="xfce"><a href="http://www.xfce.org/">Xfce</a></h3>
@@ -197,10 +203,13 @@ for any programmer on a UNIX system.
 A powerful, portable editor which is very lightweight and nice.
 </p>
 
-<h3 id="subversion"><a href="http://subversion.tigris.org/">Subversion</a></h3>
+<h3 id="subversion"><a href="https://subversion.apache.org/">Apache Subversion</a></h3>
 
 <p>
 This is a version-control system with style. Runs on UNIXes and Windows.
+<b>Note:</b> due to <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">recent
+trends</a> it is recommended to use <a href="https://en.wikipedia.org/wiki/Git">Git</a>
+instead.
 </p>
 
 <h3 id="gdb"><a href="http://www.gnu.org/software/gdb/">GDB</a></h3>
@@ -231,6 +240,12 @@ JavaScript so they can be deployed inside web pages.
 A nifty command-line utility for quickly searching source trees
 for information. Complements the ubiquitous
 <a href="http://en.wikipedia.org/wiki/Grep">grep</a> utility.
+</p>
+
+<p>
+There are some similar tools such as <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>
+or <a href="https://github.com/ggreer/the_silver_searcher">the Silver Searcher</a>
+which may be faster.
 </p>
 
 <h3 id="cmake"><a href="http://www.cmake.org/">CMake</a></h3>
@@ -321,14 +336,6 @@ Program</a></h3>
 A powerful image-processing application.
 </p>
 
-<h3 id="xmms"><a href="http://www.xmms.org/">XMMS - The X Multimedia System</a></h3>
-
-<p>
-A WinAmp clone for X-Windows, that is better than the original. <b>Note:</b>
-I’ve lately switched to <a href="#amarok">Amarok</a>. XMMS is still useful
-on underpowered machines or outside KDE.
-</p>
-
 <h3 id="vlc"><a href="http://www.videolan.org/vlc/">VLC</a></h3>
 
 <p>
@@ -336,11 +343,11 @@ A usable, attractive, and cross-platform, media player which sports a
 convenient GUI.
 </p>
 
-<h3 id="mplayer"><a href="http://mplayerhq.hu/">MPlayer</a></h3>
+<h3 id="mpv"><a href="https://mpv.io/">mpv</a></h3>
 
 <p>
 A capable multimedia player that can play almost any video or audio format
-under the sun.
+under the sun. An improved fork of mplayer.
 </p>
 
 <h3 id="mikmod"><a href="http://mikmod.sourceforge.net/">MikMod</a></h3>
@@ -363,17 +370,6 @@ A fast and portable module player that supports many formats, with a
 A very nice cross-platform vector graphics program.
 </p>
 
-<h3 id="ogg_for_wmp"><a href="http://www.illiminable.com/ogg/">Illiminable Ogg Directshow
-Filters for Free Codecs for Windows Media Player (WMP), etc.</a></h3>
-
-<p>
-These are filters to enable playing of <a href="http://www.vorbis.com/">the Ogg
-Vorbis file formats</a> and other open codecs in Microsoft’s Windows Media
-Player. All the other filters I found were out-of-date, required hackish
-tweaks, and even did not play the files well or supported visualization.
-Illiminable’s on the other hand works well out of the box.
-</p>
-
 <h3 id="youtube-dl"><a href="https://rg3.github.io/youtube-dl/">youtube-dl</a></h3>
 
 <p>
@@ -382,7 +378,7 @@ I often get referred to or find videos on
 inaccessible, because of my Linux configuration. However, using youtube-dl, I
 can easily download the video files to my home computer, where I can
 conveniently play them using such media players as
-<a href="#mplayer">MPlayer</a> or <a href="#vlc">VLC</a>, and also keep them
+<a href="#vlc">VLC</a>, and also keep them
 on my hard disk for posterity. Highly recommended.
 </p>
 
@@ -463,6 +459,12 @@ A powerful and easy-to-use mail client for the KDE environment. Has excellent
 internationalization.
 </p>
 
+<h3 id="claws-mail"><a href="https://www.claws-mail.org/">claws-mail</a></h3>
+
+<p>
+I switched to using it after KMail became unusable after version 2.x.
+</p>
+
 <h3 id="spamassassin"><a href="http://spamassassin.org/">SpamAssassin</a></h3>
 
 <p>
@@ -502,6 +504,8 @@ messages.
 
 <p>
 A feature-rich tool for incremental remote transfer of files.
+Also see <a href="http://zsync.moria.org.uk/">zsync</a> which
+is similar but based on HTTP-1.1.
 </p>
 
 <h3 id="wireshark"><a href="http://www.wireshark.org/">Wireshark</a></h3>

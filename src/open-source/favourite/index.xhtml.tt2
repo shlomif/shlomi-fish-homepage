@@ -243,6 +243,21 @@ Mac OS X and many flavours of UNIX. Also see
 (= the GNU Autotools)</a> and why you should use CMake instead.
 </p>
 
+<h3 id="valgrind"><a href="https://valgrind.org/">Valgrind</a></h3>
+
+<p>
+A sophisticated memory debugger for x86-linux and other platforms. Helped
+diagnose a few hard-to-catch bugs in my projects and is now also used as
+part of the automated tests' suites.
+</p>
+
+<h3 id="american_fuzzy"><a href="http://lcamtuf.coredump.cx/afl/">American Fuzzy Lop</a></h3>
+
+<p>
+A fuzzer.
+</p>
+
+
 <h3 id="web_devel">Web Development</h3>
 
 <h4 id="apache"><a href="http://httpd.apache.org/">The Apache Web-server</a></h4>
@@ -259,11 +274,11 @@ A Perl subsystem for Apache, that greatly accelerates it and provides other
 capabilities.
 </p>
 
-<h4 id="website_meta_lang"><a href="http://thewml.org/">Website Meta Language</a></h4>
+<h4 id="website_meta_lang"><a href="https://github.com/thewml/website-meta-language">Website Meta Language</a></h4>
 
 <p>
-WML is a powerful generator for offline HTML content. I now use it for most
-of my sites, including this one.
+A static site generator which is powerful, but slow and quite quirky. I'd recommend
+against using it, but I have some legacy code in it.
 </p>
 
 <h4 id="libwww_perl"><a href="http://www.linpro.no/lwp/">Libwww-perl (LWP)</a></h4>

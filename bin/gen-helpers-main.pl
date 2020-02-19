@@ -232,4 +232,13 @@ if ( my $Err = $@ )
 push @tt, "humour/fortunes/all-in-one.uncompressed.html";
 path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
+{
+    my $src = (
+        ( scalar(`inkscape --help`) =~ /--export-type/ )
+        ? path("./bin/inkscape-wrapper-new.bash")
+        : path("./bin/inkscape-wrapper-old.pl")
+    );
+
+    $src->copy("./bin/inkscape-wrapper")->chmod(0755);
+}
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );

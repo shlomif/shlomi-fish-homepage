@@ -71,3 +71,4 @@ let @s='[% IF 0 %]'
 let @e='[% END %]'
 " map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>
 map <F6> :S<cr>
+command! I :%s!\vinkscape(.*)\-\-export\-png!\$(INKSCAPE_WRAPPER)\1--export-type=png --export-file!

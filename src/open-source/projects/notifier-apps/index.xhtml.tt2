@@ -67,9 +67,47 @@ but it was less than ideal.
 
 <p>
 As a result, I wrote a <a href="https://github.com/shlomif/shlomif-computer-settings/blob/master/shlomif-settings/home-bin-executables/bin/notifier-event-show-hook--pyqt5.py">custom event handler</a>
-using python-vlc and PyQt5 (largely derived from an example in the python-vlc
-repository) that can be invoked by the server. (I guess it is <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">ship
+using python-vlc and PySide2 / PyQt5 (largely derived from an example in the python-vlc
+repository) that can be invoked by the server. (I guess it is the <a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">ship
 of Theseus</a> all over again.)
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id="protocol_spec" title="Protocol Spec" %]
+
+<p>
+The client should make a GET request to the <code>/notify</code> endpoint of the
+service with the following query parameters:
+</p>
+
+<ol>
+
+<li>
+<p>
+<code>cmd_id</code> - an optional key whose value is a UTF-8 string.
+</p>
+</li>
+
+<li>
+<p>
+<code>text_params</code> - A JSON key/value object encodeded as UTF-8 and then
+GET encoding. Recognized keys are <code>msg</code> which is an alternative message
+to display.
+</p>
+</li>
+</ol>
+
+<p>
+Example using curl:
+</p>
+
+<pre>
+curl 'http://localhost:6300/notify?text_params=\{"msg":"Replacement%20Message"\}'
+</pre>
+
+<p>
+This assumes the service is at http://localhost:6300/ .
 </p>
 
 [%- END -%]

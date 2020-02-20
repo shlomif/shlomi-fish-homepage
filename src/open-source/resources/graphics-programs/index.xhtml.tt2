@@ -110,7 +110,7 @@ open-source image viewer for the GNOME platform. Provides limited functionality.
 
 <ul>
 
-<li>
+<li id="Gimp">
 <p>
 <img src="The_GIMP_icon_-_gnome.min.svg" style="height:80px;" class="rfloaty" alt="GIMP’s Logo" />
 <a href="http://www.gimp.org/">GIMP</a> - the so-called “GNU Image
@@ -472,6 +472,21 @@ fork of ImageMagick with a similar scope. (MIT licensed).
 Library</a> - an open-source library to generate images (BSD-like licence).
 </p>
 </li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/GEGL">GEGL</a> - an open-source (LGPLed)
+library for image processing applications. Used by <a href="#Gimp">GIMP</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/OpenCV">OpenCV</a> - an open source
+(BSDLed) library for computer vision.
+</p>
+</li>
+
 </ul>
 
 [%- END -%]

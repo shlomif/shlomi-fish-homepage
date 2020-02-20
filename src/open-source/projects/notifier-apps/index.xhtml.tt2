@@ -91,9 +91,9 @@ service with the following query parameters:
 
 <li>
 <p>
-<code>text_params</code> - A JSON key/value object encodeded as UTF-8 and then
-GET encoding. Recognized keys are <code>msg</code> which is an alternative message
-to display.
+<code>text_params</code> - A JSON key/value object encoded as UTF-8 and then
+GET encoding. Recognized keys are <code>msg</code> whose value is a text
+to display (instead of the default one).
 </p>
 </li>
 </ol>

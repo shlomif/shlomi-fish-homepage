@@ -2793,6 +2793,30 @@ plugin</a>.
 
 [%- END -%]
 
+[% WRAPPER faq_h4_section id = "explicit_licensing"  title = "Why do you mention that a certain work or post is copyrighted by you and under a certain licence?"  %]
+
+<p>
+First of all note that [% my_acronym( "key" => "IANAL" ) %]/etc. Anyway, I try
+to give explicit and more permissive licences (e.g: <a
+href="https://creativecommons.org/">Creative Commons</a> ones) to all my posts
+and works because otherwise they are <a
+href="https://en.wikipedia.org/wiki/All_rights_reserved">All Rights
+Reserved</a> by default and so under much more restrictive implicit licensing
+conditions. I know that <a
+href="https://en.wikipedia.org/wiki/Ashleigh_Brilliant">Ashleigh Brilliant</a>
+got copyright to apply to relatively short sentences (which most of my posts are
+longer than them), and that there was a court decision that made it a violation
+to sample and reuse even a single chord of a copyrighted song. So there may not
+be a minimal limit to how substantial a copyrightable work can be.
+</p>
+
+<p>
+Most of the licences I use permit some use that will be normally be forbidden
+by default so you are better off and it is better to be safe than sorry.
+</p>
+
+[%- END -%]
+
 [% WRAPPER faq_h4_section id = "expat_license"  title = "What is the “Expat License”?"  %]
 
 <p>

@@ -69,8 +69,8 @@ if __name__ == '__main__':
 ###############################################################################
 
 
-import base64, cgi, email.utils, functools, hmac, imp, itertools, mimetypes,\
-        os, re, tempfile, threading, time, warnings, weakref, hashlib
+import base64, calendar, cgi, email.utils, functools, hmac, imp, itertools,\
+       mimetypes, os, re, tempfile, threading, time, warnings, weakref, hashlib
 
 from types import FunctionType
 from datetime import date as datedate, datetime, timedelta
@@ -110,7 +110,9 @@ except ImportError:
     except ImportError:
         from inspect import getargspec
 
-py3k = sys.version_info.major > 2
+
+py = sys.version_info
+py3k = py.major > 2
 
 
 # Workaround for the "print is a keyword/function" Python 2/3 dilemma
@@ -129,7 +131,7 @@ if py3k:
     from urllib.parse import urlencode, quote as urlquote, unquote as urlunquote
     urlunquote = functools.partial(urlunquote, encoding='latin1')
     from http.cookies import SimpleCookie, Morsel, CookieError
-    from collections import MutableMapping as DictMixin
+    from collections.abc import MutableMapping as DictMixin
     import pickle
     from io import BytesIO
     import configparser
@@ -347,7 +349,7 @@ class Router(object):
     rule_syntax = re.compile('(\\\\*)'
         '(?:(?::([a-zA-Z_][a-zA-Z_0-9]*)?()(?:#(.*?)#)?)'
           '|(?:<([a-zA-Z_][a-zA-Z_0-9]*)?(?::([a-zA-Z_]*)'
-            '(?::((?:\\\\.|[^\\\\>]+)+)?)?)?>))')
+            '(?::((?:\\\\.|[^\\\\>])+)?)?)?>))')
 
     def _itertokens(self, rule):
         offset, prefix = 0, ''
@@ -510,7 +512,7 @@ class Router(object):
 class Route(object):
     """ This class wraps a route callback along with route specific metadata and
         configuration and applies Plugins on demand. It is also responsible for
-        turing an URL path rule into a regular expression usable by the Router.
+        turning an URL path rule into a regular expression usable by the Router.
     """
 
     def __init__(self, app, rule, method, callback,
@@ -728,6 +730,13 @@ class Bottle(object):
                 def start_response(status, headerlist, exc_info=None):
                     if exc_info:
                         _raise(*exc_info)
+                    if py3k:
+                        # Errors here mean that the mounted WSGI app did not
+                        # follow PEP-3333 (which requires latin1) or used a
+                        # pre-encoding other than utf8 :/
+                        status = status.encode('latin1').decode('utf8')
+                        headerlist = [(k, v.encode('latin1').decode('utf8'))
+                                      for (k, v) in headerlist]
                     rs.status = status
                     for name, value in headerlist:
                         rs.add_header(name, value)
@@ -862,7 +871,7 @@ class Bottle(object):
         run(self, **kwargs)
 
     def match(self, environ):
-        """ Search for a matching route and return a (:class:`Route` , urlargs)
+        """ Search for a matching route and return a (:class:`Route`, urlargs)
             tuple. The second value is a dictionary with parameters extracted
             from the URL. Raise :exc:`HTTPError` (404/405) on a non-match."""
         return self.router.match(environ)
@@ -1106,7 +1115,7 @@ class Bottle(object):
             or environ['REQUEST_METHOD'] == 'HEAD':
                 if hasattr(out, 'close'): out.close()
                 out = []
-            start_response(response._status_line, response.headerlist)
+            start_response(response._wsgi_status_line(), response.headerlist)
             return out
         except (KeyboardInterrupt, SystemExit, MemoryError):
             raise
@@ -1288,7 +1297,7 @@ class BaseRequest(object):
         """
         ctype = self.environ.get('CONTENT_TYPE', '').lower().split(';')[0]
         if ctype in ('application/json', 'application/json-rpc'):
-            b = self._get_body_string()
+            b = self._get_body_string(self.MEMFILE_MAX)
             if not b:
                 return None
             try:
@@ -1354,15 +1363,13 @@ class BaseRequest(object):
         body.seek(0)
         return body
 
-    def _get_body_string(self):
-        """ read body until content-length or MEMFILE_MAX into a string. Raise
-            HTTPError(413) on requests that are to large. """
-        clen = self.content_length
-        if clen > self.MEMFILE_MAX:
+    def _get_body_string(self, maxread):
+        """ Read body into a string. Raise HTTPError(413) on requests that are
+            to large. """
+        if self.content_length > maxread:
             raise HTTPError(413, 'Request entity too large')
-        if clen < 0: clen = self.MEMFILE_MAX + 1
-        data = self.body.read(clen)
-        if len(data) > self.MEMFILE_MAX:  # Fail fast
+        data = self.body.read(maxread + 1)
+        if len(data) > maxread:
             raise HTTPError(413, 'Request entity too large')
         return data
 
@@ -1395,8 +1402,8 @@ class BaseRequest(object):
         # We default to application/x-www-form-urlencoded for everything that
         # is not multipart and take the fast path (also: 3.1 workaround)
         if not self.content_type.startswith('multipart/'):
-            pairs = _parse_qsl(tonat(self._get_body_string(), 'latin1'))
-            for key, value in pairs:
+            body = tonat(self._get_body_string(self.MEMFILE_MAX), 'latin1')
+            for key, value in _parse_qsl(body):
                 post[key] = value
             return post
 
@@ -1708,6 +1715,8 @@ class BaseResponse(object):
         if isinstance(status, int):
             code, status = status, _HTTP_STATUS_LINES.get(status)
         elif ' ' in status:
+            if '\n' in status or '\r' in status or '\0' in status:
+                raise ValueError('Status line must not include control chars.')
             status = status.strip()
             code = int(status.split()[0])
         else:
@@ -1768,6 +1777,12 @@ class BaseResponse(object):
             allowed with the current response status code. """
         return self.headerlist
 
+    def _wsgi_status_line(self):
+        """ WSGI conform status line (latin1-encodeable) """
+        if py3k:
+            return self._status_line.encode('utf8').decode('latin1')
+        return self._status_line
+
     @property
     def headerlist(self):
         """ WSGI conform list of (header, value) tuples. """
@@ -1787,7 +1802,7 @@ class BaseResponse(object):
         return out
 
     content_type = HeaderProperty('Content-Type')
-    content_length = HeaderProperty('Content-Length', reader=int)
+    content_length = HeaderProperty('Content-Length', reader=int, default=-1)
     expires = HeaderProperty(
         'Expires',
         reader=lambda x: datetime.utcfromtimestamp(parse_date(x)),
@@ -1819,10 +1834,8 @@ class BaseResponse(object):
             :param secure: limit the cookie to HTTPS connections (default: off).
             :param httponly: prevents client-side javascript to read this cookie
               (default: off, requires Python 2.6 or newer).
-            :param samesite: disables third-party use for a cookie.
-              Allowed attributes: `lax` and `strict`.
-              In strict mode the cookie will never be sent.
-              In lax mode the cookie is only sent with a top-level GET request.
+            :param samesite: Control or disable third-party use for this cookie.
+              Possible values: `lax`, `strict` or `none` (default).
 
             If neither `expires` nor `maxage` is set (default), the cookie will
             expire at the end of the browser session (as soon as the browser
@@ -1834,7 +1847,7 @@ class BaseResponse(object):
 
             Warning: Pickle is a potentially dangerous format. If an attacker
             gains access to the secret key, he could forge cookies that execute
-            code on server side if unpickeld. Using pickle is discouraged and
+            code on server side if unpickled. Using pickle is discouraged and
             support for it will be removed in later versions of bottle.
 
             Warning: Signed cookies are not encrypted (the client can still see
@@ -1847,7 +1860,8 @@ class BaseResponse(object):
 
         # Monkey-patch Cookie lib to support 'SameSite' parameter
         # https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1
-        Morsel._reserved.setdefault('samesite', 'SameSite')
+        if py < (3, 8, 0):
+            Morsel._reserved.setdefault('samesite', 'SameSite')
 
         if secret:
             if not isinstance(value, basestring):
@@ -1873,15 +1887,11 @@ class BaseResponse(object):
                 if isinstance(value, timedelta):
                     value = value.seconds + value.days * 24 * 3600
             if key == 'expires':
-                if isinstance(value, (datedate, datetime)):
-                    value = value.timetuple()
-                elif isinstance(value, (int, float)):
-                    value = time.gmtime(value)
-                value = time.strftime("%a, %d %b %Y %H:%M:%S GMT", value)
+                value = http_date(value)
             if key in ('same_site', 'samesite'): # 'samesite' variant added in 0.13
-                key = 'samesite'
-                if value.lower() not in ('lax', 'strict'):
-                    raise CookieError("Invalid value samesite=%r (expected 'lax' or 'strict')" % (key,))
+                key, value = 'samesite', (value or "none").lower()
+                if value not in ('lax', 'strict', 'none'):
+                    raise CookieError("Invalid value for SameSite")
             if key in ('secure', 'httponly') and not value:
                 continue
             self._cookies[name][key] = value
@@ -2835,7 +2845,8 @@ def static_file(filename, root,
                 mimetype=True,
                 download=False,
                 charset='UTF-8',
-                etag=None):
+                etag=None,
+                headers=None):
     """ Open a file in a safe way and return an instance of :exc:`HTTPResponse`
         that can be sent back to the client.
 
@@ -2852,6 +2863,7 @@ def static_file(filename, root,
             (default: UTF-8)
         :param etag: Provide a pre-computed ETag header. If set to ``False``,
             ETag handling is disabled. (default: auto-generate ETag header)
+        :param headers: Additional headers dict to add to the response.
 
         While checking user input is always a good idea, this function provides
         additional protection against malicious ``filename`` parameters from
@@ -2869,7 +2881,7 @@ def static_file(filename, root,
 
     root = os.path.join(os.path.abspath(root), '')
     filename = os.path.abspath(os.path.join(root, filename.strip('/\\')))
-    headers = dict()
+    headers = headers or {}
 
     if not filename.startswith(root):
         return HTTPError(403, "Access denied.")
@@ -2883,11 +2895,12 @@ def static_file(filename, root,
             mimetype, encoding = mimetypes.guess_type(download)
         else:
             mimetype, encoding = mimetypes.guess_type(filename)
-        if encoding: headers['Content-Encoding'] = encoding
+        if encoding:
+            headers['Content-Encoding'] = encoding
 
     if mimetype:
         if (mimetype[:5] == 'text/' or mimetype == 'application/javascript')\
-        and charset and 'charset' not in mimetype:
+          and charset and 'charset' not in mimetype:
             mimetype += '; charset=%s' % charset
         headers['Content-Type'] = mimetype
 
@@ -2949,20 +2962,26 @@ def debug(mode=True):
 
 
 def http_date(value):
-    if isinstance(value, (datedate, datetime)):
+    if isinstance(value, basestring):
+        return value
+    if isinstance(value, datetime):
+        # aware datetime.datetime is converted to UTC time
+        # naive datetime.datetime is treated as UTC time
         value = value.utctimetuple()
-    elif isinstance(value, (int, float)):
-        value = time.gmtime(value)
-    if not isinstance(value, basestring):
-        value = time.strftime("%a, %d %b %Y %H:%M:%S GMT", value)
-    return value
+    elif isinstance(value, datedate):
+        # datetime.date is naive, and is treated as UTC time
+        value = value.timetuple()
+    if not isinstance(value, (int, float)):
+        # convert struct_time in UTC to UNIX timestamp
+        value = calendar.timegm(value)
+    return email.utils.formatdate(value, usegmt=True)
 
 
 def parse_date(ims):
     """ Parse rfc1123, rfc850 and asctime timestamps and return UTC epoch. """
     try:
         ts = email.utils.parsedate_tz(ims)
-        return time.mktime(ts[:8] + (0, )) - (ts[9] or 0) - time.timezone
+        return calendar.timegm(ts[:8] + (0, )) - (ts[9] or 0)
     except (TypeError, ValueError, IndexError, OverflowError):
         return None
 
@@ -2998,7 +3017,7 @@ def parse_range_header(header, maxlen=0):
 
 
 #: Header tokenizer used by _parse_http_header()
-_hsplit = re.compile('(?:(?:"((?:[^"\\\\]+|\\\\.)*)")|([^;,=]+))([;,=]?)').findall
+_hsplit = re.compile('(?:(?:"((?:[^"\\\\]|\\\\.)*)")|([^;,=]+))([;,=]?)').findall
 
 def _parse_http_header(h):
     """ Parses a typical multi-valued and parametrised HTTP header (e.g. Accept headers) and returns a list of values
@@ -3443,14 +3462,19 @@ class GunicornServer(ServerAdapter):
     """ Untested. See http://gunicorn.org/configure.html for options. """
 
     def run(self, handler):
-        from gunicorn.app.base import Application
+        from gunicorn.app.base import BaseApplication
 
-        config = {'bind': "%s:%d" % (self.host, int(self.port))}
+        if self.host.startswith("unix:"):
+            config = {'bind': self.host}
+        else:
+            config = {'bind': "%s:%d" % (self.host, self.port)}
+
         config.update(self.options)
 
-        class GunicornApplication(Application):
-            def init(self, parser, opts, args):
-                return config
+        class GunicornApplication(BaseApplication):
+            def load_config(self):
+                for key, value in config.items():
+                    self.cfg.set(key, value)
 
             def load(self):
                 return handler
@@ -3488,15 +3512,6 @@ class EventletServer(ServerAdapter):
             wsgi.server(listen(address), handler)
 
 
-class RocketServer(ServerAdapter):
-    """ Untested. """
-
-    def run(self, handler):
-        from rocket import Rocket
-        server = Rocket((self.host, self.port), 'wsgi', {'wsgi_app': handler})
-        server.start()
-
-
 class BjoernServer(ServerAdapter):
     """ Fast server written in C: https://github.com/jonashaag/bjoern """
 
@@ -3510,9 +3525,9 @@ class AsyncioServerAdapter(ServerAdapter):
         pass
 
 class AiohttpServer(AsyncioServerAdapter):
-    """ Untested.
-        aiohttp
+    """ Asynchronous HTTP client/server framework for asyncio
         https://pypi.python.org/pypi/aiohttp/
+        https://pypi.org/project/aiohttp-wsgi/
     """
 
     def get_event_loop(self):
@@ -3521,26 +3536,16 @@ class AiohttpServer(AsyncioServerAdapter):
 
     def run(self, handler):
         import asyncio
-        from aiohttp.wsgi import WSGIServerHttpProtocol
+        from aiohttp_wsgi.wsgi import serve
         self.loop = self.get_event_loop()
         asyncio.set_event_loop(self.loop)
-
-        protocol_factory = lambda: WSGIServerHttpProtocol(
-            handler,
-            readpayload=True,
-            debug=(not self.quiet))
-        self.loop.run_until_complete(self.loop.create_server(protocol_factory,
-                                                             self.host,
-                                                             self.port))
 
         if 'BOTTLE_CHILD' in os.environ:
             import signal
             signal.signal(signal.SIGINT, lambda s, f: self.loop.stop())
 
-        try:
-            self.loop.run_forever()
-        except KeyboardInterrupt:
-            self.loop.stop()
+        serve(handler, host=self.host, port=self.port)
+
 
 class AiohttpUVLoopServer(AiohttpServer):
     """uvloop
@@ -3580,7 +3585,6 @@ server_names = {
     'gunicorn': GunicornServer,
     'eventlet': EventletServer,
     'gevent': GeventServer,
-    'rocket': RocketServer,
     'bjoern': BjoernServer,
     'aiohttp': AiohttpServer,
     'uvloop': AiohttpUVLoopServer,
@@ -3711,8 +3715,11 @@ def run(app=None,
         if not server.quiet:
             _stderr("Bottle v%s server starting up (using %s)...\n" %
                     (__version__, repr(server)))
-            _stderr("Listening on http://%s:%d/\n" %
-                    (server.host, server.port))
+            if server.host.startswith("unix:"):
+                _stderr("Listening on %s\n" % server.host)
+            else:
+                _stderr("Listening on http://%s:%d/\n" %
+                        (server.host, server.port))
             _stderr("Hit Ctrl-C to quit.\n\n")
 
         if reloader:
@@ -4067,7 +4074,7 @@ class StplParser(object):
     # Match the start tokens of code areas in a template
     _re_split = r'''(?m)^[ \t]*(\\?)((%(line_start)s)|(%(block_start)s))'''
     # Match inline statements (may contain python strings)
-    _re_inl = r'''%%(inline_start)s((?:%s|[^'"\n]+?)*?)%%(inline_end)s''' % _re_inl
+    _re_inl = r'''%%(inline_start)s((?:%s|[^'"\n])*?)%%(inline_end)s''' % _re_inl
 
     # add the flag in front of the regexp to avoid Deprecation warning (see Issue #949)
     # verbose and dot-matches-newline mode

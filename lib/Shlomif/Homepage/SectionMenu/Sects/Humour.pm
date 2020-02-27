@@ -596,6 +596,10 @@ my $humour_tree_contents = {
                     text => "The Toaster vs Computer Science",
                     url  => "humour/by-others/the-toaster-vs-CS/",
                 },
+                {
+                    text => "The 12 Days of Christmas Letters",
+                    url  => "humour/by-others/12-Days-of-Christmas-Letters/",
+                },
             ],
         },
         {

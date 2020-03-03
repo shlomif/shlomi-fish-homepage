@@ -3,7 +3,11 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/start-foss-image.tt2" %]
+
 <div class="lim_width wrap-me side_toc">
+
+[% INCLUDE start_foss_image %]
 
 [% default_toc %]
 
@@ -20,6 +24,8 @@ here.
 </p>
 
 [% path_slurp("htmls/from-mediawiki/processed/How_to_start_contributing_to_or_using_Open_Source_Software.html") %]
+
+[% INCLUDE start_foss_image_attribution %]
 
 </div>
 

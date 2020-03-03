@@ -1,8 +1,11 @@
 [%- SET title = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
 [%- SET desc = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% PROCESS "Inc/start-foss-image.tt2" %]
+
+[% INCLUDE start_foss_image %]
 
 <h2 id="note">Note</h2>
 
@@ -70,19 +73,18 @@ projects.
 <p>
 After you’ve read all that, you should learn enough programming to prove
 yourself useful, in case you don’t already (see
-<a href="http://perl-begin.org/">the Perl Beginners’
-Site</a> or search for
-<a href="https://duckduckgo.com/?q=online%20python%20book">an
-online Python book</a>). And after that, you should look for a project
+<a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#i-want-to-learn-programming-which-language-should-i-start-with">our resources' recommendations</a>. And after that, you should look for a project
 to contribute to. For that see <a href="http://openhatch.org/">OpenHatch</a>
 and <a href="http://freecode.com/">Freecode</a>.
 </p>
 
 <p>
-You may wish to <b>get a mentor</b> who will guide you that you’ll be
+You may wish to <b>get a mentor</b> who will guide you, and that you’ll be
 able to consult in case you encounter difficulties.
 <a href="[% base_path %]open-source/mentoring/">I’m willing to act as a mentor</a>
 and you should be able to find others who will be willing to guide you.
 </p>
+
+[% INCLUDE start_foss_image_attribution %]
 
 [% END %]

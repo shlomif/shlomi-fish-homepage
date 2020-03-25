@@ -9498,7 +9498,7 @@ Thanks, and let me figure out what you just wrote, heh.
 
             </body>
             <info>
-                <channel>#gamedev</channel>
+                <channel>#gnu</channel>
                 <network>Freenode</network>
             </info>
         </irc>
@@ -9586,6 +9586,60 @@ can always find me, anyway.
                 <work href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the Living Dead”</work>
             </info>
         </screenplay>
+    </fortune>
+
+    <fortune id="sharp-linux--including-things-in-the-kernel">
+        <meta>
+            <title>Including things in the kernel</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="fenirskunk">bin is for mission critical, xbin and sbin are for addins, cause Linux is paranoid crack mother over your shoulder.</saying>
+<saying who="tomty89">xbin is an android thing i think</saying>
+<saying who="tomty89">wonder what the x means</saying>
+<saying who="Armand">&quot;not s&quot;</saying>
+<saying who="Armand">:P</saying>
+<saying who="schu-r">extra</saying>
+<saying who="fenirskunk">Lol</saying>
+<saying who="fenirskunk">Kill me.</saying>
+<saying who="tomty89">exterminate</saying>
+<saying who="Masklin">I have four bins in my default PATH.</saying>
+<saying who="Masklin">FOUR!</saying>
+<saying who="Masklin">Two I would understand</saying>
+<saying who="Masklin">But this is outrageous</saying>
+<saying who="fenirskunk">Busybox should just be baked into kernel in my opinion</saying>
+<saying who="Masklin">Would that help?</saying>
+<saying who="tomty89">i am sure you have a lot of opinions</saying>
+<saying who="ananke">tomty89: that&#39;s precisely what I said</saying>
+<saying who="Triffid_Hunter">fenirskunk: heh do you remember back in the day when there was a http server baked into the kernel?</saying>
+<saying who="SuperSeriousCat">Ye. Building busybox every time you rebuild kernel would be awesome</saying>
+<saying who="hexnewbie">The kernel ought to have zsh, wayland and wineserver integrated.</saying>
+<saying who="rindolf">hexnewbie: heh</saying>
+<saying who="SuperSeriousCat">And a web browser!</saying>
+<saying who="hexnewbie">Think of the advantages of running CNN&#39;s JavaScript in kernel-space.</saying>
+<saying who="rindolf">hexnewbie: heh</saying>
+<saying who="rindolf">hexnewbie: you made me smile</saying>
+<saying who="rindolf">hexnewbie: i remember a .txt file causing msie 6 to fork bomb</saying>
+<saying who="rindolf">on windows though</saying>
+<saying who="Triffid_Hunter">rindolf: heh, or literally every single image format it supports having a remote code execution vulnerability?</saying>
+<saying who="rindolf">Triffid_Hunter: what?</saying>
+<saying who="Triffid_Hunter">rindolf: ie6</saying>
+<saying who="rindolf">Triffid_Hunter: ah</saying>
+<saying who="hexnewbie">Once again, a flaw in Wine&#39;s compatibility! Including an &lt;img&gt; src&#39;ed from &quot;con&quot; should kernel-crash GNU/Linux too.</saying>
+<saying who="Triffid_Hunter">hexnewbie: LOL, or aux or lpt?</saying>
+<saying who="rindolf">hexnewbie: heh</saying>
+<saying who="hexnewbie">IE6 worked pretty well in Wine, from what I can recall, lack of system crash bugs notwithstanding.</saying>
+<saying who="stefmorino2">Masklin: I have $HOME/bin, /bin, /sbin, /usr/bin, /usr/sbin, /usr/ports/infrastructure/bin, /usr/X11R6/bin, /usr/local/bin, /usr/local/sbin</saying>
+<saying who="rindolf">hexnewbie: :)</saying>
+
+            </body>
+            <info>
+                <channel>##linux</channel>
+                <network>Freenode</network>
+                <tagline>Failure is not an option! It is bundled with the product.</tagline>
+            </info>
+        </irc>
     </fortune>
 
 </list>

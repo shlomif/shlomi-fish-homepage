@@ -1901,7 +1901,7 @@ reasons (not sure).
 
 <li>
 <p>
-I enabled server-side gzip/deflate/etc. compression.
+I enabled server-side <a href="https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip/deflate/etc. compression</a>.
 </p>
 </li>
 
@@ -1909,7 +1909,9 @@ I enabled server-side gzip/deflate/etc. compression.
 <p>
 XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
 and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
-minimised.
+minimised. See <a href="https://github.com/kangax/html-minifier">HTML minifier</a>
+for HTML, <a href="https://github.com/tdewolff/minify">Go minifiers</a> for
+SVG, and <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> for JavaScript.
 </p>
 </li>
 
@@ -1944,7 +1946,8 @@ PNG images are compressed using
 
 <p>
 Moreover, I recently started to increasingly make use of
-<a href="https://en.wikipedia.org/wiki/WebP">WebP</a>.
+<a href="https://en.wikipedia.org/wiki/WebP">WebP</a>, whose files tends to
+be smaller than PNG and JPEG ones, and look better than JPEG.
 </p>
 
 </li>

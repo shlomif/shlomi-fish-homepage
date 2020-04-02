@@ -140,12 +140,12 @@ to write in the first place. A few notes:
 
 <ol>
 <li>
-I implemented everything using ANSI C arrays of C structs, a different
+I implemented everything using C arrays of C structs, a different
 one for each table. As a result there was a lot of duplicate code there.
 </li>
 <li>
 Retrospectively, I understand that I could have implemented it with
-faster insertions using a balanced binary tree.
+faster insertions using a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">balanced binary tree</a>.
 </li>
 <li>
 I ended up implementing my own binary search function using trial and error,

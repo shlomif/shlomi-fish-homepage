@@ -262,7 +262,7 @@ Using Turbo C++, I started writing a crude, 16-bit code to convert Gregorian
 dates to Jewish dates. The Jewish calendar is not simple at all, as it
 has quite a lot of religious caveats. Nevertheless, the code was eventually
 working. I use some C++ features, but my friend later insisted on his program
-being pure ANSI C and said I should convert them all to C. A beautiful class I
+being pure C and said I should convert them all to C. A beautiful class I
 wrote and some operator overloading of it had to be sacrificed for this
 sake.</p>
 
@@ -384,7 +384,7 @@ The days of BASIC, C and Pascal hobbyist programmers in DOS are largely over
 now, highly superseded by Visual Basic/Delphi/Visual C++ programmers working
 for Win32, and gcc/Perl/Python/Ruby/Tcl programmers working on GNU systems
 (such as Linux). Even when I learned C I did not distinguish between the
-ANSI C functions, and those that were DOS or Borland extensions. And 16-bit
+C functions, and those that were DOS or Borland extensions. And 16-bit
 programming was a bit painful and I had to use long for numbers that
 could get quite large.
 </p>

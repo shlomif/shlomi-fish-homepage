@@ -246,14 +246,14 @@ to see if it corresponds with the philosophy.
         everything. That's exactly what Rindolf aims to be.
     </para>
 </section>
-<section xml:id="philosophy_cpp"><info><title>Analogy with C++ and ANSI C</title></info>
+<section xml:id="philosophy_cpp"><info><title>Analogy with C++ and C</title></info>
 
     <para>
-        The analogy between Rindolf and Perl 5 and C++ and ANSI C is naturally
+        The analogy between Rindolf and Perl 5 and C++ and C is naturally
         something that needs to be addressed. C++ has seen wide use in the
         industry, while has almost been completely rejected by the open-source
         community who sticked to the bare ISO C 89'. Even some software houses
-        maintain ANSI C codebases of various sizes, which they do not indeed to
+        maintain C codebases of various sizes, which they do not indeed to
         convert to C++. Is Rindolf going to have the same fate?
     </para>
     <para>
@@ -270,7 +270,7 @@ to see if it corresponds with the philosophy.
         Single-inheritance is useful (it is nicer than the Gtk+-style
         implementation in software), as are templates, ,operator
         overloading and friend functions. But at the moment, Standard C++ has
-        become a completely different language than ANSI C, which is still
+        become a completely different language than C, which is still
         backwards compatible. Mozilla, for instance, restricts itself to
         only a very small subset of the functionality to maintain
         compatibility with different broken compilers. (I also know someone
@@ -281,12 +281,12 @@ to see if it corresponds with the philosophy.
         Rindolf will still essentially be Perl 5-like with a Perl 5 feel
         and behaviour. Moreover, C++ has proved of some use to many projects,
         and is still commonly used. As much as there is a hype about Java and
-        .NET, they are not compatible with ANSI C, and so aren't actually
+        .NET, they are not compatible with C, and so aren't actually
         a replacement for C++.
         <footnote xml:id="mikmod_for_java">
             <para>
             I did in fact
-            convert an entire ANSI C codebase (MikMod) to Java through several
+            convert an entire C codebase (MikMod) to Java through several
             stages of C++. This took a lot of time, and the resultant code
             was completely not compatible with the Java conventions. If I had
             to make MikMod play nice with C++, all I needed were a few
@@ -294,7 +294,7 @@ to see if it corresponds with the philosophy.
         </para>
         </footnote>
 
-            If Perl 5 is ANSI C, then Perl 6 is going
+            If Perl 5 is C, then Perl 6 is going
         to be something like Java. Rindolf will be C++, and the analogy is
         perfectly fine.
     </para>

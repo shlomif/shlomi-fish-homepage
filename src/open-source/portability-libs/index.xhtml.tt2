@@ -52,7 +52,7 @@ services (and not GUI). [% INCLUDE licence_qt %]
 <ul>
 <li>
 <p>
-<a href="http://www.gtk.org/">GLib</a> - an ANSI C library that provides
+<a href="http://www.gtk.org/">GLib</a> - a C library that provides
 many useful classes. It is complete, but sometimes common useful programming
 practices (such as supplying a callback context argument) are ignored. It
 also tends to have non-optimised code. LGPLed.
@@ -162,7 +162,7 @@ library that can be used for multi-threading and the such. C++ and LGPLed.
 <li>
 <p>
 <a href="http://www.mozilla.org/projects/nspr/">The Netscape Portable
-Runtime (NSPR)</a> - an ANSI C library that abstracts Threads, sockets,
+Runtime (NSPR)</a> - a C library that abstracts Threads, sockets,
 files, data structures and many other goodies. Open source under the
 MPL licence.
 </p>

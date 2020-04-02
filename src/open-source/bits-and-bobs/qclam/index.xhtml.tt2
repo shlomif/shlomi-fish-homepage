@@ -1,7 +1,6 @@
 [%- SET title = "The QClam-Shlomif Modified QClam" -%]
 [%- SET desc = "The QClam-Shlomif Modified QClam" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -14,7 +13,7 @@ Download <a href="qclam-0.2-shlomif-0.2.0.tar.bz2">qclam-0.2-shlomif-0.2.0.tar.b
 
 <p>
 This is a version of the <a href="http://sageshome.net/oss/qclam.php">QClam</a>
-utility, that converted the code from C++ to ANSI C, fixed some bugs, and made
+utility, that converted the code from C++ to C, fixed some bugs, and made
 the makefile more modular.
 </p>
 

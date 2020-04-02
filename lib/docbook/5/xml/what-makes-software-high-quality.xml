@@ -490,7 +490,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             Popular programs like GCC, perl 5, Vim, Subversion and Emacs have
             very few dependencies and
             they are normally included in the package, if necessary to build
-            the system. They are all written in very portable ANSI C and POSIX
+            the system. They are all written in very portable C and POSIX
             and have been successfully deployed on all modern UNIX-flavours, on
             Microsoft Windows and on many other more obscure systems.
         </para>
@@ -636,7 +636,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             small penetration.
         </para>
         <para>
-            The bootstrapping ANSI C compiler of gcc for example, is written in
+            The bootstrapping C compiler of gcc for example, is written in
             very portable
             <link xlink:href="http://en.wikipedia.org/wiki/C_(programming_language)#K.26R_C">K&amp;R
                 C</link>, so it can be compiled by any C compiler. Later
@@ -1305,7 +1305,7 @@ No package named this-does-not-exist
             embed an x86-and-DOS emulator (such as
             <link xlink:href="http://www.dosbox.com/">DOSBox</link>) inside the
             device, which will complicate things, consume a lot of memory,
-            and slow things down. On the other, an ANSI C-based solver,
+            and slow things down. On the other, a C-based solver,
             such as Freecell Solver, or Tom Holroyd's Patsolve, can be easily
             made to compile and run there with few if any modifications.
             So they would be preferable.
@@ -1315,7 +1315,7 @@ No package named this-does-not-exist
                 programs</emphasis> for
             <link xlink:href="http://en.wikipedia.org/wiki/Unix">the various
                 Unix flavours</link> and other POSIX-capable or
-            ANSI C-capable operating-systems, then writing code
+            C-capable operating-systems, then writing code
             in x86 Assembly exclusively will make it a non-starter.
             <footnote xml:id="portions-in-assembly" label="Assembly">
                 <para>
@@ -1387,7 +1387,7 @@ make: *** [param.h] Error 127
         </para>
         <para xml:id="quality-analysis--licensing">
             <emphasis role="bold">Licensing</emphasis>, a necessary, but
-            important, evil. The Freecell Solver's ANSI C source is
+            important, evil. The Freecell Solver's C source is
             distributed under the Public Domain licence, which allows
             virtually any use, including linking, modifying and
             sublicensing under any different

@@ -76,7 +76,7 @@ C++ is entirely different.
 <h3 id="portability">Portability</h3>
 
 <p>
-ANSI C is portable for every architecture there’s a gcc backend or any other
+C is portable for every architecture there’s a gcc backend or any other
 compiler for. With Java you rely on Sun’s whims. Open-source high level
 languages are better (especially if they can be compiled using gcc or supply
 a gcc back-end), but nonetheless, C is still more portable than anything
@@ -87,7 +87,7 @@ written using it.
 
 <p>
 <a href="http://gcc.gnu.org/">gcc</a> is a full-featured and robust compiler
-for ANSI C, and it’s open-source. Sun’s Java distribution has a very
+for C, and it’s open-source. Sun’s Java distribution has a very
 problematic license. It’s not distributed as part of most Linux distributions
 due to this.
 </p>
@@ -103,7 +103,7 @@ memory-management routines.
 </p>
 
 <p>
-Many problem domains call for ANSI C.
+Many problem domains call for C.
 </p>
 
 <h3 id="self_contained">Writing self-contained code</h3>
@@ -151,7 +151,7 @@ programs, etc.
 <h2 id="case_study_fcs">Case Study: Freecell Solver</h2>
 
 <p>
-<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is an ANSI C library
+<a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is a C library
 that can be used to solve games of the Solitaire Card Game
 <a href="http://www.solitairelaboratory.com/fcfaq.html">Freecell</a>, and
 similar Solitaire variants. Started as a way for me to see if a theory I had
@@ -166,8 +166,8 @@ killer”</a> of its kind.
 </p>
 
 <p>
-Freecell Solver (also FCS from now on) is written in ANSI C - mostly C89 but
-with some necessary extensions that are common in most modern ANSI C compilers.
+Freecell Solver (also FCS from now on) is written in C - mostly C89 but
+with some necessary extensions that are common in most modern C compilers.
 It’s been successfully compiled with gcc, Visual C++, and the Intel C Compiler
 . The code of Freecell Solver is very “funky”: hard to understand, uses
 preprocessor macros all over the place (inline and gcc’s statement

@@ -520,7 +520,7 @@
                 Bootstrapping is the process of implementing a virtual machine
                 by implementing it using an existing virtual machine. So,
                 for example perl 5, CPython, ruby, php and the Tcl interpreter
-                are all written in ANSI C. That way they can be bootstrapped
+                are all written in C. That way they can be bootstrapped
                 to run on any system for which a C compiler (such as
                 <link xlink:href="http://gcc.gnu.org/">the Open-Source gcc</link>
                 is available).

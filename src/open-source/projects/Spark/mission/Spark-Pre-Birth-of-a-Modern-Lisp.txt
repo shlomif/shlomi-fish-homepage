@@ -71,7 +71,7 @@ programming languages as “scripting languages”, I still think saying
 “script” and “scripting” is a valid way to distinguish a trivial program
 from an application. For example +/usr/bin/gcc+ is essentially
 a script written in
-ANSI C, which just passes controls to the various compilation stages. When
+C, which just passes controls to the various compilation stages. When
 we type +gcc+ at the command line, we are running this script that does the
 hard work of doing the compilation for us. (+/usr/bin/gcc+ should not be
 confused with GCC, the GNU Compiler Collection which is a compilation
@@ -138,7 +138,7 @@ purpose in hope it will save me from the evil eye of having a decent language.
 But I don’t think languages succeed because they are bad but because they offer
 at least one awesome advantage. For example Perl 1 offered the ability to write
 pseudo-shell scripts in a much more robsut and powerful way than awk, sed, sh
-and csh and a much easier way than ANSI C did. (Although still very primitive
+and csh and a much easier way than C did. (Although still very primitive
 by the standards of Perl 5.). By the time Perl 4 was abandoned in favour of
 Perl 5 , Perl 4 was already the de-facto standard for clueful
 sys admins who valued their sanity. And I recall when Perl 5 was the only
@@ -173,8 +173,8 @@ it.)
 Spark does not aim to compete with C and friends
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Spark does not aim to fill the same ecological niche as ANSI C, C++
-Objective-C, etc. - much less assembly. ANSI C and friends have been the
+Spark does not aim to fill the same ecological niche as C, C++
+Objective-C, etc. - much less assembly. C and friends have been the
 de-facto standard for writing applications when some or all of certain
 constraints have been met:
 
@@ -637,7 +637,7 @@ there are good reasons for this phenomenon. [I wrote this before 2000; now see
 a preview of Java 1.5.]
 __________________________________________________________________________
 
-(I should note that, like many other FOSS hackers, I normally prefer ANSI C
+(I should note that, like many other FOSS hackers, I normally prefer C
 over C\++ , and am not a big fan of C++ for most stuff. However, Stroustrup
 is a wickedly smart guy, and despite whatever faults his language may have,
 he speaks straight, and what he says here seems to make a lot of sense).

@@ -260,12 +260,9 @@ Removed code here.
 ----------------
 
 [id="decls-after-stmts"]
-No declarations after statements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+No predeclarations
+~~~~~~~~~~~~~~~~~~
 
-One should make sure there are no declarations after statements in the ANSI
-C code. If you're using gcc, you can make sure this is the case by adding
-the flags "-Wdeclaration-after-statement -Werror" to "CCFLAGS" in the makefile.
 
 Bad:
 
@@ -273,11 +270,11 @@ Bad:
 int my_func(int arg)
 {
     int var;
+    int other_var;
 
     printf("%s\n", "Foo");
 
-    /* Declaration after statement. */
-    int other_var = var;
+    other_var = var;
 
     return;
 }
@@ -289,11 +286,11 @@ Better:
 int my_func(int arg)
 {
     int var;
-    int other_var;
 
     printf("%s\n", "Foo");
 
-    other_var = var;
+    /* Declaration after statement. */
+    int other_var = var;
 
     return;
 }

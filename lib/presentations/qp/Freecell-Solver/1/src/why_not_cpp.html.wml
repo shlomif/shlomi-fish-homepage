@@ -11,12 +11,12 @@ not going to do it:
 <ol class="point">
 
 <li>
-The solver is already working in ANSI C.
+The solver is already working in C.
 </li>
 
 <li>
 The code is not overly object-oriented. Whatever OOP concepts exist there
-fit well enough within what ANSI C gives me.
+fit well enough within what C gives me.
 </li>
 
 <li>
@@ -25,20 +25,20 @@ spend time risking something like that, only to roll it back later.
 </li>
 
 <li>
-ANSI C compiles much faster. (at least with gcc)
+C compiles much faster. (at least with gcc)
 </li>
 
 <li>
-ANSI C is cleaner, more portable and causes less unexpected problems
+C is cleaner, more portable and causes less unexpected problems
 than C++.
 </li>
 </ol>
 
 <p>
 I'm more willing to integrate C++-derived features there into the
-ANSI C code. Things like namespaces, (non-inherited) classes, or inline
+C code. Things like namespaces, (non-inherited) classes, or inline
 functions. However, for the time being, I'd like to maintain the code as
-pure ANSI C.
+pure C.
 </p>
 
 <p>

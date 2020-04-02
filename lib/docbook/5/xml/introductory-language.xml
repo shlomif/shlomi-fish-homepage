@@ -253,7 +253,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
         <para>
             In his <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</link>,
-            Joel Spolsky gave a case for teaching ANSI C as an introductory
+            Joel Spolsky gave a case for teaching C as an introductory
             language instead of more high level languages. His argument is
             that programmers will end up writing sub-optimal code because
             some low-level elements of dealing with strings and arrays are
@@ -261,7 +261,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
         <para>
-            ANSI C and C++ have been popular introductory languages for teaching
+            C and C++ have been popular introductory languages for teaching
             programming for many years now. While some schools have switched
             to teaching Java or a different language, C and C++ are still very
             popular.
@@ -513,7 +513,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             execution scripts, and even serious applications. While BASIC is
             in today’s standards a very limited language that should no longer
             be taught as a first language, I still fondly remember it as being
-            a lot of fun. I even continued using BASIC after I learned ANSI C
+            a lot of fun. I even continued using BASIC after I learned C
             and what was then C++, because it was quicker and more convenient.
             (I no longer do, because I now feel that Perl is superior to BASIC
             in every way, and that’s what I’m using now.)
@@ -632,7 +632,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <link xlink:href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">“The
                 Perils of JavaSchools”</link> where he argued that teaching
             Java in Computer Science curricula is inferior to teaching
-            ANSI C and Scheme, which was what he learned. The article is wrong
+            C and Scheme, which was what he learned. The article is wrong
             on many points, but it highlights some of the problems with Java.
         </para>
         <para>
@@ -980,7 +980,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         teenager programming. Such youngsters are often mostly motivated
         by things that seem fun to them: games, demos, drawing pretty
         pictures programmatically, etc. They will have little nerve for
-        a tedious programming language such as ANSI C, in which every task
+        a tedious programming language such as C, in which every task
         takes a boatload of code.
     </para>
     <para>
@@ -1046,7 +1046,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         market. They used to teach Assembler. They used to teach COBOL (an
         awful language by all means, and one which proved to be a dead-end
         in language design). They taught Fortran and PL/I. They taught Pascal.
-        They taught ANSI C and C++. And now they teach Java. I believe none
+        They taught C and C++. And now they teach Java. I believe none
         of these languages were suitable as an introductory programming
         language, but they were taught because they were used in the industry.
     </para>
@@ -1054,7 +1054,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <para>
         During the course of IT education, several languages need to be
         studied - at least one dynamic language such as Perl, Python or Ruby
-        ; ANSI C;  an assembly language; Lisp (Scheme, Common Lisp or perhaps
+        ; C;  an assembly language; Lisp (Scheme, Common Lisp or perhaps
         now <link xlink:href="http://www.paulgraham.com/arc.html">Arc</link>);
         Haskell, O’Caml or SML; and probably some specialised languages when
         they are appropriate. But the first language need not be what is the
@@ -1065,7 +1065,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <para>
         From my <link xlink:href="http://www.shlomifish.org/philosophy/computers/education/opinion-on-the-technion/">impression of the Technion</link>, the
         institute as a whole believes that students can effectively write all
-        their code in ANSI C. In some courses, the choice of C++ and Java are
+        their code in C. In some courses, the choice of C++ and Java are
         given, but these languages are not effectively taught. Most students,
         during their studies, had not been exposed to such advanced paradigms
         as regular expressions, dynamic-typing, Perl 5-like nested data

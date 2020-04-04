@@ -7351,6 +7351,45 @@ It doesn’t yet do anything useful.
                 </info>
             </screenplay>
         </fortune>
+        <fortune id="esr-catb--great-programmers">
+            <meta>
+                <title>Great Programmers</title>
+            </meta>
+            <quote>
+                <body>
+
+                <p> So, did I immediately launch into a furious whirl of coding
+                up a brand-new POP3 client to compete with the existing ones?
+                Not on your life! I looked carefully at the POP utilities I had
+                in hand, asking myself ``Which one is closest to what I want?''
+                Because: </p>
+
+                <p>
+
+                2. Good programmers know what to write. Great ones know what to rewrite
+                (and reuse).  </p>
+
+                <p>
+
+                While I don't claim to be a great programmer, I try to imitate one. An
+                important trait of the great ones is constructive laziness. They know that you
+                get an A not for effort but for results, and that it's almost always easier to
+                start from a good partial solution than from nothing at all.  </p>
+
+                <p>
+                Linus Torvalds, for example, didn't actually try to write Linux from scratch.
+                Instead, he started by reusing code and ideas from Minix, a tiny Unix-like
+                operating system for PC clones. Eventually all the Minix code went away or was
+                completely rewritten—but while it was there, it provided scaffolding for the
+                infant that would eventually become Linux.  </p>
+
+                </body>
+                <info>
+                    <author>Eric Raymond</author>
+                    <work href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">The Cathedral and the Bazaar</work>
+                </info>
+            </quote>
+        </fortune>
 
     </list>
 </collection>

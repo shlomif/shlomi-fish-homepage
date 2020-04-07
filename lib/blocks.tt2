@@ -105,6 +105,12 @@ License</a>, a permissive software licence.
 [%- END -%]
 [%- END -%]
 
+[%- BLOCK cc_by_nc_sa_licence_section -%]
+[%- WRAPPER licence_sect %]
+[% license_obj.by_nc_sa_british_blurb(year=year) %]
+[%- END -%]
+[%- END -%]
+
 [%- BLOCK note -%]
 <section class="note">
 [% content %]

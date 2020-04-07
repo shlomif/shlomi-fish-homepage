@@ -1,0 +1,60 @@
+[%- SET title = "Software Quality Enhancement Tools and Links" -%]
+[%- SET desc = "List of software quality enhancement tools and links" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+[% default_toc %]
+
+<div class="software_build">
+[% WRAPPER intro  %]
+
+<p>
+Quite a few people, including me, have been lamenting the
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/notes/quality-software--followup-2018.md">poor
+quality</a> of a lot of moodern software applications. In order to do something constructive
+to combat this, I decided to collect links to tools and other resources that can help
+enhancing the quality of software.
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "linters"  title = "Linters"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/caramelomartins/awesome-linters">"Awesome Linters" list on GitHub</a>
+</p>
+</li>
+</ul>
+
+[% END %]
+
+[% WRAPPER links_sect  %]
+
+<ul>
+
+<li>
+<p>
+<a href="http://perlhacks.com/2012/03/you-must-hate-version-control-systems/">“You
+Must Hate Version Control Systems”</a> - a post on the “Perl Hacks” blog about
+best practices in the software industry.
+</p>
+</li>
+</ul>
+
+[%- END -%]
+
+</div>
+
+[% PROCESS cc_by_nc_sa_licence_section "year" => "2020",  %]
+
+<!-- To add:
+Configuration: the SC entries,
+SCMs: BitKeeper.
+Testing: Expect.
+-->
+
+[% END %]

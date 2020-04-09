@@ -46,6 +46,25 @@ a list for linters and autoformataters.
 
 [% END %]
 
+[% WRAPPER h2_section id = "profiler" title = "Profilers"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/List_of_performance_analysis_tools">Wikipedia's "List of performance analysis tools"</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/Devel::NYTProf">Devel::NYTProf</a> - an advanced profiler for Perl 5.
+</p>
+</li>
+</ul>
+
+[% END %]
+
 [% WRAPPER links_sect  %]
 
 <ul>

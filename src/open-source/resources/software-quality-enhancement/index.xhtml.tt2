@@ -65,6 +65,40 @@ a list for linters and autoformatters.
 
 [% END %]
 
+[% WRAPPER h2_section id = "mem_debuggers" title = "Memory Debuggers"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Memory_debugger">Wikipedia's List of Memory Debuggers</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://valgrind.org/">valgrind</a> - an open source (GPLv2) memory debugger
+for Linux, Solaris, Android and macOS.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/AddressSanitizer">AddressSanitizer / ASAN</a> - an open
+source add-on for GCC and clang. Reportedly runs faster than valgrind, but detects fewer errors.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/DynamoRIO/drmemory">Dr. Memory</a> - open source.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [% WRAPPER links_sect  %]
 
 <ul>

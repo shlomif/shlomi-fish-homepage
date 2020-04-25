@@ -15,8 +15,8 @@ system(
     "inkscape",
     (
         map {
-                  /\A--export-type=png\z/  ? ()
-                : /\A--export-file=(.*)\z/ ? ("--export-png=$1")
+                  /\A--export-type=png\z/      ? ()
+                : /\A--export-filename=(.*)\z/ ? ("--export-png=$1")
                 : ($_)
         } @ARGV
     ),

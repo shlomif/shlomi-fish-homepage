@@ -465,7 +465,7 @@ $(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER)
 	gm convert $< $@
 
 $(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
-	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-file="$@" $< && \
+	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
 	optipng "$@"
 
 MOJOLICIOUS_LECTURE_SLIDE1 := $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
@@ -568,7 +568,7 @@ ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 OPTIPNG := optipng -o7 -quiet
 
 define EXPORT_INKSCAPE_PNG
-	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-file="$@" $<
+	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<
 	$(OPTIPNG) $@
 endef
 
@@ -592,7 +592,7 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(POST_DEST_HTML_6_LOGO_PNG)
 
 $(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
-	$(INKSCAPE_WRAPPER) --export-dpi=60 --export-area-page --export-type=png --export-file="$@" "$<"
+	$(INKSCAPE_WRAPPER) --export-dpi=60 --export-area-page --export-type=png --export-filename="$@" "$<"
 	$(OPTIPNG) $@
 
 POST_DEST_WINDOWS_UPDATE_SNAIL_ICON := $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
@@ -600,11 +600,11 @@ POST_DEST_WINDOWS_UPDATE_SNAIL_ICON := $(POST_DEST_HUMOUR)/bits/facts/images/win
 all: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
 
 $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
-	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-file="$@" $<
+	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<
 	$(OPTIPNG) $@
 
 $(ART_SLOGANS_PNGS): %.png: %.svg
-	$(INKSCAPE_WRAPPER) --export-type=png --export-file=$@ $<
+	$(INKSCAPE_WRAPPER) --export-type=png --export-filename=$@ $<
 	$(OPTIPNG) $@
 
 $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
@@ -612,11 +612,11 @@ $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
 	$(OPTIPNG) $@
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
-	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-file="$@" $<
+	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-filename="$@" $<
 	$(OPTIPNG) $@
 
 $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
-	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-file="$@" $<
+	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-filename="$@" $<
 	$(OPTIPNG) $@
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png

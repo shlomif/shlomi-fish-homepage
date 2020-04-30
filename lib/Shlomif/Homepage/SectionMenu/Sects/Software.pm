@@ -358,6 +358,11 @@ my $software_tree_contents = {
                 },
                 {
                     url =>
+                        "open-source/resources/software-quality-enhancement/",
+                    text => "List of Software quality-enhancement tools",
+                },
+                {
+                    url =>
 "open-source/resources/how-to-contribute-to-my-projects/",
                     text => "How to Contribute to My Projects",
                 },

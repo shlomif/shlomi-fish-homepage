@@ -99,6 +99,61 @@ source add-on for GCC and clang. Reportedly runs faster than valgrind, but detec
 
 [% END %]
 
+[% WRAPPER h2_section id = "fuzzers" title = "Fuzzers" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.blackarch.org/fuzzer.html">List of Fuzzer tools</a> - by the
+Black Arch Linux distribution.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Fuzzing">Fuzzing Wikipedia Page</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id = "auto_formatters" title = "Code autoformatters"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/prettier/prettier/">Prettier</a> - formats JavaScript,
+TypeScript, JSON, CSS, SCSS, HTML, YAML, Markdown and other languages.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> - for C,
+C++, Objective C, JavaScript, Java, and C#.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://perltidy.sourceforge.net/">Perltidy</a> - for Perl.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/distribution/Code-TidyAll/bin/tidyall">tidyall</a> - an
+all-in-one autoformatter and validator - with many backends.
+</p>
+</li>
+</ul>
+
+[% END %]
+
 [% WRAPPER links_sect  %]
 
 <ul>
@@ -110,6 +165,7 @@ Must Hate Version Control Systems”</a> - a post on the “Perl Hacks” blog a
 best practices in the software industry.
 </p>
 </li>
+
 </ul>
 
 [%- END -%]

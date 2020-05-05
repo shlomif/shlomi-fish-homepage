@@ -28,8 +28,20 @@
 [%- END -%]
 [%- END -%]
 
+[%- BLOCK _generic_see_also -%]
+[%- WRAPPER h2_section title="See Also" -%]
+[% content %]
+[%- END -%]
+[%- END -%]
+
 [%- BLOCK see_also -%]
-[%- WRAPPER h2_section id="see_also" title="See Also" -%]
+[%- WRAPPER _generic_see_also id="see_also" -%]
+[% content %]
+[%- END -%]
+[%- END -%]
+
+[%- BLOCK see_also__dash_id -%]
+[%- WRAPPER _generic_see_also id="see-also" -%]
 [% content %]
 [%- END -%]
 [%- END -%]

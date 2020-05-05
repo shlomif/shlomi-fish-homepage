@@ -75,7 +75,7 @@ tag on my LiveJournal technical blog</a></h3>
 More recently, I moved most of my Perl blogging there.
 </p>
 
-<h2 id="see-also">See Also</h2>
+[% WRAPPER see_also__dash_id %]
 
 <ul>
 
@@ -105,5 +105,7 @@ Perl</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

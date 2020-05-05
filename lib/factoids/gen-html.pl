@@ -252,7 +252,7 @@ Whedon</a> and portrayed by
 EOF
         id_base => 'buffy_facts',
         img_alt =>
-"Photo of Buffy Summers from the show DVD via the English Wikipedia",
+"Photo of Buffy Summers from the show’s DVD via the English Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
         img_class       => "facts_logo buffy",
         img_src => "humour/bits/facts/images/SMG-as-buffy-from-wikipedia.webp",

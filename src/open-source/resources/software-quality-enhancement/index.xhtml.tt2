@@ -170,6 +170,42 @@ best practices in the software industry.
 
 [%- END -%]
 
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]open-source/resources/software-tools/">List of
+Software Build and Management Tools</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]open-source/resources/editors-and-IDEs/">List of
+Text Editors and IDEs</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md">The
+Freenode's ##programming chat-room FAQ</a> - provides answers and links to many questions.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]philosophy/computers/high-quality-software/rev2/">What makes software high-quality?</a> - an
+essay.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 </div>
 
 [% PROCESS cc_by_nc_sa_licence_section "year" => "2020",  %]

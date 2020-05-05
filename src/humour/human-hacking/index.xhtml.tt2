@@ -131,7 +131,7 @@ and <a href="http://en.wikipedia.org/wiki/Faith_(Buffy_the_Vampire_Slayer)">Fait
 </li>
 [% END %]
 
-<h2 id="see_also">See Also</h2>
+[% WRAPPER see_also %]
 
 <ol>
 
@@ -193,6 +193,8 @@ projects, that is featured in the story. <b>Warning:</b> [% my_acronym( "key" =>
 </li>
 
 </ol>
+
+[% END %]
 
 <h2 id="sources_of_inspiration">Sources of Inspiration</h2>
 

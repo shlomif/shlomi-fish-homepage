@@ -59,7 +59,7 @@ window, use it to run a <a href="http://bellard.org/jslinux/">JavaScript x86 emu
 ahead.
 </p>
 
-<h2 id="see_also">See Also</h2>
+[% WRAPPER see_also %]
 
 <ul>
 
@@ -98,6 +98,8 @@ showing Electron apps are super slow and eat memory like there is no tomorrow</a
 </li>
 
 </ul>
+
+[% END %]
 
 <h2 id="license">Copyright and Licence</h2>
 

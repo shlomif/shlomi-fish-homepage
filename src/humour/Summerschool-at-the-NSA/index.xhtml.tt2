@@ -342,7 +342,7 @@ screenplay): the NSA gets schooled on security”</a>
 
 </ul>
 
-<h2 id="see_also">See Also</h2>
+[% WRAPPER see_also %]
 
 <ul>
 
@@ -377,6 +377,8 @@ Buffy Summers from the show.
 [% INCLUDE li_SummerNSA_hashtag %]
 
 </ul>
+
+[% END %]
 
 <h2 id="thanks">Thanks and Acknowledgements</h2>
 

@@ -85,7 +85,7 @@ $(function() {
 
 [% END %]
 
-<h2 id="see_also">See Also</h2>
+[% WRAPPER see_also %]
 
 <ul>
 
@@ -94,5 +94,7 @@ TODO : Fill in.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

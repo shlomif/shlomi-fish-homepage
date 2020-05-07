@@ -7,6 +7,7 @@
 [% default_toc %]
 
 <div class="software_build">
+
 [% WRAPPER intro  %]
 
 <p>
@@ -43,6 +44,41 @@ a list for linters and autoformatters.
 </li>
 
 </ul>
+
+[% WRAPPER h3_section id = "auto_formatters" title = "Code autoformatters"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/prettier/prettier/">Prettier</a> - formats JavaScript,
+TypeScript, JSON, CSS, SCSS, HTML, YAML, Markdown and other languages.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> - for C,
+C++, Objective C, JavaScript, Java, and C#.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://perltidy.sourceforge.net/">Perltidy</a> - for Perl.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/distribution/Code-TidyAll/bin/tidyall">tidyall</a> - an
+all-in-one autoformatter and validator - with many backends.
+</p>
+</li>
+</ul>
+
+[% END %]
+
 
 [% END %]
 
@@ -116,40 +152,6 @@ Black Arch Linux distribution.
 </p>
 </li>
 
-</ul>
-
-[% END %]
-
-[% WRAPPER h2_section id = "auto_formatters" title = "Code autoformatters"  %]
-
-<ul>
-
-<li>
-<p>
-<a href="https://github.com/prettier/prettier/">Prettier</a> - formats JavaScript,
-TypeScript, JSON, CSS, SCSS, HTML, YAML, Markdown and other languages.
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> - for C,
-C++, Objective C, JavaScript, Java, and C#.
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://perltidy.sourceforge.net/">Perltidy</a> - for Perl.
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://metacpan.org/pod/distribution/Code-TidyAll/bin/tidyall">tidyall</a> - an
-all-in-one autoformatter and validator - with many backends.
-</p>
-</li>
 </ul>
 
 [% END %]

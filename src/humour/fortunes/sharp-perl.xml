@@ -7694,5 +7694,50 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-perl-all-the-good-names-are-taken">
+        <meta>
+            <title>All the good names are taken</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="gordonfish">basheval: printf &#39;[%s]&#39; &quot;$var&quot; $&#39;foo \x27bar\x27 baz&#39; # This can be nicer than &#39;\&#39;&#39; or &#39;&quot;&#39;&quot;&#39;</saying>
+<saying who="perlbot">gordonfish: [][foo &#39;bar&#39; baz]</saying>
+<saying who="gordonfish">oops</saying>
+<saying who="gordonfish">basheval: printf &#39;[%s]&#39; $&#39;foo \x27bar\x27 baz&#39;</saying>
+<saying who="perlbot">gordonfish: [foo &#39;bar&#39; baz]</saying>
+<saying who="gordonfish">Re: &lt;thrig&gt; well you can write &#39;...&#39; then fixup any inner &#39; to &#39;\&#39;&#39; # Re: &lt;huf&gt; there&#39;s $&#39;&#39; at least</saying>
+<saying who="huf">it can do \&#39;</saying>
+<saying who="huf">that&#39;s the entire point</saying>
+<saying who="huf">it also does \n</saying>
+<saying who="huf">so you know, you can&#39;t win</saying>
+<saying who="gordonfish">Yeah I know about \n and \t, I forgot that \&#39; was legal, as in a normal &#39;...&#39; that doesn&#39;t work. Good point, thanks.</saying>
+<saying who="huf">the tragedy is that you dont have a normal shell &#39;&#39; with switchable delimiters</saying>
+<saying who="huf">and so on</saying>
+<saying who="huf">instead we get this...</saying>
+<saying who="gordonfish">the tragedy of darth delimiter the daft</saying>
+<saying who="Grinnz">mst: bash already lets you use &#39;&#39; for one bit and &quot;&quot; for another :P</saying>
+<saying who="mst">Grinnz: ... yes?</saying>
+<saying who="Grinnz">no need for a second -e</saying>
+<saying who="mst">I can do  &#39;...&#39;&quot;...&quot;&#39;...&#39; true</saying>
+<saying who="mst">but multiple -es skim reads easier</saying>
+<saying who="Grinnz">what do you mean, surely bash quoting rules are eminently readable and consistent with everything else!</saying>
+<saying who="xenu">if you think bash is inconsistent, try using tcsh</saying>
+<saying who="ttkp">every time I try to work on my own perl shell thinger, I get hung up on parsing .. but maybe adding a few convenience functions to my repl would help as a stopgap</saying>
+<saying who="mst">Grinnz: give a man a fish and he&#39;ll be confused for a day. teach a man to fish and he&#39;ll bash his head against other people&#39;s scripts for the rest of his life</saying>
+<saying who="guestkato">so you&#39;re saying order the chicken(scheme)</saying>
+<saying who="mst">guestkato: your plan may not be cunning but it is not without guile</saying>
+<saying who="thrig">guile? is that your scheme</saying>
+<saying who="LeoNerd">I hear it gets a good rep</saying>
+<saying who="mst">thrig: no need to accuse me of running a racket</saying>
+
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

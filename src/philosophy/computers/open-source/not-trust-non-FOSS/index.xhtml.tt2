@@ -122,7 +122,7 @@ which was also the case for the Linux kernel project, with the demise of
 the gratis BitKeeper version altogether.
 </p>
 
-<h2 id="links">Links</h2>
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -130,6 +130,13 @@ the gratis BitKeeper version altogether.
 <p>
 <a href="http://esr.ibiblio.org/?p=4371">“Evaluating the harm from closed
 source”</a> — an essay by Eric Raymond (ESR).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://blog.codinghorror.com/learn-to-read-the-source-luke/">Learn to Read the Source, Luke</a> - another
+reason why it is important to have the source code of your dependencies.
 </p>
 </li>
 
@@ -202,6 +209,8 @@ the Apache 2.0 licence, several years later.
 </li>
 
 </ul>
+
+[% END %]
 
 <h2 id="licence">Licence</h2>
 

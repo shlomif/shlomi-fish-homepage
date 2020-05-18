@@ -156,6 +156,28 @@ Black Arch Linux distribution.
 
 [% END %]
 
+[% WRAPPER h2_section id = "text-checkers" title = "Checkers for invalid text"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/Test::TrailingSpace">Test::TrailingSpace</a> - ascertain
+there are no text files with trailing whitespace. (By me).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/pod/Test::NoTabs">Test::NoTabs</a> - detect hard tabs
+(<code>'\t'</code>); mostly only for perl code.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [% WRAPPER links_sect  %]
 
 <ul>

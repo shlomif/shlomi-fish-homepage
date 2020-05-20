@@ -163,7 +163,8 @@ Black Arch Linux distribution.
 <li>
 <p>
 <a href="https://metacpan.org/pod/Test::TrailingSpace">Test::TrailingSpace</a> - ascertain
-there are no text files with trailing whitespace. (By me).
+there are no text files with trailing whitespace, and optionally no hard tabs, and
+no DOS-style <a href="https://en.wikipedia.org/wiki/Newline">newlines</a>. (By me).
 </p>
 </li>
 
@@ -178,7 +179,7 @@ there are no text files with trailing whitespace. (By me).
 <p>
 <a href="https://metacpan.org/release/File-Find-CaseCollide">File-Find-CaseCollide</a>
 - find collisions in filenames, differing only in case (for avoiding problems on
-case-insensitive filesystems such as <a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT</a>.
+case-insensitive filesystems such as <a href="https://en.wikipedia.org/wiki/File_Allocation_Table">FAT</a>).
 </p>
 </li>
 

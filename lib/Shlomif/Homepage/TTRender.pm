@@ -106,7 +106,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 my $args = shift;
                 return _render_nav_block( $args->{name} );
             },
-            p_ArticleIndex__calc_string => sub {
+            article_index__body => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();
             },
             fortunes__package_base => sub {

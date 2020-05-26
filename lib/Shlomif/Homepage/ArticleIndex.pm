@@ -3,10 +3,10 @@ package Shlomif::Homepage::ArticleIndex;
 use strict;
 use warnings;
 
-use XML::LibXSLT;
-use XML::LibXML;
+use XML::LibXSLT ();
+use XML::LibXML  ();
 
-use Moo;
+sub new { return bless {}, shift; }
 
 sub calc_string
 {

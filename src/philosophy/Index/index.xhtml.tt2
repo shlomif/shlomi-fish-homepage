@@ -4,6 +4,6 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% p_ArticleIndex__calc_string() %]
+[% article_index__body() %]
 
 [% END %]

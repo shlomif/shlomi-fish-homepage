@@ -2,6 +2,7 @@ package ShlomifFortunesMake;
 
 use strict;
 use warnings;
+use autodie;
 
 my $DIR = __FILE__ =~ s#(?:/|\A)[^/]*\z##r;
 
@@ -18,8 +19,9 @@ sub ver
 
     my $fn = $class->version_file;
 
-    my $ret = `head -1 "$fn"`;
-    chomp($ret);
+    open my $in, '<', $fn;
+    chomp( my $ret = <$in> );
+    close $in;
 
     return $ret;
 }

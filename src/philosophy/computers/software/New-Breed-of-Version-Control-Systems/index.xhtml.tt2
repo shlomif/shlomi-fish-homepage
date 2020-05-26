@@ -1,0 +1,396 @@
+[%- SET title = "The New Breed of Version Control Systems" -%]
+[%- SET desc = "An old overview and introduction to CVS alternatives (originally published on onlamp.com)" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+<div class="fancy_sects">
+
+<h2>Introduction</h2>
+
+<p>
+A version control system enables to efficiently keep historical
+versions of the files a developer works on, and to promptly
+retrieve past versions. All the versions of the files (and entire
+project structure) are kept in a collection normally called
+a <b>repository</b>.
+</p>
+<p>
+Inside the repository, several parallel
+lines of development can be kept that are normally called
+<b>branches</b>. For example, This, is useful to keep a
+maintenance branch for a stable version that was released while
+still working on the bleeding-edge version. Or opening a
+dedicated branch to work on a certain experimental feature.
+</p>
+<p>
+Version Control Systems also enable the user to give labels to
+a snapshot of a branch (often referred to as <b>tags</b>), for a
+later easy extraction. For instance, this is useful to signify
+individual releases, or the most recent usable development version.
+</p>
+
+<p>
+Using a version control system is an absolute must for a developer
+of a project above a few hundred lines of code (even more so for
+projects involving the collaboration of several developers). Using
+a good version control system is certainly better than the ad-hoc
+methods developers use to maintain various revisions of their code.
+</p>
+
+<p>
+Traditionally, the de-facto open source version control system
+was <a href="http://www.cvshome.org/">CVS</a>, but lately many
+others have emerged, that aim to be better in some or every way. This
+article will provide an overview of them.
+</p>
+
+<h2>Common Features Found in Versions Control Systems</h2>
+
+<p>
+Version control systems come in all shapes and size, but there are
+common guidelines for their design. Some version control support
+<b>Atomic Commits</b>, which means that the state of the entire
+repository changes as one. If they are not present, then each file
+or unit changes separately and so the state may not be preserved.
+</p>
+
+<p>
+Most common VCSes (= Version Control Systems) allow <b>merging</b>
+of changes from one branch to another. This means that changes
+committed to one branch will be committed to the trunk or in another
+branch as well, with one automatic (or at least semi-automatic)
+operation.
+</p>
+
+<p>
+A <b>distributed</b> version control system is such that allows
+cloning a remote repository to form an exact copy of it. Plus, it also
+allows propagating changes from one repository to another. In
+non-distributed VCSes, a developer needs a repository access in order
+to commit changes to the repository. That way, developers without
+repository access are second-class citizens.
+</p>
+
+<p>
+With a distributed VCS, this is a non-issue, as each developer can
+clone the master repository and work on it, and later on propagate
+his changes to the master repository somehow.
+</p>
+
+<p>
+Another common factor is whether the repository allow <b>versioned
+file and directory renames</b> (and possibly copies as well). If
+a file changes location, it is possible that its entire history will
+be cut in two. Worse, it is possible that changes done to the older
+files organization, cannot be effectively committed to the newer one.
+</p>
+
+<h2>CVS</h2>
+
+<p>
+<a href="http://www.cvshome.org/">CVS</a> stands for Concurrent
+Versions System and is a mature and relatively reliable version
+control system. It is actively used by many large open source projects
+including <a href="http://www.kde.org/">KDE</a>,
+<a href="http://www.gnome.org/">GNOME</a>, and
+<a href="http://www.mozilla.org/">Mozilla</a>, and is supplied as a
+service by most open source hubs such as
+<a href="http://sourceforge.net/">SourceForge</a>. (which as a result
+cause it to be used by many other projects).
+</p>
+
+<p>
+Despite all that, CVS is not without its limitations. For example,
+File and directory renames are not supported. Furthermore, binary
+files are not handled very well. CVS is not distributed and the commits
+are not atomic. As there are already better alternatives that aim to
+be a superset of its functionality, you are probably better using
+something else.
+</p>
+
+<p>
+CVS is extensively documented in
+<a href="http://cvsbook.red-bean.com/">its own online book</a> and in
+many online tutorials. There are many
+<a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/Concurrent_Versions_System/">graphical clients and add-ons</a>
+available for it.
+</p>
+
+<h2>Subversion</h2>
+
+<p>
+<a href="http://subversion.tigris.org/">Subversion</a> is a project
+under way, that aims to create a better replacement for CVS. Most of
+the conventions of working with CVS were kept, including a large part
+of the command set, so CVS users will quickly feel at home. Aside
+from that Subversion offers many useful improvements over CVS: copies
+and renames of files and directories, commits are truly atomic,
+efficient handling of binary files, and the ability to be networked
+over HTTP (and HTTPS). Subversion also has a native Win32 client and
+server.
+</p>
+
+<p>
+Subversion has recently entered its Beta period after being Alpha for
+a long time. As such it may still have some minor quirks and its
+performance in some areas is lacking. Nevertheless, it's very usable
+for a beta-stage software, and was so even in a large part of its
+alpha-stage.
+</p>
+
+<p>
+The HTTP (or HTTPS) based Subversion service is difficult to deploy
+in comparison to hosting of some other systems, as it requires setting
+up an Apache 2 service with its own specialized module. There is also
+an "svnserve" server which is less capable but easier to set up (and
+faster) and uses a custom protocol. Moreover, Subversion's support for
+merging is limited and resembles that of CVS. (i.e: merges to branches
+where file were moved, will not be performed correctly). It is also
+relatively resource intensive, especially with large operations.
+</p>
+
+<p>
+Subversion is extensively documented in
+<a href="http://svnbook.red-bean.com/">the book "Version Control
+with Subversion"</a>. There's also a rudimentary online help
+system supplied by the Subversion client that can prove useful
+for reference. There are also a lot of add-ons for it, but they
+are still less mature than the CVS ones.
+</p>
+
+<h2>Arch</h2>
+
+<p>
+<a href="http://gnuarch.org/">GNU Arch</a> is a VCS
+originally created by Tom Lord for the version control needs of
+himself and free software projects. Arch was initially prototyped
+as a collection of shell scripts, but its main client now is
+<a href="ftp://ftp.gnu.org/pub/gnu/gnu-arch/">tla</a> which is
+written in C and should be portable to any UNIX. It is not ported
+to Win32 and, while it is not impossible to do so, it is not a
+priority for the project.
+</p>
+
+<p>
+Arch is a distributed version control system.
+Furthermore, Arch does not require a special service in order to
+set up a network-accessible repository, and any remote file-service
+service (such as FTP, SFTP or
+<a href="http://www.webdav.org/">WebDAV</a>) is a suitable Arch
+service. This makes setting up a service incredibly easy.
+</p>
+
+<p>
+Arch supports versioned renames of files and directories, as well
+as intelligent merging that detect if a file has been renamed
+and apply the changes cleanly. Arch aims to be a superior system to
+CVS', but there are still some individual features that are missing.
+Arch is a post-1.0 system and as such is declared mature and stable
+for any use.
+</p>
+
+<p>
+Arch is documented with a very basic online help system,
+and a <a href="http://arch.quackerhead.com/~lord/tutorial-tla/arch.html">tutorial</a>.
+</p>
+
+<h2>OpenCM</h2>
+
+<p>
+<a href="http://www.opencm.org/">OpenCM</a> is a version control system
+created for the <a href="http://www.eros-os.org/">EROS</a> project.
+OpenCM does not aim to be as feature rich as CVS is, but it does have
+a few advantages over it. Namely, OpenCM has versioned renames of
+files and directories, atomic commits and automatic propagation of
+changes from branch to trunk and some support for cryptographic
+authentication.
+</p>
+
+<p>
+OpenCM uses its own custom protocol for communicating between
+the client and the server. It is not distributed. Since OpenCM is
+not very feature-rich, it is possible that other systems will be more
+suitable for your needs. However, you may prefer using OpenCM if one
+or more of its features is attractive to you.
+</p>
+
+<p>
+OpenCM runs on UNIXes and on Windows under the cygwin
+emulation. It features a CVS-like command set and is well documented.
+</p>
+
+<h2>Aegis</h2>
+
+<p>
+<a href="http://aegis.sourceforge.net/">Aegis</a> is a source
+configuration management (SCM) system created by Peter Miller. It is
+not networked, and all operations are done via UNIX file-system
+operations. As such, it also utilizes the UNIX permissions system to
+determine who has a permission to do what there. Despite the fact that
+Aegis is not networked, it is still distributed in the sense that
+repositories can be cloned and changes can be propagated from one
+repository to the other. To pseudo-network it, one has to use
+NFS.
+</p>
+
+<p>
+Being an SCM system instead of a plain version control one, Aegis
+tries to assure the correctness of the code that was checked in.
+Namely, it:
+</p>
+<ol>
+<li>Manages automated tests, and prevents check-ins that do not
+pass the previous tests, and requires them to add new tests.
+</li>
+<li>
+Manages reviews of code. A code that is checked in by
+a developer, has to pass the review of a reviewer to get
+into the main line of development.
+</li>
+<li>
+Has various other features that aim to ensure the quality of
+code.
+</li>
+</ol>
+
+<p>
+Its command set reflects this philosophy and is quite tedious if
+everything you are looking for is a plain version control system.
+</p>
+
+<p>
+Aegis is documented in several troff documents, that are then
+rendered into Postscript. As such, it is sometimes hard to browse,
+and find exactly what you want. Still, the documentation is of
+high quality.
+</p>
+
+<h2>Monotone</h2>
+
+<p>
+<a href="http://www.venge.net/monotone/">The Monotone Version Control
+System</a> was created by Graydon Hoare, and exhibits a different
+philosophy than all of the above systems. Namely, it is distributed,
+and changesets are propagated to a certain depot, that can be a CGI
+script, an NNTP (Usenet news) receiver, and SMTP (E-mail). From there,
+each developer pulls the desirable changes into his own copy of the
+repository.
+</p>
+
+<p>
+This may have the unfortunate effect of making the history or
+current state of the individual repositories become out of sync
+with each other, as the repositories of individual developers fail
+to receive the appropriate changes. (Or receive some non-desired ones.)
+</p>
+
+<p>
+Monotone relies on strong cryptography heavily. Files, directories
+and revisions, are identified according to their SHA1 checksums, and
+permissions to change the repository are determined according to
+RSA certificates.
+</p>
+
+<p>
+Monotone supports renames and copies of files and directories. It has
+a command set that aims to be as CVS compatible as possible, with some
+necessary deviations due to its different philosophy. It should be
+portable to Win32, but was not explicitly ported yet.
+</p>
+
+<p>
+Monotone is still under development, and so may still has some
+behavioural glitches. These problems are expected to be resolved
+eventually by the Monotone developers as more work is carried on
+it.
+</p>
+
+<p>
+All in all, Monotone holds a lot of promise, and is well-worth taking
+a look.
+</p>
+
+<h2>BitKeeper</h2>
+
+<p>
+<a href="http://www.bitkeeper.com/">BitKeeper</a> is not an open
+source version control system, but is given here for completeness
+sake because some open source projects use it. BitKeeper is very
+reliable and feature-rich, supporting distributed
+repositories, serving over HTTP, file and directories copies and
+renames, management of patches, tracking changes from branch to
+trunk and many other features.
+</p>
+
+<p>
+It comes in two licenses. The commercial license costs a few
+thousands dollars per seat (lease or buy). The gratis license
+is available for development of open source software, but
+<a href="http://better-scm.berlios.de/comparison/bk-license.html">has
+some restrictions</a>, among them a non-compete clause and a
+requirement to upgrade the system as new versions come out, even
+if they have a different license. Furthermore, the source code for it
+is not publicly available, and one can only download binaries for
+most common systems (including Win32).
+</p>
+
+<p>
+BitKeeper is used by some of the Linux kernel developers, by the
+core MySQL developers, and by a handful of other projects. It has
+been the subject of much controversy in the Linux Kernel Mailing
+List. Due to its license, BitKeeper is not suitable for open source
+development, as this will alienate more "idealistic" developers, and
+impose various problems on the users who choose to use it. If you are
+working on a non-public project and can afford to pay for BitKeeper,
+it is naturally an option.
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+You probably should not use CVS, as there are several systems
+out there that are better. This is unless you cannot get hosting for
+something else. (but note that <a href="http://savannah.gnu.org/">
+GNU Savannah</a> provides hosting for Arch, and working with it
+with SourceForge has been documented). You should also not
+use the gratis version of BitKeeper due to its restrictions.
+</p>
+
+<p>
+Other systems are nicer than CVS and provide a better working
+experience. When I work in CVS, I always take a long time to think
+where to place a file or how to name it, because I know I cannot rename
+it later, without breaking history. This is completely a non-issue in
+other version control systems where a move functionality is supported.
+I'm aware of one project I was involved with whose entire history was
+broken in two when they decided to rename their directories
+differently.
+</p>
+
+<p>
+And you certainly have a lot of choice.
+</p>
+
+<h2>More Information</h2>
+
+<p>
+An <a href="http://better-scm.berlios.de/comparison/">item-by-item
+comparison of these systems</a> can be found at the
+<a href="http://better-scm.berlios.de/">Better SCM Site</a>.
+<a href="http://www.linuxmafia.com/~rick/">Rick Moen</a> has a list
+of <a href="http://linuxmafia.com/faq/Apps/scm.html">Version
+Control and SCMs for Linux</a> on his web-site. Finally,
+the <a href="http://dmoz.org/Computers/Software/Configuration_Management/Tools/">DMoz Configuration Management Tools directory</a> provides many
+other useful links.
+</p>
+<p>
+Finally, more information about version control systems and
+configuration management tools can be found in the
+<a href="http://www.faqs.org/faqs/by-newsgroup/comp/comp.software.config-mgmt.html">comp.software.config-mgmt
+FAQs page</a>.
+</p>
+
+</div>
+
+[% END %]

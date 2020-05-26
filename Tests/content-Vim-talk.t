@@ -2,7 +2,6 @@
 
 use strict;
 use warnings;
-use utf8;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 

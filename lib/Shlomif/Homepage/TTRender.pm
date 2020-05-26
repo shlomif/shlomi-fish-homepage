@@ -109,7 +109,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             p_ArticleIndex__calc_string => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();
             },
-            p_ShlomifFortunesMake__package_base => sub {
+            fortunes__package_base => sub {
                 lib->import('./src/humour/fortunes/');
                 require ShlomifFortunesMake;
                 return ShlomifFortunesMake->package_base;

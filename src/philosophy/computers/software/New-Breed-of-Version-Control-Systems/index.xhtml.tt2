@@ -26,7 +26,7 @@ some copyediting and for allowing me to republish my old posts under Creative Co
 
 [%- END -%]
 
-<h2>Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 A version control system enables to efficiently keep historical
@@ -64,6 +64,8 @@ was <a href="http://www.cvshome.org/">CVS</a>, but lately many
 others have emerged, that aim to be better in some or every way. This
 article will provide an overview of them.
 </p>
+
+[%- END -%]
 
 <h2>Common Features Found in Versions Control Systems</h2>
 

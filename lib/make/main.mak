@@ -1017,11 +1017,6 @@ $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 
-VIM_IFACE_BN := VimIface.pm
-QP_VIM_IFACE := lib/presentations/qp/common/$(VIM_IFACE_BN)
-
-all: $(QP_VIM_IFACE)
-
 FASTRENDER_DEPS := $(SRC_DOCS_SRC) all_deps
 
 FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ

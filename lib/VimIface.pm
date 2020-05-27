@@ -1,5 +1,6 @@
 package VimIface;
 
+use 5.014;
 use strict;
 use warnings;
 
@@ -8,14 +9,13 @@ use Path::Tiny qw/ path /;
 
 sub is_newer
 {
-    my $file1 = shift;
-    my $file2 = shift;
-    my @stat1 = stat($file1);
-    my @stat2 = stat($file2);
+    my ( $filename1, $filename2 ) = @_;
+    my @stat2 = stat($filename2);
     if ( !@stat2 )
     {
         return 1;
     }
+    my @stat1 = stat($filename1);
     return ( $stat1[9] >= $stat2[9] );
 }
 
@@ -36,14 +36,14 @@ sub get_syntax_highlighted_html_from_file
             ( $args->{'filetype'} ? ( filetype => $args->{'filetype'} ) : () ),
         );
         path($html_filename)
-            ->spew( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr );
+            ->spew( $syntax->html =~ s#<meta[^/>]+[^/]\K>#/>#gr );
     }
 
     my $text = path($html_filename)->slurp;
 
     $text =~ s{\A.*<pre>[\s\n\r]*}{}s;
     $text =~ s{[\s\n\r]*</pre>.*\z}{}s;
-    $text =~ s{(class=")syn}{$1}g;
+    $text =~ s{class="\Ksyn}{}g;
 
     return $text;
 }

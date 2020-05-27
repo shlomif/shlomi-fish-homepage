@@ -46,7 +46,7 @@ then
     sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator WebTest Zenfilter
     perl bin/my-cookiecutter.pl
     # For various sites
-    cpanm --notest HTML::Toc
+    cpanm --notest HTML::Toc XML::Feed
     deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )

@@ -31,11 +31,10 @@ then
             sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
         fi
     fi
-    export INLINE_PYTHON_EXECUTABLE="$(which python3)"
-    cpanm local::lib
+    cpanm --local-lib=~/perl_modules local::lib
     eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
-    eval "$(perl -Mlocal::lib=$HOME/perl_modules)"
+    eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
     cpanm App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     cpanm HTML::T5
     # For wml
@@ -44,8 +43,10 @@ then
     cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-    sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator HspellPy Pillow WebTest Zenfilter
+    sudo -H `which python3` -m pip install beautifulsoup4 bs4 cookiecutter lxml pycotap vnu_validator WebTest Zenfilter
     perl bin/my-cookiecutter.pl
+    # For various sites
+    cpanm --notest HTML::Toc
     deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )

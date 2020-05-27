@@ -68,7 +68,9 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
 
 foreach my $I (@fns)
 {
-    system(qq#tidy -quiet -asxhtml -o "$I".new "$I" ; mv -f "$I".new "$I"#);
+    system(
+qq#tidy -quiet -asxhtml --tidy-mark no -o "$I".new "$I" ; mv -f "$I".new "$I"#
+    );
 }
 
 =head1 COPYRIGHT & LICENSE

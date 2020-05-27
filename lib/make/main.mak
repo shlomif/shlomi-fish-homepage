@@ -421,7 +421,7 @@ $(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(SRC_FORTUNES_DIR
 
 $(FORTUNES_WMLS_HTMLS): $(PRE_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input
 
-FORTUNES_TIDY := tidy -asxhtml -utf8 -quiet
+FORTUNES_TIDY := tidy -asxhtml -utf8 -quiet --tidy-mark no
 
 $(FORTUNES_XHTMLS__COMPRESSED): %.compressed.xhtml: %.xhtml
 	$(FORTUNES_TIDY) --show-warnings no -o $@ $< || true

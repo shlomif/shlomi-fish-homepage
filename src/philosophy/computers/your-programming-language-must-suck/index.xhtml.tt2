@@ -90,7 +90,7 @@ skimming code (even without syntax highlighting).
 
 <p>
 I could have gone
-on, but I think I got my message across. Thing is, when designing a programming
+on, but I think I got my message across. The point is, when designing a programming
 language, you need to make a lot of design decisions - what to include, what to
 exclude, etc. However, many of these design decisions are not 100% advantages
 or 100% disadvantages, but in fact trade-offs, and many people will question
@@ -160,6 +160,41 @@ list of links and quotations on my wiki, about the more general, non-programming
 </li>
 
 </ul>
+
+[% WRAPPER h3_section id = "especially-bad-langs"  title = "Some especially bad languages"  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/jloughry/BANCStar">BANCStar</a> - "The worst programming environment in the world?" -
+not a joke.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://thedailywtf.com/articles/We-Use-BobX">"We Use BobX"</a> - on The Daily WTF.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/INTERCAL_programming_language">INTERCAL</a> - the original
+esoteric programming language.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Malbolge">Malbolge</a> - designed to be almost impossible
+to use.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
 
 [%- END -%]
 

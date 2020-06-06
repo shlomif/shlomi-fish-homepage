@@ -5,27 +5,20 @@ use Path::Tiny qw/ path /;
 
 require 5.010;
 
-use File::Spec;
-use XML::Grammar::Fortune;
+my $abs_in_fn  = path( shift @ARGV )->absolute();
+my $abs_out_fn = path( shift @ARGV )->absolute();
 
-my $in_fn  = shift(@ARGV);
-my $out_fn = shift(@ARGV);
-
-my $abs_in_fn = File::Spec->rel2abs($in_fn);
-
-my $abs_out_fn = File::Spec->rel2abs($out_fn);
-
-my $contents = path($abs_in_fn)->slurp_utf8;
+my $contents = $abs_in_fn->slurp_utf8;
 
 $contents =~ s{\A(?:.*?)<body>}{}ms;
 $contents =~ s{</body>(?:.*?)\z}{}ms;
 
 $contents =~
-s#(?<full><h3 id=\s*"(?<id>[^"]+)"[^>]*>[^<]+</h3>)#<div class="head">$+{full}\n<p class="disp"><a href="show.cgi?id=$+{id}">Display</a></p></div>\n#g;
+s#(<h3 id=\s*"([^"]+)"[^>]*>[^<]+</h3>)#<div class="head">$1\n<p class="disp"><a href="show.cgi?id=$2">Display</a></p></div>\n#g;
 
 $contents =~
-s#(?<full><table class="irc-conversation">.*?</table>)#<div class="irc-body">$+{full}</div>#gms;
+s#(<table class="irc-conversation">.*?</table>)#<div class="irc-body">$1</div>#gms;
 
 $contents =~ s/\n(\s*)#/${1} #/gms;
 
-path($abs_out_fn)->spew_utf8($contents);
+$abs_out_fn->spew_utf8($contents);

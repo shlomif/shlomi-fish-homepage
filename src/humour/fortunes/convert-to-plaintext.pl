@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use XML::Grammar::Fortune::ToText();
+use XML::Grammar::Fortune::ToText ();
 
 my ( $xml_fn, $out_fn ) = @ARGV;
 

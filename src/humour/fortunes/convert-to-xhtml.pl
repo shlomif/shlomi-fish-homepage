@@ -2,10 +2,9 @@ use strict;
 use warnings;
 use utf8;
 
-use File::Spec;
-use XML::Grammar::Fortune;
-use XML::LibXML;
-use URI::Find ();
+use XML::Grammar::Fortune ();
+use XML::LibXML           ();
+use URI::Find             ();
 use Encode qw/ decode /;
 
 my $xml_fn = shift(@ARGV);
@@ -13,9 +12,9 @@ my $out_fn = shift(@ARGV);
 
 my $html_fn = $xml_fn;
 
-my $abs_xml_fn = File::Spec->rel2abs($xml_fn);
+my $abs_xml_fn = $xml_fn;
 
-my $abs_out_fn = File::Spec->rel2abs($out_fn);
+my $abs_out_fn = $out_fn;
 
 XML::Grammar::Fortune->new( { mode => "validate", } )
     ->run( { input => $abs_xml_fn, } );

@@ -864,7 +864,7 @@ LC_LECTURE_ARC := $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 all: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_LECTURE_ARC_DIR)/Lambda-Calculus/slides/funcs.scm.html
-	(cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z Lambda-Calculus/slides/* && tar -cavf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
+	(cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z Lambda-Calculus/slides/* && tar -caf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
 
 $(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@

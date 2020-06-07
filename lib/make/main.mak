@@ -648,13 +648,18 @@ LC_PRES_SCMS := \
 	output_vars.scm \
 	shriram.scm \
 
-LC_PRES_DEST_HTMLS := $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
+LC_PRES_SRC_DIR := $(SRC_SRC_DIR)/$(LC_PRES_PATH)
+LC_PRES_DEST := $(PRE_DEST)/$(LC_PRES_PATH)
 
-lc_pres_targets: $(LC_PRES_DEST_HTMLS)
+# LC_PRES_DEST_HTMLS := $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
+LC_PRES_SRC_SCMS := $(patsubst %,$(LC_PRES_SRC_DIR)/%,$(LC_PRES_SCMS))
+LC_PRES_DEST_HTMLS__PIVOT := $(patsubst %.scm,$(LC_PRES_DEST)/%.scm.html,notes.scm)
+
+lc_pres_targets: $(LC_PRES_DEST_HTMLS__PIVOT)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
-$(LC_PRES_DEST_HTMLS): $(PRE_DEST)/%.scm.html: $(SRC_SRC_DIR)/%.scm
-	$(PERL) bin/text-vimcolor-xhtml5.pl $< $@
+$(LC_PRES_DEST_HTMLS__PIVOT): $(LC_PRES_SRC_SCMS)
+	$(PERL) bin/text-vimcolor-multi.pl $(LC_PRES_SRC_DIR) $(LC_PRES_DEST)
 
 SPORK_LECTURES_BASENAMES := \
 	Perl/Graham-Function \
@@ -863,7 +868,7 @@ LC_LECTURE_ARC := $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 
 all: $(LC_LECTURE_ARC)
 
-$(LC_LECTURE_ARC): $(LC_LECTURE_ARC_DIR)/Lambda-Calculus/slides/funcs.scm.html
+$(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
 	(cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z Lambda-Calculus/slides/* && tar -caf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
 
 $(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)

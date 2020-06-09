@@ -74,6 +74,20 @@ of Theseus</a> all over again.)
 
 [%- END -%]
 
+[% WRAPPER h2_section id="forwarding-service" title="A forwarding service" %]
+
+<p>
+As sometimes one sets up a client to connect to a port on a remote machine, and
+wishes to forward the request to the locally-running service, I decided to write
+a simple HTTP request forwarder. <a href="https://github.com/shlomif/app-notifier/tree/master/notifier-proxy">Several versions</a>
+of it (written in <a href="https://en.wikipedia.org/wiki/Flask_%28web_framework%29">Flask / Python</a>,
+<a href="https://en.wikipedia.org/wiki/Nodejs">Node.js</a>
+and <a href="https://mojolicious.org/">Mojolicious / Perl 5</a> but
+otherwise equivalent in their functionality) can be found in the repository.
+</p>
+
+[%- END -%]
+
 [% WRAPPER h2_section id="protocol_spec" title="Protocol Spec" %]
 
 <p>

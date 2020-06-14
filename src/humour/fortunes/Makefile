@@ -68,12 +68,10 @@ print_package_base:
 
 xhtmls: $(XHTMLS)
 
-$(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
-	bash run-validator.bash $< $@
-	perl convert-to-xhtml.pl $<
+$(XHTMLS): %.xhtml: %.xml
+	$(PERL) $(T2_FORTUNES_DIR)/convert-to-xhtml.pl $<
 
 $(FILES): %: %.xml
-	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \
 	$(PERL) $(T2_FORTUNES_DIR)/convert-to-plaintext.pl $< $@
 
 gen_sources_list: $(SOURCE_FILES_LIST)

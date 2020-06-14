@@ -54,13 +54,8 @@ foreach my $host (qw(t2 vipe))
     Parallel::ForkManager::Segmented->new->run(
         {
             items => (
-                ( $host eq 't2' )
-                ? (
-                    [
-                        ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ),
-                        @ARGV
-                    ]
-                    )
+                  ( $host eq 't2' )
+                ? ( [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ] )
                 : [qw(index.html lecture/index.html)]
             ),
             nproc        => 4,

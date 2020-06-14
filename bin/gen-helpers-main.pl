@@ -193,9 +193,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         ];
         if ( $args->{bucket} eq 'DOCS' and $args->{host} eq 'src' )
         {
-            path("${DIR}tt2.txt")
-                ->spew_raw( join "\n", (@$ret),
-                "humour/fortunes/all-in-one.uncompressed.html", "" );
+            path("${DIR}tt2.txt")->spew_raw( join "\n", (@$ret), "" );
         }
         return $ret;
     },

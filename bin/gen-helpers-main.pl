@@ -110,8 +110,6 @@ my_exec_perl(
 
 my $DIR = "lib/make/";
 
-# [ $^X, "./bin/gen-fortunes.pl" ],
-
 foreach my $cmd (
     ["./bin/gen-docbook-make-helpers.pl"], ["./lib/factoids/gen-html.pl"],
     ["./bin/gen-fortunes-dats.pl"],        ["./bin/gen-deps-mak.pl"],
@@ -147,10 +145,10 @@ foreach my $ext (qw/ xhtml pdf /)
     my %all_deps;
     my @captioned_images = (
         map {
-            my $src = "lib/repos/$_";
+            my $src = path("lib/repos/$_");
             ++$idx;
-            my $bn       = path($src)->basename;
-            my $dn       = path($src)->parent->stringify;
+            my $bn       = $src->basename;
+            my $dn       = $src->parent->stringify;
             my $bn_var   = "CAPT_IMG_BN$idx";
             my $dest_var = "CAPT_IMG_DEST_$idx";
             $all_deps{"\$($dest_var)"} = 1;
@@ -169,12 +167,8 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
 
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
-my $iter = path("./src")->iterator( { recurse => 1, } );
-
-my $IMAGES_SRC = path('./src/images');
-my_system(
-    [ $^X, 'lib/images/navigation/section/sect-nav-arrows.pl', "$IMAGES_SRC", ]
-);
+my_exec_perl(
+    [ 'lib/images/navigation/section/sect-nav-arrows.pl', "./src/images", ] );
 my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     'hosts' => [
         map {
@@ -199,7 +193,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         ];
         if ( $args->{bucket} eq 'DOCS' and $args->{host} eq 'src' )
         {
-            path("$DIR/tt2.txt")
+            path("${DIR}tt2.txt")
                 ->spew_raw( join "\n", (@$ret),
                 "humour/fortunes/all-in-one.uncompressed.html", "" );
         }
@@ -207,7 +201,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     },
     out_docs_ext          => '.tt2',
     docs_build_command_cb => sub {
-        my ( $obj, $args ) = @_;
+        my ( undef, $args ) = @_;
         return sprintf(
             '$(call %s%s_INCLUDE_TT2_RENDER)',
             uc( $args->{host}->id ),
@@ -215,7 +209,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         );
     },
     images_dest_varname_cb => sub {
-        my ( $obj, $args ) = @_;
+        my ( undef, $args ) = @_;
         return sprintf( '%s%s_DEST', uc( $args->{host}->id ), '_POST', );
     },
 );

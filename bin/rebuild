@@ -23,20 +23,7 @@ rebuild()
             ncpus="4"
         fi
         PATH="$PWD/bin/mod:$PATH"
-        no_longer_needed_due_to_avoiding_recursive_make=false
-        if $no_longer_needed_due_to_avoiding_recursive_make
-        then
-            cl_d=../"$(basename "$PWD")"--clones
-            mkdir -p "$cl_d"
-            for d in "$cl_d"/*
-            do
-                if test -e "$d"
-                then
-                    ( cd "$d"; time git clean -dxf . )
-                fi
-            done
-        fi
-        time git clean -dxf .
+        time git clean -dfqx .
         time bash -x bin/install-npm-deps.sh
         time ./gen-helpers
         # if ! gmake -j"$ncpus" docbook_targets

@@ -45,7 +45,8 @@ while ( my $r = $finder->next() )
             )
         {
             system( "gvim", "-p",
-                ( ( -e "t2/$base.wml" ) ? "t2/$base.wml" : "t2/$base" ), $r, );
+                ( ( -e "src/$base.tt2" ) ? "src/$base.tt2" : "src/$base" ), $r,
+            );
             die "Tidy failed on '$r'\n";
         }
         $after_size += ( -s $r );

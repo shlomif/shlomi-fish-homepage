@@ -38,7 +38,7 @@ foreach my $fn (@ARGV)
     }
 }
 
-foreach my $fn ( "t2/old-news.html.wml", "t2/index.html.wml" )
+foreach my $fn ( "src/old-news.html.tt2", "src/index.html.tt2" )
 {
     path($fn)->touch;
 }

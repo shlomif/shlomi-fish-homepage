@@ -71,7 +71,7 @@ xhtmls: $(XHTMLS)
 $(XHTMLS): %.xhtml: %.xml convert-to-xhtml.pl
 	bash run-validator.bash $< $@
 	perl convert-to-xhtml.pl $<
-	touch $(patsubst %.xml,%.html.wml,$<)
+	touch $(patsubst %.xml,%.html.tt2,$<)
 
 $(FILES): %: %.xml
 	bash $(T2_FORTUNES_DIR)/run-validator.bash $< && \

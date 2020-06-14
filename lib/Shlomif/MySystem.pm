@@ -12,7 +12,7 @@ sub my_system
     my $cmd = shift;
     my $err = shift || '';
 
-    print join( ' ', @$cmd ), "\n";
+    # print join( ' ', @$cmd ), "\n";
     if ( system(@$cmd) )
     {
         die "<<@$cmd>> failed $err.";

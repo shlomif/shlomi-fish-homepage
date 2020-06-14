@@ -8,10 +8,10 @@ use MooX qw( late );
 use Path::Tiny qw(path);
 use JSON::MaybeXS qw(decode_json);
 
-use XML::Grammar::ProductsSyndication;
-use XML::LibXML::XPathContext;
+use XML::Grammar::ProductsSyndication ();
+use XML::LibXML::XPathContext         ();
 
-has 'wml_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
+has 'src_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'lib_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'xml_basename' => ( isa => 'Str', is => 'ro', required => 1, );
 has 'ps'           => (
@@ -27,7 +27,7 @@ has 'ps'           => (
             {
                 'source' => {
                     'file' =>
-                        sprintf( "%s/%s", $self->wml_dir, $self->xml_basename ),
+                        sprintf( "%s/%s", $self->src_dir, $self->xml_basename ),
                 }
             },
         );
@@ -61,7 +61,7 @@ sub process
             'resize_to' => { 'width' => 150, 'height' => 250 },
             'name_cb'   => sub {
                 my $args = shift;
-                return $self->wml_dir() . "/images/$args->{id}.jpg";
+                return $self->src_dir() . "/images/$args->{id}.jpg";
             },
             'amazon_token'     => "0VRRHTFJECHSKYNYD282",
             'amazon_associate' => "shlomifishhom-20",

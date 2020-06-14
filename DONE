@@ -66,8 +66,8 @@ shlomif@iglu.org.il is preferable.
     - add the CSS of the screenplays.
     display it.
 
-* Put t2/t/hilazon.doc t2/t/oded-c/bla_bla.doc.gz t2/t/oded-c/No_name.doc.gz
-under t2/humour/by-others/ .
+* Put src/t/hilazon.doc src/t/oded-c/bla_bla.doc.gz src/t/oded-c/No_name.doc.gz
+under src/humour/by-others/ .
 
 * Fix the breadcrumbs trail in http://www.shlomifish.org/toggle.html .
 
@@ -78,10 +78,10 @@ previously expanded items (which is annoying and causes them to jump).
 
 * Typos:
     - "proportionm".
-        - Index: t2/humour/recommendations/films/shlomi-fish-films-recommendations.xml
+        - Index: src/humour/recommendations/films/shlomi-fish-films-recommendations.xml
         - search for similar.
-    - fix the broken Unicode on t2/humour/Selena-Mandrake/index.html.wml .
-    - fix the broken Unicode on t2/humour/Pope/index.html.wml .
+    - fix the broken Unicode on src/humour/Selena-Mandrake/index.html.tt2 .
+    - fix the broken Unicode on src/humour/Pope/index.html.tt2 .
 
 * Add Objectivist C to the anti-apple page's jokes.
 
@@ -97,11 +97,11 @@ previously expanded items (which is annoying and causes them to jump).
     - Which programming languages did you start with?
     - Is “Shlomi Fish” your real name?
 
-* Add a section navigation menu to t2/meta/ .
+* Add a section navigation menu to src/meta/ .
 
 * Update the instructions for how to build the homepage:
 
-* Create a block to license a project under t2/open-source/projects/ under
+* Create a block to license a project under src/open-source/projects/ under
 the Expat licence.
 
 * Integrate building the lectures/presentations into the homepage.
@@ -119,7 +119,7 @@ margins.
     * Find a way to minify/compress common/js/tree.jquery.js - it is too large.
         - DONE (at least partly).
 
-    * Extract the jQtree functionality from t2/humour/bits/index.html into
+    * Extract the jQtree functionality from src/humour/bits/index.html into
     a common place.
         - DONE.
 

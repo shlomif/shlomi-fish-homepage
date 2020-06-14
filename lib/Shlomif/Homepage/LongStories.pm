@@ -474,7 +474,6 @@ sub _get_tagline_tags
 
     my $tag_id    = 'tagline';
     my $tag_title = $self->get_tagline($id);
-    $self->_push_toc_h2( { 'id' => $tag_id, 'body' => $tag_title, } );
     return [ qq#<h2 id="$tag_id">#, $tag_title, qq#</h2>\n#, ];
 }
 
@@ -518,28 +517,6 @@ sub _get_list_items_tags
     return [ @{ $self->_get_abstract_tags($id) }, ];
 }
 
-sub _push_toc_h2
-{
-    my ( $self, $args ) = @_;
-    if ($::wml_xhtml_std_toc_section)
-    {
-        my @prev_sects = ($::wml_xhtml_std_toc_section);
-        foreach my $idx ( 3 .. 2 )
-        {
-            if ( !exists( $prev_sects[-1]->{'subs'} ) )
-            {
-                use Data::Dumper;
-                print {*STDERR} Dumper( \@prev_sects );
-                die "Cannot find a subs in the last prev_sects!";
-            }
-            push @prev_sects, $prev_sects[-1]->{'subs'}->[-1];
-        }
-        push @{ $prev_sects[-1]->{subs} },
-            { 'id' => $args->{id}, 'body' => $args->{body}, 'subs' => [], };
-
-    }
-}
-
 sub _get_common_top_elems
 {
     my ( $self, $id ) = @_;
@@ -552,7 +529,6 @@ sub _get_common_top_elems
         @{ $self->_get_abstract_tags($id) },
         qq{</div>\n},
     ];
-    $self->_push_toc_h2( { 'id' => 'abstract', 'body' => "Abstract", }, );
     return $ret;
 }
 

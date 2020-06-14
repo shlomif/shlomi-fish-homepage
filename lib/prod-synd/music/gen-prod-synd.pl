@@ -3,11 +3,11 @@
 use strict;
 use warnings;
 
-use Shlomif::Homepage::Amazon::Obj;
+use Shlomif::Homepage::Amazon::Obj ();
 
 Shlomif::Homepage::Amazon::Obj->new(
     {
-        wml_dir      => "src/art/recommendations/music",
+        src_dir      => "src/art/recommendations/music",
         lib_dir      => "lib/prod-synd/music",
         xml_basename => "shlomi-fish-music-recommendations.xml",
     }

@@ -223,22 +223,6 @@ sub calc_items
     return [ @old_news_items, @{ $self->calc_rss_items() } ];
 }
 
-=begin foo
-
-sub _wmlize
-{
-    my $s = shift;
-
-    $s =~ s{^#}{\\#}gms;
-    $s =~ s#^[ \t]+##gms;
-
-    return $s;
-}
-
-=end foo
-
-=cut
-
 sub _tt2_process_body
 {
     return (

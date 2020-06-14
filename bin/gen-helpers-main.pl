@@ -170,15 +170,6 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 my $iter = path("./src")->iterator( { recurse => 1, } );
-my @tt;
-while ( my $next = $iter->() )
-{
-    my $s = "$next";
-    if ( ( not -d $next ) and $s =~ s#\.tt2\z## )
-    {
-        push @tt, ( $s =~ s#\A(\./)?src/##r );
-    }
-}
 
 my $IMAGES_SRC = path('./src/images');
 my_system(
@@ -198,14 +189,21 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
     ],
     out_dir                    => $DIR,
     filename_lists_post_filter => sub {
-        my ($args) = @_;
+        my ($args)    = @_;
         my $filenames = $args->{filenames};
-        return [
+        my $ret       = [
             grep {
                 not(   m#\Ahumour/fortunes/\S+(?:\.tar\.gz|\.sqlite3)\z#
                     || m#\Aimages/bk2hp-v2\.(?:svgz?|min\.svg)\z# )
             } @$filenames
         ];
+        if ( $args->{bucket} eq 'DOCS' and $args->{host} eq 'src' )
+        {
+            path("$DIR/tt2.txt")
+                ->spew_raw( join "\n", (@$ret),
+                "humour/fortunes/all-in-one.uncompressed.html", "" );
+        }
+        return $ret;
     },
     out_docs_ext          => '.tt2',
     docs_build_command_cb => sub {
@@ -229,8 +227,6 @@ if ( my $Err = $@ )
     print Data::Dumper->new( [$Err] )->Dump;
     die $Err;
 }
-push @tt, "humour/fortunes/all-in-one.uncompressed.html";
-path("$DIR/tt2.txt")->spew_raw( join "\n", ( sort @tt ), "" );
 
 {
     my $src = (

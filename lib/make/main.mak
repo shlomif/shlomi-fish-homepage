@@ -81,7 +81,7 @@ FACTOIDS_NAV_JSON := lib/Shlomif/factoids-nav.json
 SRC_CACHE_ALL_STAMP := lib/cache/STAMP.sects-includes
 SRC_CLEAN_STAMP := lib/cache/STAMP.post-dest
 
-GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $$(cat lib/make/tt2.txt) $(SRC_DOCS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
+GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS) $(FORTUNES_DIR)/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) $(FORTUNES_DIR)/index.xhtml $(patsubst %,$(FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE) $(FORTUNES_ALL_IN_ONE__TEMP__BASE))
 
 $(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"

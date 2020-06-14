@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>lib/presentations/qp/Website-Meta-Lecture/src/examples/meta-tag/template.wml</title>
+<meta charset="utf-8"/>
+  <style>
+/*
+ * A stylesheet designed to be used with the HTML output of the
+ * Perl module Text::VimColor.
+ *
+ * This is designed to make the highlighting look like the default gvim
+ * colour scheme, with 'background=light'.
+ *
+ * Geoff Richards (qef@laxan.com)
+ *
+ * This CSS file (light.css) is public domain.  Do what you want with it.
+ * That doesn't mean that HTML with this CSS in is public domain.
+ */
+
+body { color: black; background: white none }
+
+A:link { color: #00F; background: white none }
+A:visited { color: #909; background: white none }
+A:hover { color: #F00; background: white none }
+A:active { color: #F00; background: white none }
+
+.synComment    { color: #0000FF }
+.synConstant   { color: #FF00FF }
+.synIdentifier { color: #008B8B }
+.synStatement  { color: #A52A2A ; font-weight: bold }
+.synPreProc    { color: #A020F0 }
+.synType       { color: #2E8B57 ; font-weight: bold }
+.synSpecial    { color: #6A5ACD }
+.synUnderlined { color: #000000 ; text-decoration: underline }
+.synError      { color: #FFFFFF ; background: #FF0000 none }
+.synTodo       { color: #0000FF ; background: #FFFF00 none }
+</style>
+ </head>
+ <body>
+
+<pre><span class="synIdentifier">&lt;?xml </span><span class="synType">version</span><span class="synIdentifier">=</span><span class="synConstant">&quot;1.0&quot;</span><span class="synIdentifier"> encoding=</span><span class="synConstant">&quot;utf-8&quot;</span><span class="synIdentifier">?&gt;</span>
+<span class="synIdentifier">&lt;!DOCTYPE html&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">html</span><span class="synIdentifier"> xmlns=</span><span class="synConstant">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="synIdentifier"> xml:</span><span class="synType">lang</span><span class="synIdentifier">=</span><span class="synConstant">&quot;en-US&quot;</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">head</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">title</span><span class="synIdentifier">&gt;</span>{#SUBJECT_LOC#}<span class="synIdentifier">&lt;/</span><span class="synStatement">title</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">meta</span><span class="synIdentifier"> </span><span class="synType">charset</span><span class="synIdentifier">=</span><span class="synConstant">&quot;utf-8&quot;</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">link</span><span class="synIdentifier"> </span><span class="synType">rel</span><span class="synIdentifier">=</span><span class="synConstant">&quot;stylesheet&quot;</span><span class="synIdentifier"> </span><span class="synType">href</span><span class="synIdentifier">=</span><span class="synConstant">&quot;$(ROOT)/style.css&quot;</span><span class="synIdentifier"> </span><span class="synType">type</span><span class="synIdentifier">=</span><span class="synConstant">&quot;text/css&quot;</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">head</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">body</span><span class="synIdentifier">&gt;</span>
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">table</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;layout&quot;</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">tr</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">td</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;navbar&quot;</span><span class="synIdentifier">&gt;</span>
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">define-tag</span><span class="synIdentifier"> navbarlink&gt;</span>
+<span class="synIdentifier">&lt;</span>if
+<span class="synIdentifier">    ;;; Determine if %0 matches this document</span>
+<span class="synIdentifier">    </span><span class="synError">&lt;</span><span class="synIdentifier">ifeq </span><span class="synConstant">&quot;$(FILENAME)&quot;</span><span class="synIdentifier"> </span><span class="synConstant">&quot;%0&quot;</span>
+<span class="synIdentifier">        </span><span class="synConstant">&quot;1&quot;</span>
+<span class="synIdentifier">        </span><span class="synError">&lt;</span><span class="synIdentifier">ifeq </span><span class="synConstant">&quot;$(FILENAME)&quot;</span><span class="synIdentifier"> </span><span class="synConstant">&quot;%0index.html&quot;</span>
+<span class="synIdentifier">            </span><span class="synConstant">&quot;1&quot;</span>
+<span class="synIdentifier">            </span><span class="synConstant">&quot;&quot;</span>
+<span class="synIdentifier">        /&gt;</span>
+
+    /<span class="synError">&gt;</span>
+    ;;; If so - bolds the text
+    &quot;<span class="synIdentifier">&lt;</span><span class="synStatement">b</span><span class="synIdentifier">&gt;</span>%1<span class="synIdentifier">&lt;/</span><span class="synStatement">b</span><span class="synIdentifier">&gt;</span>&quot;
+    ;;; If not - makes a hyperlink
+    &quot;<span class="synIdentifier">&lt;</span><span class="synStatement">a</span><span class="synIdentifier"> </span><span class="synType">href</span><span class="synIdentifier">=</span><span class="synConstant">&quot;$(ROOT)/%0&quot;</span><span class="synIdentifier">&gt;</span>%1<span class="synIdentifier">&lt;/</span><span class="synStatement">a</span><span class="synIdentifier">&gt;</span>&quot;
+/<span class="synError">&gt;</span><span class="synIdentifier">&lt;</span><span class="synStatement">br</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">define-tag</span><span class="synIdentifier">&gt;</span>
+
+<span class="synIdentifier">&lt;</span>navbarlink<span class="synIdentifier"> </span><span class="synConstant">&quot;&quot;</span><span class="synIdentifier"> </span><span class="synConstant">&quot;Main&quot;</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;</span>navbarlink<span class="synIdentifier"> </span><span class="synConstant">&quot;download.html&quot;</span><span class="synIdentifier"> </span><span class="synConstant">&quot;Downloads&quot;</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;</span>navbarlink<span class="synIdentifier"> </span><span class="synConstant">&quot;links.html&quot;</span><span class="synIdentifier"> </span><span class="synConstant">&quot;Links&quot;</span><span class="synIdentifier"> /&gt;</span>
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">br</span><span class="synIdentifier"> /&gt;</span>
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">a</span><span class="synIdentifier"> </span><span class="synType">href</span><span class="synIdentifier">=</span><span class="synConstant">&quot;mailto:webmaster@mysite.org&quot;</span><span class="synIdentifier">&gt;</span>Webmaster<span class="synIdentifier">&lt;/</span><span class="synStatement">a</span><span class="synIdentifier">&gt;&lt;</span><span class="synStatement">br</span><span class="synIdentifier"> /&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">td</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">td</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;main&quot;</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;</span><span class="synStatement">h1</span><span class="synIdentifier">&gt;</span>{#SUBJECT_LOC#}<span class="synIdentifier">&lt;/</span><span class="synStatement">h1</span><span class="synIdentifier">&gt;</span>
+{#BODY#}
+<span class="synIdentifier">&lt;/</span><span class="synStatement">td</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">tr</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">table</span><span class="synIdentifier">&gt;</span>
+
+<span class="synIdentifier">&lt;/</span><span class="synStatement">body</span><span class="synIdentifier">&gt;</span>
+<span class="synIdentifier">&lt;/</span><span class="synStatement">html</span><span class="synIdentifier">&gt;</span>
+
+<span class="synIdentifier">&lt;</span><span class="synStatement">define-tag</span><span class="synIdentifier"> subject&gt;</span>
+{#SUBJECT_LOC#:%0:##}
+<span class="synIdentifier">&lt;/</span><span class="synStatement">define-tag</span><span class="synIdentifier">&gt;</span>
+
+<span class="synComment">#   per default we are in body</span>
+{#BODY#:
+</pre>
+
+ </body>
+</html>

@@ -39,15 +39,19 @@ sub generate
 
     foreach my $fn ( split /\n/, $BASENAMES )
     {
-        my $ffn = "lib/presentations/qp/Website-Meta-Lecture/src/examples/$fn";
-        my $syntax = Text::VimColor->new(
-            file           => $ffn,
-            html_full_page => 1,
-            xhtml5         => 1,
-        );
+        my $ffn  = "lib/presentations/qp/Website-Meta-Lecture/src/examples/$fn";
+        my $dest = path("$ffn.html");
+        if ( !$dest->exists() )
+        {
+            my $syntax = Text::VimColor->new(
+                file           => $ffn,
+                html_full_page => 1,
+                xhtml5         => 1,
+            );
 
-        write_on_change( path( $ffn . ".html" ),
-            \( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr ) );
+            write_on_change( $dest,
+                \( $syntax->html =~ s#(<meta[^/>]+[^/])>#$1/>#gr ) );
+        }
     }
     my $tt = Template->new( {} );
     $tt->process(

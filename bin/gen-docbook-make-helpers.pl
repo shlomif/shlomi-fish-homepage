@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 use autodie;
-use utf8;
 
 use Carp ();
 use Path::Tiny qw/ path /;
@@ -59,7 +58,7 @@ $git_obj->sys_task(
 foreach my $repo (
     (
         map { s#/[^/]*$##r }
-        path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
+        path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
     ),
     'Shlomi-Fish-Back-to-my-Homepage-Logo',
     'XML-Grammar-Vered',

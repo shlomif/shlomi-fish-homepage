@@ -86,7 +86,7 @@ GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS)
 
 $(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"
-	@$(GEN_CACHE_CMD)
+	$(GEN_CACHE_CMD)
 	touch $@
 
 sects_cache: make-dirs $(SRC_CACHE_ALL_STAMP)

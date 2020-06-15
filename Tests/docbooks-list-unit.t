@@ -2,13 +2,10 @@
 
 use strict;
 use warnings;
-use utf8;
 
 use Test::More tests => 2;
-use Test::Differences (qw(eq_or_diff));
-use List::MoreUtils qw/ all /;
+use List::Util qw/ all /;
 
-use lib './Tests/lib';
 use lib './lib';
 use HTML::Latemp::DocBook::DocsList ();
 

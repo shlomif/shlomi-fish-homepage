@@ -7,7 +7,7 @@ use utf8;
 
 use 5.014;
 
-use MooX qw/late/;
+use Moo;
 
 extends('HTML::Spelling::Site::Checker');
 

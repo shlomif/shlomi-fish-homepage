@@ -3,7 +3,7 @@ package Shlomif::Homepage::FortuneCollections::Record;
 use strict;
 use warnings;
 
-use MooX qw( late );
+use Moo;
 
 has [
     qw(
@@ -15,7 +15,7 @@ has [
         text
         title
         )
-] => ( is => 'ro', isa => 'Str', required => 1 );
+] => ( is => 'ro', required => 1 );
 
 sub nav_record
 {

@@ -3,14 +3,14 @@ package Shlomif::Homepage::FactoidsPages::Page;
 use strict;
 use warnings;
 
-use MooX qw/late/;
+use Moo;
 
 has [
     'abstract',  'id_base',    'img_alt',        'img_attribution',
     'img_class', 'img_src',    'license_method', 'license_year',
     'links_tt2', 'meta_desc',  'nav_blocks_tt2', 'see_also',
     'short_id',  'tabs_title', 'title',          'url_base',
-] => ( is => 'ro', isa => 'Str', required => 1 );
+] => ( is => 'ro', required => 1 );
 
 sub img_src_tt2
 {

@@ -3,9 +3,8 @@ package Shlomif::Spelling::Hebrew::Check;
 use strict;
 use warnings;
 use autodie;
-use utf8;
 
-use MooX qw/late/;
+use Moo;
 
 use Shlomif::Spelling::Hebrew::Whitelist   ();
 use Shlomif::Spelling::Hebrew::SiteChecker ();

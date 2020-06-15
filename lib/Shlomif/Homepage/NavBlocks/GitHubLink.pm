@@ -3,7 +3,7 @@ package Shlomif::Homepage::NavBlocks::GitHubLink;
 use strict;
 use warnings;
 
-use MooX (qw( late ));
+use Moo;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 

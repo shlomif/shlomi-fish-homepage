@@ -3,8 +3,8 @@ package Shlomif::Spelling::Hebrew::FindFiles;
 use strict;
 use warnings;
 
-use MooX qw/late/;
-use List::MoreUtils qw/any/;
+use Moo;
+use List::Util 1.34 qw/ any /;
 
 use HTML::Spelling::Site::Finder ();
 use lib './lib';

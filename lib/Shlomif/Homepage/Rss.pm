@@ -3,13 +3,13 @@ package Shlomif::Homepage::Rss;
 use strict;
 use warnings;
 
-use MooX (qw( late ));
+use Moo;
 
-use XML::Feed;
+use XML::Feed ();
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use Path::Tiny qw/ path /;
 
-use Encode (qw(decode));
+use Encode qw( decode );
 
 has 'feed' => (
     is      => 'rw',

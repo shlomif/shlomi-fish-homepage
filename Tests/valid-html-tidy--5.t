@@ -5,8 +5,8 @@ use warnings;
 
 package Test::HTML::Tidy::Recursive::Tidy5;
 
-use MooX qw/ late /;
-use HTML::T5;
+use Moo;
+use HTML::T5 ();
 
 extends('Test::HTML::Tidy::Recursive');
 

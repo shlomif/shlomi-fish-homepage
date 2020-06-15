@@ -3,7 +3,7 @@ package Shlomif::Spelling::Hebrew::Iface;
 use strict;
 use warnings;
 
-use MooX (qw( late ));
+use Moo;
 
 use Shlomif::Spelling::Hebrew::Check     ();
 use Shlomif::Spelling::Hebrew::FindFiles ();

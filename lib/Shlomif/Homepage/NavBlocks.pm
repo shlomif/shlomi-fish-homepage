@@ -41,10 +41,10 @@ sub _facebook
     return Shlomif::Homepage::NavBlocks::FacebookLink->new( {@_} );
 }
 
-use Shlomif::Homepage::NavBlocks::Tr;
-use Shlomif::Homepage::NavBlocks::Subdiv_Tr;
-use Shlomif::Homepage::NavBlocks::Master_Tr;
-use Shlomif::Homepage::NavBlocks::TableBlock;
+use Shlomif::Homepage::NavBlocks::Tr         ();
+use Shlomif::Homepage::NavBlocks::Subdiv_Tr  ();
+use Shlomif::Homepage::NavBlocks::Master_Tr  ();
+use Shlomif::Homepage::NavBlocks::TableBlock ();
 
 sub _tr
 {

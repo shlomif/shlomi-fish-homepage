@@ -5,7 +5,7 @@ use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
-use MooX qw/ late /;
+use Moo;
 
 extends('Shlomif::Homepage::NavBlocks::ExternalLink');
 

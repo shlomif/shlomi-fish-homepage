@@ -16,7 +16,7 @@ my $filename = shift(@ARGV)
 
 my $text = path($filename)->slurp_utf8;
 
-$text =~ s{<(/?h)(\d+)}{"<".$1.($2+1)}ge;
+$text =~ s{<(/?h)([0-9])}{"<".$1.($2+1)}ge;
 
 $text =~ s{\A.*?(<)main( class="screenplay")}{$1 . "div" . $2}ems;
 substr( $text, rindex( $text, "</main>" ) ) = "</div>";

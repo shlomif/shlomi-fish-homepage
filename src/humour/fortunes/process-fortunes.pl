@@ -7,7 +7,7 @@ package XML::Grammar::Fortune::FromText;
 
 use XML::Writer ();
 
-use List::MoreUtils (qw(any));
+use List::Util 1.34 qw/ any /;
 
 use MooX (qw( late ));
 

@@ -3,8 +3,7 @@
 use strict;
 use warnings;
 
-use XML::LibXML;
-use List::MoreUtils qw(firstidx);
+use XML::LibXML ();
 
 my $parser = XML::LibXML->new();
 

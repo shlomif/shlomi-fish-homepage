@@ -24,7 +24,10 @@ rebuild()
         fi
         PATH="$PWD/bin/mod:$PATH"
         time git clean -dfqx .
-        time bash -x bin/install-npm-deps.sh
+        if test "$SKIP_NODE_INST" != '1'
+        then
+            time bash bin/install-npm-deps.sh
+        fi
         time ./gen-helpers
         # if ! gmake -j"$ncpus" docbook_targets
         # if ! gmake -j"$ncpus" screenplay_epub_dests

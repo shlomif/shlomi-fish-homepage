@@ -5,23 +5,9 @@
 #
 # Distributed under terms of the MIT license.
 #
-    # hackmyresume \
 (
 set -e -x
 npm install
 PATH="$PATH:`pwd`/node_modules/.bin"
 bower install
-exit
-
-########### Not needed due to package.json .
-#     camel-case \
-#     eslint \
-#     eslint-config-google \
-#     html-minifier \
-#     jquery \
-#     param-case \
-#     prettier \
-#     sass \
-#     uglify-es \
-
 )

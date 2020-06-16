@@ -137,8 +137,6 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
     }
 );
 
-my %INDEX = ( map { $_ => 1 } 'index.html', 'index.xhtml' );
-
 my $template = Template->new(
     {
         COMPILE_DIR  => ( $ENV{TMPDIR} // "/tmp" ) . "/shlomif-hp-tt2-cache",

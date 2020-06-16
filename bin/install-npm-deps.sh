@@ -6,8 +6,8 @@
 # Distributed under terms of the MIT license.
 #
 (
-set -e -x
+set -e
 npm install
-PATH="$PATH:`pwd`/node_modules/.bin"
+PATH="$PATH:$PWD/node_modules/.bin"
 bower install
 )

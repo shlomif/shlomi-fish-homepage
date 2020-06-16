@@ -166,13 +166,8 @@ sub proc
 {
     my ( $self, $input_tt2_page_path ) = @_;
     $::latemp_filename = $input_tt2_page_path;
-    my @fn     = split m#/#, $input_tt2_page_path;
-    my @fn_nav = @fn;
-    my $tail   = \$fn_nav[-1];
-    $$tail = '' if ( exists $INDEX{$$tail} );
-    $base_path =
-        ( '../' x ( scalar(@fn) - 1 ) );
-    my $fn2 = join( '/', @fn_nav ) || '/';
+    my @fn = split m#/#, $input_tt2_page_path;
+    $base_path = ( '../' x $#fn );
 
     my $vars = $self->vars;
     $vars->{base_path} = $base_path;

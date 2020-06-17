@@ -9,14 +9,15 @@
 <p>
 All <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>
 of the world suck. If you require people to declare variables
-(like in Pascal, C, <a
+(like in <a href="https://en.wikipedia.org/wiki/Pascal_%28programming_language%29">Pascal</a>,
+<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a
     href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
 or Perl 5 with <a href="http://perldoc.perl.org/strict.html">strict</a>), then
 some people will be inconvenienced by the need to declare, and will tell you
 they like variables to spring up upon first use. Without
 variable declarations, then you get various weird side-effects of the implicit
 scoping. If you use curly braces for scoping, then you'll have to type more and
-there's more clutter. With indentation-based scoping (like in Python), you'll
+there's more clutter. With indentation-based scoping (like in <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python</a>), you'll
 find it hard to introduce multiple-expression <a
 href="http://en.wikipedia.org/wiki/Lambda_calculus#First-class_functions">lambdas</a> and will
 have <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">some other problems</a>.

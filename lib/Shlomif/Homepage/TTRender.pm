@@ -88,6 +88,19 @@ sub _shlomif_include_colorized_file
         )
     );
 }
+my $NAME = "Shlomi Fish";
+my $H    = "Homesite";
+
+sub _process_title
+{
+    my $args  = shift;
+    my $title = $args->{title};
+    return (
+        ( $title =~ m#\Q${NAME}\E\S*\s+Home# )
+        ? $title
+        : ("$title - $NAME’s $H")
+    );
+}
 
 has vars => (
     is      => 'ro',
@@ -118,6 +131,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             print_markdown    => \&Shlomif::MD::as_fixed_xhtml5,
             longblank         => $LONGBLANK,
             main_email        => 'shlomif@shlomifish.org',
+            process_title     => \&_process_title,
             my_acronym        => sub {
                 my $args = shift;
 

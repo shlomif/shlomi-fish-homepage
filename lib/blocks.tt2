@@ -212,7 +212,7 @@ publicly linked to. Please send comments to
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]">
 <head>
-<title>[% title %]</title>
+<title>[% process_title(title=title) %]</title>
 [% IF xhtml1 %]
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 [% ELSE %]

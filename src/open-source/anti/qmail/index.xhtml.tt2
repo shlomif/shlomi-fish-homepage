@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<div class="note">
+[% WRAPPER note  %]
 <h2 id="note">Note</h2>
 
 <p>
@@ -13,10 +13,10 @@ it was announced that the <a href="http://lwn.net/Articles/260481/">original
 qmail package has been released into the public domain</a>.
 </p>
 
-</div>
+[%- END -%]
 
 <p>
-<b>Last Updated:</b> 14-December-2007
+<b>Last Updated:</b> 21-June-2020
 </p>
 
 <p>
@@ -137,17 +137,27 @@ to Linux-IL about qmail and mx records</a> - “we flush qmail’s DNS cache dai
 because we found it wasn’t respecting TTL”.
 </li>
 
+<li>
+<a href="https://lwn.net/Articles/820969/">"A remote code execution vulnerability in qmail [LWN.net]"</a>
+( 19-May-2020 ) - a vulnerability that was originally published in 2005 and was
+not fixed is exploitable now on 64-bit systems.
+</li>
+
 </ul>
 
 <h2>Discussions of this Page</h2>
 
 <ul>
+
 <li>
 <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg42279.html">Linux-IL
-mailing list</a></li>
+mailing list</a>
+</li>
+
 <li>
 <a href="http://zgp.org/pipermail/linux-elitists/2005-November/011333.html">Linux-elitists</a>
 </li>
+
 </ul>
 
 [% END %]

@@ -51,7 +51,7 @@ open my $out, ">", $out_fn
     or die "Bar!";
 print {$out} $buffer;
 close($out);
-my $time  = 120 + ( stat($in_fn) )[9];
+my $time  = 12 + ( stat($in_fn) )[9];
 my $time2 = time();
 if ( $time2 < $time )
 {

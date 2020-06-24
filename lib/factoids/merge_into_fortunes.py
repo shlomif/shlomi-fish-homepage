@@ -14,6 +14,7 @@ into src/humour/fortunes/shlomif-factoids.xml .
 DRY - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 """
 
+import os
 import re
 from collections import defaultdict
 from copy import deepcopy
@@ -110,6 +111,8 @@ class FortunesMerger:
         with open(out_fn, "wb") as f:
             f.write(
                 etree.tostring(self.target_root, pretty_print=True))
+        t = os.stat(self.input_fn).st_mtime + 12
+        os.utime(out_fn, (t, t))
 
 
 def main():

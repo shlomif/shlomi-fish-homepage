@@ -989,7 +989,7 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	bn='$(patsubst $(SRC_MODS_DIR)/%,%,$<)'; \
-	(cd $(SRC_MODS_DIR) && zip -9 "$$bn.zip" "$$bn" ; ) ;  \
+	(cd $(SRC_MODS_DIR) && TZ=UTC zip -o -X -9 "$$bn.zip" "$$bn" ; ) ;  \
 	mv -f "$(SRC_MODS_DIR)/$$bn.zip" $@
 
 TECH_BLOG_DIR := lib/repos/shlomif-tech-diary

@@ -13,3 +13,13 @@ my_system(
     'gmake -f lib/make/factoids.mak'
 );
 my_system( [qw#gmake -s -j16 -C src/humour/fortunes dats#], 'gmake -C' );
+
+foreach my $dat ( glob("src/humour/fortunes/*.dat") )
+{
+    my $orig = $dat =~ s/\.dat\z//r;
+    my $time = ( ( stat $orig ) )[9] + 1;
+    utime( $time, $time, $dat );
+}
+{
+    # body...
+}

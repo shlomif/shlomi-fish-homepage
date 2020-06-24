@@ -49,7 +49,7 @@ distdir: $(DIST_DIR)
 
 $(DIST_DIR): $(PACKAGE_DEPS)
 	mkdir $(DIST_DIR)
-	cp $(FILES) $(DATS) $(EXTRA_FILES) $(DIST_DIR)
+	rsync -a $(FILES) $(DATS) $(EXTRA_FILES) $(DIST_DIR)/
 
 $(PACKAGE_BASE): $(PACKAGE_DEPS)
 	if test -e $@ ; then \
@@ -57,11 +57,9 @@ $(PACKAGE_BASE): $(PACKAGE_DEPS)
 		exit -1 ;\
 	fi
 	@make distdir
-	tar -czvf $@ $(DIST_DIR)
+	touch -t 202006241200.00 $(DIST_DIR)
+	tar --sort=name -cavf $@ $(DIST_DIR)
 	rm -fr $(DIST_DIR)
-
-upload: dist
-	rsync -r -v --progress $(DATS) $(FILES) $(PACKAGE_BASE) "$${HOMEPAGE_SSH_PATH}/Vipe/humour/fortunes/"
 
 print_package_base:
 	@echo $(PACKAGE_BASE)

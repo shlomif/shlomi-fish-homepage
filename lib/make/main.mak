@@ -988,8 +988,7 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 	xz -9 --extreme < $< > $@
 
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
-	p="$$PWD"; \
-	(cd $(SRC_MODS_DIR) && TZ=UTC zip -o -X -9 "$$p/$@" "$(notdir $<)" ; )
+	TZ=UTC zip -o -X -9 -j "$@" "$<"
 
 TECH_BLOG_DIR := lib/repos/shlomif-tech-diary
 TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl

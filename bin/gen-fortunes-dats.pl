@@ -20,6 +20,3 @@ foreach my $dat ( glob("src/humour/fortunes/*.dat") )
     my $time = ( ( stat $orig ) )[9] + 1;
     utime( $time, $time, $dat );
 }
-{
-    # body...
-}

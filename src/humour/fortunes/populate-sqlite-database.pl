@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use autodie;
 
 use File::Spec::Functions qw( catpath splitpath rel2abs );
 
@@ -21,7 +22,13 @@ my $full_db_path = "$script_dir/$db_base_name";
 
 # To reset the database.
 # May not be a good idea in the future.
-unlink( $full_db_path, "$full_db_path-journal" );
+foreach my $fn ( $full_db_path, "$full_db_path-journal" )
+{
+    if ( -e $fn )
+    {
+        unlink($fn);
+    }
+}
 
 my $dbh = DBI->connect( "dbi:SQLite:dbname=$full_db_path",
     "", "", { RaiseError => 1 } );
@@ -129,3 +136,13 @@ $insert_sth->finish;
 $collection_query_id_sth->finish;
 
 $dbh->disconnect;
+
+sub _reproducible_builds
+{
+    open my $fh, '+<:raw', $full_db_path;
+    seek( $fh, 99, 0 );
+    print {$fh} chr( oct('302') );
+    close $fh;
+    return;
+}
+_reproducible_builds();

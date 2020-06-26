@@ -10,6 +10,8 @@
  />
 
 <xsl:param name="fortune.id"></xsl:param>
+<xsl:param name="filter-facts-list.id"></xsl:param>
+<xsl:param name="filter.lang">en-US</xsl:param>
 
 <!-- The purpose of this function is to recursively copy elements without a
 namespace-->
@@ -32,9 +34,6 @@ namespace-->
         <head>
             <title>Fortunes</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <style type="text/css">
-                td { vertical-align: top; }
-            </style>
         </head>
         <body>
             <xsl:choose>
@@ -47,6 +46,58 @@ namespace-->
             </xsl:choose>
         </body>
     </html>
+</xsl:template>
+
+<xsl:template match="/facts">
+    <html>
+        <xsl:attribute name="xml:lang">
+            <xsl:value-of select="$filter.lang" />
+        </xsl:attribute>
+        <head>
+            <title>Facts</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        </head>
+        <body>
+            <xsl:choose>
+                <xsl:when test="$fortune.id">
+                    <xsl:apply-templates select="list/*[(self::f or self::fact) and @id=$fortune.id]" />
+                </xsl:when>
+                <xsl:when test="$filter-facts-list.id">
+                    <xsl:apply-templates select="list[@xml:id=$filter-facts-list.id]" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="list" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </body>
+    </html>
+</xsl:template>
+
+<xsl:template match="/facts/list">
+    <div class="list">
+        <xsl:attribute name="xml:lang">
+            <xsl:value-of select="$filter.lang" />
+        </xsl:attribute>
+        <h3 id="{@xml:id}"><xsl:value-of select="@title" /></h3>
+        <div class="main_facts_list">
+            <ul>
+                <xsl:apply-templates select="*[self::f or self::fact][*[self::l or self::lang]/@xml:lang = $filter.lang]" />
+            </ul>
+        </div>
+    </div>
+</xsl:template>
+
+<xsl:template match="/facts/list/*[self::f or self::fact]">
+    <li class="fact">
+        <xsl:apply-templates select="*[self::l or self::lang][@xml:lang = $filter.lang]"/>
+    </li>
+</xsl:template>
+
+<xsl:template match="/facts/list/*[self::f or self::fact]/*[self::l or self::lang]">
+    <blockquote>
+        <xsl:apply-templates select="body/*" mode="copy-html-ns"/>
+    </blockquote>
+    <xsl:call-template name="render_info" />
 </xsl:template>
 
 <xsl:template match="fortune">
@@ -230,8 +281,10 @@ namespace-->
 <xsl:template match="para" mode="screenplay">
     <p>
         <xsl:if test="local-name(..) = 'saying'">
-            <strong class="sayer"><xsl:value-of select="../@character" />:</strong>
-            <xsl:text> </xsl:text>
+            <strong class="sayer">
+                <xsl:value-of select="../@character" />
+                <xsl:text>: </xsl:text>
+            </strong>
         </xsl:if>
         <xsl:if test="local-name(..) = 'description' and ../child::para[position()=1] = .">
             <xsl:text>[</xsl:text>
@@ -256,6 +309,12 @@ namespace-->
     <strong class="bold">
         <xsl:apply-templates  mode="screenplay"/>
     </strong>
+</xsl:template>
+
+<xsl:template match="italics" mode="screenplay">
+    <em class="italics">
+        <xsl:apply-templates  mode="screenplay"/>
+    </em>
 </xsl:template>
 
 <xsl:template match="inlinedesc" mode="screenplay">

@@ -8,6 +8,8 @@ use Moo;
 use CGI         ();
 use MIME::Types ();
 
+use Path::Tiny qw/ path tempdir tempfile cwd /;
+
 sub serve
 {
     my ( $self, $args ) = (@_);
@@ -33,9 +35,9 @@ sub serve
         }
         else
         {
-            opendir D, $dir_to_serve . $path;
+            opendir my $dh, $dir_to_serve . $path;
             my @files = ( sort { $a cmp $b } grep { $_ ne "." } readdir(D) );
-            closedir(D);
+            closedir($dh);
             print $cgi->header();
             my $title        = "Listing for " . CGI::escapeHTML($path);
             my $files_string = join(
@@ -66,15 +68,8 @@ EOF
     }
 
     my $file_full_path = $dir_to_serve . $path;
-    my $text;
-    do
-    {
-        local $/;
-        open my $in, "<", $file_full_path;
-        $text = <$in>;
-        close($in);
-    };
-    my $mime_type = $mimetypes->mimeTypeOf($file_full_path);
+    my $text           = path($file_full_path)->slurp_raw;
+    my $mime_type      = $mimetypes->mimeTypeOf($file_full_path);
     if ( $mime_type eq "text/html" )
     {
         $text =~

@@ -52,7 +52,7 @@ sub serve
             );
             $files_string = @files ? "<ol>\n$files_string\n</ol>" : "";
             print <<"EOF";
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <title>$title</title>

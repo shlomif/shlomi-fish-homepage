@@ -340,12 +340,11 @@ Wiki</a></li>
 
 [%- IF xhtml1 %]
 <p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless">
-<img class="highlight bless" src="[% base_path %]images/xh11-btn.png" alt="Valid XHTML 1.1!"/></p>
+<img class="highlight bless" src="[% base_path %]images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
 [% ELSE %]
 <p><a href="http://validator.w3.org/check/referer" title=
-"Valid XHTML 1.0!" class="bless"><img class="highlight bless" src=
-"[% base_path %]images/valid-xhtml10.png" alt="Valid XHTML 1.0!" height="31"
-width="88" /></a></p>
+"Valid XHTML5!" class="bless"><img class="highlight bless" src=
+"[% base_path %]images/xh11-btn.png" alt="Valid XHTML5!"/></a></p>
 [% END -%]
 
 <p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"

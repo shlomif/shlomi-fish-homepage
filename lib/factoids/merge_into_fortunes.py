@@ -111,7 +111,7 @@ class FortunesMerger:
         with open(out_fn, "wb") as f:
             f.write(
                 etree.tostring(self.target_root, pretty_print=True))
-        t = os.stat(self.input_fn).st_mtime + 12
+        t = max([os.stat(fn).st_mtime for fn in [self.input_fn, __file__]]) + 1
         os.utime(out_fn, (t, t))
 
 

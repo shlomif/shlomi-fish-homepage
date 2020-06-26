@@ -369,8 +369,6 @@ $(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(
 tidy: all
 	$(PERL) bin/run-tidy.pl
 
-.PHONY: install_docbook4_pdfs install_docbook_xmls install_docbook4_rtfs install_docbook_individual_xhtmls install_docbook_css_dirs make-dirs +ulk-make-dirs presentations_targets
-
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 
@@ -907,12 +905,12 @@ all: $(MY_NAME_IS_RINDOLF_DEST)
 
 MY_RPF_SRC_DIR := lib/repos/my-real-person-fan-fiction
 
-$(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp $(MY_RPF_DEST_DIR)
+$(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
 
 OPENLY_BIPOLAR_SRC_DIR := lib/repos/why-openly-bipolar-people-should-not-be-medicated
 
-$(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp $(OPENLY_BIPOLAR_DEST_DIR)
+$(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
 
 $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
@@ -970,26 +968,6 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
-SRC_MODS_DIR := lib/assets/mods
-
-MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
-
-ZIP_MODS := $(addsuffix .zip,$(MODS))
-XZ_MODS := $(addsuffix .xz,$(MODS))
-
-POST_DEST_MODS_DIR := $(POST_DEST)/Iglu/shlomif/mods
-dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
-POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
-POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
-
-mod_files: $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
-
-$(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
-	xz -9 --extreme < $< > $@
-
-$(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
-	TZ=UTC zip -o -X -9 -j "$@" "$<"
-
 TECH_BLOG_DIR := lib/repos/shlomif-tech-diary
 TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl
 TECH_TIPS_INPUTS := $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
@@ -1008,13 +986,26 @@ all: $(SRC_CLEAN_STAMP)
 
 $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 
+SRC_MODS_DIR := lib/assets/mods
+
+MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
+
+ZIP_MODS := $(addsuffix .zip,$(MODS))
+XZ_MODS := $(addsuffix .xz,$(MODS))
+
+POST_DEST_MODS_DIR := $(POST_DEST)/Iglu/shlomif/mods
+dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
+POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
+POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
+POST_DEST_ALL_MODS := $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
+
 PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(PRE_DEST) --dest-dir=$(POST_DEST) --
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) mod_files
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
 	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 1 -P 4 strip-nondeterminism --type zip
@@ -1133,3 +1124,13 @@ $(CATB_COPY_POST): $(CATB_COPY)
 all: $(CATB_COPY_POST)
 
 copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
+
+mod_files: $(POST_DEST_ALL_MODS)
+
+$(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
+	xz -9 --extreme < $< > $@
+
+$(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
+	TZ=UTC zip -o -X -9 -j "$@" "$<"
+
+.PHONY: bulk-make-dirs install_docbook4_pdfs install_docbook4_rtfs install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

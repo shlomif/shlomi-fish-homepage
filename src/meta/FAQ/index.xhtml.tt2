@@ -2005,6 +2005,57 @@ fragments if you think they will improve matters.
 
 [%- END -%]
 
+[% WRAPPER faq_h3_section id = "site_markup_not_formatted"  title = "Why is the site’s markup not formatted nicely?"  %]
+
+<p>
+Some web developers told me they like to keep the markup they emit properly formatted
+and <a href="https://en.wikipedia.org/wiki/Indentation_style">indented</a>. I dislike
+doing that because:
+</p>
+
+<ol>
+
+<li>
+<p>
+It may harm <a href="./#site_loads_quickly">Its load time</a>.
+</p>
+</li>
+
+<li>
+<p>
+May provide users who look at it the illusion that it is the ultimate, editable/patch-able
+<a href="https://en.wikipedia.org/wiki/Source_code">source code</a> (and I already received
+a patch directly against the generated page of one of my site, which was not directly usable
+for me).
+</p>
+</li>
+
+<li>
+<p>
+People are unlikely to use my site's markup to learn web technologies. For this, I
+recommend <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#how-can-i-learn-web-development-htmletc">other resources</a>.
+</p>
+</li>
+
+<li>
+<p>
+The ultimate sources used to <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">generate</a>
+the markups are kept properly formatted, and are human-readable and editable, in public <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt">version-control repositories</a>, so it's
+not as if I keep my code non-indented.
+</p>
+</li>
+
+<li>
+<p>
+Keeping the served markup properly formatted may be harder than simply minifying it, and the proper
+formatting may vary according to taste.
+</p>
+</li>
+
+</ol>
+
+[%- END -%]
+
 [%- END -%]
 
 [% WRAPPER faq_h2_section id = "works_of_fiction"  title = "About my works of fiction."  %]

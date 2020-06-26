@@ -29,8 +29,6 @@ rebuild()
             time bash bin/install-npm-deps.sh
         fi
         time ./gen-helpers
-        # if ! gmake -j"$ncpus" docbook_targets
-        # if ! gmake -j"$ncpus" screenplay_epub_dests
         _gmake_target copy_images_target
         _gmake_target fastrender
         _gmake_target all

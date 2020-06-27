@@ -18,7 +18,7 @@ the cards to move.
 
 [% WRAPPER h2_section id = "download"  title = "Download"  %]
 
-[% SET ver = "1.4.0" %]
+[% SET ver = "1.8.0" %]
 [% SET arc = "black-hole-solver-${ver}.tar.xz" %]
 [% SET sqlite_dump_arc = "black_hole_solver.dump.xz" %]
 [% SET sqlite_dump_url = "http://fc-solve.shlomifish.org/downloads/fc-solve/$sqlite_dump_arc" %]
@@ -149,6 +149,16 @@ validate solutions as correct.
 [% PROCESS x11_licence name = "The Black Hole Solitaire Solver",  %]
 
 [% WRAPPER news_sect  %]
+
+[% WRAPPER h3_section id = "news_version_1_8_0"  title = "Version 1.8.0"  %]
+
+<p>
+Version 1.8.0 was released with some fixes and enhancements, and while
+featuring a new <a href="https://pypi.org/project/black-hole-solver/">wrapper of
+the C library for Python</a> which is also open source.
+</p>
+
+[%- END -%]
 
 [% WRAPPER h3_section id = "news_version_1_4_0"  title = "Version 1.4.0"  %]
 

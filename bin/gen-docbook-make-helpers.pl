@@ -44,7 +44,9 @@ $git_obj->sys_task(
 $git_obj->sys_task(
     {
         pivot_path => 'lib/ebookmaker/README.md',
-        cmd => ['cd lib && git clone https://github.com/shlomif/ebookmaker']
+        cmd        => [
+'cd lib && git clone -b silence-is-golden https://github.com/shlomif/ebookmaker'
+        ]
     }
 );
 

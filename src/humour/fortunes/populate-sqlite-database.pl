@@ -103,7 +103,7 @@ foreach my $basename (@file_bases)
 
     while ( defined( my $node = shift(@$nodes_list) ) )
     {
-        printf( "%-70s\r", "$basename $idx/$count ($global_idx)" );
+        # printf( "%-70s\r", "$basename $idx/$count ($global_idx)" );
 
         my $h3_node = $node->findnodes(q{descendant::h3[@id]})->[0];
 

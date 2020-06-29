@@ -4,6 +4,8 @@ rebuild()
     (
         set -x
         set -e
+        # It builds faster with no $DISPLAY
+        unset DISPLAY
         _gmake_target()
         {
             local tgt="$1"

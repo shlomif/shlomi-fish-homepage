@@ -17,21 +17,22 @@ my $git_obj = Shlomif::Homepage::Git->new;
 
 my $git_task = $git_obj->calc_git_task_cb;
 
-$git_obj->sys_task(
+$git_obj->git_in_checkout_task(
     {
-        pivot_path => 'lib/js/MathJax/README.md',
-        cmd        => [
-'cd lib/js && git clone git://github.com/mathjax/MathJax.git MathJax && cd MathJax && git checkout 2.7.5'
-        ]
+        pivot_bn     => "README.md",
+        repo         => "MathJax",
+        user         => "mathjax",
+        base_dirname => "lib/js",
+        branch       => '2.7.5',
     }
 );
 
-$git_obj->sys_task(
+$git_obj->git_in_checkout_task(
     {
-        pivot_path => 'lib/js/jquery-expander',
-        cmd        => [
-'cd lib/js && git clone https://github.com/kswedberg/jquery-expander'
-        ]
+        pivot_bn     => "readme.md",
+        repo         => "jquery-expander",
+        user         => "kswedberg",
+        base_dirname => "lib/js",
     }
 );
 
@@ -41,19 +42,22 @@ $git_obj->sys_task(
 # I switched to my fork for now.
 #
 # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
-$git_obj->sys_task(
+$git_obj->git_in_checkout_task(
     {
-        pivot_path => 'lib/ebookmaker/README.md',
-        cmd        => [
-'cd lib && git clone -b silence-is-golden https://github.com/shlomif/ebookmaker'
-        ]
+        pivot_bn     => "README.md",
+        repo         => "ebookmaker",
+        user         => "shlomif",
+        base_dirname => "lib",
+        branch       => 'silence-is-golden',
     }
 );
 
-$git_obj->sys_task(
+$git_obj->git_in_checkout_task(
     {
-        pivot_path => 'lib/c-begin/README.md',
-        cmd => ['cd lib && git clone https://github.com/shlomif/c-begin.git']
+        pivot_bn     => "README.md",
+        repo         => "c-begin",
+        user         => "shlomif",
+        base_dirname => "lib",
     }
 );
 

@@ -110,6 +110,30 @@ sub calc_git_task_cb
     return sub { return $self->git_task(@_); };
 }
 
+sub git_in_checkout_task
+{
+    my ( $self, $args ) = @_;
+
+    my $bn           = $args->{pivot_bn};
+    my $repo         = $args->{repo};
+    my $user         = $args->{user};
+    my $base_dirname = $args->{base_dirname};
+    my $branch       = $args->{branch} // '';
+    if ($branch)
+    {
+        $branch = "-b $branch";
+    }
+
+    return $self->sys_task(
+        {
+            pivot_path => "$base_dirname/$repo/$bn",
+            cmd        => [
+qq#cd $base_dirname && git clone $branch https://github.com/$user/$repo#,
+            ],
+        }
+    );
+}
+
 sub end
 {
     my $self = shift;

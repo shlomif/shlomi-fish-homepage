@@ -91,7 +91,6 @@ foreach my $basename (@file_bases)
         die "Cannot find for '$basename'!";
     }
 
-# my $tree = HTML::TreeBuilder::LibXML->new_from_file("./lib/fortunes/xhtmls/$basename.xhtml");
     my $tree = HTML::TreeBuilder::LibXML->new_from_file(
         "./lib/fortunes/xhtmls/$basename.compressed.xhtml");
 
@@ -115,11 +114,6 @@ foreach my $basename (@file_bases)
         }
 
         $insert_sth->execute( $collection_id, $id, $title, $node->as_XML() );
-
-        # Some debugging statement.
-        # print "\n\n\n[[[START ID=$id]]]\n";
-        # print $node->as_XML();
-        # print "\n[[[END]]]\n\n\n";
     }
 
 =begin removed
@@ -134,7 +128,6 @@ foreach my $basename (@file_bases)
 
 }
 
-# Commit the remaining items.
 $dbh->commit;
 
 $insert_sth->finish;

@@ -19,8 +19,10 @@ has obj => (
         my $hspell = Text::Hspell->new;
         return Shlomif::Spelling::Hebrew::SiteChecker->new(
             {
-                timestamp_cache_fn =>
-                    './Tests/data/cache/hebrew-spelling-timestamp.json',
+                timestamp_cache_fn => (
+                    ( $ENV{LATEMP_SPELL_CACHE_DIR} // './Tests/data/cache' )
+                    . '/hebrew-spelling-timestamp.json',
+                ),
                 whitelist_parser =>
                     scalar( Shlomif::Spelling::Hebrew::Whitelist->new() ),
                 check_word_cb => sub {

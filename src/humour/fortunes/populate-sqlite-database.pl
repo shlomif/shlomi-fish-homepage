@@ -16,7 +16,7 @@ use DBI                       ();
 
 use Shlomif::Homepage::FortuneCollections ();
 
-STDOUT->autoflush(1);
+# STDOUT->autoflush(1);
 
 my $full_db_path = "$script_dir/$db_base_name";
 
@@ -78,7 +78,7 @@ my $collection_query_id_sth =
 # Freenode's #perl by tm604 and jql , and to avoid these errors:
 # http://stackoverflow.com/questions/21054245/attempt-to-write-a-readonly-database-django-w-selinux-error
 
-my $global_idx = 0;
+# my $global_idx = 0;
 
 foreach my $basename (@file_bases)
 {
@@ -97,11 +97,10 @@ foreach my $basename (@file_bases)
 
     my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
 
-    my $count = @$nodes_list;
+    # my $count = @$nodes_list;
+    # my $idx = 0;
 
-    my $idx = 0;
-
-    while ( defined( my $node = shift(@$nodes_list) ) )
+    foreach my $node (@$nodes_list)
     {
         # printf( "%-70s\r", "$basename $idx/$count ($global_idx)" );
 
@@ -122,11 +121,17 @@ foreach my $basename (@file_bases)
         # print $node->as_XML();
         # print "\n[[[END]]]\n\n\n";
     }
+
+=begin removed
     continue
     {
-        ++$idx;
-        ++$global_idx;
+        # ++$idx;
+        # ++$global_idx;
     }
+=end removed
+
+=cut
+
 }
 
 # Commit the remaining items.

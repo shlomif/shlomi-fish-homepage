@@ -54,6 +54,15 @@ $git_obj->git_in_checkout_task(
 
 $git_obj->git_in_checkout_task(
     {
+        pivot_bn     => "hebrew-html-tutorial/hebrew-html-tutorial.xml.tt",
+        repo         => "html-tutorial",
+        user         => "shlomif",
+        base_dirname => "lib/presentations/docbook",
+    }
+);
+
+$git_obj->git_in_checkout_task(
+    {
         pivot_bn     => "README.md",
         repo         => "c-begin",
         user         => "shlomif",

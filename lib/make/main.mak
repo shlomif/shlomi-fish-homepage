@@ -760,14 +760,6 @@ $(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && gmake docbook
 
-$(HTML_TUT_HEB_TT):
-	cd lib/presentations/docbook && git clone https://github.com/shlomif/html-tutorial
-
-update_html_tut: update_html_tut_hg html_tutorial
-
-update_html_tut_hg:
-	cd $(HTML_TUT_BASE) && (git pull)
-
 include lib/make/deps.mak
 
 MATHJAX_DEST_DIR := $(POST_DEST)/js/MathJax

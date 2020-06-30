@@ -33,7 +33,7 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <title>Shlomi Fish’s FAQ - {title}</title>
 <meta charset="utf-8" />
 <meta name="description" content=
-"Shlomi Fish’s Frequently Asked Questions (FAQ) List" />
+"Shlomi Fish’s Frequently Asked Questions (FAQ) List - {title}" />
 <link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen" title=
 "Normal" />
 <link rel="stylesheet" href="{base_path}print.css" media="print" />

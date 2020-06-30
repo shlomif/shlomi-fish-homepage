@@ -19,6 +19,16 @@ WIDTH = 600
 
 
 class MyTests(unittest.TestCase):
+    def test_FAQ_desc(self):
+        input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
+        root = etree.HTML(open(input_fn, "rb").read())
+        descs = root.xpath(".//head/meta[@name='description']")
+        self.assertEqual(len(descs), 1)
+        desc_text = descs[0].get('content')
+        m = re.match(
+            "^.*?What can you say about your name", desc_text)
+        self.assertTrue(m)
+
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/image-macros/index.xhtml'
         root = etree.HTML(open(input_fn, "rb").read())

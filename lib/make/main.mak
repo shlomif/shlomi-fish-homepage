@@ -108,7 +108,8 @@ all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 SRC_SRC_FORTUNE_SHOW_SCRIPT := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
-SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/fortunes_show.py
+FORTUNE_SHOW_PY__BN := fortunes_show.py
+SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/$(FORTUNE_SHOW_PY__BN)
 SRC_SRC_BOTTLE := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
 POST_DEST_FORTUNE_SHOW_SCRIPT_TXT := $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
 
@@ -391,16 +392,21 @@ FORTUNES_XHTMLS__COMPRESSED := $(patsubst %.xhtml,%.compressed.xhtml,$(FORTUNES_
 FORTUNES_XHTMLS__FOR_INPUT_PORTIONS := $(patsubst %.xhtml,%.xhtml-for-input,$(FORTUNES_XHTMLS))
 FORTUNES_TT2S_HTMLS := $(patsubst %,$(PRE_DEST_FORTUNES_DIR)/%.html,$(FORTUNES_FILES_BASE))
 FORTUNES_TEXTS := $(patsubst %.xml,%,$(FORTUNES_XMLS_SRC))
-FORTUNES_ATOM_FEED := $(SRC_FORTUNES_DIR)/fortunes-shlomif-all.atom
-FORTUNES_RSS_FEED := $(SRC_FORTUNES_DIR)/fortunes-shlomif-all.rss
+FORTUNES__SHOW_PY__PRE_DEST := $(PRE_DEST_FORTUNES_DIR)/$(FORTUNE_SHOW_PY__BN)
+FORTUNES_ATOM_FEED := $(PRE_DEST_FORTUNES_DIR)/fortunes-shlomif-all.atom
+FORTUNES_RSS_FEED := $(PRE_DEST_FORTUNES_DIR)/fortunes-shlomif-all.rss
 FORTUNES_SQLITE_BASENAME := fortunes-shlomif-lookup.sqlite3
 POST_DEST_FORTUNES_SQLITE_DB := $(POST_DEST_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 FORTUNES_SQLITE_DB := $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 
-fortunes-compile-xmls: $(FORTUNES_SOURCE_TT2S) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB)
+FORTUNES_BUILT_TARGETS := $(FORTUNES_SOURCE_TT2S) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB) $(FORTUNES__SHOW_PY__PRE_DEST)
+fortunes-compile-xmls: $(FORTUNES_BUILT_TARGETS)
 
 FORTUNES_CONVERT_TO_XHTML_SCRIPT := $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
 FORTUNES_PREPARE_FOR_INPUT_SCRIPT := $(SRC_FORTUNES_DIR)/prepare-xhtml-for-input.pl
+
+$(FORTUNES__SHOW_PY__PRE_DEST): $(SRC_SRC_FORTUNE_SHOW_PY)
+	$(call chmod_copy)
 
 $(FORTUNES_SOURCE_TT2S): $(FORTUNES_LIST__DEPS)
 	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;'
@@ -1006,7 +1012,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS)
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
 	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 1 -P 4 strip-nondeterminism --type zip

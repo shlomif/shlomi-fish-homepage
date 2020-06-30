@@ -6,9 +6,10 @@ use warnings;
 use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
-use HTML::Latemp::Local::Paths ();
+use HTML::Latemp::Local::Paths::Test ();
 
-my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $obj       = HTML::Latemp::Local::Paths::Test->new();
+my $POST_DEST = $obj->t2_post_dest();
 
 {
     my $fh = path("$POST_DEST/humour/fortunes/show.cgi");
@@ -22,22 +23,18 @@ my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 {
     # TEST
-    cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes-shlomif-all.atom" ),
-        '>', 100, "size of .atom file" );
+    $obj->_check_size("humour/fortunes/fortunes-shlomif-all.atom");
 
     # TEST
-    cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes-shlomif-all.rss" ),
-        '>', 100, "size of .rss file" );
+    $obj->_check_size("humour/fortunes/fortunes-shlomif-all.rss");
 
     # TEST
     ok( scalar( !-e "$POST_DEST/humour/fortunes/fortunes-shlomif.spec" ),
         "existence of .spec file" );
 
     # TEST
-    cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes_show.py" ),
-        '>', 100, "size of .py file" );
+    $obj->_check_size("humour/fortunes/fortunes_show.py");
 
     # TEST
-    cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes-shlomif.epub" ),
-        '>', 1000, "size of .epub file" );
+    $obj->_check_size("humour/fortunes/fortunes-shlomif.epub");
 }

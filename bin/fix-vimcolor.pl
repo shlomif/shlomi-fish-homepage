@@ -6,7 +6,7 @@ use Path::Tiny qw/ path /;
 
 path(shift)->edit_utf8(
     sub {
-s#<html>#<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">#ms;
+        s#<html>#<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">#ms;
         s#\A#<?xml version="1.0" encoding="utf-8"?>#;
         s#(<!DOCTYPE html)[^>]+(>)#$1$2#;
     }

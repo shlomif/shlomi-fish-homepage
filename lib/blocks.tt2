@@ -1,6 +1,6 @@
 [% PROCESS "Inc/email.tt2" %]
 
-[% SET html_lang = "en-US" %]
+[% SET html_lang = "en" %]
 [% SET HEBREW_XML_LANG_SCRIPT = '' %]
 
 [% BLOCK webmaster_footer %]
@@ -329,7 +329,7 @@ It is easy to reach Shlomi using a large number of
 <li><a href="http://shlomifishswiki.branchable.com/">Shlomi Fish’s
 Wiki</a></li>
 </ul>
-<p><a href="https://www.mozilla.org/en-US/firefox/new/" class=
+<p><a href="https://www.mozilla.org/firefox/new/" class=
 "bless"><img class="bless" alt="Get Firefox!" title=
 "Get Firefox! A safer, faster, better web-browser." src=
 "[% base_path %]images/get-firefox.png" /></a></p>

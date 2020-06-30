@@ -76,7 +76,7 @@ sub _wrap_error_html
     print <<"ERROR_HTML";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>$title</title>
 <meta charset="utf-8"/>
@@ -186,7 +186,7 @@ sub _display_fortune_from_data
     print <<"FORTUNE";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>$title_esc</title>
 <link rel="stylesheet" href="$base_dir/fort_total.css" media="screen" />

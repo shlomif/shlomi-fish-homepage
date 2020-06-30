@@ -19,7 +19,7 @@ my $out = path("source-files-list.html");
 $out->spew_utf8(<<"EOF");
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>Shlomi Fish's Fortunes' Files List</title>
 <meta charset="utf-8" />

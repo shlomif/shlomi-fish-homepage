@@ -28,7 +28,7 @@ namespace-->
 </xsl:template>
 
 <xsl:template match="/collection">
-    <ul xml:lang="en-US">
+    <ul xml:lang="en">
         <xsl:apply-templates select="list/fortune" />
     </ul>
 </xsl:template>

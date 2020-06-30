@@ -36,7 +36,7 @@ def _emit_error(title, body):
     abort(404,
           '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>%(title)s</title>
 <meta charset="utf-8" />
@@ -117,7 +117,7 @@ def _display_fortune_from_data(str_id, html_text, html_title,
     return template(
                     '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>{{title}}</title>
 <link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />

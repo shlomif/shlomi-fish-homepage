@@ -43,7 +43,7 @@ if ( my ($id) = $path =~ m{\A/([^/]+)\z} )
         print $HEADER, <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>Unknown shlom.in URL</title>
 <meta charset="utf-8"/>
@@ -67,7 +67,7 @@ else
     print $HEADER, <<'EOF';
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>Welcome to http://shlom.in/</title>
 <meta charset="utf-8"/>

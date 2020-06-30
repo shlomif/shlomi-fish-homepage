@@ -23,18 +23,18 @@ my $POST_DEST = $obj->t2_post_dest();
 
 {
     # TEST
-    $obj->_check_size("humour/fortunes/fortunes-shlomif-all.atom");
+    $obj->_fortunes_check_size("fortunes-shlomif-all.atom");
 
     # TEST
-    $obj->_check_size("humour/fortunes/fortunes-shlomif-all.rss");
+    $obj->_fortunes_check_size("fortunes-shlomif-all.rss");
 
     # TEST
     ok( scalar( !-e "$POST_DEST/humour/fortunes/fortunes-shlomif.spec" ),
         "existence of .spec file" );
 
     # TEST
-    $obj->_check_size("humour/fortunes/fortunes_show.py");
+    $obj->_fortunes_check_size("fortunes_show.py");
 
     # TEST
-    $obj->_check_size("humour/fortunes/fortunes-shlomif.epub");
+    $obj->_fortunes_check_size("fortunes-shlomif.epub");
 }

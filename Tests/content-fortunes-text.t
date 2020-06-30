@@ -25,7 +25,7 @@ my $POST_DEST = $obj->t2_post_dest();
         ".dat file exists." );
 
     # TEST
-    $obj->_check_size("humour/fortunes/fortunes-shlomif-lookup.sqlite3");
+    $obj->_fortunes_check_size("fortunes-shlomif-lookup.sqlite3");
 
     # TEST
     ok(

@@ -18,4 +18,12 @@ sub _check_size
         ">", $size, "$path has size greater than $size" );
 }
 
+sub _fortunes_check_size
+{
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    my $self = shift;
+    my $bn   = shift;
+    return $self->_check_size( "humour/fortunes/$bn", @_ );
+}
+
 1;

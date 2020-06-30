@@ -11,7 +11,7 @@ MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-target copy_fortunes
+all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortunes
 
 non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target graham_func_pres_targets hhgg_convert lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install svg_nav_images
 
@@ -399,7 +399,12 @@ FORTUNES_SQLITE_BASENAME := fortunes-shlomif-lookup.sqlite3
 POST_DEST_FORTUNES_SQLITE_DB := $(POST_DEST_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 FORTUNES_SQLITE_DB := $(SRC_FORTUNES_DIR)/$(FORTUNES_SQLITE_BASENAME)
 
+FORTS_EPUB_BASENAME := fortunes-shlomif.epub
+FORTS_EPUB_DEST := $(PRE_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
+FORTS_EPUB_SRC := $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
+
 FORTUNES_BUILT_TARGETS := $(FORTUNES_SOURCE_TT2S) $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_TEXTS) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED) $(FORTUNES_SQLITE_DB) $(FORTUNES__SHOW_PY__PRE_DEST)
+
 fortunes-compile-xmls: $(FORTUNES_BUILT_TARGETS)
 
 FORTUNES_CONVERT_TO_XHTML_SCRIPT := $(SRC_FORTUNES_DIR)/convert-to-xhtml.pl
@@ -449,27 +454,24 @@ $(SRC_FORTUNES_ALL__TEMP__HTML): $(SRC_FORTUNES_ALL_TT2) $(DOCS_COMMON_DEPS) $(F
 
 $(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
-FORTS_EPUB_COVER := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.png
+FORTS_EPUB_COVER_PNG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.png
 FORTS_EPUB_COVER_JPG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
-FORTS_EPUB_SVG   := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
+FORTS_EPUB_COVER_SVG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
+FORTS_EPUB_ALL_COVERS := $(FORTS_EPUB_COVER_JPG) $(FORTS_EPUB_COVER_PNG) $(FORTS_EPUB_COVER_SVG)
 
-FORTS_EPUB_BASENAME := fortunes-shlomif.epub
-FORTS_EPUB_DEST := $(PRE_DEST_FORTUNES_DIR)/$(FORTS_EPUB_BASENAME)
-FORTS_EPUB_SRC := $(FORTUNES_XHTMLS_DIR)/$(FORTS_EPUB_BASENAME)
-
-$(FORTS_EPUB_SRC): fortunes-target
-	cd $(FORTUNES_XHTMLS_DIR) && ebookmaker --output $(FORTS_EPUB_BASENAME) book.json
+$(FORTS_EPUB_SRC): $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS_TOCS) $(FORTS_EPUB_ALL_COVERS)
+	export EBOOKMAKER="$$PWD/lib/ebookmaker/ebookmaker"; cd $(FORTUNES_XHTMLS_DIR) && $${EBOOKMAKER} --output $(FORTS_EPUB_BASENAME) book.json && touch $(FORTS_EPUB_BASENAME)
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 
-fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_COVER) $(FORTS_EPUB_COVER_JPG)
+fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_ALL_COVERS)
 
 INKSCAPE_WRAPPER = ./bin/inkscape-wrapper
 
-$(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER)
+$(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER_PNG)
 	gm convert $< $@
 
-$(FORTS_EPUB_COVER): $(FORTS_EPUB_SVG)
+$(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
 	optipng "$@"
 
@@ -1012,7 +1014,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS)
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
 	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 1 -P 4 strip-nondeterminism --type zip
@@ -1141,4 +1143,4 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	TZ=UTC zip -o -X -9 -j "$@" "$<"
 
-.PHONY: bulk-make-dirs install_docbook4_pdfs install_docbook4_rtfs install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets
+.PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook4_pdfs install_docbook4_rtfs install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

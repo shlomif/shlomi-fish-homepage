@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 6;
+use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -36,4 +36,8 @@ my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
     # TEST
     cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes_show.py" ),
         '>', 100, "size of .py file" );
+
+    # TEST
+    cmp_ok( scalar( -s "$POST_DEST/humour/fortunes/fortunes-shlomif.epub" ),
+        '>', 1000, "size of .epub file" );
 }

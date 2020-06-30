@@ -28,7 +28,7 @@ ns = {
 # <script src="{base_path}js/main_all.js"></script>
 SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>Shlomi Fish’s FAQ - {title}</title>
 <meta charset="utf-8" />

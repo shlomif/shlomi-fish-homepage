@@ -92,8 +92,9 @@ sub generate
             _calc_screenplay_doc_makefile_lines( $screenplay_vcs_base_dir, $_ )
         } @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
     );
-    my $epub_dests_varname = 'SCREENPLAY_XML__EPUBS_DESTS';
-    my $epub_dests         = <<'EOF';
+    my $epub_dests_varname        = 'SCREENPLAY_XML__EPUBS_DESTS';
+    my $raw_htmls__dests__varname = 'SCREENPLAY_XML__RAW_HTMLS__DESTS';
+    my $epub_dests                = <<'EOF';
 $(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie.epub \
@@ -112,7 +113,8 @@ EOF
 
     my @_files = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
     my @_htmls_files =
-        map { my $x = $_; $x =~ s/\.epub\z/\.raw.html/; $x } @_files;
+        map { s/\.epub\z/\.raw.html/r =~ s#\A\$\(POST_DEST\)/#\$(PRE_DEST)/#r }
+        @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
     path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
@@ -143,7 +145,7 @@ EOF
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n\n",
-        "$epub_dests_varname := \\\n$epub_dests$_htmls_dests\n\n",
+"$epub_dests_varname := \\\n$epub_dests\n\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n\n",
         (
             map {
                       "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"

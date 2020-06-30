@@ -24,6 +24,8 @@ ns = {
     "xml": XML_NS,
 }
 
+# Removed:
+# <script src="{base_path}js/main_all.js"></script>
 SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
@@ -38,7 +40,6 @@ SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <link rel="shortcut icon" href="{base_path}favicon.ico" type=
 "image/x-icon" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<script src="{base_path}js/main_all.js"></script>
 </head>
 <body class="faq_indiv_entry">
 <div class="header" id="header">

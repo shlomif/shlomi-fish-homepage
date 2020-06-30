@@ -999,7 +999,8 @@ POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
 POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
 POST_DEST_ALL_MODS := $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 
-PROC_INCLUDES_COMMON := APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(PRE_DEST) --dest-dir=$(POST_DEST) --
+PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
+PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
@@ -1021,6 +1022,7 @@ FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
 
 $(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM)
 	python3 $(FAQ_SECTS__PROGRAM)
+	(cd $(FAQ_SECTS__DIR) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(FAQ_SECTS__DIR),$(FAQ_SECTS__DIR))
 
 $(FAQ_SECTS__SRC): $(SRC_CLEAN_STAMP)
 

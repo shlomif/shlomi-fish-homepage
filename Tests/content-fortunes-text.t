@@ -5,9 +5,10 @@ use warnings;
 use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
-use HTML::Latemp::Local::Paths ();
+use HTML::Latemp::Local::Paths::Test ();
 
-my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
+my $obj       = HTML::Latemp::Local::Paths::Test->new();
+my $POST_DEST = $obj->t2_post_dest();
 
 {
     my $content = path("$POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
@@ -24,13 +25,7 @@ my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
         ".dat file exists." );
 
     # TEST
-    cmp_ok(
-        scalar(
-            -s "$POST_DEST/humour/fortunes/fortunes-shlomif-lookup.sqlite3"
-        ),
-        ">", 1024,
-        "sqlite database is there"
-    );
+    $obj->_check_size("humour/fortunes/fortunes-shlomif-lookup.sqlite3");
 
     # TEST
     ok(

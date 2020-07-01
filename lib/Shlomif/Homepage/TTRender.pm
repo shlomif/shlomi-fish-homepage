@@ -163,7 +163,7 @@ my $template = Template->new(
     }
 );
 
-my @DEST       = ( '.', "dest", "pre-incs", $LATEMP_SERVER, );
+my $DEST       = path( '.', "dest", "pre-incs", $LATEMP_SERVER, ) . '';
 my $INC_PREF   = qq#\n(((((include "cache/combined/$LATEMP_SERVER#;
 my $INC_SUFFIX = qq#")))))\n#;
 
@@ -218,7 +218,7 @@ sub proc
     }
     else
     {
-        path( @DEST, @fn, )->spew_utf8($html);
+        path( $DEST, @fn, )->spew_utf8($html);
     }
 }
 

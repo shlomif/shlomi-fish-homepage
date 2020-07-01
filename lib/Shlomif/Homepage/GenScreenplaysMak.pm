@@ -10,7 +10,7 @@ use YAML::XS ();
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $screenplay_vcs_base_dir, $record ) = @_;
+    my ( $_epub_map, $screenplay_vcs_base_dir, $record ) = @_;
 
     my $base        = $record->{base};
     my $github_repo = $record->{github_repo};
@@ -50,7 +50,7 @@ sub _calc_screenplay_doc_makefile_lines
 "$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n\n",
 "$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n\n",
             "$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
-"$epub_dest_varname := \$(SCREENPLAY_XML_EPUB_DIR)/${doc_base}.epub\n\n",
+            "$epub_dest_varname := @{[$_epub_map->{$doc_base.'.epub'}]}\n\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" ),
@@ -87,11 +87,6 @@ sub generate
 
     my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
 
-    my @records = (
-        map {
-            _calc_screenplay_doc_makefile_lines( $screenplay_vcs_base_dir, $_ )
-        } @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
-    );
     my $epub_dests_varname        = 'SCREENPLAY_XML__EPUBS_DESTS';
     my $raw_htmls__dests__varname = 'SCREENPLAY_XML__RAW_HTMLS__DESTS';
     my $epub_dests                = <<'EOF';
@@ -111,12 +106,19 @@ $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
 $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
 EOF
 
-    my @_files = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
+    my @_files    = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
+    my $_epub_map = +{ map { ( split m#/#, $_, -1 )[-1] => $_ } @_files };
     my @_htmls_files =
         map { s/\.epub\z/\.raw.html/r =~ s#\A\$\(POST_DEST\)/#\$(PRE_DEST)/#r }
         @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
+    my @records = (
+        map {
+            _calc_screenplay_doc_makefile_lines( $_epub_map,
+                $screenplay_vcs_base_dir, $_ )
+        } @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
+    );
     path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
         ( map { $_->{copy_screenplay_mak} } @records ),
         (
@@ -146,13 +148,6 @@ EOF
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n\n",
 "$epub_dests_varname := \\\n$epub_dests\n\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n\n",
-        (
-            map {
-                      "$_: \$(SCREENPLAY_XML_EPUB_DIR)/"
-                    . [ split m#/#, $_ ]->[-1]
-                    . "\n\t\$(call COPY)\n\n"
-            } @_files
-        ),
         (
             map {
                 my $x = [ split m#/#, $_ ]->[-1];

@@ -44,20 +44,21 @@ sub _calc_screenplay_doc_makefile_lines
         my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
 
         push @epubs, $epub_dest_varname;
+        my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' };
 
-        push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n\n",
-"$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n\n",
-"$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n\n",
-"$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n\n",
-            "$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n\n",
-            "$epub_dest_varname := @{[$_epub_map->{$doc_base.'.epub'}]}\n\n",
+        push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
+"$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
+"$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n",
+            "$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n",
+            "$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n",
+            "$epub_dest_varname := $epub_dest_path\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" ),
 
             <<"EOF",
 \$($epub_dest_varname): \$($dest_xhtmlname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; orig_dir="\$\$PWD"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
+\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
         if ( defined($suburl) )
@@ -73,7 +74,8 @@ qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
     return +{
         copy_screenplay_mak          => $copy_screenplay_mak,
         copy_screenplay_mak__targets => \@copy_screenplay_mak__targets,
-        rec                          => $record,
+        docs                         => $docs,
+        github_repo                  => $github_repo,
         lines                        => \@ret,
         epubs                        => \@epubs,
     };
@@ -143,11 +145,11 @@ EOF
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
-        ( map { "\t$_->{base} \\\n" } map { @{ $_->{rec}->{docs} } } @records ),
+        ( map { "\t$_->{base} \\\n" } map { @{ $_->{docs} } } @records ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
-        "\n\n",
-"$epub_dests_varname := \\\n$epub_dests\n\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n\n",
+        "\n",
+"$epub_dests_varname := \\\n$epub_dests\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n",
         (
             map {
                 my $x = [ split m#/#, $_ ]->[-1];
@@ -173,7 +175,7 @@ EOF
 
     foreach my $github_repo (@records)
     {
-        $clone_cb->( $github_repo->{rec}->{github_repo} );
+        $clone_cb->( $github_repo->{github_repo} );
     }
     $clone_cb->('screenplays-common');
 

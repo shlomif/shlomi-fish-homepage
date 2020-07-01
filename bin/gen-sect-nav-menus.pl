@@ -54,8 +54,8 @@ foreach my $host (qw(t2 vipe))
                 my $filename = "/$url";
 
                 # urlpath.
-                my $urlp = "$hostp/" . ( $url =~ s#(\A|/)$#${1}$suf#r ) . '/';
-                path($urlp)->mkpath;
+                my $urlp = path( "$hostp/" . ( $url =~ s#(\A|/)$#${1}$suf#r ) );
+                $urlp->mkpath;
 
                 # print "start filename=$filename\n";
 
@@ -98,8 +98,7 @@ foreach my $host (qw(t2 vipe))
                 my $out = sub {
                     my ( $id, $ref ) = @_;
 
-                    return write_on_change( scalar( path( $urlp . $id ) ),
-                        $ref );
+                    return write_on_change( $urlp->child($id), $ref );
                 };
 
                 $out->( 'sect-navmenu', \( $section_nav_menu->get_html ), );

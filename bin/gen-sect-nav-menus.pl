@@ -48,13 +48,13 @@ foreach my $host (qw(t2 vipe))
             batch_size   => 16,
             process_item => sub {
                 my $proto_url = shift;
-                my $url       = $proto_url =~ s#(\A|/)(index\.x?html)\z#$1#r;
+                my $url       = $proto_url =~ s#(?:\A|/)\K(index\.x?html)\z##r;
 
-                my $suf      = $2;
+                my $suf      = $1;
                 my $filename = "/$url";
 
                 # urlpath.
-                my $urlp = path( "$hostp/" . ( $url =~ s#(\A|/)$#${1}$suf#r ) );
+                my $urlp = path( "$hostp/" . ( $url =~ s#(?:\A|/)\K$#$suf#r ) );
                 $urlp->mkpath;
 
                 # print "start filename=$filename\n";
@@ -152,7 +152,7 @@ foreach my $host (qw(t2 vipe))
                                     '',
                                     $shlomif_nav_links_renderer->get_total_html(
                                         @params)
-                                ) =~ s%(<img src=")\./%$1%gr
+                                ) =~ s%<img src="\K\./%%gr
                             );
                         },
                     );

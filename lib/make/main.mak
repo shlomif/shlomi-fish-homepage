@@ -684,19 +684,19 @@ SPORK_LECTURES_DESTS := $(addprefix $(PRE_DEST)/lecture/,$(SPORK_LECTURES_BASENA
 SPORK_LECTURES_DEST_STARTS := $(addsuffix $(SLIDES_start),$(SPORK_LECTURES_DESTS))
 SPORK_LECTURES_BASE_STARTS := $(patsubst %,$(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start),$(SPORK_LECTURES_BASENAMES))
 
-SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run := lib/presentations/spork/Perl/Lightning/Test-Run/slides/images/screenshot02.png \
-	lib/presentations/spork/Perl/Lightning/Test-Run/slides/images/Test-Run-Plugin-ColorSummary.png
+SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run := $(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Test-Run/slides/images/screenshot02.png \
+	$(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Test-Run/slides/images/Test-Run-Plugin-ColorSummary.png
 
-SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many := lib/presentations/spork/Perl/Lightning/Too-Many-Ways/slides/images/coachella-crowd.jpg \
-	lib/presentations/spork/Perl/Lightning/Too-Many-Ways/slides/images/bono.jpg \
-	lib/presentations/spork/Perl/Lightning/Too-Many-Ways/slides/images/TestBeforeYouTouchCARD.jpg
+SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many := $(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Too-Many-Ways/slides/images/coachella-crowd.jpg \
+	$(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Too-Many-Ways/slides/images/bono.jpg \
+	$(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Too-Many-Ways/slides/images/TestBeforeYouTouchCARD.jpg
 
 SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES := $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many) $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run)
 
-$(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): lib/presentations/spork/Perl/Lightning/Test-Run/slides/images/%: src/lecture/images/%
+$(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Test-Run/slides/images/%: src/lecture/images/%
 	$(call COPY)
 
-$(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): lib/presentations/spork/Perl/Lightning/Too-Many-Ways/slides/images/%: src/images/presentations/%
+$(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Too-Many-Ways/slides/images/%: src/images/presentations/%
 	$(call COPY)
 
 graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)

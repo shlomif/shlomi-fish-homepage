@@ -48,13 +48,12 @@ foreach my $host (qw(t2 vipe))
             batch_size   => 16,
             process_item => sub {
                 my $proto_url = shift;
-                my $url       = $proto_url =~ s#(?:\A|/)\K(index\.x?html)\z##r;
+                my $url       = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
 
-                my $suf      = $1;
                 my $filename = "/$url";
 
                 # urlpath.
-                my $urlp = path( "$hostp/" . ( $url =~ s#(?:\A|/)\K$#$suf#r ) );
+                my $urlp = path("$hostp/$proto_url");
                 $urlp->mkpath;
 
                 # print "start filename=$filename\n";
@@ -66,12 +65,12 @@ foreach my $host (qw(t2 vipe))
                     'ul_classes'     => [],
                     'no_leading_dot' => 1,
                 );
-
+                my $ROOT    = get_root($url);
                 my $results = NavSectMenuRender->init_section_nav_menu(
                     {
                         filename => $filename,
                         host     => $host,
-                        'ROOT'   => get_root($url),
+                        ROOT     => $ROOT,
                     }
                 );
 
@@ -84,7 +83,7 @@ foreach my $host (qw(t2 vipe))
                     {
                         filename => $url,
                         host     => $host,
-                        ROOT     => get_root($url),
+                        ROOT     => $ROOT,
                     }
                 );
 

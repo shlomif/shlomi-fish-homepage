@@ -177,7 +177,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
             +{
                 'id'         => $dir,
                 'source_dir' => $dir,
-                'dest_dir'   => "\$(ALL_DEST_BASE)/$dest_dir",
+                'dest_dir'   => "dest/pre-incs/$dest_dir",
             }
         } (qw(common src))
     ],

@@ -5,8 +5,6 @@ POST_DEST := dest/post-incs/t2
 SRC_POST_DEST := $(POST_DEST)
 T2_POST_DEST := $(POST_DEST)
 
-ALL_DEST_BASE := dest/pre-incs
-
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
 all: all_deps latemp_targets non_latemp_targets

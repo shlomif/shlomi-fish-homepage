@@ -45,5 +45,4 @@ my @cmd_line = (
     "--author"      => "shlomif\@cpan.org (Shlomi Fish)",
 );
 
-print join( " ", map { m{ } ? qq{"$_"} : $_ } @cmd_line ), "\n";
-exit( system(@cmd_line) ? (-1) : 0 );
+system(@cmd_line) and die "Error in executing <<@cmd_line>>!";

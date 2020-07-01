@@ -13,7 +13,7 @@ use Path::Tiny qw/ path /;
     )->slurp_utf8;
 
     # TEST
-    is( $content, <<'EOF', 'right one' );
+    is( $content . "\n", <<'EOF', 'right one' );
 <a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Presentations I Wrote (Mostly Technical)">Lectures</a> → <a href="../" title="Presentations in the Series for Linux Beginners">Welcome to Linux</a> → <a href="./" title="Networking in Linux Explanation and Howto">Networking</a>
 EOF
 }

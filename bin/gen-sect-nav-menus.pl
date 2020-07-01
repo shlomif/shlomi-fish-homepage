@@ -29,17 +29,6 @@ sub get_root
 
 use File::Update qw/ write_on_change /;
 
-sub _out
-{
-    my ( $path, $text_cb ) = @_;
-
-    my $text_ref = $text_cb->();
-
-    write_on_change( scalar( path($path) ), $text_ref, );
-
-    return;
-}
-
 # At least temporarily disable Parallel::ForkManager because it causes
 # the main process to exit before all the work is done.
 my $hosts = MyNavData::Hosts::get_hosts();
@@ -107,74 +96,59 @@ foreach my $host (qw(t2 vipe))
                 my $nav_links_obj = $rendered_results->{nav_links_obj};
 
                 my $out = sub {
-                    my ( $id, $cb ) = @_;
+                    my ( $id, $ref ) = @_;
 
-                    return _out( $urlp . $id, $cb );
+                    return write_on_change( scalar( path( $urlp . $id ) ),
+                        $ref );
                 };
 
-                $out->(
-                    'sect-navmenu',
-                    sub {
-                        return \( $section_nav_menu->get_html );
-                    }
-                );
+                $out->( 'sect-navmenu', \( $section_nav_menu->get_html ), );
                 $out->(
                     'breadcrumbs-trail',
-                    sub {
-                        return \(
-                            NavDataRender
-                                ->get_breadcrumbs_trail_unconditionally(
-                                {
-                                    total_leading_path =>
-                                        $section_nav_menu->total_leading_path(
-                                        {
-                                            main_leading_path => $leading_path,
-                                        }
-                                        ),
-                                }
-                                )
-                        );
-                    }
+                    \(
+                        NavDataRender->get_breadcrumbs_trail_unconditionally(
+                            {
+                                total_leading_path =>
+                                    $section_nav_menu->total_leading_path(
+                                    {
+                                        main_leading_path => $leading_path,
+                                    }
+                                    ),
+                            }
+                        )
+                    ),
                 );
                 $out->(
                     'main_nav_menu_html',
-                    sub {
-                        return \(
-                            join( "\n", @{ $rendered_results->{html} } ) );
-                    }
+                    \( join( "\n", @{ $rendered_results->{html} } ) ),
                 );
                 $out->(
                     'html_head_nav_links',
-                    sub {
-                        return \(
-                            NavDataRender->get_html_head_nav_links(
-                                { nav_links_obj => $nav_links_obj }
-                            )
-                        );
-                    }
+                    \(
+                        NavDataRender->get_html_head_nav_links(
+                            { nav_links_obj => $nav_links_obj }
+                        )
+                    ),
                 );
 
                 $out->(
                     'page_url',
-                    sub {
-                        return \(
-                            escape_html( uri_escape( $host_base_url . $url ) )
-                        );
-                    }
+                    \( escape_html( uri_escape( $host_base_url . $url ) ) ),
                 );
 
                 foreach my $with_accesskey ( '', 1 )
                 {
                     $out->(
 "shlomif_nav_links_renderer-with_accesskey=$with_accesskey",
-                        sub {
+                        do
+                        {
                             my @params;
                             if ( $with_accesskey ne "" )
                             {
                                 push @params,
                                     ( 'with_accesskey' => $with_accesskey );
                             }
-                            return \(
+                            \(
                                 join(
                                     '',
                                     $shlomif_nav_links_renderer->get_total_html(
@@ -189,22 +163,18 @@ foreach my $host (qw(t2 vipe))
                 {
                     $out->(
                         'shlomif_main_expanded_nav_bar',
-                        sub {
-                            return \(
-                                join(
-                                    '',
-                                    map { "$_\n" } @{
-                                        $nav_results
-                                            ->{shlomif_main_expanded_nav_bar}
-                                            ->gen_site_map()
-                                    }
-                                )
-                            );
-                        },
+                        \(
+                            join(
+                                '',
+                                map { "$_\n" } @{
+                                    $nav_results
+                                        ->{shlomif_main_expanded_nav_bar}
+                                        ->gen_site_map()
+                                }
+                            )
+                        ),
                     );
                 }
-
-                # print "filename=$filename\n";
             }
         }
     );

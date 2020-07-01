@@ -1129,6 +1129,6 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 	xz -9 --extreme < $< > $@
 
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
-	TZ=UTC zip -o -X -9 -j "$@" "$<"
+	TZ=UTC zip -joqX9 "$@" "$<"
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook4_pdfs install_docbook4_rtfs install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

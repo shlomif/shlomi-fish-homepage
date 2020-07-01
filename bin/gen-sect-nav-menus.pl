@@ -35,10 +35,7 @@ sub _out
 
     my $text_ref = $text_cb->();
 
-    my $text = ( $$text_ref
-            . ( ( $$text_ref !~ /\n\z/ && $$text_ref =~ /\S/ ) ? "\n" : '' ) );
-
-    write_on_change( scalar( path($path) ), \$text, );
+    write_on_change( scalar( path($path) ), $text_ref, );
 
     return;
 }

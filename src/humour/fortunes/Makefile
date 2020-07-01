@@ -58,7 +58,7 @@ $(PACKAGE_BASE): $(PACKAGE_DEPS)
 	fi
 	@make distdir
 	touch -t 202006241200.00 $(DIST_DIR)
-	tar --sort=name -cavf $@ $(DIST_DIR)
+	tar --sort=name -caf $@ $(DIST_DIR)
 	rm -fr $(DIST_DIR)
 
 print_package_base:

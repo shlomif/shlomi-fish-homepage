@@ -37,19 +37,6 @@ my $software_tree_contents = {
                     title => "A Content Management System for Static HTML",
                 },
                 {
-                    text => "MikMod",
-                    url  => "open-source/projects/mikmod/",
-                    title =>
-                        "A library and player for playing music module files",
-                    subs => [
-                        {
-                            text  => "MikMod for Java",
-                            url   => "jmikmod/",
-                            title => "MOD Music Files Player for Java",
-                        },
-                    ],
-                },
-                {
                     text  => "Website META Language",
                     url   => "open-source/projects/website-meta-language/",
                     title => "A Preprocessor for HTML",
@@ -231,6 +218,19 @@ my $software_tree_contents = {
 "Patch to Enhance the Configuration Searching of the Linux Kernel",
                 },
                 {
+                    text => "MikMod",
+                    url  => "open-source/projects/mikmod/",
+                    title =>
+                        "A library and player for playing music module files",
+                    subs => [
+                        {
+                            text  => "MikMod for Java",
+                            url   => "jmikmod/",
+                            title => "MOD Music Files Player for Java",
+                        },
+                    ],
+                },
+                {
                     text => "Problem Sets and Competitive Programming Sites",
                     url  => "open-source/projects/problem-sets-and-cp/",
                     subs => [
@@ -262,6 +262,7 @@ my $software_tree_contents = {
 "The Personal Configuration of some of the Programs on my Computer",
                     subs => [
                         {
+                            skip => 1,
                             text => "Vim",
                             url  => "open-source/projects/conf/vim/",
                             title =>
@@ -326,7 +327,7 @@ my $software_tree_contents = {
                     url  => "open-source/resources/editors-and-IDEs/",
                     text => "Editors and IDEs",
                     title =>
-"Index of Editors and Integrated Development Environments",
+"Index of Text Editors and Integrated Development Environments",
                 },
                 {
                     url  => "open-source/resources/numerical-software/",
@@ -367,6 +368,7 @@ my $software_tree_contents = {
                     text => "How to Contribute to My Projects",
                 },
                 {
+                    skip => 1,
                     url  => "rindolf/",
                     text => "Rindolf - a Dialect of Perl based on Perl 5",
                 },

@@ -229,4 +229,5 @@ if ( my $Err = $@ )
 
     $src->copy("./bin/inkscape-wrapper")->chmod(0755);
 }
+exit if delete $ENV{LATEMP_STOP_GEN};
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );

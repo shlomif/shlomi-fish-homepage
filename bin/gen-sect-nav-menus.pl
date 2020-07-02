@@ -166,5 +166,6 @@ Parallel::ForkManager::Segmented->new->run(
         nproc => 4,
         batch_size   => 16,
         process_item => \&_process_item,
+        ( delete( $ENV{LATEMP_PROFILE} ) ? ( disable_fork => 1, ) : () ),
     }
 );

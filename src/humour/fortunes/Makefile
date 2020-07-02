@@ -32,7 +32,7 @@ XHTMLS := $(patsubst %.xml,%.xhtml,$(XMLS))
 all: dist test gen_htaccess
 
 $(DATS):: %.dat : %
-	PATH="$$PATH:/usr/sbin" strfile $<
+	PATH="$$PATH:/usr/sbin" strfile -s $<
 
 dats: $(DATS)
 

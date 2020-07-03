@@ -19,6 +19,7 @@
     set -e -x
     git clean -dfqx .
     (
+        unset DISPLAY
         LATEMP_STOP_GEN=1 ./gen-helpers
     )
     (

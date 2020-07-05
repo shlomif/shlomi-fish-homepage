@@ -2,9 +2,11 @@
 
 use strict;
 use warnings;
-use Test::More tests => 7;
+use Test::More tests => 8;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
+
+use Path::Tiny qw/ path cwd /;
 
 my $PRE_DEST  = HTML::Latemp::Local::Paths->new->t2_dest;
 my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
@@ -67,4 +69,12 @@ sub dest_test
     # TEST
     post_dest_test( 'SRC_SVGS__svgz', "images/bk2hp-v2.svgz",
         "bk2hp-v2 svg is present." );
+}
+
+{
+    # TEST
+    unlike(
+        path("lib/make/rules.mak")->slurp_raw(),
+        qr/ttml/i, "No rules for unused ttml/TTML",
+    );
 }

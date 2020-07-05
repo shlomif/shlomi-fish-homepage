@@ -10,6 +10,18 @@ package Shlomif::Homepage::GenMakeHelpers;
 
 use parent 'HTML::Latemp::GenMakeHelpers';
 
+sub get_rules_template
+{
+    my ( $self, $host ) = @_;
+
+    my $ret = $self->SUPER::get_rules_template( $host, );
+
+    return $ret =~ s#((?:[^\n]+\n)+)(\n)#
+        my ($para, $sep) = ($1, $2);
+        (($para =~ /ttml/i) ? "" : $para) . $sep
+        #egmrs;
+}
+
 sub place_files_into_buckets
 {
     my ( $self, $host, $files, $buckets ) = @_;

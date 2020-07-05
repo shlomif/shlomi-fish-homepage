@@ -11,7 +11,7 @@ all: all_deps latemp_targets non_latemp_targets
 
 all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortunes
 
-non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target graham_func_pres_targets hhgg_convert lc_pres_targets mathjax_dest min_svgs minified_javascripts mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install svg_nav_images
+non_latemp_targets: art_slogans_targets css_targets generate_nav_data_as_json htaccesses_target hhgg_convert lc_pres_targets mathjax_dest minified_assets mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install svg_nav_images
 
 include lib/make/shlomif_common.mak
 include lib/make/include.mak
@@ -695,7 +695,7 @@ SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many := $(SPORK_too_many_ways_dir)/coa
 
 SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES := $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many) $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run)
 
-graham_func_pres_targets: $(SPORK_LECTURES_DEST_STARTS)
+presentations_targets: $(SPORK_LECTURES_DEST_STARTS)
 
 start_html = $(patsubst %$(START_html),%/,$1)
 
@@ -816,8 +816,6 @@ MAIN_TOTAL_MIN_JS__SOURCES := \
 	common/js/to-jqtree-2.js \
 	common/js/selfl.js \
 	common/js/sub_menu.js \
-
-minified_javascripts: $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
@@ -1064,7 +1062,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-min_svgs: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps)
+minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 TEST_TARGETS := Tests/*.{py,t}
 
@@ -1142,4 +1140,4 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	TZ=UTC zip -joqX9 "$@" "$<"
 
-.PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook4_pdfs install_docbook4_rtfs install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets
+.PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

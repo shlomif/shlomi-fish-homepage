@@ -17,7 +17,7 @@ $(POST_DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman
 $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
 $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
 $(POST_DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
-$(PRE_DEST_FORTUNES_many_files): $(PRE_DEST)/%: $(SRC_SRC_DIR)/%
+$(PRE_DEST_FORTUNES_many_files) $(FORTUNES_TEXTS__PRE_DEST) $(FORTUNES_DATS__PRE_DEST): $(PRE_DEST)/%: $(SRC_SRC_DIR)/%
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(QOHELETH_IMAGES__POST_DEST): $(QOHELETH_IMAGES__POST_DEST_PREFIX)/%: $(QOHELETH_IMAGES__SOURCE_PREFIX)/%
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(POST_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl

@@ -31,6 +31,7 @@ sub place_files_into_buckets
 FILE_LOOP:
     foreach my $f (@$files)
     {
+        next FILE_LOOP if $f =~ m#/fortune-shlomif\.spec\z#;
     BUCKETS:
         foreach my $bucket (@$buckets)
         {

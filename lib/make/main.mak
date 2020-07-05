@@ -833,7 +833,6 @@ $(PRINTABLE_RESUMES__DOCX): %.docx: %.html
 
 $(PRINTABLE_RESUMES__HTML__PIVOT): $(PRE_DEST)/SFresume.html $(PRE_DEST)/SFresume_detailed.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
 	bash bin/gen-printable-CVs.sh
-	$(PERL) -lp -0777 -e 's#\A<\?xml ver.*?\?>##' < $(PRE_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html > $(PRINTABLE_DEST_DIR)/Shlomi-Fish-Heb-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume.html
 	cp -f $(PRINTABLE_DEST_DIR)/SFresume_detailed.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
 

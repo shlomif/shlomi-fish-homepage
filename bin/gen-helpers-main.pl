@@ -18,8 +18,8 @@ sub get_rules_template
 
     return $ret =~ s#((?:[^\n]+\n)+)(\n)#
         my ($para, $sep) = ($1, $2);
-        (($para =~ /ttml/i) ? "" : $para) . $sep
-        #egmrs;
+        (($para =~ /ttml|wml/i) ? "" : $para) . $sep
+        #egmrs =~ s/\n{3,}/\n\n/gmrs;
 }
 
 sub place_files_into_buckets

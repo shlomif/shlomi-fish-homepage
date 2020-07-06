@@ -2,7 +2,6 @@
 DEV ?= 0
 
 POST_DEST := dest/post-incs/t2
-SRC_POST_DEST := $(POST_DEST)
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 

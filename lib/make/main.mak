@@ -90,9 +90,6 @@ sects_cache: make-dirs $(SRC_CACHE_ALL_STAMP)
 
 site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 
-$(DOCBOOK5_ALL_IN_ONE_XHTMLS__DIRS):
-	mkdir -p $@
-
 DEST_HUMOUR := $(PRE_DEST)/humour
 POST_DEST_HUMOUR := $(POST_DEST)/humour
 DEST_POPE := $(DEST_HUMOUR)/Pope
@@ -500,7 +497,7 @@ all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	$(call extract_gzipped_xhtml)
 
-DOCBOOK4_HHFG_IMAGES_RAW := \
+DOCBOOK5_HHFG_IMAGES_RAW := \
 	background-image.png \
 	background-shlomif.png \
 	bottom-shlomif.png \
@@ -510,20 +507,20 @@ DOCBOOK4_HHFG_IMAGES_RAW := \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK4_HHFG_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
-DOCBOOK4_HHFG_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK5_HHFG_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK5_HHFG_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 
 HHFG_V2_IMAGES_DEST_DIR_FROM_VCS := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
 HHFG_V2_IMAGES_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
 
 HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
 HHFG_V2_IMAGES_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
-HHFG_V2_IMAGES_POST_DEST := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
-HHFG_V2_IMAGES_POST_DEST_FROM_VCS := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_POST_DEST := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_POST_DEST_FROM_VCS := $(addprefix $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
 HHFG_V2_DOCBOOK_css := $(HHFG_V2_IMAGES_POST_DEST_DIR)/docbook.css
-DOCBOOK4_HHFG_IMAGES_POST_DEST := $(addprefix $(DOCBOOK4_HHFG_POST_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+DOCBOOK5_HHFG_IMAGES_POST_DEST := $(addprefix $(DOCBOOK5_HHFG_POST_DEST_DIR)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
 
-docbook_hhfg_images:  $(HHFG_V2_IMAGES_POST_DEST) $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS) $(HHFG_V2_DOCBOOK_css) $(DOCBOOK4_HHFG_IMAGES_POST_DEST)
+docbook_hhfg_images:  $(HHFG_V2_IMAGES_POST_DEST) $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS) $(HHFG_V2_DOCBOOK_css) $(DOCBOOK5_HHFG_IMAGES_POST_DEST)
 
 $(HHFG_V2_DOCBOOK_css): lib/docbook/5/indiv-nodes/human-hacking-field-guide-v2--english/docbook.css
 	mkdir -p $(HHFG_V2_IMAGES_POST_DEST_DIR)

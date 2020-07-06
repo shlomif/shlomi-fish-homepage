@@ -27,7 +27,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $copy_screenplay_mak = '';
     my @copy_screenplay_mak__targets;
 
-    foreach my $doc (@$docs)
+    foreach my $doc ( sort { $a->{base} cmp $b->{base} } @$docs )
     {
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suffix};
@@ -65,9 +65,12 @@ EOF
         {
             my $target_bn = $doc->{txt_target_bn} // "$doc_base.txt";
             my $target    = "\$(POST_DEST_HUMOUR)/$suburl/$target_bn";
+            my $target_varname =
+                "POST_DEST_TXT__${base}__${doc_base}" =~ s/-/_/gr;
+            my $target_var_deref = "\$($target_varname)";
             $copy_screenplay_mak .=
-qq^${target}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
-            push @copy_screenplay_mak__targets, $target;
+qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
+            push @copy_screenplay_mak__targets, $target_var_deref;
         }
     }
 
@@ -119,7 +122,8 @@ EOF
         map {
             _calc_screenplay_doc_makefile_lines( $_epub_map,
                 $screenplay_vcs_base_dir, $_ )
-        } @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
+        } sort { $a->{base} cmp $b->{base} }
+            @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
     );
     path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
         ( map { $_->{copy_screenplay_mak} } @records ),

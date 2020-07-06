@@ -31,7 +31,6 @@ COMMON_POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(COMMON_DIRS))
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 
 POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(SRC_DIRS))
-SRC_TARGETS += $(POST_DEST_DIRS)
 
 NAV_DATA_DEP := lib/MyNavData.pm
 NAV_DATA_AS_JSON_BIN := bin/nav-data-as-json

@@ -5,7 +5,6 @@ use warnings;
 use autodie;
 
 use File::Find::Object ();
-use URI::Escape qw/uri_escape/;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -38,16 +37,12 @@ EOF
             if ( $p !~ m#humour/fortunes.*\.tar\.gz\z# )
             {
                 my $rel_path = escape_html($p);
-                print {$m} qq{<li><a href="$rel_path">$rel_path</a></li>\n};
+                print {$m} qq{<li><a href="$rel_path">$rel_path</a></li>};
             }
         }
     }
 }
 
-$m->print(<<'EOF');
-</ul>
-</body>
-</html>
-EOF
+$m->print(q{</ul></body></html>});
 
 close($m);

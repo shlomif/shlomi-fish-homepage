@@ -46,7 +46,7 @@ include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
 PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) bin/post-incs-v2.pl
 
-MAN_HTML := $(PRE_DEST)/MANIFEST.html
+MANIFEST_HTML := $(PRE_DEST)/MANIFEST.html
 GEN_SECT_NAV_MENUS := ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET := $(POST_DEST)/meta/site-source/INSTALL
 PRE_DEST_FORTUNES_DIR := $(PRE_DEST)/$(FORTUNES_DIR)
@@ -77,7 +77,7 @@ FACTOIDS_NAV_JSON := lib/Shlomif/factoids-nav.json
 SRC_CACHE_ALL_STAMP := lib/cache/STAMP.sects-includes
 SRC_CLEAN_STAMP := lib/cache/STAMP.post-dest
 
-GEN_CACHE_CMD = $(PERL) $(GEN_SECT_NAV_MENUS)
+GEN_CACHE_CMD := $(PERL) $(GEN_SECT_NAV_MENUS)
 
 $(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"
@@ -350,13 +350,6 @@ $(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(
 
 tidy: all
 	$(PERL) bin/run-tidy.pl
-
-# This copies all the .pdf's at once - not ideal, but still
-# working.
-
-$(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
-	mkdir -p $@
-	rsync -r $< $@
 
 FORTUNES_XHTMLS_DIR := lib/fortunes/xhtmls
 
@@ -853,7 +846,7 @@ all: $(FACTOIDS_TIMESTAMP)
 
 all: manifest_html
 
-manifest_html: $(MAN_HTML)
+manifest_html: $(MANIFEST_HTML)
 
 $(FACTOIDS_NAV_JSON):
 	$(FACTOIDS_GEN_CMD)
@@ -1003,7 +996,7 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
-$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MAN_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
+$(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MANIFEST_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
 	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 1 -P 4 strip-nondeterminism --type zip
@@ -1106,7 +1099,7 @@ $(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
 
 non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 
-$(MAN_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
+$(MANIFEST_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
 CATB_COPY := $(PRE_DEST)/catb-heb.xhtml

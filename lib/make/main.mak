@@ -161,12 +161,6 @@ upload_hostgator: upload_deps
 $(PRE_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
-SRC_DOCS_SRC := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST))
-
-t2_filt_file = $(filter $(PRE_DEST)/$1,$(SRC_DOCS_DEST))
-t2_filt = $(filter $(PRE_DEST)/$1/%,$(SRC_DOCS_DEST))
-t2_src_filt = $(filter $(SRC_SRC_DIR)/$1/%,$(SRC_DOCS_SRC))
-
 #### Humour thing
 
 rss:
@@ -1016,7 +1010,7 @@ $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 
-FASTRENDER_DEPS := $(SRC_DOCS_SRC) all_deps
+FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 
 FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
@@ -1031,7 +1025,7 @@ $(FAQ_SECTS__SRC): $(SRC_CLEAN_STAMP)
 
 all: $(FAQ_SECTS__PIVOT)
 
-fastrender: $(FASTRENDER_DEPS) fastrender-tt2 $(SRC_FORTUNES_ALL__HTML)
+fastrender: fastrender-tt2 $(SRC_FORTUNES_ALL__HTML)
 
 fastrender-tt2: $(FASTRENDER_DEPS)
 	@echo $(MAKE) fastrender-tt2

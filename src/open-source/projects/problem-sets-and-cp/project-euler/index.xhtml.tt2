@@ -5,14 +5,21 @@
 [%- WRAPPER wrap_html -%]
 
 <p>
-I’m keeping most of my solutions to
+I’ve kept most of my solutions to
 <a href="https://en.wikipedia.org/wiki/Project_Euler">Project Euler</a> in
-a <a href="https://github.com/shlomif/project-euler">version
-control repository</a>.
+a public version control repository. However, I removed public access to it
+in order to comply with the site's policy about sharing solutions.
 </p>
 
-<h2 id="progress">Progress</h2>
+<p>
+Parts of it may still be available upon inquiry, and I hope I can provide
+a snapshot of my solutions to the first 100 problems there soon.
+</p>
+
+[% WRAPPER h2_section id="progress" title="Progress"%]
 
 [% PROCESS project_euler_progress  %]
+
+[% END %]
 
 [% END %]

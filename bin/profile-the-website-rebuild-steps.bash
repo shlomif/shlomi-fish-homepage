@@ -26,7 +26,8 @@
         unset DISPLAY
         LATEMP_PROFILE=1 perl -d:NYTProf bin/gen-sect-nav-menus.pl
     )
-    nytprofhtml --no-flame
-    sky -x up-r nytprof/
+    nytout="nytprof--shlomif-org-gen-sect-nav-menu"
+    nytprofhtml --out="$nytout" --no-flame
+    sky -x up-r "$nytout"
 )
 notifier notify --msg "nytprof for website has finished"

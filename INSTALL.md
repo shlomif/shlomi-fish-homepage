@@ -5,7 +5,7 @@ Follow the following steps to build the homesite:
 2. Install perl 5.16.x (or later) in case it's not already installed. You
 should have a package for it for your system.
 
-3. Install Website Meta Language (version 2.24.0 or later):
+3. Install Website Meta Language (version 2.28.0 or later):
 
 https://github.com/thewml/website-meta-language/releases
 
@@ -17,9 +17,18 @@ export PERL_MM_USE_DEFAULT=1
 perl -MCPAN -e 'install App::Deps::Verify Task::Sites::ShlomiFish'
 ```
 
+or:
+
 ```bash
 export PERL_MM_USE_DEFAULT=1
 perl -MCPANPLUS -e 'install App::Deps::Verify Task::Sites::ShlomiFish'
+```
+
+or:
+
+```bash
+export PERL_MM_USE_DEFAULT=1
+cpanm App::Deps::Verify Task::Sites::ShlomiFish
 ```
 
 5. Install Latemp:
@@ -60,8 +69,8 @@ cd trunk/xhtml/1.x/
 bash Install.bash
 ```
 
-10. Install [inkscape](https://inkscape.org/) and put its executable in
-the path.
+10. Install [inkscape](https://inkscape.org/) - version 1.0.x-or-later is
+recommended, and put its executable in the path.
 
 11. Install jing and put it in the path:
 
@@ -95,4 +104,4 @@ gmake docbook_extended
 gmake test
 ```
 
-The site should be in `dest/post-incs/t2/` .
+The site's pages and data files should be in `dest/post-incs/t2/` .

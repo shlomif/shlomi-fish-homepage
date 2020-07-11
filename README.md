@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/shlomif/shlomi-fish-homepage.svg?branch=master)](https://travis-ci.org/shlomif/shlomi-fish-homepage)
 
-This repository contains the sources for the Shlomi Fish’s Homesite ( http://www.shlomifish.org/ ), which
+This repository contains the sources for Shlomi Fish’s Homesite ( http://www.shlomifish.org/ ), which
 is mostly a [generated static site](https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md).
 
 For build instructions see the file [INSTALL.md](./INSTALL.md), which may be

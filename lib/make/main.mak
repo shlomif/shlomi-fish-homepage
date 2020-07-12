@@ -1053,6 +1053,8 @@ TEST_TARGETS := Tests/*.{py,t}
 PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
 POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
 DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
+CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
+CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
 
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
@@ -1101,16 +1103,7 @@ non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MANIFEST_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
-CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
-
-$(CATB_COPY): $(SRC_SRC_DIR)/homesteading/catb-heb.xhtml
-	$(call COPY)
-
 all_deps: $(CATB_COPY)
-
-$(CATB_COPY_POST): $(CATB_COPY)
-	$(call COPY)
 
 all: $(CATB_COPY_POST)
 

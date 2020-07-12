@@ -14,6 +14,7 @@ $(HHFG_V2_IMAGES_POST_DEST): $(HHFG_V2_IMAGES_POST_DEST_DIR)/%: $(DOCBOOK5_BASE_
 $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS): $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
 $(POST_DEST_FORTUNES_many_files): $(POST_DEST)/%: $(SRC_SRC_DIR)/%
+$(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 $(POST_DEST_INTERVIEWS)/ae-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/ae-interview.txt
 $(POST_DEST_INTERVIEWS)/sussman-interview.txt: $(SCREENPLAY_XML_TXT_DIR)/sussman-interview.txt
 $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-english.xml
@@ -31,3 +32,4 @@ $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_O
 $(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)
 $(TERM_LIBERATION_IMAGES__POST_DEST): $(TERM_LIBERATION_IMAGES__POST_DEST_PREFIX)/%: $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/%
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
+lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml

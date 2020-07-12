@@ -119,9 +119,6 @@ chmod_copy = $(call COPY) ; chmod +x $@
 $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-$(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call COPY)
-
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 
 ifeq ($(UPLOAD_MATHJAX),1)
@@ -905,9 +902,6 @@ $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances
 	gm convert $< $@
 
 all: $(DnD_lances_cartoon_DEST)
-
-lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
-	$(call COPY)
 
 Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif

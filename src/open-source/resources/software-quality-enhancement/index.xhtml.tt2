@@ -28,6 +28,7 @@ that statically analyse static source code for defects. Autoformatters format co
 to conform to a certain <a href="https://en.wikipedia.org/wiki/Indentation_style">indentation
 style</a>.
 </p>
+
 <ul>
 
 <li>
@@ -83,6 +84,11 @@ all-in-one autoformatter and validator - with many backends.
 [% END %]
 
 [% WRAPPER h2_section id = "profiler" title = "Profilers"  %]
+
+<p>
+Profilers are programs that report which parts of the code consume a lot
+of time, memory or other resources, to allow for a more effective optimisation.
+</p>
 
 <ul>
 

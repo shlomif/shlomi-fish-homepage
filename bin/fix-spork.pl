@@ -66,7 +66,7 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
     $fh->spew_utf8( $indiv_dom->toString() );
 }
 
-system(qq#tidy -quiet -asxhtml --tidy-mark no --write-back yes @fns#);
+system( qw#tidy -quiet -asxhtml --tidy-mark no --write-back yes#, @fns );
 
 =head1 COPYRIGHT & LICENSE
 

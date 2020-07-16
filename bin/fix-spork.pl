@@ -66,12 +66,7 @@ s%<meta name="Content-Type" content="text/html; charset=[^"]+" />%<meta charset=
     $fh->spew_utf8( $indiv_dom->toString() );
 }
 
-foreach my $I (@fns)
-{
-    system(
-qq#tidy -quiet -asxhtml --tidy-mark no -o "$I".new "$I" ; mv -f "$I".new "$I"#
-    );
-}
+system(qq#tidy -quiet -asxhtml --tidy-mark no --write-back yes @fns#);
 
 =head1 COPYRIGHT & LICENSE
 

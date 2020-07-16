@@ -685,7 +685,7 @@ $(SPORK_LECTURES_DEST_STARTS) : $(PRE_DEST)/lecture/%$(START_html): $(SPORK_LECT
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES)
 	dn="$(patsubst %$(SLIDES_start),%,$@)" ; \
-	   (cd "$$dn" && $(PERL) -MSpork::Shlomify -e 'Spork::Shlomify->new->load_hub->command->process(@ARGV)' -- -make) && $(PERL) bin/fix-spork.pl "$$dn"/slides/*.html && \
+	   (cd "$$dn" && $(PERL) $(PWD)/bin/my-spork.pl -- -make) && $(PERL) bin/fix-spork.pl "$$dn"/slides/*.html && \
 	cp -f common/favicon.png $(patsubst %$(START_html),%,$@)/
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source

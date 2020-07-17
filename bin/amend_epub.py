@@ -9,4 +9,4 @@
 import os
 
 import shlomif_epub_maker
-shlomif_epub_maker._my_amend_epub(os.getenv('DFN'))
+shlomif_epub_maker._my_amend_epub(os.getenv('DFN'), os.getenv('JSONFN'))

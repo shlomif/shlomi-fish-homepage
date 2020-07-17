@@ -58,7 +58,7 @@ sub _calc_screenplay_doc_makefile_lines
 
             <<"EOF",
 \$($epub_dest_varname): \$($dest_xhtmlname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker"; perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
+\texport EBOOKMAKER="\$\$PWD/lib/ebookmaker/ebookmaker";  PYTHONPATH="\$\${PYTHONPATH}}:\$(SCREENPLAY_COMMON_INC_DIR)" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
         if ( defined($suburl) )
@@ -181,7 +181,8 @@ EOF
     {
         $clone_cb->( $github_repo->{github_repo} );
     }
-    $clone_cb->('screenplays-common');
+
+    # $clone_cb->('screenplays-common');
 
     return;
 }

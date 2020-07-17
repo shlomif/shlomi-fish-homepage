@@ -426,7 +426,7 @@ FORTS_EPUB_COVER_SVG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 FORTS_EPUB_ALL_COVERS := $(FORTS_EPUB_COVER_JPG) $(FORTS_EPUB_COVER_PNG) $(FORTS_EPUB_COVER_SVG)
 
 $(FORTS_EPUB_DEST): $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS_TOCS) $(FORTS_EPUB_ALL_COVERS)
-	export EBOOKMAKER="$$PWD/lib/ebookmaker/ebookmaker"; cd $(FORTUNES_XHTMLS_DIR) && $${EBOOKMAKER} --output $(PWD)/$(FORTS_EPUB_DEST) book.json
+	export EBOOKMAKER="$$PWD/lib/ebookmaker/ebookmaker" PYTHONPATH="$${PYTHONPATH}}:$(SCREENPLAY_COMMON_INC_DIR)" DFN="$(PWD)/$(FORTS_EPUB_DEST)" ; cd $(FORTUNES_XHTMLS_DIR) && $${EBOOKMAKER} --output "$$DFN" book.json && python3 $(PWD)/bin/amend_epub.py
 
 fortunes-epub: $(FORTS_EPUB_DEST)
 

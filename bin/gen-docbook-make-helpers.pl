@@ -48,7 +48,7 @@ $git_obj->git_in_checkout_task(
         repo         => "ebookmaker",
         user         => "shlomif",
         base_dirname => "lib",
-        branch       => 'silence-is-golden',
+        branch       => "shlomif-conversion-to-floss",
     }
 );
 
@@ -91,6 +91,15 @@ foreach my $repo (
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(
     { git_task => $git_task, } );
+$git_obj->git_in_checkout_task(
+    {
+        pivot_bn     => "README.md",
+        repo         => "screenplays-common",
+        user         => "shlomif",
+        base_dirname => "lib/screenplay-xml/from-vcs",
+        branch       => "shlomif-convert-to-a-floss-epub-maker",
+    }
+);
 
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
 

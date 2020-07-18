@@ -42,15 +42,18 @@ $git_obj->git_in_checkout_task(
 # I switched to my fork for now.
 #
 # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
-$git_obj->git_in_checkout_task(
-    {
-        pivot_bn     => "README.md",
-        repo         => "ebookmaker",
-        user         => "shlomif",
-        base_dirname => "lib",
-        branch       => "shlomif-conversion-to-floss",
-    }
-);
+if (0)
+{
+    $git_obj->git_in_checkout_task(
+        {
+            pivot_bn     => "README.md",
+            repo         => "ebookmaker",
+            user         => "shlomif",
+            base_dirname => "lib",
+            branch       => "shlomif-conversion-to-floss",
+        }
+    );
+}
 
 $git_obj->git_in_checkout_task(
     {

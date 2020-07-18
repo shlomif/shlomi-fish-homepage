@@ -181,8 +181,7 @@ EOF
     {
         $clone_cb->( $github_repo->{github_repo} );
     }
-
-    # $clone_cb->('screenplays-common');
+    $clone_cb->('screenplays-common');
 
     return;
 }

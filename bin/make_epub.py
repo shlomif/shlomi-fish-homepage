@@ -6,7 +6,11 @@
 #
 # Distributed under the MIT license.
 
-import os
+import sys
 
 import shlomif_epub_maker
-shlomif_epub_maker._my_amend_epub(os.getenv('DFN'), os.getenv('JSONFN'))
+
+assert sys.argv.pop(1) == "--output"
+dfn = sys.argv.pop(1)
+jsonfn = sys.argv.pop(1)
+shlomif_epub_maker._my_amend_epub(dfn, jsonfn)

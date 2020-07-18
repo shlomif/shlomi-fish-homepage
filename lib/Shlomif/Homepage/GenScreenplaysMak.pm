@@ -58,7 +58,7 @@ sub _calc_screenplay_doc_makefile_lines
 
             <<"EOF",
 \$($epub_dest_varname): \$($dest_xhtmlname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\tPYTHONPATH="\$\${PYTHONPATH}:\$(SCREENPLAY_COMMON_INC_DIR)" SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" EBOOKMAKER="\$(PWD)/bin/amend_epub.py" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
+\tPYTHONPATH="\$\${PYTHONPATH}:\$(SCREENPLAY_COMMON_INC_DIR)" SCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" EBOOKMAKER="\$(PWD)/bin/make_epub.py" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
         if ( defined($suburl) )

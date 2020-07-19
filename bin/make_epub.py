@@ -8,9 +8,9 @@
 
 import sys
 
-import shlomif_epub_maker
+from shlomif_epub_maker import EbookMaker
 
 assert sys.argv.pop(1) == "--output"
 dfn = sys.argv.pop(1)
 jsonfn = sys.argv.pop(1)
-shlomif_epub_maker._my_amend_epub(dfn, jsonfn)
+EbookMaker().make_epub(jsonfn, dfn)

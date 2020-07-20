@@ -178,6 +178,14 @@ the GFDL/CC-by-sa-3.0.
 [% WRAPPER h3_section id = "ebookmaker"  href = "http://github.com/setanta/ebookmaker"  title = "ebookmaker"  %]
 
 <p>
+<b>Update:</b> I have now written <a href="https://pypi.org/project/rebookmaker/">rebookmaker</a>
+which is a mostly compatible reimplementation of ebookmaker, and which is under
+the <a href="https://en.wikipedia.org/wiki/MIT_License">MIT / Expat licence</a>
+since ebookmaker lacks an explicit licence, and am using it instead of ebookmaker.
+<a href="https://github.com/shlomif/screenplays-common">Git repository</a>.
+</p>
+
+<p>
 Ebookmaker is a Python 3 script that allows one to generate an EPUB and was
 used for preparing <a href="#ebook">the Selina Mandrake E-book</a>. While
 not perfect, it proved extremely useful and

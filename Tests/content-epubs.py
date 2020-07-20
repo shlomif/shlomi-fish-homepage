@@ -23,11 +23,13 @@ class MyTests(unittest.TestCase):
             'So-Who-the-Hell-is-Qoheleth.epub', 'r')
         xml = zip_obj.open("OEBPS/toc.ncx").read()
         root = etree.XML(xml)
-        self.assertTrue(len(root.xpath(
-            ".//ncx:navMap/ncx:navPoint",
+        self.assertEqual(len(root.xpath(
+            ".//ncx:navMap/ncx:navPoint/ncx:navLabel/" +
+            "ncx:text[text()='Introducing Josephus']",
             namespaces=ns,
-            )
-            ) > 0)
+            )),
+            1
+        )
 
 
 if __name__ == '__main__':

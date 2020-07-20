@@ -8,7 +8,7 @@
 
 import sys
 
-from shlomif_epub_maker import EbookMaker
+from rebookmaker import EbookMaker
 
 assert sys.argv.pop(1) == "--output"
 dfn = sys.argv.pop(1)

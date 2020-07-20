@@ -42,7 +42,6 @@ import vnu_validator
 class MyTests(vnu_validator.VnuTest):
     def test_main(self):
         dir_ = './dest/post-incs/t2/'
-        # dir_ = './dest/post-incs/t2/humour/'
 
         def _create_cb(s):
             """docstring for _create_cb"""

@@ -6,11 +6,17 @@
 #
 # Distributed under the MIT license.
 
-import sys
+import click
 
 from rebookmaker import EbookMaker
 
-assert sys.argv.pop(1) == "--output"
-dfn = sys.argv.pop(1)
-jsonfn = sys.argv.pop(1)
-EbookMaker().make_epub(jsonfn, dfn)
+
+@click.command()
+@click.option("--output", help='the output EPub path')
+@click.argument("jsonfn")
+def main(output, jsonfn):
+    EbookMaker().make_epub(jsonfn, output)
+
+
+if __name__ == '__main__':
+    main()

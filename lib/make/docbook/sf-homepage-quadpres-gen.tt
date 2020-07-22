@@ -5,7 +5,7 @@ QUADPRES_EXE := quadp
 QUADPRES_COMMON_INC_DIR := $(PWD)/lib/presentations/qp/common/
 QUADPRES__WML_OPTS := --passoption=3,-I$(QUADPRES_COMMON_INC_DIR) -I$(QUADPRES_COMMON_INC_DIR) --passoption=8,--nosharp --passoption=7,-Simgsize,summary --passoption=3,-I$(PWD)/lib/ -p1-3,5,7,8 -q
 QUADPRES__TAR_OPTIONS = --group=user:1000 --owner=user:1000
-QUADPRES_RUN_generic = $(QUADPRES_EXE) multi_run render -a --cache \; render_all_in_one_page $(1) --output-dir all-in-one \; pack
+QUADPRES_RUN_generic = $(QUADPRES_EXE) multi_run render -a --cache \; render_all_in_one_page --cache $(1) --output-dir all-in-one \; pack
 QUADPRES_RUN_en := $(call QUADPRES_RUN_generic,)
 QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 

@@ -6,6 +6,8 @@
 #
 # Distributed under the MIT license.
 
+from zipfile import ZIP_DEFLATED
+
 import click
 
 from rebookmaker import EbookMaker
@@ -15,7 +17,7 @@ from rebookmaker import EbookMaker
 @click.option("--output", help='the output EPub path')
 @click.argument("jsonfn")
 def main(output, jsonfn):
-    EbookMaker().make_epub(jsonfn, output)
+    EbookMaker(compression=ZIP_DEFLATED).make_epub(jsonfn, output)
 
 
 if __name__ == '__main__':

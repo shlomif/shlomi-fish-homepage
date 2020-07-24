@@ -74,6 +74,8 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 <dd>(<b>Note:</b> don’t E-mail me there instead of <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
 <dt>Flickr</dt>
 <dd>[% INCLUDE url_body_link href = "http://www.flickr.com/photos/shlomif/",  %]</dd>
+<dt>PyPI (Python Package Index)</dt>
+<dd>[% INCLUDE url_body_link href = "https://pypi.org/user/shlomif-gmail/",  %]</dd>
 <dt>Frappr</dt>
 <dd>[% INCLUDE url_body_link href = "http://www.frappr.com/shlomifish",  %]</dd>
 <dt>StumbleUpon</dt>

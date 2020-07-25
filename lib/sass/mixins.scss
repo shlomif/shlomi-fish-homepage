@@ -66,6 +66,10 @@ $navbar_margin: 0.5em;
     margin-bottom: 2em;
     overflow: hidden;
 
+    &:hover {
+        border-color: #787;
+    }
+
     @include rounded_corners(10px);
 }
 

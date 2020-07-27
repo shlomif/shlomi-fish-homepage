@@ -25,6 +25,12 @@ sub mod
         qq#<a href="http://metacpan.org/module/$args->{m}">$args->{body}</a>#;
 }
 
+sub module
+{
+    my ( $self, $args ) = @_;
+    return $self->mod($args);
+}
+
 sub b_self_dist
 {
     my ( $self, $args ) = @_;

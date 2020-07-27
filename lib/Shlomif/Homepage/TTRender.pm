@@ -11,8 +11,8 @@ use YAML::XS ();
 
 use HTML::Acronyms                         ();
 use HTML::Latemp::AddToc                   ();
+use Module::Format::AsHTML                 ();
 use Shlomif::Homepage::ArticleIndex        ();
-use Shlomif::Homepage::CPAN_Links          ();
 use Shlomif::Homepage::FortuneCollections  ();
 use Shlomif::Homepage::LicenseBlurbs       ();
 use Shlomif::Homepage::LongStories         ();
@@ -33,7 +33,7 @@ my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
 my $DEFAULT_TOC_DIV = Shlomif::Homepage::TocDiv::toc_div();
-my $cpan            = Shlomif::Homepage::CPAN_Links->new;
+my $cpan            = Module::Format::AsHTML->new;
 my $license         = Shlomif::Homepage::LicenseBlurbs->new;
 
 my $base_path;

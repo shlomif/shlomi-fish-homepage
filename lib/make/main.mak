@@ -435,8 +435,10 @@ fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SH
 
 INKSCAPE_WRAPPER = ./bin/inkscape-wrapper
 
+simple_gm = gm convert $< $@
+
 $(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER_PNG)
-	gm convert $< $@
+	$(call simple_gm)
 
 $(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
@@ -666,9 +668,14 @@ SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run := $(SPORK_test_run_dir)/screensh
 	$(SPORK_test_run_dir)/Test-Run-Plugin-ColorSummary.png
 
 SPORK_too_many_ways_dir := $(SPORK_LECTS_SOURCE_BASE)/Perl/Lightning/Too-Many-Ways/slides/images
-SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many := $(SPORK_too_many_ways_dir)/coachella-crowd.jpg \
+SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many := \
+	$(SPORK_too_many_ways_dir)/coachella-crowd.jpg \
+	$(SPORK_too_many_ways_dir)/coachella-crowd.webp \
 	$(SPORK_too_many_ways_dir)/bono.jpg \
 	$(SPORK_too_many_ways_dir)/TestBeforeYouTouchCARD.jpg
+
+src/images/presentations/coachella-crowd.webp: %.webp: %.jpg
+	$(call simple_gm)
 
 SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES := $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many) $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run)
 
@@ -895,7 +902,7 @@ $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
 
 $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
-	gm convert $< $@
+	$(call simple_gm)
 
 all: $(DnD_lances_cartoon_DEST)
 
@@ -1018,13 +1025,13 @@ copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
-	gm convert $< $@
+	$(call simple_gm)
 
 SRC_pngs__BASE := $(filter $(POST_DEST)/humour/bits/%.png,$(SRC_IMAGES_DEST))
 SRC_pngs__BASE += $(POST_DEST_HTML_6_LOGO_PNG)
 SRC_pngs__webps := $(SRC_pngs__BASE:%.png=%.webp)
 $(SRC_pngs__webps): %.webp: %.png
-	gm convert $< $@
+	$(call simple_gm)
 
 SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
 SRC_SVGS__MIN := $(SRC_SVGS__BASE:%.svg=%.min.svg)

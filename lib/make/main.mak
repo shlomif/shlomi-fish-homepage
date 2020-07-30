@@ -856,7 +856,7 @@ LC_LECTURE_ARC := $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 all: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
-	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_All=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z $$(filelist) && tar "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
+	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_All=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
 
 $(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@

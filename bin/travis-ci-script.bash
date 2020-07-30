@@ -15,6 +15,11 @@ m()
     "$@"
 }
 
+(
+    set -e
+    cd .. && git clone https://github.com/shlomif/shlomi-fish-sites--fonts.git fffFFF && cd fffFFF && perl install.pl && cd .. && rm -fr fffFFF
+) || exit -1
+
 if ! ./gen-helpers | perl bin/filter-make.pl ; then
     echo "Error in executing ./gen-helpers.pl" 1>&2
     exit -1

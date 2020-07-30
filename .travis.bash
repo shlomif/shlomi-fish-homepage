@@ -48,8 +48,6 @@ then
     # For various sites
     cpanm --notest HTML::Toc XML::Feed
     deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
-    # To take precedence over both global and local executables.
-    # sudo gem install asciidoctor compass compass-blueprint
     gem install asciidoctor compass compass-blueprint
     PATH="$HOME/bin:$PATH"
     ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )

@@ -278,7 +278,7 @@ publicly linked to. Please send comments to
 
 [% BLOCK share_this_button %]
 <p class="share">
-<a href="http://www.addtoany.com/share_save?linkurl=(((((chomp_inc='cache/combined/t2/[% fn_path %]/page_url')))))&amp;linkname="><img src="[% base_path %]images/share_save_171_16.png" width="171" height="16" class="bless" alt="Share/Bookmark" /></a><br />
+<a href="http://www.addtoany.com/share_save?linkurl=[% escaped_url %]&amp;linkname="><img src="[% base_path %]images/share_save_171_16.png" width="171" height="16" class="bless" alt="Share/Bookmark" /></a><br />
 </p>
 [%- END -%]
 

@@ -5,7 +5,6 @@ use warnings;
 
 use lib './lib';
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();
 use MyNavData::Hosts                       ();
@@ -13,7 +12,6 @@ use NavDataRender                          ();
 use NavSectMenuRender                      ();
 use Parallel::ForkManager::Segmented       ();
 use Path::Tiny qw/ path /;
-use URI::Escape qw(uri_escape);
 
 sub get_root
 {
@@ -117,10 +115,6 @@ sub _process_batch
                     { nav_links_obj => $nav_links_obj }
                 )
             ),
-        );
-
-        $out->(
-            'page_url', \( escape_html( uri_escape( $host_base_url . $url ) ) ),
         );
 
         foreach my $with_accesskey ( '', 1 )

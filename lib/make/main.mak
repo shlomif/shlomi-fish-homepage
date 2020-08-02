@@ -948,7 +948,6 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/breadcrumbs-trail \
 	$(SRC_CACHE_PREFIX)/%/html_head_nav_links \
 	$(SRC_CACHE_PREFIX)/%/main_nav_menu_html \
-	$(SRC_CACHE_PREFIX)/%/page_url \
 	$(SRC_CACHE_PREFIX)/%/sect-navmenu \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \

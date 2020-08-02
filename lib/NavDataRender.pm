@@ -95,21 +95,4 @@ sub get_html_head_nav_links
     return join '', @ret;
 }
 
-my $hosts = MyNavData::Hosts::get_hosts();
-
-sub calc_page_url
-{
-    my ($class) = @_;
-
-    return $hosts->{ $::nav_bar->current_host() }->{'base_url'}
-        . $::nav_bar->path_info();
-}
-
-sub calc_esc_page_url
-{
-    my ($class) = @_;
-
-    return escape_html( uri_escape( $class->calc_page_url() ) );
-}
-
 1;

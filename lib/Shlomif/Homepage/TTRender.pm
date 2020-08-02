@@ -185,11 +185,14 @@ sub proc
     my $vars = $self->vars;
     $vars->{base_path} = $base_path;
     $license->base_path($base_path);
-    $vars->{fn_path} = $input_tt2_page_path;
-    $vars->{raw_fn_path} =
-        $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r;
-    $vars->{escaped_url} =
-        uri_escape( "http://www.shlomifish.org/" . $vars->{raw_fn_path} );
+    $vars->{fn_path}     = $input_tt2_page_path;
+    $vars->{escaped_url} = uri_escape(
+        "http://www.shlomifish.org/"
+            . (
+            $vars->{raw_fn_path} =
+                $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r
+            )
+    );
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

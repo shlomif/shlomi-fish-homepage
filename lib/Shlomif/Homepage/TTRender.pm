@@ -27,8 +27,6 @@ use Shlomif::XmlFictionSlurp               ();
 use Template                               ();
 use VimIface                               ();
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
@@ -190,8 +188,8 @@ sub proc
     $vars->{fn_path} = $input_tt2_page_path;
     $vars->{raw_fn_path} =
         $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r;
-    $vars->{escaped_url} = escape_html(
-        uri_escape( "http://www.shlomifish.org/" . $vars->{raw_fn_path} ) );
+    $vars->{escaped_url} =
+        uri_escape( "http://www.shlomifish.org/" . $vars->{raw_fn_path} );
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

@@ -88,10 +88,7 @@ sub BUILD
                 'path_info'  => $self->path_info(),
                 current_host => $self->current_host(),
                 $self->get_section_nav_menu_params( $current_sect->{class} ),
-                'ul_classes' => [
-                    "nm_main",      "nm_nested",
-                    "nm_subnested", "nm_subsubnested",
-                ],
+                'ul_classes'     => [ "nm_main", ],
                 'no_leading_dot' => 1,
             )
         );

@@ -48,10 +48,10 @@ my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
 
 sub _render_nav_block
 {
-    my ($id) = @_;
+    my ($args) = @_;
 
     return $nav_block_renderer->render(
-        { obj => $nav_blocks->get_nav_block($id), } );
+        { obj => $nav_blocks->get_nav_block( $args->{name} ), } );
 }
 
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
@@ -115,11 +115,8 @@ has vars => (
             news_obj     => $news,
             mytan =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
-            d2url           => "http://divisiontwo.shlomifish.org/",
-            print_nav_block => sub {
-                my $args = shift;
-                return _render_nav_block( $args->{name} );
-            },
+            d2url               => "http://divisiontwo.shlomifish.org/",
+            print_nav_block     => \&_render_nav_block,
             article_index__body => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();
             },

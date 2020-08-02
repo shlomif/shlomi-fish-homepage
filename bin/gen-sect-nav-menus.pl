@@ -5,7 +5,6 @@ use warnings;
 
 use lib './lib';
 
-use Carp::Always;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();

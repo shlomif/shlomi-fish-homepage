@@ -2,17 +2,12 @@ package NavDataRender;
 
 use strict;
 use warnings;
-
 use utf8;
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-
-use MyNavData                              ();
-use MyNavData::Hosts                       ();
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 use HTML::Widgets::NavMenu::JQueryTreeView ();
-
-use URI::Escape qw(uri_escape);
-use MyNavLinks;
+use MyNavData                              ();
+use MyNavLinks                             ();
 
 sub nav_data_render
 {
@@ -79,7 +74,7 @@ sub get_html_head_nav_links
     my $nav_links_obj = $args->{nav_links_obj};
 
     my @keys = ( sort { $a cmp $b } keys(%$nav_links_obj) );
-    my @ret;
+    my $ret  = '';
     foreach my $key (@keys)
     {
         my $val   = $nav_links_obj->{$key};
@@ -88,11 +83,11 @@ sub get_html_head_nav_links
 
         if ( not( $key eq 'top' || $key eq 'up' ) )
         {
-            push @ret, qq{<link rel="$key" href="$url" title="$title" />\n};
+            $ret .= qq{<link rel="$key" href="$url" title="$title"/>};
         }
     }
 
-    return join '', @ret;
+    return $ret;
 }
 
 1;

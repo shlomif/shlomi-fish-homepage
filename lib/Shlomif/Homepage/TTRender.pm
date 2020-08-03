@@ -184,7 +184,7 @@ sub proc
     $license->base_path($base_path);
     $vars->{fn_path}     = $input_tt2_page_path;
     $vars->{escaped_url} = encodeURIComponent(
-        "http://www.shlomifish.org/"
+        "https://www.shlomifish.org/"
             . (
             $vars->{raw_fn_path} =
                 $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r

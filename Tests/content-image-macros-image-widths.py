@@ -19,7 +19,18 @@ WIDTH = 600
 
 
 class MyTests(unittest.TestCase):
-    def test_FAQ_desc(self):
+    def test_share_this_url(self):
+        input_fn = './dest/post-incs/t2/humour/bits/' + \
+            'Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml'
+        root = etree.HTML(open(input_fn, "rb").read())
+        share_links = root.xpath(
+            ".//p[@class='share']/a[@href='" +
+            "http://www.addtoany.com/share_save?linkurl=https%3A%2F%2F" +
+            "www.shlomifish.org%2Fhumour%2Fbits%2FAtom-Text-Editor" +
+            "-edits-2_000_001-bytes%2F&linkname=']")
+        self.assertEqual(len(share_links), 1)
+
+    def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
         root = etree.HTML(open(input_fn, "rb").read())
         descs = root.xpath(".//head/meta[@name='description']")

@@ -78,7 +78,7 @@ SRC_CLEAN_STAMP := lib/cache/STAMP.post-dest
 
 GEN_CACHE_CMD := $(PERL) $(GEN_SECT_NAV_MENUS)
 
-$(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(FACTOIDS_NAV_JSON) $(ALL_SUBSECTS_DEPS)
+$(SRC_CACHE_ALL_STAMP): $(GEN_SECT_NAV_MENUS) $(ALL_SUBSECTS_DEPS)
 	@echo "Generating sects_cache"
 	$(GEN_CACHE_CMD)
 	touch $@
@@ -857,9 +857,6 @@ all: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
 	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_All=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
-
-$(HUMOUR_DEPS): $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
-	touch $@
 
 OCT_2014_SGLAU_LET_DIR := $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
 OCT_2014_SGLAU_LET_PDF := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf

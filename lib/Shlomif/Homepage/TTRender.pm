@@ -7,7 +7,7 @@ use utf8;
 use Encode qw/ decode_utf8 /;
 use Moo;
 use Path::Tiny qw/ path /;
-use URI::Escape qw/ uri_escape /;
+use URI::Escape::XS qw/ encodeURIComponent /;
 use YAML::XS ();
 
 use HTML::Acronyms                         ();
@@ -183,7 +183,7 @@ sub proc
     $vars->{base_path} = $base_path;
     $license->base_path($base_path);
     $vars->{fn_path}     = $input_tt2_page_path;
-    $vars->{escaped_url} = uri_escape(
+    $vars->{escaped_url} = encodeURIComponent(
         "http://www.shlomifish.org/"
             . (
             $vars->{raw_fn_path} =

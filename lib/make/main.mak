@@ -5,7 +5,7 @@ POST_DEST := dest/post-incs/t2
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
-all: all_deps latemp_targets non_latemp_targets
+all: all_deps non_latemp_targets
 
 all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortunes
 

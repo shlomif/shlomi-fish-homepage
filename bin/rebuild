@@ -32,6 +32,13 @@ rebuild()
         fi
         time ./gen-helpers
         _gmake_target copy_images_target
+        _gmake_target sects_cache
+        _gmake_target screenplay_targets
+        _gmake_target install_docbook5_epubs
+        _gmake_target docbook_targets
+        _gmake_target fortunes-epub
+        _gmake_target fortunes-target
+        _gmake_target copy_fortunes
         _gmake_target fastrender
         _gmake_target all
         _gmake_target test

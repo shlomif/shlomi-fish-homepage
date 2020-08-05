@@ -25,5 +25,7 @@ foreach my $in ( path($in_dir)->children(qr/\.scm\z/) )
         html_title     => '[untitled]',
         html_full_page => 1
     );
-    $out->child( $in->basename() . ".html" )->spew_utf8( $syntax->html );
+    open my $o, ">:encoding(utf8)", $out->child( $in->basename() . ".html" );
+    print {$o} $syntax->html();
+    close $o;
 }

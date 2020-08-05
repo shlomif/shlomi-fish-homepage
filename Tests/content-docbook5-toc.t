@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 3;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -43,6 +43,16 @@ q{<a href="#how_i_started">How I started Working for Cortext</a>}
         ),
         'Contains a hyperlink.'
     );
+}
+
+{
+    my $content =
+        path(
+"$POST_DEST/philosophy/politics/drug-legalisation/case-for-drug-legalisation/style.css"
+    )->slurp_raw;
+
+    # TEST
+    ok( scalar( index( $content, q{palegreen} ) >= 0 ), 'Contains CSS', );
 }
 
 __END__

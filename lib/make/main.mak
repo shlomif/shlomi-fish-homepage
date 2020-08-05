@@ -436,13 +436,14 @@ fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SH
 INKSCAPE_WRAPPER = ./bin/inkscape-wrapper
 
 simple_gm = gm convert $< $@
+OPTIPNG := optipng -quiet
 
 $(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER_PNG)
 	$(call simple_gm)
 
 $(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
-	optipng "$@"
+	$(OPTIPNG) $@
 
 MOJOLICIOUS_LECTURE_SLIDE1 := $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
 
@@ -549,8 +550,6 @@ ART_SLOGANS_DOCS := \
 ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
-
-OPTIPNG := optipng -quiet
 
 define EXPORT_INKSCAPE_PNG
 	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<

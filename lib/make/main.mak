@@ -1,6 +1,3 @@
-# Whether this is the development environment
-DEV ?= 0
-
 POST_DEST := dest/post-incs/t2
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
@@ -758,10 +755,8 @@ MATHJAX_DEST_README := $(MATHJAX_DEST_DIR)/README.md
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
 $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	rsync -r --exclude='**/.git/**' lib/js/MathJax/ $(MATHJAX_DEST_DIR)/
-	rm -fr $(MATHJAX_DEST_DIR)/.git
-	rm -fr $(MATHJAX_DEST_DIR)/.gitignore
-	rm -fr $(MATHJAX_DEST_DIR)/test
+	@mkdir -p $(MATHJAX_DEST_DIR)/
+	cp -PR lib/js/MathJax/{LICENSE,README.md,es5/} $(MATHJAX_DEST_DIR)/
 
 SCRIPTS_WITH_OFFENDING_EXTENSIONS := MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
 

@@ -6,7 +6,6 @@ $(DEST_FIERY_Q_PNG): lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/s
 $(DEST__C_BAD_ELEMS): $(C_BAD_ELEMS_SRC)
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html
 $(DOCBOOK5_HHFG_IMAGES_POST_DEST): $(DOCBOOK5_HHFG_POST_DEST_DIR)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(DOCBOOK5_HHFG_DEST_DIR)/index.xhtml
-$(DOCBOOK5_INSTALLED_INDIVIDUAL_XHTMLS_CSS): %: $(DOCMAKE_STYLE_CSS)
 $(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
 $(EXPANDER_JS_DEST): $(EXPANDER_JS_SRC)
 $(HHFG_HEB_V2_XSLT_POST_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt

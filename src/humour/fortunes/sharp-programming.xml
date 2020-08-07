@@ -4646,7 +4646,7 @@
 <saying who="rindolf">Zuu_: guilty as charged! I made your monitor noisy because I hate you</saying>
 <saying who="Zuu_">Arrrr *shakes fist at Evil rindolf*</saying>
 <saying who="rindolf">Zuu_: it was a late EvilChristmas present</saying>
-<me_is who="Zuu_">wraps it back up, and sends it back to santa :P</me_is>
+<me_is who="Zuu_">wraps it back up, and sends it back to Santa :P</me_is>
             </body>
             <info>
                 <channel>##programming</channel>
@@ -5720,7 +5720,7 @@
 <saying who="Jasparon">brwr: Well, would you recommend I get: 1. Intro CE book. 2. Intro electronics. 3. Intro circuits? Which one?</saying>
 <saying who="rindolf">Jasparon: they never showed us how to replace a lightbulb</saying>
 <saying who="rindolf">Jasparon: wait a sec</saying>
-<saying who="Jasparon">rindolf: 0, becuase it&#39;s a hardware issue</saying>
+<saying who="Jasparon">rindolf: 0, because it&#39;s a hardware issue</saying>
 <saying who="brwr">Jasparon: i don’t know enough about electronics to make a recommendation. Sorry!</saying>
 <saying who="FMan">morning</saying>
 <saying who="rindolf">Jasparon: https://mitpress.mit.edu/books/computation-structures - this book is nice</saying>
@@ -5728,9 +5728,9 @@
 <saying who="brwr">IRC on mobile is sadface</saying>
 <saying who="brwr">I get disconnected if I turn my screen off</saying>
 <saying who="rindolf">Jasparon: i suggest you start from a high level prog lang</saying>
-<saying who="rindolf">Jasparon: sth like python</saying>
+<saying who="rindolf">Jasparon: something like python</saying>
 <saying who="rindolf">Jasparon: how good is your math?</saying>
-<saying who="Jasparon">rindolf: So, I know about formal logic enough to know things like De Morgen&#39;s, but I still need to take college algebra</saying>
+<saying who="Jasparon">rindolf: So, I know about formal logic enough to know things like De Morgan&#39;s, but I still need to take college algebra</saying>
 <saying who="Jasparon">Thanks for the books</saying>
 <saying who="rindolf">Jasparon: you&#39;re welcome</saying>
 <saying who="Jasparon">rindolf: Here is a good question:</saying>
@@ -5751,7 +5751,7 @@
 <saying who="Jasparon">rindolf: Right. But I was so confused because my constructor was empty.</saying>
 <saying who="rindolf">Jasparon: or use iterative tree recursion with a dedicated stack</saying>
 <saying who="Jasparon">Good idea</saying>
-<saying who="mvaenskae">hm, low level detail quesiton on C&#39;s memory allocation; if i request 200MB of memory via malloc will that be virtual-addressed memory or real memory locations?</saying>
+<saying who="mvaenskae">hm, low level detail question on C&#39;s memory allocation; if i request 200MB of memory via malloc will that be virtual-addressed memory or real memory locations?</saying>
 <saying who="Jasparon">rindolf: I should be going :)</saying>
 <saying who="rindolf">Jasparon: where?</saying>
 <saying who="rindolf">mvaenskae: hi</saying>
@@ -5791,7 +5791,7 @@
 <saying who="rindolf">Rashad: the quad-pres ones</saying>
 <saying who="rindolf">rts-sander: no</saying>
 <saying who="l2y">mvaenskae: again, what can you do about it? nothing. malloc already allocates a contiguous block of memory, if you are in a kernel space, which you should never be in, you don&#39;t have malloc. you are provided with an interface and are bound to what the interface reveals about itself</saying>
-<saying who="Rashad">rindolf: I don&#39;t know if you need this, but it&#39;s used by Twitter, Github and more: https://necolas.github.io/normalize.css/</saying>
+<saying who="Rashad">rindolf: I don&#39;t know if you need this, but it&#39;s used by Twitter, GitHub and more: https://necolas.github.io/normalize.css/</saying>
 <saying who="rindolf">Rashad: i had done a lot of copying and tweaking</saying>
 <saying who="mvaenskae">l2y: i may to do kernel development ;) and i wanted to clarify the memory pages returned :) i assumed them to be VA but it&#39;s early in the morning and i wasn&#39;t fully awake to properly recall :)</saying>
 <saying who="Rashad">Neat</saying>
@@ -5843,7 +5843,7 @@
 <saying who="rts-sander">svn broke more often than not when I tried it with other people</saying>
 <saying who="velco">one does not have to understand git</saying>
 <saying who="rindolf">rts-sander: git rebase can be a bitch too</saying>
-<saying who="velco">one needs to know just enough of it, ib order to accommodate their workflow</saying>
+<saying who="velco">one needs to know just enough of it, in order to accommodate their workflow</saying>
 <saying who="rindolf">velco: well, git threw me off quite a lot</saying>
 <saying who="rts-sander">if you have a lot of conflicts yeah</saying>
 <saying who="rindolf">velco: good thing there is #git here</saying>
@@ -5893,7 +5893,7 @@
 <saying who="rts-sander">yeah I agree it&#39;s confusing at times</saying>
 <saying who="rts-sander">for example git checkout -- path, git checkout branchname, git checkout -b newbranch all do something completely different</saying>
 <saying who="rindolf">rts-sander: also see http://www.shlomifish.org/humour/fortunes/show.cgi?id=djb-on-cmd-interfaces</saying>
-<saying who="merijn">rts-sander: I think this summaries it accurately: http://stevelosh.com/media/images/blog/2010/01/mercurial-vs-git.jpg</saying>
+<saying who="merijn">rts-sander: I think this summarises it accurately: http://stevelosh.com/media/images/blog/2010/01/mercurial-vs-git.jpg</saying>
 <saying who="rindolf">merijn: heh</saying>
 <saying who="loginoob">git is easy until you fuck up</saying>
 <saying who="merijn">loginoob: Then you just Google and copy&amp;paste cryptic lines from blogposts until either all your data is gone or it&#39;s fixed :p</saying>
@@ -5916,7 +5916,6 @@
 <saying who="jp">sight has been unseen</saying>
 <me_is who="vendu">writes a bullshit generator for git commit comments =)</me_is>
 <saying who="SlashLife^work">merijn: Well, I guess it confirms my 20/10 vision.</saying>
-<me_is who="redstarcomrade">has quit (Read error: Connection reset by peer)</me_is>
 <saying who="Jeremeh">vendu: http://sebpearce.com/bullshit/</saying>
 <saying who="SlashLife^work">rts-sander: That won&#39;t help me now that I *know* they&#39;d be offset when in color. :|</saying>
 <saying who="vendu">bbs lunch :)</saying>
@@ -5960,20 +5959,20 @@
 <saying who="rindolf">better than imaginary integer</saying>
 <saying who="adsc">the subject of the crime is imaginary, but the crime itself is real</saying>
 <me_is who="rindolf">flees to an imaginary haven</me_is>
-<me_is who="adsc">plots rindolf on the gaussian plane</me_is>
+<me_is who="adsc">plots rindolf on the Gaussian plane</me_is>
 <saying who="adsc">there you are</saying>
 <me_is who="rindolf">conspires against the plot</me_is>
-<saying who="exio4">liste: finnish people are over-represented on IRC</saying>
+<saying who="exio4">liste: Finnish people are over-represented on IRC</saying>
 <saying who="vendu">rts-sander, let me find the rules for everyone</saying>
 <saying who="xqb">Finnish people invented IRC :P</saying>
 <saying who="exio4">maybe some irc channel is selling alcohol???</saying>
 <saying who="exio4">xqb: i know :p</saying>
-<saying who="liste">though most finns hang out in IRCnet</saying>
+<saying who="liste">though most Finns hang out in IRCnet</saying>
 <saying who="adsc">vendu: I&#39;ve wanted to make a console based cracking game in forever, but I&#39;m always too lazy</saying>
 <saying who="FMan">Finns invented getting drunk</saying>
 <saying who="rindolf">FMan: they did not</saying>
-<saying who="rindolf">FMan: the jewish bible describes noah getting drunk</saying>
-<saying who="exio4">rindolf: it&#39;s a joke, finns are known to get extremely drunk</saying>
+<saying who="rindolf">FMan: the jewish bible describes Noah getting drunk</saying>
+<saying who="exio4">rindolf: it&#39;s a joke, Finns are known to get extremely drunk</saying>
 <saying who="rindolf">exio4: yes</saying>
 <saying who="SlashLife^work">rindolf: Now you know why he got stuck on a mountain.</saying>
 <saying who="xqb">people were getting drunk and high way before any bible</saying>
@@ -5982,7 +5981,7 @@
 <saying who="SlashLife^work">rindolf: That&#39;s how people got from paradise to Finland. :D</saying>
 <saying who="wedr_">Finland is the End of Land. :/</saying>
 <saying who="rindolf">SlashLife^work: :)</saying>
-<saying who="exio4">it&#39;s the north pole, they&#39;re santa&#39;s buddies</saying>
+<saying who="exio4">it&#39;s the north pole, they&#39;re Santa&#39;s buddies</saying>
 <saying who="rindolf">there is nor way out of there</saying>
 <saying who="wedr_">Oh, how Sweden of you. :/</saying>
 <saying who="rindolf">wedr_: :)</saying>
@@ -6039,7 +6038,7 @@
 <saying who="aawe">I want memes too</saying>
 <saying who="hexingbao">Nowyouseeme to see different culture</saying>
 <saying who="snake2k">birkoff, a simple linear search algorithm if you&#39;re not gonna sort it</saying>
-<saying who="vesc">Birkoff: If you are sorthing you can do it quicker than N.</saying>
+<saying who="vesc">Birkoff: If you are sorting you can do it quicker than N.</saying>
 <saying who="snake2k">birkoff, you&#39;d be better off implemented a fast sorting algorithm and picking the first (or last) value off the array.</saying>
 <saying who="birkoff">vesc interesting. how ? I'm not sorting though.</saying>
 <saying who="day">snake2k: sorting is faster than N?</saying>
@@ -6071,7 +6070,7 @@
 <saying who="flipchan">hey rindolf</saying>
 <saying who="flipchan">what's up</saying>
 <saying who="rindolf">flipchan: i got a haircut today</saying>
-<saying who="rindolf">flipchan: and looked into contributing to tslint, but they have 65 open pull reqs</saying>
+<saying who="rindolf">flipchan: and looked into contributing to tslint, but they have 65 open pull requests</saying>
 <me_is who="snake2k">(snake2k@gateway/vpn/privateinternetaccess/snake2k) has left (&quot;Leaving&quot;)</me_is>
 <me_is who="snake2k">(snake2k@gateway/vpn/privateinternetaccess/snake2k) has joined</me_is>
 <saying who="snake2k">closed out ##programming by mistake &gt;_&gt;</saying>
@@ -6105,7 +6104,7 @@
             <body>
 
 <saying who="G3nka1">Hello I am finding fib number for a large series, here is my code https://pastebin.com/Eu5J4r5y but I get the following error</saying>
-<saying who="AbleBacon">man this python looks like greek to me. I&#39;m so out of touch</saying>
+<saying who="AbleBacon">man this python looks like Greek to me. I&#39;m so out of touch</saying>
 <saying who="rindolf">G3nka1: hi</saying>
 <saying who="rindolf">G3nka1: this is an inaccurate method</saying>
 <saying who="rindolf">G3nka1: perhaps try using matrix exp</saying>
@@ -6130,22 +6129,22 @@
 <saying who="iodev">AbleBacon, LOL!!!</saying>
 <saying who="AbleBacon">&quot;i used this snippet in my production software and it totally destroyed everything and now I&#39;m gonna sue&quot;</saying>
 <saying who="iodev">rindolf, this is illegal!</saying>
-<saying who="iodev">you can&#39;t copyright fibonacci!</saying>
+<saying who="iodev">you can&#39;t copyright Fibonacci!</saying>
 <saying who="G3nka1">rindolf, yup I also had written something similar https://paste.pound-python.org/show/WnXeO2U2BwuzHRQ8k8e2/</saying>
 <saying who="iodev">you can only copyright a unique idea, fibonacci-iterative.py is like copyrighting the stool :D</saying>
-<saying who="rindolf">iodev: i copyright the code and it is expat</saying>
+<saying who="rindolf">iodev: i copyright the code and it is Expat</saying>
 <saying who="AbleBacon">that&#39;s not similar... it doesn&#39;t have an elaborate license explicitly stated in the code file</saying>
-<saying who="iodev">rindolf, well, i can do whatever I want with it, fibo is public domain, you can&#39;t MIT it, if I wanna use it in proprietary software, I can</saying>
+<saying who="iodev">rindolf, well, i can do whatever I want with it, Fibonacci is public domain, you can&#39;t MIT it, if I wanna use it in proprietary software, I can</saying>
 <saying who="AbleBacon">it&#39;s a good thing you didn&#39;t write something similar, because that shit is already copyrighted</saying>
 <saying who="rindolf">iodev: go ahead</saying>
 <saying who="iodev">because it&#39;s not really original, so not copyrighted, so you can&#39;t sue</saying>
 <saying who="rindolf">iodev: mit allows that</saying>
-<saying who="AbleBacon">did he just implicitly award you a license to use fibbonacci?</saying>
+<saying who="AbleBacon">did he just implicitly award you a license to use Fibonacci?</saying>
 <saying who="rindolf">iodev: i wont sue you</saying>
 <saying who="iodev">The above copyright notice and this permission notice shall be</saying>
 <saying who="iodev">included in all copies or substantial portions of the Software.</saying>
 <saying who="iodev">no, even if I don&#39;t do this, you can&#39;t sue me rindolf</saying>
-<saying who="AbleBacon">&quot;i used this fibonacci code as the random number generator for my library and my security has been cracked. I&#39;m totally suing&quot;</saying>
+<saying who="AbleBacon">&quot;i used this Fibonacci code as the random number generator for my library and my security has been cracked. I&#39;m totally suing&quot;</saying>
 <saying who="iodev">rindolf, there, I broke your license :D http://dpaste.com/1NWZFH0</saying>
 <saying who="rindolf">G3nka1: fibgen and F are identical</saying>
 <saying who="iodev">and I dare you to sue me! rindolf make me rich, sue me :D I&#39;ll win</saying>
@@ -6159,19 +6158,19 @@
 <saying who="Trashlord">I need a course in how to not over complicated software</saying>
 <saying who="rindolf">iodev: I&#39;m laughing</saying>
 <saying who="rindolf">iodev: that is OK</saying>
-<saying who="AbleBacon">i mean, an iterative approach is what you use when generating fibonacci numbers on paper</saying>
+<saying who="AbleBacon">i mean, an iterative approach is what you use when generating Fibonacci numbers on paper</saying>
 <saying who="G3nka1">I know rindolf</saying>
 <saying who="iodev">rindolf, anyway, you see, before you MIT/GPL something you must having something Original, that is the copyrighted thing :D</saying>
 <saying who="iodev">if anyone can make it, just like anyone can make a stool, no patent, no copyright is given, because you&#39;re not the author of anything, rindolf</saying>
-<saying who="AbleBacon">fibonacci isn&#39;t around to say that it&#39;s not original</saying>
+<saying who="AbleBacon">Fibonacci isn&#39;t around to say that it&#39;s not original</saying>
 <saying who="AbleBacon">that mofo is 6 feet under somewhere in italy</saying>
 <saying who="GeDaMo">fibs = 0 : 1 : zipWith (+) fibs (tail fibs)</saying>
 <saying who="iodev">I&#39;m an amateur lawyer, rindolf :-)</saying>
 <saying who="iodev">I like to learn legalese :D</saying>
 <saying who="AbleBacon">I&#39;ve seen a couple of episodes of law &amp; order and i can confirm he&#39;s correct</saying>
 <saying who="AbleBacon">this case just needs a bombshell for the thrill factor</saying>
-<saying who="AbleBacon">fibonacci&#39;s great-great-great-great-grandson comes in as a surprise witness</saying>
-<saying who="AbleBacon">and testifies that fibonacci stole the formula</saying>
+<saying who="AbleBacon">Fibonacci&#39;s great-great-great-great-grandson comes in as a surprise witness</saying>
+<saying who="AbleBacon">and testifies that Fibonacci stole the formula</saying>
 <saying who="iodev">AbleBacon, yes, soap opera</saying>
 <saying who="iodev">and in 20 years, he confesses on his death bead to have stolen the formula from an orphan</saying>
 <saying who="iodev">and asks him for forgiveness through an email, and gets a &quot;NOO!&quot;</saying>
@@ -6988,7 +6987,7 @@
 <saying who="mobinoob">time to buckle up and git gud</saying>
 <saying who="rindolf">mobinoob: saw that</saying>
 <saying who="merijn">mobinoob: pfft, that won&#39;t stop me from using Mercurial :)</saying>
-<saying who="merijn">mobinoob: I&#39;ve been using Github as main host for my code in mercurial for years to prepare for this moment :p</saying>
+<saying who="merijn">mobinoob: I&#39;ve been using GitHub as main host for my code in mercurial for years to prepare for this moment :p</saying>
 <saying who="mobinoob">the mercurial rats swim to the last big sinking ship :)</saying>
 <saying who="mobinoob">merijn, haha but at some point you&#39;ll have to learn git though :)</saying>
 <saying who="duncan">Does github support mercurial or do you just push it there as a git repo?</saying>

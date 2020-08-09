@@ -6,7 +6,7 @@ rebuild()
         set -e
         # It builds faster with no $DISPLAY
         unset DISPLAY
-        _gmake_target()
+        _debug_gmake_target()
         {
             local tgt="$1"
             shift
@@ -18,6 +18,10 @@ rebuild()
                 return -1
             fi
             return 0
+        }
+        _gmake_target()
+        {
+            time gmake -j"$ncpus" "$1"
         }
         ncpus="$(nproc)"
         if test -z "$ncpus"

@@ -40,6 +40,24 @@ rebuild()
         _gmake_target fortunes-target
         _gmake_target copy_fortunes
         _gmake_target fastrender
+        _gmake_target all_deps
+        _gmake_target splay
+        _gmake_target art_slogans_targets
+        _gmake_target css_targets
+        _gmake_target generate_nav_data_as_json
+        _gmake_target htaccesses_target
+        _gmake_target hhgg_convert
+        _gmake_target lc_pres_targets
+        _gmake_target mathjax_dest
+        _gmake_target minified_assets
+        _gmake_target mod_files
+        _gmake_target mojo_pres
+        _gmake_target plaintext_scripts_with_offending_extensions
+        _gmake_target printable_resumes__html
+        _gmake_target presentations_targets
+        _gmake_target site_source_install
+        _gmake_target svg_nav_images
+        _gmake_target non_latemp_targets
         _gmake_target all
         _gmake_target test
     )

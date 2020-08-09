@@ -84,9 +84,8 @@ sects_cache: make-dirs $(SRC_CACHE_ALL_STAMP)
 
 site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 
-DEST_HUMOUR := $(PRE_DEST)/humour
+PRE_DEST_HUMOUR := $(PRE_DEST)/humour
 POST_DEST_HUMOUR := $(POST_DEST)/humour
-DEST_POPE := $(DEST_HUMOUR)/Pope
 POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
@@ -188,7 +187,7 @@ all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
 $(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
 
-$(DEST_HUMOUR)/recommendations/films/index.xhtml: $(PROD_SYND_FILMS_INC)
+$(PRE_DEST_HUMOUR)/recommendations/films/index.xhtml: $(PROD_SYND_FILMS_INC)
 
 all_deps: $(PROD_SYND_FILMS_INC)
 
@@ -272,7 +271,7 @@ $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 
 HHGG_CONVERT_SCRIPT_FN := convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
 HHGG_CONVERT_SCRIPT_SRC := bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
-HHGG_CONVERT_SCRIPT_DEST := $(DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
+HHGG_CONVERT_SCRIPT_DEST := $(PRE_DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
@@ -332,9 +331,9 @@ $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtm
 # Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
 
-$(DEST_HUMOUR)/index.xhtml $(DEST_HUMOUR)/stories/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.tt2
+$(PRE_DEST_HUMOUR)/index.xhtml $(PRE_DEST_HUMOUR)/stories/index.xhtml $(PRE_DEST_HUMOUR)/stories/Star-Trek/index.xhtml $(PRE_DEST_HUMOUR)/stories/Star-Trek/We-the-Living-Dead/index.xhtml $(PRE_DEST_HUMOUR)/TheEnemy/index.xhtml: lib/stories/stories-list.tt2
 
-$(DEST_HUMOUR)/humanity/index.xhtml $(DEST_HUMOUR)/humanity/ongoing-text.html $(DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.tt2
+$(PRE_DEST_HUMOUR)/humanity/index.xhtml $(PRE_DEST_HUMOUR)/humanity/ongoing-text.html $(PRE_DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(PRE_DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.tt2
 
 tidy: all
 	$(PERL) bin/run-tidy.pl
@@ -416,7 +415,7 @@ $(FORTUNES_DEST_HTMLS): $(PRE_DEST_FORTUNES_DIR)/%.html: lib/fortunes/xhtmls/%.t
 
 $(SRC_FORTUNES_ALL__TEMP__HTML): $(SRC_FORTUNES_ALL_TT2) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
 
-$(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
+$(PRE_DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
 FORTS_EPUB_COVER_PNG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.png
 FORTS_EPUB_COVER_JPG := $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
@@ -483,11 +482,11 @@ DOCBOOK5_HHFG_IMAGES_RAW := \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK5_HHFG_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK5_HHFG_DEST_DIR := $(PRE_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 DOCBOOK5_HHFG_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide
 
-HHFG_V2_IMAGES_DEST_DIR_FROM_VCS := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
-HHFG_V2_IMAGES_DEST_DIR := $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
+HHFG_V2_IMAGES_DEST_DIR_FROM_VCS := $(PRE_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
+HHFG_V2_IMAGES_DEST_DIR := $(PRE_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
 
 HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
 HHFG_V2_IMAGES_POST_DEST_DIR := $(POST_DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
@@ -529,12 +528,12 @@ $(ALL_DIRS__TO_make_dirs): %:
 
 FICTION_DB5S := $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC := lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
-DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
+POST_DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	./bin/translate-Vered-XML --output "$@" "$<"
 
-all: $(DEST__C_BAD_ELEMS)
+all: $(POST_DEST__C_BAD_ELEMS)
 
 ART_SLOGANS_DOCS := \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
@@ -715,7 +714,7 @@ $(POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 $(POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
 $(PRE_DEST)/personal.html $(PRE_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
-$(DEST_HUMOUR).html $(DEST_HUMOUR)-heb.html: lib/pages/t2/humour.tt2
+$(PRE_DEST)/humour.html $(PRE_DEST)/humour-heb.html: lib/pages/t2/humour.tt2
 $(PRE_DEST)/work/hire-me/index.xhtml $(PRE_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.tt2
 
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
@@ -729,8 +728,8 @@ HTML_TUT_BASE := lib/presentations/docbook/html-tutorial/hebrew-html-tutorial
 HTML_TUT_HEB_DIR := $(HTML_TUT_BASE)/hebrew-html-tutorial
 HTML_TUT_HEB_DB := $(HTML_TUT_BASE)/hebrew-html-tutorial.xml
 HTML_TUT_HEB_TT := $(HTML_TUT_BASE)/hebrew-html-tutorial.xml.tt
-DEST_HTML_TUT_BASE := $(PRE_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
-DEST_HTML_TUT := $(DEST_HTML_TUT_BASE)/index.xhtml
+PRE_DEST_HTML_TUT_BASE := $(PRE_DEST)/lecture/HTML-Tutorial/v1/xhtml1/hebrew
+PRE_DEST_HTML_TUT := $(PRE_DEST_HTML_TUT_BASE)/index.xhtml
 
 selina_mandrake: $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SELINA_MANDRAKE_ENG_TXT_FROM_VCS) $(SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST) $(QOHELETH_IMAGES__POST_DEST) $(TERM_LIBERATION_IMAGES__POST_DEST)
 
@@ -740,9 +739,9 @@ hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_POST_DEST) $(FICTION_TEXT_SOURCES_ON_POST_DEST) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
 
-$(DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
-	mkdir -p $(DEST_HTML_TUT_BASE)
-	rsync -r $(HTML_TUT_HEB_DIR)/ $(DEST_HTML_TUT_BASE)
+$(PRE_DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
+	mkdir -p $(PRE_DEST_HTML_TUT_BASE)
+	rsync -r $(HTML_TUT_HEB_DIR)/ $(PRE_DEST_HTML_TUT_BASE)
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && gmake docbook
@@ -1039,7 +1038,7 @@ TEST_TARGETS := Tests/*.{py,t}
 
 PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
 POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
-DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
+POST_DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
 CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
 

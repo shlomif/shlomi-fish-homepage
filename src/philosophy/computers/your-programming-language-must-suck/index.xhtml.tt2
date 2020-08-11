@@ -59,10 +59,11 @@ side-effects and so are prone to many errors.
 </p>
 
 <p>
-If you have goto or
-goto-like statements (such as exceptions or Perl 5's "last LABEL;" (more like
-"break" in C) or "next LABEL;"), then you encourage code to not be factored
-correctly. If you don't have such stuff, then programmers will hate you for
+If you have <a href="https://en.wikipedia.org/wiki/Goto">goto</a> or
+goto-like statements (such as <a href="https://en.wikipedia.org/wiki/Exception_handling">exceptions</a>
+or Perl 5's <a href="https://perldoc.perl.org/functions/last.html">"last LABEL;"</a>
+or "next LABEL;"), then you encourage code to not be factored
+correctly. If you don't have such stuff, then some programmers will hate you for
 having to go through many hoops to write quick-and-dirty code.
 </p>
 
@@ -133,6 +134,7 @@ Also see a
 <a href="https://www.reddit.com/r/ProgrammingLanguages/comments/7mcsx3/programming_language_checklist/">Reddit discussion</a>.
 </p>
 </li>
+
 <li>
 <p>
 <a href="https://twitter.com/shlomif/status/1025334909014077440">My Tweet</a> -

@@ -22,7 +22,7 @@ s%(<html)([^>]*)(>)%my ($pre, $in, $post)=($1,$2,$3); if ($in !~ /lang/) { $in =
                 ( $$text =~
 s%\s+(?:bgcolor|color|width|border|cellspacing|cellpadding|valign|align)="[^"]+"%%gms
                 );
-            $ret |= ( $$text =~ s%<hr\s+size="[^"+]"\s*/>%<hr />%gms );
+            $ret |= ( $$text =~ s%<hr\s+size="[^"+]"\s*/>%<hr/>%gms );
             return $ret;
         },
     );

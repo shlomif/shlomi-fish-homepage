@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
-<img src="../../images/bk2hp-v2.svg" alt="Back to my homepage" class="bk2hp" />
+<img src="../../images/bk2hp-v2.svg" alt="Back to my homepage" class="bk2hp"/>
 
 [% WRAPPER h2_section "id" => "about", "title" => "About this image", %]
 
@@ -79,7 +79,7 @@ converted the “K” letter to curves and created the arrow based on the “K�
 It looks something like that:
 </p>
 
-<img src="inkscape-bk2hp-v2-new-image-cropped.png" alt="Base wireframe image in Inkscape" />
+<img src="inkscape-bk2hp-v2-new-image-cropped.png" alt="Base wireframe image in Inkscape"/>
 
 [%- END -%]
 
@@ -91,7 +91,7 @@ the built-in Inkscape envelope effect yielded a deformed effect:
 </p>
 
 <img src="inkscape-bk2hp-v2--envelope-effect--deformed--2.png"
-     alt="Deformed Inkscape Envelope Effect" />
+     alt="Deformed Inkscape Envelope Effect"/>
 
 <p>
 So I sought a different approach. I considered my own ad-hoc effect by doing

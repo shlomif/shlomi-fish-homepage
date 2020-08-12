@@ -162,10 +162,10 @@ that denotes the number of “original” codes of n should be
 recursive and defined as following:
 </p>
 
-<p><b>O(1) = 2</b><br />
-<b>O(n) = T(n)/n</b> for every prime number n<br />
+<p><b>O(1) = 2</b><br/>
+<b>O(n) = T(n)/n</b> for every prime number n<br/>
 <b>O(n) = [ T(n) - (O(q1)*q1 + O(q2)*q2 + .. O(qt)*qt ) ] / n</b>
-for all other numbers<br />
+for all other numbers<br/>
 </p>
 
 <p>Otherwise the solution is fine. You can view a C program that

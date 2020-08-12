@@ -146,10 +146,18 @@ second point: it is removed only if all the dice, except maybe one has a
 face value of 2 or more. Phrased in a different way it is removed:
 </p>
 
+<ol>
+<li>
 <p>
-1. If there are 4 dice in the range 2..6   OR<br />
-2. If there are 3 dice in the range 2..6 and one die whose value is 1.
+If there are 4 dice in the range 2..6   OR
 </p>
+</li>
+<li>
+<p>
+If there are 3 dice in the range 2..6 and one die whose value is 1.
+</p>
+</li>
+</ol>
 
 <p>
 The conditions for the other 4 cases are similar: if the additional point

@@ -8,21 +8,21 @@
 <h1>Gamla Scope and Contents</h1>
 <h2>Objectives</h2>
 <p>
-The gamla project aims to create the following:<br />
-<br />
+The gamla project aims to create the following:<br/>
+<br/>
 1. A set of perl modules to manipulate SQL data and other types of
-sequential data.<br />
+sequential data.<br/>
 2. A set of perl modules that will serve as the basis for a World
-Wide Web based application server.<br />
+Wide Web based application server.<br/>
 3. A set of perl modules that will encapsulate common database and
-non-database related GUI dialogs.<br />
+non-database related GUI dialogs.<br/>
 4. Various web applications to run on top of the application
-server.<br />
-5. A web-interface for managing the application server.<br />
+server.<br/>
+5. A web-interface for managing the application server.<br/>
 6. A GUI builder for creating and maintining perl and Gamla based
-applications.<br />
+applications.<br/>
 7. Various perl and C modules and APIs that will be found essential
-to the progress of the project.<br />
+to the progress of the project.<br/>
 The focus of the Gamla project will be on source code and less on
 GUI and other interfaces that can be used to generate it. The
 assumption is that our target is not afraid of editing a few text
@@ -36,47 +36,47 @@ We are going to use nested perl data structures to represent
 various configurations. As demonstrated by Arad::Editor::OneTable
 and Shlomif::MiniReporter, an SQL query can be represented inside a
 perl data structure. This concept will be carried forward
-throughout Gamla.<br />
-<br />
+throughout Gamla.<br/>
+<br/>
 If we take a links manager for example, then we should write such
 SPECs to describe its underlying tables of links and categories.
 Only at the front-end there will be functions that take some of the
 fields (whose values will be passed to it inside a hash) and
 process them to represent a link. That way, it will be easy to add
 or remove fields from the tables, without having to go over the
-entire code.<br />
-<br />
+entire code.<br/>
+<br/>
 </p>
 <h3>2. The record as an associative array</h3>
 An SQL (or other Relational database) record is a hash, not an
 object. We should place all the values of the currently processed
 record in a separate hash, and not place them inside the member
-variables of the object.<br />
-<br />
+variables of the object.<br/>
+<br/>
 This rule was made for having organized and modular code, and
-should be followed.<br />
-<br />
+should be followed.<br/>
+<br/>
 <h3>3. Closures should be avoided when possible</h3>
 Make sure all the subroutine references a function receives accept
 at least one user-defined context variable. Closures are not
 supported by every languages, and I find that having a context
 variable is cleaner and more modular then depending on remembered
-variables.<br />
+variables.<br/>
 <h3>4. Use as many user-definable functions as possible</h3>
 If for example we take Arad::Reporter::OneTable, which will be a
 module that will take a stream of relational records and output
-them. The following methods can be supplied as parameters:<br />
-<br />
-1. Record Renderer Function: How to render a record.<br />
+them. The following methods can be supplied as parameters:<br/>
+<br/>
+1. Record Renderer Function: How to render a record.<br/>
 2. Record Separator Function (accpets the index of the previous
-record).<br />
+record).<br/>
 3. Field Renderer Function: to be called by the Record Renderer to
-render an individual field.<br />
+render an individual field.<br/>
 4. Record Stream Function: retrieves a record from a data
-stream.<br />
-5. Category Header and Category Footer functions.<br />
+stream.<br/>
+5. Category Header and Category Footer functions.<br/>
 Etc. All those methods can be specified at the object creation. For
-example:<br />
+example:<br/>
 <pre>
 my $reporter = Arad::Reporter::OneTable-&gt;new(
         $spec,
@@ -86,71 +86,71 @@ my $reporter = Arad::Reporter::OneTable-&gt;new(
         );
 
 </pre>
-<br />
-<br />
+<br/>
+<br/>
 <h3>5. Perl/Tk-like argument passing</h3>
 Whenever a reference to a function is expected one can place a
 reference to an array that will contain the function reference as
 the first member, and its initial paramters as the other
-members.<br />
-<br />
+members.<br/>
+<br/>
 Also, optional arguments to functions can be specified in the
-manner of "-argument =&gt; $value".<br />
-<br />
+manner of "-argument =&gt; $value".<br/>
+<br/>
 <h3>6. SPEC overriding</h3>
 Instead of modifying the SPEC data structure (which could be a bad
 thing because it may be shared by several concurrent instances of
 the application) we should devise a method to override its
 contents. My idea is that wherever a SPEC is expected, an array of
 SPECs may be passed, where the first is the main spec file and the
-other are deltas.<br />
-<br />
+other are deltas.<br/>
+<br/>
 There may be a more elegant way of doing that, so I suggest we give
-it some thought.<br />
-<br />
+it some thought.<br/>
+<br/>
 <h3>7. Use "$ret .= $value", not "print $value"</h3>
 The title says it all. All functions should return their output,
 which can later be appended to some other output, or printed to the
-screen. In any case print should only be used in end scripts.<br />
-<br />
+screen. In any case print should only be used in end scripts.<br/>
+<br/>
 <h3>8. Dialogs should use at least two objects.</h3>
 A common dialog should have two objects: one object that
 manipulates all the data, and perform all the operations; and one
 object which is library specific and calls the data-object when the
 user performs actions, and displays what the data object returns as
-arguments.<br />
-<br />
+arguments.<br/>
+<br/>
 This concept not only enables us to write multi-library dialogs
 more easily but contributes to a more modular code.
 Arad::Editor::OneTable demonsrates it, and as a proof of concept,
 the table editor can be controlled by either a Perl/Tk dialog or a
-GNU readline-based one (and more can be added by the user).<br />
+GNU readline-based one (and more can be added by the user).<br/>
 <h3>9. Document while you write</h3>
 Those who are working on a module should write a document
 describing its functionality, the methods that should be used by
 the outside, how to use it, etc. That document should then be
-posted to the mailing list.<br />
-<br />
+posted to the mailing list.<br/>
+<br/>
 I'd like the coding to be efficient as possible so it's important
-that people follow this.<br />
+that people follow this.<br/>
 <h2>Core Modules</h2>
 <h3>Arad - The interface with relational data</h3>
 Arad will be a set of modules that will be used to query and edit
 SQL and other relational data. Modules in the Arad namespace will
-include:<br />
-<br />
+include:<br/>
+<br/>
 <b>Arad::Reporter::OneTable</b> - report one table into a static
 HTML file, a text file, etc. Incldue categorizing into categories
-and sub-categories.<br />
-<br />
+and sub-categories.<br/>
+<br/>
 <b>Arad::RecordStream::OneTable</b> - a record stream that can be
 used as input to Arad::Reporter::OneTable. Will be overriden to
 suply streams for SQL tables, perl arrays, Berkeley DB files,
-etc.<br />
-<br />
+etc.<br/>
+<br/>
 <b>Arad::Editor::OneTable</b> - the core of an interactive table
-editor.<br />
-<br />
+editor.<br/>
+<br/>
 Same for multiple tables.
 <h3>Arad::Types - The types manager</h3>
 This will be a type manager for SQL and other types, which will
@@ -167,13 +167,13 @@ type)</li>
 Gamla will contain a great deal of spec data structures, and it is
 required that each class of SPEC files will have its own spec that
 will determine its format and contents, how to convert it to and
-from XML, what is the type of every argument, and so forth.<br />
-<br />
+from XML, what is the type of every argument, and so forth.<br/>
+<br/>
 SPEC::SPECer will enable us to define a spec describing the class
 and sub-classes of every SPEC, and to easily manipulate it within a
 perl program. It can later be used to generate dialogs that will
-allow the user to edit such SPECs.<br />
-<br />
+allow the user to edit such SPECs.<br/>
+<br/>
 <h3>UDL - The Unified Dialog Layer</h3>
 UDL will serve as something like DBI for dialogs and
 user-interfaces. It will enable to create Perl/Gtk, Perl/Tk, HTML,
@@ -186,8 +186,8 @@ basis for UDL.
 <h3>Gamla::Web::Nablus - the HTML (text, Tex, etc.) generator</h3>
 Nablus will be a set of classes that will give an abstraction layer
 with logical styles and central customization over HTML. Basically,
-I can execute statements like:<br />
-<br />
+I can execute statements like:<br/>
+<br/>
 <pre>
 $generator-&gt;append(
      Nablus::Heading-&gt;new("The Enemy and How I helped to fight it",
@@ -204,20 +204,20 @@ Israeli-Lebanese border"));
 Nablus will be able to overcome HTML difficulties like the fact
 that the font has to be applied to every cell in the table
 individually. The same Nablus code can later be used to render
-non-HTML documents, to which we will supply different renders.<br />
-<br />
+non-HTML documents, to which we will supply different renders.<br/>
+<br/>
 I believe we should supply a way to translate Nablus code to and
 from our own defined subset of XML, so site users will be able to
 upload their own documents without the insecurity of writing it in
-perl.<br />
-<br />
+perl.<br/>
+<br/>
 <h3>Gamla::Web::PageMan - the location manager</h3>
 PageMan will be a registry of page id's and their actual locations
 in the site. Gamla applications will be able to supply links to
 pages based on their page ids. Thus, if a page has moved to a new
 location, one can change its location in the registry, and thus
-make sure, all the old pages will point to the new URL.<br />
-<br />
+make sure, all the old pages will point to the new URL.<br/>
+<br/>
 Note that we should make sure that locations can be based on other
 locations. For example, the placement of a certain document can be
 expressed as the base directory of the documentation (e.g: "docs/")
@@ -226,22 +226,22 @@ at run time.
 <h3>Gamla::Web::Lockers - synchronization mechanisms</h3>
 Those mechanisms will supply mechanisms to block read or write to a
 shared resource from several instances of the application server.
-They will include:<br />
-<br />
+They will include:<br/>
+<br/>
 1. ResourceLocker - get permission to read or write from a generic
-resource.<br />
-2. FileLocker - get permission to read or write to a file.<br />
+resource.<br/>
+2. FileLocker - get permission to read or write to a file.<br/>
 3. DirectoryLocker - get permission to add files to a a directory,
-etc.<br />
+etc.<br/>
 <h3>Rindolf - the customization engine</h3>
 Rindolf will enable Gamla to be customized in a very flexible way.
 For example, one can customize the colors, images, fonts, etc. of
-an entire site or subsite, by modifying one central place.<br />
-<br />
+an entire site or subsite, by modifying one central place.<br/>
+<br/>
 Eventually, it should be able to maintain a list of "web themes",
 which the administrator or end-user can choose from, and that can
-be distributed to other sites.<br />
-<br />
+be distributed to other sites.<br/>
+<br/>
 <h3>Bryte - the end-user management engine</h3>
 Bryte will enable to maintain a list of end-users with usernames,
 passwords, preferences, customizations, etc.
@@ -250,31 +250,31 @@ Likewise for site administrators'. Managing permissions on site,
 etc.
 <h2>WWW Applications</h2>
 This is a list of end-applications that will be developed for
-Gamla:<br />
-<br />
-<b>Link-Bus</b> - Link manager.<br />
-<b>Slash-Bus</b> - Slashdot-like online discussions.<br />
+Gamla:<br/>
+<br/>
+<b>Link-Bus</b> - Link manager.<br/>
+<b>Slash-Bus</b> - Slashdot-like online discussions.<br/>
 <b>Mail-Bus</b> - Egroups-like interface to mailing-lists and mail
-archives.<br />
-<b>Store-Bus</b> - E-commerce server.<br />
-<b>GamlaWiki</b> - a Wiki-Wiki web.<br />
+archives.<br/>
+<b>Store-Bus</b> - E-commerce server.<br/>
+<b>GamlaWiki</b> - a Wiki-Wiki web.<br/>
 <b>Source-Bus</b> - Interface to CVS and other code repositories,
-with syntax highlighting, code links, and other goodies.<br />
-<b>Schedule-Bus</b> - a personal/groupware schedule.<br />
-<b>Doc-Bus</b> - manager for online books and documents.<br />
+with syntax highlighting, code links, and other goodies.<br/>
+<b>Schedule-Bus</b> - a personal/groupware schedule.<br/>
+<b>Doc-Bus</b> - manager for online books and documents.<br/>
 <b>FAQ-Bus</b> - SQL-ready FAQ-O-Matic replacement. Probably based
-on Doc-Bus.<br />
-<br />
+on Doc-Bus.<br/>
+<br/>
 Note that all of them should be able to work with SQL or without
 it. Also: both standard database BLOBs and file-system stored BLOBs
 may be used. The reason for that is that some databases like
-PostgreSQL have BLOBs that are inaccesible from the SQL level.<br />
-<br />
+PostgreSQL have BLOBs that are inaccesible from the SQL level.<br/>
+<br/>
 <h2>Modules that we should work on</h2>
 <h3>Data::Duplicator</h3>
 <p>
 Take a perl data-structure and create a duplicate of it. Note that
-the data may not be necessarily hierarchial.<br />
+the data may not be necessarily hierarchial.<br/>
 </p>
 </body>
 </html>

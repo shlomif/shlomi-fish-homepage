@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "Inc/mathjax.tt2" -%]
 
-<img src="dodeca.gif" alt="A Dodecahedron" /> <br />
+<img src="dodeca.gif" alt="A Dodecahedron"/> <br/>
 
 <p>
 The picture above shows a dodecahedron. It’s a solid body which has
@@ -49,7 +49,7 @@ a triangle at the points which are at a certain distance along the
 edges. We get the following picture:</p>
 
 <p><img src="dodeca_corner.gif"
-alt="Corner of a dodecahedron from two different views" /><br />
+alt="Corner of a dodecahedron from two different views"/><br/>
 From point C, which is found somewhere along the edge, let’s lower
 two perpendiculars to the edge, down to the edges of the base
 triangle. We get the triangle CAB. Now since the surface sides of
@@ -100,7 +100,7 @@ $$ \arcsin{\frac{1}{2 \sin{36°}}} $$
 calculate its volume:</p>
 
 <p><img src="dodeca_side_pyramid.gif"
-alt="A Dodecahedron Side Pyramid" /><br />
+alt="A Dodecahedron Side Pyramid"/><br/>
 Since the angle of a perfect pentagon is equal to 108°, angle
 OBA which is half of it is equal to 54°. Since AB is
 <b>a</b>/2, OA is equal to tan(54°)*<b>a</b>/2. Now, the base

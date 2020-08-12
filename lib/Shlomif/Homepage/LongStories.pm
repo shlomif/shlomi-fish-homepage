@@ -69,11 +69,11 @@ Will they succeed?
 </p>
 
 <p>
-What was the <b>photo</b> of the Parthenon <b>replaced</b> with?<br />
-Why was <b>Chandler</b> happy to play Peter Keating?<br />
-Which element is featured in every second-rate <b>romantic novel</b>?<br />
-Which piece of advice did <b>Toohey</b> give Dominique Francon?<br />
-Why did <b>cruising</b> with Gail Wynand turn out to be a <b>bad idea</b>?<br />
+What was the <b>photo</b> of the Parthenon <b>replaced</b> with?<br/>
+Why was <b>Chandler</b> happy to play Peter Keating?<br/>
+Which element is featured in every second-rate <b>romantic novel</b>?<br/>
+Which piece of advice did <b>Toohey</b> give Dominique Francon?<br/>
+Why did <b>cruising</b> with Gail Wynand turn out to be a <b>bad idea</b>?<br/>
 And who were the <b>bad</b> guys in the story?
 </p>
 
@@ -502,7 +502,7 @@ sub _get_logo_tags
 
     return [
         sprintf(
-            qq#<img id="%s" src="%s" alt="%s" class="story_logo %s" />\n#,
+            qq#<img id="%s" src="%s" alt="%s" class="story_logo %s"/>\n#,
             $o->logo_id,
             escape_html( _rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
             $o->logo_alt, $o->logo_class,

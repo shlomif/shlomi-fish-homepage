@@ -23,8 +23,8 @@ sub toc_div
     my $details = "<summary>$title</summary>";
     my $c =
         $args{collapse}
-        ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\" /></details>"
-        : "$head<toc $lang_attr />";
+        ? "<details id=\"toc\">$details<toc $lang_attr nohtag=\"1\"/></details>"
+        : "$head<toc $lang_attr/>";
     return qq#<nav class="page_toc">$c</nav>#;
 }
 

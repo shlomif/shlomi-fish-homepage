@@ -5,7 +5,7 @@
     xmlns="http://docbook.org/ns/docbook"
     xmlns:db="http://docbook.org/ns/docbook">
 
-    <xsl:output method="xml" encoding="UTF-8" indent="yes" />
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="node()|@*">
         <xsl:copy>

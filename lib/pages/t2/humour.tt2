@@ -21,7 +21,7 @@
 <div class="main_text side_toc">
 
 [% BLOCK cartoon_img %]
-<img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon" />
+<img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon"/>
 [% END %]
 
 [% BLOCK eng_intro %]
@@ -287,7 +287,7 @@ dollar, but you can keep the dream.
 [% WRAPPER quote  %]
 
 <p>
-I don’t believe in fairies. Oops! A fairy died.<br />
+I don’t believe in fairies. Oops! A fairy died.<br/>
 I don’t believe in fairies. Oops! Another fairy died.
 </p>
 
@@ -304,7 +304,7 @@ I don’t really know who said it, so it’s possible that I invented it.
 [% WRAPPER heb_header_joke id = "believe_in_fairies"  header = "אני לא מאמינה בפיות"  %]
 
 <p>
-אני לא מאמינה בפיות. אופס! פיה מתה.<br />
+אני לא מאמינה בפיות. אופס! פיה מתה.<br/>
 אני לא מאמינה בפיות. אופס! עוד פיה מתה.
 </p>
 
@@ -502,12 +502,12 @@ header = "המשפט הראשון שיש ללמד"  %]
 [% WRAPPER quote  %]
 
 <p>
-If:<br />
-1. A is A.<br />
-2. A is not not-A.<br />
-does it also imply that:<br />
-1. B is B.<br />
-2. B is not not-B.<br />
+If:<br/>
+1. A is A.<br/>
+2. A is not not-A.<br/>
+does it also imply that:<br/>
+1. B is B.<br/>
+2. B is not not-B.<br/>
 </p>
 
 [%- END -%]
@@ -528,9 +528,9 @@ Linux Club</a>
 <p>
 אם:<br/>
 ‫1. A הוא A.‬
-<br />
+<br/>
 2. ‫A הוא לא לא-A‬
-<br />
+<br/>
 </p>
 
 <p>
@@ -539,9 +539,9 @@ Linux Club</a>
 
 <p>
 ‫1. B הוא B.‬
-<br />
+<br/>
 ‫2. B הוא לא לא-B.‬
-<br />
+<br/>
 </p>
 
 <p class="indent">
@@ -826,20 +826,20 @@ Hackers-IL message No. 2465</a>:
 [% WRAPPER quote  %]
 
 <p>
-&gt;<br />
-&gt; Shlomi,<br />
-&gt;<br />
-&gt; Have you ever considered taking a Turing test? ;-)<br />
-&gt;<br />
+&gt;<br/>
+&gt; Shlomi,<br/>
+&gt;<br/>
+&gt; Have you ever considered taking a Turing test? ;-)<br/>
+&gt;<br/>
 </p>
 
 <p>
-&lt;sarcasm&gt;<br />
+&lt;sarcasm&gt;<br/>
 Sure I did. I sat at one point of an IRC channel, and someone
 tested me. Eventually it was discovered that I am a computer, but it
 turned out the other side was an Eliza program. Strangely enough, I could
-not detect that the latter fact was true.<br />
-&lt;/sarcasm&gt;<br />
+not detect that the latter fact was true.<br/>
+&lt;/sarcasm&gt;<br/>
 </p>
 
 [%- END -%]
@@ -992,13 +992,13 @@ miles.
 [% WRAPPER quote  %]
 
 <p>
-What happened to Christopher Michael Pilato?<br />
-Is he gone?<br />
-Is he gone for good?<br />
-Is he gone for better?<br />
-Is he gone for best?<br />
-Is he gone forever?<br />
-Will he return?<br />
+What happened to Christopher Michael Pilato?<br/>
+Is he gone?<br/>
+Is he gone for good?<br/>
+Is he gone for better?<br/>
+Is he gone for best?<br/>
+Is he gone forever?<br/>
+Will he return?<br/>
 Who is Christopher Michael Pilato, anyway?
 </p>
 
@@ -1437,7 +1437,7 @@ not work, and it always does not work in exactly the same way.
 [% WRAPPER quote  %]
 
 <p>
-<b>Sophie:</b> Let’s suppose you have a table with 2<sup>n</sup> cups…<br />
+<b>Sophie:</b> Let’s suppose you have a table with 2<sup>n</sup> cups…<br/>
 <b>Jack:</b> Wait a second - is “n” a natural number?
 </p>
 
@@ -1448,7 +1448,7 @@ not work, and it always does not work in exactly the same way.
 [% WRAPPER heb_header_joke id = "table_with_cups"  header = "נניח שיש לך שולחן"  %]
 
 <p>
-<b>דפנה:</b> נניח שיש לך שולחן עם 2 בגובה n כוסות…<br />
+<b>דפנה:</b> נניח שיש לך שולחן עם 2 בגובה n כוסות…<br/>
 <b>קובי:</b> רגע, רגע  - האם „n“ הוא מספר טבעי?
 </p>
 
@@ -2216,7 +2216,7 @@ That was said by Anno on
 [% WRAPPER quote  %]
 
 <p>
-<b>Sophie:</b> I’m hungry today.<br />
+<b>Sophie:</b> I’m hungry today.<br/>
 <b>Jack:</b> well, wait until tomorrow - maybe this feeling will pass.
 </p>
 
@@ -2227,7 +2227,7 @@ That was said by Anno on
 [% WRAPPER heb_header_joke id = "Im_hungry_today"  header = "אני רעבה היום…"  %]
 
 <p>
-<b>דפנה:</b> אני רעבה היום.<br />
+<b>דפנה:</b> אני רעבה היום.<br/>
 <b>קובי:</b> אז חכי עד מחר - אולי זה יעבור.
 </p>
 
@@ -2448,7 +2448,7 @@ Got it? It’s kinda awesome!
 
 [% WRAPPER quote  %]
 <p>
-There are two kinds of fools. One says, “This is old, and therefore good”.<br />
+There are two kinds of fools. One says, “This is old, and therefore good”.<br/>
 And one says, “This is new, and therefore better”.
 </p>
 [%- END -%]
@@ -2460,7 +2460,7 @@ And one says, “This is new, and therefore better”.
 
 [% WRAPPER quote  %]
 <p>
-Two more kinds of fools. One says: “This is popular, and therefore good”.<br />
+Two more kinds of fools. One says: “This is popular, and therefore good”.<br/>
 The other says: “This is good because it’s not popular”.
 </p>
 [%- END -%]
@@ -2475,7 +2475,7 @@ The other says: “This is good because it’s not popular”.
 
 [% WRAPPER quote  %]
 <p>
-יש שני סוגי כסילים. אחד אומר: ”זה ישן, ולכן זה טוב“.<br />
+יש שני סוגי כסילים. אחד אומר: ”זה ישן, ולכן זה טוב“.<br/>
 השני אומר: ”זה חדש, ועל-כן זה טוב יותר”.
 </p>
 [%- END -%]
@@ -2487,7 +2487,7 @@ The other says: “This is good because it’s not popular”.
 
 [% WRAPPER quote  %]
 <p>
-שני סוגים נוספים של כסילים. אחד אומר: ”זה פופולרי ולכן זה טוב”.<br />
+שני סוגים נוספים של כסילים. אחד אומר: ”זה פופולרי ולכן זה טוב”.<br/>
 השני אומר: ”זה טוב מפני שזה לא פופולרי“.
 </p>
 [%- END -%]

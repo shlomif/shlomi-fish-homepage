@@ -124,7 +124,7 @@ EOF
         my $title = $r->title();
 
         $ret .= <<"FOO_EOF" ;
-<li><a href="#$id">$title</a><br />
+<li><a href="#$id">$title</a><br/>
 (((((include "fortunes/xhtmls/$id.toc-xhtml")))))
 </li>
 FOO_EOF
@@ -181,7 +181,7 @@ sub _get_common_tt2
 
     return <<"EOF";
 [% BLOCK page_extra_head_elements %]
-<link rel="stylesheet" href="[% base_path %]fortunes.css" media="screen" />
+<link rel="stylesheet" href="[% base_path %]fortunes.css" media="screen"/>
 [% END %]
 EOF
 }

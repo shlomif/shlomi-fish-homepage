@@ -13,8 +13,8 @@ my $HEAD = <<'EOF';
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="he" dir="rtl">
 <head>
 <title>Shlomi Fish’s Homepage</title>
-<meta charset="utf-8" />
-<meta name="description" content="Perl for Newbies Lecture 5: Hebrew Notes" />
+<meta charset="utf-8"/>
+<meta name="description" content="Perl for Newbies Lecture 5: Hebrew Notes"/>
 <style>
 body { direction: rtl; text-align: right; }
 </style>

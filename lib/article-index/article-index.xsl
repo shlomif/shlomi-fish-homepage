@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-    <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
+    <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -30,7 +30,7 @@
 
 <xsl:template match="section" mode="toc">
     <li>
-        <a href="#{@id}"><xsl:value-of select="@title"/></a><br />
+        <a href="#{@id}"><xsl:value-of select="@title"/></a><br/>
         <ol>
             <xsl:apply-templates select="section|entry" mode="toc"/>
         </ol>

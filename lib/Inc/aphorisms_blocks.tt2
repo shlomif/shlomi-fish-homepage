@@ -42,7 +42,7 @@
 
 [% WRAPPER eng_header_joke id=id isa_captioned_image="1" header=header %]
 
-<img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %] /><br />
+<img src="[% src %]" alt="[% alt %]" [% IF img_style %] style="[% img_style %]"[% END %]/><br/>
 
 <ul>
 <li>

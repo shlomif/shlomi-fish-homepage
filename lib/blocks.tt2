@@ -229,8 +229,10 @@ publicly linked to. Please send comments to
 %]
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 [% INCLUDE "Inc/head_javascripts.tt2" %]
+[%- UNLESS raw_fn_path %]
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss" />
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom" />
+[% END %]
 
 [% TRY %]
 [% INCLUDE page_extra_head_elements %]

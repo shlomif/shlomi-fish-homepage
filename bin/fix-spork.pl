@@ -34,7 +34,7 @@ foreach my $fn (@fns)
     $fh->edit_lines_utf8(
         sub {
 
-            $_ = '' if m%\Q<link rel="stylesheet" type="text/css" href="" />\E%;
+            $_ = '' if m%\Q<link rel="stylesheet" type="text/css" href=""/>\E%;
             s/[\t ]+(\n?)\z/$1/;
         }
     );

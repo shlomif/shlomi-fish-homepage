@@ -18,6 +18,20 @@
     width: 40px;
     height: auto;
 }
+.game input[type="checkbox"]
+{
+    display: block;
+    width: 40px;
+    height: auto;
+}
+.game input[type="checkbox"].on
+{
+    background-color: white;
+}
+.game input[type="checkbox"].off
+{
+    background-color: black;
+}
 </style>
 [% END %]
 

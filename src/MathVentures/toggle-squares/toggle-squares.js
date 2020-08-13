@@ -14,7 +14,17 @@ function get_max(x) {
     return Math.min(x + 1, N_squares - 1);
 }
 
+let disable = false;
+let disable_x = 0;
+let disable_y = 0;
+
 function press_button(x, y) {
+    if (disable) {
+        return;
+    }
+    disable = true;
+    disable_x = x;
+    disable_y = y;
     const min_x = get_min(x);
     const min_y = get_min(y);
     const max_x = get_max(x);
@@ -25,25 +35,29 @@ function press_button(x, y) {
             toggle_button(ix, iy);
         }
     }
+    disable = false;
+    return;
 }
 
 function toggle_button(ix, iy) {
     const button_name = 'button_' + ix + '_' + iy;
     const button_handle = $('#' + button_name);
 
-    const old_src = button_handle.attr('src');
-
-    const old_state = (old_src == '1.min.svg');
+    const old_state = button_handle.hasClass('on');
     const new_state = !old_state;
 
+    button_handle.toggleClass('on');
+    button_handle.toggleClass('off');
+    if (true) { //if (! ((ix == disable_x) && (iy == disable_y))) {
+        button_handle.prop('checked', new_state);
+    }
+
     if (new_state) {
-        button_handle.attr('src', '1.min.svg');
         ++count_of_ons;
-        button_handle.attr('alt', 'on');
+        // button_handle.attr('alt', 'on');
     } else {
-        button_handle.attr('src', '0.min.svg');
         --count_of_ons;
-        button_handle.attr('alt', 'off');
+        // button_handle.attr('alt', 'off');
     }
 }
 

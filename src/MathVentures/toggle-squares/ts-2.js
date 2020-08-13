@@ -2,12 +2,12 @@ let n = -1;
 
 function button_html(x, y, value) {
     return (
-        "<img src=\"" +
-        (value ? "1" : "0") +
-        ".min.svg\" alt=\"" +
-        (value ? "white" : "black") +
-        "\" id=\"button_" + x + "_" + y + "\" " +
-        "onclick=\"user_press_button(" + x + "," + y + "); return false;\" />"
+        "<input type=\"checkbox\" class=\"" +
+        (value ? "on" : "off") +
+        "\" " + (value ? " checked=\"checked\" " : "") +
+        " id=\"button_" + x + "_" + y + "\" " +
+        // "onchange=\"user_press_button(" + x + "," + y + "); return false;\" onclick=\"return false;\" />"
+        "onclick=\"user_press_button(" + x + "," + y + "); return true;\" onchange=\"return true;\" />"
         );
 }
 

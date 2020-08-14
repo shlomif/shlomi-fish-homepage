@@ -34,7 +34,7 @@ my $software_tree_contents = {
                 {
                     text  => "Latemp",
                     url   => "open-source/projects/latemp/",
-                    title => "A Content Management System for Static HTML",
+                    title => "A static site generator",
                 },
                 {
                     text  => "Website META Language",

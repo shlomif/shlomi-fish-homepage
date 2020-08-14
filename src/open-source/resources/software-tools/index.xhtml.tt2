@@ -295,11 +295,12 @@ effort to port and package open source software for macOS .
 
 <ul>
 
-<li>
+<li id="git">
 <p>
-<a href="http://www.cvshome.org/">CVS</a> - the old standard of
-open-source source control systems. Functional and stable, but limited in
-many ways. (GPLed).
+<a href="https://git-scm.com/">Git</a> - a version control system originally
+designed for the Linux kernel. Fast and 100% distributed, but has some
+user-interface idiosyncrasies, a complex command-set, and lacks good
+documentation. (GPLed) Considered the go-to solution as of 2020.
 </p>
 </li>
 
@@ -312,16 +313,7 @@ but much more reliable than CVS and works better. (Apache/BSD Licence).
 </p>
 </li>
 
-<li>
-<p>
-<a href="https://git-scm.com/">Git</a> - a version control system originally
-designed for the Linux kernel. Very fast and 100% distributed, but has some
-user-interface idiosyncrasies, a complex command-set, and lacks good
-documentation. (GPLed)
-</p>
-</li>
-
-<li>
+<li id="mercurial">
 <p>
 <a href="https://www.mercurial-scm.org/">Mercurial</a> - a distributed
 version control system inspired by Subversion and Git and written in Python and
@@ -352,6 +344,25 @@ written in C, based on <a href="https://www.sqlite.org/index.html">SQLite</a> an
 version control and bug tracking system. (Apache licence).
 </p>
 </li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/BitKeeper">BitKeeper</a> - a formerly proprietary
+distributed version control system, which was made open source under the Apache License
+in 2016. Had been used by the Linux kernel project, and the demise of its gratis version
+prompted the development of <a href="#git">Git</a> and <a href="#mercurial">Mercurial</a>,
+which eclipsed it in popularity.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.cvshome.org/">CVS</a> - the old de-facto standard of
+open-source source control systems. Functional and stable, but limited in
+many ways. (GPLed).
+</p>
+</li>
+
 
 </ul>
 
@@ -430,6 +441,14 @@ enterprise-grade ticketing system which enables a group of people to
 intelligently and efficiently manage tasks, issues, and requests submitted
 by a community of users.”</q>. Among else, it is used for
 <a href="http://rt.cpan.org/">tracking CPAN issues</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://roundup.sourceforge.net/">Roundup</a> - an issue tracker written
+in Python, based on the winning entry for the Software Carpentry competition
+(which only accepted Python entries).
 </p>
 </li>
 
@@ -680,11 +699,5 @@ best practices in the software industry.
 </div>
 
 [% PROCESS cc_by_licence_section "year" => "2011",  %]
-
-<!-- To add:
-Configuration: the SC entries,
-SCMs: BitKeeper.
-Testing: Expect.
--->
 
 [% END %]

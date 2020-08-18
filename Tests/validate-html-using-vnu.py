@@ -60,10 +60,6 @@ class MyTests(vnu_validator.VnuTest):
             )
             |
             (?:
-                (?:Perl/Newbies/
-                    lecture[1-5](?:--all-in-one-html)?/index{ext}
-                )
-                        |
                 (?:
                     WebMetaLecture/
                         {slides_dir}/examples/frames(?:/dest)?/(?:frames|links){ext}

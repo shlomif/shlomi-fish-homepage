@@ -9677,5 +9677,32 @@ can always find me, anyway.
         </irc>
     </fortune>
 
+    <fortune id="sharp-gamedev--good-vs-bad-refactoring">
+        <meta>
+            <title>Good vs. bad refactoring</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="rindolf">refactoring and optimising code seem like bottomless pits (or evertop mountains?)</saying>
+<saying who="warweasle">rindolf: I found a similar problem with retopologizing meshes.</saying>
+<saying who="rindolf">warweasle: with respect to refactoring?</saying>
+<saying who="warweasle">Although I deal with lower poly stuff so it&#39;s not nearly as bad as people who use the subsurf modifier all the time.</saying>
+<saying who="warweasle">rindolf: Very similar. You can just keep making it &quot;better&quot; when the original crappy mesh was good &quot;enough&quot;.</saying>
+<saying who="rindolf">warweasle: ah</saying>
+<saying who="warweasle">rindolf: It really kills me because I do both modeling AND code.</saying>
+<saying who="warweasle">If I looked, I could probably find a better paying job doing gamedev...but I enjoy doing next to nothing.</saying>
+<saying who="rindolf">warweasle: I recently ran into some cases where I spent many hours trying to fix functional defects, and then converted to a more elegant design, which ended up fixing the bugs later.</saying>
+<saying who="warweasle">rindolf: Then that&#39;s the good kind of refactoring. But I go too far sometimes. I just keep trying to make it better because it&#39;s not &quot;perfect&quot;.</saying>
+<saying who="warweasle">And honestly sometimes it&#39;s easier to rewrite something than fix it in place.</saying>
+
+            </body>
+            <info>
+                <channel>#gamedev</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

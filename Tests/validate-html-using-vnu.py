@@ -65,11 +65,9 @@ class MyTests(vnu_validator.VnuTest):
                         {slides_dir}/examples/frames(?:/dest)?/(?:frames|links){ext}
                 )
                             |
-                (?:(?:Perl/Haskell
-                        |
+                (?:(?:
                     WebMetaLecture
-                        |
-                    mini/mdda )/
+                    )/
                     {slides_dir}/index{ext}
                 )
             )

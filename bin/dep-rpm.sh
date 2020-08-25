@@ -3,7 +3,7 @@
 # t.sh
 # Copyright (C) 2018 shlomif <shlomif@cpan.org>
 #
-# Distributed under terms of the MIT license.
+# Distributed under the terms of the MIT license.
 #
 
 perl bin/gen-rpm-for-build-deps -o f.spec

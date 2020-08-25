@@ -335,9 +335,6 @@ $(PRE_DEST_HUMOUR)/index.xhtml $(PRE_DEST_HUMOUR)/stories/index.xhtml $(PRE_DEST
 
 $(PRE_DEST_HUMOUR)/humanity/index.xhtml $(PRE_DEST_HUMOUR)/humanity/ongoing-text.html $(PRE_DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(PRE_DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.tt2
 
-tidy: all
-	$(PERL) bin/run-tidy.pl
-
 FORTUNES_XHTMLS_DIR := lib/fortunes/xhtmls
 
 FORTUNES_LIST_PM := lib/Shlomif/Homepage/FortuneCollections.pm

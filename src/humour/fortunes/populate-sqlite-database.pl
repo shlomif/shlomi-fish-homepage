@@ -79,6 +79,11 @@ my $collection_query_id_sth =
 # http://stackoverflow.com/questions/21054245/attempt-to-write-a-readonly-database-django-w-selinux-error
 
 # my $global_idx = 0;
+sub _find_h3
+{
+    my $node = shift;
+    return $node->findnodes(q{descendant::h3[@id]})->[0];
+}
 
 foreach my $basename (@file_bases)
 {
@@ -103,7 +108,7 @@ foreach my $basename (@file_bases)
     {
         # printf( "%-70s\r", "$basename $idx/$count ($global_idx)" );
 
-        my $h3_node = $node->findnodes(q{descendant::h3[@id]})->[0];
+        my $h3_node = _find_h3($node);
 
         my $id    = $h3_node->id;
         my $title = $h3_node->string_value();
@@ -112,8 +117,11 @@ foreach my $basename (@file_bases)
         {
             die "No ID in file '$basename' in " . $node->as_XML . "!";
         }
+        my $clone = $node->clone();
+        my $h3    = _find_h3($clone);
+        $h3->detach();
 
-        $insert_sth->execute( $collection_id, $id, $title, $node->as_XML() );
+        $insert_sth->execute( $collection_id, $id, $title, $clone->as_XML() );
     }
 
 =begin removed

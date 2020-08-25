@@ -63,7 +63,10 @@ foreach my $fn (@fns)
     $fh->spew_utf8( $indiv_dom->toString() );
 }
 
-system( qw#tidy -quiet -asxhtml --tidy-mark no --write-back yes#, @fns );
+system(
+    qw#tidy -quiet -asxhtml --show-warnings no --tidy-mark no --write-back yes#,
+    @fns
+);
 
 =head1 COPYRIGHT & LICENSE
 

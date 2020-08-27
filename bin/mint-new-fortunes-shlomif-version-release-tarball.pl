@@ -33,14 +33,25 @@ my $git_obj = Shlomif::Homepage::Git->new;
 my $repos   = 'shlomif-humour-fortunes-archives-assets';
 $git_obj->github_shlomif_clone( 'lib/repos', $repos );
 my $full_r        = "lib/repos/$repos";
-my $dest_pkg      = "humour/fortunes/$package_base";
-my $full_dest_pkg = "$full_r/$dest_pkg";
+my $dir           = "humour/fortunes";
+my $dest_pkg      = "$dir/$package_base";
+my $full_dest_pkg = path("$full_r/$dest_pkg");
 path($full_path)->copy($full_dest_pkg);
-my_system(
-    [
-        "bash",
-        "-c",
-"set -e -x ; cd $full_r && git add \"$dest_pkg\" && git commit -m \"add version @{[ShlomifFortunesMake->ver()]}\" && git push"
-    ]
-);
+my $ver = ShlomifFortunesMake->ver();
 
+if (1)
+{
+    my_system(
+        [
+            "bash",
+            "-c",
+"set -e -x ; cd $full_r && git add \"$dest_pkg\" && git commit -m \"add version @{[$ver]}\" && git push"
+        ]
+    );
+}
+my $post_dest = path("./dest/post-incs/t2/$dir");
+foreach my $tar ( $full_dest_pkg->parent->children(qr/\.tar\.(gz|xz)\z/) )
+{
+    $tar->copy($post_dest);
+}
+my_system( [ "git", "tag", "fortunes-shlomif-v$ver" ] );

@@ -28,3 +28,19 @@ my_system( [ 'gmake', "-C", $DIR, "dist" ] );
 my $package_base = ShlomifFortunesMake->package_base();
 my $full_path    = sprintf( "%s/%s", $DIR, $package_base );
 my_system( [ "ls", $full_path ] );
+use Shlomif::Homepage::Git ();
+my $git_obj = Shlomif::Homepage::Git->new;
+my $repos   = 'shlomif-humour-fortunes-archives-assets';
+$git_obj->github_shlomif_clone( 'lib/repos', $repos );
+my $full_r        = "lib/repos/$repos";
+my $dest_pkg      = "humour/fortunes/$package_base";
+my $full_dest_pkg = "$full_r/$dest_pkg";
+path($full_path)->copy($full_dest_pkg);
+my_system(
+    [
+        "bash",
+        "-c",
+"set -e -x ; cd $full_r && git add \"$dest_pkg\" && git commit -m \"add version @{[ShlomifFortunesMake->ver()]}\" && git push"
+    ]
+);
+

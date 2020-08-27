@@ -44,7 +44,7 @@ sub package_base
 {
     my ($class) = @_;
 
-    return $class->dist_dir . '.tar.gz';
+    return $class->dist_dir . '.tar.xz';
 }
 
 1;

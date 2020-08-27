@@ -111,16 +111,10 @@ lib->import("./lib");
 require Shlomif::Homepage::LongStories;
 Shlomif::Homepage::LongStories->new->render_make_fragment;
 require Shlomif::Homepage::FortuneCollections;
-Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;
-
-my_exec_perl(
-    [
-        'bin/gen-forts-all-in-one-page.pl',
-        'src/humour/fortunes/all-in-one.uncompressed.html.tt2',
-    ],
-    "gen-forts-all-in-one-page.pl failed!"
-);
-
+my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new();
+$fortune_colls_obj->print_all_fortunes_html_tt2s;
+$fortune_colls_obj->write_epub_and_all_in_one(
+    'src/humour/fortunes/all-in-one.uncompressed.html.tt2');
 my $DIR = "lib/make/";
 
 foreach my $cmd (

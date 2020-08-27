@@ -29,7 +29,7 @@ XHTMLS := $(patsubst %.xml,%.xhtml,$(XMLS))
 
 .PHONY: all test html distdir upload
 
-all: dist test gen_htaccess
+all: test gen_htaccess
 
 $(DATS):: %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile -s $<

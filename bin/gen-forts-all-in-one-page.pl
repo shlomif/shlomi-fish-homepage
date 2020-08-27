@@ -7,8 +7,7 @@ use Shlomif::Homepage::FortuneCollections ();
 my $filename          = shift(@ARGV);
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 
-$fortune_colls_obj->write_fortune_all_in_one_page_to_file($filename);
-$fortune_colls_obj->write_epub_json('lib/fortunes/xhtmls/book.json');
+$fortune_colls_obj->write_epub_and_all_in_one($filename);
 
 __END__
 

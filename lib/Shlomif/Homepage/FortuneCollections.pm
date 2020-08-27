@@ -13,7 +13,7 @@ use JSON::MaybeXS ();
 use List::Util qw(max);
 use Path::Tiny qw/ path /;
 use Shlomif::FindLib ();
-use YAML::XS (qw(LoadFile));
+use YAML::XS         (qw(LoadFile));
 
 sub _init_fortune
 {
@@ -240,6 +240,14 @@ sub print_all_fortunes_html_tt2s
             },
         );
     }
+}
+
+sub write_epub_and_all_in_one
+{
+    my ( $self, $fn ) = @_;
+    $self->write_fortune_all_in_one_page_to_file($fn);
+    $self->write_epub_json('lib/fortunes/xhtmls/book.json');
+    return;
 }
 
 sub write_epub_json

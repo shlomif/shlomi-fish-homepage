@@ -26,7 +26,9 @@ ns = {"xml": XML_NS, }
 FULL_NAMES = {"chuck": "Chuck Norris",
               "emma-watson": "Emma Watson",
               "nsa": "NSA",
-              "taylor-swift": "Taylor Swift", }
+              "taylor-swift": "Taylor Swift",
+              "xena": "Xena the Warrior Princess",
+              }
 
 ID_IS_FACTOID_RE = re.compile("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$")
 BASENAME_EXTRACT_RE = re.compile('^([a-z_\\-]*)_facts$')

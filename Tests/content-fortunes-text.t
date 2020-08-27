@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 7;
+use Test::More tests => 9;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
@@ -18,6 +18,18 @@ my $POST_DEST = $obj->t2_post_dest();
         $content,
         qr{You are banished! You}ms,
         'Plain text fortune exists and contains text.',
+    );
+
+    $content = path("$POST_DEST/humour/fortunes/shlomif-factoids")->slurp_utf8;
+
+    # TEST
+    like( $content, qr{Xena can meet King David}ms, 'Search for "Xena"', );
+    #
+    # TEST
+    like(
+        $content,
+        qr{Xena the Warrior Princess has not met Chuck}ms,
+        'Search for "Xena"',
     );
 
     # TEST

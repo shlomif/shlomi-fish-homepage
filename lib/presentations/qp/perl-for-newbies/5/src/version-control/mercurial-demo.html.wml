@@ -105,7 +105,7 @@ which, as it name implies, gives a log of what has been done in the past:
 $p4n/5/merc-test/MyModule$ hg log
 changeset:   0:7dec17ed3e88
 tag:         tip
-user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+user:        Shlomi Fish &lt;shlomif@ELIDED&gt;
 date:        Fri Jan 14 18:07:32 2011 +0200
 summary:     Added MyModule.pm
 </quadpres_code_block>
@@ -372,22 +372,22 @@ $ hg update
 $ hg log
 changeset:   3:a7599e97a8d8
 tag:         tip
-user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+user:        Shlomi Fish &lt;shlomif@ELIDED&gt;
 date:        Sat Jan 15 10:46:24 2011 +0200
 summary:     Fixed a bug - we did x+y*2 instead of x+y
 
 changeset:   2:ebc249691c24
-user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+user:        Shlomi Fish &lt;shlomif@ELIDED&gt;
 date:        Fri Jan 14 18:20:29 2011 +0200
 summary:     Add another assertion
 
 changeset:   1:e2b34f948dcd
-user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+user:        Shlomi Fish &lt;shlomif@ELIDED&gt;
 date:        Fri Jan 14 18:14:05 2011 +0200
 summary:     Added mytest.t.
 
 changeset:   0:7dec17ed3e88
-user:        Shlomi Fish &lt;shlomif@iglu.org.il&gt;
+user:        Shlomi Fish &lt;shlomif@ELIDED&gt;
 date:        Fri Jan 14 18:07:32 2011 +0200
 summary:     Added MyModule.pm
 </quadpres_code_block>

@@ -9704,5 +9704,71 @@ can always find me, anyway.
         </irc>
     </fortune>
 
+    <fortune id="sharp-math--divisibility-tests">
+        <meta>
+            <title>Divisibility Tests</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="k_sze">You know how, for numbers expressed in base 10, there is a way to check whether an integer is divisible by 3 or 9 by recursively summing the digits? Is there a pattern to this trick that extends to other bases? Are there special requirements for this kind of trick to hold for a certain base?</saying>
+<saying who="rindolf">k_sze: i think it is (b-1)</saying>
+<saying who="rindolf">k_sze: you can also use a https://en.wikipedia.org/wiki/Finite-state_machine</saying>
+<saying who="rindolf">k_sze: which works for any number base and modulo</saying>
+<saying who="int-e">rindolf: right, 10_b = 1_b (mod b-1)</saying>
+<saying who="k_sze">rindolf, 3 is not b-1 for base 10, so why does it hold?</saying>
+<saying who="int-e">k_sze: it also works for divisors of b-1.</saying>
+<saying who="int-e">3 | 9.</saying>
+<saying who="rindolf">k_sze: because 9 is divisible by  3</saying>
+<saying who="k_sze">interesting. So for base 16, I could check the divisibility of 15, 3, and 5 using this trick?</saying>
+<saying who="int-e">Yes.</saying>
+<saying who="int-e">And 1, but that&#39;s silly.</saying>
+<me_is who="rindolf">divides himself by 1 and gets a remainder of 0 ;)</me_is>
+<me_is who="k_sze">divides himself by 1 and get NaN.</me_is>
+<saying who="rindolf">k_sze: heh</saying>
+<me_is who="rindolf">divides k_sze &#39;s mum by 1 and gets +\inf</me_is>
+<saying who="mawk">k_sze: you can find other tricks by just playing with the numbers in the relevant base</saying>
+<saying who="mawk">like divisibility by 11 in base 10, for abcd you do d-c+b-a</saying>
+<saying who="rindolf">mawk: in the general case one can generate an FSM for any given number base and modulo</saying>
+<saying who="mawk">yes I&#39;m sure</saying>
+<saying who="int-e">or a regular expression</saying>
+<saying who="int-e">which is a terrible idea ;)</saying>
+<saying who="rindolf">int-e: heh</saying>
+<saying who="int-e">(The FSM for divisibility by d will have up to d states (sometimes you can get away with fewer, notably for divisors of the base)... but regular expressions based on DFAs tend to be large.)</saying>
+<saying who="rindolf">int-e: i see</saying>
+<saying who="int-e">rindolf: It&#39;s not stopping people from doing that though: https://github.com/olligobber/DivisibilityRegex</saying>
+<saying who="int-e">And I tried it for divisibility by 7 once myself (with computer help, of course) and ended up with 10789 characters, plus 4 for an initial &#39;^(&#39; and a final &#39;)$&#39;.</saying>
+<saying who="mawk">ugly</saying>
+<saying who="mawk">...fedcba = a + 3b + 2c - d - 3e - 2f + ...</saying>
+<saying who="mawk">like this ?</saying>
+<saying who="rindolf">int-e: oooh, Haskell</saying>
+<saying who="mawk">or is there something smarter</saying>
+<saying who="int-e">rindolf: http://paste.debian.net/1161958/ is my regex :P</saying>
+<saying who="int-e">sheer beauty ;)</saying>
+<saying who="mawk">I mean mod 7 of course</saying>
+<saying who="int-e">mawk: The usual rule for this is to split the number into groups of 3, and alternatingly add and subtract them.</saying>
+<saying who="mawk">but with the coefficients I&#39;ve put right</saying>
+<saying who="mawk">or did I make a mistake</saying>
+<saying who="int-e">mawk: they&#39;re right</saying>
+<saying who="mawk">ah good</saying>
+<saying who="int-e">mawk: but hard to remember, I guess.</saying>
+<saying who="mawk">yeah nobody needs divisibility by 7 anyway</saying>
+<saying who="mawk">7 is not a pretty number</saying>
+<saying who="int-e">cba - fed + ihg - lkj ... is easier to remember. And it also works for 11 and 13.</saying>
+<saying who="int-e">(7*11*13 = 1001)</saying>
+<saying who="nejimban">write N = 10*a + b, then N is divisible by 7 if and only if b - 2a is divisible by 7</saying>
+<saying who="mawk">ah yes</saying>
+<saying who="mawk">b-4a you mean ?</saying>
+<saying who="int-e">Nobody really cares because we have calculators and computers and pocket-sized distraction rectangles.</saying>
+<saying who="mawk">lol</saying>
+
+            </body>
+            <info>
+                <channel>##math</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

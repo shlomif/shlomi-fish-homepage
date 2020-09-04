@@ -6,9 +6,10 @@
 [%- WRAPPER wrap_html -%]
 
 [% IF 0 %]
-;;; Removed due to a firefox bug with the CSS in the sb.css. The page
-;;; doesn't look much worse without it, anyway.
-
+[%#
+Removed due to a firefox bug with the CSS in the sb.css. The page
+doesn't look much worse without it, anyway.
+%]
 [% BLOCK _removed______page_extra_head_elements %]
 <link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
 [% END %]

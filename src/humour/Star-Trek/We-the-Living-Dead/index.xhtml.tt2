@@ -98,31 +98,6 @@ seems extremely far-fetched.
 
 [%- END -%]
 
-[% IF 0 %]
-
-[% WRAPPER h2_section id = "ebook"  title = "Ebook for Purchase"  %]
-
-<p>
-An Ebook of the screenplay for purchase in EPUB and MOBI formats.
-</p>
-
-<ul>
-
-<li>
-<a href="http://www.lulu.com/shop/shlomi-fish/star-trek-we-the-living-dead/ebook/product-20939569.html">Lulu.com</a>
-</li>
-
-</ul>
-
-<p>
-The Ebooks are made available under the same CC-by-sa licence as the source,
-and can be built from the repository with some technical know how.
-</p>
-
-[%- END -%]
-
-[% END %]
-
 [% WRAPPER links_sect  %]
 
 [% WRAPPER h3_section id = "star_trek_links"  title = "Star Trek Links"  %]

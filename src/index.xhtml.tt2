@@ -79,10 +79,10 @@ open source, web culture, Internet freedom, etc. from the author of
 [% END %]
 
 [% BLOCK page_extra_head_elements %]
-[% IF 0 %]
-;;; OpenID-enabling http://www.shlomifish.org/ - see:
-;;; http://blog.woobling.org/2009/05/your-openid-sucks.html
-[% END %]
+[%#
+OpenID-enabling http://www.shlomifish.org/ - see:
+http://blog.woobling.org/2009/05/your-openid-sucks.html
+%]
 [%SET openid="http://shlomif.livejournal.com/"%]
 <meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
 <link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />

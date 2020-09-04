@@ -1,24 +1,22 @@
 [%- SET title = "A First-Come First-Served Readers/Writers Lock" -%]
 [%- SET desc = "A First-Come First-Served Readers/Writers Lock" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
+<ul>
+<li>
 <p>
 <a href="pthread_rwlock_fcfs-0.8.0.tar.bz2"><b>Download the latest (0.8.0) stable version source code.</b></a>
 </p>
+</li>
 
+<li>
 <p>
 <a href="linux-kernel/">FCFS flock for the Linux Kernel</a>
 </p>
+</li>
 
-[% IF 0 %]
-;;; removed until I have a new development version
-
-<p>
-<a href="pthread_rwlock_fcfs-0.3.5.tar.gz">Development version</a>
-</p>
-[% END %]
+</ul>
 
 <p>
 This is a working implementation of a First-Come First-Served

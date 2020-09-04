@@ -248,11 +248,6 @@ publicly linked to. Please send comments to
 
 <div class="header" id="header">
 
-[%- IF 0 -%]
-<div class="banner">
-</div>
-[%- END -%]
-
 <div class="leading_path">
 [% leading_path_string %]
 </div>
@@ -492,9 +487,7 @@ of an EvilPHish”</a> cartoon of
 [%- END -%]
 
 [% content %]
-
 [%- PROCESS end_html -%]
-
 [%- END -%]
 
 [%-# vim:ft=tt2html:

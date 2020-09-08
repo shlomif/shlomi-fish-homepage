@@ -223,7 +223,7 @@ publicly linked to. Please send comments to
 <meta name="keywords" content="Shlomi Fish, Shlomi, Fish, Perl, Humour, Israel, Programming, Open Source, Free Software, Presentations, Philosophy, Freecell, Freecell Solver, GIMP, Software[% more_keywords ? (", " _ more_keywords) : "" %]"/>
 <link rel="stylesheet" href="[% base_path %]style.css" media="screen" title="Normal"/>
 <link rel="stylesheet" href="[% base_path %]print.css" media="print"/>
-<link rel="shortcut icon" href="[% base_path %]favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="[% base_path %]favicon.png" type="image/png"/>
 [%- html_head_nav_links -%]
 [% # Let the browser know that the website is optimized for mobile
 %]

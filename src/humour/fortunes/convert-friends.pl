@@ -76,7 +76,7 @@ foreach my $fort (@fortunes)
         if (
             system(
                 "perl", "-MXML::Grammar::Screenplay::App::FromProto",
-                "-e", 'run()', "--", "-o", $xml_fn, $txt_fn
+                "-e",   'run()', "--", "-o", $xml_fn, $txt_fn
             )
             )
         {

@@ -9,7 +9,7 @@ use utf8;
 use MyNavData::Hosts ();
 
 use Shlomif::Homepage::FortuneCollections ();
-use JSON::MaybeXS (qw( decode_json ));
+use JSON::MaybeXS                         (qw( decode_json ));
 use Path::Tiny qw( path );
 
 my $json_data_fn =

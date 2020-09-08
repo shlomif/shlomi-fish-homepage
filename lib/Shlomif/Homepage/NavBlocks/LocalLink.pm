@@ -16,7 +16,7 @@ has [
         )
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
-has 'title'   => ( is => 'ro', isa => 'Str' );
+has 'title' => ( is => 'ro', isa => 'Str' );
 has 'no_wrap' => ( is => 'ro', isa => 'Bool', defualt => '', );
 
 sub collect_local_links

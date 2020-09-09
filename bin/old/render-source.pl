@@ -23,8 +23,8 @@ my @WML_FLAGS = (
 % =~ /(\S+)/g
 );
 
-my $T2_SRC_DIR = 't2';
-my $T2_DEST    = "dest/pre-incs/$T2_SRC_DIR";
+my $T2_SRC_DIR  = 't2';
+my $T2_PRE_DEST = "dest/pre-incs/$T2_SRC_DIR";
 
 chdir($T2_SRC_DIR);
 
@@ -45,7 +45,7 @@ sub is_newer
 my @queue;
 foreach my $lfn (@ARGV)
 {
-    my $dest     = "$T2_DEST/$lfn";
+    my $dest     = "$T2_PRE_DEST/$lfn";
     my $abs_dest = "$PWD/$dest";
     my $src      = "$lfn.wml";
     if ( $UNCOND or is_newer( $src, $abs_dest ) )

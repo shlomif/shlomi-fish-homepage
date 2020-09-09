@@ -28,7 +28,6 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_test_run_dir)/%: src/lecture/images/%
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_too_many_ways_dir)/%: src/images/presentations/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
-$(T2_DEST_FORTUNE_BOTTLE): $(SRC_SRC_BOTTLE)
 $(TERM_LIBERATION_IMAGES__POST_DEST): $(TERM_LIBERATION_IMAGES__POST_DEST_PREFIX)/%: $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/%
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml

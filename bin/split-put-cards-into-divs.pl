@@ -11,7 +11,7 @@ use XML::LibXML                ();
 use HTML::Latemp::Local::Paths ();
 use Shlomif::DocBookClean      ();
 
-my $PRE_DEST = HTML::Latemp::Local::Paths->new->t2_dest;
+my $PRE_DEST = HTML::Latemp::Local::Paths->new->t2_pre_dest;
 my $dom      = XML::LibXML->load_xml( location =>
         'lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml' );
 

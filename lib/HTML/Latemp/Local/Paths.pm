@@ -5,7 +5,7 @@ use warnings;
 
 use Moo;
 
-sub t2_dest
+sub t2_pre_dest
 {
     return 'dest/pre-incs/t2';
 }

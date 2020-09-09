@@ -11,7 +11,7 @@ use HTML::Widgets::NavMenu::ToJSON                         ();
 use HTML::Widgets::NavMenu::ToJSON::Data_Persistence::YAML ();
 use HTML::Latemp::Local::Paths                             ();
 
-my $PRE_DEST      = HTML::Latemp::Local::Paths->new->t2_dest;
+my $PRE_DEST      = HTML::Latemp::Local::Paths->new->t2_pre_dest;
 my %keys_briefing = (
     subs   => 's',
     id     => 'i',

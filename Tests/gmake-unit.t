@@ -8,7 +8,7 @@ use HTML::Latemp::Local::Paths ();
 
 use Path::Tiny qw/ path cwd /;
 
-my $PRE_DEST  = HTML::Latemp::Local::Paths->new->t2_dest;
+my $PRE_DEST  = HTML::Latemp::Local::Paths->new->t2_pre_dest;
 my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 delete $ENV{MAKEFLAGS};

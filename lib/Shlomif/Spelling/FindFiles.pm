@@ -21,6 +21,7 @@ qr#\A\Q$POST_DEST\E/philosophy/politics/drug-legalisation/case-for-drug-legalisa
 qr#\A\Q$POST_DEST\E/(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))#,
 qr#\A\Q$POST_DEST\E/(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))#,
     qr#\A\Q$POST_DEST\E/humour/fortunes/all-in-one#,
+
     qr#\A\Q$POST_DEST\E/humour/fortunes/sharp-perl#,
     qr#\A\Q$POST_DEST\E/humour/fortunes/source-files-list.html#,
     qr#\A\Q$POST_DEST\E/humour/human-hacking/.*arabic#,

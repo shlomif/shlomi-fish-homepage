@@ -20,11 +20,6 @@ q#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#,
     q#(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))#,
 q#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchhiker|how-many-newsgroup-readers|oded-c|s-stands-for-simple|technion-bit-1|top-12-things-likely|was-the-death-star-attack|grad-student-jokes-from-jnoakes|the-fountainhead-starring-skull-force|if-people-bought-cars))#,
     q#humour/fortunes/all-in-one#,
-    (
-        $ENV{SHLOMIF_SPELL}
-        ? ()
-        : (q#humour/fortunes/sharp-perl#)
-    ),
     q#humour/fortunes/source-files-list.html#,
     q#humour/human-hacking/.*arabic#,
     q#humour/human-hacking/human-hacking-field-guide/#,

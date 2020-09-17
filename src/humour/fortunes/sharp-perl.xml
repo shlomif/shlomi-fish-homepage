@@ -1671,7 +1671,7 @@
             <body>
 <saying who="krang">Hey all, what&#39;s the best way to call one perl script from another? I was thinking I&#39;d just use &#39;system(&quot;script.pl&quot;);&#39;</saying>
 <saying who="dazjorz">krang: yeah, that, or do &quot;script.pl&quot;</saying>
-<saying who="dazjorz">krang: depends on how seperated you want them to be</saying>
+<saying who="dazjorz">krang: depends on how separated you want them to be</saying>
 <saying who="krang">dazjorz: you mean just a line that has &quot;script.pl&quot;; written on it?</saying>
 <saying who="Khisanth">you need the do as well</saying>
 <saying who="dazjorz">krang: no, exactly this: do &quot;script.pl&quot;;</saying>
@@ -1801,12 +1801,12 @@
 <saying who="rindolf">tkr: you read my mind.</saying>
 <saying who="rindolf">tkr: I now placed some of their songs.</saying>
 <saying who="rindolf">Now it&#39;s November Rain.</saying>
-<saying who="tkr">rindolf: next time youll come to finland Ill buy you a beer (with no alcohol)! :)</saying>
+<saying who="tkr">rindolf: next time you'll come to Finland I'll buy you a beer (with no alcohol)! :)</saying>
 <saying who="tkr">rindolf++</saying>
 <saying who="rindolf">tkr: OK.</saying>
 <saying who="rindolf">tkr: we have something called &quot;Black Beer&quot; in Israel.</saying>
 <saying who="rindolf">Which is a non-alcoholic beer.</saying>
-<saying who="simcop2387">rindolf: THATS RACIST! IT SHOULD BE AFRICAN AMERICAN ISREALI BEER!</saying>
+<saying who="simcop2387">rindolf: THAT'S RACIST! IT SHOULD BE AFRICAN AMERICAN ISRAELI BEER!</saying>
 <saying who="edenc">rindolf: is it any good?</saying>
 <saying who="rindolf">simcop2387: heh .</saying>
         </body>
@@ -1826,12 +1826,12 @@
 <saying who="LeoNerd">I feel there must be a way to do this...  given   func( foo =&gt; 1, bar =&gt; 2 );   how to write   my ( $foo, $bar ) = ....  inside the function?</saying>
 <saying who="LeoNerd">My current attempt is    my ( $foo, $bar ) = @{{@_}}{qw( foo bar )};   which is messy as sin</saying>
 <saying who="icke">LeoNerd: what&#39;s the problem? readability?</saying>
-<saying who="LeoNerd">Yah</saying>
+<saying who="LeoNerd">Yeah</saying>
 <saying who="dazjorz">LeoNerd: I&#39;d change specs to be func({ foo =&gt; 1, bar =&gt; 2})</saying>
 <saying who="dazjorz">then my ($foo, $bar) = ($_[0]{foo}, $_[0]{bar});</saying>
-<saying who="ton">Leonerd: If you insist on doing it on one line, that&#39;s about as good as it gets. But why not use a temporary hash ? Should be just as fast and as readable</saying>
+<saying who="ton">LeoNerd: If you insist on doing it on one line, that&#39;s about as good as it gets. But why not use a temporary hash ? Should be just as fast and as readable</saying>
 <saying who="LeoNerd">Hrm.. :/ Then it&#39;s only marginally nicer as    my ( $foo, $bar ) = @{$_[0]}{qw( foo bar )};</saying>
-<saying who="LeoNerd">my %args = @_;  my ( $foo, $bar ) = @args{qw( foo bar )};  ya... that works</saying>
+<saying who="LeoNerd">my %args = @_;  my ( $foo, $bar ) = @args{qw( foo bar )};  yeah... that works</saying>
 <saying who="mst">LeoNerd: my ($foo, $bar) = do { my %a = @_; @a{qw(foo bar)} };</saying>
 <saying who="ton">if you combine it with a delete you can then check if %args is empty and catch typos or unexpected arguments....</saying>
 <saying who="LeoNerd">Oooh.. a do block</saying>
@@ -1839,7 +1839,7 @@
 <saying who="LeoNerd">Oh, args won&#39;t be empty... this is a wrapper function that pulls a few named args off and sends the rest to a nested inner function</saying>
 <saying who="LeoNerd">Now.. I want to call a function &quot;foreach&quot; but that breaks things... suggestions?</saying>
 <saying who="icke">a method could be named &#39;foreach&#39;</saying>
-<saying who="LeoNerd">Ya.. but this is a plain function</saying>
+<saying who="LeoNerd">Yeah... but this is a plain function</saying>
 <saying who="icke">tough</saying>
 <saying who="LeoNerd">I suppose &quot;iterate&quot; is about as best as I&#39;ll get</saying>
 <saying who="icke">for_each</saying>
@@ -1948,10 +1948,10 @@
 <saying who="simcop2387-lab">rindolf: a 1 bit processor would be a hell of a thing to work with</saying>
 <saying who="danieldg">not if you can&#39;t test it unless it&#39;s one</saying>
 <saying who="ik">We&#39;re not talking about numbers, we&#39;re talking about on and off, true and false, whatever you want to call it</saying>
-<saying who="ik">sqrt(2) is nonzero, so it&#39;s one.</saying>
+<saying who="ik">sqrt(2) is non-zero, so it&#39;s one.</saying>
 <saying who="rindolf">danieldg: not 1/sqrt(2)?</saying>
 <saying who="danieldg">hmm it would probably be that, yes</saying>
-<saying who="simcop2387-lab">my proc uses sqrt[-1]!</saying>
+<saying who="simcop2387-lab">my processor uses sqrt[-1]!</saying>
 <saying who="ik">may as well</saying>
 <saying who="danieldg">ik: think quantum computers. It tests true with probability 1/sqrt(2)</saying>
 <saying who="ik">I&#39;m not talking about a quantum computer..</saying>
@@ -1973,7 +1973,7 @@
 <saying who="rindolf">whoppix: what&#39;s up?</saying>
 <saying who="whoppix">rindolf, haskelling through the night.</saying>
 <saying who="rindolf">whoppix: ah.</saying>
-<saying who="whoppix">rindolf, im pretty much a beginner, tho.</saying>
+<saying who="whoppix">rindolf, I'm pretty much a beginner, though.</saying>
 <saying who="rindolf">whoppix: yes, I learned Haskell back at the time.</saying>
 <saying who="rindolf">whoppix: I tried to write a log analyser in Haskell once.</saying>
 <saying who="rindolf">whoppix: it segfaulted.</saying>
@@ -2002,7 +2002,7 @@
     <irc>
         <body>
 <saying who="rindolf">perlmonkey2: I&#39;ve ran into a strange problem with CMake. It&#39;s some kind of bug that disappears after running a few commands.</saying>
-<saying who="perlmonkey2">rindolf: heh, the best kind of bugs are intermittant and only happen under load :P</saying>
+<saying who="perlmonkey2">rindolf: heh, the best kind of bugs are intermittent and only happen under load :P</saying>
 <saying who="rindolf">perlmonkey2: it&#39;s not load.</saying>
 <saying who="daemon">The best kind of bugs are the ones that do not happen at all :)</saying>
 <saying who="rindolf">daemon: heh.</saying>
@@ -2283,7 +2283,7 @@
 <saying who="rindolf">Good localtime(), #perl!</saying>
 <saying who="sproingie">rindolf: good scalar localtime to you</saying>
 <saying who="rindolf">sproingie: oooh! scalar context.</saying>
-<saying who="sproingie">well i didn&#39;t want to make ya parse it</saying>
+<saying who="sproingie">well i didn&#39;t want to make you parse it</saying>
 <saying who="rindolf">sproingie: it is implied however.</saying>
 <saying who="sproingie">(er unparse it)</saying>
 <saying who="rindolf">Good strftime($format, localtime()).</saying>
@@ -3820,7 +3820,7 @@
 <saying who="jim">believe me, my variable names from 20 years ago tell me what they are for</saying>
 <saying who="thrig">var_name_from_20_years_ago_you_re_still_not_taking_out_the_damn_trash</saying>
 <saying who="jim">I&#39;m not necessarily at liberty to specify exactly what I&#39;m doing</saying>
-<saying who="jim">even tho I did so in this case</saying>
+<saying who="jim">even though I did so in this case</saying>
 <saying who="thrig">otherwise the mafia arranges a boaking accident?</saying>
 <saying who="mfontani">worse; nobody expects the spanish inquisition!</saying>
 <saying who="rindolf">I&#39;m going  crazy without buubot.</saying>
@@ -5834,7 +5834,7 @@
 <me_is who="rindolf">demands equal rights for years, minutes, hours and days to also get YAAKOV&#39;S GREAT HUGE LOVE.</me_is>
 <saying who="Yaakov">buu: You aren&#39;t a simulation.</saying>
 <saying who="rindolf">Heh.</saying>
-<saying who="whosgonna">Yaakov:  we still love ya ;)</saying>
+<saying who="whosgonna">Yaakov:  we still love you ;)</saying>
 <saying who="rindolf">Oh well, let&#39;s put some GREAT HUGE LOVE into the code.</saying>
 <saying who="apeiron">WE LOVE YOU WITH A GREAT HUGE LOVE YAAKOV</saying>
 <saying who="whosgonna">please no equal rights for the minutes.  we don&#39;t want GREAT HUGE LOVE every 60 seconds.</saying>
@@ -7165,7 +7165,7 @@
 <saying who="johndoemer">I guess I never learned how to use a mailing list</saying>
 <saying who="johndoemer">so I sign up and how do I read it without getting 500 emails a day?</saying>
 <saying who="preaction">look at the archives to see how many e-mails get sent per day</saying>
-<saying who="johndoemer">I dunno I just gota escape this unix admin job stuff im doing</saying>
+<saying who="johndoemer">I dunno I just gota escape this unix admin job stuff I'm doing</saying>
 <saying who="rindolf">johndoemer: put it in a separate folder.</saying>
 <saying who="johndoemer">just the interviews driving me batty</saying>
 <saying who="johndoemer">fuck ansible and chef</saying>

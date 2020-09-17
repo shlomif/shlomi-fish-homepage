@@ -4962,7 +4962,7 @@
 <saying who="ChibaPet">um</saying>
 <saying who="Altreus">floor $foo</saying>
 <saying who="Altreus">:P</saying>
-<saying who="DrForr">Premature microoptimization detected at line 0.</saying>
+<saying who="DrForr">Premature micro-optimization detected at line 0.</saying>
 <saying who="Altreus">I think that /is/ the most efficient way to do it</saying>
 <saying who="ChibaPet">what about int $foo?</saying>
 <saying who="ChibaPet">or is floor more efficient?</saying>
@@ -4970,7 +4970,7 @@
 <saying who="Altreus">er, the lowest 600</saying>
 <saying who="Altreus">int truncates towards 0</saying>
 <saying who="ChibaPet">doesn&#39;t floor do that as well?</saying>
-<saying who="DrForr">You&#39;re looking at microoptimization in *math*. Surely there are bigger fish to fry?</saying>
+<saying who="DrForr">You&#39;re looking at micro-optimization in *math*. Surely there are bigger fish to fry?</saying>
 <saying who="Altreus">ChibaPet: consider negatives</saying>
 <saying who="ChibaPet">Oh! Negatives. Slipped right by me. Thanks.</saying>
 <saying who="Altreus">the difference in most operations is evident in negatives, except the various rounding techniques</saying>
@@ -5027,7 +5027,7 @@
 <saying who="thrig">back in the day, one would get smited for lazing the day away watching Aramaic Idol</saying>
 <saying who="rindolf">thrig: when I was younger, I watched Sumerian Idol.</saying>
 <saying who="thrig">it&#39;s in estivation now, I hear</saying>
-<saying who="cfedde">rindolf: gilgamesh was such a bastard on that show.</saying>
+<saying who="cfedde">rindolf: Gilgamesh was such a bastard on that show.</saying>
             </body>
             <info>
                 <channel>#perl</channel>
@@ -5083,7 +5083,7 @@
 <saying who="PerlJam">m4rcu5: you need a newer perl to use the /r modifier to tr///</saying>
 <saying who="mauke">also, why are you reading 5.14&#39;s perlop?</saying>
 <saying who="apeiron">&quot;because that&#39;s what I found online&quot;</saying>
-<saying who="m4rcu5">mauke: too old? i tought that de default install of gentoo came shiped with a bit more up2date version of perl :P</saying>
+<saying who="m4rcu5">mauke: too old? i thought that the default install of Gentoo came shipped with a bit more up to date version of perl :P</saying>
 <saying who="apeiron">snrk</saying>
 <saying who="m4rcu5">mauke: because that's what perldoc.perl.org served me ;-)</saying>
 <saying who="mauke">and why are you going to perldoc.perl.org?</saying>
@@ -5145,7 +5145,7 @@
                 <saying who="rindolf">el_seano: http://perl-begin.org/tutorials/bad-elements/#ampersand-in-subroutine-calls</saying>
                 <saying who="Yaakov">Ampersands are among the coolest punctuation marks &amp; add their coolness to everything they are used for.</saying>
                 <saying who="mauke">el_seano: what ambiguity?</saying>
-                <saying who="apeiron">foo() # pretty umambiguous</saying>
+                <saying who="apeiron">foo() # pretty unambiguous</saying>
                 <saying who="archon-">&amp;Yaakov&amp;</saying>
                 <me_is who="rindolf">prefers ampersors.</me_is>
                 <saying who="rindolf">Or ampernots.</saying>
@@ -5178,7 +5178,7 @@
                 <saying who="RiXtEr-Work">drforr, I wrote a bunch of perl back in about 2003-2005 era, but if you don&#39;t use it you lose it I guess..</saying>
                 <saying who="rindolf">DrForr: Chuck Norris was never a newbie!</saying>
                 <saying who="rindolf">Chuck Norris will kill anyone who implies otherwise.</saying>
-                <saying who="RiXtEr-Work">rindolf, Chuck Norris is the perl interpereter...</saying>
+                <saying who="RiXtEr-Work">rindolf, Chuck Norris is the perl interpreter...</saying>
                 <saying who="rindolf">RiXtEr-Work: heh.</saying>
                 <saying who="rindolf">Only perl and Chuck Norris can parse Perl.</saying>
                 <saying who="RiXtEr-Work">haha</saying>
@@ -5227,7 +5227,7 @@
 <saying who="mauke">then you need to install 5.6</saying>
 <saying who="mauke">also, uninstall 5.6 and 5.10 and install 5.16</saying>
 <saying who="DrForr">crane_work: Then install v5.6 with perlbrew. And pad your keyboard for the inevitable &lt;headdesk/&gt;s.</saying>
-<saying who="DrForr">And holy god why do you *need* something last bugfixed in the last *century*.</saying>
+<saying who="DrForr">And holy god why do you *need* something last bug-fixed in the last *century*.</saying>
 <saying who="Botje">or, you know, use a version of perl developed *after* 9/11.</saying>
 <saying who="lesshaste">mauke: would you be able to share the code with me?</saying>
 <saying who="crane_work">lol ^^</saying>
@@ -5250,26 +5250,26 @@
 <saying who="DrForr">Oh, because it&#39;s python, therefore better. Silly me.</saying>
 <saying who="huf">it&#39;d force people to understand (and fix) the darkest corners of the perl grammar? *shrug* dunno</saying>
 <saying who="mauke">grammar and semantics</saying>
-<saying who="huf">that too. the vote on how to interpolate $length[1234] into regexes doesnt make me feel good...</saying>
+<saying who="huf">that too. the vote on how to interpolate $length[1234] into regexes doesn't make me feel good...</saying>
 <saying who="lesshaste">DrForr: it&#39;s not really python</saying>
 <saying who="lesshaste">DrForr: In fact, it&#39;s not python :)</saying>
 <saying who="lesshaste">DrForr: they just did the same thing for PHP</saying>
-<saying who="lesshaste">DrForr: and was some project for prolog etc in the past</saying>
+<saying who="lesshaste">DrForr: and was some project for Prolog etc in the past</saying>
 <saying who="crane_work">maybe this question would be stupid but... why if use v5.06 is stupid is it possible to tell perl to use a version?</saying>
 <saying who="mauke">crane_work: what?</saying>
-<saying who="huf">use v5.6 isnt stupid, it just does something other than what you wanted.</saying>
+<saying who="huf">use v5.6 isn't stupid, it just does something other than what you wanted.</saying>
 <saying who="lesshaste">DrForr: the idea is simply that it would be *faster*</saying>
 <saying who="crane_work">huf: in which cases will i need it=?</saying>
 <saying who="rindolf">lesshaste: isn&#39;t pyperl this - http://wiki.python.org/moin/PyPerl ?</saying>
 <saying who="mauke">when your code doesn&#39;t run on 5.005 and earlier</saying>
 <saying who="huf">crane_work: use VERSION means your script requires at least that version of perl. if an older one tries to load it, it&#39;ll tell you to fuck off and get a newer perl. it will not turn your new perl into an old one however.</saying>
-<saying who="lesshaste">rindolf: that has the same name :) I mean using pypy to make a jit for perl as in http://pypy.org/</saying>
+<saying who="lesshaste">rindolf: that has the same name :) I mean using pypy to make a JIT for perl as in http://pypy.org/</saying>
 <saying who="rindolf">lesshaste: OK, there&#39;s perlito.</saying>
 <saying who="mst">crane_work: if you want to check for things</saying>
 <saying who="mst">crane_work: Perl::MinimumVersion exists IIRC</saying>
 <saying who="rindolf">perlbot: perlito</saying>
 <saying who="perlbot">rindolf: No factoid found. Did you mean one of these: [#perl topic] [perl topic] [perl tutorials] [perl5004delta] [perl5005delta] [perl561delta] [perl56delta] [perl570delta] [perl6 Test.pm] [perldata]</saying>
-<saying who="lesshaste">rindolf: is that a static compiler or a jit?</saying>
+<saying who="lesshaste">rindolf: is that a static compiler or a JIT?</saying>
 <saying who="DrForr">crane_work: Then start with 5.16 and don&#39;t worry about earlier versions.</saying>
 <saying who="rindolf">perlbot: perlito is http://perlito.org/ - a Perl 5 / Perl 6 compiler written in Perl 5 / Perl 6.</saying>
 <saying who="perlbot">rindolf: Stored perlito is http://perlito.org/ - a Perl 5 / Perl 6 compiler written in Perl 5 / Perl 6.</saying>
@@ -5333,7 +5333,7 @@
         </meta>
         <irc>
             <body>
-<saying who="EdwardIII">Altreus: I saw your magento moral quantry on g+</saying>
+<saying who="EdwardIII">Altreus: I saw your Magento moral quandary on g+</saying>
 <saying who="rindolf">EdwardIII: Magento!</saying>
 <me_is who="rindolf">runs away screaming.</me_is>
 <saying who="rindolf">EdwardIII: do you mean the eCommerce solution?</saying>
@@ -6201,7 +6201,7 @@
 <saying who="Altreus">can&#39;t be both</saying>
 <saying who="Altreus">(false)</saying>
 <saying who="Su-Shee">well it seems he incremented. f comes after e. soon he will be maukg.</saying>
-<saying who="wagle">how do you split a string into a list of lists?  (different delimiters)..  trying this, but it doesnt work: map {split (&quot;|&quot;)} (split(&#39;\n&#39;,$output)))</saying>
+<saying who="wagle">how do you split a string into a list of lists?  (different delimiters)..  trying this, but it doesn't work: map {split (&quot;|&quot;)} (split(&#39;\n&#39;,$output)))</saying>
 <saying who="maukf">there is no such thing as a list of lists</saying>
 <saying who="wagle">i feared that</saying>
 <saying who="DrForr">List of arrayrefs.</saying>
@@ -6389,7 +6389,7 @@
 <saying who="huf">rindolf: fewer deps! more lightweight!</saying>
 <saying who="rindolf">Maybe require &#39;&#39;; will work.</saying>
 <saying who="rindolf">huf: heh.</saying>
-<saying who="huf">this one doesnt even need perl!</saying>
+<saying who="huf">this one doesn't even need perl!</saying>
 <saying who="huf">it &quot;works&quot; equally well with a tea towel</saying>
 <me_is who="rindolf">writes a /bin/cat script.</me_is>
 <saying who="huf">sed 1d is better</saying>
@@ -6679,7 +6679,7 @@
 <saying who="Su-Shee">dammit.</saying>
 <saying who="huf">&#39;s the point of urlencoding</saying>
 <saying who="Su-Shee">yeah, I really wasn&#39;t sure, I haven&#39;t used in-page links for at least a decade or so.</saying>
-<saying who="Nei"># doesnt get send to the server</saying>
+<saying who="Nei"># doesn't get send to the server</saying>
 <saying who="rindolf">Now there&#39;s also them AJAX URLs #!op/sub-op/foo-12353ab343</saying>
 <saying who="Nei">unless via JS</saying>
 <saying who="huf">&quot;now&quot;</saying>
@@ -6695,7 +6695,7 @@
 <saying who="Su-Shee">huf: no, I&#39;m really honestly using real in-page links :)</saying>
 <saying who="huf">at least this way we get to spend cpu cycles on *gasp* transitions!</saying>
 <saying who="huf">Su-Shee: yeah, those are fine and cool</saying>
-<saying who="Nei">and repllace everything with ajax and in-page div replacement so it doesnt feel sluggish</saying>
+<saying who="Nei">and repllace everything with ajax and in-page div replacement so it doesn't feel sluggish</saying>
 <saying who="Su-Shee">huf: not when they get encoded apparently.. :)</saying>
 <saying who="huf">Nei: and somehow it&#39;s still not as fast as a nice clean simple website built with html4 and no css. just the content, cleanly. no crap.</saying>
 <saying who="huf">Su-Shee: write some js to decode it and ajax and ... oh god</saying>
@@ -7181,13 +7181,13 @@
 <saying who="johndoemer">zomg some brits think shes hottes twoman in film?</saying>
 <saying who="johndoemer">oh my gods!!</saying>
 <saying who="johndoemer">butt ugly</saying>
-<saying who="johndoemer">fake teeth and a lack of implples doesnt mean your pretty</saying>
+<saying who="johndoemer">fake teeth and a lack of implples doesn't mean your pretty</saying>
 <saying who="johndoemer">caveman brow</saying>
 <saying who="johndoemer">short with no tits or ass</saying>
 <saying who="johndoemer">zomg</saying>
 <saying who="preaction">I&#39;m fairly certain that this is not on-topic for #perl</saying>
 <saying who="Grinnz">lol</saying>
-<saying who="rindolf">johndoemer: maybe you should change your attitude. After I reached enought enlightenment, I find the vast majority of women attractive enough.</saying>
+<saying who="rindolf">johndoemer: maybe you should change your attitude. After I reached enough enlightenment, I find the vast majority of women attractive enough.</saying>
 <saying who="johndoemer">holy crap did they make 8 harry potter films?</saying>
 <saying who="rindolf">johndoemer: but preaction is right.</saying>
 <saying who="rindolf">johndoemer: yes.</saying>

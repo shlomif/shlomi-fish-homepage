@@ -94,11 +94,7 @@ ITEMS:
 
         $loop->add($function);
         Future->needs_all( map { $function->call( args => [$_] ); } @batches )
-            ->on_fail(
-            sub {
-                print STDERR "error $_[0]!";
-            }
-        )->get;
+            ->get;
     }
     return;
 }

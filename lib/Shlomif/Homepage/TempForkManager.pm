@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 
-use IO::Async::Function ();
+use Parallel::Map qw/ pmap_void /;
 
 sub new
 {
@@ -75,26 +75,25 @@ sub run
     return if not defined $batch;
     $batch_cb->($batch);
     my @batches;
-ITEMS:
-    while (
-        defined( $batch = $stream_cb->( { size => $batch_size } )->{items} ) )
+    if ($WITH_PM)
     {
-        if ($WITH_PM)
-        {
-            push @batches, $batch;
-        }
-        else
+        pmap_void sub { $batch_cb->(shift); Future->done; }, generate => sub {
+            my $ret = $stream_cb->( { size => $batch_size } )->{items};
+            return () if not defined $ret;
+            return $ret;
+            },
+            ;
+    }
+    else
+    {
+        while (
+            defined(
+                $batch = $stream_cb->( { size => $batch_size } )->{items}
+            )
+            )
         {
             $batch_cb->($batch);
         }
-    }
-    if ($WITH_PM)
-    {
-        my $function = IO::Async::Function->new( code => $batch_cb, );
-
-        $loop->add($function);
-        Future->needs_all( map { $function->call( args => [$_] ); } @batches )
-            ->get;
     }
     return;
 }

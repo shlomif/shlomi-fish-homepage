@@ -156,9 +156,7 @@ sub _process_batch
     return;
 }
 
-use IO::Async::Loop ();
-my $loop = IO::Async::Loop->new;
-Shlomif::Homepage::TempForkManager->new( { loop => $loop, } )->run(
+Shlomif::Homepage::TempForkManager->new()->run(
     {
         items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
         nproc => 4,

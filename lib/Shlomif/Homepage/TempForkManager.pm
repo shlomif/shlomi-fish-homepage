@@ -10,7 +10,7 @@ sub new
 {
     my $class = shift;
 
-    my $self = bless shift(@_), $class;
+    my $self = bless +{}, $class;
 
     $self->_init(@_);
 
@@ -27,7 +27,6 @@ sub _init
 sub run
 {
     my ( $self, $args ) = @_;
-    my $loop = $self->{loop};
 
     my $WITH_PM   = !$args->{disable_fork};
     my $items     = $args->{items};

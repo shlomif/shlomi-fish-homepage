@@ -28,9 +28,7 @@ if ( !@filenames )
 {
     @filenames = path("lib/make/tt2.txt")->lines_raw( { chomp => 1 } );
 }
-use IO::Async::Loop ();
-my $loop = IO::Async::Loop->new;
-Shlomif::Homepage::TempForkManager->new( { loop => $loop, } )->run(
+Shlomif::Homepage::TempForkManager->new()->run(
     {
         #         disable_fork => 1,
         items         => \@filenames,

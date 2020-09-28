@@ -10,6 +10,7 @@ use MyNavData                              ();
 use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
+use Shlomif::Homepage::TempForkManager     ();
 use Path::Tiny qw/ path /;
 
 sub get_root
@@ -25,6 +26,8 @@ sub get_root
 
 use File::Update qw/ write_on_change /;
 
+# At least temporarily disable Parallel::ForkManager because it causes
+# the main process to exit before all the work is done.
 my $hosts         = MyNavData::Hosts::get_hosts();
 my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
@@ -155,27 +158,14 @@ sub _process_batch
     return;
 }
 
-use IO::Async::Function ();
-
 use IO::Async::Loop ();
 my $loop = IO::Async::Loop->new;
-
-my $function = IO::Async::Function->new( code => \&_process_batch, );
-
-$loop->add($function);
-
-my @bundles;
-my $items      = [ split /\n/, path("lib/make/tt2.txt")->slurp_raw() ];
-my $batch_size = 16;
-_process_batch( [ shift @$items ] );
-while (@$items)
-{
-    push @bundles, [ splice @$items, 0, $batch_size ];
-}
-
-Future->needs_all( map { $function->call( args => [$_] ); } @bundles )
-    ->on_fail(
-    sub {
-        print STDERR "error $_[0]!";
+Shlomif::Homepage::TempForkManager->new( { loop => $loop, } )->run(
+    {
+        items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
+        nproc => 4,
+        batch_size    => 16,
+        process_batch => \&_process_batch,
+        ( delete( $ENV{LATEMP_PROFILE} ) ? ( disable_fork => 1, ) : () ),
     }
-)->get;
+);

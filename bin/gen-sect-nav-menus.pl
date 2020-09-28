@@ -26,8 +26,6 @@ sub get_root
 
 use File::Update qw/ write_on_change /;
 
-# At least temporarily disable Parallel::ForkManager because it causes
-# the main process to exit before all the work is done.
 my $hosts         = MyNavData::Hosts::get_hosts();
 my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};

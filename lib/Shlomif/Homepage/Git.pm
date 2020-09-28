@@ -7,23 +7,20 @@ use Moo;
 
 use Carp ();
 use Path::Tiny qw/ cwd /;
-use Parallel::ForkManager ();
+use IO::Async::Function ();
+use IO::Async::Loop     ();
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
 my $git_clones_dir = $upper_dir->child( $cwd->basename . "--clones" );
 $git_clones_dir->mkpath;
 
-my $pm = Parallel::ForkManager->new(20);
+my @tasks;
 
 sub task
 {
     my ( $self, $cb ) = @_;
-    if ( not $pm->start )
-    {
-        $cb->();
-        $pm->finish;
-    }
+    push @tasks, $cb;
     return;
 }
 
@@ -138,8 +135,16 @@ sub end
 {
     my $self = shift;
 
-    $pm->wait_all_children;
+    my $loop = IO::Async::Loop->new();
+    Future->needs_all(
+        map {
+            my $func = IO::Async::Function->new( code => $_ );
+            $loop->add($func);
+            $func->call( args => [] );
+        } @tasks
+    )->get();
 
+    @tasks = ();
     return;
 }
 

@@ -77,9 +77,7 @@ sub run
     if ($WITH_PM)
     {
         pmap_void sub { $batch_cb->(shift); Future->done; }, generate => sub {
-            my $ret = $stream_cb->( { size => $batch_size } )->{items};
-            return () if not defined $ret;
-            return $ret;
+            return $stream_cb->( { size => $batch_size } )->{items} // ();
             },
             ;
     }

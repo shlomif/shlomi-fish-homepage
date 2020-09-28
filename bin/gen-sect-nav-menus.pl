@@ -10,7 +10,6 @@ use MyNavData                              ();
 use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
-use Parallel::ForkManager::Segmented       ();
 use Path::Tiny qw/ path /;
 
 sub get_root
@@ -158,12 +157,28 @@ sub _process_batch
     return;
 }
 
-Parallel::ForkManager::Segmented->new->run(
-    {
-        items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
-        nproc => 4,
-        batch_size    => 16,
-        process_batch => \&_process_batch,
-        ( delete( $ENV{LATEMP_PROFILE} ) ? ( disable_fork => 1, ) : () ),
+use IO::Async::Function ();
+
+use IO::Async::Loop ();
+my $loop = IO::Async::Loop->new;
+
+my $function = IO::Async::Function->new( code => \&_process_batch, );
+
+$loop->add($function);
+
+my @bundles;
+my $items      = [ split /\n/, path("lib/make/tt2.txt")->slurp_raw() ];
+my $batch_size = 16;
+while (@$items)
+{
+    push @bundles, [ splice @$items, 0, $batch_size ];
+}
+Future->needs_all( map { $function->call( args => [$_] ); } @bundles )
+    ->on_done(
+    sub {
     }
-);
+)->on_fail(
+    sub {
+        print STDERR "error $_[0]!";
+    }
+)->get;

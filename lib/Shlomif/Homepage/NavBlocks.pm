@@ -205,7 +205,7 @@ my %tr_s = (
         items => [
             _l(
                 inner_html => "Grammar Nazis",
-                path =>
+                path       =>
                     "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
             ),
             $muppets_github,

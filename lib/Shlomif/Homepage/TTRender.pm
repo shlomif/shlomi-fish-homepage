@@ -113,7 +113,7 @@ has vars => (
             license_obj  => $license,
             long_stories => $long_stories,
             news_obj     => $news,
-            mytan =>
+            mytan        =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
             print_nav_block     => \&_render_nav_block,
@@ -143,7 +143,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             path_slurp        => \&path_slurp,
             xml_fiction_slurp => $xml_fiction_slurp,
             shlomif_include_colorized_file => \&_shlomif_include_colorized_file,
-            p4n_lecture5_heb_notes =>
+            p4n_lecture5_heb_notes         =>
                 \&Shlomif::Homepage::P4N_Lect5_HebNotes::calc,
         };
     }

@@ -33,14 +33,14 @@ my @sections = (
         'title' => "Lectures Section Menu",
     },
     {
-        'id' => "software",
+        'id'    => "software",
         'regex' =>
 qr#\A/(?:open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/#,
         'class' => "Shlomif::Homepage::SectionMenu::Sects::Software",
         'title' => "Software Section Menu",
     },
     {
-        'id' => "humour",
+        'id'    => "humour",
         'regex' =>
             qr#\A/(?:humour/|(?:(?:humour(?:-heb)?|wysiwyt|wonderous)\.html))#,
         'class' => "Shlomif::Homepage::SectionMenu::Sects::Humour",

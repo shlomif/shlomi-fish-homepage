@@ -7,7 +7,7 @@ my @nav_lectures_rejects = (
         'url'  => "lecture/Freecell-Solver/",
     },
     {
-        'text' => "Lambda Calculus",
+        'text'  => "Lambda Calculus",
         'title' =>
 "A presentation about a Turing-complete programming environment with only two primitives",
         'url' => "lecture/lc/",

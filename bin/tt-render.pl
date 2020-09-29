@@ -30,7 +30,7 @@ if ( !@filenames )
 }
 Shlomif::Homepage::TempForkManager->new()->run(
     {
-        #         disable_fork => 1,
+        disable_fork  => 1,
         items         => \@filenames,
         nproc         => 4,
         batch_size    => 100,

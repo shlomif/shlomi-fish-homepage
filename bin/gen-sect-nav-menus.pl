@@ -158,6 +158,7 @@ sub _process_batch
 
 Shlomif::Homepage::TempForkManager->new()->run(
     {
+        disable_fork => 1,
         items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
         nproc => 4,
         batch_size    => 16,

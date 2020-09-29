@@ -73,6 +73,7 @@ sub process_args
         WITH_PM    => $WITH_PM,
         batch_cb   => $batch_cb,
         batch_size => $batch_size,
+        nproc      => $nproc,
         stream_cb  => $stream_cb,
     };
 }
@@ -83,8 +84,8 @@ sub run
 
     my $processed = $self->process_args($args);
     return if not $processed;
-    my ( $WITH_PM, $batch_cb, $batch_size, $stream_cb, ) =
-        @{$processed}{qw/ WITH_PM batch_cb batch_size stream_cb  /};
+    my ( $WITH_PM, $batch_cb, $batch_size, $nproc, $stream_cb, ) =
+        @{$processed}{qw/ WITH_PM batch_cb batch_size nproc stream_cb  /};
 
     my $batch = $stream_cb->( { size => 1 } )->{items};
     return if not defined $batch;

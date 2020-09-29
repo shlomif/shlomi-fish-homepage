@@ -10,7 +10,7 @@ sub new
 {
     my $class = shift;
 
-    my $self = bless +{}, $class;
+    my $self = bless {}, $class;
 
     $self->_init(@_);
 
@@ -24,7 +24,7 @@ sub _init
     return;
 }
 
-sub run
+sub process_args
 {
     my ( $self, $args ) = @_;
 
@@ -69,11 +69,26 @@ sub run
             };
         };
     }
+    return +{
+        WITH_PM    => $WITH_PM,
+        batch_cb   => $batch_cb,
+        batch_size => $batch_size,
+        stream_cb  => $stream_cb,
+    };
+}
+
+sub run
+{
+    my ( $self, $args ) = @_;
+
+    my $processed = $self->process_args($args);
+    return if not $processed;
+    my ( $WITH_PM, $batch_cb, $batch_size, $stream_cb, ) =
+        @{$processed}{qw/ WITH_PM batch_cb batch_size stream_cb  /};
 
     my $batch = $stream_cb->( { size => 1 } )->{items};
     return if not defined $batch;
     $batch_cb->($batch);
-    my @batches;
     if ($WITH_PM)
     {
         pmap_void sub { $batch_cb->(shift); Future->done; }, generate => sub {

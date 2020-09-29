@@ -114,16 +114,16 @@ sub generate
             subdir      => "Pope",
             docs        => [
                 {
-                    base => "The-Pope-Died-on-Sunday-english",
-                    type => "fiction-text",
-                    suf  => "ENG",
+                    base      => "The-Pope-Died-on-Sunday-english",
+                    type      => "fiction-text",
+                    suf       => "ENG",
                     dest_expr =>
 q#$(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt#,
                 },
                 {
-                    base => "The-Pope-Died-on-Sunday-hebrew",
-                    type => "fiction-text",
-                    suf  => "HEB",
+                    base      => "The-Pope-Died-on-Sunday-hebrew",
+                    type      => "fiction-text",
+                    suf       => "HEB",
                     dest_expr =>
                         q#$(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt#,
                 },

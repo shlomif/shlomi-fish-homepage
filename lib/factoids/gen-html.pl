@@ -95,8 +95,8 @@ and masculinity.
 </p>
 </blockquote>
 EOF
-        id_base => "chuck_facts",
-        img_alt => "Photo of Chuck Norris from the English Wikipedia",
+        id_base         => "chuck_facts",
+        img_alt         => "Photo of Chuck Norris from the English Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
         img_class      => "facts_logo chuck_norris",
@@ -187,8 +187,8 @@ Additions to the
 Soviet Russia…</a> (or “Soviet reversal”) meme by my friends and me.
 </p>
 EOF
-        id_base => "in_soviet_russia_facts",
-        img_alt => "Soviet Russia",
+        id_base         => "in_soviet_russia_facts",
+        img_alt         => "Soviet Russia",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
         img_class => "facts_logo in_soviet_russia",
@@ -360,8 +360,8 @@ and played by
 <a href="http://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a>.
 </p>
 EOF
-        id_base => "clarissa_facts",
-        img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
+        id_base         => "clarissa_facts",
+        img_alt         => "Photo of the First DVD of CEIA from the Wikipedia",
         img_attribution =>
 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
         img_class      => "facts_logo clarissa",
@@ -417,8 +417,8 @@ EOF
         abstract => <<'EOF',
 [% PROCESS emma_watson_intro_text %]
 EOF
-        id_base => "emma_watson_facts",
-        img_alt => "Photo of Emma Watson from the Wikipedia",
+        id_base         => "emma_watson_facts",
+        img_alt         => "Photo of Emma Watson from the Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
         img_class      => "facts_logo emma_watson",
@@ -525,8 +525,8 @@ and of the <a href="https://en.wikipedia.org/wiki/Rn_(newsreader)">rn
 newsreader</a>. These facts illustrate his “hacky” (= rule bending) awesomeness.
 </p>
 EOF
-        id_base => "larry_wall_facts",
-        img_alt => "Larry Wall",
+        id_base         => "larry_wall_facts",
+        img_alt         => "Larry Wall",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
         img_src        => "humour/bits/facts/images/lwall-150w.webp",
@@ -572,8 +572,8 @@ why it should not be feared.
 </p>
 
 EOF
-        id_base => "nsa_facts",
-        img_alt => "NSA Logo",
+        id_base         => "nsa_facts",
+        img_alt         => "NSA Logo",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
         img_class      => "facts_logo nsa",
@@ -718,8 +718,8 @@ who is the subject of such facts here.
 </p>
 
 EOF
-        id_base => "summer_glau_facts",
-        img_alt => "Photo of Summer Glau from the English Wikipedia",
+        id_base         => "summer_glau_facts",
+        img_alt         => "Photo of Summer Glau from the English Wikipedia",
         img_attribution =>
 'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',
         img_class      => "facts_logo summer_glau",
@@ -760,8 +760,8 @@ her extravagant music videos, her philanthropy, and the rich culture of
 YouTubers who cover, parody, and remix her songs.
 </p>
 EOF
-        id_base => "taylor_swift_facts",
-        img_alt => "Photo of Taylor Swift from the Wikipedia",
+        id_base         => "taylor_swift_facts",
+        img_alt         => "Photo of Taylor Swift from the Wikipedia",
         img_attribution =>
             'https://en.wikipedia.org/wiki/File:TaylorSwiftApr09.jpg',
         img_class      => "facts_logo taylor_swift",
@@ -823,8 +823,8 @@ annoying to use.
 </p>
 
 EOF
-        id_base => "windows_update_facts",
-        img_alt => "Silhouette of a Snail",
+        id_base         => "windows_update_facts",
+        img_alt         => "Silhouette of a Snail",
         img_attribution =>
             'https://openclipart.org/detail/230426/snail-silhouette',
         img_class      => "facts_logo windows_update",
@@ -867,8 +867,8 @@ I recall watching the show and enjoying it, though I found it a little silly.
 I also found the character of Xena to be more comical than strong.
 </p>
 EOF
-        id_base => "xena_facts",
-        img_alt => "Photo of Xena, the Warrior Princess",
+        id_base         => "xena_facts",
+        img_alt         => "Photo of Xena, the Warrior Princess",
         img_attribution =>
 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
         img_class      => "facts_logo xena",
@@ -950,8 +950,8 @@ IRC conversation we had on ##programming</a> started this meme and it
 seems cool.
 </p>
 EOF
-        id_base => "xslt_facts",
-        img_alt => "XSLT Logo",
+        id_base         => "xslt_facts",
+        img_alt         => "XSLT Logo",
         img_attribution =>
 'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/humour/bits/facts/images/XSLT.svg',
         img_class      => "facts_logo xslt",

@@ -44,13 +44,13 @@ irrationality guiding political bodies.
 EOF
         },
         {
-            id => 'tow_the_fountainhead',
+            id      => 'tow_the_fountainhead',
             tagline =>
 "The Fountainhead may have been good enough in the 60’s, but we’re in the Information Age now",
             logo_alt   => "The One With The Fountainhead Logo",
             logo_class => "towtf",
             logo_id    => "tow_the_fountainhead_logo",
-            logo_src =>
+            logo_src   =>
                 "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
             logo_svg   => '//$SKIP',
             entry_id   => "fountainhead",
@@ -111,7 +111,7 @@ EOF
             logo_class => "hhfg",
             logo_id    => "hhfg_logo",
             logo_src   => "humour/human-hacking/images/hhfg-logo-small.png",
-            logo_svg =>
+            logo_svg   =>
 'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
             entry_id   => "human-hacking",
             entry_text => "The Human Hacking Field Guide",
@@ -130,14 +130,14 @@ there are some surprises along the road.
 EOF
         },
         {
-            id => 'we_the_living_dead',
+            id      => 'we_the_living_dead',
             tagline =>
                 "From perfection to imperfection; from finity to infinity",
 
             logo_alt   => "Fiery Q",
             logo_class => "st_wtld",
             logo_id    => "we_the_living_dead_logo",
-            logo_src =>
+            logo_src   =>
                 "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
             logo_svg   => '//$SKIP',
             entry_id   => "we-the-living-dead",
@@ -197,7 +197,7 @@ EOF
             logo_alt   => "Summerschool at the NSA Logo",
             logo_class => "summernsa",
             logo_id    => "summernsa_logo",
-            logo_src =>
+            logo_src   =>
 "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
             logo_svg   => '//$SKIP',
             entry_id   => "summerschool-at-the-nsa",
@@ -237,13 +237,13 @@ Shrugged</i></a>
 EOF
         },
         {
-            id => 'buffy_a_few_good_slayers',
+            id      => 'buffy_a_few_good_slayers',
             tagline =>
                 "I learned more from my students than I have from my teachers.",
             logo_alt   => "Buffy - a Few Good Slayers Logo",
             logo_class => "buffy_few_good",
             logo_id    => "buffy_a_few_good_slayers_logo",
-            logo_src =>
+            logo_src   =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.min.svg',
             logo_svg =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
@@ -289,13 +289,13 @@ two ruthless <a href="$(ROOT)/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norr
 EOF
         },
         {
-            id => 'who_is_qoheleth',
+            id      => 'who_is_qoheleth',
             tagline =>
 "What had been, is what will be. There is nothing new under the sun.",
             logo_alt   => "“So, who the Hell is Qoheleth?” Logo",
             logo_class => "who_is_qoheleth",
             logo_id    => "who_is_qoheleth_logo",
-            logo_src =>
+            logo_src   =>
 "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
             logo_svg =>
                 'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
@@ -335,7 +335,7 @@ EOF
             logo_alt   => "“Terminator: Liberation” Logo",
             logo_class => "terminator_liberation",
             logo_id    => "terminator_liberation_logo",
-            logo_src =>
+            logo_src   =>
                 "humour/Terminator/Liberation/images/terminator_liberation.png",
             logo_svg =>
                 "humour/Terminator/Liberation/images/terminator_liberation.svg",
@@ -358,7 +358,7 @@ href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place).
 EOF
         },
         {
-            id => 'pope_died_on_sunday',
+            id      => 'pope_died_on_sunday',
             tagline =>
                 "And so starts what appears to be an ordinary week… or not!",
             logo_alt   => "“The Pope Died on Sunday” Logo",
@@ -396,7 +396,7 @@ EOF
             logo_alt   => "The Blue Rabbit Log Logo",
             logo_class => "blue_rabbit",
             logo_id    => "blue_rabbit_logo",
-            logo_src =>
+            logo_src   =>
                 "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
             logo_svg   => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
             entry_id   => "blue-rabbit",
@@ -424,7 +424,7 @@ EOF
             logo_alt   => "The Earth Angel Logo",
             logo_class => "the_earth_angel",
             logo_id    => "the_earth_angel_logo",
-            logo_src =>
+            logo_src   =>
                 "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
             logo_svg =>
                 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',

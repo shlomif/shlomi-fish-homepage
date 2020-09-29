@@ -11,9 +11,9 @@ use lib './lib';
 # TEST
 Test::TrailingSpace->new(
     {
-        find_cr   => 0,
-        find_tabs => 0,
-        root      => '.',
+        find_cr        => 0,
+        find_tabs      => 0,
+        root           => '.',
         filename_regex =>
 qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cpp|css|desktop|dsl|dtd|ent|ggr|h|hs|htm|ini|m|mak|markdown|md|ml|opml|pod|pov|rb|rc|rng|scm|sh|slides|spec|svg|t|tex|tt|tt2|txt|vim|wml|wmlrc|xsl|xslt|yaml|yml|t|pm|pl|PL|yml|json|(?:x?html)|wml|xml|js|mak))|README|Changes|Makefile)\z/,
         abs_path_prune_re => qr%

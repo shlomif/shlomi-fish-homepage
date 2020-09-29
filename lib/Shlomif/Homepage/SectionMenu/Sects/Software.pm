@@ -57,8 +57,8 @@ my $software_tree_contents = {
                     title => "A First-Come First-Served Readers/Writers Lock",
                     subs  => [
                         {
-                            text => "For the Linux Kernel",
-                            url  => "rwlock/linux-kernel/",
+                            text  => "For the Linux Kernel",
+                            url   => "rwlock/linux-kernel/",
                             title =>
 "Make Linux's flock/fcntl calls First-come First-served",
                         },
@@ -81,21 +81,21 @@ my $software_tree_contents = {
                     subs => [
                         {
                             text => "ABC Path Solver",
-                            url =>
+                            url  =>
 "open-source/projects/japanese-puzzle-games/abc-path/",
                             title =>
 "Solver for ABC Path as featured on BrainBashers.com",
                         },
                         {
                             text => "Binary Puzzle Solver",
-                            url =>
+                            url  =>
 "open-source/projects/japanese-puzzle-games/binary-puzzle/",
                             title =>
 "Solver for logic puzzles as featured on www.binarypuzzle.com",
                         },
                         {
                             text => "Kakurasu Solver",
-                            url =>
+                            url  =>
 "open-source/projects/japanese-puzzle-games/kakurasu/",
                             title =>
                                 "Automatically Solve the Kakurasu Puzzle Game",
@@ -108,20 +108,20 @@ my $software_tree_contents = {
                     title => "An Object-Oriented Alternative to File::Find",
                 },
                 {
-                    text => "Module-Format",
-                    url  => "open-source/projects/Module-Format/",
+                    text  => "Module-Format",
+                    url   => "open-source/projects/Module-Format/",
                     title =>
 "Perform operations on a number of Perl modules by handling their different stringification formats.",
                 },
                 {
-                    text => "Convert From Test.pm",
-                    url  => "open-source/projects/Test.pm-Converter/",
+                    text  => "Convert From Test.pm",
+                    url   => "open-source/projects/Test.pm-Converter/",
                     title =>
 "Script to partially convert Perl test programs that use Test.pm to Test::More.",
                 },
                 {
-                    text => "The XML-Grammar Project",
-                    url  => "open-source/projects/XML-Grammar/",
+                    text  => "The XML-Grammar Project",
+                    url   => "open-source/projects/XML-Grammar/",
                     title =>
 "Provides specialised XML grammars, with processors and converters for various tasks",
                     subs => [
@@ -132,16 +132,16 @@ my $software_tree_contents = {
 "A lightweight markup language and an XML grammar for writing Prose.",
                         },
                         {
-                            text => "XML-GrammarBase",
-                            url  => "open-source/projects/XML-Grammar/Base/",
+                            text  => "XML-GrammarBase",
+                            url   => "open-source/projects/XML-Grammar/Base/",
                             title =>
 "Base classes and roles for XML grammar processors",
                         },
                     ],
                 },
                 {
-                    text => "docmake",
-                    url  => "open-source/projects/docmake/",
+                    text  => "docmake",
+                    url   => "open-source/projects/docmake/",
                     title =>
 "Automate the conversion of DocBook/XML to different formats",
                 },
@@ -151,27 +151,27 @@ my $software_tree_contents = {
                     title => "A Tool for Generating HTML Presentations",
                 },
                 {
-                    skip => 1,
-                    text => "yjobs.co.il on Firefox/Mozilla",
-                    url  => "open-source/projects/yjobs-on-mozilla/",
+                    skip  => 1,
+                    text  => "yjobs.co.il on Firefox/Mozilla",
+                    url   => "open-source/projects/yjobs-on-mozilla/",
                     title =>
 "Workaround to use yjobs.co.il using (cross-platform) Mozilla-based browsers such as Firefox",
                 },
                 {
-                    text => "libtap",
-                    url  => "open-source/projects/libtap/",
+                    text  => "libtap",
+                    url   => "open-source/projects/libtap/",
                     title =>
 "Write test programs in C that output to the Test Anything Protocol (TAP)",
                 },
                 {
-                    text => "countdown",
-                    url  => "open-source/projects/countdown/",
+                    text  => "countdown",
+                    url   => "open-source/projects/countdown/",
                     title =>
 "Delay for a certain seconds, while displaying the remaining time",
                 },
                 {
-                    text => "Notifier-Apps",
-                    url  => "open-source/projects/notifier-apps/",
+                    text  => "Notifier-Apps",
+                    url   => "open-source/projects/notifier-apps/",
                     title =>
 "A simple client/server HTTP-based applications for desktop notifications",
                 },
@@ -186,8 +186,8 @@ my $software_tree_contents = {
                     title => "A download accelerator with a key improvement.",
                 },
                 {
-                    text => "KSokoban Maintenance",
-                    url  => "open-source/projects/ksokoban/",
+                    text  => "KSokoban Maintenance",
+                    url   => "open-source/projects/ksokoban/",
                     title =>
                         "A KDE implementation of Sokoban - maintenance branch",
                 },
@@ -203,9 +203,9 @@ my $software_tree_contents = {
                             title => "Spark - Pre-Birth of a Modern Lisp",
                         },
                         {
-                            skip => 1,
-                            text => "Old Document ( “Park” )",
-                            url  => "open-source/projects/Park-Lisp/",
+                            skip  => 1,
+                            text  => "Old Document ( “Park” )",
+                            url   => "open-source/projects/Park-Lisp/",
                             title =>
 "Park - a Dialect of the Lisp Programming Language inspired by Arc",
                         },
@@ -218,8 +218,8 @@ my $software_tree_contents = {
 "Patch to Enhance the Configuration Searching of the Linux Kernel",
                 },
                 {
-                    text => "MikMod",
-                    url  => "open-source/projects/mikmod/",
+                    text  => "MikMod",
+                    url   => "open-source/projects/mikmod/",
                     title =>
                         "A library and player for playing music module files",
                     subs => [
@@ -236,7 +236,7 @@ my $software_tree_contents = {
                     subs => [
                         {
                             text => "Project Euler",
-                            url =>
+                            url  =>
 "open-source/projects/problem-sets-and-cp/project-euler/",
                         },
                     ],
@@ -248,7 +248,7 @@ my $software_tree_contents = {
                     subs  => [
                         {
                             text => "Greasemonkey Scripts",
-                            url =>
+                            url  =>
 "open-source/bits-and-bobs/greasemonkey/grease.html",
                             title =>
 "Greasemonkey User Scripts for Firefox and other browsers",
@@ -256,15 +256,15 @@ my $software_tree_contents = {
                     ],
                 },
                 {
-                    text => "Personal Configuration",
-                    url  => "open-source/projects/conf/",
+                    text  => "Personal Configuration",
+                    url   => "open-source/projects/conf/",
                     title =>
 "The Personal Configuration of some of the Programs on my Computer",
                     subs => [
                         {
-                            skip => 1,
-                            text => "Vim",
-                            url  => "open-source/projects/conf/vim/",
+                            skip  => 1,
+                            text  => "Vim",
+                            url   => "open-source/projects/conf/vim/",
                             title =>
                                 "Vim Editor Configuration Files (.vimrc, etc.)",
                         },
@@ -278,8 +278,8 @@ my $software_tree_contents = {
             title => "Contributions to Open Source Projects I did not Initiate",
         },
         {
-            text => "Mentoring FOSS Contributors",
-            url  => "open-source/mentoring/",
+            text  => "Mentoring FOSS Contributors",
+            url   => "open-source/mentoring/",
             title =>
 "Providing mentoring and guidance to those who want to become open-source contributors",
         },
@@ -299,7 +299,7 @@ my $software_tree_contents = {
                     subs  => [
                         {
                             text => "Adrian Ettlinger",
-                            url =>
+                            url  =>
                                 "open-source/interviews/adrian-ettlinger.html",
                             title => "Interview with Adrian Ettlinger",
                         },
@@ -324,8 +324,8 @@ my $software_tree_contents = {
                     text => "Software Building and Management Tools",
                 },
                 {
-                    url  => "open-source/resources/editors-and-IDEs/",
-                    text => "Editors and IDEs",
+                    url   => "open-source/resources/editors-and-IDEs/",
+                    text  => "Editors and IDEs",
                     title =>
 "Index of Text Editors and Integrated Development Environments",
                 },
@@ -338,8 +338,8 @@ my $software_tree_contents = {
                     text => "Text Processing Tools",
                 },
                 {
-                    url  => "open-source/resources/networking-clients/",
-                    text => "Networking Clients",
+                    url   => "open-source/resources/networking-clients/",
+                    text  => "Networking Clients",
                     title =>
 "Web browsers, FTP clients, Instant Messaging (IM) clients, File sharing applications and more",
                 },
@@ -348,8 +348,8 @@ my $software_tree_contents = {
                     text => "List of Multimedia Applications",
                 },
                 {
-                    url  => "open-source/resources/graphics-programs/",
-                    text => "List of Computer Graphics Applications",
+                    url   => "open-source/resources/graphics-programs/",
+                    text  => "List of Computer Graphics Applications",
                     title =>
 "Raster editors, vector editors, image viewers and organisers, 3-D applications and more",
                 },
@@ -379,7 +379,7 @@ my $software_tree_contents = {
                         {
                             url =>
 "open-source/resources/israel/guide-to-israeli-foss-resources/",
-                            text => "Guide to Israeli FOSS Resources",
+                            text  => "Guide to Israeli FOSS Resources",
                             title =>
 "Guide to online Israeli open-source-related resources",
                         },
@@ -402,8 +402,8 @@ my $software_tree_contents = {
                     title => "Stop Using Internet Explorer!",
                     subs  => [
                         {
-                            text => "Feb 2014 Update",
-                            url  => "no-ie/update-2014-02/",
+                            text  => "Feb 2014 Update",
+                            url   => "no-ie/update-2014-02/",
                             title =>
                                 "February 2014 Update for the Anti-MSIE Page",
                         },
@@ -450,8 +450,8 @@ my $software_tree_contents = {
                     title => "Escape from GNU Autohell!",
                 },
                 {
-                    text => "Stop Abusing JavaScript",
-                    url  => "open-source/anti/javascript/",
+                    text  => "Stop Abusing JavaScript",
+                    url   => "open-source/anti/javascript/",
                     title =>
 "Why JavaScript Should not be Used Outside Web Browser Scripting",
                 },
@@ -461,14 +461,14 @@ my $software_tree_contents = {
                     title => "Some links against Java",
                 },
                 {
-                    text => "Links against SOAP",
-                    url  => "open-source/anti/SOAP/",
+                    text  => "Links against SOAP",
+                    url   => "open-source/anti/SOAP/",
                     title =>
 "Some links against SOAP (the so-called “Simple Object Access Protocol”)",
                 },
                 {
-                    text => "Links against TIOBE",
-                    url  => "open-source/anti/TIOBE/",
+                    text  => "Links against TIOBE",
+                    url   => "open-source/anti/TIOBE/",
                     title =>
 "Some links against the TIOBE index, which aims to measure programming languages’ popularity",
                 },

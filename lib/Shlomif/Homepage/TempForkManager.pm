@@ -6,77 +6,7 @@ use 5.014;
 
 use Parallel::Map qw/ pmap_void /;
 
-sub new
-{
-    my $class = shift;
-
-    my $self = bless {}, $class;
-
-    $self->_init(@_);
-
-    return $self;
-}
-
-sub _init
-{
-    my ( $self, $args ) = @_;
-
-    return;
-}
-
-sub process_args
-{
-    my ( $self, $args ) = @_;
-
-    my $WITH_PM   = !$args->{disable_fork};
-    my $items     = $args->{items};
-    my $stream_cb = $args->{stream_cb};
-    my $cb        = $args->{process_item};
-    my $batch_cb  = $args->{process_batch};
-
-    if ( $stream_cb && $items )
-    {
-        die "Do not specify both stream_cb and items!";
-    }
-    if ( $batch_cb && $cb )
-    {
-        die "Do not specify both process_item and process_batch!";
-    }
-    $batch_cb //= sub {
-        foreach my $item ( @{ shift() } )
-        {
-            $cb->($item);
-        }
-        return;
-    };
-    my $nproc      = $args->{nproc};
-    my $batch_size = $args->{batch_size};
-
-    # Return prematurely on empty input to avoid calling $ch with undef()
-    # at least once.
-    if ($items)
-    {
-        if ( not @$items )
-        {
-            return;
-        }
-        $stream_cb = sub {
-            my ($args) = @_;
-            my $size = $args->{size};
-
-            return +{ items =>
-                    scalar( @$items ? [ splice @$items, 0, $size ] : undef() ),
-            };
-        };
-    }
-    return +{
-        WITH_PM    => $WITH_PM,
-        batch_cb   => $batch_cb,
-        batch_size => $batch_size,
-        nproc      => $nproc,
-        stream_cb  => $stream_cb,
-    };
-}
+use parent 'Parallel::ForkManager::Segmented::Base';
 
 sub run
 {

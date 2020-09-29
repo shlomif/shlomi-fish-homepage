@@ -10,8 +10,8 @@ use MyNavData                              ();
 use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
-use Shlomif::Homepage::TempForkManager     ();
 use Path::Tiny qw/ path /;
+use Parallel::Map::Segmented ();
 
 sub get_root
 {
@@ -156,7 +156,7 @@ sub _process_batch
     return;
 }
 
-Shlomif::Homepage::TempForkManager->new()->run(
+Parallel::Map::Segmented->new()->run(
     {
         disable_fork => 1,
         items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],

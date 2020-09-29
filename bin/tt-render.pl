@@ -7,7 +7,7 @@ use 5.014;
 use lib './lib';
 
 use Getopt::Long qw/ GetOptions /;
-use Shlomif::Homepage::TempForkManager ();
+use Parallel::Map::Segmented ();
 use Path::Tiny qw/ path /;
 use Shlomif::Homepage::TTRender ();
 
@@ -28,7 +28,7 @@ if ( !@filenames )
 {
     @filenames = path("lib/make/tt2.txt")->lines_raw( { chomp => 1 } );
 }
-Shlomif::Homepage::TempForkManager->new()->run(
+Parallel::Map::Segmented->new()->run(
     {
         disable_fork  => 1,
         items         => \@filenames,

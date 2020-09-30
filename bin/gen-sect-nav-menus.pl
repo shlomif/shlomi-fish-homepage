@@ -158,11 +158,14 @@ sub _process_batch
 
 Parallel::Map::Segmented->new()->run(
     {
-        disable_fork => 1,
         items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
         nproc => 4,
         batch_size    => 16,
         process_batch => \&_process_batch,
-        ( delete( $ENV{LATEMP_PROFILE} ) ? ( disable_fork => 1, ) : () ),
+        (
+              ( delete( $ENV{LATEMP_PROFILE} ) || $ENV{TRAVIS} )
+            ? ( disable_fork => 1, )
+            : ()
+        ),
     }
 );

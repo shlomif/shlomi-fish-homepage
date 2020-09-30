@@ -8,13 +8,13 @@
 
 import unittest
 
-from lxml import etree
+from lxml import html
 
 
 class MyTests(unittest.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/index.xhtml'
-        root = etree.HTML(open(input_fn, "rb").read())
+        root = html.parse(input_fn)
         self.assertTrue(len(root.xpath(
             ".//footer//a[@href = 'meta/hosting/#hostgator']/"
             + "img[@src='images/hostgator.png' and @alt='Hosted at HostGator']"

@@ -8,14 +8,14 @@
 
 import unittest
 
-from lxml import etree
+from lxml import html
 
 
 class MyTests(unittest.TestCase):
     def test_main(self):
         input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
             'putting-cards-on-the-table-2019-2020/index.xhtml'
-        root = etree.HTML(open(input_fn, "rb").read())
+        root = html.parse(input_fn)
         self.assertEqual(len(root.xpath(
             ".//h5[@id='fox-in-the-hens-coop' and " +
             "text()='The Fox in the Chickens Coop']"

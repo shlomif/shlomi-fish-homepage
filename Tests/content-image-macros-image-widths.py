@@ -11,7 +11,7 @@ import unittest
 
 from PIL import Image
 
-from lxml import etree
+from lxml import html
 
 
 # the WIDTH is subject to update in the future
@@ -22,7 +22,7 @@ class MyTests(unittest.TestCase):
     def test_share_this_url(self):
         input_fn = './dest/post-incs/t2/humour/bits/' + \
             'Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml'
-        root = etree.HTML(open(input_fn, "rb").read())
+        root = html.parse(input_fn)
         share_links = root.xpath(
             ".//p[@class='share']/a[@href='" +
             "http://www.addtoany.com/share_save?linkurl=https%3A%2F%2F" +
@@ -32,7 +32,7 @@ class MyTests(unittest.TestCase):
 
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
-        root = etree.HTML(open(input_fn, "rb").read())
+        root = html.parse(input_fn)
         descs = root.xpath(".//head/meta[@name='description']")
         self.assertEqual(len(descs), 1)
         desc_text = descs[0].get('content')
@@ -42,7 +42,7 @@ class MyTests(unittest.TestCase):
 
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/image-macros/index.xhtml'
-        root = etree.HTML(open(input_fn, "rb").read())
+        root = html.parse(input_fn)
         imgs = root.xpath(".//article/img")
         self.assertTrue(len(imgs) > 5)
         for img in imgs:

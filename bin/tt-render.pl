@@ -30,7 +30,6 @@ if ( !@filenames )
 }
 Parallel::Map::Segmented->new()->run(
     {
-        disable_fork  => 1,
         items         => \@filenames,
         nproc         => 4,
         batch_size    => 100,
@@ -42,5 +41,10 @@ Parallel::Map::Segmented->new()->run(
             }
             return;
         },
+        (
+              ( delete( $ENV{LATEMP_PROFILE} ) || $ENV{TRAVIS} )
+            ? ( disable_fork => 1, )
+            : ()
+        ),
     }
 );

@@ -841,9 +841,16 @@ EOF
 [%- END -%]
 EOF
         see_also => <<'EOF',
+<ul>
+
+<li>
 <p>
-<b>TODO</b>
+<a href="https://tonsky.me/blog/disenchantment/">Software disenchantment</a> -
+highlights Windows Update’s slowness.
 </p>
+</li>
+
+</ul>
 EOF
         short_id   => 'windows_update',
         tabs_title => "Windows Update Facts",

@@ -15,10 +15,10 @@ class MyTests(unittest.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/index.xhtml'
         root = html.parse(input_fn)
-        self.assertTrue(len(root.xpath(
+        self.assertEqual(len(root.xpath(
             ".//footer//a[@href = 'meta/hosting/#hostgator']/"
             + "img[@src='images/hostgator.png' and @alt='Hosted at HostGator']"
-            )) == 1)
+            )), 1)
 
 
 if __name__ == '__main__':

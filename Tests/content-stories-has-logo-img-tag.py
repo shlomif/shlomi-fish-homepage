@@ -15,18 +15,18 @@ class MyTests(unittest.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/Selina-Mandrake/index.xhtml'
         root = html.parse(input_fn)
-        self.assertTrue(len(root.xpath(
+        self.assertEqual(len(root.xpath(
             ".//img[@id='selina_mandrake_logo' and " +
             "@src='images/Green-d10-dice.webp']"
-            )) == 1)
+            )), 1)
 
     def test_factoids(self):
         input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
         root = html.parse(input_fn)
-        self.assertTrue(len(root.xpath(
+        self.assertEqual(len(root.xpath(
             ".//h3[@id='shlomif-fact-xena-1' and " +
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
-            )) == 1)
+            )), 1)
 
 
 if __name__ == '__main__':

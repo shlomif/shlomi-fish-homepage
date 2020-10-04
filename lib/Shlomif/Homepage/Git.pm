@@ -7,8 +7,9 @@ use Moo;
 
 use Carp ();
 use Path::Tiny qw/ cwd /;
-use IO::Async::Function ();
-use IO::Async::Loop     ();
+use IO::Async       ();
+use IO::Async::Loop ();
+use Future::Utils qw/ fmap_void /;
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
@@ -17,10 +18,14 @@ $git_clones_dir->mkpath;
 
 my @tasks;
 
-sub task
+sub add_task
 {
-    my ( $self, $cb ) = @_;
-    push @tasks, $cb;
+    my ( $self, $task ) = @_;
+    if ( !$task )
+    {
+        return;
+    }
+    push @tasks, $task;
     return;
 }
 
@@ -52,17 +57,14 @@ sub github_clone
     my @prefix = ( 'git', 'clone' );
     my @cmd    = ( @prefix, $url, $clone_into );
 
-    if ( !-e $clone_into )
-    {
-        print "@cmd\n";
-        if ( system(@cmd) )
-        {
-            die "git clone [@cmd] failed!";
-        }
-    }
     if ( !-e $link )
     {
         symlink( $clone_into, $link );
+    }
+    if ( !-e $clone_into )
+    {
+        print "@cmd\n";
+        return \@cmd;
     }
 
     return;
@@ -88,7 +90,7 @@ sub sys_task
     {
         return;
     }
-    return $self->task( sub { system( @{ $args->{cmd} } ); return; } );
+    return $self->add_task( [ @{ $args->{cmd} } ] );
 }
 
 sub git_task
@@ -96,8 +98,7 @@ sub git_task
     my ( $self, $d, $bn ) = @_;
     return
         if -e "$d/$bn";
-    return $self->task( sub { $self->github_shlomif_clone( $d, $bn ); return; }
-    );
+    return $self->add_task( scalar( $self->github_shlomif_clone( $d, $bn ) ) );
 }
 
 sub calc_git_task_cb
@@ -134,15 +135,20 @@ qq#cd $base_dirname && git clone $branch https://github.com/$user/$repo#,
 sub end
 {
     my $self = shift;
+    my $loop = IO::Async::Loop->new;
 
-    my $loop = IO::Async::Loop->new();
-    Future->needs_all(
-        map {
-            my $func = IO::Async::Function->new( code => $_ );
-            $loop->add($func);
-            $func->call( args => [] );
-        } @tasks
-    )->get();
+    my $f = fmap_void
+    {
+        my $task = shift;
+        if ( ref $task eq 'ARRAY' )
+        {
+            return $loop->run_process( command => $task );
+        }
+        $task->();
+        return Future->done();
+    }
+    foreach => ( \@tasks );    # , otherwise => sub { return undef; };
+    $f->get();
 
     @tasks = ();
     return;

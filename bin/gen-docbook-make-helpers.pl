@@ -36,10 +36,15 @@ $git_obj->git_in_checkout_task(
     }
 );
 
-# Broken due to the bug in this pull-request:
+# Replaced with rebookmaker anyway due to a lack of an explicit (and FOSS)
+# licence:
+#
+# https://pypi.org/project/rebookmaker/
+#
+# Previously broken due to the bug in this pull-request:
 #    - https://github.com/setanta/ebookmaker/pull/7
 #
-# I switched to my fork for now.
+# I switched to my fork before the "rebookmaker" rewrite.
 #
 # system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
 if (0)

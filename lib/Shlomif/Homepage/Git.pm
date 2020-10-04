@@ -7,8 +7,9 @@ use Moo;
 
 use Carp ();
 use Path::Tiny qw/ cwd /;
-use IO::Async::Function ();
-use IO::Async::Loop     ();
+use IO::Async       ();
+use IO::Async::Loop ();
+use Future::Utils qw/ repeat /;
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
@@ -52,17 +53,14 @@ sub github_clone
     my @prefix = ( 'git', 'clone' );
     my @cmd    = ( @prefix, $url, $clone_into );
 
-    if ( !-e $clone_into )
-    {
-        print "@cmd\n";
-        if ( system(@cmd) )
-        {
-            die "git clone [@cmd] failed!";
-        }
-    }
     if ( !-e $link )
     {
         symlink( $clone_into, $link );
+    }
+    if ( !-e $clone_into )
+    {
+        print "@cmd\n";
+        return \@cmd;
     }
 
     return;
@@ -88,7 +86,7 @@ sub sys_task
     {
         return;
     }
-    return $self->task( sub { system( @{ $args->{cmd} } ); return; } );
+    return $self->task( [ @{ $args->{cmd} } ] );
 }
 
 sub git_task
@@ -96,8 +94,7 @@ sub git_task
     my ( $self, $d, $bn ) = @_;
     return
         if -e "$d/$bn";
-    return $self->task( sub { $self->github_shlomif_clone( $d, $bn ); return; }
-    );
+    return $self->task( scalar( $self->github_shlomif_clone( $d, $bn ) ) );
 }
 
 sub calc_git_task_cb
@@ -135,16 +132,24 @@ sub end
 {
     my $self = shift;
 
-    my $loop = IO::Async::Loop->new();
-    Future->needs_all(
-        map {
-            my $func = IO::Async::Function->new( code => $_ );
-            $loop->add($func);
-            $func->call( args => [] );
-        } @tasks
-    )->get();
+    repeat
+    {
+        my $t    = shift;
+        my $task = $tasks[$t];
+        if ( !defined $task )
+        {
+            return Future->done();
+        }
+        if ( ref $task eq 'ARRAY' )
+        {
+            return IO::Async->run_process( command => $task );
+        }
+        $task->();
+        return Future->done();
+    }
+    foreach => [ keys @tasks ];
 
-    @tasks = ();
+    # @tasks = ();
     return;
 }
 

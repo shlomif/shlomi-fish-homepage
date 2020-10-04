@@ -18,10 +18,14 @@ $git_clones_dir->mkpath;
 
 my @tasks;
 
-sub task
+sub add_task
 {
-    my ( $self, $cb ) = @_;
-    push @tasks, $cb;
+    my ( $self, $task ) = @_;
+    if ( !$task )
+    {
+        return;
+    }
+    push @tasks, $task;
     return;
 }
 
@@ -86,7 +90,7 @@ sub sys_task
     {
         return;
     }
-    return $self->task( [ @{ $args->{cmd} } ] );
+    return $self->add_task( [ @{ $args->{cmd} } ] );
 }
 
 sub git_task
@@ -94,7 +98,7 @@ sub git_task
     my ( $self, $d, $bn ) = @_;
     return
         if -e "$d/$bn";
-    return $self->task( scalar( $self->github_shlomif_clone( $d, $bn ) ) );
+    return $self->add_task( scalar( $self->github_shlomif_clone( $d, $bn ) ) );
 }
 
 sub calc_git_task_cb
@@ -135,12 +139,7 @@ sub end
 
     my $f = fmap_void
     {
-        my $t    = shift;
-        my $task = $tasks[$t];
-        if ( !defined $task )
-        {
-            return Future->done();
-        }
+        my $task = shift;
         if ( ref $task eq 'ARRAY' )
         {
             return $loop->run_process( command => $task );
@@ -148,10 +147,10 @@ sub end
         $task->();
         return Future->done();
     }
-    foreach => [ keys @tasks ];    # , otherwise => sub { return undef; };
+    foreach => ( \@tasks );    # , otherwise => sub { return undef; };
     $f->get();
 
-    # @tasks = ();
+    @tasks = ();
     return;
 }
 

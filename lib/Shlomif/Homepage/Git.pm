@@ -9,7 +9,7 @@ use Carp ();
 use Path::Tiny qw/ cwd /;
 use IO::Async       ();
 use IO::Async::Loop ();
-use Future::Utils qw/ repeat /;
+use Future::Utils qw/ fmap_void /;
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
@@ -131,8 +131,9 @@ qq#cd $base_dirname && git clone $branch https://github.com/$user/$repo#,
 sub end
 {
     my $self = shift;
+    my $loop = IO::Async::Loop->new;
 
-    repeat
+    my $f = fmap_void
     {
         my $t    = shift;
         my $task = $tasks[$t];
@@ -142,12 +143,13 @@ sub end
         }
         if ( ref $task eq 'ARRAY' )
         {
-            return IO::Async->run_process( command => $task );
+            return $loop->run_process( command => $task );
         }
         $task->();
         return Future->done();
     }
-    foreach => [ keys @tasks ];
+    foreach => [ keys @tasks ];    # , otherwise => sub { return undef; };
+    $f->get();
 
     # @tasks = ();
     return;

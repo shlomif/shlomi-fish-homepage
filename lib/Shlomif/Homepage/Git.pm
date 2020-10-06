@@ -147,7 +147,7 @@ sub end
         $task->();
         return Future->done();
     }
-    foreach => ( \@tasks );    # , otherwise => sub { return undef; };
+    foreach => ( \@tasks );
     $f->get();
 
     @tasks = ();

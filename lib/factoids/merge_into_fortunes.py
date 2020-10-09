@@ -37,6 +37,7 @@ BASENAME_EXTRACT_RE = re.compile('^([a-z_\\-]*)_facts$')
 class FortunesMerger:
     def __init__(self, input_fn, merge_into_fn):
         self.input_fn = input_fn
+        self.merge_into_fn = merge_into_fn
         self.root = etree.parse(input_fn)
         self.target_root = etree.parse(merge_into_fn)
         self.max_idxs = defaultdict(int)
@@ -113,7 +114,9 @@ class FortunesMerger:
         with open(out_fn, "wb") as f:
             f.write(
                 etree.tostring(self.target_root, pretty_print=True))
-        t = max([os.stat(fn).st_mtime for fn in [self.input_fn, __file__]]) + 1
+        t = max([os.stat(fn).st_mtime for fn in
+                 [self.input_fn, self.merge_into_fn, __file__]
+                 ]) + 1
         os.utime(out_fn, (t, t))
 
 

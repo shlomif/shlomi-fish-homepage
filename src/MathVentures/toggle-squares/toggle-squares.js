@@ -1,5 +1,7 @@
 let N_squares = 5;
 let count_of_ons = 0;
+const on_state_alternate_text = 'on';
+const off_state_alternate_text = 'off';
 
 function set_N(new_n) {
     N_squares = new_n;
@@ -39,11 +41,11 @@ function toggle_button(ix, iy) {
     if (new_state) {
         button_handle.attr('src', '1.min.svg');
         ++count_of_ons;
-        button_handle.attr('alt', 'on');
+        button_handle.attr('alt', on_state_alternate_text);
     } else {
         button_handle.attr('src', '0.min.svg');
         --count_of_ons;
-        button_handle.attr('alt', 'off');
+        button_handle.attr('alt', off_state_alternate_text);
     }
 }
 

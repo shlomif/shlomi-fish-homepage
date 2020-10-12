@@ -5,7 +5,7 @@ function button_html(x, y, value) {
         "<img src=\"" +
         (value ? "1" : "0") +
         ".min.svg\" alt=\"" +
-        (value ? "white" : "black") +
+        (value ? on_state_alternate_text : off_state_alternate_text) +
         "\" id=\"button_" + x + "_" + y + "\" " +
         "onclick=\"user_press_button(" + x + "," + y + "); return false;\" />"
         );

@@ -18,7 +18,7 @@ the cards to move.
 
 [% WRAPPER h2_section id = "download"  title = "Download"  %]
 
-[% SET ver = "1.8.0" %]
+[% SET ver = "1.10.1" %]
 [% SET arc = "black-hole-solver-${ver}.tar.xz" %]
 [% SET sqlite_dump_arc = "black_hole_solver.dump.xz" %]
 [% SET sqlite_dump_url = "http://fc-solve.shlomifish.org/downloads/fc-solve/$sqlite_dump_arc" %]

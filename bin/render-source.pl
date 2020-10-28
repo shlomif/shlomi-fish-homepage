@@ -11,8 +11,8 @@ BEGIN
     $HOME = $ENV{HOME};
 }
 use lib "$HOME/apps/test/wml/share/wml";
-use TheWML::Frontends::Wml::Runner   ();
-use Parallel::ForkManager::Segmented ();
+use TheWML::Frontends::Wml::Runner ();
+use Parallel::Map::Segmented       ();
 
 my $UNCOND = $ENV{UNCOND} // '';
 
@@ -67,7 +67,7 @@ my $proc  = sub {
     ) and die "$!";
     return;
 };
-Parallel::ForkManager::Segmented->new->run(
+Parallel::Map::Segmented->new->run(
     {
         items        => \@queue,
         nproc        => 4,

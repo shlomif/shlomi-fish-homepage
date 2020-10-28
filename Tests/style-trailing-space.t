@@ -39,6 +39,8 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cook|cpp|css|desktop|dsl|dtd|ent|fo
             # We add node_modules due to Travis-CI build failures. Do not
             # remove!
             node_modules
+            |
+            bower_components
             )
             %msx,
         },

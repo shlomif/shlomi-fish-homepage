@@ -62,7 +62,7 @@ deploy:
 go:
     - '1.13.x'
 os: linux
-dist: focal
+dist: bionic
 rvm:
     - 2.7.0
 before_install:

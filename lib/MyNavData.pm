@@ -54,7 +54,7 @@ my %reduced_sub_trees = (
                         subs => [
                             {
                                 text => "Online Artists",
-                                url =>
+                                url  =>
                                     "art/recommendations/music/online-artists/",
                                 title =>
                                     "Some of my favourite online musicians",
@@ -97,8 +97,8 @@ my %reduced_sub_trees = (
                         url  => "humour/Star-Trek/We-the-Living-Dead/",
                     },
                     {
-                        text => "Humanity - The Movie",
-                        url  => "humour/humanity/",
+                        text  => "Humanity - The Movie",
+                        url   => "humour/humanity/",
                         title =>
                             "Parody of Humanity and Modern Life in Particular",
                     },
@@ -123,13 +123,13 @@ my %reduced_sub_trees = (
                         url => "humour.html",
                     },
                     {
-                        text => "Fortune Cookies Collection",
+                        text  => "Fortune Cookies Collection",
                         title =>
 "Collection of Files for Input to the UNIX ‘fortune’ Program",
                         url => "humour/fortunes/",
                     },
                     {
-                        text => "Factoids",
+                        text  => "Factoids",
                         title =>
                             "“Facts” about Chuck Norris and other things",
                         url    => "humour/bits/facts/",
@@ -194,7 +194,7 @@ my %reduced_sub_trees = (
                         title => "A suite of Solitaire games",
                     },
                     {
-                        text => "FCFS RWLock",
+                        text  => "FCFS RWLock",
                         title =>
                             "A First-Come First-Served Readers/Writers Lock",
                         url => "rwlock/",
@@ -226,7 +226,7 @@ my %reduced_sub_trees = (
                         url   => "open-source/portability-libs/",
                     },
                     {
-                        text => "Text Editors and IDEs",
+                        text  => "Text Editors and IDEs",
                         title =>
 "List of Text Editors and Integrated Development Environments (IDEs)",
                         url => "open-source/resources/editors-and-IDEs/",
@@ -244,7 +244,7 @@ my %reduced_sub_trees = (
                 ],
             },
             {
-                text => "Contributions",
+                text  => "Contributions",
                 title =>
                     "Contributions to Other Projects, that I did not Start",
                 url => "open-source/contributions/",
@@ -262,9 +262,9 @@ my %reduced_sub_trees = (
                 url  => "lecture/Perl/Newbies/",
             },
             {
-                text => "Web Publishing using LAMP",
-                url  => "lecture/LAMP/",
-                host => "t2",
+                text  => "Web Publishing using LAMP",
+                url   => "lecture/LAMP/",
+                host  => "t2",
                 title =>
 "Web Publishing using Linux, Apache, MySQL, and Perl/PHP/Python (or equivalents)",
             },
@@ -283,8 +283,8 @@ my %reduced_sub_trees = (
                 title => "Presentations about Various Tools",
             },
             {
-                text => "Welcome to Linux",
-                url  => "lecture/W2L/",
+                text  => "Welcome to Linux",
+                url   => "lecture/W2L/",
                 title =>
                     "Presentations for the Israeli series for Linux Newcomers",
             },
@@ -305,7 +305,7 @@ my %reduced_sub_trees = (
         text   => "Essays",
         url    => "philosophy/",
         expand => { re => "^(?:philosophy|prog-evolution|DeCSS)/", },
-        title =>
+        title  =>
 "Various Essays and Articles about Technology and Philosophy in General",
         subs => [
             {
@@ -314,27 +314,27 @@ my %reduced_sub_trees = (
                 title => "Index to Essays and Articles I wrote.",
             },
             {
-                text => "General Philosophy",
-                url  => "philosophy/philosophy/",
+                text   => "General Philosophy",
+                url    => "philosophy/philosophy/",
                 expand =>
                     { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
             },
             {
-                text  => "Computing",
-                url   => "philosophy/computers/",
-                title => "Computing-related Essays and Articles",
+                text   => "Computing",
+                url    => "philosophy/computers/",
+                title  => "Computing-related Essays and Articles",
                 expand =>
                     { re => "^(?:philosophy/computers|prog-evolution)/", },
                 subs => [
                     {
-                        text => "Open Source",
-                        url  => "philosophy/computers/open-source/",
+                        text  => "Open Source",
+                        url   => "philosophy/computers/open-source/",
                         title =>
                             "Essays about Free and Open Source Software (FOSS)",
                     },
                     {
-                        text => "Software Management",
-                        url  => "philosophy/computers/software-management/",
+                        text  => "Software Management",
+                        url   => "philosophy/computers/software-management/",
                         title =>
 "Essays about how to manage software workplaces, projects and teams",
                     },
@@ -466,14 +466,14 @@ sub generic_get_params
                         expand => { re => "^(?:me/|personal/)", },
                         subs   => [
                             {
-                                text => "Intros",
-                                url  => "me/intros/",
+                                text  => "Intros",
+                                url   => "me/intros/",
                                 title =>
                                     "Introductions of Me to Various Forums",
                                 subs => [
                                     {
-                                        text => "MIT Writers",
-                                        url  => "me/intros/writers/",
+                                        text  => "MIT Writers",
+                                        url   => "me/intros/writers/",
                                         title =>
 "My Intro to the MIT Writers Mailing List",
                                     },
@@ -492,7 +492,7 @@ sub generic_get_params
                         subs => [
                             {
                                 text => "Résumé as a Software Dev",
-                                url =>
+                                url  =>
 "me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html",
                             },
                             {
@@ -507,14 +507,14 @@ sub generic_get_params
                             },
                             {
                                 text => "Résumé as a Writer and Entertainer",
-                                url =>
+                                url  =>
 "me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
                             },
                         ],
                     },
                     {
-                        text => "Personal Ad",
-                        url  => "me/personal-ad.html",
+                        text  => "Personal Ad",
+                        url   => "me/personal-ad.html",
                         title =>
 "My Personal Ad: what I’m looking for in a prospective girlfriend and what I can add to the relationship.",
                     },
@@ -536,8 +536,8 @@ sub generic_get_params
                         ],
                     },
                     {
-                        text => "“Rindolf” - my nickname",
-                        url  => "me/rindolf/",
+                        text  => "“Rindolf” - my nickname",
+                        url   => "me/rindolf/",
                         title =>
 "The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
                     },
@@ -562,8 +562,8 @@ sub generic_get_params
                         expand => { re => "\\Awork/", },
                         subs   => [
                             {
-                                text => "Private Lessons",
-                                url  => "work/private-lessons/",
+                                text  => "Private Lessons",
+                                url   => "work/private-lessons/",
                                 title =>
 "I’m Giving Private Lessons for High School Subjects and Computing.",
                             },
@@ -576,14 +576,14 @@ sub generic_get_params
                 skip      => 1,
             },
             {
-                text => "Cool Links",
-                url  => "links.html",
+                text  => "Cool Links",
+                url   => "links.html",
                 title =>
                     "An incomplete list of links I find cool and/or useful.",
             },
             {
-                text => "Recommendations",
-                url  => "recommendations/",
+                text  => "Recommendations",
+                url   => "recommendations/",
                 title =>
                     "Recommendations of Books, Compact Discs, Movies, etc.",
             },

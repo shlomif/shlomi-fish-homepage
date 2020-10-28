@@ -19,8 +19,8 @@ my $puzzles_tree_contents = {
             title => "Puzzles and Riddles",
         },
         {
-            text => "Math-Ventures",
-            url  => "MathVentures/",
+            text  => "Math-Ventures",
+            url   => "MathVentures/",
             title =>
 "Adventures in Mathematics, usually with some real-life application",
             subs => [
@@ -76,14 +76,14 @@ my $puzzles_tree_contents = {
             title => "Various Logic Puzzles I came up with.",
             subs  => [
                 {
-                    text => "Between the Screws",
-                    url  => "puzzles/logic/between-the-screws/",
+                    text  => "Between the Screws",
+                    url   => "puzzles/logic/between-the-screws/",
                     title =>
 "Which are the 4 different Screws Used to build an Aeroplane?",
                 },
                 {
-                    text => "Ravensborg’s Guild",
-                    url  => "puzzles/logic/ravensborgs-guild/",
+                    text  => "Ravensborg’s Guild",
+                    url   => "puzzles/logic/ravensborgs-guild/",
                     title =>
 "5 members of a guild with different profession, one of them is the leader.",
                 },
@@ -95,8 +95,8 @@ my $puzzles_tree_contents = {
             ],
         },
         {
-            text => "Situation Puzzles",
-            url  => "puzzles/situation/",
+            text  => "Situation Puzzles",
+            url   => "puzzles/situation/",
             title =>
 "Puzzles where one has to guess what caused the situation using Yes/No questions",
             subs => [
@@ -121,8 +121,8 @@ my $puzzles_tree_contents = {
             url  => "puzzles/cs/",
             subs => [
                 {
-                    text => "The “Lotg” Code",
-                    url  => "puzzles/cs/lotg/",
+                    text  => "The “Lotg” Code",
+                    url   => "puzzles/cs/lotg/",
                     title =>
 "A minimalistic programming language that I came up with",
                 },

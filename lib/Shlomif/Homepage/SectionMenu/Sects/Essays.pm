@@ -33,8 +33,8 @@ my $essays_tree_contents = {
             title => "Writings about General Philosophy",
             subs  => [
                 {
-                    text => "The Eternal Jew",
-                    url  => "philosophy/the-eternal-jew/",
+                    text  => "The Eternal Jew",
+                    url   => "philosophy/the-eternal-jew/",
                     title =>
                         "The Eternal Jew - An Essay about the value of Self",
                 },
@@ -49,14 +49,14 @@ my $essays_tree_contents = {
                 },
                 {
                     text => "Why Closed Books are So 19th Century",
-                    url =>
+                    url  =>
 "philosophy/philosophy/closed-books-are-so-19th-century/",
                     title =>
 "Why authors of books should make sure they are publicly available online.",
                 },
                 {
                     text => "Putting all the Cards on the Table (2013)",
-                    url =>
+                    url  =>
 "philosophy/philosophy/putting-all-cards-on-the-table-2013/",
                     title =>
                         "A snapshot of my personal philosophy as of March 2013",
@@ -69,20 +69,20 @@ my $essays_tree_contents = {
             title => "Writings about Psychology",
             subs  => [
                 {
-                    text => "Dealing with Hypomanias",
-                    url  => "philosophy/psychology/hypomanias/",
+                    text  => "Dealing with Hypomanias",
+                    url   => "philosophy/psychology/hypomanias/",
                     title =>
 "How I deal with the bad psychological periods that affect me",
                 },
                 {
-                    text => "The Elephant in the Circus",
-                    url  => "philosophy/psychology/elephant-in-the-circus/",
+                    text  => "The Elephant in the Circus",
+                    url   => "philosophy/psychology/elephant-in-the-circus/",
                     title =>
                         "A (non-original) story with self-growth implications",
                     subs => [
                         {
                             text => "Hebrew Translation",
-                            url =>
+                            url  =>
 "philosophy/psychology/elephant-in-the-circus/hebrew.html",
                         },
                     ],
@@ -95,8 +95,8 @@ my $essays_tree_contents = {
             title => "Essays about Politics and Philosophical Politics",
             subs  => [
                 {
-                    text => "#SummerNSA",
-                    url  => "philosophy/SummerNSA/",
+                    text  => "#SummerNSA",
+                    url   => "philosophy/SummerNSA/",
                     title =>
                         "The #SummerNSA / “Summerschool at the NSA” effort",
                     subs => [
@@ -108,12 +108,12 @@ my $essays_tree_contents = {
                         },
                         {
                             text => "Letter to Summer Glau on Oct 2014",
-                            url =>
+                            url  =>
                                 "philosophy/SummerNSA/Letter-to-SGlau-2014-10/",
                         },
                         {
                             text => "Sep 2014 Call for Action",
-                            url =>
+                            url  =>
 "philosophy/philosophy/SummerNSA-2014-09-call-for-action/",
                         },
                     ],
@@ -124,8 +124,8 @@ my $essays_tree_contents = {
                     title => "Objectivism and Open Source",
                     subs  => [
                         {
-                            text => "Revision 2",
-                            url  => "philosophy/obj-oss/rev2/",
+                            text  => "Revision 2",
+                            url   => "philosophy/obj-oss/rev2/",
                             title =>
 "Revision 2 of the Objectivism and Open Source Article",
                         },
@@ -137,14 +137,14 @@ my $essays_tree_contents = {
                     title => "A Solution to the Israeli Palestinian Conflict",
                 },
                 {
-                    text => "Case for File Swapping",
-                    url  => "philosophy/case-for-file-swapping/",
+                    text  => "Case for File Swapping",
+                    url   => "philosophy/case-for-file-swapping/",
                     title =>
 "Why File Swapping is Ethical and Moral and should be Legal",
                     subs => [
                         {
                             text => "Revision 3 Text",
-                            url =>
+                            url  =>
                                 "philosophy/case-for-file-swapping/revision-3/",
                             title => "Text of the Third Revision",
                         },
@@ -162,7 +162,7 @@ my $essays_tree_contents = {
                     subs  => [
                         {
                             text => "Hebrew Translation",
-                            url =>
+                            url  =>
 "philosophy/politics/drug-legalisation/hebrew.html",
                         },
                     ],
@@ -186,8 +186,8 @@ my $essays_tree_contents = {
                     url => "philosophy/politics/dispelling-myths-about-israel/",
                 },
                 {
-                    text => "Opinion on DeCSS",
-                    url  => "DeCSS/",
+                    text  => "Opinion on DeCSS",
+                    url   => "DeCSS/",
                     title =>
 "My Opinion on the DeCSS (= DVDs’ de-scrambling code) fiasco",
                 },
@@ -199,14 +199,14 @@ my $essays_tree_contents = {
             title => "Computing-related Essays and Articles",
             subs  => [
                 {
-                    text => "When C is the Best?",
-                    url  => "philosophy/computers/when-c-is-best/",
+                    text  => "When C is the Best?",
+                    url   => "philosophy/computers/when-c-is-best/",
                     title =>
 "An Essay that Explains when the C Language should be used instead of Other Languages",
                     subs => [
                         {
                             text => "The Text Itself",
-                            url =>
+                            url  =>
 "philosophy/computers/when-c-is-best/when-c-is-the-best.html",
                         },
                     ],
@@ -216,49 +216,49 @@ my $essays_tree_contents = {
                     url  => "philosophy/computers/open-source/",
                     subs => [
                         {
-                            text => "What is Open Source?",
-                            url  => "philosophy/foss-other-beasts/",
+                            text  => "What is Open Source?",
+                            url   => "philosophy/foss-other-beasts/",
                             title =>
                                 "Open Source, Free Software and Other Beasts",
                         },
                         {
                             text => "How to Contribute to Open Source",
-                            url =>
+                            url  =>
 "philosophy/computers/open-source/how-to-start-contributing/",
                             title =>
 "How can one start contributing to free and open-source software (FOSS)",
                             subs => [
                                 {
                                     text => "Longer Document",
-                                    url =>
+                                    url  =>
 "philosophy/computers/open-source/how-to-start-contributing/tos-document.html",
                                 },
                             ],
                         },
                         {
                             text => "GPL, BSD and Suckerism",
-                            url =>
+                            url  =>
 "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                             title =>
                                 "The GPL, The BSD Licence and Being a Sucker",
                         },
                         {
                             text => "The Linus Bus Factor",
-                            url =>
+                            url  =>
 "philosophy/computers/open-source/linus-torvalds-bus-factor/",
                             title =>
 "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
                         },
                         {
                             text => "FOSS Licences Wars",
-                            url =>
+                            url  =>
 "philosophy/computers/open-source/foss-licences-wars/",
                             title =>
 "An overview of open-source licences and some recommendations and opinions",
                         },
                         {
                             text => "Why I Don’t Trust Non-FOSS",
-                            url =>
+                            url  =>
 "philosophy/computers/open-source/not-trust-non-FOSS/",
                         },
                     ],
@@ -270,21 +270,21 @@ my $essays_tree_contents = {
                     subs  => [
                         {
                             text => "The End of IT Slavery",
-                            url =>
+                            url  =>
 "philosophy/computers/software-management/end-of-it-slavery/",
                             title =>
 "The end of Info-Tech/High-Tech slavery - if you want great people to work for you, make sure they love your workplace",
                         },
                         {
                             text => "The Perfect Info-Tech Workplace",
-                            url =>
+                            url  =>
 "philosophy/computers/software-management/perfect-workplace/",
                             title =>
 "How to make an Info-Tech Workplace Where Programmers Will Be Happy, Want to Stay, Be Super-Productive and Efficient and will Rave About",
                             subs => [
                                 {
                                     text => "Revision 1",
-                                    url =>
+                                    url  =>
 "philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml",
                                 },
                             ],
@@ -297,7 +297,7 @@ my $essays_tree_contents = {
                     subs => [
                         {
                             text => "2nd Revision",
-                            url =>
+                            url  =>
 "philosophy/computers/high-quality-software/rev2/",
                             title =>
 "“What Makes Software High Quality?” - Revision 2",
@@ -310,23 +310,23 @@ my $essays_tree_contents = {
                 },
                 {
                     text => "How to share code online for getting help with it",
-                    url =>
+                    url  =>
 "philosophy/computers/how-to-share-code-for-getting-help/",
                 },
                 {
                     text => "Your Programming Language Must Suck",
-                    url =>
+                    url  =>
 "philosophy/computers/your-programming-language-must-suck/",
                 },
                 {
-                    text => "Perl",
-                    url  => "philosophy/computers/perl/",
+                    text  => "Perl",
+                    url   => "philosophy/computers/perl/",
                     title =>
                         "Articles Related to the Perl Programming Language",
                     subs => [
                         {
-                            text => "Perl &amp; Newcomers",
-                            url  => "philosophy/perl-newcomers/",
+                            text  => "Perl &amp; Newcomers",
+                            url   => "philosophy/perl-newcomers/",
                             title =>
 "“Usability” of the Perl Online World for Newcomers",
                             subs => [
@@ -345,7 +345,7 @@ my $essays_tree_contents = {
                                 {
                                     skip => 1,
                                     text => "The Text Itself",
-                                    url =>
+                                    url  =>
 "philosophy/computers/perl/joy-of-perl/joy-of-perl.html",
                                 },
                             ],
@@ -364,40 +364,40 @@ my $essays_tree_contents = {
                     subs  => [
                         {
                             text => "Create a Homesite",
-                            url =>
+                            url  =>
 "philosophy/computers/web/create-a-great-personal-homesite/",
                             title => "Create a Great Personal Homesite",
                             subs  => [
                                 {
                                     text => "Revision 2",
-                                    url =>
+                                    url  =>
 "philosophy/computers/web/create-a-great-personal-homesite/rev2.html",
                                 },
                             ],
                         },
                         {
-                            text => "Which Wiki?",
-                            url  => "philosophy/computers/web/which-wiki/",
+                            text  => "Which Wiki?",
+                            url   => "philosophy/computers/web/which-wiki/",
                             title =>
                                 "Which Open Source Wiki Engine Works for you",
                             subs => [
                                 {
                                     text => "July 2006 Update",
-                                    url =>
+                                    url  =>
 "philosophy/computers/web/which-wiki/update-2006-07/",
                                 },
                             ],
                         },
                         {
                             text => "Choice of Doc Formats",
-                            url =>
+                            url  =>
 "philosophy/computers/web/choice-of-docs-formats/",
                             title =>
 "Coverage of the Current Choice of Document Formats",
                         },
                         {
                             text => "The “Use qmail instead” Syndrome",
-                            url =>
+                            url  =>
                                 "philosophy/computers/web/use-qmail-instead/",
                         },
                         {
@@ -406,20 +406,20 @@ my $essays_tree_contents = {
                         },
                         {
                             text => "Online Communities",
-                            url =>
+                            url  =>
                                 "philosophy/computers/web/online-communities/",
                             title => "Reflections on Online Communities",
                         },
                         {
                             text => "Models for Web-based Commerce",
-                            url =>
+                            url  =>
                                 "philosophy/computers/web/models-for-commerce/",
                             title =>
 "Alternative Models for Web-based Commerce that Do Not Involve Intrusive Advertising",
                         },
                         {
                             text => "Validate Your HTML",
-                            url =>
+                            url  =>
                                 "philosophy/computers/web/validate-your-html/",
                         },
                     ],
@@ -431,14 +431,14 @@ my $essays_tree_contents = {
                     subs  => [
                         {
                             text => "EE in the Technion",
-                            url =>
+                            url  =>
 "philosophy/computers/education/opinion-on-the-technion/",
                             title =>
 "My Opinion on Electrical Engineering Studies in the Technion",
                         },
                         {
                             text => "Best Introductory Language",
-                            url =>
+                            url  =>
 "philosophy/computers/education/introductory-language/",
                             title =>
 "What is the best Introductory Programming Language?",
@@ -446,39 +446,39 @@ my $essays_tree_contents = {
                     ],
                 },
                 {
-                    text => "How to Get Help Online",
-                    url  => "philosophy/computers/how-to-get-help-online/",
+                    text  => "How to Get Help Online",
+                    url   => "philosophy/computers/how-to-get-help-online/",
                     title =>
 "Where on the Internet one can get help with their (probably technical) problems",
                     subs => [
                         {
                             text => "2013 Edition",
-                            url =>
+                            url  =>
 "philosophy/computers/how-to-get-help-online/2013.html",
                         },
                     ],
                 },
                 {
-                    text => "Netiquette",
-                    url  => "philosophy/computers/netiquette/",
+                    text  => "Netiquette",
+                    url   => "philosophy/computers/netiquette/",
                     title =>
 "Articles and Links about Netiquette - the Internet Etiquette",
                     subs => [
                         {
-                            text => "Email",
-                            url  => "philosophy/computers/netiquette/email/",
+                            text  => "Email",
+                            url   => "philosophy/computers/netiquette/email/",
                             title =>
                                 "Articles and Links about E-mail netiquette.",
                             subs => [
                                 {
                                     text => "Start New Thread",
-                                    url =>
+                                    url  =>
 "philosophy/computers/netiquette/email/start-new-thread.html",
                                     title => "How to start a new thread",
                                 },
                                 {
                                     text => "Reply to List",
-                                    url =>
+                                    url  =>
 "philosophy/computers/netiquette/email/reply-to-list.html",
                                     title =>
                                         "Reply to List on a Mailing List Post",
@@ -527,14 +527,14 @@ my $essays_tree_contents = {
             title => "Various Random (and Practical) Ideas I Have",
             subs  => [
                 {
-                    text => "Fortunes Mania",
-                    url  => "philosophy/ideas/fortunes-mania/",
+                    text  => "Fortunes Mania",
+                    url   => "philosophy/ideas/fortunes-mania/",
                     title =>
 "A community site for collecting and organising fortune cookies",
                 },
                 {
-                    text => "Unixdoc",
-                    url  => "philosophy/ideas/unixdoc/",
+                    text  => "Unixdoc",
+                    url   => "philosophy/ideas/unixdoc/",
                     title =>
 "An Integrated Offline and Online Documentation Framework",
                 },
@@ -546,7 +546,7 @@ my $essays_tree_contents = {
             subs => [
                 {
                     text => "James Carr - “Completely Overrated”",
-                    url =>
+                    url  =>
 "philosophy/by-others/james-carr--completely-overrated.html",
                     title => "James Carr about the anti-Muslim Cartoons",
                 },

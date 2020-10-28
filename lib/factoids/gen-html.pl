@@ -109,8 +109,8 @@ and masculinity.
 </p>
 </blockquote>
 EOF
-        id_base => "chuck_facts",
-        img_alt => "Photo of Chuck Norris from the English Wikipedia",
+        id_base         => "chuck_facts",
+        img_alt         => "Photo of Chuck Norris from the English Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Norrishuckabee.JPG',
         img_class => "facts_logo chuck_norris",
@@ -181,12 +181,12 @@ Additions to the
 Soviet Russia…</a> (or “Soviet reversal”) meme by my friends and me.
 </p>
 EOF
-        id_base => "in_soviet_russia_facts",
-        img_alt => "Soviet Russia",
+        id_base         => "in_soviet_russia_facts",
+        img_alt         => "Soviet Russia",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg',
         img_class => "facts_logo in_soviet_russia",
-        img_src =>
+        img_src   =>
             "\$(ROOT)/humour/bits/facts/images/soviet-union-modified.min.svg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
@@ -253,7 +253,7 @@ EOF
 "Photo of Buffy Summers from the show DVD via the English Wikipedia",
         img_attribution => 'http://en.wikipedia.org/wiki/File:S514_Buffy.png',
         img_class       => "facts_logo buffy",
-        img_src =>
+        img_src         =>
             "\$(ROOT)/humour/bits/facts/images/SMG-as-buffy-from-wikipedia.jpg",
         license_wml => <<'EOF',
 <cc_by_sa_british_blurb year="2013" />
@@ -362,8 +362,8 @@ and played by
 
 
 EOF
-        id_base => "clarissa_facts",
-        img_alt => "Photo of the First DVD of CEIA from the Wikipedia",
+        id_base         => "clarissa_facts",
+        img_alt         => "Photo of the First DVD of CEIA from the Wikipedia",
         img_attribution =>
 'http://en.wikipedia.org/wiki/File:Clarissa_Explains_it_All_Season_1.jpg',
         img_class   => "facts_logo clarissa",
@@ -420,8 +420,8 @@ EOF
         abstract => <<'EOF',
 <emma_watson_intro_text />
 EOF
-        id_base => "emma_watson_facts",
-        img_alt => "Photo of Emma Watson from the Wikipedia",
+        id_base         => "emma_watson_facts",
+        img_alt         => "Photo of Emma Watson from the Wikipedia",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg',
         img_class   => "facts_logo emma_watson",
@@ -522,8 +522,8 @@ These facts illustrate his “hacky” (= rule bending) awesomeness.
 
 
 EOF
-        id_base => "larry_wall_facts",
-        img_alt => "Larry Wall",
+        id_base         => "larry_wall_facts",
+        img_alt         => "Larry Wall",
         img_attribution =>
             'http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg',
         img_src     => "\$(ROOT)/humour/bits/facts/images/lwall-150w.jpg",
@@ -570,8 +570,8 @@ why it should not be feared.
 </p>
 
 EOF
-        id_base => "nsa_facts",
-        img_alt => "NSA Logo",
+        id_base         => "nsa_facts",
+        img_alt         => "NSA Logo",
         img_attribution =>
 'http://commons.wikimedia.org/wiki/File:National_Security_Agency.svg',
         img_class   => "facts_logo nsa",
@@ -717,8 +717,8 @@ which is the subject of such facts here.
 </p>
 
 EOF
-        id_base => "summer_glau_facts",
-        img_alt => "Photo of Summer Glau from the English Wikipedia",
+        id_base         => "summer_glau_facts",
+        img_alt         => "Photo of Summer Glau from the English Wikipedia",
         img_attribution =>
 'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',
         img_class   => "facts_logo summer_glau",
@@ -762,8 +762,8 @@ annoying to use.
 </p>
 
 EOF
-        id_base => "windows_update_facts",
-        img_alt => "Silhouette of a Snail",
+        id_base         => "windows_update_facts",
+        img_alt         => "Silhouette of a Snail",
         img_attribution =>
             'https://openclipart.org/detail/230426/snail-silhouette',
         img_class   => "facts_logo windows_update",
@@ -808,8 +808,8 @@ I also found the character of Xena to be more comical than strong.
 </p>
 
 EOF
-        id_base => "xena_facts",
-        img_alt => "Photo of Xena, the Warrior Princess",
+        id_base         => "xena_facts",
+        img_alt         => "Photo of Xena, the Warrior Princess",
         img_attribution =>
 'http://images6.fanpop.com/image/photos/35900000/Xena-big-size-xena-warrior-princess-35948592-3112-4688.jpg',
         img_class   => "facts_logo xena",
@@ -892,8 +892,8 @@ IRC conversation we had on ##programming</a> started this meme and it
 seems cool.
 </p>
 EOF
-        id_base => "xslt_facts",
-        img_alt => "XSLT Logo",
+        id_base         => "xslt_facts",
+        img_alt         => "XSLT Logo",
         img_attribution =>
 'http://bitbucket.org/shlomif/shlomi-fish-homepage/src/184e131d0687582cc88c705e9ce26c0846d289f4/t2/humour/bits/facts/images/XSLT.svg?at=default',
         img_class   => "facts_logo xslt",

@@ -14,7 +14,7 @@ has obj => (
 );
 
 has files => (
-    is => 'ro',
+    is      => 'ro',
     default =>
         sub { return Shlomif::Spelling::Hebrew::FindFiles->new->list_htmls(); }
 );

@@ -39,8 +39,8 @@ my $essays_tree_contents = {
             title => "Presentations about Software Management",
             subs  => [
                 {
-                    text => "CatB",
-                    url  => "lecture/CatB/",
+                    text  => "CatB",
+                    url   => "lecture/CatB/",
                     title =>
 "Presentation about “The Cathedral and the Bazaar” series by Eric Raymond",
                 },
@@ -70,8 +70,8 @@ my $essays_tree_contents = {
                     ],
                 },
                 {
-                    text => "Haskell for Perlers",
-                    url  => "lecture/Perl/Haskell/",
+                    text  => "Haskell for Perlers",
+                    url   => "lecture/Perl/Haskell/",
                     title =>
                         "The Haskell Programming Language for Perl Programmers",
                 },

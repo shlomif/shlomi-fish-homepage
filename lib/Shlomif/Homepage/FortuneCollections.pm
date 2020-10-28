@@ -9,7 +9,7 @@ use Shlomif::Homepage::FortuneCollections::Record;
 
 use Carp;
 use List::Util qw(max);
-use YAML::XS (qw(LoadFile));
+use YAML::XS      (qw(LoadFile));
 use JSON::MaybeXS ();
 use Path::Tiny qw/ path /;
 use Text::WrapAsUtf8 qw/ print_utf8 /;

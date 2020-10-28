@@ -23,20 +23,20 @@ my $art_tree_contents = {
             url  => "art/original-graphics/",
             subs => [
                 {
-                    text => "Back to my Homepage",
-                    url  => "art/bk2hp/",
+                    text  => "Back to my Homepage",
+                    url   => "art/bk2hp/",
                     title =>
 "A Back to my Homepage logo not unlike the one from the movie “Back to the Future”",
                 },
                 {
-                    text => "Back to my Homepage - 2nd Version",
-                    url  => "art/back-to-my-homepage-2nd-ver/",
+                    text  => "Back to my Homepage - 2nd Version",
+                    url   => "art/back-to-my-homepage-2nd-ver/",
                     title =>
 "New Version of the Back to my Homepage logo done using Inkscape",
                 },
                 {
-                    text => "Linux Banner",
-                    url  => "art/linux_banner/",
+                    text  => "Linux Banner",
+                    url   => "art/linux_banner/",
                     title =>
 "Linux - Because Software Problems should not Cost Money",
                 },
@@ -46,8 +46,8 @@ my $art_tree_contents = {
                     title => "“Made with Latemp” Button",
                 },
                 {
-                    text => "HHFG Background",
-                    url  => "art/hhfg-background/",
+                    text  => "HHFG Background",
+                    url   => "art/hhfg-background/",
                     title =>
 "Background Image for the “Human Hacking Field Guide” Story",
                 },
@@ -61,8 +61,8 @@ my $art_tree_contents = {
                     url  => "art/d-and-d-cartoon--comparing-lances/",
                 },
                 {
-                    text => "Slogans’ Designs",
-                    url  => "art/slogans/",
+                    text  => "Slogans’ Designs",
+                    url   => "art/slogans/",
                     title =>
 "The design of my aphorism - useful for T-shirts and other merchandise",
                 },

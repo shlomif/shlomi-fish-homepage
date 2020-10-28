@@ -62,8 +62,8 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "Humanity",
-                    url  => "humour/humanity/",
+                    text  => "Humanity",
+                    url   => "humour/humanity/",
                     title =>
                         "A Parody about Humanity and Modern Life in Particular",
                     subs => [
@@ -84,14 +84,14 @@ my $humour_tree_contents = {
                         },
                         {
                             text => "“Buy the Fish” Song in Hebrew",
-                            url =>
+                            url  =>
                                 "humour/humanity/buy-the-fish-in-hebrew.html",
                         },
                     ],
                 },
                 {
-                    text => "Human Hacking Field Guide",
-                    url  => "humour/human-hacking/",
+                    text  => "Human Hacking Field Guide",
+                    url   => "humour/human-hacking/",
                     title =>
 "Story about Teenage Computer Enthusiasts in 2005’s Los Angeles",
                     subs => [
@@ -116,15 +116,15 @@ my $humour_tree_contents = {
                     subs => [
                         {
                             text => "Ongoing Text",
-                            url =>
+                            url  =>
 "humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
                     ],
                 },
                 {
-                    text => "Selina Mandrake - The Slayer (Buffy Parody)",
-                    url  => "humour/Selina-Mandrake/",
+                    text  => "Selina Mandrake - The Slayer (Buffy Parody)",
+                    url   => "humour/Selina-Mandrake/",
                     title =>
 "Parody and Reflection of Buffy the Vampire Slayer along with other sources of inspiration.",
                     subs => [
@@ -141,14 +141,14 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "Summerschool at the NSA",
-                    url  => "humour/Summerschool-at-the-NSA/",
+                    text  => "Summerschool at the NSA",
+                    url   => "humour/Summerschool-at-the-NSA/",
                     title =>
 "Sarah Michelle Gellar and Summer Glau conspire to take the the NSA out of the equation",
                     subs => [
                         {
                             text => "Ongoing Text",
-                            url =>
+                            url  =>
 "humour/Summerschool-at-the-NSA/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
@@ -158,20 +158,20 @@ my $humour_tree_contents = {
                         },
                         {
                             text => "Conclusions and Reflection",
-                            url =>
+                            url  =>
 "humour/Summerschool-at-the-NSA/conclusions-and-reflection.html",
                         },
                     ],
                 },
                 {
-                    text => "Buffy: a Few Good Slayers",
-                    url  => "humour/Buffy/A-Few-Good-Slayers/",
+                    text  => "Buffy: a Few Good Slayers",
+                    url   => "humour/Buffy/A-Few-Good-Slayers/",
                     title =>
 "Everyone is happier and more powerful and empowered in a forked version of the Buffy universe, but a crisis emerges",
                     subs => [
                         {
                             text => "Ongoing Text",
-                            url =>
+                            url  =>
 "humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
@@ -188,44 +188,44 @@ my $humour_tree_contents = {
                         },
                         {
                             text => "Summer Glau and Chuck Norris",
-                            url =>
+                            url  =>
 "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
                         },
                         {
                             text => "Jennifer Lawrence",
-                            url =>
+                            url  =>
 "humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
                         },
                     ],
                 },
                 {
-                    text => "“So, who the hell is Qoheleth?”",
-                    url  => "humour/So-Who-The-Hell-Is-Qoheleth/",
+                    text  => "“So, who the hell is Qoheleth?”",
+                    url   => "humour/So-Who-The-Hell-Is-Qoheleth/",
                     title =>
 "Contemplating what happened to the author of the Scroll of Ecclesiastes shortly after he wrote it.",
                     subs => [
                         {
                             text => "Ongoing Text",
-                            url =>
+                            url  =>
 "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
                     ],
                 },
                 {
-                    text => "The Pope Died on Sunday",
-                    url  => "humour/Pope/",
+                    text  => "The Pope Died on Sunday",
+                    url   => "humour/Pope/",
                     title =>
 "An Insane Week in the Life of a Female American Graphics Artist",
                     subs => [
                         {
                             text => "English Text",
-                            url =>
+                            url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                         },
                         {
                             text => "Hebrew Text",
-                            url =>
+                            url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
                         },
                     ],
@@ -266,7 +266,7 @@ my $humour_tree_contents = {
                     subs  => [
                         {
                             text => "Ongoing Text",
-                            url =>
+                            url  =>
 "humour/The-Earth-Angel/The-Earth-Angel--English-Text.html",
                         },
                     ],
@@ -278,8 +278,8 @@ my $humour_tree_contents = {
             url  => "humour/aphorisms/",
             subs => [
                 {
-                    text => "My Aphorisms Collection",
-                    url  => "humour.html",
+                    text  => "My Aphorisms Collection",
+                    url   => "humour.html",
                     title =>
 "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                     subs => [
@@ -291,15 +291,15 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "Fortune Cookies Collection",
-                    url  => "humour/fortunes/",
+                    text  => "Fortune Cookies Collection",
+                    url   => "humour/fortunes/",
                     title =>
 "Collection of Quotes by Me and Others in the UNIX Fortune Format",
                     subs => Shlomif::Homepage::FortuneCollections->nav_data(),
                 },
                 {
-                    text => "Collections of Facts",
-                    url  => "humour/bits/facts/",
+                    text  => "Collections of Facts",
+                    url   => "humour/bits/facts/",
                     title =>
 "Collections of funny factoids about various people and things",
                     subs => decode_json( path($json_data_fn)->slurp_raw ),
@@ -312,8 +312,8 @@ my $humour_tree_contents = {
             title => "Small Scale Creations",
             subs  => [
                 {
-                    text => "Ways to Do it",
-                    url  => "humour/ways_to_do_it.html",
+                    text  => "Ways to Do it",
+                    url   => "humour/ways_to_do_it.html",
                     title =>
 "Ways to Do it According to the Programming Languages of the World",
                     subs => [
@@ -324,8 +324,8 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "IRPWUG Announces Project WYSIWYT",
-                    url  => "wysiwyt.html",
+                    text  => "IRPWUG Announces Project WYSIWYT",
+                    url   => "wysiwyt.html",
                     title =>
 "A Project by the International Really Pissed-off Windows User Group",
                 },
@@ -373,7 +373,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "COBOL, the New Age Programming Language",
-                    url =>
+                    url  =>
                         "humour/bits/COBOL-the-New-Age-Programming-Language/",
                 },
                 {
@@ -382,7 +382,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "It’s not a Fooware - It’s an Operating System",
-                    url =>
+                    url  =>
 "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
                     title =>
 "Software Applications that Transcend Their Original Purpose",
@@ -413,12 +413,12 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "GNU Will Integrate Guile into Coreutils",
-                    url =>
+                    url  =>
 "humour/bits/GNU-Project-Will-Integrate-Guile-into-coreutils/",
                 },
                 {
-                    text => "The FSF Announces New Versions of the GPL",
-                    url  => "humour/bits/New-versions-of-the-GPL/",
+                    text  => "The FSF Announces New Versions of the GPL",
+                    url   => "humour/bits/New-versions-of-the-GPL/",
                     title =>
 "The Free Software Foundation (FSF) Announces New Versions of the GNU General Public License (GPL)",
                 },
@@ -428,7 +428,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "Emma Watson Getting Interviewed for a Tech Job",
-                    url =>
+                    url  =>
 "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
                     title =>
 "Emma Watson Getting Interviewed for a Software Developer Job",
@@ -443,7 +443,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "The Atom text editor edits a 2,000,001 bytes file",
-                    url =>
+                    url  =>
                         "humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/",
                 },
                 {
@@ -472,8 +472,8 @@ my $humour_tree_contents = {
                     title => "Richard Stallman Switches to Basic",
                 },
                 {
-                    text => "Darien - Everybody’s Free (to Ping Timeout)",
-                    url  => "humour/by-others/darien--everybody-is-free.html",
+                    text  => "Darien - Everybody’s Free (to Ping Timeout)",
+                    url   => "humour/by-others/darien--everybody-is-free.html",
                     title =>
 "The IRC Version of “Everybody’s Free to Wear Sunscreen”",
                 },
@@ -484,14 +484,14 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "Hitchhiker’s Guide to Star Trek TNG",
-                    url =>
+                    url  =>
 "humour/by-others/hitchhiker-guide-to-star-trek-tng.html",
                     title =>
 "A Cross of the Douglas Adams’ book and the T.V. series",
                     subs => [
                         {
                             text => "HTMLised Version",
-                            url =>
+                            url  =>
 "humour/by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html",
                             title =>
 "Nicely formatted version after converted to HTML",
@@ -516,7 +516,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "Was the Death Star Attack an Inside Job?",
-                    url =>
+                    url  =>
 "humour/by-others/was-the-death-star-attack-an-inside-job/",
                     title =>
 "A conspiracy theory set in the Star Wars World. Via “Debunking 911” via “Websurdity”",
@@ -527,14 +527,14 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "The Fountainhead - Starring Skull Force",
-                    url =>
+                    url  =>
 "humour/by-others/the-fountainhead-starring-skull-force/",
                     title =>
                         "A short parody of Ayn Rand’s novel The Fountainhead",
                 },
                 {
-                    text => "Division Two Magazine",
-                    url  => "humour/by-others/division-two/",
+                    text  => "Division Two Magazine",
+                    url   => "humour/by-others/division-two/",
                     title =>
 "A mirror of a hilarious parodical site that went offline",
                 },
@@ -544,14 +544,14 @@ my $humour_tree_contents = {
                     title => "Humorous stories by Oded C. in Hebrew",
                 },
                 {
-                    text => "Mirror of funroll-loops.info",
-                    url  => "humour/by-others/funroll-loops/",
+                    text  => "Mirror of funroll-loops.info",
+                    url   => "humour/by-others/funroll-loops/",
                     title =>
 "A mirror of the site funroll-loops.info - “Gentoo is Rice”",
                 },
                 {
                     text => "How to Make Square Corners with CSS",
-                    url =>
+                    url  =>
                         "humour/by-others/how-to-make-square-corners-with-CSS/",
                 },
                 {
@@ -562,7 +562,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text => "What if drivers were hired like programmers",
-                    url =>
+                    url  =>
 "humour/by-others/what-if-drivers-were-hired-like-programmers/",
                 },
                 {

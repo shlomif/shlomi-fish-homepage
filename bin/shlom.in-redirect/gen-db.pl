@@ -5,7 +5,7 @@ use warnings;
 
 my @urls = (
     {
-        id => "intro-lang",
+        id  => "intro-lang",
         url =>
 "http://www.shlomifish.org/philosophy/computers/education/introductory-language/",
         desc => "Thoughts about the Best Introductory Programming Language"
@@ -31,7 +31,7 @@ my @urls = (
         desc => "Interview with Ben Collins-Sussman",
     },
     {
-        id => "optimise",
+        id  => "optimise",
         url =>
 "http://www.shlomifish.org/philosophy/computers/optimizing-code-for-speed/",
         desc => "Optimising Code for Speed",
@@ -79,37 +79,37 @@ my @urls = (
         desc => qq{Define "Zionism"},
     },
     {
-        id => "sw-quality",
+        id  => "sw-quality",
         url =>
 "http://www.shlomifish.org/philosophy/computers/high-quality-software/",
         desc => qq{What Makes Software High-Quality?},
     },
     {
-        id => "joy-of-perl",
+        id  => "joy-of-perl",
         url =>
             "http://www.shlomifish.org/philosophy/computers/perl/joy-of-perl/",
         desc => qq{The Joy of Perl},
     },
     {
-        id => "gpl-bsd-sucker",
+        id  => "gpl-bsd-sucker",
         url =>
 "http://www.shlomifish.org/philosophy/computers/open-source/gpl-bsd-and-suckerism/",
         desc => qq{The GPL, The BSD Licence and Being a Sucker},
     },
     {
-        id => "perfect-workplace",
+        id  => "perfect-workplace",
         url =>
 "http://www.shlomifish.org/philosophy/computers/software-management/perfect-workplace/",
         desc => qq{The Perfect Info-Tech Workplace},
     },
     {
-        id => "sourceware",
+        id  => "sourceware",
         url =>
 "http://www.shlomifish.org/philosophy/foss-other-beasts/revision-2/foss-and-other-beasts/criteria.html#criteria_sourceware",
         desc => qq{Open source vs. Sourceware},
     },
     {
-        id => "closed-books",
+        id  => "closed-books",
         url =>
 "http://www.shlomifish.org/philosophy/philosophy/closed-books-are-so-19th-century/",
         desc => qq{Why Closed Books are So 19th-Century},
@@ -125,19 +125,19 @@ my @urls = (
         desc => qq{List of Cross-Platform, Abstraction, Portability Libraries},
     },
     {
-        id => "IDEs",
+        id  => "IDEs",
         url =>
             "http://www.shlomifish.org/open-source/resources/editors-and-IDEs/",
         desc => qq{List of Text Editors and IDEs},
     },
     {
-        id => "text-proc",
+        id  => "text-proc",
         url =>
 "http://www.shlomifish.org/open-source/resources/text-processing-tools/",
         desc => qq{List of Text Processing Tools},
     },
     {
-        id => "net-clients",
+        id  => "net-clients",
         url =>
 "http://www.shlomifish.org/open-source/resources/networking-clients/",
         desc => qq{List of Networking Clients},
@@ -158,13 +158,13 @@ my @urls = (
         desc => qq{“So, Who the Hell is Qoheleth?”},
     },
     {
-        id => 'setup',
+        id  => 'setup',
         url =>
 'https://raw.githubusercontent.com/shlomif/shlomif-computer-settings/master/shlomif-settings/setup-all/setup-all.pl',
         desc => qq{My setup script — for quick access},
     },
     {
-        id => "graphics",
+        id  => "graphics",
         url =>
 "https://www.shlomifish.org/open-source/resources/graphics-programs/",
         desc => qq{List of Graphics Applications},

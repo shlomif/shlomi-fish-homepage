@@ -148,6 +148,7 @@ $(T2_FORTUNES_ALL_WML): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 T2_DEST_FORTUNES := $(patsubst $(T2_FORTUNES_DIR)/%,$(T2_DEST_FORTUNES_DIR)/%,$(wildcard $(T2_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
 chmod_copy = $(call COPY) ; chmod +x $@
+LATEMP_COPY = $(call COPY)
 
 $(T2_DEST_SHOW_CGI): $(T2_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
@@ -523,7 +524,7 @@ $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FOR
 
 $(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
-FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
+FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.png
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 
 FORTS_EPUB_BASENAME = fortunes-shlomif.epub
@@ -1132,6 +1133,12 @@ all_deps: $(catb_copy)
 
 $(catb_copy_post): $(catb_copy)
 	$(call COPY)
+
+T2_IMAGES_DEST_Post = $(patsubst dest/pre-incs/%,dest/post-incs/%,$(T2_IMAGES_DEST))
+
+# $(T2_IMAGES_DEST_Post): dest/post-incs/%: dest/pre-incs/%
+#	$(call COPY)
+
 
 all: $(catb_copy_post)
 

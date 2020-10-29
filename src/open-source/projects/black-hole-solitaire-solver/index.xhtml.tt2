@@ -32,7 +32,9 @@ the cards to move.
 <li>
 <a href="http://metacpan.org/release/Games-Solitaire-BlackHole-Solver">The Games-Solitaire-BlackHole-Solver CPAN Distribution</a> - an older version of the
 solver written as a proof-of-concept, which produces identical results, but
-is much slower and consumes more memory.
+is much slower and consumes more memory. It is still maintained and enhanced
+for <a href="https://en.wikipedia.org/wiki/Software_prototyping">prototyping</a> ideas and
+new features.
 </li>
 
 <li>
@@ -149,6 +151,19 @@ validate solutions as correct.
 [% PROCESS x11_licence name = "The Black Hole Solitaire Solver",  %]
 
 [% WRAPPER news_sect  %]
+
+[% WRAPPER h3_section id = "news_version_1_10_1"  title = "Version 1.10.1"  %]
+
+<p>
+<time datetime="2020-10-29">29 October 2020</time>: Version 1.10.1 was released
+featuring a compile-time and run-time option to determine the maximal number
+of playable cards, which is primarily of interest for impossible deals.
+This feature was inspired by <a href="https://politaire.com/article/blackhole.html">Jon Wolter’s
+article</a> titled <q>Experimental Analysis of Black Hole and All-In-A-Row Solitaire</q>
+over on <a href="https://politaire.com/">the Polymorphic Solitaire site</a> (Thanks!).
+</p>
+
+[%- END -%]
 
 [% WRAPPER h3_section id = "news_version_1_8_0"  title = "Version 1.8.0"  %]
 

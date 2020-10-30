@@ -109,3 +109,23 @@ $ss_margin: 2em;
     max-width: 99%;
     @include navbarwrap_common;
 }
+
+@mixin text_doument_h_tags_sizes {
+    h2 {
+        font-size: 150%;
+    }
+    h3 {
+        font-size: 140%;
+    }
+    h4 {
+        font-size: 130%;
+    }
+
+    h5 {
+        font-size: 120%;
+    }
+
+    h6 {
+        font-size: 110%;
+    }
+}

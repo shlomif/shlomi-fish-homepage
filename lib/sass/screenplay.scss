@@ -1,3 +1,4 @@
+@import "mixins";
 /* For the screenplays */
 
 /* .description
@@ -5,6 +6,7 @@
  * color: brown */
 
 @mixin story_box_style {
+    @include text_doument_h_tags_sizes;
     border: 1pt solid black;
     padding: 0.5em;
     background-color: white;
@@ -14,18 +16,6 @@
     h4,
     h5 {
         text-decoration: none;
-    }
-
-    h3 {
-        font-size: 130%;
-    }
-
-    h4 {
-        font-size: 120%;
-    }
-
-    h5 {
-        font-size: 110%;
     }
 }
 

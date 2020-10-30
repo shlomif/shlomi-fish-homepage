@@ -489,6 +489,7 @@ table.visible,
 }
 
 .article {
+    @include text_doument_h_tags_sizes;
     h4,
     h5,
     h6 {
@@ -497,25 +498,11 @@ table.visible,
     }
 
     h2 {
-        font-size: 150%;
         text-decoration: underline;
     }
 
     h3 {
-        font-size: 140%;
         text-decoration: underline;
-    }
-
-    h4 {
-        font-size: 130%;
-    }
-
-    h5 {
-        font-size: 120%;
-    }
-
-    h6 {
-        font-size: 110%;
     }
 }
 

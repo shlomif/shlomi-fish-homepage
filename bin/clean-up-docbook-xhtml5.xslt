@@ -38,4 +38,8 @@
 
     <xsl:template match="xhtml:a[not(@href)]"/>
 
+    <xsl:template match="xhtml:div[@class='titlepage' and count(./*)=1]/xhtml:div[count(@*)=0 and ./xhtml:div[count(@*)=0 and ./*[@id and @class='title']]]">
+        <xsl:apply-templates select="./*/*"/>
+    </xsl:template>
+
 </xsl:stylesheet>

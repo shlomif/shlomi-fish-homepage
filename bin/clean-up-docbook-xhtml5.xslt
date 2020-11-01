@@ -1,5 +1,6 @@
 <xsl:stylesheet version = '1.0'
     xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://www.w3.org/1999/xhtml"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
     >
@@ -38,7 +39,7 @@
 
     <xsl:template match="xhtml:a[not(@href)]"/>
 
-    <xsl:template match="xhtml:div[@class='titlepage' and count(./*)=1]/xhtml:div[count(@*)=0 and ./xhtml:div[count(@*)=0 and ./*[@id and @class='title']]]">
+    <xsl:template match="h:div[@class='titlepage' and count(*)=1]/h:div[count(@*)=0 and h:div[count(@*)=0 and *[@id and @class='title']]]">
         <xsl:apply-templates select="./*/*"/>
     </xsl:template>
 

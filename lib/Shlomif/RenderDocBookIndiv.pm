@@ -25,12 +25,12 @@ sub render_docbook
 
     foreach my $fn ( $dir->children(qr/\.x?html\z/) )
     {
-        my $source   = XML::LibXML->load_xml( location => $fn, );
-        my $results  = $stylesheet->transform($source);
-        my $$str_ref = $stylesheet->output_as_chars($results);
-        $$str_ref =~ s#<p>\s*?</p>##gms;
-        $$str_ref =~ s/[ \t]+$$//gms;
-        $fn->spew_utf8($$str_ref);
+        my $source  = XML::LibXML->load_xml( location => $fn, );
+        my $results = $stylesheet->transform($source);
+        my $str_ref = $stylesheet->output_as_chars($results);
+        $str_ref =~ s#<p>\s*?</p>##gms;
+        $str_ref =~ s/[ \t]+$//gms;
+        $fn->spew_utf8($str_ref);
     }
 
     return;

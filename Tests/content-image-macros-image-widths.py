@@ -30,6 +30,13 @@ class MyTests(unittest.TestCase):
             "-edits-2_000_001-bytes%2F&linkname=']")
         self.assertEqual(len(share_links), 1)
 
+    def test_faq_inner_links(self):
+        input_fn = \
+            './dest/post-incs/t2/meta/FAQ/atheism_can_be_a_religion.xhtml'
+        root = html.parse(input_fn)
+        links = root.xpath(".//a[@href='./#religious_belief']")
+        self.assertEqual(len(links), 1)
+
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
         root = html.parse(input_fn)

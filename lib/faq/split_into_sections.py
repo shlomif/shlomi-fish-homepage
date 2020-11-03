@@ -97,6 +97,12 @@ class FaqSplitter:
                 self.root,
                 "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
                 "//xhtml:section"):
+            for a_el in xpath(list_elem, "./descendant::xhtml:a"):
+                href = a_el.get('href')
+                if href is None:
+                    continue
+                if href.startswith('#'):
+                    a_el.set("href", "./" + href)
             header_tag = first(list_elem, "./xhtml:header")
 
             h_tag = first(header_tag, "./*[@id]")

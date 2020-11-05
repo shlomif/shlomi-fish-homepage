@@ -88,6 +88,26 @@ to decide which way to do it.
 
 [% license_obj.by_sa_license_british( "year" => "2002", ) %]
 
+[% WRAPPER see_also  %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]lecture/Perl/Lightning/Too-Many-Ways/">“There are too many ways to do it”</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/Im-The-Real-Tim-Toady/">“I’m the Real Tim Toady”</a>
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
 </div>
 
 [% END %]

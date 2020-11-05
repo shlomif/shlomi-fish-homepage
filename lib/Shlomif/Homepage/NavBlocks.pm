@@ -350,8 +350,9 @@ my %table_blocks = (
             id   => 'foss_nav_block',
             tr_s => [
                 _master_tr( title => q{Open Source/Perl/etc. Fanfiction}, ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                _subdiv_tr( title => q{Stories and Screenplays}, ),
                 _get_tr('hhfg'),
+                _get_tr('star_trek_wtld'),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('foss_facts'),
                 _subdiv_tr( title => q{Bits}, ),

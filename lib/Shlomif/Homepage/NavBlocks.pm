@@ -116,6 +116,11 @@ my %tr_s = (
             ),
             _l( inner_html => "RMS Lint", path => "humour/bits/RMS-Lint/", ),
             _l(
+                inner_html =>
+"Ways to do it According to the Programming Languages of the World",
+                path => "humour/ways_to_do_it.html",
+            ),
+            _l(
                 inner_html => "Cracka’s Paradise",
                 path       => "humour/bits/Crackas-Paradise/",
             ),

@@ -28,6 +28,19 @@ class MyTests(unittest.TestCase):
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
             )), 1)
 
+    def test_hhgg_st_tng(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/' +
+            'by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html'
+        )
+        root = html.parse(input_fn)
+        self.assertEqual(len(root.xpath(
+            ".//section[header/h2[@id='about']]/descendant::p" +
+            "[contains(text(),'This is an HTMLised version')]")),
+            1,
+            "describes HTMLised in about",
+            )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

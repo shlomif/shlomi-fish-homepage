@@ -5,7 +5,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "pages/t2/humour/by_others_hhgg_st_tng.tt2" %]
-[% INCLUDE hhgg_st_tng__about_sect %]
+[% INCLUDE hhgg_st_tng__about_sect hhgg_html = "0" %]
 
 <h2 id="link-to-text"><a
 href="hitchhiker-guide-to-star-trek-tng.txt">Link to Text</a></h2>

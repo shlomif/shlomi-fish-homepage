@@ -10,5 +10,15 @@ Hitchhiker’s Guide to the Galaxy</i></a> and the T.V. series
 Trek: The Next Generation</i></a>.
 </p>
 
+[% IF hhgg_html == "1" %]
+
+<p>
+This is an HTMLised version of the screenplay (which was written in plain-text
+ASCII).
+</p>
+
 [%- END -%]
+
+[%- END -%]
+
 [%- END -%]

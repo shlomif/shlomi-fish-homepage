@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h1>Introduction</h1>
+[% WRAPPER intro %]
 
 <p>
 Lots of people heard <a href="http://perl.net.au/wiki/Emacs">Emacs</a>
@@ -16,9 +16,11 @@ expanded to cover lots of other stuff. So you’ll know that Emacs is not alone.
 
 <p>Are you ready? Let’s go!</p>
 
-<h1>The Fooware Programs</h1>
+[% END %]
 
-<h2>It’s not a Text Editor - it’s an Operating System!</h2>
+[% WRAPPER h2_section id = "fooware" title = "The Fooware Programs"  %]
+
+[% WRAPPER h3_section id = "text-editor" title = "It’s not a Text Editor - it’s an Operating System!" %]
 
 <p>
 <a href="http://www.gnu.org/software/emacs/">GNU Emacs</a>, <a
@@ -44,7 +46,9 @@ its vi-emulation modes may qualify.)
 Most people either love Emacs or hate its guts.
 </p>
 
-<h2>It’s not a Shell - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "shell" title = "It’s not a Shell - it’s an Operating System!" %]
 
 <p>
 <a href="http://zsh.dotsrc.org/">zsh</a> is the Emacs of shells. It has
@@ -53,7 +57,9 @@ auto-completion, <a href="http://ajgenius.us/Screenshots/ZTextEditor.png">GUI
 bindings for Gtk+</a>, a built-in text editor (zed) - the works.
 </p>
 
-<h3>It’s not a Shell - it’s an Operating System! (Reloaded)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "shell-reloaded" title = "It’s not a Shell - it’s an Operating System! (Reloaded)" %]
 
 <p>
 Alternatively, <a href="http://www.busybox.net/">BusyBox</a> is an
@@ -63,7 +69,9 @@ shell it contains such userland utilities as cp, mv, ls, etc. If you can
 install only one executable - install that.
 </p>
 
-<h2>It’s not an IDE - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "ide" title = "It’s not an IDE - it’s an Operating System!" %]
 
 <p>
 <a href="http://www.eclipse.org/">Eclipse</a> is the Integrated Development
@@ -76,7 +84,9 @@ href="http://www.phpeclipse.de/tiki-view_articles.php">PHP</a> and <a
 href="http://e-p-i-c.sourceforge.net/">Perl</a>.
 </p>
 
-<h2>It’s not a Browser - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "web-browser" title = "It’s not a Browser - it’s an Operating System!" %]
 
 <p>
 What do you need in your web browser? Surely you also need SMTP/POP/IMAP
@@ -87,7 +97,9 @@ Mozilla Suite) has all of these and more. “All your Internet Needs in One
 Application”. Indeed.
 </p>
 
-<h2>It’s not a Virtual Machine - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "vm" title = "It’s not a Virtual Machine - it’s an Operating System!" %]
 
 <p>
 <a href="http://www.squeak.org/">Squeak Smalltalk</a> has it all. A virtual
@@ -97,7 +109,9 @@ control system, and a built-in refactoring browser. The additional packages
 supply additional functionality.
 </p>
 
-<h2>It’s not a Vi Clone - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "vi-clone" title = "It’s not a Vi Clone - it’s an Operating System!" %]
 
 <p>
 <a href="http://www.vim.org/">Vim - Vi Improved</a> is the Emacs of the vi
@@ -108,7 +122,9 @@ features. There was also a project under-way called VINE - Vim Integrated News
 and Email, that provided news and email functionality to it.
 </p>
 
-<h2>It’s not an Operating System - it’s an Operating System!</h2>
+[% END %]
+
+[% WRAPPER h3_section id = "operating-system" title = "It’s not an Operating System - it’s an Operating System!" %]
 
 <p>
 <a href="http://www.debian.org/">Debian GNU/Linux</a> contains packages for
@@ -119,7 +135,11 @@ are very usable after a DVD installation, perhaps after only installing a few
 packages.
 </p>
 
-<h2 id="credits">Licence and Credits</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "credits" title = "Licence and Credits" %]
 
 <p>
 This article originated from
@@ -135,7 +155,11 @@ Commons Attribution Share Alike Australia Licence</a> dually licensed with
 the Artistic Licence.
 </p>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% END %]
 
 [% WRAPPER nav_blocks  %]
 

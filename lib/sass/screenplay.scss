@@ -36,7 +36,7 @@
 
         figure.asciiart {
             > pre {
-                $edge_color: #fcf;
+                $edge_color: #ccf;
                 background: linear-gradient($edge_color, #cff, $edge_color);
                 padding: 2em;
                 color: black;
@@ -46,6 +46,9 @@
                 //margin-right: auto;
                 overflow-x: hidden;
                 width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+                // text-align: center;
             }
         }
     }

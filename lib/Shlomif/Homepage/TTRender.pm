@@ -89,8 +89,9 @@ sub _shlomif_include_colorized_file
         )
     );
 }
-my $NAME = "Shlomi Fish";
-my $H    = "Homesite";
+my $FULL_URL_PREFIX = "https://www.shlomifish.org/";
+my $NAME            = "Shlomi Fish";
+my $H               = "Homesite";
 
 sub _process_title
 {
@@ -182,14 +183,12 @@ sub proc
     my $vars = $self->vars;
     $vars->{base_path} = $base_path;
     $license->base_path($base_path);
-    $vars->{fn_path}     = $input_tt2_page_path;
-    $vars->{escaped_url} = encodeURIComponent(
-        "https://www.shlomifish.org/"
-            . (
-            $vars->{raw_fn_path} =
-                $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r
-            )
-    );
+    $vars->{fn_path} = $input_tt2_page_path;
+    my $raw_fn_path = ( $vars->{raw_fn_path} =
+            $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r );
+    my $full_url = $FULL_URL_PREFIX . $raw_fn_path;
+    $vars->{canonical_url} = $full_url;
+    $vars->{escaped_url}   = encodeURIComponent($full_url);
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

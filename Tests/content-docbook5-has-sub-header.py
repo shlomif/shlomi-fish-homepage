@@ -8,18 +8,17 @@
 
 import unittest
 
-from lxml import html
+import html_unit_test
 
 
-class MyTests(unittest.TestCase):
+class MyTests(html_unit_test.TestCase):
     def test_main(self):
         input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
             'putting-cards-on-the-table-2019-2020/index.xhtml'
-        root = html.parse(input_fn)
-        self.assertEqual(len(root.xpath(
+        return self.doc(input_fn).has_one(
             ".//h5[@id='fox-in-the-hens-coop' and " +
             "text()='The Fox in the Chickens Coop']"
-            )), 1)
+        )
 
 
 if __name__ == '__main__':

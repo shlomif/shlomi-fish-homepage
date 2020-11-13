@@ -1102,4 +1102,6 @@ $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 
 all_deps: $(SRC_IMAGES_DEST)
 
+TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$${PWD}/Tests/lib"
+
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

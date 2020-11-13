@@ -7,6 +7,7 @@
 [% PROCESS "pages/t2/humour/by_others_hhgg_st_tng.tt2" %]
 [% INCLUDE hhgg_st_tng__about_sect hhgg_html = "1" %]
 
+<div class="hhgg_st_tng">
 [% path_slurp("screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html") %]
-
+</div>
 [% END %]

@@ -33,22 +33,28 @@
         p {
             margin: 0;
         }
+    }
+}
 
+.hhgg_st_tng {
+    .screenplay {
         figure.asciiart {
-            > pre {
-                $edge_color: #ccf;
-                background: linear-gradient($edge_color, #cff, $edge_color);
-                padding: 2em;
-                color: black;
-                font-style: normal;
-                border: 3px black solid;
-                border-radius: 1em;
-                //margin-right: auto;
+            > pre,
+            > figcaption {
                 overflow-x: hidden;
                 width: max-content;
                 margin-left: auto;
                 margin-right: auto;
                 // text-align: center;
+                color: black;
+                font-style: normal;
+            }
+            > pre {
+                $edge_color: #ccf;
+                background: linear-gradient($edge_color, #cff, $edge_color);
+                padding: 2em;
+                border: 3px black solid;
+                border-radius: 1em;
             }
         }
     }

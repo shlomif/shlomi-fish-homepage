@@ -8,17 +8,16 @@
 
 import unittest
 
-from lxml import html
+import html_unit_test
 
 
-class MyTests(unittest.TestCase):
+class MyTests(html_unit_test.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/index.xhtml'
-        root = html.parse(input_fn)
-        self.assertEqual(len(root.xpath(
+        return self.doc(input_fn).has_one(
             ".//footer//a[@href = 'meta/hosting/#hostgator']/"
             + "img[@src='images/hostgator.png' and @alt='Hosted at HostGator']"
-            )), 1)
+        )
 
 
 if __name__ == '__main__':

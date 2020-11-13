@@ -34,8 +34,19 @@
             margin: 0;
         }
 
-        pre {
-            font-style: normal;
+        figure.asciiart {
+            > pre {
+                $edge_color: #fcf;
+                background: linear-gradient($edge_color, #cff, $edge_color);
+                padding: 2em;
+                color: black;
+                font-style: normal;
+                border: 3px black solid;
+                border-radius: 1em;
+                //margin-right: auto;
+                overflow-x: hidden;
+                width: max-content;
+            }
         }
     }
 }

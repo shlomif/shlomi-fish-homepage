@@ -81,5 +81,5 @@ $text =~ s{^(\s*\Q$END\E.*)\z}{
 
 path('lib/screenplay-xml/txt/hitchhikers-guide-to-star-trek-tng.txt')
     ->spew_utf8(
-qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generations">\n\n$text\n\n</s>}
+qq{<s id="top" title="The Hitchiker's Guide to Star Trek - The Next Generation">\n\n$text\n\n</s>}
     );

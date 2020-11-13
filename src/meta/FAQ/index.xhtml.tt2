@@ -1604,7 +1604,7 @@ two parts of the site had cross-links to one another.
 </p>
 
 <p>
-Eventually, I was about to graduate and so moved the t2.technion.a.il part
+Eventually, I was about to graduate and so moved the t2.technion.ac.il part
 of my homesite, first to shlomif.il.eu.org (a free hostname, which ended up
 causing too many DNS problems), and then to www.shlomifish.org which is
 where it has been residing until now. In the process, I converted all of the
@@ -2763,6 +2763,16 @@ longer have any legitimate use. However, while I use JSON and YAML for
 many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
 used to add markup to a substring of the text (like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
+</p>
+
+<p>
+I recall that some <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> fans
+argued that XML is <a href="https://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>
+for <a href="https://en.wikipedia.org/wiki/S-expression">S-expressions</a>, but I think it
+is a moot point, because we can encode and decode them both to/from a binary stream of 0s and 1s,
+JSON, or most other syntaxes. Syntax is, while often considered marginal, is nevertheless important, and
+I don't think I'll enjoy writing text documents completely using <a href="https://www.netfunny.com/rhf/jokes/90q2/lispcode.html">S-expressions</a>.
+I also recall reading about a new language that allows mixing and matching both lisp-like code and XML code.
 </p>
 
 [%- END -%]

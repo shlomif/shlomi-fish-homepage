@@ -8,36 +8,32 @@
 
 import unittest
 
-from lxml import html
+import html_unit_test
 
 
-class MyTests(unittest.TestCase):
+class MyTests(html_unit_test.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/Selina-Mandrake/index.xhtml'
-        root = html.parse(input_fn)
-        self.assertEqual(len(root.xpath(
+        return self.doc(input_fn).has_one(
             ".//img[@id='selina_mandrake_logo' and " +
             "@src='images/Green-d10-dice.webp']"
-            )), 1)
+        )
 
     def test_factoids(self):
         input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
-        root = html.parse(input_fn)
-        self.assertEqual(len(root.xpath(
+        return self.doc(input_fn).has_one(
             ".//h3[@id='shlomif-fact-xena-1' and " +
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
-            )), 1)
+        )
 
     def test_hhgg_st_tng(self):
         input_fn = (
             './dest/post-incs/t2/humour/' +
             'by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html'
         )
-        root = html.parse(input_fn)
-        self.assertEqual(len(root.xpath(
+        return self.doc(input_fn).has_one(
             ".//section[header/h2[@id='about']]/descendant::p" +
-            "[contains(text(),'This is an HTMLised version')]")),
-            1,
+            "[contains(text(),'This is an HTMLised version')]",
             "describes HTMLised in about",
             )
 

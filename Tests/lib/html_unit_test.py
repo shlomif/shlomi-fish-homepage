@@ -36,9 +36,9 @@ class HtmlTestsDoc:
     def xpath(self, xpath_s):
         return HtmlTestsDocQuery(self, self.root.xpath(xpath_s))
 
-    def has_one(self, xpath_s):
+    def has_one(self, xpath_s, blurb=""):
         """docstring for has_one"""
-        self.harness.assertEqual(len(self.xpath(xpath_s)), 1)
+        self.harness.assertEqual(len(self.xpath(xpath_s)), 1, blurb)
 
 
 class TestCase(unittest.TestCase):

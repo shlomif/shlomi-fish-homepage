@@ -48,13 +48,21 @@
                 // text-align: center;
                 color: black;
                 font-style: normal;
+                border: 3px black solid;
+                padding: 2em;
+            }
+            > figcaption {
+                background-color: #cfc;
+                text-align: center;
+                $vert_pad: 1em;
+                padding-top: $vert_pad;
+                padding-bottom: $vert_pad;
             }
             > pre {
                 $edge_color: #ccf;
                 background: linear-gradient($edge_color, #cff, $edge_color);
-                padding: 2em;
-                border: 3px black solid;
                 border-radius: 1em;
+                margin-bottom: 0.2em;
             }
         }
     }

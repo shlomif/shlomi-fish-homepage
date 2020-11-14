@@ -36,34 +36,44 @@
     }
 }
 
+@mixin hhgg_st_tng_rounded_border__common {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+@mixin hhgg_st_tng_rounded_border {
+    @include hhgg_st_tng_rounded_border__common;
+    border: 3px black solid;
+}
 .hhgg_st_tng {
+    $hhgg_st_tng__radius: 20px;
     .screenplay {
         figure.asciiart {
+            @include hhgg_st_tng_rounded_border;
+            $edge_color: #ccf;
+            border-radius: $hhgg_st_tng__radius;
+            background: linear-gradient($edge_color, #cff, $edge_color);
             > pre,
             > figcaption {
-                overflow-x: hidden;
+                @include hhgg_st_tng_rounded_border__common;
                 width: max-content;
-                margin-left: auto;
-                margin-right: auto;
-                // text-align: center;
                 color: black;
                 font-style: normal;
-                border: 3px black solid;
-                padding: 2em;
-            }
-            > figcaption {
-                background-color: #cfc;
-                text-align: center;
-                $vert_pad: 1em;
-                padding-top: $vert_pad;
-                padding-bottom: $vert_pad;
-                border-radius: 0.4em;
             }
             > pre {
-                $edge_color: #ccf;
-                background: linear-gradient($edge_color, #cff, $edge_color);
-                border-radius: 1em;
-                margin-bottom: 0.2em;
+                @include hhgg_st_tng_rounded_border;
+                border-radius: 0 0 $hhgg_st_tng__radius $hhgg_st_tng__radius;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 2em 1em;
+                max-width: 100%;
+            }
+            > figcaption {
+                padding: 2em 1em;
+                text-align: center;
             }
         }
     }

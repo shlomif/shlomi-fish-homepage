@@ -1,10 +1,10 @@
+[% PROCESS "pages/t2/humour/by_others_hhgg_st_tng.tt2" %]
 [%- SET title = "The Hitchhiker's Guide to Star Trek - The Next Generation" -%]
 [%- SET desc = "Copy of David T. Lu’s and Mickey McCarter's parodical screenplay crossing “The Hitchhiker’s Guide to the Galaxy” and “Star Trek: The Next Generation” here." -%]
 
 
 [%- WRAPPER wrap_html -%]
 
-[% PROCESS "pages/t2/humour/by_others_hhgg_st_tng.tt2" %]
 [% INCLUDE hhgg_st_tng__about_sect hhgg_html = "0" %]
 
 <h2 id="link-to-text"><a

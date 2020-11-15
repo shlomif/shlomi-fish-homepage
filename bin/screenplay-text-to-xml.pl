@@ -30,7 +30,6 @@ sub run
             source => { file => shift(@ARGV), },
         },
     );
-    $xml =~ s/[ \t]+$//gms;
 
     open my $out, ">:encoding(UTF-8)", $output_fn;
     print {$out} $xml;

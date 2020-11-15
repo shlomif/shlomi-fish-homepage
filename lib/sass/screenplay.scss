@@ -68,11 +68,15 @@
                 border-right: none;
                 margin-top: 0;
                 margin-bottom: 0;
-                padding: 2em 1em;
+                padding: 2em $hhgg_st_tng__radius;
                 max-width: 100%;
             }
             > figcaption {
-                padding: 2em 1em;
+                @if false {
+                    font-style: italic;
+                    font-weight: bold;
+                }
+                padding: 1em $hhgg_st_tng__radius;
                 text-align: center;
             }
         }

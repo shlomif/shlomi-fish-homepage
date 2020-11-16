@@ -694,7 +694,7 @@ css_targets: $(SRC_CSS_TARGETS)
 
 SASS_STYLE := compressed
 # SASS_STYLE := expanded
-SASS_CMD := sass --style $(SASS_STYLE)
+SASS_CMD := sass --style $(SASS_STYLE) -I ./normalize.css/
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss
 COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss

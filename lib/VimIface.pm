@@ -6,22 +6,7 @@ use warnings;
 
 use Text::VimColor 0.29 ();
 use Path::Tiny qw/ path /;
-
-sub should_update
-{
-    my ( $filename2, $syntax_sugar, $filename1 ) = @_;
-    if ( $syntax_sugar ne ":" )
-    {
-        die qq#wrong syntax_sugar - not ":"!#;
-    }
-    my @stat2 = stat($filename2);
-    if ( !@stat2 )
-    {
-        return 1;
-    }
-    my @stat1 = stat($filename1);
-    return ( $stat1[9] >= $stat2[9] );
-}
+use File::ShouldUpdate qw/ should_update /;
 
 sub get_syntax_highlighted_html_from_file
 {

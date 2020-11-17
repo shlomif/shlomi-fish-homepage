@@ -3,6 +3,17 @@
 [%- SET desc = "The Hitchhiker’s Guide to Star Trek - The Next Generation - As HTML. Copy of David T. Lu’s and Mickey McCarter's parodical screenplay crossing “The Hitchhiker’s Guide to the Galaxy” and “Star Trek: The Next Generation” here." -%]
 [%- SET apply_screenplay_style = 1 -%]
 
+[% BLOCK page_extra_head_elements %]
+<style>
+body #main {
+    min-width: 0;
+}
+.screenplay .description {
+    overflow: auto;
+}
+</style>
+[% END %]
+
 [%- WRAPPER wrap_html -%]
 
 [% INCLUDE hhgg_st_tng__about_sect hhgg_html = "1" %]
@@ -10,4 +21,50 @@
 <div class="hhgg_st_tng">
 [% path_slurp("screenplay-xml/rendered-html/hitchhikers-guide-to-star-trek-tng-hand-tweaked.html") %]
 </div>
+[% IF 0 %]
+<script>
+{
+    if (false) {
+        function _gen2(){
+            return $("\x3cdiv class=\"asciiart_wrapper\"\x3e\x3c/div\x3e");
+        };
+        function _wrap_with_div2 (el) {
+            let wrap = _gen2();
+            el.clone().appendTo(wrap);
+            el.replaceWith(wrap);
+            return;
+        };
+        let f=$("figure.asciiart");
+        _wrap_with_div2(f);
+    }
+    if (false) {
+        let f=$("figure");
+        let pp = f.parent();
+        while (! pp.hasClass("description")) {
+            pp = pp.parent();
+        }
+        pp.addClass("oflow_test");
+        let h = pp.parent().find("> header:first-child");
+        h.addClass("oflow_test");
+        if (false){
+            let p=f.find("pre");
+            function _gen(){
+                return $("\x3cdiv style=\"overflow:scroll;\"\x3e\x3c/div\x3e");
+            };
+            function _wrap_with_div (el) {
+                let wrap = _gen();
+                el.clone().appendTo(wrap);
+                el.replaceWith(wrap);
+                return;
+            };
+            let wrap=_gen();
+            p.detach().appendTo(wrap);
+            wrap.prependTo(f);
+            _wrap_with_div(f);
+            _wrap_with_div($("figcaption"));
+        }
+    }
+}
+</script>
+[% END %]
 [% END %]

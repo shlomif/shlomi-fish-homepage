@@ -6,6 +6,7 @@ use autodie;
 
 use Getopt::Long qw/ GetOptions /;
 use XML::Grammar::Screenplay::ToHTML ();
+use XML::LibXML::XPathContext        ();
 
 sub run
 {
@@ -17,17 +18,37 @@ sub run
     {
         die "Output filename not specified! Use the -o|--output flag!";
     }
-
-    my $output_text = XML::Grammar::Screenplay::ToHTML->new->translate_to_html(
+    my $translator = XML::Grammar::Screenplay::ToHTML->new;
+    my $output_dom = $translator->translate_to_html(
         {
             source => { file => shift(@ARGV), },
-            output => "string",
+            output => "dom",
         }
     );
-    $output_text =~ s/[ \t]+$//gms;
+    my $xc      = XML::LibXML::XPathContext->new($output_dom);
+    my $XHTMLNS = "http://www.w3.org/1999/xhtml";
+    $xc->registerNs( 'html' => $XHTMLNS, );
 
+    # print($output_dom);
+    my @list = $xc->findnodes(
+        q#descendant::html:figure[contains(@class, 'asciiart')]#,
+        ($output_dom) );
+
+    foreach my $el (@list)
+    {
+        my $parent  = $el->parentNode;
+        my $wrapper = $output_dom->createElementNS( $XHTMLNS, 'div' );
+        $wrapper->setAttribute( 'class', 'asciiart_wrapper' );
+        $wrapper->appendChild( $el->cloneNode(1) );
+        $parent->replaceChild( $wrapper, $el );
+    }
+
+    my $chars =
+        $translator->_to_html_stylesheet()->output_as_chars($output_dom);
+
+    $chars =~ s/[ \t]+$//gms;
     open my $out, ">:encoding(UTF-8)", $output_fn;
-    print {$out} $output_text;
+    print {$out} $chars;
     close($out);
 
     exit(0);

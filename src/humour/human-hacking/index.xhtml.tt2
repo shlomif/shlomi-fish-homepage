@@ -16,9 +16,9 @@ California and is written in English.
 </p>
 [% END %]
 
-<h2 id="text">The Text</h2>
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
-<h3 id="version_2">Version 2 (Most recent)</h3>
+[% WRAPPER h3_section id = "version_2" title = "Version 2 (Most recent)" %]
 
 <ul>
 
@@ -45,7 +45,7 @@ self-contained document - please don’t print it.).
 
 </ul>
 
-<h4 id="version_2_hebrew">Hebrew Translation</h4>
+[% WRAPPER h4_section id = "version_2_hebrew" title = "Hebrew Translation" %]
 
 <ul>
 
@@ -81,7 +81,11 @@ stylesheet</a> to post-process the resultant DocBook 5/XML source.
 
 </ul>
 
-<h4 id="version_2_arabic">Arabic Translation</h4>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h4_section id = "version_2_arabic" title = "Arabic Translation" %]
 
 <ul>
 
@@ -99,9 +103,13 @@ stylesheet</a> to post-process the resultant DocBook 5/XML source.
 
 </ul>
 
+[% END %]
+
+[% END %]
+
 [% default_toc %]
 
-<h2 id="source_repo">Source Repository</h2>
+[% WRAPPER h2_section id = "source_repo" title = "Source Repository" %]
 
 <ul>
 
@@ -118,6 +126,8 @@ stylesheet</a> to post-process the resultant DocBook 5/XML source.
 </li>
 
 </ul>
+
+[% END %]
 
 [% BLOCK buffy_inspiration %]
 <li>
@@ -196,7 +206,7 @@ projects, that is featured in the story. <b>Warning:</b> [% my_acronym( "key" =>
 
 [% END %]
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ol>
 
@@ -267,7 +277,9 @@ favourite song of theirs.
 
 </ol>
 
-<h2 id="acknowledgements">Acknowledgements</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "acknowledgements" title = "Acknowledgements" %]
 
 <p>
 The stylesheet and images used for the background of the text are based
@@ -282,13 +294,17 @@ Thanks go to Uri Bruck, Gai Borshack, Omer Zak, Drew Dexter and others who
 have read and reviewed early, incomplete, drafts of this story.
 </p>
 
-<h2 id="conclusions"><a href="conclusions/">Conclusions and Reviews</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "conclusions" title = "Conclusions and Reviews" href = "conclusions/" %]
 
 <p>
 Read these only <b>after</b> you have finished reading the story.
 </p>
 
-<h2 id="spin-offs">Spin-offs and Derivative Works</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "spin-offs" title = "Spin-offs and Derivative Works" %]
 
 <ul>
 
@@ -327,9 +343,11 @@ work under, then <a href="[% base_path %]me/contact-me/">drop me
 a line</a> and we may be able to negotiate a better, commercial, licence.
 </p>
 
-<h2 id="old_versions">Old Versions</h2>
+[% END %]
 
-<h3 id="version_1">Version 1 (Old)</h3>
+[% WRAPPER h2_section id = "old_versions" title = "Old Versions" %]
+
+[% WRAPPER h3_section id = "version_1" title = "Version 1 (Old)" %]
 
 <ul>
 <li>
@@ -340,7 +358,11 @@ a line</a> and we may be able to negotiate a better, commercial, licence.
 </li>
 </ul>
 
-<h2 id="licensing">Licensing</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
 The story (a <a href="http://en.wikipedia.org/wiki/Novella">novella</a>)
@@ -352,7 +374,9 @@ or at your option, any later version. Share, build upon, even sell,
 and Enjoy! (As long as you keep the derivatives under the same licence.)
 </p>
 
-<h2 id="ads">Ads</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "ads" title = "Ads" %]
 
 <table class="visible lim_width limit_imgs_width">
 <tr>
@@ -422,6 +446,8 @@ Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logo
 </tr>
 
 </table>
+
+[% END %]
 
 [% WRAPPER nav_blocks  %]
 

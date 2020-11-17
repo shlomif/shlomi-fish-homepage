@@ -8,6 +8,8 @@
 @import "main-element";
 @import "faq-common";
 
+@include text_doument_h_tags_sizes;
+
 :link:hover,
 :visited:hover,
 img.highlight:hover,
@@ -489,7 +491,6 @@ table.visible,
 }
 
 .article {
-    @include text_doument_h_tags_sizes;
     h4,
     h5,
     h6 {

@@ -2771,26 +2771,8 @@ Moreover, as the busts indicate, they did some modelling even back then.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "mighty_klingon_warriors"  header = "Mighty Klingon Warriors"  repo_href = "https://github.com/shlomif/Captioned-Image-Every-mighty-Klingon-Warrior"  src = base_path _ "humour/images/Every-mighty-Klingon-Warrior.svg.webp"  alt = "Every Mighty Klingon warrior has watched Sesame Street!"  %]
-
-[% WRAPPER quote  %]
-<p>
-Every Mighty Klingon warrior has watched Sesame Street!
-</p>
-[%- END -%]
-
-<p>
-Originally a funny quote from a
-<a href="[% base_path %]humour/fortunes/show.cgi?id=selina-mandrake-the-three">a
-scene</a> from my screenplay
-<a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake -
-The Slayer</i></a>, it stuck in my mind and grew some life of its own. Here is
-<a href="http://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/best_warriors.html">the
-rest</a> of the explanation for the grain of truth behind it.
-</p>
-
-[%- END -%]
-
+[% PROCESS "Inc/selina_mandrake_img_macros_blocks.tt2" %]
+[% INCLUDE klingon_warriors_watched_sesame_street__image_macro %]
 
 [% WRAPPER github_captioned_image_joke id = "evolution_of_girls_w_weapons"  header = "Evolution of Girls with Weapons"  repo_href = "http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons"  src = base_path _ "humour/images/evolution-of-girls-with-weapons.svg.webp"  alt = "Evolution of Girls with Weapons"  img_style = "border: 0.2em solid black; border-radius: 0.15em;"  %]
 

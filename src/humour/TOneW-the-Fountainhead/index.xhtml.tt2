@@ -26,11 +26,11 @@
 </li>
 
 <li>
-[% PROCESS link_to_screenplay base = "TOW_Fountainhead_1", screenplay_desc = "Part 1 - ",  %]
+[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_1", screenplay_desc = "Part 1 - ",  %]
 </li>
 
 <li>
-[% PROCESS link_to_screenplay base = "TOW_Fountainhead_2", screenplay_desc = "Part 2 - ",  %]
+[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_2", screenplay_desc = "Part 2 - ",  %]
 </li>
 
 </ul>

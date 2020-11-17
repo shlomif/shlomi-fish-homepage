@@ -19,7 +19,7 @@
 
 <li>
 <p>
-[% PROCESS link_to_screenplay base = "Humanity-Movie",  %]
+[% PROCESS link_to_screenplay basename = "Humanity-Movie",  %]
 </p>
 </li>
 
@@ -36,7 +36,7 @@
 </li>
 
 <li>
-[% PROCESS link_to_screenplay base = "Humanity-Movie-hebrew",  %]
+[% PROCESS link_to_screenplay basename = "Humanity-Movie-hebrew",  %]
 </li>
 
 </ul>

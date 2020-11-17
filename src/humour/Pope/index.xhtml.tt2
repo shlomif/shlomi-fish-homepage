@@ -20,7 +20,7 @@ Text - read online. (HTML)</b></a>
 
 <li>
 <p>
-[% PROCESS link_to_fiction_text base = "The-Pope-Died-on-Sunday-english",  %]
+[% PROCESS link_to_fiction_text basename = "The-Pope-Died-on-Sunday-english",  %]
 </p>
 </li>
 
@@ -46,7 +46,7 @@ Text - read online. (HTML)</b></a>
 
 <li>
 <p>
-[% PROCESS link_to_fiction_text base = "The-Pope-Died-on-Sunday-hebrew",  %]
+[% PROCESS link_to_fiction_text basename = "The-Pope-Died-on-Sunday-hebrew",  %]
 </p>
 </li>
 

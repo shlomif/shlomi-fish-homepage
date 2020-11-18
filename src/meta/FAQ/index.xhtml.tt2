@@ -2405,6 +2405,29 @@ with one of the creators of <a href="https://en.wikipedia.org/wiki/South_Park"><
 
 [% WRAPPER faq_h2_section id = "computing"  title = "About computing and software development"  %]
 
+[% WRAPPER faq_h3_section id = "are-you-a-programmer"  title = "Are you a programmer?"  %]
+
+<p>
+Yes, I am. For some of the publicly available source code I wrote (usually [% my_acronym( "key" => "FOSS",) %])
+see:
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]open-source/projects/">My open source projects.</a>
+</p>
+</li>
+
+</ul>
+
+<p>
+(I'm answering this question here, because I got asked that a lot.)
+</p>
+
+[%- END -%]
+
 [% WRAPPER faq_h3_section id = "computers-specs"  title = "What are your Computers’ Specifications?"  %]
 
 <p>

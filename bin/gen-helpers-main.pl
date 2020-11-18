@@ -104,10 +104,29 @@ use lib './lib';
 use Shlomif::MySystem qw/ my_system my_exec_perl /;
 
 path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
+my $inkscape_wrap = path("./bin/inkscape-wrapper");
+{
+    my $src = (
+        ( scalar(`inkscape --help`) =~ /--export-type/ )
+        ? path("./bin/inkscape-wrapper-new.bash")
+        : path("./bin/inkscape-wrapper-old.pl")
+    );
 
-require lib;
-lib->import("./lib");
+    $src->copy($inkscape_wrap)->chmod(0755);
+}
+my $evilphish_right_face = path("src/images/evilphish-svg--facing-right.svg");
+my_system(
+    [
+        $inkscape_wrap,
+        "--batch-process",
+        "--actions",
+"EditSelectAll;ObjectFlipHorizontally;export-filename:$evilphish_right_face;export-do;",
 
+        # "--export-filename=$evilphish_right_face",
+        "src/images/evilphish-svg--facing-left.svg",
+    ]
+);
+$evilphish_right_face->copy("src/images/evilphish-svg.svg");
 require Shlomif::Homepage::LongStories;
 Shlomif::Homepage::LongStories->new->render_make_fragment;
 require Shlomif::Homepage::FortuneCollections;
@@ -226,14 +245,5 @@ if ( my $Err = $@ )
     die $Err;
 }
 
-{
-    my $src = (
-        ( scalar(`inkscape --help`) =~ /--export-type/ )
-        ? path("./bin/inkscape-wrapper-new.bash")
-        : path("./bin/inkscape-wrapper-old.pl")
-    );
-
-    $src->copy("./bin/inkscape-wrapper")->chmod(0755);
-}
 exit if delete $ENV{LATEMP_STOP_GEN};
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );

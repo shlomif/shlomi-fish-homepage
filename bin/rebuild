@@ -5,7 +5,12 @@ rebuild()
         set -x
         set -e
         # It builds faster with no $DISPLAY
-        unset DISPLAY
+        # but inkscape needs it. :-(
+        inkscape_actions_require_display_set='true'
+        if ! $inkscape_actions_require_display_set
+        then
+            unset DISPLAY
+        fi
         _debug_gmake_target()
         {
             local tgt="$1"

@@ -707,7 +707,7 @@ $(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 
 $(POST_DEST)/style.css $(POST_DEST)/print.css: $(COMMON_SASS_DEPS) lib/sass/lang_switch.scss $(FORT_SASS_DEPS) lib/sass/code_block.scss lib/sass/jqtree.scss lib/sass/treeview.scss lib/sass/common-with-print.scss lib/sass/self_link.scss
 
-$(POST_DEST)/style.css: lib/sass/smoked-wp-theme.scss lib/sass/footer.scss
+$(POST_DEST)/style.css: lib/sass/footer.scss
 
 $(POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 

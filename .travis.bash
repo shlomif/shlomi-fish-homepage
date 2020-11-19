@@ -24,9 +24,9 @@ elif test "$cmd" = "before_install"
 then
 
     . /etc/lsb-release
-    sudo add-apt-repository ppa:inkscape.dev/stable
-    sudo apt update
-    sudo apt install inkscape
+    sudo add-apt-repository -y ppa:inkscape.dev/stable
+    sudo apt -q update
+    sudo apt -y install inkscape
     if test "$DISTRIB_ID" = 'Ubuntu'
     then
         if test "$DISTRIB_RELEASE" = '14.04'

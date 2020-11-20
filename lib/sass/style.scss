@@ -27,8 +27,8 @@
     // word-break: break-all;
 
     overflow-wrap: break-word;
-    // word-wrap: break-word;
-    word-wrap: normal;
+    // overflow-wrap: break-word;
+    overflow-wrap: normal;
 }
 
 /* based on
@@ -37,7 +37,7 @@
  */
 pre {
     // white-space: pre-wrap;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     text-align: justify;
     direction: ltr;
     max-width: 90%;
@@ -120,7 +120,7 @@ body {
             // word-break: break-all;
 
             // overflow-wrap: break-word;
-            // word-wrap: break-word;
+            // overflow-wrap: break-word;
         }
     }
 }

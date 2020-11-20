@@ -139,8 +139,8 @@
 
 #qunit-tests pre {
 	margin: 0;
+	overflow-wrap: break-word;
 	white-space: pre-wrap;
-	word-wrap: break-word;
 }
 
 #qunit-tests del {

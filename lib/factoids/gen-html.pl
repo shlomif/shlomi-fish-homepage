@@ -850,6 +850,20 @@ highlights Windows Update’s slowness.
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-windows-update">Windows Update</a> IRC
+Log.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-windows-UpHate">“Windows UpHate”</a> -
+<q>It's recently caused people to miss out on large parts of their exams</q>
+</p>
+</li>
+
 </ul>
 EOF
         short_id   => 'windows_update',

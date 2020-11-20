@@ -1047,7 +1047,9 @@ h3 {
         max-width: 90%;
     }
     pre {
-        overflow: scroll;
+        @if false {
+            overflow: scroll;
+        }
     }
 }
 
@@ -1136,7 +1138,7 @@ img.rindolf {
 
 * {
     // outline: hotpink solid 2px;
-    // outline: deeppink solid 2px;
+    outline: deeppink solid 2px;
 }
 
 @import "self_link";

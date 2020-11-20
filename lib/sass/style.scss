@@ -40,7 +40,9 @@ pre {
     overflow-wrap: break-word;
     text-align: justify;
     direction: ltr;
-    max-width: 90%;
+    @if false {
+        max-width: 90%;
+    }
     // overflow-x: scroll;
     // overflow-x: hidden;
     overflow: auto;

@@ -791,8 +791,8 @@ MAIN_TOTAL_MIN_JS__SOURCES := \
 	bower_components/jqTree/tree.jquery.js \
 	common/js/to-jqtree.js \
 	common/js/to-jqtree-2.js \
-	common/js/selfl.js \
 	common/js/sub_menu.js \
+	# common/js/selfl.js
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)

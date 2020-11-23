@@ -1,7 +1,5 @@
 [% BLOCK page_extra_head_elements %]
-<style>
-#show_navbar, main { overflow: auto; }
-</style>
+<link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
 [% END %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 

@@ -1,6 +1,6 @@
 [% BLOCK page_extra_head_elements %]
 <style>
-.oflow { overflow: auto !important; }
+.oflow, #container-all > *:nth-child(1), #container-all > *:nth-child(1) * { overflow: auto !important; }
 </style>
 [% END %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
@@ -3132,4 +3132,23 @@ taken from knowyourmeme.com and is originally part of <a href="https://en.wikipe
 
 </div>
 
+<script>
+if (1) {
+    let myfun =(
+        (r,css_query, start_idx, end_idx) =>{
+        // return;
+        let elems = $(css_query);
+        elems=elems.slice(start_idx, end_idx);
+        console.log(elems.length, elems, elems.find("> *"));
+        if(r){
+            return;
+        };
+        console.log(elems.filter((i, x)=>{return ! $(x).hasClass("jqtree_common");}).find("*").addClass("oflow"))
+        $(css_query).addClass("oflow");
+    }
+    );
+    myfun(0, "div#container-all > *", 0, 1);
+}
+// ((r,css_query, s, e)=>{let a = $(css_query);a=a.slice(s,e);console.log(a.length, a, a.find("> *"));if(r){return;};console.log(a.filter((i, x)=>{return ! $(x).hasClass("jqtree_common");}).find("*").addClass("oflow"));})(0, "div#container-all", 0, 1);
+</script>
 [% END %]

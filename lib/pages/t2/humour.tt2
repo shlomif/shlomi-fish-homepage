@@ -1,6 +1,6 @@
 [% BLOCK page_extra_head_elements %]
 <style>
-.oflow, #show_navbar, main { overflow: auto !important; }
+#show_navbar, main { overflow: auto; }
 </style>
 [% END %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]

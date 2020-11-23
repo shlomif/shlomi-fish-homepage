@@ -1,3 +1,8 @@
+[% BLOCK page_extra_head_elements %]
+<style>
+.oflow { overflow: auto !important; }
+</style>
+[% END %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
 [% IF lang == "eng" %]

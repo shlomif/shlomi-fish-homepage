@@ -1006,6 +1006,9 @@ div.abstract {
     }
 }
 
+@mixin facts_clear {
+    clear: both;
+}
 h2,
 h3 {
     &.story {
@@ -1014,7 +1017,13 @@ h3 {
 
     &.facts,
     &#facts {
-        clear: both;
+        @include facts_clear;
+    }
+}
+
+.facts_sources {
+    > header {
+        @include facts_clear;
     }
 }
 

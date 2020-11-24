@@ -23,12 +23,15 @@ h1 {
 }
 
 #random {
-    width: 100%;
     float: right;
-    padding-left: 0.5em;
-    margin-left: 0;
-    margin-bottom: 1.5em;
     list-style: none;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    padding-left: 0.5em;
+    @mixin needed_random_width_for_floaty {
+        width: 100%;
+    }
+    @include needed_random_width_for_floaty;
 }
 
 #nav li {

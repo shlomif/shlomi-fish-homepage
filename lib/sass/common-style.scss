@@ -769,8 +769,11 @@ section.story {
 
 .aphorisms article {
     @include highlight_div_frame;
-    width: 65%;
+    @if false {
+        width: 65%;
+    }
 }
+
 .screenplay.read,
 .docbook_formats {
     @include highlight_div_frame;

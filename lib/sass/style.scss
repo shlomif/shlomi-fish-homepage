@@ -43,8 +43,6 @@ pre {
     @if false {
         max-width: 90%;
     }
-    // overflow-x: scroll;
-    // overflow-x: hidden;
     overflow: auto;
 }
 
@@ -75,17 +73,14 @@ body {
         * {
             vertical-align: middle;
         }
-        // width: 100%;
         grid-column: 1 / 6;
         grid-row: 1;
 
         &.on {
             grid-column: 1;
-            // width: 20%;
         }
 
         .logo {
-            // outline: 2px solid hotpink;
             max-height: 2em;
             width: auto;
         }
@@ -117,12 +112,6 @@ body {
         .news *,
         .wrap-me * {
             // @include wrap;
-        }
-        * {
-            // word-break: break-all;
-
-            // overflow-wrap: break-word;
-            // overflow-wrap: break-word;
         }
     }
 }

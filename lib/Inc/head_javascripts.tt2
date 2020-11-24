@@ -5,9 +5,7 @@
 <script [% script_type %] src="[% base_path %]js/toggle_sect.js"></script>
 <script [% script_type %] src="[% base_path %]js/to-jqtree.js"></script>
 <script [% script_type %] src="[% base_path %]js/to-jqtree-2.js"></script>
-[% IF 0 %]
 <script [% script_type %] src="[% base_path %]js/selfl.js"></script>
-[% END %]
 <script [% script_type %] src="[% base_path %]js/sub_menu.js"></script>
 [% ELSE %]
 <script [% script_type %] src="[% base_path %]js/main_all.js"></script>

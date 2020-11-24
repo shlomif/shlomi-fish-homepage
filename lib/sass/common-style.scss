@@ -622,7 +622,7 @@ blockquote {
     padding: 0.5em;
     // font-style: italic;
     margin-left: 0.5em;
-    overflow: scroll;
+    overflow: auto;
 
     @if false {
         > p:first-child {
@@ -1047,7 +1047,7 @@ h3 {
         max-width: 90%;
     }
     pre {
-        overflow: scroll;
+        overflow: auto;
     }
 }
 

@@ -60,7 +60,6 @@
         @mixin fortune_style {
             padding: 5px;
 
-            // height: 25px
             font-size: 20px;
             font-family: Arial, sans-serif;
         }
@@ -91,11 +90,8 @@
             > .irc-body {
                 margin: 1em;
 
-                // outline: blue 4px solid
                 > .irc-conversation {
                     @include elem;
-
-                    // outline: red 2px solid
                 }
             }
 
@@ -116,7 +112,9 @@
             }
 
             h3 {
-                // background-color: $fortune_color
+                @if false {
+                    background-color: $fortune_color;
+                }
                 border-top-left-radius: $fortune_radius;
                 border-top-right-radius: $fortune_radius;
                 border-bottom-left-radius: 0;
@@ -135,8 +133,6 @@
             }
 
             .disp {
-                // padding: 0
-                // margin: 0
                 display: table-cell;
                 border-bottom: $fort_border_color $fortune_border;
                 border-left: black solid 3px;
@@ -144,9 +140,6 @@
                 > a {
                     @include fortune_radius_hover;
 
-                    // position: absolute
-                    // top: 0
-                    // right: 0
                     margin-top: 0;
                     margin-bottom: 0;
                     color: #48f;
@@ -159,13 +152,6 @@
 
                         @include fortune_radius_hover;
                     }
-
-                    /* float: right */
-
-                    /* &:before
-                     * content: "[" */
-                    /* &:after
-                     * content: "]" */
                 }
             }
         }

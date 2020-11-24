@@ -24,9 +24,6 @@
 }
 
 @mixin wrap {
-    // word-break: break-all;
-
-    overflow-wrap: break-word;
     // overflow-wrap: break-word;
     overflow-wrap: normal;
 }
@@ -36,7 +33,6 @@
  * - thanks!
  */
 pre {
-    // white-space: pre-wrap;
     overflow-wrap: break-word;
     text-align: justify;
     direction: ltr;

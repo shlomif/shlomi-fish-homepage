@@ -128,7 +128,7 @@ section.bordered {
     overflow: hidden;
 }
 
-/* Border-less */
+/* bless == Border-less */
 
 .bless {
     border: none;
@@ -187,8 +187,6 @@ section.bordered {
     font-size: 80%;
 }
 
-/* Start of the .toggle_sect_menu */
-
 #sect_menu_wrapper {
     &.novis {
         display: none;
@@ -230,8 +228,6 @@ button.toggle_sect_menu {
         background-color: yellow;
     }
 }
-
-/* End of toggle sect menu. */
 
 .sub_menu h2 {
     font-size: medium;
@@ -347,7 +343,6 @@ $about_color: #008000;
     border-right: $about_color solid 2pt;
     border-bottom: $about_color solid 3pt;
 
-    /* padding: 5pt; */
     h2 {
         margin-top: 0;
         background-color: $about_color;
@@ -419,9 +414,8 @@ table.visible,
     }
 }
 
-/*    The styles for the products' syndication.
- *
- *    See: http://search.cpan.org/dict/XML-Grammar-ProductsSyndication/ . */
+// The styles for the products' syndication.
+// See: https://metacpan.org/release/XML-Grammar-ProductsSyndication
 
 .prod_cat,
 .prod,
@@ -550,22 +544,6 @@ table.visible,
 
     /* BlueViolet */
 }
-
-/* For Adbrite */
-
-.adHeadline {
-    font: bold 10pt Arial;
-    text-decoration: underline;
-    color: #0000ff;
-}
-
-.adText {
-    font: normal 10pt Arial;
-    text-decoration: none;
-    color: #000000;
-}
-
-/* End of Adbrite */
 
 .wishlist_notice {
     border: thin solid #006400;
@@ -751,11 +729,6 @@ section.story {
 
     max-width: 80%;
     float: right;
-    // clear: right;
-
-    &.enemy {
-        // clear: right;
-    }
 
     &.buffy_few_good {
         width: 200px;
@@ -805,7 +778,7 @@ section.story {
 }
 
 .selina.abstract {
-    // For the die to be displayed in place.
+    // For the die image to be displayed in place.
     margin-bottom: 50px;
 }
 
@@ -831,7 +804,6 @@ $border: 3px darkgreen solid;
 div.abstract {
     &.towtf,
     &.pope {
-        // +highlight_div_frame
         border-bottom: $border;
         margin-bottom: 1em;
         border-top: $border;
@@ -1011,10 +983,6 @@ div.abstract {
 }
 h2,
 h3 {
-    &.story {
-        // clear: right
-    }
-
     &.facts,
     &#facts {
         @include facts_clear;

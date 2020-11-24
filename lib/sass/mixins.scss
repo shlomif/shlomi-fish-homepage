@@ -79,13 +79,10 @@ $ss_margin: 2em;
     margin-top: $ss_margin;
     margin-left: 0.5em;
 
-    // margin-bottom: $ss_margin
     padding-left: 1em;
     border-left: black solid 3px;
     padding-top: 0.3em;
 
-    // padding-bottom: 0.3em
-    // border-radius: 5pt
     &:hover {
         border-left-color: #555555;
     }

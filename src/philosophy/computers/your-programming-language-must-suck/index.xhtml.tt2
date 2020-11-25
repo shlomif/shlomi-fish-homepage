@@ -5,6 +5,15 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER intro  %]
+
+<p>
+This is an essay that enumerates some trade-offs in the design of programming
+languages, and why some people who have to learn or use the language will always be unhappy.
+</p>
+
+[%- END -%]
+
 [% WRAPPER h2_section id = "text"  title = "The text"  %]
 
 <p>
@@ -42,8 +51,10 @@ they are often useful together.
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Dynamic_programming_language">Dynamically typed languages</a> (like Perl 5, Python, Ruby, or most dialects of Lisp) possibly
-suffer from many subtle errors&#160;; Statically typed languages (like Haskell)
-are less expressive and it seems that about one third of the language design
+suffer from many subtle errors; Statically typed languages
+(such as <a href="https://en.wikipedia.org/wiki/Haskell_%28programming_language%29">Haskell</a>)
+are less flexible, and sometimes require going into many hoops to write
+quick-and-dirty code. Furthermore, it seems that about one third of the language design
 papers published on <a href="http://lambda-the-ultimate.org/">Lambda the
 Ultimate</a> are about various funky extensions to the Haskell type system
 to allow for better expressiveness.

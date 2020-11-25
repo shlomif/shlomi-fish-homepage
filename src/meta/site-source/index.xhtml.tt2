@@ -3,9 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<section class="h2">
-
-<h2 id="sources">How to build the site</h2>
+[% WRAPPER h2_section id = "sources" title = "How to build the site" %]
 
 <p>
 The source code of this site is maintained inside
@@ -23,11 +21,9 @@ which gives a recipe for a consistent and reproducible build on Ubuntu Linux
 systems.
 </p>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="techs_used">Technologies that are Used</h2>
+[% WRAPPER h2_section id = "techs_used" title = "Technologies that are Used" %]
 
 <ul>
 
@@ -211,9 +207,8 @@ licence.
 </p>
 </li>
 
-
 </ul>
 
-</section>
+[% END %]
 
 [% END %]

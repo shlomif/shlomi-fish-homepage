@@ -23,9 +23,24 @@ my @filenames =
 my @dirs;
 foreach my $fn (@filenames)
 {
+    # next if $fn !~ /XSLT/;
     my $dn = path($fn)->dirname;
-    push @dirs, quotemeta( ( $dn eq "." ) ? "" : ( $dn =~ s#[/\\]\z##r ) );
+    push @dirs, ( ( $dn eq "." ) ? "" : ( $dn =~ s#[/\\]\z##r ) );
 }
 
-print
-    qq#RewriteRule "^(/(?:@{[join("|", @dirs)]})/)index\\.html\$" "\$1" [R]\n#;
+my $out_text = '';
+foreach my $dn (@dirs)
+{
+    if ( length $dn )
+    {
+        $dn .= "/";
+    }
+    $out_text .= qq#Redirect permanent /${dn}index.html /${dn}\n#;
+}
+print $out_text;
+
+if (0)
+{
+    print
+qq#RewriteRule "^(/(?:@{[join("|", @dirs)]})/)index\\.html\$" "\$1" [R]\n#;
+}

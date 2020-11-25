@@ -180,39 +180,24 @@ section.bordered {
     }
 }
 
-.sub_menu .toggle_sect_menu {
-    float: right;
-}
-
 .toggle_sect_menu {
-    padding: 0.2em 0.5em;
-
-    @include rounded_corners(5px);
-
-    border: 2pt solid black;
-
-    &:hover {
-        padding: 0.2em 0.5em;
-
-        @include rounded_corners(5px);
-
+    @mixin toggle_sect_menu__style {
         border: 2pt solid black;
+        padding: 0.2em 0.5em;
+        @include rounded_corners(5px);
     }
-}
-
-button.toggle_sect_menu {
-    color: black;
-    text-decoration: none;
-}
-
-.toggle_sect_menu {
-    border-color: black;
+    @include toggle_sect_menu__style;
     background-color: PaleGoldenRod;
+    border-color: black;
+    color: black;
+    float: right;
+    text-decoration: none;
 
     &:hover {
-        cursor: pointer;
-        border-color: red;
+        @include toggle_sect_menu__style;
         background-color: yellow;
+        border-color: red;
+        cursor: pointer;
     }
 }
 

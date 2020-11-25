@@ -701,7 +701,7 @@ SASS_STYLE := compressed
 SASS_CMD := sass --style $(SASS_STYLE)
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss
-COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
+COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
 
 $(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@

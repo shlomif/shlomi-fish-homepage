@@ -1,0 +1,19 @@
+table.thumbs {
+    border: none;
+    border-collapse: collapse;
+}
+
+.thumbs {
+    td {
+        padding: 1em;
+        vertical-align: middle;
+    }
+
+    tr {
+        border: 2px solid black;
+    }
+
+    img {
+        border: 0;
+    }
+}

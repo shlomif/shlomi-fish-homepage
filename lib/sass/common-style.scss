@@ -62,19 +62,6 @@ img.highlight:hover,
     @include indent;
 }
 
-@if false {
-    .news article {
-        // +indent
-        blockquote,
-        ol,
-        ul,
-        p {
-            margin-left: 0;
-            padding-left: 0.3em;
-        }
-    }
-}
-
 div.rightalign {
     text-align: right;
 }
@@ -579,9 +566,6 @@ table.visible,
 
 blockquote {
     border: grey thin solid;
-    @if false {
-        display: table-cell;
-    }
     padding: 0.5em;
     // font-style: italic;
     margin-left: 0.5em;
@@ -685,12 +669,6 @@ section.story {
     }
 }
 
-@if false {
-    * {
-        border: hotpink solid 1px;
-    }
-}
-
 .aphorisms {
     blockquote {
         margin-left: 3em;
@@ -769,9 +747,6 @@ section.story {
 
 .aphorisms article {
     @include highlight_div_frame;
-    @if false {
-        width: 65%;
-    }
 }
 
 .screenplay.read,

@@ -24,7 +24,6 @@
 }
 
 @mixin wrap {
-    // overflow-wrap: break-word;
     overflow-wrap: normal;
 }
 
@@ -39,9 +38,6 @@ pre {
     overflow: auto;
 }
 
-@mixin cell {
-}
-
 body {
     @include bottom_bg;
     padding: 1em;
@@ -52,7 +48,6 @@ body {
         position: relative;
     }
     #main {
-        @include cell;
         grid-column: 2 / 6;
         grid-row: 2;
 
@@ -62,7 +57,6 @@ body {
     }
 
     #show_navbar {
-        @include cell;
         * {
             vertical-align: middle;
         }
@@ -79,7 +73,6 @@ body {
         }
     }
     #navbar {
-        @include cell;
         grid-row: 2;
         grid-column: 1;
         &.novis {

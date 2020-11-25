@@ -74,21 +74,11 @@ ul.noindent {
     text-align: center;
 }
 
-#noie {
-    text-align: center;
-    margin-bottom: 1.5em;
-}
-
 table {
     &.center {
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-ul.nospace {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .note {
@@ -107,12 +97,10 @@ ul.nospace {
 
 div.bordered,
 section.bordered {
-    border-color: green;
-    border-style: solid;
-    border-width: medium;
-    padding: 0.5em;
+    border: solid green medium;
     margin-top: 1em;
     overflow: hidden;
+    padding: 0.5em;
 }
 
 /* bless == Border-less */
@@ -130,48 +118,55 @@ section.bordered {
 }
 
 .books {
-    padding-top: 0.5em;
+    background-image: url("./images/grsites-beige049-modified.png");
+    border: 4pt double #e02030;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    background-image: url("./images/grsites-beige049-modified.png");
-    border: 4pt double #e02030;
+    padding-top: 0.5em;
 
     dt {
+        background-color: #ffffbb;
         border: 1.5pt solid #ffa500;
-        padding-top: 0.2em;
         padding-bottom: 0.25em;
         padding-left: 0.3em;
         padding-right: 0.3em;
-        background-color: #ffffbb;
+        padding-top: 0.2em;
     }
 
     dd {
         background-color: #e0ffe0;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
+        border: 1pt solid black;
+        margin-bottom: 0.7em;
         margin-left: 0.5em;
         margin-right: 0.5em;
         margin-top: 0.7em;
-        margin-bottom: 0.7em;
-        border: 1pt solid black;
+        padding-bottom: 0.3em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 0.3em;
 
         p {
-            margin-top: 3pt;
             margin-bottom: 7pt;
+            margin-top: 3pt;
         }
     }
 }
 
 .sub_menu {
     float: right;
-    width: 20%;
-    min-width: 220px;
+    font-size: 80%;
     margin-left: 7pt;
     margin-right: 10pt;
-    font-size: 80%;
+    min-width: 220px;
+    width: 20%;
+
+    h2 {
+        font-size: medium;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
 
 #sect_menu_wrapper {
@@ -201,13 +196,6 @@ section.bordered {
     }
 }
 
-.sub_menu h2 {
-    font-size: medium;
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 .hide {
     display: none;
 }
@@ -229,9 +217,8 @@ section.bordered {
 }
 
 .about_author {
-    margin-top: 1em;
-
     @include navbar_box;
+    margin-top: 1em;
 
     img {
         margin-top: $navbar_margin;
@@ -252,14 +239,14 @@ section.bordered {
 
 .hebrew {
     direction: rtl;
-    text-align: right;
     padding-right: 0.75cm;
+    text-align: right;
 }
 
 .english {
     direction: ltr;
-    text-align: left;
     font-family: Helvetica, sans-serif;
+    text-align: left;
 }
 
 .hilight .l,
@@ -268,8 +255,8 @@ p.hilight {
 }
 
 .hilight dd {
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 p.desc {
@@ -278,28 +265,28 @@ p.desc {
 
 .invisible,
 .invisible a {
-    position: absolute;
+    height: 1px;
     left: -10000px;
+    overflow: hidden;
+    position: absolute;
     top: auto;
     width: 1px;
-    height: 1px;
-    overflow: hidden;
 
     &:focus {
+        height: auto;
         position: static;
         width: auto;
-        height: auto;
     }
 }
 
 $about_color: #008000;
 
 .about_site {
-    margin-left: 1em;
-    margin-right: 10pt;
+    border-bottom: $about_color solid 3pt;
     border-left: $about_color solid 2pt;
     border-right: $about_color solid 2pt;
-    border-bottom: $about_color solid 3pt;
+    margin-left: 1em;
+    margin-right: 10pt;
 
     h2 {
         margin-top: 0;
@@ -311,9 +298,9 @@ $about_color: #008000;
 
     p,
     h3 {
-        margin-top: 0;
         margin-left: 0.5em;
         margin-right: 0.5em;
+        margin-top: 0;
     }
 }
 
@@ -324,10 +311,10 @@ $about_color: #008000;
     }
 
     td {
-        vertical-align: top;
-        text-align: left;
         border: 1.5pt black solid;
         padding: 2pt;
+        text-align: left;
+        vertical-align: top;
     }
 
     border-collapse: collapse;
@@ -359,16 +346,16 @@ table.visible,
 
 .visible {
     td {
-        vertical-align: top;
-        padding: 0.2em 0.2em 1em 0.2em;
         border: #689 thin solid;
+        padding: 0.2em 0.2em 1em 0.2em;
+        vertical-align: top;
     }
 
     th {
-        vertical-align: top;
-        padding: 0.2em 0.2em 1em 0.2em;
         border: #689 thin solid;
         font-weight: bold;
+        padding: 0.2em 0.2em 1em 0.2em;
+        vertical-align: top;
     }
 }
 
@@ -383,17 +370,16 @@ table.visible,
 
 .prod,
 .prod_set {
+    border: transparent 1.5pt solid;
+    margin-bottom: 1em;
     margin-right: 1em;
     margin-top: 1em;
-    margin-bottom: 1em;
     padding: 1em;
-    border: transparent 1.5pt solid;
-}
 
-.prod:hover,
-.prod_set:hover {
-    border-color: #006000;
-    background-color: #fff5e8;
+    &:hover {
+        border-color: #006000;
+        background-color: #fff5e8;
+    }
 }
 
 .prod .head {
@@ -417,8 +403,8 @@ table.visible,
 
 .prod_set .head {
     ul {
-        margin-left: 0;
         list-style-type: none;
+        margin-left: 0;
         padding-left: 0;
     }
 

@@ -793,17 +793,17 @@ div.abstract {
             font-size: 90%;
 
             ul {
-                list-style-position: inside;
                 list-style: disc;
-                margin: 0;
+                list-style-position: inside;
                 overflow: hidden;
                 padding: 0;
+                margin: 0;
 
                 li {
                     p {
-                        display: inline;
                         margin: 0;
                         padding: 0;
+                        display: inline;
                     }
 
                     float: left;

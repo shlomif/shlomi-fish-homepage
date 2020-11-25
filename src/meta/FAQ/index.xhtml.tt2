@@ -29,6 +29,7 @@
 [%- END -%]
 
 [% SET Technion = "<a href=\"http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology\">Technion</a>" %]
+[% SET site_sources_url = base_path _ "meta/site-source/" %]
 
 <p>
 This document is a list of questions and answers to common questions I have
@@ -1560,7 +1561,7 @@ common look and feel, a style that’s hopefully semantic, converted to use
 
 <p>
 All of the source code for the site is available online in various places. I’ve
-prepared <a href="[% base_path %]meta/site-source/">a top-to-bottom
+prepared <a href="[% site_sources_url %]">a top-to-bottom
 document</a> on how to compile the site from
 scratch). Some of the hand-crafted code was released as
 <a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
@@ -1748,7 +1749,7 @@ Naturally, it does not help that I often omit the dates of creation and last
 update from a resource, and that I sometimes neglect to add a “Recent Update”
 note at the top of the page when it becomes irrelevant. If you have the
 necessary technical skills, you can peruse the pages’ history in the
-<a href="[% base_path %]meta/site-source/">version control repository</a>.
+<a href="[% site_sources_url %]">version control repository</a>.
 </p>
 
 [%- END -%]
@@ -1905,7 +1906,7 @@ Most of the site is comprised
 of <a href="https://en.wikipedia.org/wiki/Static_web_page">static HTML web
 pages</a>, which are uploaded to the web-site as they are, <b>after</b> being
 generated using templates, data, and programs. The site’s
-<a href="[% base_path %]meta/site-source/">sources</a> are public and kept in
+<a href="[% site_sources_url %]">sources</a> are public and kept in
 a public version control repository, which also contains some
 <a href="https://en.wikipedia.org/wiki/Test_automation">automated tests</a>
 and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> service.
@@ -2159,6 +2160,31 @@ Also see:
 <p>
 <a href="https://www.joelonsoftware.com/2004/04/22/news-4/">"Perfectionism" post on <i>Joel on Software</i></a> - cites
 formatted HTML as an example.
+</p>
+</li>
+
+</ol>
+
+[%- END -%]
+
+[% WRAPPER faq_h3_section id = "site_sources_vcs_repo"  title = "Does this site have a public Git repository (on GitHub / GitLab / etc.)?"  %]
+
+<p>
+Yes, it does. See:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="[% site_sources_url %]">The page about the site's sources.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomi-fish-homepage">The main GitHub repository</a> (the build process clones
+some sub-repositories).
 </p>
 </li>
 

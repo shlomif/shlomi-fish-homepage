@@ -529,14 +529,13 @@ blockquote {
 
 .graphic_designs .design {
     border: 2pt solid black;
-    padding: 1em;
     margin-bottom: 2em;
-    margin-right: 2em;
     margin-left: 2em;
+    margin-right: 2em;
+    padding: 1em;
+    overflow: hidden;
 
     @include rounded_corners(5px);
-
-    overflow: hidden;
 
     &:hover {
         border-color: grey;
@@ -573,12 +572,12 @@ blockquote {
 }
 
 section.story {
-    border: 3px solid black;
     border-radius: 5px;
+    border: 3px solid black;
+    clear: right;
     margin-bottom: 2em;
     margin-top: 0.5em;
     padding: 0.5em;
-    clear: right;
 
     &:hover {
         border-color: darkgreen;
@@ -605,9 +604,8 @@ section.story {
 .story_logo,
 .screenplay_image {
     @include logo_image;
-
-    max-width: 80%;
     float: right;
+    max-width: 80%;
 
     &.buffy_few_good {
         width: 200px;
@@ -675,8 +673,8 @@ $border: 3px darkgreen solid;
 .shlomif_tips {
     > .entry {
         border: $border;
-        padding: 0.5em;
         margin-bottom: 1em;
+        padding: 0.5em;
     }
 }
 
@@ -684,8 +682,8 @@ div.abstract {
     &.towtf,
     &.pope {
         border-bottom: $border;
-        margin-bottom: 1em;
         border-top: $border;
+        margin-bottom: 1em;
         overflow: hidden;
     }
 }
@@ -703,20 +701,18 @@ div.abstract {
 .screenplay_style {
     div.page_toc,
     nav.page_toc {
+        $border: black solid 3px;
+        border-bottom-left-radius: 10px;
+        border-bottom: $border;
+        border-left: $border;
         clear: right;
         float: right;
         font-size: 85%;
-        width: 27%;
-        max-width: 25em;
-
-        $border: black solid 3px;
-
-        border-left: $border;
-        border-bottom: $border;
         margin-left: 1em;
-        padding-left: 0.5em;
+        max-width: 25em;
         padding-bottom: 0.5em;
-        border-bottom-left-radius: 10px;
+        padding-left: 0.5em;
+        width: 27%;
 
         li,
         ul {
@@ -738,9 +734,9 @@ div.abstract {
 
 .death_star_frame {
     border: 1.5pt solid #dd6666;
-    padding: 1em;
-    margin-top: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
 
     @include rounded_corners(5px);
 
@@ -757,12 +753,12 @@ div.abstract {
     table {
         td,
         th {
-            vertical-align: top;
             border: thin black solid;
+            padding-bottom: 0.3em;
             padding-left: 0.5em;
             padding-right: 0.5em;
             padding-top: 0.3em;
-            padding-bottom: 0.3em;
+            vertical-align: top;
         }
 
         th {
@@ -797,22 +793,22 @@ div.abstract {
             font-size: 90%;
 
             ul {
-                list-style: disc;
                 list-style-position: inside;
+                list-style: disc;
+                margin: 0;
                 overflow: hidden;
                 padding: 0;
-                margin: 0;
 
                 li {
                     p {
+                        display: inline;
                         margin: 0;
                         padding: 0;
-                        display: inline;
                     }
 
+                    float: left;
                     margin-left: 0.2em;
                     margin-right: 0.2em;
-                    float: left;
                 }
             }
         }
@@ -900,13 +896,13 @@ h3 {
 
 .math_illus {
     float: right;
-    margin-left: 0.5em;
     margin-bottom: 0.5em;
+    margin-left: 0.5em;
 }
 .math_angels {
-    width: 90%;
-    margin-top: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
+    width: 90%;
 }
 .lim_width .dnd_cartoon {
     margin-bottom: 1.5em;
@@ -932,10 +928,10 @@ ol.plain {
 }
 
 .mastering-cat-cover {
-    float: right;
     border: green solid thin;
-    padding: 0.5em;
+    float: right;
     margin-left: 0.5em;
+    padding: 0.5em;
     img {
         border: 0;
     }
@@ -956,8 +952,8 @@ img.rindolf {
 
 .evilphish {
     border: 0;
-    margin: 0.5em;
     float: right;
+    margin: 0.5em;
     max-width: 70%;
 }
 

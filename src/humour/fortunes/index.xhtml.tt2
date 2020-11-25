@@ -234,7 +234,7 @@ Reader/Aggregator</a> (see <a
 href="http://en.wikipedia.org/wiki/List_of_feed_aggregators">a list on the Wikipedia</a>).
 </p>
 
-<h2 id="credits">Credits</h2>
+[% WRAPPER credits_sect %]
 
 <ul>
 
@@ -247,5 +247,7 @@ game</a> collection under CC0/public domain.
 </p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

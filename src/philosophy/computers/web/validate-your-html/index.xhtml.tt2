@@ -2,7 +2,6 @@
 [%- SET desc = "The what, why, and how, of having valid HTML" -%]
 [%- SET more_keywords = "html, html5, validation, validate, valid, standards" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -11,7 +10,7 @@
 
 [% print_markdown(fn=>'lib/repos/validate-your-html/README.md') %]
 
-<h2 id="credits">Credits</h2>
+[% WRAPPER credits_sect %]
 
 <ul>
 
@@ -22,5 +21,7 @@
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

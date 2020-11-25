@@ -42,7 +42,7 @@ This was originally <a href="http://shlomif-tech.livejournal.com/67311.html">a
 post</a> on one of my blogs.
 </p>
 
-<h2 id="credits">Credits</h2>
+[% WRAPPER credits_sect %]
 
 <ul>
 
@@ -52,6 +52,8 @@ post</a> on one of my blogs.
 </p>
 </li>
 </ul>
+
+[% END %]
 
 <h2 id="license">Copyright and Licence</h2>
 

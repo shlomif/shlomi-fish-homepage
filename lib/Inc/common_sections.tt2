@@ -4,6 +4,12 @@
 [%- END -%]
 [%- END -%]
 
+[%- BLOCK credits_sect -%]
+[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
+[% content %]
+[%- END -%]
+[%- END -%]
+
 [%- BLOCK intro -%]
 [%- WRAPPER h2_section id="intro" title="Introduction" -%]
 [% content %]

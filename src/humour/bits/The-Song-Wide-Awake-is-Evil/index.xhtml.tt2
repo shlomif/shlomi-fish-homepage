@@ -116,7 +116,7 @@ because my other ideas didn't seem as good.
 
 [% END %]
 
-<h2 id="credits">Credits</h2>
+[% WRAPPER credits_sect %]
 
 <ul>
 
@@ -129,6 +129,8 @@ under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-by-sa<
 </p>
 </li>
 </ul>
+
+[% END %]
 
 <h2 id="license">Copyright and Licence</h2>
 

@@ -666,7 +666,7 @@ is the language of love and “Love is Evil, and Evil is Love”.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "credits"  title = "Credits"  %]
+[% WRAPPER credits_sect %]
 
 <ul>
 
@@ -679,7 +679,7 @@ Drawing of an evil reindeer taken from <a href="https://drawception.com/game/eyd
 
 <li>
 <p>
-Picture of a dwarf with a pick axe taken from <a href="http://clockworkgods.wikia.com/wiki/Dwarf">the Clockwork Gods Wiki "Dwarf" page</a>.
+Picture of a dwarf with a pick taken from <a href="http://clockworkgods.wikia.com/wiki/Dwarf">the Clockwork Gods Wiki "Dwarf" page</a>.
 </p>
 </li>
 
@@ -694,6 +694,7 @@ Gandalf photo with caption provided by a Facebook friend of a friend.
 <a href="https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg">Summer Glau photo</a> taken from the English Wikipedia.
 </p>
 </li>
+
 </ul>
 
 [%- END -%]

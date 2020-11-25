@@ -107,7 +107,7 @@ report</a> I have written about the booth to the mailing list.
 
 </ul>
 
-<h2 id="credits">Credits</h2>
+[% WRAPPER credits_sect %]
 
 <h3 id="pebbles_image_background">Pebbles Image Background</h3>
 
@@ -121,6 +121,8 @@ repository with the intermediate images</a> used to create the logo,
 and <a href="images/summernsa-logo-large.png">the
 large version of the logo</a>.
 </p>
+
+[% END %]
 
 <h2 id="sources_of_inspiration">Sources of Inspiration</h2>
 

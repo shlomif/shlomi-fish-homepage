@@ -447,13 +447,16 @@ HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-project
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
-$(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+define ASCIIDOCTOR_TO_XTHML5
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
+endef
+
+$(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+	$(call ASCIIDOCTOR_TO_XTHML5)
 
 $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
-	asciidoctor --backend=xhtml5 -o $@ $<
-	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
+	$(call ASCIIDOCTOR_TO_XTHML5)
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 

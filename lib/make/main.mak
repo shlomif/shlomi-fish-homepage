@@ -1,4 +1,5 @@
 POST_DEST := dest/post-incs/t2
+LATEMP_ROOT_SOURCE_DIR := .
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
@@ -988,7 +989,8 @@ WMLect_PATH := lecture/WebMetaLecture/slides/examples
 $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MANIFEST_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
-	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 3 -P 8 $(PERL) bin/normalize-zips.pl
+	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 3 -P 8 $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/normalize-zips.pl
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-index-xhtmls-redirects.pl
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 

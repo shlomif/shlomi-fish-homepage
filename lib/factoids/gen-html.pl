@@ -270,7 +270,7 @@ EOF
 
 <li>
 <p>
-<a href="http://buffyfanfiction.wikia.com/">Buffy Fanfiction Wikia</a>
+<a href="http://buffyfanfiction.wikia.com/">Buffy Fanfiction Fandom.com Wiki</a>
 ( <a href="http://buffyfanfiction.wikia.com/wiki/Buffy_facts">Buffy
 facts page</a> there).
 </p>

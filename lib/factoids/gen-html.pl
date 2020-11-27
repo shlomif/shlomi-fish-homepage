@@ -852,7 +852,7 @@ highlights Windows Update’s slowness.
 
 <li>
 <p>
-<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-windows-update">Windows Update</a> IRC
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-windows-update">Windows Update</a> - IRC
 Log.
 </p>
 </li>

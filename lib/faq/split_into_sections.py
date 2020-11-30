@@ -112,14 +112,14 @@ class FaqSplitter:
             parents = []
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))
-            while p_iter.tag == 'section':
+            # print(p_iter.tag)
+            while p_iter.tag == '{' + XHTML_NAMESPACE + '}section':
                 res = xpath(p_iter, "./xhtml:header[*/@id]")
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])
                 rec = {'id': id_, 'header_esc': header_esc, }
                 parents.append(rec)
                 p_iter = p_iter.getparent()
-                # print(parents)
             for a_el in xpath(list_elem, "./descendant::xhtml:a"):
                 href = a_el.get('href')
                 if href is None:

@@ -134,7 +134,8 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             my_acronym        => sub {
                 my $args = shift;
 
-                return $latemp_acroman->abbr( { key => $args->{key}, } )
+                return $latemp_acroman->abbr(
+                    { key => $args->{key}, no_link => $args->{no_link}, } )
                     ->{html};
             },
             shlomif_cpan      => $shlomif_cpan,

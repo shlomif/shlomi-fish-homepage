@@ -1471,12 +1471,15 @@ is likely that I had a lot of contempt for the original work by Rand.
 
 [% WRAPPER faq_h4_section id="crime_and_punishment" title="What do you think about Dostoevsky’s Crime and Punishment?" %]
 
+[% SET cnp = my_acronym( "key" => "Crime&P",) %]
+[% SET cnp_nl = my_acronym( "key" => "Crime&P", "no_link"=>1,) %]
+
 <ol>
 <li>
 
 <p>
 I spent large parts of a high school summer vacation forcing myself to
-read a paper copy of a Hebrew Translation of C&amp;P. It was boring
+read a paper copy of a Hebrew translation of [% cnp %]. It was boring
 and I'd have stopped much earlier if I didn't want to prepare for the next
 year's literature classes.
 </p>
@@ -1514,7 +1517,7 @@ At least one friend of mine did enjoy reading it, and found it captivating.
 <li>
 <p>
 On a different page, I
-<a href="[% base_path %]philosophy/the-eternal-jew/#reception">compare C&amp;P to Little Red Riding Hood</a>
+<a href="[% base_path %]philosophy/the-eternal-jew/#reception">compare [% cnp_nl %] to Little Red Riding Hood</a>
 and conclude that the latter was far more influential, successful, and better written. (Even though I
 have some reservations about its message.)
 </p>
@@ -1522,7 +1525,7 @@ have some reservations about its message.)
 
 <li>
 <p>
-I'm not going to read it again willingly, unless someone pays me a
+I'm not going to read [% cnp %] again willingly, unless someone pays me a
 <a href="https://www.youtube.com/watch?v=bJrqpR_7VSo">shitload of money</a>.
 </p>
 </li>
@@ -1535,6 +1538,10 @@ intellectual is expected to read. On the other hand, its <a href="https://en.wik
 is extremely low and it is not compliant with <a href="https://www.robcottingham.ca/cartoon/archive/tldr/">TL;DR</a> / TL;DW / TL;DL.
 It is possible that reading the <a href="https://en.wikipedia.org/wiki/Crime_and_Punishment">wikipedia page</a>
 or a different summary will be adequate (assuming you are not forced to read it in class).
+</p>
+
+<p>
+And take my advice at your own risk. If it breaks, you get to keep both pieces. 😉
 </p>
 
 [%- END -%]

@@ -114,10 +114,10 @@ class FaqSplitter:
             # print(etree.tostring(p_iter))
             while p_iter.tag == 'section':
                 res = xpath(p_iter, "./xhtml:header[*/@id]")
-                if len(res):
-                    id_, header_esc = calc_id_and_header_esc(res[0])
-                    rec = {'id': id_, 'header_esc': header_esc, }
-                    parents.append(rec)
+                assert len(res) == 1
+                id_, header_esc = calc_id_and_header_esc(res[0])
+                rec = {'id': id_, 'header_esc': header_esc, }
+                parents.append(rec)
                 p_iter = p_iter.getparent()
                 # print(parents)
             for a_el in xpath(list_elem, "./descendant::xhtml:a"):

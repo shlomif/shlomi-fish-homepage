@@ -23,6 +23,7 @@ ns = {
     "xhtml": XHTML_NS,
     "xml": XML_NS,
 }
+XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
 # Removed:
 # <script src="{base_path}js/main_all.js"></script>
@@ -113,7 +114,7 @@ class FaqSplitter:
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))
             # print(p_iter.tag)
-            while p_iter.tag == '{' + XHTML_NAMESPACE + '}section':
+            while p_iter.tag == XHTML_SECTION_TAG:
                 res = xpath(p_iter, "./xhtml:header[*/@id]")
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])

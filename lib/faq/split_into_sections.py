@@ -81,6 +81,9 @@ Policy</a></li>
 OUT_DN = "./dest/post-incs/t2/meta/FAQ"
 
 
+TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
+
+
 class FaqSplitter:
     def __init__(self, input_fn):
         self.input_fn = input_fn
@@ -104,12 +107,12 @@ class FaqSplitter:
 
         for list_elem in xpath(
                 self.root,
-                "//xhtml:div[@class='faq fancy_sects lim_width wrap-me']" +
+                "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']" +
                 "//xhtml:section"):
             parents = []
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))
-            while p_iter.get('class') != 'faq fancy_sects lim_width wrap-me':
+            while p_iter.tag == 'section':
                 res = xpath(p_iter, "./xhtml:header[*/@id]")
                 if len(res):
                     id_, header_esc = calc_id_and_header_esc(res[0])

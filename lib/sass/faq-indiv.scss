@@ -20,6 +20,7 @@
 }
 
 body.faq_indiv_entry {
+    @include text_document_h_tags_sizes;
     margin: 0;
     background-color: #e0ebef;
     min-height: 100vh;
@@ -52,6 +53,9 @@ body.faq_indiv_entry {
             padding-bottom: 1em;
             margin-bottom: 1em;
         }
+    }
+    header {
+        margin-bottom: 2em;
     }
 }
 

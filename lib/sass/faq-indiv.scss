@@ -21,6 +21,7 @@
 
 body.faq_indiv_entry {
     @include text_document_h_tags_sizes;
+    @include visible_focus;
     margin: 0;
     background-color: #e0ebef;
     min-height: 100vh;

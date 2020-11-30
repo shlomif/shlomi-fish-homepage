@@ -972,9 +972,7 @@ img.rindolf {
     }
 }
 
-*:focus {
-    outline: red solid 2px;
-}
+@include visible_focus;
 
 * {
     // outline: hotpink solid 2px;

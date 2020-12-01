@@ -478,6 +478,12 @@ my $humour_tree_contents = {
                     url  => "humour/bits/Python4-Announcement/",
                 },
                 {
+                    text  => "Who gets the final say?",
+                    url   => "humour/bits/who-gets-the-final-say/",
+                    title =>
+"True story about asking people by the road about relationships",
+                },
+                {
                     text => "Emma Watson’s Visit to Israel and Gaza",
                     url  => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
                     title =>

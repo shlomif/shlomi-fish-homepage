@@ -1079,6 +1079,9 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fan-fiction/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
+$(DOCBOOK5_BASE_DIR)/xml/who-gets-the-final-say.xml: lib/asciidocs/who-gets-the-final-say.asciidoc
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
+
 $(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 

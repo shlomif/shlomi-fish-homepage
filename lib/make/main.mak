@@ -888,12 +888,14 @@ OPENLY_BIPOLAR_DEST_PIVOT := $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
 all: $(MY_NAME_IS_RINDOLF_DEST)
 
-MY_RPF_SRC_DIR := lib/repos/my-real-person-fan-fiction
+SUB_REPOS_BASE_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/repos
+
+MY_RPF_SRC_DIR := $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction
 
 $(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp
 	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
 
-OPENLY_BIPOLAR_SRC_DIR := lib/repos/why-openly-bipolar-people-should-not-be-medicated
+OPENLY_BIPOLAR_SRC_DIR := $(SUB_REPOS_BASE_DIR)/why-openly-bipolar-people-should-not-be-medicated
 
 $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
 	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
@@ -949,10 +951,10 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
-TECH_BLOG_DIR := $(LATEMP_ABS_ROOT_SOURCE_DIR)/lib/repos/shlomif-tech-diary
+TECH_BLOG_DIR := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary
 TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl
 TECH_TIPS_INPUTS := $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
-TECH_TIPS_OUT := lib/repos/shlomif-tech-diary--tech-tips.xhtml
+TECH_TIPS_OUT := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary--tech-tips.xhtml
 
 $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 	$(PERL) $(TECH_TIPS_SCRIPT) $(addprefix --file=,$(TECH_TIPS_INPUTS)) --output $@ --nowrap
@@ -960,8 +962,8 @@ $(TECH_TIPS_OUT): $(TECH_TIPS_SCRIPT) $(TECH_TIPS_INPUTS)
 $(PRE_DEST)/open-source/resources/tech-tips/index.xhtml: $(TECH_TIPS_OUT)
 all_deps: $(TECH_TIPS_OUT)
 
-$(PRE_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: lib/repos/validate-your-html/README.md
-$(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: lib/repos/how-to-share-code-online/README.md
+$(PRE_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: $(SUB_REPOS_BASE_DIR)/validate-your-html/README.md
+$(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: $(SUB_REPOS_BASE_DIR)/how-to-share-code-online/README.md
 
 all: $(SRC_CLEAN_STAMP)
 
@@ -1076,13 +1078,13 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
-$(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: lib/repos/my-real-person-fan-fiction/README.asciidoc
+$(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
-$(DOCBOOK5_BASE_DIR)/xml/who-gets-the-final-say.xml: lib/asciidocs/who-gets-the-final-say.asciidoc
+$(DOCBOOK5_BASE_DIR)/xml/who-gets-the-final-say.xml: $(LATEMP_ROOT_SOURCE_DIR)/lib/asciidocs/who-gets-the-final-say.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
-$(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
+$(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: $(SUB_REPOS_BASE_DIR)/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 $(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt

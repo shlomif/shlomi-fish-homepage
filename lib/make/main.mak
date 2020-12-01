@@ -379,7 +379,7 @@ $(FORTUNES__SHOW_PY__PRE_DEST): %: $(SRC_SRC_FORTUNE_SHOW_PY)
 	$(call chmod_copy)
 
 $(FORTUNES_SOURCE_TT2S): $(FORTUNES_LIST__DEPS)
-	$(PERL) -Ilib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;'
+	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib -MShlomif::Homepage::FortuneCollections -e 'Shlomif::Homepage::FortuneCollections->new->print_all_fortunes_html_tt2s;'
 
 $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS): %.xhtml-for-input: %.compressed.xhtml $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT)
 	$(PERL) $(FORTUNES_PREPARE_FOR_INPUT_SCRIPT) $< $@
@@ -408,7 +408,7 @@ $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(SRC_FORTUNES_DIR)/generate-web-fee
 	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(SRC_FORTUNES_DIR)
 
 $(FORTUNES_SQLITE_DB): $(SRC_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS__COMPRESSED) $(FORTUNES_LIST__DEPS)
-	$(PERL) -Ilib $<
+	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $<
 
 $(FORTUNES_TARGET): $(SRC_FORTUNES_DIR)/index.xhtml.tt2 $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(SRC_FORTUNES_DIR)/Makefile $(SRC_FORTUNES_DIR)/ver.txt
 
@@ -823,14 +823,14 @@ $(PRINTABLE_RESUMES__HTML__PIVOT): $(PRE_DEST)/SFresume.html $(PRE_DEST)/SFresum
 resumes: $(PRINTABLE_RESUMES__DOCX)
 
 PUT_CARDS_2013_DEST_INDIV := $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
-PUT_CARDS_2013_INDIV_SCRIPT := bin/split-put-cards-into-divs.pl
+PUT_CARDS_2013_INDIV_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/bin/split-put-cards-into-divs.pl
 
 all: $(PUT_CARDS_2013_DEST_INDIV)
 
 $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
 	$(PERL) $(PUT_CARDS_2013_INDIV_SCRIPT)
 
-FACTOIDS_RENDER_SCRIPT := lib/factoids/gen-html.pl
+FACTOIDS_RENDER_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/lib/factoids/gen-html.pl
 FACTOIDS_TIMESTAMP := lib/factoids/TIMESTAMP
 FACTOIDS_GENERATED_FILES := lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD := $(PERL) $(FACTOIDS_RENDER_SCRIPT)
@@ -949,7 +949,7 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
-TECH_BLOG_DIR := lib/repos/shlomif-tech-diary
+TECH_BLOG_DIR := $(LATEMP_ABS_ROOT_SOURCE_DIR)/lib/repos/shlomif-tech-diary
 TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl
 TECH_TIPS_INPUTS := $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
 TECH_TIPS_OUT := lib/repos/shlomif-tech-diary--tech-tips.xhtml
@@ -980,7 +980,7 @@ POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
 POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
 POST_DEST_ALL_MODS := $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 
-PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) bin/post-incs-v2.pl
+PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/post-incs-v2.pl
 PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
 PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
@@ -1090,11 +1090,11 @@ JSON_RES_BASE := me/resumes/Shlomi-Fish-Resume.jsonresume
 JSON_RES_DEST := $(POST_DEST)/$(JSON_RES_BASE).json
 
 $(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
-	$(PERL) bin/my-yaml-2-canonical-json.pl -i $< -o $@
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/my-yaml-2-canonical-json.pl -i $< -o $@
 
 non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 
-$(MANIFEST_HTML): ./bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
+$(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
 all_deps: $(CATB_COPY)

@@ -1,5 +1,6 @@
 POST_DEST := dest/post-incs/t2
 LATEMP_ROOT_SOURCE_DIR := .
+LATEMP_ABS_ROOT_SOURCE_DIR := $(shell cd $(LATEMP_ROOT_SOURCE_DIR)/ && pwd)
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
@@ -34,7 +35,7 @@ POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(SRC_DIRS))
 NAV_DATA_DEP := lib/MyNavData.pm
 NAV_DATA_AS_JSON_BIN := bin/nav-data-as-json
 
-SCREENPLAY_COMMON_INC_DIR := $(PWD)/lib/screenplay-xml/from-vcs/screenplays-common
+SCREENPLAY_COMMON_INC_DIR := $(LATEMP_ABS_ROOT_SOURCE_DIR)/lib/screenplay-xml/from-vcs/screenplays-common
 
 DOCS_COMMON_DEPS := $(NAV_DATA_DEP)
 
@@ -107,8 +108,8 @@ htaccesses_target: $(ALL_HTACCESSES)
 $(SRC_FORTUNES_DIR)/my_htaccess.conf: $(SRC_FORTUNES_DIR)/gen-htaccess.pl
 	(cd $(SRC_FORTUNES_DIR) && gmake)
 
-$(SRC_FORTUNES_ALL_TT2): bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
-	$(PERL) -Ilib $< $@
+$(SRC_FORTUNES_ALL_TT2): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
+	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $< $@
 
 PRE_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(PRE_DEST_FORTUNES_DIR)/%,$(wildcard $(SRC_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
 
@@ -160,26 +161,26 @@ $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd l
 #### Humour thing
 
 rss:
-	$(PERL) ./bin/fetch-shlomif_hsite-feed.pl
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/fetch-shlomif_hsite-feed.pl
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
 prod_sync_inc = $(1)/include-me.html
 
-PROD_SYND_MUSIC_DIR := lib/prod-synd/music
+PROD_SYND_MUSIC_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/music
 PROD_SYND_MUSIC_INC := $(call prod_sync_inc,$(PROD_SYND_MUSIC_DIR))
 
-PROD_SYND_NON_FICTION_BOOKS_DIR := lib/prod-synd/non-fiction-books
+PROD_SYND_NON_FICTION_BOOKS_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/non-fiction-books
 PROD_SYND_NON_FICTION_BOOKS_INC := $(call prod_sync_inc,$(PROD_SYND_NON_FICTION_BOOKS_DIR))
 
-PROD_SYND_FILMS_DIR := lib/prod-synd/films
+PROD_SYND_FILMS_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/films
 PROD_SYND_FILMS_INC := $(call prod_sync_inc,$(PROD_SYND_FILMS_DIR))
 
 $(PRE_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
 
 all_deps: $(PROD_SYND_MUSIC_INC)
 
-GPERL = $(PERL) -Ilib
-GPERL_DEPS := lib/Shlomif/Homepage/Amazon/Obj.pm
+GPERL = $(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib
+GPERL_DEPS := $(LATEMP_ROOT_SOURCE_DIR)/lib/Shlomif/Homepage/Amazon/Obj.pm
 
 $(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
 	$(GPERL) $<
@@ -246,13 +247,13 @@ SCREENPLAY_XML_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_HTML_DIR),html)
 splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS)
 
 $(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
-	$(PERL) bin/screenplay-xml-to-html.pl -o $@ $<
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/screenplay-xml-to-html.pl -o $@ $<
 
 $(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html: $(SCREENPLAY_XML_HTML_DIR)/%.html
-	./bin/extract-screenplay-xml-html.pl -o $@ $<
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/extract-screenplay-xml-html.pl -o $@ $<
 
 $(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
-	$(PERL) bin/screenplay-text-to-xml.pl -o $@ $<
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/screenplay-text-to-xml.pl -o $@ $<
 
 POST_DEST_HUMOUR_SELINA := $(POST_DEST_HUMOUR)/Selina-Mandrake
 POST_DEST_INTERVIEWS := $(POST_DEST)/open-source/interviews
@@ -268,13 +269,13 @@ HHFG_HEB_V2_XSLT_POST_DEST := $(HHFG_DIR)/human-hacking-field-guide-hebrew-v2.db
 
 FICTION_TEXT_SOURCES_ON_POST_DEST := $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_POST_DEST) $(HHFG_HEB_V2_XSLT_POST_DEST) $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
 
-translate_fiction_text_to_xml = $(PERL) bin/fiction-text-to-xml.pl -o $@ $<
+translate_fiction_text_to_xml = $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/fiction-text-to-xml.pl -o $@ $<
 
 $(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
 	$(call translate_fiction_text_to_xml)
 
 HHGG_CONVERT_SCRIPT_FN := convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
-HHGG_CONVERT_SCRIPT_SRC := bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
+HHGG_CONVERT_SCRIPT_SRC := $(LATEMP_ROOT_SOURCE_DIR)/bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
 HHGG_CONVERT_SCRIPT_DEST := $(PRE_DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
@@ -311,7 +312,7 @@ PUT_CARDS_2013_DEST := $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
 PUT_CARDS_2013_XHTML_STRIPPED := $(PUT_CARDS_2013_XHTML).processed-stripped
 
-STRIP_HTML_BIN := bin/processors/strip-html-overhead.pl
+STRIP_HTML_BIN := $(LATEMP_ROOT_SOURCE_DIR)/bin/processors/strip-html-overhead.pl
 strip_html = $(PERL) $(STRIP_HTML_BIN) < $< > $@
 
 $(PUT_CARDS_2013_XHTML_STRIPPED): $(PUT_CARDS_2013_XHTML) $(STRIP_HTML_BIN)
@@ -450,7 +451,7 @@ mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
 define ASCIIDOCTOR_TO_XTHML5
 	asciidoctor --backend=xhtml5 -o $@ $<
-	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/clean-up-asciidoctor-xhtml5.pl $@
 endef
 
 $(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
@@ -461,19 +462,20 @@ $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-pro
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 
-extract_gzipped_xhtml = gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
+EXTRACT_html_script := $(LATEMP_ROOT_SOURCE_DIR)/bin/extract-xhtml.pl
+extract_gzipped_xhtml = gunzip < $< | $(PERL) $(EXTRACT_html_script) -o $@ -
 
-lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz $(EXTRACT_html_script)
 	$(call extract_gzipped_xhtml)
 
 all_deps: lib/htmls/The-Enemy-English-rev5.html-part
 
-lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz $(EXTRACT_html_script)
 	$(call extract_gzipped_xhtml)
 
 all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 
-lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
+lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz $(EXTRACT_html_script)
 	$(call extract_gzipped_xhtml)
 
 DOCBOOK5_HHFG_IMAGES_RAW := \
@@ -640,7 +642,7 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS__PIVOT)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS__PIVOT): $(LC_PRES_SRC_SCMS)
-	$(PERL) bin/text-vimcolor-multi.pl $(LC_PRES_SRC_DIR) $(LC_PRES_DEST)
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/text-vimcolor-multi.pl $(LC_PRES_SRC_DIR) $(LC_PRES_DEST)
 
 SPORK_LECTURES_BASENAMES := \
 	Perl/Graham-Function \
@@ -687,7 +689,7 @@ $(SPORK_LECTURES_DEST_STARTS) : $(PRE_DEST)/lecture/%$(START_html): $(SPORK_LECT
 
 $(SPORK_LECTURES_BASE_STARTS) : $(SPORK_LECTS_SOURCE_BASE)/%$(SLIDES_start) : $(SPORK_LECTS_SOURCE_BASE)/%/Spork.slides $(SPORK_LECTS_SOURCE_BASE)/%/config.yaml $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES)
 	dn="$(patsubst %$(SLIDES_start),%,$@)" ; \
-	   (cd "$$dn" && $(PERL) $(PWD)/bin/my-spork.pl -- -make) && \
+	   (cd "$$dn" && $(PERL) $(LATEMP_ABS_ROOT_SOURCE_DIR)/bin/my-spork.pl -- -make) && \
 	cp -f common/favicon.png $(patsubst %$(START_html),%,$@)/
 
 lib/presentations/spork/Vim/beginners/Spork.slides: lib/presentations/spork/Vim/beginners/Spork.slides.source
@@ -1111,6 +1113,6 @@ $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 
 all_deps: $(SRC_IMAGES_DEST)
 
-TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$${PWD}/Tests/lib"
+TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

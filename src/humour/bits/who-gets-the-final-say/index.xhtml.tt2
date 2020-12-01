@@ -4,4 +4,6 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% path_slurp("docbook/5/rendered/who-gets-the-final-say.xhtml") %]
+
 [% END %]

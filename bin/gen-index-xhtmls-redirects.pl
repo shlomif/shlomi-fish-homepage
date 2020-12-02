@@ -35,7 +35,7 @@ foreach my $fn (@filenames)
         my $new_text = qq#Redirect permanent /${dslash}${IDXH} /${dslash}\n#;
         my $fh =
             path($dir_src)->child( ( split m#/#, $dn ), ".htaccess" );
-        if ( none { $_ eq $new_text } $fh->lines_utf8() )
+        if ( ( !-e $fh ) or ( none { $_ eq $new_text } $fh->lines_utf8() ) )
         {
             $fh->append_utf8($new_text);
         }

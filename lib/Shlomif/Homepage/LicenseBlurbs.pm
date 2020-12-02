@@ -29,15 +29,16 @@ sub by_sa_british_blurb
 {
     my ( $self, $args ) = @_;
 
-    my $year = $args->{year};
+    my $year    = $args->{year};
+    my $version = $args->{version} // '3.0';
 
     return <<"EOF";
 <p>
 This document is Copyright by @{[$self->copyright_holder()]}, $year, and is available
 under the
 terms of <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
-Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+href="http://creativecommons.org/licenses/by-sa/$version/">the Creative Commons
+Attribution-ShareAlike License $version Unported</a> (or at your option any
 later version).
 </p>
 
@@ -64,17 +65,18 @@ sub by_british_blurb
 {
     my ( $self, $args ) = @_;
 
-    my $year = $args->{year};
+    my $year    = $args->{year};
+    my $version = $args->{version} // '3.0';
 
     return <<"EOF";
-<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" class="bless" src="@{[$self->base_path]}images/somerights20.png"/></a></p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/$version/"><img alt="Creative Commons License" class="bless" src="@{[$self->base_path]}images/somerights20.png"/></a></p>
 
 <p>
 This document is Copyright by @{[$self->copyright_holder()]}, $year, and is available
 under the
 terms of <a rel="license"
-href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons
-Attribution License 3.0 Unported</a> (or at your option any
+href="http://creativecommons.org/licenses/by/$version/">the Creative Commons
+Attribution License $version Unported</a> (or at your option any
 later version of that licence).
 </p>
 
@@ -91,15 +93,16 @@ sub by_hebrew_blurb
 {
     my ( $self, $args ) = @_;
 
-    my $year = $args->{year};
+    my $year    = $args->{year};
+    my $version = $args->{version} // '2.5';
 
     return <<"EOF";
-<p><a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he"><img alt="Creative Commons License" class="bless" src="@{[$self->base_path]}images/somerights20.png"/></a></p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/$version/deed.he"><img alt="Creative Commons License" class="bless" src="@{[$self->base_path]}images/somerights20.png"/></a></p>
 
 <p>
 זכויות היוצרים על מסמך זה שייכות לשלומי פיש, והוא נוצר בשנת ${year},
 תחת תנאי
-<a rel="license" href="http://creativecommons.org/licenses/by/2.5/deed.he">הרישיון
+<a rel="license" href="http://creativecommons.org/licenses/by/$version/deed.he">הרישיון
 ייחוס 2.5 לא מותאם של קריאייטיב קומונס Creative Commons)</a>
 (או לשיקולכם כל גרסה מאוחרת יותר של אותו הרישיון.)
 </p>
@@ -118,15 +121,16 @@ sub by_nc_sa_british_blurb
 {
     my ( $self, $args ) = @_;
 
-    my $year = $args->{year};
+    my $year    = $args->{year};
+    my $version = $args->{version} // '3.0';
 
     return <<"EOF";
 <p>
 This document is Copyright by @{[$self->copyright_holder()]}, $year, and is made
 available under the
 terms of <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/">the Creative Commons
-Attribution Noncommercial ShareAlike License 3.0 Unported</a> (or at your
+href="http://creativecommons.org/licenses/by-nc-sa/$version/">the Creative Commons
+Attribution Noncommercial ShareAlike License $version Unported</a> (or at your
 option any later version).
 </p>
 

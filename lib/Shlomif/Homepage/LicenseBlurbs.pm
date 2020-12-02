@@ -22,6 +22,7 @@ use utf8;
 use Moo;
 
 has 'base_path'        => ( is => 'rw' );
+has 'contact_url'      => ( is => 'ro', required => 1, );
 has 'copyright_holder' => ( is => 'ro', required => 1, );
 
 sub by_sa_british_blurb
@@ -42,7 +43,7 @@ later version).
 
 <p>
 For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">@{[$self->copyright_holder()]}</a>
+<a href="@{[$self->contact_url()]}">@{[$self->copyright_holder()]}</a>
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
@@ -79,7 +80,7 @@ later version of that licence).
 
 <p>
 For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">@{[$self->copyright_holder()]}</a>
+<a href="@{[$self->contact_url()]}">@{[$self->copyright_holder()]}</a>
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
@@ -105,7 +106,7 @@ sub by_hebrew_blurb
 
 <p>
 בשביל לרכוש זכויות נוספות, אנא צרו קשר עם
-<a href="http://www.shlomifish.org/me/contact-me/">שלומי פיש</a>
+<a href="@{[$self->contact_url()]}">שלומי פיש</a>
 ושימו לב
 <a href="http://www.shlomifish.org/meta/copyrights/">לדרישות המפורשות</a>
 שהוא דורש כדי לעמוד בתנאי הרישיון הזה.
@@ -131,7 +132,7 @@ option any later version).
 
 <p>
 For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">@{[$self->copyright_holder()]}</a>
+<a href="@{[$self->contact_url()]}">@{[$self->copyright_holder()]}</a>
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>

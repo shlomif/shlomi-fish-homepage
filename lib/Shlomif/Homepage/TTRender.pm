@@ -36,7 +36,11 @@ my $toc           = HTML::Latemp::AddToc->new;
 my $DEFAULT_TOC_DIV = Shlomif::Homepage::TocDiv::toc_div();
 my $cpan            = Module::Format::AsHTML->new;
 my $license         = Shlomif::Homepage::LicenseBlurbs->new(
-    { copyright_holder => "Shlomi Fish", } );
+    {
+        contact_url      => "http://www.shlomifish.org/me/contact-me/",
+        copyright_holder => "Shlomi Fish",
+    }
+);
 
 my $base_path;
 

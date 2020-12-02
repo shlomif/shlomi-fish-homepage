@@ -559,8 +559,7 @@ define EXPORT_INKSCAPE_PNG
 endef
 
 define ASCIIDOCTOR_TO_DOCBOOK5
-	asciidoctor --backend=docbook5 -o $@.temp.xml $<
-	xsltproc bin/clean-up-asciidoctor-docbook5.xslt $@.temp.xml > $@
+	asciidoctor --backend=docbook5 -o >(xsltproc bin/clean-up-asciidoctor-docbook5.xslt - > $@) $<
 endef
 
 PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png

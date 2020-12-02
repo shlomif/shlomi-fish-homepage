@@ -13,6 +13,7 @@ use 5.014;
 use autodie;
 
 use Data::Munge qw/ list2re /;
+use List::Util qw/ none /;
 use Path::Tiny qw/ path tempdir tempfile cwd /;
 use File::Find::Object::Rule ();
 
@@ -32,8 +33,12 @@ foreach my $fn (@filenames)
     {
         my $dslash   = "$dn/";
         my $new_text = qq#Redirect permanent /${dslash}${IDXH} /${dslash}\n#;
-        path($dir_src)->child( ( split m#/#, $dn ), ".htaccess" )
-            ->append_utf8($new_text);
+        my $fh =
+            path($dir_src)->child( ( split m#/#, $dn ), ".htaccess" );
+        if ( none { $_ eq $new_text } $fh->lines_utf8() )
+        {
+            $fh->append_utf8($new_text);
+        }
     }
 
     #push @dirs, ( ( $dn eq "." ) ? "" : ( $dn =~ s#[/\\]\z##r ) );

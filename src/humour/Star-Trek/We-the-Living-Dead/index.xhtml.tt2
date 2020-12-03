@@ -1,7 +1,6 @@
 [%- SET title = "Star Trek: “We, the Living Dead”" -%]
 [%- SET desc = "Fan Episode of Star Trek: Deep Space Nine where we discover the true essence of the Q Continuum, and meet some “living dead” and “vampires”. Also crossing Buffy, Judaism, computer geeks’ culture, and other influences." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'we_the_living_dead') %]
@@ -216,6 +215,27 @@ place.
 </ul>
 
 [%- END -%]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% WRAPPER archive_of_our_own_links %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://archiveofourown.org/works/21864088">Star Trek - We the Living Dead - shlomif [Archive of Our Own]</a> (with some discussion).
+On <a href="https://archiveofourown.org/">Archive of Our Own</a>, a
+site for syndicating, discovering, and discussing fan art, including
+crossovers.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]
 
 [% WRAPPER nav_blocks  %]
 

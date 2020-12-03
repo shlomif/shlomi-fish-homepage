@@ -28,7 +28,7 @@ Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ;
 ICQ - #207733823<br/>
 </p>
 
-<h2>Objective</h2>
+[% WRAPPER h2_section id = "objective" title = "Objective"  %]
 
 <p>
 I am a professional software developer, specialising in writing
@@ -46,11 +46,13 @@ to tread on the fine line between modularity (DRY) and making sure
 the code is not overly clever and hard to read (KISS).
 </p>
 
+[% END %]
+
 <table class="cv">
 
 <tr>
 <td colspan="2">
-<h2>Education</h2>
+<h2 id="education">Education</h2>
 </td>
 </tr>
 
@@ -77,13 +79,13 @@ Major Subjects: Mathematics, English, Physics and Arabic<br/>
 
 <tr>
 <td colspan="2">
-<h2>Experience</h2>
+<h2 id="experience">Experience</h2>
 </td>
 </tr>
 
 <tr>
 <td colspan="2">
-<h3>Programming - at Workplaces</h3>
+<h3 id="prog_experience">Programming - at Workplaces</h3>
 </td>
 </tr>
 
@@ -280,7 +282,7 @@ primarily with Borland C++ 4.5 and the Microsoft Developer Network.
 
 <tr>
 <td colspan="2">
-<h2>Fields of Expertise</h2>
+<h2 id="fields_expertise">Fields of Expertise</h2>
 </td>
 </tr>
 
@@ -373,7 +375,7 @@ Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
 
 <tr>
 <td colspan="2">
-<h3>Programming - Open Source Projects</h3>
+<h3 id="foss_exp">Programming - Open Source Projects</h3>
 </td>
 </tr>
 
@@ -547,7 +549,7 @@ to the Java style.
 
 <tr>
 <td colspan="2">
-<h3>Communal and Personal</h3>
+<h3 id="communal_projects">Communal and Personal</h3>
 </td>
 </tr>
 
@@ -568,8 +570,7 @@ WWW-services.
 [%- END -%]
 [% WRAPPER detailed  %]
 <p>
-An Administrator for the
-<a href="http://www.iglu.org.il/">iglu.org.il</a> site.
+An Administrator for the iglu.org.il site.
 </p>
 <p>
 Maintaining several online services supported by the main server of
@@ -603,7 +604,7 @@ of content using these tools.
 
 <tr>
 <td colspan="2">
-<h3>Mathematics</h3>
+<h3 id="mathematics">Mathematics</h3>
 </td>
 </tr>
 
@@ -699,13 +700,9 @@ aim to introduce the Perl programming language for beginners.
 </td>
 </tr>
 
-
-
-
-
 <tr>
 <td colspan="2">
-<h3>Creative Writing</h3>
+<h3 id="creative_writing">Creative Writing</h3>
 </td>
 </tr>
 
@@ -761,7 +758,7 @@ A satire about the situation in the Israeli-Lebanese border.
 
 <tr>
 <td colspan="2">
-<h3>Essays</h3>
+<h3 id="essays">Essays</h3>
 </td>
 </tr>
 
@@ -818,7 +815,7 @@ An essay explaining why I like Perl so much.
 
 <tr>
 <td colspan="2">
-<h2>References</h2>
+<h2 id="jobs_references">References</h2>
 </td>
 </tr>
 
@@ -830,7 +827,7 @@ Will be supplied upon request
 
 <tr>
 <td colspan="2">
-<h2>Languages</h2>
+<h2 id="human_languages">Languages</h2>
 </td>
 </tr>
 
@@ -851,7 +848,7 @@ Will be supplied upon request
 
 <tr>
 <td colspan="2">
-<h2>Personal</h2>
+<h2 id="personal_info">Personal</h2>
 </td>
 </tr>
 

@@ -67,8 +67,9 @@ class MyTests(html_unit_test.TestCase):
             'fn': 'test_meta_desc_tag',
             'text': resp.text.encode('utf8'),
         })
-        query = doc.xpath("//html/head/meta[@name='description']")
-        assert len(query) == 1
+        doc.has_one(
+            "//html/head/meta[@name='description' " +
+            "and contains(@content, 'recorded')]")
 
 
 if __name__ == '__main__':

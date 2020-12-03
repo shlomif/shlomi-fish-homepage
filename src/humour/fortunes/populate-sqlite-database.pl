@@ -14,12 +14,9 @@ my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 
 use HTML::TreeBuilder::LibXML ();
-use HTML::WikiConverter       ();
 use DBI                       ();
 
 use Shlomif::Homepage::FortuneCollections ();
-
-my $html2text = HTML::WikiConverter->new( dialect => 'Markdown', );
 
 # STDOUT->autoflush(1);
 
@@ -90,6 +87,23 @@ sub _find_h3
     return $node->findnodes(q{descendant::h3[@id]})->[0];
 }
 
+sub _next_fortune
+{
+    my $fh  = shift;
+    my $ret = "";
+    while ( !eof($fh) )
+    {
+        my $line = <$fh>;
+        chomp $line;
+        if ( $line eq "%" )
+        {
+            return \$ret;
+        }
+        $ret .= "$line\n";
+    }
+    return \$ret;
+}
+
 foreach my $basename (@file_bases)
 {
     my $collection_id;
@@ -104,7 +118,9 @@ foreach my $basename (@file_bases)
     my $tree = HTML::TreeBuilder::LibXML->new_from_file(
         "./lib/fortunes/xhtmls/$basename.compressed.xhtml");
 
-    my $nodes_list = $tree->findnodes(q{//div[@class = "fortune"]});
+    my $nodes_list   = $tree->findnodes(q{//div[@class = "fortune"]});
+    my $plaintext_fn = "dest/pre-incs/t2/humour/fortunes/$basename";
+    open my $plaintext_fh, '<:encoding(utf8)', $plaintext_fn;
 
     # my $count = @$nodes_list;
     # my $idx = 0;
@@ -127,10 +143,10 @@ foreach my $basename (@file_bases)
         $h3->detach();
 
         my $body = $clone->as_XML();
-        my $desc = decode_utf8( $html2text->html2wiki( encode_utf8($body) ) );
-        substr( $desc, min( 500, length($desc) ) ) = '';
-        $desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
-        $insert_sth->execute( $collection_id, $id, $title, $body, $desc, );
+        my $desc = _next_fortune($plaintext_fh);
+        substr( $$desc, min( 500, length($$desc) ) ) = '';
+        $$desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
+        $insert_sth->execute( $collection_id, $id, $title, $body, $$desc, );
     }
 
 =begin removed
@@ -143,6 +159,7 @@ foreach my $basename (@file_bases)
 
 =cut
 
+    close $plaintext_fh;
 }
 
 $dbh->commit;

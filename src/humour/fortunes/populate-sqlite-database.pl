@@ -129,7 +129,7 @@ foreach my $basename (@file_bases)
         my $body = $clone->as_XML();
         my $desc = decode_utf8( $html2text->html2wiki( encode_utf8($body) ) );
         substr( $desc, min( 500, length($desc) ) ) = '';
-        $desc =~ s#(?:\A|\S\s)\K\s*\S+\z##ms;
+        $desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
         $insert_sth->execute( $collection_id, $id, $title, $body, $desc, );
     }
 

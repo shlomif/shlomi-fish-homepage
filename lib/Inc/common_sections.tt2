@@ -51,3 +51,9 @@
 [% content %]
 [%- END -%]
 [%- END -%]
+
+[%- BLOCK archive_of_our_own_links -%]
+[% WRAPPER h3_section id = "archive_of_our_own" title = "Archive of Our Own" href = "https://archiveofourown.org/" %]
+[% content %]
+[%- END -%]
+[%- END -%]

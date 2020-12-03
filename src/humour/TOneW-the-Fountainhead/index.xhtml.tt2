@@ -4,6 +4,12 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET fhbook = '<i>The Fountainhead</i>' %]
+[% SET fhbooklink = '<a href="https://en.wikipedia.org/wiki/The_Fountainhead">' _ fhbook _ '</a>' %]
+
+[% SET friendsshow = '<i>Friends</i>' %]
+[% SET friendsshowlink = '<a href="https://en.wikipedia.org/wiki/Friends">' _ friendsshow _ '</a>' %]
+
 [% long_stories.calc_common_top_elems(id => 'tow_the_fountainhead') %]
 
 [% WRAPPER screenplay_read_online  %]
@@ -48,8 +54,8 @@ familiar with only one of the two sources of inspiration.
 [% WRAPPER h2_section id = "suitability" title = "Suitability" %]
 
 <p>
-This work was also enjoyed by people who were only familiar with either the
-Fountainhead or the Friends T.V. show.
+This work was also enjoyed by people who were only familiar with either [% fhbooklink %]
+or the Friends T.V. show.
 </p>
 
 [% END %]
@@ -60,26 +66,29 @@ Fountainhead or the Friends T.V. show.
 
 <li>
 <p>
-<a href="http://www.zak.co.il/">Omer Zak</a>
-</p>
-
-<p>
+<a href="http://www.zak.co.il/">Omer Zak</a> -
 Omer gave a positive review of an early draft of the screenplays, and gave
-some useful commentary.
+some useful commentary. Note that he had previously read [% fhbook %],
+and has not watched
+[% friendsshow %] (in part out of being deaf) and admitted he may have
+missed some of the jokes from that aspect of my crossover.
 </p>
 </li>
 
 <li>
+
 <p>
 <a href="https://twitter.com/gwenshap">Gwen (Chen) Shapira</a> - stumbled
-across the screenplay after visiting my home site as it was back then, and
+across the screenplay after visiting my home site, in its contemporary version then, and
 after mentioning it to her in a real-life conversation, she noted that it was
 “one of the most horrid things I have read lately”, to which I replied,
 “Yes, well, I wrote it.”.
 </p>
+
 <p>
-As it turns out, she had not read either <i>The Fountainhead</i> or watched
-<i>Friends</i> at the time, and then went on to read all of Ayn Rand’s books.
+As it turns out, she had not read either [% fhbook %] or watched
+<i>Friends</i> at the time. After the conversation, she went on to read all of Ayn Rand’s books,
+a feat which I have not done yet.
 </p>
 </li>
 
@@ -150,18 +159,28 @@ Rand’s Buffy the Vampire Slayer</a> (via
 [% WRAPPER h3_section id = "friends_links" title = "Friends-related" %]
 
 <ul>
+
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Friends">Friends on the Wikipedia</a>.
 Also see their
 <a href="http://en.wikipedia.org/wiki/User:Shlomif/Running_gags_in_Friends">“Running
 gags in Friends” page</a>.
+</p>
 </li>
+
 <li>
+<p>
 <a href="http://www.friendscafe.org/">The Friends’ Café</a>
+</p>
 </li>
+
 <li>
+<p>
 <a href="http://www.friendsplace.com/">The Friends’ Place</a>
+</p>
 </li>
+
 </ul>
 
 [% END %]
@@ -171,20 +190,23 @@ gags in Friends” page</a>.
 <ul>
 
 <li>
+<p>
 <a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The
 Hitchhiker’s Guide to Star Trek - The Next Generation</a> - an old Internet
 cross of the <i>The Hitchhiker’s Guide to the Galaxy</i> and
 <i>Star Trek - The Next Generation</i>. Incredibly funny, and inspired me
-to cross <i>Friends</i> and <i>The Fountainhead</i> in a similar fashion.
+to cross <i>Friends</i> and [% fhbook %] in a similar fashion.
+</p>
 </li>
 
 <li>
-<a href="http://en.wikipedia.org/wiki/The_Fountainhead"><i>The
-Fountainhead</i></a>
+<p>
+[% fhbooklink %]
 - the actual novel by Ayn Rand, which I have read, and enjoyed immensely and it
 is probably my favourite “Adult-oriented book”. I have heard mixed opinions of
-it from other people who have read it, but even people who hated the book
+it from other people who have read it, but even some people who disliked the book
 appear to enjoy my parody.
+</p>
 </li>
 
 </ul>
@@ -223,7 +245,7 @@ on the Wikipedia</a>
 [% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
-Well, since this work is a parody of <a href="https://en.wikipedia.org/wiki/The_Fountainhead"><i>The Fountainhead</i></a>
+Well, since this work is a parody of [% fhbooklink %]
 (written by <a href="https://en.wikipedia.org/wiki/Ayn_Rand">Ayn Rand</a>
 and now still kept by the Ayn Rand estate), and contains characters from there,
 I am theoretically protected by the Copyright’s
@@ -253,7 +275,7 @@ more complicated than that.
 
 <p>
 I’m putting it here on this site in hope that it will amuse or inspire
-people, and also because it may encourage people to read the Fountainhead, or
+people, and also because it may encourage people to read [% fhbook %], or
 watch some episodes of Friends — both of which I can highly recommend. I’m not
 charging people any money to download, build, or view the works, but I
 have some web commercials which I’m making some small money from, and which

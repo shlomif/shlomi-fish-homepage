@@ -1,5 +1,5 @@
 [%- SET title = "The One with the Fountainhead" -%]
-[%- SET desc = "The six friends of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." -%]
+[%- SET desc = "The six clique members of the Friends television show decide to role play their own version of the book The Fountainhead by Ayn Rand. A parody and modernisation of The Fountainhead by Shlomi Fish." -%]
 [%- SET more_keywords = "fountainhead,ayn rand,parody,spoof,humour,funny,screenplay,story,friends,television,tv,objectivism,randianism" -%]
 
 [%- WRAPPER wrap_html -%]
@@ -17,7 +17,7 @@
 
 [% default_toc %]
 
-<h2 id="sources">Sources</h2>
+[% WRAPPER h2_section id = "sources" title = "Sources" %]
 
 <ul>
 
@@ -43,14 +43,18 @@ this creation of mine. So it is probably good enough for people who are
 familiar with only one of the two sources of inspiration.
 [% END %]
 
-<h2 id="suitability">Suitability</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "suitability" title = "Suitability" %]
 
 <p>
-This work was enjoyed by people who were only familiar with either the
+This work was also enjoyed by people who were only familiar with either the
 Fountainhead or the Friends T.V. show.
 </p>
 
-<h2 id="thanks">Thanks</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <ul>
 
@@ -78,11 +82,14 @@ As it turns out, she had not read either <i>The Fountainhead</i> or watched
 <i>Friends</i> at the time, and then went on to read all of Ayn Rand’s books.
 </p>
 </li>
+
 </ul>
 
-<h2 id="links">Links</h2>
+[% END %]
 
-<h3 id="other_ayn_rand_parodies">Other Parodies of Ayn Rand’s Works</h3>
+[% WRAPPER links_sect %]
+
+[% WRAPPER h3_section id = "other_ayn_rand_parodies" title = "Other Parodies of Ayn Rand’s Works" %]
 
 <ul>
 
@@ -138,7 +145,9 @@ Rand’s Buffy the Vampire Slayer</a> (via
 
 </ul>
 
-<h3 id="friends_links">Friends-related</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "friends_links" title = "Friends-related" %]
 
 <ul>
 <li>
@@ -155,7 +164,9 @@ gags in Friends” page</a>.
 </li>
 </ul>
 
-<h3 id="other_sources_of_inspiration">Other Sources of Inspiration</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "other_sources_of_inspiration" title = "Other Sources of Inspiration" %]
 
 <ul>
 
@@ -178,7 +189,9 @@ appear to enjoy my parody.
 
 </ul>
 
-<h3 id="general-objectivism-links">General Objectivism Links</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "general-objectivism-links" title = "General Objectivism Links" %]
 
 <ul>
 
@@ -203,21 +216,25 @@ on the Wikipedia</a>
 
 </ul>
 
+[% END %]
 
-<h2 id="licensing">Licensing</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
-Well, since this work is a parody of The Fountainhead (written by Ayn Rand
+Well, since this work is a parody of <a href="https://en.wikipedia.org/wiki/The_Fountainhead"><i>The Fountainhead</i></a>
+(written by <a href="https://en.wikipedia.org/wiki/Ayn_Rand">Ayn Rand</a>
 and now still kept by the Ayn Rand estate), and contains characters from there,
 I am theoretically protected by the Copyright’s
 <a href="http://en.wikipedia.org/wiki/Fair_use#Fair_use_and_parody">“right of
 parody”</a> as part of the ”Fair Use” provision. There are other parodies of
-Ayn Rand works online and possibly offline, and no one was sued yet.
+Ayn Rand works online and possibly offline, and as far as I know, no one was sued yet.
 </p>
 
 <p>
-However, I have used characters and concepts from the T.V. show <i>Friends</i>,
-and while some parts of my work parody the show in some respect, I consider
+However, I have used characters and concepts from the T.V. show <a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a>,
+and while some parts of my work may parody the show in some respect, I consider
 it as an ordinary fan-fiction work of Friends, rather than as a parody of it.
 As a result, I consider it a derivative work of Friends, which, like it or not
 and according to the contemporary Copyright Law, may mean it is encumbered by
@@ -243,9 +260,11 @@ have some web commercials which I’m making some small money from, and which
 I hope are acceptable to the copyright holders. Please don’t sue me.
 </p>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
 
-<h3 id="r_Objectivism"><a href="http://www.reddit.com/r/Objectivism/">/r/Objectivism</a></h3>
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% WRAPPER h3_section id="r_Objectivism" href="http://www.reddit.com/r/Objectivism/" title="/r/Objectivism" %]
 
 <ul>
 
@@ -254,9 +273,12 @@ I hope are acceptable to the copyright holders. Please don’t sue me.
 <a href="http://www.reddit.com/r/Objectivism/comments/1cji0x/fountainhead_parody_the_one_with_the_fountainhead/">Fountainhead Parody: “The One With The Fountainhead”</a>.
 </p>
 </li>
+
 </ul>
 
-<h3 id="objectivism_online_forums"><a href="http://forum.objectivismonline.com/">Objectivism Online Forums</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "objectivism_online_forums" title = "Objectivism Online Forums" href = "http://forum.objectivismonline.com/" %]
 
 <ul>
 
@@ -268,6 +290,8 @@ One with the Fountainhead” (Fountainhead Parody and Modernisation)</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER archive_of_our_own_links %]
 
@@ -284,6 +308,8 @@ crossovers.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]
 
@@ -332,7 +358,7 @@ Objectivism-inspired essay.
 
 [% WRAPPER credits_sect %]
 
-<h3 id="friends_fountain_image">Friends Fountain Image</h3>
+[% WRAPPER h3_section id = "friends_fountain_image" title = "Friends Fountain Image" %]
 
 <p>
 The <i>Friends</i>’ fountain image that serves as the logo was taken
@@ -345,6 +371,8 @@ One can find the intermediate images
 in <a href="http://github.com/shlomif/The-One-with-the-Fountainhead-Logo">a
 GitHub repository</a>.
 </p>
+
+[% END %]
 
 [% END %]
 

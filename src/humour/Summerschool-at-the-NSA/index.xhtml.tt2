@@ -124,7 +124,7 @@ large version of the logo</a>.
 
 [% END %]
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
 
@@ -297,7 +297,9 @@ Eternal Jew”.
 
 </ul>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <h3 id="r_xkcd_1"><a href="http://www.reddit.com/r/xkcd">On the reddit Xkcd
 subreddit</a></h3>
@@ -343,6 +345,8 @@ screenplay): the NSA gets schooled on security”</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER see_also %]
 

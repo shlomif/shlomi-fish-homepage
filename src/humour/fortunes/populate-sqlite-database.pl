@@ -4,7 +4,9 @@ use strict;
 use warnings;
 use autodie;
 
+use Encode qw/ decode_utf8 encode_utf8 /;
 use File::Spec::Functions qw( catpath splitpath rel2abs );
+use List::Util qw/ min /;
 
 # The Directory containing the script.
 my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
@@ -12,9 +14,12 @@ my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 
 use HTML::TreeBuilder::LibXML ();
+use HTML::WikiConverter       ();
 use DBI                       ();
 
 use Shlomif::Homepage::FortuneCollections ();
+
+my $html2text = HTML::WikiConverter->new( dialect => 'Markdown', );
 
 # STDOUT->autoflush(1);
 
@@ -44,13 +49,13 @@ $dbh->do(
 );
 
 $dbh->do(
-"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, collection_id INTEGER)"
+"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, collection_id INTEGER, desc TEXT)"
 );
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 my $insert_sth = $dbh->prepare(
-"INSERT INTO fortune_cookies (collection_id, str_id, title, text) VALUES(?, ?, ?, ?)"
+"INSERT INTO fortune_cookies (collection_id, str_id, title, text, desc) VALUES(?, ?, ?, ?, ?)"
 );
 
 my $collections_aref =
@@ -121,7 +126,11 @@ foreach my $basename (@file_bases)
         my $h3    = _find_h3($clone);
         $h3->detach();
 
-        $insert_sth->execute( $collection_id, $id, $title, $clone->as_XML() );
+        my $body = $clone->as_XML();
+        my $desc = decode_utf8( $html2text->html2wiki( encode_utf8($body) ) );
+        substr( $desc, min( 500, length($desc) ) ) = '';
+        $desc =~ s#(?:\A|\S\s)\K\s*\S+\z##ms;
+        $insert_sth->execute( $collection_id, $id, $title, $body, $desc, );
     }
 
 =begin removed

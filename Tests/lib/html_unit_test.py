@@ -30,6 +30,11 @@ class HtmlTestsDoc:
     """docstring for HtmlTestsDoc"""
     def __init__(self, harness, fn):
         self.harness = harness
+        if isinstance(fn, dict):
+            assert fn['type'] == 'text'
+            self.fn = fn['fn']
+            self.root = html.document_fromstring(html=fn['text'])
+            return
         self.fn = fn
         self.root = html.parse(fn)
 

@@ -110,7 +110,7 @@ Report this problem to the webmaster.
 
 
 def _display_fortune_from_data(str_id, html_text, html_title,
-                               col_str_id, col_title):
+                               col_str_id, col_title, description):
     title = html_title + " - Fortune"
     base_dir = '../..'
 
@@ -122,6 +122,7 @@ def _display_fortune_from_data(str_id, html_text, html_title,
 <title>{{title}}</title>
 <link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />
 <meta charset="utf-8" />
+<meta name="description" content="{{description}}" />
 </head>
 <body>
 <ul id="nav">
@@ -142,6 +143,7 @@ def _display_fortune_from_data(str_id, html_text, html_title,
                     base_dir=base_dir,
                     col_str_id=col_str_id,
                     col_title=col_title,
+                    description=html.escape(description, True),
                     fullpath=_my_fullpath(),
                     html_text=html_text,
                     str_id=str_id,
@@ -158,7 +160,7 @@ The ID parameter must be specified.
 </p>''')
 
     cur.execute(
-            '''SELECT f.text, f.title, c.str_id, c.title
+            '''SELECT f.text, f.title, c.str_id, c.title, f.desc
 FROM fortune_cookies AS f, fortune_collections AS c
 WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
     data = cur.fetchone()

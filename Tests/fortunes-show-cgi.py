@@ -35,12 +35,14 @@ OTHER DEALINGS IN THE SOFTWARE.
 import sys
 import unittest
 
+import html_unit_test
+
 from webtest import TestApp
 sys.path.append('./src/humour/fortunes/')
 import fortunes_show  # noqa:E402
 
 
-class MyTests(unittest.TestCase):
+class MyTests(html_unit_test.TestCase):
     def test_main(self):
         app = TestApp(fortunes_show.app)
         assert app
@@ -54,6 +56,19 @@ class MyTests(unittest.TestCase):
         resp = app.get('?id=NotExiSTTTTTTttttt', expect_errors=True)
         assert resp.status_code == 404
         assert ("The fortune ID NotExiSTTTTTTttttt is not recog" in resp.text)
+
+    def test_meta_desc_tag(self):
+        app = TestApp(fortunes_show.app)
+        assert app
+        resp = app.get('?id=i-thought-using-loops-was-cheating')
+        assert resp.status_code == 200
+        doc = self.doc({
+            'type': 'text',
+            'fn': 'test_meta_desc_tag',
+            'text': resp.text.encode('utf8'),
+        })
+        query = doc.xpath("//html/head/meta[@name='description']")
+        assert len(query) == 1
 
 
 if __name__ == '__main__':

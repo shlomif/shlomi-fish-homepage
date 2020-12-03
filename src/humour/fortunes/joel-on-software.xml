@@ -2686,5 +2686,59 @@
                 </info>
             </quote>
         </fortune>
+        <fortune id="joel-rub-dub-dub--software-is-neat-like-that">
+            <meta>
+                <title>Joel on Software - "Software is neat like that" (“Rub a dub dub”)</title>
+            </meta>
+            <quote>
+                <body>
+
+                <p> One reason people are tempted to rewrite their entire code
+                base from scratch is that the original code base wasn’t
+                designed for what it’s doing. It was designed as a prototype,
+                an experiment, a learning exercise, a way to go from zero to
+                IPO in nine months, or a one-off demo. And now it has grown
+                into a big mess that’s fragile and impossible to add code to,
+                and everybody’s whiny, and the old programmers quit in despair
+                and the new ones that are brought in can’t make head or tail of
+                the code so they somehow convince management to give up and
+                start over while Microsoft takes over their business. Today let
+                me tell you a story about what they could have done instead.
+                </p>
+
+                <p> FogBUGZ started out six years ago as an experiment to teach
+                myself ASP programming. Pretty soon it became an in-house bug
+                tracking system. It got embellished almost daily with features
+                that people needed until it was good enough that it no longer
+                justified any more work.  </p>
+
+                <p> Various friends asked me if they could use FogBUGZ at their
+                companies. The trouble was, it had too many hardcoded things
+                that made it a pain to run anywhere other than on the original
+                computer where it was deployed. I had used a bunch of SQL
+                Server stored procedures, which meant that you needed SQL
+                Server to run FogBUGZ, which was expensive and overkill for
+                some of the two person teams that wanted to run it. And so on.
+                So I would tell my friends, “gosh, for $5000 in consulting
+                fees, I’ll spend a couple of days and clean up the code so you
+                can run it on your server using Access instead of SQL Server.”
+                Generally, my friends thought this was too expensive.  </p>
+
+                <p> After this happened a few times I had a revelation — if I
+                could sell the same program to, say, three people, I could
+                charge $2000 and come out ahead. Or thirty people for $200.
+                Software is neat like that. So in late 2000, Michael sat down,
+                ported the code so that it worked on Access or SQL Server,
+                pulled all the site-specific stuff out into a header file, and
+                we started selling the thing. I didn’t really expect much to
+                come of it.  </p>
+
+                </body>
+                <info>
+                    <author>Joel Spolsky</author>
+                    <work href="http://www.joelonsoftware.com/articles/fog0000000348.html">Rub a dub dub</work>
+                </info>
+            </quote>
+        </fortune>
     </list>
 </collection>

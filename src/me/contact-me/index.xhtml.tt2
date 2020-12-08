@@ -27,7 +27,13 @@ Last updated on 2020-12-08 .)
 <li>
 <p>
 The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a>
-private chat or <a href="https://telegram.org/">Telegram</a> (using +972-54-6232377 as the phone id).
+private chat or <a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id).
+</p>
+</li>
+
+<li>
+<p>
+You can also email
 </p>
 </li>
 
@@ -87,7 +93,7 @@ private chat or <a href="https://telegram.org/">Telegram</a> (using +972-54-6232
 <dt>Yahoo</dt>
 <dd>[% INCLUDE url_body_link href = "http://profiles.yahoo.com/shlomif2",  %]</dd>
 <dt>GMail</dt>
-<dd>(<b>Note:</b> don’t E-mail me there instead of <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
+<dd>(<b>Note:</b> please E-mail me there in addition to <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
 <dt>Flickr</dt>
 <dd>[% INCLUDE url_body_link href = "http://www.flickr.com/photos/shlomif/",  %]</dd>
 <dt>PyPI (Python Package Index)</dt>

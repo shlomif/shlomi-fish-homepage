@@ -15,7 +15,23 @@
 
 <p>
 This page lists the various ways in which I (= Shlomi Fish) can be contacted.
+<b>Note:</b> I recently decided to give the best ways to contact me (due to
+usability, accessibility, and [% my_acronym( "key" => "FOSS",) %]-considerations.
+Last updated on 2020-12-08 .)
 </p>
+
+<h2 id="best-ways-to-contact">Best ways to contact me:</h2>
+
+<ol>
+
+<li>
+<p>
+The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a>
+private chat or <a href="https://telegram.org/">Telegram</a> (using +972-54-6232377 as the phone id).
+</p>
+</li>
+
+</ol>
 
 <dl class="contact">
 <dt>Homepage:</dt>
@@ -164,9 +180,11 @@ This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 </dd>
 </dl>
 
+[% IF 0 %]
 <script>
 shf_expand("#more_contacts_list", 500);
 </script>
+[% END %]
 
 [%- END -%]
 

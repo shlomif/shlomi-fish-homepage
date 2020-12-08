@@ -17,7 +17,9 @@
 <li><a href="#[% he_id %]">Hebrew (עברית)</a></li>
 </ul>
 
-[% FOREACH shlomif_lang in ["en", "he"] %]
+[% FOREACH shlomif_lang IN [ "en" "he" ] %]
+[% SET lang = shlomif_lang %]
+[% SET html_lang = shlomif_lang %]
 
 [% WRAPPER en  %]
 

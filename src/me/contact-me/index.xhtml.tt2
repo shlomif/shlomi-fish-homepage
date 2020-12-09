@@ -1,7 +1,6 @@
 [%- SET title = "How to Reach Me" -%]
 [%- SET desc = "How to Reach Shlomi Fish: E-mail, IM, mobile phone, IRC and many user-generated content sites." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% IF 0 %]
@@ -26,8 +25,17 @@ Last updated on 2020-12-08 .)
 
 <li>
 <p>
-The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a>
+The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook
+shlomi.fish</a>
 private chat or <a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id).
+or
+</p>
+</li>
+
+<li>
+<p>
+File an issue on my
+<a href="https://github.com/shlomif/shlomi-fish-homepage/issues">homepage's issue tracker</a>
 </p>
 </li>
 
@@ -35,10 +43,16 @@ private chat or <a href="https://telegram.org/">Telegram.org</a> (using +972-54-
 <p>
 You can also try emailing
 [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]
-as well as <a href="mailto:[% main_email %]">my regular E-mail</a>. </dd>
+as well as <a href="mailto:[% main_email %]">my regular E-mail</a>.
 </p>
 </li>
 
+<li>
+<p>
+<a href="http://en.wikipedia.org/wiki/XMPP">Jabber/XMPP</a>
+ShlomiFish@jabber.org
+</p>
+</li>
 </ol>
 
 <dl class="contact">
@@ -53,9 +67,9 @@ as well as <a href="mailto:[% main_email %]">my regular E-mail</a>. </dd>
 
 <dl>
 
-<dt><a href="http://en.wikipedia.org/wiki/XMPP">Jabber/XMPP</a> (also branded as
-“Google Talk”, “Google Chat”, “Google Hangouts”, etc.)</dt>
-
+<dt><a href="http://en.wikipedia.org/wiki/XMPP">Jabber/XMPP</a></dt>
+<dd>ShlomiFish@jabber.org / shlomif@gmail.com</dd>
+<dt>( “Google Talk”, “Google Chat”, “Google Hangouts”, etc.)</dt>
 <dd>ShlomiFish@jabber.org / shlomif@gmail.com</dd>
 
 </dl>

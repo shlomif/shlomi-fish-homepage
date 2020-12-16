@@ -234,6 +234,25 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
+                    text  => "Queen Padmé Tales",
+                    url   => "humour/Queen-Padme-Tales/",
+                    title => "Pizza slice with all my favourite topings",
+                    subs  => [
+                        {
+                            text => "Episodes",
+                            url  => "humour/Queen-Padme-Tales/episodes/",
+                            subs => [
+                                {
+                                    text =>
+"Queen Amidala vs. the Klingon Warriors",
+                                    url =>
+"humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html",
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
                     text  => "The Pope Died on Sunday",
                     url   => "humour/Pope/",
                     title =>

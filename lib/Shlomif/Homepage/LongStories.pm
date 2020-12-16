@@ -332,7 +332,7 @@ EOF
         {
             id         => 'queen_padme_tales',
             tagline    => "Pizza slice with all my favourite toppings",
-            logo_alt   => "“Terminator: Liberation” Logo",
+            logo_alt   => "“Queen Padmé Tales” logo",
             logo_class => "queen_padme_tales",
             logo_id    => "queen_padme_tales_logo",
             logo_src   =>
@@ -342,11 +342,19 @@ EOF
             entry_text => "Queen Padmé Tales",
             href       => "humour/Queen-Padme-Tales/",
             abstract   => <<'EOF',
-<p class="queen_padme_tales abstract">
-The
+<div class="queen_padme_tales abstract">
+<p>
+While the birth parents of
 <a href="https://en.wikipedia.org/wiki/Padm%C3%A9_Amidala">Queen Padmé Amidala</a>
-of the Naboo
+of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">the Selinaverse</a>
+( <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> )
+were killed in a starship crash when she was, she was adopted by her aunt,
+the Archduchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
+Portman</a>), and her husband Darth Vader, who volunteered to act as King in effect until
+Padme's coming of age. As a result, Padmé had a happy childhood until she turned 18
+at late 2010 and was ready to become the bona fide ruler of Naboo.
 </p>
+</div>
 
 EOF
         },

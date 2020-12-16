@@ -330,6 +330,27 @@ and set in a time of great confusion — not unlike our own.
 EOF
         },
         {
+            id         => 'queen_padme_tales',
+            tagline    => "Pizza slice with all my favourite topings",
+            logo_alt   => "“Terminator: Liberation” Logo",
+            logo_class => "queen_padme_tales",
+            logo_id    => "queen_padme_tales_logo",
+            logo_src   =>
+                "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
+            logo_svg   => '//$SKIP',
+            entry_id   => "queen--padme--tales",
+            entry_text => "Queen Padmé Tales",
+            href       => "humour/Queen-Padme-Tales/",
+            abstract   => <<'EOF',
+<p class="queen_padme_tales abstract">
+The
+<a href="https://en.wikipedia.org/wiki/Padm%C3%A9_Amidala">Queen Padmé Amidala</a>
+of the Naboo
+</p>
+
+EOF
+        },
+        {
             id         => 'terminator_liberation',
             tagline    => "Tell about the Exodus. And the more, the better.",
             logo_alt   => "“Terminator: Liberation” Logo",

@@ -44,7 +44,8 @@ sub _calc_screenplay_doc_makefile_lines
         my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
 
         push @epubs, $epub_dest_varname;
-        my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' };
+        my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
+            // ( die "epub_dest_path returned undef for doc_base=$doc_base ." );
 
         push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
 "$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
@@ -102,6 +103,7 @@ $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
+$(POST_DEST)/humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.epub \
 $(POST_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
 $(POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
 $(POST_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \

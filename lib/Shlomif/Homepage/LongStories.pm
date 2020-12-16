@@ -331,7 +331,7 @@ EOF
         },
         {
             id         => 'queen_padme_tales',
-            tagline    => "Pizza slice with all my favourite topings",
+            tagline    => "Pizza slice with all my favourite toppings",
             logo_alt   => "“Terminator: Liberation” Logo",
             logo_class => "queen_padme_tales",
             logo_id    => "queen_padme_tales_logo",

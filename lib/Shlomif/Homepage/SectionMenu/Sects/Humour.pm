@@ -236,7 +236,7 @@ my $humour_tree_contents = {
                 {
                     text  => "Queen Padmé Tales",
                     url   => "humour/Queen-Padme-Tales/",
-                    title => "Pizza slice with all my favourite topings",
+                    title => "Pizza slice with all my favourite toppings",
                     subs  => [
                         {
                             text => "Episodes",

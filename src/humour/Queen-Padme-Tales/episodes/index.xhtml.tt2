@@ -8,11 +8,9 @@
 
 <h2 id="read_online">Read Online</h2>
 
-[% SET epub_prefix="Muppets-Show--" %]
+[% SET epub_prefix="Queen-Padma-Tales--" %]
 <ul>
-[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter",  %]
-[% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris",  %]
-[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence",  %]
+[% PROCESS story_episode_li base = "Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
 </ul>
 
 [% default_toc %]
@@ -22,7 +20,7 @@
 <ul>
 
 <li>
-[% PROCESS screenplay_github_repo url = "http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation", %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Queen-Padme-Tales", %]
 </li>
 
 </ul>

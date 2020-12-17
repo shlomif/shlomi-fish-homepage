@@ -1,0 +1,109 @@
+[%- SET title = "Why I will continue to write my real person fan fiction (fanfic)" -%]
+[%- SET desc = "Why I will continue to write my real person fan fiction (fanfic)" -%]
+[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+<div class="fancy_sects my_rpf limit_imgs_width">
+
+[% default_toc %]
+
+[% WRAPPER h2_section id = "content" title = "Content" %]
+
+<p>
+As unlikely as it sounds, I think I reached the "right" conclusions at <a href="../">my previous attempt</a>
+of contrasting amateurs (= people who perform their job because they like it; "geeks")
+to "professionalism" (= doing something for money, regardless of how little or a lot:
+<a href="https://www.youtube.com/watch?v=bJrqpR_7VSo">shitload of money</a>)
+as well as "conformism" (= playing by the rules of "society", "what other people
+expect you to do, following <a href="https://en.wikipedia.org/wiki/Superior_orders">superior orders</a>,
+etc.) vs. "hacking":
+</p>
+
+<ol>
+
+<li>
+<p>
+ thinking outside the box
+</p>
+</li>
+
+<li>
+<p>
+being resourceful
+</p>
+</li>
+
+<li>
+<p>
+, finding creative
+solutions
+</p>
+</li>
+
+<li>
+<p>
+, defying the laws
+</p>
+</li>
+
+<li>
+<p>
+, not accepting your fate
+</p>
+</li>
+
+<li>
+<p>
+, <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/hacking-heroism.xhtml">"david vs. Goliath"
+or "Indiana Jones' Gun vs. swordmaster" scene</a>
+and now (my own)
+<a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html">Queen
+Amidala of the Naboo vs, The Klingon Warriors</a>
+</p>
+</li>
+
+<li>
+<p>
+"craziness" / <a href="https://en.wikipedia.org/wiki/Nevi%27im">Nev'ua</a> (it originally meant
+being scizophrenic but later was emulated by the superior <a href="https://en.wikipedia.org/wiki/Mania">mania</a>
+or <a href="https://en.wikipedia.org/wiki/Hypomania">hypomania</a>,
+which some "Closet bipolar" people can hide better than others),
+"funny"ness, exageration which many <a href="http://www.catb.org/jargon/html/M/MOTAS.html">MOTAS</a>
+find sexy.
+</p>
+</li>
+
+<li>
+<p>
+Despite common belief, <a href="https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/">NASA
+astronauts did use pencils in space at first</a>, just like their Soviet counterparts
+but this solution was inadequate.
+</p>
+</li>
+
+</ol>
+
+[% END %]
+
+[%- WRAPPER links_sect -%]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/my-real-person-fan-fiction">Source Repository for this essay on GitHub</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction",  %]
+
+</div>
+
+
+[% END %]

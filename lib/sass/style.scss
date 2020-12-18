@@ -136,7 +136,7 @@ body {
 
 @import "jqtree";
 @include small-screen {
-    .hhfg_eng {
+    body.overflow_all {
         * {
             overflow: auto;
         }

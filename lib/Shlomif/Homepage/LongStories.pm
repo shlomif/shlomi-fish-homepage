@@ -659,6 +659,7 @@ my %png_stories = (
     map { $_ => 1 }
         qw#
         muppets_show_tni
+        queen_padme_tales
         selina_mandrake
         summerschool_at_the_nsa
         we_the_living_dead

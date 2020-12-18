@@ -363,9 +363,18 @@ she is the richest person in Naboo and one of the richest women in the galaxy;
 she has enough time to contribute on Internet content and code sharing sites;
 she has many supporting friends, including her boyfriend Anakin Skywalker,
 a 1992 born (about her age) promising young jedi padawan, with aspirations
-for joining the mysterious but revered jedi order of Siths of which only Vader
+for joining the mysterious but revered jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>
-are the only known extant members.
+are the known extant members.
+</p>
+
+<p>
+In practice though, there is <a href="https://en.wikipedia.org/wiki/Damocles">the Sword of Damocles</a>:
+critics on online publications and social media who are unhappy with every choice
+she makes, a poorly executed takeover attempt by a "real life" celebrity thought to
+be flawless, her boyfriend being so busy with his studies that he becomes awfully laconic
+even in his emails; her spirit friends, who are animated characters from
+<a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki">MLP</a>
 </p>
 
 </div>

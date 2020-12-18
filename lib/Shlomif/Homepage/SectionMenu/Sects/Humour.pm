@@ -241,6 +241,7 @@ my $humour_tree_contents = {
                         {
                             text => "Episodes",
                             url  => "humour/Queen-Padme-Tales/episodes/",
+                            skip => 1,
                             subs => [
                                 {
                                     text =>

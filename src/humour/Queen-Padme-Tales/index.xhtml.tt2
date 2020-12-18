@@ -1,10 +1,40 @@
 [%- SET title = "Queen Padmé Tales" -%]
+[%- SET desc = "Fan fiction screeenplays for The Muppet Show or Sesame Street" -%]
+[%- SET more_keywords = "muppet,muppets,The Muppet Show,fanfic,fan fiction,crossovers,screeenplays,screeenplay" -%]
 
-[%- PROCESS "stories/selina-common.tt2" -%]
-[%- PROCESS "Inc/jqui_tabs.tt2" -%]
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
+
+<h2 id="read_online">Read Online</h2>
+
+[% SET epub_prefix="Queen-Padma-Tales--" %]
+<ul>
+[% PROCESS story_episode_li base = "Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
+</ul>
+
+[% default_toc %]
+
+<h2 id="sources">Sources</h2>
+
+<ul>
+
+<li>
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Queen-Padme-Tales", %]
+</li>
+
+</ul>
+
+<h2 id="licensing">Licensing</h2>
+
+<p>
+All the text is original, and as far as
+I’m concerned can be used under the terms of
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">the Creative Commons
+Attribution-Noncommercial-ShareAlike licence Unported (CC-by-sa),
+either version 4.0, or at your option any later version</a>, but
+like I said, the situation is more complicated than that.
+</p>
 
 [% WRAPPER nav_blocks  %]
 

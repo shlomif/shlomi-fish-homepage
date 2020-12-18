@@ -41,7 +41,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = './dest/post-incs/t2/humour/RoadToHeaven/abstract.xhtml'
         return self.doc(input_fn).has_one(
             ".//li[contains(" +
-            "text(),'החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר']"
+            "text(),'החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר')]"
         )
 
 

@@ -15,6 +15,7 @@ my @prunes = (
     q#MANIFEST\.html\z#,
     q#lecture/.*?/[a-zA-Z_\-0-9\.]*?--all-in-one-html/#,
     q#philosophy/foss-other-beasts/revision-2/#,
+    q#humour/aphorisms/twitter-tweets-archive/#,
 q#philosophy/politics/drug-legalisation/case-for-drug-legalisation--hebrew-v3/#,
     q#guide2ee/undergrad#,
     q#(?:humour/TheEnemy/(?:The-Enemy-(?:English-)?rev|TheEnemy))#,

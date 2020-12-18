@@ -1,0 +1,12 @@
+[%- SET title = "@shlomif twitter.com tweets archive" -%]
+[%- SET desc = "@shlomif twitter.com tweets archive" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="story">
+
+[% path_slurp("htmls/shlomif-tweets-rendered.xhtml-part") %]
+
+</div>
+
+[% END %]

@@ -46,4 +46,12 @@ A collection of image macros / captioned images / "memes" I created.
 
 [%- END -%]
 
+[% WRAPPER h2_section id = "tweets-archive" title = "twitter.com/shlomif Tweets archive data" href="${base_path}humour/aphorisms/twitter-tweets-archive/" %]
+
+<p>
+The @shlomif twitter tweets. (Thanks to <a href="https://gist.github.com/tiffany352/9ee7e0d4fd7e08ede9d0314df9eab672">tiffany352</a>!).
+</p>
+
+[%- END -%]
+
 [% END %]

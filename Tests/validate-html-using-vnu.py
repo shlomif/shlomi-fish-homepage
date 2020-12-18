@@ -82,6 +82,8 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?: MathVentures/.*? )
                 |
+            (?: humour/aphorisms/twitter-tweets-archive/.*? )
+                |
             (?: humour/
                 (?: by-others/oded-c/\\S+{ext}
                     |

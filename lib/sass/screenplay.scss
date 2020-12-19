@@ -15,10 +15,19 @@
     }
 }
 
+//img { float:right; margin-left:1em; }
+@mixin floatcontain {
+    &::after {
+        display: block;
+        content: "";
+        clear: right;
+    }
+}
 .screenplay {
     @include story_box_style;
 
     .description {
+        @include floatcontain;
         border: 2pt solid orange;
         border-radius: 0.3em;
         padding: 0.3em;

@@ -681,6 +681,13 @@ for Government! [And I'm Not Joking As the Reader Shall See]”</a> - on Google+
 
 <li>
 <p>
+<a href="https://www.shlomifish.org/me/rindolf/#update_long_live_us_hacker_monarchs">Update: Long Live,
+us, [no-"the"!] Hacker Monarchs!</a>
+</p>
+</li>
+
+<li>
+<p>
 <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">“Saladin
 Style”</a> - an executive summary — irresponsible and opinionated — about
 Saladin’s innovative approach to security, combat warfare, psychological

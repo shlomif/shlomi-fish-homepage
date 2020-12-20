@@ -294,7 +294,7 @@ QOHELETH_IMAGES__SOURCE := $(addprefix $(QOHELETH_IMAGES__SOURCE_PREFIX)/,$(QOHE
 QOHELETH_IMAGES__POST_DEST := $(addprefix $(QOHELETH_IMAGES__POST_DEST_PREFIX)/,$(QOHELETH_IMAGES__BASE))
 
 
-QUEEN_PADME_TALES_IMAGES__BASE := bad-blood189.webp evilphish-svg--facing-right.min.svg.png tacos6306095903_a5c92746ba_o--tacos-reduced-by-jeffreyw--small-400px.webp
+QUEEN_PADME_TALES_IMAGES__BASE := Christina_Grimmie_in_November_2014--resized.webp bad-blood189.webp evilphish-svg--facing-right.min.svg.png tacos6306095903_a5c92746ba_o--tacos-reduced-by-jeffreyw--small-400px.webp
 
 QUEEN_PADME_TALES_IMAGES__SOURCE_PREFIX := $(QUEEN_PADME_TALES__VCS_DIR)/graphics
 QUEEN_PADME_TALES_IMAGES__POST_DEST_PREFIX := $(POST_DEST_HUMOUR)/Queen-Padme-Tales/images

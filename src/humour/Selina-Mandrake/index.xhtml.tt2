@@ -7,19 +7,11 @@
 [% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
 
 <p>
-This is a parody of the television series
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy the Vampire Slayer</a>, while referencing other pieces of popular
-culture, and has many ties to my other screenplay,
-<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
-Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
-serious messages and insights.
-</p>
-
-<p>
 Hope you enjoy it!
 </p>
 
 [% WRAPPER screenplay_read_online  %]
+
 <ul>
 
 [% PROCESS story_ongoing_episode_li base = "selina-mandrake-the-slayer",  %]

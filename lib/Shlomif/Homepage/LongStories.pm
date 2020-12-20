@@ -180,6 +180,14 @@ culminating in none other than The Master, the vampire with the oldest
 soul. See how she manages to do so, despite being completely non-violent, and
 even supportive of the demons she encounters.
 </p>
+<p>
+This is a parody of the television series
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy the Vampire Slayer</a>, while referencing other pieces of popular
+culture, and has many ties to my other screenplay,
+<a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
+Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
+serious messages and insights.
+</p>
 EOF
             entry_extra_html => <<'EOF',
 <p>

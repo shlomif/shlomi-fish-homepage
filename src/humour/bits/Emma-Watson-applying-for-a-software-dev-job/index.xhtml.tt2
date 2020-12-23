@@ -3,8 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<section class="h2">
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id="intro" title="Introduction"%]
 
 [% PROCESS emma_watson_intro  %]
 
@@ -14,21 +13,38 @@ Now the question is: does she have what it takes to work as a Java
 software</a> developer… ;-).
 </p>
 
-</section>
+[% END %]
 
 [% default_toc %]
 
-<section class="h2">
-
-<h2 id="text">Text</h2>
+[% WRAPPER h2_section id="text" title="Text"%]
 
 [% path_slurp("screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html") %]
 
-</section>
+[% END %]
 
-<section class="h2">
+[% WRAPPER h2_section id = "reception" title = "What other people are saying" %]
 
-<h2 id="coverage">Coverage</h2>
+<ul>
+
+<li>
+<p>
+«I would not hire Emma Watson. She’d be good for employee morale, but she’d
+also be too distracting.» - <b>osoleve</b> on Freenode’s ##programming.
+</p>
+</li>
+<li>
+<p>
+«I think we would hire Emma Watson based on looks alone. ☺» — <b>glange</b>
+on Freenode’s #objectivism.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
 
 <ul>
 
@@ -40,13 +56,11 @@ software</a> developer… ;-).
 
 </ul>
 
-</section>
+[% END %]
 
-<section class="h2">
+[% WRAPPER h2_section id="links" title="Links"%]
 
-<h2 id="links">Links</h2>
-
-<h3 id="links__EmWatson">Emma Watson Links</h3>
+[% WRAPPER h3_section id="links__EmWatson" title="Emma Watson Links"%]
 
 <ul>
 
@@ -55,7 +69,9 @@ software</a> developer… ;-).
 
 </ul>
 
-<h3 id="links__software_dev">Software Industry Advocacy Links</h3>
+[% END %]
+
+[% WRAPPER h3_section id="links__software_dev" title="Software Industry Advocacy Links"%]
 
 <ul>
 
@@ -81,38 +97,15 @@ Worst Job Offer Ever”.
 
 </ul>
 
-</section>
+[% END %]
 
-<section class="h2">
+[% END %]
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.by_sa_british_blurb( "year" => "2014", ) %]
 
-</section>
-
-<section class="h2">
-
-<h2 id="reception">What other people are saying</h2>
-
-<ul>
-
-<li>
-<p>
-«I would not hire Emma Watson. She’d be good for employee morale, but she’d
-also be too distracting.» - <b>osoleve</b> on Freenode’s ##programming.
-</p>
-</li>
-<li>
-<p>
-«I think we would hire Emma Watson based on looks alone. ☺» — <b>glange</b>
-on Freenode’s #objectivism.
-</p>
-</li>
-
-</ul>
-
-</section>
+[% END %]
 
 [% WRAPPER nav_blocks  %]
 

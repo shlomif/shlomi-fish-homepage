@@ -675,7 +675,7 @@ sub calc_all_stories_entries
         my $tag = $args->{tag};
         return $self->calc_all_stories_entries(
             { only_inactives => [0], %$args, } )
-            . "<section class=\"fancy_sects\"><header><$tag>Inactive Stories</$tag></header>"
+            . qq#<section class="fancy_sects"><header><$tag><a href="@{[_rel_url("humour/stories/inactive/")]}">Inactive Stories</a></$tag></header>#
             . $self->calc_all_stories_entries(
             {
                 only_inactives => [1],

@@ -226,6 +226,18 @@ my %tr_s = (
             $muppets_github,
         ],
     ),
+    'queen_padme_tales' => _tr(
+        title => "Queen Padmé Tales",
+        items => [
+            _fp( path => "humour/Queen-Padme-Tales/", ),
+            _l(
+                inner_html => "vs. The Klingon Warriors",
+                path       =>
+"humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html",
+            ),
+            _github( url => 'https://github.com/shlomif/Queen-Padme-Tales', ),
+        ],
+    ),
     'selina_mandrake' => _tr(
         title => "Selina Mandrake - The Slayer",
         items => [
@@ -329,6 +341,7 @@ my %table_blocks = (
                 _get_tr('selina_mandrake'),
                 _get_tr('summer_nsa'),
                 _get_tr('buffy_few_good'),
+                _get_tr('queen_padme_tales'),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('buffy_facts'),
             ],
@@ -388,6 +401,7 @@ my %table_blocks = (
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
+                _get_tr('queen_padme_tales'),
             ],
         },
     ),

@@ -132,3 +132,11 @@ $ss_margin: 2em;
         outline: red solid 2px;
     }
 }
+
+@mixin float-contain {
+    &::after {
+        display: block;
+        content: "";
+        clear: right;
+    }
+}

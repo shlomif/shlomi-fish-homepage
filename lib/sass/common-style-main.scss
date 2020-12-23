@@ -574,6 +574,7 @@ blockquote {
 article,
 section {
     &.story {
+        @include float-contain;
         border-radius: 5px;
         border: 3px solid black;
         clear: right;

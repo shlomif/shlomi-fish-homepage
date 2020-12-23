@@ -609,7 +609,7 @@ sub _get_story_entry_tags
     my $o = $self->_get_story($args);
 
     return [
-        qq{<section class="story">\n},
+        qq{<article class="story">\n},
         qq{<header>\n},
         @{ $self->_get_logo_tags($args) },
         sprintf(
@@ -623,7 +623,7 @@ sub _get_story_entry_tags
         qq{</header>\n},
         @{ $self->_get_list_items_tags($args) },
         $o->entry_extra_html(),
-        qq{</section>\n}
+        qq{</article>\n},
     ];
 }
 

@@ -254,61 +254,68 @@ my $humour_tree_contents = {
                     ],
                 },
                 {
-                    text  => "The Pope Died on Sunday",
-                    url   => "humour/Pope/",
-                    title =>
-"An Insane Week in the Life of a Female American Graphics Artist",
+                    text => "Inactive",
+                    url  => "humour/stories/inactive/",
                     subs => [
                         {
-                            text => "English Text",
-                            url  =>
+                            text  => "The Pope Died on Sunday",
+                            url   => "humour/Pope/",
+                            title =>
+"An Insane Week in the Life of a Female American Graphics Artist",
+                            subs => [
+                                {
+                                    text => "English Text",
+                                    url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
-                        },
-                        {
-                            text => "Hebrew Text",
-                            url  =>
+                                },
+                                {
+                                    text => "Hebrew Text",
+                                    url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
-                        },
-                    ],
-                },
-                {
-                    text  => "The Blue Rabbit’s Log",
-                    url   => "humour/Blue-Rabbit-Log/",
-                    title => "Movies that Parody Role-Playing Games",
-                    subs  => [
-                        {
-                            text  => "Part I",
-                            url   => "humour/Blue-Rabbit-Log/part-1.html",
-                            title => "Ongoing Text of the First Part",
+                                },
+                            ],
                         },
                         {
-                            text  => "Random Ideas",
-                            url   => "humour/Blue-Rabbit-Log/ideas.xhtml",
-                            title => "Random ideas and future excerpts",
+                            text  => "The Blue Rabbit’s Log",
+                            url   => "humour/Blue-Rabbit-Log/",
+                            title => "Movies that Parody Role-Playing Games",
+                            subs  => [
+                                {
+                                    text => "Part I",
+                                    url => "humour/Blue-Rabbit-Log/part-1.html",
+                                    title => "Ongoing Text of the First Part",
+                                },
+                                {
+                                    text => "Random Ideas",
+                                    url => "humour/Blue-Rabbit-Log/ideas.xhtml",
+                                    title => "Random ideas and future excerpts",
+                                },
+                            ],
                         },
-                    ],
-                },
-                {
-                    text  => "The Earth Angel",
-                    url   => "humour/The-Earth-Angel/",
-                    title => "TODO: FILL IN",
-                    subs  => [
                         {
-                            text => "Ongoing Text",
-                            url  =>
+                            text  => "The Earth Angel",
+                            url   => "humour/The-Earth-Angel/",
+                            title => "TODO: FILL IN",
+                            subs  => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
 "humour/The-Earth-Angel/The-Earth-Angel--English-Text.html",
+                                },
+                            ],
                         },
-                    ],
-                },
-                {
-                    text  => "Road to Heaven",
-                    url   => "humour/RoadToHeaven/",
-                    title => "The Road to Heaven is Paved with Bad Intentions",
-                    subs  => [
                         {
-                            skip => 1,
-                            text => "Abstract",
-                            url  => "humour/RoadToHeaven/abstract.xhtml",
+                            text  => "Road to Heaven",
+                            url   => "humour/RoadToHeaven/",
+                            title =>
+"The Road to Heaven is Paved with Bad Intentions",
+                            subs => [
+                                {
+                                    skip => 1,
+                                    text => "Abstract",
+                                    url => "humour/RoadToHeaven/abstract.xhtml",
+                                },
+                            ],
                         },
                     ],
                 },

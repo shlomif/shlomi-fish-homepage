@@ -1,0 +1,15 @@
+[%- SET title = "Shlomi Fish’s Inactive Stories" -%]
+[%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength, and beauty" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<h2 id="intro">Introduction</h2>
+
+<section class="long_stories">
+<header>
+<h2 id="list-of-stories">List of Inactive Stories</h2>
+</header>
+[% PROCESS inactive_humour_stories_list_text  %]
+</section>
+
+[% END %]

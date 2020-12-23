@@ -11,20 +11,24 @@ use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 
 use Shlomif::Homepage::LongStories::Story ();
 
-my @_Stories = (
-    map { Shlomif::Homepage::LongStories::Story->new($_) } (
-        {
-            id         => 'the_enemy',
-            tagline    => "I came; I saw; I left no trace",
-            logo_alt   => "A = not-A",
-            logo_class => "ene",
-            logo_id    => "the_enemy_logo",
-            logo_src   => "humour/TheEnemy/images/The-Enemy-logo-small.png",
-            logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
-            entry_id   => "enemy-how-i-helped",
-            entry_text => "The Enemy and How I Helped to Fight it",
-            href       => "humour/TheEnemy/",
-            abstract   => <<'EOF',
+sub _to_story_objects
+{
+    return ( map { Shlomif::Homepage::LongStories::Story->new($_) } @_ );
+}
+
+my @active_Stories = _to_story_objects(
+    {
+        id         => 'the_enemy',
+        tagline    => "I came; I saw; I left no trace",
+        logo_alt   => "A = not-A",
+        logo_class => "ene",
+        logo_id    => "the_enemy_logo",
+        logo_src   => "humour/TheEnemy/images/The-Enemy-logo-small.png",
+        logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
+        entry_id   => "enemy-how-i-helped",
+        entry_text => "The Enemy and How I Helped to Fight it",
+        href       => "humour/TheEnemy/",
+        abstract   => <<'EOF',
 <p>
 A member of the terrorist organisation “The Organisation” gets
 up in the morning, goes to his post, and quits. But before he
@@ -35,28 +39,27 @@ prove that A can in fact be not‐A, whether or not Aristotle
 would agree.
 </p>
 EOF
-            entry_extra_html => <<'EOF',
+        entry_extra_html => <<'EOF',
 <p>
 A political satire about the situation that prevailed in the Israeli-Lebanese
 border. Lots of exits about mathematical logic, and a general critique of the
 irrationality guiding political bodies.
 </p>
 EOF
-        },
-        {
-            id      => 'tow_the_fountainhead',
-            tagline =>
+    },
+    {
+        id      => 'tow_the_fountainhead',
+        tagline =>
 "The Fountainhead may have been good enough in the 60’s, but we’re in the Information Age now",
-            logo_alt   => "The One With The Fountainhead Logo",
-            logo_class => "towtf",
-            logo_id    => "tow_the_fountainhead_logo",
-            logo_src   =>
-                "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
-            logo_svg   => '//$SKIP',
-            entry_id   => "fountainhead",
-            entry_text => "The One with the Fountainhead",
-            href       => "humour/TOneW-the-Fountainhead/",
-            abstract   => <<'EOF',
+        logo_alt   => "The One With The Fountainhead Logo",
+        logo_class => "towtf",
+        logo_id    => "tow_the_fountainhead_logo",
+        logo_src => "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
+        logo_svg => '//$SKIP',
+        entry_id => "fountainhead",
+        entry_text => "The One with the Fountainhead",
+        href       => "humour/TOneW-the-Fountainhead/",
+        abstract   => <<'EOF',
 <p>
 A parody of Ayn Rand’s novel,
 <a href="http://en.wikipedia.org/wiki/The_Fountainhead"><i>The
@@ -81,19 +84,19 @@ And who were the <b>bad</b> guys in the story?
 Read the screenplays to find out.
 </p>
 EOF
-        },
-        {
-            id         => 'humanity',
-            tagline    => "Intelligent (?) and Conscious (?)",
-            logo_alt   => "Humanity Logo",
-            logo_class => "humanity",
-            logo_id    => "humanity_logo",
-            logo_src   => "humour/humanity/images/humanity-logo-small.png",
-            logo_svg   => 'humour/humanity/images/humanity-logo.svg',
-            entry_id   => "humanity",
-            entry_text => "Humanity",
-            href       => "humour/humanity/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'humanity',
+        tagline    => "Intelligent (?) and Conscious (?)",
+        logo_alt   => "Humanity Logo",
+        logo_class => "humanity",
+        logo_id    => "humanity_logo",
+        logo_src   => "humour/humanity/images/humanity-logo-small.png",
+        logo_svg   => 'humour/humanity/images/humanity-logo.svg',
+        entry_id   => "humanity",
+        entry_text => "Humanity",
+        href       => "humour/humanity/",
+        abstract   => <<'EOF',
 <p class="humanity abstract">
 Humanity is a screenplay for a movie
 that aims to be a parody about humanity and modern life in particular. It
@@ -103,20 +106,20 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 (OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
 </p>
 EOF
-        },
-        {
-            id         => 'hhfg',
-            tagline    => "Who said girls can’t code?",
-            logo_alt   => "Human Hacking Field Guide Logo",
-            logo_class => "hhfg",
-            logo_id    => "hhfg_logo",
-            logo_src   => "humour/human-hacking/images/hhfg-logo-small.png",
-            logo_svg   =>
-'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
-            entry_id   => "human-hacking",
-            entry_text => "The Human Hacking Field Guide",
-            href       => "humour/human-hacking/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'hhfg',
+        tagline    => "Who said girls can’t code?",
+        logo_alt   => "Human Hacking Field Guide Logo",
+        logo_class => "hhfg",
+        logo_id    => "hhfg_logo",
+        logo_src   => "humour/human-hacking/images/hhfg-logo-small.png",
+        logo_svg   =>
+            'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
+        entry_id   => "human-hacking",
+        entry_text => "The Human Hacking Field Guide",
+        href       => "humour/human-hacking/",
+        abstract   => <<'EOF',
 <p class="hhfg abstract">
 Jennifer is a trendy and popular high school senior who is living and
 studying in the vicinity of Los Angeles. Her best friend, Taylor, convinces her
@@ -128,22 +131,20 @@ determined to learn how to become an open source developer from Erisa, but
 there are some surprises along the road.
 </p>
 EOF
-        },
-        {
-            id      => 'we_the_living_dead',
-            tagline =>
-                "From perfection to imperfection; from finity to infinity",
+    },
+    {
+        id      => 'we_the_living_dead',
+        tagline => "From perfection to imperfection; from finity to infinity",
 
-            logo_alt   => "Fiery Q",
-            logo_class => "st_wtld",
-            logo_id    => "we_the_living_dead_logo",
-            logo_src   =>
-                "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
-            logo_svg   => '//$SKIP',
-            entry_id   => "we-the-living-dead",
-            entry_text => "Star Trek: We the Living Dead",
-            href       => "humour/Star-Trek/We-the-Living-Dead/",
-            abstract   => <<'EOF',
+        logo_alt   => "Fiery Q",
+        logo_class => "st_wtld",
+        logo_id    => "we_the_living_dead_logo",
+        logo_src   => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "we-the-living-dead",
+        entry_text => "Star Trek: We the Living Dead",
+        href       => "humour/Star-Trek/We-the-Living-Dead/",
+        abstract   => <<'EOF',
 <p>
 In this fan episode of the Television show
 <a href="http://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine"><i>Star Trek: Deep Space Nine</i></a>,
@@ -159,19 +160,19 @@ A Star Trek episode to end all Star Trek episodes, (and, more
 generally - story to end all stories).
 </p>
 EOF
-        },
-        {
-            id         => 'selina_mandrake',
-            tagline    => "Caught between Post-modernism and the New Age",
-            logo_alt   => "1d10 die",
-            logo_class => "selina",
-            logo_id    => "selina_mandrake_logo",
-            logo_src   => "humour/Selina-Mandrake/images/Green-d10-dice.png",
-            logo_svg   => '//$SKIP',
-            entry_id   => "selina-mandrake",
-            entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
-            href       => "humour/Selina-Mandrake/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'selina_mandrake',
+        tagline    => "Caught between Post-modernism and the New Age",
+        logo_alt   => "1d10 die",
+        logo_class => "selina",
+        logo_id    => "selina_mandrake_logo",
+        logo_src   => "humour/Selina-Mandrake/images/Green-d10-dice.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "selina-mandrake",
+        entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
+        href       => "humour/Selina-Mandrake/",
+        abstract   => <<'EOF',
 <p class="selina abstract">
 A geeky Anglo-American girl in her high school senior year in 2011
 California ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> ),
@@ -190,7 +191,7 @@ Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
 serious messages and insights.
 </p>
 EOF
-            entry_extra_html => <<'EOF',
+        entry_extra_html => <<'EOF',
 <p>
 This screenplay, a parody and reflection on
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
@@ -199,20 +200,20 @@ other sources, is still work-in-progress, but is already in a usable state.
 </p>
 EOF
 
-        },
-        {
-            id         => 'summerschool_at_the_nsa',
-            tagline    => "As the sling shoots, grown men will cry",
-            logo_alt   => "Summerschool at the NSA Logo",
-            logo_class => "summernsa",
-            logo_id    => "summernsa_logo",
-            logo_src   =>
-"humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
-            logo_svg   => '//$SKIP',
-            entry_id   => "summerschool-at-the-nsa",
-            entry_text => "Summerschool at the NSA - A Screenplay",
-            href       => "humour/Summerschool-at-the-NSA/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'summerschool_at_the_nsa',
+        tagline    => "As the sling shoots, grown men will cry",
+        logo_alt   => "Summerschool at the NSA Logo",
+        logo_class => "summernsa",
+        logo_id    => "summernsa_logo",
+        logo_src   =>
+            "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "summerschool-at-the-nsa",
+        entry_text => "Summerschool at the NSA - A Screenplay",
+        href       => "humour/Summerschool-at-the-NSA/",
+        abstract   => <<'EOF',
 <p class="summernsa abstract">
 The Hollywood actresses
 <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah
@@ -231,7 +232,7 @@ several times their combined worth. Does the NSA actually stand
 a chance?
 </p>
 EOF
-            entry_extra_html => <<'EOF',
+        entry_extra_html => <<'EOF',
 <p>
 This screenplay is surrealistic realism and takes place in
 April 2013. Very farfetched, but could happen.
@@ -244,22 +245,22 @@ Shrugged</i></a>
 </p>
 
 EOF
-        },
-        {
-            id      => 'buffy_a_few_good_slayers',
-            tagline =>
-                "I learned more from my students than I have from my teachers.",
-            logo_alt   => "Buffy - a Few Good Slayers Logo",
-            logo_class => "buffy_few_good",
-            logo_id    => "buffy_a_few_good_slayers_logo",
-            logo_src   =>
+    },
+    {
+        id      => 'buffy_a_few_good_slayers',
+        tagline =>
+            "I learned more from my students than I have from my teachers.",
+        logo_alt   => "Buffy - a Few Good Slayers Logo",
+        logo_class => "buffy_few_good",
+        logo_id    => "buffy_a_few_good_slayers_logo",
+        logo_src   =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.min.svg',
-            logo_svg =>
+        logo_svg =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
-            entry_id   => "buffy-few-good",
-            entry_text => "Buffy: a Few Good Slayers - A Screenplay",
-            href       => "humour/Buffy/A-Few-Good-Slayers/",
-            abstract   => <<'EOF',
+        entry_id   => "buffy-few-good",
+        entry_text => "Buffy: a Few Good Slayers - A Screenplay",
+        href       => "humour/Buffy/A-Few-Good-Slayers/",
+        abstract   => <<'EOF',
 <p class="buffy_few_good abstract">
 The Demonic underworld is held under tight control in a forked version of the
 <a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
@@ -273,19 +274,19 @@ with the usual set of problems that come with being teachers, parents,
 spouses and adults.
 </p>
 EOF
-        },
-        {
-            id         => 'muppets_show_tni',
-            tagline    => "Muppets!",
-            logo_alt   => "The Muppets Show TNI",
-            logo_class => "muppets",
-            logo_id    => "muppets_show_tni_logo",
-            logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
-            logo_svg   => '//$SKIP',
-            entry_id   => "muppets-show-TNI",
-            entry_text => "Muppets / Sesame Street Fanfic",
-            href       => "humour/Muppets-Show-TNI/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'muppets_show_tni',
+        tagline    => "Muppets!",
+        logo_alt   => "The Muppets Show TNI",
+        logo_class => "muppets",
+        logo_id    => "muppets_show_tni_logo",
+        logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "muppets-show-TNI",
+        entry_text => "Muppets / Sesame Street Fanfic",
+        href       => "humour/Muppets-Show-TNI/",
+        abstract   => <<'EOF',
 <p class="muppets_show_tni abstract">
 Fanfic episodes of <a href="http://muppet.wikia.com/wiki/The_Muppet_Show"><b>The
 Muppets’ show</b></a> or <a href="https://muppet.fandom.com/wiki/Sesame_Street">Sesame Street</a>.
@@ -296,22 +297,22 @@ as <a href="$(ROOT)/humour/Muppets-Show-TNI/Harry-Potter.html"></a>Harry Potter,
 two ruthless <a href="$(ROOT)/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">Grammar Nazis</a>.
 </p>
 EOF
-        },
-        {
-            id      => 'who_is_qoheleth',
-            tagline =>
+    },
+    {
+        id      => 'who_is_qoheleth',
+        tagline =>
 "What had been, is what will be. There is nothing new under the sun.",
-            logo_alt   => "“So, who the Hell is Qoheleth?” Logo",
-            logo_class => "who_is_qoheleth",
-            logo_id    => "who_is_qoheleth_logo",
-            logo_src   =>
+        logo_alt   => "“So, who the Hell is Qoheleth?” Logo",
+        logo_class => "who_is_qoheleth",
+        logo_id    => "who_is_qoheleth_logo",
+        logo_src   =>
 "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
-            logo_svg =>
-                'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
-            entry_id   => "who-is-qoheleth",
-            entry_text => "“So, who the Hell is Qoheleth?”",
-            href       => "humour/So-Who-The-Hell-Is-Qoheleth/",
-            abstract   => <<'EOF',
+        logo_svg =>
+            'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
+        entry_id   => "who-is-qoheleth",
+        entry_text => "“So, who the Hell is Qoheleth?”",
+        href       => "humour/So-Who-The-Hell-Is-Qoheleth/",
+        abstract   => <<'EOF',
 <p class="who_is_qoheleth abstract">
 Josephus was a budding philosopher of Jewish descent in
 <a href="https://en.wikipedia.org/wiki/Damascus">Damascus</a> of
@@ -337,20 +338,20 @@ and set in a time of great confusion — not unlike our own.
 </p>
 
 EOF
-        },
-        {
-            id         => 'queen_padme_tales',
-            tagline    => "Pizza slice with all my favourite toppings",
-            logo_alt   => "“Queen Padmé Tales” logo",
-            logo_class => "queen_padme_tales",
-            logo_id    => "queen_padme_tales_logo",
-            logo_src   =>
-                "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
-            logo_svg   => '//$SKIP',
-            entry_id   => "queen--padme--tales",
-            entry_text => "Queen Padmé Tales",
-            href       => "humour/Queen-Padme-Tales/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'queen_padme_tales',
+        tagline    => "Pizza slice with all my favourite toppings",
+        logo_alt   => "“Queen Padmé Tales” logo",
+        logo_class => "queen_padme_tales",
+        logo_id    => "queen_padme_tales_logo",
+        logo_src   =>
+            "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "queen--padme--tales",
+        entry_text => "Queen Padmé Tales",
+        href       => "humour/Queen-Padme-Tales/",
+        abstract   => <<'EOF',
 <div class="queen_padme_tales abstract">
 
 <p>
@@ -393,21 +394,21 @@ to reduce it.
 </div>
 
 EOF
-        },
-        {
-            id         => 'terminator_liberation',
-            tagline    => "Tell about the Exodus. And the more, the better.",
-            logo_alt   => "“Terminator: Liberation” Logo",
-            logo_class => "terminator_liberation",
-            logo_id    => "terminator_liberation_logo",
-            logo_src   =>
-                "humour/Terminator/Liberation/images/terminator_liberation.png",
-            logo_svg =>
-                "humour/Terminator/Liberation/images/terminator_liberation.svg",
-            entry_id   => "terminator--liberation",
-            entry_text => "Terminator: Liberation",
-            href       => "humour/Terminator/Liberation/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'terminator_liberation',
+        tagline    => "Tell about the Exodus. And the more, the better.",
+        logo_alt   => "“Terminator: Liberation” Logo",
+        logo_class => "terminator_liberation",
+        logo_id    => "terminator_liberation_logo",
+        logo_src   =>
+            "humour/Terminator/Liberation/images/terminator_liberation.png",
+        logo_svg =>
+            "humour/Terminator/Liberation/images/terminator_liberation.svg",
+        entry_id   => "terminator--liberation",
+        entry_text => "Terminator: Liberation",
+        href       => "humour/Terminator/Liberation/",
+        abstract   => <<'EOF',
 <p class="terminator_liberation abstract">
 A self-referential parody of the <a
 href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
@@ -421,20 +422,23 @@ href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a> takes place).
 </p>
 
 EOF
-        },
-        {
-            id      => 'pope_died_on_sunday',
-            tagline =>
-                "And so starts what appears to be an ordinary week… or not!",
-            logo_alt   => "“The Pope Died on Sunday” Logo",
-            logo_class => "pope_died_on_sunday",
-            logo_id    => "pope_died_on_sunday_logo",
-            logo_src   => "humour/Pope/images/pope-logo-small.png",
-            logo_svg   => 'humour/Pope/images/pope-logo.svg',
-            entry_id   => "pope-died-on-sunday",
-            entry_text => "The Pope Died on Sunday",
-            href       => "humour/Pope/",
-            abstract   => <<'EOF',
+    },
+);
+
+my @inactive_Stories = _to_story_objects(
+    {
+        id      => 'pope_died_on_sunday',
+        tagline =>
+            "And so starts what appears to be an ordinary week… or not!",
+        logo_alt   => "“The Pope Died on Sunday” Logo",
+        logo_class => "pope_died_on_sunday",
+        logo_id    => "pope_died_on_sunday_logo",
+        logo_src   => "humour/Pope/images/pope-logo-small.png",
+        logo_svg   => 'humour/Pope/images/pope-logo.svg',
+        entry_id   => "pope-died-on-sunday",
+        entry_text => "The Pope Died on Sunday",
+        href       => "humour/Pope/",
+        abstract   => <<'EOF',
 <p class="pope_died_on_sunday abstract">
 Rachel Southern, an American graphic artist who lives and works in
 <a href="https://en.wikipedia.org/wiki/Milwaukee">Milwaukee</a>, did not expect the week following the death of the Roman Catholic
@@ -454,20 +458,19 @@ been written.
 </p>
 
 EOF
-        },
-        {
-            id         => 'blue_rabbit',
-            tagline    => "TODO FILL IN",
-            logo_alt   => "The Blue Rabbit Log Logo",
-            logo_class => "blue_rabbit",
-            logo_id    => "blue_rabbit_logo",
-            logo_src   =>
-                "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
-            logo_svg   => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
-            entry_id   => "blue-rabbit",
-            entry_text => "The Blue Rabbit Log",
-            href       => "humour/Blue-Rabbit-Log/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'blue_rabbit',
+        tagline    => "TODO FILL IN",
+        logo_alt   => "The Blue Rabbit Log Logo",
+        logo_class => "blue_rabbit",
+        logo_id    => "blue_rabbit_logo",
+        logo_src => "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
+        logo_svg => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
+        entry_id => "blue-rabbit",
+        entry_text => "The Blue Rabbit Log",
+        href       => "humour/Blue-Rabbit-Log/",
+        abstract   => <<'EOF',
 <p>
 Screenplays for a series of crazy comedy films parodying
 <a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
@@ -482,21 +485,20 @@ and... the Game Master! (Muahahahahaha).
 Work in progress.
 </p>
 EOF
-        },
-        {
-            id         => 'the_earth_angel',
-            tagline    => "TODO FILL IN",
-            logo_alt   => "The Earth Angel Logo",
-            logo_class => "the_earth_angel",
-            logo_id    => "the_earth_angel_logo",
-            logo_src   =>
-                "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
-            logo_svg =>
-                'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
-            entry_id   => "the-earth-angel",
-            entry_text => "The Earth Angel",
-            href       => "humour/The-Earth-Angel/",
-            abstract   => <<'EOF',
+    },
+    {
+        id         => 'the_earth_angel',
+        tagline    => "TODO FILL IN",
+        logo_alt   => "The Earth Angel Logo",
+        logo_class => "the_earth_angel",
+        logo_id    => "the_earth_angel_logo",
+        logo_src   =>
+            "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
+        logo_svg   => 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
+        entry_id   => "the-earth-angel",
+        entry_text => "The Earth Angel",
+        href       => "humour/The-Earth-Angel/",
+        abstract   => <<'EOF',
 <p>
 A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
 Angeles teaches a copyrights attorney all about life.
@@ -510,10 +512,10 @@ preliminary state.
 </p>
 
 EOF
-        },
-    )
+    },
 );
 
+my @_Stories       = ( @active_Stories, @inactive_Stories );
 my %_Stories_by_id = ( map { $_->id() => $_ } @_Stories );
 
 sub _get_story
@@ -627,16 +629,16 @@ sub _get_story_entry_tags
 
 sub _get_all_stories_entries_tags
 {
-    my ( $self, $tag ) = @_;
+    my ( $self, $args ) = @_;
 
     return [
         map {
             @{
                 $self->_get_story_entry_tags(
-                    { id => $_->id(), tag => $tag->{tag}, }
+                    { id => $_->id(), tag => $args->{tag}, }
                 )
             }
-        } @_Stories
+        } ( $args->{only_inactive} ? @inactive_Stories : @_Stories )
     ];
 }
 
@@ -663,9 +665,9 @@ sub calc_common_top_elems
 
 sub calc_all_stories_entries
 {
-    my ( $self, $tag ) = @_;
+    my ( $self, $args ) = @_;
 
-    return join( '', @{ $self->_get_all_stories_entries_tags($tag) }, );
+    return join( '', @{ $self->_get_all_stories_entries_tags($args) }, );
 }
 
 my %png_stories = (

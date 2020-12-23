@@ -18,6 +18,12 @@ href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
 
 [% END %]
 
+[% BLOCK inactive_humour_stories_list_text %]
+
+[% long_stories.calc_all_stories_entries(only_inactive=>1, tag=>'h3') %]
+
+[% END %]
+
 [% BLOCK rejects_road_to_heaven %]
 
 <humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/"

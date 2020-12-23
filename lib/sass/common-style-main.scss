@@ -836,6 +836,10 @@ div.abstract {
     }
 }
 
+section.fancy_sects {
+    @include mysection;
+}
+
 .fancy_sects {
     section,
     .sub_section {

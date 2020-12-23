@@ -638,7 +638,10 @@ sub _get_all_stories_entries_tags
                     { id => $_->id(), tag => $args->{tag}, }
                 )
             }
-        } ( $args->{only_inactive} ? @inactive_Stories : @_Stories )
+        } (
+            map { $_ ? @inactive_Stories : @active_Stories; }
+                @{ $args->{only_inactives} // [ 0, 1 ] }
+        )
     ];
 }
 
@@ -667,6 +670,19 @@ sub calc_all_stories_entries
 {
     my ( $self, $args ) = @_;
 
+    if ( not $args->{only_inactives} )
+    {
+        my $tag = $args->{tag};
+        return $self->calc_all_stories_entries(
+            { only_inactives => [0], %$args, } )
+            . "<section class=\"fancy_sects\"><header><$tag>Inactive Stories</$tag></header>"
+            . $self->calc_all_stories_entries(
+            {
+                only_inactives => [1],
+                %$args, tag => ( $tag =~ s#(h)([0-9]+)#$1 . ($2 + 1)#er )
+            }
+            ) . "</section>";
+    }
     return join( '', @{ $self->_get_all_stories_entries_tags($args) }, );
 }
 

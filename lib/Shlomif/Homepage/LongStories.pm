@@ -21,7 +21,6 @@ my @active_Stories = _to_story_objects(
         id         => 'the_enemy',
         tagline    => "I came; I saw; I left no trace",
         logo_alt   => "A = not-A",
-        logo_class => "ene",
         logo_src   => "humour/TheEnemy/images/The-Enemy-logo-small.png",
         logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
         entry_id   => "enemy-how-i-helped",
@@ -87,7 +86,6 @@ EOF
         id         => 'humanity',
         tagline    => "Intelligent (?) and Conscious (?)",
         logo_alt   => "Humanity Logo",
-        logo_class => "humanity",
         logo_src   => "humour/humanity/images/humanity-logo-small.png",
         logo_svg   => 'humour/humanity/images/humanity-logo.svg',
         entry_id   => "humanity",
@@ -105,12 +103,11 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 EOF
     },
     {
-        id         => 'hhfg',
-        tagline    => "Who said girls can’t code?",
-        logo_alt   => "Human Hacking Field Guide Logo",
-        logo_class => "hhfg",
-        logo_src   => "humour/human-hacking/images/hhfg-logo-small.png",
-        logo_svg   =>
+        id       => 'hhfg',
+        tagline  => "Who said girls can’t code?",
+        logo_alt => "Human Hacking Field Guide Logo",
+        logo_src => "humour/human-hacking/images/hhfg-logo-small.png",
+        logo_svg =>
             'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
         entry_id   => "human-hacking",
         entry_text => "The Human Hacking Field Guide",
@@ -133,7 +130,6 @@ EOF
         tagline => "From perfection to imperfection; from finity to infinity",
 
         logo_alt   => "Fiery Q",
-        logo_class => "st_wtld",
         logo_src   => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
         logo_svg   => '//$SKIP',
         entry_id   => "we-the-living-dead",
@@ -196,12 +192,11 @@ EOF
 
     },
     {
-        id         => 'summerschool_at_the_nsa',
-        tagline    => "As the sling shoots, grown men will cry",
-        logo_alt   => "Summerschool at the NSA Logo",
-        logo_class => "summernsa",
-        logo_id    => "summernsa_logo",
-        logo_src   =>
+        id       => 'summerschool_at_the_nsa',
+        tagline  => "As the sling shoots, grown men will cry",
+        logo_alt => "Summerschool at the NSA Logo",
+        logo_id  => "summernsa_logo",
+        logo_src =>
             "humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png",
         logo_svg   => '//$SKIP',
         entry_id   => "summerschool-at-the-nsa",
@@ -272,7 +267,6 @@ EOF
         id         => 'muppets_show_tni',
         tagline    => "Muppets!",
         logo_alt   => "The Muppets Show TNI",
-        logo_class => "muppets",
         logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
         logo_svg   => '//$SKIP',
         entry_id   => "muppets-show-TNI",
@@ -331,11 +325,10 @@ and set in a time of great confusion — not unlike our own.
 EOF
     },
     {
-        id         => 'queen_padme_tales',
-        tagline    => "Pizza slice with all my favourite toppings",
-        logo_alt   => "“Queen Padmé Tales” logo",
-        logo_class => "queen_padme_tales",
-        logo_src   =>
+        id       => 'queen_padme_tales',
+        tagline  => "Pizza slice with all my favourite toppings",
+        logo_alt => "“Queen Padmé Tales” logo",
+        logo_src =>
             "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
         logo_svg   => '//$SKIP',
         entry_id   => "queen--padme--tales",
@@ -420,7 +413,6 @@ my @inactive_Stories = _to_story_objects(
         tagline =>
             "And so starts what appears to be an ordinary week… or not!",
         logo_alt   => "“The Pope Died on Sunday” Logo",
-        logo_class => "pope_died_on_sunday",
         logo_src   => "humour/Pope/images/pope-logo-small.png",
         logo_svg   => 'humour/Pope/images/pope-logo.svg',
         entry_id   => "pope-died-on-sunday",
@@ -448,10 +440,9 @@ been written.
 EOF
     },
     {
-        id         => 'blue_rabbit',
-        tagline    => "TODO FILL IN",
-        logo_alt   => "The Blue Rabbit Log Logo",
-        logo_class => "blue_rabbit",
+        id       => 'blue_rabbit',
+        tagline  => "TODO FILL IN",
+        logo_alt => "The Blue Rabbit Log Logo",
         logo_src => "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
         logo_svg => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
         entry_id => "blue-rabbit",
@@ -474,11 +465,10 @@ Work in progress.
 EOF
     },
     {
-        id         => 'the_earth_angel',
-        tagline    => "TODO FILL IN",
-        logo_alt   => "The Earth Angel Logo",
-        logo_class => "the_earth_angel",
-        logo_src   =>
+        id       => 'the_earth_angel',
+        tagline  => "TODO FILL IN",
+        logo_alt => "The Earth Angel Logo",
+        logo_src =>
             "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
         logo_svg   => 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
         entry_id   => "the-earth-angel",
@@ -555,10 +545,10 @@ sub _get_logo_tags
 
     return [
         sprintf(
-            qq#<img id="%s" src="%s" alt="%s" class="story_logo %s"/>\n#,
+            qq#<img id="%s" src="%s" alt="%s" class="story_logo%s"/>\n#,
             $o->logo_id,
             escape_html( _rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
-            $o->logo_alt, $o->logo_class,
+            $o->logo_alt, $o->calc_logo_class,
         ),
     ];
 }
@@ -576,8 +566,8 @@ sub _get_common_top_elems
     my $ret = [
         @{ $self->_get_tagline_tags($id) },
         @{ $self->_get_logo_tags($id) },
-        sprintf( qq#<div class="%s abstract">\n#,
-            $self->_get_story($id)->logo_class ),
+        sprintf( qq#<div class="abstract%s">\n#,
+            $self->_get_story($id)->calc_logo_class ),
         qq#<h2 id="abstract">Abstract</h2>\n#,
         @{ $self->_get_abstract_tags($id) },
         qq{</div>\n},

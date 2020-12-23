@@ -22,7 +22,6 @@ my @active_Stories = _to_story_objects(
         tagline    => "I came; I saw; I left no trace",
         logo_alt   => "A = not-A",
         logo_class => "ene",
-        logo_id    => "the_enemy_logo",
         logo_src   => "humour/TheEnemy/images/The-Enemy-logo-small.png",
         logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
         entry_id   => "enemy-how-i-helped",
@@ -53,7 +52,6 @@ EOF
 "The Fountainhead may have been good enough in the 60’s, but we’re in the Information Age now",
         logo_alt   => "The One With The Fountainhead Logo",
         logo_class => "towtf",
-        logo_id    => "tow_the_fountainhead_logo",
         logo_src => "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
         logo_svg => '//$SKIP',
         entry_id => "fountainhead",
@@ -90,7 +88,6 @@ EOF
         tagline    => "Intelligent (?) and Conscious (?)",
         logo_alt   => "Humanity Logo",
         logo_class => "humanity",
-        logo_id    => "humanity_logo",
         logo_src   => "humour/humanity/images/humanity-logo-small.png",
         logo_svg   => 'humour/humanity/images/humanity-logo.svg',
         entry_id   => "humanity",
@@ -112,7 +109,6 @@ EOF
         tagline    => "Who said girls can’t code?",
         logo_alt   => "Human Hacking Field Guide Logo",
         logo_class => "hhfg",
-        logo_id    => "hhfg_logo",
         logo_src   => "humour/human-hacking/images/hhfg-logo-small.png",
         logo_svg   =>
             'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
@@ -138,7 +134,6 @@ EOF
 
         logo_alt   => "Fiery Q",
         logo_class => "st_wtld",
-        logo_id    => "we_the_living_dead_logo",
         logo_src   => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
         logo_svg   => '//$SKIP',
         entry_id   => "we-the-living-dead",
@@ -166,7 +161,6 @@ EOF
         tagline    => "Caught between Post-modernism and the New Age",
         logo_alt   => "1d10 die",
         logo_class => "selina",
-        logo_id    => "selina_mandrake_logo",
         logo_src   => "humour/Selina-Mandrake/images/Green-d10-dice.png",
         logo_svg   => '//$SKIP',
         entry_id   => "selina-mandrake",
@@ -252,7 +246,6 @@ EOF
             "I learned more from my students than I have from my teachers.",
         logo_alt   => "Buffy - a Few Good Slayers Logo",
         logo_class => "buffy_few_good",
-        logo_id    => "buffy_a_few_good_slayers_logo",
         logo_src   =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.min.svg',
         logo_svg =>
@@ -280,7 +273,6 @@ EOF
         tagline    => "Muppets!",
         logo_alt   => "The Muppets Show TNI",
         logo_class => "muppets",
-        logo_id    => "muppets_show_tni_logo",
         logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
         logo_svg   => '//$SKIP',
         entry_id   => "muppets-show-TNI",
@@ -304,7 +296,6 @@ EOF
 "What had been, is what will be. There is nothing new under the sun.",
         logo_alt   => "“So, who the Hell is Qoheleth?” Logo",
         logo_class => "who_is_qoheleth",
-        logo_id    => "who_is_qoheleth_logo",
         logo_src   =>
 "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
         logo_svg =>
@@ -344,7 +335,6 @@ EOF
         tagline    => "Pizza slice with all my favourite toppings",
         logo_alt   => "“Queen Padmé Tales” logo",
         logo_class => "queen_padme_tales",
-        logo_id    => "queen_padme_tales_logo",
         logo_src   =>
             "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
         logo_svg   => '//$SKIP',
@@ -400,7 +390,6 @@ EOF
         tagline    => "Tell about the Exodus. And the more, the better.",
         logo_alt   => "“Terminator: Liberation” Logo",
         logo_class => "terminator_liberation",
-        logo_id    => "terminator_liberation_logo",
         logo_src   =>
             "humour/Terminator/Liberation/images/terminator_liberation.png",
         logo_svg =>
@@ -432,7 +421,6 @@ my @inactive_Stories = _to_story_objects(
             "And so starts what appears to be an ordinary week… or not!",
         logo_alt   => "“The Pope Died on Sunday” Logo",
         logo_class => "pope_died_on_sunday",
-        logo_id    => "pope_died_on_sunday_logo",
         logo_src   => "humour/Pope/images/pope-logo-small.png",
         logo_svg   => 'humour/Pope/images/pope-logo.svg',
         entry_id   => "pope-died-on-sunday",
@@ -464,7 +452,6 @@ EOF
         tagline    => "TODO FILL IN",
         logo_alt   => "The Blue Rabbit Log Logo",
         logo_class => "blue_rabbit",
-        logo_id    => "blue_rabbit_logo",
         logo_src => "humour/Blue-Rabbit-Log/images/blue-rabbit-logo-small.png",
         logo_svg => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
         entry_id => "blue-rabbit",
@@ -491,7 +478,6 @@ EOF
         tagline    => "TODO FILL IN",
         logo_alt   => "The Earth Angel Logo",
         logo_class => "the_earth_angel",
-        logo_id    => "the_earth_angel_logo",
         logo_src   =>
             "humour/The-Earth-Angel/images/the-earth-angel-logo-small.png",
         logo_svg   => 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',

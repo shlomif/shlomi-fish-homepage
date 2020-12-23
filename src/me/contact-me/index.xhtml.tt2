@@ -5,10 +5,9 @@
 
 [% IF 0 %]
 <script src="[% base_path %]js/jquery.expander.js"></script>
-[% END %]
 <script src="[% base_path %]js/jquery.expander.min.js"></script>
-
 <script src="[% base_path %]js/my-expander.js"></script>
+[% END %]
 
 [% WRAPPER h2_section id = "contact_me"  title = "How to contact me / How to reach me"  %]
 
@@ -19,7 +18,7 @@ usability, accessibility, and [% my_acronym( "key" => "FOSS",) %]-considerations
 Last updated on 2020-12-08 .)
 </p>
 
-<h2 id="best-ways-to-contact">Best ways to contact me:</h2>
+[% WRAPPER h3_section id="best-ways-to-contact" title="Best ways to contact me:"%]
 
 <ol>
 
@@ -28,7 +27,6 @@ Last updated on 2020-12-08 .)
 The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook
 shlomi.fish</a>
 private chat or <a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id).
-or
 </p>
 </li>
 
@@ -43,7 +41,7 @@ File an issue on my
 <p>
 You can also try emailing
 [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]
-as well as <a href="mailto:[% main_email %]">my regular E-mail</a>.
+as well as <a href="mailto:[% main_email %]">my other E-mail</a>.
 </p>
 </li>
 
@@ -54,6 +52,10 @@ ShlomiFish@jabber.org
 </p>
 </li>
 </ol>
+
+[% END %]
+
+[% WRAPPER h3_section id = "primary-contact-ways" title = "Secondary ways"  %]
 
 <dl class="contact">
 <dt>Homepage:</dt>
@@ -80,9 +82,9 @@ ShlomiFish@jabber.org
 <dd>+972-54-6232377 (Orange)</dd>
 </dl>
 
-[%- END -%]
+[% END %]
 
-[% WRAPPER h2_section id = "more_contact_details"  title = "More Contact Details"  %]
+[% WRAPPER h3_section id = "more_contact_details"  title = "More Contact Details"  %]
 
 <dl id="more_contacts_list" class="contact">
 
@@ -207,6 +209,8 @@ ShlomiFish@jabber.org
 shf_expand("#more_contacts_list", 500);
 </script>
 [% END %]
+
+[%- END -%]
 
 [%- END -%]
 

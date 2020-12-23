@@ -309,6 +309,7 @@ my $humour_tree_contents = {
                             url   => "humour/RoadToHeaven/",
                             title =>
 "The Road to Heaven is Paved with Bad Intentions",
+                            skip => 1,
                             subs => [
                                 {
                                     skip => 1,

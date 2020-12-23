@@ -1070,13 +1070,10 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 
 [% BLOCK facts__list %]
 {{ FOREACH p IN pages }}
-<section class="h3">
-<header>
-<h3 id="facts-{{ p.short_id() }}" class="facts"><a href="{{ p.url_base() }}/">{{ p.title() }}</a></h3>
-</header>
+[% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}" title="{{ p.title() }}" %]
 {{ "[% INCLUDE facts__${p.short_id()} %]" }}
 
-</section>
+[% END %]
 {{ END }}
 [% END %]
 END_OF_TEMPLATE
@@ -1099,17 +1096,23 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 
 [% INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" %]
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.{{ p.license_method() }} (year=>"{{ p.license_year() }}") %]
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER links_sect  %]
 
 {{ p.links_tt2() }}
 
-<h2 id="see_also">See Also</h2>
+[% END %]
+
+[% WRAPPER see_also  %]
 
 {{ p.see_also() }}
+
+[% END %]
 
 {{ p.nav_blocks_tt2() }}
 

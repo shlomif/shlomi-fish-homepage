@@ -14,12 +14,10 @@
 [% IF shlomif_lang == "en"%]<li>[%content%]</li>[% END %]
 [% END %]
 
-[%# THROW "bef en_he_tabs = ${multi_shlomif_lang}" %]
 [% BLOCK en_he_tabs %]
 
 [% SET en_id="${id_base}_en" %]
 [% SET he_id="${id_base}_he" %]
-[%#THROW "heyid = ${multi_shlomif_lang}" %]
 
 <div class="jqueryui_tabs">
 
@@ -31,7 +29,6 @@
 [% FOREACH shlomif_lang IN ["en", "he"] %]
 
 [% SET multi_shlomif_lang = "${shlomif_lang}" %]
-[% # THROW "multi_shlomif_lang = ${multi_shlomif_lang}" %]
 [% WRAPPER en %]
 
 <div id="[% en_id %]" class="tab">
@@ -46,10 +43,8 @@
 
 [% common_prefix %]
 
-[%# THROW "ollllllllllllllllennnnnnnnnn utsidr" %]
 [% WRAPPER en %]
 <p>
-[%# THROW "ollllllllllllllllennnnnnnnnn" %]
 This is the sequel to the story “The Enemy and How I Helped to Fight it”.
 If you have not read the original story, you will probably not fully
 understand what is written here. Even if so, then reading it may ruin part
@@ -210,7 +205,6 @@ to return with him back in time, and change history back to the way it was,
 and return with him to the present. Hitler agrees.
 [%- END -%]
 
-[%# THROW "wrap_html li_he" %]
 [% WRAPPER li_he %]
 החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר תלך להיפגש עם היטלר. אחרי מעט
 מאמצים הם מצליחים להיפגש איתו. הוא מיד מזהה את החבר לשעבר האמתי בתור מי שהוא

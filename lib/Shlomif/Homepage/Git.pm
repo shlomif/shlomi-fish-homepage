@@ -72,7 +72,18 @@ sub github_clone
 
 sub github_shlomif_clone
 {
-    my ( $self, $into_dir, $repo ) = @_;
+    my ( $self, $into_dir, $repo, $inside ) = @_;
+
+    if ($inside)
+    {
+        my $clone_into = $git_clones_dir->child($repo);
+        if ( !-e $clone_into )
+        {
+            my $link = "$into_dir/$repo";
+            symlink( $link, $clone_into, );
+            return;
+        }
+    }
 
     return $self->github_clone(
         {
@@ -95,10 +106,11 @@ sub sys_task
 
 sub git_task
 {
-    my ( $self, $d, $bn ) = @_;
+    my ( $self, $d, $bn, $inside ) = @_;
     return
         if -e "$d/$bn";
-    return $self->add_task( scalar( $self->github_shlomif_clone( $d, $bn ) ) );
+    return $self->add_task(
+        scalar( $self->github_shlomif_clone( $d, $bn, $inside, ) ) );
 }
 
 sub calc_git_task_cb

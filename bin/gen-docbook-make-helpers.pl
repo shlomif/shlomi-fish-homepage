@@ -15,7 +15,7 @@ use Shlomif::Homepage::GenScreenplaysMak ();
 
 my $git_obj = Shlomif::Homepage::Git->new;
 
-my $git_task = $git_obj->calc_git_task_cb;
+my $git_task = $git_obj->calc_git_task_cb();
 
 $git_obj->git_in_checkout_task(
     {
@@ -79,11 +79,11 @@ $git_obj->git_in_checkout_task(
 );
 
 foreach my $repo (
+    [ 'Shlomi-Fish-Back-to-my-Homepage-Logo', 1 ],
     (
         map { s#/[^/]*$##r }
-        path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
-    ),
-    'Shlomi-Fish-Back-to-my-Homepage-Logo',
+            path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
+        ),
     'XML-Grammar-Vered',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
@@ -94,7 +94,7 @@ foreach my $repo (
     'why-openly-bipolar-people-should-not-be-medicated',
     )
 {
-    $git_task->( 'lib/repos', $repo );
+    $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );
 }
 
 Shlomif::Homepage::GenScreenplaysMak->new->generate(

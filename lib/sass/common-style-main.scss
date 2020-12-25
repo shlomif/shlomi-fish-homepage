@@ -267,10 +267,10 @@ p.hilight {
     @include hilight;
     > a {
         &:after {
-            content: " ] ";
+            content: " ⬇ ] ";
         }
         &:before {
-            content: " [ ";
+            content: " [ ⬇ ";
         }
     }
 }

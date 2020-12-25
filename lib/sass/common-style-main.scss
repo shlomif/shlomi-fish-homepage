@@ -249,14 +249,30 @@ section.bordered {
     text-align: left;
 }
 
+@mixin hilight {
+    font-size: x-large;
+}
+
 .hilight .l,
 p.hilight {
-    font-size: x-large;
+    @include hilight;
 }
 
 .hilight dd {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
+}
+
+.skip_to_main {
+    @include hilight;
+    > a {
+        &:after {
+            content: " ] ";
+        }
+        &:before {
+            content: " [ ";
+        }
+    }
 }
 
 p.desc {

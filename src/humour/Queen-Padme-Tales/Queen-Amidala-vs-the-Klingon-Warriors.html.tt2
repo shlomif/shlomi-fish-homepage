@@ -1,11 +1,11 @@
-[% PROCESS "stories/selina-common.tt2" %]
 [%- SET title = "Queen Padmé Tales: Pilot: Queen Amidala vs. the Klingon Warriors - Ongoing Text" -%]
+[%- SET desc = "Queen Padmé Tales: Pilot: Queen Amidala vs. the Klingon Warriors | Queen Padmé’s first assassination attempt after 10 years of reign is handled gracefully. Ongoing Text" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
 [%- WRAPPER wrap_html -%]
 
-<p>
-<a href="#filming-version-0.2.x">[Skip the introductions]</a>
+<p class="skip_to_main">
+<a href="#filming-version-0.2.x"><b>Skip the introductions</b></a>
 </p>
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]

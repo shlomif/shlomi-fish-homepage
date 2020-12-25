@@ -10,7 +10,8 @@ has [ 'abstract', 'id', 'logo_alt', 'logo_src', 'logo_svg', 'tagline', ] =>
 
 has [ 'entry_id', 'entry_text', 'href', ] => ( is => 'ro', );
 
-has [ 'entry_extra_html', ] => ( is => 'ro', default => q{}, );
+has [ 'entry_extra_html', ]           => ( is => 'ro', default => q{}, );
+has [ 'should_skip_abstract_h_tag', ] => ( is => 'ro', default => q{}, );
 
 has logo_class => ( is => 'ro', );
 

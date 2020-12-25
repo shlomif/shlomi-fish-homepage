@@ -334,9 +334,16 @@ EOF
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
-        href     => "humour/Queen-Padme-Tales/",
-        abstract => <<'EOF',
+        href                       => "humour/Queen-Padme-Tales/",
+        should_skip_abstract_h_tag => 1,
+        abstract                   => <<'EOF',
 <div class="queen_padme_tales abstract">
+
+<section>
+
+<header>
+<h2 id="objective">Objective</h2>
+</header>
 
 <p>
 This ambitious series of screenplays breaks a long time taboo of writing
@@ -347,8 +354,13 @@ the case for commercial yet free/open ( <a href="https://creativecommons.org/">C
 and screenplays written in easier to write formats than the
 draconian, finicky, and boring, Hollywood-blessed format.
 </p>
+</section>
 
-<hr />
+<section>
+
+<header>
+<h2 id="abstract">Abstract</h2>
+</header>
 
 <p>
 While the birth parents of
@@ -386,6 +398,8 @@ but which many people believe are some kind of a trick. And her biggest pet
 peeve: her bank account which keeps getting larger, despite her many attempts
 to reduce it.
 </p>
+
+</section>
 
 </div>
 
@@ -537,6 +551,15 @@ sub _get_tagline_tags
 
 use Shlomif::Homepage::RelUrl qw/ _rel_url /;
 
+sub _get_should_skip_abstract_h_tag
+{
+    my ( $self, $id ) = @_;
+
+    my $abstract = $self->_get_story($id)->should_skip_abstract_h_tag();
+
+    return $abstract;
+}
+
 sub _get_abstract_tags
 {
     my ( $self, $id ) = @_;
@@ -583,7 +606,11 @@ sub _get_common_top_elems
         @{ $self->_get_logo_tags($id) },
         sprintf( qq#<div class="abstract%s">\n#,
             $self->_get_story($id)->calc_logo_class ),
-        qq#<h2 id="abstract">Abstract</h2>\n#,
+        (
+            $self->_get_should_skip_abstract_h_tag($id)
+            ? ()
+            : ( qq#<h2 id="abstract">Abstract</h2>\n#, )
+        ),
         @{ $self->_get_abstract_tags($id) },
         qq{</div>\n},
     ];

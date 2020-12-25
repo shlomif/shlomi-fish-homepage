@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro  %]
 
 <p>
 Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>
@@ -28,6 +28,8 @@ changes), and wish that my words and deeds will carry reality <b>forward</b>
 instead of preserving the status quo.
 </p>
 
-[% PROCESS humour_stories_list_text %]
+[% END %]
+
+[% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
 
 [% END %]

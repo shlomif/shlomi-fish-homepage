@@ -80,10 +80,12 @@ requests, and filing bugs/issues in the bug tracker
 
 [% BLOCK humour_stories_list_text %]
 
+[% UNLESS no_stories_wrapper %]
 <section class="long_stories">
 <header>
 <h2 id="list-of-stories">List of Stories</h2>
 </header>
+[% END %]
 <section>
 <header>
 <h2 id="active_stories">Active Stories</h2>
@@ -100,6 +102,8 @@ requests, and filing bugs/issues in the bug tracker
 [% PROCESS inactive_humour_stories_list_text  %]
 </div>
 </section>
+[% UNLESS no_stories_wrapper %]
 </section>
+[% END %]
 
 [% END %]

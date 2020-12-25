@@ -47,6 +47,19 @@ class MyTests(unittest.TestCase):
             "^.*?What can you say about your name", desc_text)
         self.assertTrue(m)
 
+    def test_rindolfism(self):
+        input_fn = \
+            './dest/post-incs/t2/me/rindolfism/index.xhtml'
+        root = html.parse(input_fn)
+        links = root.xpath(
+            ".//section[header/*/@id='neo_semitism']" +
+            "/section[header/*/@id='rindolfism_canon']")
+        self.assertEqual(len(links), 0)
+        links = root.xpath(
+            ".//section[header/*/@id='rindolfism']" +
+            "/section[header/*/@id='rindolfism_canon']")
+        self.assertEqual(len(links), 1)
+
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/image-macros/index.xhtml'
         root = html.parse(input_fn)

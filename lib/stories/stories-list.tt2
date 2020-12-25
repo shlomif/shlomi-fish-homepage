@@ -12,15 +12,15 @@ href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
 </div>
 [% END %]
 
-[% BLOCK humour_stories_list_text %]
-
-[% long_stories.calc_all_stories_entries(tag=>'h3') %]
-
-[% END %]
-
 [% BLOCK inactive_humour_stories_list_text %]
 
 [% long_stories.calc_all_stories_entries(only_inactives=>[1], tag=>'h3') %]
+
+[% END %]
+
+[% BLOCK active_humour_stories_list_text %]
+
+[% long_stories.calc_all_stories_entries(only_inactives=>[0], tag=>'h3') %]
 
 [% END %]
 
@@ -75,5 +75,31 @@ requests, and filing bugs/issues in the bug tracker
 [% content %]
 
 </div>
+
+[% END %]
+
+[% BLOCK humour_stories_list_text %]
+
+<section class="long_stories">
+<header>
+<h2 id="list-of-stories">List of Stories</h2>
+</header>
+<section>
+<header>
+<h2 id="active_stories">Active Stories</h2>
+</header>
+<div class="fancy_sects">
+[% PROCESS active_humour_stories_list_text  %]
+</div>
+</section>
+<section>
+<header>
+<h2 id="inactive_stories"><a href="[% base_path %]humour/stories/inactive/">Inactive Stories</a></h2>
+</header>
+<div class="fancy_sects">
+[% PROCESS inactive_humour_stories_list_text  %]
+</div>
+</section>
+</section>
 
 [% END %]

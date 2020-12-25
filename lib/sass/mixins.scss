@@ -76,12 +76,15 @@ $navbar_margin: 0.5em;
 $ss_margin: 2em;
 
 @mixin mysection {
+    $ss_padding: 0.3em;
+    margin-bottom: $ss_margin;
     margin-top: $ss_margin;
     margin-left: 0.5em;
 
     padding-left: 1em;
     border-left: black solid 3px;
-    padding-top: 0.3em;
+    padding-bottom: $ss_padding;
+    padding-top: $ss_padding;
 
     &:hover {
         border-left-color: #555555;

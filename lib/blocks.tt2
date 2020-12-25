@@ -28,10 +28,22 @@
 </li>
 </ul>
 
+[% IF is_forked_site %]
+
+<p>
+This page is derived from the <a href="[% orig_url %]">original page</a>
+on Shlomi Fish’s personal website. See <a href="[% text_ORIG_URL_PREFIX %]meta/copyrights/">the Creative Commons copyright terms</a>.
+</p>
+
+[% ELSE %]
+
 <p>
 Written, designed, and maintained by Shlomi Fish,
 [% PROCESS main_email_mailto -%].
 </p>
+
+[% END %]
+
 [% END %]
 
 [%- BLOCK rellink -%]
@@ -437,6 +449,7 @@ Style and look based on the
 <a href="http://wordpress.org/extend/themes/smoked">Smoked WordPress Theme</a>
 by <a href="http://wordpress.org/extend/themes/profile/iconstantin">iconstantin</a>.
 </p>
+
 <p>
 <a href="[% base_path %]meta/FAQ/#evilphish-emblem">Fish emblem</a>
 taken from the

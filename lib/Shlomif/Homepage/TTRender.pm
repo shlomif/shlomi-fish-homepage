@@ -94,7 +94,8 @@ sub _shlomif_include_colorized_file
         )
     );
 }
-my $FULL_URL_PREFIX = "https://www.shlomifish.org/";
+my $ORIG_URL_PREFIX = "https://www.shlomifish.org/";
+my $FULL_URL_PREFIX = $ORIG_URL_PREFIX;
 my $NAME            = "Shlomi Fish";
 my $H               = "Homesite";
 
@@ -109,17 +110,20 @@ sub _process_title
     );
 }
 
+my $FALSE = '';
+
 has vars => (
     is      => 'ro',
     default => sub {
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
-            cpan         => $cpan,
-            license_obj  => $license,
-            long_stories => $long_stories,
-            news_obj     => $news,
-            mytan        =>
+            cpan           => $cpan,
+            is_forked_site => $FALSE,
+            license_obj    => $license,
+            long_stories   => $long_stories,
+            news_obj       => $news,
+            mytan          =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
             print_nav_block     => \&_render_nav_block,
@@ -193,8 +197,10 @@ sub proc
     my $raw_fn_path = ( $vars->{raw_fn_path} =
             $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r );
     my $full_url = $FULL_URL_PREFIX . $raw_fn_path;
-    $vars->{canonical_url} = $full_url;
-    $vars->{escaped_url}   = encodeURIComponent($full_url);
+    $vars->{canonical_url}        = $full_url;
+    $vars->{text_ORIG_URL_PREFIX} = $ORIG_URL_PREFIX;
+    $vars->{orig_url}             = $ORIG_URL_PREFIX . $raw_fn_path;
+    $vars->{escaped_url}          = encodeURIComponent($full_url);
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

@@ -6,14 +6,15 @@ use warnings;
 use Moo;
 
 use Carp ();
-use Path::Tiny qw/ cwd /;
+use Path::Tiny qw/ cwd path /;
 use IO::Async       ();
 use IO::Async::Loop ();
 use Future::Utils qw/ fmap_void /;
 
 my $cwd            = cwd();
 my $upper_dir      = $cwd->parent;
-my $git_clones_dir = $upper_dir->child( $cwd->basename . "--clones" );
+my $cwd_bn         = $cwd->basename;
+my $git_clones_dir = $upper_dir->child( $cwd_bn . "--clones" );
 $git_clones_dir->mkpath;
 
 my @tasks;
@@ -51,8 +52,9 @@ sub github_clone
         $url = "https://github.com/$gh_username/$repo.git";
     }
 
-    my $clone_into = $git_clones_dir->child($repo);
-    my $link       = "$into_dir/$repo";
+    my $clone_into =
+        path( $args->{clone_into} // $git_clones_dir )->child($repo);
+    my $link = "$into_dir/$repo";
 
     my @prefix = ( 'git', 'clone' );
     my @cmd    = ( @prefix, $url, $clone_into );
@@ -76,13 +78,30 @@ sub github_shlomif_clone
 
     if ($inside)
     {
-        my $clone_into = $git_clones_dir->child($repo);
-        if ( !-e $clone_into )
+        my $link       = $git_clones_dir->child($repo);
+        my $clone_into = "$into_dir/$repo";
+
+        # die $clone_into;
+        warn "[link=$link clone_into=$clone_into]";
+        if ( not -e $link )
         {
-            my $link = "$into_dir/$repo";
-            symlink( $link, $clone_into, );
+            warn "[not exist;link=$link clone_into=$clone_into]";
+            if ( not -e $clone_into )
+            {
+                symlink( "../$cwd_bn/$clone_into", $link );
+                warn "[not exist clone_into;link=$link clone_into=$clone_into]";
+                return $self->github_clone(
+                    {
+                        clone_into => $into_dir,
+                        username   => 'shlomif',
+                        into_dir   => $clone_into,
+                        repo       => $repo,
+                    }
+                );
+            }
             return;
         }
+        return;
     }
 
     return $self->github_clone(

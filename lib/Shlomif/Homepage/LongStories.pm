@@ -332,10 +332,23 @@ EOF
             "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
         logo_svg   => '//$SKIP',
         entry_id   => "queen--padme--tales",
-        entry_text => "Queen Padmé Tales",
-        href       => "humour/Queen-Padme-Tales/",
-        abstract   => <<'EOF',
+        entry_text =>
+            "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
+        href     => "humour/Queen-Padme-Tales/",
+        abstract => <<'EOF',
 <div class="queen_padme_tales abstract">
+
+<p>
+This ambitious series of screenplays breaks a long time taboo of writing
+<i>Star Wars</i> and <i>Star Trek</i> crossovers, but also aims to make
+the case for commercial yet free/open ( <a href="https://creativecommons.org/">Creative Commons</a>
+/ etc.) fan fiction / crossovers / real person fiction
+( e.g: <a href="https://archiveofourown.org/">Archive of our own</a> )
+and screenplays written in easier to write formats than the
+draconian, finicky, and boring, Hollywood-blessed format.
+</p>
+
+<hr />
 
 <p>
 While the birth parents of
@@ -593,9 +606,9 @@ sub _get_story_entry_tags
         sprintf(
             qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
             $tag,
-            ( $o->entry_id || ( die "Foo $id" ) ),
-            escape_html( _rel_url( $o->href || die "Qlax $id" ) ),
-            ( $o->entry_text || die "Elimbda $id" ),
+            ( $o->entry_id || ( die "no entry_id for $id" ) ),
+            escape_html( _rel_url( $o->href || ( die "no href for $id" ) ) ),
+            ( $o->entry_text || ( die "no entry_text for $id" ) ),
             $tag,
         ),
         qq{</header>\n},

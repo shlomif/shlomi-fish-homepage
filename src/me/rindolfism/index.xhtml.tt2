@@ -3,10 +3,6 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% BLOCK rindolf_floaty_img %]
-<a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
-[% END %]
-
 <div class="side_toc fancy_sects lim_width">
 
 [% PROCESS "Inc/rindolfism.tt2" %]

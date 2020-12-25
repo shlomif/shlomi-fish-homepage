@@ -4,6 +4,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+<p>
+<a href="#filming-version-0.2.x">[Skip the introductions]</a>
+</p>
+
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
 
 [% path_slurp("screenplay-xml/rendered-html/Queen-Amidala-vs-the-Klingon-Warriors.html") %]

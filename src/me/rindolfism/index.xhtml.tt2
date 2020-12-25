@@ -2,10 +2,9 @@
 [%- SET desc = "Rindolfism - Shlomi Fish’s Personal, Dynamic, Philosophy (but don't be a rindroid)" -%]
 
 [%- WRAPPER wrap_html -%]
+[% PROCESS "Inc/rindolfism.tt2" %]
 
 <div class="side_toc fancy_sects lim_width">
-
-[% PROCESS "Inc/rindolfism.tt2" %]
 
 [% INCLUDE rindolfism_block %]
 

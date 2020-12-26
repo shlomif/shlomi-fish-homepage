@@ -337,25 +337,25 @@ So without further ado:
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/stories/">The screenplays and novellas</a>.
+<a href="[% base_path %]humour/stories/">The screenplays and novellas</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/aphorisms/">The Aphorisms and Quotes</a>
+<a href="[% base_path %]humour/aphorisms/">The Aphorisms and Quotes</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/philosophy/">The essays</a>.
+<a href="[% base_path %]philosophy/">The essays</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/meta/FAQ/">My [% my_acronym( "key" => "FAQ", "no_link"=>1, ) %]</a>
+<a href="[% base_path %]meta/FAQ/">My [% my_acronym( "key" => "FAQ", "no_link"=>1, ) %]</a>
 </p>
 </li>
 

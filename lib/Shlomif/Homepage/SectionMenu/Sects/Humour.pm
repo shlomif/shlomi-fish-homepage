@@ -249,6 +249,11 @@ my $humour_tree_contents = {
                                     url =>
 "humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html",
                                 },
+                                {
+                                    text => "Planting Trees",
+                                    url  =>
+"humour/Queen-Padme-Tales/Planting-Trees.html",
+                                },
                             ],
                         },
                     ],

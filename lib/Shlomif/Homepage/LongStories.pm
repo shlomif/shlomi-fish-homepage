@@ -166,7 +166,9 @@ EOF
 <p class="selina abstract">
 A geeky Anglo-American girl in her high school senior year in 2011
 California ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> ),
-finds out that she is none other than <b>The Slayer</b>,
+is approached by a mysterious goth man calling himself "The Guide"
+( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
+who tells her that she is none other than <b>The Slayer</b>,
 a legendary heroine who is destined to slay many notable vampires and demons,
 culminating in none other than The Master, the vampire with the oldest
 soul. See how she manages to do so, despite being completely non-violent, and
@@ -175,7 +177,7 @@ even supportive of the demons she encounters.
 <p>
 This is a parody of the television series
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy the Vampire Slayer</a>, while referencing other pieces of popular
-culture, and has many ties to my other screenplay,
+culture, and has many ties to my previous screenplay,
 <a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
 serious messages and insights.

@@ -1,0 +1,22 @@
+[%- SET title = "Queen Padmé Tales: Planting Trees - Ongoing Text" -%]
+[%- SET desc = "Queen Padmé Tales: Fighting global warming by planting trees in southern Spain. Ongoing Text" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p class="skip_to_main" id="sk">
+<a href="#filming-version-0.2.x"><b>Skip the introductions</b></a>
+</p>
+
+[% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
+
+[% path_slurp("screenplay-xml/rendered-html/Planting-Trees.html") %]
+
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS star_trek_nav_block  %]
+[% PROCESS harry_potter_nav_block  %]
+
+[%- END -%]
+
+[% END %]

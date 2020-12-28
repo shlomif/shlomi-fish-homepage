@@ -11,6 +11,7 @@
 [% SET epub_prefix="Queen-Padma-Tales--" %]
 <ul>
 [% PROCESS story_episode_li base = "Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
+[% PROCESS story_episode_li base = "Planting-Trees", story_title = "Planting Trees",  %]
 </ul>
 
 [% default_toc %]

@@ -247,12 +247,12 @@ my $humour_tree_contents = {
                                     text =>
 "Queen Amidala vs. the Klingon Warriors",
                                     url =>
-"humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html",
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
                                 },
                                 {
                                     text => "Planting Trees",
                                     url  =>
-"humour/Queen-Padme-Tales/Planting-Trees.html",
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
                                 },
                             ],
                         },

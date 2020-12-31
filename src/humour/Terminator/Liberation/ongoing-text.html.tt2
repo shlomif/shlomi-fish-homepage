@@ -7,8 +7,6 @@
 
 [% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
 
-
-
 <div class="terminator_liberation">
 [% path_slurp("screenplay-xml/rendered-html/Terminator--Liberation.html") %]
 </div>

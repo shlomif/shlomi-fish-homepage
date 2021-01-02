@@ -394,7 +394,7 @@ critics on online publications and social media who are unhappy with every choic
 she makes, a poorly executed takeover attempt by a "real life" celebrity thought to
 be flawless, her boyfriend being so busy with his studies that he becomes awfully laconic
 even in his emails; her spirit friends, who are animated characters from
-<a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki">MLP</a>
+<a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
 and other franchises, that everyone can see, hear, photograph, and record,
 but which many people believe are some kind of a trick. And her biggest pet
 peeve: her bank account which keeps getting larger, despite her many attempts

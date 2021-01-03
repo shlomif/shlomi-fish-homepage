@@ -327,6 +327,35 @@ and set in a time of great confusion — not unlike our own.
 EOF
     },
     {
+        id         => 'terminator_liberation',
+        tagline    => "Tell about the Exodus. And the more, the better.",
+        logo_alt   => "“Terminator: Liberation” Logo",
+        logo_class => "terminator_liberation",
+        logo_src   =>
+            "humour/Terminator/Liberation/images/terminator_liberation.png",
+        logo_svg =>
+            "humour/Terminator/Liberation/images/terminator_liberation.svg",
+        entry_id   => "terminator--liberation",
+        entry_text => "Terminator: Liberation",
+        href       => "humour/Terminator/Liberation/",
+        abstract   => <<'EOF',
+<p class="terminator_liberation abstract">
+A self-referential parody of the <a
+href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
+franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
+Watson</a> as herself and her cosplayer, Hannah, as the evil terminator,
+and with <a
+href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
+Schwarzenegger</a> as himself and a cosplayer of his, Aharon, as the good terminator.
+Takes place in
+<a href="https://en.wikipedia.org/wiki/Tel_Aviv">Tel Aviv</a> during <a
+href="https://en.wikipedia.org/wiki/Passover">Passover</a> (during <a
+href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a>).
+</p>
+
+EOF
+    },
+    {
         id       => 'queen_padme_tales',
         tagline  => "Pizza slice with all my favourite toppings",
         logo_alt => "“Queen Padmé Tales” logo",
@@ -404,35 +433,6 @@ to reduce it.
 </section>
 
 </div>
-
-EOF
-    },
-    {
-        id         => 'terminator_liberation',
-        tagline    => "Tell about the Exodus. And the more, the better.",
-        logo_alt   => "“Terminator: Liberation” Logo",
-        logo_class => "terminator_liberation",
-        logo_src   =>
-            "humour/Terminator/Liberation/images/terminator_liberation.png",
-        logo_svg =>
-            "humour/Terminator/Liberation/images/terminator_liberation.svg",
-        entry_id   => "terminator--liberation",
-        entry_text => "Terminator: Liberation",
-        href       => "humour/Terminator/Liberation/",
-        abstract   => <<'EOF',
-<p class="terminator_liberation abstract">
-A self-referential parody of the <a
-href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
-franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
-Watson</a> as herself and her cosplayer, Hannah, as the evil terminator,
-and with <a
-href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
-Schwarzenegger</a> as himself and a cosplayer of his, Aharon, as the good terminator.
-Takes place in
-<a href="https://en.wikipedia.org/wiki/Tel_Aviv">Tel Aviv</a> during <a
-href="https://en.wikipedia.org/wiki/Passover">Passover</a> (during <a
-href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a>).
-</p>
 
 EOF
     },

@@ -1,6 +1,6 @@
 [%- SET title = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody" -%]
-[%- SET desc = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody" -%]
 
+[%- PROCESS "stories/terminator-liberation-common.tt2" %]
 
 [%- WRAPPER wrap_html -%]
 

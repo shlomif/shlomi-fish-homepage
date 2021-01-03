@@ -1039,6 +1039,7 @@ $(SRC_jpgs__webps): %.webp: %.jpg
 SRC_pngs__BASE := $(filter $(POST_DEST)/humour/bits/%.png,$(SRC_IMAGES_DEST))
 SRC_pngs__BASE += $(POST_DEST_HTML_6_LOGO_PNG)
 SRC_pngs__BASE += $(POST_DEST)/humour/images/14920899703_243677cbf4_o--cropped.png
+SRC_pngs__BASE += $(POST_DEST)/humour/images/14920899703_243677cbf4_o--crop150w.png
 SRC_pngs__BASE += $(POST_DEST)/humour/images/14920899703_243677cbf4_o--crop300w.png
 SRC_pngs__BASE += $(POST_DEST)/images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png
 SRC_pngs__webps := $(SRC_pngs__BASE:%.png=%.webp)

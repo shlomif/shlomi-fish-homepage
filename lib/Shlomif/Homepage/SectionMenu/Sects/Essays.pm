@@ -101,7 +101,14 @@ my $essays_tree_contents = {
                 {
                     text =>
                         "Why I will continue to write my real person fiction",
-                    url => "philosophy/culture/my-real-person-fan-fiction/",
+                    url  => "philosophy/culture/my-real-person-fan-fiction/",
+                    subs => [
+                        {
+                            text => "Take 2 (Reloaded)",
+                            url  =>
+"philosophy/culture/my-real-person-fan-fiction/take2/",
+                        }
+                    ]
                 },
             ],
         },

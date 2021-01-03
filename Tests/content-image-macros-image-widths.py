@@ -79,6 +79,26 @@ class MyTests(unittest.TestCase):
                 "image {} has WIDTH={}".format(path, WIDTH)
                 )
 
+    def test_qoheleth(self):
+        base_path_fn = './dest/post-incs/t2/humour/' + \
+            'So-Who-The-Hell-Is-Qoheleth/'
+        input_fn = base_path_fn + 'ongoing-text.html'
+        root = html.parse(input_fn)
+        imgs = root.xpath(".//img[contains(@alt, 'Standup-Philosopher')]")
+        self.assertEqual(len(imgs), 1)
+        for img in imgs:
+            src = img.get("src")
+            self.assertTrue(src)
+            m = re.match("^(images/[A-Za-z0-9_.\\-]+)$", src)
+            self.assertTrue(m)
+            path = m.group(1)
+            self.assertTrue(re.match(".*\\.webp$", path))
+            self.assertEqual(
+                Image.open(base_path_fn + path).size[0],
+                WIDTH,
+                "image {} has WIDTH={}".format(path, WIDTH)
+                )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

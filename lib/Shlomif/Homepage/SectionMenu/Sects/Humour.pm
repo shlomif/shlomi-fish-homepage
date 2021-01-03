@@ -35,6 +35,7 @@ my $humour_tree_contents = {
                     title => "The Enemy and How I Helped to Fight it",
                     subs  => [
                         {
+                            skip  => 1,
                             text  => "Text in Hebrew",
                             url   => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
                             title => "Text of “The Enemy” In Hebrew",
@@ -75,6 +76,7 @@ my $humour_tree_contents = {
                             title => "Ongoing Text of the Screenplay",
                         },
                         {
+                            skip  => 1,
                             text  => "Hebrew Translation",
                             url   => "humour/humanity/ongoing-text-hebrew.html",
                             title => "Hebrew translation of the screenplay.",
@@ -102,11 +104,13 @@ my $humour_tree_contents = {
                             url  => "humour/human-hacking/conclusions/",
                         },
                         {
+                            skip  => 1,
                             text  => "Arabic Translation",
                             url   => "humour/human-hacking/arabic-v2.html",
                             title => "Translation to Literary Arabic by Vieq",
                         },
                         {
+                            skip => 1,
                             text => "Hebrew Translation",
                             url  => "humour/human-hacking/hebrew-v2.html",
                         },
@@ -274,6 +278,7 @@ my $humour_tree_contents = {
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                                 },
                                 {
+                                    skip => 1,
                                     text => "Hebrew Text",
                                     url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
@@ -338,6 +343,7 @@ my $humour_tree_contents = {
 "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                     subs => [
                         {
+                            skip  => 1,
                             text  => "Hebrew Versions of the Aphorisms",
                             url   => "humour-heb.html",
                             title => "The Aphorisms in Hebrew",
@@ -378,6 +384,7 @@ my $humour_tree_contents = {
 "Ways to Do it According to the Programming Languages of the World",
                     subs => [
                         {
+                            skip => 1,
                             text => "Hebrew Translation",
                             url  => "humour/ways_to_do_it-heb.html",
                         },

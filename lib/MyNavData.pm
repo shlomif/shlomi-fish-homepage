@@ -527,6 +527,15 @@ sub generic_get_params
                         url   => "me/rindolf/",
                         title =>
 "The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
+                        subs => [
+                            {
+                                text =>
+"“Rindolfism” - my personal, dynamic, philosophy",
+                                url   => "me/rindolfism/",
+                                title =>
+"Shlomi Fish’s Personal, dynamic, open / free / geeky / share / hacky philosophy",
+                            },
+                        ],
                     },
                     {
                         text => "Relicensing my Creative Works Portfolio",

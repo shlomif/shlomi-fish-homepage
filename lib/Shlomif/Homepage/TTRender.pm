@@ -84,6 +84,11 @@ sub path_slurp
     return slurp( "lib/" . shift );
 }
 
+sub h_inc_path_slurp
+{
+    return path_slurp(shift) =~ s#<(/?)h([0-9]+)#"<". $1 ."h". ( $2 + 1 )#egr;
+}
+
 sub _shlomif_include_colorized_file
 {
     my $args = shift;
@@ -151,6 +156,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             default_toc       => $DEFAULT_TOC_DIV,
             toc_div           => \&Shlomif::Homepage::TocDiv::toc_div,
             retrieved_slurp   => \&retrieved_slurp,
+            h_inc_path_slurp  => \&h_inc_path_slurp,
             path_slurp        => \&path_slurp,
             xml_fiction_slurp => $xml_fiction_slurp,
             shlomif_include_colorized_file => \&_shlomif_include_colorized_file,

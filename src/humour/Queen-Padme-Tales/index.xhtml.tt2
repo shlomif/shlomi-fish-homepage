@@ -8,10 +8,10 @@
 
 <h2 id="read_online">Read Online</h2>
 
-[% SET epub_prefix="Queen-Padme-Tales--" %]
+[%# SET epub_prefix="Queen-Padme-Tales--" %]
 <ul>
-[% PROCESS story_episode_li base = "Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
-[% PROCESS story_episode_li base = "Planting-Trees", story_title = "Planting Trees",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
 </ul>
 
 [% default_toc %]

@@ -143,3 +143,11 @@ $ss_margin: 2em;
         clear: right;
     }
 }
+
+@mixin left-float-contain {
+    &::after {
+        display: block;
+        content: "";
+        clear: left;
+    }
+}

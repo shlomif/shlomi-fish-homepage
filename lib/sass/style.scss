@@ -134,6 +134,12 @@ body {
     }
 }
 
+.facts_lists_list {
+    section.facts {
+        @include left-float-contain;
+    }
+}
+
 @import "jqtree";
 @include small-screen {
     body.overflow_all {

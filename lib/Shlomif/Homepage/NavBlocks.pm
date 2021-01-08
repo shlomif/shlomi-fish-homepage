@@ -292,6 +292,19 @@ my %tr_s = (
             _facebook( url => 'http://www.facebook.com/SummerNSA', ),
         ],
     ),
+    'terminator_liberation' => _tr(
+        title =>
+"Terminator: Liberation - Starring Schwarzenegger &amp; Emma Watson",
+        items => [
+            _fp( path => "humour/Terminator/Liberation/", ),
+            _ontext(
+                path => "humour/Terminator/Liberation/ongoing-text.html",
+            ),
+            _github(
+                url => 'https://github.com/shlomif/Terminator-Liberation',
+            ),
+        ],
+    ),
     'the_enemy' => _tr(
         title => "The Enemy",
         items => [
@@ -356,6 +369,7 @@ my %table_blocks = (
                 _get_tr('selina_mandrake'),
                 _get_tr('buffy_few_good'),
                 _get_tr('muppets_harry_potter'),
+                _get_tr('terminator_liberation'),
                 _get_tr('EmWatson_tech_job'),
                 _get_tr('EmWatson_visit_to_Gaza'),
                 _subdiv_tr( title => q{Factoids}, ),

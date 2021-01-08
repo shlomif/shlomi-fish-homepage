@@ -11,4 +11,10 @@
 [% path_slurp("screenplay-xml/rendered-html/Terminator--Liberation.html") %]
 </div>
 
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS harry_potter_nav_block  %]
+
+[%- END -%]
+
 [% END %]

@@ -87,4 +87,10 @@ the situation is more complicated than that.
 <b>TODO: FILL IN.</b>
 </p>
 
+[% WRAPPER nav_blocks  %]
+
+[% PROCESS harry_potter_nav_block  %]
+
+[%- END -%]
+
 [% END %]

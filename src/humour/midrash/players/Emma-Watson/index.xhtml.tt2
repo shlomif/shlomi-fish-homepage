@@ -1,0 +1,16 @@
+[% SET title = "Emma Watson as a “Player” in my Fiction" %]
+[% SET desc = "I consider Emma Watson as a female and 13 years my junior, kindred spirit, protegée (and sometimes mentor) of myself." %]
+
+[% WRAPPER wrap_html %]
+
+[% WRAPPER h2_section id = "summary" , title = "TL;DR Summary"  %]
+
+<p>
+I consider Emma Watson as a female and 13 years my junior, kindred spirit, protegée (and sometimes mentor) of myself.
+Her life paralleled mine, and I kind of think of myself as her guardian angel, and she either did not repeat
+my mistakes, or was less hurt by them.
+</p>
+
+[% END %]
+
+[% END %]

@@ -5,11 +5,11 @@
 [%- WRAPPER wrap_html -%]
 
 <p>
-This is the sequel to <a href="../TheEnemy/">The Enemy and How I Helped
+This is an abandoned and inactive sequel to <a href="../TheEnemy/">The Enemy and How I Helped
 to Fight it</a>. Read the abstract to find more.
 </p>
 
-<h2>Abstract</h2>
+[% WRAPPER h2_section id="abstract" title="Abstract" %]
 
 <ul>
 
@@ -18,5 +18,7 @@ to Fight it</a>. Read the abstract to find more.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

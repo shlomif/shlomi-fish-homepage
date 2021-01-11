@@ -343,7 +343,8 @@ EOF
 A self-referential parody of the <a
 href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
 franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
-Watson</a> as herself and her cosplayer, Hannah, as the evil terminator,
+Watson</a> as herself and her cosplayer, <a href="https://www.facebook.com/hannah.saunders.1213">Hannah</a>,
+as the evil terminator,
 and with <a
 href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
 Schwarzenegger</a> as himself and a cosplayer of his, Aharon, as the good terminator.

@@ -332,7 +332,7 @@ EOF
         logo_alt   => "“Terminator: Liberation” Logo",
         logo_class => "terminator_liberation",
         logo_src   =>
-            "humour/Terminator/Liberation/images/terminator_liberation.min.svg",
+            "humour/Terminator/Liberation/images/terminator_liberation.png",
         logo_svg =>
             "humour/Terminator/Liberation/images/terminator_liberation.svg",
         entry_id   => "terminator--liberation",

@@ -9,6 +9,18 @@
 
 [% default_toc %]
 
+[% WRAPPER note  %]
+
+<header>
+<h2 id="note">Note ( 2021-01-12 )</h2>
+</header>
+
+<p>
+There is <a href="take2/">an update here</a>.
+</p>
+
+[% END %]
+
 <h2 id="content">Content</h2>
 
 [% path_slurp("docbook/5/rendered/my-real-person-fiction.xhtml") %]

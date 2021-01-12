@@ -80,7 +80,7 @@ were funny, exciting, non "original" (borrowed and built upon the works of their
 often contradicted themselves,
 blasphemous, didn't take themselves seriously, and although held with
 <a href="https://www.shlomifish.org/humour/image-macros/#pbride_philosophers">some contempt</a>
-were highly coveted by MOTAS.
+were highly coveted by [% my_acronym( "key" => "MOTAS", ) %].
 </p>
 
 </li>
@@ -95,9 +95,9 @@ but this solution was inadequate.
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/Samson">Samson</a> was a classical "I'm taking them all
-with me" tragic hero, who worked hard (not smart!) and took many lives of people who
-cared about him.
+<a href="https://en.wikipedia.org/wiki/Samson">Samson</a> was a classical "I'm
+taking them all with me" tragic hero, who worked hard (not smart!) and took
+many lives of people who cared about him.
 </p>
 </li>
 
@@ -126,6 +126,13 @@ So a lack of "original" screenplays and many unemployed screenplay readers is no
 surprising.
 </p>
 
+<p>
+I suggest Hollywood studios to also accept screenplays either in
+a well-formed <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a>-based
+format and an XML-based format, either a subset of <a href="https://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI</a>
+or a custom format.
+</p>
+
 [% END %]
 
 [% WRAPPER h3_section id = "beautiful_people_are_geeks" title = "Attractive People are Geeky and vice-versa"  %]
@@ -140,7 +147,7 @@ do because they enjoy it) as well as very <a href="https://www.shlomifish.org/ph
 While there are many big name actors and actresses, and studios will gladly
 have them star in their films, they will refuse to act in any films whose
 screenplays were not
-written by <b>honest, optimistic, idealistic</b> screenwriters such
+written by <b>honest, optimistic, and idealistic</b> screenwriters such
 as <a href="https://www.shlomifish.org/humour/stories/">me</a>, which
 feature a crossover / mashups / real person fiction / parodies
 of relatively recent franchises.
@@ -150,8 +157,8 @@ of relatively recent franchises.
 <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#emma_watson">Emma Watson being unhirable</a>
 started as a joke youtube comment, which materialised
 after <a href="https://en.wikipedia.org/wiki/Little_Women_(2019_film)">Little
-Women (2019)</a>
-which although loved by professional critics, geeky fans like me thought
+Women (2019)</a>.
+Although loved by professional critics, geeky fans like me thought
 that the <a href="https://en.wikipedia.org/wiki/Little_Women_(1994_film)">Winona
 Rider 1994 adaptation</a> was still pertinent today,
 and that Emma Watson was underutilised.
@@ -175,7 +182,7 @@ Lawrence and I'll return both with <a href="https://slashdot.org/submission/1300
 
 <p>
 It's funny to think that Em is the "Alpha Female" now, but Bernhardt being the
-daughter of a (jewish) hooker w unclear father was far more questionable. And
+daughter of a (Jewish) hooker with unclear father was far more questionable. And
 where there's a will there's a way.
 </p>
 
@@ -206,6 +213,5 @@ where there's a will there's a way.
 [%# PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction",  %]
 
 </div>
-
 
 [% END %]

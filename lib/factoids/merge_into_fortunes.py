@@ -27,7 +27,10 @@ FULL_NAMES = {"chuck": "Chuck Norris",
               "emma-watson": "Emma Watson",
               "nsa": "NSA",
               "taylor-swift": "Taylor Swift",
-              "xena": "Xena the Warrior Princess",
+              "xena": {
+                  'full_name': "Xena the Warrior Princess",
+                  'url_base': "Xena",
+                  },
               }
 
 ID_IS_FACTOID_RE = re.compile("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$")
@@ -75,13 +78,21 @@ class FortunesMerger:
             self.target_list.xpath(
                 "./fortune[@id='{}']".format(
                     self.max_idxs_ids[facts_basename]))[0])
-        full_name = FULL_NAMES[facts_basename]
+        full_rec = FULL_NAMES[facts_basename]
+        if isinstance(full_rec, str):
+            full_rec = {
+                'full_name': full_rec,
+                'url_base': full_rec,
+            }
         for idx, iter_fact in enumerate(facts_to_add):
             self._process_fact(
-                idx, iter_fact, full_name, target_idx, facts_basename)
+                idx, iter_fact, full_rec, target_idx, facts_basename)
 
-    def _process_fact(self, idx, iter_fact, full_name,
+    def _process_fact(self, idx, iter_fact, full_rec,
                       target_idx, facts_basename):
+        full_name = full_rec['full_name']
+        url_base = full_rec['url_base']
+
         author_str = 'Shlomi Fish'
         newidx = idx + self.max_idxs[facts_basename] + 1
         new_elem = etree.Element(
@@ -103,9 +114,9 @@ class FortunesMerger:
         work = etree.SubElement(
             info,
             "work",
-            href="http://www.shlomifish.org/" +
-            "humour/bits/facts/{}/".format(
-                full_name.replace(' ', '-')))
+            href=("http://www.shlomifish.org/" +
+                  "humour/bits/facts/{}/".format(
+                    url_base.replace(' ', '-'))))
         work.text = ("{} Facts by " +
                      "{} and Friends").format(full_name, author_str)
         self.target_list.insert(target_idx+idx+1, new_elem)

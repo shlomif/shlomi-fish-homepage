@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 9;
+use Test::More tests => 11;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
@@ -22,6 +22,21 @@ my $POST_DEST = $obj->t2_post_dest();
 
     $content = path("$POST_DEST/humour/fortunes/shlomif-factoids")->slurp_utf8;
 
+    # TEST
+    unlike(
+        $content,
+qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
+        'Search for "Chuck-Norris"',
+    );
+
+    # TEST
+    unlike(
+        $content,
+        qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EXena[^/]}ms,
+        'Search for "Xena" URLs',
+    );
+
+    #
     # TEST
     like( $content, qr{Xena can meet King David}ms, 'Search for "Xena"', );
     #

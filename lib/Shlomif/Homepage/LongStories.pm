@@ -521,6 +521,24 @@ preliminary state.
 
 EOF
     },
+    {
+        id         => 'road_to_heaven',
+        tagline    => "TODO FILL IN",
+        logo_alt   => "The Road to Heaven Logo",
+        logo_src   => "humour/RoadToHeaven/images/r2h-logo-small.png",
+        logo_svg   => 'humour/RoadToHeaven/images/r2h-logo.svg',
+        entry_id   => "road_to_heaven",
+        entry_text => "The Road to Heaven is Paved with Bad Intentions",
+        href       => "humour/RoadToHeaven/",
+        abstract   => <<'EOF',
+<p>
+The Story “The Road to Heaven is Paved with Bad Intentions” - a proposed sequel
+to California ( <a href="$(ROOT)/humour/TheEnemy/">“The Enemy and How I Helped
+to Fight it”</a>. The ex-Member of the Organisation
+returns back in time in order to prevent World War II.
+</p>
+EOF
+    },
 );
 
 my @_Stories       = ( @active_Stories, @inactive_Stories );

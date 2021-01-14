@@ -556,9 +556,9 @@ sub _get_story
 
 sub get_tagline
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    return $self->_get_story($id)->tagline;
+    return $self->_get_story($args)->tagline;
 }
 
 sub _get_tagline_tags
@@ -574,18 +574,21 @@ use Shlomif::Homepage::RelUrl qw/ _rel_url /;
 
 sub _get_should_skip_abstract_h_tag
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    my $abstract = $self->_get_story($id)->should_skip_abstract_h_tag();
+    my $abstract = $self->_get_story($args)->should_skip_abstract_h_tag();
 
     return $abstract;
 }
 
 sub _get_abstract_tags
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    my $abstract = $self->_get_story($id)->abstract || die "No abstract";
+    my $abstract =
+           $args->{abstract_text}
+        || $self->_get_story($args)->abstract
+        || die "No abstract for id=<$args->{id}>";
 
     $abstract =~ s#"\$\(ROOT\)/([^"]+?)"#
                 q{"}
@@ -598,9 +601,9 @@ sub _get_abstract_tags
 
 sub _get_logo_tags
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    my $o = $self->_get_story($id);
+    my $o = $self->_get_story($args);
 
     return [
         sprintf(
@@ -621,18 +624,18 @@ sub _get_list_items_tags
 
 sub _get_common_top_elems
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
     my $ret = [
-        @{ $self->_get_tagline_tags($id) },
-        @{ $self->_get_logo_tags($id) },
+        @{ $self->_get_tagline_tags($args) },
+        @{ $self->_get_logo_tags($args) },
         sprintf( qq#<div class="abstract%s">\n#,
-            $self->_get_story($id)->calc_logo_class ),
+            $self->_get_story($args)->calc_logo_class ),
         (
-            $self->_get_should_skip_abstract_h_tag($id)
+            $self->_get_should_skip_abstract_h_tag($args)
             ? ()
             : ( qq#<h2 id="abstract">Abstract</h2>\n#, )
         ),
-        @{ $self->_get_abstract_tags($id) },
+        @{ $self->_get_abstract_tags($args) },
         qq{</div>\n},
     ];
     return $ret;
@@ -686,9 +689,9 @@ sub _get_all_stories_entries_tags
 
 sub calc_abstract
 {
-    my ( $self, $id ) = @_;
+    my $self = shift;
 
-    return join( "", @{ $self->_get_abstract_tags($id) } );
+    return join( "", @{ $self->_get_abstract_tags(@_) } );
 }
 
 sub calc_logo
@@ -700,9 +703,11 @@ sub calc_logo
 
 sub calc_common_top_elems
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
+    my $id            = $args->{id};
+    my $abstract_text = $args->{abstract_text};
 
-    return join( '', @{ $self->_get_common_top_elems($id) }, );
+    return join( '', @{ $self->_get_common_top_elems($args) }, );
 }
 
 sub calc_all_stories_entries

@@ -532,10 +532,10 @@ EOF
         href       => "humour/RoadToHeaven/",
         abstract   => <<'EOF',
 <p>
-The Story “The Road to Heaven is Paved with Bad Intentions” - a proposed sequel
-to California ( <a href="$(ROOT)/humour/TheEnemy/">“The Enemy and How I Helped
+The story “The Road to Heaven is Paved with Bad Intentions” - a proposed sequel
+to <a href="$(ROOT)/humour/TheEnemy/">“The Enemy and How I Helped
 to Fight it”</a>. The ex-Member of the Organisation
-returns back in time in order to prevent World War II.
+travels back in time in order to prevent World War II.
 </p>
 EOF
     },

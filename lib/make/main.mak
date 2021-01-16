@@ -753,11 +753,20 @@ pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
 
 hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
+QUEEN_PADME_TALES__teaser_dir := $(POST_DEST_HUMOUR)/Queen-Padme-Tales/teaser
+QUEEN_PADME_TALES__teaser_pivot := $(QUEEN_PADME_TALES__teaser_dir)/index.xhtml
+
 screenplay_targets: $(ST_WTLD_TEXT_IN_TREE) $(SCREENPLAY_XMLS) $(SCREENPLAY_HTMLS) $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_SOURCES_ON_POST_DEST) $(FICTION_TEXT_SOURCES_ON_POST_DEST) $(SELINA_MANDRAKE_ENG_SCREENPLAY_XML_SOURCE) $(SUMMERSCHOOL_AT_THE_NSA_ENG_SCREENPLAY_XML_SOURCE) screenplay_epub_dests
 
 $(PRE_DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 	mkdir -p $(PRE_DEST_HTML_TUT_BASE)
 	rsync -r $(HTML_TUT_HEB_DIR)/ $(PRE_DEST_HTML_TUT_BASE)
+
+screenplay_targets: $(QUEEN_PADME_TALES__teaser_pivot)
+
+$(QUEEN_PADME_TALES__teaser_pivot):
+	mkdir -p $(QUEEN_PADME_TALES__teaser_dir)
+	rsync -a lib/repos/Star-Wars-opening-crawl-from-1977-Remake/ $(QUEEN_PADME_TALES__teaser_dir)
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && gmake docbook

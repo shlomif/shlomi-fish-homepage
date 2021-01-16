@@ -72,6 +72,16 @@ $git_obj->git_in_checkout_task(
 $git_obj->git_in_checkout_task(
     {
         pivot_bn     => "README.md",
+        repo         => "Star-Wars-opening-crawl-from-1977-Remake",
+        branch       => "queen-padme-intro--shlomif",
+        user         => "shlomif",
+        base_dirname => "lib/repos",
+    }
+);
+
+$git_obj->git_in_checkout_task(
+    {
+        pivot_bn     => "README.md",
         repo         => "c-begin",
         user         => "shlomif",
         base_dirname => "lib",

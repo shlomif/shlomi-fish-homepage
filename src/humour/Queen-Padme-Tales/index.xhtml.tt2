@@ -10,6 +10,16 @@
 
 [%# SET epub_prefix="Queen-Padme-Tales--" %]
 <ul>
+
+<li>
+<p>
+<a href="teaser/">Teaser for the pilot episode</a> - based on
+<a href="https://github.com/ztzockt/Star-Wars-opening-crawl-from-1977-Remake">the CSS/JS version</a>
+by <a href="https://github.com/ztzockt">Marvin</a>
+(My derivative <a href="https://github.com/shlomif/Star-Wars-opening-crawl-from-1977-Remake/tree/queen-padme-intro--shlomif">branch</a>.)
+</p>
+</li>
+
 [% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors",  %]
 [% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
 </ul>

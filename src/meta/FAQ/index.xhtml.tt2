@@ -1236,7 +1236,7 @@ presented as a false dichotomy.
 <p>
 I normally link to such resources which I either agree with, partly agree, or are relevant
 to the discussion at hand. That does not mean I think everything these originators have published
-is true, but that does not mean that <b>none of their post</b> are of merit (see <a href="https://en.wikipedia.org/wiki/Ad_hominem">ad hominem</a>
+is true, but that does not mean that <b>none of their posts</b> are of merit (see <a href="https://en.wikipedia.org/wiki/Ad_hominem">ad hominem</a>
 and similar fallacies.)
 </p>
 
@@ -1812,8 +1812,8 @@ All of the source code for the site is available online in various places. I’v
 prepared <a href="[% site_sources_url %]">a top-to-bottom
 document</a> on how to compile the site from
 scratch). Some of the hand-crafted code was released as
-<a href="http://web-cpan.shlomifish.org/latemp/">the Latemp Content Management
-System</a> or various <a href="[% shlomif_cpan %]">assisting
+<a href="http://web-cpan.shlomifish.org/latemp/">the Latemp static site
+generator</a> or various <a href="[% shlomif_cpan %]">assisting
 CPAN modules</a> under an open-source license.
 </p>
 
@@ -2764,6 +2764,19 @@ an open-minded and pluralistic agnostic.
 </p>
 
 [%- END -%]
+
+[% WRAPPER faq_h3_section id = "release_something_perfect" title = "Why don't you cut out contact with the outside world for several years and release a perfect screenplay?"  %]
+
+<p>
+This was popularised by Hollywood, but from my experience is deterimental
+in this day and age (~January 2021).
+I find that releasing screenplays (or essays or software)
+in an "imperfect" or even incomplete state, helps getting input
+from readers, reviewers, and collaborators, which even
+if negative and "destructive", helps in the thought process.
+</p>
+
+[% END %]
 
 [%- END -%]
 

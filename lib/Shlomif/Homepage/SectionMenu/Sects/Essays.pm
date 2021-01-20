@@ -92,6 +92,10 @@ my $essays_tree_contents = {
                     url  =>
 "philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/",
                 },
+                {
+                    text => "Changing the Seldon Plan",
+                    url  => "philosophy/psychology/changing-the-seldon-plan/",
+                },
             ],
         },
         {

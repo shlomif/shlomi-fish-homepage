@@ -1,0 +1,91 @@
+[%- SET title = "Changing the Seldon Plan" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="main_text">
+
+<h2 id="intro">Introduction</h2>
+
+<p>
+</p>
+
+[% WRAPPER h2_section id = "the_story" title = "The Essay"  %]
+
+<p>
+In <a href="http://en.wikipedia.org/wiki/Second_Foundation">Isaac
+Asimov's book "Second Foundation"</a>, the second foundation are in charge
+of <a href="http://en.wikipedia.org/wiki/Seldon_Plan">the Seldon Plan</a>,
+the grand "psychohistory" plan for the advancement of the galaxy,
+and one thing that is mentioned there is that it should by no means be
+considered holy and that changing it according to the circumstances is
+expected and even necessary. This mentality has an effect on us as open-source
+programmers, who should do our best to remedy bad open-source code as we
+find it.
+</p>
+
+<p>
+Recently, in the Perl world there has been a continuous trend to shift
+from
+<a href="http://www.perlfoundation.org/perl5/index.cgi?ancient_perl">Ancient
+Perl</a> to <a href="http://modernperlbooks.com/">Modern Perl</a>, and often
+people ask for our help on Perl 5 code they found (possibly on CPAN - possibly
+elsewhere) with "Ancient Perl" paradigms. It doesn't necessarily mean that
+that Perl 5 code is very old, because often people who wrote it didn't know
+any better, and there are plenty of Perl 5 (or even Perl 4) tutorials or
+books still floating around the Net teaching bad practices. As a result,
+we normally tell them to either abandon or convert the code completely for
+a better trusted and more modern CPAN module, or alternatively to modernise
+it.
+</p>
+
+<p>
+So far, so good. However, some people who've asked for us help said something
+like <a
+href="http://mail.pm.org/pipermail/chicago-talk/2009-October/005499.html">"I
+do not consider myself capable of rewriting his module and [it] has
+demonstrated robust stability over the years [so] I have
+little reason to."</a>. So essentially, all the comments that we have given
+on it were dismissed due to apparent lack of competency on the part of
+the code's end-user, and that Ancient Perl code will still linger in use.
+The link I gave is not the only place where I saw it - I also saw it in at
+least another place (though I think it was on IRC).
+</p>
+
+<p>
+I think that this spirit stands in opposition to the spirit of open-source
+and possibly even
+<a href="http://catb.org/~esr/faqs/hacker-howto.html#attitude">the Hacker
+Ethos</a>. By all means, if we consider all the millions of lines of
+open-source out there as the Seldon Plan which powers all the open-source
+programs in use, and empowers us and end-users, then we should not
+feel detrimental or afraid to change the code that we use everyday. And
+people should not deploy code that they are not confident enough in changing,
+modernising and adapting to their needs.
+</p>
+
+<p>
+One cannot usually expect code to remain the same forever. As time progresses,
+we can expect there to be code rot, features that needs to be added, tests
+that need to be added, or as is often the case in Perl 5 and other languages,
+paradigms that are considered to be bad and that should be changed to newer
+and safer paradigms. If you're lucky, the original developer or a co-maintainer
+can do that for you, but sometimes an end-user needs to stand up and volunteer
+to do that.
+</p>
+
+<p>
+The <a href="http://en.wikipedia.org/wiki/Open_source">open source</a> nature
+of "Free and Open Source Software" permits everybody to create derivative
+works of the software and distribute them. So we don't have legal
+reservations from improving them and contributing our improvements to the
+general public, and should not have any moral or ethical ones, either. "Hacker
+sees bug. Hacker doesn't want bug. Hacker fixes bug.".
+</p>
+
+[% END %]
+
+[% license_obj.by_sa_license_british(year="2009",head_tag="h2") %]
+
+</div>
+
+[% END %]

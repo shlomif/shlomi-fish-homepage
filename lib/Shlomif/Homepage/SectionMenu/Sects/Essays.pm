@@ -81,6 +81,7 @@ my $essays_tree_contents = {
                         "A (non-original) story with self-growth implications",
                     subs => [
                         {
+                            skip => 1,
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/psychology/elephant-in-the-circus/hebrew.html",
@@ -188,6 +189,7 @@ my $essays_tree_contents = {
                     title => "Why the War on Drugs is the Real Drug Problem",
                     subs  => [
                         {
+                            skip => 1,
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/politics/drug-legalisation/hebrew.html",
@@ -203,6 +205,7 @@ my $essays_tree_contents = {
                     ),
                     subs => [
                         {
+                            skip => 1,
                             text => "Hebrew Translation",
                             url  => "philosophy/politics/define-zionism/heb/",
                         },
@@ -583,6 +586,7 @@ my $essays_tree_contents = {
                     title => "James Carr about the anti-Muslim Cartoons",
                 },
                 {
+                    skip => 1,
                     text =>
 "Hebrew Translation of “Ten Reasons for Web Standards”",
                     url =>

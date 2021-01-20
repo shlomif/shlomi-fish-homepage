@@ -16,7 +16,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
             'putting-cards-on-the-table-2019-2020/index.xhtml'
         return self.doc(input_fn).has_one(
-            ".//h5[@id='fox-in-the-hens-coop' and " +
+            ".//h4[@id='fox-in-the-hens-coop' and " +
             "text()='The Fox in the Chickens Coop']"
         )
 

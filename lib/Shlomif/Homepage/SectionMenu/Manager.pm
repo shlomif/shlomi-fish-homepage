@@ -3,10 +3,10 @@ package Shlomif::Homepage::SectionMenu::Manager;
 use strict;
 use warnings;
 
-use Shlomif::Homepage::SectionMenu;
+use Shlomif::Homepage::SectionMenu           ();
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
 
-use Shlomif::Homepage::SectionMenu::AllSects;
+use Shlomif::Homepage::SectionMenu::AllSects ();
 
 my @sections = (
     {
@@ -42,7 +42,7 @@ qr#\A/(?:open-source|jmikmod|grad-fu|rwlock|software-tools|no-ie|rindolf)/#,
     },
     {
         'id'    => "humour",
-        'regex' => scalar( get_is_humour_re() ),
+        'regex' => qr#\A/@{[ get_is_humour_re()]}#,
         'class' => "Shlomif::Homepage::SectionMenu::Sects::Humour",
         'title' => "Humour Section Menu",
     },

@@ -5,6 +5,6 @@ use warnings;
 
 use lib './lib';
 
-use Shlomif::Spelling::Hebrew::Iface;
+use Shlomif::Spelling::Hebrew::Iface ();
 
 Shlomif::Spelling::Hebrew::Iface->new->run;

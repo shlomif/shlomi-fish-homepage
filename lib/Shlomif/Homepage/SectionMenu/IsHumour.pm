@@ -8,7 +8,7 @@ use parent 'Exporter';
 
 our @EXPORT_OK = (qw/ get_is_humour_re /);
 my $IS_HUMOUR =
-    qr#\A(?:humour/|(?:(?:humour(?:-heb)?|wonderous|wysiwyt)\.html\z))#;
+    qr#(?:humour/|(?:(?:humour(?:-heb)?|wonderous|wysiwyt)\.html\z))#;
 
 sub get_is_humour_re
 {

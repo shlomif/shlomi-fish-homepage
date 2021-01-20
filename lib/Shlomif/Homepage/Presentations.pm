@@ -52,7 +52,7 @@ use strict;
 use warnings;
 
 use lib "\$ENV{HOME}/apps/test/quadpres/share/quad-pres/perl5";
-use Shlomif::Quad::Pres::CGI;
+use Shlomif::Quad::Pres::CGI ();
 
 Shlomif::Quad::Pres::CGI->new->run;
 EOF

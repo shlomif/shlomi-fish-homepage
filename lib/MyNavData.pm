@@ -12,7 +12,7 @@ use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
 use MyNavData::Hosts                         ();
 
 my @personal_expand = ( expand => { bool => 1, capt => 0, }, );
-my @humour_expand   = ( re     => scalar( get_is_humour_re() ) );
+my @humour_expand   = ( re     => qr#\A@{[ get_is_humour_re()]}#, );
 my @humour_aphorisms_expand =
     ( re =>
         qr{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour\.html$))}
@@ -289,8 +289,9 @@ my %reduced_sub_trees = (
             {
                 text   => "General Philosophy",
                 url    => "philosophy/philosophy/",
-                expand =>
-                    { re => "^philosophy/(?:philosophy/|the-eternal-jew/)" },
+                expand => {
+                    re => "^philosophy/(?:philosophy/|the-eternal-jew/)"
+                },
             },
             {
                 text   => "Computing",

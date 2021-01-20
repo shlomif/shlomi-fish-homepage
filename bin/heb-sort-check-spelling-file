@@ -5,6 +5,6 @@ use warnings;
 
 use lib './lib';
 
-use Shlomif::Spelling::Hebrew::Whitelist;
+use Shlomif::Spelling::Hebrew::Whitelist ();
 
 Shlomif::Spelling::Hebrew::Whitelist->new->write_sorted_file;

@@ -7,14 +7,16 @@ use utf8;
 
 use Carp ();
 
-use Shlomif::Homepage::SectionMenu ();
-use MyNavData::Hosts               ();
+use Shlomif::Homepage::SectionMenu           ();
+use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+use MyNavData::Hosts                         ();
 
 my @personal_expand = ( expand => { bool => 1, capt => 0, }, );
-my @humour_expand =
-    ( re => q{^(?:humour/|(?:(?:humour|wysiwyt|wonderous).html$))} );
-my @humour_aphorisms_expand = ( re =>
-        q{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour\.html$))} );
+my @humour_expand   = ( re     => scalar( get_is_humour_re() ) );
+my @humour_aphorisms_expand =
+    ( re =>
+        qr{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour\.html$))}
+    );
 
 my %reduced_sub_trees = (
     'Shlomif::Homepage::SectionMenu::Sects::Art' => {
@@ -88,11 +90,6 @@ my %reduced_sub_trees = (
                         url   => "humour/humanity/",
                         title =>
                             "Parody of Humanity and Modern Life in Particular",
-                    },
-                    {
-                        text  => "The Pope",
-                        url   => "humour/Pope/",
-                        title => "The Pope Died on Sunday",
                     },
                 ],
             },
@@ -179,12 +176,6 @@ my %reduced_sub_trees = (
                         text  => "PySol FC",
                         url   => "open-source/projects/pysol/",
                         title => "A suite of Solitaire games",
-                    },
-                    {
-                        text  => "FCFS RWLock",
-                        title =>
-                            "A First-Come First-Served Readers/Writers Lock",
-                        url => "rwlock/",
                     },
                 ],
             },

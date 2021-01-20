@@ -4,11 +4,13 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 TODO: write.
 </p>
+
+[% END %]
 
 <h2 id="the-table">The Table</h2>
 

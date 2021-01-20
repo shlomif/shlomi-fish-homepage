@@ -10,7 +10,7 @@
 [% default_toc %]
 
 <div class="note">
-<h2 id="historical_introduction">Historical Introduction to the Story</h2>
+[% WRAPPER h2_section id = "historical_introduction" title = "Historical Introduction to the Story" %]
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Lebanon">Lebanon</a> had been a peaceful
@@ -48,6 +48,7 @@ attacks on Lebanon, in order to retaliate against the Hizbullah.
 It is at this point in time when this story supposedly takes places.
 </p>
 
+[% END %]
 </div>
 
 <div class="story">

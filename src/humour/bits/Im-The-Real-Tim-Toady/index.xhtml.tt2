@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 This is a geek song sang to the music of
@@ -20,6 +20,8 @@ in its own right</a>.
 Currently, this song is incomplete and requires some familiarity with geek and
 especially Perl culture.
 </p>
+
+[% END %]
 
 <h2 id="lyrics">Lyrics</h2>
 

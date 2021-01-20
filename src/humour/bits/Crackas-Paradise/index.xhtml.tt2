@@ -4,7 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
+
 
 <p>
 This is a geek parody of Coolio’s
@@ -12,6 +13,8 @@ This is a geek parody of Coolio’s
 Paradise”</a>. It’s still incomplete and rather lame, but you may still enjoy
 it.
 </p>
+
+[% END %]
 
 <h2 id="lyrics">Lyrics</h2>
 

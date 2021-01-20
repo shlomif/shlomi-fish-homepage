@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 This is a geek song sang to the music of
@@ -14,6 +14,8 @@ the music too well. It is based on a true story that happened with the
 <code>vipe.technion.ac.il</code> server a
 few years ago, but I had the idea for the chorus a long time beforehand.
 </p>
+
+[% END %]
 
 <h2 id="lyrics">Lyrics</h2>
 

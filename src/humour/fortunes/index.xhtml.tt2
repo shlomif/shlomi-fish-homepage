@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 [% INCLUDE "fortunes/corner_image.tt2" %]
 
@@ -21,6 +21,8 @@ fortune collections.
 They have been converted to a custom XML-based grammar, based on
 <a href="http://web-cpan.shlomifish.org/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> .
 </p>
+
+[% END %]
 
 [% default_toc %]
 

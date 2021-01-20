@@ -4,8 +4,7 @@
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "factoids/common-out/tags.tt2" -%]
 
-<section class="intro">
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 There is an ongoing Internet meme of collecting various funny or otherwise
@@ -21,7 +20,7 @@ amusing. Many people I talk with don't enjoy them, as much as I and some of my
 friends seem to, so don't worry if you do not.
 </p>
 
-</section>
+[% END %]
 
 <section class="facts_lists_list">
 

@@ -3,12 +3,14 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 These are recordings of the songs from the screenplay
 <a href="../"><i>Humanity</i></a>.
 </p>
+
+[% END %]
 
 <div class="lim_width">
 

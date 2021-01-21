@@ -247,6 +247,10 @@ my %tr_s = (
                 inner_html => "Proposed Cast",
                 path       => "humour/Selina-Mandrake/cast.html",
             ),
+            _l(
+                inner_html => "Image Macros",
+                path       => "humour/Selina-Mandrake/image-macros/",
+            ),
             _github( url => 'http://github.com/shlomif/Selina-Mandrake', ),
         ],
     ),

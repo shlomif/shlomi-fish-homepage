@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -29,4 +29,17 @@ my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
     # TEST
     like( $content, qr{\bDax}, 'Contains a name from the screenplay.' );
+}
+
+{
+    my $content =
+        path(
+"$POST_DEST/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html"
+    )->slurp_utf8;
+
+    # TEST
+    like( $content, qr{<div class="screenplay"}, 'Contains a screenplay div.' );
+
+    # TEST
+    like( $content, qr{podracer}i, 'Contains "podracer".' );
 }

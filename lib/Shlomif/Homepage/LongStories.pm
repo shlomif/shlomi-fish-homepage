@@ -164,19 +164,22 @@ EOF
         href       => "humour/Selina-Mandrake/",
         abstract   => <<'EOF',
 <p class="selina abstract">
-A geeky Anglo-American girl in her high school senior year in 2011
-California ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> ),
-is approached by a mysterious goth man calling himself "The Guide"
+Selina ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
+was a geeky Anglo-American girl in her high school senior year in 2011
+California, who thought that the show <i>Buffy the Vampire Slayer</i> was fictional.
+However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
-who tells her that she is none other than <b>The Slayer</b>,
+who told her that she is none other than Buffy Mageia, <b>The Slayer</b>,
 a legendary heroine who is destined to slay many notable vampires and demons,
 culminating in none other than The Master, the vampire with the oldest
-soul. See how she manages to do so, despite being completely non-violent, and
+soul. See how she managed to do so, despite being completely non-violent, and
 even supportive of the demons she encounters.
 </p>
 <p>
 This is a parody of the television series
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy the Vampire Slayer</a>, while referencing other pieces of popular
+<a
+href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy
+the Vampire Slayer</a>, while referencing other pieces of popular
 culture, and has many ties to my previous screenplay,
 <a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
@@ -188,7 +191,7 @@ EOF
 This screenplay, a parody and reflection on
 <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
 Vampire Slayer</a> (both the movie and the show) and inspired by many
-other sources, is still work-in-progress, but is already in a usable state.
+other sources, is in a usable state.
 </p>
 EOF
 
@@ -306,7 +309,7 @@ Josephus was a budding philosopher of Jewish descent in
 <a href="http://en.wikipedia.org/wiki/Hellenistic_period">Hellenistic
 times</a>, when he took a bet that he could produce a decent work
 of philosophy, and wrote the Biblical scroll of
-<a href="http://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a>.
+<a href="http://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes (Qoheleth)</a>.
 Soon after that, he became the most notorious celebrity in his town,
 made a moderate fortune from donations of enthusiastic fans of the
 scroll, and became annoyed by the fact that he has become the object of
@@ -398,7 +401,7 @@ draconian, finicky, and boring, Hollywood-blessed format.
 While the birth parents of
 <a href="https://en.wikipedia.org/wiki/Padm%C3%A9_Amidala">Queen Padmé Amidala</a>
 of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">the Selinaverse</a>
-( <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> (b. 1992) )
+( <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> , b. 1992 )
 were killed in a starship crash when she was 2, she was adopted by her aunt,
 the Archduchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
 Portman</a>), and her aunt's husband Darth Vader, who volunteered to act as King in effect until
@@ -420,16 +423,48 @@ are the known extant members.
 
 <p>
 In practice though, there is <a href="https://en.wikipedia.org/wiki/Damocles">the Sword of Damocles</a>:
-critics on online publications and social media who are unhappy with every choice
-she makes, a poorly executed takeover attempt by a "real life" celebrity thought to
-be flawless, her boyfriend being so busy with his studies that he becomes awfully laconic
-even in his emails; her spirit friends, who are animated characters from
+</p>
+
+<ul>
+
+<li>
+<p>
+Critics on online publications and social media who are unhappy with every choice she makes.
+</p>
+</li>
+
+<li>
+<p>
+A poorly executed takeover attempt by a "real life" celebrity thought to
+be flawless.
+</p>
+</li>
+
+<li>
+<p>
+Her boyfriend being so busy with his studies that he becomes awfully laconic
+even in his emails
+</p>
+</li>
+
+<li>
+<p>
+Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
 and other franchises, that everyone can see, hear, photograph, and record,
-but which many people believe are some kind of a trick. And her biggest pet
+but which many people believe are some kind of a trick.
+</p>
+</li>
+
+<li>
+<p>
+And her biggest pet
 peeve: her bank account which keeps getting larger, despite her many attempts
 to reduce it.
 </p>
+</li>
+
+</ul>
 
 </section>
 

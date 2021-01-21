@@ -282,7 +282,7 @@ publicly linked to. Please send comments to
 [% END %]
 
 [% UNLESS xhtml1 %]<header>[% END %]
-<h1>[% title %]</h1>
+<h1>[% process_title__h1(title=>title, raw_fn_path=>raw_fn_path) %]</h1>
 [% UNLESS xhtml1 %]</header>[% END %]
 [%- END -%]
 

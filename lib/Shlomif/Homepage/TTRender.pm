@@ -10,26 +10,28 @@ use Path::Tiny qw/ path /;
 use URI::Escape::XS qw/ encodeURIComponent /;
 use YAML::XS ();
 
-use HTML::Acronyms                         ();
-use HTML::Latemp::AddToc                   ();
-use Module::Format::AsHTML                 ();
-use Shlomif::Homepage::ArticleIndex        ();
-use Shlomif::Homepage::FortuneCollections  ();
-use Shlomif::Homepage::LicenseBlurbs       ();
-use Shlomif::Homepage::LongStories         ();
-use Shlomif::Homepage::NavBlocks           ();
-use Shlomif::Homepage::NavBlocks::Renderer ();
-use Shlomif::Homepage::News                ();
-use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
-use Shlomif::Homepage::TocDiv              ();
-use Shlomif::MD                            ();
-use Shlomif::XmlFictionSlurp               ();
-use Template                               ();
-use VimIface                               ();
+use HTML::Acronyms                           ();
+use HTML::Latemp::AddToc                     ();
+use Module::Format::AsHTML                   ();
+use Shlomif::Homepage::ArticleIndex          ();
+use Shlomif::Homepage::FortuneCollections    ();
+use Shlomif::Homepage::LicenseBlurbs         ();
+use Shlomif::Homepage::LongStories           ();
+use Shlomif::Homepage::NavBlocks             ();
+use Shlomif::Homepage::NavBlocks::Renderer   ();
+use Shlomif::Homepage::News                  ();
+use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+use Shlomif::Homepage::P4N_Lect5_HebNotes    ();
+use Shlomif::Homepage::TocDiv                ();
+use Shlomif::MD                              ();
+use Shlomif::XmlFictionSlurp                 ();
+use Template                                 ();
+use VimIface                                 ();
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
+my $IS_HUMOUR     = get_is_humour_re();
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
 
@@ -104,6 +106,19 @@ my $FULL_URL_PREFIX = $ORIG_URL_PREFIX;
 my $NAME            = "Shlomi Fish";
 my $H               = "Homesite";
 
+sub _process_title__h1
+{
+    my $args        = shift;
+    my $title       = $args->{title};
+    my $raw_fn_path = $args->{raw_fn_path};
+    return (
+
+        ( $raw_fn_path =~ /\A$IS_HUMOUR/ )
+        ? sprintf( qq#%s <span class="satire">[ Satire ]</span>#, $title )
+        : $title
+    );
+}
+
 sub _process_title
 {
     my $args  = shift;
@@ -145,6 +160,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             longblank         => $LONGBLANK,
             main_email        => 'shlomif@shlomifish.org',
             process_title     => \&_process_title,
+            process_title__h1 => \&_process_title__h1,
             my_acronym        => sub {
                 my $args = shift;
 

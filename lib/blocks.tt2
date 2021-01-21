@@ -96,7 +96,7 @@ control and other resources.
 [% PROCESS qp_lect dir = "slides", %]
 [% END %]
 
-[% PROCESS "h_sections.tt2" %]
+[% PROCESS "h_sections_local.tt2" %]
 [% PROCESS "Inc/common_sections.tt2" %]
 
 [% BLOCK x11_licence %]

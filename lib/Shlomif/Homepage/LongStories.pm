@@ -170,10 +170,10 @@ California, who thought that the show <i>Buffy the Vampire Slayer</i> was fictio
 However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
 who told her that she is none other than Buffy Mageia, <b>The Slayer</b>,
-a legendary heroine who is destined to slay many notable vampires and demons,
+a legendary heroine who was destined to slay many notable vampires and demons,
 culminating in none other than The Master, the vampire with the oldest
 soul. See how she managed to do so, despite being completely non-violent, and
-even supportive of the demons she encounters.
+even supportive of the demons she encountered.
 </p>
 <p>
 This is a parody of the television series

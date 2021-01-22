@@ -11,6 +11,7 @@ from black-hole-solver's C code.
 """
 
 import argparse
+import os
 import re
 import shutil
 import subprocess
@@ -95,7 +96,16 @@ class SourceFilter:
     def __init__(self, should_process, target, exe_path):
         self.exe_path = exe_path
         self.should_process = should_process
-        self.target = target
+        self.target = Path(target)
+
+    def _git_add(self, basenames):
+        subprocess.check_call(
+            [
+                "/bin/sh",
+                "-exc",
+                "cd {} && git add {}".format(self.target, ' '.join(basenames))
+            ]
+        )
 
     def process_file_or_copy(self, basename, callback):
         """optionally filter the file in 'basename' using 'callback'"""
@@ -120,6 +130,9 @@ class SourceFilter:
             ["/bin/sh", "-exc", "cd {} && git init .".format(self.target)]
         )
 
+        bn = "Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"
+        shutil.copyfile(Path(os.getenv("HOME")) / bn, self.target / bn)
+        self._git_add([bn])
         return
         self.process_file_or_copy(
             "include/black-hole-solver/black_hole_solver.h",

@@ -120,6 +120,21 @@ class SourceFilter:
                 text = ifh.read()
                 ofh.write(callback(text) if self.should_process else text)
 
+    def move_and_process(self, src_bn, dest_bn, callback):
+        """optionally filter the file in 'basename' using 'callback'"""
+        src_fn = self.target / src_bn
+        dest_fn = self.target / dest_bn
+
+        dest_parent = dest_fn.parent
+        if not dest_parent.exists():
+            dest_parent.mkdir(parents=True)
+        with open(dest_fn, "wt") as ofh:
+            with open(src_fn, "rt") as ifh:
+                text = ifh.read()
+                ofh.write(callback(text) if self.should_process else text)
+        self._git_add([dest_bn])
+        os.unlink(src_fn)
+
     def run(self):
         """docstring for run"""
         shutil.copytree(
@@ -132,12 +147,19 @@ class SourceFilter:
 
         bn = "Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"
         shutil.copyfile(Path(os.getenv("HOME")) / bn, self.target / bn)
+
+        def svg_cb(text):
+            return text
+        orig_svg_bn = "emma-watson-wandless.svg"
+        renamed_svg_bn = "gotta-be-a-badass-to-play-one.svg"
+        self.move_and_process(
+                src_bn=orig_svg_bn,
+                dest_bn=renamed_svg_bn,
+                callback=svg_cb,
+        )
+
         self._git_add([bn])
         return
-        self.process_file_or_copy(
-            "include/black-hole-solver/black_hole_solver.h",
-            _process_black_hole_solver_h
-        )
 
         self.process_file_or_copy(
             "solver_common.h",

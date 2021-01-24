@@ -128,12 +128,15 @@ class SourceFilter:
         dest_parent = dest_fn.parent
         if not dest_parent.exists():
             dest_parent.mkdir(parents=True)
+        with open(src_fn, "rt") as ifh:
+            text = ifh.read()
         with open(dest_fn, "wt") as ofh:
-            with open(src_fn, "rt") as ifh:
-                text = ifh.read()
-                ofh.write(callback(text) if self.should_process else text)
+            ofh.write(callback(text) if self.should_process else text)
+        # os.system("echo ============ ;ls " +
+        #           str(self.target) + "; echo =====")
         self._git_add([dest_bn])
-        os.unlink(src_fn)
+        if dest_bn != src_bn:
+            os.unlink(src_fn)
 
     def run(self):
         """docstring for run"""
@@ -150,12 +153,26 @@ class SourceFilter:
 
         def svg_cb(text):
             return text
+        orig_svg = "emma-watson-wandless"
         orig_svg_bn = "emma-watson-wandless.svg"
+        renamed_svg = "gotta-be-a-badass-to-play-one"
         renamed_svg_bn = "gotta-be-a-badass-to-play-one.svg"
         self.move_and_process(
                 src_bn=orig_svg_bn,
                 dest_bn=renamed_svg_bn,
                 callback=svg_cb,
+        )
+
+        def makefile_cb(text):
+            print(text)
+            # assert 0
+            return re.sub(orig_svg, renamed_svg, text, 0)
+        orig_makefile_bn = "Makefile"
+        renamed_makefile_bn = "Makefile"
+        self.move_and_process(
+            src_bn=orig_makefile_bn,
+            dest_bn=renamed_makefile_bn,
+            callback=makefile_cb,
         )
 
         self._git_add([bn])
@@ -189,6 +206,7 @@ def main():
         should_process = False
     else:
         raise Exception("wrong invocation")
+    should_process = True
 
     SourceFilter(
         exe_path=sys.argv[0],

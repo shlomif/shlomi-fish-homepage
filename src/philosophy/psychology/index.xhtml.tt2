@@ -1,7 +1,6 @@
 [%- SET title = "Psychology Writings by Shlomi Fish" -%]
 [%- SET desc = "Psychology Writings by Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,7 +9,9 @@ These are essays I wrote about psychology.
 
 <h2 id="articles">The Articles and Essays</h2>
 
-<h3 id="hypomanias"><a href="hypomanias/">Dealing with Hypomanias</a></h3>
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section id="hypomanias" href="hypomanias/" title="Dealing with Hypomanias" %]
 
 <p>
 How I deal with the bad psychological conditions of hypomanias which are states
@@ -19,19 +20,27 @@ my experience as someone who experienced clinical depressions, clinical
 anxieties, hypomanias and even had a few manias.
 </p>
 
-<h3 id="elephant"><a href="elephant-in-the-circus/">The Elephant in the Circus</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="elephant" href="elephant-in-the-circus/" title="The Elephant in the Circus" %]
 
 <p>
 A small parable which became an Internet Meme, which I’ve transcribed here
 for posterity.
 </p>
 
-<h3 id="medicating-bipolar"><a href="why-openly-bipolar-people-should-not-be-medicated/">Why Openly Bipolar People Should Not Be Medicated</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="medicating-bipolar" href="why-openly-bipolar-people-should-not-be-medicated/" title="Why Openly Bipolar People Should Not Be Medicated" %]
 
 <p>
 Parallel with Alan Turing’s medicated treatment for his homosexuality, the sad
 story of my treatment, Taylor Swift as a woman who exhibits hypomanias, and
 more.
 </p>
+
+[% END %]
+
+[% SET section_element = "section" %]
 
 [% END %]

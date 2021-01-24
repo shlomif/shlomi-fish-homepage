@@ -67,6 +67,7 @@ META_SUBSECT_DEPS := $(SECTS_DEPS__DIR)/Meta.pm
 PHILOSOPHY_DEPS := $(SECTS_DEPS__DIR)/Essays.pm
 PUZZLES_DEPS := $(SECTS_DEPS__DIR)/Puzzles.pm
 SOFTWARE_DEPS := $(SECTS_DEPS__DIR)/Software.pm
+Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
 
 ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_DEPS) $(PHILOSOPHY_DEPS) $(PUZZLES_DEPS) $(SECTION_MENU_DEPS) $(SOFTWARE_DEPS)
 
@@ -892,6 +893,10 @@ MY_NAME_IS_RINDOLF_DEST := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.j
 
 Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
+Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
+
+$(Evilphish_flipped_dest): $(Evilphish_flipped_src)
+	gm convert -flop $< $@
 
 DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
@@ -1124,7 +1129,7 @@ non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-all_deps: $(CATB_COPY)
+all_deps: $(CATB_COPY) $(Evilphish_flipped_dest)
 
 all: $(CATB_COPY_POST)
 

@@ -107,6 +107,15 @@ class SourceFilter:
             ]
         )
 
+    def _git_clean(self):
+        subprocess.check_call(
+            [
+                "/bin/sh",
+                "-exc",
+                "cd {} && git clean -dxf .".format(self.target)
+            ]
+        )
+
     def process_file_or_copy(self, basename, callback):
         """optionally filter the file in 'basename' using 'callback'"""
         src_fn = Path(self.exe_path).parent.parent / basename
@@ -176,6 +185,8 @@ class SourceFilter:
         )
 
         self._git_add([bn])
+        if True:
+            self._git_clean()
         return
 
         self.process_file_or_copy(

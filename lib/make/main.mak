@@ -126,6 +126,7 @@ ifeq ($(UPLOAD_MATHJAX),1)
 endif
 
 UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
+UPLOAD_BRIEF = (cd $(POST_DEST) && $(RSYNC) --no-progress --no-verbose $(RSYNC_EXCLUDES) -a . $1 )
 
 upload_deps: all
 
@@ -135,10 +136,10 @@ upload_local: upload_deps
 upload: upload_local upload_remote_only
 
 upload_remote_only: upload_deps
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
+	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH})
 
 upload_remote_only_without_deps:
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
+	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH})
 
 upload_var: upload_deps upload_var_without_deps
 

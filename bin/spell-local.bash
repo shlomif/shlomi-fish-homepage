@@ -14,7 +14,7 @@ runspell()
     (
         set -e -x
         gmake
-        perl -I ./lib -M Shlomif::Spelling::Iface_Local -E 'Shlomif::Spelling::Iface_Local->new->run()' | perl -lp -E 's/[ \t]+$//' > "$spelling_errors_filename_1"
+        perl -I ./lib -M"Shlomif::Spelling::Iface_Local" -E 'Shlomif::Spelling::Iface_Local->new->run()' | perl -lp -E 's/[ \t]+$//' > "$spelling_errors_filename_1"
         perl bin/extract-spelling-errors.pl > "$spelling_errors_filename_2"
     )
 }

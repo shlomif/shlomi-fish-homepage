@@ -20,8 +20,11 @@ has obj => (
     DIRS:
         foreach my $dir ( "/usr/share/hunspell", "/usr/share/myspell" )
         {
-            $speller =
-                Text::Hunspell->new( "$dir/en_GB.aff", "$dir/en_GB.dic", );
+            eval {
+                $speller =
+                    Text::Hunspell->new( "$dir/en_GB.aff", "$dir/en_GB.dic", );
+            };
+            next DIRS if $@;
             last DIRS
                 if $speller;
         }

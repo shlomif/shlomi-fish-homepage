@@ -164,6 +164,32 @@ my %tr_s = (
                     "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
             ),
             $EmWatson_tech_interview,
+            _l(
+                inner_html => "I'm the Real Tim Toady",
+                path       => "humour/bits/Im-The-Real-Tim-Toady/",
+            ),
+            _l(
+                inner_html => "“Can I SCO Now?”",
+                path       => "humour/bits/Can-I-SCO-Now/",
+            ),
+            _l(
+                inner_html => "Freecell Solver™ Goes Webscale",
+                path       => "humour/bits/Freecell-Solver-Goes-Webscale/",
+            ),
+            _l(
+                inner_html =>
+                    "Freecell Solver Enterprises™ Acquires Google Inc.",
+                path =>
+"humour/bits/Freecell-Solver-Enterprises-Acquires-Google-Inc/",
+            ),
+            _l(
+                inner_html => "New Israeli Tech Usergroups",
+                path       => "humour/bits/New-Israeli-Tech-Usergroups/",
+            ),
+            _l(
+                inner_html => "Announcing Python 4",
+                path       => "humour/bits/Python4-Announcement/",
+            ),
         ],
     ),
     'foss_facts' => _tr(

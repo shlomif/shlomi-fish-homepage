@@ -158,44 +158,26 @@ class SourceFilter:
         )
 
         bn = "Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"
+        orig_svg = "emma-watson-wandless"
+        renamed_svg = "gotta-be-a-badass-to-play-one"
         shutil.copyfile(Path(os.getenv("HOME")) / bn, self.target / bn)
 
         def svg_cb(text):
             return text
 
         def run_svg(suffix):
-            orig_svg = "emma-watson-wandless" + suffix
-            orig_svg_bn = orig_svg + ".svg"
-            renamed_svg = "gotta-be-a-badass-to-play-one" + suffix
-            renamed_svg_bn = renamed_svg + ".svg"
+            suffixed_svg = "emma-watson-wandless" + suffix
+            orig_svg_bn = suffixed_svg + ".svg"
+            suffixed_renamed_svg = renamed_svg + suffix
+            renamed_svg_bn = suffixed_renamed_svg + ".svg"
             self.move_and_process(
                     src_bn=orig_svg_bn,
                     dest_bn=renamed_svg_bn,
                     callback=svg_cb,
             )
         run_svg("--3rd-tense--wo-hashtag-and-username")
-
-        orig_svg = "emma-watson-wandless--3rd-tense"
-        orig_svg_bn = orig_svg + ".svg"
-        renamed_svg = "gotta-be-a-badass-to-play-one--3rd-tense"
-        renamed_svg_bn = renamed_svg + ".svg"
-        self.move_and_process(
-                src_bn=orig_svg_bn,
-                dest_bn=renamed_svg_bn,
-                callback=svg_cb,
-        )
-
-        def svg_cb(text):
-            return text
-        orig_svg = "emma-watson-wandless"
-        orig_svg_bn = "emma-watson-wandless.svg"
-        renamed_svg = "gotta-be-a-badass-to-play-one"
-        renamed_svg_bn = "gotta-be-a-badass-to-play-one.svg"
-        self.move_and_process(
-                src_bn=orig_svg_bn,
-                dest_bn=renamed_svg_bn,
-                callback=svg_cb,
-        )
+        run_svg("--3rd-tense")
+        run_svg("")
 
         def makefile_cb(text):
             print(text)

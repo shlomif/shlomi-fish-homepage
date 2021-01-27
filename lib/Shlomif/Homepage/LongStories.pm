@@ -330,8 +330,10 @@ and set in a time of great confusion — not unlike our own.
 EOF
     },
     {
-        id         => 'terminator_liberation',
-        tagline    => "Tell about the Exodus. And the more, the better.",
+        id => 'terminator_liberation',
+
+        # tagline    => "Tell about the Exodus. And the more, the better.",
+        tagline    => "“Hasta la vista, baby tank girl!”",
         logo_alt   => "“Terminator: Liberation” Logo",
         logo_class => "terminator_liberation",
         logo_src   =>
@@ -353,8 +355,8 @@ href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
 Schwarzenegger</a> as himself and a cosplayer of his, Aharon, as the good terminator.
 Takes place in
 <a href="https://en.wikipedia.org/wiki/Tel_Aviv">Tel Aviv</a> during <a
-href="https://en.wikipedia.org/wiki/Passover">Passover</a> (during <a
-href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a>).
+href="https://en.wikipedia.org/wiki/Passover">Passover</a> and <a
+href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a>.
 </p>
 
 EOF

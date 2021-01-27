@@ -162,6 +162,31 @@ class SourceFilter:
 
         def svg_cb(text):
             return text
+
+        def run_svg(suffix):
+            orig_svg = "emma-watson-wandless" + suffix
+            orig_svg_bn = orig_svg + ".svg"
+            renamed_svg = "gotta-be-a-badass-to-play-one" + suffix
+            renamed_svg_bn = renamed_svg + ".svg"
+            self.move_and_process(
+                    src_bn=orig_svg_bn,
+                    dest_bn=renamed_svg_bn,
+                    callback=svg_cb,
+            )
+        run_svg("--3rd-tense--wo-hashtag-and-username")
+
+        orig_svg = "emma-watson-wandless--3rd-tense"
+        orig_svg_bn = orig_svg + ".svg"
+        renamed_svg = "gotta-be-a-badass-to-play-one--3rd-tense"
+        renamed_svg_bn = renamed_svg + ".svg"
+        self.move_and_process(
+                src_bn=orig_svg_bn,
+                dest_bn=renamed_svg_bn,
+                callback=svg_cb,
+        )
+
+        def svg_cb(text):
+            return text
         orig_svg = "emma-watson-wandless"
         orig_svg_bn = "emma-watson-wandless.svg"
         renamed_svg = "gotta-be-a-badass-to-play-one"
@@ -175,7 +200,22 @@ class SourceFilter:
         def makefile_cb(text):
             print(text)
             # assert 0
-            return re.sub(orig_svg, renamed_svg, text, 0)
+            bn_no_ext = re.sub("\\.[^\\.]*\\Z", "", bn)
+            text = re.sub(
+                "\n(PHOTO_BASE\\s*=)[^\\n]+", "\nPHOTO_BASE = " + bn_no_ext,
+                re.sub(orig_svg, renamed_svg, text, 0), re.M | re.S)
+            text = text.replace(
+                "$(PHOTO_INTERIM1): $(PHOTO_BASE).webp",
+                "$(PHOTO_INTERIM1): $(PHOTO_BASE).jpg",
+            )
+
+            text = text.replace(
+                "$(PHOTO_DEST): $(PHOTO_INTERIM1)\n\t" +
+                "gm convert $< $@\n", "")
+
+            print(text)
+            # assert 0
+            return text
         orig_makefile_bn = "Makefile"
         renamed_makefile_bn = "Makefile"
         self.move_and_process(
@@ -188,16 +228,6 @@ class SourceFilter:
         if True:
             self._git_clean()
         return
-
-        self.process_file_or_copy(
-            "solver_common.h",
-            _process_solver_common_h
-        )
-
-        self.process_file_or_copy(
-            "lib.c",
-            _process_lib_c
-        )
 
 
 def main():

@@ -160,9 +160,18 @@ class SourceFilter:
         bn = "Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"
         orig_svg = "emma-watson-wandless"
         renamed_svg = "gotta-be-a-badass-to-play-one"
-        shutil.copyfile(Path(os.getenv("HOME")) / bn, self.target / bn)
+        target_path = self.target / bn
+
+        shutil.copyfile(Path(os.getenv("HOME")) / bn, target_path)
 
         def svg_cb(text):
+            def match_cb(m):
+                """docstring for match_cb"""
+                return m.group(1) + str(target_path) + m.group(2) + bn
+            text, count = re.subn(
+                    "(<image[ \\t\\n\\r]+sodipodi:absref=\")[^\"]+" +
+                    "(\"[ \\t\\n\\r]+xlink:href=\")[^\"]+", match_cb, text)
+            assert count == 1
             return text
 
         def run_svg(suffix):

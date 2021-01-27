@@ -164,12 +164,12 @@ EOF
         href       => "humour/Selina-Mandrake/",
         abstract   => <<'EOF',
 <p class="selina abstract">
-Selina ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
+Selina Mandrake ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
 was a geeky Anglo-American girl in her high school senior year in 2011
 California, who thought that the show <i>Buffy the Vampire Slayer</i> was fictional.
 However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
-who told her that she is none other than Buffy Mageia, <b>The Slayer</b>,
+who told her that she was none other than Buffy Mageia, <b>The Slayer</b>,
 a legendary heroine who was destined to slay many notable vampires and demons,
 culminating in none other than The Master, the vampire with the oldest
 soul. See how she managed to do so, despite being completely non-violent, and
@@ -189,9 +189,8 @@ EOF
         entry_extra_html => <<'EOF',
 <p>
 This screenplay, a parody and reflection on
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy the
-Vampire Slayer</a> (both the movie and the show) and inspired by many
-other sources, is in a usable state.
+<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the
+Vampire Slayer</i></a> and inspired by many other sources, is in a usable state.
 </p>
 EOF
 

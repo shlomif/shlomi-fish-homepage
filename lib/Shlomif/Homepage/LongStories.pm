@@ -84,7 +84,7 @@ EOF
     },
     {
         id         => 'humanity',
-        tagline    => "Intelligent (?) and Conscious (?)",
+        tagline    => "Intelligent (?) and Conscious (?) People",
         logo_alt   => "Humanity Logo",
         logo_src   => "humour/humanity/images/humanity-logo-small.png",
         logo_svg   => 'humour/humanity/images/humanity-logo.svg',

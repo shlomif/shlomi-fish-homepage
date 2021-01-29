@@ -33,3 +33,15 @@ Obligatory YouTube videos:
 * https://www.youtube.com/watch?v=nppq0_O5lWM - Tiffany Alvord - That Kiss.
 
 * https://www.youtube.com/watch?v=liyiT_DGREA - The Four Seasons - December, 1963 (Oh, What a Night)
+
+## Notes:
+
+I did not try helping that girl in order to kiss her - I helped her because I try
+to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&oldid=1002824276#Charitable_activities ; https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html#emma-watson-and-the-children-get-icecream  .) The kiss was just a happy side-effect.
+
+I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
+
+Back in Tel Aviv, a friend of mine joked that 20 GBP was too much to pay for such a kiss.
+
+While you can call it a "rapekiss", I suspect that many first kisses are like that
+despite the mutual kiss popularised by films such as https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29 (♥!).

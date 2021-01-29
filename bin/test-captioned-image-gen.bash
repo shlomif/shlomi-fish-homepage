@@ -7,6 +7,8 @@
 #
 (
     set -e -x
+    test -e ../trunk
+    test "trunk--clones" = "$(basename "$(pwd)")"
     img="Captioned-Image-Badass-Schwarzenegger"
     test -d "$img" && rm -fr "$img"
     python3 "$trunk"/bin/generate_captioned_image.py --process none

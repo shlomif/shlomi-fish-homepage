@@ -18,6 +18,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from PIL import Image
+
 
 def _newlinify(text, match_object):
     start = text.rindex("\n", 0, match_object.start(0)+1)
@@ -171,6 +173,27 @@ class SourceFilter:
             text, count = re.subn(
                     "(<image[ \\t\\n\\r]+sodipodi:absref=\")[^\"]+" +
                     "(\"[ \\t\\n\\r]+xlink:href=\")[^\"]+", match_cb, text)
+            width, height = Image.open(target_path).size
+            newtext = []
+            oldtext = text.split("\n")
+            while width or height:
+                lin = oldtext.pop(0)
+                newtext.append(lin)
+                if re.search("^[ \\t]*<image", lin):
+                    while width or height:
+                        lin = oldtext.pop(0)
+                        m = re.search("^([ \\t]*height=\")([^\"]+)(\".*)", lin)
+                        if m:
+                            lin = m.group(1) + str(height) + \
+                                m.group(3)
+                            height = None
+                        m = re.search("^([ \\t]*width=\")([^\"]+)(\".*)", lin)
+                        if m:
+                            lin = m.group(1) + str(width) + \
+                                m.group(3)
+                            width = None
+                        newtext.append(lin)
+            text = "\n".join(newtext + oldtext)
             assert count == 1
             return text
 

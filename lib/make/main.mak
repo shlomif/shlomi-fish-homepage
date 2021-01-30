@@ -876,7 +876,7 @@ LC_LECTURE_ARC := $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 all: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
-	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_ALL=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-12-05T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
+	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_ALL=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2021-01-29T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
 
 OCT_2014_SGLAU_LET_DIR := $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
 OCT_2014_SGLAU_LET_PDF := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf

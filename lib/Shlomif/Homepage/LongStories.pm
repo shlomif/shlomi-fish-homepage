@@ -471,7 +471,7 @@ even in his emails
 Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
 and other franchises, that everyone can see, hear, photograph, and record,
-but which many people believe are some kind of a trick.
+but which many people believe are some kind of trick.
 </p>
 </li>
 

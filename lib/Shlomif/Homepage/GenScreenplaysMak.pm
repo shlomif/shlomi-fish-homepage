@@ -121,7 +121,7 @@ EOF
         @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-    my @records = (
+    my @records      = (
         map {
             _calc_screenplay_doc_makefile_lines( $_epub_map,
                 $screenplay_vcs_base_dir, $_ )

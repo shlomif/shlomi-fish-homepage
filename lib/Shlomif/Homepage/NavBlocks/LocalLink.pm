@@ -13,7 +13,7 @@ has [
     qw(
         inner_html
         path
-        )
+    )
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
 has 'title' => ( is => 'ro', isa => 'Str' );

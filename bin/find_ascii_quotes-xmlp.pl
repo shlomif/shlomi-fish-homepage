@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use XML::Parser;
+use XML::Parser ();
 
 binmode STDOUT, ":encoding(utf8)";
 
@@ -23,7 +23,7 @@ foreach my $filename (@ARGV)
                     if ( $l =~ m{["']} )
                     {
                         printf {*STDOUT} (
-                            "%s:%d:%s\n", $filename,
+                            "%s:%d:%s\n",                  $filename,
                             $idx + $expat->current_line(), $l
                         );
                     }

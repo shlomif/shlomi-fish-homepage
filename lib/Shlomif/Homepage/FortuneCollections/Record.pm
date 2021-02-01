@@ -14,7 +14,7 @@ has [
         page_title
         text
         title
-        )
+    )
 ] => ( is => 'ro', required => 1 );
 
 sub nav_record

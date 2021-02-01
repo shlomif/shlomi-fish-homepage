@@ -1,0 +1,23 @@
+[%- SET title = "The Eternal Jew" -%]
+[%- SET desc = "This is a philosophical essay that nicely summarises the principles of my view on myself and of life. Do you think highly of yourself? Do you think highly of yourself enough? Do you think you can influence the world? It’s all there." -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects">
+[% default_toc %]
+
+<h2 id="itself">The Article Itself</h2>
+
+<h3 id="itself3">Article</h3>
+
+[% path_slurp("docbook/5/rendered/the-eternal-jew.xhtml") %]
+
+<h2 id="coverage">Coverage</h2>
+
+<p>
+<b>TODO:</b> fill in.
+</p>
+
+</div>
+
+[% END %]

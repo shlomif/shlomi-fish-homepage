@@ -31,6 +31,13 @@ my $essays_tree_contents = {
                     url   => "philosophy/the-eternal-jew/",
                     title =>
                         "The Eternal Jew - An Essay about the value of Self",
+                    subs => [
+                        {
+                            text => "Ongoing Text",
+                            url  =>
+                                "philosophy/the-eternal-jew/ongoing-text.xhtml",
+                        },
+                    ],
                 },
                 {
                     text => "Guide to Neo-Tech",

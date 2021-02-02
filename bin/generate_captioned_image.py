@@ -170,34 +170,47 @@ class SourceFilter:
         )
 
         def svg_cb(text):
+            was_processed = 0
+
             def match_cb(m):
                 """docstring for match_cb"""
                 return m.group(1) + str(target_path) + m.group(2) + bn
             text, count = re.subn(
                     "(<image[ \\t\\n\\r]+sodipodi:absref=\")[^\"]+" +
                     "(\"[ \\t\\n\\r]+xlink:href=\")[^\"]+", match_cb, text)
-            width, height = Image.open(target_path).size
+            init_width, init_height = Image.open(target_path).size
             newtext = []
             oldtext = text.split("\n")
-            while width or height:
-                lin = oldtext.pop(0)
-                newtext.append(lin)
-                if re.search("^[ \\t]*<image", lin):
-                    while width or height:
-                        lin = oldtext.pop(0)
-                        m = re.search("^([ \\t]*height=\")([^\"]+)(\".*)", lin)
-                        if m:
-                            lin = m.group(1) + str(height) + \
-                                m.group(3)
-                            height = None
-                        m = re.search("^([ \\t]*width=\")([^\"]+)(\".*)", lin)
-                        if m:
-                            lin = m.group(1) + str(width) + \
-                                m.group(3)
-                            width = None
-                        newtext.append(lin)
+
+            def change_dims(tag, width, height):
+                tag_re = "^[ \\t]*<{}".format(tag)
+                while width or height:
+                    lin = oldtext.pop(0)
+                    newtext.append(lin)
+                    if re.search(tag_re, lin):
+                        while width or height:
+                            lin = oldtext.pop(0)
+                            m = re.search(
+                                "^([ \\t]*height=\")([^\"]+)(\".*)", lin)
+                            if m:
+                                lin = m.group(1) + str(height) + "px" + \
+                                    m.group(3)
+                                height = None
+                                nonlocal was_processed
+                                was_processed += 1
+                            m = re.search(
+                                "^([ \\t]*width=\")([^\"]+)(\".*)", lin)
+                            if m:
+                                lin = m.group(1) + str(width) + "px" + \
+                                    m.group(3)
+                                width = None
+                                was_processed += 1
+                            newtext.append(lin)
+            change_dims("svg", init_width, init_height)
+            change_dims("image", init_width, init_height)
             text = "\n".join(newtext + oldtext)
             assert count == 1
+            assert was_processed == 4
             return text
 
         def run_svg(suffix):

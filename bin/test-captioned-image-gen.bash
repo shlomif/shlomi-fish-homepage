@@ -16,6 +16,7 @@
         cd "$img"
         gmake
         git i
+        inkscape *.svg
     )
 )
 

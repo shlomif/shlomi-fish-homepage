@@ -13,7 +13,10 @@ sub script_test
     my $output =
 qx#"$^X" -E 'while (1) { say "Give up" . (" giving up" x (\$i++)) . "!"; }' | head -n 100#;
     $output =~ s#\r##g;
-    return is( substr( $output, 0, length($prefix) ), $prefix, $blurb );
+    return is(
+        substr( $output, 0, length($prefix) ),
+        $prefix, "Terminator Liberation perl script - $blurb",
+    );
 }
 
 {

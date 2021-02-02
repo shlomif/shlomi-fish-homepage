@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 1;
+use Test::More tests => 2;
 use lib './lib';
 
 sub script_test
@@ -19,4 +19,7 @@ qx#"$^X" -E 'while (1) { say "Give up" . (" giving up" x (\$i++)) . "!"; }' | he
 {
     # TEST
     script_test( "Give up!\n", "1 line" );
+
+    # TEST
+    script_test( "Give up!\nGive up giving up!\n", "2 lines", );
 }

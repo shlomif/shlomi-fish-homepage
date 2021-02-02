@@ -164,7 +164,10 @@ class SourceFilter:
         renamed_svg = "gotta-be-a-badass-to-play-one"
         target_path = self.target / bn
 
-        shutil.copyfile(Path(os.getenv("HOME")) / bn, target_path)
+        shutil.copyfile(
+            Path(os.getenv("HOME")) / "Download" / "Arcs" / bn,
+            target_path
+        )
 
         def svg_cb(text):
             def match_cb(m):

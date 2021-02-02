@@ -1,20 +1,23 @@
 #!/usr/bin/env perl
 
+use 5.014;
 use strict;
 use warnings;
 use Test::More tests => 3;
 use lib './lib';
+
+my $GOT_SCRIPT_OUTPUT =
+    scalar(
+qx#"$^X" -E 'while (1) { say "Give up" . (" giving up" x (\$i++)) . "!"; }' | head -n 100#
+    ) =~ s#\r##gr;
 
 sub script_test
 {
     my ( $prefix, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    my $output =
-qx#"$^X" -E 'while (1) { say "Give up" . (" giving up" x (\$i++)) . "!"; }' | head -n 100#;
-    $output =~ s#\r##g;
     return is(
-        substr( $output, 0, length($prefix) ),
+        substr( $GOT_SCRIPT_OUTPUT, 0, length($prefix) ),
         $prefix, "Terminator Liberation perl script - $blurb",
     );
 }

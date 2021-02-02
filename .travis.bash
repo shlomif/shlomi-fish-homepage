@@ -45,7 +45,7 @@ then
     eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
-    cpanm -vvv --notest IO::Async
+    cpanm -vvv --force IO::Async
     cpanm App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     export CPATH="${CPATH}:/usr/include/tidy"
     cpanm HTML::T5

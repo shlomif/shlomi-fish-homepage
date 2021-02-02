@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[%- WRAPPER about_sect -%]
+
 <p>
 This is a philosophical essay that nicely summarises the principles of my view
 on myself and of life. Do you think highly of yourself? Do you think highly of
@@ -12,27 +14,39 @@ yourself enough? Do you think you can influence the world? It’s all there.
 <ul>
 
 <li>
-<a href="the-eternal-jew/"><b>HTML</b> - Read online</a>
+<p>
+<a href="ongoing-text.xhtml">All on one page</a> and
+as individual pages:
+<a href="the-eternal-jew/"><b>HTML</b></a> - Read online
+</p>
 </li>
 
 <li>
+<p>
 <a href="the-eternal-jew.xml">DocBook/XML Sources</a>
+</p>
 </li>
 
 </ul>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
 
 <ul>
 
 <li>
+<p>
 <a href="http://philosophy.livejournal.com/1818045.html">“My Philosophical
 Creations” on the livejournal.com philosophy community</a>
+</p>
 </li>
 
 </ul>
 
-<h2 id="reception">Reception</h2>
+[% END %]
+
+[% WRAPPER h2_section id="reception" title="Reception"%]
 
 <p>
 While, some people have commented or implied that they liked it or agreed
@@ -94,12 +108,16 @@ Eternal Jew”, the “Little Red Riding Hood of Philosophy” is one of
 the greatest compliments I can possibly get.
 </p>
 
-<h3 id="combined_meme">Combined Meme</h3>
+[% WRAPPER h3_section id="combined_meme" title="Combined Meme"%]
 
 <img src="little-red-riding-hood-of-messiahs.jpg" alt="I’m the Little Red Riding Hood of Messiahs…" class="max_width" /><br />
 
 <p>
 (Photo of <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a> holding guns with the caption of “I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”.).
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

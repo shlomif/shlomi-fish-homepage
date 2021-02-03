@@ -42,6 +42,7 @@ then
     then
         sudo dnf --color=never install -y hspell-devel perl-devel ruby-devel
     fi
+    eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
     cpanm -vvv IO::Async
@@ -54,7 +55,7 @@ then
     cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
     bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-    sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator zenfilter Pillow WebTest
+    sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
     perl bin/my-cookiecutter.pl
     # For various sites
     cpanm --notest HTML::Toc XML::Feed
@@ -75,6 +76,8 @@ then
     then
         sudo ln -s /usr/bin/make /usr/bin/gmake
     fi
+
+
 
 elif test "$cmd" = "build"
 then

@@ -1022,6 +1022,16 @@ $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 
+SCREENPLAY_XML__RAW_HTMLS__POST_DESTS := $(patsubst $(PRE_DEST)/%,$(POST_DEST)/%,$(SCREENPLAY_XML__RAW_HTMLS__DESTS))
+SCREENPLAY_XML__PDFS__POST_DESTS := $(patsubst %.raw.html,%.pdf,$(SCREENPLAY_XML__RAW_HTMLS__POST_DESTS))
+
+$(SCREENPLAY_XML__PDFS__POST_DESTS): %.pdf: %.raw.html
+	weasyprint "$<" "$@"
+
+screenplays_pdfs: $(SCREENPLAY_XML__PDFS__POST_DESTS)
+
+docbook_extended: screenplays_pdfs
+
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 
 FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ

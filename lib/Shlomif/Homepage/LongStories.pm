@@ -404,7 +404,7 @@ While the birth parents of
 <a href="https://en.wikipedia.org/wiki/Padm%C3%A9_Amidala">Queen Padmé Amidala</a>
 of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">the Selinaverse</a>
 (<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> , b. 1992)
-were killed in a starship crash when she was 2, she was adopted by her aunt,
+were killed in a starship crash when she was 1 years old, she was adopted by her aunt,
 the Archduchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
 Portman</a>), and her aunt's husband Darth Vader, who volunteered to act as King in effect until
 Padme's coming of age. As a result, Padmé had a happy childhood until she turned 18
@@ -432,7 +432,7 @@ She has enough time to contribute on Internet content and code sharing sites.
 <li>
 <p>
 She has many supporting friends, including her boyfriend Anakin Skywalker,
-a promising young Jedi padawan, with aspirations
+a promising Jedi padawan who is about her age, with aspirations
 for joining the mysterious but revered jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>
 are the known extant members.

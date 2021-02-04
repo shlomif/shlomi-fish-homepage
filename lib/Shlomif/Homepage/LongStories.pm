@@ -384,10 +384,10 @@ EOF
 <p>
 This ambitious series of screenplays breaks a long time taboo of writing
 <i>Star Wars</i> and <i>Star Trek</i> crossovers, but also aims to make
-the case for commercial yet free/open ( <a href="https://creativecommons.org/">Creative Commons</a>
+the case for commercial yet free/open (<a href="https://creativecommons.org/">Creative Commons</a>
 / etc.) fan fiction / crossovers / real person fiction
-( see e.g: <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/take2/">Our
-mission statement</a> )
+(see e.g: <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/take2/">Our
+mission statement</a>)
 and screenplays written in easier to write formats than the
 draconian, finicky, and boring, Hollywood-blessed format.
 </p>
@@ -462,7 +462,7 @@ be flawless.
 <li>
 <p>
 Her boyfriend being so busy with his studies that he becomes awfully laconic
-even in his emails
+even in his emails.
 </p>
 </li>
 

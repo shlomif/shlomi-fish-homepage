@@ -1,7 +1,6 @@
 [%- SET title = "Interviews with Open Source People" -%]
 [%- SET desc = "Interviews with Open Source People" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
@@ -14,7 +13,7 @@ to people who are not at the community’s central attention.
 
 <h2>The Interviews Themselves</h2>
 
-<h3><a href="adrian-ettlinger.html">Adrian Ettlinger</a></h3>
+[% WRAPPER h3_section href = "adrian-ettlinger.html", id = "adrian-ettlinger", title = "Adrian Ettlinger"  %]
 
 <p>
 This is an interview with <a href="https://en.wikipedia.org/wiki/Adrian_Ettlinger">Adrian Ettlinger</a> (1925-2013) who was a very experienced
@@ -34,7 +33,9 @@ One can also find <a href="https://github.com/shlomif/Adrian-Ettlinger-Emails-Co
 <a href="ae-interview.txt">Source in XML-Grammar-Screenplay Format</a>
 </p>
 
-<h3><a href="sussman.html">Ben Collins-Sussman</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href="sussman.html" , id = "sussman" , title = "Ben Collins-Sussman" %]
 
 <p>
 This is an interview with <a href="http://www.red-bean.com/sussman/">Ben
@@ -45,5 +46,7 @@ Collins-Sussman</a> who is best known for being a core developer of the
 <p>
 <a href="sussman-interview.txt">Source in XML-Grammar-Screenplay Format</a>
 </p>
+
+[% END %]
 
 [% END %]

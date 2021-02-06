@@ -45,3 +45,9 @@ Back in Tel Aviv, a friend of mine joked that 20 GBP was too much to pay for suc
 
 While you can call it a "rapekiss", I suspect that many first kisses are like that
 despite the mutual kiss popularised by films such as https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29 (♥!).
+
+While it felt good, it was not good enough for me to prioritise kissing girls over my
+other creative work (which [are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
+
+I tried searching for my "shlomi fish" and that girl's given name on google in
+February 2021 and didn't find anything relevant.

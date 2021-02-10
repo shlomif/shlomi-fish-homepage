@@ -4,7 +4,12 @@
 [% SET HEBREW_XML_LANG_SCRIPT = '' %]
 
 [% BLOCK webmaster_footer %]
+[%# patreon.svg from https://www.flaticon.com/free-icon/patreon_2111574?term=patreon&page=1&position=1&page=1&position=1&related_id=2111574&origin=tag
+%]
 <ul class="bt_nav">
+<li>
+<a href="https://www.patreon.com/shlomif"><img class="patreon" src="[% base_path %]images/patreon.svg" alt="Patreon account" title="Support me using Patreon" /></a>
+</li>
 <li>
 <a href="[% base_path || "./" %]">Home</a>
 </li>

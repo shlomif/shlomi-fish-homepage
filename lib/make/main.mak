@@ -147,10 +147,10 @@ upload_var_without_deps:
 	$(call UPLOAD,/var/www/html/shlomif/homepage-local/)
 
 upload_beta: upload_deps
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
+	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
 
 upload_beta2: upload_deps
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH}/__Beta-aj2del)
+	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH}/__Beta-aj2del)
 
 upload_all: upload upload_var upload_local upload_beta
 

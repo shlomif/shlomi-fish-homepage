@@ -26,6 +26,23 @@ class MyTests(html_unit_test.TestCase):
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
         )
 
+    def test_factoids_main_page(self):
+        input_fn = './dest/post-incs/t2/humour/bits/facts/index.xhtml'
+        doc = self.doc(input_fn)
+        res = doc.xpath(
+            ".//section[@class='h3 facts']"
+        )
+        self.assertTrue((len(res) > 6), "len(facts)")
+        for el in res.xpath_results:
+            a_el = el.xpath(
+                "./header/h3/a"
+            )
+            self.assertEqual(len(a_el), 1, "len")
+            self.assertTrue(
+                a_el[0].get("href").endswith("/"),
+                "trailing slash for directory link"
+            )
+
     def test_hhgg_st_tng(self):
         input_fn = (
             './dest/post-incs/t2/humour/' +

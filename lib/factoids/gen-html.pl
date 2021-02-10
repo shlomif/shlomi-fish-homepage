@@ -1071,7 +1071,7 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 
 [% BLOCK facts__list %]
 {{ FOREACH p IN pages }}
-[% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}" title="{{ p.title() }}" %]
+[% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
 {{ "[% INCLUDE facts__${p.short_id()} %]" }}
 
 [% END %]

@@ -74,11 +74,15 @@ Creative Commons Attribution licence Unported (CC-by)</a>
 the situation is more complicated than that.
 </p>
 
+[% UNLESS avoid_nav_blocks %]
+
 [% WRAPPER nav_blocks  %]
 
 [% PROCESS buffy_nav_block  %]
 [% PROCESS star_trek_nav_block  %]
 
 [%- END -%]
+
+[% END %]
 
 [% END %]

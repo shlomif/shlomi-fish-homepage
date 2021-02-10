@@ -54,9 +54,21 @@ my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
 sub _render_nav_block
 {
     my ($args) = @_;
+    my $name   = $args->{name};
+    my $ret    = $nav_block_renderer->render(
+        { obj => $nav_blocks->get_nav_block($name), } );
 
-    return $nav_block_renderer->render(
-        { obj => $nav_blocks->get_nav_block( $args->{name} ), } );
+    my $page = $::latemp_filename;
+
+    if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
+        and $nav_block_renderer->flush_found() )
+    {
+        my $err = qq#NavBlock "$name" had no page "$page"!\n#;
+        print {*STDERR} "err=\n\n$err\n\n";
+        die $err;
+    }
+
+    return $ret;
 }
 
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;

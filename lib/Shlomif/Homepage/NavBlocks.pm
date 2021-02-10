@@ -187,6 +187,11 @@ my %tr_s = (
                 path       => "humour/bits/New-Israeli-Tech-Usergroups/",
             ),
             _l(
+                inner_html => "GNU Will Integrate GNU Guile into GNU coreutils",
+                path       =>
+"humour/bits/GNU-Project-Will-Integrate-Guile-into-coreutils/",
+            ),
+            _l(
                 inner_html => "Announcing Python 4",
                 path       => "humour/bits/Python4-Announcement/",
             ),
@@ -259,7 +264,11 @@ my %tr_s = (
             _l(
                 inner_html => "vs. The Klingon Warriors",
                 path       =>
-"humour/Queen-Padme-Tales/Queen-Amidala-vs-the-Klingon-Warriors.html",
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
+            ),
+            _l(
+                inner_html => "Proposed Cast",
+                path       => "humour/Queen-Padme-Tales/cast.html",
             ),
             _github( url => 'https://github.com/shlomif/Queen-Padme-Tales', ),
         ],
@@ -300,6 +309,10 @@ my %tr_s = (
             _l(
                 inner_html => "A #SummerNSA’s Reading",
                 path       => "philosophy/SummerNSA/A-SummerNSA-Reading/",
+            ),
+            _l(
+                inner_html => "Letter to Summer Glau",
+                path       => "philosophy/SummerNSA/Letter-to-SGlau-2014-10/",
             ),
             _sf_wiki( url => 'http://shlomif.wikia.com/wiki/SummerNSA', ),
             _facebook( url => 'http://www.facebook.com/SummerNSA', ),

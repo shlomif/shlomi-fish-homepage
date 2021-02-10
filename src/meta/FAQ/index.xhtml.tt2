@@ -1104,9 +1104,11 @@ and being in love with them.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id="philosophy" title="Questions about my philosophy / ideology / religion" %]
+[%- END -%]
 
-[% WRAPPER faq_h4_section id = "religious_belief"  title = "What is your Religious Belief or Inclination?"  %]
+[% WRAPPER faq_h2_section id="philosophy" title="Questions about my philosophy / ideology / religion" %]
+
+[% WRAPPER faq_h3_section id = "religious_belief"  title = "What is your Religious Belief or Inclination?"  %]
 
 <p>
 First of all, I should note that one’s general classification of
@@ -1201,7 +1203,7 @@ or <a href="https://en.wikipedia.org/wiki/Sam_Harris">Sam Harris</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "ethnicity"  title = "What is your ethnicity? What is your lineage?"  %]
+[% WRAPPER faq_h3_section id = "ethnicity"  title = "What is your ethnicity? What is your lineage?"  %]
 
 <p>
 I am a <a href="https://en.wikipedia.org/wiki/Jews">Jew</a> by birth and
@@ -1264,7 +1266,7 @@ I found it amusing, and kind-of have taken it to my advantage.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "secular_jew" title = "How come you say you are a secular Jew? Isn't Judaism a religion?"  %]
+[% WRAPPER faq_h3_section id = "secular_jew" title = "How come you say you are a secular Jew? Isn't Judaism a religion?"  %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Jews">Judaism</a> is much more than just
@@ -1297,7 +1299,7 @@ href="https://en.wikipedia.org/wiki/Sturgeon%27s_law">Sturgeon's law</a> (=
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?"  %]
+[% WRAPPER faq_h3_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?"  %]
 
 <p>
 I am currently many of these and more. As I
@@ -1310,7 +1312,7 @@ and it changes almost every day.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "selfishness"  title = "Is the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) makes you selfish?"  %]
+[% WRAPPER faq_h3_section id = "selfishness"  title = "Is the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) makes you selfish?"  %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=neo-tech-selfishness">This
@@ -1347,7 +1349,7 @@ presented as a false dichotomy.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?"  %]
+[% WRAPPER faq_h3_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?"  %]
 
 <p>
 See:
@@ -1409,9 +1411,9 @@ quite evil and misguided.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id="israel" title="Questions Related to Me and to Israel" %]
+[% WRAPPER faq_h2_section id="israel" title="Questions Related to Me and to Israel" %]
 
-[% WRAPPER faq_h4_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
+[% WRAPPER faq_h3_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
 
 <p>
 No, I did not. I’m exempt from service, due to the various
@@ -1438,7 +1440,7 @@ and more anachronistic.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "zionist"  title = "Are you a “Zionist”? Are you an “anti-Zionist”?" %]
+[% WRAPPER faq_h3_section id = "zionist"  title = "Are you a “Zionist”? Are you an “anti-Zionist”?" %]
 
 <p>
 See <a href="https://twitter.com/shlomif/status/1021078089797898241">this tweet</a>
@@ -1459,7 +1461,7 @@ by-laws discrimination against non-Jews/Jews/whatever. What does that make me?
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "hebrew_and_arabic"  title = "Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?"  %]
+[% WRAPPER faq_h3_section id = "hebrew_and_arabic"  title = "Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?"  %]
 
 <p>
 While both Arabic and Hebrew are <a href="https://en.wikipedia.org/wiki/Semitic_languages">Semitic languages</a>, they
@@ -1517,7 +1519,7 @@ in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower 
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "jewish_conspiracy"  title = "Are you aware of any Jewish “Elders of Zion” / Illuminati / “Zionist” conspiracy?"  %]
+[% WRAPPER faq_h3_section id = "jewish_conspiracy"  title = "Are you aware of any Jewish “Elders of Zion” / Illuminati / “Zionist” conspiracy?"  %]
 
 <p>
 Despite being Jewish by blood and an Israeli resident and citizen, who received
@@ -1545,7 +1547,7 @@ convey some lessons about the real world).
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "are_you_an_agent"  title = "Are you a Mossad / Shin Bet / Unit 8200 / NSA / Hizbullah / CIA / etc. agent?"  %]
+[% WRAPPER faq_h3_section id = "are_you_an_agent"  title = "Are you a Mossad / Shin Bet / Unit 8200 / NSA / Hizbullah / CIA / etc. agent?"  %]
 
 <p>
 I can testify that I am just an unemployed Israeli and secular Jewish web-writer and software developer.
@@ -1587,7 +1589,7 @@ you likely won't ever be approached by them.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "is_it_true_that_israel_genocides_palestinians" title = "Is it true that Israel has been genociding the Palestinians?" %]
+[% WRAPPER faq_h3_section id = "is_it_true_that_israel_genocides_palestinians" title = "Is it true that Israel has been genociding the Palestinians?" %]
 
 <p>
 Not at all. As of February 2021, the number of Palestinian residents in the
@@ -1613,8 +1615,6 @@ and make all patients and workers there hacker monarchs.
 </p>
 
 [% END %]
-
-[%- END -%]
 
 [%- END -%]
 
@@ -2136,6 +2136,11 @@ see:
 </li>
 
 </ul>
+
+<p>
+<b>Update: (February 2021)</b> I recently decided that it is not a worthwhile battle
+to insist that it is not a blog.
+</p>
 
 [%- END -%]
 

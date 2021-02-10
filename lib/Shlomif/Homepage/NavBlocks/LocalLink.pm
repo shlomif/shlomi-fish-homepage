@@ -49,6 +49,7 @@ sub _render_helper
 
     if ( $normalize->( $self->path ) eq $normalize->( _path_info() ) )
     {
+        $r->count_bolds( $r->count_bolds() + 1 );
         return sprintf( q#<strong class="current">%s</strong>#,
             $self->inner_html(), );
     }

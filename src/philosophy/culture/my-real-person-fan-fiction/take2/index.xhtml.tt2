@@ -530,7 +530,8 @@ from real life (<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real
 <a href="#hacker-laziness">constructively lazy</a>).
 </p>
 
-[% IF 0 %]
+[% BLOCK links_and_illustrations %]
+
 <p>
 People who complain about illustrated stories or screenplays,
 are advised to see the <a href="https://en.wikipedia.org/w/index.php?title=The_pen_is_mightier_than_the_sword&amp;oldid=998361214">illustration on Edward Bulwer-Lytton's stage play "Richelieu"</a>.
@@ -538,6 +539,12 @@ Furthermore, not only did the <a href="https://en.wikipedia.org/wiki/Hebrew_Bibl
 Bible</a> had hyperlinks of sorts, but <a href="https://en.wikipedia.org/wiki/Non-canonical_books_referenced_in_the_Bible">many are
 currently broken</a>.
 </p>
+
+[% END %]
+
+[% IF 0 %]
+
+[% INCLUDE links_and_illustrations %]
 
 <p>
 Education, entertainment, and amateur (= "geeky") philosophy have been
@@ -854,7 +861,7 @@ her not doing things her way, which made her
 later work gradually deteriorate,
 her sex-appeal (which <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/meaning-of-able-competent.xhtml#sexiness-as-competence">correlates with competence</a>)
 to decline, and she not remaining true to her YouTuber roots
-(e.g: of she doing collaborations with other independent artists,
+(e.g: of she doing collaborations with other artists,
 including the more obscure ones). She acted in one film
 before she died, but even its trailer was a complete turnoff.
 </p>
@@ -863,6 +870,13 @@ before she died, but even its trailer was a complete turnoff.
 
 <p>
 Therefore, I decided that in my quests to, I will do things my way.
+</p>
+
+[% INCLUDE links_and_illustrations %]
+
+<p>
+So linking <b>is</b> writing, and I am going to continue adding hyperlinks
+to my writings.
 </p>
 
 [% END %]

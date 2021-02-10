@@ -42,6 +42,10 @@ class MyTests(html_unit_test.TestCase):
                 a_el[0].get("href").endswith("/"),
                 "trailing slash for directory link"
             )
+            self.assertFalse(
+                a_el[0].text.endswith("[Satire]"),
+                "[Satire] title",
+            )
 
     def test_hhgg_st_tng(self):
         input_fn = (

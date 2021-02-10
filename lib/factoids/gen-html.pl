@@ -173,7 +173,7 @@ and Summer Glau on the Muppet Show as two ruthless Grammar Nazis</a>
 EOF
         short_id   => 'chuck',
         tabs_title => "Chuck Norris Facts",
-        title      => "Chuck Norris Facts [Satire]",
+        title      => "Chuck Norris Facts",
         url_base   => "Chuck-Norris",
     },
 );
@@ -346,7 +346,7 @@ Gellar theme.
 EOF
         short_id   => 'buffy',
         tabs_title => 'Buffy Facts',
-        title      => 'Buffy Facts [Satire]',
+        title      => 'Buffy Facts',
         url_base   => "Buffy",
     },
     {
@@ -410,9 +410,8 @@ herself.
 EOF
         short_id   => 'clarissa',
         tabs_title => "Clarissa Darling Facts",
-        title      =>
-            "Clarissa Darling (from Clarissa Explains it All) Facts [Satire]",
-        url_base => "Clarissa",
+        title      => "Clarissa Darling (from Clarissa Explains it All) Facts",
+        url_base   => "Clarissa",
     },
     {
         abstract => <<'EOF',
@@ -448,7 +447,7 @@ EOF
 EOF
         short_id   => 'emma_watson',
         tabs_title => "Emma Watson Facts",
-        title      => "Emma Watson Facts [Satire]",
+        title      => "Emma Watson Facts",
         url_base   => "Emma-Watson",
     },
     {
@@ -512,7 +511,7 @@ a story about open source developers (or "hackers").
 EOF
         short_id   => 'knuth',
         tabs_title => "Why Knuth is Not God",
-        title      => "Knuth Facts [Satire]",
+        title      => "Knuth Facts",
         url_base   => "Knuth",
     },
     {
@@ -559,7 +558,7 @@ EOF
 EOF
         short_id   => 'lwall',
         tabs_title => "Larry Wall Facts",
-        title      => "Larry Wall Facts [Satire]",
+        title      => "Larry Wall Facts",
         url_base   => "Larry-Wall",
     },
     {
@@ -700,7 +699,7 @@ warfare, and justice, that still has implications today.
 EOF
         short_id   => 'nsa',
         tabs_title => "NSA Facts",
-        title      => "NSA Facts [Satire]",
+        title      => "NSA Facts",
         url_base   => "NSA",
     },
     {
@@ -756,7 +755,7 @@ EOF
 EOF
         short_id   => 'sglau',
         tabs_title => "Summer Glau Facts",
-        title      => "Summer Glau Facts [Satire]",
+        title      => "Summer Glau Facts",
         url_base   => "Summer-Glau",
     },
     {
@@ -815,7 +814,7 @@ EOF
 EOF
         short_id   => 'taylor_swift',
         tabs_title => "Taylor Swift Facts",
-        title      => "Taylor Swift Facts [Satire]",
+        title      => "Taylor Swift Facts",
         url_base   => "Taylor-Swift",
     },
     {
@@ -876,7 +875,7 @@ Log.
 EOF
         short_id   => 'windows_update',
         tabs_title => "Windows Update Facts",
-        title      => "Windows Update Facts [Satire]",
+        title      => "Windows Update Facts",
         url_base   => "Windows-Update",
     },
     {
@@ -955,7 +954,7 @@ a real-life female.
 EOF
         short_id   => 'xena',
         tabs_title => "Xena Facts",
-        title      => "Xena (the Warrior Princess) Facts [Satire]",
+        title      => "Xena (the Warrior Princess) Facts",
         url_base   => "Xena",
     },
     {
@@ -1019,7 +1018,7 @@ EOF
 EOF
         short_id   => 'xslt',
         tabs_title => "XSLT Facts",
-        title      => "XSLT Facts [Satire]",
+        title      => "XSLT Facts",
         url_base   => "XSLT",
     },
 );
@@ -1080,8 +1079,8 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 END_OF_TEMPLATE
 
 my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
-[% SET title = "{{p.title() }}" %]
-[% SET desc = "{{p.meta_desc()}}" %]
+[% SET title = "{{ p.title() }} [Satire]" %]
+[% SET desc = "{{ p.meta_desc() }}" %]
 
 [% WRAPPER wrap_html %]
 

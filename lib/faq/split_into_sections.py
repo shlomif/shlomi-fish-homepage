@@ -27,7 +27,7 @@ XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
 # Removed:
 # <script src="{base_path}js/main_all.js"></script>
-SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
+FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -86,11 +86,13 @@ TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
 
 
 class FaqSplitter:
-    def __init__(self, input_fn):
+    def __init__(self, input_fn, section_format):
         self.input_fn = input_fn
         self.root = etree.parse(input_fn)
+        self.section_format = section_format
 
     def process(self):
+        SECTION_FORMAT = self.section_format
         os.makedirs(OUT_DN, exist_ok=True)
 
         def xpath(node, query):
@@ -149,7 +151,9 @@ class FaqSplitter:
 
 def main():
     splitter = FaqSplitter(
-        OUT_DN + "/index.xhtml")
+        input_fn=(OUT_DN + "/index.xhtml"),
+        section_format=FAQ_SECTION_FORMAT,
+    )
     splitter.process()
 
 

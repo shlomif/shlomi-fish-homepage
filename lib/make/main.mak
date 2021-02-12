@@ -282,9 +282,9 @@ HHGG_CONVERT_SCRIPT_DEST := $(PRE_DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_F
 
 hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
-FRON_IMAGE_BASE := fron-demon-illustration-small-indexed.png
-SELINA_MANDRAKE_ENG_FRON_IMAGE__SOURCE := $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/$(FRON_IMAGE_BASE)
-SELINA_MANDRAKE_ENG_FRON_IMAGE__POST_DEST := $(POST_DEST_HUMOUR_SELINA)/images/$(FRON_IMAGE_BASE)
+SELINA_MANDRAKE_ENG_IMAGES__BASE := fron-demon-illustration-small-indexed.png
+SELINA_MANDRAKE_ENG_IMAGES__SOURCE := $(addprefix $(SELINA_MANDRAKE__VCS_DIR)/graphics/fron/,$(SELINA_MANDRAKE_ENG_IMAGES__BASE))
+SELINA_MANDRAKE_ENG_IMAGES__POST_DEST := $(addprefix $(POST_DEST_HUMOUR_SELINA)/images/,$(SELINA_MANDRAKE_ENG_IMAGES__BASE))
 
 QOHELETH_IMAGES__BASE := Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg Standup-Philosopher.svg.webp sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg
 

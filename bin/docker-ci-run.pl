@@ -33,7 +33,8 @@ EOF
                 qw/
                     libgmp-dev
                     libprimesieve-dev
-                    ruby-rspec python3-virtualenv
+                    ruby-rspec
+                    python3-virtualenv
                     python3-venv
                     /,
             ],
@@ -78,9 +79,12 @@ sub run_config
                 gcc
                 git
                 make
+                nodejs
+                npm
                 primesieve
                 pypy3
                 python3
+                python3-cookiecutter
                 python3-pip
                 python3-setuptools
                 python3-virtualenv

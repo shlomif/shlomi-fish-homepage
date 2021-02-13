@@ -59,10 +59,11 @@ class FaqSplitter:
             header_esc = html.escape(header_text)
             return id_, header_esc
 
+        container_elem = first(
+            self.root, "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']")
         for list_elem in xpath(
-                self.root,
-                "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']" +
-                "//xhtml:section"):
+                container_elem,
+                ".//xhtml:section"):
             parents = []
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))

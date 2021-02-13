@@ -25,6 +25,81 @@ ns = {
 }
 XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
+OUT_DN = "./dest/post-incs/t2/meta/FAQ"
+
+
+TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
+
+
+class FaqSplitter:
+    def __init__(self, input_fn, section_format):
+        self.input_fn = input_fn
+        self.root = etree.parse(input_fn)
+        self.section_format = section_format
+
+    def process(self):
+        SECTION_FORMAT = self.section_format
+        os.makedirs(OUT_DN, exist_ok=True)
+
+        def xpath(node, query):
+            return node.xpath(query, namespaces=ns)
+
+        def first(node, query):
+            mylist = xpath(node, query)
+            if not len(mylist):
+                raise Exception(
+                    "node={} , query={}".format(node, query)
+                )
+            return mylist[0]
+
+        def calc_id_and_header_esc(header_tag):
+            h_tag = first(header_tag, "./*[@id]")
+            id_ = first(h_tag, "./@id")
+            header_text = first(h_tag, "./text()")
+            header_esc = html.escape(header_text)
+            return id_, header_esc
+
+        for list_elem in xpath(
+                self.root,
+                "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']" +
+                "//xhtml:section"):
+            parents = []
+            p_iter = list_elem.getparent()
+            # print(etree.tostring(p_iter))
+            # print(p_iter.tag)
+            while p_iter.tag == XHTML_SECTION_TAG:
+                res = xpath(p_iter, "./xhtml:header[*/@id]")
+                assert len(res) == 1
+                id_, header_esc = calc_id_and_header_esc(res[0])
+                rec = {'id': id_, 'header_esc': header_esc, }
+                parents.append(rec)
+                p_iter = p_iter.getparent()
+            for a_el in xpath(list_elem, "./descendant::xhtml:a"):
+                href = a_el.get('href')
+                if href is None:
+                    continue
+                if href.startswith('#'):
+                    a_el.set("href", "./" + href)
+            header_tag = first(list_elem, "./xhtml:header")
+            id_, header_esc = calc_id_and_header_esc(header_tag)
+
+            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            a_tag.set("class", "back_to_faq")
+            a_tag.set("href", "./#"+id_)
+            # print([id_, header_text])
+            formats = {
+                'base_path': "../../",
+                'body': etree.tostring(list_elem).decode('utf-8'),
+                'title': header_esc,
+                'breadcrumbs_trail': ''.join(
+                    [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)
+                     for rec in reversed(parents)]),
+            }
+            with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
+                f.write(SECTION_FORMAT.format(**formats))
+            # print(etree.tostring(id_))
+
+
 # Removed:
 # <script src="{base_path}js/main_all.js"></script>
 FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
@@ -78,75 +153,6 @@ Policy</a></li>
 "bk2hp" alt="Back to my Homepage"/></a></footer>
 </body>
 </html>'''
-
-OUT_DN = "./dest/post-incs/t2/meta/FAQ"
-
-
-TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
-
-
-class FaqSplitter:
-    def __init__(self, input_fn, section_format):
-        self.input_fn = input_fn
-        self.root = etree.parse(input_fn)
-        self.section_format = section_format
-
-    def process(self):
-        SECTION_FORMAT = self.section_format
-        os.makedirs(OUT_DN, exist_ok=True)
-
-        def xpath(node, query):
-            return node.xpath(query, namespaces=ns)
-
-        def first(node, query):
-            return xpath(node, query)[0]
-
-        def calc_id_and_header_esc(header_tag):
-            h_tag = first(header_tag, "./*[@id]")
-            id_ = first(h_tag, "./@id")
-            header_text = first(h_tag, "./text()")
-            header_esc = html.escape(header_text)
-            return id_, header_esc
-
-        for list_elem in xpath(
-                self.root,
-                "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']" +
-                "//xhtml:section"):
-            parents = []
-            p_iter = list_elem.getparent()
-            # print(etree.tostring(p_iter))
-            # print(p_iter.tag)
-            while p_iter.tag == XHTML_SECTION_TAG:
-                res = xpath(p_iter, "./xhtml:header[*/@id]")
-                assert len(res) == 1
-                id_, header_esc = calc_id_and_header_esc(res[0])
-                rec = {'id': id_, 'header_esc': header_esc, }
-                parents.append(rec)
-                p_iter = p_iter.getparent()
-            for a_el in xpath(list_elem, "./descendant::xhtml:a"):
-                href = a_el.get('href')
-                if href is None:
-                    continue
-                if href.startswith('#'):
-                    a_el.set("href", "./" + href)
-            header_tag = first(list_elem, "./xhtml:header")
-            id_, header_esc = calc_id_and_header_esc(header_tag)
-
-            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
-            a_tag.set("class", "back_to_faq")
-            a_tag.set("href", "./#"+id_)
-            # print([id_, header_text])
-            formats = {
-                'base_path': "../../",
-                'body': etree.tostring(list_elem).decode('utf-8'),
-                'title': header_esc,
-                'breadcrumbs_trail': ''.join(
-                    [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)
-                     for rec in reversed(parents)]),
-            }
-            with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
-                f.write(SECTION_FORMAT.format(**formats))
-            # print(etree.tostring(id_))
 
 
 def main():

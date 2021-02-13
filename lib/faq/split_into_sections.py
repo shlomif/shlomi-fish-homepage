@@ -25,14 +25,15 @@ ns = {
 }
 XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
-TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
-
 
 class FaqSplitter:
-    def __init__(self, input_fn, output_dirname, section_format):
+    def __init__(
+            self, input_fn, output_dirname,
+            section_format, container_elem_xpath):
         self.input_fn = input_fn
         self.output_dirname = output_dirname
         self.section_format = section_format
+        self.container_elem_xpath = container_elem_xpath
 
         self.root = etree.parse(input_fn)
 
@@ -60,7 +61,7 @@ class FaqSplitter:
             return id_, header_esc
 
         container_elem = first(
-            self.root, "//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']")
+            self.root, self.container_elem_xpath)
         for list_elem in xpath(
                 container_elem,
                 ".//xhtml:section"):
@@ -158,10 +159,13 @@ Policy</a></li>
 
 def main():
     OUT_DN = "./dest/post-incs/t2/meta/FAQ"
+    TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
+
     splitter = FaqSplitter(
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
+        container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
     )
     splitter.process()
 

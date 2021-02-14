@@ -107,7 +107,7 @@ foreach my $repo (
     $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );
 }
 
-Shlomif::Homepage::GenScreenplaysMak->new->generate(
+my $gen_scr_ret = Shlomif::Homepage::GenScreenplaysMak->new->generate(
     { git_task => $git_task, } );
 
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
@@ -121,4 +121,6 @@ HTML::Latemp::DocBook::GenMake->new(
 )->generate;
 Shlomif::Homepage::GenQuadPresMak->new->generate;
 
-$git_obj->end;
+my $future = $git_obj->end();
+
+# $future->await();

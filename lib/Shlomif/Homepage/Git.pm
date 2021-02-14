@@ -179,10 +179,7 @@ sub end
         return Future->done();
     }
     foreach => ( \@tasks );
-    $f->get();
-
-    @tasks = ();
-    return;
+    return $f->get();
 }
 
 1;

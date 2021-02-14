@@ -8,6 +8,12 @@ use Moo;
 use Path::Tiny qw/ path /;
 use YAML::XS ();
 
+use XML::Grammar::Screenplay::FromProto::API::ListImages ();
+use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
+
+my $image_lister =
+    XML::Grammar::Screenplay::FromProto::API::ListImages->new( {} );
+
 sub _calc_screenplay_doc_makefile_lines
 {
     my ( $_epub_map, $screenplay_vcs_base_dir, $record ) = @_;
@@ -24,6 +30,7 @@ sub _calc_screenplay_doc_makefile_lines
         ("$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n");
 
     my @epubs;
+    my @generate_file_list_promises;
     my $copy_screenplay_mak = '';
     my @copy_screenplay_mak__targets;
 
@@ -36,6 +43,38 @@ sub _calc_screenplay_doc_makefile_lines
             return "${base}_${suf}_" . shift;
         };
 
+        if ( $suf eq 'ENG' )
+        {
+            my $files_var = $gen_name->("IMAGES__BASE");
+            my $fn =
+"$screenplay_vcs_base_dir/$github_repo/$subdir/screenplay/${doc_base}.screenplay-text.txt";
+
+            push @generate_file_list_promises, sub {
+
+                my $got_doc = $image_lister->calc_doc__from_proto_text(
+                    {
+                        source => {
+                            file => $fn,
+                        },
+                    }
+                );
+                return (
+                    join(
+                        " ",
+                        "${files_var} :=",
+                        (
+                            map {
+                                my $uri = $_->uri();
+                                $uri =~ s#\A(?:\./)?images/##ms
+                                    or die "non matching uri='$uri'";
+                                $uri
+                            } @{ $got_doc->list_images() }
+                        )
+                        )
+                        . "\n"
+                );
+            };
+        }
         my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
         my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
         my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
@@ -82,6 +121,7 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         github_repo                  => $github_repo,
         lines                        => \@ret,
         epubs                        => \@epubs,
+        generate_file_list_promises  => \@generate_file_list_promises,
     };
 }
 
@@ -186,8 +226,10 @@ EOF
     }
     $clone_cb->('screenplays-common');
 
-    return;
+    return { generate_file_list_promises =>
+            [ map { @{ $_->{generate_file_list_promises} } } @records ] };
 }
+
 1;
 
 __END__

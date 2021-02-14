@@ -137,8 +137,11 @@ $fortune_colls_obj->write_epub_and_all_in_one(
 my $DIR = "lib/make/";
 
 foreach my $cmd (
-    ["./bin/gen-docbook-make-helpers.pl"], ["./lib/factoids/gen-html.pl"],
-    ["./bin/gen-fortunes-dats.pl"],        ["./bin/gen-deps-mak.pl"],
+    ["./bin/gen-docbook-make-helpers.pl"],
+    ["./bin/gen-docbook-make-helpers--stage2.pl"],
+    ["./lib/factoids/gen-html.pl"],
+    ["./bin/gen-fortunes-dats.pl"],
+    ["./bin/gen-deps-mak.pl"],
     )
 {
     my_exec_perl($cmd);

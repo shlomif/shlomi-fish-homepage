@@ -124,3 +124,6 @@ Shlomif::Homepage::GenQuadPresMak->new->generate;
 my $future = $git_obj->end();
 
 # $future->await();
+path("lib/make/docbook/sf-screenplays.mak")
+    ->append_utf8( map { $_->() }
+        ( @{ $gen_scr_ret->{generate_file_list_promises} } ) );

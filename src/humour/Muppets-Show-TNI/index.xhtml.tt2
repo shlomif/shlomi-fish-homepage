@@ -10,8 +10,8 @@
 
 [% SET epub_prefix="Muppets-Show--" %]
 <ul>
-[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter",  %]
-[% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris",  %]
+[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter on Sesame Street: Harry and Hermione on a mission to vanquish “He who must not be named Two” a.k.a The Amazing Mumford",  %]
+[% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris as Grammar Nazis",  %]
 [% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence",  %]
 </ul>
 
@@ -81,20 +81,6 @@ Objectivism-inspired essay.
 [% END %]
 
 [% WRAPPER credits_sect %]
-
-<h3 id="friends_fountain_image">Friends Fountain Image</h3>
-
-<p>
-The <i>Friends</i>’ fountain image that serves as the logo was taken
-from <a href="http://www.youtube.com/watch?v=YKYL_zcSfzc">the “Friends Opening
-(HD)”</a> video-clip on YouTube at approximate time 0m40s.
-</p>
-
-<p>
-One can find the intermediate images
-in <a href="http://github.com/shlomif/The-One-with-the-Fountainhead-Logo">a
-GitHub repository</a>.
-</p>
 
 [% END %]
 

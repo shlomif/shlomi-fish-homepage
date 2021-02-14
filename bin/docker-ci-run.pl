@@ -31,6 +31,7 @@ sudo apt-get update -qq
 EOF
             sys_deps => [
                 qw/
+                    graphicsmagick
                     libgmp-dev
                     libprimesieve-dev
                     libxml2-dev
@@ -38,6 +39,7 @@ EOF
                     ruby-rspec
                     python3-virtualenv
                     python3-venv
+                    xsltproc
                     xz-utils
                     /,
             ],
@@ -51,7 +53,10 @@ EOF
             sys_deps                    => [
                 qw/
                     gmp-devel
+                    GraphicsMagick
                     libxml2-devel
+                    libxslt
+                    libxslt-devel
                     primesieve-devel
                     ruby-devel
                     rubygem-rspec
@@ -91,7 +96,6 @@ sub run_config
                 g++
                 gcc
                 git
-                graphicsmagick
                 inkscape
                 make
                 nodejs
@@ -108,7 +112,6 @@ sub run_config
                 ruby
                 tidy
                 virtualenv
-                xsltproc
                 /,
             @$sys_deps,
         )

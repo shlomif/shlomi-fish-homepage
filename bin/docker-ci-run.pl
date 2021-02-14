@@ -96,6 +96,7 @@ sub run_config
     );
     my @cpan_deps = (
         qw/
+            App::Deps::Verify
             Carp::Always
             File::Which
             IO::All
@@ -147,6 +148,7 @@ then
     rm -fr primesieve
 fi
 sudo cpanm --notest @cpan_deps
+deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
 virtualenv -p `which pypy3` /pypyenv
 source /pypyenv/bin/activate
 pydeps="flake8 six"

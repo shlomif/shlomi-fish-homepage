@@ -16,6 +16,7 @@
     { "id" => "politics", "title" => "Politics", },
     { "id" => "star_trek", "title" => "Star Trek", },
     { "id" => "xkcd", "title" => "Summer Glau/xkcd", },
+    { "id" => "commercial_fanfic_initiative", "title" => "The Commercial Fanfic Initiative", },
 ] %]
 
 [% WRAPPER h2_section id= (rec.id _ "_sect") title=(rec.title) %]

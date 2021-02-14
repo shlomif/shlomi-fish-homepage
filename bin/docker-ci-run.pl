@@ -33,6 +33,7 @@ EOF
                 qw/
                     libgmp-dev
                     libprimesieve-dev
+                    ruby-dev
                     ruby-rspec
                     python3-virtualenv
                     python3-venv
@@ -46,7 +47,14 @@ EOF
             package_manager_install_cmd => "sudo dnf -y install",
             setup_package_manager       => '',
             sys_deps                    => [
-                qw/ gmp-devel primesieve-devel rubygem-rspec virtualenv which/,
+                qw/
+                    gmp-devel
+                    primesieve-devel
+                    ruby-devel
+                    rubygem-rspec
+                    virtualenv
+                    which
+                    /,
             ],
         }
     ),
@@ -147,8 +155,21 @@ then
     cd ..
     rm -fr primesieve
 fi
+sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
 sudo cpanm --notest @cpan_deps
-deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
+perl bin/my-cookiecutter.pl
+deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
+gem install asciidoctor compass compass-blueprint
+PATH="\$HOME/bin:\$PATH"
+( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
+( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
+( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
+bash -x bin/install-npm-deps.sh
+bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
+echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
+( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
+pwd
+echo "HOME=\$HOME"
 virtualenv -p `which pypy3` /pypyenv
 source /pypyenv/bin/activate
 pydeps="flake8 six"

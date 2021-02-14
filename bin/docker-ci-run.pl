@@ -98,6 +98,7 @@ sub run_config
                 python3-pip
                 python3-setuptools
                 python3-virtualenv
+                rsync
                 ruby
                 virtualenv
                 /,
@@ -159,6 +160,7 @@ then
 fi
 sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
 sudo cpanm --notest @cpan_deps
+cpanm https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 perl bin/my-cookiecutter.pl
 deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
 gem install asciidoctor compass compass-blueprint

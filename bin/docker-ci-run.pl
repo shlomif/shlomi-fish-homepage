@@ -38,6 +38,7 @@ EOF
                     ruby-rspec
                     python3-virtualenv
                     python3-venv
+                    xz-utils
                     /,
             ],
         }
@@ -56,6 +57,7 @@ EOF
                     rubygem-rspec
                     virtualenv
                     which
+                    xz
                     /,
             ],
         }
@@ -85,12 +87,16 @@ sub run_config
                 cmake-data
                 cpanminus
                 cppcheck
+                fortune-mod
                 g++
                 gcc
                 git
+                graphicsmagick
+                inkscape
                 make
                 nodejs
                 npm
+                optipng
                 primesieve
                 pypy3
                 python3
@@ -100,7 +106,9 @@ sub run_config
                 python3-virtualenv
                 rsync
                 ruby
+                tidy
                 virtualenv
+                xsltproc
                 /,
             @$sys_deps,
         )

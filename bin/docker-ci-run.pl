@@ -33,6 +33,7 @@ EOF
                 qw/
                     libgmp-dev
                     libprimesieve-dev
+                    libxml2-dev
                     ruby-dev
                     ruby-rspec
                     python3-virtualenv
@@ -49,6 +50,7 @@ EOF
             sys_deps                    => [
                 qw/
                     gmp-devel
+                    libxml2-devel
                     primesieve-devel
                     ruby-devel
                     rubygem-rspec

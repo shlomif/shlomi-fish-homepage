@@ -18,6 +18,10 @@
 [% print_nav_block (name => 'buffy') %]
 [% END %]
 
+[% BLOCK commercial_fanfic_initiative_nav_block %]
+[% print_nav_block (name => 'commercial_fanfic_initiative') %]
+[% END %]
+
 [% BLOCK politics_nav_block %]
 [% print_nav_block (name => 'politics') %]
 [% END %]

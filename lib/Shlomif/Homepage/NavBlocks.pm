@@ -477,6 +477,18 @@ my %table_blocks = (
             ],
         }
     ),
+    'commercial_fanfic_initiative' =>
+        Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'commercial_fanfic_initiative_nav_block',
+            tr_s => [
+                _master_tr( title => q{The Commercial Fanfic Initiative}, ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales'),
+            ],
+        },
+        ),
 );
 
 sub get_nav_block

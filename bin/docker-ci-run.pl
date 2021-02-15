@@ -149,10 +149,14 @@ sub run_config
 
     $obj->clean_up();
     $obj->run_docker();
-    $obj->do_system( { cmd => [ "rm", "-fr", "./temp-git" ] } );
-    $obj->do_system( { cmd => [ 'git', 'clone', '.', "./temp-git" ] } );
+    my $temp_git_repo_path = "../temp-git";
+    $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
+    $obj->do_system( { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
     $obj->docker(
-        { cmd => [ 'cp', "./temp-git", $obj->container() . ":source", ] } );
+        {
+            cmd => [ 'cp', $temp_git_repo_path, $obj->container() . ":source", ]
+        }
+    );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
 $setup_package_manager

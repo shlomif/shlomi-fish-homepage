@@ -16,14 +16,15 @@ has [
     )
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
-has 'title' => ( is => 'ro', isa => 'Str' );
-has 'no_wrap' => ( is => 'ro', isa => 'Bool', defualt => '', );
+has 'title'     => ( is => 'ro', isa => 'Str' );
+has 'no_wrap'   => ( is => 'ro', isa => 'Bool', defualt => '', );
+has 'skip_bold' => ( is => 'ro', isa => 'Bool', defualt => '', );
 
 sub collect_local_links
 {
     my ($self) = @_;
 
-    return [ $self->path ];
+    return ( $self->skip_bold ? [] : [ $self->path ] );
 }
 
 sub _li_p_wrap
@@ -49,7 +50,10 @@ sub _render_helper
 
     if ( $normalize->( $self->path ) eq $normalize->( _path_info() ) )
     {
-        $r->count_bolds( $r->count_bolds() + 1 );
+        if ( !$self->skip_bold )
+        {
+            $r->count_bolds( $r->count_bolds() + 1 );
+        }
         return sprintf( q#<strong class="current">%s</strong>#,
             $self->inner_html(), );
     }

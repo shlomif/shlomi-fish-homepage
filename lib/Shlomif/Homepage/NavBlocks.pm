@@ -262,6 +262,11 @@ my %tr_s = (
         items => [
             _fp( path => "humour/Queen-Padme-Tales/", ),
             _l(
+                inner_html => "Teaser",
+                path       => "humour/Queen-Padme-Tales/teaser/",
+                skip_bold  => 1,
+            ),
+            _l(
                 inner_html => "vs. The Klingon Warriors",
                 path       =>
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",

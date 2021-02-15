@@ -366,6 +366,19 @@ my %tr_s = (
             _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/" ),
         ],
     ),
+    'commercial_fanfic_initiative__mission_stmt' => _tr(
+        title => "Mission Statement",
+        items => [
+            _l(
+                inner_html => "Take 2",
+                path => "philosophy/culture/my-real-person-fan-fiction/take2/",
+            ),
+            _github(
+                url =>
+'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/philosophy/culture/my-real-person-fan-fiction/take2/index.xhtml.tt2',
+            ),
+        ],
+    ),
 );
 
 sub _get_tr
@@ -483,6 +496,8 @@ my %table_blocks = (
             id   => 'commercial_fanfic_initiative_nav_block',
             tr_s => [
                 _master_tr( title => q{The Commercial Fanfic Initiative}, ),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr('commercial_fanfic_initiative__mission_stmt'),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('terminator_liberation'),
                 _get_tr('queen_padme_tales'),

@@ -42,6 +42,7 @@ to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?t
 I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
 
 Back in Tel Aviv, a friend of mine joked that 20 GBP was too much to pay for such a kiss.
+She did say, however, that she was moved by reading the story.
 
 While you can call it a "rapekiss", I suspect that many first kisses are like that
 despite the mutual kiss popularised by films such as https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29 (♥!).
@@ -51,3 +52,13 @@ other creative work (which [are often sexualised](https://www.shlomifish.org/met
 
 I tried searching for my "shlomi fish" and that girl's given name on google in
 February 2021 and didn't find anything relevant.
+
+I think this story uncovered some misfeatures of the financial system.
+I happen to think that every legal entity should be able to transfer any
+amount of money to any other entity. While money was previously considered
+to be a source of power, like the song goes
+[Money can't buy me love](https://www.youtube.com/watch?v=srwxJUXPHvE)
+(where love is also enthusiasm to spend time, energy, for
+[worthy causes](https://www.youtube.com/watch?v=i41qWJ6QjPI)
+or acquiring the skills for them.)
+

@@ -272,6 +272,11 @@ my %tr_s = (
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
             ),
             _l(
+                inner_html => "Planting Trees",
+                path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
+            ),
+            _l(
                 inner_html => "Proposed Cast",
                 path       => "humour/Queen-Padme-Tales/cast.html",
             ),

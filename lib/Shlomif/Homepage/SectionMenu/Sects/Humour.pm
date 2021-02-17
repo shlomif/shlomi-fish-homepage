@@ -240,7 +240,7 @@ my $humour_tree_contents = {
                 {
                     text  => "Queen Padmé Tales",
                     url   => "humour/Queen-Padme-Tales/",
-                    title => "Pizza slice with all my favourite toppings",
+                    title => "Star Wars + Star Trek + Real Life Fanfic",
                     subs  => [
                         {
                             text => "Episodes",
@@ -259,6 +259,10 @@ my $humour_tree_contents = {
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
                                 },
                             ],
+                        },
+                        {
+                            text => "Spec / Plan",
+                            url  => "humour/Queen-Padme-Tales/spec/",
                         },
                     ],
                 },

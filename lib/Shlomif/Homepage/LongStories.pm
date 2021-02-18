@@ -343,7 +343,28 @@ EOF
         entry_text => "Terminator: Liberation",
         href       => "humour/Terminator/Liberation/",
         abstract   => <<'EOF',
-<p class="terminator_liberation abstract">
+<div class="terminator_liberation abstract">
+
+<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-emma-watson-11">
+
+<p>
+It might seem preposterous to believe Emma Watson is the new Arnold
+Schwarzenegger just because they were both Hollywood's best paid actors and you
+would be right. Emma Watson is not the new Arnold Schwarzenegger.
+</p>
+
+<p>
+But Arnold Schwarzenegger will forever be remembered as the old EMMA FUCKIN'
+WATSON!
+</p>
+
+</blockquote>
+
+<p>
+( <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/take2/#bad_acting_emwatson">Reference and Midrash.</a> )
+</p>
+
+<p>
 A self-referential parody of the <a
 href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
 franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
@@ -357,6 +378,7 @@ Takes place in
 href="https://en.wikipedia.org/wiki/Passover">Passover</a> and <a
 href="https://shlomif.fandom.com/wiki/Olamot_Con">Olamot Con</a>.
 </p>
+</div>
 
 EOF
     },

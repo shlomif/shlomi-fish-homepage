@@ -12,13 +12,17 @@ First  of all my type of girls are:
 
 5. Attractive enough and groomed enough.
 
+Do note that per [the story about looking for the perfect woman](https://nice-inspiration.blogspot.com/2011/05/looking-for-perfect-wife.html) only
+to realise she was looking for the perfect man, I am quite lenient in
+my requirements.
+
 ----
 
 Now on with the story: at the Saturday during the long weekend in which the Nine Worlds GeekFest took place, I decided to walk all the way to a nearby gas station and buy myself a nice drink and a sandwich. I ended up buying a drink, a small wrap package, etc. using my credit card, and I sat down to enjoy them at a nearby bus station.
 
 At that point I was approached by a young girl who was Black, big, fat and with too small a T-shirt so her belly was partly exposed, who told me she need 10 £ to buy some medicine to relieve a headache. She was going to be my first kiss.
 
-Now we tried various ways of getting the money like using the ATM at the gas station with my card, asking the cashiers at the gas station's store to charge my credit card and give us the money, or asking people to use their own credit card. Eventually, I was able to use the ATM machine back at the hotel where the con took place and extract 20 £ out of it, and give it to the girl, and she was so happy that she ended up kissing me.
+Now we tried various ways of getting the money like using the ATM at the gas station with my card, asking the cashiers at the gas station's store to charge my credit card and give us the money, or asking people to use their own credit card. Eventually, I was able to use the ATM machine back at the hotel where the con took place and extract 20 £ out of it, and give them to the girl, and she was so happy that she ended up kissing me.
 
 She was too strong (or at least too heavy) to resist, and having recalled what I had written in https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#celts_trip__rape about not resisting getting raped and thus enjoying it better, I did not really resist, and it felt good in a way. (No tongues were involved.).
 
@@ -26,7 +30,7 @@ After the kiss, we went to some trouble to get her to call her family on my mobi
 
 Anyway, on all the way, I learned more about her like the fact that she was born in the states, and that her father was Jewish, and naturally her given name (which I won't tell here to avoid sharing incriminating details).
 
-We parted way, and I haven't had too much sexual/romantic interest in her to permanently enter into a relationship with her, but I kinda feel perhaps it was what God (however manifested) intended for me as my first kiss.
+We parted way, and I haven't had too much sexual/romantic interest in her to permanently enter into a relationship with her, but I kinda feel that perhaps it was what God (however manifested) intended for me as my first kiss.
 
 Obligatory YouTube videos:
 
@@ -45,12 +49,12 @@ Back in Tel Aviv, a friend of mine joked that 20 GBP was too much to pay for suc
 She did say, however, that she was moved by reading the story.
 
 While you can call it a "rapekiss", I suspect that many first kisses are like that
-despite the mutual kiss popularised by films such as https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29 (♥!).
+despite the mutual kiss popularised by films such as [The Princess Bride](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29).
 
 While it felt good, it was not good enough for me to prioritise kissing girls over my
 other creative work (which [are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
 
-I tried searching for my "shlomi fish" and that girl's given name on google in
+I tried searching for "shlomi fish" and that girl's given name on google in
 February 2021 and didn't find anything relevant.
 
 I think this story uncovered some misfeatures of the financial system.

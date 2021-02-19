@@ -35,6 +35,8 @@ EOF
                     libdbd-sqlite-perl
                     libgd-dev
                     libgmp-dev
+                    libncurses-dev
+                    libperl-dev
                     libprimesieve-dev
                     libxml2-dev
                     ruby-dev
@@ -56,10 +58,12 @@ EOF
                 qw/
                     GraphicsMagick
                     gd-devel
+                    gdbm-devel
                     gmp-devel
                     libxml2-devel
                     libxslt
                     libxslt-devel
+                    ncurses-devel
                     perl-DBD-SQLite
                     perl-generators
                     primesieve-devel
@@ -118,6 +122,7 @@ sub run_config
                 ruby
                 tidy
                 virtualenv
+                zip
                 /,
             @$sys_deps,
         )

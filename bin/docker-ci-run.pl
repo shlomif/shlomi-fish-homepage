@@ -99,6 +99,7 @@ sub run_config
                 gcc
                 git
                 inkscape
+                lynx
                 make
                 nodejs
                 npm

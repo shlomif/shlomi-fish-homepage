@@ -177,6 +177,13 @@ then
     rm -fr primesieve
 fi
 sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
+cpanm -vvv IO::Async
+cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
+cpanm --notest HTML::T5
+# For wml
+cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
+# For quadp
+cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
 sudo cpanm --notest @cpan_deps
 cpanm https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 perl bin/my-cookiecutter.pl

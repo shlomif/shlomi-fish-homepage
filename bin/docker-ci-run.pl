@@ -32,6 +32,7 @@ EOF
             sys_deps => [
                 qw/
                     graphicsmagick
+                    libdbd-sqlite-perl
                     libgmp-dev
                     libprimesieve-dev
                     libxml2-dev
@@ -57,6 +58,7 @@ EOF
                     libxml2-devel
                     libxslt
                     libxslt-devel
+                    perl-DBD-SQLite
                     primesieve-devel
                     ruby-devel
                     rubygem-rspec
@@ -185,6 +187,8 @@ PATH="\$HOME/bin:\$PATH"
 ( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
 bash -x bin/install-npm-deps.sh
 bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
+bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
+bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
 echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
 ( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
 pwd

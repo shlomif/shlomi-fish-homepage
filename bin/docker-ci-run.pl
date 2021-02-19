@@ -33,6 +33,7 @@ EOF
                 qw/
                     graphicsmagick
                     libdbd-sqlite-perl
+                    libgd-dev
                     libgmp-dev
                     libprimesieve-dev
                     libxml2-dev
@@ -53,12 +54,14 @@ EOF
             setup_package_manager       => '',
             sys_deps                    => [
                 qw/
-                    gmp-devel
                     GraphicsMagick
+                    gd-devel
+                    gmp-devel
                     libxml2-devel
                     libxslt
                     libxslt-devel
                     perl-DBD-SQLite
+                    perl-generators
                     primesieve-devel
                     ruby-devel
                     rubygem-rspec

@@ -17,23 +17,18 @@ import os
 from lxml import etree
 from lxml.html import XHTML_NAMESPACE
 
-XHTML_NS = XHTML_NAMESPACE
-XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-ns = {
-    "xhtml": XHTML_NS,
-    "xml": XML_NS,
-}
-XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
-
 
 class FaqSplitter:
     def __init__(
             self, input_fn, output_dirname,
-            section_format, container_elem_xpath):
+            section_format, container_elem_xpath,
+            xhtml_section_tag, ns):
         self.input_fn = input_fn
+        self.ns = ns
         self.output_dirname = output_dirname
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
+        self.xhtml_section_tag = xhtml_section_tag
 
         self.root = etree.parse(input_fn)
 
@@ -43,7 +38,7 @@ class FaqSplitter:
         os.makedirs(OUT_DN, exist_ok=True)
 
         def xpath(node, query):
-            return node.xpath(query, namespaces=ns)
+            return node.xpath(query, namespaces=self.ns)
 
         def first(node, query):
             mylist = xpath(node, query)
@@ -69,7 +64,7 @@ class FaqSplitter:
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))
             # print(p_iter.tag)
-            while p_iter.tag == XHTML_SECTION_TAG:
+            while p_iter.tag == self.xhtml_section_tag:
                 res = xpath(p_iter, "./xhtml:header[*/@id]")
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])
@@ -160,12 +155,21 @@ Policy</a></li>
 def main():
     OUT_DN = "./dest/post-incs/t2/meta/FAQ"
     TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
+    XHTML_NS = XHTML_NAMESPACE
+    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+    ns = {
+        "xhtml": XHTML_NS,
+        "xml": XML_NS,
+    }
+    XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
     splitter = FaqSplitter(
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
+        ns=ns,
+        xhtml_section_tag=XHTML_SECTION_TAG,
     )
     splitter.process()
 

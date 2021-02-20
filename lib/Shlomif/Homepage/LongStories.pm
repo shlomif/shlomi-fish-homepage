@@ -114,11 +114,17 @@ EOF
         href       => "humour/human-hacking/",
         abstract   => <<'EOF',
 <p class="hhfg abstract">
-Jennifer is a trendy and popular high school senior who is living and
-studying in the vicinity of Los Angeles. Her best friend, Taylor, convinces her
+Jennifer (loosely based on
+<a href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy</a>
+from <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">BtVS</a>)
+is a trendy and popular high school senior who is living and
+studying in the vicinity of Los Angeles. Her best friend, Taylor
+(<a href="https://buffy.fandom.com/wiki/Alexander_Harris">Xander</a>), convinces her
 to try to become a developer of open source software. He puts her
 under the tutorship of a different friend of his, the female open source
-contributor Eve, who prefers to be called “Erisa”, and who is a self-conscious
+contributor Eve (<a
+    href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>), who prefers
+to be called “Erisa”, and who is a self-conscious
 and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
 determined to learn how to become an open source developer from Erisa, but
 there are some surprises along the road.

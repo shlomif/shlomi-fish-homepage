@@ -1032,9 +1032,10 @@ FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST
 FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
-FAQ_SECTS__PROGRAM := lib/faq/split_into_sections.py
+FAQ_SECTS__PROGRAM := lib/faq/faq_splitter_prog.py
+FAQ_SECTS__LIB_DEPS := lib/faq/split_into_sections.py
 
-$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM)
+$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM) $(FAQ_SECTS__LIB_DEPS)
 	python3 $(FAQ_SECTS__PROGRAM)
 	(cd $(FAQ_SECTS__DIR) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(FAQ_SECTS__DIR),$(FAQ_SECTS__DIR))
 

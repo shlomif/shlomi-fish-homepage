@@ -56,7 +56,10 @@ an increase in dystopian and/or pessimistic franchises,
 to its requirement of accepting screenplays only in its draconian, finnicky (and
 boring) format, its franchise territorialism, and the fact that copyright is
 enforced on commercial use of characters, concepts, and worlds (and to
-an extent - texts).
+an extent - texts), and the recent
+antagonism against [% my_acronym( "key" => "RPF", ) %]
+due to an apparent "jinxing" from being employable as actors in commercial films.
+.
 </p>
 
 <p>
@@ -124,12 +127,15 @@ but in the 19th century, it was a compliment.
 </p>
 
 <p>
-
-to "professionalism" (= doing something for money, regardless of how little or a lot:
+These were contrasted
+to "professionalism" (= doing something only for money, regardless of how little or a lot:
 <a href="https://www.youtube.com/watch?v=bJrqpR_7VSo">shitload of money</a>).
+</p>
+
+<p id="what_is_hacking">
 I also contrasted "conformism" (= playing by the rules of "society", what other people
 expect you to do, following <a href="https://en.wikipedia.org/wiki/Superior_orders">superior orders</a>,
-etc.) vs. "hacking" (a.k.a "action heroism").
+etc.) to "hacking" (a.k.a "action heroism").
 </p>
 
 <p>
@@ -304,9 +310,15 @@ that can be used to edit it.
 
 <p> As a hacker/action hero I'd rather <a href="[% base_path
 %]humour/stories/">my screenplays</a> never be filmed by Hollywood studios,
-than waste time preparing one in its blessed format. One can imagine most young
-or young-at-heart screen writers who use Google Docs, code sharing sites
-and services (e.g: GitHub or GitLab), wikis, desktop word
+than waste time preparing one in its blessed format. Furthermore,
+since it cannot be automatically <a href="https://github.com/caramelomartins/awesome-linters">linted or validated</a>, one often needs to revise or
+amend it, which is even more time-consuming. Rinse and repeat.
+</p>
+
+<p>
+One can imagine most young
+or young-at-heart screen writers who use code sharing sites
+and services (e.g: GitHub or GitLab), wikis, desktop or online word
 processors, etc. will also sport the same sentiments.  </p>
 
 <p id="hacker-laziness">
@@ -346,6 +358,8 @@ finicky, anyway.
 
 [% WRAPPER h3_section id = "bad_acting_ftw" title = "“Bad” Acting For The Win"  %]
 
+[% WRAPPER h4_section id = "bad_acting_mel_brooks" title = "Mel Brooks"  %]
+
 <p>
 Mel Brooks popularised exaggerated, phony, and overemotional acting
 in his films. My favourite film of his is
@@ -355,12 +369,14 @@ I) now admit that Spaceballs is better. The actors there acted badly because it
 was easier for them, and because the crowds liked it better. They were hacking.
 </p>
 
+[% END %]
+
 [% WRAPPER h4_section id = "bad_acting_arnie" title = "Arnold Schwarzenegger"  %]
 
 <p>
 One actor who built his career around hacky, guideline-bending, acting was <a
 href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
-Schwarzenegger</a>, who was hired for reprtedly
+Schwarzenegger</a>, who was hired for reportedly
 as much as 50 million dollar per film,
 and whom audiences in the 1980s and 1990s loved, and many people held in
 contempt back then. Aside from his physique, Schwarzenegger was notorious for
@@ -388,7 +404,7 @@ and almost monopolised the role.
 </p>
 
 <p>
-I recall playing the close-to-finish monologue where I was
+I recall playing the close-to-the-finish monologue where I was
 lamenting the absence of my character's treasure box. I felt
 I acted unnaturally, but it was still fun, and my classmates
 gave me an enthusiastic ovation.
@@ -440,7 +456,7 @@ manner which was both easier, more fun, and was loved by the geeky audience.
 In a way, she was one of the few selling points of most of the series' films,
 which although skillfully executed, were clearly not done by artists having fun.
 This apparently changed with the 7th and 8th installments which were reportedly
-edgy and fun to watch,
+edgy and fun to watch.
 </p>
 
 <p>
@@ -554,8 +570,9 @@ Sesame Street Hosting Harry Potter fan fiction</a> as an example, then it
 mashes together the real world J. K. Rowling, her franchise's characters: Harry
 Potter, Hermione, and Dumbledore; the Muppets' characters The Amazing Mumford,
 Cookie Monster, and Miss Piggy; various circa 2014 trends (e.g: Sushi, and the
-model Candice Swanepoel, who was mentioned there because she topped Maxim's Hot
-100 that year) and more. While it also sports a parody of <a
+model Candice Swanepoel, who was mentioned there because she topped
+<a href="https://en.wikipedia.org/wiki/Maxim_(magazine)#Maxim_Hot_100">Maxim's Hot
+100</a> that year) and more. While it also sports a parody of <a
 href="https://en.wikipedia.org/wiki/The_miller%2C_his_son_and_the_donkey">"The
 miller, his son and the donkey" fable</a>, the donkey there is the <a
 href="https://shrek.fandom.com/wiki/Donkey">one from the Shrek franchise</a> as
@@ -599,7 +616,7 @@ person fiction.
 As I noted <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#ftn.beauty_and_the_geek">elsewhere</a>
 increasingly most attractive guys and girls are geeky (= "amateur"; doing what they
 do because they enjoy it) as well as very <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacking-heroism">action
+href="#what_is_hacking">action
 heroic and hackery</a> (resourceful, bending the rules, defying their fate).
 </p>
 
@@ -757,7 +774,7 @@ naturally refused because she was and still is happily married (to my father).
 
 <p>
 As a result, I don't think that Hollywood producers, executives, lawyers,
-directors, or USA/etc. government, parliament, legal system, lawyers, etc. are evil, just
+directors, or USA/etc. government, parliament, legal system, etc. workers are evil, just
 possibly misguided.
 Lawyers have been demonised, but I think most of the lawyers employed
 by the offenses in the <a
@@ -799,12 +816,13 @@ The RIAA is happy now providing legal or financial services to signed artists
 and lately even actively promoting them and YouTuber singers (and the line between
 them has been getting blurred). The Roman Catholic church used to burn at stake
 girls who admitted to having premarital sex even once. Madonna (who claimed
-to had sex with dozens of willing men, and I have no reason to doubt her) was
+to have had sex with dozens of willing men, and I have no reason to doubt her) was
 not only left unharmed, but was welcome in some of the holiest churches in
 Israel and Palestine. If you ask a Catholic clergyman if she or similar
 "sin"ful people should be killed again he'd likely say: "Dear Lord no! 'Thou shall
 not kill'. It's up to God to punish them if they see fit, but we should not
-act as their agents". So the Roman Catholic church now - by choice.
+act as their agents". So the Roman Catholic church now is more benevolent
+- by choice.
 </p>
 
 <p>
@@ -882,11 +900,13 @@ Anyway, as humans we are capable of challenging certain dogmata or taboos
 in certain cases,
 including <a href="https://metacpan.org/pod/Acme::NewMath">Peano's axioms
 ("2 + 2 = 5")</a>,
-Aristotlean Logic ("Was qmail open source? Yes, and no.";
-or "I believe in God, and I don't believe in God" like I
+Aristotlean Logic ("Was <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> open source? Yes, and no.";
+or like I
 overheard one young school girl say to her friend
-a few weeks ago)
-much less a "[% my_acronym( "key" => "RPF", ) %]: never do that!" ( <a
+a few weeks ago
+"I believe in God, and I don't believe in God" ).
+We can certainly challenge
+"[% my_acronym( "key" => "RPF", ) %]: never do that!" ( <a
 href="https://en.wikipedia.org/wiki/Last_Action_Hero">oops!</a>
 ;
 <a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a> ;
@@ -909,6 +929,7 @@ starring them.
 Moreover, they have my blessing to change the screenplay as they see fit.
 Even if they do not license a franchise, then a
 (for example) "Walt Disney Corp. vs. Emma Watson"
+or perhaps "Walt Disney Corp. vs. Emma Watson Productions"
 court case will <a href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">not
 look good to share holders</a>.
 Like I say:
@@ -931,6 +952,9 @@ I can further suggest the owners of major franchises to put
 them under <a href="https://en.wikipedia.org/wiki/Permissive_software_license">permissive
 licences</a>, requesting that a donation be made in case there is profit.
 They can do it either by agreement or individually.
+</p>
+
+<p>
 I recall that back in
 the late 1990s, there was an initial resistence by commercial vendors of <a
 href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">SQL

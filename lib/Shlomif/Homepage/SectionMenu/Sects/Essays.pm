@@ -63,10 +63,10 @@ my $essays_tree_contents = {
                         "A snapshot of my personal philosophy as of March 2013",
                 },
                 {
-                    text => "Putting Cards on the Table (2019-2020)",
+                    text => "Putting Cards on the Table (2019-2021)",
                     url  =>
 "philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
-                    title => "Update to my personal philosophy as of 2019-2020",
+                    title => "Update to my personal philosophy as of 2019-2021",
                 },
             ],
         },

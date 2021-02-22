@@ -4,9 +4,9 @@
 
 [%- WRAPPER wrap_html -%]
 
-<div class="fancy_sects my_rpf limit_imgs_width">
+<div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
-[% default_toc %]
+[% toc_div() %]
 
 [% WRAPPER h2_section id = "context" title = "The Context For This Essay"  %]
 

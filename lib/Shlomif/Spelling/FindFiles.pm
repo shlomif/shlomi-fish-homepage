@@ -11,6 +11,7 @@ use HTML::Latemp::Local::Paths ();
 
 my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
+# q#philosophy/culture/my-real-person-fan-fiction/take2/index.xhtml\z#,
 my @prunes = (
     q#MANIFEST\.html\z#,
     q#lecture/.*?/[a-zA-Z_\-0-9\.]*?--all-in-one-html/#,
@@ -37,7 +38,6 @@ q#philosophy/computers/high-quality-software/what-makes-software-high-quality#,
     q#open-source/resources/how-to-contribute-to-my-projects/HACKING.html\z#,
     q#open-source/resources/tech-tips/#,
     q#philosophy/culture/my-real-person-fan-fiction/index.xhtml\z#,
-    q#philosophy/culture/my-real-person-fan-fiction/take2/index.xhtml\z#,
 q#philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-sections/#,
 q#philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/#,
     q#philosophy/philosophy/putting-cards-on-the-table-2019-2020/DocBook5/#,

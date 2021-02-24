@@ -17,16 +17,24 @@ has obj => (
         my ($self) = @_;
         my $speller;
 
+        use List::Util qw/all/;
+        my @basenames = (qw# en_GB.aff en_GB.dic #);
     DIRS:
         foreach my $dir ( "/usr/share/hunspell", "/usr/share/myspell" )
         {
-            eval {
-                $speller =
-                    Text::Hunspell->new( "$dir/en_GB.aff", "$dir/en_GB.dic", );
-            };
-            next DIRS if $@;
-            last DIRS
-                if $speller;
+            my $dn    = $dir;
+            my @check = ( map { "$dn/$_" } @basenames );
+            if ( all { -e } @check )
+            {
+                eval {
+                    $speller =
+                        Text::Hunspell->new( "$dir/en_GB.aff",
+                        "$dir/en_GB.dic", );
+                };
+                next DIRS if $@;
+                last DIRS
+                    if $speller;
+            }
         }
 
         if ( not $speller )

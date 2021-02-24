@@ -1,0 +1,8 @@
+[%- SET title = "My First Kiss" -%]
+[%- SET desc = "Obligatory report about my first kiss" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% print_markdown(fn=>'lib/notes/first-kiss.md') %]
+
+[% END %]

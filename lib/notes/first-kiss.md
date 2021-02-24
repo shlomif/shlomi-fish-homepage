@@ -65,4 +65,3 @@ to be a source of power, like the song goes
 (where love is also enthusiasm to spend time, energy, for
 [worthy causes](https://www.youtube.com/watch?v=i41qWJ6QjPI)
 or acquiring the skills for them.)
-

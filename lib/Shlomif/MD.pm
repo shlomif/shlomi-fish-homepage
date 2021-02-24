@@ -24,7 +24,7 @@ sub as_fixed_xhtml5
     my ($s, $mid, $e)=($1, $2, $3);
     $mid.=" /" if $mid !~ m%/\s*\z%;
     $s.$mid.$e
-        #egr;
+        #egr =~ s#<hr>#<hr />#gr;
 }
 
 1;

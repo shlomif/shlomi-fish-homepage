@@ -22,13 +22,10 @@ $(POST_DEST__C_BAD_ELEMS): $(C_BAD_ELEMS_SRC)
 $(PRE_DEST_FORTUNES_many_files) $(FORTUNES_TEXTS__PRE_DEST) $(FORTUNES_DATS__PRE_DEST): $(PRE_DEST)/%: $(SRC_SRC_DIR)/%
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(POST_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl
-$(SELINA_MANDRAKE_ENG_IMAGES__POST_DEST): $(SELINA_MANDRAKE_ENG_IMAGES__POST_DEST_PREFIX)/%: $(SELINA_MANDRAKE_ENG_IMAGES__SOURCE_PREFIX)/%
 $(SITE_SOURCE_INSTALL_TARGET): INSTALL.md
-$(SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__POST_DEST): $(SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__POST_DEST_PREFIX)/%: $(SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__SOURCE_PREFIX)/%
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_test_run_dir)/%: src/lecture/images/%
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_too_many_ways_dir)/%: src/images/presentations/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
-$(TERM_LIBERATION_IMAGES__POST_DEST): $(TERM_LIBERATION_IMAGES__POST_DEST_PREFIX)/%: $(TERM_LIBERATION_IMAGES__SOURCE_PREFIX)/%
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
 lib/docbook/5/xml/putting-cards-2021.xml: lib/repos/putting-cards-2021/shlomif-putting-cards-on-the-table-2021.docbook5.xml
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml

@@ -101,6 +101,30 @@ sub _calc_screenplay_doc_makefile_lines
 \tSCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" REBOOKMAKER="\$(REBOOKMAKER)" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
+
+        my $gen_deref = sub { return sprintf( "\$(%s)", $gen_name->(shift) ); };
+        if (
+            $doc_base !~ /\A(?:
+            BUFFY_A_FEW_GOOD_SLAYERS
+            |
+            MUPPET_SHOW_TNI
+            |
+            HUMANITY
+            |
+            BLUE_RABBIT_LOG
+            |
+            STAR_TREK_WTLD
+            )/x
+            )
+        {
+            $copy_screenplay_mak .=
+                  $gen_deref->("IMAGES__POST_DEST") . ": "
+                . $gen_deref->("IMAGES__POST_DEST_PREFIX") . "/%: "
+                . $gen_deref->("IMAGES__SOURCE_PREFIX")
+                . "/%\n\t\$(call COPY)\n\n";
+
+        }
+
         if ( defined($suburl) )
         {
             my $target_bn = $doc->{txt_target_bn} // "$doc_base.txt";

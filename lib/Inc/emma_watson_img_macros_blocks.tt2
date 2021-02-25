@@ -4,6 +4,7 @@
 
 [% WRAPPER github_captioned_image_joke id = "wandless_emma_watson"  header = "Emma Watson does not need a wand"  repo_href = "https://github.com/shlomif/captioned-image--emma-watson-doesnt-need-a-wand"  src = base_path _ "humour/images/emma-watson-wandless--3rd-tense.svg.webp"  alt = caption %]
 
+<div id="wandless_emma_watson__image_macro__midrash">
 [% WRAPPER quote %]
 <p>
 [% caption %]
@@ -29,10 +30,10 @@ scene in <i>Selina</i></a>.
 
 <p>
 For you people lacking imagination: you can figuratively "kick someone's ass" by
-convincing someone he was wrong, or winning in Checkers or
+convincing them they had been wrong, or by winning in Checkers or
 <a href="https://en.wikipedia.org/wiki/Bohnanza">Bohnanza</a> or Darts or
 <a href="https://en.wikipedia.org/wiki/Esports">electronic sports</a>
-or whatever, or alternatively enlightening someone.
+or whatever, or alternatively by enlightening someone.
 </p>
 
 <p>
@@ -44,6 +45,8 @@ href="[% base_path
 %]meta/FAQ/featuring_sexy_women_and_girls.xhtml">she won't attack you out of
 the blue</a> or even deliberately kick a friendly cat or dog.)
 </p>
+
+</div>
 
 [%- END -%]
 

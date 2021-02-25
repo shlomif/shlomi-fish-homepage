@@ -523,7 +523,7 @@ my $humour_tree_contents = {
                 },
                 {
                     text  => "Who gets the final say?",
-                    url   => "humour/bits/who-gets-the-final-say/",
+                    url   => "humour/bits/true-stories/who-gets-the-final-say/",
                     title =>
 "True story about asking people by the road about relationships",
                 },

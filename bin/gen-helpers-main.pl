@@ -183,8 +183,13 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
     );
     path("${DIR}copies-generated-include.mak")->spew_utf8(
         (
-            map { $_ . $COPY . "\n" }
-                path("${DIR}copies-source.mak")->lines_utf8
+            map { $_ . $COPY . "\n" } (
+                sort { $a cmp $b } (
+                    path("${DIR}copies-source.mak")->lines_utf8,
+                    path("${DIR}copies-generated-screenplay-images.mak")
+                        ->lines_utf8,
+                )
+            ),
         ),
         @captioned_images,
         "all: " . join( " ", sort keys %all_deps ) . "\n\n"

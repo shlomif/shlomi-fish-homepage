@@ -14,6 +14,8 @@ use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
 my $image_lister =
     XML::Grammar::Screenplay::FromProto::API::ListImages->new( {} );
 
+my $images_copy = '';
+
 sub _calc_screenplay_doc_makefile_lines
 {
     my ( $_epub_map, $screenplay_vcs_base_dir, $record ) = @_;
@@ -117,11 +119,10 @@ EOF
             )/x
             )
         {
-            $copy_screenplay_mak .=
+            $images_copy .=
                   $gen_deref->("IMAGES__POST_DEST") . ": "
                 . $gen_deref->("IMAGES__POST_DEST_PREFIX") . "/%: "
-                . $gen_deref->("IMAGES__SOURCE_PREFIX")
-                . "/%\n\t\$(call COPY)\n\n";
+                . $gen_deref->("IMAGES__SOURCE_PREFIX") . "/%\n";
 
         }
 
@@ -238,6 +239,9 @@ EOF
         ),
     );
 
+    my $DIR = "lib/make/";
+    path("${DIR}copies-generated-screenplay-images.mak")
+        ->spew_utf8($images_copy);
     my $clone_cb = sub {
         my ($r) = @_;
 

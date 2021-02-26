@@ -1,11 +1,29 @@
 [%- SET title = "Guide to the Online Neo-Tech Resources" -%]
 [%- SET desc = "Guide to the Online Neo-Tech Resources" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER note  %]
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id="note" title="Note" %]
+
+<p>
+I now agree with <a href="https://rationalwiki.org/wiki/Neo-Tech">rational wiki</a>
+that the Neo-Tech material is bizarre, and that <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/take2/#all_people_are_good">all people
+are good</a>, and that N-T is far too dogmatic and "ultimate truth"-like.
+</p>
+
+<p>
+I appreciate the fact that reading Neo-Tech provided fodder for escaping my
+interpretation of escaping my interpretation of
+the secular Israeli-taught
+<a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a> philosophy
+(and my previous observations) but would suggest perusing
+<a href="https://www.shlomifish.org/me/rindolf/">Rindolfism</a>
+or similar instead as of February 2021.
+</p>
+
+[% END %]
+
+[% BLOCK old__note  %]
 
 <p>
 The Neo-Tech pages linked from this page have been down in recent years, so
@@ -14,16 +32,18 @@ material is great, but I don’t have any control of it. Thus, please don’t
 report problems with bad links to me.
 </p>
 
-[%- END -%]
+[% END %]
 
-<h2>Introduction</h2>
+[% WRAPPER h2_section id="intro_old" title="Introduction" %]
 
 <p>
 This is a guide to the online <a href="http://www.neo-tech.com/">Neo-Tech
 resources</a> - what you should read first, how to read it, etc.
 </p>
 
-<h2 id="info">Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id="info" title="Information" %]
 
 <dl>
 
@@ -38,9 +58,11 @@ resources</a> - what you should read first, how to read it, etc.
 
 </dl>
 
-<h2 id="text">Guide to the Online Neo-Tech</h2>
+[% END %]
 
-<h3 id="intro">Introduction</h3>
+[% WRAPPER h2_section id="text" title="Guide to the Online Neo-Tech" %]
+
+[% WRAPPER h3_section id="intro" title="Introduction" %]
 
 <p>
 <a href="http://www.neo-tech.com/">Neo-Tech</a> is a new idea system based
@@ -69,7 +91,9 @@ The purpose of this guide is to help you make sense of the online Neo-Tech
 resources, and how to read them.
 </p>
 
-<h3 id="how_to_read">How to Read?</h3>
+[% END %]
+
+[% WRAPPER h3_section id="how_to_read" title="How to Read?" %]
 
 <p>
 When reading Neo-Tech there are a few notes that should be noted:
@@ -105,8 +129,9 @@ consciously. Eventually they’ll sink in.
 
 </ol>
 
+[% END %]
 
-<h3 id="what_to_read">What to Read?</h3>
+[% WRAPPER h3_section id="what_to_read" title="What to Read?" %]
 
 <p>
 The first thing you should read are
@@ -142,7 +167,11 @@ Finally, another good read is
 Zero</a>.
 </p>
 
-<h2>Where to Go from Here</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id="where_to_go" title="Where to Go from Here" %]
 
 <p>
 I’ve recommended other very good books in my
@@ -154,5 +183,7 @@ is a political/philosophical system I initiated that is heavily inspired from
 both Neo-Tech and the Open Source world. Its pages may contain a lot of
 wisdom.
 </p>
+
+[% END %]
 
 [% END %]

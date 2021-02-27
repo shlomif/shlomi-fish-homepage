@@ -1,6 +1,7 @@
 POST_DEST := dest/post-incs/t2
 LATEMP_ROOT_SOURCE_DIR := .
 LATEMP_ABS_ROOT_SOURCE_DIR := $(shell cd $(LATEMP_ROOT_SOURCE_DIR)/ && pwd)
+SASS_DEBUG_FLAGS :=
 
 MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 
@@ -705,7 +706,7 @@ css_targets: $(SRC_CSS_TARGETS)
 
 SASS_STYLE := compressed
 # SASS_STYLE := expanded
-SASS_CMD := sass --style $(SASS_STYLE)
+SASS_CMD = pysassc $(SASS_DEBUG_FLAGS) --style $(SASS_STYLE)
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss
 COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss

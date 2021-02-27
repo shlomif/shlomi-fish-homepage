@@ -380,12 +380,12 @@ my %tr_s = (
         title => "Mission Statement",
         items => [
             _l(
-                inner_html => "Take 2",
-                path => "philosophy/culture/my-real-person-fan-fiction/take2/",
+                inner_html => "Document",
+                path => "philosophy/culture/case-for-commercial-fan-fiction/",
             ),
             _github(
                 url =>
-'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/philosophy/culture/my-real-person-fan-fiction/take2/index.xhtml.tt2',
+'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/philosophy/culture/case-for-commercial-fan-fiction/index.xhtml.tt2',
             ),
         ],
     ),

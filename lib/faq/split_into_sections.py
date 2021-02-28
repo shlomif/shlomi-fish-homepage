@@ -59,6 +59,10 @@ class XhtmlSplitter:
             header_esc = html.escape(header_text)
             return id_, header_esc
 
+        main_title = first(
+            self.root, './xhtml:head/xhtml:title/text()'
+        )
+        main_title_esc = html.escape(main_title)
         container_elem = first(
             self.root, self.container_elem_xpath)
         for list_elem in xpath(
@@ -97,6 +101,7 @@ class XhtmlSplitter:
             formats = {
                 'base_path': "../../",
                 'body': etree.tostring(list_elem).decode('utf-8'),
+                'main_title': main_title_esc,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(
                     [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)

@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET MOTAS = my_acronym( "key" => "MOTAS", ) %]
+
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
 [% toc_div() %]
@@ -205,7 +207,7 @@ contradicting one self,
 <a href="https://mlp.fandom.com/wiki/Luna_Eclipsed">intimidation and fear
 (which can be fun in a way)</a>
 even blasphemy.
-Many [% my_acronym( "key" => "MOTAS", ) %] nevertheless found it sexy.
+Many [% MOTAS %] nevertheless found it sexy.
 </p>
 
 <p>
@@ -218,7 +220,7 @@ themselves, blasphemous or just seemingly "stupid", didn't take themselves
 seriously, and although held
 with <a
 href="https://www.shlomifish.org/humour/image-macros/#pbride_philosophers">some
-contempt</a> were highly coveted by [% my_acronym( "key" => "MOTAS", ) %].
+contempt</a> were highly coveted by [% MOTAS %].
 </p>
 
 <p>
@@ -281,6 +283,34 @@ pens were developed (within budget) and used (including by the Russian cosmonaut
 [% END %]
 
 [% WRAPPER h3_section id = "learning_more_from_inet_forums" title = "Learning From Internet Forums"  %]
+
+<blockquote cite="https://twitter.com/shlomif/status/1357768753241608193">
+
+<p>
+«"Those who make a distinction between education and entertainment don't know
+the first thing about either."   - Marshall McLuhan » (possibly a
+misquatation). via fortune-mod
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1357768753241608193">Marshall McLuhan</a>. )
+</p>
+
+<blockquote cite="https://twitter.com/shlomif/status/1357768753241608193">
+
+<p>
+I think before the Internet/social media were a thing, people did amateur
+philosophy / entertainment / education / art - with their peers, even if
+limited to sports / food / [% MOTAS %].
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1352232602598584324">@shlomif  (= me) tweet</a>. )
+</p>
 
 <p>
 I think I have learnt more from Internet forums (especially interactive,
@@ -528,7 +558,7 @@ currently broken</a>.
 <p>
 ( Education, entertainment, and amateur (= "geeky") philosophy have been
 done by humans for millenia, even if they were limited to talking about
-sports, food, or members of the appropriate sex. )
+sports, food, or [% MOTAS %]. )
 </p>
 
 [% END %]
@@ -637,7 +667,7 @@ originally voiced by Eddie Murphy.
 
 <p>
 These are all building blocks of my creative spiritual world.  Any screenwriter
-who can successfully mutate it (and they have my blessing and legal permission
+who can successfully mutate the screenplay (and they have my blessing and legal permission
 to do so) must use recent enough characters and quotes.  To quote <a
 href="https://en.wikiquote.org/wiki/Groucho_Marx">Groucho Marx</a> <q> I don’t
 care to belong to any club that will have me as a member</q>. The Muppets
@@ -687,7 +717,9 @@ heroic and hackery</a> (resourceful, bending the rules, defying their fate).
 
 <p>
 While there are many big name actors and actresses, and studios will gladly
-have them star in their films, they will refuse to act in any films whose
+have them star in their films, they will refuse to act (even for an obscene
+amount of money)
+in any films whose
 screenplays were not
 written by <b>honest, optimistic, and idealistic</b> screenwriters such
 as <a href="https://www.shlomifish.org/humour/stories/">me</a>, which
@@ -715,9 +747,10 @@ underutilised.
 <p>
 She has not accepted a "major motion picture" role since, possibly because
 she'd rather play
-at local schools' parody plays, <a href="https://en.wikipedia.org/wiki/Con_Man_(web_series)">frequent Conventions ("cons")</a>,
+at parody plays, <a href="https://en.wikipedia.org/wiki/Con_Man_(web_series)">frequent Conventions ("cons")</a>,
 play in indie films,
-get paid for modelling, be an activist, or just relax, than get paid
+get paid for modelling, be an activist, acquire new skills,
+or just relax, than get paid
 to star in a poorly written and professional (and likely dystopian or
 pessimstic) Hollywood
 remake or original film. Lend me Emma Watson and
@@ -777,7 +810,7 @@ For example, <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torval
 a software developer, action hero, geek, and <a href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur philosopher / entertainer</a>,
 is believed to get paid 20 million USD/year.
 While he will gladly continue to comaintain the Linux kernel
-project for less, it is commonly accepted that it is a bargain
+project for less, it is commonly accepted that it is a reasonable
 salary.
 </p>
 
@@ -798,8 +831,7 @@ jinxed "Beauty and the Geek"</a> and now large budget Hollywood feature films.
 
 <p> I was told that <q>every waitress at a restaurant in LA is a potential
 Hollywood actress</q>. But most of the good looking ones are increasingly geeky
-hackers
-as well.  </p>
+hackers as well.  </p>
 
 <p>
 Many people will pay to see
@@ -883,7 +915,7 @@ was done by a techsavvy lawyer employee of the RIAA, who had the legal
 endorsement to file it on behalf of the RIAA as a whole,
 and hoped to save future work this way.
 This is given the RIAA <a href="https://boingboing.net/2004/11/06/save-canadas-interne.html">foolishly sends takedown notices</a>
-to many open web web sites that host media files downloaded
+to many publicly accessible web sites that host media files downloaded
 using it and similar tools ( <a href="https://www.shlomifish.org/Files/files/">Piracy,
 motherfucker! Do you speak it? Arrrrrr!!</a> ), and they
 are kept being protested and challenged.
@@ -895,7 +927,8 @@ have been scolded by their executives, but do note
 <a href="https://memory-alpha.fandom.com/wiki/The_Nagus_(episode)">Quark's
 positive reaction to Rom (= his brother and employee) attempting to murder him</a> in a
 Star Trek DS9 episode.
-I think the real solution is to completely stop sending these takedown notices.
+I think the real solution is to completely stop sending these takedown notices
+and <a href="https://www.shlomifish.org/philosophy/case-for-file-swapping/">accept them as a necessary "evil"</a> (and possibly sponsor better user interfaces for file sharing sites and practice less censorship).
 </p>
 
 <p>
@@ -914,7 +947,7 @@ piracy — it’s obscurity.</q>.
 <p>
 The RIAA is happy now providing legal or financial services to signed artists
 and lately even actively promoting them and YouTuber singers (and the line between
-them has been getting blurred). The Roman Catholic church used to burn at stake
+signed and independent artists has been getting blurry). The Roman Catholic church used to burn at stake
 girls who admitted to having premarital sex even once. <a href="https://en.wikipedia.org/wiki/Madonna">Madonna</a>, who boasted
 of having had premarital sex with dozens of willing men, and I have no reason
 to doubt her, was not only left unharmed, but was welcome in some of the
@@ -953,7 +986,7 @@ even religious decrees or <a href="https://en.wikipedia.org/wiki/Constitution_of
 American Constitution</a>
 or the <a href="https://en.wikipedia.org/wiki/Logic">laws of Logic</a>
 or <a href="https://en.wikipedia.org/wiki/Peano_axioms">those of maths</a>
-as dogma rather than as mere <a
+as absolutes and dogma rather than as mere <a
 href="http://shlomifishswiki.branchable.com/Rules_are_Just_Guidelines/">guidelines</a>.
 </p>
 
@@ -970,7 +1003,7 @@ git-scm,
 the Emacs text editor, <a href="https://en.wikipedia.org/wiki/Free_Software_Foundation">FSF/GNU</a>,
 <a href="https://www.shlomifish.org/meta/FAQ/zionist.xhtml">pro/anti-Israel (or
 pro/anti-"Zionism")</a>, Python-Lang, and the <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD family of
-operating systems</a> - all of whom have notoriously had ardent zealots.
+operating systems</a> - all of whom have or had notoriously had ardent zealots.
 </p>
 
 <p>
@@ -986,11 +1019,11 @@ And naturally, the harm done by overzealous xkcd fans (who usually at most
 can ban one from an Internet subforum) is small compared to the
 destructiveness of the Nazis, or early communists to say nothing
 of Genghis Khan's army. Note however that I believe <a href="https://en.wikipedia.org/wiki/Samantha_Smith">later communists were reformed</a>
-and that most of the best "alt-right" bloggers are
+and that most of the best <a href="https://en.wikipedia.org/wiki/Alt-right">"alt-right"</a> bloggers are
 <a href="https://twitter.com/shlomif/status/1176072465858072582">parody
 ones</a>. Similarly, I
 suspect <a href="https://www.chabad.org/library/bible_cdo/aid/16099">Ezekiel I</a>
-was originally intended as a parody of Polytheistic visions of revelation
+was originally intended as an exaggerated a parody of Polytheistic visions of revelation
 by Ezekiel who was a standup philosopher/comedian.
 </p>
 
@@ -1023,6 +1056,24 @@ and still isn't enforced by Slashdot nor by many subreddits).
 [% END %]
 
 [% WRAPPER h3_section id = "subverting_franchise_copyright_maximalism" title = "Subverting Copyright Maximalism and Territorialism on Franchises for Great Justice"  %]
+
+<p>
+The commercial fiction industry ( "Hollywood"/etc. ) is not a good Oligapoly
+because they assume people will only enjoy fanfic from one franchise or at most
+two. This causes franchises to be territorialised even inside
+media conglomerates. OTOH before the 19th-20th century, creators mashed together
+the franchises of previous generations, along with [% my_acronym( "key" => "RPF", ) %]
+and current trends and events.
+</p>
+
+<p>
+These were funny or entertaining by people who were not familiar
+with their origins and sources of inspiration (often indirect or subconscious ones).
+I recall enjoying <a href="https://www.youtube.com/watch?v=0lczHvB3Y9s">the "Romans
+go home!"</a> skit despite not being taught Latin,
+and enjoyed reading <a href="https://en.wikipedia.org/wiki/The_Three_Musketeers">The Three Musketeers</a>
+despite not an expert in French history.
+</p>
 
 <p>
 I think either Arnold Schwarzenegger or Emma Watson can afford to license the
@@ -1063,15 +1114,16 @@ Pilot episode, noted that "it was crazier than <a href="https://en.wikipedia.org
 I can further suggest the owners of major [and minor] franchises to put
 them under <a href="https://en.wikipedia.org/wiki/Permissive_software_license">permissive
 licences</a>, requesting that a donation be made in case there is profit.
-They can do it either by agreement or individually. If one cannot legally
+If one cannot legally
 accept donations, then they can sell digital goods with
-a minimal, but not maximal price similar to
+a minimal, but not maximal price similar to the
 <a href="https://www.humblebundle.com/">Humble Bundle</a>
-    or <a href="https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/">bandcamp</a>.
+    or <a href="https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/">bandcamp</a> models.
 Hacks!
 </p>
 
 <p>
+They can do it either by agreement or individually.
 As an analogy, I recall that back in
 the late 1990s, there was an initial resistence by commercial vendors of <a
 href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">SQL
@@ -1095,7 +1147,7 @@ earlier thoughts</a> about commercial fan-fiction.
 
 <p>
 Copyright maximalism, and franchise territorialism, are man-made problems,
-which can be subverted either legally, or in practice, by hacking around it. As
+which can be subverted either legally, or in practice, by hacking around them. As
 an alternative to the more famous actors, cosplayers can play as them or one
 can produce lower-cost animations (including <a
 href="https://www.reddit.com/r/mylittlepony/comments/kaajb9/commission_fluttershy_as_queen_amidala_of_the/gfdi3b0/">MLP-style
@@ -1112,7 +1164,7 @@ roles envisioned as played by:
 <ol>
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/Friends">the
+<a href="https://www.shlomifish.org/humour/TOneW-the-Fountainhead/">the
 cast of Friends</a>,
 </p>
 </li>
@@ -1263,7 +1315,7 @@ and suggest that neither should you. I want to "win" and become rich and famous 
 and admired), but setting artificial obstacles in the way of my peers,
 or people who still (unfortunately IMHO) see themselves as inferior to me, will
 backfire in the end, and will make me feel guilty and remorse
-and not <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">Saladin-like</a>
+and not <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">Saladin-like</a>.
 </p>
 
 [% INCLUDE links_and_illustrations %]

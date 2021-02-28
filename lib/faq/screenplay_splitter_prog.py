@@ -70,7 +70,7 @@ Policy</a></li>
 </html>'''
 
 
-def generate(output_dirname):
+def generate(base_path, output_dirname):
     OUT_DN = "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/"
     output_dirname = OUT_DN + \
         ("" if output_dirname is None else output_dirname)
@@ -90,13 +90,14 @@ def generate(output_dirname):
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
         ns=ns,
         xhtml_section_tag=XHTML_SECTION_TAG,
+        base_path=base_path,
     )
     splitter.process()
 
 
 def main():
-    generate(output_dirname=None)
-    generate(output_dirname="temp2del/")
+    generate(base_path=None, output_dirname=None)
+    generate(base_path=("../"*3), output_dirname="temp2del/")
 
 
 if __name__ == '__main__':

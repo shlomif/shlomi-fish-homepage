@@ -21,7 +21,7 @@ class XhtmlSplitter:
     def __init__(
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
-            xhtml_section_tag, ns):
+            xhtml_section_tag, ns, base_path=None):
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
@@ -30,6 +30,7 @@ class XhtmlSplitter:
         self.xhtml_section_tag = xhtml_section_tag
 
         self.root = etree.parse(input_fn)
+        self.base_path = (base_path or "../../")
 
     def process(self):
         SECTION_FORMAT = self.section_format
@@ -92,14 +93,18 @@ class XhtmlSplitter:
                 a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
             except MyXmlNoResultsFoundError:
                 a_tag = etree.XML(
-                    "<a class=\"indiv_node\" href=\"\">[ Node Link ]</a>"
-                )
+                    (
+                        "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
+                        + " href=\"\">" + "[ Node Link ]</xhtml:a>"
+                    ).format(**self.ns)
+                    )
                 header_tag.append(a_tag)
+                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
             a_tag.set("class", "back_to_faq")
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])
             formats = {
-                'base_path': "../../",
+                'base_path': self.base_path,
                 'body': etree.tostring(list_elem).decode('utf-8'),
                 'main_title': main_title_esc,
                 'title': header_esc,

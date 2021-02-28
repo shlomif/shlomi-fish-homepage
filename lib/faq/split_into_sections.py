@@ -39,10 +39,15 @@ class XhtmlSplitter:
         def xpath(node, query):
             return node.xpath(query, namespaces=self.ns)
 
+        class MyXmlNoResultsFoundError(Exception):
+            """docstring for MyXmlNoResultsFoundError"""
+            def __init__(self, arg):
+                super(MyXmlNoResultsFoundError, self).__init__(arg)
+
         def first(node, query):
             mylist = xpath(node, query)
             if not len(mylist):
-                raise Exception(
+                raise MyXmlNoResultsFoundError(
                     "node={} , query={}".format(node, query)
                 )
             return mylist[0]
@@ -79,7 +84,13 @@ class XhtmlSplitter:
             header_tag = first(list_elem, "./xhtml:header")
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
-            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            try:
+                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            except MyXmlNoResultsFoundError:
+                a_tag = etree.XML(
+                    "<a class=\"indiv_node\" href=\"\">[ Node Link ]</a>"
+                )
+                header_tag.append(a_tag)
             a_tag.set("class", "back_to_faq")
             a_tag.set("href", "./#"+id_)
             # print([id_, header_text])

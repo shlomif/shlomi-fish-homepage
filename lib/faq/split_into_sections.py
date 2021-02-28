@@ -95,7 +95,7 @@ class XhtmlSplitter:
                 a_tag = etree.XML(
                     (
                         "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
-                        + " href=\"\">" + "[ Node Link ]</xhtml:a>"
+                        + " href=\"\">Node Link</xhtml:a>"
                     ).format(**self.ns)
                     )
                 header_tag.append(a_tag)

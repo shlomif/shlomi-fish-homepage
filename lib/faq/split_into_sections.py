@@ -68,9 +68,11 @@ class XhtmlSplitter:
         main_title_esc = html.escape(main_title)
         container_elem = first(
             self.root, self.container_elem_xpath)
-        for list_elem in xpath(
-                container_elem,
-                ".//xhtml:section"):
+
+        def _list_sections():
+            """docstring for _list_sections"""
+            return xpath(container_elem, ".//xhtml:section")
+        for list_elem in _list_sections():
             header_tag = first(list_elem, "./xhtml:header")
             try:
                 a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
@@ -85,9 +87,7 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
-        for list_elem in xpath(
-                container_elem,
-                ".//xhtml:section"):
+        for list_elem in _list_sections():
             parents = []
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))

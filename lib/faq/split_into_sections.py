@@ -21,7 +21,8 @@ class XhtmlSplitter:
     def __init__(
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
-            xhtml_section_tag, ns, base_path=None):
+            xhtml_section_tag, ns, base_path=None,
+            path_to_all_in_one="./"):
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
@@ -31,6 +32,7 @@ class XhtmlSplitter:
 
         self.root = etree.parse(input_fn)
         self.base_path = (base_path or "../../")
+        self.path_to_all_in_one = path_to_all_in_one
 
     def process(self):
         SECTION_FORMAT = self.section_format
@@ -85,7 +87,7 @@ class XhtmlSplitter:
                 if href is None:
                     continue
                 if href.startswith('#'):
-                    a_el.set("href", "./" + href)
+                    a_el.set("href", self.path_to_all_in_one + href)
             header_tag = first(list_elem, "./xhtml:header")
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
@@ -101,7 +103,7 @@ class XhtmlSplitter:
                 header_tag.append(a_tag)
                 a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
             a_tag.set("class", "back_to_faq")
-            a_tag.set("href", "./#"+id_)
+            a_tag.set("href", self.path_to_all_in_one + "#" + id_)
             # print([id_, header_text])
             formats = {
                 'base_path': self.base_path,

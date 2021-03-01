@@ -70,7 +70,7 @@ Policy</a></li>
 </html>'''
 
 
-def generate(base_path, output_dirname):
+def generate(base_path, output_dirname, path_to_all_in_one):
     OUT_DN = "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/"
     output_dirname = OUT_DN + \
         ("" if output_dirname is None else output_dirname)
@@ -91,13 +91,22 @@ def generate(base_path, output_dirname):
         ns=ns,
         xhtml_section_tag=XHTML_SECTION_TAG,
         base_path=base_path,
+        path_to_all_in_one=path_to_all_in_one,
     )
     splitter.process()
 
 
 def main():
-    generate(base_path=None, output_dirname=None)
-    generate(base_path=("../"*3), output_dirname="temp2del/")
+    generate(
+        base_path=None,
+        output_dirname=None,
+        path_to_all_in_one="./ongoing-text.html",
+    )
+    generate(
+        base_path=("../"*3),
+        output_dirname="temp2del/",
+        path_to_all_in_one="../ongoing-text.html",
+    )
 
 
 if __name__ == '__main__':

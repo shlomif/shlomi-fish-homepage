@@ -165,13 +165,20 @@ sub run_config
     $obj->do_system( { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
     $obj->docker(
         {
-            cmd => [ 'cp', $temp_git_repo_path, $obj->container() . ":source", ]
+            cmd => [
+                'cp',
+                ( $temp_git_repo_path . "" ),
+                ( $obj->container() . ":/temp-git" ),
+            ]
         }
     );
+    $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
+mv /temp-git ~/source
+true || ls -lR /root
 $setup_package_manager
-cd source
+cd ~/source
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
 if false

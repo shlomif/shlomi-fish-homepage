@@ -72,7 +72,8 @@ Policy</a></li>
 
 def generic_generate(
         OUT_DN, base_path, output_dirname,
-        path_to_all_in_one, path_to_images=""):
+        path_to_all_in_one, path_to_images="",
+        path_to_input="ongoing-text.html",):
     output_dirname = OUT_DN + \
         ("" if output_dirname is None else output_dirname)
     TOP_LEVEL_CLASS = 'screenplay'
@@ -85,7 +86,7 @@ def generic_generate(
     XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
     splitter = XhtmlSplitter(
-        input_fn=(OUT_DN + "/ongoing-text.html"),
+        input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=output_dirname,
         section_format=FAQ_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
@@ -98,17 +99,24 @@ def generic_generate(
     splitter.process()
 
 
-def generate(**args):
+def generate_summerschool_at_nsa(**args):
     return generic_generate(
-            OUT_DN="./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
-            **args,
+        OUT_DN="./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
+        **args,
     )
 
 
 def generate_selina(**args):
     return generic_generate(
-            OUT_DN="./dest/post-incs/t2/humour/Selina-Mandrake/",
-            **args,
+        OUT_DN="./dest/post-incs/t2/humour/Selina-Mandrake/",
+        **args,
+    )
+
+
+def generate_grammar_nazis(**args):
+    return generic_generate(
+        OUT_DN="./dest/post-incs/t2/humour/Muppets-Show-TNI/",
+        **args,
     )
 
 
@@ -120,12 +128,12 @@ def generate_terminator_liberation(**args):
 
 
 def main():
-    generate(
+    generate_summerschool_at_nsa(
         base_path=None,
         output_dirname=None,
         path_to_all_in_one="./ongoing-text.html",
     )
-    generate(
+    generate_summerschool_at_nsa(
         base_path=("../" * 3),
         output_dirname="temp2del/",
         path_to_all_in_one="../ongoing-text.html",
@@ -139,6 +147,13 @@ def main():
         base_path=("../" * 4),
         output_dirname="temp2del/",
         path_to_all_in_one="../ongoing-text.html",
+        path_to_images="../",
+    )
+    generate_grammar_nazis(
+        base_path=("../" * 3),
+        output_dirname="temp2del/",
+        path_to_all_in_one="../Summer-Glau-and-Chuck-Norris.html",
+        path_to_input="Summer-Glau-and-Chuck-Norris.html",
         path_to_images="../",
     )
 

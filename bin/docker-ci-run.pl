@@ -24,10 +24,13 @@ my $configs = {
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
             setup_package_manager => <<'EOF',
-# sed -r -i -e 's#^(deb )[^ ]+( +buster main.*)\$#\\1http://mirror.isoc.org.il/pub/debian/\\2#' /etc/apt/sources.list
+cat /etc/apt/sources.list
+sed -r -i -e 's#^(deb *)[^ ]+( *buster +main.*)$#\1http://mirror.isoc.org.il/pub/debian\2#' /etc/apt/sources.list
+cat /etc/apt/sources.list
+# exit 5
 su -c "apt-get update"
 su -c "apt-get -y install eatmydata netselect-apt sudo"
-sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
+# sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 EOF
             sys_deps => [

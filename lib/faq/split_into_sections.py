@@ -22,7 +22,9 @@ class XhtmlSplitter:
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
             xhtml_section_tag, ns, base_path=None,
-            path_to_all_in_one="./"):
+            path_to_all_in_one="./",
+            path_to_images="",
+            ):
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
@@ -33,6 +35,7 @@ class XhtmlSplitter:
         self.root = etree.parse(input_fn)
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
+        self.path_to_images = path_to_images
 
     def process(self):
         SECTION_FORMAT = self.section_format
@@ -67,7 +70,11 @@ class XhtmlSplitter:
         )
         main_title_esc = html.escape(main_title)
         container_elem = first(
-            self.root, self.container_elem_xpath)
+            self.root, self.container_elem_xpath
+        )
+        if len(self.path_to_images):
+            for img_elem in xpath(container_elem, ".//xhtml:img"):
+                img_elem.set("src", self.path_to_images + img_elem.get("src"))
 
         def _list_sections():
             """docstring for _list_sections"""

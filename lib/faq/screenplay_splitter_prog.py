@@ -70,7 +70,9 @@ Policy</a></li>
 </html>'''
 
 
-def generic_generate(OUT_DN, base_path, output_dirname, path_to_all_in_one):
+def generic_generate(
+        OUT_DN, base_path, output_dirname,
+        path_to_all_in_one, path_to_images=""):
     output_dirname = OUT_DN + \
         ("" if output_dirname is None else output_dirname)
     TOP_LEVEL_CLASS = 'screenplay'
@@ -91,6 +93,7 @@ def generic_generate(OUT_DN, base_path, output_dirname, path_to_all_in_one):
         xhtml_section_tag=XHTML_SECTION_TAG,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
+        path_to_images=path_to_images,
     )
     splitter.process()
 
@@ -109,6 +112,13 @@ def generate_selina(**args):
     )
 
 
+def generate_terminator_liberation(**args):
+    return generic_generate(
+        OUT_DN="./dest/post-incs/t2/humour/Terminator/Liberation/",
+        **args,
+    )
+
+
 def main():
     generate(
         base_path=None,
@@ -116,14 +126,20 @@ def main():
         path_to_all_in_one="./ongoing-text.html",
     )
     generate(
-        base_path=("../"*3),
+        base_path=("../" * 3),
         output_dirname="temp2del/",
         path_to_all_in_one="../ongoing-text.html",
     )
     generate_selina(
-        base_path=("../"*3),
+        base_path=("../" * 3),
         output_dirname="temp2del/",
         path_to_all_in_one="../ongoing-text.html",
+    )
+    generate_terminator_liberation(
+        base_path=("../" * 4),
+        output_dirname="temp2del/",
+        path_to_all_in_one="../ongoing-text.html",
+        path_to_images="../",
     )
 
 

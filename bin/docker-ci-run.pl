@@ -31,8 +31,9 @@ sudo apt-get update -qq
 EOF
             sys_deps => [
                 qw/
+                    cookiecutter
                     graphicsmagick
-                    libdbd-sqlite-perl
+                    libdbd-sqlite3-perl
                     libgd-dev
                     libgmp-dev
                     libncurses-dev
@@ -200,7 +201,7 @@ cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::Al
 # For quadp
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
 sudo cpanm --notest @cpan_deps
-cpanm https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 perl bin/my-cookiecutter.pl
 deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
 gem install asciidoctor compass compass-blueprint
@@ -234,7 +235,8 @@ EOSCRIPTTTTTTT
     return;
 }
 
-foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
+# foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config($sys);
 }

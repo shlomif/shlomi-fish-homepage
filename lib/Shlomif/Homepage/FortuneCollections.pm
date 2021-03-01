@@ -213,6 +213,10 @@ $BODY_PARAMS
 
 @{[$r->about_blurb() =~ s=\$\(ROOT\)/=[% base_path %]=gr]}
 
+<p>
+( <b>Note:</b> on chat services, I tend to use the nicknames <a href="[% base_path %]me/rindolf/">"rindolf"</a> or "shlomif". )
+</p>
+
 <h3>Table of Contents</h3>
 
 (((((include "fortunes/xhtmls/$id.toc-xhtml")))))

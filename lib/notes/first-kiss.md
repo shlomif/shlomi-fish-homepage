@@ -2,13 +2,13 @@ More impressions from the trip, and this time something that I'd already told in
 
 First  of all my type of girls are:
 
-1. White ( https://en.wikipedia.org/wiki/Caucasian_race ) or with Asian / Oriental features, though I admit that I found some Black celebrities very attractive too (e.g:  https://en.wikipedia.org/wiki/Rihanna ).
+1. White ( [Caucasian race](https://en.wikipedia.org/wiki/Caucasian_race) or with Asian / Oriental features, though I admit that I found some Black celebrities very attractive too (e.g:  [Rihanna](https://en.wikipedia.org/wiki/Rihanna) ).
 
 2. Not overly big. Petite is fine, but can also be larger.
 
-3. Muscular, athletic, and without too much excess fat, e.g: https://twitter.com/Athletic_Babes
+3. Muscular, athletic, and without too much excess fat, e.g: ["Athletic Babes" on Twitter](https://twitter.com/Athletic_Babes).
 
-4. An "alpha female": the insurgent, rebellious, independent, "bad girl", awe-inspiring, sexy, exciting, girl, who can get out of any trouble she may get into and keeps challenging social norms. Akin to Westley Snipes in http://www.ericsink.com/entries/hg_denzel.html , or [Milady de-Winter](https://en.wikipedia.org/wiki/Milady_de_Winter) in [The Three Musketters](https://en.wikipedia.org/wiki/The_Three_Musketeers).
+4. An "alpha female": the insurgent, rebellious, independent, "bad girl", awe-inspiring, sexy, exciting, girl, who can get out of any trouble she may get into and keeps challenging social norms. Akin to Wesley Snipes in [here](http://www.ericsink.com/entries/hg_denzel.html) , or [Milady de-Winter](https://en.wikipedia.org/wiki/Milady_de_Winter) in [The Three Musketeers](https://en.wikipedia.org/wiki/The_Three_Musketeers).
 
 5. Attractive enough and groomed enough.
 

@@ -71,6 +71,23 @@ class XhtmlSplitter:
         for list_elem in xpath(
                 container_elem,
                 ".//xhtml:section"):
+            header_tag = first(list_elem, "./xhtml:header")
+            try:
+                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            except MyXmlNoResultsFoundError:
+                id_, header_esc = calc_id_and_header_esc(header_tag)
+                a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
+                a_tag = etree.XML(
+                    (
+                        "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
+                        + " href=\"{href}\">Node Link</xhtml:a>"
+                    ).format(href=a_tag_href_val, **self.ns)
+                )
+                header_tag.append(a_tag)
+
+        for list_elem in xpath(
+                container_elem,
+                ".//xhtml:section"):
             parents = []
             p_iter = list_elem.getparent()
             # print(etree.tostring(p_iter))
@@ -91,19 +108,11 @@ class XhtmlSplitter:
             header_tag = first(list_elem, "./xhtml:header")
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
-            try:
-                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
-            except MyXmlNoResultsFoundError:
-                a_tag = etree.XML(
-                    (
-                        "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
-                        + " href=\"\">Node Link</xhtml:a>"
-                    ).format(**self.ns)
-                    )
-                header_tag.append(a_tag)
-                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
             a_tag.set("class", "back_to_faq")
-            a_tag.set("href", self.path_to_all_in_one + "#" + id_)
+            a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
+            # print(a_tag_href_val)
+            a_tag.set("href", a_tag_href_val)
             # print([id_, header_text])
             formats = {
                 'base_path': self.base_path,

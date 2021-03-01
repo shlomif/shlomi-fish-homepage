@@ -96,6 +96,32 @@ def generate(base_path, output_dirname, path_to_all_in_one):
     splitter.process()
 
 
+def generate_selina(base_path, output_dirname, path_to_all_in_one):
+    OUT_DN = "./dest/post-incs/t2/humour/Selina-Mandrake/"
+    output_dirname = OUT_DN + \
+        ("" if output_dirname is None else output_dirname)
+    TOP_LEVEL_CLASS = 'screenplay'
+    XHTML_NS = XHTML_NAMESPACE
+    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+    ns = {
+        "xhtml": XHTML_NS,
+        "xml": XML_NS,
+    }
+    XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
+
+    splitter = XhtmlSplitter(
+        input_fn=(OUT_DN + "/ongoing-text.html"),
+        output_dirname=output_dirname,
+        section_format=FAQ_SECTION_FORMAT,
+        container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
+        ns=ns,
+        xhtml_section_tag=XHTML_SECTION_TAG,
+        base_path=base_path,
+        path_to_all_in_one=path_to_all_in_one,
+    )
+    splitter.process()
+
+
 def main():
     generate(
         base_path=None,
@@ -103,6 +129,11 @@ def main():
         path_to_all_in_one="./ongoing-text.html",
     )
     generate(
+        base_path=("../"*3),
+        output_dirname="temp2del/",
+        path_to_all_in_one="../ongoing-text.html",
+    )
+    generate_selina(
         base_path=("../"*3),
         output_dirname="temp2del/",
         path_to_all_in_one="../ongoing-text.html",

@@ -207,7 +207,7 @@ $BODY_PARAMS
 
 [%- WRAPPER wrap_html -%]
 
-<h2>About</h2>
+[% WRAPPER about_sect  %]
 
 [% INCLUDE "fortunes/corner_image.tt2" %]
 
@@ -217,14 +217,21 @@ $BODY_PARAMS
 ( <b>Note:</b> on chat services, I tend to use the nicknames <a href="[% base_path %]me/rindolf/">"rindolf"</a> or "shlomif". )
 </p>
 
-<h3>Table of Contents</h3>
+[% END %]
+
+[% WRAPPER h3_section id="fortunes-toc" title="Table of Contents" %]
 
 (((((include "fortunes/xhtmls/$id.toc-xhtml")))))
 
-<h2 id="fortunes-list">The Fortunes Themselves</h2>
+[% END %]
+
+[% WRAPPER h2_section id="fortunes-list" title="The Fortunes Themselves" %]
+
 <div class="fortunes_list">
 (((((include "fortunes/xhtmls/$id.xhtml-for-input")))))
 </div>
+
+[% END %]
 
 [% END %]
 EOF

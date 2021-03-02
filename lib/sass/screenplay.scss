@@ -38,6 +38,14 @@
     @include hhgg_st_tng_rounded_border__common;
     border: 3px black solid;
 }
+.hhgg_st_tng {
+    .screenplay {
+        figure.asciiart {
+            $edge_color: #ccf;
+            background: linear-gradient($edge_color, #cff, $edge_color);
+        }
+    }
+}
 .hhgg_st_tng,
 .terminator_liberation {
     .asciiart_wrapper {
@@ -48,10 +56,8 @@
     .screenplay {
         figure.asciiart {
             @include hhgg_st_tng_rounded_border;
-            $edge_color: #ccf;
             display: inline-block;
             border-radius: $hhgg_st_tng__radius;
-            background: linear-gradient($edge_color, #cff, $edge_color);
             > pre,
             > div > pre,
             > figcaption {

@@ -41,6 +41,7 @@ EOF
                     libgd-dev
                     libgmp-dev
                     libncurses-dev
+                    libpcre2-dev
                     libperl-dev
                     libprimesieve-dev
                     libxml2-dev
@@ -69,6 +70,7 @@ EOF
                     libxslt
                     libxslt-devel
                     ncurses-devel
+                    pcre-devel
                     perl-DBD-SQLite
                     perl-generators
                     primesieve-devel

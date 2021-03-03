@@ -2,7 +2,7 @@ More impressions from the trip, and this time something that I'd already told in
 
 First  of all my type of girls are:
 
-1. White ( [Caucasian race](https://en.wikipedia.org/wiki/Caucasian_race) or with Asian / Oriental features, though I admit that I found some Black celebrities very attractive too (e.g:  [Rihanna](https://en.wikipedia.org/wiki/Rihanna) ).
+1. White ( [Caucasian race](https://en.wikipedia.org/wiki/Caucasian_race) ) or with Asian / Oriental features, though I admit that I found some Black celebrities very attractive too (e.g:  [Rihanna](https://en.wikipedia.org/wiki/Rihanna) ).
 
 2. Not overly big. Petite is fine, but can also be larger.
 

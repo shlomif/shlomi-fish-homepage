@@ -40,8 +40,8 @@ File an issue on my
 <li>
 <p>
 You can also try emailing
-[% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]
-as well as <a href="mailto:[% main_email %]">my other E-mail</a>.
+[% PROCESS mailto_link_to_self email = "shlomif@gmail.com"
+%][% " " %] as well as <a href="mailto:[% main_email %]">my other E-mail</a>.
 </p>
 </li>
 

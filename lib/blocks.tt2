@@ -303,10 +303,22 @@ publicly linked to. Please send comments to
 </div>
 [% END %]
 
+[% BLOCK comments_engine_xhtml5 %]
+<script src="https://utteranc.es/client.js"
+        repo="shlomif/shlomif-homesite-comments"
+        issue-term="url"
+        theme="github-light"
+        label="Comment"
+        crossorigin="anonymous"
+        async="async">
+</script>
+[% END %]
+
 [%- BLOCK end_html -%]
 <script [% script_type %]>
 shlomif_load_nav("[% raw_fn_path %]");
 </script>
+[% INCLUDE comments_engine_xhtml5 %]
 [% INCLUDE share_this_button %]
 [% HEBREW_XML_LANG_SCRIPT %]
 </main>

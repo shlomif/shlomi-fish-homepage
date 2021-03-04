@@ -125,9 +125,9 @@ References:
     Example: the towers of hanoi.
     Some syntax:
         \ - takes a reference to an existing variable or a scalar value
-        [ ] - a dynamic refernece to an array.
+        [ ] - an anonymous reference to an array.
             Note about copying an array reference with [ @_ ];
-        { } - a dynamic reference to a hash.
+        { } - an anonymous reference to a hash.
         The de-referencing schem @{$ref}, ${$ref}, %{$ref}
         The various arrow operators: $ref->[$index], $ref->{$key}
     Examples:

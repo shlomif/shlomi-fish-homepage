@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 9;
+use Test::More tests => 13;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -41,12 +41,21 @@ sub dest_test
     gmake_test( 'DOCBOOK5_EPUB_DIR', 'lib/docbook/5/epub',
         "DOCBOOK5_EPUB_DIR" );
 
-    # TEST
-    gmake_test(
-        'SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE',
-'Friends-S02E04--Nothing-Sexier.svg.jpg If-You-Wanna-Be-Sad.svg.jpg Standup-Philosopher.svg.webp sigourney-weaver--resized.jpg summer-glau--two-guns--400w.jpg',
-        "SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE"
-    );
+    foreach my $word (
+        qw#
+        Friends-S02E04--Nothing-Sexier.svg.jpg
+        If-You-Wanna-Be-Sad.svg.jpg
+        Standup-Philosopher.svg.webp
+        sigourney-weaver--resized.jpg
+        summer-glau--two-guns--400w.jpg
+        #
+        )
+    {
+        # TEST*5
+        gmake_test( 'SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE',
+            $word,
+            "SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE - word=$word" );
+    }
 
     # TEST
     post_dest_test(

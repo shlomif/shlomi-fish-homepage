@@ -35,23 +35,32 @@ sudo apt-get update -qq
 EOF
             sys_deps => [
                 qw/
+                    build-essential
                     cookiecutter
                     graphicsmagick
+                    hunspell-en-gb
+                    libdb5.3-dev
                     libdbd-sqlite3-perl
+                    libgdbm-compat-dev
                     libgd-dev
                     libgmp-dev
+                    libhunspell-dev
                     libncurses-dev
                     libpcre2-dev
                     libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
                     libxml2-dev
+                    lynx
+                    perl
+                    python3-venv
+                    python3-virtualenv
                     ruby-dev
                     ruby-rspec
-                    python3-virtualenv
-                    python3-venv
+                    txt2html
                     xsltproc
                     xz-utils
+                    zip
                     /,
             ],
         }
@@ -110,6 +119,7 @@ sub run_config
                 cpanminus
                 cppcheck
                 fortune-mod
+                hunspell
                 g++
                 gcc
                 git

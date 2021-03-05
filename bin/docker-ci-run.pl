@@ -42,6 +42,7 @@ EOF
                     libdb5.3-dev
                     libdbd-sqlite3-perl
                     libgdbm-compat-dev
+                    libgdbm-dev
                     libgd-dev
                     libgmp-dev
                     libhunspell-dev

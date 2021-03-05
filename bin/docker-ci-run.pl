@@ -42,6 +42,7 @@ EOF
                     libgmp-dev
                     libncurses-dev
                     libpcre2-dev
+                    libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
                     libxml2-dev

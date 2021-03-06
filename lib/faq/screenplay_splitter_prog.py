@@ -16,9 +16,7 @@ from lxml.html import XHTML_NAMESPACE
 from split_into_sections import XhtmlSplitter
 
 
-# Removed:
-# <script src="{base_path}js/main_all.js"></script>
-FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
+SCREENPLAY_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -87,7 +85,7 @@ def generic_generate(
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=output_dirname,
-        section_format=FAQ_SECTION_FORMAT,
+        section_format=SCREENPLAY_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
         ns=ns,
         base_path=base_path,

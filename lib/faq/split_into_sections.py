@@ -44,8 +44,8 @@ class XhtmlSplitter:
 
     def process(self):
         SECTION_FORMAT = self.section_format
-        OUT_DN = self.output_dirname
-        os.makedirs(OUT_DN, exist_ok=True)
+        output_dirname = self.output_dirname
+        os.makedirs(output_dirname, exist_ok=True)
 
         def xpath(node, query):
             return node.xpath(query, namespaces=self.ns)
@@ -135,6 +135,6 @@ class XhtmlSplitter:
                     [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)
                      for rec in reversed(parents)]),
             }
-            with open("{}/{}.xhtml".format(OUT_DN, id_), "wt") as f:
+            with open("{}/{}.xhtml".format(output_dirname, id_), "wt") as f:
                 f.write(SECTION_FORMAT.format(**formats))
             # print(etree.tostring(id_))

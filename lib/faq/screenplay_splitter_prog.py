@@ -83,7 +83,6 @@ def generic_generate(
         "xhtml": XHTML_NS,
         "xml": XML_NS,
     }
-    XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
@@ -91,7 +90,6 @@ def generic_generate(
         section_format=FAQ_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
         ns=ns,
-        xhtml_section_tag=XHTML_SECTION_TAG,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,

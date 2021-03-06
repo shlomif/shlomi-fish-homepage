@@ -72,8 +72,7 @@ def generic_generate(
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="ongoing-text.html",):
-    output_dirname = OUT_DN + \
-        ("" if output_dirname is None else output_dirname)
+    full_out_dirname = OUT_DN + (output_dirname or '')
     TOP_LEVEL_CLASS = 'screenplay'
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
@@ -84,7 +83,7 @@ def generic_generate(
 
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
-        output_dirname=output_dirname,
+        output_dirname=full_out_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
         ns=ns,

@@ -305,10 +305,10 @@ publicly linked to. Please send comments to
 
 [% BLOCK comments_engine_xhtml5 %]
 <script src="https://utteranc.es/client.js"
-        repo="shlomif/shlomif-homesite-comments"
-        issue-term="url"
-        theme="github-light"
-        label="Comment"
+        data-repo="shlomif/shlomif-homesite-comments"
+        data-issue-term="url"
+        data-theme="github-light"
+        data-label="Comment"
         crossorigin="anonymous"
         async="async">
 </script>

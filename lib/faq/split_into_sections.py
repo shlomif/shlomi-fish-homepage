@@ -15,13 +15,18 @@ import html
 import os
 
 from lxml import etree
+from lxml.html import XHTML_NAMESPACE
+
+
+XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 
 
 class XhtmlSplitter:
     def __init__(
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
-            xhtml_section_tag, ns, base_path=None,
+            ns,
+            xhtml_section_tag=XHTML_SECTION_TAG, base_path=None,
             path_to_all_in_one="./",
             path_to_images="",
             ):

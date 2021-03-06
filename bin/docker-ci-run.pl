@@ -58,6 +58,7 @@ EOF
                     python3-virtualenv
                     ruby-dev
                     ruby-rspec
+                    silversearcher-ag
                     txt2html
                     xsltproc
                     xz-utils
@@ -87,6 +88,7 @@ EOF
                     primesieve-devel
                     ruby-devel
                     rubygem-rspec
+                    the_silver_searcher
                     virtualenv
                     which
                     xz

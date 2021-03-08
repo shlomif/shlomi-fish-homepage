@@ -988,6 +988,11 @@ h3 {
     pre {
         overflow: auto;
     }
+    &.my_rpf {
+        .page_toc * {
+            overflow: hidden;
+        }
+    }
 }
 
 .math_illus {

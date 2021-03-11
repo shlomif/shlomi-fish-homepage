@@ -500,6 +500,17 @@ my %table_blocks = (
             ],
         }
     ),
+    'mlp_fim' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'mlp_fim_nav_block',
+            tr_s => [
+                _master_tr( title => q{My Little Pony Fanfiction}, ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales'),
+            ],
+        },
+    ),
     'commercial_fanfic_initiative' =>
         Shlomif::Homepage::NavBlocks::TableBlock->new(
         {

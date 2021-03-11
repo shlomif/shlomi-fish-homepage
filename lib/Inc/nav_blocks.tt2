@@ -1,3 +1,7 @@
+[% BLOCK mlp_fim_nav_block %]
+[% print_nav_block (name => 'mlp_fim') %]
+[% END %]
+
 [% BLOCK star_trek_nav_block %]
 [% print_nav_block (name => 'star_trek') %]
 [% END %]

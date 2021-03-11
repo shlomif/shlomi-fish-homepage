@@ -3,6 +3,8 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 use strict;
 use warnings;
 
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
+
 use Shlomif::FindLib ();
 use utf8;
 
@@ -15,7 +17,7 @@ use Path::Tiny qw( path );
 my $json_data_fn =
     Shlomif::FindLib->rel_path( [qw(Shlomif factoids-nav.json)] );
 
-my $humour_tree_contents = {
+my $__humour_tree_contents = {
     host        => "t2",
     text        => "Shlomi Fish’s Stories and Aphorisms",
     title       => "Shlomi Fish’s Stories and Aphorisms",
@@ -104,13 +106,13 @@ my $humour_tree_contents = {
                             url  => "humour/human-hacking/conclusions/",
                         },
                         {
-                            skip  => 1,
+                            lang  => "ar",
                             text  => "Arabic Translation",
                             url   => "humour/human-hacking/arabic-v2.html",
                             title => "Translation to Literary Arabic by Vieq",
                         },
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "humour/human-hacking/hebrew-v2.html",
                         },
@@ -282,7 +284,7 @@ my $humour_tree_contents = {
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                                 },
                                 {
-                                    skip => 1,
+                                    lang => "he",
                                     text => "Hebrew Text",
                                     url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
@@ -388,7 +390,7 @@ my $humour_tree_contents = {
 "Ways to Do it According to the Programming Languages of the World",
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "humour/ways_to_do_it-heb.html",
                         },
@@ -665,12 +667,20 @@ my $humour_tree_contents = {
         },
     ],
 };
+my $humour_tree_contents_by_lang = +{
+    (
+        map {
+            my $l = $_;
+            $l => __PACKAGE__->_calc_lang_tree( $l, $__humour_tree_contents )
+        } @{ __PACKAGE__->_available_langs() },
+    )
+};
 
 sub get_params
 {
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $humour_tree_contents,
+        tree_contents => $humour_tree_contents_by_lang->{en},
     );
 }
 

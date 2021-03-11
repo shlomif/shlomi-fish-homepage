@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 use utf8;
-use MyNavData;
-use HTML::Widgets::NavMenu;
-use MyNavLinks;
+use MyNavData              ();
+use HTML::Widgets::NavMenu ();
+use MyNavLinks             ();
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 

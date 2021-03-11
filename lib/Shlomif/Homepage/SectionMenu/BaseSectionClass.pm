@@ -32,4 +32,18 @@ sub _available_langs
     return \@langs;
 }
 
+sub _calc_lang_trees_hash
+{
+    my ( $self, $tree_contents ) = @_;
+
+    return +{
+        (
+            map {
+                my $l = $_;
+                ( $l => $self->_calc_lang_tree( $l, $tree_contents ) );
+            } @{ $self->_available_langs() },
+        )
+    };
+}
+
 1;

@@ -6,7 +6,7 @@ use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
 use MyNavData::Hosts ();
 
-my $__essays_tree_contents = {
+my $_essays_tree_contents = {
     host        => "t2",
     text        => "Shlomi Fish’s Essays",
     title       => "Shlomi Fish’s Essays",
@@ -614,14 +614,8 @@ my $__essays_tree_contents = {
     ],
 };
 
-my $essays_tree_contents_by_lang = +{
-    (
-        map {
-            my $l = $_;
-            $l => __PACKAGE__->_calc_lang_tree( $l, $__essays_tree_contents )
-        } @{ __PACKAGE__->_available_langs() },
-    )
-};
+my $essays_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_essays_tree_contents);
 
 sub get_params
 {

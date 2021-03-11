@@ -37,7 +37,7 @@ my $_humour_tree_contents = {
                     title => "The Enemy and How I Helped to Fight it",
                     subs  => [
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Text in Hebrew",
                             url   => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
                             title => "Text of “The Enemy” In Hebrew",
@@ -78,7 +78,7 @@ my $_humour_tree_contents = {
                             title => "Ongoing Text of the Screenplay",
                         },
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Hebrew Translation",
                             url   => "humour/humanity/ongoing-text-hebrew.html",
                             title => "Hebrew translation of the screenplay.",
@@ -349,7 +349,7 @@ my $_humour_tree_contents = {
 "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                     subs => [
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Hebrew Versions of the Aphorisms",
                             url   => "humour-heb.html",
                             title => "The Aphorisms in Hebrew",

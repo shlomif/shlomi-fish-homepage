@@ -5,8 +5,6 @@ use warnings;
 
 use utf8;
 
-use MyNavData;
-
 use Shlomif::Homepage::SectionMenu::Manager ();
 
 use vars (qw($section_nav_menu));

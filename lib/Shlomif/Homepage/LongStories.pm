@@ -172,7 +172,7 @@ EOF
 <p class="selina abstract">
 Selina Mandrake ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
 was a geeky Anglo-American girl in her high school senior year in 2011
-California, who thought that the show <i>Buffy the Vampire Slayer</i> was fictional.
+California, who thought that the show <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">BtVS</a> was fictional.
 However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
 who told her that she was none other than Buffy Mageia, <b>The Slayer</b>,
@@ -261,7 +261,7 @@ EOF
         abstract   => <<'EOF',
 <p class="buffy_few_good abstract">
 The Demonic underworld is held under tight control in a forked version of the
-<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
+<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy universe</a> where
 the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
 ended up happier and more powerful, and men and women have equal opportunities
 when it comes to fighting Demons. A

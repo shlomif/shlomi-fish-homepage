@@ -2,10 +2,11 @@ package Shlomif::Homepage::SectionMenu::Sects::Essays;
 
 use strict;
 use warnings;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
 use MyNavData::Hosts ();
 
-my $essays_tree_contents = {
+my $__essays_tree_contents = {
     host        => "t2",
     text        => "Shlomi Fish’s Essays",
     title       => "Shlomi Fish’s Essays",
@@ -88,7 +89,7 @@ my $essays_tree_contents = {
                         "A (non-original) story with self-growth implications",
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/psychology/elephant-in-the-circus/hebrew.html",
@@ -195,7 +196,7 @@ my $essays_tree_contents = {
                     title => "Why the War on Drugs is the Real Drug Problem",
                     subs  => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/politics/drug-legalisation/hebrew.html",
@@ -211,7 +212,7 @@ my $essays_tree_contents = {
                     ),
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "philosophy/politics/define-zionism/heb/",
                         },
@@ -592,7 +593,7 @@ my $essays_tree_contents = {
                     title => "James Carr about the anti-Muslim Cartoons",
                 },
                 {
-                    skip => 1,
+                    lang => "he",
                     text =>
 "Hebrew Translation of “Ten Reasons for Web Standards”",
                     url =>
@@ -613,11 +614,20 @@ my $essays_tree_contents = {
     ],
 };
 
+my $essays_tree_contents_by_lang = +{
+    (
+        map {
+            my $l = $_;
+            $l => __PACKAGE__->_calc_lang_tree( $l, $__essays_tree_contents )
+        } @{ __PACKAGE__->_available_langs() },
+    )
+};
+
 sub get_params
 {
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $essays_tree_contents,
+        tree_contents => $essays_tree_contents_by_lang->{en},
     );
 }
 

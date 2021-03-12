@@ -12,11 +12,8 @@ use Test::Differences (qw(eq_or_diff));
 use lib './Tests/lib';
 use lib './lib';
 
-use NavDataRender                            ();
-use Shlomif::Homepage::NavBlocks::Renderer   ();
-use Shlomif::Homepage::NavBlocks             ();
-use Shlomif::Homepage::NavBlocks::TableBlock ();
-use NavBlocks                                ();
+use NavDataRender                ();
+use Shlomif::Homepage::NavBlocks ();
 
 our $latemp_filename;
 
@@ -40,22 +37,10 @@ $parser->load_ext_dtd(1);
 my $xpc = XML::LibXML::XPathContext->new();
 $xpc->registerNs( 'x', q{http://www.w3.org/1999/xhtml} );
 
-# TEST:$num_blocks=8;
-foreach my $ext ('')
-{
-    my $nav_bar = HTML::Widgets::NavMenu->new(
-        path_info    => _fn("humour/Selina-Mandrake/$ext"),
-        current_host => 't2',
-        MyNavData::get_params(),
-        'no_leading_dot' => 1,
-    );
+my %cache;
 
-    my $r = Shlomif::Homepage::NavBlocks::Renderer->new(
-        {
-            host     => 't2',
-            nav_menu => $nav_bar,
-        }
-    );
+# TEST:$num_blocks=8;
+{
     foreach my $block_id ( @{ $main_obj->list_nav_blocks } )
     {
         my $block = $main_obj->get_nav_block($block_id);
@@ -69,7 +54,7 @@ foreach my $ext ('')
                 my $fn = "dest/post-incs/t2/$link";
 
                 ok( scalar( -f $fn ), "$fn exists." );
-                my $doc = $parser->parse_file($fn);
+                my $doc = ( $cache{$fn} //= $parser->parse_file($fn) );
 
                 my $r = $xpc->find(
                     sprintf(
@@ -87,6 +72,4 @@ q{//x:div[@class="nav_blocks"]/x:div[@id="%s_nav_block"]/x:table},
         };
 
     }
-
-    # die "@$links";
 }

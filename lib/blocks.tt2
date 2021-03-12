@@ -118,7 +118,7 @@ License</a>, a permissive software licence.
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
-[% license_obj.by_british_blurb(year=year) %]
+[% license_obj.by_british_blurb(version=(version||"3.0"), year=year) %]
 [%- END -%]
 [%- END -%]
 

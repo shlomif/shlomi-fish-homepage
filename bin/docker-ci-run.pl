@@ -126,6 +126,7 @@ sub run_config
                 g++
                 gcc
                 git
+                golang
                 inkscape
                 lynx
                 make
@@ -247,6 +248,7 @@ if test "\$cmake_build_is_already_part_of_test_sh" != "true"
 then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
+go get -u github.com/tdewolff/minify/cmd/minify
 bash bin/rebuild
 EOSCRIPTTTTTTT
 

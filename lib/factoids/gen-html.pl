@@ -155,9 +155,7 @@ EOF
         meta_desc =>
 "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -287,9 +285,7 @@ tag on Twitter</a>
 EOF
         meta_desc => "Facts about Buffy Summers from Buffy the Vampire Slayer",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS buffy_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -434,9 +430,7 @@ EOF
 EOF
         meta_desc      => "Factoids about Emma Watson, the British actress",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS harry_potter_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["harry_potter", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -495,9 +489,7 @@ EOF
         meta_desc =>
 "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -547,9 +539,7 @@ EOF
         meta_desc =>
 "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <p>
@@ -588,10 +578,7 @@ EOF
         meta_desc =>
 "Factoids about the NSA - the U.S. government National Security Agency",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS xkcd_nav_block  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["xkcd", "foss", ] %]
 EOF
         see_also => <<'EOF',
 <ol>
@@ -742,9 +729,7 @@ EOF
 EOF
         meta_desc      => "Factoids about Summer Glau, the Hollywood actress",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS xkcd_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["xkcd", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -843,9 +828,7 @@ EOF
         meta_desc =>
 "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -1007,9 +990,7 @@ refers to several resources.
 EOF
         meta_desc      => "Facts about XSLT, the most Evil thing in existence.",
         nav_blocks_tt2 => <<'EOF',
-[% WRAPPER nav_blocks  %]
-[% PROCESS foss_nav_block  %]
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <p>

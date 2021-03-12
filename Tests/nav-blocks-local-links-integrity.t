@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 use XML::LibXML ();
 
 use lib './lib';
@@ -21,7 +21,7 @@ $xpc->registerNs( 'x', q{http://www.w3.org/1999/xhtml} );
 
 my %cache;
 
-# TEST:$num_blocks=8;
+# TEST:$num_blocks=9;
 {
     foreach my $block_id ( @{ $main_obj->list_nav_blocks } )
     {

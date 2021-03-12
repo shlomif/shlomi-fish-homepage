@@ -345,6 +345,18 @@ my %tr_s = (
             _facebook( url => 'http://www.facebook.com/SummerNSA', ),
         ],
     ),
+    'qoheleth' => _tr(
+        title => "“So, who the Hell is Qoheleth?”",
+        items => [
+            _fp( path => "humour/So-Who-The-Hell-Is-Qoheleth/", ),
+            _ontext(
+                path => "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
+            ),
+            _github(
+                url => 'https://github.com/shlomif/So-Who-the-Hell-Is-Qoheleth',
+            ),
+        ],
+    ),
     'terminator_liberation' => _tr(
         title =>
 "Terminator: Liberation - Starring Schwarzenegger &amp; Emma Watson",
@@ -355,6 +367,20 @@ my %tr_s = (
             ),
             _github(
                 url => 'https://github.com/shlomif/Terminator-Liberation',
+            ),
+        ],
+    ),
+    'tow_fountainhead' => _tr(
+        title => "The One with the Fountainhead",
+        items => [
+            _fp( path => "humour/TOneW-the-Fountainhead/", ),
+            _l(
+                inner_html => "Part 1",
+                path => "humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.html",
+            ),
+            _l(
+                inner_html => "Part 2",
+                path => "humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
             ),
         ],
     ),
@@ -423,6 +449,18 @@ my %table_blocks = (
                 _get_tr('queen_padme_tales'),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('buffy_facts'),
+            ],
+        },
+    ),
+    'friends_tv' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'friends_tv_nav_block',
+            tr_s => [
+                _master_tr( title => q{Friends Fanfiction}, ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('tow_fountainhead'),
+                _get_tr('hhfg'),
+                _get_tr('qoheleth'),
             ],
         },
     ),

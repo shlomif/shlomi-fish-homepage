@@ -57,9 +57,10 @@ sent via physical mail.
 </li>
 </ul>
 
-[% WRAPPER nav_blocks  %]
+[% WRAPPER nav_blocks %]
 
-[% PROCESS politics_nav_block  %]
+[% PROCESS politics_nav_block %]
+[% PROCESS xkcd_nav_block %]
 
 [%- END -%]
 

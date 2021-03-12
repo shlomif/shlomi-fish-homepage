@@ -536,4 +536,11 @@ sub get_nav_block
     );
 }
 
+sub list_nav_blocks
+{
+    my ( $self, ) = @_;
+
+    return [ sort { $a cmp $b } keys(%table_blocks) ];
+}
+
 1;

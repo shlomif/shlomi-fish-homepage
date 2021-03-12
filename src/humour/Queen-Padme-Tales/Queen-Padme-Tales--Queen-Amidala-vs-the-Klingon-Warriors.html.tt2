@@ -12,11 +12,12 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html") %]
 
-[% WRAPPER nav_blocks  %]
+[% WRAPPER nav_blocks %]
 
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS mlp_fim_nav_block  %]
-[% PROCESS commercial_fanfic_initiative_nav_block  %]
+[% PROCESS star_trek_nav_block %]
+[% PROCESS buffy_nav_block %]
+[% PROCESS mlp_fim_nav_block %]
+[% PROCESS commercial_fanfic_initiative_nav_block %]
 
 [%- END -%]
 

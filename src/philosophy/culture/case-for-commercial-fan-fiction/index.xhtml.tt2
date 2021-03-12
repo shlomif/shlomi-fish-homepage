@@ -1,10 +1,12 @@
 [%- SET title = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as geeky imperatives (as of 2021)" -%]
 [%- SET desc = "The case for commercial fan fiction: commercial Real Person Fan Fiction (RPFs), crossovers and parodies as &quot;geeky&quot; (= loving your work; &quot;amateur&quot;) imperatives (as of 2021) for the prosperity of the film, drama, and fiction industries." -%]
+
 [%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism, Emma Watson, copyrights, open, free, Arnold Schwarzenegger, fanfic, fan fiction, hacking, action, hero, comedy, parody, Paul Graham, commercial, IRC, geeky" -%]
 
 [%- WRAPPER wrap_html -%]
 
 [% SET MOTAS = my_acronym( "key" => "MOTAS", ) %]
+[% SET RPF = my_acronym( "key" => "RPF", ) %]
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
@@ -433,6 +435,32 @@ href="https://en.wikipedia.org/wiki/Kaley_Cuoco">Kaley Cuoco</a> who portrayed
 her.
 </p>
 
+<blockquote cite="https://twitter.com/shlomif/status/1364839109068541958">
+
+<p>
+First people were prejudiced about new/old. Then about popularity. Now they are
+about "mainstream"ness:
+<a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=two-kinds-of-fools">"Two
+kinds of fools"</a>. Let's
+just kill prejudice once and for all! When I described Kate in
+<a href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Seline Mandrake - The Slayer</i></a>
+as a socialite, I was attacked.
+But what's wrong with being one?
+</p>
+
+</blockquote>
+
+<p>
+I still resent the fact that many hardcore geeks looked down on
+<a href="https://en.wikipedia.org/wiki/Friends">the <i>Friends</i> T.V. show</a>
+due to its "mainstream" image, at the time.
+</p>
+
+<p>
+Moreover, some self-proclaimed atheists dismiss the Jewish Bible due to
+it reflecting the mentality of the time.
+</p>
+
 [% END %]
 
 [% END %]
@@ -560,7 +588,8 @@ not surprising.
 </p>
 
 <p>
-Note that even if a screenwriter has prepared such Hollywood-places in the
+Note that even if a screenwriter has prepared such Hollywood-blessed
+screenplays in the
 past, he or she likely met enough fans, critics (either positive
 or <a href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">negative</a> or mixed), collaborators, etc. (see
 <a href="https://www.shlomifish.org/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html">the "Earth Angel" concept</a>
@@ -584,7 +613,9 @@ a subset of <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a>
 (which will be capable of being validated using <a href="https://github.com/caramelomartins/awesome-linters">an open source, easy to install, and portable linter</a>)
 ,
 or an XML-based format, either a subset of <a href="https://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI</a>
-or a custom format. Perhaps any self-contained XHTML5/HTML5 page can be
+or a custom format. Perhaps any self-contained XHTML5/HTML5 page
+or <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a>
+can be
 accepted, including ones on the public-facing web.
 </p>
 
@@ -645,7 +676,7 @@ went to see his films were usually entertained because
 
 <p>
 Now for a personal story: back when I was in the 7th or 8th grade
-(I am 1977-born), my class room studied a Hebrew translation of
+(I am 1977-born, so it was around <a href="https://en.wikipedia.org/wiki/Gulf_War">the first Gulf War</a>; ~1990), my class room studied a Hebrew translation of
 Molière's play
 <a href="https://en.wikipedia.org/wiki/The_Misanthrope">The Misanthrope</a>
 as part of our "Literature" studies
@@ -704,7 +735,7 @@ WATSON!
 <p>
 It seems that <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> employed a similar strategy when playing for the <a
 href="https://en.wikipedia.org/wiki/Harry_Potter_(film_series)">Harry Potter
-films</a> from what I saw of her there.  She was overemotional, edgy, and acted in a
+films</a> from what I saw of her there. She was overemotional, edgy, and acted in a
 manner which was both easier, more fun, and was loved by the geeky audience.
 In a way, she was one of the few selling points of most of the series' films,
 which although skillfully executed, were clearly not done by artists having fun.
@@ -727,30 +758,6 @@ is self-defeating.
 
 [% END %]
 
-[% BLOCK links_and_illustrations %]
-
-<p>
-People who complain about illustrated stories or screenplays,
-are advised to see the <a href="https://en.wikipedia.org/w/index.php?title=The_pen_is_mightier_than_the_sword&amp;oldid=998361214">illustration on Edward Bulwer-Lytton's stage play "Richelieu"</a>.
-Furthermore, not only did the <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew
-Bible</a> had hyperlinks of sorts, but <a href="https://en.wikipedia.org/wiki/Non-canonical_books_referenced_in_the_Bible">many are
-currently broken</a>.
-</p>
-
-<p>
-( Education, entertainment, and amateur (= "geeky") philosophy have been
-done by humans for millennia, even if they were limited to talking about
-sports, food, or [% MOTAS %]. )
-</p>
-
-[% END %]
-
-[% IF 0 %]
-
-[% INCLUDE links_and_illustrations %]
-
-[% END %]
-
 [% WRAPPER h3_section id = "originality_is_self_defeating" title = "“Originality” and Franchise Territorialism is self-defeating"  %]
 
 <p>
@@ -762,17 +769,19 @@ and now public domain sources, the good ones also reuse characters or texts
 from real life (<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>) or from newer franchises (out of being
 <a href="#hacker-laziness">constructively lazy</a>).
 And with copyright law being maximalised to covering individual
-characters, concepts, and worlds and <a href="https://en.wikipedia.org/wiki/Ashleigh_Brilliant#Criticism">individual sentences</a> (but do note
+characters, concepts, and worlds and <a
+href="https://en.wikipedia.org/wiki/Ashleigh_Brilliant#Criticism">individual
+sentences</a> (but do note
 that it is highly likely that Ashleigh Brilliant is reformed
 by now), this makes legitimate and commercial reuse/remixing
-of drama a problem.
+of drama a legal problem.
 </p>
 
 <blockquote id="wilwheaton_about_crossovers">
 
 <p>
-At one point, I walked past a booth that had lots of clas-
-sic Star Wars toys. My eyes fell on an original model of Darth
+At one point, I walked past a booth that had lots of classic Star Wars toys. My
+eyes fell on an original model of Darth
 Vader’s TIE Fighter. I had that toy when I was a kid, and just
 looking at it was like those car commercials where the guy
 touches the car and gets this rapid-fire burst of images until
@@ -799,7 +808,7 @@ Emphasis (bold text) is mine.
 )
 
 <p>
-People as young as children have been doing mashups and RPFs of
+People as young as children have been doing mashups and [% RPF%] of
 franchises, individual books/stories/films/songs/etc.,
 <a href="https://www.shlomifish.org/meta/FAQ/idolisation_of_people_and_things.xhtml">characters</a>
 (both fictional and real),
@@ -840,13 +849,19 @@ instead (or in addition), possibly with Klingon subtitles.
 <blockquote cite="https://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/#best_warriors">
 
 <p>
-In my screenplay <a href="https://www.shlomifish.org/humour/Selina-Mandrake/">Selina Mandrake - The Slayer</a>, the protagonist (Selina) runs
-into three vampire warriors (“The Three”) dressed as Klingons, who tell her
-that “Every mighty Klingon warrior has watched Sesame Street” to which she
-exclaims: “Mighty Klingon vampire warriors who have watched Sesame Street… this
-decade royally sucks!!”. However, most of the best American warriors of the
-relatively recent past (of all kinds) have watched Sesame Street, because they
-loved it as happy children (and later as adults).
+In my screenplay <a
+href="https://www.shlomifish.org/humour/Selina-Mandrake/">Selina Mandrake - The
+Slayer</a>, the protagonist (Selina) runs into three vampire warriors (“The
+Three”) dressed as Klingons, who tell her that “Every mighty Klingon warrior
+has watched Sesame Street”.
+</p>
+
+<p>
+As a retort, she exclaims: “Mighty Klingon vampire
+warriors who have watched Sesame Street… this decade royally sucks!!”. However,
+most of the best American warriors of the relatively recent past (of all kinds)
+have watched Sesame Street, because they loved it as happy children (and later
+as adults).
 </p>
 
 </blockquote>
@@ -883,7 +898,7 @@ who can successfully mutate the screenplay (and they have my blessing and legal
 permission to do so) must use recent enough characters and quotes.  To quote <a
 href="https://en.wikiquote.org/wiki/Groucho_Marx">Groucho Marx</a> <q> I don’t
 care to belong to any club that will have me as a member</q>. The Muppets
-franchise did such crossovers and RPF since the 1970s (e.g. <a
+franchise did such crossovers and [% RPF %] since the 1970s (e.g. <a
 href="https://www.youtube.com/watch?v=KNYI3iINXrQ">"Sam the Eagle versus Alice
 Cooper"</a>) and most of The Muppets Show's early (and later) skits are
 amazingly fresh and funny even today.
@@ -1015,7 +1030,9 @@ money or at least token pay (see
 <a href="https://www.shlomifish.org/humour/bits/Emma-Watson-applying-for-a-software-dev-job/">the
 Emma Watson as a software dev thought experiment</a>).
 For example, <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>
-a software developer, action hero, geek, and <a href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur philosopher / entertainer</a>,
+a software developer, action hero, geek, and <a
+href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur
+philosopher / entertainer</a>,
 is believed to get paid 20 million USD/year.
 While he will gladly continue to comaintain the Linux kernel
 project for less, it is commonly accepted that it is a reasonable
@@ -1037,18 +1054,18 @@ href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-tabl
 jinxed the reality T.V. show "Beauty and the Geek"</a> and now large budget Hollywood feature films.
 </p>
 
-<p> I was told that <q>every waitress at a restaurant in LA is a potential
+<p>
+I was told that <q>every waitress at a restaurant in LA is a potential
 Hollywood actress</q>. But most of the good looking ones are increasingly geeky
-hackers as well.  </p>
+hackers as well.
+</p>
 
 <p>
 Many people will pay to see
 <a href="https://www.joelonsoftware.com/2005/07/25/hitting-the-high-notes/">a film
 starring well-known and well-regarded actors and actresses</a>
 which they happen to like, and approve of its trailer, which they can watch
-on YouTube. But given most of the screenwriters (including older and/or
-experienced one who met enough <a href="https://www.shlomifish.org/humour/The-Earth-Angel/">Earth Angels</a>
-who enlightened them - either offline or online), are
+on YouTube. But given most of the screenwriters, are
 now great hackers and geeks, they won't bother writing their screenplays
 in the <a href="#hollywood_screenplay_format">Hollywood blessed format</a>
 and <a href="#originality_is_self_defeating">increasingly do parodies, crossovers
@@ -1068,7 +1085,8 @@ I never met a monster I didn't like.
 </blockquote>
 
 <p>
-( <a href="https://www.youtube.com/watch?v=lQALLGsn-Fk">Vincent Price on <i>The Muppet Show</i></a> )
+( <a href="https://www.youtube.com/watch?v=lQALLGsn-Fk">Vincent Price on <i>The
+Muppet Show</i></a> )
 </p>
 
 <p>
@@ -1174,19 +1192,20 @@ piracy — it’s obscurity.</q>.
 <p>
 The RIAA members is happy now providing legal or financial services to signed artists
 and lately even actively promoting them and YouTuber singers (and the line between
-signed and independent artists has been getting blurry). As an analogy,
-The Roman Catholic church used to burn at stake
-girls who admitted to having premarital sex even once.
-<a href="https://en.wikipedia.org/wiki/Madonna">Madonna</a>, who identifies
-as a Catholic,
-and boasted
-of having had premarital sex with dozens of willing men, and I have no reason
-to doubt her, was not only left unharmed, but was welcome in some of the
-holiest churches in Israel and the Palestinian Authority during her visit there. If you ask a
-Catholic clergyman if she or similar "sin"ful people should be killed again
-he'd likely say: <q>Dear Lord no! 'Thou shall not kill'. It's up to God to punish
-them if they see fit, but we should not act as God's agents.</q>. So the Roman
-Catholic church now is more benevolent
+signed and independent artists has been getting more blurry).
+</p>
+
+<p>
+As an analogy, The Roman Catholic church used to burn at stake girls who
+admitted to having premarital sex even once. On the other hand, <a
+href="https://en.wikipedia.org/wiki/Madonna">Madonna</a>, who identifies as a
+Catholic, and boasted of having had premarital sex with dozens of willing men,
+and I have no reason to doubt her, was not only left unharmed, but was welcome
+in some of the holiest churches in Israel and the Palestinian Authority during
+her visit there. If you ask a Catholic clergyman if she or similar "sin"ful
+people should be killed again he'd likely say: <q>Dear Lord no! 'Thou shall not
+kill'. It's up to God to punish them if they see fit, but we should not act as
+God's agents.</q>. So the Roman Catholic church now is more benevolent
 - by choice.
 </p>
 
@@ -1195,7 +1214,7 @@ More recently, the <a href="https://knowyourmeme.com/memes/ceiling-cat">"Ceiling
 cat is watching you masturbate"</a>
 captioned image, has stopped many preachers from using
 the shopworn "omniscient, omnipresent, deity [who cares about your sex life]"
-argument, but frankly, it was not effective, nor desirable.
+argument, but frankly, it was neither effective, nor desirable.
 I think there are far better insights and memes in the Hebrew Bible,
 than that (despite being a non-observant <a href="https://www.shlomifish.org/meta/FAQ/religious_belief.xhtml">agnostic</a>).
 </p>
@@ -1235,7 +1254,7 @@ href="http://shlomifishswiki.branchable.com/Rules_are_Just_Guidelines/">guidelin
 
 <p>
 I met open-minded, enlightened, even self-critical, observant
-Jews, Christians, or Muslims (and the Sri-Lankan caretaker of my late
+Jews, Christians, or Muslims (and a Sri-Lankan woman who took care of my late
 grandmother <a href="https://www.shlomifish.org/meta/FAQ/thought_you_were_a_Perl_guy.xhtml">is both a Christian and a Buddhist</a>).
 I also met close-minded and "professionally fanatic"
 <a href="https://xkcd.com/">xkcd</a> fans,
@@ -1268,7 +1287,7 @@ and that most of the best <a href="https://en.wikipedia.org/wiki/Alt-right">"alt
 ones</a>. Similarly, I
 suspect <a href="https://www.chabad.org/library/bible_cdo/aid/16099">Ezekiel I</a>
 was originally intended as an exaggerated parody of Polytheistic visions of revelation
-by Ezekiel who was a standup philosopher/comedian.
+by Ezekiel who was <a href="https://www.shlomifish.org/humour/image-macros/#standup_philosopher">a standup philosopher/comedian</a>.
 </p>
 
 <hr />
@@ -1282,11 +1301,11 @@ Aristotlian Logic ("Was <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> 
 or like I
 overheard one local young school girl say to her friend
 a few weeks ago
-"I believe in God, and I don't believe in God" ).
+"I believe in God, and I don't believe in God." ).
 </p>
 
 <p>
-And we can certainly challenge "[% my_acronym( "key" => "RPF", ) %]: never do that!" ( <a
+And we can certainly challenge "[% RPF %]: never do that!" ( <a
 href="https://en.wikipedia.org/wiki/Last_Action_Hero">Last Action Hero</a>
 ;
 <a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a> ;
@@ -1309,7 +1328,7 @@ The commercial fiction industry ( "Hollywood"/etc. ) is not a good oligopoly
 because they assume people will only enjoy fanfic from one franchise or at most
 two. This causes franchises to be territorialised even inside
 media conglomerates. OTOH, before the 19th-20th centuries, creators mashed together
-the franchises of previous generations, along with [% my_acronym( "key" => "RPF", ) %]
+the franchises of previous generations, along with [% RPF %]
 and current trends and events.
 </p>
 
@@ -1320,6 +1339,11 @@ I recall enjoying <a href="https://www.youtube.com/watch?v=0lczHvB3Y9s">the "Rom
 go home!"</a> skit despite not being taught Latin,
 and enjoyed reading <a href="https://en.wikipedia.org/wiki/The_Three_Musketeers">The Three Musketeers</a>
 despite not being an expert in French history.
+</p>
+
+<p>
+In order to subvert copyright maximalism, actors can finance the production of
+fanfiction screenplays starring them, and which are not written in <a href="#hollywood_screenplay_format">the Hollywood-blessed format</a>. They can and should also try to make a profit from them. <a href="https://en.wikipedia.org/wiki/Ghosts_I%E2%80%93IV">Ghosts I-IV</a> was licensed under a redstributable licence and yet proved very profitable.
 </p>
 
 <p>
@@ -1370,20 +1394,16 @@ Hacks!
 </p>
 
 <p>
-They can do it either by agreement or individually.
-As an analogy, I recall that back in
-the late 1990s, there was an initial resistance by vendors of <a
-href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">commercial SQL
-databases</a>
-to release official Linux ports of their databases (which could be built and run well
-on similar, but proprietary and costly,
-<a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#is-it-true-that-macos--mac-os-x-is-superior-to-linux-because-it-is-a-certified-unix">UNIX-like</a> OSes).
-However, then they announced their
-intentions to do so one by one, and it was
-<a
+They can do it either by agreement or individually.  As an analogy, I recall
+that back in the late 1990s, there was an initial resistance by vendors of <a
+href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">commercial
+SQL databases</a> to release official Linux ports of their databases (which
+could be built and run well on similar, but proprietary and costly, <a
+href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#is-it-true-that-macos--mac-os-x-is-superior-to-linux-because-it-is-a-certified-unix">UNIX-like</a>
+OSes).  However, then they announced their intentions to do so one by one, and
+it was <a
 href="https://linux.slashdot.org/story/98/08/01/0948200/we-just-typed-make">technologically
-easy to do</a>
-and brought them many sales.
+easy to do</a> and brought them many sales.
 </p>
 
 <p>
@@ -1424,7 +1444,7 @@ The cast of <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">Buf
 
 <li>
 <p>
-the cast of <a href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek Deep Space Nine</a> along with <a href="https://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a> and some modernised Biblical characters and some
+The cast of <a href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek Deep Space Nine</a> along with <a href="https://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a> and some modernised Biblical characters and some
 contemporary celebrities of the [% my_acronym("key"=>"FOSS") %] world.
 </p>
 </li>
@@ -1567,6 +1587,24 @@ or people who still (unfortunately IMHO) see themselves as inferior to me, will
 backfire in the end, and will make me feel guilty and remorse
 and not <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">Saladin-like</a>.
 </p>
+
+[% BLOCK links_and_illustrations %]
+
+<p>
+People who complain about illustrated stories or screenplays,
+are advised to see the <a href="https://en.wikipedia.org/w/index.php?title=The_pen_is_mightier_than_the_sword&amp;oldid=998361214">illustration on Edward Bulwer-Lytton's stage play "Richelieu"</a>.
+Furthermore, not only did the <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew
+Bible</a> had hyperlinks of sorts, but <a href="https://en.wikipedia.org/wiki/Non-canonical_books_referenced_in_the_Bible">many are
+currently broken</a>.
+</p>
+
+<p>
+( Education, entertainment, and amateur (= "geeky") philosophy have been
+done by humans for millennia, even if they were limited to talking about
+sports, food, or [% MOTAS %]. )
+</p>
+
+[% END %]
 
 [% INCLUDE links_and_illustrations %]
 

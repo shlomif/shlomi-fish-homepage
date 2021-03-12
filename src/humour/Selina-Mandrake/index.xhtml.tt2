@@ -10,15 +10,15 @@
 Hope you enjoy it!
 </p>
 
-[% WRAPPER screenplay_read_online  %]
+[% WRAPPER screenplay_read_online %]
 
 <ul>
 
-[% PROCESS story_ongoing_episode_li base = "selina-mandrake-the-slayer",  %]
+[% PROCESS story_ongoing_episode_li base = "selina-mandrake-the-slayer", %]
 
 <li>
 <p>
-[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Selina-Mandrake",  %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Selina-Mandrake", %]
 </p>
 </li>
 
@@ -43,7 +43,7 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 
 <div class="accordion">
 
-[% WRAPPER h2_section id = "audio" title = "Audio (= Dramatic Reading of the Screenplay)"  %]
+[% WRAPPER h2_section id = "audio" title = "Audio (= Dramatic Reading of the Screenplay)" %]
 
 <p>
 You can find audio files of some work-in-progress
@@ -98,9 +98,9 @@ Mandrake</a> - about the protagonist.
 
 <div class="fancy_sects">
 
-[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
-[% WRAPPER h3_section id = "fanfiction.net"  title = "FanFiction.Net"  %]
+[% WRAPPER h3_section id = "fanfiction.net" title = "FanFiction.Net" %]
 
 <ol>
 
@@ -112,7 +112,7 @@ Mandrake</a> - about the protagonist.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "coverage_mageia_forums"  title = "Mageia Forums"  %]
+[% WRAPPER h3_section id = "coverage_mageia_forums" title = "Mageia Forums" %]
 
 <ol>
 
@@ -125,7 +125,7 @@ on the Mageia Forums</a>
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "coverage_fxp_forums"  title = "On the fxp.co.il forums"  %]
+[% WRAPPER h3_section id = "coverage_fxp_forums" title = "On the fxp.co.il forums" %]
 
 <ol>
 
@@ -138,7 +138,7 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "coverage_r_buffy"  title = "On the /r/buffy subreddit"  %]
+[% WRAPPER h3_section id = "coverage_r_buffy" title = "On the /r/buffy subreddit" %]
 
 <ol>
 
@@ -156,7 +156,7 @@ available for Selina Mandrake - The Slayer (Buffy parody)</a>
 
 [% WRAPPER credits_sect %]
 
-[% WRAPPER h3_section id = "d10_image_credits"  title = "1d10 Image Credit"  %]
+[% WRAPPER h3_section id = "d10_image_credits" title = "1d10 Image Credit" %]
 
 <p>
 <a href="http://commons.wikimedia.org/wiki/File:Green-d10-dice.png">1d10
@@ -167,7 +167,7 @@ the GFDL/CC-by-sa-3.0.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "ebookmaker"  href = "http://github.com/setanta/ebookmaker"  title = "ebookmaker"  %]
+[% WRAPPER h3_section id = "ebookmaker" href = "http://github.com/setanta/ebookmaker" title = "ebookmaker" %]
 
 <p>
 <b>Update:</b> I have now written <a href="https://pypi.org/project/rebookmaker/">rebookmaker</a>
@@ -197,7 +197,7 @@ A post about websites that allow you to sell your electronic book / EPUB.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "fxp_about_buying_dice"  href = "http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371"  title = "Thread in fxp.co.il about buying d10 Dice"  %]
+[% WRAPPER h3_section id = "fxp_about_buying_dice" href = "http://www.fxp.co.il/showthread.php?t=12282040&amp;p=113709371" title = "Thread in fxp.co.il about buying d10 Dice" %]
 
 <p>
 Some people on <a href="http://www.fxp.co.il/">the fxp.co.il forums</a>
@@ -208,7 +208,7 @@ helped me with purchasing some ten-sided dice I was seeking (in Hebrew).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
 
@@ -399,11 +399,11 @@ to live her normal life.
 
 </ul>
 
-[% PROCESS links_to_judaism_and_israel  %]
+[% PROCESS links_to_judaism_and_israel %]
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "licensing"  title = "Licensing"  %]
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
 Well, since this work is a parody of <a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the Vampire Slayer</i></a> (written by
@@ -444,9 +444,9 @@ I hope are acceptable to the copyright holders. Please don’t sue me.
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
-[% WRAPPER h3_section id = "buffy_links"  title = "Buffy Links"  %]
+[% WRAPPER h3_section id = "buffy_links" title = "Buffy Links" %]
 
 <ul>
 
@@ -485,7 +485,7 @@ Rand’s Buffy the Vampire Slayer</a> (via
 
 [%- END -%]
 
-[% WRAPPER see_also  %]
+[% WRAPPER see_also %]
 
 <ul>
 
@@ -521,11 +521,11 @@ facts about Buffy Summers, the protagonist of the show.
 
 </div>
 
-[% WRAPPER nav_blocks  %]
+[% WRAPPER nav_blocks %]
 
-[% PROCESS buffy_nav_block  %]
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS harry_potter_nav_block  %]
+[% PROCESS buffy_nav_block %]
+[% PROCESS star_trek_nav_block %]
+[% PROCESS harry_potter_nav_block %]
 
 [%- END -%]
 

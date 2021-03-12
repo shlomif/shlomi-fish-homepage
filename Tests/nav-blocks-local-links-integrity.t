@@ -35,6 +35,7 @@ my %cache;
 
         # TEST*$num_blocks
         subtest "tests for block_id='$block_id'", sub {
+            plan( tests => ( 2 * @$links ) );
             foreach my $link (@$links)
             {
                 $link =~ s#/\z#/index.xhtml#ms;
@@ -54,7 +55,6 @@ q{//x:div[@class="nav_blocks"]/x:div[@id="%s_nav_block"]/x:table},
                     "Found one toc item for block_id='$block_id';fn='$fn'",
                 );
             }
-            done_testing();
             return;
         };
 

@@ -106,10 +106,6 @@ it is available for some kinds of commercial use). Here are the
 <a href="GPL-v4_5_6_etc.svg">sources</a>.
 </p>
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 
 [% END %]

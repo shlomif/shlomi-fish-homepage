@@ -521,12 +521,6 @@ facts about Buffy Summers, the protagonist of the show.
 
 </div>
 
-[% WRAPPER nav_blocks %]
-
-[% PROCESS buffy_nav_block %]
-[% PROCESS star_trek_nav_block %]
-[% PROCESS harry_potter_nav_block %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", "star_trek", "harry_potter", ] %]
 
 [% END %]

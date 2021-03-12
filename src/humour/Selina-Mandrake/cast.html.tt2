@@ -126,13 +126,7 @@ Frenchman, just like Cardinal Richelieu.
 
 [%- END -%]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS harry_potter_nav_block  %]
-[% PROCESS buffy_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["star_trek", "harry_potter", "buffy", ] %]
 
 </div>
 

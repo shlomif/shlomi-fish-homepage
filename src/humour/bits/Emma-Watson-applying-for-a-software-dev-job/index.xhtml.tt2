@@ -107,11 +107,6 @@ Worst Job Offer Ever”.
 
 [% END %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS harry_potter_nav_block  %]
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["harry_potter", "foss", ] %]
 
 [% END %]

@@ -41,3 +41,17 @@
 </div>
 
 [% END %]
+
+[% BLOCK render_compact_nav_blocks %]
+
+[% WRAPPER nav_blocks %]
+
+[% FOREACH navid IN names %]
+
+[% print_nav_block ('name' => navid) %]
+
+[% END %]
+
+[% END %]
+
+[% END %]

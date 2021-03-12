@@ -15,24 +15,11 @@ use lib './lib';
 use NavDataRender                ();
 use Shlomif::Homepage::NavBlocks ();
 
-our $latemp_filename;
-
-sub _fn
-{
-    my $fn = shift;
-
-    $latemp_filename = $fn;
-
-    return "/$fn";
-}
-
 my $main_obj = Shlomif::Homepage::NavBlocks->new();
 
 use XML::LibXML ();
 
 my $parser = XML::LibXML->new();
-
-$parser->load_ext_dtd(1);
 
 my $xpc = XML::LibXML::XPathContext->new();
 $xpc->registerNs( 'x', q{http://www.w3.org/1999/xhtml} );

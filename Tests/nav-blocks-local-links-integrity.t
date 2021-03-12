@@ -4,20 +4,15 @@ use strict;
 use warnings;
 use 5.014;
 
-use utf8;
-
 use Test::More tests => 8;
-use Test::Differences (qw(eq_or_diff));
+use XML::LibXML ();
 
-use lib './Tests/lib';
 use lib './lib';
 
 use NavDataRender                ();
 use Shlomif::Homepage::NavBlocks ();
 
 my $main_obj = Shlomif::Homepage::NavBlocks->new();
-
-use XML::LibXML ();
 
 my $parser = XML::LibXML->new();
 

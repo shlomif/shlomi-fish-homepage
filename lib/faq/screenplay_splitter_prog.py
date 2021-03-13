@@ -122,6 +122,34 @@ def generate_terminator_liberation(**args):
     )
 
 
+def generic_generate_from_db5(
+        OUT_DN, base_path, output_dirname,
+        path_to_all_in_one, path_to_images="",
+        path_to_input="ongoing-text.html",):
+    full_out_dirname = OUT_DN + (output_dirname or '')
+    TOP_LEVEL_CLASS = 'article'
+    XHTML_NS = XHTML_NAMESPACE
+    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+    ns = {
+        "xhtml": XHTML_NS,
+        "xml": XML_NS,
+    }
+
+    splitter = XhtmlSplitter(
+        input_fn=(OUT_DN + "/" + path_to_input),
+        output_dirname=full_out_dirname,
+        section_format=SCREENPLAY_SECTION_FORMAT,
+        container_elem_xpath=(
+            "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
+        ),
+        ns=ns,
+        base_path=base_path,
+        path_to_all_in_one=path_to_all_in_one,
+        path_to_images=path_to_images,
+    )
+    splitter.process()
+
+
 def main():
     generate_summerschool_at_nsa(
         base_path=None,
@@ -150,6 +178,20 @@ def main():
         path_to_all_in_one="../Summer-Glau-and-Chuck-Norris.html",
         path_to_input="Summer-Glau-and-Chuck-Norris.html",
         path_to_images="../",
+    )
+
+
+def sample_docbook5_call__disabled():
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy" +
+        "/philosophy/putting-all-cards-on-the-table-2013/",
+        base_path=("../" * 3),
+        output_dirname="temp2del/",
+        path_to_all_in_one="./DocBook5" +
+        "/putting-all-cards-on-the-table-2013.raw.html",
+        path_to_input="./DocBook5" +
+        "/putting-all-cards-on-the-table-2013.raw.html",
+        path_to_images="./",
     )
 
 

@@ -5,7 +5,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET FOSS = my_acronym( "key" => "FOSS", ) %]
+[% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET MOTAS = my_acronym( "key" => "MOTAS", ) %]
+[% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = my_acronym( "key" => "RPF", ) %]
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
@@ -1536,7 +1539,7 @@ The cast of <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">Buf
 <li>
 <p>
 The cast of <a href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek Deep Space Nine</a> along with <a href="https://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a> and some modernised Biblical characters and some
-contemporary celebrities of the [% my_acronym("key"=>"FOSS") %] world.
+contemporary celebrities of the [% FOSS %] world.
 </p>
 </li>
 

@@ -11,15 +11,13 @@
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = my_acronym( "key" => "RPF", ) %]
 
+<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 300px; max-width: 90%; background-color: black; padding: 20px;" alt="Movie Star Wars" />
+
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
 [% toc_div() %]
 
 [% WRAPPER h2_section id = "context" title = "The Context For This Essay"  %]
-
-<p>
-<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" class="rfloaty" style="max-height: 200px; max-width: 20%; float: right; background-color: black; padding: 20px;" alt="Movie Star Wars" />
-</p>
 
 <ul>
 

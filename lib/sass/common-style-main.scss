@@ -988,9 +988,11 @@ h3 {
     pre {
         overflow: auto;
     }
-    &.my_rpf {
-        .page_toc * {
-            overflow: hidden;
+    @include small-screen {
+        &.my_rpf {
+            .page_toc * {
+                overflow: hidden;
+            }
         }
     }
 }

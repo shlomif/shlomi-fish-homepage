@@ -1125,6 +1125,26 @@ legal system, etc.  workers are evil), just possibly misguided.
 [% WRAPPER h4_section id = "starved_of_employees" title = "Businesses Starved of Competent Employees" %]
 
 <p>
+<a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a>
+and I have
+<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/esr-deprecate-windows.md">a hypothesis</a> that
+Microsoft wishes to deprecate the original Microsoft Windows Internals. That
+is because
+optimising, refactoring, or enhancing them has been made more and more
+errorprone due to the possibly justified policy to <a href="https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/">not break legacy 3rd-party applications</a>
+(including many old ones or ones with no source available).
+Programmers and other software developers who wish to work on it, whether
+young, old, experienced, or inexperienced, are thus frustrated at
+the process' lack of flexibility that they become unhappy, frustrated and
+complain. Given they can easily find many other openings as software
+developers or other high paying jobs, and increasingly wish to enjoy their work
+(being <a href="#geek_def">geeks or "amateurs"</a>), the team is starved
+of competent, and enthusiastic workers. Even if Microsoft still sells
+Windows copies, they are starved of employees. (<b>Note:</b> Microsoft
+has many other products and services, many of them are [% FOSS %].)
+</p>
+
+<p>
 Lawyers have been demonised, but I think most of the lawyers employed
 by the offenses in the <a
 href="https://en.wikipedia.org/wiki/Smartphone_patent_wars">Smartphone patent
@@ -1134,7 +1154,26 @@ the
 <a href="https://en.wikipedia.org/wiki/William_Jennens">"Jennens vs. Jennens"
 court case</a>
 which gave many lawyers more work to do and made them
-a little richer, but made them more miserable.
+a little richer, but made them more miserable:
+
+<blockquote>
+
+<p>
+William Jennens (possibly Jennings) (1701–1798)… was a reclusive financier who
+lived at Acton Place in the village of Acton, Suffolk, England. He was
+described as the "richest commoner in England" when he died unmarried and
+intestate with a fortune estimated at £2 million,[1][2][dead link] which became
+the subject of legal wrangles (Jennens vs Jennens) in the Court of Chancery for
+well over a century until the entire estate had been swallowed by lawyers'
+fees.
+</p>
+
+</blockquote>
+
+<p>
+There is a reason that most lawsuits are settled out of court: the
+reputation, angst, and happiness loss involved in them are too
+paramount.
 </p>
 
 <p>
@@ -1158,7 +1197,7 @@ youtube-dl's GitHub repository</a>
 was done by a techsavvy lawyer employee of the RIAA, who had the legal
 endorsement to file it on behalf of the RIAA as a whole,
 and hoped to save future work this way.
-This is given the RIAA <a href="https://boingboing.net/2004/11/06/save-canadas-interne.html">foolishly sends takedown notices</a>
+This is given the [% RIAA %] <a href="https://boingboing.net/2004/11/06/save-canadas-interne.html">foolishly sends takedown notices</a>
 to many publicly accessible web sites that host media files downloaded
 using it and similar tools ( <a href="https://www.shlomifish.org/Files/files/">Piracy,
 motherfucker! Do you speak it? Arrrrrr!!</a> ), and they
@@ -1166,16 +1205,27 @@ are kept being protested and challenged.
 </p>
 
 <p>
-He or she may
-have been scolded by their executives, but do note
-<a href="https://memory-alpha.fandom.com/wiki/The_Nagus_(episode)">Quark's
-positive reaction to Rom (= his brother and employee) attempting to murder him</a> in a
-Star Trek DS9 episode.
-I think the real solution is to completely stop sending these takedown notices
-and <a
+He or she may have been scolded by their executives, but do note <a
+href="https://memory-alpha.fandom.com/wiki/The_Nagus_(episode)">Quark's
+positive reaction to Rom (= his brother and employee) attempting to murder
+him</a> in a Star Trek DS9 episode.  I think the real solution is to completely
+stop sending these takedown notices and <a
 href="https://www.shlomifish.org/philosophy/case-for-file-swapping/">accept
-them as a necessary "evil"</a> (and possibly sponsor better user interfaces for
+piracy as a necessary "evil"</a> (and possibly sponsor better user interfaces for
 file sharing sites and practice less censorship).
+</p>
+
+<p>
+There is an ongoing transition to <a href="#hacking_and_amateur__vs__conformism_and_professional">the geeks and hackers' culture</a>,
+which no one can or wants to stop ( see <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/"><i>Summmerschool at the NSA</i></a> )
+and a trend towards openness, freedom, and sharing
+of cultural / code / scientific / tangible
+works ( e.g: <a href="https://www.youtube.com/watch?v=-qTIGg3I5y8">Sesame Street: "Share it Maybe"</a>,
+or <a href="https://www.youtube.com/watch?v=uCeMZccDMA0">with comments</a> ).
+Thus, the film industry is not only starving itself of competent screenwriters and
+individual screenplays, but of <a href="#beautiful_people_are_geeks">attractive and competent actors</a>,
+both male and female, including
+those that haven't appeared in any major roles.
 </p>
 
 [% END %]
@@ -1183,7 +1233,7 @@ file sharing sites and practice less censorship).
 [% WRAPPER h4_section id = "better_now_by_choice" title = "Organisations being better - by choice" %]
 
 <p>
-One reason the RIAA member companies embraced YouTube and other media sharing
+One reason the [% RIAA %] member companies embraced YouTube and other media sharing
 sites as distribution channels for their songs, was that there were enough
 independent singers who provided (sometimes not too inferior and often
 superior) covers of the songs and didn't care too much about getting direct ad
@@ -1313,7 +1363,8 @@ or Aristotlian Logic:
 
 <li>
 <p>
-"Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> [before its change of licence] open source? Yes, and no.";
+"Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> [before its change
+of licence] open source? Yes, and no.";
 </p>
 </li>
 
@@ -1339,6 +1390,23 @@ format".  Or the redditesque "no self-promotion" (which was not enforced by
 Slashdot before reddit was conceived, and still isn't enforced by Slashdot nor
 by many subreddits).
 </p>
+
+<blockquote cite="https://www.joelonsoftware.com/2008/03/17/martian-headsets/">
+
+<p>
+If you’ve ever visited the ultra-orthodox Jewish communities of Jerusalem, all
+of whom agree in complete and utter adherence to every iota of Jewish law, you
+will discover that despite general agreement on what constitutes kosher food,
+that you will not find a rabbi from one ultra-orthodox community who is willing
+to eat at the home of a rabbi from a different ultra-orthodox community. And
+the web designers are discovering what the Jews of Mea Shearim have known for
+decades: just because you all agree to follow one book doesn’t ensure
+compatibility, because the laws are so complex and complicated and convoluted
+that it’s almost impossible to understand them all well enough to avoid traps
+and landmines, and you’re safer just asking for the fruit plate.
+</p>
+
+</blockquote>
 
 [% END %]
 

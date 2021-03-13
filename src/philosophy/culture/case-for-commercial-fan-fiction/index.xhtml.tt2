@@ -20,8 +20,8 @@
 [% WRAPPER h2_section id = "summary" title = "Summary"  %]
 
 <p>
-This essay attributes the perceived problems of "Hollywood"/MPAA/the-film-industry,
-namely:
+This essay attributes the perceived problems of
+"Hollywood"/MPAA/the-film-industry, namely:
 </p>
 
 <ul>
@@ -71,6 +71,21 @@ as well as <a href="#what_is_hacking">hackers</a> (= resourceful, rule benders,
 
 <li>
 <p>
+The recent cultural trend toward openness, freedom, sharing and
+<a href="https://en.wikipedia.org/wiki/Remix_(book)">remixing</a> / <a
+href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">standing
+on the shoulders of giants</a>
+(e.g: [% FOSS %], <a href="https://en.wikipedia.org/wiki/Free_content">open/free content</a>,
+<a href="https://en.wikipedia.org/wiki/Web_2.0">"web 2.0"</a>,
+<a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>)
+</p>
+
+<iframe src="https://www.youtube.com/embed/-qTIGg3I5y8" allowfullscreen="allowfullscreen"></iframe>
+
+</li>
+
+<li>
+<p>
 The film industry's requirement of accepting screenplays only in its draconian,
 finicky (and boring) format
 </p>
@@ -78,7 +93,8 @@ finicky (and boring) format
 
 <li>
 <p>
-Its franchise territorialism (which hinders commercial <a href="https://en.wikipedia.org/wiki/Crossover_(fiction)">crossovers</a>).
+Its franchise territorialism (which hinders commercial <a
+href="https://en.wikipedia.org/wiki/Crossover_(fiction)">crossovers</a>).
 </p>
 </li>
 
@@ -102,10 +118,10 @@ commercial films.
 
 <p>
 It proposes a way forward, implementable by more than one party, that may
-hopefully make the film industry flourish just like the music industry (including
-"playing-for-fun" musicians), and the software industry. Here is the link to
-see
-<a href="#the-plan"><b>the current plan and recommendations</b></a> .
+hopefully make the film industry flourish just like the music industry
+(including "playing-for-fun" musicians), and the software industry. Here is the
+link to see <a href="#the-plan"><b>the current plan and recommendations</b></a>
+.
 </p>
 
 [% END %]
@@ -1445,7 +1461,10 @@ I think either Arnold Schwarzenegger or Emma Watson can afford to license the
 franchises which I used in my <a href="https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html">"Terminator: Liberation"</a>
 screenplay
 starring them.
-Moreover, they have my blessing to change the screenplay as they see fit.
+Moreover, they have my (legal and spiritual) blessing to change the screenplay as they see fit.
+</p>
+
+<p id="suing_actors">
 Even if they do not license a franchise, then a
 (for example) "Walt Disney Corp. vs. Emma Watson",
 or perhaps "Walt Disney Corp. vs. Emma Watson Productions",
@@ -1475,7 +1494,7 @@ Pilot episode, noted that "it was crazier than <a href="https://en.wikipedia.org
 
 <hr />
 
-<p>
+<p id="freeing_franchises">
 I can further suggest the owners of major [and minor] franchises to put
 them under <a href="https://en.wikipedia.org/wiki/Permissive_software_license">permissive
 licences</a>, requesting that a donation be made in case there is profit.
@@ -1750,12 +1769,17 @@ or humanity as a whole, so we should not rest on our laurels.
 Anyway I recommend:
 </p>
 
+[% BLOCK ref %]
+<a href="[% href %]">Reference</a>
+[% END %]
+
 <ol>
 
 <li>
 <p>
-Copyright owners to put their franchises under permissive licenses (possibly
-one by one).
+[% INCLUDE ref href="#freeing_franchises" %]
+Copyright owners to relicense their franchises under permissive licenses
+(possibly unliterally).
 </p>
 
 <ul>
@@ -1773,8 +1797,8 @@ They can request to donate parts of the profits of derivative works to them.
 <li>
 <p>
 Politicians to amend the financial bylaws to allow any legal entity to transfer
-any amount of money to any other legal entity (possibly with some
-digital <a href="https://en.wikipedia.org/wiki/Ledger">ledger</a>).
+any amount of money to any other legal entity (possibly with some digital <a
+href="https://en.wikipedia.org/wiki/Ledger">ledger</a>).
 </p>
 
 <ul>
@@ -1811,6 +1835,7 @@ confident anyway: <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?i
 
 <li>
 <p>
+[% INCLUDE ref href="#hollywood_screenplay_format" %]
 Screenplay readers to accept screenplays in XHTML5/HTML5 formats (
 with an open source, portable, and easy-to-install, <a href="https://github.com/caramelomartins/awesome-linters">linter</a>), and
 some pragmatism towards formatting mistakes.
@@ -1818,6 +1843,7 @@ some pragmatism towards formatting mistakes.
 </li>
 
 <li>
+[% INCLUDE ref href="#suing_actors" %]
 <p>
 Big name actors and actresses to set up production companies carrying
 their names.
@@ -1853,6 +1879,15 @@ against infringing copies.
 </p>
 </li>
 
+<li>
+<p>
+Similarly most forms of
+<a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a>
+provide <a href="https://en.wikipedia.org/wiki/Fig_leaf">fig leaf protection</a>
+at best and often obstacles for legitimate uses, and are best
+avoided.
+</p>
+</li>
 </ol>
 </li>
 
@@ -1882,8 +1917,7 @@ himself, won, and collected the bet money.
 <ul>
 
 <li>
-<p>
-</p>
+<p class="small"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></p>
 </li>
 
 </ul>

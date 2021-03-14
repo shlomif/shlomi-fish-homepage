@@ -61,8 +61,15 @@ class MyTests(unittest.TestCase):
         self.assertEqual(len(links), 1)
 
     def test_main(self):
-        input_fn = './dest/post-incs/t2/humour/image-macros/index.xhtml'
+        input_fn = ('./dest/post-incs/t2/humour/image-macros/' +
+                    ('indiv-nodes/' if False else '') + 'index.xhtml')
         root = html.parse(input_fn)
+        articles = root.xpath(".//article")
+        for art in articles:
+            link = art.xpath("./header/a[./text() = 'Node Link']")
+            self.assertEqual(len(link), 1)
+            href = link[0].get("href")
+            self.assertTrue(href.startswith("indiv-nodes/"))
         imgs = root.xpath(".//article/img")
         self.assertTrue(len(imgs) > 5)
         for img in imgs:

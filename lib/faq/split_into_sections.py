@@ -19,6 +19,26 @@ from lxml.html import XHTML_NAMESPACE
 
 
 XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
+XHTML_ARTICLE_TAG = '{' + XHTML_NAMESPACE + '}article'
+
+
+class MyXmlNoResultsFoundError(Exception):
+    """docstring for MyXmlNoResultsFoundError"""
+    def __init__(self, arg):
+        super(MyXmlNoResultsFoundError, self).__init__(arg)
+
+
+def _xpath(ns, node, query):
+    return node.xpath(query, namespaces=ns)
+
+
+def _first(ns, node, query):
+    mylist = _xpath(ns, node, query)
+    if not len(mylist):
+        raise MyXmlNoResultsFoundError(
+            "node={} , query={}".format(node, query)
+        )
+    return mylist[0]
 
 
 class XhtmlSplitter:
@@ -26,6 +46,7 @@ class XhtmlSplitter:
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
             ns,
+            xhtml_article_tag=XHTML_ARTICLE_TAG,
             xhtml_section_tag=XHTML_SECTION_TAG, base_path=None,
             path_to_all_in_one="./",
             path_to_images="",
@@ -35,62 +56,69 @@ class XhtmlSplitter:
         self.output_dirname = output_dirname
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
+        self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
+        self.section_tags = set([
+            self.xhtml_article_tag, self.xhtml_section_tag, ])
 
-        self.root = etree.parse(input_fn)
+        # self.root = etree.parse(input_fn)
+        self.initial_xml_string = open(input_fn, 'rb').read()
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
+
+    def _calc_root(self):
+        self.root = etree.XML(self.initial_xml_string)
+        self.main_title = _first(
+            self.ns,
+            self.root, './xhtml:head/xhtml:title/text()'
+        )
+        self.main_title_esc = html.escape(self.main_title)
+        self.container_elem = _first(
+            self.ns,
+            self.root, self.container_elem_xpath
+        )
+
+    def _write_master_xml_file(self):
+        tree_s = etree.tostring(self.root)
+        should = False
+        with open(self.input_fn, 'rb') as ifh:
+            curr = ifh.read()
+            should = curr != tree_s
+        if should:
+            with open(self.input_fn, 'wb') as ofh:
+                ofh.write(tree_s)
 
     def process(self):
         SECTION_FORMAT = self.section_format
         output_dirname = self.output_dirname
         os.makedirs(output_dirname, exist_ok=True)
 
-        def xpath(node, query):
-            return node.xpath(query, namespaces=self.ns)
-
-        class MyXmlNoResultsFoundError(Exception):
-            """docstring for MyXmlNoResultsFoundError"""
-            def __init__(self, arg):
-                super(MyXmlNoResultsFoundError, self).__init__(arg)
-
-        def first(node, query):
-            mylist = xpath(node, query)
-            if not len(mylist):
-                raise MyXmlNoResultsFoundError(
-                    "node={} , query={}".format(node, query)
-                )
-            return mylist[0]
-
         def calc_id_and_header_esc(header_tag):
-            h_tag = first(header_tag, "./*[@id]")
-            id_ = first(h_tag, "./@id")
-            header_text = first(h_tag, "./text()")
+            h_tag = _first(self.ns, header_tag, "./*[@id]")
+            id_ = _first(self.ns, h_tag, "./@id")
+            header_text = _first(self.ns, h_tag, "./text()")
             header_esc = html.escape(header_text)
             return id_, header_esc
 
-        main_title = first(
-            self.root, './xhtml:head/xhtml:title/text()'
-        )
-        main_title_esc = html.escape(main_title)
-        container_elem = first(
-            self.root, self.container_elem_xpath
-        )
-        if len(self.path_to_images):
-            for img_elem in xpath(container_elem, ".//xhtml:img"):
-                img_elem.set("src", self.path_to_images + img_elem.get("src"))
+        self._calc_root()
 
         def _list_sections():
             """docstring for _list_sections"""
-            return xpath(container_elem, ".//xhtml:article | .//xhtml:section")
-        for list_elem in _list_sections():
-            header_tag = first(list_elem, "./xhtml:header")
+            return _xpath(
+                self.ns,
+                self.container_elem,
+                ".//xhtml:article | .//xhtml:section")
+
+        def _add_prefix(prefix, suffix, list_elem):
+            """docstring for _add_prefix"""
+            header_tag = _first(self.ns, list_elem, "./xhtml:header")
             try:
-                a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+                a_tag = _first(
+                    self.ns, header_tag, "./xhtml:a[@class='indiv_node']")
             except MyXmlNoResultsFoundError:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
-                a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
+                a_tag_href_val = (prefix + id_ + suffix)
                 a_tag = etree.XML(
                     (
                         "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
@@ -99,37 +127,52 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
+        if len(self.path_to_images):
+            for img_elem in _xpath(self.ns,
+                                   self.container_elem, ".//xhtml:img"):
+                img_elem.set("src", self.path_to_images + img_elem.get("src"))
+
         for list_elem in _list_sections():
+            _add_prefix(
+                prefix=(self.output_dirname),
+                suffix=".xhtml",
+                list_elem=list_elem)
+        self._write_master_xml_file()
+
+        self._calc_root()
+        for list_elem in _list_sections():
+            _add_prefix(
+                prefix=(self.path_to_all_in_one + "#"),
+                suffix="",
+                list_elem=list_elem)
             parents = []
             p_iter = list_elem.getparent()
-            # print(etree.tostring(p_iter))
-            # print(p_iter.tag)
-            while p_iter.tag == self.xhtml_section_tag:
-                res = xpath(p_iter, "./xhtml:header[*/@id]")
+            while p_iter.tag in self.section_tags:
+                res = _xpath(self.ns, p_iter, "./xhtml:header[*/@id]")
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])
                 rec = {'id': id_, 'header_esc': header_esc, }
                 parents.append(rec)
                 p_iter = p_iter.getparent()
-            for a_el in xpath(list_elem, "./descendant::xhtml:a"):
+            for a_el in _xpath(self.ns, list_elem, "./descendant::xhtml:a"):
                 href = a_el.get('href')
                 if href is None:
                     continue
                 if href.startswith('#'):
                     a_el.set("href", self.path_to_all_in_one + href)
-            header_tag = first(list_elem, "./xhtml:header")
+            header_tag = _first(self.ns, list_elem, "./xhtml:header")
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
-            a_tag = first(header_tag, "./xhtml:a[@class='indiv_node']")
+            a_tag = _first(
+                self.ns, header_tag, "./xhtml:a[@class='indiv_node']"
+            )
             a_tag.set("class", "back_to_faq")
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
-            # print(a_tag_href_val)
             a_tag.set("href", a_tag_href_val)
-            # print([id_, header_text])
             formats = {
                 'base_path': self.base_path,
                 'body': etree.tostring(list_elem).decode('utf-8'),
-                'main_title': main_title_esc,
+                'main_title': self.main_title_esc,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(
                     [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)
@@ -137,4 +180,3 @@ class XhtmlSplitter:
             }
             with open("{}/{}.xhtml".format(output_dirname, id_), "wt") as f:
                 f.write(SECTION_FORMAT.format(**formats))
-            # print(etree.tostring(id_))

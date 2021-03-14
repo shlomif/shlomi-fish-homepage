@@ -126,7 +126,7 @@ def generate_from_image_macros_page(
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="index.xhtml",):
-    full_out_dirname = OUT_DN + (output_dirname or '')
+    # full_out_dirname = OUT_DN + (output_dirname or '')
     # TOP_LEVEL_CLASS = 'article'
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
@@ -137,7 +137,7 @@ def generate_from_image_macros_page(
 
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
-        output_dirname=full_out_dirname,
+        output_dirname=output_dirname,
         section_format=IMAGE_MACRO_SECTION_FORMAT,
         container_elem_xpath=(
             "//xhtml:div[./xhtml:article]"
@@ -157,7 +157,7 @@ def gen_image_macros_call():
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
-        path_to_images="../../../images",
+        # path_to_images="../../../images/",
     )
 
 

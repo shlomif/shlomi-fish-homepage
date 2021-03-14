@@ -129,11 +129,6 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
-        if len(self.path_to_images):
-            for img_elem in _xpath(self.ns,
-                                   self.container_elem, ".//xhtml:img"):
-                img_elem.set("src", self.path_to_images + img_elem.get("src"))
-
         for list_elem in _list_sections():
             _add_prefix(
                 prefix=(self.relative_output_dirname),
@@ -142,6 +137,12 @@ class XhtmlSplitter:
         self._write_master_xml_file()
 
         self._calc_root()
+
+        if len(self.path_to_images):
+            for img_elem in _xpath(self.ns,
+                                   self.container_elem, ".//xhtml:img"):
+                img_elem.set("src", self.path_to_images + img_elem.get("src"))
+
         for list_elem in _list_sections():
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),

@@ -67,6 +67,16 @@ class MyTests(unittest.TestCase):
         fragment_fn = fragments_dir + "GNU_slash_Linux.xhtml"
         import os
         self.assertTrue(os.stat(fragment_fn).st_size > 200)
+        root = html.parse(fragment_fn)
+        imgs = root.xpath(".//article/img")
+        for img in imgs:
+            src = img.get("src")
+            self.assertTrue(src)
+            print(src)
+            m = re.match(
+                "^(?:\\.\\./){3}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
+            self.assertTrue(m)
+
         root = html.parse(input_fn)
         articles = root.xpath(".//article")
         for art in articles:
@@ -79,8 +89,9 @@ class MyTests(unittest.TestCase):
         for img in imgs:
             src = img.get("src")
             self.assertTrue(src)
+            print(src)
             m = re.match(
-                "^\\.\\./\\.\\./(humour/images/[A-Za-z0-9_.\\-]+)$", src)
+                "^(?:\\.\\./){2}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)
             path = m.group(1)
             self.assertTrue(re.match(".*\\.webp$", path))

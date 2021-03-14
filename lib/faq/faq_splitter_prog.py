@@ -160,6 +160,8 @@ def gen_image_macros_call():
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
         # path_to_images="../../../images/",
+        path_to_images="../",
+        # path_to_images="",
     )
 
 

@@ -61,8 +61,12 @@ class MyTests(unittest.TestCase):
         self.assertEqual(len(links), 1)
 
     def test_main(self):
-        input_fn = ('./dest/post-incs/t2/humour/image-macros/' +
-                    ('indiv-nodes/' if False else '') + 'index.xhtml')
+        base_dir_path = './dest/post-incs/t2/humour/image-macros/'
+        input_fn = (base_dir_path + 'index.xhtml')
+        fragments_dir = base_dir_path + "indiv-nodes/"
+        fragment_fn = fragments_dir + "GNU_slash_Linux.xhtml"
+        import os
+        self.assertTrue(os.stat(fragment_fn).st_size > 200)
         root = html.parse(input_fn)
         articles = root.xpath(".//article")
         for art in articles:

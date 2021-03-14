@@ -50,10 +50,12 @@ class XhtmlSplitter:
             xhtml_section_tag=XHTML_SECTION_TAG, base_path=None,
             path_to_all_in_one="./",
             path_to_images="",
+            relative_output_dirname="",
             ):
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
+        self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
         self.xhtml_article_tag = xhtml_article_tag
@@ -134,7 +136,7 @@ class XhtmlSplitter:
 
         for list_elem in _list_sections():
             _add_prefix(
-                prefix=(self.output_dirname),
+                prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
                 list_elem=list_elem)
         self._write_master_xml_file()

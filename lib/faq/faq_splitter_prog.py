@@ -123,7 +123,7 @@ Policy</a></li>
 
 
 def generate_from_image_macros_page(
-        OUT_DN, base_path, output_dirname,
+        OUT_DN, base_path, relative_output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="index.xhtml",):
     # full_out_dirname = OUT_DN + (output_dirname or '')
@@ -135,9 +135,11 @@ def generate_from_image_macros_page(
         "xml": XML_NS,
     }
 
+    output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=output_dirname,
+        relative_output_dirname=relative_output_dirname,
         section_format=IMAGE_MACRO_SECTION_FORMAT,
         container_elem_xpath=(
             "//xhtml:div[./xhtml:article]"
@@ -154,7 +156,7 @@ def gen_image_macros_call():
     generate_from_image_macros_page(
         OUT_DN="./dest/post-incs/t2/humour/image-macros/",
         base_path=("../" * 3),
-        output_dirname="indiv-nodes/",
+        relative_output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
         # path_to_images="../../../images/",

@@ -229,7 +229,7 @@ def sample_image_macros_call():
         OUT_DN="./dest/post-incs/t2/humour/image-macros/",
         base_path=("../" * 3),
         output_dirname="temp2del/",
-        path_to_all_in_one="./index.xhtml",
+        path_to_all_in_one="../",
         path_to_input="./index.xhtml",
         path_to_images="../../../images",
     )

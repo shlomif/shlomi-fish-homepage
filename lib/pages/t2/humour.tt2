@@ -3054,10 +3054,10 @@ On #perl6, we joked that it is so speedy due to <a href="https://mlp.fandom.com/
 
 [% INCLUDE cast_american_as_a_britishwoman %]
 
-[% WRAPPER github_captioned_image_joke id = "set_up_email_service"  header = "“One does not simply set up an E-mail service.”"  repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service"  src = base_path _ "humour/images/one-does-not-simply-set-up-an-email-service.svg.webp"  alt = "“One does not simply set up an E-mail service.”" %]
+[% WRAPPER github_captioned_image_joke id = "set_up_email_service" header = "“One does not simply set up an E-mail service.”" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service" src = base_path _ "humour/images/one-does-not-simply-set-up-an-email-service.svg.webp" alt = "“One does not simply set up an E-mail service.”" %]
 
 
-[% WRAPPER quote  %]
+[% WRAPPER quote %]
 <p>
 “One does not simply set up an E-mail service.”
 </p>
@@ -3119,23 +3119,44 @@ Web resources (e.g.: <a href="https://en.wikipedia.org/wiki/YouTuber">YouTubers<
 </p>
 
 <p>
-Many philosophers were joking and didn't take their philosophies
-seriously. They were often
-<a href="[% base_path %]humour/fortunes/paul-graham.html">amateur</a> (=
-artists or workers who enjoy their work, regardless of how much or how
-little they were paid; a.k.a: "geeks")
-and polymaths, who accepted
-different opinions,
-or people who built, parodied, and expanded upon their work.
+Many philosophers were joking and didn't take their philosophies seriously.
+They were often <a href="[% base_path
+%]humour/fortunes/paul-graham.html">amateur</a> (= artists or workers who enjoy
+their work, regardless of how much or how little they were paid; a.k.a:
+"geeks") and polymaths, who accepted different opinions, or people who built,
+parodied, and expanded upon their work.
 </p>
 
 <p>
-I suspect that despite what Jaynes describes in <a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">his book</a>,
-most of the good nev'im and story tellers of ancient times
-were only <a href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a>
-(= mildly manic) at worse, or possibly manic, who satirised
-fanatical or cynical zealots, often spoke in prose or drama, and
-were in effect "stand-up comedians".
+I suspect that despite what Jaynes describes in <a
+href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">his book</a>,
+most of the good nev'im and story tellers of ancient times were only <a
+href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a> (= mildly manic)
+at worse, or possibly manic, who satirised fanatical or cynical zealots, often
+spoke in prose, drama or freeform verse, and were in effect "stand-up
+comedians".
+</p>
+
+[%- END -%]
+
+[% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
+
+
+[% WRAPPER quote %]
+<p>
+One does not simply say “no” to an Alpha Female.
+</p>
+[%- END -%]
+
+<p>
+This purposely alludes to sex, but is about something else.
+In the Bible <a href="https://en.wikipedia.org/wiki/Rahab">Rahab</a>
+is being visited by Canaanite soldiers who ask her if she hides
+the Israelite spies, and they leave after she testifies that it isn't
+the case. Even today, <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">alpha females</a>
+are held with enough admiration and respect to assume they know
+what they are doing. That is because, among humans, sex appeal
+<a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">corresponds to competence</a>.
 </p>
 
 [%- END -%]

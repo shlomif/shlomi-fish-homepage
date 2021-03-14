@@ -83,7 +83,7 @@ class XhtmlSplitter:
 
         def _list_sections():
             """docstring for _list_sections"""
-            return xpath(container_elem, ".//xhtml:section")
+            return xpath(container_elem, ".//xhtml:article | .//xhtml:section")
         for list_elem in _list_sections():
             header_tag = first(list_elem, "./xhtml:header")
             try:

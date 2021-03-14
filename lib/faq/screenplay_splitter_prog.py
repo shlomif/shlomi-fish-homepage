@@ -150,6 +150,34 @@ def generic_generate_from_db5(
     splitter.process()
 
 
+def generate_from_image_macros_page(
+        OUT_DN, base_path, output_dirname,
+        path_to_all_in_one, path_to_images="",
+        path_to_input="index.xhtml",):
+    full_out_dirname = OUT_DN + (output_dirname or '')
+    # TOP_LEVEL_CLASS = 'article'
+    XHTML_NS = XHTML_NAMESPACE
+    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+    ns = {
+        "xhtml": XHTML_NS,
+        "xml": XML_NS,
+    }
+
+    splitter = XhtmlSplitter(
+        input_fn=(OUT_DN + "/" + path_to_input),
+        output_dirname=full_out_dirname,
+        section_format=SCREENPLAY_SECTION_FORMAT,
+        container_elem_xpath=(
+            "//xhtml:div[./xhtml:article]"
+        ),
+        ns=ns,
+        base_path=base_path,
+        path_to_all_in_one=path_to_all_in_one,
+        path_to_images=path_to_images,
+    )
+    splitter.process()
+
+
 def main():
     generate_summerschool_at_nsa(
         base_path=None,
@@ -179,6 +207,7 @@ def main():
         path_to_input="Summer-Glau-and-Chuck-Norris.html",
         path_to_images="../",
     )
+    sample_image_macros_call()
 
 
 def sample_docbook5_call__disabled():
@@ -192,6 +221,17 @@ def sample_docbook5_call__disabled():
         path_to_input="./DocBook5" +
         "/putting-all-cards-on-the-table-2013.raw.html",
         path_to_images="./",
+    )
+
+
+def sample_image_macros_call():
+    generate_from_image_macros_page(
+        OUT_DN="./dest/post-incs/t2/humour/image-macros/",
+        base_path=("../" * 3),
+        output_dirname="temp2del/",
+        path_to_all_in_one="./index.xhtml",
+        path_to_input="./index.xhtml",
+        path_to_images="../../../images",
     )
 
 

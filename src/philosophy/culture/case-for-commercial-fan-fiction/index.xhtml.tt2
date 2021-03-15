@@ -32,7 +32,7 @@ are currently broken</a>.
 
 [% END %]
 
-<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 300px; max-width: 90%; background-color: black; padding: 20px;" alt="Movie Star Wars" />
+<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 500px; max-width: 90%; background-color: black; padding: 20px; display: block; margin-left: auto; margin-right: auto; text-align: center;" alt="Movie Star Wars" />
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
@@ -1863,16 +1863,25 @@ Anyway I suggest:
 </p>
 
 [% BLOCK ref %]
-<a href="[% href %]">Reference</a>
+( <a href="[% href %]">Reference</a> ).
 [% END %]
 
 <ol>
 
 <li>
 <p>
-[% INCLUDE ref href="#freeing_franchises" %]
+Screenplay readers to accept screenplays in easier to write and get right formats
+with open source, portable, and easy-to-install, <a href="https://github.com/caramelomartins/awesome-linters">linters</a>), and
+some pragmatism towards formatting mistakes.
+[% INCLUDE ref href="#hollywood_screenplay_format" %]
+</p>
+</li>
+
+<li>
+<p>
 Copyright owners to relicense their franchises under permissive licenses
-(possibly unliterally).
+(possibly unilaterally).
+[% INCLUDE ref href="#freeing_franchises" %]
 </p>
 
 <ul>
@@ -1891,8 +1900,8 @@ They can request to donate parts of the profits of derivative works to them.
 "In time, Warner Bros will mismanage the
 <a href="https://en.wikipedia.org/wiki/Wizarding_World">#HarryPotter
 franchise</a> so badly that <a href="https://twitter.com/jk_rowling">@jk_rowling</a> will be able to buy it back at a bargain
-price... There's another road ahead for either
-Warner Bros or Disney than copyright cannibalism.
+price… There's another road ahead for
+Warner Bros, Disney, and other copyright holders than copyright cannibalism.
 </p>
 
 </blockquote>
@@ -1910,7 +1919,7 @@ Warner Bros or Disney than copyright cannibalism.
 <li>
 <p>
 Politicians to amend the financial bylaws to allow any legal entity to transfer
-any amount of money to any other legal entity (possibly with some digital
+any amount of money to any other legal entity (possibly while keeping some digital
 transaction <a
 href="https://en.wikipedia.org/wiki/Ledger">ledger</a>).
 </p>
@@ -1932,14 +1941,15 @@ is welcome given gold has industrial utility.
 <p>
 There is industrial utility for gold, silver, etc. that it is a shame to waste
 them on jewellery, given people can buy cheap accessories made out of abundant
-materials if that's their thing [and they look better]. It's all about being
+materials if that's their thing (and they look better). It's all about being
 confident anyway: <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-beauty-products-as-the-stone-soup-effect">Beauty Products as the Stone Soup / Placebo Effect</a>
 </p>
 
 </blockquote>
 
 <p>
-<a href="https://www.youtube.com/watch?v=PvMdN_i-D9I&amp;t=167s">Nice wedding rings!</a>
+<a href="https://www.youtube.com/watch?v=PvMdN_i-D9I&amp;t=167s">Nice wedding
+rings!</a>
 </p>
 
 </li>
@@ -1950,18 +1960,9 @@ confident anyway: <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?i
 
 <li>
 <p>
-[% INCLUDE ref href="#hollywood_screenplay_format" %]
-Screenplay readers to accept screenplays in easier to write and get right formats
-with open source, portable, and easy-to-install, <a href="https://github.com/caramelomartins/awesome-linters">linters</a>), and
-some pragmatism towards formatting mistakes.
-</p>
-</li>
-
-<li>
-[% INCLUDE ref href="#suing_actors" %]
-<p>
 Big name actors and actresses to set up production companies carrying
 their names.
+[% INCLUDE ref href="#suing_actors" %]
 </p>
 </li>
 
@@ -1999,10 +2000,25 @@ against infringing copies.
 Similarly most forms of
 <a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a>
 provide <a href="https://en.wikipedia.org/wiki/Fig_leaf">fig leaf protection</a>
-at best and often obstacles for legitimate uses, and are best
+at best and are often obstacles for legitimate uses, and are best
 avoided.
 </p>
 </li>
+
+<li>
+<blockquote>
+
+<p>
+I Feel Much Better Now That I've Given Up Hope
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://www.amazon.com/Feel-Much-Better-That-Given/dp/0880071478">Brilliant, Ashleigh: 9780880071475: Amazon.com: Books</a> )
+</p>
+</li>
+
 </ol>
 </li>
 
@@ -2033,6 +2049,12 @@ himself, won, and collected the bet money.
 
 <li>
 <p class="small"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/philosophy/philosophy/#summaries_of_my_philosophy">Partial Summaries of my Personal Philosophy ("Rindolfism")</a>
+</p>
 </li>
 
 </ul>

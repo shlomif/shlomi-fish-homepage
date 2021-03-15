@@ -410,11 +410,11 @@ EOF
 </header>
 
 <p>
-This ambitious series of screenplays breaks a long time taboo of writing
+This ambitious series of screenplays breaks a long time taboo against writing
 <i>Star Wars</i> and <i>Star Trek</i> crossovers, but also aims to make
 the case for commercial yet free/open (<a href="https://creativecommons.org/">Creative Commons</a>
 / etc.) fan fiction / crossovers / real person fiction
-(see e.g: <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/take2/">Our
+(see e.g: <a href="$(ROOT)/philosophy/culture/case-for-commercial-fan-fiction/">Our
 mission statement</a>)
 and screenplays written in easier to write formats than the
 draconian, finicky, and boring, Hollywood-blessed format.
@@ -498,8 +498,10 @@ even in his emails.
 <p>
 Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
-and other franchises, that everyone can see, hear, photograph, and record,
-but which many people believe are some kind of trick.
+and other franchises, who appear at the seemingly least
+desirable times, and whom
+everyone can see, hear, photograph, and record,
+but whom many people believe are some kind of trick.
 </p>
 </li>
 

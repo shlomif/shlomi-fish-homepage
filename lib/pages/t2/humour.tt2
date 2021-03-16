@@ -21,7 +21,7 @@
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 [%- END -%]
 
-<div class="main_text side_toc">
+<div class="[% IF captioned_images_only %]faq [% END %]main_text side_toc">
 
 [% BLOCK cartoon_img %]
 <img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon"/>

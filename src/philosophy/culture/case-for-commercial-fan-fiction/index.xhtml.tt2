@@ -610,6 +610,10 @@ my writing:
 <blockquote>
 
 <p>
+
+</p>
+
+<p>
 <b>Why do you write mostly fan-fiction and crossovers?</b>
 </p>
 
@@ -792,7 +796,7 @@ As a hacker/action hero I'd rather <a href="[% base_path
 %]humour/stories/">my screenplays</a> never be filmed by Hollywood studios,
 than waste time preparing one in its blessed format. Furthermore,
 since it cannot be automatically <a href="https://github.com/caramelomartins/awesome-linters">linted or validated</a>, one often needs to revise or
-amend it, which is even more time-consuming. Rinse and repeat.
+amend the drafts, which is even more time-consuming. Rinse and repeat.
 </p>
 
 <p>
@@ -894,7 +898,7 @@ was easier for them, and because the crowds liked it better. They were hacking.
 One actor who built his career around hacky, guideline-bending, acting is <a
 href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold
 Schwarzenegger</a>, who was hired for reportedly
-as much as 50 million dollar per film,
+as much as 50 million dollars per film,
 and whom audiences in the 1980s and 1990s loved, and many people held in
 contempt back then. Aside from his physique, Schwarzenegger was notorious for
 his thick Austrian accent, <a href="https://github.com/lhartikk/ArnoldC">his
@@ -1344,18 +1348,20 @@ happily married (to my father).
 
 <p>
 As a result, I don't think that Hollywood producers, executives, lawyers,
-directors, and other workers (or alternatively USA/etc. government, parliament,
-legal system, etc. workers are evil), just possibly misguided.
+directors, and other workers are evil
+(or alternatively USA/etc. government, parliament,
+legal system, etc. workers), just possibly misguided.
 </p>
 
-[% WRAPPER h3_section id = "starved_of_employees" title = "Businesses Starved of Competent Employees" %]
+[% WRAPPER h3_section id = "starved_of_employees" title = "Businesses Being Starved of Competent Employees" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a> and
 I have <a
 href="https://github.com/shlomif/shlomif-tech-diary/blob/master/esr-deprecate-windows.md">a
 hypothesis</a> that Microsoft wishes to deprecate the original Microsoft
-Windows Internals. That is because optimising, refactoring, or enhancing them
+Windows Internals, and gradually replace them with an open source
+reimplementation based on Linux. That is because optimising, refactoring, or enhancing them
 has been made more and more errorprone due to the (possibly justified) policy
 to <a
 href="https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/">not
@@ -1367,9 +1373,11 @@ unhappy, aggravated and complain. Given they can easily find many other
 openings as software developers or other high paying jobs, and increasingly
 wish to enjoy their work (being <a href="#geek_def">geeks or "amateurs"</a>),
 the team is starved of competent, and enthusiastic workers. Even if Microsoft
-still sells Windows copies, they are starved of employees. (<b>Note:</b>
-Microsoft has many other products and services, many of them are [% FOSS %], so
-I do not wish to completely demonise them.)
+still sells Windows copies, they are being starved of employees. (<b>Note:</b>
+Microsoft has many other products and services, many of them are [% FOSS %]
+and/or provide important services or infrastructure for open source, open
+content, or otherwise geeky and hackery projects, so I do not wish to
+completely demonise them.)
 </p>
 
 <p>
@@ -1414,6 +1422,8 @@ href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what
 goes around come around"</a>). Even if a firm doing destructive tasks is not
 starved of customers, they will be starved of employees.
 </p>
+
+<hr />
 
 <p id="takedown_notices">
 I suspect the recent <a href="https://en.wikipedia.org/wiki/Youtube-dl">RIAA
@@ -1501,7 +1511,7 @@ href="https://www.shlomifish.org/meta/FAQ/religious_belief.xhtml">agnostic</a>).
 </p>
 
 <p>
-Similarly, the RIAA is not going back to the pre-YouTube / pre-"piracy" days,
+Similarly, the [% RIAA %] is not going back to the pre-YouTube / pre-"piracy" days,
 because even if it could, it would rather not. We need to be more creative and
 resourceful when reforming the fiction/drama/Hollywood/film-industry/MPAA
 world, but I think we should try, and we likely can succeed.
@@ -1643,6 +1653,10 @@ and landmines, and you’re safer just asking for the fruit plate.
 </blockquote>
 
 <p>
+( <a href="https://www.joelonsoftware.com/2008/03/17/martian-headsets/">Joel Spolsky</a> )
+</p>
+
+<p>
 The 1991 comedy film <a href="https://en.wikipedia.org/wiki/Nothing_but_Trouble_%281991_film%29"><i>Nothing but Trouble</i></a>,
 which I enjoyed at the time (despite its vulgarity) demonstrated
 that most judges (or juries for that matter) followed reason, gut feeling,
@@ -1733,7 +1747,7 @@ Pilot episode, noted that "it was crazier than <a href="https://en.wikipedia.org
 <hr />
 
 <p id="freeing_franchises">
-I can further suggest the owners of major [and minor] franchises to put them
+I can further suggest the owners of major (and minor) franchises to put them
 under <a
 href="https://en.wikipedia.org/wiki/Permissive_software_license">permissive
 copyright licences</a>, requesting that a donation be made in case there is
@@ -1835,10 +1849,10 @@ as they try to vanquish an idolised version of the NSA.
 </ol>
 
 <p>
-While I am playing the domineering  <b>The</b> Messiah" for now (because frankly
+While I am playing the domineering "<b>The</b> Messiah" for now (because frankly
 you guys suck!), there are likely others who reached the same conclusions.
 And my secret plan for <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen Padmé [Amidala] Tales</a>
-is to create an even greater Hacker Monarch/Messiah, who despite being
+is to beget an even greater Hacker Monarch/Messiah, who despite being
 fictional, is an awe-inspiring Renaissance Woman.
 But she too will likely not be the final word about Messiah-hood just like
 <a href="http://www.earthstar.co.uk/deep1.htm">Deep Thought 1</a>
@@ -1985,7 +1999,13 @@ be "quite a weird lot". Mix in the fact that she is tormented by "The Guide"
 ( Wil Wheaton ) who despite seeming to possess powerful magic,
 and mustering weapons, claims she is a far better slayer than he is,
 and some Israeli secular/Tanakh Judaism background, and a
-take-it-in-your-face <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse"> milliards years-old "Elders of Zion"/Illuminati-like conspiracy</a>.
+take-it-in-your-face <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">milliards years-old "Elders of Zion"/Illuminati-like conspiracy</a> titled
+"The Neo-Tech Conspiracy for Establishing the Semitic Culture",
+and a modernised take on <i>The Three Musketeers</i>, with
+Milady Kate Canterson being the love interest of d'Artagnan,
+who are both sent by <a href="https://en.wikipedia.org/wiki/Cardinal_Richelieu">Cardinal Richelieu</a>,
+King Louis XIII, and the King of England, to "slay"
+<a href="https://en.wikipedia.org/wiki/George_Villiers,_1st_Duke_of_Buckingham">Lord Buckingham</a>
 </p>
 
 <p>
@@ -2009,13 +2029,13 @@ will not be the final challenge faced by the film industry and fiction industry
 or humanity as a whole, so we should not rest on our laurels.
 </p>
 
-<p>
-Anyway I suggest:
-</p>
-
 [% BLOCK ref %]
 ( <a href="[% href %]">Reference</a> ).
 [% END %]
+
+<p>
+Anyway I suggest:
+</p>
 
 <ol>
 
@@ -2138,7 +2158,7 @@ piracy</a>. In addition, legitimate low-res (720p/etc.) versions of the
 complete films and TV show episodes should be provided free of charge on
 YouTube/etc. This is for hyperlinking, making <a
 href="https://en.wikipedia.org/wiki/Image_macro">image macros</a>, video
-macros, meme scenes, meme story arcs.
+macros, meme scenes, meme story arcs, or even watching completely.
 </p>
 
 <blockquote>
@@ -2174,7 +2194,7 @@ href="#takedown_notices">takedown notices</a> against infringing copies
 Similarly most forms of
 <a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a>
 provide <a href="https://en.wikipedia.org/wiki/Fig_leaf">fig leaf protection</a>
-at best and are often obstacles for legitimate uses, and are best
+at best and are often obstacles for legitimate uses, and so are best
 avoided.
 </p>
 </li>

@@ -7,7 +7,7 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, actors, actresses, professionalism, Emma Watson, copyrights, open, free, Arnold Schwarzenegger, fanfic, fan fiction, hacking, action, hero, comedy, parody, Paul Graham, commercial, IRC, geeky, RPF, real person fiction, geek, geeky, hackers, philosophy, philosophers, david, goliath" -%]
 
 [%- WRAPPER wrap_html -%]
-
+[% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET FOSS = my_acronym( "key" => "FOSS", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET MOTAS = my_acronym( "key" => "MOTAS", ) %]
@@ -273,15 +273,17 @@ not accepting their fate, being resourceful, thinking outside the box, etc.).
 As I show, this implies most new quality screenplays and
 stories are and are going to increasingly not only be fanfiction but also
 crossovers, parodies, and/or real person fiction - usually including recent
-"proprietary" franchises and recent (and often living) real people.
+<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a>
+(= restricted, [% ARR %], "copyrighted")
+franchises and recent (and often living) real people.
 And they aren't being written in the finicky, hard to get right,
 and boring Hollywood-blessed format.
 </p>
 
 <p>
-Moreover, attractive actors (including female and/or inexperienced and obscure
-ones) are also geeky hackers and will not play in any badly written film (and
-usually dystopian, ending badly, pessimistic, politically correct and
+Moreover, attractive actors (including female actresses and/or inexperienced
+and obscure ones) are also geeky hackers and will not play in any badly written
+film (and usually dystopian, ending badly, pessimistic, politically correct and
 dishonest) even for all the money in the world.
 </p>
 
@@ -299,6 +301,8 @@ to "professionalism" (= doing something only for money, regardless of how little
 for money!…We're doing it for a shitload of money"</a>;
 not enjoying your work).
 </p>
+
+<iframe src="https://www.youtube.com/embed/bJrqpR_7VSo" allowfullscreen="allowfullscreen"></iframe>
 
 [% WRAPPER h3_section id = "what_is_hacking" title = "What is “hacking”?"  %]
 
@@ -358,7 +362,7 @@ Not accepting your "fate".
 and its
 <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/hacking-heroism.xhtml">"Indiana Jones' Gun vs. Swordmaster" scene</a> modernisation (which is funny now,
 and the Goliath story was likely equally funny in ancient times).
-Moreover, <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>
+Moreover, the real-life <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>
 became "the child who slew two mighty superpowers", at the age of 10,
 by using international mail, and other 20th century technology (and not
 killing anyone).
@@ -369,6 +373,7 @@ killing anyone).
 <p>
 "Craziness" / <a href="https://en.wikipedia.org/wiki/Nevi%27im">Nev'ua</a> (
 which was mistranslated as "prophecy").  I suspect "lenabé" in Biblical times
+originally
 meant to "act crazy", to "drive crazy", "to be crazy", "to seek [divine]
 guidance", including in today's casual senses.  It involved: "funny"ness,
 exaggeration, song-and-poetry, emulation, contradicting one self, <a
@@ -389,8 +394,13 @@ href="https://www.shlomifish.org/humour/image-macros/#pbride_philosophers">some
 contempt</a>, they were highly coveted by [% MOTAS %].
 </p>
 
+[# A Standup Philosopher
+#]
+
+<iframe src="https://www.youtube.com/embed/tl4VD8uvgec" allowfullscreen="allowfullscreen"></iframe>
+
 <p>
-<a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">Jaynes</a>
+<a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">Julian Jaynes</a>
 hypothesised that the Nevi'im were <a
 href="https://en.wikipedia.org/wiki/Schizophrenia">Schizophrenic</a> and
 hallucinated voices of "gods" (= <a
@@ -421,7 +431,7 @@ is nothing new under the sun."</a>
 
 <p>
 Just for the record, while I am enamoured with many YouTube cover
-artists, and whose songs comprise of most of what I listen to,
+artists, and whose songs comprise of most of the music I listen to,
 my sister who is 5 years my junior and who has a Ph.D. in Computer
 Science (so she is intelligent and techsavvy), has a prejudice
 against them.
@@ -507,7 +517,7 @@ kinds of fools"</a>. Let's
 just kill prejudice once and for all! When I described Kate in
 <a href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Seline Mandrake - The Slayer</i></a>
 as a socialite, I was attacked.
-But what's wrong with being one?
+But what's wrong with being a socialite?
 </p>
 
 </blockquote>
@@ -597,7 +607,7 @@ from here. I havent made any music lately, what with the goat farming and all.
 While not all digital works are explicitly licensed under licences that allow
 building derivatives, or remixes/crossovers/mashups, in practice, most
 talented independent remixers will have no qualms about reusing other
-people's <a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a> work.
+people's [% ARR %] work.
 </p>
 
 <p>
@@ -680,7 +690,6 @@ a lot.
 
 [% END %]
 
-
 [% WRAPPER h2_section id = "learning_more_from_inet_forums" title = "Learning From Internet Forums"  %]
 
 <blockquote cite="https://twitter.com/shlomif/status/1357768753241608193">
@@ -750,7 +759,7 @@ For more information, see:
 
 <li>
 <p>
-<a href="https://www.youtube.com/watch?v=gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My comment
+<a href="https://www.youtube.com/embed/gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My comment
 about "The Student Bride" film</a> which I find satirises and criticises
 contemporary American college student life by showing how ridiculous
 the film
@@ -771,7 +780,7 @@ English dramatically improved <b>after</b> I graduated from high school</a>
 <p>
 <a
 href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-tddpirate-and-pepy-about-top-vs-bottom-posting">"Top
-vs. Bottom Posting"</a> - <q>Pepy: ah, when they ask me how the hell I managed
+vs. Bottom Posting"</a> - <q>ah, when they ask me how the hell I managed
 to write so good band propositions, I’ll tell em,the secret is to chat with
 geeks about top vs bottom posting</q>
 </p>
@@ -781,7 +790,7 @@ geeks about top vs bottom posting</q>
 
 [% END %]
 
-[% WRAPPER h2_section id = "hollywood_screenplay_format" title = "Ditching Hollywood's Screenplay Format"  %]
+[% WRAPPER h2_section id = "hollywood_screenplay_format" title = "Ditching Hollywood's Screenplay Format" %]
 
 <p>
 Hollywood's blessed screenplay format is boring, finicky, and requires a lot of
@@ -795,7 +804,9 @@ it.
 As a hacker/action hero I'd rather <a href="[% base_path
 %]humour/stories/">my screenplays</a> never be filmed by Hollywood studios,
 than waste time preparing one in its blessed format. Furthermore,
-since it cannot be automatically <a href="https://github.com/caramelomartins/awesome-linters">linted or validated</a>, one often needs to revise or
+since it cannot be automatically <a
+href="https://github.com/caramelomartins/awesome-linters">linted or
+validated</a>, one often needs to revise or
 amend the drafts, which is even more time-consuming. Rinse and repeat.
 </p>
 
@@ -819,23 +830,24 @@ not surprising.
 
 <p>
 Note that even if a screenwriter has prepared such Hollywood-blessed
-screenplays in the
-past, he or she likely met enough fans, critics (either positive
-or <a href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">negative</a> or mixed), collaborators, etc. (see
-<a href="https://www.shlomifish.org/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html">the "Earth Angel" concept</a>
-or the <a href="https://explainxkcd.com/519/">subtext of xkcd: "11th grade"</a>)
-that they will adopt a similar mindset. Even though I am 1977-born (so approaching
-44 in 2021) there are some time consuming things I have done in the
-past which I will not repeat such as <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
-Electrical Engineering in the Technion</a>,
-or working for distrustful or <a
+screenplays in the past, he or she likely met enough fans, critics (either
+positive or <a
+href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">negative</a>
+or mixed), collaborators, etc. (see <a
+href="https://www.shlomifish.org/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html">the
+"Earth Angel" concept</a> or the <a href="https://explainxkcd.com/519/">subtext
+of xkcd: "11th grade"</a>) that they will adopt a similar mindset. Even though
+I am 1977-born (so approaching 44 in 2021) there are some time consuming things
+I have done in the past which I will not repeat such as <a
+href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
+Electrical Engineering in the Technion</a>, or working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
-bosses (though I may now try to reform them). This is while I can spend
-many hours contributing text, code, and markup, voluntarily and
-without expecting immediate payment, to the public.
-And this includes my contributions
-to <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora Linux</a>,
-which is backed by a profitable and well financed for-profit company.
+bosses (though I may now try to reform them). This is while I can spend many
+hours contributing text, code, and markup, voluntarily and without expecting
+immediate payment, to the public.  And this includes my contributions to <a
+href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora
+Linux</a>, which is backed by a profitable and well financed for-profit
+company.
 </p>
 
 <hr />
@@ -890,6 +902,12 @@ I) now admit that Spaceballs is better. The actors there acted badly because it
 was easier for them, and because the crowds liked it better. They were hacking.
 </p>
 
+<iframe src="https://www.youtube.com/embed/fMCDcKxMVGU" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+(Don't mess with a Druish Princess - "He shot my hair!")
+</p>
+
 [% END %]
 
 [% WRAPPER h3_section id = "bad_acting_arnie" title = "Arnold Schwarzenegger"  %]
@@ -906,6 +924,8 @@ one-liners</a>, and his funny and fun and unnatural acting. People who
 went to see his films were usually entertained because
 <a href="https://en.wikipedia.org/wiki/Worse_is_better">"worse is better"</a>.
 </p>
+
+<iframe src="https://www.youtube.com/embed/9Eont_yEGZs" allowfullscreen="allowfullscreen"></iframe>
 
 [% END %]
 
@@ -996,7 +1016,7 @@ and action films in non-essential cases is self-defeating.
 <p>
 Like it or not - most of the popular art in the 20th century was commercial
 and/or <a href="https://en.wikipedia.org/wiki/Proprietary_software">proprietary</a>
-( <a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a> )
+( [% ARR %] )
 . While screenwriters often derive inspiration from older,
 and now public domain sources, the good ones also reuse characters or texts
 from real life (<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>) or from newer franchises (out of being
@@ -1036,8 +1056,8 @@ Emphasis (bold text) is mine.
 )
 
 <p>
-People as young as children have been doing crossovers and [% RPF%] of franchises,
-individual books/stories/films/songs/etc., <a
+People as young as children have been doing crossovers and [% RPF%] of
+franchises, individual books/stories/films/songs/etc., <a
 href="https://www.shlomifish.org/meta/FAQ/idolisation_of_people_and_things.xhtml">characters</a>
 (both fictional and real), and more serious idea systems (see <a
 href="https://www.shlomifish.org/me/rindolfism/">a partial list</a>).  E.g:
@@ -1114,9 +1134,9 @@ model Candice Swanepoel, who was mentioned there because she topped
 </p>
 
 <p>
-While it also sports a parody of <a
+While it also sports a parody of the fable <a
 href="https://en.wikipedia.org/wiki/The_miller%2C_his_son_and_the_donkey">"The
-miller, his son and the donkey" fable</a>, the donkey there is the <a
+miller, his son and the donkey"</a>, the donkey there is the <a
 href="https://shrek.fandom.com/wiki/Donkey">one from the Shrek franchise</a> as
 originally voiced by Eddie Murphy.
 </p>
@@ -1158,14 +1178,15 @@ person fiction.
 
 [% END %]
 
-[% WRAPPER h2_section id = "beautiful_people_are_geeks" title = "Attractive People are Geeky"  %]
+[% WRAPPER h2_section id = "beautiful_people_are_geeks" title = "Attractive People are Geeky" %]
 
 <p>
-As I noted <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#ftn.beauty_and_the_geek">elsewhere</a>
-increasingly most attractive guys and girls are geeky (= "amateur"; doing what they
-do because they enjoy it) as well as very <a
-href="#what_is_hacking">action
-heroic and hackery</a> (resourceful, bending the rules, defying their fate).
+As I noted <a
+href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#ftn.beauty_and_the_geek">elsewhere</a>
+increasingly most attractive guys and girls are geeky (= "amateur"; doing what
+they do because they enjoy it) as well as very <a
+href="#what_is_hacking">action heroic and hackery</a> (resourceful, bending the
+rules, defying their fate).
 </p>
 
 <p>
@@ -1188,13 +1209,14 @@ Watson being unhirable as an actress in Hollywood</a> started as a joke youtube
 comment I wrote, which materialised after the film <a
 href="https://en.wikipedia.org/wiki/Little_Women_(2019_film)">Little Women
 (2019)</a>.  Although loved by professional critics, geeky fans like me thought
-that the <a href="https://en.wikipedia.org/wiki/Little_Women_(1994_film)">1994 adaptation starring Winona Rider</a> was still pertinent today, and that Watson was
-underutilised.
+that the <a href="https://en.wikipedia.org/wiki/Little_Women_(1994_film)">1994
+adaptation starring Winona Rider</a> was still pertinent today, and that Watson
+was underutilised.
 </p>
 
 <p>
 She has not accepted a "major motion picture" role since, possibly because
-she'd rather play at parody plays, <a
+she'd rather play at local parody plays, <a
 href="https://en.wikipedia.org/wiki/Con_Man_(web_series)">frequent Conventions
 ("cons")</a>, play in indie films, get paid for modelling, be an activist,
 acquire new skills, or just relax, than get paid to star in a poorly written
@@ -1257,7 +1279,7 @@ pay (see <a
 href="https://www.shlomifish.org/humour/bits/Emma-Watson-applying-for-a-software-dev-job/">the
 Emma Watson as a software dev thought experiment</a>).  For example, <a
 href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, who is
-a software developer, action hero, geek, and <a
+a software developer, an action hero, a geek, and <a
 href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur
 philosopher and entertainer</a>, is believed to get paid 20 million USD/year.
 While he will gladly continue to comaintain the Linux kernel project for less,
@@ -1265,14 +1287,12 @@ it is commonly accepted that it is a reasonable salary.
 </p>
 
 <p>
-I also suspect the belief that make-up makes a woman look better is
-largely
-<a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-beauty-products-as-the-stone-soup-effect">a
-"Stone Soup" effect / placebo effect</a>
-catalyst
-for feeling confident, competent, and happy, and being honest and benevolent.
-This is given men, who have their share of frustrations with their looks,
-do not need makeup, and neither do underage girls.
+I also suspect the belief that make-up makes a woman look better is largely <a
+href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-beauty-products-as-the-stone-soup-effect">a
+"Stone Soup" effect / placebo effect</a> catalyst for feeling confident,
+competent, and happy, and being honest and benevolent.  This is given men, who
+have their share of frustrations with their looks, do not need makeup, and
+neither do underage girls.
 </p>
 
 <p>
@@ -1313,7 +1333,7 @@ I never met a monster I didn't like.
 </blockquote>
 
 <p>
-( <a href="https://www.youtube.com/watch?v=lQALLGsn-Fk">Vincent Price on <i>The
+( <a href="https://www.youtube.com/embed/lQALLGsn-Fk">Vincent Price on <i>The
 Muppet Show</i></a> )
 </p>
 
@@ -1361,9 +1381,9 @@ I have <a
 href="https://github.com/shlomif/shlomif-tech-diary/blob/master/esr-deprecate-windows.md">a
 hypothesis</a> that Microsoft wishes to deprecate the original Microsoft
 Windows Internals, and gradually replace them with an open source
-reimplementation based on Linux. That is because optimising, refactoring, or enhancing them
-has been made more and more errorprone due to the (possibly justified) policy
-to <a
+reimplementation based on Linux. That is because optimising, refactoring, or
+enhancing them has been made more and more errorprone due to the (possibly
+justified) policy to <a
 href="https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/">not
 break legacy 3rd-party applications</a> (including many old ones or ones with
 no source available).  Programmers and other software developers who wish to
@@ -1397,17 +1417,16 @@ richer, but made them more miserable:
 William Jennens (possibly Jennings) (1701–1798)… was a reclusive financier who
 lived at Acton Place in the village of Acton, Suffolk, England. He was
 described as the "richest commoner in England" when he died unmarried and
-intestate with a fortune estimated at £2 million,[1][2][dead link] which became
-the subject of legal wrangles (Jennens vs Jennens) in the Court of Chancery for
-well over a century until the entire estate had been swallowed by lawyers'
-fees.
+intestate with a fortune estimated at £2 million, which became the subject of
+legal wrangles (Jennens vs Jennens) in the Court of Chancery for well over a
+century until the entire estate had been swallowed by lawyers' fees.
 </p>
 
 </blockquote>
 
 <p>
 There is a reason that most lawsuits are settled out of court: the reputation,
-angst, and happiness loss involved in them are too paramount.
+angst, and happiness losses involved in them are too paramount.
 </p>
 
 <p>
@@ -1454,8 +1473,7 @@ There is an ongoing transition to <a href="#hacking_and_amateur__vs__conformism_
 which no one can stop ( see <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/"><i>Summmerschool at the NSA</i></a> )
 and a <a href="#open_free_share_steal">trend towards openness, freedom, and sharing</a>
 of cultural / code / scientific / tangible
-works ( e.g: <a href="https://www.youtube.com/watch?v=-qTIGg3I5y8">Sesame Street: "Share it Maybe"</a> (
-or <a href="https://www.youtube.com/watch?v=uCeMZccDMA0">with comments</a> ) ).
+works.
 Thus, the film industry is not only starving itself of competent screenwriters
 and individual screenplays, but of <a
 href="#beautiful_people_are_geeks">attractive and competent actors</a>, both
@@ -1480,13 +1498,14 @@ piracy — it’s obscurity.</q>.
 </p>
 
 <p>
-The [% RIAA %] member companies are happy now providing legal or financial services to signed
-artists and lately even actively promoting them and YouTuber singers (and the
-line between signed and independent artists has been getting more blurry).
+The [% RIAA %] member companies are happy now providing legal or financial
+services to signed artists and lately even actively promoting them and YouTuber
+singers (and the line between signed and independent artists has been getting
+more blurry).
 </p>
 
 <p>
-As an analogy, The Roman Catholic church used to burn at stake girls who
+As an analogy, The <a href="https://en.wikipedia.org/wiki/Catholic_Church">Roman Catholic</a> church used to burn at stake girls who
 admitted to having premarital sex even once. On the other hand, <a
 href="https://en.wikipedia.org/wiki/Madonna">Madonna</a>, who identifies as a
 Catholic, and boasted of having had premarital sex with dozens of willing men,
@@ -1511,10 +1530,11 @@ href="https://www.shlomifish.org/meta/FAQ/religious_belief.xhtml">agnostic</a>).
 </p>
 
 <p>
-Similarly, the [% RIAA %] is not going back to the pre-YouTube / pre-"piracy" days,
-because even if it could, it would rather not. We need to be more creative and
-resourceful when reforming the fiction/drama/Hollywood/film-industry/MPAA
-world, but I think we should try, and we likely can succeed.
+Similarly, the [% RIAA %] is not going back to the pre-YouTube / pre-"piracy"
+days, because even if it could, it would rather not. We need to be more
+creative and resourceful when reforming the
+fiction/drama/Hollywood/film-industry/MPAA world, but I think we should try,
+and we likely can succeed.
 </p>
 
 [% END %]
@@ -1549,7 +1569,7 @@ href="http://shlomifishswiki.branchable.com/Rules_are_Just_Guidelines/">guidelin
 <p>
 I met open-minded, enlightened, even self-critical, observant
 Jews, Christians, or Muslims (and a Sri-Lankan woman who took care of my
-grandmother during her later years <a href="https://www.shlomifish.org/meta/FAQ/thought_you_were_a_Perl_guy.xhtml">is both a Christian and a Buddhist</a>).
+grandmother during her later years identifies as <a href="https://www.shlomifish.org/meta/FAQ/thought_you_were_a_Perl_guy.xhtml">both a Christian and a Buddhist</a>).
 I also met close-minded and "professionally fanatic"
 <a href="https://xkcd.com/">xkcd</a> fans,
 or
@@ -1597,8 +1617,9 @@ was similarly half tongue-in-cheek.
 
 <p>
 Anyway, as humans we are capable of challenging certain dogmata or taboos
-in certain cases,
-including <a href="https://metacpan.org/pod/Acme::NewMath">Peano's axioms
+in certain cases.
+This includes:
+<a href="https://metacpan.org/pod/Acme::NewMath">Peano's axioms
 ("2 + 2 = 5!")</a>,
 or Aristotlian Logic:
 </p>
@@ -1610,14 +1631,14 @@ or Aristotlian Logic:
 "Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a>  open source? Yes, and no.";
 </p>
 <p>
-(That was written before its change of licence.)
+(That was written before its change of licensing.)
 </p>
 </li>
 
 <li>
 <p>
-I overheard one young local school girl say to her friend a few weeks ago: <q>I
-believe in God, and I don't believe in God.</q>
+<q>I believe in God, and I don't believe in God.</q>
+(I overheard one young local school girl say to her friend a few weeks ago.)
 </p>
 </li>
 </ul>
@@ -1662,8 +1683,8 @@ which I enjoyed at the time (despite its vulgarity) demonstrated
 that most judges (or juries for that matter) followed reason, gut feeling,
 prejudice, etc.
 rather than the letter of the bylaws, legal code, regulations,
-and <a href="https://en.wikipedia.org/wiki/Precedent">precedents</a>
-when formulating their judgements, given the complexity of the latter.
+and <a href="https://en.wikipedia.org/wiki/Precedent">legal precedents</a>
+when formulating their judgements, given the complexity and mass of the latter.
 </p>
 
 <p>
@@ -1684,7 +1705,7 @@ that were or seemed beneficial at the time that no longer are.
 The commercial fiction industry ( "Hollywood"/etc. ) is not a good oligopoly
 because they assume people will only enjoy fanfic from one franchise or at most
 two. This causes franchises to be territorialised even inside media
-conglomerates. OTOH, before the 19th-20th centuries, creators mashed together
+conglomerates. On the other hand, before the 19th-20th centuries, creators mashed together
 the franchises of previous generations, along with [% RPF %] and current trends
 and events.
 </p>
@@ -1759,6 +1780,8 @@ href="https://www.humblebundle.com/">Humble Bundle</a> or <a
 href="https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/">bandcamp</a>
 models.  Hacks!
 </p>
+
+<iframe src="https://www.youtube.com/embed/oNZove4OTtI" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
 They can do it either by agreement or individually.  As an analogy, I recall
@@ -1849,20 +1872,22 @@ as they try to vanquish an idolised version of the NSA.
 </ol>
 
 <p>
-While I am playing the domineering "<b>The</b> Messiah" for now (because frankly
-you guys suck!), there are likely others who reached the same conclusions.
-And my secret plan for <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen Padmé [Amidala] Tales</a>
-is to beget an even greater Hacker Monarch/Messiah, who despite being
-fictional, is an awe-inspiring Renaissance Woman.
-But she too will likely not be the final word about Messiah-hood just like
-<a href="http://www.earthstar.co.uk/deep1.htm">Deep Thought 1</a>
-is only the "second greatest computer in the Universe of Time and Space".
-Like <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">Moses, Socrates, Muhammad, Saladin, da Vinci,
-Newton, Richelieu, Dumas, Verne, The Beatles, The Muppets, etc,</a>
-were succeeded, so will Queen Padmé Amidala of the Naboo of the Selinaverse.
-And it seems likely that people once took Socrates, Plato, Aristotle,
-Saladin, Richelieu, or Dumas not as seriously as The Muppets, The Beatles,
-Buffy, or the Web 2.0 Bloggers, or xkcd.
+While I am playing the domineering "<b>The</b> Messiah" for now (because
+frankly you guys suck!), there are likely others who reached the same
+conclusions.  And my secret plan for <a
+href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen Padmé
+[Amidala] Tales</a> is to beget an even greater Hacker Monarch/Messiah, who
+despite being fictional, is an awe-inspiring Renaissance Woman.  But she too
+will likely not be the final word about Messiah-hood just like <a
+href="http://www.earthstar.co.uk/deep1.htm">Deep Thought 1</a> is only the
+"second greatest computer in the Universe of Time and Space".  Like <a
+href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">Moses,
+Socrates, Muhammad, Saladin, da Vinci, Newton, Richelieu, Dumas, Verne, The
+Beatles, The Muppets, etc,</a> were succeeded, so will Queen Padmé Amidala of
+the Naboo of the Selinaverse.  And it seems likely that people once took
+Socrates, Plato, Aristotle, Saladin, Richelieu, or Dumas not as seriously as
+some people took The Muppets, The Beatles, Buffy, or the Web 2.0 Bloggers, or
+xkcd.
 </p>
 
 [% END %]
@@ -1897,11 +1922,16 @@ king" or "messiah"</a> of the Web 2.0 / open content revolution.
 <p>
 And I care even more about flesh-and-blood people not dying physically and
 prematurely for whatever reason, or otherwise get physically injured, usually
-by their own mismanagement. I also want every individual and organisation
-in the world to improve and prosper ( <a href="https://en.wikipedia.org/wiki/Pygmalion_effect">Pygmalion effect</a> vs.
-<a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>;
-<a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-chuck-156"><q>Chuck Norris was challenged to fight the world, and accepted. He bet on himself, won, and collected the bet money.</q></a>;
-<a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-sglau-29"><q>Summer Glau can get more with a kind word alone than Al Capone could with a kind word and a gun.</q></a>. )
+by their own mismanagement. I also want every individual and organisation in
+the world to improve and prosper ( <a
+href="https://en.wikipedia.org/wiki/Pygmalion_effect">Pygmalion effect</a> vs.
+<a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>; <a
+href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-chuck-156"><q>Chuck
+Norris was challenged to fight the world, and accepted. He bet on himself, won,
+and collected the bet money.</q></a>; <a
+href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-sglau-29"><q>Summer
+Glau can get more with a kind word alone than Al Capone could with a kind word
+and a gun.</q></a>. )
 </p>
 
 [% IF 1 %]
@@ -1917,30 +1947,30 @@ impatience.
 
 <p>
 I am however saddened that I didn't prevent the premature death of <a
-href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina Grimmie</a> at age 22 in 2016,
-who was a singer, songwriter, and YouTube indie artist. I and others expected
-her
-to dominate the music world, or perhaps the whole world at large, for years to
-come (and become a <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">"hacker monarch"/Messiah</a> so to speak). She was
-killed by an obsessed fan, who shot her, and who committed suicide shortly
-after shooting her . I believe her death was also caused by her not doing
-things her way, which made her later work gradually deteriorate, her sex-appeal
-(which <a
+href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina Grimmie</a> at
+age 22 in 2016, who was a singer, songwriter, and YouTube indie artist. I and
+others expected her to dominate the music world, or perhaps the whole world at
+large, for years to come (and become a <a
+href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">"hacker
+monarch"/Messiah</a> so to speak). She was killed by an obsessed fan, who shot
+her, and who committed suicide shortly after shooting her . I believe her death
+was also caused by her not doing things her way, which made her later work
+gradually deteriorate, her sex-appeal (which <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/meaning-of-able-competent.xhtml#sexiness-as-competence">correlates
 with competence</a>) to decline, and she not remaining true to her YouTuber
 roots (e.g: of she doing collaborations with other artists, including the more
-obscure ones). She acted in one film before she died, but even
-<a href="https://www.youtube.com/watch?v=aH_6CQso2qQ">its trailer</a> was
-a complete turnoff to me.
+obscure ones). She acted in one film before she died, but even <a
+href="https://www.youtube.com/watch?v=aH_6CQso2qQ">its trailer</a> was a
+complete turnoff to me.
 </p>
 
 <hr />
 [% END %]
 
 <p>
-Therefore I decided that in my quests to advocate commercial fan-fiction, and get my
-screenplays produced, I will do things my way.  I shall remain living with my
-parents in <a
+Therefore I decided that in my quests to advocate commercial fan-fiction, and
+get my screenplays produced, I will do things my way.  I shall remain living
+with my parents in <a
 href="https://www.shlomifish.org/meta/FAQ/where_are_you_from.xhtml">their
 apartment</a> and will not venture far away from my neighbourhood (= <a
 href="https://en.wikipedia.org/wiki/Ramat_Aviv_Gimel">Ramat Aviv Gimel</a>, in
@@ -1958,7 +1988,7 @@ some others disapprove of. (Though I may add notes that I take it back.)
 </p>
 
 <p>
-I may have a lot of competition, but not only will I encourage them to try to
+I may have competition, but not only will I encourage them to try to
 outcompete me, but I will even try to help them.  I don't <a
 href="https://knowyourmeme.com/memes/wheatons-law">want to be a dick</a> and
 suggest that neither should you. I want to "win" and become rich and famous
@@ -2000,9 +2030,9 @@ be "quite a weird lot". Mix in the fact that she is tormented by "The Guide"
 and mustering weapons, claims she is a far better slayer than he is,
 and some Israeli secular/Tanakh Judaism background, and a
 take-it-in-your-face <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">milliards years-old "Elders of Zion"/Illuminati-like conspiracy</a> titled
-"The Neo-Tech Conspiracy for Establishing the Semitic Culture",
-and a modernised take on <i>The Three Musketeers</i>, with
-Milady Kate Canterson being the love interest of d'Artagnan,
+"The Neo-Tech Conspiracy for Establishing the Semitic Culture".
+It also sports modernised take on <i>The Three Musketeers</i>, with
+the French-English-French Milady Kate Canterson being the love interest of d'Artagnan,
 who are both sent by <a href="https://en.wikipedia.org/wiki/Cardinal_Richelieu">Cardinal Richelieu</a>,
 King Louis XIII, and the King of England, to "slay"
 <a href="https://en.wikipedia.org/wiki/George_Villiers,_1st_Duke_of_Buckingham">Lord Buckingham</a>
@@ -2019,14 +2049,15 @@ and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_
 
 <p>
 OK, ok <a href="https://www.youtube.com/watch?v=FFrag8ll85w">"Show Me the
-Money!"</a>.  Note that just like <a
+Money!"</a>.  Note that just like Asimov's <a
 href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">the
 Seldon Plan</a>, this plan is not set in stone and <a
 href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/ongoing-text.html">we'll
-likely have to improvise ("play it by ear"), or mutate it a bit</a>.  Moreover, they are just
-guidelines and suggestions, not rules and demands. Furthermore, it is likely this
-will not be the final challenge faced by the film industry and fiction industry
-or humanity as a whole, so we should not rest on our laurels.
+likely have to improvise ("play it by ear"), or mutate it a bit</a>.  Moreover,
+they are just guidelines and suggestions, not rules and demands. Furthermore,
+it is likely this will not be the final challenge faced by the film industry
+and fiction industry or humanity as a whole, so we should not rest on our
+laurels.
 </p>
 
 [% BLOCK ref %]
@@ -2046,7 +2077,7 @@ get right formats, which should
 have open source, portable, and easy-to-install, validators
 and <a href="https://github.com/caramelomartins/awesome-linters">linters</a>.
 There should also be
-some pragmatism towards formatting mistakes.
+some toleration of formatting mistakes.
 [% INCLUDE ref href="#hollywood_screenplay_format" %]
 </p>
 </li>
@@ -2071,11 +2102,11 @@ They can request to donate parts of the profits of derivative works to them.
 <blockquote cite="https://twitter.com/shlomif/status/1335316113887023105">
 
 <p>
-"In time, Warner Bros will mismanage the
-<a href="https://en.wikipedia.org/wiki/Wizarding_World">#HarryPotter
-franchise</a> so badly that <a href="https://twitter.com/jk_rowling">@jk_rowling</a> will be able to buy it back at a bargain
-price… There's another road ahead for
-Warner Bros, Disney, and other copyright holders than copyright cannibalism.
+In time, Warner Bros will mismanage the <a
+href="https://en.wikipedia.org/wiki/Wizarding_World">#HarryPotter franchise</a>
+so badly that <a href="https://twitter.com/jk_rowling">@jk_rowling</a> will be
+able to buy it back at a bargain price… There's another road ahead for Warner
+Bros, Disney, and other copyright holders than copyright cannibalism.
 </p>
 
 </blockquote>
@@ -2101,12 +2132,11 @@ digital transaction <a href="https://en.wikipedia.org/wiki/Ledger">ledger</a>).
 
 <li>
 <p>
-As opposed to some libertarian purists, I think money's evolution into
-<a href="https://en.wikipedia.org/wiki/Binary_number">digital integers</a>
-on mainframes and other computers and the abandonment of
-the
-<a href="https://en.wikipedia.org/wiki/Gold_standard">gold standard</a>
-is welcome due to gold having industrial utility.
+As opposed to some libertarian purists, I think money's evolution into <a
+href="https://en.wikipedia.org/wiki/Binary_number">digital integers</a> on
+mainframes and other computers and the abandonment of the <a
+href="https://en.wikipedia.org/wiki/Gold_standard">gold standard</a> is welcome
+due to gold having industrial utility.
 </p>
 
 <blockquote cite="https://twitter.com/shlomif/status/1347825822414073856">
@@ -2256,6 +2286,13 @@ Parodied "[Movie] Star Wars" logo taken from
 <li>
 <p>
 <a href="https://www.shlomifish.org/philosophy/philosophy/#summaries_of_my_philosophy">Partial Summaries of my Personal Philosophy ("Rindolfism")</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://shlomifishswiki.branchable.com/">My wiki</a> - contains
+thematic pages of quotes or essays.
 </p>
 </li>
 

@@ -924,6 +924,11 @@ div.abstract {
         float: left;
         margin: 1em;
     }
+    iframe {
+        height: 315px;
+        max-width: 90%;
+        width: 560px;
+    }
 }
 .terminator_liberation.abstract {
     @include fancy_blockquote;

@@ -8,11 +8,11 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 
 [%- WRAPPER wrap_html -%]
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
-[% SET FOSS = my_acronym( "key" => "FOSS", ) %]
+[% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
-[% SET MOTAS = my_acronym( "key" => "MOTAS", ) %]
+[% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
-[% SET RPF = my_acronym( "key" => "RPF", ) %]
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
 
 [% BLOCK links_and_illustrations %]
 
@@ -143,7 +143,7 @@ and worlds (and to an extent - texts).
 
 <li>
 <p>
-The recent antagonism against [% my_acronym( "key" => "RPF", ) %] due to an
+The recent antagonism against [% RPF %] due to an
 apparent "jinxing" of celebrities from being employable as actors in commercial
 films, and T. V. series.
 </p>
@@ -711,7 +711,7 @@ misquotation). via fortune-mod
 <p>
 I think before the Internet/social media were a thing, people did amateur
 philosophy / entertainment / education / art - with their peers, even if
-limited to sports / food / [% MOTAS %].
+limited to sports / food / [% MOTAS %]..
 </p>
 
 </blockquote>
@@ -1445,9 +1445,10 @@ starved of customers, they will be starved of employees.
 <hr />
 
 <p id="takedown_notices">
-I suspect the recent <a href="https://en.wikipedia.org/wiki/Youtube-dl">RIAA
-takedown request against youtube-dl's GitHub repository</a> was done by a
-techsavvy lawyer employee of the RIAA, who had the legal capability to file it
+I suspect the recent <a href="https://en.wikipedia.org/wiki/Youtube-dl">RIAA (=
+"Recording Industry Association of America") takedown request against
+youtube-dl's GitHub repository</a> was done by a
+techsavvy lawyer employee of the [% RIAA %], who had the legal capability to file it
 on behalf of the RIAA as a whole, and hoped to save future work this way.  This
 is given the [% RIAA %] <a
 href="https://boingboing.net/2004/11/06/save-canadas-interne.html">foolishly

@@ -14,6 +14,8 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
 
+[% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
+
 [% BLOCK links_and_illustrations %]
 
 <p>
@@ -1336,9 +1338,11 @@ I never met a monster I didn't like.
 </blockquote>
 
 <p>
-( <a href="https://www.youtube.com/embed/lQALLGsn-Fk">Vincent Price on <i>The
+( <a href="https://www.youtube.com/watch?v=lQALLGsn-Fk">Vincent Price on <i>The
 Muppet Show</i></a> )
 </p>
+
+<iframe src="https://www.youtube.com/embed/lQALLGsn-Fk" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
 Even though I tried to find truly malevolent people per <a
@@ -1373,7 +1377,7 @@ happily married (to my father).
 As a result, I don't think that Hollywood producers, executives, lawyers,
 directors, and other workers are evil
 (or alternatively USA/etc. government, parliament,
-legal system, etc. workers), just possibly misguided.
+legal system, etc. workers are) - just possibly misguided.
 </p>
 
 [% WRAPPER h3_section id = "starved_of_employees" title = "Businesses Being Starved of Competent Employees" %]
@@ -1396,14 +1400,18 @@ unhappy, aggravated and complain. Given they can easily find many other
 openings as software developers or other high paying jobs, and increasingly
 wish to enjoy their work (being <a href="#geek_def">geeks or "amateurs"</a>),
 the team is starved of competent, and enthusiastic workers. Even if Microsoft
-still sells Windows copies, they are being starved of employees. (<b>Note:</b>
-Microsoft has many other products and services, many of them are [% FOSS %]
-and/or provide important services or infrastructure for open source, open
-content, or otherwise geeky and hackery projects, so I do not wish to
-completely demonise them.)
+still sells Windows copies, they are being starved of employees.
 </p>
 
 <p>
+<b>Note:</b>
+Microsoft has many other products and services, many of them are [% FOSS %]
+and/or provide important services or infrastructure for open source, open
+content, or otherwise geeky and hackery projects, so I do not wish to
+completely demonise them. In fact, I make use of some of the Microsoft-owned <a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a> infrastructure for many projects of mine, including my home-site, and it seems the user experience of GitHub improved since the acquisition by Microsoft.
+</p>
+
+<p id="smartphone_wars">
 Lawyers have been demonised, but I think most of the lawyers employed by the
 offenses in the <a
 href="https://en.wikipedia.org/wiki/Smartphone_patent_wars">Smartphone patent
@@ -1439,9 +1447,7 @@ depression</a> when working on destructive tasks, and this includes lawyers and
 politicians and clergymen and socialites - even accountants. Someone told me of
 a documentary showing almost empty Silicon Valley office spaces of <a
 href="https://en.wikipedia.org/wiki/Patent_troll">patent trolls</a> as most of
-their workers quit in frustration (also see <a
-href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what
-goes around come around"</a>). Even if a firm doing destructive tasks is not
+their workers quit in frustration (also see [% karma %]). Even if a firm doing destructive tasks is not
 starved of customers, they will be starved of employees.
 </p>
 
@@ -1697,6 +1703,26 @@ constantly challenge the 'rules' / 'laws' that we abide by to defy our
 fate. I do not encourage people to murder innocent people, vandalise
 property, rape, or steal (and you <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">should try to "be excellent to each other"</a>) but there are many guidelines
 that were or seemed beneficial at the time that no longer are.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id = "money_cant_buy_you_love" title = "Money can't buy you love"  %]
+
+<iframe src="https://www.youtube.com/embed/srwxJUXPHvE" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+It was commonly accepted that money brings power, but even though
+<a href="https://en.wikipedia.org/wiki/Apple_Inc.">Apple Inc.</a>
+reportedly has north of 100 milliards USD ($100,000,000,000) in
+the bank, and Steve Jobs and his successors wanted at the time
+to <a href="#smartphone_wars">stop sales of non-iOS-based mobile devices</a>
+in the United States for "intellectual property" infringement,
+they were unable to. That is partly due to most competent (and ergo honest,
+<a href="#hacking_and_amateur__vs__conformism_and_professional">geeky and hackery</a>)
+lawyers refusing to litigate for them, and by most others getting bit
+by unhappiness ( <a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">clinical depression</a> ), alienation from their friends and family, or by [% karma %].
+Judges are forbidden to accept "bribes" by law
 </p>
 
 [% END %]

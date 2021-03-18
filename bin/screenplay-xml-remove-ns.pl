@@ -11,6 +11,16 @@ use autodie;
 if (m#^<html #ms)
 {
 s#\Q xmlns:sp="http://web-cpan.berlios.de/modules/XML-Grammar-Screenplay/screenplay-xml-0.2/"\E##;
-    my $d = $ENV{DIR};
-    $d and s/(<html )/$1dir="$d" /;
+
+    if ( my $d = $ENV{DIR} )
+    {
+        s/(<html )/$1dir="$d" /;
+    }
 }
+my $MOBILE_FRIENDLY_CSS_STYLE_TAG = <<'EOF';
+<style>
+img { max-width: 85%; }
+pre { overflow: hidden; }
+</style>
+EOF
+s#(</head>)#${MOBILE_FRIENDLY_CSS_STYLE_TAG}${1}#;

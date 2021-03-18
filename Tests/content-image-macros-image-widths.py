@@ -94,7 +94,8 @@ class MyTests(unittest.TestCase):
                 "^(?:\\.\\./){2}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)
             path = m.group(1)
-            self.assertTrue(re.match(".*\\.webp$", path))
+            if "interesting-hypothesis" not in path:
+                self.assertTrue(re.match(".*\\.webp$", path))
             self.assertEqual(
                 Image.open("./dest/post-incs/t2/" + path).size[0],
                 WIDTH,

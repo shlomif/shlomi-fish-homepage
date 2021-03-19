@@ -13,6 +13,7 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+[% SET RPFs = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction Works ( RPFs )</a>' %]
 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
 
@@ -37,7 +38,7 @@ are currently broken</a>.
 
 [% END %]
 
-<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 500px; max-width: 70%; background-color: black; padding: 20px; display: block; margin-left: auto; margin-right: auto; text-align: center;" alt="Movie Star Wars" />
+<img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 300px; max-width: 50%; background-color: black; padding: 20px; display: block; margin-left: auto; margin-right: auto; text-align: center;" alt="Movie Star Wars" />
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
@@ -284,9 +285,9 @@ and boring Hollywood-blessed format.
 
 <p>
 Moreover, attractive actors (including female actresses and/or inexperienced
-and obscure ones) are also geeky hackers and will not play in any badly written
-film (and usually dystopian, ending badly, pessimistic, politically correct and
-dishonest) even for all the money in the world.
+and obscure ones) are also geeky hackers. As a result, they will not play in
+any badly written film (and usually a dystopian, ending badly, pessimistic,
+politically correct and dishonest one) even for all the money in the world.
 </p>
 
 <p>
@@ -313,9 +314,9 @@ I also contrasted "conformism" (= playing by the rules of "society", what other
 people expect you to do, following <a
 href="https://en.wikipedia.org/wiki/Superior_orders">superior orders</a>, doing
 what you feel you are obliged to do, etc.) to "hacking" (a.k.a "action
-heroism"). Hacking may or may not be limited to <a
+heroism"). Hacking is not limited to <a
 href="https://en.wikipedia.org/wiki/Security_hacker">computer security
-exploitation</a>, or even limited to <a
+exploitation</a>, or even to <a
 href="https://en.wikipedia.org/wiki/Hacker_culture">creative software
 development</a>.
 </p>
@@ -430,6 +431,7 @@ href="https://en.wikipedia.org/wiki/Role-playing_game">Role-playing games</a>,
 Internet chat ( [% IRC %] / etc.), supermodels, reality TV show contestants,
 independent YouTube cover/etc. artists,
 bloggers, and <a href="https://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/#departing_pope_about_twitter">social media</a>.
+Like Qoheleth noted around 300 B.C.:
 <a href="https://en.wikipedia.org/wiki/Ecclesiastes">"There
 is nothing new under the sun."</a>
 </p>
@@ -487,10 +489,10 @@ shy, anti-social, unathletic, and often without "real-life" social life.
 My 2005 <a href="https://www.shlomifish.org/humour/human-hacking/conclusions/">"The Human Hacking Field Guide"</a> story
 presented male and female open source / open content / etc. geeks and hackers
 as competent, confident, sexually attractive, socially capable, assertive, as well as
-popular and coveted (as an antithesis to Paul Graham's <a href="http://www.paulgraham.com/nerds.html">"Why Nerds are Unpopular" essay</a>
+popular and coveted. It was written as an antithesis to Paul Graham's <a href="http://www.paulgraham.com/nerds.html">"Why Nerds are Unpopular" essay</a>
 and the <a
 href="https://www.shlomifish.org/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">Buffyesque false
-social dichotomy</a>). Some commentators claimed it was detrimental, because the
+social dichotomy</a>. Some commentators claimed it was detrimental, because the
 target demographic for "open source"/etc. geeks was the social outcasts,
 "uncool" kids.
 </p>
@@ -501,10 +503,11 @@ href="https://en.wikipedia.org/wiki/The_Big_Bang_Theory">The Big Bang
 Theory</a> aired during late 2007, it was an established observation that geeks
 and hackers were the Alphas.  Moreover, I believe that its primary "anti-Geek"
 character, <a href="https://bigbangtheory.fandom.com/wiki/Penny">Penny</a>,
-despite her attractive, "dumb blonde", image, and her ignorance and laymanship,
+despite her "hot dumb blonde girl" image, and her ignorance and laymanship,
 was a superb hacker and geek. This is because she constantly challenged and
 broke the hidden rules of the show's more stigmatic (and less attractive
-looking) geeks, and because she was passionate about many of her endeavours.
+looking) geeks, and because she was passionate and enthusiastic about many of
+her endeavours.
 And given <a
 href="https://github.com/shlomif/Captioned-Image-Badass-Schwarzenegger">"one
 needs to be a badass to play one on T.V."</a>, I'm pretty sure that is also the
@@ -620,11 +623,14 @@ people's [% ARR %] work.
 <p>
 In <a href="https://www.shlomifish.org/meta/FAQ/">my FAQ</a> I explain
 why I, as a geeky hacker king, who was influenced by the "open" / "remix"
-movement, find it necessary to do crossovers, [% RPF %]s and parodies in
+movement, find it necessary to do crossovers, [% RPFs %] and parodies in
 my writing:
 </p>
 
 <blockquote>
+
+<br/>
+<br/>
 
 <p>
 <b>Why do you write mostly fan-fiction and crossovers?</b>
@@ -698,9 +704,9 @@ a lot.
 <blockquote cite="https://twitter.com/shlomif/status/1357768753241608193">
 
 <p>
-«"Those who make a distinction between education and entertainment don't know
-the first thing about either."   - Marshall McLuhan » (possibly a
-misquotation). via fortune-mod
+Those who make a distinction between education and entertainment don't know
+the first thing about either. — Marshall McLuhan
+( via fortune-mod )
 </p>
 
 </blockquote>
@@ -714,7 +720,7 @@ misquotation). via fortune-mod
 <p>
 I think before the Internet/social media were a thing, people did amateur
 philosophy / entertainment / education / art - with their peers, even if
-limited to sports / food / [% MOTAS %]..
+limited to sports / food / [% MOTAS %].
 </p>
 
 </blockquote>
@@ -763,7 +769,7 @@ For more information, see:
 <li>
 <p>
 <a href="https://www.youtube.com/embed/gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My comment
-about "The Student Bride" film</a> which I find satirises and criticises
+about "The Student Bride" student film</a> which I find satirises and criticises
 contemporary American college student life by showing how ridiculous
 the film
 <a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29"><i>The Princess Bride</i></a>
@@ -900,7 +906,7 @@ more info.
 [% WRAPPER h3_section id = "bad_acting_mel_brooks" title = "Mel Brooks"  %]
 
 <p>
-Mel Brooks popularised exaggerated, phony, and overemotional acting
+<a href="https://en.wikipedia.org/wiki/Mel_Brooks">Mel Brooks</a> popularised exaggerated, phony, and overemotional acting
 in his films. My favourite film of his is
 <a href="https://en.wikipedia.org/wiki/Spaceballs"><i>Spaceballs</i></a>,
 which is a parody of the <a href="https://en.wikipedia.org/wiki/Star_Wars_(film)">Star Wars IV-VI</a> trilogy. Many people who have seen both (including
@@ -944,7 +950,7 @@ went to see his films were usually entertained because
 Now for a personal story: back when I was in the 7th or the 8th grades (I am
 1977-born, so it was around <a
 href="https://en.wikipedia.org/wiki/Gulf_War">the first Gulf War</a>; ~1990),
-my class room studied a Hebrew translation of Molière's play <a
+my classroom studied a Hebrew translation of Molière's play <a
 href="https://en.wikipedia.org/wiki/The_Misanthrope">The Misanthrope</a> as
 part of our "Literature" studies and my classmates took turns reading the
 lines. One day I was assigned to read the lines of the titular character, and
@@ -975,7 +981,8 @@ to technological limitations (e.g:
 and Microsoft
 holding back
 <a href="https://en.wikipedia.org/wiki/Internet_Explorer_6">Internet Explorer 6</a>
-development
+development,
+and low speed Internet connections.
 ).
 </p>
 
@@ -1013,12 +1020,15 @@ This apparently changed with the 7th and 8th installments which were reportedly
 edgy and fun to watch.
 </p>
 
+<iframe src="https://www.youtube.com/embed/NcE83Txe-3g" allowfullscreen="allowfullscreen"></iframe>
+
 <p>
-<strong>Note:</strong> all of the geeky actors I mentioned (except perhaps me,
+<strong>Note:</strong> all of the hacker actors I mentioned (except perhaps me,
 given I cannot be a judge of my own skill) <b>could</b> play well if and when
 they needed to and when given more time. But playing "naturally" in comedies
 and action films in non-essential cases is self-defeating.
 </p>
+
 
 [% END %]
 
@@ -1136,13 +1146,14 @@ If we take <a
 href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html">my
 Sesame Street Hosting Harry Potter fan fiction</a> as an example, then it
 mashes together the real world J. K. Rowling, her franchise's characters: Harry
-Potter, Hermione Granger, and Dumbledore; the Muppets' characters: The Amazing Mumford,
-Cookie Monster, and Miss Piggy; various circa 2014 trends (e.g: Sushi, and the
-model Candice Swanepoel, who was mentioned there because she topped
-<a href="https://en.wikipedia.org/wiki/Maxim_(magazine)#Maxim_Hot_100">Maxim's Hot
-100</a> that year); and as icing on the cake it closes with
-<a href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html#do_it_all_with_love">a hack of the Beatles song "All you need is love" titled
-"Do it all with love"</a>
+Potter, Hermione Granger, and Dumbledore; the Muppets' characters: The Amazing
+Mumford, Cookie Monster, and Miss Piggy; various circa 2014 trends (e.g: Sushi,
+and the model Candice Swanepoel, who was mentioned there because she topped <a
+href="https://en.wikipedia.org/wiki/Maxim_(magazine)#Maxim_Hot_100">Maxim's Hot
+100</a> that year); and as icing on the cake it closes with a hack of the
+Beatles song "All you need is love" titled <a
+href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html#do_it_all_with_love">"Do
+it all with love"</a>
 </p>
 
 <p>
@@ -1169,7 +1180,7 @@ amazingly fresh and funny even today.
 
 <p>
 As much I like <a href="https://en.wikipedia.org/wiki/Charlie_Chaplin">Charlie
-Chaplin</a> he will be a poor substitute to Chuck Norris in my muppets' <a
+Chaplin</a>, he will be a poor substitute to Chuck Norris in my muppets' <a
 href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html">"Summer
 Glau &amp; Chuck Norris as Grammar Nazis"</a> fanfic episode despite the fact
 that he was also Hollywood's "alpha male" at the time.
@@ -1186,7 +1197,7 @@ they have enough money) to start a long litigation process.
 <p>
 Good hackers are constructively lazy, and <a
 href="https://www.reddit.com/r/edmproduction/comments/60zh48/do_you_ever_feel_like_your_cheating_by_using/dfasidh/">build
-on the work of others</a>. And that means doing crossovers, parodies, and real
+on the work of others</a>. And this means doing crossovers, parodies, and real
 person fiction.
 </p>
 
@@ -1728,12 +1739,14 @@ format
 
 <li>
 <p>
-Or the redditesque "no self-promotion" (which was not enforced by
+The redditesque "no self-promotion" (which was not enforced by
 Slashdot before reddit was conceived, and still is not enforced by Slashdot
 or by many subreddits).
 </p>
 </li>
 </ul>
+
+<hr />
 
 <blockquote cite="https://www.joelonsoftware.com/2008/03/17/martian-headsets/">
 
@@ -1832,7 +1845,7 @@ And now that I have the time, it's amazing.
 
 [% END %]
 
-[% WRAPPER h2_section id = "subverting_franchise_copyright_maximalism" title = "Subverting Copyright Maximalism and Territorialism on Franchises for Great Justice" %]
+[% WRAPPER h2_section id = "subverting_franchise_copyright_maximalism" title = "Subverting Copyright Maximalism, and Territorialism on Franchises (“For Great Justice!”)" %]
 
 <p>
 The commercial fiction industry ( "Hollywood"/etc. ) is not a good oligopoly
@@ -1880,9 +1893,6 @@ Like I say:
 href="https://www.shlomifish.org/humour/image-macros/indiv-nodes/say_no_to_an_alpha_female.xhtml"><q>One
 does not simply say “no” to an Alpha Female</q></a>.
 </p>
-
-[%# style="max-height: 500px; max-width: 90%; background-color: black; padding: 20px; display: block; margin-left: auto; margin-right: auto; text-align: center;"
-%]
 
 <p>
 <img src="[% base_path %]humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt="One does not simply say “no” to an Alpha Female" class="max_width" style="float: none;" /><br />
@@ -1958,6 +1968,9 @@ href="https://www.reddit.com/r/mylittlepony/comments/kaajb9/commission_fluttersh
 animations</a>) and solicit money for producing a live action version.
 One can also solicit money for <a href="https://www.shlomifish.org/me/relicensing-my-entire-portfolio-under-cc-by/">relicensing works under less restrictive licences</a> (e.g: "CC-by-nc-sa"→"CC0").
 </p>
+
+
+[% WRAPPER h3_section id = "older_fics_by_shlomif" title = "Reusing my Older Fics"  %]
 
 <p>
 Naturally, there are <a
@@ -2038,6 +2051,8 @@ Socrates, Plato, Aristotle, Saladin, Richelieu, or Dumas not as seriously as
 some people later took The Muppets, The Beatles, Buffy, or the Web 2.0
 Bloggers, or xkcd.
 </p>
+
+[% END %]
 
 [% END %]
 
@@ -2134,7 +2149,7 @@ write a semi-automatic converter.
 </p>
 
 <p>
-I plan to release early and often, and not delete content from my sites that
+I plan to <a href="https://www.shlomifish.org/meta/FAQ/release_something_perfect.xhtml">release early and often</a>, and not delete content from my sites that
 some others disapprove of. (Though I may add notes that I take it back.)
 </p>
 
@@ -2161,6 +2176,8 @@ to my writings.
 
 [% WRAPPER h2_section id = "lets_have_them_all" title = "Why can't we have them all?"  %]
 
+<iframe src="https://www.youtube.com/embed/vqgSO8_cRio" allowfullscreen="allowfullscreen"></iframe>
+
 <p>
 Currently, there aren't too many commercial parodical crossovers of fiction,
 but there is no reason why we cannot bend all the guidelines that prevent them.
@@ -2173,7 +2190,7 @@ href="https://en.wikipedia.org/wiki/Political_correctness">politically correct</
 <p>
 But picture Emma Watson as <a
 href="https://www.shlomifish.org/humour/Selina-Mandrake/">Selina Mandrake</a>,
-a geeky Anglo-American (and <a href="https://en.wikipedia.org/wiki/Caucasian_race">Caucasian</a> naturally, of any hair colour) 12th-grade high school
+a geeky Anglo-American (and <a href="https://en.wikipedia.org/wiki/Caucasian_race">Caucasian</a> naturally, of any hair colour she fancies) 12th-grade high school
 student, who is
 unathletic and clumsy, loves playing Basketball (but "royally sucks at it"),
 is completely non-violent toward the demons she slays, and even shows
@@ -2215,9 +2232,9 @@ and yet <a href="http://shlomifishswiki.branchable.com/Never_Try_to_Please_Every
 </p>
 
 <p>
-If I try to please "the media" / "my earnings" / society / "the rules" / <a href="https://en.wikipedia.org/wiki/What_Do_You_Care_What_Other_People_Think%3F">what other people think</a> / the guidelines and guidelines-generators too much,
+If I try to please "the media" / "my profits" / society / "the rules" / <a href="https://en.wikipedia.org/wiki/What_Do_You_Care_What_Other_People_Think%3F">what other people think</a> / the guidelines and guidelines-generators too much,
 then no one will be pleased. If I'll be myself and <a href="#do_it_my_way">do it
-my way</a>, then hopefully some people will love my work and the others will not remain indifferent.
+my way</a>, then hopefully some people will love my work and most of the others will not remain indifferent.
 </p>
 
 [%#

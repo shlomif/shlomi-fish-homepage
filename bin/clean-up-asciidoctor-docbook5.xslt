@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <xsl:stylesheet
-    exclude-result-prefixes="d"
+    exclude-result-prefixes="d #default"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://docbook.org/ns/docbook"
     xmlns:d="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     version='1.0'
@@ -13,22 +14,22 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="//d:article">
-        <d:article>
+    <xsl:template match="//article">
+        <article>
             <xsl:if test="not(@xml:id)">
                 <xsl:attribute name="xml:id">index</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates select="node() | @*"/>
-        </d:article>
+        </article>
     </xsl:template>
-    <xsl:template match="//d:info/d:author[not(./d:affiliation)]">
-        <d:author>
+    <xsl:template match="//info/author[not(./affiliation)]">
+        <author>
             <xsl:apply-templates select="node() | @*"/>
-            <d:affiliation>
-                <d:address>
-                    <d:uri d:type="homepage" xlink:href="https://www.shlomifish.org/">Shlomi Fish’s Homepage</d:uri>
-                </d:address>
-            </d:affiliation>
-        </d:author>
+            <affiliation>
+                <address>
+                    <uri type="homepage" xlink:href="https://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+                </address>
+            </affiliation>
+        </author>
     </xsl:template>
 </xsl:stylesheet>

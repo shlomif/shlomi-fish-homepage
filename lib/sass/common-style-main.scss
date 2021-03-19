@@ -925,8 +925,11 @@ div.abstract {
     }
     iframe {
         height: 315px;
-        margin: 3%;
-        max-width: 50%;
+        @include margin-lr(auto);
+        $m: 1em;
+        margin-bottom: $m;
+        margin-top: $m;
+        max-width: 90%;
         width: 560px;
     }
 }

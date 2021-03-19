@@ -42,7 +42,7 @@ are currently broken</a>.
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
 
-[% toc_div() %]
+[% toc_div( "collapse" => "1", ) %]
 
 [% WRAPPER h2_section id = "summary" title = "Summary"  %]
 

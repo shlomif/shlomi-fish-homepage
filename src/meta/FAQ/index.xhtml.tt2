@@ -2576,6 +2576,7 @@ That put aside, here are some factors that may contribute to this:
 </p>
 
 <ol>
+
 <li>
 <p>
 Some of it has to do with my <a href="[% base_path %]meta/hosting/">web hosting</a>,
@@ -2593,29 +2594,6 @@ reasons (not sure).
 
 <li>
 <p>
-I enabled server-side <a href="https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip/deflate/etc. compression</a>.
-</p>
-</li>
-
-<li>
-<p>
-XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
-and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
-minimised. See <a href="https://github.com/kangax/html-minifier">HTML minifier</a>
-for HTML, <a href="https://github.com/tdewolff/minify">Go minifiers</a> for
-SVG, and <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> for JavaScript.
-</p>
-</li>
-
-<li>
-<p>
-I use common external stylesheets, script files, and images instead of embedding
-them on every page.
-</p>
-</li>
-
-<li>
-<p>
 The website is mostly
 <a href="https://en.wikipedia.org/wiki/Static_web_page">static</a> and served
 from the server's hard disk directly without potentially costly server-side
@@ -2627,6 +2605,29 @@ scripting.
 <p>
 I avoid loading unnecessary JavaScript codes and other resources from other
 sites (with some possible exceptions.).
+</p>
+</li>
+
+<li>
+<p>
+I enabled server-side <a href="https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip/deflate/etc. compression</a>.
+</p>
+</li>
+
+<li>
+<p>
+XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
+and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
+being minified. See <a href="https://github.com/kangax/html-minifier">HTML minifier</a>
+for HTML, <a href="https://github.com/tdewolff/minify">Go minifiers</a> for
+SVG, and <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> for JavaScript.
+</p>
+</li>
+
+<li>
+<p>
+I use common external stylesheets, script files, and images instead of embedding
+them on every page.
 </p>
 </li>
 

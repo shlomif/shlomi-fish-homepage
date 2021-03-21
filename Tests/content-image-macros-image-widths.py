@@ -76,6 +76,18 @@ class MyTests(unittest.TestCase):
             m = re.match(
                 "^(?:\\.\\./){3}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)
+        fragment_fn = fragments_dir + "interesting_hypothesis.xhtml"
+        root = html.parse(fragment_fn)
+        good = False
+        bad = False
+        for atag in root.xpath(".//a"):
+            href = atag.get("href")
+            if href == '../../../humour/image-macros/#standup_philosopher':
+                good = True
+            elif href == '../../humour/image-macros/#standup_philosopher':
+                bad = True
+        self.assertTrue(good, "relative link")
+        self.assertTrue((not bad), "relative link [bad]")
 
         root = html.parse(input_fn)
         articles = root.xpath(".//article")

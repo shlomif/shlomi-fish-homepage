@@ -172,6 +172,15 @@ class XhtmlSplitter:
             a_tag.set("class", "back_to_faq")
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
+            if len(self.path_to_images):
+                for a_elem in _xpath(self.ns,
+                                     list_elem, ".//xhtml:a"):
+                    href = a_elem.get("href")
+                    if href.startswith(("http:", "https:", )):
+                        continue
+                    a_elem.set(
+                        "href", self.path_to_images + href
+                    )
             formats = {
                 'base_path': self.base_path,
                 'body': etree.tostring(list_elem).decode('utf-8'),

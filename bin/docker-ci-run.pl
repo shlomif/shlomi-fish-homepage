@@ -78,6 +78,7 @@ EOF
                     gd-devel
                     gdbm-devel
                     gmp-devel
+                    libdb-devel
                     libxml2-devel
                     libxslt
                     libxslt-devel
@@ -257,8 +258,8 @@ EOSCRIPTTTTTTT
     return;
 }
 
-# foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+# foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config($sys);
 }

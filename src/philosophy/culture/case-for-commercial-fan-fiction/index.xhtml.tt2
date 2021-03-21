@@ -9,6 +9,7 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [%- WRAPPER wrap_html -%]
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
+[% SET IANAL = my_acronym( "key" => "IANAL", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
@@ -166,6 +167,16 @@ link to see <a href="#the-plan"><b>the current plan and recommendations</b></a>.
 seems to be the lowest-hanging fruit for me. However, I suspect this is
 also an important stepping stone towards other aspects of world healing.
 </p>
+
+[% WRAPPER h3_section id = "disclaimer" title = "Disclaimer"  %]
+
+<p>
+I am not a lawyer ( [% IANAL %] ), nor am I a qualified
+economist, psychologist, sociologist, historian, ethnologist, film maker,
+etc. Please take my insights and advice with a grain of salt.
+</p>
+
+[% END %]
 
 [% END %]
 
@@ -508,11 +519,23 @@ was a superb hacker and geek. This is because she constantly challenged and
 broke the hidden rules of the show's more stigmatic (and less attractive
 looking) geeks, and because she was passionate and enthusiastic about many of
 her endeavours.
-And given <a
+Moreover, she is often depicted as trying to emulate the nerdier/dorkier
+geeks, and successfully.
+</p>
+
+[%#
+   https://www.youtube.com/watch?v=Ufr-Y5oROyE
+   Big Bang Theory - Penny The Game Addict 2 - YouTube
+%]
+
+<iframe src="https://www.youtube.com/embed/Ufr-Y5oROyE" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+Given <a
 href="https://github.com/shlomif/Captioned-Image-Badass-Schwarzenegger">"one
-needs to be a badass to play one on T.V."</a>, I'm pretty sure that is also the
-case for the actress <a href="https://en.wikipedia.org/wiki/Kaley_Cuoco">Kaley
-Cuoco</a> who portrayed her.
+needs to be a badass to play one on T.V."</a>, I'm pretty sure that
+ <a href="https://en.wikipedia.org/wiki/Kaley_Cuoco">Kaley
+Cuoco</a> the actress who portrayed Penny is a hacker and a geek as well.
 </p>
 
 <blockquote cite="https://twitter.com/shlomif/status/1364839109068541958">
@@ -550,7 +573,7 @@ due to its text and style reflecting the mentality of the time.
 Some people love to hate <a href="https://en.wikipedia.org/wiki/Ayn_Rand">Ayn
 Rand</a>, or <a
 href="https://www.shlomifish.org/humour/fortunes/joel-on-software.html">Joel on
-Software</a> or <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric
+Software</a>, or <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric
 S. Raymond</a>, who while I never completely agreed with everything they said
 (and they may have proven wrong in time),
 often found them of useful food for thought (and none of them claimed what

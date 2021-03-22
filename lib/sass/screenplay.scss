@@ -3,10 +3,10 @@
 
 @mixin story_box_style {
     @include text_document_h_tags_sizes;
-    border: 1pt solid black;
-    padding: 0.5em;
     background-color: white;
-    border-radius: 0.5em;
+    border-radius: 1em;
+    border: 1pt solid black;
+    padding: 1em;
 
     h3,
     h4,

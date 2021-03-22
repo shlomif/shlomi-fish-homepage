@@ -45,10 +45,8 @@ Homepage</a> → <a href="../" title=
 → <b>{title}</b>
 </div>
 </div>
-<div id="faux">
-<main class="main faq">
+<main class="faq faux main">
 {body}</main>
-</div>
 <footer>
 <div class="foot_left">
 <ul class="bt_nav">
@@ -94,10 +92,8 @@ Homepage</a> → <a href="./" title="{main_title}">{main_title}</a>
 → <b>{title}</b>
 </div>
 </div>
-<div id="faux">
-<main class="main faq">
+<main class="faq faux main">
 {body}</main>
-</div>
 <footer>
 <div class="foot_left">
 <ul class="bt_nav">

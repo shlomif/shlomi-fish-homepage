@@ -72,7 +72,6 @@ class MyTests(unittest.TestCase):
         for img in imgs:
             src = img.get("src")
             self.assertTrue(src)
-            print(src)
             m = re.match(
                 "^(?:\\.\\./){3}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)
@@ -109,7 +108,6 @@ class MyTests(unittest.TestCase):
         for img in imgs:
             src = img.get("src")
             self.assertTrue(src)
-            print(src)
             m = re.match(
                 "^(?:\\.\\./){2}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
             self.assertTrue(m)

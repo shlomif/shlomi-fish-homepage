@@ -80,14 +80,22 @@ class MyTests(unittest.TestCase):
         root = html.parse(fragment_fn)
         good = False
         bad = False
+        node_link_href = ""
         for atag in root.xpath(".//a"):
             href = atag.get("href")
-            if href == '../../../humour/image-macros/#standup_philosopher':
+            if "back_to_faq" in (atag.get('class') or ''):
+                node_link_href = href
+            elif href == '../../../humour/image-macros/#standup_philosopher':
                 good = True
             elif href == '../../humour/image-macros/#standup_philosopher':
                 bad = True
         self.assertTrue(good, "relative link")
         self.assertTrue((not bad), "relative link [bad]")
+        self.assertEqual(
+            node_link_href,
+            "../#interesting_hypothesis",
+            "node_link_href",
+        )
 
         root = html.parse(input_fn)
         articles = root.xpath(".//article")

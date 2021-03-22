@@ -178,6 +178,8 @@ class XhtmlSplitter:
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
                         continue
+                    if "back_to_faq" in (a_elem.get("class") or ""):
+                        continue
                     a_elem.set(
                         "href", self.path_to_images + href
                     )

@@ -8,12 +8,13 @@
 
 <h2 id="read_online">Read Online</h2>
 
-[%# SET epub_prefix="Queen-Padme-Tales--" %]
+[% SET epub_prefix= base_path _ "humour/Queen-Padme-Tales/" %]
+
 <ul>
 
 <li>
 <p>
-<a href="teaser/"><b>Teaser for the pilot episode</b></a> - based on
+<a href="[% epub_prefix %]teaser/"><b>Teaser for the pilot episode</b></a> - based on
 <a href="https://github.com/ztzockt/Star-Wars-opening-crawl-from-1977-Remake">the CSS/JS version</a>
 by <a href="https://github.com/ztzockt">Marvin</a>
 (My derivative <a href="https://github.com/shlomif/Star-Wars-opening-crawl-from-1977-Remake/tree/queen-padme-intro--shlomif">branch</a>.)

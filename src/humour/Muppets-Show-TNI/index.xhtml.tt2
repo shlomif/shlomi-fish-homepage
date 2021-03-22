@@ -8,6 +8,8 @@
 
 <h2 id="read_online">Read Online</h2>
 
+[% SET use_screenplay_html_prefix = 1 %]
+[% SET screenplay_html_prefix="" %]
 [% SET epub_prefix="Muppets-Show--" %]
 <ul>
 [% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter on Sesame Street: Harry and Hermione on a mission to vanquish “He who must not be named Two” a.k.a The Amazing Mumford",  %]

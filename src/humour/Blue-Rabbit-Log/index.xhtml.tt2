@@ -20,6 +20,8 @@ some disorganised ideas for the continuation.
 
 <ul>
 
+[% SET use_screenplay_html_prefix = 1 %]
+[% SET screenplay_html_prefix="" %]
 [% SET epub_prefix="Blue-Rabbit-Log-" %]
 [% PROCESS story_episode_li base = "part-1", story_title = "Part I - The Ongoing Text",  %]
 

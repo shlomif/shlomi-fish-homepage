@@ -39,6 +39,10 @@ are currently broken</a>.
 
 [% END %]
 
+[% BLOCK ref %]
+( <a href="[% href %]">Reference</a> ).
+[% END %]
+
 <img src="[% base_path %]humour/Queen-Padme-Tales/teaser/parody-logo--after-convert-to-curves.svg" style="max-height: 300px; max-width: 50%; background-color: black; padding: 20px; display: block; margin-left: auto; margin-right: auto; text-align: center;" alt="Movie Star Wars" />
 
 <div class="fancy_sects limit_imgs_width my_rpf side_toc">
@@ -114,7 +118,8 @@ as well as <a href="#what_is_hacking">hackers</a> (= resourceful, rule benders,
 The recent cultural trend toward openness, freedom, sharing and
 <a href="https://en.wikipedia.org/wiki/Remix_(book)">remixing</a> / <a
 href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">standing
-on the shoulders of giants</a>.
+on the shoulders of giants</a> (= building on the work of your
+predecessors or contemporaries).
 E.g: [% FOSS %], <a href="https://en.wikipedia.org/wiki/Free_content">open/free content</a>,
 <a href="https://en.wikipedia.org/wiki/Web_2.0">"web 2.0"</a>,
 <a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>.
@@ -125,7 +130,8 @@ E.g: [% FOSS %], <a href="https://en.wikipedia.org/wiki/Free_content">open/free 
 <li>
 <p>
 The film industry's requirement of accepting screenplays only in its draconian,
-finicky (and boring) format
+finicky (and yet - boring) format.
+[% INCLUDE ref href="#hollywood_screenplay_format" %]
 </p>
 </li>
 
@@ -133,6 +139,7 @@ finicky (and boring) format
 <p>
 Its franchise territorialism (which hinders commercial <a
 href="https://en.wikipedia.org/wiki/Crossover_(fiction)">crossovers</a>).
+[% INCLUDE ref href="#freeing_franchises" %]
 </p>
 </li>
 
@@ -140,6 +147,7 @@ href="https://en.wikipedia.org/wiki/Crossover_(fiction)">crossovers</a>).
 <p>
 The fact that copyright is enforced on commercial use of characters, concepts,
 and worlds (and to an extent - texts).
+[% INCLUDE ref href="#freeing_franchises" %]
 </p>
 </li>
 
@@ -179,7 +187,7 @@ etc. Please take my insights and advice with a grain of salt.
 <p>
 This document is researched relatively amateurly, and it is likely that it
 cannot be directly cited as a reliable source. I use the HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">"cite" element and attribute</a>
-as an origin link. Furthermore, I sometimes link or quote to older pages
+only as an origin link. Furthermore, I sometimes link or quote to older pages
 I originated (despite Ustinov's reluctance to do so in <a href="https://www.amazon.com/Quotable-Ustinov-Peter/dp/1573920258">the introduction to his book</a>). To be fair, I link to many other pages and also embed youtube videos.
 </p>
 
@@ -291,9 +299,11 @@ previous attempt</a> while having a somewhat misled deduction chain.
 <p id="geek_def">
 As of March 2021, it seems most talented,
 skillful, competent, and attractive individuals of any gender, age
-and professions, are increasingly both geeks (= <a href="https://www.shlomifish.org/humour/fortunes/paul-graham.html">"amateurs"</a>; love what
-they do; not doing it only for money) and <a href="#what_is_hacking">hackers</a> (= "action heroes"; bending or challenging the "rules",
+and professions, and past experience are increasingly both geeks (= <a href="https://www.shlomifish.org/humour/fortunes/paul-graham.html">"amateurs"</a>; love what
+they do; not doing it only for money, even though they may be offered
+a lot) and <a href="#what_is_hacking">great hackers</a> (= "action heroes"; bending or challenging the "rules",
 not accepting their fate, being resourceful, thinking outside the box, etc.).
+or even "hacker monarchs" / "messiahs".
 As I show, this implies most new quality screenplays and
 stories are currently and are going to increasingly not only be fanfiction but
 also crossovers, parodies, and/or real person fiction - usually including
@@ -306,7 +316,7 @@ and boring <a href="#hollywood_screenplay_format">Hollywood-blessed screenplay f
 
 <p>
 Moreover, attractive actors (including female actresses and/or inexperienced
-and obscure ones) are also geeky hackers. As a result, they will not play in
+and obscure ones and/or formerly big name ones) are also geeky hackers. As a result, they will not play in
 any badly written film (and usually a dystopian, ending badly, pessimistic,
 politically correct and dishonest one) even for all the money in the world.
 </p>
@@ -385,7 +395,7 @@ Not accepting your "fate".
 <a href="https://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/#david_and_goliath">"David vs. Goliath"</a>
 and its
 <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/hacking-heroism.xhtml">"Indiana Jones' Gun vs. Swordmaster" scene</a> modernisation (which is funny now,
-and the Goliath story was likely equally funny in ancient times).
+and the Goliath story was likely equally as funny in ancient times).
 Moreover, the real-life <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>
 became "the child who slew two mighty superpowers", at the age of 10,
 by using international mail, and other 20th century technology (and not
@@ -431,7 +441,7 @@ hypothesised that the Nevi'im were <a
 href="https://en.wikipedia.org/wiki/Schizophrenia">Schizophrenic</a> and
 hallucinated voices of "gods" (= <a
 href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/asciidocs/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.asciidoc">"guidelines-generators"</a>)
-and who spoke in poems or rhymes.  However now I think most of the later ones
+and who spoke in poems or rhymes.  However, now I think most of the later ones
 were only <a href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a> (=
 mild-mania) at worst, often spoke in prose or in free form verse, and often not
 only emulated, built-upon, or mocked their predecessors or contemporaries, but
@@ -469,6 +479,7 @@ against them.
 <p>
 The Biblical
 <a href="https://en.wikipedia.org/wiki/Samson">Samson</a> was <strong>not</strong>
+in generally
 an action hero, but a classical "I'm
 taking them all with me" / <a
 href="https://www.mechon-mamre.org/p/pt/pt0716.htm#28">"may my soul perish with
@@ -883,7 +894,7 @@ I have done in the past which I will not repeat such as <a
 href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
 Electrical Engineering in the Technion</a>, or working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
-bosses (though as the contemporary me I may now try to reform them
+bosses (though as the contemporary and more competent me I may now try to reform them
 using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">benevolent psychological warfare</a>
 ). This is while I can spend hundreds of
 hours contributing text, code, and markup, voluntarily and without expecting
@@ -931,6 +942,23 @@ from similar reasons. See <a href="#originality_is_self_defeating">this</a> for
 more info.
 </p>
 
+[% WRAPPER h3_section id = "be_communicative" title = "Be communicative"  %]
+
+<p>
+If you do not like a work, please try to comment on why you think it is
+lacking, rather than throwing it away. People are often amazed by food
+reviewers in the recently trendy cooking competition shows being very pedantic
+and pinpointing small and large problems, but it comes with experience
+and "with the territory".
+</p>
+
+<p>
+Telling a contributor why you dislike their work will make reworked and
+future works better, and your own work better.
+</p>
+
+[% END %]
+
 [% END %]
 
 [% WRAPPER h2_section id = "bad_acting_ftw" title = "“Bad” Acting For The Win"  %]
@@ -969,7 +997,7 @@ went to see his films were usually entertained because
 <a href="https://en.wikipedia.org/wiki/Worse_is_better">"worse is better"</a>.
 </p>
 
-[%# Trailer for "Hamlet starring Arnie" from Last Action Hero
+[%# Trailer for "Hamlet starring Arnold Schwarzenegger" from Last Action Hero
 %]
 
 <iframe src="https://www.youtube.com/embed/9Eont_yEGZs" allowfullscreen="allowfullscreen"></iframe>
@@ -1045,7 +1073,8 @@ WATSON!
 It seems that <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> employed a similar strategy when playing for the <a
 href="https://en.wikipedia.org/wiki/Harry_Potter_(film_series)">Harry Potter
 films</a> from what I saw of her there. She was overemotional, edgy, and acted in a
-manner which was both easier, more fun, and was loved by the geeky audience.
+manner which was both easier, more fun, and was loved by the geeky audience
+(whether in the cinemas, or at home).
 In a way, she was one of the few selling points of most of the series' films,
 which although skillfully executed, were clearly not done by artists having fun.
 This apparently changed with the 7th and 8th installments which were reportedly
@@ -1122,6 +1151,16 @@ Our Lives".
 </p>
 
 <p>
+As an example, we can imagine a young girl to pity
+Emma Watson vs. <a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>
+on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next
+with Darth Vader and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
+as "evil", but mutually hating one another, arbiters. Might seem ridiculus,
+but if I didn't want entertainment in my life, then I'd go watch
+grass grow.
+</p>
+
+<p>
 There is no way one can expect them (or me) to use only earlier sources than
 1900, because technology as well as art, culture, &amp; entertainment /
 education / amateur philosophy, did not stand still since then, despite being
@@ -1193,7 +1232,8 @@ While it also sports a parody of the fable <a
 href="https://en.wikipedia.org/wiki/The_miller%2C_his_son_and_the_donkey">"The
 miller, his son and the donkey"</a>, the donkey there is the <a
 href="https://shrek.fandom.com/wiki/Donkey">one from the Shrek franchise</a> as
-originally voiced by Eddie Murphy.
+originally voiced by Eddie Murphy, and he ends up being converted
+into a bigger and stronger stallion, like in the second Shrek film.
 </p>
 
 <p>
@@ -1675,9 +1715,18 @@ Similarly, I suspect <a
 href="https://www.chabad.org/library/bible_cdo/aid/16099">Ezekiel I</a> was
 originally intended as an exaggerated parody of Polytheistic visions of
 revelation by <a href="https://en.wikipedia.org/wiki/Ezekiel">Ezekiel</a> who was <a href="#craziness_and_nevua">a standup
-philosopher/comedian</a>,
-and that <a href="https://en.wikipedia.org/wiki/Republic_(Plato)">Plato’s "Republic"</a>
-was similarly half tongue-in-cheek.
+philosopher/comedian</a>.
+Generations of scholars who considered it holy
+have tried to divine meaning from it, but it is
+pointless: Ezekiel was just <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=mjd-how-to-ask-a-good-question-1">making shit up</a>.
+</p>
+<p>
+I also suspect
+<a href="https://en.wikipedia.org/wiki/Republic_(Plato)">Plato’s "Republic"</a>
+was similarly half tongue-in-cheek by Plato who described how he thought
+a country really <b>should not</b> be run. That was for the entertainment and
+education of the Greek, who may have heard or uttered similar sentiments
+and found them ridiculous when lumped together.
 </p>
 
 <hr />
@@ -1874,7 +1923,9 @@ And now that I have the time, it's amazing.
 
 </blockquote>
 
+<p>
 ( <a href="https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&amp;oldid=1012248078">Sarah Michelle Gellar</a> as quoted on the English Wikipedia. )
+</p>
 
 [% END %]
 
@@ -2297,10 +2348,6 @@ Furthermore, it is likely this will not be the final challenge faced by the
 film industry and fiction industry or humanity as a whole, so we should not
 rest on our laurels.
 </p>
-
-[% BLOCK ref %]
-( <a href="[% href %]">Reference</a> ).
-[% END %]
 
 <p>
 Anyway, I suggest:

@@ -215,7 +215,8 @@ then
     rm -fr primesieve
 fi
 sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
-cpanm -vvv IO::Async
+# cpanm -vvv IO::Async
+cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
 cpanm --notest HTML::T5
 # For wml

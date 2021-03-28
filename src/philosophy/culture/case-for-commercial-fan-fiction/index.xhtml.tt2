@@ -11,6 +11,7 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
 [% SET IANAL = my_acronym( "key" => "IANAL", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
+[% SET MDD = ' <a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">Clinical Depression</a>' %]
 [% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
@@ -324,7 +325,7 @@ previous attempt</a> while having a somewhat misled deduction chain.
 <p id="geek_def">
 As of March 2021, it seems most talented,
 skillful, competent, and attractive individuals of any gender, age
-and professions, and past experience are increasingly both geeks (= <a href="https://www.shlomifish.org/humour/fortunes/paul-graham.html">"amateurs"</a>; love what
+and profession, and past experience are increasingly both geeks (= <a href="https://www.shlomifish.org/humour/fortunes/paul-graham.html">"amateurs"</a>; love what
 they do; not doing it only for money, even though they may be offered
 a lot) and <a href="#what_is_hacking">great hackers</a> (= "action heroes"; bending or challenging the "rules",
 not accepting their fate, being resourceful, thinking outside the box, etc.).
@@ -340,10 +341,27 @@ and boring <a href="#hollywood_screenplay_format">Hollywood-blessed screenplay f
 </p>
 
 <p>
+One thing I got wrong is thinking a geek will refuse to get paid.  That is
+wrong because often, geeks are offered large amounts of money or at least token
+pay (see <a
+href="https://www.shlomifish.org/humour/bits/Emma-Watson-applying-for-a-software-dev-job/">the
+Emma Watson as a software dev thought experiment</a>).  For example, <a
+href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, who is
+a software developer, an action hero, a geek, and <a
+href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur
+philosopher and entertainer</a>, is believed to get paid 20 million USD/year.
+While he will gladly continue to comaintain the
+<a href="https://en.wikipedia.org/wiki/Linux_kernel">Linux kernel project</a>
+for less,
+it is commonly accepted that it is a reasonable salary.
+</p>
+
+<p>
 Moreover, attractive actors (including female actresses and/or inexperienced
-and obscure ones and/or formerly big name ones) are also geeky hackers. As a result, they will not play in
-any badly written film (and usually a dystopian, ending badly, pessimistic,
-politically correct and dishonest one) even for all the money in the world.
+and obscure ones and/or formerly big name ones) are also geeky hackers. As a
+result, they will not play in any badly written film (and usually a dystopian,
+ending badly, pessimistic, politically correct and dishonest one) even for all
+the money in the world.
 </p>
 
 <p>
@@ -386,8 +404,8 @@ Hacking involves:
 <li>
 <p>
 Thinking outside the box.
-( <a href="https://www.youtube.com/watch?v=rMz7JBRbmNo">"They were
-both poisoned."</a> )
+( <a href="https://www.youtube.com/watch?v=rMz7JBRbmNo"><q>Both cups
+were poisoned. I had developed an immunity for the poison.</q></a> )
 </p>
 </li>
 
@@ -504,7 +522,7 @@ against them.
 <p>
 The Biblical
 <a href="https://en.wikipedia.org/wiki/Samson">Samson</a> was <strong>not</strong>
-in generally
+in general
 an action hero, but a classical "I'm
 taking them all with me" / <a
 href="https://www.mechon-mamre.org/p/pt/pt0716.htm#28">"may my soul perish with
@@ -519,7 +537,7 @@ That put aside,
 despite common belief, <a href="https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/">NASA
 astronauts did use pencils in space at first</a>, just like their Soviet peers.
 However, this solution was found to be lacking. As a result, space-friendly
-pens were developed (within budget) and used (including by the Russian
+pens were developed (within budget) and used (including by the USSR
 cosmonauts).
 </p>
 </li>
@@ -839,7 +857,7 @@ For more information, see:
 <li>
 <p>
 <a href="https://www.youtube.com/embed/gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My comment
-about "The Student Bride" student film</a> which I find satirises and criticises
+about "The Student Bride" student film</a>. That film satirises and criticises
 contemporary American college student life by showing how ridiculous
 the film
 <a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29"><i>The Princess Bride</i></a>
@@ -923,7 +941,11 @@ Electrical Engineering in the Technion</a>, or working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
 bosses (though as the contemporary and more competent me I may now try to reform them
 using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">benevolent psychological warfare</a>
-). This is while I can spend hundreds of
+).
+</p>
+
+<p>
+This is while I can spend hundreds of
 hours contributing text, code, and markup, voluntarily and without expecting
 immediate payment, to the public.  And this includes my pro-bono
 contributions to <a
@@ -966,7 +988,8 @@ finicky, anyway.
 Do note that while I am quite happy with my
 <a href="https://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction</a>'s
 custom "Screenplay-Text" format, its "Screenplay-XML" XML grammar carries
-a large amount of legacy and outdated practices.
+a large amount of legacy and outdated practices, so I suggest not
+relying on it as the basis for a standard directly.
 </p>
 
 <p>
@@ -1104,26 +1127,39 @@ WATSON!
 </p>
 
 <p>
-It seems that <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> employed a similar strategy when playing for the <a
+It seems that <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma
+Watson</a> employed a similar strategy when playing for the <a
 href="https://en.wikipedia.org/wiki/Harry_Potter_(film_series)">Harry Potter
-films</a> from what I saw of her there. She was overemotional, edgy, and acted in a
-manner which was both easier, more fun, and was loved by the geeky audience
-(whether in the cinemas, or at home).
-In a way, she was one of the few selling points of most of the series' films,
-which although skillfully executed, were clearly not done by artists having fun.
-This apparently changed with the 7th and 8th installments which were reportedly
-edgy and fun to watch.
+films</a> from what I saw of her there. She was overemotional, edgy, and acted
+in a manner which was both easier, more fun, and was loved by the geeky
+audience (whether in the cinemas, or at home).  In a way, she was one of the
+few selling points of most of the series' films, which although skillfully
+executed, were clearly not done by artists having fun.  This apparently changed
+with the 7th and 8th installments which were reportedly edgy and fun to watch.
 </p>
 
 <iframe src="https://www.youtube.com/embed/NcE83Txe-3g" allowfullscreen="allowfullscreen"></iframe>
 
+[% END %]
+
+[% WRAPPER h3_section id = "bad_acting_conclusion" title = "Conclusion: People Love Hacky Acting" %]
+
 <p>
-<strong>Note:</strong> all of the hacker actors I mentioned (except perhaps me,
+All of the hacker actors I mentioned (except perhaps me,
 given I cannot be a judge of my own skill) <b>could</b> play well if and when
 they needed to and when given more time. But playing "naturally" in comedies
 and action films in non-essential cases is self-defeating.
 </p>
 
+<p>
+If you think of the memorable moments of your favourite films, then if
+you are not in a [% MDD %] you may
+notice that most of them consistently featured hacky acting that
+the actor employed. I recall Sharon Stone's
+phony acting in
+<a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)">The Quick and the Dead</a> to be
+a feature.
+</p>
 
 [% END %]
 
@@ -1355,9 +1391,17 @@ a legal and pseudo-ethical minefield.
 It seems the parodical 2001 film <a href="https://en.wikipedia.org/wiki/Not_Another_Teen_Movie"><i>Not Another Teen Movie</i></a>
 killed the whole genre. However, I've written the afforementioned
 [% hhfg %] story in 2005 (after recovering from my
-<a href="#learning_more_from_inet_forums">Technion "education" or
-lack of it and entertainment</a>)
+<a href="#learning_more_from_inet_forums">Technion "education", or
+relative lack of it and entertainment</a>), and it is a geek/hacker spin
+on the teen story model. But it too is partly crossover/RPF fanfic, but despite
+that two teenagers living in the USA (where it takes place) asked me if it was
+real.
+</p>
 
+<p>
+The two female protagonists seemed quite farfetchedly competent back then, but
+I'd bet many younger girls (or older ones that have the right attitude) today
+can easily blow them out of the water.
 </p>
 
 [% END %]
@@ -1455,20 +1499,6 @@ unclear, was far more questionable. And where there's a will there's a way.
 </p>
 
 <hr />
-
-<p>
-One thing I got wrong is thinking a geek will refuse to get paid.  That is
-wrong because often, geeks are offered large amounts of money or at least token
-pay (see <a
-href="https://www.shlomifish.org/humour/bits/Emma-Watson-applying-for-a-software-dev-job/">the
-Emma Watson as a software dev thought experiment</a>).  For example, <a
-href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, who is
-a software developer, an action hero, a geek, and <a
-href="https://en.wikiquote.org/wiki/Linus_Torvalds">a remarkable amateur
-philosopher and entertainer</a>, is believed to get paid 20 million USD/year.
-While he will gladly continue to comaintain the Linux kernel project for less,
-it is commonly accepted that it is a reasonable salary.
-</p>
 
 <p>
 I also suspect the belief that make-up makes a woman look better is largely <a

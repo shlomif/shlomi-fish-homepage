@@ -1,0 +1,49 @@
+[%- SET title = "Shlomi Fish’s True Stories / Memoirs" -%]
+[%- SET desc = "TODO: FILL IN" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="bits_stories_list">
+
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section id="who-gets-the-final-say" href="${base_path}humour/bits/true-stories/who-gets-the-final-say/" title="Who gets the final say?" %]
+
+<p>
+Who gets the final say, before and after marriage? A memoir.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="my-first-kiss" href="${base_path}humour/bits/true-stories/my-first-kiss/" title="The story of my first kiss" %]
+
+<p>
+A memoir.
+</p>
+
+[% END %]
+
+[% SET section_element = "section" %]
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/facts/">Collections of Factoids</a> - about
+Chuck Norris/etc.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/aphorisms/">Aphorisms and Quotes Pages</a>
+</p>
+</li>
+</ul>
+
+[% END %]
+
+</div>
+
+[% END %]

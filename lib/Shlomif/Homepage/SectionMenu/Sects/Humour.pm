@@ -524,10 +524,30 @@ my $_humour_tree_contents = {
                     url  => "humour/bits/Python4-Announcement/",
                 },
                 {
-                    text  => "Who gets the final say?",
-                    url   => "humour/bits/true-stories/who-gets-the-final-say/",
-                    title =>
+                    text => "True Stories / Memoirs",
+                    url  => "humour/bits/true-stories/",
+                    subs => [
+                        {
+                            text => "Who gets the final say?",
+                            url  =>
+"humour/bits/true-stories/who-gets-the-final-say/",
+                            title =>
 "True story about asking people by the road about relationships",
+                        },
+                        {
+                            text => "Socialising with a Hermione Cosplayer",
+                            url  =>
+"humour/bits/true-stories/socialising-with-an-11yo-hermione-cosplayer/",
+                            title =>
+"Socialising with an 11 years old Hermione (“Harry Potter”) Cosplayer at GeekCon Nine Worlds",
+                        },
+                        {
+                            text  => "First Kiss",
+                            url   => "humour/bits/true-stories/my-first-kiss/",
+                            title =>
+"True story about asking people by the road about relationships",
+                        },
+                    ],
                 },
                 {
                     text => "Emma Watson’s Visit to Israel and Gaza",

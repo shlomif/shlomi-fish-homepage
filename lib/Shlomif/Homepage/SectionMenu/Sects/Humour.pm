@@ -2,14 +2,11 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 
 use strict;
 use warnings;
-
-use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
-
-use Shlomif::FindLib ();
 use utf8;
-
-use MyNavData::Hosts ();
-
+use Carp qw/ confess /;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
+use Shlomif::FindLib                      ();
+use MyNavData::Hosts                      ();
 use Shlomif::Homepage::FortuneCollections ();
 use JSON::MaybeXS                         (qw( decode_json ));
 use Path::Tiny qw( path );
@@ -693,9 +690,14 @@ my $humour_tree_contents_by_lang =
 
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $humour_tree_contents_by_lang->{en},
+        tree_contents => $humour_tree_contents_by_lang->{$lang},
     );
 }
 

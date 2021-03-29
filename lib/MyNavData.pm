@@ -410,7 +410,8 @@ sub generic_get_params
         if ($is_fully_expanded)
         {
             return Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
-                $sect_name);
+                $sect_name, { lang => 'en', },
+            );
         }
         else
         {

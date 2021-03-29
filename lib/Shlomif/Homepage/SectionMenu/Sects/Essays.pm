@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
+use Carp qw/ confess /;
 use MyNavData::Hosts ();
 
 my $_essays_tree_contents = {
@@ -619,9 +620,13 @@ my $essays_tree_contents_by_lang =
 
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $essays_tree_contents_by_lang->{en},
+        tree_contents => $essays_tree_contents_by_lang->{$lang},
     );
 }
 

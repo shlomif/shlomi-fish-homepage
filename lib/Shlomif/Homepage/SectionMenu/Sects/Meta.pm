@@ -2,10 +2,9 @@ package Shlomif::Homepage::SectionMenu::Sects::Meta;
 
 use strict;
 use warnings;
-
 use utf8;
-
 use MyNavData::Hosts ();
+use Carp qw/ confess /;
 
 my $meta_tree_contents = {
     host        => "t2",
@@ -77,6 +76,11 @@ my $meta_tree_contents = {
 
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $meta_tree_contents,

@@ -16,11 +16,12 @@ package Shlomif::Homepage::SectionMenu;
 
 use MooX (qw( late ));
 
-use HTML::Widgets::NavMenu;
+use HTML::Widgets::NavMenu ();
 
 has 'bottom_code'  => ( is => 'rw', isa => 'Maybe[Str]', required => 1, );
 has 'current_host' => ( is => 'rw', isa => 'Str',        required => 1, );
 has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
+has 'lang'         => ( is => 'ro', isa => 'Str',        required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
 has 'path_info'    => ( is => 'rw', isa => 'Str', required => 1, );
 has 'results'      => (
@@ -41,16 +42,17 @@ has '_current_sect' => (
 
 sub get_section_nav_menu_params
 {
-    my ( undef, $class ) = @_;
-    return $class->get_params();
+    my ( undef, $class, $args ) = @_;
+    return $class->get_params($args);
 }
 
 sub get_modified_sub_tree
 {
-    my ( $self, $sect ) = @_;
+    my ( $self, $sect, $args ) = @_;
 
     my $subs =
-        +{ $self->get_section_nav_menu_params($sect) }->{tree_contents}->{subs};
+        +{ $self->get_section_nav_menu_params( $sect, $args ) }
+        ->{tree_contents}->{subs};
 
     return { %{ $subs->[0] }, subs => [ @{$subs}[ 1 .. $#$subs ] ], };
 }
@@ -87,7 +89,10 @@ sub BUILD
             HTML::Widgets::NavMenu->new(
                 'path_info'  => $self->path_info(),
                 current_host => $self->current_host(),
-                $self->get_section_nav_menu_params( $current_sect->{class} ),
+                $self->get_section_nav_menu_params(
+                    $current_sect->{class},
+                    { lang => $self->lang(), },
+                ),
                 'ul_classes'     => [ "nm_main", ],
                 'no_leading_dot' => 1,
             )

@@ -2,8 +2,8 @@ package Shlomif::Homepage::SectionMenu::Sects::Lectures;
 
 use strict;
 use warnings;
-
 use utf8;
+use Carp qw/ confess /;
 
 use MyNavData::Hosts ();
 
@@ -248,6 +248,11 @@ my $essays_tree_contents = {
 
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $essays_tree_contents,

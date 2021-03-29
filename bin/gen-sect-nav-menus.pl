@@ -57,6 +57,7 @@ sub _process_batch
             {
                 filename => $filename,
                 host     => $host,
+                lang     => 'en',
                 ROOT     => $ROOT,
             }
         );

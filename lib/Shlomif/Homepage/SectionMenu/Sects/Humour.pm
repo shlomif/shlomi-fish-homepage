@@ -532,11 +532,12 @@ my $_humour_tree_contents = {
 "True story about asking people by the road about relationships",
                         },
                         {
-                            text => "Socialising with a Hermione Cosplayer",
-                            url  =>
+                            text =>
+"Socialising with a Young Hermione Cosplayer and Her Family",
+                            url =>
 "humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/",
                             title =>
-"Socialising with an 11 years old Hermione (“Harry Potter”) Cosplayer at GeekCon Nine Worlds",
+"Socialising with an ~11 years old Hermione (“Harry Potter”) Cosplayer and her family at GeekCon Nine Worlds",
                         },
                         {
                             text  => "First Kiss",

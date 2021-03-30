@@ -2,6 +2,8 @@
 [%- SET desc = "Fan fiction screeenplays for a web series crossing Star Wars, Star Trek and Internet and IRL life in the 2010s-2020s" -%]
 [%- SET more_keywords = "fanfic,fan fiction,crossovers,screeenplays,screeenplay,star wars,star trek,tiffany alvord,sith,jedi" -%]
 
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
@@ -56,6 +58,56 @@ the name and the rough format.
 <p>
 <a href="https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace">Star Wars: Episode I The Phantom Menace</a> -
 inspired the characters of Queen Padmé, Obi-Wan Kenobi, Qui-Jon, Darth Vader, Anakin Skywalker, etc.
+</p>
+
+<p>
+Do note that Darth Vader and Anakin Skywalker are two different characters
+here.
+</p>
+
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Con_Man_(web_series)"><i>Con Man</i></a> -
+inspired the web series format. Do note that I feel, but did not prove yet,
+that it would have been better as [% RPF %] about the real stars of
+<i>Firefly</i>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony: Friendship is Magic</i></a> - we reuse characters and concepts
+from it, e.g: as Padmé's "spirit friends".
+</p>
+
+<p>
+The characters were forked roughly from those at the end of MLP's
+<a href="https://mlp.fandom.com/wiki/Category:Season_7">7th season</a>,
+after which I stopped watching the show's canon.
+</p>
+
+<p>
+And that <a href="https://mlp.fandom.com/wiki/Discord">Discord</a>
+in <i>Queen Padmé Tales</i> is distinct from
+the Selinaverse's Q, even though they are both based on the Star Trek
+Q character.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/recommendations/films/#spaceballs">Spaceballs</a>
+- is featured in the 2nd episode as an allegory to the real Earth.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">Selinaverse</a>:
+my crossover world (loosely based on an imaginary reality I believed was
+true during a Mania episode in the late 1990s).
 </p>
 </li>
 

@@ -566,17 +566,17 @@ EOF
         href       => "humour/Blue-Rabbit-Log/",
         abstract   => <<'EOF',
 <p>
-Screenplays for a series of crazy comedy films parodying
-<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
-Role-Playing Games</a>. Join the band of the player characters called “The
-Blue Rabbit Adventuring Company”, as they journey in the imaginary role-playing
-world, and their struggles and
-encounters with monsters, the non-player characters, their players,
-and... the Game Master! (Muahahahahaha).
+Screenplays for an (incomplete) series of crazy comedy films parodying Fantasy
+<a href="http://en.wikipedia.org/wiki/Tabletop_role-playing_game">Tabletop
+Role-Playing Games</a> (FRPs or RPGs). Join the band of the player characters
+called “The Blue Rabbit Adventuring Company”, as they journey in the imaginary
+role-playing world, and their struggles and encounters with monsters, the
+non-player characters, their players, and… the Game Master! (Muahahahahaha).
 </p>
 
 <p>
-Work in progress.
+Included here are the beginning of the screenplay of the first part and some
+disorganised ideas for the continuation.
 </p>
 EOF
     },

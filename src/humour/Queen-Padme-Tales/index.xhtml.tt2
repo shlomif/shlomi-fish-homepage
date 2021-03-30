@@ -6,7 +6,7 @@
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
 
-<h2 id="read_online">Read Online</h2>
+[% WRAPPER h2_section id = "read_online"  title = "Read Online"  %]
 
 [% SET epub_prefix= base_path _ "humour/Queen-Padme-Tales/" %]
 
@@ -25,9 +25,11 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 [% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
 </ul>
 
+[% END %]
+
 [% default_toc %]
 
-<h2 id="sources">Sources</h2>
+[% WRAPPER h2_section id="sources" title="Sources"%]
 
 <ul>
 
@@ -36,6 +38,8 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
 
@@ -59,7 +63,7 @@ inspired the characters of Queen Padmé, Obi-Wan Kenobi, Qui-Jon, Darth Vader, A
 
 [% END %]
 
-<h2 id="licensing">Licensing</h2>
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
 
 <p>
 This work uses some characters and concepts from real life, from other
@@ -74,6 +78,8 @@ Creative Commons Attribution licence Unported (CC-by)</a>
 (either version 4.0, or at your option any later version), but like I said,
 the situation is more complicated than that.
 </p>
+
+[% END %]
 
 [% UNLESS avoid_nav_blocks %]
 

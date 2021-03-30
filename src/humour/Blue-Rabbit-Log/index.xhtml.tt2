@@ -3,18 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro %]
-
-<p>
-<i>The Blue Rabbit Log</i> is an original but incomplete screenplay for a
-series of films which parody Fantasy
-<a href="http://en.wikipedia.org/wiki/Tabletop_role-playing_game">Tabletop
-Role-Playing Games</a> (FRPs or RPGs).
-Included here are the beginning of the screenplay of the first part and
-some disorganised ideas for the continuation.
-</p>
-
-[%- END -%]
+[% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
 
 [% WRAPPER h2_section id = "read_online"  title = "The Text"  %]
 

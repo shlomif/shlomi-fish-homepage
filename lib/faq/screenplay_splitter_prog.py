@@ -135,6 +135,7 @@ def generic_generate_from_(
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
+        relative_output_dirname=output_dirname,
     )
     splitter.process()
 

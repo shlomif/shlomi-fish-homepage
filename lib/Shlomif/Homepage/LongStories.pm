@@ -729,8 +729,9 @@ sub _get_story_entry_tags
 {
     my ( $self, $args ) = @_;
 
-    my $id  = $args->{id};
-    my $tag = $args->{tag};
+    my $id                = $args->{id};
+    my $paragraph_tagline = $args->{paragraph_tagline};
+    my $tag               = $args->{tag};
 
     my $o = $self->_get_story($args);
 
@@ -747,6 +748,13 @@ sub _get_story_entry_tags
             $tag,
         ),
         qq{</header>\n},
+        (
+            $paragraph_tagline
+            ? ( qq{<p class="tagline">}
+                    . escape_html( $o->tagline() )
+                    . qq{</p>} )
+            : ()
+        ),
         @{ $self->_get_list_items_tags($args) },
         $o->entry_extra_html(),
         qq{</article>\n},
@@ -761,7 +769,11 @@ sub _get_all_stories_entries_tags
         map {
             @{
                 $self->_get_story_entry_tags(
-                    { id => $_->id(), tag => $args->{tag}, }
+                    {
+                        id                => $_->id(),
+                        paragraph_tagline => $args->{paragraph_tagline},
+                        tag               => $args->{tag},
+                    }
                 )
             }
         } (

@@ -683,17 +683,17 @@ sub _get_abstract_tags
 
 sub _process_html
 {
-    my ( $self, $abstract ) = @_;
+    my ( $self, $html_code ) = @_;
 
-    $abstract =~ s#"\$\(ROOT\)/([^"]+?)"#
+    $html_code =~ s#"\$\(ROOT\)/([^"]+?)"#
                 q{"}
                 . _rel_url($1)
                 . q{"}
         #eg;
 
-    $abstract =~ s#\$\(BtVS\)#$BtVS#g;
+    $html_code =~ s#\$\(BtVS\)#$BtVS#g;
 
-    return $abstract;
+    return $html_code;
 }
 
 sub _get_logo_tags

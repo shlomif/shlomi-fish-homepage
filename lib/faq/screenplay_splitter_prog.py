@@ -122,12 +122,30 @@ def generate_terminator_liberation(**args):
     )
 
 
-def generic_generate_from_db5(
+def generic_generate_from_tt2_generated_xhtml5(**args):
+    TOP_LEVEL_ID = 'main_text_wrapper'
+    return generic_generate_from_(
+        container_elem_xpath=("//xhtml:div[@id='" + TOP_LEVEL_ID + "']"),
+        **args,
+    )
+
+
+def generic_generate_from_db5(**args):
+    TOP_LEVEL_CLASS = 'article'
+    return generic_generate_from_(
+        container_elem_xpath=(
+            "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
+        ),
+        **args,
+    )
+
+
+def generic_generate_from_(
+        container_elem_xpath,
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="ongoing-text.html",):
     full_out_dirname = OUT_DN + (output_dirname or '')
-    TOP_LEVEL_CLASS = 'article'
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
     ns = {
@@ -136,58 +154,22 @@ def generic_generate_from_db5(
     }
 
     splitter = XhtmlSplitter(
+        container_elem_xpath=container_elem_xpath,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
-        container_elem_xpath=(
-            "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
-        ),
         ns=ns,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
-    )
-    splitter.process()
-
-
-def generic_generate_from_tt2_generated_xhtml5(
-        OUT_DN, base_path, output_dirname,
-        path_to_all_in_one, path_to_images="",
-        path_to_input="index.xhtml",):
-    full_out_dirname = OUT_DN + (output_dirname or '')
-    TOP_LEVEL_ID = 'main_text_wrapper'
-    XHTML_NS = XHTML_NAMESPACE
-    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-    ns = {
-        "xhtml": XHTML_NS,
-        "xml": XML_NS,
-    }
-
-    splitter = XhtmlSplitter(
-        input_fn=(OUT_DN + "/" + path_to_input),
-        output_dirname=full_out_dirname,
-        section_format=SCREENPLAY_SECTION_FORMAT,
-        container_elem_xpath=(
-            "//xhtml:div[@id='" + TOP_LEVEL_ID + "']"
-        ),
-        ns=ns,
-        base_path=base_path,
-        path_to_all_in_one=path_to_all_in_one,
-        path_to_images=path_to_images,
-        relative_output_dirname=output_dirname,
     )
     splitter.process()
 
 
 def main():
     generate_summerschool_at_nsa(
-        base_path=None,
-        output_dirname=None,
-        path_to_all_in_one="./ongoing-text.html",
-    )
-    generate_summerschool_at_nsa(
         base_path=("../" * 3),
-        output_dirname="temp2del/",
+        output_dirname="indiv-nodes/",
         path_to_all_in_one="../ongoing-text.html",
     )
     generate_selina(
@@ -208,7 +190,15 @@ def main():
         path_to_input="Summer-Glau-and-Chuck-Norris.html",
         path_to_images="../",
     )
-    sample_tt2_generated_xhtml5_call()
+    generic_generate_from_tt2_generated_xhtml5(
+        OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
+                "case-for-commercial-fan-fiction/"),
+        base_path=("../" * 4),
+        output_dirname="indiv-nodes/",
+        path_to_all_in_one="../",
+        path_to_input="./index.xhtml",
+        path_to_images="./",
+    )
 
 
 def sample_docbook5_call__disabled():
@@ -221,18 +211,6 @@ def sample_docbook5_call__disabled():
         "/putting-all-cards-on-the-table-2013.raw.html",
         path_to_input="./DocBook5" +
         "/putting-all-cards-on-the-table-2013.raw.html",
-        path_to_images="./",
-    )
-
-
-def sample_tt2_generated_xhtml5_call():
-    generic_generate_from_tt2_generated_xhtml5(
-        OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
-                "case-for-commercial-fan-fiction/"),
-        base_path=("../" * 4),
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../",
-        path_to_input="./index.xhtml",
         path_to_images="./",
     )
 

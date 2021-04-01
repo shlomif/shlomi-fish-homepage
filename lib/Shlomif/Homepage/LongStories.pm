@@ -6,10 +6,18 @@ use utf8;
 
 use Moo;
 
+use HTML::Acronyms ();
 use Path::Tiny qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use YAML::XS ();
 
 use Shlomif::Homepage::LongStories::Story ();
+
+my $ACRONYMS_FN = "lib/acronyms/list1.yaml";
+my $latemp_acroman =
+    HTML::Acronyms->new( dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
+
+my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', no_link => 0, } )->{html};
 
 sub _to_story_objects
 {
@@ -116,7 +124,7 @@ EOF
 <p class="hhfg abstract">
 Jennifer (loosely based on
 <a href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy</a>
-from <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">BtVS</a>)
+from $(BtVS)
 is a trendy and popular high school senior who is living and
 studying in the vicinity of Los Angeles. Her best friend, Taylor
 (<a href="https://buffy.fandom.com/wiki/Alexander_Harris">Xander</a>), convinces her
@@ -172,7 +180,7 @@ EOF
 <p class="selina abstract">
 Selina Mandrake ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
 was a geeky Anglo-American girl in her high school senior year in 2011
-California, who thought that the show <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">BtVS</a> was fictional.
+California, who thought that the show $(BtVS) was fictional.
 However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
 who told her that she was none other than Buffy Mageia, <b>The Slayer</b>,
@@ -679,6 +687,8 @@ sub _get_abstract_tags
                 . _rel_url($1)
                 . q{"}
         #eg;
+
+    $abstract =~ s#\$\(BtVS\)#$BtVS#g;
 
     return [$abstract];
 }

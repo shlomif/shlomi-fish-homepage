@@ -14,13 +14,13 @@ href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
 
 [% BLOCK inactive_humour_stories_list_text %]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[1], tag=>'h3') %]
+[% long_stories.calc_all_stories_entries(only_inactives=>[1], paragraph_tagline=>1, tag=>'h3') %]
 
 [% END %]
 
 [% BLOCK active_humour_stories_list_text %]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[0], tag=>'h3', paragraph_tagline=>1,) %]
+[% long_stories.calc_all_stories_entries(only_inactives=>[0], paragraph_tagline=>1, tag=>'h3',) %]
 
 [% END %]
 

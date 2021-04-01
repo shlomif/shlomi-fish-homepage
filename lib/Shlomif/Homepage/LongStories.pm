@@ -191,9 +191,7 @@ even supportive of the demons she encountered.
 </p>
 <p>
 This is a parody of the television series
-<a
-href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy
-the Vampire Slayer</a>, while referencing other pieces of popular
+$(BtVS), while referencing other pieces of popular
 culture, and has many ties to my previous screenplay,
 <a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
@@ -202,9 +200,8 @@ serious messages and insights.
 EOF
         entry_extra_html => <<'EOF',
 <p>
-This screenplay, a parody and reflection on
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the
-Vampire Slayer</i></a> and inspired by many other sources, is in a usable state.
+This screenplay, a parody and reflection on $(BtVS)
+and inspired by many other sources, is in a usable state.
 </p>
 EOF
 
@@ -681,6 +678,12 @@ sub _get_abstract_tags
            $args->{abstract_text}
         || $self->_get_story($args)->abstract
         || die "No abstract for id=<$args->{id}>";
+    return [ $self->_process_html($abstract) ];
+}
+
+sub _process_html
+{
+    my ( $self, $abstract ) = @_;
 
     $abstract =~ s#"\$\(ROOT\)/([^"]+?)"#
                 q{"}
@@ -690,7 +693,7 @@ sub _get_abstract_tags
 
     $abstract =~ s#\$\(BtVS\)#$BtVS#g;
 
-    return [$abstract];
+    return $abstract;
 }
 
 sub _get_logo_tags
@@ -766,7 +769,7 @@ sub _get_story_entry_tags
             : ()
         ),
         @{ $self->_get_list_items_tags($args) },
-        $o->entry_extra_html(),
+        $self->_process_html( $o->entry_extra_html() ),
         qq{</article>\n},
     ];
 }

@@ -60,6 +60,16 @@ class MyTests(unittest.TestCase):
             "/section[header/*/@id='rindolfism_canon']")
         self.assertEqual(len(links), 1)
 
+    def _helper_indiv_nodes_test(self, root, xpath_str):
+        """docstring for _helper_indiv_nodes_test"""
+        articles = root.xpath(xpath_str)
+        self.assertTrue(len(articles), "count articles")
+        for art in articles:
+            link = art.xpath("./header/a[./text() = 'Node Link']")
+            self.assertEqual(len(link), 1)
+            href = link[0].get("href")
+            self.assertTrue(href.startswith("indiv-nodes/"))
+
     def test_main(self):
         base_dir_path = './dest/post-incs/t2/humour/image-macros/'
         input_fn = (base_dir_path + 'index.xhtml')
@@ -97,12 +107,7 @@ class MyTests(unittest.TestCase):
         )
 
         root = html.parse(input_fn)
-        articles = root.xpath(".//article")
-        for art in articles:
-            link = art.xpath("./header/a[./text() = 'Node Link']")
-            self.assertEqual(len(link), 1)
-            href = link[0].get("href")
-            self.assertTrue(href.startswith("indiv-nodes/"))
+        self._helper_indiv_nodes_test(root, ".//article")
         imgs = root.xpath(".//article/img")
         self.assertTrue(len(imgs) > 5)
         for img in imgs:
@@ -119,6 +124,13 @@ class MyTests(unittest.TestCase):
                 WIDTH,
                 "image {} has WIDTH={}".format(path, WIDTH)
                 )
+
+    def test_terminator_liberation(self):
+        """docstring for test_terminator_liberation"""
+        input_fn = './dest/post-incs/t2/humour/Terminator/Liberation/' + \
+            'ongoing-text.html'
+        root = html.parse(input_fn)
+        self._helper_indiv_nodes_test(root, ".//section")
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

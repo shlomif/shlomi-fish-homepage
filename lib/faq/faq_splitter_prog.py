@@ -277,6 +277,7 @@ def generic_generate(
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
+        relative_output_dirname=output_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
         ns=ns,
@@ -303,18 +304,18 @@ def _screenplays_main():
     )
     generic_generate(
         OUT_DN="./dest/post-incs/t2/humour/Selina-Mandrake/",
-        output_dirname="temp2del/",
+        output_dirname="indiv-nodes/",
         path_to_all_in_one="../ongoing-text.html",
     )
     generic_generate(
         OUT_DN="./dest/post-incs/t2/humour/Terminator/Liberation/",
-        output_dirname="temp2del/",
+        output_dirname="indiv-nodes/",
         path_to_all_in_one="../ongoing-text.html",
         path_to_images="../",
     )
     generic_generate(
         OUT_DN="./dest/post-incs/t2/humour/Muppets-Show-TNI/",
-        output_dirname="temp2del/",
+        output_dirname="indiv-nodes/",
         path_to_all_in_one="../Summer-Glau-and-Chuck-Norris.html",
         path_to_input="Summer-Glau-and-Chuck-Norris.html",
         path_to_images="../",

@@ -106,6 +106,12 @@ my $_essays_tree_contents = {
                     text => "Changing the Seldon Plan",
                     url  => "philosophy/psychology/changing-the-seldon-plan/",
                 },
+                {
+                    text =>
+"Crossover hypothesis about the origin of human consciousness",
+                    url =>
+"philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness/",
+                },
             ],
         },
         {

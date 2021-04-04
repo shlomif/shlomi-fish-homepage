@@ -1116,6 +1116,9 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
+$(DOCBOOK5_BASE_DIR)/xml/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.xml: $(LATEMP_ROOT_SOURCE_DIR)/lib/asciidocs/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.asciidoc
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
+
 $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 

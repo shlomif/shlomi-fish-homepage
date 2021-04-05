@@ -21,6 +21,16 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
 [% SET proprietary = '<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a> (= restricted, ' _ ARR _ ', "copyrighted")' %]
 
+[% BLOCK cookie_monster__share_it_maybe__video %]
+
+[%# Sesame Street 'Share it Maybe'
+%]
+
+<iframe src="https://www.youtube.com/embed/-qTIGg3I5y8" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
+
+
 [% BLOCK links_and_illustrations %]
 
 <p>
@@ -208,7 +218,7 @@ series.
 
 </ul>
 
-<iframe src="https://www.youtube.com/embed/-qTIGg3I5y8" allowfullscreen="allowfullscreen"></iframe>
+[% INCLUDE cookie_monster__share_it_maybe__video %]
 
 <p>
 It proposes a way forward, implementable by more than one party, that may
@@ -891,6 +901,12 @@ a lot.
 </p>
 
 </blockquote>
+
+<p>
+Cookie monster agrees with me:
+</p>
+
+[% INCLUDE cookie_monster__share_it_maybe__video %]
 
 [% END %]
 

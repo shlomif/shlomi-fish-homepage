@@ -13,6 +13,7 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET MDD = ' <a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">Clinical Depression</a>' %]
 [% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
+[% SET MPAA = my_acronym( "key" => "MPAA", ) %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
 [% SET RPFs = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction Works ( RPFs )</a>' %]
@@ -75,6 +76,8 @@ thematic pages of quotes or essays.
 
 [% WRAPPER h2_section id = "summary" title = "Summary"  %]
 
+[% IF _enable_cliche_quote %]
+
 <blockquote>
 
 <p>
@@ -82,6 +85,8 @@ Let’s make ("fan")-fiction great again!
 </p>
 
 </blockquote>
+
+[% END %]
 
 <p>
 This essay attributes the perceived problems of
@@ -162,6 +167,13 @@ This makes geeky hackers increasingly write and think in terms of fanfiction.
 The film industry's requirement of accepting screenplays only in its draconian,
 finicky (and yet - boring) format.
 [% INCLUDE ref href="#hollywood_screenplay_format" %]
+</p>
+</li>
+
+<li>
+<p>
+Its lack of communication on why a screenplay has been rejected.
+[% INCLUDE ref href="#be_communicative" %]
 </p>
 </li>
 
@@ -2291,7 +2303,13 @@ The [% MPAA %] vs. <a href="https://www.shlomifish.org/humour/bits/facts/Chuck-N
 
 <li>
 <p>
-Even: Megacorp vs. <a href="https://en.wikipedia.org/wiki/Ariel_Winter">Ariel Winter</a>.
+Dreamworks vs. <a href="https://twitter.com/TiffanyAlvord">Tiffany Alvord</a> Productions.
+</p>
+</li>
+
+<li>
+<p>
+Even: Megacorp vs. <a href="https://en.wikipedia.org/wiki/Ariel_Winter">Ariel Winter</a> Films.
 </p>
 </li>
 

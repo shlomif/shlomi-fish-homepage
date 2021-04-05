@@ -66,13 +66,14 @@ sub by_british_blurb
     my ( $self, $args ) = @_;
 
     my $year    = $args->{year};
+    my $url     = $args->{url}     // "https://www.shlomifish.org/";
     my $version = $args->{version} // '3.0';
 
     return <<"EOF";
 <p><a rel="license" href="http://creativecommons.org/licenses/by/$version/"><img alt="Creative Commons License" class="bless" src="@{[$self->base_path]}images/somerights20.png"/></a></p>
 
 <p>
-This document is Copyright by @{[$self->copyright_holder()]}, $year, and is available
+This document is Copyright by <a href="$url">@{[$self->copyright_holder()]}</a>, $year, and is available
 under the
 terms of <a rel="license"
 href="http://creativecommons.org/licenses/by/$version/">the Creative Commons

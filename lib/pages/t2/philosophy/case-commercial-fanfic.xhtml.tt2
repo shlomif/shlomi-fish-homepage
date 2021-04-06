@@ -1,3 +1,11 @@
+[% IF scope == "screenplay_shortage" %]
+[% SET screenplay_shortage__remix = "1" %]
+[% ELSIF scope == "full" %]
+[% SET screenplay_shortage__remix = "" %]
+[% ELSE %]
+[% THROW "unknown scope = \"$scope\"" %]
+[% END %]
+
 
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]

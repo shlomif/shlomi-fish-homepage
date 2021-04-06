@@ -303,6 +303,11 @@ def _screenplays_main():
         path_to_all_in_one="../ongoing-text.html",
     )
     generic_generate(
+        OUT_DN="./dest/post-incs/t2/humour/humanity/",
+        output_dirname="indiv-nodes/",
+        path_to_all_in_one="../ongoing-text.html",
+    )
+    generic_generate(
         OUT_DN="./dest/post-incs/t2/humour/Selina-Mandrake/",
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../ongoing-text.html",

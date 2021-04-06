@@ -2373,7 +2373,7 @@ models.  Hacks!
 <iframe src="https://www.youtube.com/embed/oNZove4OTtI" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
-They can do it either by agreement or individually.  As an analogy, I recall
+They can do it either by agreement or unilaterally.  As an analogy, I recall
 that back in the late 1990s, there was an initial resistance by vendors of <a
 href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">commercial
 SQL databases</a> to release official <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> ports of their databases (which
@@ -2408,6 +2408,7 @@ href="https://www.shlomifish.org/me/relicensing-my-entire-portfolio-under-cc-by/
 works under less restrictive licences</a> (e.g: "CC-by-nc-sa"→"CC0").
 </p>
 
+[% UNLESS screenplay_shortage__remix %]
 
 [% WRAPPER h3_section id = "older_fics_by_shlomif" title = "Reusing my Older Fics" %]
 
@@ -2495,6 +2496,8 @@ Bloggers, or xkcd.
 
 [% END %]
 
+[% END %]
+
 [% WRAPPER h2_section id = "film_industry_losing_the_psychological_war" title = "Losing the Psychological War" %]
 
 <p>
@@ -2553,6 +2556,8 @@ But I have <a href="#the-plan">a plan forward</a>.
 </p>
 
 [% END %]
+
+[% UNLESS screenplay_shortage__remix %]
 
 [% WRAPPER h2_section id = "do_it_my_way" title = "Do it my way"  %]
 
@@ -2672,12 +2677,15 @@ to my writings.
 
 [% END %]
 
+[% END %]
+
 [% WRAPPER h2_section id = "lets_have_them_all" title = "Why can't we have them all?"  %]
 
 <iframe src="https://www.youtube.com/embed/vqgSO8_cRio" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
-Currently, there aren't too many commercial parodical crossovers of fiction,
+Currently, there aren't too many commercial parodical crossovers of fiction
+starring big-time actors,
 but there is no reason why we cannot bend all the guidelines that prevent them.
 <a href="https://en.wikipedia.org/wiki/Joss_Whedon">Joss Whedon</a> wanted to
 reboot <a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer">Buffy
@@ -2716,6 +2724,8 @@ Extremely not politically correct, which is why it is much more honest and fun
 and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_of_Acquisition">"War is good for business!"</a> to quote the Ferengi Rules of Acquisition. And I invite <a href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html#cast__direction">Whedon to direct it</a>!
 </p>
 
+[% UNLESS screenplay_shortage__remix %]
+
 <p>
 My secret to success: I'm a 21st century open source + open content + remixer +
 fanfic polymath and <a
@@ -2740,6 +2750,8 @@ my way</a>, then hopefully some people will love my work and most of the others 
 %]
 
 <iframe src="https://www.youtube.com/embed/af_J2e4r328" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
 
 [% END %]
 
@@ -3047,6 +3059,7 @@ Well, I'm still going to try, and there may be obstacles, and setbacks,
 and I might not succeed, but I won't give up for now.
 I may still <a href="https://www.youtube.com/watch?v=_FCld2UJMRg">"walk away"
 or "run"</a> from this based on what my judgement tells me.
+But I'll carry on for now.
 </p>
 
 [% END %]

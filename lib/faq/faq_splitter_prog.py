@@ -297,34 +297,18 @@ def generic_generate_from_tt2_generated_xhtml5(**args):
 
 
 def _screenplays_main():
-    generic_generate(
-        OUT_DN="./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../ongoing-text.html",
-    )
-    generic_generate(
-        OUT_DN="./dest/post-incs/t2/humour/humanity/",
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../ongoing-text.html",
-    )
-    generic_generate(
-        OUT_DN="./dest/post-incs/t2/humour/Selina-Mandrake/",
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../ongoing-text.html",
-    )
-    generic_generate(
-        OUT_DN="./dest/post-incs/t2/humour/Terminator/Liberation/",
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../ongoing-text.html",
-        path_to_images="../",
-    )
-    generic_generate(
-        OUT_DN="./dest/post-incs/t2/humour/Muppets-Show-TNI/",
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../Summer-Glau-and-Chuck-Norris.html",
-        path_to_input="Summer-Glau-and-Chuck-Norris.html",
-        path_to_images="../",
-    )
+    for OUT_DN in [
+        "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
+        "./dest/post-incs/t2/humour/humanity/",
+        "./dest/post-incs/t2/humour/Selina-Mandrake/",
+        "./dest/post-incs/t2/humour/Terminator/Liberation/",
+            ]:
+        generic_generate(
+            OUT_DN=OUT_DN,
+            output_dirname="indiv-nodes/",
+            path_to_all_in_one="../ongoing-text.html",
+            path_to_images="../",
+        )
     generic_generate_from_tt2_generated_xhtml5(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),

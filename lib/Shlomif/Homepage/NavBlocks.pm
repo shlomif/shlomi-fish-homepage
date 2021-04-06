@@ -406,6 +406,11 @@ my %tr_s = (
         title => "Mission Statement",
         items => [
             _l(
+                inner_html => "Screenplay Shortage Reduced Version",
+                path       =>
+"philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml",
+            ),
+            _l(
                 inner_html => "Document",
                 path => "philosophy/culture/case-for-commercial-fan-fiction/",
             ),

@@ -26,8 +26,7 @@ base_path %]meta/donate/">PayPal</a> and/or bank account and/or
 <p>
 In addition, if I receive at least 100 million Euro, I will make the
 texts and the franchises themselves
-<a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>
-(also see <a href="https://copyfree.org/">Copyfree</a>).
+under an aggregate <a href="#public_domain_license">public-domain / "copyfree" license</a>.
 </p>
 
 <p>
@@ -169,6 +168,46 @@ they credit me.
 </ul>
 
 [%- END -%]
+
+[% WRAPPER h2_section id = "public_domain_license" title = "The Aggregate Public Domain License"  %]
+
+<p>
+Any or all of:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-or-later</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Unlicense">The Unlicense</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MIT_License">The "Expat" variant of the MIT License</a>
+</p>
+</li>
+
+</ol>
+
+<p>
+(Also see <a href="https://copyfree.org/">Copyfree</a>.)
+</p>
+
+[% END %]
 
 </div>
 

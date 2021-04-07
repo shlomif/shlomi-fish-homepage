@@ -128,6 +128,13 @@ my $_essays_tree_contents = {
                         "Commercial Fanfiction as a Geeky/Hackery Imperative",
                     url =>
                         "philosophy/culture/case-for-commercial-fan-fiction/",
+                    subs => [
+                        {
+                            text => "Reduced Version",
+                            url  =>
+"philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml",
+                        },
+                    ],
                 },
             ],
         },

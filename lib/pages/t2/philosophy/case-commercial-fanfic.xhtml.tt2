@@ -84,6 +84,17 @@ thematic pages of quotes or essays.
 
 [% toc_div( "collapse" => "1", ) %]
 
+[% UNLESS screenplay_shortage__remix %]
+
+<section class="note">
+<header><h2 id="note">Note</h2></header>
+<p>
+There is now a <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml">Reduced / shortened / more TL;DRy version</a>.
+</p>
+</section>
+
+[% END %]
+
 [% WRAPPER h2_section id = "summary" title = "Summary"  %]
 
 [% IF _enable_cliche_quote %]

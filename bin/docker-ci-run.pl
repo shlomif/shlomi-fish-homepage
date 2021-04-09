@@ -256,8 +256,15 @@ echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
 ( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
 pwd
 echo "HOME=\$HOME"
-virtualenv -p `which pypy3` /pypyenv
-source /pypyenv/bin/activate
+if false
+then
+    virtualenv -p `which pypy3` /pypyenv
+    source /pypyenv/bin/activate
+else
+    virtualenv -p `which python3` /python_3_env
+    source /python_3_env/bin/activate
+fi
+
 pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"

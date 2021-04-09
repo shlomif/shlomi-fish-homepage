@@ -84,6 +84,9 @@ EOF
             sys_deps                    => [
                 qw/
                     GraphicsMagick
+                    docbook-dtds
+                    docbook-style-xsl
+                    docbook5-style-xsl
                     gd-devel
                     gdbm-devel
                     gmp-devel
@@ -103,6 +106,7 @@ EOF
                     python3-devel
                     ruby-devel
                     rubygem-rspec
+                    sgml-common
                     the_silver_searcher
                     vim
                     virtualenv

@@ -276,7 +276,8 @@ fi
 go get -u github.com/tdewolff/minify/cmd/minify
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"
-bash bin/rebuild
+# bash bin/rebuild
+TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
 
     $obj->exe_bash_code( { code => $script, } );

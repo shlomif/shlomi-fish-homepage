@@ -38,9 +38,11 @@ EOF
                     build-essential
                     cookiecutter
                     graphicsmagick
+                    hspell
                     hunspell-en-gb
                     libdb5.3-dev
                     libdbd-sqlite3-perl
+                    libexpat1-dev
                     libgdbm-compat-dev
                     libgdbm-dev
                     libgd-dev
@@ -51,15 +53,22 @@ EOF
                     libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
+                    libpython3-all
+                    libpython3-dev
                     libxml2-dev
                     lynx
+                    myspell-hw
                     perl
+                    python3
+                    python3-all
+                    python3-dev
                     python3-venv
                     python3-virtualenv
                     ruby-dev
                     ruby-rspec
                     silversearcher-ag
                     txt2html
+                    vim
                     xsltproc
                     xz-utils
                     zip
@@ -78,6 +87,8 @@ EOF
                     gd-devel
                     gdbm-devel
                     gmp-devel
+                    hspell-devel
+                    libdb-devel
                     libdb-devel
                     libxml2-devel
                     libxslt
@@ -85,11 +96,15 @@ EOF
                     ncurses-devel
                     pcre-devel
                     perl-DBD-SQLite
+                    perl-XML-Parser
                     perl-generators
                     primesieve-devel
+                    python3
+                    python3-devel
                     ruby-devel
                     rubygem-rspec
                     the_silver_searcher
+                    vim
                     virtualenv
                     which
                     xz
@@ -122,6 +137,7 @@ sub run_config
                 cmake-data
                 cpanminus
                 cppcheck
+                expat
                 fortune-mod
                 hunspell
                 g++
@@ -251,6 +267,8 @@ then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
 go get -u github.com/tdewolff/minify/cmd/minify
+find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
+PATH="\$PATH:\$HOME/go/bin"
 bash bin/rebuild
 EOSCRIPTTTTTTT
 

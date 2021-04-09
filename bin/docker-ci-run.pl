@@ -89,13 +89,13 @@ EOF
                     gmp-devel
                     hspell-devel
                     libdb-devel
-                    libdb-devel
                     libxml2-devel
                     libxslt
                     libxslt-devel
                     ncurses-devel
                     pcre-devel
                     perl-DBD-SQLite
+                    perl-Inline-Python
                     perl-XML-Parser
                     perl-generators
                     primesieve-devel
@@ -258,7 +258,7 @@ pwd
 echo "HOME=\$HOME"
 virtualenv -p `which pypy3` /pypyenv
 source /pypyenv/bin/activate
-pydeps="flake8 six"
+pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"
 cmake_build_is_already_part_of_test_sh='true'

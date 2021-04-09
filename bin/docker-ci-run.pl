@@ -218,6 +218,8 @@ sub run_config
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
+export LC_ALL=en_US.UTF-8
+export LANG="\$LC_ALL"
 mv /temp-git ~/source
 true || ls -lR /root
 $setup_package_manager

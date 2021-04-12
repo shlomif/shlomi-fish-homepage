@@ -298,10 +298,12 @@ def generic_generate_from_tt2_generated_xhtml5(**args):
 
 def _screenplays_main():
     for OUT_DN in [
-        "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
-        "./dest/post-incs/t2/humour/humanity/",
+        "./dest/post-incs/t2/humour/Buffy/A-Few-Good-Slayers/",
         "./dest/post-incs/t2/humour/Selina-Mandrake/",
+        "./dest/post-incs/t2/humour/So-Who-The-Hell-Is-Qoheleth/",
+        "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
         "./dest/post-incs/t2/humour/Terminator/Liberation/",
+        "./dest/post-incs/t2/humour/humanity/",
             ]:
         generic_generate(
             OUT_DN=OUT_DN,

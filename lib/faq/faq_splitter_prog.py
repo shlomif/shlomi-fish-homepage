@@ -301,6 +301,7 @@ def _screenplays_main():
         "./dest/post-incs/t2/humour/Buffy/A-Few-Good-Slayers/",
         "./dest/post-incs/t2/humour/Selina-Mandrake/",
         "./dest/post-incs/t2/humour/So-Who-The-Hell-Is-Qoheleth/",
+        "./dest/post-incs/t2/humour/Star-Trek/We-the-Living-Dead/",
         "./dest/post-incs/t2/humour/Summerschool-at-the-NSA/",
         "./dest/post-incs/t2/humour/Terminator/Liberation/",
         "./dest/post-incs/t2/humour/humanity/",
@@ -319,6 +320,18 @@ def _screenplays_main():
             generic_generate(
                 OUT_DN=OUT_DN,
                 output_dirname="part{}-indiv-nodes/".format(part),
+                path_to_input=path_to_input,
+                path_to_all_in_one=("../" + path_to_input),
+                path_to_images="../",
+            )
+    for OUT_DN in [
+        "./dest/post-incs/t2/humour/Blue-Rabbit-Log/",
+            ]:
+        for part in [1]:
+            path_to_input = "part-{}.html".format(part)
+            generic_generate(
+                OUT_DN=OUT_DN,
+                output_dirname="part-{}-indiv-nodes/".format(part),
                 path_to_input=path_to_input,
                 path_to_all_in_one=("../" + path_to_input),
                 path_to_images="../",

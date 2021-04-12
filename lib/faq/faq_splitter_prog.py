@@ -309,6 +309,18 @@ def _screenplays_main():
             path_to_all_in_one="../ongoing-text.html",
             path_to_images="../",
         )
+    for OUT_DN in [
+        "./dest/post-incs/t2/humour/TOneW-the-Fountainhead/",
+            ]:
+        for part in [1, 2]:
+            path_to_input = "TOW_Fountainhead_{}.html".format(part)
+            generic_generate(
+                OUT_DN=OUT_DN,
+                output_dirname="part{}-indiv-nodes/".format(part),
+                path_to_input=path_to_input,
+                path_to_all_in_one=("../" + path_to_input),
+                path_to_images="../",
+            )
     generic_generate_from_tt2_generated_xhtml5(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),

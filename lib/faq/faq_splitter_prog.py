@@ -356,6 +356,23 @@ def _screenplays_main():
                 path_to_images="../",
             )
 
+    for OUT_DN in [
+        "./dest/post-incs/t2/humour/Muppets-Show-TNI/",
+            ]:
+        for part in [
+                "Harry-Potter",
+                "Jennifer-Lawrence",
+                "Summer-Glau-and-Chuck-Norris",
+                ]:
+            path_to_input = "{}.html".format(part)
+            generic_generate(
+                OUT_DN=OUT_DN,
+                output_dirname="{}-indiv-nodes/".format(part),
+                path_to_input=path_to_input,
+                path_to_all_in_one=("../" + path_to_input),
+                path_to_images="../",
+            )
+
     generic_generate_from_tt2_generated_xhtml5(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),

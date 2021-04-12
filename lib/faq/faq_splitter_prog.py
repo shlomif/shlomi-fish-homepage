@@ -312,6 +312,7 @@ def _screenplays_main():
             path_to_all_in_one="../ongoing-text.html",
             path_to_images="../",
         )
+
     for OUT_DN in [
         "./dest/post-incs/t2/humour/TOneW-the-Fountainhead/",
             ]:
@@ -324,6 +325,7 @@ def _screenplays_main():
                 path_to_all_in_one=("../" + path_to_input),
                 path_to_images="../",
             )
+
     for OUT_DN in [
         "./dest/post-incs/t2/humour/Blue-Rabbit-Log/",
             ]:
@@ -336,6 +338,24 @@ def _screenplays_main():
                 path_to_all_in_one=("../" + path_to_input),
                 path_to_images="../",
             )
+
+    for OUT_DN in [
+        "./dest/post-incs/t2/humour/Queen-Padme-Tales/",
+            ]:
+        for part_suf in [
+            "Planting-Trees",
+            "Queen-Amidala-vs-the-Klingon-Warriors",
+                ]:
+            part = "Queen-Padme-Tales--" + part_suf
+            path_to_input = "{}.html".format(part)
+            generic_generate(
+                OUT_DN=OUT_DN,
+                output_dirname="{}-indiv-nodes/".format(part),
+                path_to_input=path_to_input,
+                path_to_all_in_one=("../" + path_to_input),
+                path_to_images="../",
+            )
+
     generic_generate_from_tt2_generated_xhtml5(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),

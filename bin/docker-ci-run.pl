@@ -218,12 +218,16 @@ sub run_config
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
-export LC_ALL=C.UTF-8
+export LC_ALL=en_US.UTF-8
 export LANG="\$LC_ALL"
+export LANGUAGE="en_US:en"
 mv /temp-git ~/source
 true || ls -lR /root
 $setup_package_manager
 cd ~/source
+$package_manager_install_cmd glibc-langpack-en glibc-locale-source
+# localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
+localedef --force -i en_US -f UTF-8 en_US.UTF-8
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
 if false

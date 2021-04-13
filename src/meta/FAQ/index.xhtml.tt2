@@ -2041,6 +2041,18 @@ now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
 
+[% WRAPPER faq_h4_section id = "why_the_www_domain_prefix"  title = "Why are you using the www domain prefix for your site?"  %]
+
+<p>
+There is no clear consensus whether "www." or plain "shlomifish.org" should
+be used. It makes the URLs somewhat longer but I also have
+<a href="https://shlom.in/">shlom.in</a> which is even shorter.
+Also see <a href="https://en.wikipedia.org/wiki/Law_of_triviality">colour
+of the bikeshed</a> arguments.
+</p>
+
+[%- END -%]
+
 [%- END -%]
 
 [% WRAPPER faq_h3_section id = "refer_to_shlomifish.org"  title = "How should I refer to this site?"  %]

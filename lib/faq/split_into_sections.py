@@ -76,6 +76,9 @@ class XhtmlSplitter:
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
+        self._to_string_cb = (
+            lxml.html.tostring
+            if self.latemp_plain_html else etree.tostring)
 
     def _calc_root(self):
         self.root = (
@@ -101,7 +104,7 @@ class XhtmlSplitter:
         )
 
     def _write_master_xml_file(self):
-        tree_s = etree.tostring(self.root)
+        tree_s = self._to_string_cb(self.root)
         should = False
         with open(self.input_fn, 'rb') as ifh:
             curr = ifh.read()
@@ -252,7 +255,7 @@ class XhtmlSplitter:
                     )
             formats = {
                 'base_path': self.base_path,
-                'body': etree.tostring(list_elem).decode('utf-8'),
+                'body': self._to_string_cb(list_elem).decode('utf-8'),
                 'main_title': self.main_title_esc,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(

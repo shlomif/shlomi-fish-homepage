@@ -237,7 +237,7 @@ def generic_generate_from_(
         container_elem_xpath,
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
-        path_to_input="ongoing-text.html",):
+        path_to_input="ongoing-text.html", latemp_plain_html=False):
     full_out_dirname = OUT_DN + (output_dirname or '')
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
@@ -256,6 +256,7 @@ def generic_generate_from_(
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
         relative_output_dirname=output_dirname,
+        latemp_plain_html=latemp_plain_html,
     )
     splitter.process()
 
@@ -286,6 +287,15 @@ def generic_generate(
         path_to_images=path_to_images,
     )
     splitter.process()
+
+
+def generic_generate_from_tt2_generated_plain_html5(**args):
+    TOP_LEVEL_ID = 'main_text_wrapper'
+    return generic_generate_from_(
+        container_elem_xpath=("//div[@id='" + TOP_LEVEL_ID + "']"),
+        latemp_plain_html=True,
+        **args,
+    )
 
 
 def generic_generate_from_tt2_generated_xhtml5(**args):
@@ -373,7 +383,7 @@ def _screenplays_main():
                 path_to_images="../",
             )
 
-    generic_generate_from_tt2_generated_xhtml5(
+    generic_generate_from_tt2_generated_plain_html5(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),
         base_path=("../" * 4),

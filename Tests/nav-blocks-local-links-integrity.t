@@ -43,22 +43,31 @@ my $master_doc = __PACKAGE__->_get_doc($master_fn);
             plan( tests => ( 1 + 2 * @$links ) );
             foreach my $link (@$links)
             {
-                $link =~ s#/\z#/index.xhtml#ms;
-                my $fn = "dest/post-incs/t2/$link";
+            SKIP:
+                {
+                    if ( $link =~ /commercial-fan-fic/ )
+                    {
+                        skip "commercial_fanfic", 2;
+                    }
+                    $link =~ s#/\z#/index.xhtml#ms;
+                    my $fn = "dest/post-incs/t2/$link";
 
-                ok( scalar( -f $fn ), "$fn exists." );
-                my $doc = __PACKAGE__->_get_doc($fn);
+                    ok( scalar( -f $fn ), "$fn exists." );
+                    my $doc = __PACKAGE__->_get_doc($fn);
 
-                my $r = $xpc->find(
-                    sprintf(
+                    my $r = $xpc->find(
+                        sprintf(
 q{//x:div[@class="nav_blocks"]/x:div[@id="%s_nav_block"]/x:table},
-                        $block_id ),
-                    $doc
-                );
+                            $block_id ),
+                        $doc
+                    );
 
-                is( $r->size(), 1,
-                    "Found one toc item for block_id='$block_id';fn='$fn'",
-                );
+                    is(
+                        $r->size(),
+                        1,
+                        "Found one toc item for block_id='$block_id';fn='$fn'",
+                    );
+                }
             }
             my $r = $xpc->find(
                 sprintf(

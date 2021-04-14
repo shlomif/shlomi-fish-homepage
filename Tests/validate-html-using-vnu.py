@@ -95,6 +95,8 @@ class MyTests(vnu_validator.VnuTest):
                 |
             (?: me/resumes/Shlomi-Fish-Heb.*? )
                 |
+            (?: philosophy/culture/case-for-commercial-fan-fic.*? )
+                |
             (?: open-source/projects/Park-Lisp/
                 park-lisp-informal-spec.raw{ext})
                 |

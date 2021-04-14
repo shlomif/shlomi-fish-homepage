@@ -13,6 +13,8 @@ sections or questions.
 
 import html
 import os
+import lxml.html
+# from io import StringIO
 
 from lxml import etree
 from lxml.html import XHTML_NAMESPACE
@@ -36,7 +38,7 @@ def _first(ns, node, query):
     mylist = _xpath(ns, node, query)
     if not len(mylist):
         raise MyXmlNoResultsFoundError(
-            "node={} , query={}".format(node, query)
+            "node={} , query={}".format(etree.tostring(node), query)
         )
     return mylist[0]
 
@@ -47,10 +49,12 @@ class XhtmlSplitter:
             section_format, container_elem_xpath,
             ns,
             xhtml_article_tag=XHTML_ARTICLE_TAG,
-            xhtml_section_tag=XHTML_SECTION_TAG, base_path=None,
+            xhtml_section_tag=XHTML_SECTION_TAG,
+            base_path=None,
             path_to_all_in_one="./",
             path_to_images="",
             relative_output_dirname="",
+            latemp_plain_html=False,
             ):
         self.input_fn = input_fn
         self.ns = ns
@@ -58,6 +62,8 @@ class XhtmlSplitter:
         self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
+        self.latemp_plain_html = latemp_plain_html
+        self.xhtml_prefix = ("" if self.latemp_plain_html else "xhtml:")
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
         self.section_tags = set([
@@ -70,10 +76,18 @@ class XhtmlSplitter:
         self.path_to_images = path_to_images
 
     def _calc_root(self):
-        self.root = etree.XML(self.initial_xml_string)
+        self.root = (
+            etree.HTML
+            if self.latemp_plain_html
+            else etree.XML)(
+                self.initial_xml_string
+            )
         self.main_title = _first(
             self.ns,
-            self.root, './xhtml:head/xhtml:title/text()'
+            self.root,
+            './{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
+                xhtml_prefix=self.xhtml_prefix
+            )
         )
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
@@ -110,22 +124,48 @@ class XhtmlSplitter:
             return _xpath(
                 self.ns,
                 self.container_elem,
-                ".//xhtml:article | .//xhtml:section")
+                ".//{xhtml_prefix}article | .//{xhtml_prefix}section".format(
+                    xhtml_prefix=self.xhtml_prefix
+                )
+            )
 
         def _add_prefix(prefix, suffix, list_elem):
             """docstring for _add_prefix"""
-            header_tag = _first(self.ns, list_elem, "./xhtml:header")
+            header_tag = _first(
+                self.ns, list_elem,
+                "./{xhtml_prefix}header".format(
+                    xhtml_prefix=self.xhtml_prefix
+                )
+            )
             try:
                 a_tag = _first(
-                    self.ns, header_tag, "./xhtml:a[@class='indiv_node']")
+                    self.ns,
+                    header_tag,
+                    "./{xhtml_prefix}a[@class='indiv_node']".format(
+                        xhtml_prefix=self.xhtml_prefix
+                    )
+                )
             except MyXmlNoResultsFoundError:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
                 a_tag_href_val = (prefix + id_ + suffix)
-                a_tag = etree.XML(
+                a_tag = (
+                    # (lambda x: etree.parse(StringIO(x), etree.HTMLParser()))
+                    lxml.html.fragment_fromstring
+                    if self.latemp_plain_html
+                    else etree.XML
+                )(
                     (
-                        "<xhtml:a xmlns:xhtml=\"{xhtml}\" class=\"indiv_node\""
-                        + " href=\"{href}\">Node Link</xhtml:a>"
-                    ).format(href=a_tag_href_val, **self.ns)
+                        "<{xhtml_prefix}a" + (
+                            "" if self.latemp_plain_html
+                            else " xmlns:xhtml=\"{xhtml}\""
+                        ) +
+                        " class=\"indiv_node\""
+                        + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
+                    ).format(
+                        href=a_tag_href_val,
+                        **self.ns,
+                        xhtml_prefix=self.xhtml_prefix,
+                    )
                 )
                 header_tag.append(a_tag)
 
@@ -140,7 +180,10 @@ class XhtmlSplitter:
 
         if len(self.path_to_images):
             for img_elem in _xpath(self.ns,
-                                   self.container_elem, ".//xhtml:img"):
+                                   self.container_elem,
+                                   ".//{xhtml_prefix}img".format(
+                                       xhtml_prefix=self.xhtml_prefix
+                                                                   )):
                 img_elem.set("src", self.path_to_images + img_elem.get("src"))
 
         for list_elem in _list_sections():
@@ -151,30 +194,49 @@ class XhtmlSplitter:
             parents = []
             p_iter = list_elem.getparent()
             while p_iter.tag in self.section_tags:
-                res = _xpath(self.ns, p_iter, "./xhtml:header[*/@id]")
+                res = _xpath(
+                    self.ns,
+                    p_iter,
+                    "./{xhtml_prefix}header[*/@id]".format(
+                        xhtml_prefix=self.xhtml_prefix
+                    )
+                )
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])
                 rec = {'id': id_, 'header_esc': header_esc, }
                 parents.append(rec)
                 p_iter = p_iter.getparent()
-            for a_el in _xpath(self.ns, list_elem, "./descendant::xhtml:a"):
+            for a_el in _xpath(
+                    self.ns, list_elem, "./descendant::{xhtml_prefix}a".format(
+                                xhtml_prefix=self.xhtml_prefix
+                                            )):
                 href = a_el.get('href')
                 if href is None:
                     continue
                 if href.startswith('#'):
                     a_el.set("href", self.path_to_all_in_one + href)
-            header_tag = _first(self.ns, list_elem, "./xhtml:header")
+            header_tag = _first(
+                self.ns, list_elem, "./{xhtml_prefix}header".format(
+                    xhtml_prefix=self.xhtml_prefix
+                )
+            )
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
             a_tag = _first(
-                self.ns, header_tag, "./xhtml:a[@class='indiv_node']"
+                self.ns,
+                header_tag,
+                "./{xhtml_prefix}a[@class='indiv_node']".format(
+                    xhtml_prefix=self.xhtml_prefix
+                )
             )
             a_tag.set("class", "back_to_faq")
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
             if len(self.path_to_images):
                 for a_elem in _xpath(self.ns,
-                                     list_elem, ".//xhtml:a"):
+                                     list_elem, ".//{xhtml_prefix}a".format(
+                                         xhtml_prefix=self.xhtml_prefix
+                                                                     )):
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
                         continue

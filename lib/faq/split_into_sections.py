@@ -63,7 +63,9 @@ class XhtmlSplitter:
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
         self.latemp_plain_html = latemp_plain_html
-        self.xhtml_prefix = ("" if self.latemp_plain_html else "xhtml:")
+        self.xhtml_prefix = (
+            "" if self.latemp_plain_html else (""+'xhtml' + ":")
+        )
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
         self.section_tags = set([
@@ -82,12 +84,15 @@ class XhtmlSplitter:
             else etree.XML)(
                 self.initial_xml_string
             )
+        main_title_xpath = \
+            './/{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
+                xhtml_prefix=self.xhtml_prefix
+            )
+        # print('main_title_xpath = ', main_title_xpath)
         self.main_title = _first(
             self.ns,
             self.root,
-            './{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
-                xhtml_prefix=self.xhtml_prefix
-            )
+            main_title_xpath
         )
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
@@ -163,8 +168,8 @@ class XhtmlSplitter:
                         + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                     ).format(
                         href=a_tag_href_val,
-                        **self.ns,
                         xhtml_prefix=self.xhtml_prefix,
+                        **self.ns,
                     )
                 )
                 header_tag.append(a_tag)

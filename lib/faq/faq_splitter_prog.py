@@ -160,15 +160,20 @@ def gen_image_macros_call():
 
 
 def main():
-    OUT_DN = "./dest/post-incs/t2/meta/FAQ"
-    TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
+    _faq_gen()
+    gen_image_macros_call()
+    _screenplays_main()
+
+
+def _faq_gen():
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
     ns = {
         "xhtml": XHTML_NS,
         "xml": XML_NS,
     }
-
+    OUT_DN = "./dest/post-incs/t2/meta/FAQ"
+    TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
     splitter = XhtmlSplitter(
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
@@ -177,8 +182,6 @@ def main():
         ns=ns,
     )
     splitter.process()
-    gen_image_macros_call()
-    _screenplays_main()
 
 
 SCREENPLAY_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>

@@ -1007,7 +1007,7 @@ WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
 SKIP_EPUBS_NORMALIZE_DUE_TO_INVALID_EPUBS = 1
 
-add_doctype = $(PERL) -i -p -0777 -C -E 's=\A=<\x{21}DOCTYPE html>=ms' $(POST_DEST)/philosophy/culture/case-for-commercial-fan-fiction/*.xhtml
+add_doctype = $(PERL) -i -p -0777 -C -E 's=\A=<\x{21}DOCTYPE html>=ms unless m=\A<\x{21}DOCTYPE=' $(POST_DEST)/philosophy/culture/case-for-commercial-fan-fiction/*.xhtml
 
 $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MANIFEST_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)

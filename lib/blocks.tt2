@@ -219,12 +219,15 @@ publicly linked to. Please send comments to
 [% END %]
 
 [%- BLOCK start_html -%]
+[% UNLESS latemp_plain_html %]
 <?xml version="1.0" encoding="utf-8"?>
+[% END %]
 
 [% TRY %]
 [% INCLUDE latemp_html_doctype %]
 [% CATCH file %]
 <!DOCTYPE html>
+[%# THROW "foo start_html $fn_path" %]
 [% END %]
 
 <html [% IF latemp_plain_html %]lang="[% html_lang %]"[% ELSE %]xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]"[% END %]>

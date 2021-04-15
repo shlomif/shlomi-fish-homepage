@@ -20,6 +20,18 @@ class MyTests(html_unit_test.TestCase):
             "text()='The Fox in the Chickens Coop']"
         )
 
+    def test_fanfic(self):
+        input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
+            'case-for-commercial-fan-fiction/indiv-nodes/' + \
+            'learning_more_from_inet_forums.xhtml'
+        doc = self.doc(input_fn)
+        xp = doc.xpath('//*/text()')
+        self.assertEqual(
+            [x for x in xp.xpath_results if (("b'" in x) or ("\\'" in x))],
+            [],
+            "no double quoting",
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

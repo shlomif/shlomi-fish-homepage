@@ -263,9 +263,7 @@ class XhtmlSplitter:
             body_string = self._to_string_cb(list_elem)
             formats = {
                 'base_path': self.base_path,
-                'body': (
-                    body_string if self.latemp_plain_html
-                    else body_string.decode('utf-8')),
+                'body': (body_string.decode('utf-8')),
                 'main_title': self.main_title_esc,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(

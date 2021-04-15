@@ -72,7 +72,8 @@ class XhtmlSplitter:
             self.xhtml_article_tag, self.xhtml_section_tag, ])
 
         # self.root = etree.parse(input_fn)
-        self.initial_xml_string = open(input_fn, 'rb').read()
+        with open(input_fn, 'rb') as fh:
+            self.initial_xml_string = fh.read()
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
@@ -81,6 +82,7 @@ class XhtmlSplitter:
             if self.latemp_plain_html else etree.tostring)
 
     def _calc_root(self):
+        print(self.initial_xml_string)
         self.root = (
             etree.HTML
             if self.latemp_plain_html

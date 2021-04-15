@@ -2,8 +2,9 @@
 
 use strict;
 use warnings;
+use utf8;
 
-use Test::More tests => 4;
+use Test::More tests => 6;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
@@ -47,4 +48,23 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
 
     # TEST
     like( $content, qr{\Q$needle\E}, 'Contains the correct URL.' );
+}
+{
+    foreach my $path (
+        path(
+"$POST_DEST/philosophy/culture/case-for-commercial-fan-fiction/index.xhtml"
+        ),
+        path(
+"$POST_DEST/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/context.xhtml"
+        ),
+
+        )
+    {
+        my $content = $path->slurp_utf8;
+
+        my $needle = q#Queen Padmé#;
+
+        # TEST*2
+        like( $content, qr{\Q$needle\E}, "$path contains the Padme needle", );
+    }
 }

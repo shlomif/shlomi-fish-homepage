@@ -70,9 +70,15 @@ class XhtmlSplitter:
         self.xhtml_section_tag = xhtml_section_tag
         self.section_tags = set([
             self.xhtml_article_tag, self.xhtml_section_tag, ])
+        if self.latemp_plain_html:
+            self._r_mode = 'rt'
+            self._w_mode = 'wb'
+        else:
+            self._r_mode = 'rb'
+            self._w_mode = 'wb'
 
         # self.root = etree.parse(input_fn)
-        with open(input_fn, 'rb') as fh:
+        with open(input_fn, self._r_mode) as fh:
             self.initial_xml_string = fh.read()
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
@@ -108,11 +114,11 @@ class XhtmlSplitter:
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(self.root)
         should = False
-        with open(self.input_fn, 'rb') as ifh:
+        with open(self.input_fn, self._r_mode) as ifh:
             curr = ifh.read()
             should = curr != tree_s
         if should:
-            with open(self.input_fn, 'wb') as ofh:
+            with open(self.input_fn, self._w_mode) as ofh:
                 ofh.write(tree_s)
 
     def process(self):
@@ -255,9 +261,12 @@ class XhtmlSplitter:
                     a_elem.set(
                         "href", self.path_to_images + href
                     )
+            body_string = self._to_string_cb(list_elem)
             formats = {
                 'base_path': self.base_path,
-                'body': self._to_string_cb(list_elem).decode('utf-8'),
+                'body': (
+                    body_string if self.latemp_plain_html
+                    else body_string.decode('utf-8')),
                 'main_title': self.main_title_esc,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(

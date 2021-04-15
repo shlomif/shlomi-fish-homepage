@@ -319,7 +319,6 @@ def _screenplays_main():
         "./dest/post-incs/t2/humour/Terminator/Liberation/",
         "./dest/post-incs/t2/humour/humanity/",
             ]:
-        print(OUT_DN)
         generic_generate(
             OUT_DN=OUT_DN,
             output_dirname="indiv-nodes/",

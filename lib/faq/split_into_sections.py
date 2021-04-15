@@ -88,7 +88,6 @@ class XhtmlSplitter:
             if self.latemp_plain_html else etree.tostring)
 
     def _calc_root(self):
-        print(self.initial_xml_string)
         self.root = (
             etree.HTML
             if self.latemp_plain_html

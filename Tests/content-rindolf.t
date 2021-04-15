@@ -6,6 +6,7 @@ use utf8;
 
 use Test::More tests => 6;
 use Path::Tiny qw/ path /;
+use HTML::Entities qw/ decode_entities /;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -60,7 +61,7 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
 
         )
     {
-        my $content = $path->slurp_utf8;
+        my $content = decode_entities( $path->slurp_utf8() );
 
         my $needle = q#Queen Padmé#;
 

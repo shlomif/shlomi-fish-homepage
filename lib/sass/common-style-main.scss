@@ -589,12 +589,22 @@ blockquote {
 }
 
 @mixin story_tagline {
+    $color: chocolate;
     // color: #7d3b5f;
-    color: chocolate;
+    color: $color;
+    // font-family: Arial, Sans-Serif;
     font-size: 130%;
     font-style: italic;
     font-weight: bold;
     margin-left: 2em;
+    $border_style: 3px solid $color;
+    @include border-vert($val: $border_style);
+    @include padding-vert($mar: 0.5em);
+    @include padding-lr($mar: 0.5em);
+    display: inline-block;
+    overflow: auto;
+    word-break: normal;
+    max-width: 60%;
 }
 
 article,

@@ -13,6 +13,16 @@
     padding-right: $mar;
 }
 
+@mixin padding-vert($mar) {
+    padding-bottom: $mar;
+    padding-top: $mar;
+}
+
 @mixin rounded_corners($radius) {
     border-radius: $radius;
+}
+
+@mixin border-vert($val) {
+    border-bottom: $val;
+    border-top: $val;
 }

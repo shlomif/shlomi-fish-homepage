@@ -261,8 +261,7 @@ foreach my $ext ( '', 'index.xhtml', )
     # TEST*$ext
     eq_or_diff(
         [ $r->render( { obj => $block } ), ], [ <<'EOF', ],
-<div class="topical_nav_block" id="buffy_nav_block">
-<table>
+<table id="buffy_nav_block">
 <tr class="main_title">
 <th colspan="2">Buffy Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
 </tr>
@@ -332,7 +331,6 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 </table>
-</div>
 EOF
         "Render a block.",
     );

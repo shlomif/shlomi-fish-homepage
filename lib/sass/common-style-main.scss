@@ -788,8 +788,8 @@ div.abstract {
     font-size: 120%;
 }
 
-.topical_nav_block {
-    table {
+.nav_blocks {
+    > table {
         td,
         th {
             border: thin black solid;

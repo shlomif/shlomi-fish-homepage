@@ -57,7 +57,7 @@ my $master_doc = __PACKAGE__->_get_doc($master_fn);
 
                     my $r = $xpc->find(
                         sprintf(
-q{//x:div[@class="nav_blocks"]/x:div[@id="%s_nav_block"]/x:table},
+q{//x:div[@class="nav_blocks"]/x:table[@id="%s_nav_block"]},
                             $block_id ),
                         $doc
                     );
@@ -71,7 +71,7 @@ q{//x:div[@class="nav_blocks"]/x:div[@id="%s_nav_block"]/x:table},
             }
             my $r = $xpc->find(
                 sprintf(
-q{//x:div[@class="nav_blocks"]/x:section[./x:header/x:h2[@id="%s_sect"]]/x:div[@id="%s_nav_block"]/x:table},
+q{//x:div[@class="nav_blocks"]/x:section[./x:header/x:h2[@id="%s_sect"]]/x:table[@id="%s_nav_block"]},
                     ($block_id) x 2 ),
                 $master_doc
             );

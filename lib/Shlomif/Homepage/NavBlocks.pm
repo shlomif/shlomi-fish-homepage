@@ -554,6 +554,21 @@ my %table_blocks = (
             ],
         },
     ),
+    'self_ref' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'self_ref_nav_block',
+            tr_s => [
+                _master_tr(
+                    title =>
+                        q{Self-Reference/Gödel, Escher, Bach/Last Action Hero},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('buffy_few_good'),
+                _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales'),
+            ],
+        },
+    ),
     'commercial_fanfic_initiative' =>
         Shlomif::Homepage::NavBlocks::TableBlock->new(
         {

@@ -227,6 +227,6 @@ Buffy Summers from the show.
 
 </div> [% # /fancy_sects
 %]
-[% INCLUDE render_compact_nav_blocks names = ["buffy", "harry_potter", ] %]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", "harry_potter", "self_ref", ] %]
 
 [% END %]

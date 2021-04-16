@@ -135,7 +135,7 @@ the situation is more complicated than that.
 
 [% UNLESS avoid_nav_blocks %]
 
-[% INCLUDE render_compact_nav_blocks names = ["buffy", "star_trek", "mlp_fim", "commercial_fanfic_initiative", ] %]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", "star_trek", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
 
 [% END %]
 

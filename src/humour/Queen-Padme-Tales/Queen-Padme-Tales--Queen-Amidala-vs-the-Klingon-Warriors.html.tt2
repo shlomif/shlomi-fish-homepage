@@ -12,6 +12,6 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html") %]
 
-[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "mlp_fim", "commercial_fanfic_initiative", ] %]
+[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
 
 [% END %]

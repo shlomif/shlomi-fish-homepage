@@ -1037,6 +1037,12 @@ it.
 </p>
 
 <p>
+Moreover, it is poorly documented, cannot be <a href="https://github.com/caramelomartins/awesome-linters">validated and linted</a> by an automated program,
+and <a href="https://alistapart.com/article/unwebbable/">has issues
+being mad XML and HTML-friendly</a>
+</p>
+
+<p>
 As a hacker/action hero I'd rather <a href="[% base_path
 %]humour/stories/">my screenplays</a> never be filmed by Hollywood studios,
 than waste time preparing one in its blessed format. Furthermore,
@@ -1078,7 +1084,7 @@ I have done in the past which I will not repeat such as <a
 href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
 Electrical Engineering in the Technion</a>, or working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
-bosses (though as the contemporary and more competent me I may now try to reform them
+bosses (though as the contemporary and more competent me, I may now try to reform them
 using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">benevolent psychological warfare</a>
 ).
 </p>
@@ -1124,11 +1130,15 @@ finicky, anyway.
 </p>
 
 <p>
-Do note that while I am quite happy with my
+I am quite happy with my
 <a href="https://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction</a>'s
-custom "Screenplay-Text" format, its "Screenplay-XML" XML grammar carries
-a large amount of legacy and outdated practices, so I suggest not
-relying on it as the basis for a standard directly.
+custom "Screenplay-Text" format, as well as its "Screenplay-XML" XML grammar,
+and I added more features to these grammars as I needed them ( <a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">YAGNI - "You aren't going to need it"</a> ). Nevertheless, I'd be happy with other grammars that can be validated and linted.
+</p>
+
+<p>
+It is also conceivable to write converters from subsets of
+other trendy <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup languages</a> (e.g : <a href="https://en.wikipedia.org/wiki/AsciiDoc">AsciiDoc</a>, or <a href="https://en.wikipedia.org/wiki/Markdown#CommonMark">CommonMark</a> ) other document formats such as Google Docs or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument</a>.
 </p>
 
 <p>
@@ -1167,12 +1177,14 @@ loved the song, but that she still is not going to marry him.
 </p>
 
 <p>
-Note that I employed this strategy, in real life, with an Internet friend of mine who is a retired
-Finnish software developer in his 40s, who lives in a small Finnish town. He shared
-some poems he wrote and I and other chat participants commented what we liked or
-disliked about them. His poetry did improve mostly consistently and… he now
-has a young woman living with him. I do not know what she thinks about his poems,
-but he's <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#make-your-own-kind-of-music">a cool guy regardless</a>.
+Note that I employed this strategy, in real life, with an Internet friend of
+mine who is a retired Finnish software developer in his 40s, who lives in a
+small Finnish town. He shared some poems he wrote and I and other chat
+participants commented what we liked or disliked about them. His poetry did
+improve mostly consistently and… he now has a young woman living with him. I do
+not know what she thinks about his poems, but he's <a
+href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#make-your-own-kind-of-music">a
+cool guy regardless</a>.
 </p>
 
 <hr />
@@ -1189,19 +1201,20 @@ applaud these reviewers.
 </p>
 
 <p>
-Telling a contributor why you dislike their work will make reworked and
-future works better, and your own future job easier. Reportedly film studios
-often silently dismissed screenplays that they received. I recently submitted
-my
-<a href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html">Sesame Street / "Harry Potter"</a> crossover screenplay
-to <a href="https://www.sesameworkshop.org/">the Sesame Workshop</a> and received no reply.
+Telling a contributor why you dislike their work will make reworked and future
+works better, and your own future job easier. Reportedly, film studios often
+silently dismissed screenplays that they received. I recently submitted my <a
+href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html">Sesame
+Street / "Harry Potter"</a> crossover screenplay to <a
+href="https://www.sesameworkshop.org/">the Sesame Workshop</a> and received no
+reply.
 </p>
 
 <p>
 Another different approach is the canned reply. While sometimes useful,
 it is often indicative that the <a href="https://www.joelonsoftware.com/2007/02/19/seven-steps-to-remarkable-customer-service/">problem needs to be fixed more permanently</a>.
-I also recall being given a list of reasons by an ad service for why my
-site was unacceptable
+I also recall being given a list of reasons by a web ad service for why my
+site was unacceptable, and they were far too vague.
 </p>
 
 [% END %]
@@ -1217,7 +1230,7 @@ Ethics</a>, I do not propose laying off the existing screenreaders.
 </p>
 
 <p>
-I feel this is the current bottleneck but
+I feel this is the current bottleneck, but
 the film studios should also approve of
 <a
 href="#originality_is_self_defeating">writing commercial crossovers, parodies and RPFs</a>.
@@ -3170,14 +3183,14 @@ I also have to handle:
 <li>
 <p>
 Slashdot reviewers who keep my submissions in the queue
-for months and are effectively unreachable
+for months and are effectively unreachable.
 </p>
 </li>
 
 <li>
 <p>
 reddit readers who downvote comments
-or posts they disagree with (or find blasphemous / true)
+or posts they disagree with (or find blasphemous / true).
 </p>
 </li>
 
@@ -3185,7 +3198,7 @@ or posts they disagree with (or find blasphemous / true)
 <p>
 subreddit
 administrators who remove my posts from public view - either for being
-blasphemous or for lacking delivery
+blasphemous or for their delivery being lacking.
 </p>
 </li>
 
@@ -3199,7 +3212,7 @@ being fragmented, unusable, messy, or insecure.
 <li>
 <p>
 WordPress, which I was told
-is the best-in-class blog engine, <a href="http://shlomifishswiki.branchable.com/WordPress/?updated">being incredibly bad and unusable</a> even for the end-commentators, whose comments are often eaten or their links rendered as plaintext/
+is the best-in-class blog engine, <a href="http://shlomifishswiki.branchable.com/WordPress/">being incredibly bad and unusable</a> even for the end-commentators, whose comments are often eaten or their links rendered as plaintext/
 </p>
 </li>
 
@@ -3212,10 +3225,27 @@ or idea systems, and take them as gospel or anti-gospel.
 
 <li>
 <p>
+Possible interpretations of the USA Constitution, various acts and bylaws
+or even court precedents and other <a href="#guidelines_as_dogma">guidelines</a>
+that are getting in the way now.
+</p>
+</li>
+
+<li>
+<p>
+Some people's reluctance to change.
 </p>
 </li>
 
 </ul>
+
+<p>
+They are not obstacles to be dismissed offhand. But they may not be
+insurmountable. Furthermore, I am not seeking to destroy the commercial
+film industry this time, but to make them prosper. And I believe
+commercial fanfiction will be nice to have, even if some film studios
+go out of business (which I hope shall not happen).
+</p>
 
 [% END %]
 
@@ -3261,7 +3291,7 @@ unhirability" (but why should it have?)
 I consider myself a child of the 1990s despite being ~12-22 years old at the time
 ( I am 1977-born ). I recall watching the film several times using our VHS copy,
 and while enjoying the opening scene was mostly indifferent to it. Now watching
-while being "hypomanic" and inspired, sends shivers by my spine from feeling
+it while being "hypomanic" and inspired, sends shivers by my spine from feeling
 exalted.
 </p>
 

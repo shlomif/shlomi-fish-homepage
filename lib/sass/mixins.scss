@@ -155,7 +155,7 @@ $ss_margin: 2em;
 }
 
 @mixin fancy_blockquote {
-    blockquote {
+    blockquote.fancy {
         border: none;
         @if false {
             font: 14px/22px normal helvetica, sans-serif;

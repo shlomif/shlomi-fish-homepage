@@ -356,7 +356,7 @@ EOF
         abstract   => <<'EOF',
 <div class="terminator_liberation abstract">
 
-<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-emma-watson-11">
+<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-emma-watson-11" class="fancy">
 
 <p>
 It might seem preposterous to believe Emma Watson is the new Arnold

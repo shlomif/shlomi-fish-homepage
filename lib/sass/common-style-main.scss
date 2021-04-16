@@ -588,6 +588,15 @@ blockquote {
     }
 }
 
+@mixin story_tagline {
+    // color: #7d3b5f;
+    color: chocolate;
+    font-size: 130%;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 2em;
+}
+
 article,
 section {
     &.story {
@@ -604,13 +613,13 @@ section {
         }
 
         p.tagline {
-            // color: #7d3b5f;
-            color: chocolate;
-            font-size: 120%;
-            font-style: italic;
-            margin-left: 2em;
+            @include story_tagline;
         }
     }
+}
+
+#tagline {
+    @include story_tagline;
 }
 
 .aphorisms {

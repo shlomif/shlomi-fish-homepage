@@ -654,9 +654,11 @@ sub _get_tagline_tags
 {
     my ( $self, $id ) = @_;
 
+    my $tag_elem  = 'p';
     my $tag_id    = 'tagline';
     my $tag_title = $self->get_tagline($id);
-    return [ qq#<h2 id="$tag_id">#, $tag_title, qq#</h2>\n#, ];
+    return [ qq#<${tag_elem} id="$tag_id">#, $tag_title, qq#</${tag_elem}>\n#,
+    ];
 }
 
 use Shlomif::Homepage::RelUrl qw/ _rel_url /;

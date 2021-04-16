@@ -28,6 +28,10 @@
         font-style: italic;
         color: #080;
     }
+
+    section.scene {
+        @include mysection($left_hover_color: darkgreen);
+    }
 }
 
 @mixin hhgg_st_tng_rounded_border__common {

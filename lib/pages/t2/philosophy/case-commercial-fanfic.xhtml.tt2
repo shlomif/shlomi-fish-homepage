@@ -1954,15 +1954,12 @@ which no one can stop ( see <a href="https://www.shlomifish.org/humour/Summersch
 and a <a href="#open_free_share_steal">trend towards openness, freedom, and sharing</a>
 of cultural / code / scientific / tangible
 works.
-[% IF screenplay_shortage__remix %]
-Thus, the film industry is starving itself of competent screenwriters
-and individual screenplays.
-[% ELSE %]
-Thus, the film industry is not only starving itself of competent screenwriters
-and individual screenplays, but of <a
-href="#beautiful_people_are_geeks">attractive and competent actors</a>, both
-male and female, including those that haven't yet appeared in any major roles.
-[% END %]
+[% SET _actors = 'attractive and competent actors' %]
+Thus, the film industry is starving itself, both of competent screenwriters
+and individual screenplays, and of
+[% IF screenplay_shortage__remix %][% _actors %][% ELSE %]<a href="#beautiful_people_are_geeks">[% _actors %]</a>[% END %]
+both male and female, including those that haven't yet appeared in any major roles
+<b>as well as</b> experienced and highly acclaimed one.
 </p>
 
 [% END %]

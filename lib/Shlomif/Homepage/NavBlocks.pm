@@ -560,7 +560,7 @@ my %table_blocks = (
             tr_s => [
                 _master_tr(
                     title =>
-                        q{Self-Reference/Gödel, Escher, Bach/Last Action Hero},
+q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('buffy_few_good'),

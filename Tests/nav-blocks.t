@@ -231,7 +231,7 @@ EOF
             $r->render( { obj => $master_tr, table => $table, } ),
             <<'EOF',
 <tr class="main_title">
-<th colspan="2">Harry Potter/Emma Watson Fanfiction <a href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
+<th colspan="2">Harry Potter/Emma Watson Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
 </tr>
 EOF
             "Render Master_Tr",
@@ -264,7 +264,7 @@ foreach my $ext ( '', 'index.xhtml', )
 <div class="topical_nav_block" id="buffy_nav_block">
 <table>
 <tr class="main_title">
-<th colspan="2">Buffy Fanfiction <a href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
+<th colspan="2">Buffy Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
 </tr>
 
 <tr class="subdiv">

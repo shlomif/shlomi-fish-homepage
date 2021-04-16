@@ -812,11 +812,13 @@ div.abstract {
                     &:visited {
                         color: darkgreen;
                     }
-                    &:after {
-                        content: "] ";
-                    }
-                    &:before {
-                        content: " [";
+                    &.to_block {
+                        &:after {
+                            content: "] ";
+                        }
+                        &:before {
+                            content: " [";
+                        }
                     }
                 }
             }

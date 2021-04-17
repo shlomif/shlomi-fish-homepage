@@ -30,7 +30,7 @@ then
         sudo apt -q update
         sudo apt -y install inkscape
     fi
-    cpanm --local-lib=~/perl_modules local::lib
+    cpanm --notest --local-lib=~/perl_modules local::lib
     if test "$DISTRIB_ID" = 'Ubuntu'
     then
         if test "$DISTRIB_RELEASE" = '14.04'
@@ -46,7 +46,7 @@ then
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
     cpanm -v --notest IO::Async
-    cpanm App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
+    cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     export CPATH="${CPATH}:/usr/include/tidy"
     cpanm HTML::T5
     # For wml
@@ -59,7 +59,7 @@ then
     perl bin/my-cookiecutter.pl
     # For various sites
     cpanm --notest HTML::Toc XML::Feed
-    deps-app plinst -i bin/common-required-deps.yml -i bin/required-modules.yml
+    deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     PATH="$HOME/bin:$PATH"
     ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
@@ -77,10 +77,9 @@ then
         sudo ln -s /usr/bin/make /usr/bin/gmake
     fi
 
-
-
 elif test "$cmd" = "build"
 then
+
     export SCREENPLAY_COMMON_INC_DIR="$PWD/screenplays-common"
     cd .
     m()
@@ -91,4 +90,5 @@ then
     }
     m
     m test
+
 fi

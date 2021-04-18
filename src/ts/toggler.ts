@@ -72,19 +72,16 @@ function build_toggler(args) {
     }
 
     function toggle_details(): void {
+        if (!has_ls) {
+            return;
+        }
         const elem = _calc_elem();
         const is_on_now: boolean = _calc__is_on_now(elem);
 
-        // elem.html(was_off ? hide_text : show_text);
-        // $(toggled_selector).toggleClass(toggled_class);
-        // elem.toggleClass("off");
-        // elem.toggleClass("on");
-        if (has_ls) {
-            if (is_on_now === default_state) {
-                localStorage.removeItem(_key_name);
-            } else {
-                localStorage.setItem(_key_name, is_on_now ? "1" : "0");
-            }
+        if (is_on_now === default_state) {
+            localStorage.removeItem(_key_name);
+        } else {
+            localStorage.setItem(_key_name, is_on_now ? "1" : "0");
         }
     }
     const elem = _calc_elem();

@@ -21,6 +21,8 @@
 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
 [% SET proprietary = '<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a> (= restricted, ' _ ARR _ ', "copyrighted")' %]
+[% SET the_web = '<a href="https://en.wikipedia.org/wiki/World_Wide_Web">the Web (WWW)</a>' %]
+[% SET WWW = the_web %]
 
 [% BLOCK cookie_monster__share_it_maybe__video %]
 
@@ -926,7 +928,7 @@ Cookie monster agrees with me:
 
 [% END %]
 
-[% WRAPPER h2_section id = "learning_more_from_inet_forums" title = "Learning From Internet Forums"  %]
+[% WRAPPER h2_section id = "learning_more_from_inet_forums" title = "Education = Entertainment"  %]
 
 <blockquote cite="https://twitter.com/shlomif/status/1357768753241608193" class="fancy">
 
@@ -941,6 +943,60 @@ the first thing about either. — <a href="https://en.wikipedia.org/wiki/Marshal
 <p>
 ( <a href="https://twitter.com/shlomif/status/1357768753241608193">Marshall McLuhan</a>. )
 </p>
+
+<p>
+McLuhan was a Canadian philosopher who coined the term "global village"
+and predicted [% the_web %] almost 30 years before its invention (which in turn
+was a while before it became popular).
+</p>
+
+<p>
+Both education and entertainment were known by various names throughout human
+history:
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Philosophy">Philosophy</a>
+(especially <a href="#hacking_and_amateur__vs__conformism_and_professional">amateur</a> philosophy)
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Science">Science</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Art">Art</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Aesthetics">Aesthetics</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Fun">Fun</a>,
+<a href="https://en.wikipedia.org/wiki/Joy">Joy</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Academy">Academia</a>,
+<a href="https://en.wikipedia.org/wiki/School">scholastics</a>
+</p>
+</li>
+
+</ul>
 
 <blockquote cite="https://twitter.com/shlomif/status/1357768753241608193" class="fancy">
 
@@ -995,13 +1051,16 @@ For more information, see:
 
 <li>
 <p>
-<a href="https://www.youtube.com/embed/gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My comment
-about "The Student Bride" student film</a>. That film satirises and criticises
-contemporary American college student life by showing how ridiculous
+<a href="https://www.youtube.com/embed/gVvMl1Ig9cY&amp;lc=Ugz3ewlt95IsmQE8cDZ4AaABAg">My YouTube comment
+for the student film titled "The Student Bride"</a>. I feel that that film satirises and criticises
+the contemporary American college student life by showing how ridiculous
 the film
-<a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29"><i>The Princess Bride</i></a>
-will be when converted to be set there.
+<a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29"><i>The Princess Bride</i></a> (which is regarded as a modern classic)
+will be when adapted to be set there.
 </p>
+
+<iframe src="https://www.youtube.com/embed/gVvMl1Ig9cY" allowfullscreen="allowfullscreen"></iframe>
+
 </li>
 
 <li>

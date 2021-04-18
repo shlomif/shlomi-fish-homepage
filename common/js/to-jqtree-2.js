@@ -3,9 +3,24 @@ function shlomif_load_nav (page_path) {
     $.getJSON(
         get_relative_path({
             rel_path: page_path,
-            to: '_data/nav.json',
+            to: '_data/n.json',
         }),
-        function(json_input) {
+        function(got_json_input) {
+            const keys_map={s:'subs',i:'id',t:'title',u:'url',x:'text',e:'expand',r:'re',k:'skip',b:'bool',h:'host',c:'capt',};
+            function _expand (val) {
+                if (Array.isArray(val)) {
+                    return val.map(_expand);
+                }
+                if ($.isPlainObject(val)) {
+                    const ret = {};
+                    for (const [k, v] of Object.entries(val)) {
+                        ret[keys_map[k]] = _expand(v);
+                    }
+                    return ret;
+                }
+                return val;
+            }
+            const json_input = _expand(got_json_input);
             const nav_menu = $('#nav_menu');
             const has_ls = (typeof localStorage !== "undefined" && localStorage !== null);
             const storage_key = 'shlomifish.org_main_nav_menu_data';

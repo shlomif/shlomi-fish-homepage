@@ -10,7 +10,7 @@ class TogglerWrapper {
     }
 }
 
-function build_toggler(args) {
+function build_toggler(args: any): void {
     function _is_null(x: any): boolean {
         return typeof x === "undefined" || x === undefined || x === null;
     }

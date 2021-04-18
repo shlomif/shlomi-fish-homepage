@@ -1,5 +1,11 @@
 "use strict";
 
+class TogglerWrapper {
+    constructor(public toggle_cb: () => void, public apply_state_cb: () => void) {
+        return;
+    }
+};
+
 function build_toggler(args) {
     function _is_null (x): boolean {
         return ((typeof x === "undefined") || (x === undefined) || (x === null));
@@ -73,11 +79,13 @@ function build_toggler(args) {
         }
     }
     const elem = $(toggler_selector);
-    const toggle_cb = (is_class ? toggle_sect_menu : toggle_details);
-    const apply_state_cb = (is_class ? toggle_sect_menu : apply_details_state);
+    const toggler_wrapper: TogglerWrapper = (is_class ?
+        (new TogglerWrapper(toggle_sect_menu, toggle_sect_menu)) :
+        (new TogglerWrapper(toggle_details, apply_details_state))
+    )
     const calc_in_elem = (is_class ? (function() { return elem.hasClass('on');}) : (function() { return _calc__is_on_now(elem);}));
 
-    elem.on((is_class ? "click" : "toggle"), function (event) { toggle_cb(); });
+    elem.on((is_class ? "click" : "toggle"), function (event) { toggler_wrapper.toggle_cb(); });
 
     $(document).ready(function() {
 
@@ -94,7 +102,7 @@ function build_toggler(args) {
         const in_elem = calc_in_elem();
 
         if ((in_storage && (!in_elem)) || ((!in_storage) && in_elem)) {
-            apply_state_cb();
+            toggler_wrapper.apply_state_cb();
         }
     });
 }

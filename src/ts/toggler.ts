@@ -1,10 +1,10 @@
 "use strict";
 
-function _is_null (x) {
-    return ((typeof x === "undefined") || (x === undefined) || (x === null));
-}
-
 function build_toggler(args) {
+    function _is_null (x): boolean {
+        return ((typeof x === "undefined") || (x === undefined) || (x === null));
+    }
+
     const has_ls = !_is_null( localStorage );
     const toggled_type = (('toggled_type' in args) ? args['toggled_type'] : 'class');
     const is_class = (toggled_type == 'class');
@@ -84,13 +84,12 @@ function build_toggler(args) {
         if (! has_ls) {
             return;
         }
-        let in_storage = localStorage.getItem(toggle_sect_key);
+        const in_storage_s:string = localStorage.getItem(toggle_sect_key);
 
-        if (_is_null(in_storage)) {
-            in_storage = default_state;
-        } else {
-            in_storage = ((in_storage == "1") ? true : false);
-        }
+        const in_storage: boolean = (
+            _is_null(in_storage_s) ? default_state
+            : ((in_storage_s == "1") ? true : false)
+        );
 
         const in_elem = calc_in_elem();
 

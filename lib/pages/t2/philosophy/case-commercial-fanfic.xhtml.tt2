@@ -18,6 +18,7 @@
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
 [% SET RPFs = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction Works ( RPFs )</a>' %]
+[% SET SMG = '<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>' %]
 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
 [% SET proprietary = '<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a> (= restricted, ' _ ARR _ ', "copyrighted")' %]
@@ -1251,7 +1252,9 @@ cool guy regardless</a>.
 <p>
 If you do not like a work, please try to comment on why you think it is
 lacking, rather than completely dismissing it or vaguely criticising it ( e.g:
-"it sucks"; "you cannot write"; "it's a waste of space").  People are often
+"it sucks"; "you cannot write"; "it's a waste of space";
+"try to write it as if you were there"
+).  People are often
 amazed by food reviewers in the recently trendy <a
 href="https://en.wikipedia.org/wiki/Reality_television#Reality_competition/game_shows">cooking
 competition ("reality") shows</a> being very pedantic and pinpointing small and
@@ -1270,7 +1273,7 @@ reply.
 </p>
 
 <p>
-Another different approach is the canned reply. While sometimes useful,
+Another different approach is the canned response. While sometimes useful,
 it is often indicative that the <a href="https://www.joelonsoftware.com/2007/02/19/seven-steps-to-remarkable-customer-service/">problem needs to be fixed more permanently</a>.
 I also recall being given a list of reasons by a web ad service for why my
 site was unacceptable, and they were far too vague.
@@ -1309,7 +1312,7 @@ href="#originality_is_self_defeating">writing commercial crossovers, parodies an
 <a href="https://en.wikipedia.org/wiki/Mel_Brooks">Mel Brooks</a> popularised exaggerated, phony, and overemotional acting
 in his films. My favourite film of his is
 <a href="https://en.wikipedia.org/wiki/Spaceballs"><i>Spaceballs</i></a>,
-which is a parody of the <a href="https://en.wikipedia.org/wiki/Star_Wars_(film)">Star Wars IV-VI</a> trilogy. Many people who have seen both (including
+which is a parody of the <a href="https://en.wikipedia.org/wiki/Star_Wars_(film)">Star Wars IV-VI</a> trilogy. Many people who have watched both (including
 I) now admit that Spaceballs is better. The actors there acted badly because it
 was easier for them, and because the crowds liked it better. They were hacking.
 </p>
@@ -1355,8 +1358,8 @@ href="https://en.wikipedia.org/wiki/The_Misanthrope">The Misanthrope</a> as
 part of our "Literature" studies and my classmates took turns reading the
 lines. One day I was assigned to read the lines of the titular character, and
 whereas most of my peers read their lines without excitement, I was
-envigorating the role with much fake emotion. I became a hit and almost
-monopolised that role.
+enthusiastically envigorating the role with much fake emotion. I became a hit
+and almost monopolised that role.
 </p>
 
 <p>
@@ -1369,7 +1372,7 @@ it was still fun, and my classmates gave me an enthusiastic ovation.
 My performances there are lost in the proverbial <a
 href="https://en.wikipedia.org/wiki/Akashic_records">Akashic records</a>
 because they were not recorded. Furthermore, for better or for worse, I was a
-web worker and writer, during the early days of the web, an amateur graphics
+web worker and writer, during the early days of [% the_web %], an amateur graphics
 manipulator, and a professional software developer (who also has done <a
 href="https://www.shlomifish.org/open-source/">for-fun/"amateur", open source,
 software development work</a>). This has given me an edge over laymen who used
@@ -1428,10 +1431,10 @@ with the 7th and 8th installments which were reportedly edgy and fun to watch.
 [% WRAPPER h3_section id = "bad_acting_conclusion" title = "Conclusion: People Love Hacky Acting" %]
 
 <p>
-All of the hacker actors I mentioned (except perhaps me,
-given I cannot be a judge of my own skill) <b>could</b> play well if and when
-they needed to and when given more time. But playing "naturally" in comedies
-and action films in non-essential cases is self-defeating.
+All of the hacker actors I mentioned (except perhaps me, given I cannot be a
+judge of my own skill) <b>could</b> play more convincingly if and when they
+needed to and when given more time. But playing "naturally" in comedies and
+action films in non-essential cases is self-defeating.
 </p>
 
 <p>
@@ -1441,7 +1444,19 @@ notice that most of them consistently featured hacky acting that
 the actor employed. I recall Sharon Stone's
 phony acting in
 <a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)">The Quick and the Dead</a> to be
-a feature.
+a feature. I also loved [% SMG %]'s portrayal of a phony, pose, and unlikely
+Buffy in [% BtVS %] and later enjoyed her distinctively high pitching voice
+in the MTv Film awards parodies:
+</p>
+
+<iframe src="https://www.youtube.com/embed/kCl3ho6_gbg" allowfullscreen="allowfullscreen"></iframe>
+
+<br />
+
+<iframe src="https://www.youtube.com/embed/8Uztj3vp-RI" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+( <a href="https://www.youtube.com/watch?v=8Uztj3vp-RI">LotR Parody</a>. )
 </p>
 
 [% END %]
@@ -2468,7 +2483,7 @@ Can you imagine any of those:
 
 <li>
 <p>
-Warner Bros vs. <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a> Films.
+Warner Bros vs. [% SMG %] Films.
 </p>
 </li>
 
@@ -3205,7 +3220,8 @@ the dominant version-control system</a>.
 </p>
 
 <p>
-They likely thought the Christian crusaders during Saladin's time will remain fanatical to Jesus. Well, most of them did not denounce their faith, but proclaimed Jesus told them that <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">returning to fight Saladin was pointless</a>. Some people would now call that "common sense", and I was told there are now several Christian interpretations of [% BtVS %], which had two Jewish actresses in leading roles ( <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>, and <a href="https://en.wikipedia.org/wiki/Alyson_Hannigan">Alyson Hannigan</a> ).
+They likely thought the Christian crusaders during Saladin's time will remain fanatical to Jesus. Well, most of them did not denounce their faith, but proclaimed Jesus told them that <a href="http://shlomifishswiki.branchable.com/Saladin_Style/">returning to fight Saladin was pointless</a>. Some people would now call that "common sense", and I was told there are now several Christian interpretations of [% BtVS %], which had two Jewish actresses in leading roles ( [% SMG %], and <a href="https://en.wikipedia.org/wiki/Alyson_Hannigan">Alyson Hannigan</a> )
+and had a strong occult general theme.
 </p>
 
 <p>

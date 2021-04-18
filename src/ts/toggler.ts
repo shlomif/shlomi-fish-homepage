@@ -10,7 +10,18 @@ class TogglerWrapper {
     }
 }
 
-function build_toggler(args: any): void {
+interface TogglerParams {
+    default_state?: boolean;
+    hide_text: string;
+    ls_key: string;
+    show_text: string;
+    toggled_class: string;
+    toggled_selector: string;
+    toggled_type?: string;
+    toggler_selector: string;
+}
+
+function build_toggler(args: TogglerParams): void {
     function _is_null(x: any): boolean {
         return typeof x === "undefined" || x === undefined || x === null;
     }

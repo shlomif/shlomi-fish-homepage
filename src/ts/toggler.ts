@@ -22,8 +22,12 @@ function build_toggler(args) {
     const show_text: string = args['show_text'];
     const default_state: boolean = (('default_state' in args) ? args['default_state'] : true);
 
+    const _calc_elem = ()=> {
+        return $(toggler_selector);
+    };
+
     function toggle_sect_menu() {
-        const elem = $(toggler_selector);
+        const elem = _calc_elem();
 
         const was_off = elem.hasClass("off");
         const was_on = !was_off;
@@ -52,7 +56,7 @@ function build_toggler(args) {
         return is_on_now;
     }
     function apply_details_state() {
-        const elem = $(toggler_selector);
+        const elem = _calc_elem();
         const is_on_now = _calc__is_on_now(elem);
         if (is_on_now) {
             elem.removeAttr(toggled_attr);
@@ -62,7 +66,7 @@ function build_toggler(args) {
     }
 
     function toggle_details() {
-        const elem = $(toggler_selector);
+        const elem = _calc_elem();
         const is_on_now = _calc__is_on_now(elem);
 
 
@@ -78,7 +82,7 @@ function build_toggler(args) {
             }
         }
     }
-    const elem = $(toggler_selector);
+    const elem = _calc_elem();
     const toggler_wrapper: TogglerWrapper = (is_class ?
         (new TogglerWrapper(toggle_sect_menu, toggle_sect_menu, (function() { return elem.hasClass('on');}))) :
         (new TogglerWrapper(toggle_details, apply_details_state, (function() { return _calc__is_on_now(elem);})))

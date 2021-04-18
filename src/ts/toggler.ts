@@ -19,7 +19,7 @@ function build_toggler(args) {
     const toggled_type: string =
         "toggled_type" in args ? args["toggled_type"] : "class";
     const is_class: boolean = toggled_type == "class";
-    const toggle_sect_key: string = args["ls_key"];
+    const _key_name: string = args["ls_key"];
     const toggler_selector: string = args["toggler_selector"];
     const toggled_selector: string = args["toggled_selector"];
     const toggled_class: string = args["toggled_class"];
@@ -45,9 +45,9 @@ function build_toggler(args) {
         elem.toggleClass("on");
         if (has_ls) {
             if (is_on_now === default_state) {
-                localStorage.removeItem(toggle_sect_key);
+                localStorage.removeItem(_key_name);
             } else {
-                localStorage.setItem(toggle_sect_key, is_on_now ? "1" : "0");
+                localStorage.setItem(_key_name, is_on_now ? "1" : "0");
             }
         }
     }
@@ -81,9 +81,9 @@ function build_toggler(args) {
         // elem.toggleClass("on");
         if (has_ls) {
             if (is_on_now === default_state) {
-                localStorage.removeItem(toggle_sect_key);
+                localStorage.removeItem(_key_name);
             } else {
-                localStorage.setItem(toggle_sect_key, is_on_now ? "1" : "0");
+                localStorage.setItem(_key_name, is_on_now ? "1" : "0");
             }
         }
     }
@@ -104,7 +104,7 @@ function build_toggler(args) {
         if (!has_ls) {
             return;
         }
-        const in_storage_s: string = localStorage.getItem(toggle_sect_key);
+        const in_storage_s: string = localStorage.getItem(_key_name);
 
         const in_storage: boolean = _is_null(in_storage_s)
             ? default_state

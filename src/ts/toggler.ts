@@ -1,7 +1,11 @@
 "use strict";
 
 class TogglerWrapper {
-    constructor(public toggle_cb: () => void, public apply_state_cb: () => void, public calc_in_elem: () => boolean) {
+    constructor(
+        public readonly toggle_cb: (() => void),
+        public readonly apply_state_cb: (() => void),
+        public readonly calc_in_elem: (() => boolean)
+    ) {
         return;
     }
 };
@@ -87,6 +91,7 @@ function build_toggler(args) {
         (new TogglerWrapper(toggle_sect_menu, toggle_sect_menu, (function() { return elem.hasClass('on');}))) :
         (new TogglerWrapper(toggle_details, apply_details_state, (function() { return _calc__is_on_now(elem);})))
     )
+
 
     elem.on((is_class ? "click" : "toggle"), function (event) { toggler_wrapper.toggle_cb(); });
 

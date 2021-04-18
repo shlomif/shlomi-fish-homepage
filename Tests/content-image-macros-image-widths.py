@@ -115,7 +115,7 @@ class MyTests(unittest.TestCase):
             self.assertTrue(src)
             m = re.match(
                 "^(?:\\.\\./){2}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
-            self.assertTrue(m)
+            self.assertTrue(m, "'{}' matches".format(src))
             path = m.group(1)
             if "interesting-hypothesis" not in path:
                 self.assertTrue(re.match(".*\\.webp$", path))

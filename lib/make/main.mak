@@ -793,6 +793,7 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 MAIN_TOTAL_MIN_JS_DEST := $(POST_DEST)/js/main_all.js
+TREE_JS_DEST := $(POST_DEST)/js/tree.jquery.js
 EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
@@ -814,6 +815,9 @@ MAIN_TOTAL_MIN_JS__SOURCES := \
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
+
+$(TREE_JS_DEST): bower_components/jqTree/tree.jquery.js
+	$(call COPY)
 
 PRINTABLE_DEST_DIR := dest/printable
 PRINTABLE_RESUMES__HTML__PIVOT := $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
@@ -1080,7 +1084,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
+minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 TEST_TARGETS := Tests/*.{py,t}
 

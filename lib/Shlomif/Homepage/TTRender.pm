@@ -128,6 +128,7 @@ sub _process_title
 }
 
 my $FALSE = '';
+my $TRUE  = 1;
 
 has vars => (
     is      => 'ro',
@@ -135,6 +136,7 @@ has vars => (
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
+            is_dev         => $FALSE,
             cpan           => $cpan,
             is_forked_site => $FALSE,
             license_obj    => $license,

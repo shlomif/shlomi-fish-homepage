@@ -2,6 +2,7 @@
 
 const toggle_sect_key = 'shlomifish.org_section_navigation_menu_shown';
 const toggle_main_key = 'shlomifish.org_main_navigation_menu_shown';
+const toggle_toc_details_key = 'shlomifish.org_toc_details_open';
 
 function build_sect_nav_menu_toggler() {
     build_toggler({
@@ -27,6 +28,18 @@ function build_main_nav_menu_toggler() {
     });
 }
 
+function build__toc_details__toggler() {
+    build_toggler({
+        toggled_type: 'details',
+        ls_key: toggle_toc_details_key,
+        toggler_selector: 'details#toc',
+        toggled_selector: 'details#toc',
+        hide_text: 'fail',
+        show_text: 'fail',
+        default_state: false,
+    });
+}
+
 $(document).ready(function() {
     if (false) {
         $('#sect_menu_wrapper > ul').tree({
@@ -37,4 +50,5 @@ $(document).ready(function() {
 
     build_sect_nav_menu_toggler();
     build_main_nav_menu_toggler();
+    build__toc_details__toggler();
 });

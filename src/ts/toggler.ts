@@ -19,10 +19,10 @@ function build_toggler(args) {
     const toggled_type: string =
         "toggled_type" in args ? args["toggled_type"] : "class";
     const is_class: boolean = toggled_type == "class";
-    const toggle_sect_key = args["ls_key"];
-    const toggler_selector = args["toggler_selector"];
-    const toggled_selector = args["toggled_selector"];
-    const toggled_class = args["toggled_class"];
+    const toggle_sect_key: string = args["ls_key"];
+    const toggler_selector: string = args["toggler_selector"];
+    const toggled_selector: string = args["toggled_selector"];
+    const toggled_class: string = args["toggled_class"];
     const hide_text: string = args["hide_text"];
     const show_text: string = args["show_text"];
     const default_state: boolean =
@@ -35,9 +35,9 @@ function build_toggler(args) {
     function toggle_sect_menu() {
         const elem = _calc_elem();
 
-        const was_off = elem.hasClass("off");
-        const was_on = !was_off;
-        const is_on_now = !was_on;
+        const was_off: boolean = elem.hasClass("off");
+        const was_on: boolean = !was_off;
+        const is_on_now: boolean = !was_on;
 
         elem.html(was_off ? hide_text : show_text);
         $(toggled_selector).toggleClass(toggled_class);
@@ -54,16 +54,16 @@ function build_toggler(args) {
 
     const toggled_attr = "open";
 
-    function _calc__is_on_now(elem) {
-        const was_off = !elem.attr(toggled_attr);
-        const was_on = !was_off;
+    function _calc__is_on_now(elem): boolean {
+        const was_off: boolean = !elem.attr(toggled_attr);
+        const was_on: boolean = !was_off;
         // NOTE THE DIFFERENCE FROM toggle_sect_menu!!!
-        const is_on_now = was_on;
+        const is_on_now: boolean = was_on;
         return is_on_now;
     }
-    function apply_details_state() {
+    function apply_details_state(): void {
         const elem = _calc_elem();
-        const is_on_now = _calc__is_on_now(elem);
+        const is_on_now: boolean = _calc__is_on_now(elem);
         if (is_on_now) {
             elem.removeAttr(toggled_attr);
         } else {
@@ -71,9 +71,9 @@ function build_toggler(args) {
         }
     }
 
-    function toggle_details() {
+    function toggle_details(): void {
         const elem = _calc_elem();
-        const is_on_now = _calc__is_on_now(elem);
+        const is_on_now: boolean = _calc__is_on_now(elem);
 
         // elem.html(was_off ? hide_text : show_text);
         // $(toggled_selector).toggleClass(toggled_class);

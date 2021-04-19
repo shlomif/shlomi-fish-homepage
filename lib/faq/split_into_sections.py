@@ -13,6 +13,7 @@ sections or questions.
 
 import html
 import os
+import re
 import lxml.html
 # from io import StringIO
 
@@ -47,6 +48,7 @@ class XhtmlSplitter:
     def __init__(
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
+            back_to_source_page_css_class,
             ns,
             xhtml_article_tag=XHTML_ARTICLE_TAG,
             xhtml_section_tag=XHTML_SECTION_TAG,
@@ -56,6 +58,11 @@ class XhtmlSplitter:
             relative_output_dirname="",
             latemp_plain_html=False,
             ):
+        self.back_to_source_page_css_class = back_to_source_page_css_class
+        self._back_re_css = re.compile(
+            "\\b(?:" + re.escape(self.back_to_source_page_css_class) + ")\\b",
+            re.M | re.S
+        )
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
@@ -244,7 +251,7 @@ class XhtmlSplitter:
                     xhtml_prefix=self.xhtml_prefix
                 )
             )
-            a_tag.set("class", "back_to_faq")
+            a_tag.set("class", self.back_to_source_page_css_class)
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
             if len(self.path_to_images):
@@ -255,7 +262,7 @@ class XhtmlSplitter:
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
                         continue
-                    if "back_to_faq" in (a_elem.get("class") or ""):
+                    if self._back_re_css.search(a_elem.get("class") or ""):
                         continue
                     a_elem.set(
                         "href", self.path_to_images + href

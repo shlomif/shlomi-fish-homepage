@@ -23,7 +23,7 @@ $git_obj->git_in_checkout_task(
         repo         => "MathJax",
         user         => "mathjax",
         base_dirname => "lib/js",
-        branch       => '3.0.5',
+        branch       => '3.1.2',
     }
 );
 
@@ -101,7 +101,7 @@ $git_obj->git_in_checkout_task(
 foreach my $repo (
     [ 'Shlomi-Fish-Back-to-my-Homepage-Logo', 1 ],
     (
-        map { s#/[^/]*$##r }
+        map { s#/[^/]*\z##r }
             path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
         ),
     'captioned-images--repo',

@@ -49,6 +49,7 @@ class XhtmlSplitter:
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
             back_to_source_page_css_class,
+            individual_node_css_class,
             ns,
             xhtml_article_tag=XHTML_ARTICLE_TAG,
             xhtml_section_tag=XHTML_SECTION_TAG,
@@ -58,6 +59,7 @@ class XhtmlSplitter:
             relative_output_dirname="",
             latemp_plain_html=False,
             ):
+        self._indiv_node = individual_node_css_class
         self.back_to_source_page_css_class = back_to_source_page_css_class
         self._back_re_css = re.compile(
             "\\b(?:" + re.escape(self.back_to_source_page_css_class) + ")\\b",
@@ -163,7 +165,8 @@ class XhtmlSplitter:
                 a_tag = _first(
                     self.ns,
                     header_tag,
-                    "./{xhtml_prefix}a[@class='indiv_node']".format(
+                    "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
+                        _indiv_node=self._indiv_node,
                         xhtml_prefix=self.xhtml_prefix
                     )
                 )
@@ -181,10 +184,11 @@ class XhtmlSplitter:
                             "" if self.latemp_plain_html
                             else " xmlns:xhtml=\"{xhtml}\""
                         ) +
-                        " class=\"indiv_node\""
+                        " class=\"{_indiv_node}\""
                         + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                     ).format(
                         href=a_tag_href_val,
+                        _indiv_node=self._indiv_node,
                         xhtml_prefix=self.xhtml_prefix,
                         **self.ns,
                     )
@@ -247,7 +251,8 @@ class XhtmlSplitter:
             a_tag = _first(
                 self.ns,
                 header_tag,
-                "./{xhtml_prefix}a[@class='indiv_node']".format(
+                "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
+                    _indiv_node=self._indiv_node,
                     xhtml_prefix=self.xhtml_prefix
                 )
             )

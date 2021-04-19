@@ -116,6 +116,7 @@ Policy</a></li>
 </html>'''
 
 BACK_TO_SOURCE_PAGE_CSS_CLASS = "back_to_faq"
+INDIVIDUAL_NODE_CSS_CLASS = "indiv_node"
 
 
 def generate_from_image_macros_page(
@@ -134,6 +135,7 @@ def generate_from_image_macros_page(
     output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
+        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=output_dirname,
         relative_output_dirname=relative_output_dirname,
@@ -179,6 +181,7 @@ def _faq_gen():
     TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
+        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
@@ -255,6 +258,7 @@ def generic_generate_from_(
 
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
+        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         container_elem_xpath=container_elem_xpath,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
@@ -285,6 +289,7 @@ def generic_generate(
 
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
+        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
         relative_output_dirname=output_dirname,

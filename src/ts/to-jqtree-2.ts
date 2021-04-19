@@ -7,24 +7,24 @@ function shlomif_load_nav(page_path) {
         }),
         function (got_json_input) {
             const keys_map = {
-                s: "subs",
+                b: "bool",
+                c: "capt",
+                e: "expand",
+                h: "host",
                 i: "id",
+                k: "skip",
+                r: "re",
+                s: "subs",
                 t: "title",
                 u: "url",
                 x: "text",
-                e: "expand",
-                r: "re",
-                k: "skip",
-                b: "bool",
-                h: "host",
-                c: "capt",
             };
-            function _expand(val) {
+            function _expand(val: any): any {
                 if (Array.isArray(val)) {
                     return val.map(_expand);
                 }
                 if ($.isPlainObject(val)) {
-                    const ret = {};
+                    const ret: any = {};
                     for (const [k, v] of Object.entries(val)) {
                         ret[keys_map[k]] = _expand(v);
                     }
@@ -32,11 +32,11 @@ function shlomif_load_nav(page_path) {
                 }
                 return val;
             }
-            const json_input = _expand(got_json_input);
+            const json_input: any = _expand(got_json_input);
             const nav_menu = $("#nav_menu");
-            const has_ls =
+            const has_ls: boolean =
                 typeof localStorage !== "undefined" && localStorage !== null;
-            const storage_key = "shlomifish.org_main_nav_menu_data";
+            const storage_key: string = "shlomifish.org_main_nav_menu_data";
             let was_storage_already_populated = false;
             if (has_ls) {
                 was_storage_already_populated = localStorage.getItem(
@@ -56,13 +56,13 @@ function shlomif_load_nav(page_path) {
             });
 
             if (!was_storage_already_populated) {
-                const about_myself_node_id = "2";
-                const art_node_id = "120";
-                const essays_node_id = "235";
-                const humour_node_id = "13";
-                const lectures_node_id = "193";
-                const meta_node_id = "311";
-                const soft_node_id = "127";
+                const about_myself_node_id: string = "2";
+                const art_node_id: string = "120";
+                const essays_node_id: string = "235";
+                const humour_node_id: string = "13";
+                const lectures_node_id: string = "193";
+                const meta_node_id: string = "311";
+                const soft_node_id: string = "127";
 
                 [
                     about_myself_node_id,
@@ -72,7 +72,7 @@ function shlomif_load_nav(page_path) {
                     lectures_node_id,
                     meta_node_id,
                     soft_node_id,
-                ].forEach(function (node_id) {
+                ].forEach(function (node_id: string): void {
                     (nav_menu as any).tree(
                         "openNode",
                         (nav_menu as any).tree("getNodeById", node_id),

@@ -791,7 +791,7 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
 OUT_PREF = lib/out-babel/js
-TYPESCRIPT_basenames = toggle_sect.js toggler.js
+TYPESCRIPT_basenames = toggle_sect.js toggler.js selfl.js
 DEST_JS_DIR = $(POST_DEST)/js
 dest_jsify = $(addprefix $(DEST_JS_DIR)/,$(1))
 
@@ -843,7 +843,7 @@ MAIN_TOTAL_MIN_JS__SOURCES := \
 	bower_components/jqTree/tree.jquery.js \
 	common/js/to-jqtree.js \
 	common/js/to-jqtree-2.js \
-	common/js/selfl.js \
+	$(DEST_JS_DIR)/selfl.js \
 	common/js/sub_menu.js \
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)

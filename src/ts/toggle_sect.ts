@@ -1,10 +1,10 @@
 "use strict";
 
-const toggle_sect_key = "shlomifish.org_section_navigation_menu_shown";
-const toggle_main_key = "shlomifish.org_main_navigation_menu_shown";
-const toggle_toc_details_key = "shlomifish.org_toc_details_open";
+const toggle_sect_key: string = "shlomifish.org_section_navigation_menu_shown";
+const toggle_main_key: string = "shlomifish.org_main_navigation_menu_shown";
+const toggle_toc_details_key: string = "shlomifish.org_toc_details_open";
 
-function build_sect_nav_menu_toggler() {
+function build_sect_nav_menu_toggler(): void {
     build_toggler({
         default_state: false,
         hide_text: "Hide",
@@ -42,7 +42,7 @@ function build__toc_details__toggler() {
     });
 }
 
-$(document).ready(function () {
+$(document).ready(function (): void {
     /*
     if (false) {
         $('#sect_menu_wrapper > ul').tree({

@@ -64,7 +64,7 @@ function shlomif_load_nav(page_path) {
                 const meta_node_id: string = "311";
                 const soft_node_id: string = "127";
 
-                [
+                for (const node_id of [
                     about_myself_node_id,
                     art_node_id,
                     essays_node_id,
@@ -72,13 +72,13 @@ function shlomif_load_nav(page_path) {
                     lectures_node_id,
                     meta_node_id,
                     soft_node_id,
-                ].forEach(function (node_id: string): void {
+                ]) {
                     (nav_menu as any).tree(
                         "openNode",
                         (nav_menu as any).tree("getNodeById", node_id),
                         false,
                     );
-                });
+                }
             }
         },
     );

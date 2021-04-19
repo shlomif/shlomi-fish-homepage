@@ -15,9 +15,14 @@ class MyTests(html_unit_test.TestCase):
     def test_main(self):
         input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
             'putting-cards-on-the-table-2019-2020/index.xhtml'
-        return self.doc(input_fn).has_one(
+        doc = self.doc(input_fn)
+
+        doc.has_one(
             ".//h4[@id='fox-in-the-hens-coop' and " +
             "text()='The Fox in the Chickens Coop']"
+        )
+        doc.has_one(
+            ".//section[header/h3[@id='hacking-heroism']]"
         )
 
     def test_fanfic(self):

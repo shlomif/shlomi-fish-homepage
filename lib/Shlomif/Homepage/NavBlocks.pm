@@ -445,7 +445,10 @@ my %table_blocks = (
         {
             id   => 'buffy_nav_block',
             tr_s => [
-                _master_tr( title => q{Buffy Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
@@ -461,7 +464,10 @@ my %table_blocks = (
         {
             id   => 'friends_tv_nav_block',
             tr_s => [
-                _master_tr( title => q{Friends Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('tow_fountainhead'),
                 _get_tr('hhfg'),
@@ -473,7 +479,10 @@ my %table_blocks = (
         {
             id   => 'harry_potter_nav_block',
             tr_s => [
-                _master_tr( title => q{Harry Potter/Emma Watson Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emma Watson Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('selina_mandrake'),
                 _get_tr('buffy_few_good'),
@@ -520,7 +529,10 @@ my %table_blocks = (
         {
             id   => 'star_trek_nav_block',
             tr_s => [
-                _master_tr( title => q{Star Trek Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
@@ -532,7 +544,10 @@ my %table_blocks = (
         {
             id   => 'xkcd_nav_block',
             tr_s => [
-                _master_tr( title => q{Summer Glau/xkcd Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _get_tr('summer_nsa'),
                 _get_tr('SummerNSA_effort'),
@@ -547,7 +562,10 @@ my %table_blocks = (
         {
             id   => 'mlp_fim_nav_block',
             tr_s => [
-                _master_tr( title => q{My Little Pony Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('terminator_liberation'),
                 _get_tr('queen_padme_tales'),

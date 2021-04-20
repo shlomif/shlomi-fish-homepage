@@ -6,6 +6,7 @@ use utf8;
 
 use Moo;
 
+use DateTime       ();
 use HTML::Acronyms ();
 use Path::Tiny qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
@@ -33,6 +34,7 @@ my @active_Stories = _to_story_objects(
         logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
         entry_id   => "enemy-how-i-helped",
         entry_text => "The Enemy and How I Helped to Fight it",
+        start_date => DateTime->new( year => 1996, ),
         href       => "humour/TheEnemy/",
         abstract   => <<'EOF',
 <p>
@@ -61,7 +63,8 @@ EOF
         logo_class => "towtf",
         logo_src => "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
         logo_svg => '//$SKIP',
-        entry_id => "fountainhead",
+        start_date => DateTime->new( year => 1998, ),
+        entry_id   => "fountainhead",
         entry_text => "The One with the Fountainhead",
         href       => "humour/TOneW-the-Fountainhead/",
         abstract   => <<'EOF',
@@ -99,6 +102,7 @@ EOF
         entry_id   => "humanity",
         entry_text => "Humanity",
         href       => "humour/humanity/",
+        start_date => DateTime->new( year => 2000, ),
         abstract   => <<'EOF',
 <p class="humanity abstract">
 Humanity is a screenplay for a movie
@@ -119,6 +123,7 @@ EOF
             'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
         entry_id   => "human-hacking",
         entry_text => "The Human Hacking Field Guide",
+        start_date => DateTime->new( year => 2004, ),
         href       => "humour/human-hacking/",
         abstract   => <<'EOF',
 <p class="hhfg abstract">
@@ -148,6 +153,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "we-the-living-dead",
         entry_text => "Star Trek: We the Living Dead",
+        start_date => DateTime->new( year => 2007, ),
         href       => "humour/Star-Trek/We-the-Living-Dead/",
         abstract   => <<'EOF',
 <p>
@@ -175,6 +181,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "selina-mandrake",
         entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
+        start_date => DateTime->new( year => 2011, ),
         href       => "humour/Selina-Mandrake/",
         abstract   => <<'EOF',
 <p class="selina abstract">
@@ -216,6 +223,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "summerschool-at-the-nsa",
         entry_text => "Summerschool at the NSA - A Screenplay",
+        start_date => DateTime->new( month => 3, year => 2013, ),
         href       => "humour/Summerschool-at-the-NSA/",
         abstract   => <<'EOF',
 <p class="summernsa abstract">
@@ -262,6 +270,7 @@ EOF
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
         entry_id   => "buffy-few-good",
         entry_text => "Buffy: a Few Good Slayers - A Screenplay",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/Buffy/A-Few-Good-Slayers/",
         abstract   => <<'EOF',
 <p class="buffy_few_good abstract">
@@ -286,6 +295,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "muppets-show-TNI",
         entry_text => "Muppets / Sesame Street Fanfic",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/Muppets-Show-TNI/",
         abstract   => <<'EOF',
 <p class="muppets_show_tni abstract">
@@ -311,6 +321,7 @@ EOF
             'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
         entry_id   => "who-is-qoheleth",
         entry_text => "“So, who the Hell is Qoheleth?”",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/So-Who-The-Hell-Is-Qoheleth/",
         abstract   => <<'EOF',
 <p class="who_is_qoheleth abstract">
@@ -352,6 +363,7 @@ EOF
             "humour/Terminator/Liberation/images/terminator_liberation.svg",
         entry_id   => "terminator--liberation",
         entry_text => "Terminator: Liberation",
+        start_date => DateTime->new( year => 2019, ),
         href       => "humour/Terminator/Liberation/",
         abstract   => <<'EOF',
 <div class="terminator_liberation abstract">
@@ -403,7 +415,8 @@ EOF
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
-        href                       => "humour/Queen-Padme-Tales/",
+        start_date => DateTime->new( month => 12, year => 2020, ),
+        href       => "humour/Queen-Padme-Tales/",
         should_skip_abstract_h_tag => 1,
         abstract                   => <<'EOF',
 <div class="queen_padme_tales abstract">
@@ -538,6 +551,7 @@ my @inactive_Stories = _to_story_objects(
         logo_svg   => 'humour/Pope/images/pope-logo.svg',
         entry_id   => "pope-died-on-sunday",
         entry_text => "The Pope Died on Sunday",
+        start_date => DateTime->new( month => 12, year => 2000, ),
         href       => "humour/Pope/",
         abstract   => <<'EOF',
 <p class="pope_died_on_sunday abstract">
@@ -568,6 +582,7 @@ EOF
         logo_svg => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
         entry_id => "blue-rabbit",
         entry_text => "The Blue Rabbit Log",
+        start_date => DateTime->new( year => 2009, ),
         href       => "humour/Blue-Rabbit-Log/",
         abstract   => <<'EOF',
 <p>
@@ -594,6 +609,7 @@ EOF
         logo_svg   => 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
         entry_id   => "the-earth-angel",
         entry_text => "The Earth Angel",
+        start_date => DateTime->new( month => 4, year => 2013, ),
         href       => "humour/The-Earth-Angel/",
         abstract   => <<'EOF',
 <p>
@@ -618,6 +634,7 @@ EOF
         logo_svg   => 'humour/RoadToHeaven/images/r2h-logo.svg',
         entry_id   => "road_to_heaven",
         entry_text => "The Road to Heaven is Paved with Bad Intentions",
+        start_date => DateTime->new( year => 2002, ),
         href       => "humour/RoadToHeaven/",
         abstract   => <<'EOF',
 <p>

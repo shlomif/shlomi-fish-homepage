@@ -8,6 +8,7 @@ use Moo;
 has [ 'abstract', 'id', 'logo_alt', 'logo_src', 'logo_svg', 'tagline', ] =>
     ( is => 'ro', required => 1 );
 
+has [ 'start_date', ]                     => ( is => 'ro', required => 1 );
 has [ 'entry_id', 'entry_text', 'href', ] => ( is => 'ro', );
 
 has [ 'entry_extra_html', ]           => ( is => 'ro', default => q{}, );

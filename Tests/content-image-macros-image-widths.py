@@ -37,6 +37,20 @@ class MyTests(unittest.TestCase):
         links = root.xpath(".//a[@href='./#religious_belief']")
         self.assertEqual(len(links), 2)
 
+    def test_case4fanfic(self):
+        input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
+            'case-for-commercial-fan-fiction/' + \
+            'indiv-nodes/starved_of_employees.xhtml'
+        root = html.parse(input_fn)
+        descs = root.xpath(
+            ".//div[@class='leading_path']/" +
+            "a[@href='all_people_are_good.xhtml']")
+        self.assertEqual(len(descs), 1)
+        desc_text = descs[0].xpath('text()')[0]
+        m = re.match(
+            "^.*?All People", desc_text)
+        self.assertTrue(m)
+
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
         root = html.parse(input_fn)

@@ -13,6 +13,8 @@ sections or questions.
 
 from lxml.html import XHTML_NAMESPACE
 
+from split_into_sections import XHTML_ARTICLE_TAG
+from split_into_sections import XHTML_SECTION_TAG
 from split_into_sections import XhtmlSplitter
 
 
@@ -247,7 +249,10 @@ def generic_generate_from_(
         container_elem_xpath,
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
-        path_to_input="ongoing-text.html", latemp_plain_html=False):
+        path_to_input="ongoing-text.html", latemp_plain_html=False,
+        xhtml_article_tag=XHTML_ARTICLE_TAG,
+        xhtml_section_tag=XHTML_SECTION_TAG,
+        ):
     full_out_dirname = OUT_DN + (output_dirname or '')
     XHTML_NS = XHTML_NAMESPACE
     XML_NS = "{http://www.w3.org/XML/1998/namespace}"
@@ -269,6 +274,8 @@ def generic_generate_from_(
         path_to_images=path_to_images,
         relative_output_dirname=output_dirname,
         latemp_plain_html=latemp_plain_html,
+        xhtml_article_tag=xhtml_article_tag,
+        xhtml_section_tag=xhtml_section_tag,
     )
     splitter.process()
 
@@ -308,6 +315,8 @@ def generic_generate_from_tt2_generated_plain_html5(**args):
     return generic_generate_from_(
         container_elem_xpath=("//div[@id='" + TOP_LEVEL_ID + "']"),
         latemp_plain_html=True,
+        xhtml_article_tag='article',
+        xhtml_section_tag='section',
         **args,
     )
 

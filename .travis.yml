@@ -6,37 +6,47 @@ addons:
     apt:
         packages:
             - ack-grep
+            - asciidoc
             - build-essential
             - cmake
+            - cmake-data
             - cpanminus
             - dbtoepub
             - docbook-defguide
             - docbook-xsl
             - docbook-xsl-ns
+            - docbook5-xml
             - fortune-mod
+            - gperf
             - graphicsmagick
             - hspell
             - hunspell
             - hunspell-en-gb
             - inkscape
+            - libapr1-dev
+            - libc6-dbg
+            - libcmocka-dev
             - libdb5.3-dev
             - libgd-dev
-            - libgdbm-dev
             - libgdbm-compat-dev
+            - libgdbm-dev
+            - libgmp-dev
+            - libgoogle-perftools-dev
             - libhunspell-dev
             - libncurses-dev
             - libpcre3-dev
             - libperl-dev
             - libtidy-dev
             - libxml2-dev
+            - lynx
             - mercurial
             - myspell-he
-            - lynx
+            - ninja-build
             - optipng
             - perl
             - python3
-            - python3-setuptools
             - python3-pip
+            - python3-setuptools
             - silversearcher-ag
             - strip-nondeterminism
             - tidy
@@ -60,7 +70,7 @@ deploy:
         tags: true
     skip_cleanup: true
 go:
-    - "1.13.x"
+    - "1.16.x"
 os: linux
 dist: focal
 rvm:

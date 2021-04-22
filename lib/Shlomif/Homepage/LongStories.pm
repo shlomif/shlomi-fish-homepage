@@ -772,11 +772,12 @@ sub _get_story_entry_tags
         qq{<header>\n},
         @{ $self->_get_logo_tags($args) },
         sprintf(
-            qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
+qq{<%s class="story" id="%s"><a href="%s">%s</a> (<span class="start_date">%s</span>)</%s>\n},
             $tag,
             ( $o->entry_id || ( die "no entry_id for $id" ) ),
             escape_html( _rel_url( $o->href || ( die "no href for $id" ) ) ),
             ( $o->entry_text || ( die "no entry_text for $id" ) ),
+            ( $o->start_date->year() || ( die "no start_date for $id" ) ),
             $tag,
         ),
         qq{</header>\n},

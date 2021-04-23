@@ -153,6 +153,37 @@ sub _process_batch
                 ),
             );
         }
+        if ( $filename eq '/site-map/hebrew/' )
+        {
+            my $hebrew_nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
+                'path_info'    => $filename,
+                'current_host' => $host,
+                MyNavData::generic_get_params( { lang => 'he', } ),
+                'ul_classes'     => [],
+                'no_leading_dot' => 1,
+            );
+            my $hebrew_rendered_results = $hebrew_nav_bar->render();
+            my $hebrew_nav_results      = NavDataRender->nav_data_render(
+                {
+                    filename => $url,
+                    host     => $host,
+                    ROOT     => $ROOT,
+                    lang     => 'he',
+                }
+            );
+            $out->(
+                'shlomif_hebrew_expanded_nav_bar',
+                \(
+                    join(
+                        '',
+                        map { "$_\n" } @{
+                            $hebrew_nav_results->{shlomif_main_expanded_nav_bar}
+                                ->gen_site_map() || ( die "hebrew site map" )
+                        }
+                    )
+                ),
+            );
+        }
     }
     return;
 }

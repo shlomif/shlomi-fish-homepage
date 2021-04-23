@@ -393,6 +393,8 @@ sub generic_get_params
 {
     my ( undef, $args ) = @_;
 
+    my $lang = $args->{lang} // 'en';
+
     my $is_fully_expanded = (
         exists( $args->{fully_expanded} )
         ? $args->{fully_expanded}
@@ -410,7 +412,7 @@ sub generic_get_params
         if ($is_fully_expanded)
         {
             return Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
-                $sect_name, { lang => 'en', },
+                $sect_name, { lang => $lang, },
             );
         }
         else

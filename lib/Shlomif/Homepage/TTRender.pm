@@ -230,6 +230,10 @@ sub proc
     $set->( 'html_head_nav_links',           "html_head_nav_links" );
     $set->( 'shlomif_main_expanded_nav_bar', "shlomif_main_expanded_nav_bar" );
     $set->(
+        'shlomif_hebrew_expanded_nav_bar',
+        "shlomif_hebrew_expanded_nav_bar"
+    );
+    $set->(
         'nav_links_without_accesskey',
         "shlomif_nav_links_renderer-with_accesskey=0"
     );

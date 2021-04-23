@@ -60,7 +60,7 @@ sub get_nav_menu
 
     return Shlomif::Homepage::SectionMenu->new(
         {
-            'sections' => \@sections,
+            'sections' => [ @sections, ],
             %$args,
         }
     );

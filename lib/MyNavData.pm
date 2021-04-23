@@ -409,9 +409,16 @@ sub generic_get_params
 
         if ($is_fully_expanded)
         {
-            return Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
-                $sect_name, { lang => 'en', },
-            );
+            my $sect_to_ret =
+                Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
+                $sect_name, { lang => $lang, },
+                );
+            if ( !defined($sect_to_ret) )
+            {
+                $DB::single = 1;
+                Carp::confess("No section '$sect_name' to return.");
+            }
+            return $sect_to_ret;
         }
         else
         {
@@ -600,6 +607,8 @@ sub generic_get_params
         ],
     };
 
+    # $DB::single = 1;
+
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $tree_contents,
@@ -611,6 +620,7 @@ sub get_params
     return __PACKAGE__->generic_get_params(
         {
             fully_expanded => 0,
+            lang           => +{ ar => 1, en => 1, he => 1, },
         }
     );
 }

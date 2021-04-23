@@ -69,6 +69,10 @@ sub output_fully_expanded_as_json
     my %params = MyNavData->generic_get_params(
         {
             fully_expanded => 1,
+<<<<<<< HEAD
+=======
+            lang           => +{ ar => 1, en => 1, he => 1, },
+>>>>>>> 6c0f1ce87 (hebrew-site-map)
         },
     );
 

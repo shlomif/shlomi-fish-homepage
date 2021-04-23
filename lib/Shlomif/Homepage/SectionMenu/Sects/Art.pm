@@ -9,15 +9,11 @@ use MyNavData::Hosts ();
 
 my $art_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Art",
-    title       => "Shlomi Fish’s Art",
+    text        => "Art",
+    url         => "art/",
+    title       => "Computer art I created while explaining how.",
     show_always => 1,
     subs        => [
-        {
-            text  => "Art",
-            url   => "art/",
-            title => "Computer art I created while explaining how.",
-        },
         {
             text => "Original Graphics",
             url  => "art/original-graphics/",

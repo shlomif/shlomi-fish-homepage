@@ -24,13 +24,15 @@ sub nav_data_render
     $filename =~ s!index\.html$!!;
     $filename = "/$filename";
 
+    my @params =
+        MyNavData->generic_get_params(
+        +{ fully_expanded => 1, ( lang => $lang, ), } );
+    $DB::single = 1;
     my $shlomif_main_expanded_nav_bar =
         HTML::Widgets::NavMenu::JQueryTreeView->new(
         'path_info'    => $filename,
         'current_host' => $host,
-        MyNavData->generic_get_params(
-            +{ fully_expanded => 1, ( lang => $lang, ), }
-        ),
+        @params,
         'ul_classes'     => [ "navbarmain", ("navbarnested") x 10 ],
         'no_leading_dot' => 1,
         );

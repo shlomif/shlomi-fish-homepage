@@ -9,15 +9,11 @@ use MyNavData::Hosts ();
 
 my $_essays_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Essays",
-    title       => "Shlomi Fish’s Essays",
+    text        => "Essays",
+    url         => "philosophy/",
+    title       => "Nav Menu for Shlomi Fish’s Essays",
     show_always => 1,
     subs        => [
-        {
-            text  => "Essays",
-            url   => "philosophy/",
-            title => "Nav Menu for Shlomi Fish’s Essays",
-        },
         {
             text  => "Book Reviews",
             url   => "philosophy/books-recommends/",
@@ -637,6 +633,15 @@ sub get_params
 
     my $lang = $args->{lang}
         or confess("lang was not specified.");
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $essays_tree_contents_by_lang->{$lang},

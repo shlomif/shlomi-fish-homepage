@@ -21,7 +21,7 @@ use HTML::Widgets::NavMenu ();
 has 'bottom_code'  => ( is => 'rw', isa => 'Maybe[Str]', required => 1, );
 has 'current_host' => ( is => 'rw', isa => 'Str',        required => 1, );
 has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
-has 'lang'         => ( is => 'ro', isa => 'Str',        required => 1, );
+has 'lang'         => ( is => 'ro', isa => 'HashRef',    required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
 has 'path_info'    => ( is => 'rw', isa => 'Str', required => 1, );
 has 'results'      => (
@@ -31,7 +31,7 @@ has 'results'      => (
     default => sub { return shift->nav_menu->render(); }
 );
 has 'root'          => ( is => 'rw', required => 1, );
-has 'sections'      => ( is => 'rw', required => 1, );
+has 'sections'      => ( is => 'ro', required => 1, );
 has 'title'         => ( is => 'rw' );
 has '_current_sect' => (
     is      => 'ro',
@@ -82,16 +82,32 @@ sub _calc_current_sect
 {
     my $self = shift;
 
-    foreach my $sect ( @{ $self->sections() } )
+    my @s = @{ $self->sections() };
+    if ( not grep { $_->{class} =~ /Lect/ } @s )
     {
-        my $regexp = $sect->{'regex'};
-        if ( ( $regexp eq "" ) || ( $self->path_info() =~ /$regexp/ ) )
+        die;
+    }
+    my $ret = sub {
+        foreach my $sect (@s)
         {
-            return $sect;
+            my $regexp = $sect->{'regex'};
+            if ( ( $regexp eq "" ) || ( $self->path_info() =~ /$regexp/ ) )
+            {
+                return $sect;
+            }
+        }
+        return;
+        }
+        ->();
+    {
+        my @s = @{ $self->sections() };
+        if ( not grep { $_->{class} =~ /Lect/ } @s )
+        {
+            die;
         }
     }
 
-    return;
+    return $ret;
 }
 
 sub BUILD
@@ -106,14 +122,16 @@ sub BUILD
     }
     else
     {
+        my @params = $self->get_section_nav_menu_params(
+            $current_sect->{class},
+            { lang => +{ ar => 1, en => 1, he => 1, }, },
+        );
+        $DB::single = 1;
         $self->nav_menu(
             HTML::Widgets::NavMenu->new(
                 'path_info'  => $self->path_info(),
                 current_host => $self->current_host(),
-                $self->get_section_nav_menu_params(
-                    $current_sect->{class},
-                    { lang => $self->lang(), },
-                ),
+                @params,
                 'ul_classes'     => [ "nm_main", ],
                 'no_leading_dot' => 1,
             )
@@ -189,4 +207,4 @@ sub total_leading_path
     }
 }
 
-1;
+2;

@@ -57,7 +57,7 @@ sub _process_batch
             {
                 filename => $filename,
                 host     => $host,
-                lang     => 'en',
+                lang     => +{ ar => 1, en => 1, he => 1, },
                 ROOT     => $ROOT,
             }
         );
@@ -72,7 +72,7 @@ sub _process_batch
                 filename => $url,
                 host     => $host,
                 ROOT     => $ROOT,
-                lang     => 'en',
+                lang     => +{ ar => 1, en => 1, he => 1, },
             }
         );
 
@@ -161,7 +161,7 @@ sub _process_batch
                     filename => $url,
                     host     => $host,
                     ROOT     => $ROOT,
-                    lang     => 'he',
+                    lang     => +{ 'he' => 1, },
                 }
             );
             my $html = join(

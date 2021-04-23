@@ -9,14 +9,11 @@ use MyNavData::Hosts ();
 
 my $software_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish's Software",
-    title       => "Shlomi Fish's Software",
     show_always => 1,
+    text        => "Open Source Software",
+    title       => "Shlomi Fish's Software",
+    url         => "open-source/",
     subs        => [
-        {
-            text => "Open Source Software",
-            url  => "open-source/",
-        },
         {
             text => "Software Projects",
             url  => "open-source/projects/",

@@ -17,13 +17,13 @@ sub _calc_lang_tree
     my $ret = +{%$tree};
 
     my $rec_lang = ( delete( $ret->{lang} ) // "en" );
-    if ( $rec_lang ne $lang )
+    if ( !exists( $lang->{$rec_lang} ) )
     {
         $ret->{skip} = 1;
     }
     else
     {
-        $ret->{lang} = $lang;
+        $ret->{lang} = $rec_lang;
     }
 
     if ( exists $ret->{subs} )
@@ -34,6 +34,10 @@ sub _calc_lang_tree
         ];
         if (@$subs)
         {
+            if ( grep { !defined } @$subs )
+            {
+                die;
+            }
             $ret->{subs} = $subs;
         }
         else
@@ -43,7 +47,11 @@ sub _calc_lang_tree
     }
     if ( $self->_check_subtree($ret) )
     {
-        $ret->{lang} //= $lang;
+        $ret->{lang} //= $rec_lang;
+    }
+    if ( !defined $ret )
+    {
+        die;
     }
     return $ret;
 }
@@ -65,7 +73,11 @@ sub _calc_lang_trees_hash
         (
             map {
                 my $l = $_;
-                ( $l => $self->_calc_lang_tree( $l, $tree_contents ) );
+                (
+                    $l => $self->_calc_lang_tree(
+                        +{ $l => 1, }, $tree_contents,
+                    )
+                );
             } @{ $self->_available_langs() },
         )
     };

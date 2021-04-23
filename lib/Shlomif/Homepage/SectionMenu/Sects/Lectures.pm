@@ -10,15 +10,11 @@ use MyNavData::Hosts ();
 
 my $essays_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Presentations",
-    title       => "Shlomi Fish’s Presentations",
+    text        => "Presentations",
+    url         => "lecture/",
+    title       => "Nav Menu for Shlomi Fish’s Presentations",
     show_always => 1,
     subs        => [
-        {
-            text  => "Presentations",
-            url   => "lecture/",
-            title => "Nav Menu for Shlomi Fish’s Presentations",
-        },
         {
             text  => "Perl for Newbies",
             url   => "lecture/Perl/Newbies/",

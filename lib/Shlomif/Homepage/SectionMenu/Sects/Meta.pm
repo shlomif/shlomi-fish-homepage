@@ -9,16 +9,12 @@ use Carp qw/ confess /;
 
 my $meta_tree_contents = {
     host        => "t2",
-    text        => "Site Meta Information Section Menu",
+    text        => "Meta Info",
     title       => "Site Meta Information Section Menu",
     show_always => 1,
     expand      => { re => "^meta/", },
     url         => "meta/",
     subs        => [
-        {
-            text => "Meta Info",
-            url  => "meta/",
-        },
         {
             text  => "FAQ",
             title => "Frequently Asked Questions",

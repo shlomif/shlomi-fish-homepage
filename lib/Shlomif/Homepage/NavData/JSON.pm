@@ -72,7 +72,7 @@ sub output_fully_expanded_as_json
     my %params = MyNavData->generic_get_params(
         {
             fully_expanded => 1,
-            lang           => 'en',
+            lang           => +{ ar => 1, en => 1, he => 1, },
         },
     );
 

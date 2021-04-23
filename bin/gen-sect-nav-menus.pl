@@ -72,6 +72,7 @@ sub _process_batch
                 filename => $url,
                 host     => $host,
                 ROOT     => $ROOT,
+                lang     => 'en',
             }
         );
 
@@ -158,7 +159,7 @@ sub _process_batch
             my $hebrew_nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
                 'path_info'    => $filename,
                 'current_host' => $host,
-                MyNavData::generic_get_params( { lang => 'he', } ),
+                MyNavData->generic_get_params( { lang => 'he', } ),
                 'ul_classes'     => [],
                 'no_leading_dot' => 1,
             );

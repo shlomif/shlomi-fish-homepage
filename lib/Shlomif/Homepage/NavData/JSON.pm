@@ -56,6 +56,7 @@ sub _map_data
                     ? ( $keys_briefing{$k} => _map_data( $thing->{$k} ) )
                     : ( die "Unknown key $k" );
                 }
+                grep { $_ ne 'lang' }
                 keys(%$thing)
         };
     }
@@ -69,6 +70,7 @@ sub output_fully_expanded_as_json
     my %params = MyNavData->generic_get_params(
         {
             fully_expanded => 1,
+            lang           => 'en',
         },
     );
 

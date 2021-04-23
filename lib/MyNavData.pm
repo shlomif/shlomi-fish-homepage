@@ -393,7 +393,8 @@ sub generic_get_params
 {
     my ( undef, $args ) = @_;
 
-    my $lang = $args->{lang} // 'en';
+    my $lang = $args->{lang}
+        or Carp::confess("lang not specified.");
 
     my $is_fully_expanded = (
         exists( $args->{fully_expanded} )
@@ -613,6 +614,7 @@ sub get_params
     return __PACKAGE__->generic_get_params(
         {
             fully_expanded => 0,
+            lang           => 'en',
         }
     );
 }

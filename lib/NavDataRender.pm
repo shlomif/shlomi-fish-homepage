@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use utf8;
 
+use Carp ();
+
 use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();
@@ -16,7 +18,8 @@ sub nav_data_render
     my $filename = $args->{filename};
     my $host     = $args->{host};
     my $ROOT     = $args->{ROOT};
-    my $lang     = $args->{lang} // 'en';
+    my $lang     = $args->{lang}
+        or Carp::confess("lang not specified.");
 
     $filename =~ s!index\.html$!!;
     $filename = "/$filename";
@@ -26,7 +29,7 @@ sub nav_data_render
         'path_info'    => $filename,
         'current_host' => $host,
         MyNavData->generic_get_params(
-            +{ fully_expanded => 1, ( lang => ( $args->{lang} // 'en' ) ), }
+            +{ fully_expanded => 1, ( lang => $lang, ), }
         ),
         'ul_classes'     => [ "navbarmain", ("navbarnested") x 10 ],
         'no_leading_dot' => 1,

@@ -17,8 +17,14 @@ sub _calc_lang_tree
 
     if ( exists $ret->{subs} )
     {
-        $ret->{subs} =
-            [ map { $self->_calc_lang_tree( $lang, $_ ) } @{ $ret->{subs} } ];
+        my $subs = [
+            grep { 0 || ( ( $_->{subs} ) || ( !$_->{skip} ) ) }
+            map  { $self->_calc_lang_tree( $lang, $_ ) } @{ $ret->{subs} }
+        ];
+        if (@$subs)
+        {
+            $ret->{subs} = $subs;
+        }
     }
     return $ret;
 }

@@ -19,6 +19,13 @@ class MyTests(html_unit_test.TestCase):
             + "img[@src='images/hostgator.png' and @alt='Hosted at HostGator']"
         )
 
+    def test_site_map(self):
+        input_fn = './dest/post-incs/t2/site-map/index.xhtml'
+        return self.doc(input_fn).has_one(
+            ".//div[@class='sitemap']/ul/li[a[@href='../humour/']]" +
+            "/ul/li/a[@href='../humour/aphorisms/']"
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

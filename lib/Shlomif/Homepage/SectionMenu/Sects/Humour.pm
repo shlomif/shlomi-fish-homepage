@@ -18,6 +18,7 @@ my $_humour_tree_contents = {
     host        => "t2",
     text        => "Shlomi Fish’s Stories and Aphorisms",
     title       => "Shlomi Fish’s Stories and Aphorisms",
+    url         => "humour/",
     show_always => 1,
     subs        => [
         {
@@ -688,6 +689,11 @@ my $_humour_tree_contents = {
 
 my $humour_tree_contents_by_lang =
     __PACKAGE__->_calc_lang_trees_hash($_humour_tree_contents);
+my $d = Data::Dumper->new( [ $humour_tree_contents_by_lang->{he} ] )->Dump();
+if ( $d !~ /Enemy-Hebrew/ )
+{
+    Carp::confess("'$d'");
+}
 
 sub get_params
 {
@@ -700,6 +706,13 @@ sub get_params
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $humour_tree_contents_by_lang->{$lang},
     );
+}
+
+sub generic_get_params
+{
+    my ( $self, $args ) = @_;
+
+    return $self->get_params($args);
 }
 
 1;

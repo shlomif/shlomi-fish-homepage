@@ -35,6 +35,8 @@ while ( my ( $k, $v ) = each %keys_briefing )
     }
 }
 
+my %_exclude_keys = ( map { $_ => 1 } qw/ lang show_always/ );
+
 sub _map_data
 {
     my ($thing) = @_;
@@ -56,7 +58,7 @@ sub _map_data
                     ? ( $keys_briefing{$k} => _map_data( $thing->{$k} ) )
                     : ( die "Unknown key $k" );
                 }
-                grep { $_ ne 'lang' }
+                grep { !exists( $_exclude_keys{$_} ) }
                 keys(%$thing)
         };
     }

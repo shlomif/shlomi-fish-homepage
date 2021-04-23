@@ -49,7 +49,7 @@ sub get_section_nav_menu_params
         Carp::confess("lang not specified");
     }
 
-    return $class->get_params($args);
+    return $class->generic_get_params($args);
 }
 
 sub get_modified_sub_tree
@@ -61,10 +61,12 @@ sub get_modified_sub_tree
         Carp::confess("lang not specified");
     }
 
-    my $subs =
+    my $tree_contents =
         +{ $self->get_section_nav_menu_params( $sect, $args ) }
-        ->{tree_contents}->{subs};
+        ->{tree_contents};
+    my $subs = $tree_contents->{subs};
 
+    return $tree_contents;
     return { %{ $subs->[0] }, subs => [ @{$subs}[ 1 .. $#$subs ] ], };
 }
 

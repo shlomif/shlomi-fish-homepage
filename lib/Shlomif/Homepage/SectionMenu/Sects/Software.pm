@@ -494,4 +494,10 @@ sub get_params
     );
 }
 
+sub generic_get_params
+{
+    my ( $self, $args ) = @_;
+
+    return $self->get_params($args);
+}
 1;

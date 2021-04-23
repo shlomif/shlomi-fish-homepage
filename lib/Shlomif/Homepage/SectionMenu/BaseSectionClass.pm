@@ -3,6 +3,13 @@ package Shlomif::Homepage::SectionMenu::BaseSectionClass;
 use strict;
 use warnings;
 
+sub _check_subtree
+{
+    my ( $self, $t ) = @_;
+
+    return ( ( $t->{subs} && @{ $t->{subs} } ) || ( !$t->{skip} ) );
+}
+
 sub _calc_lang_tree
 {
     my ( $self, $lang, $tree ) = @_;
@@ -14,11 +21,15 @@ sub _calc_lang_tree
     {
         $ret->{skip} = 1;
     }
+    else
+    {
+        $ret->{lang} = $lang;
+    }
 
     if ( exists $ret->{subs} )
     {
         my $subs = [
-            grep { ( ( $_->{subs} && @{ $_->{subs} } ) || ( !$_->{skip} ) ) }
+            grep { $self->_check_subtree($_) }
             map  { $self->_calc_lang_tree( $lang, $_ ) } @{ $ret->{subs} }
         ];
         if (@$subs)
@@ -29,6 +40,10 @@ sub _calc_lang_tree
         {
             delete $ret->{subs};
         }
+    }
+    if ( $self->_check_subtree($ret) )
+    {
+        $ret->{lang} //= $lang;
     }
     return $ret;
 }

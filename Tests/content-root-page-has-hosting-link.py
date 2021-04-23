@@ -45,11 +45,6 @@ class MyTests(html_unit_test.TestCase):
             )
 
 
-"""
-""
-"""
-
-
 if __name__ == '__main__':
     from pycotap import TAPTestRunner
     suite = unittest.TestLoader().loadTestsFromTestCase(MyTests)

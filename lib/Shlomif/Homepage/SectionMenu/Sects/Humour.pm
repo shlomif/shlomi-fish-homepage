@@ -689,11 +689,18 @@ my $_humour_tree_contents = {
 
 my $humour_tree_contents_by_lang =
     __PACKAGE__->_calc_lang_trees_hash($_humour_tree_contents);
+
+=begin debug
+
 my $d = Data::Dumper->new( [ $humour_tree_contents_by_lang->{he} ] )->Dump();
 if ( $d !~ /Enemy-Hebrew/ )
 {
     Carp::confess("'$d'");
 }
+
+=end debug
+
+=cut
 
 sub get_params
 {
@@ -706,13 +713,6 @@ sub get_params
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $humour_tree_contents_by_lang->{$lang},
     );
-}
-
-sub generic_get_params
-{
-    my ( $self, $args ) = @_;
-
-    return $self->get_params($args);
 }
 
 1;

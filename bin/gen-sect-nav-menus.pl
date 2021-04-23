@@ -172,7 +172,7 @@ sub _process_batch
                 }
             );
 
-            die "'$html" if $html !~ m#The-Enemy-Hebrew#;
+            # die "'$html" if $html !~ m#The-Enemy-Hebrew#;
             $out->( 'shlomif_hebrew_expanded_nav_bar', \($html), );
         }
     }

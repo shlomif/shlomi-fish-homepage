@@ -64,10 +64,18 @@ sub get_modified_sub_tree
     my $tree_contents =
         +{ $self->get_section_nav_menu_params( $sect, $args ) }
         ->{tree_contents};
+    return $tree_contents;
+
+=begin foo
+
     my $subs = $tree_contents->{subs};
 
-    return $tree_contents;
     return { %{ $subs->[0] }, subs => [ @{$subs}[ 1 .. $#$subs ] ], };
+
+=end foo
+
+=cut
+
 }
 
 sub _calc_current_sect

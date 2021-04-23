@@ -3,6 +3,7 @@ package Shlomif::Homepage::SectionMenu::Sects::Puzzles;
 use strict;
 use warnings;
 use utf8;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use Carp qw/ confess /;
 
 use MyNavData::Hosts ();
@@ -144,10 +145,4 @@ sub get_params
     );
 }
 
-sub generic_get_params
-{
-    my ( $self, $args ) = @_;
-
-    return $self->get_params($args);
-}
 1;

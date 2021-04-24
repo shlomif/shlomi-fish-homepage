@@ -163,20 +163,23 @@ sub generate
     my $epub_dests                = <<'EOF';
 $(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
-$(POST_DEST)/humour/humanity/Humanity-Movie.epub \
-$(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \
+$(POST_DEST)/humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.epub \
 $(POST_DEST)/humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.epub \
 $(POST_DEST)/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.epub \
+$(POST_DEST)/humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.epub \
+$(POST_DEST)/humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.epub \
 $(POST_DEST)/humour/Selina-Mandrake/selina-mandrake-the-slayer.epub \
-$(POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
 $(POST_DEST)/humour/So-Who-The-Hell-Is-Qoheleth/So-Who-the-Hell-is-Qoheleth.epub \
+$(POST_DEST)/humour/Star-Trek/We-the-Living-Dead/Star-Trek--We-the-Living-Dead.epub \
 $(POST_DEST)/humour/Summerschool-at-the-NSA/Summerschool-at-the-NSA.epub \
-$(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
 $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
 $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
+$(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
+$(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
+$(POST_DEST)/humour/humanity/Humanity-Movie.epub \
 EOF
 
     my @_files    = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );

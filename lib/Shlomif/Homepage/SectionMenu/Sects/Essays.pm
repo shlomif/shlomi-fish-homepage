@@ -2,9 +2,11 @@ package Shlomif::Homepage::SectionMenu::Sects::Essays;
 
 use strict;
 use warnings;
+use 5.014;
 use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
-use Carp qw/ confess /;
+use Carp qw/ cluck confess /;
+
 use MyNavData::Hosts ();
 
 my $_essays_tree_contents = {
@@ -633,6 +635,7 @@ sub get_params
 
     my $lang = $args->{lang}
         or confess("lang was not specified.");
+
     my @keys = sort keys %$lang;
     if ( @keys == 1 )
     {
@@ -642,10 +645,17 @@ sub get_params
     {
         $lang = 'en';
     }
+    my $tree_contents = $essays_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $essays_tree_contents_by_lang->{$lang},
+        tree_contents => $tree_contents,
     );
 }
 
+1;
 1;

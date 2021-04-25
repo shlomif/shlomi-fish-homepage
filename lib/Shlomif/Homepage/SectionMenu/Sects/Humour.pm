@@ -2,8 +2,9 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 
 use strict;
 use warnings;
+use 5.014;
 use utf8;
-use Carp qw/ confess /;
+use Carp qw/ cluck confess /;
 use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use Shlomif::FindLib                      ();
 use MyNavData::Hosts                      ();
@@ -714,9 +715,15 @@ sub get_params
     {
         $lang = 'en';
     }
+    my $tree_contents = $humour_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $humour_tree_contents_by_lang->{$lang},
+        tree_contents => $tree_contents,
     );
 }
 

@@ -26,6 +26,7 @@ sub nav_data_render
     $DB::single = 1;
     my $shlomif_main_expanded_nav_bar =
         HTML::Widgets::NavMenu::JQueryTreeView->new(
+        coords_stop    => 1,
         'path_info'    => $filename,
         'current_host' => $host,
         MyNavData->generic_get_params( { fully_expanded => 1 } ),

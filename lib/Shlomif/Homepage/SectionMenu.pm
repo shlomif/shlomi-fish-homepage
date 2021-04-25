@@ -2,6 +2,7 @@ package Shlomif::Homepage::SectionMenu;
 
 use strict;
 use warnings;
+use 5.014;
 
 package Shlomif::Homepage::SectionMenu::NavLinks;
 
@@ -105,9 +106,11 @@ sub BUILD
             $current_sect->{class},
             { lang => +{ ar => 1, en => 1, he => 1, }, },
         );
-        $DB::single = 1;
+
+        # $DB::single = 1;
         $self->nav_menu(
             HTML::Widgets::NavMenu->new(
+                coords_stop  => 1,
                 'path_info'  => $self->path_info(),
                 current_host => $self->current_host(),
                 @params,
@@ -115,6 +118,29 @@ sub BUILD
                 'no_leading_dot' => 1,
             )
         );
+        if ($::nav_menu_test)
+        {
+            my $nav_menu     = $self->nav_menu();
+            my $results      = $nav_menu->render();
+            my $leading_path = $results->{leading_path};
+            if ( $leading_path->[0]->host_url ne "humour/" )
+            {
+                $DB::single = 1;
+                my $results2 = $nav_menu->render();
+                die;
+            }
+        }
+        if (0)
+        {
+            say Data::Dumper->new(
+                [
+                    # \@params,
+                    # $self->nav_menu(),
+
+                    $self->nav_menu()->render()->{leading_path},
+                ]
+            )->Dump();
+        }
         $self->title( $current_sect->{'title'} );
     }
 
@@ -173,10 +199,14 @@ sub total_leading_path
     else
     {
         my @local_path = @{ $self->results()->{'leading_path'} };
+        if ($::nav_menu_test)
+        {
+            $DB::single = 1;
+        }
 
-        my $url = $main_leading_path[-1]->direct_url();
+        my $url = $main_leading_path[-1]->host_url();
         while ( @local_path
-            && ( $local_path[0]->direct_url() ne $url ) )
+            && ( $local_path[0]->host_url() ne $url ) )
         {
             shift(@local_path);
         }

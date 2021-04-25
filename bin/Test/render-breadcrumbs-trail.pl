@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use 5.014;
 use utf8;
 use MyNavData              ();
 use HTML::Widgets::NavMenu ();
@@ -17,50 +18,53 @@ sub _gen_the_string
     my $my_THE_filename = $args->{filename};
     my $leading_path;
 
+    my $filename = $my_THE_filename;
+    $filename =~ s{index\.html$}{};
+    $filename = "/$filename";
+
+    my $nav_bar;
+
+    $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop    => 1,
+        'path_info'    => $filename,
+        'current_host' => "t2",
+        MyNavData::get_params(),
+        'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
+    );
+
+    my $rendered_results = $nav_bar->render();
+
+    my $nav_links = $rendered_results->{nav_links};
+
+    my $nav_links_obj = $rendered_results->{nav_links_obj};
+
+    my $nav_html = $rendered_results->{html};
+
+    $leading_path = $rendered_results->{leading_path};
+    while ( @$leading_path > 1 and $leading_path->[1]->host_url eq '' )
     {
-        my $filename = $my_THE_filename;
-        $filename =~ s{index\.html$}{};
-        $filename = "/$filename";
-
-        my $nav_bar;
-
-        $nav_bar = HTML::Widgets::NavMenu->new(
-            'path_info'    => $filename,
-            'current_host' => "t2",
-            MyNavData::get_params(),
-            'ul_classes' => [ "navbarmain", ("navbarnested") x 10 ],
-        );
-
-        my $rendered_results = $nav_bar->render();
-
-        my $nav_links = $rendered_results->{nav_links};
-
-        my $nav_links_obj = $rendered_results->{nav_links_obj};
-
-        my $nav_html = $rendered_results->{html};
-
-        $leading_path = $rendered_results->{leading_path};
-
-        my $render_leading_path_component = sub {
-            my $component  = shift;
-            my $title      = $component->title();
-            my $title_attr = defined($title) ? " title=\"$title\"" : "";
-            return
-                  "<a href=\""
-                . escape_html( $component->direct_url() )
-                . "\"$title_attr>"
-                . $component->label() . "</a>";
-        };
-
-        my $leading_path_string = join( " → ",
-            ( map { $render_leading_path_component->($_) } @$leading_path ) );
-
-        my $nav_links_renderer = MyNavLinks->new(
-            'nav_links'     => $nav_links,
-            'nav_links_obj' => $nav_links_obj,
-            'root'          => "../..",
-        );
+        shift @$leading_path;
     }
+
+    my $render_leading_path_component = sub {
+        my $component  = shift;
+        my $title      = $component->title();
+        my $title_attr = defined($title) ? " title=\"$title\"" : "";
+        return
+              "<a href=\""
+            . escape_html( $component->direct_url() )
+            . "\"$title_attr>"
+            . $component->label() . "</a>";
+    };
+
+    my $leading_path_string = join( " → ",
+        ( map { $render_leading_path_component->($_) } @$leading_path ) );
+
+    my $nav_links_renderer = MyNavLinks->new(
+        'nav_links'     => $nav_links,
+        'nav_links_obj' => $nav_links_obj,
+        'root'          => "../..",
+    );
 
     use Shlomif::Homepage::SectionMenu::Manager ();
 
@@ -90,22 +94,29 @@ sub _gen_the_string
     };
 
     $init_section_nav_menu->();
+    if ($::nav_menu_test)
+    {
+        $DB::single = 1;
+
+        # say @$leading_path;
+    }
     my $total_leading_path = $section_nav_menu->total_leading_path(
         {
             main_leading_path => $leading_path,
         }
     );
+    if ($::nav_menu_test)
+    {
+        my $host_url = $total_leading_path->[-1]->host_url;
+        if ( $host_url ne $my_THE_filename )
+        {
+            say $host_url;
+            $DB::single = 1;
+            die;
+        }
+    }
 
-    my $render_leading_path_component = sub {
-        my $component  = shift;
-        my $title      = $component->title();
-        my $title_attr = defined($title) ? " title=\"$title\"" : "";
-        return
-              "<a href=\""
-            . escape_html( $component->direct_url() )
-            . "\"$title_attr>"
-            . $component->label() . "</a>";
-    };
+    # say @$total_leading_path;
 
     my $s = join( " → ",
         ( map { $render_leading_path_component->($_) } @$total_leading_path ) );
@@ -122,6 +133,7 @@ my $my_THE_filename;
 # $my_THE_filename = "meta/old-site-snapshots/";
 sub _bad_example
 {
+    local $::nav_menu_test = 1;
     $my_THE_filename = "humour/TheEnemy/The-Enemy-English-v7.html";
     _gen_the_string( { filename => $my_THE_filename, } );
     return;
@@ -135,4 +147,5 @@ sub _good_example
     _gen_the_string( { filename => $my_THE_filename, } );
     return;
 }
+
 _good_example();

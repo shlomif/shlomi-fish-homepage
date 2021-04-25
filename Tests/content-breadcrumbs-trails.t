@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -39,6 +39,18 @@ _test(
         blurb    => 'buffy factoids',
         expected => <<'EOF',
 <a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../" title="My Humorous Creations">Humour</a> → <a href="../../../aphorisms/">Aphorisms and Quotes</a> → <a href="../" title="“Facts” about Chuck Norris and other things">Factoids</a> → <a href="./">Buffy Facts</a>
+EOF
+    }
+);
+
+# TEST
+_test(
+    {
+        path =>
+"lib/cache/combined/t2/humour/TheEnemy/The-Enemy-English-v7.html/breadcrumbs-trail",
+        blurb    => 'The-Enemy-English',
+        expected => <<'EOF',
+<a href="../../">Shlomi Fish’s Homepage</a> → <a href="../" title="My Humorous Creations">Humour</a> → <a href="../stories/">Stories</a> → <a href="./" title="The Enemy and How I Helped to Fight it">The Enemy</a> → <a href="The-Enemy-English-v7.html" title="Text of “The Enemy” In English">Text in English</a>
 EOF
     }
 );

@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 use utf8;
+use List::Util qw( any );
 use MyNavData              ();
 use HTML::Widgets::NavMenu ();
 use MyNavLinks             ();
@@ -105,10 +106,24 @@ sub _gen_the_string
             main_leading_path => $leading_path,
         }
     );
+    my $s = join( " → ",
+        ( map { $render_leading_path_component->($_) } @$total_leading_path ) );
+
+    print "$s\n";
     if ($::nav_menu_test)
     {
         my $host_url = $total_leading_path->[-1]->host_url;
-        if ( $host_url ne $my_THE_filename )
+        if (
+            ( $host_url ne $my_THE_filename )
+            or (
+                $::nav_menu_test == 2
+                ? (
+                    any { $_->host_url =~ m#Perl/Newbies# }
+                    @$total_leading_path
+                )
+                : 0
+            )
+            )
         {
             say $host_url;
             $DB::single = 1;
@@ -118,10 +133,6 @@ sub _gen_the_string
 
     # say @$total_leading_path;
 
-    my $s = join( " → ",
-        ( map { $render_leading_path_component->($_) } @$total_leading_path ) );
-
-    print "$s\n";
     return +{ string => $s, };
 }
 
@@ -139,6 +150,15 @@ sub _bad_example
     return;
 }
 _bad_example();
+
+sub _bad_example2
+{
+    local $::nav_menu_test = 2;
+    $my_THE_filename = "lecture/W2L/Network/";
+    _gen_the_string( { filename => $my_THE_filename, } );
+    return;
+}
+_bad_example2();
 
 sub _good_example
 {

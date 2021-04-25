@@ -19,6 +19,9 @@
 [% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
 [% SET RPFs = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction Works ( RPFs )</a>' %]
 [% SET SMG = '<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>' %]
+[% SET Sesame = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
+[% SET hhfg = '<a href="https://www.shlomifish.org/humour/human-hacking/conclusions/">"The Human Hacking Field Guide"</a>'  %]
+
 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
 [% SET proprietary = '<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a> (= restricted, ' _ ARR _ ', "copyrighted")' %]
@@ -584,10 +587,14 @@ artists</a>, being blasphemous or stupid, and "contaminating the mind of the
 youth" and held in some contempt. Socrates, Galileo, <a
 href="https://en.wikipedia.org/wiki/Alexandre_Dumas">Alexandre Dumas</a>, <a
 href="https://en.wikipedia.org/wiki/Sarah_Bernhardt">Sarah Bernhardt</a>, early
-film cartoons, television in the 1970s (Sesame Street/etc.), computer games in
+films and film cartoons (
+<a href="https://en.wikipedia.org/wiki/Walt_Disney">Walt Disney</a>,
+<a href="https://en.wikipedia.org/wiki/Warner_Bros.">Warner Bros</a>,
+etc.)
+television in the 1970s ([% Sesame %] / etc.), <a href="https://en.wikipedia.org/wiki/Video_game">video games</a> starting from
 the 1980s, <a
 href="https://en.wikipedia.org/wiki/Role-playing_game">Role-playing games</a>,
-Internet chat ( [% IRC %] / etc.), supermodels, reality TV show contestants,
+Internet chat ( [% IRC %] / etc.), supermodels, <a href="https://en.wikipedia.org/wiki/Reality_television">reality TV</a> show contestants,
 independent YouTube cover/etc. artists,
 bloggers, and <a href="https://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/#departing_pope_about_twitter">social media</a>.
 Like Qoheleth noted around 300 B.C.:
@@ -598,7 +605,7 @@ is nothing new under the sun."</a>
 <p>
 Just for the record, while I am enamoured with many YouTube cover
 artists, and whose songs comprise of most of the music I listen to,
-my sister who is 5 years my junior and who has a Ph.D. in Computer
+my sister, who is 5 years my junior and who has a Ph.D. in Computer
 Science (so she is intelligent and techsavvy), has a prejudice
 against them.
 </p>
@@ -612,7 +619,7 @@ in general
 an action hero, but a classical "I'm
 taking them all with me" / <a
 href="https://www.mechon-mamre.org/p/pt/pt0716.htm#28">"may my soul perish with
-philistines"</a> tragic hero, who worked hard (not smart!) and took
+philistines"</a> tragic hero, who worked hard (and not smart!) and took
 many lives of (often innocent) people who cared about him.
 </p>
 </li>
@@ -663,8 +670,6 @@ qualities can be deceiving.
 </p>
 
 [% END %]
-
-[% SET hhfg = '<a href="https://www.shlomifish.org/humour/human-hacking/conclusions/">"The Human Hacking Field Guide"</a>'  %]
 
 [% WRAPPER h3_section id = "geeks_and_hackers_are_cool" title = "Geeks and Hackers are the Mainstream “Cool Kids”"  %]
 
@@ -1576,14 +1581,14 @@ In my screenplay <a
 href="https://www.shlomifish.org/humour/Selina-Mandrake/"><i>Selina Mandrake - The
 Slayer</i></a>, the protagonist (Selina) runs into three vampire warriors (“The
 Three”) dressed as Klingons, who tell her that “Every mighty Klingon warrior
-has watched Sesame Street”.
+has watched [% Sesame %]”.
 </p>
 
 <p>
 As a retort, she exclaims: “Mighty Klingon vampire
-warriors who have watched Sesame Street… this decade royally sucks!!”. However,
+warriors who have watched [% Sesame %]… this decade royally sucks!!”. However,
 most of the best American warriors of the relatively recent past (of all kinds)
-have watched Sesame Street, because they loved it as happy children (and later
+have watched [% Sesame %], because they loved it as happy children (and later
 as adults).
 </p>
 
@@ -1706,7 +1711,7 @@ killed the whole genre. However, I've written the afforementioned
 [% hhfg %] story in 2005 (after recovering from my
 <a href="#learning_more_from_inet_forums">Technion "education", or
 relative lack of it and entertainment</a>), and it is a geek/hacker spin
-on the teen story model. But it too is partly crossover/RPF fanfic, but despite
+on the teen story model. It too is partly crossover/RPF fanfic, but despite
 that two teenagers living in the USA (where it takes place) asked me if it was
 real.
 </p>
@@ -2482,8 +2487,7 @@ to challenge this guideline - at least until the dust settles.
 </p>
 
 <p>
-Back after <a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame
-Street</i></a> started airing and became notorious for its high entertainment /
+Back after [% Sesame %] started airing and became notorious for its high entertainment /
 educational value (and political activism as for example its friendly,
 benevolent, and lovable "monsters" alluded to the contemporary western
 perception of the Communists), it was a labour of love by a large group of

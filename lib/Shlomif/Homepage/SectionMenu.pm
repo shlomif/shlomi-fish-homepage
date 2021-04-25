@@ -44,18 +44,39 @@ has '_current_sect' => (
 sub get_section_nav_menu_params
 {
     my ( undef, $class, $args ) = @_;
-    return $class->get_params($args);
+
+    if ( ( ref $args ne 'HASH' ) or ( not $args->{lang} ) )
+    {
+        Carp::confess("lang not specified");
+    }
+
+    return $class->generic_get_params($args);
 }
 
 sub get_modified_sub_tree
 {
     my ( $self, $sect, $args ) = @_;
 
-    my $subs =
+    if ( ( ref $args ne 'HASH' ) or ( not $args->{lang} ) )
+    {
+        Carp::confess("lang not specified");
+    }
+
+    my $tree_contents =
         +{ $self->get_section_nav_menu_params( $sect, $args ) }
-        ->{tree_contents}->{subs};
+        ->{tree_contents};
+    return $tree_contents;
+
+=begin foo
+
+    my $subs = $tree_contents->{subs};
 
     return { %{ $subs->[0] }, subs => [ @{$subs}[ 1 .. $#$subs ] ], };
+
+=end foo
+
+=cut
+
 }
 
 sub _calc_current_sect

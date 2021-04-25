@@ -3,6 +3,7 @@ package Shlomif::Homepage::SectionMenu::Sects::Art;
 use strict;
 use warnings;
 use utf8;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use Carp qw/ confess /;
 
 use MyNavData::Hosts ();

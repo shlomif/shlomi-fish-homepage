@@ -18,6 +18,7 @@ my $_humour_tree_contents = {
     host        => "t2",
     text        => "Humour",
     title       => "Shlomi Fish’s Stories and Aphorisms",
+    url         => "humour/",
     show_always => 1,
     subs        => [
         {
@@ -684,6 +685,18 @@ my $_humour_tree_contents = {
 
 my $humour_tree_contents_by_lang =
     __PACKAGE__->_calc_lang_trees_hash($_humour_tree_contents);
+
+=begin debug
+
+my $d = Data::Dumper->new( [ $humour_tree_contents_by_lang->{he} ] )->Dump();
+if ( $d !~ /Enemy-Hebrew/ )
+{
+    Carp::confess("'$d'");
+}
+
+=end debug
+
+=cut
 
 sub get_params
 {

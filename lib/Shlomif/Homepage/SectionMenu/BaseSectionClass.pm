@@ -3,6 +3,13 @@ package Shlomif::Homepage::SectionMenu::BaseSectionClass;
 use strict;
 use warnings;
 
+sub _check_subtree
+{
+    my ( $self, $t ) = @_;
+
+    return ( ( $t->{subs} && @{ $t->{subs} } ) || ( !$t->{skip} ) );
+}
+
 sub _calc_lang_tree
 {
     my ( $self, $lang, $tree ) = @_;
@@ -74,6 +81,13 @@ sub _calc_lang_trees_hash
             } @{ $self->_available_langs() },
         )
     };
+}
+
+sub generic_get_params
+{
+    my ( $self, $args ) = @_;
+
+    return $self->get_params($args);
 }
 
 1;

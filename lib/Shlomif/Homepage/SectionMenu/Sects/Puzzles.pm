@@ -2,13 +2,14 @@ package Shlomif::Homepage::SectionMenu::Sects::Puzzles;
 
 use strict;
 use warnings;
-use utf8;
+use 5.014;
 use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
-use Carp qw/ confess /;
+use utf8;
+use Carp qw/ cluck confess /;
 
 use MyNavData::Hosts ();
 
-my $puzzles_tree_contents = {
+my $_essays_tree_contents = {
     host        => "t2",
     text        => "Puzzles",
     url         => "puzzles/",
@@ -128,6 +129,9 @@ my $puzzles_tree_contents = {
     ],
 };
 
+my $essays_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_essays_tree_contents);
+
 sub get_params
 {
     my ( $self, $args ) = @_;
@@ -135,9 +139,24 @@ sub get_params
     my $lang = $args->{lang}
         or confess("lang was not specified.");
 
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
+    my $tree_contents = $essays_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $puzzles_tree_contents,
+        tree_contents => $tree_contents,
     );
 }
 

@@ -658,4 +658,3 @@ sub get_params
 }
 
 1;
-1;

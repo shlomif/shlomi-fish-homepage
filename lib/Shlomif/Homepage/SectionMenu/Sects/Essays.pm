@@ -9,7 +9,7 @@ use Carp qw/ cluck confess /;
 
 use MyNavData::Hosts ();
 
-my $_essays_tree_contents = {
+my $_section_navmenu_tree_contents = {
     host        => "t2",
     text        => "Essays",
     url         => "philosophy/",
@@ -626,8 +626,8 @@ my $_essays_tree_contents = {
     ],
 };
 
-my $essays_tree_contents_by_lang =
-    __PACKAGE__->_calc_lang_trees_hash($_essays_tree_contents);
+my $section_navmenu_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_section_navmenu_tree_contents);
 
 sub get_params
 {
@@ -645,7 +645,7 @@ sub get_params
     {
         $lang = 'en';
     }
-    my $tree_contents = $essays_tree_contents_by_lang->{$lang};
+    my $tree_contents = $section_navmenu_tree_contents_by_lang->{$lang};
     if (0)    # ( $lang ne 'en' )
     {
         cluck "lang=$lang";

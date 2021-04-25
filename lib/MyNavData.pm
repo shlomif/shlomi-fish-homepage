@@ -436,10 +436,9 @@ sub generic_get_params
     };
 
     my $tree_contents = {
-        host  => "t2",
-        text  => "Shlomi Fish",
-        title => "Shlomi Fish’s Homepage",
-        subs  => [
+        host => "t2",
+        text => "Shlomi Fish’s Homepage",
+        subs => [
             {
                 text => "Shlomi Fish’s Homepage",
                 url  => "",

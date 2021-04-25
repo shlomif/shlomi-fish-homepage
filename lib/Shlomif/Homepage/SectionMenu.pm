@@ -144,7 +144,8 @@ sub BUILD
             my $nav_menu     = $self->nav_menu();
             my $results      = $nav_menu->render();
             my $leading_path = $results->{leading_path};
-            if ( $leading_path->[0]->host_url ne "humour/" )
+            if ( $leading_path->[0]->host_url ne
+                ( $::nav_menu_test == 1 ? "humour/" : "lecture/" ) )
             {
                 $DB::single = 1;
                 my $results2 = $nav_menu->render();

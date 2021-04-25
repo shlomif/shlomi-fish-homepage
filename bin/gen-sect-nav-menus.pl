@@ -46,6 +46,7 @@ sub _process_batch
         # print "start filename=$filename\n";
 
         my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
+            coords_stop    => 1,
             'path_info'    => $filename,
             'current_host' => $host,
             MyNavData::get_params(),

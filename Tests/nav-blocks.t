@@ -31,6 +31,7 @@ sub _fn
 {
 
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("philosophy/the-eternal-jew/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -94,6 +95,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -174,6 +176,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -243,6 +246,7 @@ EOF
 foreach my $ext ( '', 'index.xhtml', )
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/$ext"),
         current_host => 't2',
         MyNavData::get_params(),

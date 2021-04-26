@@ -35,7 +35,7 @@ FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 "image/x-icon"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
-<body class="faq_indiv_entry">
+<body class="fancy_sects faq_indiv_entry">
 <div class="header" id="header">
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>
@@ -84,7 +84,7 @@ IMAGE_MACRO_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 "image/x-icon"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
-<body class="faq_indiv_entry">
+<body class="fancy_sects faq_indiv_entry">
 <div class="header" id="header">
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>
@@ -209,7 +209,7 @@ title="Normal"/>
 "image/x-icon"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
-<body class="faq_indiv_entry screenplay_indiv_entry">
+<body class="fancy_sects faq_indiv_entry screenplay_indiv_entry">
 <div class="header" id="header">
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>

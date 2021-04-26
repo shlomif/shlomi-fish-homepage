@@ -92,8 +92,12 @@ class XhtmlSplitter:
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
+
+        def _html_to_string(x):
+            return bytes("<!DOCTYPE html>", "utf-8") + lxml.html.tostring(x)
+
         self._to_string_cb = (
-            lxml.html.tostring
+            _html_to_string
             if self.latemp_plain_html else etree.tostring)
 
     def _calc_root(self):

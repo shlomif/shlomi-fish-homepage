@@ -880,35 +880,14 @@ div.abstract {
     }
 }
 
-@include quote-iframe-styles(false, ".my_rpf.fancy_sects");
-
 .terminator_liberation.abstract {
     @include fancy_blockquote;
-}
-
-section.fancy_sects {
-    @include mysection;
-}
-
-.fancy_sects {
-    section,
-    .sub_section {
-        @include mysection;
-    }
-    li {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    ol,
-    ul {
-        margin-left: 2em;
-        padding-left: 0;
-    }
 }
 
 @mixin facts_clear {
     clear: both;
 }
+
 h2,
 h3 {
     &.facts,

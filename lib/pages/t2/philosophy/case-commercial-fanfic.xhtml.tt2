@@ -3415,6 +3415,98 @@ exalted.
 
 [% END %]
 
+[% WRAPPER h2_section id = "dedication" title = "Dedication"  %]
+
+[% WRAPPER h3_section id = "dedications_living" title = "Living"  %]
+
+<ul>
+
+<li>
+<p>
+This crossover essay has a strong reliance on memes from
+<a href="https://en.wikipedia.org/wiki/Mel_Brooks">Mel Brooks</a>'s
+films, especially Spaceballs.
+[% INCLUDE ref href="#bad_acting_mel_brooks" %]
+</p>
+</li>
+
+<li>
+<p>
+I also wish to dedicate this essay to the cast and makers of [% BtVS %],
+including <a href="#film_industry_losing_the_psychological_war">Joss Whedon</a>
+and [% SMG %]. I consider Buffy to be the <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">hacker monarch</a>
+of the brief "Web 1.0" period, comparable to Saladin, The Muppets, Jules Verne
+and The Beatles.
+Unfortunately, the growing prevalence of the Internet and the web (and
+the <a href="#open_free_share_steal">"open" / remix</a> culture) combined
+with some unfortunate mismanagement decisions (Buffy not ending at high school
+graduation, <a href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>
+being placed in a coma, and the show stopping being airing in Israel
+and possibly other countries) started spelling doom on it.
+While Gellar was <a href="https://www.shlomifish.org/meta/FAQ/biggest_celeb_crush.xhtml">my biggest celebrity crush</a>,
+a role model,
+and the "queen of the (1.0) Web", she was dethroned by Natalie Portman
+soon after that, who in turn gave way to Jennifer Lopez,
+Beyoncé Knowles, and Paris Hilton.
+</p>
+
+<p>
+Like I note, I suspect the creativity crisis of the film industry is caused
+by its operational and legal policies, and film makers like Whedon are
+not immune to their psychological effects.
+</p>
+
+<p>
+<a href="https://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">"The Hitchhiker's Guide to Star Trek - The Next Generation"</a>
+had already been written in 1990 and circulated by email, and I found it
+even funnier than <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">the original H2G2</a>.
+The web 1.0 and especially <a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>
+only amplified the "problem", and I
+had no qualms of writing <a href="https://www.shlomifish.org/humour/TOneW-the-Fountainhead/">my Friends / Fountainhead crossover</a>
+back in 1998.
+My
+<a href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the Living Dead”</a>
+is an even "worse" crossover problem.
+</p>
+
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h3_section id = "dedications_for_deceased" title = "Dedications for the deceased"  %]
+
+<ul>
+
+<li>
+<p>
+I only knew
+<a href="https://www.tributearchive.com/obituaries/17755171/Kurt-Stevens-Alvord">Kurt Stevens Alvord</a>
+as the father of <a href="https://www.youtube.com/watch?v=C4zcFr9tBi8">Tiffany Alvord and her brothers</a>.
+He <a href="https://www.youtube.com/watch?v=V_yBN5J4Bjk">passed away recently</a>, so I'd like
+to dedicate this essay to his memory.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h3_section id = "dedications_for_mythical" title = "Dedications for the mythical"  %]
+
+<p>
+<todo>living, dead, mythical: mel brooks, btvs(whedon,SMG,etc),
+https://www.youtube.com/watch?v=V_yBN5J4Bjk ( ).
+https://en.wikipedia.org/wiki/William_Goldman ;
+Sean Connerry.
+</todo>
+</p>
+
+[% END %]
+
+[% END %]
+
 [% INCLUDE cc_by_licence_section "version" => "4.0", "year" => "2021",  %]
 
 [%- WRAPPER links_sect -%]

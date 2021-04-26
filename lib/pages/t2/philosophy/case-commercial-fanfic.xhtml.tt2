@@ -12,6 +12,7 @@
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
 [% SET IANAL = my_acronym( "key" => "IANAL", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
+[% SET LAH = '<a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>' %]
 [% SET MDD = ' <a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">Clinical Depression</a>' %]
 [% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
 [% SET MPAA = my_acronym( "key" => "MPAA", ) %]
@@ -2260,8 +2261,7 @@ And we can certainly challenge:
 
 </blockquote>
 <p>
- ( <a
-href="https://en.wikipedia.org/wiki/Last_Action_Hero">Last Action Hero</a>
+ ( [% LAH %]
 ;
 <a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a> ;
 <a href="https://xkcd.com/406/">xkcd: "Venting"</a>)
@@ -3221,12 +3221,14 @@ Even <a href="https://github.com/electronicarts">EA</a> has FOSS code.
 
 <p>
 They said open content is a fad. <a href="https://www.wikimedia.org/">Wikimedia</a>,
-<a href="https://en.wikipedia.org/wiki/Fandom_(website)">Wikia</a> are
+<a href="https://en.wikipedia.org/wiki/Fandom_(website)">Wikia</a>
+and countless of blogs, microblogs and social media pages and web forums
+are
 evidence to the contrary.
 </p>
 
 <p>
-They said music will never be open. <a href="#better_now_by_choice">Many independent YouTubers</a> proved them wrong:
+They said music will never be open. <a href="#better_now_by_choice">Many independent YouTubers</a> and the commercial success of <a href="https://en.wikipedia.org/wiki/Ghosts_I%E2%80%93IV"><i>Ghosts I-IV</i></a> proved them wrong:
 </p>
 
 <blockquote cite="https://twitter.com/shlomif/status/1378421699142635525" class="fancy">
@@ -3269,7 +3271,7 @@ Hollywood studios is futile. There are dozens if not hundreds of unemployable
 formerly "big name" actors, actresses, film makers, and screenwriters.
 There are many disgruntled lawyers who make <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#commercial_fanfic">atrocious "Intellectual Property" demands</a>
 and even put one long paragraph of legalese on a McDonalds' Happy Meal toy.
-And even the Hollywood executives feel trapped.
+And even the Hollywood executives likely feel trapped.
 </p>
 
 <p>
@@ -3338,10 +3340,43 @@ Some people's reluctance to change.
 </p>
 </li>
 
+<li>
+<p>
+People who accuse me of having ulterior motives of promoting my "agenda"
+or "religion", when I think they are a solution to the underlying
+problem and am trying to help:
+</p>
+
+<blockquote cite="https://www.organizingcreativity.com/2019/07/why-creativity-is-incompatible-with-collectivism-socialism/">
+
+<p>
+"Are we to understand," asked the judge, "that you hold your own interests
+above the interests of the public?"
+</p>
+
+<p>
+"I hold that such a question can never arise except in a society of cannibals."
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://en.wikipedia.org/wiki/Atlas_Shrugged">Ayn Rand in Atlas Shrugged</a> )
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Antivirus_software">Anti-malware software</a>
+or <a href="https://en.wikipedia.org/wiki/Firewall_(computing)">firewalls</a>
+that block my domains, and which are often malware in their own right.
+</p>
+</li>
+
 </ul>
 
 <p>
-They are not obstacles to be dismissed offhand. But they may not be
+They are not obstacles to be casually dismissed. But they may not be
 insurmountable. Furthermore, I am not seeking to destroy the commercial
 film industry this time, but to make them prosper. And I believe
 commercial fanfiction will be nice to have, even if some film studios
@@ -3471,6 +3506,17 @@ is an even "worse" crossover problem.
 
 </li>
 
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/William_Goldman">William Goldman</a>
+passed away in 2018 and wrote or cowrote some of my favourite films
+including <a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29">the Princess Bride</a>,
+[% LAH %],
+Maverick,
+and the lesser known <a href="https://en.wikipedia.org/wiki/Year_of_the_Comet"><i>Year of the Comet</i></a>.
+</p>
+</li>
+
 </ul>
 
 [% END %]
@@ -3496,7 +3542,7 @@ to dedicate this essay to his memory.
 [% WRAPPER h3_section id = "dedications_for_mythical" title = "Dedications for the mythical"  %]
 
 <p>
-<todo>living, dead, mythical: mel brooks, btvs(whedon,SMG,etc),
+<todo>living, dead, mythical:
 https://www.youtube.com/watch?v=V_yBN5J4Bjk ( ).
 https://en.wikipedia.org/wiki/William_Goldman ;
 Sean Connerry.

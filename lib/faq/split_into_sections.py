@@ -214,7 +214,10 @@ class XhtmlSplitter:
                                    ".//{xhtml_prefix}img".format(
                                        xhtml_prefix=self.xhtml_prefix
                                                                    )):
-                img_elem.set("src", self.path_to_images + img_elem.get("src"))
+                src_path = img_elem.get("src")
+                if src_path.startswith(("http:", "https:", )):
+                    continue
+                img_elem.set("src", self.path_to_images + src_path)
 
         for list_elem in _list_sections():
             _add_prefix(

@@ -22,7 +22,7 @@ sub _test
 # TEST
 TODO:
 {
-    local $TODO = 1;
+    # local $TODO = 1;
     _test(
         {
             path =>
@@ -50,7 +50,7 @@ EOF
 # TEST
 TODO:
 {
-    local $TODO = 1;
+    # local $TODO = 1;
     _test(
         {
             path =>

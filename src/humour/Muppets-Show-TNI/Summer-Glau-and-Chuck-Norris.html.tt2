@@ -47,7 +47,7 @@ and <a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a
 <li>
 <p>
 <a href="https://en.wikipedia.org/wiki/Problem_Child_(film)"><i>Problem Child</i></a> - "this
-J.R - he is crazier than I am".
+J. R. - he is crazier than I am".
 </p>
 </li>
 
@@ -74,10 +74,6 @@ J.R - he is crazier than I am".
 
 [% END %]
 
-[% WRAPPER nav_blocks %]
-
-[% PROCESS xkcd_nav_block %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["xkcd", ] %]
 
 [% END %]

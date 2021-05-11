@@ -3,7 +3,11 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id="note" title="Note" %]
+[% WRAPPER note %]
+
+<header>
+<h2 id="note">Note</h2>
+</header>
 
 <p>
 I now agree with <a href="https://rationalwiki.org/wiki/Neo-Tech">rational wiki</a>
@@ -13,12 +17,11 @@ are good</a>, and that N-T is far too dogmatic and "ultimate truth"-like.
 
 <p>
 I appreciate the fact that reading Neo-Tech provided fodder for escaping my
-interpretation of escaping my interpretation of
-the secular Israeli-taught
-<a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a> philosophy
-(and my previous observations) but would suggest perusing
-<a href="https://www.shlomifish.org/me/rindolf/">Rindolfism</a>
-or similar instead as of February 2021.
+interpretation of the secular Israeli-taught <a
+href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a> philosophy
+(and my previous observations) but would suggest perusing <a
+href="https://www.shlomifish.org/me/rindolf/">Rindolfism</a> or similar instead
+as of February 2021.
 </p>
 
 [% END %]

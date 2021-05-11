@@ -26,8 +26,7 @@ base_path %]meta/donate/">PayPal</a> and/or bank account and/or
 <p>
 In addition, if I receive at least 100 million Euro, I will make the
 texts and the franchises themselves
-<a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>
-(also see <a href="https://copyfree.org/">Copyfree</a>).
+under an aggregate <a href="#public_domain_license">public-domain / "copyfree" license</a>.
 </p>
 
 <p>
@@ -43,9 +42,9 @@ by a single rich benefactor, or as something in between.
 [% WRAPPER h2_section id = "scope"  title = "Scope"  %]
 
 <p>
-The offer will affect the snapshot as of 27 October 2019 of
-<a href="https://github.com/shlomif/shlomi-fish-homepage/commit/d8f9c9059ec44eb3df8df6158a91f8175bb23e5d">commit
-d8f9c905 of the git repository</a> and will affect all original (but possibly
+The offer will affect the snapshot as of 18 March 2021 of
+<a href="https://github.com/shlomif/shlomi-fish-homepage/commit/fab5e9b2f84c5edb0066d07687b45c7c5fef593e">commit
+fab5e9b2 of the git repository</a> and will affect all original (but possibly
 fanfic) of these resources:
 </p>
 
@@ -169,6 +168,46 @@ they credit me.
 </ul>
 
 [%- END -%]
+
+[% WRAPPER h2_section id = "public_domain_license" title = "The Aggregate Public Domain License"  %]
+
+<p>
+Any or all of:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-or-later</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Unlicense">The Unlicense</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/MIT_License">The "Expat" variant of the MIT License</a>
+</p>
+</li>
+
+</ol>
+
+<p>
+(Also see <a href="https://copyfree.org/">Copyfree</a>.)
+</p>
+
+[% END %]
 
 </div>
 

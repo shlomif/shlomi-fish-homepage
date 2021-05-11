@@ -6,10 +6,19 @@ use utf8;
 
 use Moo;
 
+use DateTime       ();
+use HTML::Acronyms ();
 use Path::Tiny qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use YAML::XS ();
 
 use Shlomif::Homepage::LongStories::Story ();
+
+my $ACRONYMS_FN = "lib/acronyms/list1.yaml";
+my $latemp_acroman =
+    HTML::Acronyms->new( dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
+
+my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', no_link => 0, } )->{html};
 
 sub _to_story_objects
 {
@@ -25,6 +34,7 @@ my @active_Stories = _to_story_objects(
         logo_svg   => 'humour/TheEnemy/images/The-Enemy--Logo.svg',
         entry_id   => "enemy-how-i-helped",
         entry_text => "The Enemy and How I Helped to Fight it",
+        start_date => DateTime->new( year => 1996, ),
         href       => "humour/TheEnemy/",
         abstract   => <<'EOF',
 <p>
@@ -53,7 +63,8 @@ EOF
         logo_class => "towtf",
         logo_src => "humour/TOneW-the-Fountainhead/images/towtf-logo-200px.jpg",
         logo_svg => '//$SKIP',
-        entry_id => "fountainhead",
+        start_date => DateTime->new( year => 1998, ),
+        entry_id   => "fountainhead",
         entry_text => "The One with the Fountainhead",
         href       => "humour/TOneW-the-Fountainhead/",
         abstract   => <<'EOF',
@@ -91,6 +102,7 @@ EOF
         entry_id   => "humanity",
         entry_text => "Humanity",
         href       => "humour/humanity/",
+        start_date => DateTime->new( year => 2000, ),
         abstract   => <<'EOF',
 <p class="humanity abstract">
 Humanity is a screenplay for a movie
@@ -111,12 +123,13 @@ EOF
             'humour/human-hacking/images/human-hacking-field-guide-logo.svg',
         entry_id   => "human-hacking",
         entry_text => "The Human Hacking Field Guide",
+        start_date => DateTime->new( year => 2004, ),
         href       => "humour/human-hacking/",
         abstract   => <<'EOF',
 <p class="hhfg abstract">
 Jennifer (loosely based on
 <a href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy</a>
-from <a href="https://buffy.fandom.com/wiki/Buffy_the_Vampire_Slayer">BtVS</a>)
+from $(BtVS)
 is a trendy and popular high school senior who is living and
 studying in the vicinity of Los Angeles. Her best friend, Taylor
 (<a href="https://buffy.fandom.com/wiki/Alexander_Harris">Xander</a>), convinces her
@@ -140,6 +153,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "we-the-living-dead",
         entry_text => "Star Trek: We the Living Dead",
+        start_date => DateTime->new( year => 2007, ),
         href       => "humour/Star-Trek/We-the-Living-Dead/",
         abstract   => <<'EOF',
 <p>
@@ -167,12 +181,13 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "selina-mandrake",
         entry_text => "Selina Mandrake - The Slayer (Buffy Parody)",
+        start_date => DateTime->new( year => 2011, ),
         href       => "humour/Selina-Mandrake/",
         abstract   => <<'EOF',
 <p class="selina abstract">
 Selina Mandrake ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
 was a geeky Anglo-American girl in her high school senior year in 2011
-California, who thought that the show <i>Buffy the Vampire Slayer</i> was fictional.
+California, who thought that the show $(BtVS) was fictional.
 However, one day she was approached by a mysterious goth man calling himself "The Guide"
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
 who told her that she was none other than Buffy Mageia, <b>The Slayer</b>,
@@ -183,9 +198,7 @@ even supportive of the demons she encountered.
 </p>
 <p>
 This is a parody of the television series
-<a
-href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28TV_series%29">Buffy
-the Vampire Slayer</a>, while referencing other pieces of popular
+$(BtVS), while referencing other pieces of popular
 culture, and has many ties to my previous screenplay,
 <a href="$(ROOT)/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a>. It’s far-fetched, but, on the other hand, conveys some
@@ -194,9 +207,8 @@ serious messages and insights.
 EOF
         entry_extra_html => <<'EOF',
 <p>
-This screenplay, a parody and reflection on
-<a href="http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the
-Vampire Slayer</i></a> and inspired by many other sources, is in a usable state.
+This screenplay, a parody and reflection on $(BtVS)
+and inspired by many other sources, is in a usable state.
 </p>
 EOF
 
@@ -211,6 +223,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "summerschool-at-the-nsa",
         entry_text => "Summerschool at the NSA - A Screenplay",
+        start_date => DateTime->new( month => 3, year => 2013, ),
         href       => "humour/Summerschool-at-the-NSA/",
         abstract   => <<'EOF',
 <p class="summernsa abstract">
@@ -257,11 +270,12 @@ EOF
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
         entry_id   => "buffy-few-good",
         entry_text => "Buffy: a Few Good Slayers - A Screenplay",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/Buffy/A-Few-Good-Slayers/",
         abstract   => <<'EOF',
 <p class="buffy_few_good abstract">
 The Demonic underworld is held under tight control in a forked version of the
-<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy</a> universe where
+<a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy universe</a> where
 the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
 ended up happier and more powerful, and men and women have equal opportunities
 when it comes to fighting Demons. A
@@ -281,6 +295,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "muppets-show-TNI",
         entry_text => "Muppets / Sesame Street Fanfic",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/Muppets-Show-TNI/",
         abstract   => <<'EOF',
 <p class="muppets_show_tni abstract">
@@ -306,6 +321,7 @@ EOF
             'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
         entry_id   => "who-is-qoheleth",
         entry_text => "“So, who the Hell is Qoheleth?”",
+        start_date => DateTime->new( year => 2014, ),
         href       => "humour/So-Who-The-Hell-Is-Qoheleth/",
         abstract   => <<'EOF',
 <p class="who_is_qoheleth abstract">
@@ -347,11 +363,12 @@ EOF
             "humour/Terminator/Liberation/images/terminator_liberation.svg",
         entry_id   => "terminator--liberation",
         entry_text => "Terminator: Liberation",
+        start_date => DateTime->new( year => 2019, ),
         href       => "humour/Terminator/Liberation/",
         abstract   => <<'EOF',
 <div class="terminator_liberation abstract">
 
-<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-emma-watson-11">
+<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-emma-watson-11" class="fancy">
 
 <p>
 It might seem preposterous to believe Emma Watson is the new Arnold
@@ -398,7 +415,8 @@ EOF
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
-        href                       => "humour/Queen-Padme-Tales/",
+        start_date => DateTime->new( month => 12, year => 2020, ),
+        href       => "humour/Queen-Padme-Tales/",
         should_skip_abstract_h_tag => 1,
         abstract                   => <<'EOF',
 <div class="queen_padme_tales abstract">
@@ -410,11 +428,11 @@ EOF
 </header>
 
 <p>
-This ambitious series of screenplays breaks a long time taboo of writing
+This ambitious series of screenplays breaks a long time taboo against writing
 <i>Star Wars</i> and <i>Star Trek</i> crossovers, but also aims to make
 the case for commercial yet free/open (<a href="https://creativecommons.org/">Creative Commons</a>
 / etc.) fan fiction / crossovers / real person fiction
-(see e.g: <a href="$(ROOT)/philosophy/culture/my-real-person-fan-fiction/take2/">Our
+(see e.g: <a href="$(ROOT)/philosophy/culture/case-for-commercial-fan-fiction/">Our
 mission statement</a>)
 and screenplays written in easier to write formats than the
 draconian, finicky, and boring, Hollywood-blessed format.
@@ -498,8 +516,10 @@ even in his emails.
 <p>
 Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
-and other franchises, that everyone can see, hear, photograph, and record,
-but which many people believe are some kind of trick.
+and other franchises, who appear at the seemingly least
+desirable times, and whom
+everyone can see, hear, photograph, and record,
+but whom many people believe are some kind of trick.
 </p>
 </li>
 
@@ -531,6 +551,7 @@ my @inactive_Stories = _to_story_objects(
         logo_svg   => 'humour/Pope/images/pope-logo.svg',
         entry_id   => "pope-died-on-sunday",
         entry_text => "The Pope Died on Sunday",
+        start_date => DateTime->new( month => 12, year => 2000, ),
         href       => "humour/Pope/",
         abstract   => <<'EOF',
 <p class="pope_died_on_sunday abstract">
@@ -561,20 +582,21 @@ EOF
         logo_svg => 'humour/Blue-Rabbit-Log/images/blue-rabbit-logo.svg',
         entry_id => "blue-rabbit",
         entry_text => "The Blue Rabbit Log",
+        start_date => DateTime->new( year => 2009, ),
         href       => "humour/Blue-Rabbit-Log/",
         abstract   => <<'EOF',
 <p>
-Screenplays for a series of crazy comedy films parodying
-<a href="http://en.wikipedia.org/wiki/Role-playing_game">Fantasy
-Role-Playing Games</a>. Join the band of the player characters called “The
-Blue Rabbit Adventuring Company”, as they journey in the imaginary role-playing
-world, and their struggles and
-encounters with monsters, the non-player characters, their players,
-and... the Game Master! (Muahahahahaha).
+Screenplays for an (incomplete) series of crazy comedy films parodying Fantasy
+<a href="http://en.wikipedia.org/wiki/Tabletop_role-playing_game">Tabletop
+Role-Playing Games</a> (FRPs or RPGs). Join the band of the player characters
+called “The Blue Rabbit Adventuring Company”, as they journey in the imaginary
+role-playing world, and their struggles and encounters with monsters, the
+non-player characters, their players, and… the Game Master! (Muahahahahaha).
 </p>
 
 <p>
-Work in progress.
+Included here are the beginning of the screenplay of the first part and some
+disorganised ideas for the continuation.
 </p>
 EOF
     },
@@ -587,6 +609,7 @@ EOF
         logo_svg   => 'humour/The-Earth-Angel/images/the-earth-angel-logo.svg',
         entry_id   => "the-earth-angel",
         entry_text => "The Earth Angel",
+        start_date => DateTime->new( month => 4, year => 2013, ),
         href       => "humour/The-Earth-Angel/",
         abstract   => <<'EOF',
 <p>
@@ -611,6 +634,7 @@ EOF
         logo_svg   => 'humour/RoadToHeaven/images/r2h-logo.svg',
         entry_id   => "road_to_heaven",
         entry_text => "The Road to Heaven is Paved with Bad Intentions",
+        start_date => DateTime->new( year => 2002, ),
         href       => "humour/RoadToHeaven/",
         abstract   => <<'EOF',
 <p>
@@ -647,9 +671,11 @@ sub _get_tagline_tags
 {
     my ( $self, $id ) = @_;
 
+    my $tag_elem  = 'p';
     my $tag_id    = 'tagline';
     my $tag_title = $self->get_tagline($id);
-    return [ qq#<h2 id="$tag_id">#, $tag_title, qq#</h2>\n#, ];
+    return [ qq#<${tag_elem} id="$tag_id">#, $tag_title, qq#</${tag_elem}>\n#,
+    ];
 }
 
 use Shlomif::Homepage::RelUrl qw/ _rel_url /;
@@ -671,14 +697,22 @@ sub _get_abstract_tags
            $args->{abstract_text}
         || $self->_get_story($args)->abstract
         || die "No abstract for id=<$args->{id}>";
+    return [ $self->_process_html($abstract) ];
+}
 
-    $abstract =~ s#"\$\(ROOT\)/([^"]+?)"#
+sub _process_html
+{
+    my ( $self, $html_code ) = @_;
+
+    $html_code =~ s#"\$\(ROOT\)/([^"]+?)"#
                 q{"}
                 . _rel_url($1)
                 . q{"}
         #eg;
 
-    return [$abstract];
+    $html_code =~ s#\$\(BtVS\)#$BtVS#g;
+
+    return $html_code;
 }
 
 sub _get_logo_tags
@@ -727,8 +761,9 @@ sub _get_story_entry_tags
 {
     my ( $self, $args ) = @_;
 
-    my $id  = $args->{id};
-    my $tag = $args->{tag};
+    my $id                = $args->{id};
+    my $paragraph_tagline = $args->{paragraph_tagline};
+    my $tag               = $args->{tag};
 
     my $o = $self->_get_story($args);
 
@@ -737,16 +772,24 @@ sub _get_story_entry_tags
         qq{<header>\n},
         @{ $self->_get_logo_tags($args) },
         sprintf(
-            qq{<%s class="story" id="%s"><a href="%s">%s</a></%s>\n},
+qq{<%s class="story" id="%s"><a href="%s">%s</a> (<span class="start_date">%s</span>)</%s>\n},
             $tag,
             ( $o->entry_id || ( die "no entry_id for $id" ) ),
             escape_html( _rel_url( $o->href || ( die "no href for $id" ) ) ),
             ( $o->entry_text || ( die "no entry_text for $id" ) ),
+            ( $o->start_date->year() || ( die "no start_date for $id" ) ),
             $tag,
         ),
         qq{</header>\n},
+        (
+            $paragraph_tagline
+            ? ( qq{<p class="tagline">}
+                    . escape_html( $o->tagline() )
+                    . qq{</p>} )
+            : ()
+        ),
         @{ $self->_get_list_items_tags($args) },
-        $o->entry_extra_html(),
+        $self->_process_html( $o->entry_extra_html() ),
         qq{</article>\n},
     ];
 }
@@ -759,7 +802,11 @@ sub _get_all_stories_entries_tags
         map {
             @{
                 $self->_get_story_entry_tags(
-                    { id => $_->id(), tag => $args->{tag}, }
+                    {
+                        id                => $_->id(),
+                        paragraph_tagline => $args->{paragraph_tagline},
+                        tag               => $args->{tag},
+                    }
                 )
             }
         } (

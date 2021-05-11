@@ -2,18 +2,21 @@
 [%- SET desc = "Fan fiction screeenplays for a web series crossing Star Wars, Star Trek and Internet and IRL life in the 2010s-2020s" -%]
 [%- SET more_keywords = "fanfic,fan fiction,crossovers,screeenplays,screeenplay,star wars,star trek,tiffany alvord,sith,jedi" -%]
 
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
 
-<h2 id="read_online">Read Online</h2>
+[% WRAPPER h2_section id = "read_online"  title = "Read Online"  %]
 
-[%# SET epub_prefix="Queen-Padme-Tales--" %]
+[% SET epub_prefix= base_path _ "humour/Queen-Padme-Tales/" %]
+
 <ul>
 
 <li>
 <p>
-<a href="teaser/"><b>Teaser for the pilot episode</b></a> - based on
+<a href="[% epub_prefix %]teaser/"><b>Teaser for the pilot episode</b></a> - based on
 <a href="https://github.com/ztzockt/Star-Wars-opening-crawl-from-1977-Remake">the CSS/JS version</a>
 by <a href="https://github.com/ztzockt">Marvin</a>
 (My derivative <a href="https://github.com/shlomif/Star-Wars-opening-crawl-from-1977-Remake/tree/queen-padme-intro--shlomif">branch</a>.)
@@ -24,9 +27,11 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 [% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
 </ul>
 
+[% END %]
+
 [% default_toc %]
 
-<h2 id="sources">Sources</h2>
+[% WRAPPER h2_section id="sources" title="Sources"%]
 
 <ul>
 
@@ -35,6 +40,8 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
 
@@ -52,13 +59,63 @@ the name and the rough format.
 <a href="https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace">Star Wars: Episode I The Phantom Menace</a> -
 inspired the characters of Queen Padmé, Obi-Wan Kenobi, Qui-Jon, Darth Vader, Anakin Skywalker, etc.
 </p>
+
+<p>
+Do note that Darth Vader and Anakin Skywalker are two different characters
+here.
+</p>
+
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Con_Man_(web_series)"><i>Con Man</i></a> -
+inspired the web series format. Do note that I feel, but did not prove yet,
+that it would have been better as [% RPF %] about the real stars of
+<i>Firefly</i>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony: Friendship is Magic</i></a> - we reuse characters and concepts
+from it, e.g: as Padmé's "spirit friends".
+</p>
+
+<p>
+The characters were forked roughly from those at the end of MLP's
+<a href="https://mlp.fandom.com/wiki/Category:Season_7">7th season</a>,
+after which I stopped watching the show's canon.
+</p>
+
+<p>
+And that <a href="https://mlp.fandom.com/wiki/Discord">Discord</a>
+in <i>Queen Padmé Tales</i> is distinct from
+the Selinaverse's Q, even though they are both based on the Star Trek
+Q character.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/recommendations/films/#spaceballs">Spaceballs</a>
+- is featured in the 2nd episode as an allegory to the real Earth.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">Selinaverse</a>:
+my crossover world (loosely based on an imaginary reality I believed was
+true during a Mania episode in the late 1990s).
+</p>
 </li>
 
 </ul>
 
 [% END %]
 
-<h2 id="licensing">Licensing</h2>
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
 
 <p>
 This work uses some characters and concepts from real life, from other
@@ -74,15 +131,11 @@ Creative Commons Attribution licence Unported (CC-by)</a>
 the situation is more complicated than that.
 </p>
 
+[% END %]
+
 [% UNLESS avoid_nav_blocks %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS buffy_nav_block  %]
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS commercial_fanfic_initiative_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", "star_trek", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
 
 [% END %]
 

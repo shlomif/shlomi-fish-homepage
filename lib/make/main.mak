@@ -103,7 +103,7 @@ POST_DEST_FORTUNE_SHOW_SCRIPT_TXT := $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
 htacc = $(addsuffix /.htaccess,$(1))
 SRC_FORTUNES_DIR_HTACCESS := $(call htacc,$(PRE_DEST_FORTUNES_DIR))
 
-ALL_HTACCESSES := $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,lecture/PostgreSQL-Lecture philosophy/culture))
+ALL_HTACCESSES := $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,lecture/PostgreSQL-Lecture philosophy/culture philosophy/culture/case-for-commercial-fan-fiction))
 
 htaccesses_target: $(ALL_HTACCESSES)
 
@@ -709,7 +709,7 @@ SASS_STYLE := compressed
 SASS_CMD = pysassc $(SASS_DEBUG_FLAGS) --style $(SASS_STYLE)
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss
-COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/mixins.scss
+COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/faq-common.scss lib/sass/faq-indiv.scss lib/sass/mixins.scss
 
 $(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@
@@ -790,9 +790,43 @@ generate_nav_data_as_json: $(NAV_DATA_AS_JSON)
 $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepage/NavData/JSON.pm $(ALL_SUBSECTS_DEPS)
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
+OUT_PREF = lib/out-babel/js
+TYPESCRIPT_basenames = toggle_sect.js toggler.js selfl.js sub_menu.js to-jqtree.js to-jqtree-2.js
+DEST_JS_DIR = $(POST_DEST)/js
+dest_jsify = $(addprefix $(DEST_JS_DIR)/,$(1))
+
+TYPESCRIPT_DEST_FILES = $(patsubst %.js,$(OUT_PREF)/%.js,$(TYPESCRIPT_basenames))
+TYPESCRIPT_DEST_FILES__NODE = $(patsubst %.js,lib/for-node/js/%.js,$(TYPESCRIPT_basenames))
+TYPESCRIPT_COMMON_DEFS_FILES = src/ts/jq_qs.d.ts
+TYPESCRIPT_COMMON_DEPS =
+
+DEST_BABEL_JSES = $(call dest_jsify,$(JSES_js_basenames) $(TYPESCRIPT_basenames))
+OUT_BABEL_JSES = $(patsubst $(DEST_JS_DIR)/%,$(OUT_PREF)/%,$(DEST_BABEL_JSES))
+
+$(DEST_BABEL_JSES): $(DEST_JS_DIR)/%.js: $(OUT_PREF)/%.js
+	$(MULTI_YUI) -o $@ $<
+
+# run_tsc = tsc --target es6 --moduleResolution node --module $1 --outDir $$(dirname $@) $<
+run_tsc = tsc --project lib/typescript/$1/tsconfig.json
+
+$(TYPESCRIPT_DEST_FILES): $(OUT_PREF)/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS)
+	$(call run_tsc,www)
+
+$(TYPESCRIPT_DEST_FILES__NODE): lib/for-node/js/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS)
+	$(call run_tsc,cmdline)
+
+tsc_www:
+	$(call run_tsc,www)
+
+tsc_cmdline:
+	$(call run_tsc,cmdline)
+
+serial_run: tsc_www tsc_cmdline
+
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
 MAIN_TOTAL_MIN_JS_DEST := $(POST_DEST)/js/main_all.js
+TREE_JS_DEST := $(POST_DEST)/js/tree.jquery.js
 EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
@@ -804,16 +838,19 @@ $(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
 # Must not be sorted!
 MAIN_TOTAL_MIN_JS__SOURCES := \
 	bower_components/jquery/dist/jquery.min.js \
-	common/js/toggler.js \
-	common/js/toggle_sect.js \
+	$(DEST_JS_DIR)/toggler.js \
+	$(DEST_JS_DIR)/toggle_sect.js \
 	bower_components/jqTree/tree.jquery.js \
-	common/js/to-jqtree.js \
-	common/js/to-jqtree-2.js \
-	common/js/selfl.js \
-	common/js/sub_menu.js \
+	$(DEST_JS_DIR)/to-jqtree.js \
+	$(DEST_JS_DIR)/to-jqtree-2.js \
+	$(DEST_JS_DIR)/selfl.js \
+	$(DEST_JS_DIR)/sub_menu.js \
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)
+
+$(TREE_JS_DEST): bower_components/jqTree/tree.jquery.js
+	$(call COPY)
 
 PRINTABLE_DEST_DIR := dest/printable
 PRINTABLE_RESUMES__HTML__PIVOT := $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
@@ -1005,10 +1042,12 @@ find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 
+SKIP_EPUBS_NORMALIZE_DUE_TO_INVALID_EPUBS = 1
+
 $(SRC_CLEAN_STAMP): $(SRC_DOCS_DEST) $(PRES_TARGETS_ALL_FILES) $(SPORK_LECTURES_DEST_STARTS) $(MANIFEST_HTML) $(BK2HP_NEW_PNG) $(MATHJAX_DEST_README) $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS) $(SCREENPLAY_XML__RAW_HTMLS__DESTS) $(FORTUNES_BUILT_TARGETS) $(FORTS_EPUB_DEST)
 	$(call find_htmls,$(PRE_DEST)) | grep -vF -e philosophy/by-others/sscce -e WebMetaLecture/slides/examples -e homesteading/catb-heb -e $(SRC_SRC_DIR)/catb-heb.html | $(STRIP_src_dir_DEST) | $(PROC_INCLUDES_COMMON)
 	rsync --exclude '*.html' --exclude '*.xhtml' -a $(PRE_DEST)/ $(POST_DEST)/
-	find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 3 -P 8 $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/normalize-zips.pl
+	if test "$(SKIP_EPUBS_NORMALIZE_DUE_TO_INVALID_EPUBS)" != "1" ; then find $(POST_DEST) -name '*.epub' -o -name '*.zip' | xargs -n 3 -P 8 $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/normalize-zips.pl ; fi
 	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-index-xhtmls-redirects.pl
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
@@ -1030,12 +1069,18 @@ FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
 FAQ_SECTS__PROGRAM := lib/faq/faq_splitter_prog.py
 FAQ_SECTS__LIB_DEPS := lib/faq/split_into_sections.py
+IMAGE_MACRO_SECTS__DIR := $(POST_DEST)/humour/image-macros
+IMAGE_MACRO_SECTS__SRC := $(IMAGE_MACRO_SECTS__DIR)/index.xhtml
+IMAGE_MACRO_SECTS__DEST_DIR := $(IMAGE_MACRO_SECTS__DIR)/indiv-nodes
 
-$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM) $(FAQ_SECTS__LIB_DEPS)
+process_sects_dir = (cd $(1) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(1),$(1))
+
+$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__SRC) $(FAQ_SECTS__PROGRAM) $(FAQ_SECTS__LIB_DEPS) $(IMAGE_MACRO_SECTS__SRC)
 	python3 $(FAQ_SECTS__PROGRAM)
-	(cd $(FAQ_SECTS__DIR) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(FAQ_SECTS__DIR),$(FAQ_SECTS__DIR))
+	$(call process_sects_dir,$(FAQ_SECTS__DIR))
+	$(call process_sects_dir,$(IMAGE_MACRO_SECTS__DEST_DIR))
 
-$(FAQ_SECTS__SRC): $(SRC_CLEAN_STAMP)
+$(FAQ_SECTS__SRC) $(IMAGE_MACRO_SECTS__SRC): $(SRC_CLEAN_STAMP)
 
 all: $(FAQ_SECTS__PIVOT)
 
@@ -1072,7 +1117,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
 
-minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
+minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 
 TEST_TARGETS := Tests/*.{py,t}
 
@@ -1107,6 +1152,9 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
+
+$(DOCBOOK5_BASE_DIR)/xml/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.xml: $(LATEMP_ROOT_SOURCE_DIR)/lib/asciidocs/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.asciidoc
+	$(call ASCIIDOCTOR_TO_DOCBOOK5)
 
 $(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction/README.asciidoc
 	$(call ASCIIDOCTOR_TO_DOCBOOK5)

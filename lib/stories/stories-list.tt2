@@ -14,13 +14,13 @@ href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
 
 [% BLOCK inactive_humour_stories_list_text %]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[1], tag=>'h3') %]
+[% long_stories.calc_all_stories_entries(only_inactives=>[1], paragraph_tagline=>1, tag=>'h3') %]
 
 [% END %]
 
 [% BLOCK active_humour_stories_list_text %]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[0], tag=>'h3') %]
+[% long_stories.calc_all_stories_entries(only_inactives=>[0], paragraph_tagline=>1, tag=>'h3',) %]
 
 [% END %]
 
@@ -58,7 +58,7 @@ requests, and filing bugs/issues in the bug tracker
 [% BLOCK story_episode_li %]
 <li>
 <p>
-<a href="[% base %].html"><b>[% story_title %]</b></a>
+<a href="[% (use_screenplay_html_prefix ? screenplay_html_prefix : epub_prefix) _ base %].html"><b>[% story_title %]</b></a>
 </p>
 <ul>
 [% PROCESS link_to_epub basename = epub_prefix _ base,  %]

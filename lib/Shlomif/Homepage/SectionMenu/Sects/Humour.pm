@@ -2,12 +2,12 @@ package Shlomif::Homepage::SectionMenu::Sects::Humour;
 
 use strict;
 use warnings;
-
-use Shlomif::FindLib ();
+use 5.014;
 use utf8;
-
-use MyNavData::Hosts ();
-
+use Carp qw/ cluck confess /;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
+use Shlomif::FindLib                      ();
+use MyNavData::Hosts                      ();
 use Shlomif::Homepage::FortuneCollections ();
 use JSON::MaybeXS                         (qw( decode_json ));
 use Path::Tiny qw( path );
@@ -15,16 +15,13 @@ use Path::Tiny qw( path );
 my $json_data_fn =
     Shlomif::FindLib->rel_path( [qw(Shlomif factoids-nav.json)] );
 
-my $humour_tree_contents = {
+my $_humour_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Stories and Aphorisms",
+    text        => "Humour",
     title       => "Shlomi Fish’s Stories and Aphorisms",
+    url         => "humour/",
     show_always => 1,
     subs        => [
-        {
-            text => "Humour",
-            url  => "humour/",
-        },
         {
             text => "Stories",
             url  => "humour/stories/",
@@ -35,7 +32,7 @@ my $humour_tree_contents = {
                     title => "The Enemy and How I Helped to Fight it",
                     subs  => [
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Text in Hebrew",
                             url   => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
                             title => "Text of “The Enemy” In Hebrew",
@@ -76,7 +73,7 @@ my $humour_tree_contents = {
                             title => "Ongoing Text of the Screenplay",
                         },
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Hebrew Translation",
                             url   => "humour/humanity/ongoing-text-hebrew.html",
                             title => "Hebrew translation of the screenplay.",
@@ -104,13 +101,13 @@ my $humour_tree_contents = {
                             url  => "humour/human-hacking/conclusions/",
                         },
                         {
-                            skip  => 1,
+                            lang  => "ar",
                             text  => "Arabic Translation",
                             url   => "humour/human-hacking/arabic-v2.html",
                             title => "Translation to Literary Arabic by Vieq",
                         },
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "humour/human-hacking/hebrew-v2.html",
                         },
@@ -282,7 +279,7 @@ my $humour_tree_contents = {
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                                 },
                                 {
-                                    skip => 1,
+                                    lang => "he",
                                     text => "Hebrew Text",
                                     url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
@@ -347,7 +344,7 @@ my $humour_tree_contents = {
 "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                     subs => [
                         {
-                            skip  => 1,
+                            lang  => "he",
                             text  => "Hebrew Versions of the Aphorisms",
                             url   => "humour-heb.html",
                             title => "The Aphorisms in Hebrew",
@@ -388,7 +385,7 @@ my $humour_tree_contents = {
 "Ways to Do it According to the Programming Languages of the World",
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "humour/ways_to_do_it-heb.html",
                         },
@@ -522,10 +519,31 @@ my $humour_tree_contents = {
                     url  => "humour/bits/Python4-Announcement/",
                 },
                 {
-                    text  => "Who gets the final say?",
-                    url   => "humour/bits/true-stories/who-gets-the-final-say/",
-                    title =>
+                    text => "True Stories / Memoirs",
+                    url  => "humour/bits/true-stories/",
+                    subs => [
+                        {
+                            text => "Who gets the final say?",
+                            url  =>
+"humour/bits/true-stories/who-gets-the-final-say/",
+                            title =>
 "True story about asking people by the road about relationships",
+                        },
+                        {
+                            text =>
+"Socialising with a Young Hermione Cosplayer and Her Family",
+                            url =>
+"humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/",
+                            title =>
+"Socialising with an ~11 years old Hermione (“Harry Potter”) Cosplayer and her family at GeekCon Nine Worlds",
+                        },
+                        {
+                            text  => "First Kiss",
+                            url   => "humour/bits/true-stories/my-first-kiss/",
+                            title =>
+"True story about asking people by the road about relationships",
+                        },
+                    ],
                 },
                 {
                     text => "Emma Watson’s Visit to Israel and Gaza",
@@ -666,11 +684,46 @@ my $humour_tree_contents = {
     ],
 };
 
+my $humour_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_humour_tree_contents);
+
+=begin debug
+
+my $d = Data::Dumper->new( [ $humour_tree_contents_by_lang->{he} ] )->Dump();
+if ( $d !~ /Enemy-Hebrew/ )
+{
+    Carp::confess("'$d'");
+}
+
+=end debug
+
+=cut
+
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
+    my $tree_contents = $humour_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $humour_tree_contents,
+        tree_contents => $tree_contents,
     );
 }
 

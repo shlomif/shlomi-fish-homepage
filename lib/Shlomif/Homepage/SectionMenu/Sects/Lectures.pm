@@ -2,22 +2,20 @@ package Shlomif::Homepage::SectionMenu::Sects::Lectures;
 
 use strict;
 use warnings;
-
+use 5.014;
 use utf8;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
+use Carp qw/ cluck confess /;
 
 use MyNavData::Hosts ();
 
-my $essays_tree_contents = {
+my $_section_navmenu_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Presentations",
-    title       => "Shlomi Fish’s Presentations",
+    text        => "Presentations",
+    url         => "lecture/",
+    title       => "Nav Menu for Shlomi Fish’s Presentations",
     show_always => 1,
     subs        => [
-        {
-            text  => "Presentations",
-            url   => "lecture/",
-            title => "Nav Menu for Shlomi Fish’s Presentations",
-        },
         {
             text  => "Perl for Newbies",
             url   => "lecture/Perl/Newbies/",
@@ -246,12 +244,34 @@ my $essays_tree_contents = {
     ],
 };
 
+my $section_navmenu_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_section_navmenu_tree_contents);
+
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
+    my $tree_contents = $section_navmenu_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $essays_tree_contents,
+        tree_contents => $tree_contents,
     );
 }
-
 1;

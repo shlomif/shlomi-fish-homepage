@@ -128,6 +128,7 @@ sub _process_title
 }
 
 my $FALSE = '';
+my $TRUE  = 1;
 
 has vars => (
     is      => 'ro',
@@ -135,6 +136,7 @@ has vars => (
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
+            is_dev         => $FALSE,
             cpan           => $cpan,
             is_forked_site => $FALSE,
             license_obj    => $license,
@@ -227,6 +229,10 @@ sub proc
     $set->( 'leading_path_string',           "breadcrumbs-trail" );
     $set->( 'html_head_nav_links',           "html_head_nav_links" );
     $set->( 'shlomif_main_expanded_nav_bar', "shlomif_main_expanded_nav_bar" );
+    $set->(
+        'shlomif_hebrew_expanded_nav_bar',
+        "shlomif_hebrew_expanded_nav_bar"
+    );
     $set->(
         'nav_links_without_accesskey',
         "shlomif_nav_links_renderer-with_accesskey=0"

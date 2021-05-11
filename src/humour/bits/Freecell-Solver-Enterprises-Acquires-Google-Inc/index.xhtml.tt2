@@ -45,10 +45,6 @@ Search™ it!” instead of “Let’s Google it!”, for an exciting
 Web 3.141592™ experience.
 </p>
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 
 [% END %]

@@ -1,6 +1,7 @@
-[%- SET title = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as geeky imperatives (as of 2021)" -%]
-[%- SET desc = title -%]
-[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism, Emma Watson, copyrights, open, free, Arnold Schwarzenegger, fanfic, fan fiction, hacking, action, hero, comedy, parody, Paul Graham, commercial" -%]
+[% SET re_enable_comments_engine_xhtml5 = "1" %]
+[% SET latemp_plain_html = "1" %]
+[%- SET title = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry" -%]
+[%- SET desc = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as “geeky” (= loving your work; “amateur”) imperatives (as of 2021) for the prosperity of the film, drama, and fiction industries." -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -1460,10 +1461,8 @@ himself, won, and collected the bet money.
 
 </div>
 
-[% WRAPPER nav_blocks  %]
+[% INCLUDE "pages/t2/philosophy/case-commercial-fanfic.xhtml.tt2" scope = "full" %]
 
-[% PROCESS commercial_fanfic_initiative_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["commercial_fanfic_initiative", ] %]
 
 [% END %]

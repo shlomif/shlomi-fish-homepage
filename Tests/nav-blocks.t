@@ -31,6 +31,7 @@ sub _fn
 {
 
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("philosophy/the-eternal-jew/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -94,6 +95,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -174,6 +176,7 @@ EOF
 
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -231,7 +234,7 @@ EOF
             $r->render( { obj => $master_tr, table => $table, } ),
             <<'EOF',
 <tr class="main_title">
-<th colspan="2">Harry Potter/Emma Watson Fanfiction <a href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
+<th colspan="2">Harry Potter/Emma Watson Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
 </tr>
 EOF
             "Render Master_Tr",
@@ -243,6 +246,7 @@ EOF
 foreach my $ext ( '', 'index.xhtml', )
 {
     my $nav_bar = HTML::Widgets::NavMenu->new(
+        coords_stop  => 1,
         path_info    => _fn("humour/Selina-Mandrake/$ext"),
         current_host => 't2',
         MyNavData::get_params(),
@@ -261,10 +265,9 @@ foreach my $ext ( '', 'index.xhtml', )
     # TEST*$ext
     eq_or_diff(
         [ $r->render( { obj => $block } ), ], [ <<'EOF', ],
-<div class="topical_nav_block" id="buffy_nav_block">
-<table>
+<table id="buffy_nav_block">
 <tr class="main_title">
-<th colspan="2">Buffy Fanfiction <a href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
+<th colspan="2">Buffy Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>
 </tr>
 
 <tr class="subdiv">
@@ -332,7 +335,6 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 </table>
-</div>
 EOF
         "Render a block.",
     );

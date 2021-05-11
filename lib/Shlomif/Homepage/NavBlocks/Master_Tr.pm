@@ -19,6 +19,7 @@ sub title_html
         $self->title . " "
         . Shlomif::Homepage::NavBlocks::LocalLink->new(
         {
+            css_class => "to_block",
             %$args,
             inner_html => "Link",
             path => sprintf( "meta/nav-blocks/blocks/#%s", $args->{table}->id ),

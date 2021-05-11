@@ -1,9 +1,12 @@
-.faq {
+.faq,
+.indiv_nodes_wrapper,
+.screenplay {
     img.faq_float {
         float: right;
         margin: 0 2em;
     }
     header {
+        padding-bottom: 1em;
         > h2,
         > h3,
         > h4 {
@@ -18,3 +21,25 @@
 a.back_to_faq {
     @include faq_link;
 }
+
+section.fancy_sects {
+    @include mysection;
+}
+
+.fancy_sects {
+    section,
+    .sub_section {
+        @include mysection;
+    }
+    li {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    ol,
+    ul {
+        margin-left: 2em;
+        padding-left: 0;
+    }
+}
+
+@include quote-iframe-styles(false, ".my_rpf.fancy_sects");

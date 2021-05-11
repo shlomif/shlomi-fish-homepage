@@ -35,7 +35,21 @@ class MyTests(unittest.TestCase):
             './dest/post-incs/t2/meta/FAQ/atheism_can_be_a_religion.xhtml'
         root = html.parse(input_fn)
         links = root.xpath(".//a[@href='./#religious_belief']")
-        self.assertEqual(len(links), 1)
+        self.assertEqual(len(links), 2)
+
+    def test_case4fanfic(self):
+        input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
+            'case-for-commercial-fan-fiction/' + \
+            'indiv-nodes/starved_of_employees.xhtml'
+        root = html.parse(input_fn)
+        descs = root.xpath(
+            ".//div[@class='leading_path']/" +
+            "a[@href='all_people_are_good.xhtml']")
+        self.assertEqual(len(descs), 1)
+        desc_text = descs[0].xpath('text()')[0]
+        m = re.match(
+            "^.*?All People", desc_text)
+        self.assertTrue(m)
 
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
@@ -60,24 +74,77 @@ class MyTests(unittest.TestCase):
             "/section[header/*/@id='rindolfism_canon']")
         self.assertEqual(len(links), 1)
 
+    def _helper_indiv_nodes_test(self, root, xpath_str):
+        """docstring for _helper_indiv_nodes_test"""
+        articles = root.xpath(xpath_str)
+        self.assertTrue(len(articles), "count articles")
+        for art in articles:
+            link = art.xpath("./header/a[./text() = 'Node Link']")
+            self.assertEqual(len(link), 1)
+            href = link[0].get("href")
+            self.assertTrue(href.startswith("indiv-nodes/"))
+
     def test_main(self):
-        input_fn = './dest/post-incs/t2/humour/image-macros/index.xhtml'
+        base_dir_path = './dest/post-incs/t2/humour/image-macros/'
+        input_fn = (base_dir_path + 'index.xhtml')
+        fragments_dir = base_dir_path + "indiv-nodes/"
+        fragment_fn = fragments_dir + "GNU_slash_Linux.xhtml"
+        import os
+        self.assertTrue(os.stat(fragment_fn).st_size > 200)
+        root = html.parse(fragment_fn)
+        imgs = root.xpath(".//article/img")
+        for img in imgs:
+            src = img.get("src")
+            self.assertTrue(src)
+            m = re.match(
+                "^(?:\\.\\./){3}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
+            self.assertTrue(m)
+        fragment_fn = fragments_dir + "interesting_hypothesis.xhtml"
+        root = html.parse(fragment_fn)
+        good = False
+        bad = False
+        node_link_href = ""
+        for atag in root.xpath(".//a"):
+            href = atag.get("href")
+            if "back_to_faq" in (atag.get('class') or ''):
+                node_link_href = href
+            elif href == '../../../humour/image-macros/#standup_philosopher':
+                good = True
+            elif href == '../../humour/image-macros/#standup_philosopher':
+                bad = True
+        self.assertTrue(good, "relative link")
+        self.assertTrue((not bad), "relative link [bad]")
+        self.assertEqual(
+            node_link_href,
+            "../#interesting_hypothesis",
+            "node_link_href",
+        )
+
         root = html.parse(input_fn)
+        self._helper_indiv_nodes_test(root, ".//article")
         imgs = root.xpath(".//article/img")
         self.assertTrue(len(imgs) > 5)
         for img in imgs:
             src = img.get("src")
             self.assertTrue(src)
             m = re.match(
-                "^\\.\\./\\.\\./(humour/images/[A-Za-z0-9_.\\-]+)$", src)
-            self.assertTrue(m)
+                "^(?:\\.\\./){2}(humour/images/[A-Za-z0-9_.\\-]+)$", src)
+            self.assertTrue(m, "'{}' matches".format(src))
             path = m.group(1)
-            self.assertTrue(re.match(".*\\.webp$", path))
+            if "interesting-hypothesis" not in path:
+                self.assertTrue(re.match(".*\\.webp$", path))
             self.assertEqual(
                 Image.open("./dest/post-incs/t2/" + path).size[0],
                 WIDTH,
                 "image {} has WIDTH={}".format(path, WIDTH)
                 )
+
+    def test_terminator_liberation(self):
+        """docstring for test_terminator_liberation"""
+        input_fn = './dest/post-incs/t2/humour/Terminator/Liberation/' + \
+            'ongoing-text.html'
+        root = html.parse(input_fn)
+        self._helper_indiv_nodes_test(root, ".//section")
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

@@ -4,14 +4,37 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2>Introduction</h2>
+[% WRAPPER note %]
+
+<header>
+<h2 id="note">Note</h2>
+</header>
+
+<p>
+Given <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/">this essay</a>
+and <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/">"Putting Cards on the Table (2019-2021)"</a>,
+I believe most Scientologists are reformed by now.
+I wouldn't suggest paying money to gain access to
+their material, but don't expect their excess of money
+to be politically useful. Moreover, most politicians or celebrities
+wouldn't cave in to be blackmailed to whatever info they used to collect
+about them (given <a href="https://en.wikipedia.org/wiki/Paris_Hilton">Paris
+Hilton</a> (♥️!) only took the leaking of a sex tape to her
+advantage).
+</p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This is an essay about why I concluded (based on very limited data) that
 the Scientology modern religion was bad.
 </p>
 
-<h2 id="info">Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "info" title = "Information" %]
 
 <dl>
 
@@ -26,7 +49,9 @@ the Scientology modern religion was bad.
 
 </dl>
 
-<h2 id="text">The Essay Itself</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "text" title = "The Essay Itself" %]
 
 <p>
 I first heard of Scientology in an article I read in the weekly addendum
@@ -103,7 +128,9 @@ very article by the top-most official of the Church, was enough to make
 me realise that they were irrational and harmful.
 </p>
 
-<h2 id="other_resources">Other Anti-Scientology Resources</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "other_resources" title = "Other Anti-Scientology Resources" %]
 
 <p>
 <a href="http://www.xenu.net/">Xenu.net is the primary anti-scientology site
@@ -121,5 +148,7 @@ their sites, or removing links to them from search engines, etc. They
 completely favour government control and regulation of online free speech ,and
 as such, act against a free, unregulated economy.
 </p>
+
+[% END %]
 
 [% END %]

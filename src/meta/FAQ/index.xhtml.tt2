@@ -32,6 +32,7 @@
 [% SET site_sources_url = base_path _ "meta/site-source/" %]
 
 [% SET childhood_mem = "Possibly worse, I lost many of my earliest childhood memories, as I thought about them and remembered them in English." %]
+[% SET SMG = 'Sarah Michelle Gellar' %]
 
 <img src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.webp" alt="photo of Shlomi Fish in December 2020" class="highlight" style="float:right;" />
 
@@ -440,6 +441,7 @@ it, and whether or not I can reply in public.
 <li>
 <p>
 Please don’t send me a <b>“Can you teach me how to become a hacker?”</b>
+or <b>“Teach me programming / software development”</b>
 emails. See my
 <a href="[% base_path %]philosophy/computers/open-source/how-to-start-contributing/">How
 Can I Start Contributing to Free and Open Source Software (FOSS)</a> essay
@@ -640,6 +642,87 @@ and education progresses.
 </p>
 
 [%- END -%]
+
+[% WRAPPER faq_h3_section id = "which_disabilities_do_you_have"  title = "Which disabilities do you have?" %]
+
+<p>
+I have the following disabilities:
+</p>
+
+<ol>
+
+<li id="mental_illness_medication">
+<p>
+Being <a href="#mental_illness">openly bipolar</a> (also see
+<a href="https://www.shlomifish.org/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/">"Why Openly Bipolar People Should Not Be Medicated"</a>)
+</p>
+</li>
+
+<li>
+<p>
+Partial fingers and hands paralysis - possibly caused by the
+<a href="#mental_illness_medication">psychiatric drugs</a>.
+</p>
+</li>
+
+<li>
+<p>
+Bad diction.
+</p>
+</li>
+
+<li>
+<p>
+Stuttering.
+</p>
+</li>
+
+<li>
+<p>
+A heavy Israeli/Hebrew accent when talking in English (and a touch
+of Texan English accent when talking in Hebrew).
+</p>
+</li>
+
+</ol>
+
+<p>
+See <a href="https://www.youtube.com/watch?v=4PbAk-zb5Ns">this recording of me
+singing</a> for evidence.
+</p>
+
+<p>
+This has several implications:
+</p>
+
+<ol>
+
+<li>
+<p>
+It is hard and time-consuming for me to type.
+</p>
+</li>
+
+<li>
+<p>
+It is hard for me to use <a href="https://en.wikipedia.org/wiki/Speech_recognition">voice recognition</a>. When I say "Shlomi Fish" into my Android smartphone, in
+clear Hebrew, it thinks I meant "Shlomo".
+</p>
+</li>
+
+<li>
+<p>
+It is easier for me to paste URLs to online chats for further discussion.
+</p>
+</li>
+
+</ol>
+
+<p>
+So please don't be <a href="https://en.wikipedia.org/wiki/Ableism">ableist</a>.
+</p>
+
+[% END %]
 
 [% WRAPPER faq_h3_section id = "irc_part_message"  title = "What is the origin of your IRC part message (“Yay! I’m a Llama again!”)?"  %]
 
@@ -921,6 +1004,20 @@ and improving it in <a href="https://github.com/yvoronoy/awesome-english">the
 “Awesome English” curated list of links</a> on GitHub.
 </p>
 
+<p>
+<b>Note:</b> please do not use a two way bridge from and to
+<a href="https://en.wikipedia.org/wiki/Google_Translate">Google Translate</a>
+or similar services <b>exclusively</b>, because you can improve your English,
+but cannot easily improve that of Google Translate, because it often emits
+non-functional translations, and because it will encourage you to learn less.
+</p>
+
+<p>
+GTranslate has some legitimate use cases (such as trying to get the gist of
+a page in a foreign language) but like most tools, it has
+<a href="https://www.youtube.com/watch?v=LMkJuDVJdTw">its limitations</a>.
+</p>
+
 [%- END -%]
 
 [% WRAPPER faq_h3_section id = "asperger_syndrome"  title = "Do you have Asperger syndrome (Asperger’s)?"  %]
@@ -1044,9 +1141,9 @@ and similar fallacies.)
 [% WRAPPER faq_h3_section id = "do_you_play_chess"  title = "Do you play Chess?"  %]
 
 <p>
-I do not play Chess a lot, mainly because I do not like it too much. I'm also not a very
-good Chess player, but hopefully one should preferably not avoid doing something
-because they are bad at it.
+I do not play Chess a lot, mainly because I do not like it too much. I'm also
+not a very good Chess player, but one should hopefully not avoid
+doing something because they are bad at it.
 </p>
 
 <p>
@@ -1057,7 +1154,7 @@ Some anecdotes regarding my experience with Chess enthusiasts are:
 
 <li>
 <p>
-Someone on [% IRC %] told us that he thinks everyone should be forced to play Chess
+Someone on [% my_acronym( "key" => "IRC",) %] told us that he thinks everyone should be forced to play Chess
 (in a true <a href="https://en.wikipedia.org/wiki/Authoritarianism">authoritarian</a>
 fashion in my opinion). This is while I recall reading that in
 <a href="https://en.wikipedia.org/wiki/South_Africa">South Africa</a>
@@ -1090,8 +1187,7 @@ As I noted <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-cinema--cop
 
 <p>
 Hi all! I noticed many Hollywood marriages and other relationships have been
-stable ever since <a href="#biggest_celeb_crush">Sarah Michelle
-Gellar</a> (♥!) was
+stable ever since <a href="#biggest_celeb_crush">[% SMG %]</a> (♥!) was
 interviewed on "why my hollywood marriage works?". I'm not against divorces /
 breakups, but I want couples to be happy even if I'm attracted to their female
 partner (and frankly I'm attracted to a metric ton of celebs, friends, and
@@ -1137,7 +1233,7 @@ working on a project that I do not think is important.
 Note that if you need some money, feel free to
 <a href="[% base_path %]me/contact-me/">contact me</a>
 and I can see about giving a one time payment (with no
-strings attached): <a href="https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&amp;oldid=1006618702#Charitable_activities">SMG quote</a>.
+strings attached): <a href="https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&amp;oldid=1006618702#Charitable_activities">[% SMG %] quote</a>.
 </p>
 
 [% END %]
@@ -1332,7 +1428,7 @@ the <a
 href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a>, I do not
 hold it as gospel, or as "The Word of God", and I think <a
 href="https://en.wikipedia.org/wiki/Sturgeon%27s_law">Sturgeon's law</a> (=
-"90% of everything is crap") applies to it as well.
+"90% of everything is crap") might apply to it as well.
 </p>
 
 [%- END -%]
@@ -1350,7 +1446,7 @@ and it changes almost every day.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "selfishness"  title = "Is the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) makes you selfish?"  %]
+[% WRAPPER faq_h3_section id = "selfishness"  title = "Does the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) make you selfish?"  %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=neo-tech-selfishness">This
@@ -1378,11 +1474,11 @@ Wikipedia page. )
 </p>
 
 <p>
-While I’m no longer a Neo-Tech/Objectivism purist, I still agree with them
-that both selfish and selfless (= having an irrational disregard for one’s
-self) behaviours should be avoided as much as possible, and that one should
-strive for “Rational Self-Growth” and that often “selfish vs. selfless” is
-presented as a false dichotomy.
+While I’m no longer a Neo-Tech purist, I still agree with them that both
+selfish and selfless (= having an irrational disregard for one’s self)
+behaviours should be avoided as much as possible, and that one should strive
+for “Rational Self-Growth” and that often “selfish vs. selfless” is presented
+as a false dichotomy.
 </p>
 
 [%- END -%]
@@ -1444,6 +1540,61 @@ approving or disapproving, offline or online. HR drones who try to find faults
 in your online presence are going to be unhappy anyway, and from
 my impression they are usually wilfully stupid and thus
 quite evil and misguided.
+</p>
+
+[%- END -%]
+
+[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
+
+<p>
+Yes, I'm fully aware of that, and I think it does not matter too much.
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#great-hackers">Quoting from an essay I wrote:</a>
+</p>
+
+<blockquote cite="">
+
+<p>A great hacker is an action hero that is aware enough of the
+essence of hacking to become a greater and greater hacker, despite
+whatever limitations he or she may have, and despite whatever
+setbacks they may run into.</p>
+<p>Note that some great hackers <b>were clearly fictional</b> (e.g:
+<a href="https://en.wikipedia.org/wiki/Yoda">Yoda</a>,
+<a href=
+"https://www.geekwire.com/2011/top-10-reasons-darth-vader-amazing-project-manager/">
+Darth Vader</a>, <a href=
+"https://en.wikipedia.org/wiki/Milady_de_Winter">Milady
+de-Winter</a>, <a href=
+"https://en.wikipedia.org/wiki/Miss_Piggy">Miss Piggy</a>, or even
+<a href=
+"https://mlp.fandom.com/wiki/Fluttershy">Fluttershy</a> ), some
+were female (e.g: <a href=
+"https://en.wikipedia.org/wiki/Sarah_Bernhardt">Sarah Bernhardt</a>
+, <a href="https://en.wikipedia.org/wiki/Ayn_Rand">Ayn
+Rand</a>, and <a href=
+"https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>) and
+some were underage (most notably <a href=
+"https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>,
+<a href=
+"https://en.wikipedia.org/wiki/Shirley_Temple">Shirley Temple</a>,
+and <a href=
+"https://en.wikipedia.org/wiki/Macaulay_Culkin">Macaulay Culkin</a>
+).</p>
+<p>So don't let anything stop you.</p>
+</p>
+
+</blockquote>
+
+<p>
+Just because a story or a saga are fictional, does not invalidate the fact
+that we can enjoy them, learn from them, use them for inspiration, and
+analyse them.
+</p>
+
+<p>
+I don't take the <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Bible</a>
+as gospel and still enjoy it. On the other hand, some
+<a href="#atheism_can_be_a_religion">religious "atheists"</a>
+take it as "anti-gospel" which I find is philosophically immature too.
 </p>
 
 [%- END -%]
@@ -1602,10 +1753,10 @@ ended up <a href="#idf_service">being exempt from the IDF service anyway</a>.
 <p>
 There is a
 <a href="http://shlomifishswiki.branchable.com/Fluttershy__44___Princess_of_Princesses__44___head_of_the_secret_cabal_leadership_of_the_Mossad__44___the_already_top_secret_intelligence_agency_of_the_Zionist_conspiracy/">tongue-in-cheek conspiracy theory</a>
-that all Israeli citizens are Mossad agents, which is headed by a secret cabal headed by <i>My Little Pony</i>’s <a href="https://mlp.fandom.com/wiki/Fluttershy">Fluttershy</a>.
+that all Israeli citizens are Mossad agents, which is headed by a secret cabal headed by <i>My Little Pony</i>’s fictional Pegasus (= winged) pony <a href="https://mlp.fandom.com/wiki/Fluttershy">Fluttershy</a>.
 Furthermore, it is commonly acknowledged that <a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a>
 is a quadruple Mossad→FBI→Shin Bet→CIA agent.
-This is while <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">SMG</a>,
+This is while <a href="#biggest_celeb_crush">[% SMG %]</a>,
 <a href="[% base_path %]meta/nav-blocks/blocks/#xkcd_nav_block">Summer Glau</a>,
 and I are <a href="[% base_path %]humour/bits/facts/NSA/">the NSA</a>'s
 agents no. 1, 2 and 3 respectively.
@@ -1704,13 +1855,13 @@ paranoia, but otherwise very cool.
 [% WRAPPER faq_h3_section id = "biggest_celeb_crush"  title = "Who was your biggest celebrity crush?" %]
 
 <p>
-<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle
-Gellar</a>. She played <a
-href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy Summers</a> on Buffy,
-and I was 20 at the time. She is about my age, and I recall that her reported
+<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">[% SMG %]</a>. She played <a
+href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy Summers</a>
+on [% my_acronym( "key" => "BtVS", ) %] and I was 20 at the time.
+She is about my age, and I recall that her reported
 avoidance of consuming caffeine, alcohol, tobacco, and harder drugs,
 partly convinced me <a href="#diet">to avoid them as well</a>.
-That was along with a recommendation for that in <a href="https://rationalwiki.org/wiki/Neo-Tech">Neo-Tech</a> (which I can no longer recommend perusing).
+That was along with a recommendation for that in <a href="https://rationalwiki.org/wiki/Neo-Tech">Neo-Tech</a> (= an idea system which I can no longer recommend perusing).
 </p>
 
 <p>
@@ -1726,6 +1877,32 @@ transporters</a> and "all of her duplicates came out more normal than her".
 As <a href="[% base_path %]humour/fortunes/show.cgi?id=smg-next-film">this 1998 email exchange indicates</a> we still held her in some contempt, which
 is not unusual historically <a href="[% base_path %]humour.html#pbride_philosophers">for entertainers</a>.
 </p>
+
+<p>
+Some of my favourite performances of her:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=kCl3ho6_gbg">Spiderman Parody</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=8Uztj3vp-RI"><i>Lord of the Rings</i> Parody</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/Files/files/video/buffy-is-not-a-nobody.mkv">"Buffy is not a no-one"</a>
+</p>
+</li>
+
+</ol>
 
 [%- END -%]
 
@@ -1880,6 +2057,14 @@ I'm not going to read [% cnp %] again willingly, unless someone pays me a
 </p>
 </li>
 
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=s_pi4mbqQ6E">Zehu Zeh's reflection on Dostoevsky's "Crime
+and Punishment"</a> - (from the Israeli Educational Television; in Hebrew)
+was incredibly funny and true.
+</p>
+</li>
+
 </ol>
 
 <p>
@@ -1942,6 +2127,18 @@ http://shlomifish.org/ used to be a parked hostname of my DNS registrar, but
 now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
+
+[% WRAPPER faq_h4_section id = "why_the_www_domain_prefix"  title = "Why are you using the www domain prefix for your site?"  %]
+
+<p>
+There is no clear consensus whether "www." or plain "shlomifish.org" should
+be used. It makes the URLs somewhat longer but I also have
+<a href="https://shlom.in/">shlom.in</a> which is even shorter.
+Also see <a href="https://en.wikipedia.org/wiki/Law_of_triviality">colour
+of the bikeshed</a> arguments.
+</p>
+
+[%- END -%]
 
 [%- END -%]
 
@@ -2426,8 +2623,8 @@ people can bite you further down the road (while being kind and generous
 returns seven folds).
 <a
 href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-hurting-people">buu
-almost got himself killed</a> due to frequent online chat hostility and use of
-IRC force (kicks, devoices, or bans).  In addition, a former boss of mine who
+almost got himself killed</a> due to frequent online chat hostility and use
+of [% my_acronym( "key" => "IRC",) %] force (kicks, devoices, or bans).  In addition, a former boss of mine who
 used to walk in the middle of the roads (hubris) in <a
 href="https://en.wikipedia.org/wiki/Gush_Dan">Gush Dan</a>, got badly injured
 in a car accident.
@@ -2511,6 +2708,7 @@ That put aside, here are some factors that may contribute to this:
 </p>
 
 <ol>
+
 <li>
 <p>
 Some of it has to do with my <a href="[% base_path %]meta/hosting/">web hosting</a>,
@@ -2528,29 +2726,6 @@ reasons (not sure).
 
 <li>
 <p>
-I enabled server-side <a href="https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip/deflate/etc. compression</a>.
-</p>
-</li>
-
-<li>
-<p>
-XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
-and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
-minimised. See <a href="https://github.com/kangax/html-minifier">HTML minifier</a>
-for HTML, <a href="https://github.com/tdewolff/minify">Go minifiers</a> for
-SVG, and <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> for JavaScript.
-</p>
-</li>
-
-<li>
-<p>
-I use common external stylesheets, script files, and images instead of embedding
-them on every page.
-</p>
-</li>
-
-<li>
-<p>
 The website is mostly
 <a href="https://en.wikipedia.org/wiki/Static_web_page">static</a> and served
 from the server's hard disk directly without potentially costly server-side
@@ -2562,6 +2737,29 @@ scripting.
 <p>
 I avoid loading unnecessary JavaScript codes and other resources from other
 sites (with some possible exceptions.).
+</p>
+</li>
+
+<li>
+<p>
+I enabled server-side <a href="https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">gzip/deflate/etc. compression</a>.
+</p>
+</li>
+
+<li>
+<p>
+XHTML/HTML, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>,
+and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> are all
+being minified. See <a href="https://github.com/kangax/html-minifier">HTML minifier</a>
+for HTML, <a href="https://github.com/tdewolff/minify">Go minifiers</a> for
+SVG, and <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> for JavaScript.
+</p>
+</li>
+
+<li>
+<p>
+I use common external stylesheets, script files, and images instead of embedding
+them on every page.
 </p>
 </li>
 
@@ -2593,6 +2791,14 @@ The navigation menu is partly populated after the page load by using an
 (or so-called "AJAX") call to a static JSON file.
 </p>
 </li>
+
+<li>
+<p>
+I sometimes reduce the size of the HTML markup by using wrapper tags
+and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator">xhild or descendent CSS combinators</a>.
+</p>
+</li>
+
 </ol>
 
 <p>
@@ -2735,7 +2941,7 @@ some sub-repositories).
 
 [% WRAPPER faq_h2_section id = "works_of_fiction"  title = "About my works of fiction."  %]
 
-[% WRAPPER faq_h3_section id = "why_fan_fic"  title = "Why do you write mostly fan-fiction and crossovers?"  %]
+[% WRAPPER faq_h3_section id = "why_fan_fic" title = "Why do you write mostly fan-fiction and crossovers?" %]
 
 <p>
 Lawrence Lessig gives many good reasons for remixing in
@@ -2961,17 +3167,31 @@ I note the significance of the factoids trend <a href="[% base_path
 %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#chuck_norris">in
 this section about them</a> and continued in 2019 <a
 href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#Chuck_Norris">here</a>.
-One should also note that there has been mutual influence on the facts, and by
+One should also note that there has been mutual influence on the factoids, and by
 them, with my longer <a
 href="[% base_path %]humour/stories/">stories / screenplays</a>.
 Often such facts are being made up about celebrities or fictional characters on
-social media without being officially considered as such.
+social media without being immediately recognised as such.
+</p>
+
+<p>
+These "facts" are a natural evolution of <a
+href="https://en.wikipedia.org/wiki/Aesop">attributing fables to Aesop</a>
+(often ones thought about on the spot)
+or telling stories about <a href="#idolisation_of_people_and_things">idols
+(whether real, fictional, human, immortal, etc.)</a>.
+</p>
+
+<p>
+( I have similarly had <a href="[% base_path
+%]humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#ethical--peaceful-resolution">Gowron
+attribute a quote to Kahless</a> which I came up with. )
 </p>
 
 <p>
 Note that if you do not find these facts funny, that is OK - I still love you!
 💟 😉! But "live and let live and do and let do" and like my psychotherapist
-advised me: please don't be domineering/"pushy". Different people are
+advised me: please don't be too domineering/"pushy". Different people are
 <a href="https://en.wikipedia.org/wiki/One_Fish,_Two_Fish,_Red_Fish,_Blue_Fish">different</a>.
 </p>
 
@@ -3015,15 +3235,16 @@ Report</a>, most of the best "AltRight" neonazi bloggers are parody ones.
 <p>
 I do not wish to imply all fanatics,
 whether atheists or otherwise, were as destructive as them, just to note
-that believing or suspecting God does not exist does not automatically
+that believing or suspecting God does not exist, does not automatically
 make you free of faith or pseudo-faith.
 </p>
 
 <p>
-Note that currently I am <a href="#religious_belief">an agnostic</a>, and try not
-to be overzealous and pushy about it, but I do not rule out that there were or
-are or can be religious agnostics. Furthermore, I do not rule out that I may have
-my share of irrationalities, fanaticism or stubbornness in other realms of my life.
+Note that currently I am <a href="#religious_belief">an agnostic</a>, and try
+not to be overzealous and pushy about it, but I do not rule out that there were
+or are or can be religious agnostics. Furthermore, I do not rule out that I may
+have my share of irrationalities, fanaticism or stubbornness in other realms of
+my life.
 </p>
 
 <p>
@@ -3031,11 +3252,11 @@ Just for the record, I recall reading on an Internet site, an excerpt from an
 interview with one of the creators of <a
 href="https://en.wikipedia.org/wiki/South_Park"><i>South Park</i></a> (which I
 admit I have not watched substantially) which was known for ridiculing various
-religions, saying that they thought that despite all that, they found atheism
+religions. That excerpt noted that they thought that despite all that, they found atheism
 the funniest religion, because the contemporary astronomical/astrophysical
-model excepts time to run out and end.  This proved as one of my catalysts from
-my transition from a dogmatic atheist, to an open-minded and pluralistic
-agnostic.
+model excepts time to run out and end.  This proved as one of the catalysts from
+my transition from a dogmatic atheist, to an <a href="#religious_belief">open-minded and pluralistic
+agnostic</a>.
 </p>
 
 [%- END -%]
@@ -3043,19 +3264,18 @@ agnostic.
 [% WRAPPER faq_h3_section id = "release_something_perfect" title = "Why don't you cut out contact with the outside world for several years and release a perfect screenplay?"  %]
 
 <p>
-This was popularised by Hollywood, but from my experience is detrimental
-in this day and age (~January 2021).
-I find that releasing screenplays (or essays or software)
-in an "imperfect" or even incomplete state, helps getting input
-from readers, reviewers, and collaborators, which even
-if negative and "destructive", helps in the thought process.
+This was popularised by Hollywood, but from my experience is detrimental in
+this day and age (~January 2021).  I find that releasing screenplays (or essays
+or software) in an "imperfect" or even incomplete state, helps getting input
+from readers, reviewers, and collaborators, which even if negative and
+"destructive", helps in the thought process.
 </p>
 
 <p>
 For example, after writing the first three stanzas of
 <a href="[% base_path %]humour/Terminator/Liberation/">"Terminator: Liberation"</a>,
-it took me close to a year to think of a better (and shorter)
-plot.
+it took me close to a year to come up with a better (and shorter) plot.
+Moreover, subsequent readers' input was instrumental in further enhancing it.
 </p>
 
 <p>
@@ -3076,11 +3296,34 @@ Cookie Monster <a href="https://www.youtube.com/watch?v=uCeMZccDMA0">agrees with
 
 <p>
 Sure! <a href="https://en.wikipedia.org/wiki/Go_ahead,_make_my_day">Go ahead</a> as
-I believe most of my works are under <a href="https://www.shlomifish.org/meta/copyrights/">licences that allow derivatives</a> given respecting
+I believe most of my works are under <a href="[% base_path %]meta/copyrights/">licences that allow derivatives</a> given respecting
 certain conditions. Even if you violate the conditions, I may likely
-<a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/#originality_is_self_defeating">lack the time and energy</a>
+<a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/#originality_is_self_defeating">lack the time and energy</a>
 to start a law suit and instead just gently "shame" you on
 Internet social media or other sites.
+</p>
+
+<p>
+Also see <a href="#financial_status">some relicensing options</a>.
+</p>
+
+[% END %]
+
+[% WRAPPER faq_h3_section id = "how_do_you_expect_to_afford_the_actors" title = "How do you expect to afford paying the [big name] actors you sport in your screenplays?"  %]
+
+<p>
+First of all note that I believe by observation that <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/beautiful_people_are_geeks.xhtml">most of them are modern-day geeks and "amateurs"</a>
+and often agreed to act in films they liked for a relatively small pay.
+For instance, according to <a href="https://en.wikipedia.org/w/index.php?title=Emma_Watson&amp;oldid=1017885388">the wikipedia article about Emma Watson</a>
+and <a href="https://en.wikipedia.org/w/index.php?title=Kirsten_Dunst&amp;oldid=1018684072">the one about Kirsten Dunst</a>
+they both played in some independent films, which I presume paid less than
+"major motion pictures".
+</p>
+
+<p>
+Secondly, my cast pages (e.g: <a href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html">1</a>; <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/cast.html">2</a>; ) are merely guidelines. Film makers are welcome
+to <a href="#may_i_prepare_a_derivative">take them in their own direction</a>
+(or the screenplays themselves).
 </p>
 
 [% END %]
@@ -3882,33 +4125,38 @@ particularly derogatory).
 In general, I support gender equality, lack of double standards, equal opportunities,
 and liberation of both genders, and both men and women (of any age)
 exhibiting confidence, sexual assertiveness, while being
-<a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">"excellent to each other"</a>,
-not be <a href="https://knowyourmeme.com/memes/wheatons-law">a jerk ("Wheaton's Law")</a>.
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">"excellent to each other"</a>,
+and not being <a href="https://knowyourmeme.com/memes/wheatons-law">a jerk ("Wheaton's Law")</a>.
 </p>
 
 <p>
-I do admit I have a sexist side: either pro-female ( <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#celts_trip__rape">The trio of Celtic girls' story</a>; <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-how-chun-li-vs-tifa-should-end">Chun Li vs. Tifa</a> )
-or pro-male ( <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=too-girly">"Too girly for me"</a> ; <a href="https://www.shlomifish.org/humour/human-hacking/">"The Human Hacking Field Guide"</a> ), but this kind of humour is hopefully
+I do admit I have a sexist side: either pro-female ( <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#celts_trip__rape">The trio of Celtic girls' story</a>; <a href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-how-chun-li-vs-tifa-should-end">Chun Li vs. Tifa</a> )
+or pro-male ( <a href="[% base_path %]humour/fortunes/show.cgi?id=too-girly">"Too girly for me"</a> ; <a href="[% base_path %]humour/human-hacking/">"The Human Hacking Field Guide"</a> ), but this kind of humour is hopefully
 in good taste and is appreciated by both genders.
 </p>
 
 <p>
-I have many other conflicting sides, including a <a href="https://www.shlomifish.org/humour/TheEnemy/The-Enemy-English-v7.html#gone_without_a_trace">sadistic side</a>,
+I have many other conflicting sides, including a <a href="[% base_path %]humour/TheEnemy/The-Enemy-English-v7.html#gone_without_a_trace">sadistic side</a>,
 which <a href="#featuring_sexy_women_and_girls">Taylor Swift has one too</a>,
-and <a href="https://www.shlomifish.org/humour/Selina-Mandrake/ongoing-text.html#selina-meets-mephiqoleth">parodying Judaism side</a>.
+and a <a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html#selina-meets-mephiqoleth">parodying Judaism side</a>.
 </p>
 
 <p>
 I use these elements in my writing because they are entertaining and
-good for business, but do not encourage being destructive IRL,
-and anticipate that both children and adults will <a href="https://www.shlomifish.org/Files/files/video/What%20Kid%20Shows%20Taught%20Me-ROZjaxT_0Hw.webm">know better</a>.
+good for business. I do not encourage being destructive in real life,
+and anticipate that both children and adults will <a href="[% base_path %]Files/files/video/What%20Kid%20Shows%20Taught%20Me-ROZjaxT_0Hw.webm">know better</a>.
 </p>
 
 <p>
 Do note that I could have been too sexualised or otherwise tactless in my
 online communications in the past. Even though I was honest, I often lacked
 delivery, which brought me <a href="https://www.reddit.com/r/quotes/comments/dwaviq/where_they_have_burned_books_they_will_end_in/">some bad reputation and trouble</a>.
-I've been trying to improve though.
+</p>
+
+<p>
+I've been trying to improve though. <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-using-your-experience-points">mst joked</a>
+that <q>every time I level, I put all my XP (= experience points) into "being right" rather than boring things like "tact"</q>,
+but he has been increasingly more tactful lately, and hopefully so have I.
 </p>
 
 [%- END -%]

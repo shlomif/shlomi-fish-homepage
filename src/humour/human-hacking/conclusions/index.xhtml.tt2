@@ -275,10 +275,6 @@ has received some positive reputation, and sparked a discussion between
 <a href="http://www.reddit.com/user/YannAnth">YannAuth</a> and me.
 </p>
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", "friends_tv", ] %]
 
 [% END %]

@@ -68,10 +68,6 @@ it so</a>.
 
 [% END %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 
 [% END %]

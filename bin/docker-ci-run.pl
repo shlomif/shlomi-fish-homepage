@@ -35,22 +35,43 @@ sudo apt-get update -qq
 EOF
             sys_deps => [
                 qw/
+                    build-essential
                     cookiecutter
                     graphicsmagick
+                    hspell
+                    hunspell-en-gb
+                    libdb5.3-dev
                     libdbd-sqlite3-perl
+                    libexpat1-dev
                     libgd-dev
+                    libgdbm-compat-dev
+                    libgdbm-dev
                     libgmp-dev
+                    libhunspell-dev
                     libncurses-dev
                     libpcre2-dev
+                    libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
+                    libpython3-all
+                    libpython3-dev
                     libxml2-dev
+                    lynx
+                    myspell-hw
+                    perl
+                    python3
+                    python3-all
+                    python3-dev
+                    python3-venv
+                    python3-virtualenv
                     ruby-dev
                     ruby-rspec
-                    python3-virtualenv
-                    python3-venv
+                    silversearcher-ag
+                    txt2html
+                    vim
                     xsltproc
                     xz-utils
+                    zip
                     /,
             ],
         }
@@ -63,19 +84,31 @@ EOF
             sys_deps                    => [
                 qw/
                     GraphicsMagick
+                    docbook-dtds
+                    docbook-style-xsl
+                    docbook5-style-xsl
                     gd-devel
                     gdbm-devel
                     gmp-devel
+                    hspell-devel
+                    libdb-devel
                     libxml2-devel
                     libxslt
                     libxslt-devel
                     ncurses-devel
                     pcre-devel
                     perl-DBD-SQLite
+                    perl-Inline-Python
+                    perl-XML-Parser
                     perl-generators
                     primesieve-devel
+                    python3
+                    python3-devel
                     ruby-devel
                     rubygem-rspec
+                    sgml-common
+                    the_silver_searcher
+                    vim
                     virtualenv
                     which
                     xz
@@ -108,10 +141,13 @@ sub run_config
                 cmake-data
                 cpanminus
                 cppcheck
+                expat
                 fortune-mod
+                hunspell
                 g++
                 gcc
                 git
+                golang
                 inkscape
                 lynx
                 make
@@ -182,10 +218,16 @@ sub run_config
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
+export LC_ALL=en_US.UTF-8
+export LANG="\$LC_ALL"
+export LANGUAGE="en_US:en"
 mv /temp-git ~/source
 true || ls -lR /root
 $setup_package_manager
 cd ~/source
+$package_manager_install_cmd glibc-langpack-en glibc-locale-source
+# localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
+localedef --force -i en_US -f UTF-8 en_US.UTF-8
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
 if false
@@ -199,7 +241,8 @@ then
     rm -fr primesieve
 fi
 sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
-cpanm -vvv IO::Async
+# cpanm -vvv IO::Async
+cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
 cpanm --notest HTML::T5
 # For wml
@@ -223,9 +266,16 @@ echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
 ( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
 pwd
 echo "HOME=\$HOME"
-virtualenv -p `which pypy3` /pypyenv
-source /pypyenv/bin/activate
-pydeps="flake8 six"
+if false
+then
+    virtualenv -p `which pypy3` /pypyenv
+    source /pypyenv/bin/activate
+else
+    virtualenv -p `which python3` /python_3_env
+    source /python_3_env/bin/activate
+fi
+
+pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"
 cmake_build_is_already_part_of_test_sh='true'
@@ -233,7 +283,11 @@ if test "\$cmake_build_is_already_part_of_test_sh" != "true"
 then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
-bash bin/rebuild
+go get -u github.com/tdewolff/minify/cmd/minify
+find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
+PATH="\$PATH:\$HOME/go/bin"
+# bash bin/rebuild
+TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
 
     $obj->exe_bash_code( { code => $script, } );
@@ -241,8 +295,8 @@ EOSCRIPTTTTTTT
     return;
 }
 
-# foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+# foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config($sys);
 }

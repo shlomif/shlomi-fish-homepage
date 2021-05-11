@@ -51,11 +51,11 @@ sub _tr
     return Shlomif::Homepage::NavBlocks::Tr->new( {@_} );
 }
 
-my $EmWatson_tech_interview = _l(
+my $EmmaWatson_tech_interview = _l(
     inner_html => "Emma Watson Interviewing for a software developer job",
     path       => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
 );
-my $EmWatson_visit_to_Gaza = _l(
+my $EmmaWatson_visit_to_Gaza = _l(
     inner_html => "Emma Watson visit to Israel and Gaza",
     path       => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
 );
@@ -90,7 +90,7 @@ my %tr_s = (
         title => "Define Zionism",
         items => [ _fp( path => "philosophy/politics/define-zionism/", ), ],
     ),
-    'EmWatson_facts' => _tr(
+    'EmmaWatson_facts' => _tr(
         title => "“Facts”",
         items => [
             _l(
@@ -99,13 +99,13 @@ my %tr_s = (
             ),
         ],
     ),
-    'EmWatson_tech_job' => _tr(
-        title => "EmWatson Tech Interview",
-        items => [ $EmWatson_tech_interview, ],
+    'EmmaWatson_tech_job' => _tr(
+        title => "EmmaWatson Tech Interview",
+        items => [ $EmmaWatson_tech_interview, ],
     ),
-    'EmWatson_visit_to_Gaza' => _tr(
-        title => "EmWatson Visit to Israel &amp; Gaza",
-        items => [ $EmWatson_visit_to_Gaza, ],
+    'EmmaWatson_visit_to_Gaza' => _tr(
+        title => "EmmaWatson Visit to Israel &amp; Gaza",
+        items => [ $EmmaWatson_visit_to_Gaza, ],
     ),
     'foss_bits' => _tr(
         title => "Ultra-short stories",
@@ -163,7 +163,7 @@ my %tr_s = (
                 path =>
                     "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
             ),
-            $EmWatson_tech_interview,
+            $EmmaWatson_tech_interview,
             _l(
                 inner_html => "I'm the Real Tim Toady",
                 path       => "humour/bits/Im-The-Real-Tim-Toady/",
@@ -345,6 +345,18 @@ my %tr_s = (
             _facebook( url => 'http://www.facebook.com/SummerNSA', ),
         ],
     ),
+    'qoheleth' => _tr(
+        title => "“So, who the Hell is Qoheleth?”",
+        items => [
+            _fp( path => "humour/So-Who-The-Hell-Is-Qoheleth/", ),
+            _ontext(
+                path => "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
+            ),
+            _github(
+                url => 'https://github.com/shlomif/So-Who-the-Hell-Is-Qoheleth',
+            ),
+        ],
+    ),
     'terminator_liberation' => _tr(
         title =>
 "Terminator: Liberation - Starring Schwarzenegger &amp; Emma Watson",
@@ -355,6 +367,20 @@ my %tr_s = (
             ),
             _github(
                 url => 'https://github.com/shlomif/Terminator-Liberation',
+            ),
+        ],
+    ),
+    'tow_fountainhead' => _tr(
+        title => "The One with the Fountainhead",
+        items => [
+            _fp( path => "humour/TOneW-the-Fountainhead/", ),
+            _l(
+                inner_html => "Part 1",
+                path => "humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.html",
+            ),
+            _l(
+                inner_html => "Part 2",
+                path => "humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
             ),
         ],
     ),
@@ -379,6 +405,11 @@ my %tr_s = (
     'commercial_fanfic_initiative__mission_stmt' => _tr(
         title => "Mission Statement",
         items => [
+            _l(
+                inner_html => "Screenplay Shortage Reduced Version",
+                path       =>
+"philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml",
+            ),
             _l(
                 inner_html => "Document",
                 path => "philosophy/culture/case-for-commercial-fan-fiction/",
@@ -414,7 +445,10 @@ my %table_blocks = (
         {
             id   => 'buffy_nav_block',
             tr_s => [
-                _master_tr( title => q{Buffy Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
@@ -426,20 +460,38 @@ my %table_blocks = (
             ],
         },
     ),
+    'friends_tv' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'friends_tv_nav_block',
+            tr_s => [
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('tow_fountainhead'),
+                _get_tr('hhfg'),
+                _get_tr('qoheleth'),
+            ],
+        },
+    ),
     'harry_potter' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id   => 'harry_potter_nav_block',
             tr_s => [
-                _master_tr( title => q{Harry Potter/Emma Watson Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emma Watson Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('selina_mandrake'),
                 _get_tr('buffy_few_good'),
                 _get_tr('muppets_harry_potter'),
                 _get_tr('terminator_liberation'),
-                _get_tr('EmWatson_tech_job'),
-                _get_tr('EmWatson_visit_to_Gaza'),
+                _get_tr('EmmaWatson_tech_job'),
+                _get_tr('EmmaWatson_visit_to_Gaza'),
                 _subdiv_tr( title => q{Factoids}, ),
-                _get_tr('EmWatson_facts'),
+                _get_tr('EmmaWatson_facts'),
             ],
         },
     ),
@@ -466,7 +518,7 @@ my %table_blocks = (
                 _subdiv_tr( title => q{Middle East Politics}, ),
                 _get_tr('the_enemy'),
                 _get_tr('define_zionism'),
-                _get_tr('EmWatson_visit_to_Gaza'),
+                _get_tr('EmmaWatson_visit_to_Gaza'),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _get_tr('summer_nsa'),
                 _get_tr('SummerNSA_effort'),
@@ -477,7 +529,10 @@ my %table_blocks = (
         {
             id   => 'star_trek_nav_block',
             tr_s => [
-                _master_tr( title => q{Star Trek Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
                 _get_tr('selina_mandrake'),
@@ -489,7 +544,10 @@ my %table_blocks = (
         {
             id   => 'xkcd_nav_block',
             tr_s => [
-                _master_tr( title => q{Summer Glau/xkcd Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
+                ),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _get_tr('summer_nsa'),
                 _get_tr('SummerNSA_effort'),
@@ -499,6 +557,35 @@ my %table_blocks = (
                 _get_tr('xkcd_facts'),
             ],
         }
+    ),
+    'mlp_fim' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'mlp_fim_nav_block',
+            tr_s => [
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales'),
+            ],
+        },
+    ),
+    'self_ref' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id   => 'self_ref_nav_block',
+            tr_s => [
+                _master_tr(
+                    title =>
+q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _get_tr('buffy_few_good'),
+                _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales'),
+            ],
+        },
     ),
     'commercial_fanfic_initiative' =>
         Shlomif::Homepage::NavBlocks::TableBlock->new(
@@ -523,6 +610,13 @@ sub get_nav_block
     return (
         $table_blocks{$id} // do { Carp::confess "Unknown ID $id." }
     );
+}
+
+sub list_nav_blocks
+{
+    my ( $self, ) = @_;
+
+    return [ sort { $a cmp $b } keys(%table_blocks) ];
 }
 
 1;

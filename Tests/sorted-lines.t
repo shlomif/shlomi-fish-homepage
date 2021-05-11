@@ -11,7 +11,7 @@ Test::File::IsSorted::are_sorted(
     [
         ".gitignore",
         "lib/make/copies-source.mak",
-        "lib/Shlomif/Homepage/captioned-images.txt"
+        "lib/Shlomif/Homepage/captioned-images.txt",
     ],
-    "Files are sorted"
+    "Files are sorted",
 );

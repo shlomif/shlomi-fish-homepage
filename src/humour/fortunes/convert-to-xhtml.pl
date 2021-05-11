@@ -45,6 +45,17 @@ $contents =~ s/[ \t]+$//gms;
 
 $contents =~ s#\Q$PREF\E(.*?)\Q$SUF\E#<a href="$1" rel="nofollow">$1</a>#gms;
 
+sub _to_xhtml5
+{
+    $contents =~
+s#\Q<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">\E#<!DOCTYPE html>#ms;
+    $contents =~
+s#<meta\s+http-equiv="Content-Type"\s+content="text/html;\s*charset=utf-8"\s*/>#<meta charset="utf-8"/>#ms;
+    return;
+}
+
+_to_xhtml5();
+
 open my $back_fh, '>:encoding(UTF-8)', $out_fn
     or die "Cannot open '$out_fn' for writing - $!";
 print {$back_fh} $contents;

@@ -21,7 +21,7 @@
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 [%- END -%]
 
-<div class="main_text side_toc">
+<div class="[% IF captioned_images_only %]faq [% END %]main_text side_toc">
 
 [% BLOCK cartoon_img %]
 <img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon"/>
@@ -2712,23 +2712,24 @@ I was talking the other day with an online friend about Paul Graham’s
 <a href="http://www.paulgraham.com/say.html">What You Can’t Say</a> and then
 he mentioned that in some countries, you can get imprisoned
 for denying the holocaust. Then I said “So that's one thing you can't say” and
-so now I'm saying it (although it seems the world is ready for it).
+so now I'm saying it here (although it seems the world is ready for it).
 </p>
 
 <p>
-Just for the record, I am an Israeli Jew and my late (and loved) grandfather on my
-father's side (who was a Polish-born Jew) lost track of most of his family
+Just for the record, I am an Israeli Jew and my late (and loved) grandfather on
+my father's side (who was a Polish-born Jew) lost track of most of his family
 during World War II. However, I think whether or not the holocaust happened is
-just a
-mystical "a-point" without respect to "The Point" of WWII history, which is if
-we look at the global picture we will see that the only reason for all the
-killing and destruction was that the Nazis leadership ordered to do that, and
-it was entirely pointless. Focusing on the historical details is
+just an irrational "a-point" without respect to "The Point" of WWII history,
+which is if we look at the global picture we will see that the only reason for
+all the killing and destruction was that the Nazis leadership ordered to do
+that, and it was entirely pointless. Focusing on the historical details is
 losing the forest for the trees.
 </p>
 
 <p>
-I took the picket fence image from <a href="http://commons.wikimedia.org/wiki/File:Vandalized_picket_fence.jpg">MediaWiki commons</a> and this captioned image is under CC-by too. Share and enjoy.
+I took the picket fence image from <a
+href="http://commons.wikimedia.org/wiki/File:Vandalized_picket_fence.jpg">MediaWiki
+commons</a> and this captioned image is under CC-by too. Share and enjoy.
 </p>
 
 <p>
@@ -2738,18 +2739,19 @@ goes to UnconventionalIT, and Ankh from #gimp for some assistance.
 
 <p>
 <b>Note to Americans and Israelis:</b> you may not find this captioned image
-provocative or
-offensive, because in the United States and Israelis, there's much less taboo against
-treating the acts of the Nazis as holy. ( This may be a good thing. )
-A typical Israeli if told that the Holocaust did not happen would
-likely say "Assuming that was the case, would that make the Nazis? Get real!".
-This image is primarily intended at Europeans as intellectual activism.
+provocative or offensive, because in the United States and Israel, there's much
+less taboo against treating the acts of the Nazis as holy. ( This may be a good
+thing. ) A typical Israeli if told that the Holocaust did not happen would
+likely say "Assuming that was the case, would that make the Nazis angels? Get
+real!".  This image is primarily intended at Europeans as intellectual
+activism.
 </p>
 
 <p>
 Also note that I actually think the Holocaust <b>did happen</b>, but still
-believe that people should be free to claim otherwise due to <a href="https://en.wikipedia.org/wiki/Freedom_of_speech">the
-freedom of speech</a>.
+believe that people should be free to claim otherwise due to <a
+href="https://en.wikipedia.org/wiki/Freedom_of_speech">the freedom of
+speech</a>.
 </p>
 
 [%- END -%]
@@ -3054,10 +3056,10 @@ On #perl6, we joked that it is so speedy due to <a href="https://mlp.fandom.com/
 
 [% INCLUDE cast_american_as_a_britishwoman %]
 
-[% WRAPPER github_captioned_image_joke id = "set_up_email_service"  header = "“One does not simply set up an E-mail service.”"  repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service"  src = base_path _ "humour/images/one-does-not-simply-set-up-an-email-service.svg.webp"  alt = "“One does not simply set up an E-mail service.”" %]
+[% WRAPPER github_captioned_image_joke id = "set_up_email_service" header = "“One does not simply set up an E-mail service.”" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-set-up-an-Email-Service" src = base_path _ "humour/images/one-does-not-simply-set-up-an-email-service.svg.webp" alt = "“One does not simply set up an E-mail service.”" %]
 
 
-[% WRAPPER quote  %]
+[% WRAPPER quote %]
 <p>
 “One does not simply set up an E-mail service.”
 </p>
@@ -3119,24 +3121,126 @@ Web resources (e.g.: <a href="https://en.wikipedia.org/wiki/YouTuber">YouTubers<
 </p>
 
 <p>
-Many philosophers were joking and didn't take their philosophies
-seriously. They were often
-<a href="[% base_path %]humour/fortunes/paul-graham.html">amateur</a> (=
-artists or workers who enjoy their work, regardless of how much or how
-little they were paid; a.k.a: "geeks")
-and polymaths, who accepted
-different opinions,
-or people who built, parodied, and expanded upon their work.
+Many philosophers were joking and didn't take their philosophies seriously.
+They were often <a href="[% base_path
+%]humour/fortunes/paul-graham.html">amateur</a> (= artists or workers who enjoy
+their work, regardless of how much or how little they were paid; a.k.a:
+"geeks") and polymaths, who accepted different opinions, or people who built,
+parodied, and expanded upon their work.
 </p>
 
 <p>
-I suspect that despite what Jaynes describes in <a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">his book</a>,
-most of the good nev'im and story tellers of ancient times
-were only <a href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a>
-(= mildly manic) at worse, or possibly manic, who satirised
-fanatical or cynical zealots, often spoke in prose or drama, and
-were in effect "stand-up comedians".
+I suspect that despite what Jaynes describes in <a
+href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">his book</a>,
+most of the good nev'im and story tellers of ancient times were only <a
+href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a> (= mildly manic)
+at worse, or possibly manic, who satirised fanatical or cynical zealots, often
+spoke in prose, drama or freeform verse, and were in effect "stand-up
+comedians".
 </p>
+
+[%- END -%]
+
+[% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
+
+
+[% WRAPPER quote %]
+<p>
+One does not simply say “no” to an Alpha Female.
+</p>
+[%- END -%]
+
+<p>
+This purposely alludes to sex, but is about something else.
+In the Bible <a href="https://en.wikipedia.org/wiki/Rahab">Rahab</a>
+is being visited by Canaanite soldiers who ask her if she hides
+the Israelite spies, and they leave after she testifies that it isn't
+the case. Even today, <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">alpha females</a>
+are held with enough admiration and respect to assume they know
+what they are doing. That is because, among humans, sex appeal
+<a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">corresponds to competence</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER github_captioned_image_joke id = "interesting_hypothesis" header = "“Interesting Hypothesis”" repo_href = "https://github.com/shlomif/Captioned-Image-Interesting-Hypothesis" src = base_path _ "humour/images/interesting-hypothesis.svg.png" alt = "“Interesting Hypothesis” as said by Dr. Sheldon Cooper" %]
+
+
+[% WRAPPER quote %]
+<p>
+“Interesting Hypothesis”
+</p>
+[%- END -%]
+
+<p>
+I'm probably not the first, but in order to help avoid diluting the
+meaning of the word <a href="https://en.wikipedia.org/wiki/Scientific_theory">"theory" in its scientific context</a>
+with its casual meaning of a "hypothesis", I decided to
+follow <a href="https://en.wikipedia.org/wiki/Sheldon_Cooper">Dr. Sheldon Cooper's</a>
+lead and call such non-proven suspicions "hypotheses" even when talking about
+casual ones.
+</p>
+
+<p>
+It may sound funny now but <q>Comedy is simply a funny way of being
+serious.</q> to quote <a
+href="https://en.wikiquote.org/wiki/Peter_Ustinov">Peter Ustinov</a>.  I have a
+hypothesis (ha!) that <a href="[% base_path
+%]humour/image-macros/#standup_philosopher">large parts of the Hebrew Bible and
+Grecko-Roman Philosophy</a> were funny back then, only now they are considered
+gospel, appalling, or obvious.
+</p>
+
+[%- END -%]
+
+[% WRAPPER github_captioned_image_joke id = "yeah_like_i_could_lose_it" header = "“Yeah! Like I could lose it!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--yeah-like-i-could-lose-it" src = base_path _ "humour/images/friends--yeah-like-i-could-lose-it.svg-600w.webp" alt = "“Yeah! Like I could lose it!” as said by Ross on Friends" %]
+
+
+[% WRAPPER quote %]
+<p>
+“Yeah! Like I could lose it!”
+</p>
+[%- END -%]
+
+<p>
+I <a
+href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-cinema--copyright-cannibalism">noted
+when chatting online</a> that the reason Madonna has not been cast into an
+acting role (as of March 2021) was likely not because she lost her acting skills.
+This made me recall <a href="https://www.reddit.com/r/howyoudoin/comments/m0bv5i/ross_in_s04e07_yeah_like_i_could_lose_it/">that scene from <i>Friends</i></a>.
+I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">"Qoheleth" screenplay</a>.
+</p>
+
+[%- END -%]
+
+[% WRAPPER github_captioned_image_joke id = "sic_transit_gloria_jenn_law" header = "Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/sic-transit-gloria--j-law" src = base_path _ "humour/images/sic-transit-gloria--j-law--Demotivational_Poster.svg.webp" alt = "Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”" %]
+
+
+[% WRAPPER quote %]
+<p>
+Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”
+</p>
+[%- END -%]
+
+<p>
+My attempt at a demotivational poster ( Based on <a href="https://ao2.it/sites/default/files/blog/2011/10/31/halloween/demotivational_poster_template.svg">the ao2.it demotivational poster Inkscape template</a> .).
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-life-according-to-valentine">"Life According To Valentine"</a> - "I used to be Sarah Michelle Gellar".
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/Buffy/A-Few-Good-Slayers/indiv-nodes/talk_with_rindolf_on_freenode.xhtml">Alpha Females from Web 1.0 onwards</a> - in <a href="https://buffyfanfiction.fandom.com/wiki/Beckyverse">the Beckyverse</a>.
+</p>
+</li>
+
+</ul>
 
 [%- END -%]
 

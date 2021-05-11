@@ -121,18 +121,24 @@ BACK_TO_SOURCE_PAGE_CSS_CLASS = "back_to_faq"
 INDIVIDUAL_NODE_CSS_CLASS = "indiv_node"
 
 
+def _wrap(ns):
+    return ns
+    return '{' + ns + '}'
+
+
+XML_NS = "http://www.w3.org/XML/1998/namespace"
+NAMESPACES = {
+    "xhtml": _wrap(XHTML_NAMESPACE),
+    "xml": _wrap(XML_NS),
+}
+
+
 def generate_from_image_macros_page(
         OUT_DN, base_path, relative_output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="index.xhtml",):
     # full_out_dirname = OUT_DN + (output_dirname or '')
     # TOP_LEVEL_CLASS = 'article'
-    XHTML_NS = XHTML_NAMESPACE
-    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-    ns = {
-        "xhtml": XHTML_NS,
-        "xml": XML_NS,
-    }
 
     output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
@@ -145,7 +151,7 @@ def generate_from_image_macros_page(
         container_elem_xpath=(
             "//xhtml:div[./xhtml:article]"
         ),
-        ns=ns,
+        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
@@ -173,12 +179,7 @@ def main():
 
 
 def _faq_gen():
-    XHTML_NS = XHTML_NAMESPACE
-    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-    ns = {
-        "xhtml": XHTML_NS,
-        "xml": XML_NS,
-    }
+    # XHTML_NS = '{' + XHTML_NAMESPACE + '}'
     OUT_DN = "./dest/post-incs/t2/meta/FAQ"
     TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
     splitter = XhtmlSplitter(
@@ -188,7 +189,7 @@ def _faq_gen():
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
-        ns=ns,
+        ns=NAMESPACES,
     )
     splitter.process()
 
@@ -254,12 +255,6 @@ def generic_generate_from_(
         xhtml_section_tag=XHTML_SECTION_TAG,
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
-    XHTML_NS = XHTML_NAMESPACE
-    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-    ns = {
-        "xhtml": XHTML_NS,
-        "xml": XML_NS,
-    }
 
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
@@ -268,7 +263,7 @@ def generic_generate_from_(
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
-        ns=ns,
+        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
@@ -287,12 +282,6 @@ def generic_generate(
     base_path = '../' * (OUT_DN.count('/') - 3)
     full_out_dirname = OUT_DN + (output_dirname or '')
     TOP_LEVEL_CLASS = 'screenplay'
-    XHTML_NS = XHTML_NAMESPACE
-    XML_NS = "{http://www.w3.org/XML/1998/namespace}"
-    ns = {
-        "xhtml": XHTML_NS,
-        "xml": XML_NS,
-    }
 
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
@@ -302,7 +291,7 @@ def generic_generate(
         relative_output_dirname=output_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
         container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
-        ns=ns,
+        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,

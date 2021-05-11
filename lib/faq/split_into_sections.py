@@ -32,6 +32,7 @@ class MyXmlNoResultsFoundError(Exception):
 
 
 def _xpath(ns, node, query):
+    # print(query, ns)
     return node.xpath(query, namespaces=ns)
 
 
@@ -73,7 +74,10 @@ class XhtmlSplitter:
         self.container_elem_xpath = container_elem_xpath
         self.latemp_plain_html = latemp_plain_html
         self.xhtml_prefix = (
-            "" if self.latemp_plain_html else (""+'xhtml' + ":")
+            "" if self.latemp_plain_html else
+            "xhtml:"
+            # (""+'{' + 'xhtml' + '}' + "")
+            # (""+'{' + XHTML_NAMESPACE + '}' + "")
         )
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
@@ -140,11 +144,6 @@ class XhtmlSplitter:
 
         def xpath(node, query):
             return node.xpath(query, namespaces=self.ns)
-
-        class MyXmlNoResultsFoundError(Exception):
-            """docstring for MyXmlNoResultsFoundError"""
-            def __init__(self, arg):
-                super(MyXmlNoResultsFoundError, self).__init__(arg)
 
         def first(node, query):
             mylist = xpath(node, query)

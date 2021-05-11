@@ -23,7 +23,7 @@ $git_obj->git_in_checkout_task(
         repo         => "MathJax",
         user         => "mathjax",
         base_dirname => "lib/js",
-        branch       => '3.0.5',
+        branch       => '3.1.2',
     }
 );
 
@@ -81,6 +81,16 @@ $git_obj->git_in_checkout_task(
 
 $git_obj->git_in_checkout_task(
     {
+        pivot_bn     => "README.pod",
+        repo         => "shlomif-humour-fortunes-archives-assets",
+        branch       => "master",
+        user         => "shlomif",
+        base_dirname => "lib/repos",
+    }
+);
+
+$git_obj->git_in_checkout_task(
+    {
         pivot_bn     => "README.md",
         repo         => "shlomif-humour-fortunes-archives-assets",
         branch       => "master",
@@ -101,10 +111,10 @@ $git_obj->git_in_checkout_task(
 foreach my $repo (
     [ 'Shlomi-Fish-Back-to-my-Homepage-Logo', 1 ],
     (
-        map { s#/[^/]*$##r }
+        map { s#/[^/]*\z##r }
             path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
         ),
-    'XML-Grammar-Vered',
+    'captioned-images--repo',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
     'putting-cards-2019-2020',
@@ -112,6 +122,7 @@ foreach my $repo (
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',
+    'XML-Grammar-Vered',
     )
 {
     $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );

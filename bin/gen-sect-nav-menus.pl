@@ -46,6 +46,7 @@ sub _process_batch
         # print "start filename=$filename\n";
 
         my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
+            coords_stop    => 1,
             'path_info'    => $filename,
             'current_host' => $host,
             MyNavData::get_params(),
@@ -57,6 +58,7 @@ sub _process_batch
             {
                 filename => $filename,
                 host     => $host,
+                lang     => +{ ar => 1, en => 1, he => 1, },
                 ROOT     => $ROOT,
             }
         );
@@ -71,6 +73,7 @@ sub _process_batch
                 filename => $url,
                 host     => $host,
                 ROOT     => $ROOT,
+                lang     => +{ ar => 1, en => 1, he => 1, },
             }
         );
 
@@ -151,6 +154,27 @@ sub _process_batch
                     )
                 ),
             );
+        }
+        if ( $filename eq '/site-map/hebrew/' )
+        {
+            my $hebrew_nav_results = NavDataRender->nav_data_render(
+                {
+                    filename => $url,
+                    host     => $host,
+                    ROOT     => $ROOT,
+                    lang     => +{ 'he' => 1, },
+                }
+            );
+            my $html = join(
+                '',
+                map { "$_\n" } @{
+                    $hebrew_nav_results->{shlomif_main_expanded_nav_bar}
+                        ->gen_site_map() || ( die "hebrew site map" )
+                }
+            );
+
+            # die "'$html" if $html !~ m#The-Enemy-Hebrew#;
+            $out->( 'shlomif_hebrew_expanded_nav_bar', \($html), );
         }
     }
     return;

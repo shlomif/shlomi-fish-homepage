@@ -20,16 +20,12 @@ sub render
 {
     my ( $self, $args ) = @_;
 
-    return join '',
-        map { "$_\n" }
-        sprintf( q{<div class="topical_nav_block" id="%s">}, $self->id ),
-        "<table>", (
+    return join '', map { "$_\n" } sprintf( q{<table id="%s">}, $self->id ), (
         map {
             $args->{renderer}->render( { table => $self, %$args, obj => $_, } );
         } @{ $self->tr_s }
         ),
         "</table>",
-        "</div>",
         ;
 }
 

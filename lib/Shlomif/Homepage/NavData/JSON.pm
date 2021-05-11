@@ -35,6 +35,8 @@ while ( my ( $k, $v ) = each %keys_briefing )
     }
 }
 
+my %_exclude_keys = ( map { $_ => 1 } qw/ lang show_always/ );
+
 sub _map_data
 {
     my ($thing) = @_;
@@ -56,6 +58,7 @@ sub _map_data
                     ? ( $keys_briefing{$k} => _map_data( $thing->{$k} ) )
                     : ( die "Unknown key $k" );
                 }
+                grep { !exists( $_exclude_keys{$_} ) }
                 keys(%$thing)
         };
     }
@@ -69,6 +72,7 @@ sub output_fully_expanded_as_json
     my %params = MyNavData->generic_get_params(
         {
             fully_expanded => 1,
+            lang           => +{ ar => 1, en => 1, he => 1, },
         },
     );
 

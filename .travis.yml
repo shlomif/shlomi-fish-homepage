@@ -6,37 +6,47 @@ addons:
     apt:
         packages:
             - ack-grep
+            - asciidoc
             - build-essential
             - cmake
+            - cmake-data
             - cpanminus
             - dbtoepub
             - docbook-defguide
             - docbook-xsl
             - docbook-xsl-ns
+            - docbook5-xml
             - fortune-mod
+            - gperf
             - graphicsmagick
             - hspell
             - hunspell
             - hunspell-en-gb
             - inkscape
+            - libapr1-dev
+            - libc6-dbg
+            - libcmocka-dev
             - libdb5.3-dev
             - libgd-dev
-            - libgdbm-dev
             - libgdbm-compat-dev
+            - libgdbm-dev
+            - libgmp-dev
+            - libgoogle-perftools-dev
             - libhunspell-dev
             - libncurses-dev
             - libpcre3-dev
             - libperl-dev
             - libtidy-dev
             - libxml2-dev
+            - lynx
             - mercurial
             - myspell-he
-            - lynx
+            - ninja-build
             - optipng
             - perl
             - python3
-            - python3-setuptools
             - python3-pip
+            - python3-setuptools
             - silversearcher-ag
             - strip-nondeterminism
             - tidy
@@ -51,16 +61,16 @@ cache:
         - $HOME/tidyall_d
 
 deploy:
-    provider: releases
+    cleanup: true
     api_key:
         secure: OhF1yzK094w28DBR5I/UBzsAehylY9iU6Hfa3UsiPRUKu1IU+sf2ivvjECrSgauD3/zXY/MUB+136bG1vJ3MBjyzCPqh5gW+f2Qcq08whToVVozGbgfMjxtkdVkc83wiG3rUZLlI7qCbBVNV8qn8lpFLYVYvfV3XbWhFm3oUPQYzo8v9+WqZ53K7sQ2OWA6D/uv6xVoStZ4YwMU/lzAexwateTdsYjCKo0k5YzbW6kLlp4udiqaqn+pEFkWbD/K+mm62izDbwx+G9I41red11Rn93wuuhIS05bn8XBxStHa6zzeual6b98WPu1OFJPYBxkzxeC05CP1YyekVPrzVTkDPov53vZwfKfXc/k/wu9q2YYIij/YxDNfYO+afFTiBjlw++vnALOQET7p6BNBnnBsEi+Y1WatcqB1oor4YtjN5jinFtIImFvtVJXx8Qgwlw7DCsl5EcYpRuo8hkkSeEq8EtLTeR5VHFoABk0qacit/SZpLZ/kvv2plP4ezxcZ20Tt4phLsEMxhHqysJyYSBp1AMRk+czfE81B+2mNazMloeQXGvcwoMY6+JoDWtudc0afd5dQGKxf1/c2Yh8AkTmEBMNC9nktReaU3QQcS5vL9Ne75RFmgMwcqphwezm1TvQz0/KD/y7JgvaGLI2/bc8hRVGjyI6KUu/0lE/GvEEg=
     file: site-dest.tar.xz
     on:
         repo: "shlomif/shlomi-fish-homepage"
         tags: true
-    skip_cleanup: true
+    provider: releases
 go:
-    - '1.13.x'
+    - "1.16.x"
 os: linux
 dist: focal
 rvm:

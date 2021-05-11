@@ -456,10 +456,6 @@ Who said girls can’t code?” with “&lt;h1&gt;” and “&lt;/h1&gt;” logo
 
 [% END %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["friends_tv", "foss", ] %]
 
 [% END %]

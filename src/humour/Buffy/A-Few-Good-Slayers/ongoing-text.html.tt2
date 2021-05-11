@@ -8,11 +8,6 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Buffy--a-Few-Good-Slayers.html") %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS buffy_nav_block  %]
-[% PROCESS harry_potter_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["buffy", "harry_potter", "self_ref", ] %]
 
 [% END %]

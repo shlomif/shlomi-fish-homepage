@@ -1,0 +1,33 @@
+[%- SET title = "Shlomi Fish’s True Stories / Memoirs" -%]
+[%- SET desc = "TODO: FILL IN" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="bits_stories_list">
+
+[% PROCESS "Inc/true_stories.tt2" %]
+[% INCLUDE humour_bits__true_stories %]
+
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/facts/">Collections of Factoids</a> - about
+Chuck Norris/etc.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/aphorisms/">Aphorisms and Quotes Pages</a>
+</p>
+</li>
+</ul>
+
+[% END %]
+
+</div>
+
+[% END %]

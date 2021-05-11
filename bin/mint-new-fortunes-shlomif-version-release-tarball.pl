@@ -12,7 +12,7 @@ use warnings;
 use 5.014;
 use autodie;
 
-use Path::Tiny qw/ path tempdir tempfile cwd /;
+use Path::Tiny qw/ path /;
 
 use vars qw/ $DIR /;
 
@@ -20,10 +20,13 @@ BEGIN
 {
     $DIR = "./src/humour/fortunes";
 }
+
 use lib "$DIR";
 use ShlomifFortunesMake ();
+
 use lib './lib';
-use Shlomif::MySystem qw/ my_system my_exec_perl /;
+use Shlomif::MySystem qw/ my_system /;
+
 my_system( [ 'gmake', "-C", $DIR, "dist" ] );
 my $package_base = ShlomifFortunesMake->package_base();
 my $full_path    = sprintf( "%s/%s", $DIR, $package_base );
@@ -49,9 +52,11 @@ if (1)
         ]
     );
 }
+
 my $post_dest = path("./dest/post-incs/t2/$dir");
 foreach my $tar ( $full_dest_pkg->parent->children(qr/\.tar\.(gz|xz)\z/) )
 {
     $tar->copy($post_dest);
 }
+
 my_system( [ "git", "tag", "fortunes-shlomif-v$ver" ] );

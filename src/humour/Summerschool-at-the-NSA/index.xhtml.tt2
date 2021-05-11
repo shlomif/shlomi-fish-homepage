@@ -443,12 +443,6 @@ after that, I attended Olamot Con, and came up with the idea to write
 
 </ul>
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS xkcd_nav_block  %]
-[% PROCESS buffy_nav_block  %]
-[% PROCESS politics_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["xkcd", "buffy", "politics", ] %]
 
 [% END %]

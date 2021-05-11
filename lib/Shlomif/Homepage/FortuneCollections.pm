@@ -291,7 +291,7 @@ sub write_epub_json
                 contents => [
                     {
                         type   => 'toc',
-                        source => 'toc.html',
+                        source => 'toc.xhtml',
                     },
                     (
                         map {
@@ -303,7 +303,7 @@ sub write_epub_json
                     ),
                 ],
                 toc => {
-                    depth    => 2,
+                    depth    => 6,
                     parse    => ['text'],
                     generate => {
                         title => 'Index',

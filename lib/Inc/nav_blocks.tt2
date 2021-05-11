@@ -1,3 +1,7 @@
+[% BLOCK mlp_fim_nav_block %]
+[% print_nav_block (name => 'mlp_fim') %]
+[% END %]
+
 [% BLOCK star_trek_nav_block %]
 [% print_nav_block (name => 'star_trek') %]
 [% END %]
@@ -30,10 +34,26 @@
 
 <div class="nav_blocks">
 
+<header>
 <h2 id="nav_blocks">Navigation Blocks</h2>
+</header>
 
 [% content %]
 
 </div>
+
+[% END %]
+
+[% BLOCK render_compact_nav_blocks %]
+
+[% WRAPPER nav_blocks %]
+
+[% FOREACH navid IN names %]
+
+[% print_nav_block ('name' => navid) %]
+
+[% END %]
+
+[% END %]
 
 [% END %]

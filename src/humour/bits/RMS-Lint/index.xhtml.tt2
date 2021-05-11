@@ -138,10 +138,6 @@ what a person should work on himself to do. This makes me so angry!”
 
 [% license_obj.by_sa_british_blurb( "year" => "2004", ) %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 
 [% END %]

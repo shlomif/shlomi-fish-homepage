@@ -2,23 +2,21 @@ package Shlomif::Homepage::SectionMenu::Sects::Meta;
 
 use strict;
 use warnings;
-
+use 5.014;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
+use Carp qw/ cluck confess /;
 
 use MyNavData::Hosts ();
 
-my $meta_tree_contents = {
+my $_section_navmenu_tree_contents = {
     host        => "t2",
-    text        => "Site Meta Information Section Menu",
+    text        => "Meta Info",
     title       => "Site Meta Information Section Menu",
     show_always => 1,
     expand      => { re => "^meta/", },
     url         => "meta/",
     subs        => [
-        {
-            text => "Meta Info",
-            url  => "meta/",
-        },
         {
             text  => "FAQ",
             title => "Frequently Asked Questions",
@@ -75,11 +73,34 @@ my $meta_tree_contents = {
     ],
 };
 
+my $section_navmenu_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_section_navmenu_tree_contents);
+
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
+    my $tree_contents = $section_navmenu_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $meta_tree_contents,
+        tree_contents => $tree_contents,
     );
 }
 

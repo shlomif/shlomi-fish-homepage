@@ -38,6 +38,12 @@ required:
     files:
         - desc: You can try putting the JSON string «{"amazon_sak":"invalid"}» there.
           path: ~/.shlomifish-amazon-sak.json
+        - desc: See https://www.1001fonts.com/blue-highway-font.html
+          path: ~/.fonts/Bluehigb.ttf
+        - desc: See https://www.1001fonts.com/blue-highway-font.html
+          path: ~/.fonts/Bluehigc.ttf
+        - desc: See https://www.1001fonts.com/blue-highway-font.html
+          path: ~/.fonts/Bluehigh.ttf
         - desc: See https://www.dafont.com/bundy-yellow.font
           path: ~/.fonts/BndyYlwHS.ttf
         - desc: See https://www.dafont.com/bundy-yellow.font
@@ -62,7 +68,7 @@ required:
         DateTime::Format::Strptime: 0
         File::ShouldUpdate: 0
         HTML::Acronyms: 0
-        HTML::Latemp::GenMakeHelpers: 'v0.8.0'
+        HTML::Latemp::GenMakeHelpers: "v0.8.0"
         HTML::Selector::XPath: 0
         HTML::T5: 0
         HTML::Toc: 0
@@ -92,17 +98,17 @@ required:
         URI::Escape::XS: 0
         URI::Find: 0
         XML::Feed: 0
-        XML::Grammar::Fiction::App::FromProto: v0.20.2
-        XML::Grammar::Fiction::App::ToDocBook: v0.20.2
+        XML::Grammar::Fiction::App::FromProto: v0.22.2
+        XML::Grammar::Fiction::App::ToDocBook: v0.22.2
         XML::Grammar::Fortune: 0.0800
         XML::Grammar::Fortune::Synd::App: 0.0206
         XML::Grammar::Fortune::ToText: 0.0509
         XML::Grammar::ProductsSyndication: 0
-        XML::Grammar::Screenplay::App::FromProto: v0.20.2
-        XML::Grammar::Screenplay::App::ToHTML: v0.20.2
-        XML::Grammar::Screenplay::FromProto::API::ListImages: v0.22.0
-        XML::Grammar::Screenplay::FromProto::Parser::QnD: v0.22.0
-        XML::Grammar::Vered: v0.0.9
+        XML::Grammar::Screenplay::App::FromProto: v0.22.2
+        XML::Grammar::Screenplay::App::ToHTML: v0.22.2
+        XML::Grammar::Screenplay::FromProto::API::ListImages: v0.22.2
+        XML::Grammar::Screenplay::FromProto::Parser::QnD: v0.22.2
+        XML::Grammar::Vered: v0.0.13
     py3_modules:
         PIL: 0
         bs4: 0

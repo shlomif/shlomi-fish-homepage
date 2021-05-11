@@ -6,8 +6,10 @@
 #
 # Licensed under the terms of the MIT license.
 """
-Source filter (or C pre-processor) for removing the max_num_played feature
-from black-hole-solver's C code.
+Generator for a VCS
+( https://en.wikipedia.org/wiki/Version_control )
+repository containing a skeleton for a captioned image in Inkscape/SVG
+format.
 """
 
 import argparse
@@ -93,8 +95,8 @@ def _process_solver_common_h(text):
     return _clear_all_individual_lines(out_text, "max_num_played")
 
 
-class SourceFilter:
-    """docstring for SourceFilter:"""
+class CaptionedImageVcsRepoGenerator:
+    """docstring for CaptionedImageVcsRepoGenerator:"""
     def __init__(self, should_process, target, exe_path):
         self.exe_path = exe_path
         self.should_process = should_process
@@ -279,7 +281,7 @@ def main():
         raise Exception("wrong invocation")
     should_process = True
 
-    SourceFilter(
+    CaptionedImageVcsRepoGenerator(
         exe_path=sys.argv[0],
         should_process=should_process,
         target="Captioned-Image-Badass-Schwarzenegger",

@@ -1,0 +1,33 @@
+[% BLOCK humour_bits__true_stories %]
+
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section id="who-gets-the-final-say" href="${base_path}humour/bits/true-stories/who-gets-the-final-say/" title="Who gets the final say?" %]
+
+<p>
+Who gets the final say, before and after marriage? A memoir.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="my-first-kiss" href="${base_path}humour/bits/true-stories/my-first-kiss/" title="The story of my first kiss" %]
+
+<p>
+A memoir.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="hermione-cosplayer" href="${base_path}humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/" title="Socialising with a Young Hermione Cosplayer and Her Family at GeekCon Nine Worlds" %]
+
+<p>
+A true story about a 37 years old me socialising with a young cosplayer
+of Hermione in a sci-fi/fantasy/etc. convention in Greater London and the
+antagonism I later received about it online
+</p>
+
+[% END %]
+
+[% SET section_element = "section" %]
+
+[% END %]

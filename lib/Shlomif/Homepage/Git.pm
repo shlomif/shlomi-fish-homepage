@@ -7,7 +7,6 @@ use Moo;
 
 use Carp ();
 use Path::Tiny qw/ cwd path /;
-use IO::Async       ();
 use IO::Async::Loop ();
 use Future::Utils qw/ fmap_void /;
 

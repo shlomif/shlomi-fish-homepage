@@ -1,0 +1,34 @@
+[%- SET title = "Consciousness and craziness and a hypothesis about their origins" -%]
+[%- SET desc = "Consciousness and craziness and a hypothesis about their origins" -%]
+[%- SET more_keywords = "psychology, bipolar, depression, MDD, disorder, drugs, medication, therapy, psychiatry, mania, hypomania" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects why_openly_bipolar">
+
+[% default_toc %]
+
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.xhtml") %]
+
+[%- WRAPPER links_sect -%]
+
+<ul>
+
+<li>
+<p>
+To be discussed.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua",  %]
+
+</div>
+
+[% END %]

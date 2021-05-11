@@ -2,6 +2,7 @@ package Shlomif::Homepage::SectionMenu;
 
 use strict;
 use warnings;
+use 5.014;
 
 package Shlomif::Homepage::SectionMenu::NavLinks;
 
@@ -16,11 +17,12 @@ package Shlomif::Homepage::SectionMenu;
 
 use MooX (qw( late ));
 
-use HTML::Widgets::NavMenu;
+use HTML::Widgets::NavMenu ();
 
 has 'bottom_code'  => ( is => 'rw', isa => 'Maybe[Str]', required => 1, );
 has 'current_host' => ( is => 'rw', isa => 'Str',        required => 1, );
 has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
+has 'lang'         => ( is => 'ro', isa => 'HashRef',    required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
 has 'path_info'    => ( is => 'rw', isa => 'Str', required => 1, );
 has 'results'      => (
@@ -30,7 +32,7 @@ has 'results'      => (
     default => sub { return shift->nav_menu->render(); }
 );
 has 'root'          => ( is => 'rw', required => 1, );
-has 'sections'      => ( is => 'rw', required => 1, );
+has 'sections'      => ( is => 'ro', required => 1, );
 has 'title'         => ( is => 'rw' );
 has '_current_sect' => (
     is      => 'ro',
@@ -41,34 +43,72 @@ has '_current_sect' => (
 
 sub get_section_nav_menu_params
 {
-    my ( undef, $class ) = @_;
-    return $class->get_params();
+    my ( undef, $class, $args ) = @_;
+
+    if ( ( ref $args ne 'HASH' ) or ( not $args->{lang} ) )
+    {
+        Carp::confess("lang not specified");
+    }
+
+    return $class->generic_get_params($args);
 }
 
 sub get_modified_sub_tree
 {
-    my ( $self, $sect ) = @_;
+    my ( $self, $sect, $args ) = @_;
 
-    my $subs =
-        +{ $self->get_section_nav_menu_params($sect) }->{tree_contents}->{subs};
+    if ( ( ref $args ne 'HASH' ) or ( not $args->{lang} ) )
+    {
+        Carp::confess("lang not specified");
+    }
+
+    my $tree_contents =
+        +{ $self->get_section_nav_menu_params( $sect, $args ) }
+        ->{tree_contents};
+    return $tree_contents;
+
+=begin foo
+
+    my $subs = $tree_contents->{subs};
 
     return { %{ $subs->[0] }, subs => [ @{$subs}[ 1 .. $#$subs ] ], };
+
+=end foo
+
+=cut
+
 }
 
 sub _calc_current_sect
 {
     my $self = shift;
 
-    foreach my $sect ( @{ $self->sections() } )
+    my @s = @{ $self->sections() };
+    if ( not grep { $_->{class} =~ /Lect/ } @s )
     {
-        my $regexp = $sect->{'regex'};
-        if ( ( $regexp eq "" ) || ( $self->path_info() =~ /$regexp/ ) )
+        die;
+    }
+    my $ret = sub {
+        foreach my $sect (@s)
         {
-            return $sect;
+            my $regexp = $sect->{'regex'};
+            if ( ( $regexp eq "" ) || ( $self->path_info() =~ /$regexp/ ) )
+            {
+                return $sect;
+            }
+        }
+        return;
+        }
+        ->();
+    {
+        my @s = @{ $self->sections() };
+        if ( not grep { $_->{class} =~ /Lect/ } @s )
+        {
+            die;
         }
     }
 
-    return;
+    return $ret;
 }
 
 sub BUILD
@@ -83,15 +123,46 @@ sub BUILD
     }
     else
     {
+        my @params = $self->get_section_nav_menu_params(
+            $current_sect->{class},
+            { lang => +{ ar => 1, en => 1, he => 1, }, },
+        );
+
+        # $DB::single = 1;
         $self->nav_menu(
             HTML::Widgets::NavMenu->new(
+                coords_stop  => 1,
                 'path_info'  => $self->path_info(),
                 current_host => $self->current_host(),
-                $self->get_section_nav_menu_params( $current_sect->{class} ),
+                @params,
                 'ul_classes'     => [ "nm_main", ],
                 'no_leading_dot' => 1,
             )
         );
+        if ($::nav_menu_test)
+        {
+            my $nav_menu     = $self->nav_menu();
+            my $results      = $nav_menu->render();
+            my $leading_path = $results->{leading_path};
+            if ( $leading_path->[0]->host_url ne
+                ( $::nav_menu_test == 1 ? "humour/" : "lecture/" ) )
+            {
+                $DB::single = 1;
+                my $results2 = $nav_menu->render();
+                die;
+            }
+        }
+        if (0)
+        {
+            say Data::Dumper->new(
+                [
+                    # \@params,
+                    # $self->nav_menu(),
+
+                    $self->nav_menu()->render()->{leading_path},
+                ]
+            )->Dump();
+        }
         $self->title( $current_sect->{'title'} );
     }
 
@@ -150,10 +221,14 @@ sub total_leading_path
     else
     {
         my @local_path = @{ $self->results()->{'leading_path'} };
+        if ($::nav_menu_test)
+        {
+            $DB::single = 1;
+        }
 
-        my $url = $main_leading_path[-1]->direct_url();
+        my $url = $main_leading_path[-1]->host_url();
         while ( @local_path
-            && ( $local_path[0]->direct_url() ne $url ) )
+            && ( $local_path[0]->host_url() ne $url ) )
         {
             shift(@local_path);
         }

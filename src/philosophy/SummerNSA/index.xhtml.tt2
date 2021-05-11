@@ -57,10 +57,6 @@ sent via physical mail.
 </li>
 </ul>
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS politics_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["politics", "xkcd", ] %]
 
 [% END %]

@@ -65,6 +65,13 @@ class MyTests(html_unit_test.TestCase):
             "text(),'החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר')]"
         )
 
+    def test_tagline_on_stories_page(self):
+        input_fn = './dest/post-incs/t2/humour/stories/index.xhtml'
+        return self.doc(input_fn).has_one(
+            ".//article[@class='story' and " +
+            ".//h3/@id='summerschool-at-the-nsa']/p[@class='tagline' " +
+            "and contains(text(), 'As the sling shoots')]")
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

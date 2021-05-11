@@ -16,6 +16,7 @@ has [
     )
 ] => ( is => 'ro', isa => 'Str', required => 1 );
 
+has 'css_class' => ( is => 'ro', isa => 'Str', default => '' );
 has 'title'     => ( is => 'ro', isa => 'Str' );
 has 'no_wrap'   => ( is => 'ro', isa => 'Bool', defualt => '', );
 has 'skip_bold' => ( is => 'ro', isa => 'Bool', defualt => '', );
@@ -60,7 +61,12 @@ sub _render_helper
     else
     {
         return sprintf(
-            q#<a href="%s">%s</a>#,
+            q#<a%s href="%s">%s</a>#,
+            (
+                $self->css_class
+                ? sprintf( q# class="%s"#, $self->css_class )
+                : ''
+            ),
             escape_html( _rel_url( $self->path ) ),
             $self->inner_html(),
         );

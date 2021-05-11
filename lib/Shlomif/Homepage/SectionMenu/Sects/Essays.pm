@@ -2,20 +2,20 @@ package Shlomif::Homepage::SectionMenu::Sects::Essays;
 
 use strict;
 use warnings;
+use 5.014;
+use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use utf8;
+use Carp qw/ cluck confess /;
+
 use MyNavData::Hosts ();
 
-my $essays_tree_contents = {
+my $_section_navmenu_tree_contents = {
     host        => "t2",
-    text        => "Shlomi Fish’s Essays",
-    title       => "Shlomi Fish’s Essays",
+    text        => "Essays",
+    url         => "philosophy/",
+    title       => "Nav Menu for Shlomi Fish’s Essays",
     show_always => 1,
     subs        => [
-        {
-            text  => "Essays",
-            url   => "philosophy/",
-            title => "Nav Menu for Shlomi Fish’s Essays",
-        },
         {
             text  => "Book Reviews",
             url   => "philosophy/books-recommends/",
@@ -88,7 +88,7 @@ my $essays_tree_contents = {
                         "A (non-original) story with self-growth implications",
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/psychology/elephant-in-the-circus/hebrew.html",
@@ -103,6 +103,12 @@ my $essays_tree_contents = {
                 {
                     text => "Changing the Seldon Plan",
                     url  => "philosophy/psychology/changing-the-seldon-plan/",
+                },
+                {
+                    text =>
+"Crossover hypothesis about the origin of human consciousness",
+                    url =>
+"philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness/",
                 },
             ],
         },
@@ -120,6 +126,13 @@ my $essays_tree_contents = {
                         "Commercial Fanfiction as a Geeky/Hackery Imperative",
                     url =>
                         "philosophy/culture/case-for-commercial-fan-fiction/",
+                    subs => [
+                        {
+                            text => "Reduced Version",
+                            url  =>
+"philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml",
+                        },
+                    ],
                 },
             ],
         },
@@ -195,7 +208,7 @@ my $essays_tree_contents = {
                     title => "Why the War on Drugs is the Real Drug Problem",
                     subs  => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/politics/drug-legalisation/hebrew.html",
@@ -211,7 +224,7 @@ my $essays_tree_contents = {
                     ),
                     subs => [
                         {
-                            skip => 1,
+                            lang => "he",
                             text => "Hebrew Translation",
                             url  => "philosophy/politics/define-zionism/heb/",
                         },
@@ -592,7 +605,7 @@ my $essays_tree_contents = {
                     title => "James Carr about the anti-Muslim Cartoons",
                 },
                 {
-                    skip => 1,
+                    lang => "he",
                     text =>
 "Hebrew Translation of “Ten Reasons for Web Standards”",
                     url =>
@@ -613,11 +626,34 @@ my $essays_tree_contents = {
     ],
 };
 
+my $section_navmenu_tree_contents_by_lang =
+    __PACKAGE__->_calc_lang_trees_hash($_section_navmenu_tree_contents);
+
 sub get_params
 {
+    my ( $self, $args ) = @_;
+
+    my $lang = $args->{lang}
+        or confess("lang was not specified.");
+
+    my @keys = sort keys %$lang;
+    if ( @keys == 1 )
+    {
+        $lang = shift @keys;
+    }
+    else
+    {
+        $lang = 'en';
+    }
+    my $tree_contents = $section_navmenu_tree_contents_by_lang->{$lang};
+    if (0)    # ( $lang ne 'en' )
+    {
+        cluck "lang=$lang";
+        say Data::Dumper->new( [ $tree_contents, ] )->Dump();
+    }
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
-        tree_contents => $essays_tree_contents,
+        tree_contents => $tree_contents,
     );
 }
 

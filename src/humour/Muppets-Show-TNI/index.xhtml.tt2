@@ -1,5 +1,5 @@
 [%- SET title = "Muppets: Fan Fiction" -%]
-[%- SET desc = "Fan fiction screeenplays for The Muppet Show or Sesame Street" -%]
+[%- SET desc = "Fan fiction screeenplays for The Muppet Show or Sesame Street such as Harry Potter's Harry and Hermione trying to seek and destroy the evil dark arts magician The Amazing Mumford, or Summer Glau and Chuck Norris as Grammar Nazis" -%]
 [%- SET more_keywords = "muppet,muppets,The Muppet Show,fanfic,fan fiction,crossovers,screeenplays,screeenplay" -%]
 
 [%- WRAPPER wrap_html -%]
@@ -8,11 +8,13 @@
 
 <h2 id="read_online">Read Online</h2>
 
+[% SET use_screenplay_html_prefix = 1 %]
+[% SET screenplay_html_prefix="" %]
 [% SET epub_prefix="Muppets-Show--" %]
 <ul>
 [% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter on Sesame Street: Harry and Hermione on a mission to vanquish “He who must not be named Two” a.k.a The Amazing Mumford",  %]
 [% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris as Grammar Nazis",  %]
-[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence",  %]
+[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence (Incomplete Episode)",  %]
 </ul>
 
 [% default_toc %]

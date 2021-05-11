@@ -118,7 +118,7 @@ License</a>, a permissive software licence.
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
-[% license_obj.by_british_blurb(year=year) %]
+[% license_obj.by_british_blurb(version=(version||"3.0"), year=year) %]
 [%- END -%]
 [%- END -%]
 
@@ -219,15 +219,18 @@ publicly linked to. Please send comments to
 [% END %]
 
 [%- BLOCK start_html -%]
+[% UNLESS latemp_plain_html %]
 <?xml version="1.0" encoding="utf-8"?>
+[% END %]
 
 [% TRY %]
 [% INCLUDE latemp_html_doctype %]
 [% CATCH file %]
 <!DOCTYPE html>
+[%# THROW "foo start_html $fn_path" %]
 [% END %]
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]">
+<html [% IF latemp_plain_html %]lang="[% html_lang %]"[% ELSE %]xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]"[% END %]>
 <head>
 <title>[% process_title(title=title) %]</title>
 [% IF xhtml1 %]
@@ -318,7 +321,9 @@ publicly linked to. Please send comments to
 <script [% script_type %]>
 shlomif_load_nav("[% raw_fn_path %]");
 </script>
+[% IF re_enable_comments_engine_xhtml5 %]
 [% INCLUDE comments_engine_xhtml5 %]
+[% END %]
 [% INCLUDE share_this_button %]
 [% HEBREW_XML_LANG_SCRIPT %]
 </main>

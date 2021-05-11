@@ -1,13 +1,10 @@
-[% SET cpan_dist="XML-Grammar-Fiction" %]
+[% SET cpan_dist = "XML-Grammar-Fiction" %]
 [%- SET title = "${cpan_dist} - Markup Languages for Writing Prose" -%]
 [%- SET desc = "${cpan_dist} - Markup Languages for Writing Prose: screenplays and fiction." -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "vim_include_code.tt2" -%]
-
-
 
 <div class="wrap-me lim_width">
 
@@ -39,8 +36,6 @@ for various tasks.
 </p>
 
 [%- END -%]
-
-[% default_toc %]
 
 [% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 

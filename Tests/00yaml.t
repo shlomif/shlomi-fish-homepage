@@ -13,7 +13,10 @@ is(
     (
         system(
             qw%prettier --parser yaml --arrow-parens always --tab-width 4 --trailing-comma all -c%,
-            @files,
+            (
+                grep { !m#fortunes-shlomif-ids-data|JSON_Data_Persistence# }
+                    @files
+            ),
         ) & 0xFF
     ),
     0,

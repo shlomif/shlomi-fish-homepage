@@ -393,6 +393,9 @@ sub generic_get_params
 {
     my ( undef, $args ) = @_;
 
+    my $lang = $args->{lang}
+        or Carp::confess("lang not specified.");
+
     my $is_fully_expanded = (
         exists( $args->{fully_expanded} )
         ? $args->{fully_expanded}
@@ -409,8 +412,16 @@ sub generic_get_params
 
         if ($is_fully_expanded)
         {
-            return Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
-                $sect_name);
+            my $sect_to_ret =
+                Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
+                $sect_name, { lang => $lang, },
+                );
+            if ( !defined($sect_to_ret) )
+            {
+                $DB::single = 1;
+                Carp::confess("No section '$sect_name' to return.");
+            }
+            return $sect_to_ret;
         }
         else
         {
@@ -425,10 +436,9 @@ sub generic_get_params
     };
 
     my $tree_contents = {
-        host  => "t2",
-        text  => "Shlomi Fish",
-        title => "Shlomi Fish’s Homepage",
-        subs  => [
+        host => "t2",
+        text => "Shlomi Fish’s Homepage",
+        subs => [
             {
                 text => "Shlomi Fish’s Homepage",
                 url  => "",
@@ -599,6 +609,8 @@ sub generic_get_params
         ],
     };
 
+    # $DB::single = 1;
+
     return (
         hosts         => scalar( MyNavData::Hosts::get_hosts() ),
         tree_contents => $tree_contents,
@@ -610,6 +622,7 @@ sub get_params
     return __PACKAGE__->generic_get_params(
         {
             fully_expanded => 0,
+            lang           => +{ ar => 1, en => 1, he => 1, },
         }
     );
 }

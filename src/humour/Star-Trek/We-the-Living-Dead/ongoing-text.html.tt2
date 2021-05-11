@@ -8,11 +8,6 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Star-Trek--We-the-Living-Dead.html") %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS buffy_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "foss", ] %]
 
 [% END %]

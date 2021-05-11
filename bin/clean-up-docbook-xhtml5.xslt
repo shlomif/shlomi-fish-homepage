@@ -39,8 +39,16 @@
 
     <xsl:template match="xhtml:a[not(@href)]"/>
 
-    <xsl:template match="h:div[@class='titlepage' and count(*)=1]/h:div[count(@*)=0 and h:div[count(@*)=0 and *[@id and @class='title']]]">
-        <xsl:apply-templates select="./*/*"/>
+    <xsl:template match="h:div[@class='titlepage' and count(*)=1][h:div[count(@*)=0 and h:div[count(@*)=0 and *[@id and @class='title']]]]">
+        <header class="{@class}">
+            <xsl:apply-templates select="./*/*/*"/>
+        </header>
     </xsl:template>
+
+    <!--
+    <xsl:template match="h:section[@class='section']/h:div[@class='titlepage']">
+            <xsl:apply-templates select="./*"/>
+    </xsl:template>
+    -->
 
 </xsl:stylesheet>

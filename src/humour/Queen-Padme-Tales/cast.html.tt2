@@ -34,13 +34,7 @@ and/or <a href="https://en.wikipedia.org/wiki/George_Lucas">George Lucas</a></h3
 
 [%- END -%]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS star_trek_nav_block  %]
-[% PROCESS buffy_nav_block  %]
-[% PROCESS commercial_fanfic_initiative_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
 
 </div>
 

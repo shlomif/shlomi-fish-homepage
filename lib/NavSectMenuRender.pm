@@ -2,10 +2,7 @@ package NavSectMenuRender;
 
 use strict;
 use warnings;
-
 use utf8;
-
-use MyNavData;
 
 use Shlomif::Homepage::SectionMenu::Manager ();
 
@@ -26,6 +23,7 @@ sub init_section_nav_menu
     my $section_nav_menu =
         Shlomif::Homepage::SectionMenu::Manager->get_nav_menu(
         {
+            'lang'         => $args->{lang},
             'path_info'    => $filename,
             'current_host' => $host,
             'root'         => "$ROOT",

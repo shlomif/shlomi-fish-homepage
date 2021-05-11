@@ -71,10 +71,6 @@ This bit was originally published on 1 April, 2002, on the iglu.org.il site.
 
 [% license_obj.by_sa_british_blurb( "year" => "2002", ) %]
 
-[% WRAPPER nav_blocks  %]
-
-[% PROCESS foss_nav_block  %]
-
-[%- END -%]
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 
 [% END %]

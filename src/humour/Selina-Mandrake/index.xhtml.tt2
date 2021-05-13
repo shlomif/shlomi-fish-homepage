@@ -41,7 +41,9 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 
 [% default_toc %]
 
-<div class="accordion">
+<div class="fancy_sects">
+
+[% IF 0 %]
 
 [% WRAPPER h2_section id = "audio" title = "Audio (= Dramatic Reading of the Screenplay)" %]
 
@@ -55,6 +57,8 @@ and has a heavy Hebrew Israeli accent and diction. They are recorded using
 Their licence is also the Creative Commons Attribution ShareAlike licence
 (CC-by-sa). Share, remix and enjoy!
 </p>
+
+[% END %]
 
 [% END %]
 
@@ -95,8 +99,6 @@ Mandrake</a> - about the protagonist.
 </ul>
 
 [% END %]
-
-<div class="fancy_sects">
 
 [% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
@@ -314,7 +316,7 @@ be geeky and knowledgeable enough to be dangerous.
 </p>
 
 <p>
-However, like Harry Potter and his good friend Hermione Granger,
+However, like Harry Potter and his good friend <a href="https://harrypotter.fandom.com/wiki/Hermione_Granger">Hermione Granger</a>,
 she secretly wishes that there was more to this world than meets the eye,
 only to discover this is the case, to her great apparent dismay. And now
 she has to find a way to handle the situation gracefully.
@@ -352,7 +354,7 @@ of “museum pieces”, and what can be done about it.
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Labyrinth_(1986_film)"><i>Labyrinth</i></a> - a similar
-film that I enjoyed watching for a few times. Both its Sarah protagonist and my Selina
+film that I enjoyed watching a few times. Both its Sarah protagonist and my Selina
 are thrown into a strange demonic world, and both are often either nonchalant, caring,
 or aggravated by that. And both are almost completely non-violent.
 </p>
@@ -389,10 +391,10 @@ has reservations from it, meets Dostoevsky. The latter says "I am going to write
 </p>
 
 <p>
-This screenplay similarly references the original [% my_acronym( "key" => "BtVS", ) %] which is believed to be fictional there,
-and Selina similarly gets sucked into a ridiculous sub-culture based
-on it, as a major influencer. Only this time while trying tp continue
-to live her normal life.
+This screenplay similarly references the original [% my_acronym( "key" => "BtVS", ) %]
+which is believed to be fictional there, and Selina similarly gets sucked into
+a ridiculous sub-culture based on it, as a major influencer. Only this time
+while trying tp continue to live her normal life.
 </p>
 
 </li>
@@ -437,9 +439,8 @@ people, and also because it may encourage people to watch some episodes of
 read Dumas’
 <a href="http://en.wikipedia.org/wiki/The_Three_Musketeers"><i>The Three
 Musketeers</i></a>, etc. etc. all of which I can highly recommended. I’m not
-charging people any money to download, build, or view the works, but I
-have some web commercials which I’m making some small money from, and which
-I hope are acceptable to the copyright holders. Please don’t sue me.
+charging people any money to download, build, or view the works.
+Please don’t sue me.
 </p>
 
 [%- END -%]

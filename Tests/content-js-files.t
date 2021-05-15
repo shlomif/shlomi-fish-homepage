@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 3;
+use Test::More tests => 4;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
 
@@ -17,6 +17,10 @@ $obj->_check_size("js/jquery.expander.min.js");
 # TEST
 $obj->_check_size(
     "humour/Terminator/Liberation/images/emma-watson-wandless.svg.webp");
+
+# TEST
+$obj->_check_size(
+    "humour/Summerschool-at-the-NSA/images/xkcd-725-literally.png");
 
 __END__
 

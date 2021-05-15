@@ -114,6 +114,7 @@ foreach my $repo (
         map { s#/[^/]*\z##r }
             path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
         ),
+    'XML-Grammar-Vered',
     'captioned-images--repo',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
@@ -122,7 +123,6 @@ foreach my $repo (
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',
-    'XML-Grammar-Vered',
     )
 {
     $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );

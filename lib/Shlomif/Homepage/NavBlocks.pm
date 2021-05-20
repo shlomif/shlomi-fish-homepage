@@ -365,6 +365,10 @@ my %tr_s = (
             _ontext(
                 path => "humour/Terminator/Liberation/ongoing-text.html",
             ),
+            _l(
+                inner_html => "Proposed Cast",
+                path       => "humour/Terminator/Liberation/cast.html",
+            ),
             _github(
                 url => 'https://github.com/shlomif/Terminator-Liberation',
             ),

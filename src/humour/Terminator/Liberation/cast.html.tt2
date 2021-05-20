@@ -1,0 +1,164 @@
+[%- SET title = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody - Who Should be the Cast?" -%]
+
+[%- PROCESS "stories/terminator-liberation-common.tt2" %]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects">
+
+[% default_toc %]
+
+[% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
+
+[% WRAPPER about_sect  %]
+
+<p>
+On this page, I would like to note who I think should be the cast for some
+of the characters of "Terminator: Liberation".
+</p>
+
+<section>
+
+<header>
+
+<h3 id="cast__direction">Direction: <a href="https://en.wikipedia.org/wiki/Joss_Whedon">Joss Whedon</a></h3>
+
+<a href="https://en.wikipedia.org/wiki/Joss_Whedon#/media/File:Joss_Whedon_by_Gage_Skidmore_7.jpg"><img src="[% base_path %]humour/bits/facts/images/joss-whedon-small.webp" alt="Photo of Joss Whedon"/></a>
+
+</header>
+
+[% IF 0 %]
+
+<p>
+I'd like Whedon to direct <i>Selina</i> because I feel it should be directed
+the same as the first three seasons of <i>Buffy</i>, before <a
+href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a> was eliminated and
+the <a href="https://buffy.fandom.com/wiki/Scooby_Gang">Scooby Gang</a>
+graduated from high school, and Buffy likely became a soap
+opera. Anyway, while Buffy had very good special effects, the ones in <i>Selina</i>
+may be somewhat more cheesy.
+</p>
+
+<p>
+I believe more directors can and should direct parodies and <a
+href="https://github.com/shlomif/my-real-person-fan-fiction">other fan
+fiction</a> of their own works or franchises.
+</p>
+
+[% END %]
+
+</section>
+
+<section>
+
+<header>
+
+<h3 id="emma_watson">Emma Watson: <a href="http://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a></h3>
+
+<a href="http://commons.wikimedia.org/wiki/File:Emma_Watson_GoF_Premiere.jpg"><img src="[% base_path %]humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson"/></a>
+
+</header>
+
+[% IF 0 %]
+<p>
+I originally wrote this argument for choosing Ms. Watson there:
+</p>
+
+<blockquote cite="">
+
+<p>
+Well, Selina has to be an Englishwoman, right? Otherwise, I feel that
+Selina is similar enough to
+<a href="http://en.wikipedia.org/wiki/Hermione_Granger">Hermione Granger</a>
+to warrant Ms. Watson playing her. Furthermore,
+<a href="http://en.wikipedia.org/wiki/Keira_Knightley">Keira Knightley</a>
+plays the kind of females, who make the room miss a beat when they
+are seen, which isn't what I want for Selina, who should be the kind of girl
+that people should not feel intimated by.
+</p>
+
+</blockquote>
+
+<p>
+I think it was not the complete story as Watson's life paralleled both my life
+as well as <a href="#kate">Kate Hampshire's</a> (only she was often better equipped,
+either by her environment or by her own judgement, to avoid repeating some
+of my mistakes.)
+</p>
+
+[% END %]
+
+</section>
+
+[% IF 0 %]
+
+<section>
+
+<header>
+<h3 id="the-guide">The Guide: <a href="http://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a></h3>
+
+<a href="http://www.flickr.com/photos/genevieve719/4878236040/"><img
+src="images/wil_wheaton-reduced.jpg" alt="Photo of Wil Wheaton"/></a>
+</header>
+
+<p>
+The Guide should be an American, a geek, and someone we
+<a href="http://wilwheaton.typepad.com/wwdnbackup/2012/08/answering-a-faq-why-do-you-play-so-many-evil-characters-lately.html">love to hate</a>
+(because he brings Selina so much trouble, and is the story’s main
+antagonist). He also can be somewhat older. I think Mr. Wheaton will
+be perfect for all this.
+</p>
+
+</section>
+
+<section>
+
+<header>
+
+<h3 id="kate">Prof. Kate Hampshire / Lady Kate Canterson: <a href="http://en.wikipedia.org/wiki/Gabrielle_Anwar">Gabrielle Anwar</a></h3>
+
+</header>
+
+<p>
+Anwar lights up the room on fire when she is seen, and she seems suitable
+for playing and narrating the voice of Kate.
+She also played Queen Anne in
+<a href="http://en.wikipedia.org/wiki/The_Three_Musketeers_%281993_film%29">The Three Musketeers (1993 film)</a>, which was a completely dishonest film, so
+now I want her to go full circle and play the more real life version of
+Milady de-Winter, Kate Hampshire-Canterson.
+</p>
+
+</section>
+
+<section>
+
+<header>
+<h3 id="cardinal_richelieu">Cardinal Richelieu:
+<a href="http://en.wikipedia.org/wiki/Patrick_Stewart">Patrick Stewart</a></h3>
+
+<a href="http://en.wikipedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore.jpg"><img src="images/patrick-stewart-small.jpg" alt="Photo of Patrick Stewart from the English Wikipedia"/></a>
+</header>
+
+<p>
+I think Stewart resembles
+<a href="http://en.wikipedia.org/wiki/Cardinal_Richelieu">Richelieu</a> enough
+and I once imagined that Richelieu (= “The Commander” in the old Selinaverse
+with the Bajoran gods/profiles) was eventually “reincarnated” and “reborn”
+as Patrick Stewart in a more recent life, who ended up playing an even more
+upgraded version of “The Commander”,
+<a href="http://en.wikipedia.org/wiki/Jean-Luc_Picard">Captain
+Jean-Luc Picard</a> (a.k.a: “The Picard”). Finally, Capt. Picard is a
+Frenchman, just like Cardinal Richelieu.
+</p>
+
+</section>
+
+[% END %]
+
+[%- END -%]
+
+[% INCLUDE render_compact_nav_blocks names = ["harry_potter", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
+
+</div>
+
+[% END %]

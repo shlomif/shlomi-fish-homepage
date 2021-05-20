@@ -232,6 +232,11 @@ my $_humour_tree_contents = {
 "humour/Terminator/Liberation/ongoing-text.html",
                             title => "Ongoing Text of the Screenplay",
                         },
+                        {
+                            text  => "Cast",
+                            url   => "humour/Terminator/Liberation/cast.html",
+                            title => "Who I want to play each character",
+                        },
                     ],
                 },
                 {

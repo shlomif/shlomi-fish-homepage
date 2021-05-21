@@ -260,6 +260,11 @@ my $_humour_tree_contents = {
                                     url  =>
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
                                 },
+                                {
+                                    text => "Take It Over",
+                                    url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
+                                },
                             ],
                         },
                         {

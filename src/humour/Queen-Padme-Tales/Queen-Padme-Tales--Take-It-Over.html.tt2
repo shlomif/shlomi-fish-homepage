@@ -1,0 +1,17 @@
+[%- SET title = "Queen Padmé Tales: Let's Take It Over With - Ongoing Text" -%]
+[%- SET desc = "Queen Padmé Tales: FILL IN. Ongoing Text" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p class="skip_to_main" id="sk">
+<a href="#helping-planet-spaceballs"><b>Skip the introductions</b></a>
+</p>
+
+[% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
+
+[% path_slurp("screenplay-xml/rendered-html/Queen-Padme-Tales--Take-It-Over.html") %]
+
+[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
+
+[% END %]

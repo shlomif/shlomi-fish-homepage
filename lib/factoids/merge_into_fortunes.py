@@ -26,6 +26,10 @@ ns = {"xml": XML_NS, }
 FULL_NAMES = {"chuck": "Chuck Norris",
               "emma-watson": "Emma Watson",
               "nsa": "NSA",
+              "sglau": {
+                  'full_name': "Summer Glau",
+                  'url_base': "Summer-Glau",
+              },
               "taylor-swift": "Taylor Swift",
               "xena": {
                   'full_name': "Xena the Warrior Princess",

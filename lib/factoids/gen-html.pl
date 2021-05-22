@@ -712,7 +712,7 @@ who is the subject of such facts here.
 </p>
 
 EOF
-        id_base         => "summer_glau_facts",
+        id_base         => "sglau_facts",
         img_alt         => "Photo of Summer Glau from the English Wikipedia",
         img_attribution =>
 'https://en.wikipedia.org/wiki/Summer_Glau#mediaviewer/File:Summer_Glau_by_Gage_Skidmore.jpg',

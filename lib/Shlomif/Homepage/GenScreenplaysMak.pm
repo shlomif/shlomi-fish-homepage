@@ -17,6 +17,8 @@ my $image_lister =
 my $images_copy         = '';
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 
+my %addprefixes;
+
 sub _calc_screenplay_doc_makefile_lines
 {
     my ( $_epub_map, $screenplay_vcs_base_dir, $record ) = @_;
@@ -30,6 +32,9 @@ sub _calc_screenplay_doc_makefile_lines
     my $vcs_dir_var         = "${base}__VCS_DIR";
     my $graphics_dir_var    = "${base}_ENG_IMAGES__SOURCE_PREFIX";
     my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
+    my $addprefix =
+"${base}_ENG_IMAGES__POST_DEST := \$(addprefix \$($dest_prefix_dir_var)/,\$(${base}_ENG_IMAGES__BASE))\n";
+    ++$addprefixes{$addprefix};
 
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
@@ -248,6 +253,7 @@ EOF
             } @_htmls_files
         ),
     );
+    my @addprefixes = ( sort keys %addprefixes );
 
     my $DIR = "lib/make/";
     path("${DIR}copies-generated-screenplay-images.mak")
@@ -264,8 +270,11 @@ EOF
     }
     $clone_cb->('screenplays-common');
 
-    return { generate_file_list_promises =>
-            [ map { @{ $_->{generate_file_list_promises} } } @records ] };
+    return {
+        addprefixes                 => ( \@addprefixes ),
+        generate_file_list_promises =>
+            [ map { @{ $_->{generate_file_list_promises} } } @records ]
+    };
 }
 
 1;

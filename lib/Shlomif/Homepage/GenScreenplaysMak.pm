@@ -27,12 +27,14 @@ sub _calc_screenplay_doc_makefile_lines
     my $docs        = $record->{docs};
     my $suburl      = $record->{suburl};
 
-    my $vcs_dir_var      = "${base}__VCS_DIR";
-    my $graphics_dir_var = "${base}_ENG_IMAGES__SOURCE_PREFIX";
+    my $vcs_dir_var         = "${base}__VCS_DIR";
+    my $graphics_dir_var    = "${base}_ENG_IMAGES__SOURCE_PREFIX";
+    my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
 
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
+"$dest_prefix_dir_var := \$(POST_DEST_HUMOUR)/@{[ $suburl // '']}/images\n",
     );
 
     my @epubs;

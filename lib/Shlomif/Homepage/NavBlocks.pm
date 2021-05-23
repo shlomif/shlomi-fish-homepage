@@ -282,6 +282,16 @@ my %tr_s = (
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
             ),
             _l(
+                inner_html => "Nighttime Flight",
+                path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
+            ),
+            _l(
+                inner_html => "The Fifth Sith",
+                path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
+            ),
+            _l(
                 inner_html => "Proposed Cast",
                 path       => "humour/Queen-Padme-Tales/cast.html",
             ),

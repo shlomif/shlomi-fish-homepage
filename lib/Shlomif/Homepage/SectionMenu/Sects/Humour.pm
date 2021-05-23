@@ -265,6 +265,16 @@ my $_humour_tree_contents = {
                                     url  =>
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
                                 },
+                                {
+                                    text => "Nighttime Flight",
+                                    url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
+                                },
+                                {
+                                    text => "The Fifth Sith",
+                                    url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
+                                },
                             ],
                         },
                         {

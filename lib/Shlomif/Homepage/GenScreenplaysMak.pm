@@ -161,6 +161,13 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
     };
 }
 
+sub _basename
+{
+    my ($fn) = @_;
+
+    return ( ( split m#/#, $fn, -1 )[-1] );
+}
+
 sub generate
 {
     my $self     = shift;
@@ -194,7 +201,7 @@ $(POST_DEST)/humour/humanity/Humanity-Movie.epub \
 EOF
 
     my @_files    = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
-    my $_epub_map = +{ map { ( split m#/#, $_, -1 )[-1] => $_ } @_files };
+    my $_epub_map = +{ map { _basename($_) => $_ } @_files };
     my @_htmls_files =
         map { s/\.epub\z/\.raw.html/r =~ s#\A\$\(POST_DEST\)/#\$(PRE_DEST)/#r }
         @_files;
@@ -239,15 +246,15 @@ EOF
 "$epub_dests_varname := \\\n$epub_dests\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n",
         (
             map {
-                my $x = [ split m#/#, $_ ]->[-1];
+                my $fn = $_;
+                my $x  = _basename($fn);
                 $x =~ s/\.raw(\.html)\z/$1/;
                 my $heb_filt = '';
                 if ( $x =~ /hebrew/ )
                 {
                     $heb_filt = "DIR=rtl";
                 }
-                "$_: \$(SCREENPLAY_XML_HTML_DIR)/"
-                    . $x
+                "${fn}: \$(SCREENPLAY_XML_HTML_DIR)/${x}"
                     . sprintf( "\n\t\$(call %s,%s)\n\n",
                     $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
             } @_htmls_files

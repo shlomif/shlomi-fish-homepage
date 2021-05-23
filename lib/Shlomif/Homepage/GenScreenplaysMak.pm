@@ -14,7 +14,8 @@ use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
 my $image_lister =
     XML::Grammar::Screenplay::FromProto::API::ListImages->new( {} );
 
-my $images_copy = '';
+my $images_copy         = '';
+my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 
 sub _calc_screenplay_doc_makefile_lines
 {
@@ -26,10 +27,13 @@ sub _calc_screenplay_doc_makefile_lines
     my $docs        = $record->{docs};
     my $suburl      = $record->{suburl};
 
-    my $vcs_dir_var = "${base}__VCS_DIR";
+    my $vcs_dir_var      = "${base}__VCS_DIR";
+    my $graphics_dir_var = "${base}_ENG_IMAGES__SOURCE_PREFIX";
 
-    my @ret =
-        ("$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n");
+    my @ret = (
+        "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
+        "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
+    );
 
     my @epubs;
     my @generate_file_list_promises;
@@ -218,6 +222,7 @@ EOF
 
     path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
+        "$graphics_dir_bn_var := graphics\n",
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
         ( map { "\t$_->{base} \\\n" } map { @{ $_->{docs} } } @records ),

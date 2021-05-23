@@ -14,14 +14,13 @@ use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
 my $image_lister =
     XML::Grammar::Screenplay::FromProto::API::ListImages->new( {} );
 
-my $images_copy         = '';
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
-
-my %addprefixes;
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $_epub_map, $screenplay_vcs_base_dir, $record ) = @_;
+    my ( $images_copy_ref, $addprefixes, $_epub_map, $screenplay_vcs_base_dir,
+        $record )
+        = @_;
 
     my $base        = $record->{base};
     my $github_repo = $record->{github_repo};
@@ -34,7 +33,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
     my $addprefix =
 "${base}_ENG_IMAGES__POST_DEST := \$(addprefix \$($dest_prefix_dir_var)/,\$(${base}_ENG_IMAGES__BASE))\n";
-    ++$addprefixes{$addprefix};
+    ++( $addprefixes->{$addprefix} );
 
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
@@ -130,7 +129,7 @@ EOF
             )/x
             )
         {
-            $images_copy .=
+            $$images_copy_ref .=
                   $gen_deref->("IMAGES__POST_DEST") . ": "
                 . $gen_deref->("IMAGES__POST_DEST_PREFIX") . "/%: "
                 . $gen_deref->("IMAGES__SOURCE_PREFIX") . "/%\n";
@@ -207,10 +206,13 @@ EOF
         @_files;
 
     my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-    my @records      = (
+    my $addprefixes  = +{};
+    my $images_copy  = '';
+
+    my @records = (
         map {
-            _calc_screenplay_doc_makefile_lines( $_epub_map,
-                $screenplay_vcs_base_dir, $_ )
+            _calc_screenplay_doc_makefile_lines( ( \$images_copy ),
+                $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $_ )
         } sort { $a->{base} cmp $b->{base} }
             @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
     );
@@ -260,7 +262,6 @@ EOF
             } @_htmls_files
         ),
     );
-    my @addprefixes = ( sort keys %addprefixes );
 
     my $DIR = "lib/make/";
     path("${DIR}copies-generated-screenplay-images.mak")
@@ -278,7 +279,7 @@ EOF
     $clone_cb->('screenplays-common');
 
     return {
-        addprefixes                 => ( \@addprefixes ),
+        addprefixes                 => [ sort keys %$addprefixes ],
         generate_file_list_promises =>
             [ map { @{ $_->{generate_file_list_promises} } } @records ]
     };

@@ -36,9 +36,8 @@ rules:
     prefer-template: 0
     prettier/prettier:
         - 2
-        -
-            arrowParens: always
-            tabWidth: 4
-            trailingComma: all
+        - arrowParens: always
+          tabWidth: 4
+          trailingComma: all
     quotemark: 0
     variable-name: 0

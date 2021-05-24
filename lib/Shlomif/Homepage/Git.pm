@@ -21,7 +21,14 @@ my $cwd_bn         = $cwd->basename;
 my $git_clones_dir = $upper_dir->child( $cwd_bn . "--clones" );
 $git_clones_dir->mkpath;
 
-my @tasks;
+has _tasks => (
+    is      => 'rw',
+    default => sub {
+        return [];
+    },
+
+    # other attributes
+);
 
 sub add_task
 {
@@ -30,7 +37,7 @@ sub add_task
     {
         return;
     }
-    push @tasks, $task;
+    push @{ $self->_tasks() }, $task;
     return;
 }
 
@@ -172,6 +179,8 @@ sub end
     my $self = shift;
     my $loop = IO::Async::Loop->new;
 
+    my $_tasks = $self->_tasks;
+    $self->_tasks( [] );
     my $f = fmap_void
     {
         my $task = shift;
@@ -182,7 +191,7 @@ sub end
         $task->();
         return Future->done();
     }
-    foreach => ( \@tasks );
+    foreach => ($_tasks);
     return $f->get();
 }
 

@@ -5,6 +5,11 @@ use warnings;
 
 use Moo;
 
+has default_user => (
+    is       => 'ro',
+    required => 1,
+);
+
 use Carp ();
 use Path::Tiny qw/ cwd path /;
 use IO::Async::Loop ();
@@ -71,7 +76,7 @@ sub github_clone
     return;
 }
 
-sub github_shlomif_clone
+sub github_default_user_clone
 {
     my ( $self, $into_dir, $repo, $inside ) = @_;
 
@@ -92,7 +97,7 @@ sub github_shlomif_clone
                 return $self->github_clone(
                     {
                         clone_into => $into_dir,
-                        username   => 'shlomif',
+                        username   => $self->default_user(),
                         into_dir   => $clone_into,
                         repo       => $repo,
                     }
@@ -105,7 +110,7 @@ sub github_shlomif_clone
 
     return $self->github_clone(
         {
-            username => 'shlomif',
+            username => $self->default_user(),
             into_dir => $into_dir,
             repo     => $repo,
         }
@@ -128,7 +133,7 @@ sub git_task
     return
         if -e "$d/$bn";
     return $self->add_task(
-        scalar( $self->github_shlomif_clone( $d, $bn, $inside, ) ) );
+        scalar( $self->github_default_user_clone( $d, $bn, $inside, ) ) );
 }
 
 sub calc_git_task_cb

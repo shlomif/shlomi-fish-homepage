@@ -13,7 +13,7 @@ use Shlomif::Homepage::GenQuadPresMak    ();
 use Shlomif::Homepage::GenFictionsMak    ();
 use Shlomif::Homepage::GenScreenplaysMak ();
 
-my $git_obj = Shlomif::Homepage::Git->new;
+my $git_obj = Shlomif::Homepage::Git->new( { default_user => 'shlomif', } );
 
 my $git_task = $git_obj->calc_git_task_cb();
 

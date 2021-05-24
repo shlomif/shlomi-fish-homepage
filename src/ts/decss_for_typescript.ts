@@ -14,7 +14,7 @@ function css_descramble(scrambled_input_str: string, key: string): string {
     const ret: string = "";
 
     for (const c: string of scrambled_input_str) {
-        ret += String.fromCharCode((c.charCodeAt(0) - 3) % 256);
+        ret += String.fromCharCode((c.charCodeAt(0) - 3 + 256) % 256);
     }
 
     return ret;
@@ -74,7 +74,7 @@ function char_to_digit(str: string): number {
     return str.charCodeAt(0) - my0.charCodeAt(0);
 }
 
-function decode_a_string_with_escape_sequences(str) {
+function decode_a_string_with_escape_sequences(str: string): string {
     const ret: string = "";
     const len = str.length;
 

@@ -10,7 +10,7 @@
 //
 //    scrambled_input_str and key are both strings
 //
-function css_descramble(scrambled_input_str: string, key: string) {
+function css_descramble(scrambled_input_str: string, key: string): string {
     const ret: string = "";
 
     for (let a = 0; a < scrambled_input_str.length; ++a) {

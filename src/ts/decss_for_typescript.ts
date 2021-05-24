@@ -13,9 +13,8 @@
 function css_descramble(scrambled_input_str: string, key: string): string {
     const ret: string = "";
 
-    for (let a = 0; a < scrambled_input_str.length; ++a) {
-        const c_code = scrambled_input_str.charCodeAt(a);
-        ret += String.fromCharCode((c_code - 3) % 256);
+    for (const c: string of scrambled_input_str) {
+        ret += String.fromCharCode((c.charCodeAt(0) - 3) % 256);
     }
 
     return ret;
@@ -28,7 +27,7 @@ function encode_string_with_escape_sequences(
     const len: number = str.length;
     const ret: string = "";
 
-    for (let a = 0; a < len; a++) {
+    for (let a = 0; a < len; ++a) {
         const c = str.charAt(a);
         if (c == "\n") {
             ret += "\\n";
@@ -79,7 +78,7 @@ function decode_a_string_with_escape_sequences(str) {
     const ret: string = "";
     const len = str.length;
 
-    for (let a = 0; a < len; a++) {
+    for (let a = 0; a < len; ++a) {
         let c = str.charAt(a);
         if (c == "\n" || c == "\r") {
             // We ignore newlines so skip to the next character
@@ -89,7 +88,7 @@ function decode_a_string_with_escape_sequences(str) {
         if (c != "\\") {
             ret += c;
         } else {
-            a++;
+            ++a;
             c = str.charAt(a);
             let c_code = char_to_digit(c);
             const is_digit = () => {
@@ -108,14 +107,14 @@ function decode_a_string_with_escape_sequences(str) {
             } else if (c == "f") {
                 ret += "\f";
             } else if (is_digit()) {
-                let total = 0;
-                let num = 1;
+                let total: number = 0;
+                let num: number = 1;
 
                 while (is_digit() && num < 3) {
                     total = total * 10 + c_code;
 
-                    a++;
-                    num++;
+                    ++a;
+                    ++num;
                     c = str.charAt(a);
                     c_code = c.charCodeAt(0);
                 }

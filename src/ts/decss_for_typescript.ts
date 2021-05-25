@@ -20,6 +20,15 @@ function css_descramble(scrambled_input_str: string, key: string): string {
     return ret;
 }
 
+let encode_map = new Map<string, string>([
+    ["\b", "b"],
+    ["\f", "f"],
+    ["\n", "n"],
+    ["\r", "r"],
+    ["\t", "t"],
+    ["\\", "\\"],
+    ['"', '"'],
+]);
 function encode_string_with_escape_sequences(
     str: string,
     on_one_line: boolean,
@@ -29,20 +38,9 @@ function encode_string_with_escape_sequences(
 
     for (let a = 0; a < len; ++a) {
         const c = str.charAt(a);
-        if (c == "\n") {
-            ret += "\\n";
-        } else if (c == '"') {
-            ret += '\\"';
-        } else if (c == "\r") {
-            ret += "\\r";
-        } else if (c == "\f") {
-            ret += "\\f";
-        } else if (c == "\t") {
-            ret += "\\t";
-        } else if (c == "\b") {
-            ret += "\\b";
-        } else if (c == "\\") {
-            ret += "\\\\";
+        const found = encode_map.has(c);
+        if (found) {
+            ret += "\\" + encode_map.get(c);
         } else {
             const c_code = c.charCodeAt(0);
             if (c_code < 32 || c_code > 127) {

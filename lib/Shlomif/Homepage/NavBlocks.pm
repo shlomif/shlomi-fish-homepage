@@ -205,14 +205,22 @@ my %tr_s = (
                 path       => "humour/bits/facts/Chuck-Norris/",
             ),
             _l(
-                inner_html => "Larry Wall Facts",
-                path       => "humour/bits/facts/Larry-Wall/",
-            ),
-            _l(
                 inner_html => "“Knuth is not God”",
                 path       => "humour/bits/facts/Knuth/",
             ),
+            _l(
+                inner_html => "Larry Wall Facts",
+                path       => "humour/bits/facts/Larry-Wall/",
+            ),
             _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/", ),
+            _l(
+                inner_html => "Summer Glau Facts",
+                path       => "humour/bits/facts/Summer-Glau/",
+            ),
+            _l(
+                inner_html => "Taylor Swift Facts",
+                path       => "humour/bits/facts/Taylor-Swift/",
+            ),
             _l(
                 inner_html => "Windows Update Facts",
                 path       => "humour/bits/facts/Windows-Update/",

@@ -729,7 +729,7 @@ EOF
 EOF
         meta_desc      => "Factoids about Summer Glau, the Hollywood actress",
         nav_blocks_tt2 => <<'EOF',
-[% INCLUDE render_compact_nav_blocks names = ["xkcd", ] %]
+[% INCLUDE render_compact_nav_blocks names = ["foss", "xkcd", ] %]
 EOF
         see_also => <<'EOF',
 <ul>
@@ -774,6 +774,7 @@ EOF
         meta_desc =>
 "Factoids about Taylor Swift, the singer-songwriter and entertainer",
         nav_blocks_tt2 => <<'EOF',
+[% INCLUDE render_compact_nav_blocks names = ["foss", ] %]
 EOF
         see_also => <<'EOF',
 <ul>

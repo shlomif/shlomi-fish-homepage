@@ -14,6 +14,8 @@
 
 [% BLOCK render_compact_nav_blocks %]
 
+[% check_nav_blocks('names' => names) %]
+
 [% WRAPPER nav_blocks %]
 
 [% FOREACH navid IN names %]

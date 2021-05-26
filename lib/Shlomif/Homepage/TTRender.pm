@@ -51,6 +51,43 @@ my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
     }
 );
 
+sub check_nav_blocks
+{
+    my ($args) = @_;
+    my $names  = $args->{names};
+    my $page   = $::latemp_filename;
+    $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
+
+    my $want = $nav_blocks->lookup_page_blocks($page);
+
+    if (0)
+    {
+        if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
+            and $nav_block_renderer->flush_found() )
+        {
+            my $err = qq#NavBlock had no page "$page"!\n#;
+            print {*STDERR} "err=\n\n$err\n\n";
+            die $err;
+        }
+    }
+    if ( !defined($want) )
+    {
+        warn qq{no nav_block_renderer for page='$page'};
+        return;
+    }
+    my $canonicalize_lists = sub {
+        $names = [ sort @$names ];
+        return;
+    };
+    $canonicalize_lists->();
+    if ( "@$want" ne "@$names" )
+    {
+        warn qq|mismatch want=[@$want] names=[@$names]|;
+        return "&nbsssssspp;";
+    }
+    return '';
+}
+
 sub _render_nav_block
 {
     my ($args) = @_;
@@ -145,6 +182,7 @@ has vars => (
             mytan          =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
+            check_nav_blocks    => \&check_nav_blocks,
             print_nav_block     => \&_render_nav_block,
             article_index__body => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();

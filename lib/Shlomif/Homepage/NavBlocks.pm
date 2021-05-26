@@ -646,4 +646,34 @@ sub list_nav_blocks
     return [ sort { $a cmp $b } keys(%table_blocks) ];
 }
 
+{
+    my %by_page_lookup;
+
+    sub _calc_by_page_lookup
+    {
+        my ( $self, ) = @_;
+
+        foreach my $block ( @{ $self->list_nav_blocks() } )
+        {
+            foreach my $page (
+                @{ $self->get_nav_block($block)->collect_local_links() } )
+            {
+                die $page if not( '' eq ref($page) );
+                push @{ $by_page_lookup{$page} }, $block;
+            }
+        }
+        return;
+    }
+
+    sub lookup_page_blocks
+    {
+        my ( $self, $page ) = @_;
+
+        return $by_page_lookup{$page};
+    }
+
+}
+
+__PACKAGE__->_calc_by_page_lookup();
+
 1;

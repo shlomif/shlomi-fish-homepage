@@ -30,13 +30,16 @@ class MyTests(html_unit_test.TestCase):
         input_fn = './dest/post-incs/t2/site-map/hebrew/index.xhtml'
         doc = self.doc(input_fn)
 
+        sect = ".//section[header/*/@id='sitemap']"
         doc.has_one(
-            ".//div[@class='sitemap']/ul/li[a[@href='../../humour/']]" +
+            sect +
+            "/ul/li[a[@href='../../humour/']]" +
             ""
             )
 
         doc.has_one(
-            ".//div[@class='sitemap']/ul/li[a[@href='../../humour/']]" +
+            sect +
+            "/ul/li[a[@href='../../humour/']]" +
             "/ul/li[a[@href='../../humour/stories/']]" +
             "/ul/li[a[@href='../../humour/TheEnemy/']]" +
             "/ul/li[a[contains(@href, " +

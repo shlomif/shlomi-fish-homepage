@@ -597,9 +597,19 @@ sub generic_get_params
                 skip      => 1,
             },
             {
-                url   => "site-map/",
-                text  => "Site Map",
-                title => "A site map showing all of the main pages.",
+                show_always => 1,
+                url         => "site-map/",
+                text        => "Site Map",
+                title       => "A site map showing all of the main pages.",
+                subs        => [
+                    {
+                        skip  => 1,
+                        text  => "עמודים בעברית",
+                        title =>
+                            "מפת העמודים העבריים באתר",
+                        url => "site-map/hebrew/",
+                    },
+                ],
             },
             {
                 separator => 1,

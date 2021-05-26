@@ -1,15 +1,20 @@
-[%- SET title = "Hebrew pages" -%]
-[%- SET desc = "Site map for www.shlomifish.org'ss Hebrew pages" -%]
+[%- SET title = "עמודי ווב בעברית ( Hebrew pages )" -%]
+[%- SET desc = "מפת העמודים העבריים באתר של שלומי פיש" -%]
 
 [%- WRAPPER wrap_html -%]
 
-<div class="sitemap">
-[% shlomif_hebrew_expanded_nav_bar %]
-</div>
+[% WRAPPER h2_section id = "about" title = "לגבי הדף הזה" %]
 
 <p>
-<a href="[% base_path %]MANIFEST.html">MANIFEST.html</a> - list of all files in main
-source, for easy retrieval.
+עמוד זה מרכז קישורים לעמודי הווב באתר שלי שזמינים באופן מלא או באופן ניכר בעברית.
 </p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "sitemap" title = "מפת האתר" %]
+
+[% shlomif_hebrew_expanded_nav_bar %]
+
+[% END %]
 
 [% END %]

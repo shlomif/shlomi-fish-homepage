@@ -116,13 +116,27 @@ sub _render_nav_blocks
 
 sub render_compact_nav_blocks
 {
+
+=begin removed
     my ($args) = @_;
     $args = $args->{STASH};
+
     my $names = $args->{names}
         or die join( ",", keys %$args ) . "@_;";
 
     $names = [ sort @$names ];
     check_nav_blocks( { 'names' => $names } );
+
+=cut
+
+    my $page = $::latemp_filename;
+    $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
+
+    my $names = $nav_blocks->lookup_page_blocks($page);
+    if ( not defined $names )
+    {
+        return '';
+    }
     my $ret = '';
 
     my $start = <<'EOF';
@@ -139,6 +153,7 @@ EOF
     $ret .= qq#</div>#;
     return $ret;
 }
+
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 my $ACRONYMS_FN       = "lib/acronyms/list1.yaml";
 my $latemp_acroman =

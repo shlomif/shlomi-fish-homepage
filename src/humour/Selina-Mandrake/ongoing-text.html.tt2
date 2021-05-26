@@ -8,6 +8,5 @@
 
 [% path_slurp("screenplay-xml/rendered-html/selina-mandrake-the-slayer.html") %]
 
-[% INCLUDE render_compact_nav_blocks names = ["buffy", "star_trek", "harry_potter", ] %]
 
 [% END %]

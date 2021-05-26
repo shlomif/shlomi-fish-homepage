@@ -8,6 +8,5 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Summerschool-at-the-NSA.html") %]
 
-[% INCLUDE render_compact_nav_blocks names = ["xkcd", "buffy", "politics", ] %]
 
 [% END %]

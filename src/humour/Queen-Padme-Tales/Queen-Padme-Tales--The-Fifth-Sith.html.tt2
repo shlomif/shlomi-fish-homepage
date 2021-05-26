@@ -12,6 +12,5 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Queen-Padme-Tales--The-Fifth-Sith.html") %]
 
-[% INCLUDE render_compact_nav_blocks names = ["star_trek", "buffy", "mlp_fim", "self_ref", "commercial_fanfic_initiative", ] %]
 
 [% END %]

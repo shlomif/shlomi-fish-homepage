@@ -4,7 +4,8 @@ mkdir -p "$dir"
 adest="$dir/have.xhtml"
 bdest="$dir/want.xhtml"
 rm -f "$adest" "$bdest"
-for a in "dest/post-incs/t2/MathVentures/3d-outof-4d-mathml.xhtml"
+# for a in "dest/post-incs/t2/MathVentures/3d-outof-4d-mathml.xhtml"
+for a in "dest/post-incs/t2/humour/Selina-Mandrake/cast.html"
 do
 b=/home/shlomif/Backup/Arcs/post-$a
 f()

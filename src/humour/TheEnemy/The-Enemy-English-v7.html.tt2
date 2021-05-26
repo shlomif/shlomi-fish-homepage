@@ -25,6 +25,5 @@
 
 [% license_obj.by_sa_license_british( "year" => "1997", head_tag => "h2", ) %]
 
-[% INCLUDE render_compact_nav_blocks names = ["politics", ] %]
 
 [% END %]

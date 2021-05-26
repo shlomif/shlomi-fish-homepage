@@ -11,15 +11,3 @@
 </div>
 
 [% END %]
-
-[% BLOCK render_compact_nav_blocks %]
-
-[% check_nav_blocks('names' => names) %]
-
-[% WRAPPER nav_blocks %]
-
-[% print_nav_blocks ('names' => names) %]
-
-[% END %]
-
-[% END %]

@@ -114,6 +114,31 @@ sub _render_nav_blocks
     return $ret;
 }
 
+sub render_compact_nav_blocks
+{
+    my ($args) = @_;
+    $args = $args->{STASH};
+    my $names = $args->{names}
+        or die join( ",", keys %$args ) . "@_;";
+
+    $names = [ sort @$names ];
+    check_nav_blocks( { 'names' => $names } );
+    my $ret = '';
+
+    my $start = <<'EOF';
+<div class="nav_blocks">
+
+<header>
+<h2 id="nav_blocks">Navigation Blocks</h2>
+</header>
+EOF
+    $ret .= $start;
+
+    $ret .= _render_nav_blocks( { 'names' => $names } );
+
+    $ret .= qq#</div>#;
+    return $ret;
+}
 my $fortune_colls_obj = Shlomif::Homepage::FortuneCollections->new;
 my $ACRONYMS_FN       = "lib/acronyms/list1.yaml";
 my $latemp_acroman =
@@ -233,6 +258,9 @@ my $template = Template->new(
         POST_CHOMP   => 1,
         RELATIVE     => 1,
         ENCODING     => 'utf8',
+        BLOCKS       => +{
+            render_compact_nav_blocks => \&render_compact_nav_blocks,
+        },
     }
 );
 

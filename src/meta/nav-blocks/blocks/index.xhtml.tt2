@@ -24,7 +24,7 @@
 
 [% WRAPPER h2_section id= (rec.id _ "_sect") title=(rec.title) %]
 
-[% print_nav_block( name => rec.id) %]
+[% print_nav_blocks( names => [rec.id] ) %]
 
 [%- END -%]
 

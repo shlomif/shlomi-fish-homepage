@@ -88,23 +88,29 @@ sub check_nav_blocks
     return '';
 }
 
-sub _render_nav_block
+sub _render_nav_blocks
 {
     my ($args) = @_;
-    my $name   = $args->{name};
-    my $ret    = $nav_block_renderer->render(
-        { obj => $nav_blocks->get_nav_block($name), } );
+    my $names = $args->{names};
+    $names = [ sort @$names ];
 
+    my $ret  = '';
     my $page = $::latemp_filename;
 
-    if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
-        and $nav_block_renderer->flush_found() )
+    foreach my $name (@$names)
     {
-        my $err = qq#NavBlock "$name" had no page "$page"!\n#;
-        print {*STDERR} "err=\n\n$err\n\n";
-        die $err;
-    }
+        $ret .= $nav_block_renderer->render(
+            { obj => $nav_blocks->get_nav_block($name), } );
 
+        if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
+            and $nav_block_renderer->flush_found() )
+        {
+            my $err = qq#NavBlock "$name" had no page "$page"!\n#;
+            print {*STDERR} "err=\n\n$err\n\n";
+            die $err;
+        }
+
+    }
     return $ret;
 }
 
@@ -183,7 +189,7 @@ has vars => (
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
             check_nav_blocks    => \&check_nav_blocks,
-            print_nav_block     => \&_render_nav_block,
+            print_nav_blocks    => \&_render_nav_blocks,
             article_index__body => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();
             },

@@ -18,11 +18,7 @@
 
 [% WRAPPER nav_blocks %]
 
-[% FOREACH navid IN names %]
-
-[% print_nav_block ('name' => navid) %]
-
-[% END %]
+[% print_nav_blocks ('names' => names) %]
 
 [% END %]
 

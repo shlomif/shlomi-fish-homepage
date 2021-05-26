@@ -154,8 +154,6 @@ Chuck Norris and the facts.
 EOF
         meta_desc =>
 "Additional Chuck Norris Factoids by Shlomi Fish and Friends. No one is as tough as Norris.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ul>
 
@@ -204,10 +202,8 @@ reversal (“In Soviet Russia”) on the Wikipedia</a>
 
 </ul>
 EOF
-        meta_desc      => "In Soviet Russia, jokes laugh at you.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        meta_desc => "In Soviet Russia, jokes laugh at you.",
+        see_also  => <<'EOF',
 <ul>
 
 <li>
@@ -283,9 +279,7 @@ tag on Twitter</a>
 </ul>
 EOF
         meta_desc => "Facts about Buffy Summers from Buffy the Vampire Slayer",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        see_also  => <<'EOF',
 <ul>
 
 <li>
@@ -381,8 +375,6 @@ EOF
 EOF
         meta_desc =>
 "Clarissa Darling facts (from Clarissa Explains it All) - what you would not imagine about this smart cookie.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ul>
 
@@ -426,10 +418,8 @@ EOF
 
 </ul>
 EOF
-        meta_desc      => "Factoids about Emma Watson, the British actress",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        meta_desc => "Factoids about Emma Watson, the British actress",
+        see_also  => <<'EOF',
 <ul>
 
 [% PROCESS emma_watson__see_also  %]
@@ -485,8 +475,6 @@ with Knuth</a>
 EOF
         meta_desc =>
 "Why Prof. Don Knuth (= the famous computer scientist) is not God, but is pretty close.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ul>
 <li>
@@ -534,8 +522,6 @@ EOF
 EOF
         meta_desc =>
 "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <p>
 <b>TODO</b>
@@ -572,8 +558,6 @@ EOF
 EOF
         meta_desc =>
 "Factoids about the NSA - the U.S. government National Security Agency",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ol>
 
@@ -721,10 +705,8 @@ EOF
 
 </ul>
 EOF
-        meta_desc      => "Factoids about Summer Glau, the Hollywood actress",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        meta_desc => "Factoids about Summer Glau, the Hollywood actress",
+        see_also  => <<'EOF',
 <ul>
 
 [% PROCESS summer_glau_see_also %]
@@ -766,8 +748,6 @@ EOF
 EOF
         meta_desc =>
 "Factoids about Taylor Swift, the singer-songwriter and entertainer",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ul>
 <li>
@@ -820,8 +800,6 @@ EOF
 EOF
         meta_desc =>
 "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
         see_also => <<'EOF',
 <ul>
 
@@ -891,10 +869,8 @@ Female Ass-Kickers</a>.
 </li>
 </ul>
 EOF
-        meta_desc      => "Factoids about Xena, the Warrior Princess",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        meta_desc => "Factoids about Xena, the Warrior Princess",
+        see_also  => <<'EOF',
 <ul>
 
 <li>
@@ -980,10 +956,8 @@ refers to several resources.
 
 </ul>
 EOF
-        meta_desc      => "Facts about XSLT, the most Evil thing in existence.",
-        nav_blocks_tt2 => <<'EOF',
-EOF
-        see_also => <<'EOF',
+        meta_desc => "Facts about XSLT, the most Evil thing in existence.",
+        see_also  => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -1085,8 +1059,6 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 {{ p.see_also() }}
 
 [% END %]
-
-{{ p.nav_blocks_tt2() }}
 
 [% END %]
 END_OF_TEMPLATE

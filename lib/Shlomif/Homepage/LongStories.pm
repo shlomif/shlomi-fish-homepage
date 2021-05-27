@@ -129,7 +129,7 @@ EOF
 <p class="hhfg abstract">
 Jennifer (loosely based on
 <a href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy</a>
-from $(BtVS)
+from $(BtVS))
 is a trendy and popular high school senior who is living and
 studying in the vicinity of Los Angeles. Her best friend, Taylor
 (<a href="https://buffy.fandom.com/wiki/Alexander_Harris">Xander</a>), convinces her
@@ -207,8 +207,8 @@ serious messages and insights.
 EOF
         entry_extra_html => <<'EOF',
 <p>
-This screenplay, a parody and reflection on $(BtVS)
-and inspired by many other sources, is in a usable state.
+This screenplay, a parody and reflection on $(BtVS),
+and inspired by many other sources, is in a mostly complete state.
 </p>
 EOF
 
@@ -705,10 +705,8 @@ sub _process_html
     my ( $self, $html_code ) = @_;
 
     $html_code =~ s#"\$\(ROOT\)/([^"]+?)"#
-                q{"}
-                . _rel_url($1)
-                . q{"}
-        #eg;
+        q{"} . _rel_url($1) . q{"}
+    #eg;
 
     $html_code =~ s#\$\(BtVS\)#$BtVS#g;
 

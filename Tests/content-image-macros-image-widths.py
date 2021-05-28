@@ -14,7 +14,7 @@ from PIL import Image
 from lxml import html
 
 
-# the WIDTH is subject to update in the future
+# The WIDTH might be changed in the future
 WIDTH = 600
 
 

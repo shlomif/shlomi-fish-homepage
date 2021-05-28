@@ -89,7 +89,8 @@ IMAGE_MACRO_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>
 <div class="leading_path"><a href="{base_path}">Shlomi Fish’s
-Homepage</a> → <a href="./" title="{main_title}">{main_title}</a>
+Homepage</a> →
+<a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}
 → <b>{title}</b>
 </div>
@@ -215,7 +216,8 @@ title="Normal"/>
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>
 <div class="leading_path"><a href="{base_path}">Shlomi Fish’s
-Homepage</a> → <a href="./" title="{main_title}">{main_title}</a>
+Homepage</a> →
+<a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}
 → <b>{title}</b>
 </div>

@@ -299,6 +299,7 @@ class XhtmlSplitter:
                 'base_path': self.base_path,
                 'body': (body_string.decode('utf-8')),
                 'main_title': self.main_title_esc,
+                'path_to_all_in_one': self.path_to_all_in_one,
                 'title': header_esc,
                 'breadcrumbs_trail': ''.join(
                     [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)

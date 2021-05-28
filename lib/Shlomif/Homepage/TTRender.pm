@@ -114,6 +114,13 @@ sub _render_nav_blocks
     return $ret;
 }
 
+my $NAV_BLOCKS__START = <<'EOF';
+<nav class="nav_blocks">
+<header>
+<h2 id="nav_blocks">Navigation Blocks</h2>
+</header>
+EOF
+
 sub render_compact_nav_blocks
 {
 
@@ -139,18 +146,11 @@ sub render_compact_nav_blocks
     }
     my $ret = '';
 
-    my $start = <<'EOF';
-<div class="nav_blocks">
-
-<header>
-<h2 id="nav_blocks">Navigation Blocks</h2>
-</header>
-EOF
-    $ret .= $start;
+    $ret .= $NAV_BLOCKS__START;
 
     $ret .= _render_nav_blocks( { 'names' => $names } );
 
-    $ret .= qq#</div>#;
+    $ret .= qq#</nav>#;
     return $ret;
 }
 

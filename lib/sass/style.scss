@@ -149,9 +149,22 @@ body {
     }
 }
 
-.nav_blocks .ext {
-    background-image: url(./images/external-link-ltr-icon.min.svg);
-    background-position: center right;
-    background-repeat: no-repeat;
-    padding-right: 13px;
+.nav_blocks {
+    max-width: 80%;
+    @if false {
+        $b: 3px red solid;
+        border-left: $b;
+        border-right: $b;
+        padding-left: 0;
+    }
+
+    > table {
+        width: 100%;
+    }
+    .ext {
+        background-image: url(./images/external-link-ltr-icon.min.svg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        padding-right: 13px;
+    }
 }

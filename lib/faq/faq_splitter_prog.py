@@ -369,6 +369,7 @@ def _screenplays_main():
         for part_suf in [
             "Planting-Trees",
             "Queen-Amidala-vs-the-Klingon-Warriors",
+            "The-Fifth-Sith",
                 ]:
             part = "Queen-Padme-Tales--" + part_suf
             path_to_input = "{}.html".format(part)

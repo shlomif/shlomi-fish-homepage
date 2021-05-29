@@ -455,8 +455,20 @@ my %tr_s = (
                 path       => "humour/fortunes/",
             ),
             _l(
+                inner_html => "##programming",
+                path       => "humour/fortunes/sharp-programming.html",
+            ),
+            _l(
                 inner_html => "#perl",
                 path       => "humour/fortunes/sharp-perl.html",
+            ),
+            _l(
+                inner_html => "Joel on Software",
+                path       => "humour/fortunes/joel-on-software.html",
+            ),
+            _l(
+                inner_html => "Paul Graham",
+                path       => "humour/fortunes/paul-graham.html",
             ),
             _github(
                 url =>

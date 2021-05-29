@@ -447,6 +447,23 @@ my %tr_s = (
             ),
         ],
     ),
+    'foss_fortunes' => _tr(
+        title => "Fortune Cookies (Quotes)",
+        items => [
+            _l(
+                inner_html => "Main Page",
+                path       => "humour/fortunes/",
+            ),
+            _l(
+                inner_html => "#perl",
+                path       => "humour/fortunes/sharp-perl.html",
+            ),
+            _github(
+                url =>
+"https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/humour/fortunes",
+            ),
+        ],
+    ),
 );
 
 sub _get_tr
@@ -534,6 +551,8 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
                 _get_tr('foss_facts'),
                 _subdiv_tr( title => q{Bits}, ),
                 _get_tr('foss_bits'),
+                _subdiv_tr( title => q{Quotes}, ),
+                _get_tr('foss_fortunes'),
             ],
         },
     ),

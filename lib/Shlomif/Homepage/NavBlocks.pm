@@ -470,6 +470,14 @@ my %tr_s = (
                 inner_html => "Paul Graham",
                 path       => "humour/fortunes/paul-graham.html",
             ),
+            _l(
+                inner_html => "Subversion folklore",
+                path       => "humour/fortunes/subversion.html",
+            ),
+            _l(
+                inner_html => "Israeli FOSS folklore",
+                path       => "humour/fortunes/tinic.html",
+            ),
             _github(
                 url =>
 "https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/humour/fortunes",

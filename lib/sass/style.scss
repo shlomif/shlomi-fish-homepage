@@ -158,9 +158,13 @@ body {
         padding-left: 0;
     }
 
-    > table {
-        width: 100%;
+    > section,
+    & {
+        > table {
+            width: 100%;
+        }
     }
+
     .ext {
         background-image: url(./images/external-link-ltr-icon.min.svg);
         background-position: center right;

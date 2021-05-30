@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<div class="side_toc fancy_sects">
+<div class="fancy_sects">
 
 [% default_toc %]
 
@@ -22,7 +22,7 @@
     { "id" => "commercial_fanfic_initiative", "title" => "The Commercial Fanfic Initiative", },
 ] %]
 
-[% WRAPPER h2_section id= (rec.id _ "_sect") title=(rec.title) %]
+[% WRAPPER h3_section id= (rec.id _ "_sect") title=(rec.title) %]
 
 [% print_nav_blocks( names => [rec.id] ) %]
 

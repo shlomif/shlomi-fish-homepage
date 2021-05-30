@@ -71,7 +71,7 @@ q{//x:nav[@class="nav_blocks"]/x:table[@id="%s_nav_block"]},
             }
             my $r = $xpc->find(
                 sprintf(
-q{//x:div[@class="nav_blocks"]/x:section[./x:header/x:h2[@id="%s_sect"]]/x:table[@id="%s_nav_block"]},
+q{//x:div[@class="nav_blocks"]/x:section[./x:header/x:h3[@id="%s_sect"]]/x:table[@id="%s_nav_block"]},
                     ($block_id) x 2 ),
                 $master_doc
             );

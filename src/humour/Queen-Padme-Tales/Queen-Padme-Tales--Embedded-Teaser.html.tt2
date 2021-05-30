@@ -1,0 +1,17 @@
+[%- SET title = "Queen Padmé Tales: Teaser (Embedded)" -%]
+[%- SET desc = "Queen Padmé Tales: Teaser" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<iframe src="[% base_path %]humour/Queen-Padme-Tales/teaser/" allowfullscreen="allowfullscreen"
+[% IF 1 %]
+style="height: 800px; transform: scale(0.5); width: 80%;"
+[% END %]
+></iframe>
+
+<p>
+style="height: 800px; transform: scale(0.5); width: 80%;"
+style="height: auto ; width: auto ; max-width: 90% ; transform: scale(0.5);"
+</p>
+
+[% END %]

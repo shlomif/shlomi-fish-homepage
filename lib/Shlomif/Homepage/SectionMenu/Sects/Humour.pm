@@ -250,6 +250,11 @@ my $_humour_tree_contents = {
                             skip => 1,
                             subs => [
                                 {
+                                    text => "Teaser",
+                                    url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Embedded-Teaser.html",
+                                },
+                                {
                                     text =>
 "Queen Amidala vs. the Klingon Warriors",
                                     url =>

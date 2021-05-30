@@ -7,24 +7,14 @@
 
 [% default_toc %]
 
+[% USE HTML  %]
 [% WRAPPER nav_blocks  %]
 
-[% FOREACH rec IN [
-    { "id" => "buffy", "title" => "Buffy", },
-    { "id" => "harry_potter", "title" => "Harry Potter", },
-    { "id" => "foss", "title" => "Free &amp; Open Source Software (FOSS)", },
-    { "id" => "friends_tv", "title" => "Friends (Television Series)", },
-    { "id" => "mlp_fim", "title" => "My Little Pony (FiM)", },
-    { "id" => "politics", "title" => "Politics", },
-    { "id" => "self_ref", "title" => "Self-Reference/Gödel, Escher, Bach/Last Action Hero", },
-    { "id" => "star_trek", "title" => "Star Trek", },
-    { "id" => "xkcd", "title" => "Summer Glau/xkcd", },
-    { "id" => "commercial_fanfic_initiative", "title" => "The Commercial Fanfic Initiative", },
-] %]
+[% FOREACH rec_id IN nav_blocks_obj.list_nav_blocks() %]
 
-[% WRAPPER h3_section id= (rec.id _ "_sect") title=(rec.title) %]
+[% WRAPPER h3_section id= (rec_id _ "_sect") title=(HTML.escape(nav_blocks_obj.get_nav_block(rec_id).text_title())) %]
 
-[% print_nav_blocks( names => [rec.id] ) %]
+[% print_nav_blocks( names => [rec_id] ) %]
 
 [%- END -%]
 

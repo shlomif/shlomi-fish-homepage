@@ -285,8 +285,9 @@ sub _subdiv_tr
 my %table_blocks = (
     'buffy' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'buffy_nav_block',
-            tr_s => [
+            id         => 'buffy_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Buffy Fanfiction}, ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
@@ -300,8 +301,9 @@ my %table_blocks = (
     ),
     'harry_potter' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'harry_potter_nav_block',
-            tr_s => [
+            id         => 'harry_potter_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Harry Potter/Emma Watson Fanfiction}, ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('selina_mandrake'),
@@ -316,8 +318,9 @@ my %table_blocks = (
     ),
     'foss' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'foss_nav_block',
-            tr_s => [
+            id         => 'foss_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Open Source/Perl/etc. Fanfiction}, ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('hhfg'),
@@ -330,8 +333,9 @@ my %table_blocks = (
     ),
     'politics' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'politics_nav_block',
-            tr_s => [
+            id         => 'politics_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
                 _get_tr('the_enemy'),
@@ -345,8 +349,9 @@ my %table_blocks = (
     ),
     'star_trek' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'star_trek_nav_block',
-            tr_s => [
+            id         => 'star_trek_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Star Trek Fanfiction}, ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('star_trek_wtld'),
@@ -356,8 +361,9 @@ my %table_blocks = (
     ),
     'xkcd' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'xkcd_nav_block',
-            tr_s => [
+            id         => 'xkcd_nav_block',
+            text_title => 'dummy',
+            tr_s       => [
                 _master_tr( title => q{Summer Glau/xkcd Fanfiction}, ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _get_tr('summer_nsa'),

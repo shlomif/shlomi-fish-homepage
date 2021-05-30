@@ -507,8 +507,9 @@ sub _subdiv_tr
 my %table_blocks = (
     'buffy' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'buffy_nav_block',
-            tr_s => [
+            id         => 'buffy_nav_block',
+            text_title => "Buffy",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
@@ -526,8 +527,9 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
     ),
     'friends_tv' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'friends_tv_nav_block',
-            tr_s => [
+            id         => 'friends_tv_nav_block',
+            text_title => "Friends (Television Series)",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction},
@@ -541,8 +543,9 @@ q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction}
     ),
     'harry_potter' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'harry_potter_nav_block',
-            tr_s => [
+            id         => 'harry_potter_nav_block',
+            text_title => "Harry Potter",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emma Watson Fanfiction},
@@ -561,8 +564,9 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
     ),
     'foss' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'foss_nav_block',
-            tr_s => [
+            id         => 'foss_nav_block',
+            text_title => "Free & Open Source Software (FOSS)",
+            tr_s       => [
                 _master_tr( title => q{Open Source/Perl/etc. Fanfiction}, ),
                 _subdiv_tr( title => q{Stories and Screenplays}, ),
                 _get_tr('hhfg'),
@@ -578,8 +582,9 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
     ),
     'politics' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'politics_nav_block',
-            tr_s => [
+            id         => 'politics_nav_block',
+            text_title => "Politics",
+            tr_s       => [
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
                 _get_tr('the_enemy'),
@@ -593,8 +598,9 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
     ),
     'star_trek' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'star_trek_nav_block',
-            tr_s => [
+            id         => 'star_trek_nav_block',
+            text_title => "Star Trek",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfiction},
@@ -608,8 +614,9 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
     ),
     'xkcd' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'xkcd_nav_block',
-            tr_s => [
+            id         => 'xkcd_nav_block',
+            text_title => "Summer Glau/xkcd",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
@@ -626,8 +633,9 @@ q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfictio
     ),
     'mlp_fim' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'mlp_fim_nav_block',
-            tr_s => [
+            id         => 'mlp_fim_nav_block',
+            text_title => "My Little Pony (FiM)",
+            tr_s       => [
                 _master_tr(
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
@@ -640,7 +648,9 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
     ),
     'self_ref' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'self_ref_nav_block',
+            id         => 'self_ref_nav_block',
+            text_title =>
+                "Self-Reference/Gödel, Escher, Bach/Last Action Hero",
             tr_s => [
                 _master_tr(
                     title =>
@@ -656,8 +666,9 @@ q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Ba
     'commercial_fanfic_initiative' =>
         Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
-            id   => 'commercial_fanfic_initiative_nav_block',
-            tr_s => [
+            id         => 'commercial_fanfic_initiative_nav_block',
+            text_title => "The Commercial Fanfic Initiative",
+            tr_s       => [
                 _master_tr( title => q{The Commercial Fanfic Initiative}, ),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr('commercial_fanfic_initiative__mission_stmt'),

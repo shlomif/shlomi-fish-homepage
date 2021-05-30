@@ -8,6 +8,7 @@ extends('Shlomif::Homepage::NavBlocks::Thingy');
 
 has 'tr_s'         => ( is => 'ro', isa => 'ArrayRef', required => 1 );
 has 'id'           => ( is => 'ro', isa => "Str",      required => 1 );
+has 'text_title'   => ( is => 'ro', isa => "Str",      required => 1 );
 has '_local_links' => ( is => 'ro', isa => "HashRef",  is       => 'lazy', );
 
 sub _build__local_links

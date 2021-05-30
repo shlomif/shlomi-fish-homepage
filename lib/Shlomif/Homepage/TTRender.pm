@@ -229,6 +229,7 @@ has vars => (
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
             check_nav_blocks    => \&check_nav_blocks,
+            nav_blocks_obj      => $nav_blocks,
             print_nav_blocks    => \&_render_nav_blocks,
             article_index__body => sub {
                 return Shlomif::Homepage::ArticleIndex->new->calc_string();

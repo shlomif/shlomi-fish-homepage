@@ -215,9 +215,10 @@ EOF
     {
         my $table = Shlomif::Homepage::NavBlocks::TableBlock->new(
             {
-                id    => "harry_potter_nav_block",
-                title => "Harry Potter/Emma Watson Fanfiction",
-                tr_s  => [],
+                id         => "harry_potter_nav_block",
+                text_title => 'dummy',
+                title      => "Harry Potter/Emma Watson Fanfiction",
+                tr_s       => [],
             },
         );
         my $master_tr = Shlomif::Homepage::NavBlocks::Master_Tr->new(

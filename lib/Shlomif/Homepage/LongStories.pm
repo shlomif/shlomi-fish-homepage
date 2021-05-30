@@ -112,6 +112,20 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
 (OK - an altar with a priest), the Bazaar, the Well, the Wall, etc.
 </p>
+
+<p class="humanity abstract">
+The original Humanity project, back in 2000 was my opening shot of the <a
+href="$(ROOT)/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">the
+open content / Web 2.0 revolution</a> aiming to be a "bazaar-style"
+collaborative project for writing a screenplay. It fuzzled out due to the
+clunky CVS UI, but nowadays collaboratively written screenplays are
+common - only using <a href="https://en.wikipedia.org/wiki/List_of_wiki_software">wiki
+software</a>
+or <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git DVCS</a>
+or similar.
+</p>
+
+
 EOF
     },
     {

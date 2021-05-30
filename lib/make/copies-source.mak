@@ -27,5 +27,4 @@ $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_test_run_dir)/%: src/
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_too_many_ways_dir)/%: src/images/presentations/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
-lib/docbook/5/xml/putting-cards-2021.xml: lib/repos/putting-cards-2021/shlomif-putting-cards-on-the-table-2021.docbook5.xml
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml

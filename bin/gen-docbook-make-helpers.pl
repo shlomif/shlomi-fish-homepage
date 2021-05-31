@@ -92,16 +92,6 @@ $git_obj->git_in_checkout_task(
 $git_obj->git_in_checkout_task(
     {
         pivot_bn     => "README.md",
-        repo         => "shlomif-humour-fortunes-archives-assets",
-        branch       => "master",
-        user         => "shlomif",
-        base_dirname => "lib/repos",
-    }
-);
-
-$git_obj->git_in_checkout_task(
-    {
-        pivot_bn     => "README.md",
         repo         => "c-begin",
         user         => "shlomif",
         base_dirname => "lib",

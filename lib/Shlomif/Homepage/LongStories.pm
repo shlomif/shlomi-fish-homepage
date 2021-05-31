@@ -516,7 +516,7 @@ Critics on online publications and social media who are unhappy with every choic
 <li>
 <p>
 A poorly executed takeover attempt by a "real life" celebrity
-(<a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a>)
+(<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>)
 thought to be flawless.
 </p>
 </li>
@@ -720,9 +720,10 @@ sub _process_html
 {
     my ( $self, $html_code ) = @_;
 
-    $html_code =~ s#"\$\(ROOT\)/([^"]+?)"#
+    $html_code =~
+        s#"(?: (?: \$\(ROOT\) / ) | (?: \[\% \s* base_path \s* \%\]))([^"]+?)"#
         q{"} . _rel_url($1) . q{"}
-    #eg;
+    #egx;
 
     $html_code =~ s#\$\(BtVS\)#$BtVS#g;
 

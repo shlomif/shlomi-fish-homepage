@@ -91,6 +91,12 @@ install:
     - sudo apt-get --only-upgrade install libnss3
     - sudo apt-get install -qq inkscape
 script:
+    # Taken from https://dev.to/hiro98/how-to-use-the-systemd-userspace-dbus-api-on-traivis-ci-lag
+    # Thanks!
+    - sudo apt update
+    - sudo apt install dbus-user-session
+    - systemctl --user start dbus
+    - export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
     - export XML_CATALOG_FILES="/etc/xml/catalog $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
     - TIDYALL_DATA_DIR="$HOME/tidyall_d" bash -x bin/run-ci-build.bash
     - tar -caf site-dest.tar.xz dest/

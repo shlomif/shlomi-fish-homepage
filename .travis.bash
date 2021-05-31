@@ -59,6 +59,8 @@ then
     perl bin/my-cookiecutter.pl
     # For various sites
     cpanm --notest HTML::Toc XML::Feed
+    PERL_CPANM_OPT+=" --quiet "
+    export PERL_CPANM_OPT
     deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     PATH="$HOME/bin:$PATH"

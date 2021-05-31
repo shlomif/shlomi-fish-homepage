@@ -118,7 +118,7 @@ foreach my $repo (
     $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );
 }
 
-my $gen_scr_ret = Shlomif::Homepage::GenScreenplaysMak->new->generate(
+my $gen_screenplays_ret = Shlomif::Homepage::GenScreenplaysMak->new->generate(
     { git_task => $git_task, } );
 
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
@@ -136,6 +136,9 @@ my $future = $git_obj->end();
 
 # $future->await();
 path("lib/make/docbook/sf-screenplays.mak")->append_utf8(
-    ( map { $_->() } ( @{ $gen_scr_ret->{generate_file_list_promises} }, ) ),
-    ( @{ $gen_scr_ret->{addprefixes} }, ),
+    (
+        map { $_->() }
+            ( @{ $gen_screenplays_ret->{generate_file_list_promises} }, )
+    ),
+    ( @{ $gen_screenplays_ret->{addprefixes} }, ),
 );

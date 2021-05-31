@@ -26,7 +26,7 @@ xserver_for_inkscape()
     Xvfb :1 -screen 0 1920x1200x24 &
     export DISPLAY=":1.0"
 }
-xserver_for_inkscape
+# xserver_for_inkscape
 if ! ./gen-helpers | perl bin/filter-make.pl ; then
     echo "Error in executing ./gen-helpers.pl" 1>&2
     exit -1
@@ -57,7 +57,7 @@ stop_xserver_for_inkscape()
     kill %1
     unset DISPLAY
 }
-stop_xserver_for_inkscape
+# stop_xserver_for_inkscape
 if ! m $test_target ; then
     echo "Error in executing make $test_target." 1>&2
     exit -1

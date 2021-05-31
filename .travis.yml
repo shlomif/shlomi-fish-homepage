@@ -79,8 +79,8 @@ rvm:
 before_install:
     # Taken from https://github.com/brad/Inkscape-OpenSCAD-DXF-Export/blob/master/.travis.yml
     # Thanks!
-    - "export DISPLAY=:99.0"
-    - "sh -e /etc/init.d/xvfb start"
+    # - "export DISPLAY=:99.0"
+    # - "sh -e /etc/init.d/xvfb start"
     - . .travis.bash --cmd before_install
 install:
     - git clone https://github.com/vim/vim && ( cd vim && git checkout v8.2.1320 && ./configure --with-features=huge && make && sudo make install ) && rm -fr vim
@@ -95,3 +95,5 @@ script:
     - TIDYALL_DATA_DIR="$HOME/tidyall_d" bash -x bin/run-ci-build.bash
     - tar -caf site-dest.tar.xz dest/
     - set +x
+services:
+    - xvfb

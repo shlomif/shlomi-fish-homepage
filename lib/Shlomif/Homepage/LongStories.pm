@@ -491,8 +491,9 @@ She has enough time to contribute on Internet content and code sharing sites.
 
 <li>
 <p>
-She has many supporting friends, including her boyfriend Anakin Skywalker,
-a promising Jedi padawan who is about her age, with aspirations
+She has many supporting friends, including her boyfriend Anakin Skywalker
+(<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>)
+a promising Jedi-wannabe who is about her age, with aspirations
 for joining the mysterious but revered jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>
 are the known extant members.
@@ -514,8 +515,9 @@ Critics on online publications and social media who are unhappy with every choic
 
 <li>
 <p>
-A poorly executed takeover attempt by a "real life" celebrity thought to
-be flawless.
+A poorly executed takeover attempt by a "real life" celebrity
+(<a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a>)
+thought to be flawless.
 </p>
 </li>
 

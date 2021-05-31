@@ -20,6 +20,13 @@ m()
     cd .. && git clone https://github.com/shlomif/shlomi-fish-sites--fonts.git fffFFF && cd fffFFF && perl install.pl && cd .. && rm -fr fffFFF
 ) || exit -1
 
+# For inkscape: job no. 1
+xserver_for_inkscape()
+{
+    Xvfb :1 -screen 0 1920x1200x24 &
+    export DISPLAY=":1.0"
+}
+xserver_for_inkscape
 if ! ./gen-helpers | perl bin/filter-make.pl ; then
     echo "Error in executing ./gen-helpers.pl" 1>&2
     exit -1
@@ -45,6 +52,12 @@ then
     fi
     test_target='runtest'
 fi
+stop_xserver_for_inkscape()
+{
+    kill %1
+    unset DISPLAY
+}
+stop_xserver_for_inkscape
 if ! m $test_target ; then
     echo "Error in executing make $test_target." 1>&2
     exit -1

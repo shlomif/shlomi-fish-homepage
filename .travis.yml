@@ -95,6 +95,7 @@ script:
     # Thanks!
     - sudo apt update
     - sudo apt install dbus-user-session
+    - sudo apt install at-spi2-core
     - systemctl --user start dbus
     - export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
     - export XML_CATALOG_FILES="/etc/xml/catalog $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"

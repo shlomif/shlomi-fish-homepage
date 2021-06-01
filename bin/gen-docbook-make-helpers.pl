@@ -5,6 +5,7 @@ use warnings;
 use autodie;
 
 use Carp ();
+use List::Util qw/ uniq /;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::DocBook::GenMake       ();
@@ -100,10 +101,10 @@ $git_obj->git_in_checkout_task(
 
 foreach my $repo (
     [ 'Shlomi-Fish-Back-to-my-Homepage-Logo', 1 ],
-    (
-        map { s#/[^/]*\z##r }
+    uniq(
+        map { m#\A([^/]+)# ? ($1) : ( die "wrong captioned-image '$_'" ) }
             path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
-        ),
+    ),
     'XML-Grammar-Vered',
     'captioned-images--repo',
     'how-to-share-code-online',

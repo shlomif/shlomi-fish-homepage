@@ -2653,6 +2653,10 @@ and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration
 </p>
 
 <p>
+In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> used for code.
+</p>
+
+<p>
 While I am not ashamed of the site’s sources, they went through a long
 <a href="#site_history">history</a> and
 <a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
@@ -2661,8 +2665,8 @@ some better approaches out there for that, and often it is simpler to just
 write something of your own using a <a href="[% base_path %]open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
 a good <a href="[% base_path %]open-source/resources/software-tools/">build system</a>
 and some code glue. However, for me, converting to something else would be too
-time-consuming, and I've already found some faults in one existing popular
-static site generator that I tried.
+time-consuming, and I've already found some faults in some existing popular
+static site generators that I tried.
 </p>
 
 [%- END -%]
@@ -2680,7 +2684,7 @@ about three
 <p>
 It is true that I make use of a lot of Perl code to generate the site's
 content, but the site's source code is not limited to Perl, and it does
-not run on the web server, nor is required to run most of it.
+not run on the web server, nor is required to serve most of it.
 </p>
 
 [%- END -%]
@@ -3026,7 +3030,8 @@ in the videoclip for <a href="https://en.wikipedia.org/wiki/Bad_Blood_(Taylor_Sw
 (and <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
 <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold Schwarzenegger</a>
 and similar likely showed it more than once) that they actually are indeed so
-violent in real life? While sometimes I felt like doing that when there was a lot
+violent in real life? While sometimes I felt like going on a mayhem
+rage when there was a lot
 of commotion outside when I was trying to sleep or concentrate, I didn't
 actually do that, and at most ranted about it online or called the police.
 I believe no <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#great-hackers">great
@@ -3296,7 +3301,7 @@ Cookie Monster <a href="https://www.youtube.com/watch?v=uCeMZccDMA0">agrees with
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "may_i_prepare_a_derivative" title = "May I prepare a derivative of a screenplay, bit, aphorism, or other work (or works) of yours? (E.g: a computer game, a tabletop game, a parody, a video, an animation, an audio file, a picture?)"  %]
+[% WRAPPER faq_h3_section id = "may_i_prepare_a_derivative" title = "May I prepare a derivative of a screenplay, bit, aphorism, essay, captioned image, or other work (or works) of yours? (E.g: a computer game, a tabletop game, a parody, a video, an animation, an audio file, a picture, a version with some amendments or corrections, a translation to a different language?)"  %]
 
 <p>
 Sure! <a href="https://en.wikipedia.org/wiki/Go_ahead,_make_my_day">Go ahead</a> as
@@ -3309,6 +3314,13 @@ Internet social media or other sites.
 
 <p>
 Also see <a href="#financial_status">some relicensing options</a>.
+</p>
+
+<p>
+Do note that I try to provide sources for most of my works - usually on <a href="https://github.com/shlomif?tab=repositories">my GitHub account</a>
+or <a href="https://www.shlomifish.org/open-source/projects/#forges_home_pages">other
+code sharing sites</a> (where "code" can be <a href="https://en.wikipedia.org/wiki/Markup_language">markup</a> or a different file format).
+As a result, I recommend you peruse them if you wish to keep the best quality.
 </p>
 
 [% END %]

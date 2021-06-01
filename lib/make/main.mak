@@ -126,8 +126,9 @@ ifeq ($(UPLOAD_MATHJAX),1)
 	RSYNC_EXCLUDES :=
 endif
 
-UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
+# UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
 UPLOAD_BRIEF = (cd $(POST_DEST) && $(RSYNC) --no-progress --no-verbose $(RSYNC_EXCLUDES) -a . $1 )
+UPLOAD = $(UPLOAD_BRIEF)
 
 upload_deps: all
 

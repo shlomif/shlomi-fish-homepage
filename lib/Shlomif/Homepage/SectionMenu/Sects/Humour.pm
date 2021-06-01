@@ -15,6 +15,8 @@ use Path::Tiny qw( path );
 my $json_data_fn =
     Shlomif::FindLib->rel_path( [qw(Shlomif factoids-nav.json)] );
 
+my @both_langs = ( lang => +{ en => 1, "he" => 1, }, );
+
 my $_humour_tree_contents = {
     host        => "t2",
     text        => "Humour",
@@ -384,7 +386,10 @@ my $_humour_tree_contents = {
                     url   => "humour/bits/facts/",
                     title =>
 "Collections of funny factoids about various people and things",
-                    subs => decode_json( path($json_data_fn)->slurp_raw ),
+                    subs => [
+                        map { ; +{ @both_langs, %$_ } }
+                            @{ decode_json( path($json_data_fn)->slurp_raw ) }
+                    ],
                 },
                 {
                     text  => "Image Macros",

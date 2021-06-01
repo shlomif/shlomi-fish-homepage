@@ -2,6 +2,7 @@ package Shlomif::Homepage::SectionMenu::BaseSectionClass;
 
 use strict;
 use warnings;
+use List::Util qw/ any /;
 
 sub _check_subtree
 {
@@ -16,16 +17,11 @@ sub _calc_lang_tree
 
     my $ret = +{%$tree};
 
-    my $rec_lang = ( delete( $ret->{lang} ) // "en" );
-    if ( !exists( $lang->{$rec_lang} ) )
+    my $rec_lang = ( delete( $ret->{lang} ) // { "en" => 1, } );
+    if ( '' eq ref $rec_lang )
     {
-        $ret->{skip} = 1;
+        $rec_lang = { $rec_lang => 1, };
     }
-    else
-    {
-        $ret->{lang} = $rec_lang;
-    }
-
     if ( exists $ret->{subs} )
     {
         my $subs = [
@@ -38,6 +34,10 @@ sub _calc_lang_tree
             {
                 die;
             }
+            foreach my $t (@$subs)
+            {
+                %$rec_lang = ( %$rec_lang, ( %{ $t->{lang} // +{} } ), );
+            }
             $ret->{subs} = $subs;
         }
         else
@@ -45,6 +45,15 @@ sub _calc_lang_tree
             delete $ret->{subs};
         }
     }
+    if ( not( any { exists( $rec_lang->{$_} ) } keys %$lang ) )
+    {
+        $ret->{skip} = 1;
+    }
+    else
+    {
+        $ret->{lang} = $rec_lang;
+    }
+
     if ( $self->_check_subtree($ret) )
     {
         $ret->{lang} //= $rec_lang;

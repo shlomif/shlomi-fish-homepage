@@ -45,6 +45,8 @@ then
     eval "$(GIMME_GO_VERSION=1.13 gimme)"
     go get -u github.com/tdewolff/minify/cmd/minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
+    PERL_CPANM_OPT+=" --quiet "
+    export PERL_CPANM_OPT
     cpanm -v --notest IO::Async
     cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
     export CPATH="${CPATH}:/usr/include/tidy"
@@ -59,8 +61,6 @@ then
     perl bin/my-cookiecutter.pl
     # For various sites
     cpanm --notest HTML::Toc XML::Feed
-    PERL_CPANM_OPT+=" --quiet "
-    export PERL_CPANM_OPT
     deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
     gem install asciidoctor compass compass-blueprint
     PATH="$HOME/bin:$PATH"

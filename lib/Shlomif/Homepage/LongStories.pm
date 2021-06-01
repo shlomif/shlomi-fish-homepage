@@ -509,7 +509,8 @@ In practice though, there is <a href="https://en.wikipedia.org/wiki/Damocles">th
 
 <li>
 <p>
-Critics on online publications and social media who are unhappy with every choice she makes.
+Critics on online publications and social media who are unhappy with every
+choice she makes.
 </p>
 </li>
 
@@ -532,17 +533,16 @@ even in his emails.
 <p>
 Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
-and other franchises, who appear at the seemingly least
-desirable times, and whom
-everyone can see, hear, photograph, and record,
-but whom many people believe are some kind of trick.
+and other franchises, who appear at the seemingly least desirable moments, and
+whom everyone can see, hear, photograph, and record, but whom many people
+believe are some kind of trick.
 </p>
 </li>
 
 <li>
 <p>
 And her biggest pet
-peeve: her bank account which keeps getting larger, despite her many attempts
+peeve: her bank balance which keeps getting larger, despite her many attempts
 to reduce it.
 </p>
 </li>

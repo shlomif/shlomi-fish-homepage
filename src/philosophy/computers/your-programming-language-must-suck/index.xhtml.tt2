@@ -91,13 +91,18 @@ versions of Visual Basic .NET have), and for all other grammars you may need to 
 </p>
 
 <p>
-Finally, many people absolutely hate all the clutter created by the leading
+Many people absolutely hate all the clutter created by the leading
 <a
 href="http://en.wikipedia.org/wiki/Sigil_%28computer_programming%29">sigils</a>
 of Perl 5 (the <code>$</code>, <code>@</code>, etc.), and similar languages, but they allow for much
 better backward compatibility, facilitate the so-called "interpolation" (=
 embedding inside strings), and also give some important visual cues when
 skimming code (even without syntax highlighting).
+</p>
+
+<p>
+Finally, while most modern languages use lexical <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope">scoping</a>,
+I have found dynamic scoping to be somewhat advantageous when writing <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash / Zsh</a> and Perl 5 code (which also has lexically scoped variables).
 </p>
 
 <p><b>You are damned either way</b>, whatever you do.</p>

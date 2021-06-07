@@ -72,6 +72,16 @@ class MyTests(html_unit_test.TestCase):
             ".//h3/@id='summerschool-at-the-nsa']/p[@class='tagline' " +
             "and contains(text(), 'As the sling shoots')]")
 
+    def test_anchor_link(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/Terminator/Liberation/' +
+            'indiv-nodes/hamlet-parody-Cher-parody.xhtml'
+        )
+        return self.doc(input_fn).has_one(
+            ".//a[@href='../ongoing-text.html#emulating-arnie-as-hamlet'"
+            "and text()='the Hamlet parody scene']"
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

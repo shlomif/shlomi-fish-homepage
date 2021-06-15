@@ -252,3 +252,4 @@ if ( my $Err = $@ )
 
 exit if delete $ENV{LATEMP_STOP_GEN};
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );
+my_system( [ 'gmake', '-j1', 'tsc_www', ] );

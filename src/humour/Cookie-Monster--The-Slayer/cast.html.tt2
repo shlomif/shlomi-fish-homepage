@@ -1,0 +1,132 @@
+[%- SET title = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody - Who Should be the Cast?" -%]
+
+[%- PROCESS "stories/terminator-liberation-common.tt2" %]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="side_toc fancy_sects">
+
+[% default_toc %]
+
+[% long_stories.calc_common_top_elems(id => 'cookie_monster__the_slayer') %]
+
+[% WRAPPER about_sect  %]
+
+<p>
+On this page, I would like to note who I think should be the cast for some
+of the characters of "Terminator: Liberation".
+</p>
+
+<section>
+
+<header>
+
+<h3 id="cast__direction">Direction: <a href="https://en.wikipedia.org/wiki/Joss_Whedon">Joss Whedon</a></h3>
+
+<a href="https://en.wikipedia.org/wiki/Joss_Whedon#/media/File:Joss_Whedon_by_Gage_Skidmore_7.jpg"><img src="[% base_path %]humour/bits/facts/images/joss-whedon-small.webp" alt="Photo of Joss Whedon"/></a>
+
+</header>
+
+[% IF 0 %]
+
+<p>
+I'd like Whedon to direct <i>Selina</i> because I feel it should be directed
+the same as the first three seasons of <i>Buffy</i>, before <a
+href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a> was eliminated and
+the <a href="https://buffy.fandom.com/wiki/Scooby_Gang">Scooby Gang</a>
+graduated from high school, and Buffy likely became a soap
+opera. Anyway, while Buffy had very good special effects, the ones in <i>Selina</i>
+may be somewhat more cheesy.
+</p>
+
+<p>
+I believe more directors can and should direct parodies and <a
+href="https://github.com/shlomif/my-real-person-fan-fiction">other fan
+fiction</a> of their own works or franchises.
+</p>
+
+[% END %]
+
+</section>
+
+<section>
+
+<header>
+
+<h3 id="cast__emma_watson">Emma Watson: <a href="http://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a></h3>
+
+<a href="http://commons.wikimedia.org/wiki/File:Emma_Watson_GoF_Premiere.jpg"><img src="[% base_path %]humour/bits/facts/images/emwatson-small.jpg" alt="Photo of Emma Watson"/></a>
+
+</header>
+
+[% IF 0 %]
+<p>
+I originally wrote this argument for choosing Ms. Watson there:
+</p>
+
+<blockquote cite="">
+
+<p>
+Well, Selina has to be an Englishwoman, right? Otherwise, I feel that
+Selina is similar enough to
+<a href="http://en.wikipedia.org/wiki/Hermione_Granger">Hermione Granger</a>
+to warrant Ms. Watson playing her. Furthermore,
+<a href="http://en.wikipedia.org/wiki/Keira_Knightley">Keira Knightley</a>
+plays the kind of females, who make the room miss a beat when they
+are seen, which isn't what I want for Selina, who should be the kind of girl
+that people should not feel intimated by.
+</p>
+
+</blockquote>
+
+[% END %]
+
+</section>
+
+<section>
+
+<header>
+<h3 id="cast__Arnold_Schwarzenegger">Arnold Schwarzenegger: <a href="http://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold Schwarzenegger</a></h3>
+
+[% IF 0 %]
+
+<a href="http://www.flickr.com/photos/genevieve719/4878236040/"><img
+src="images/wil_wheaton-reduced.jpg" alt="Photo of Wil Wheaton"/></a>
+
+[% END %]
+
+</header>
+
+<p>
+A logical choice.
+</p>
+
+</section>
+
+<section>
+
+<header>
+<h3 id="cast__Hannah">Hannah the Evil Terminator: <a href="https://www.facebook.com/hannah.saunders.1213">Hannah</a></h3>
+
+[% IF 0 %]
+
+<a href="http://www.flickr.com/photos/genevieve719/4878236040/"><img
+src="images/wil_wheaton-reduced.jpg" alt="Photo of Wil Wheaton"/></a>
+
+[% END %]
+
+</header>
+
+<p>
+Hannah is a geeky Israeli-born-and-raised Facebook friend of mine who shares a similar
+height and complexion as <a href="#cast__emma_watson">Emma Watson</a>.
+</p>
+
+</section>
+
+[%- END -%]
+
+
+</div>
+
+[% END %]

@@ -555,6 +555,28 @@ to reduce it.
 
 EOF
     },
+    {
+        id       => 'cookie_monster__the_slayer',
+        tagline  => "tbd!",
+        logo_alt => "“Queen Padmé Tales” logo",
+        logo_src =>
+"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.png",
+        logo_svg =>
+"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.svg",
+        entry_id   => "cookie-monster--the-slayer",
+        entry_text =>
+            "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
+        start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
+        href       => "humour/Queen-Padme-Tales/",
+        should_skip_abstract_h_tag => 1,
+        abstract                   => <<'EOF',
+<div class="queen_padme_tales abstract">
+<p>
+TBD
+</p>
+</div>
+EOF
+    },
 );
 
 my @inactive_Stories = _to_story_objects(

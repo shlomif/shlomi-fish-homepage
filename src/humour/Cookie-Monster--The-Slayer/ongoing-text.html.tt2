@@ -1,0 +1,15 @@
+[%- SET title = "“Terminator: Liberation” - An Illustrated Screenplay for a Terminator parody - Ongoing Text" -%]
+
+[%- PROCESS "stories/terminator-liberation-common.tt2" %]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
+
+<div class="terminator_liberation">
+[% path_slurp("screenplay-xml/rendered-html/Terminator--Liberation.html") %]
+</div>
+
+
+[% END %]

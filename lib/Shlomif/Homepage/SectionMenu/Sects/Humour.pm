@@ -286,6 +286,24 @@ my $_humour_tree_contents = {
                     ],
                 },
                 {
+                    text => "Cookie Monster - The Slayer",
+                    url  => "humour/Cookie-Monster--The-Slayer/",
+                    subs => [
+                        {
+                            text => "Ongoing Text",
+                            url  =>
+"humour/Cookie-Monster--The-Slayer/ongoing-text.html",
+                            title => "Ongoing Text of the Screenplay",
+                        },
+                        {
+                            text => "Cast",
+                            url  =>
+                                "humour/Cookie-Monster--The-Slayer/cast.html",
+                            title => "Who I want to play each character",
+                        },
+                    ],
+                },
+                {
                     text => "Inactive",
                     url  => "humour/stories/inactive/",
                     subs => [

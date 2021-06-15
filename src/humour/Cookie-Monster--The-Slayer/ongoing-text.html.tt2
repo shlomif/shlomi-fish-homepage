@@ -5,10 +5,10 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
+[% long_stories.calc_common_top_elems(id => 'cookie_monster__the_slayer') %]
 
 <div class="terminator_liberation">
-[% path_slurp("screenplay-xml/rendered-html/Terminator--Liberation.html") %]
+[% path_slurp("screenplay-xml/rendered-html/Cookie-Monster--The-Slayer.html") %]
 </div>
 
 

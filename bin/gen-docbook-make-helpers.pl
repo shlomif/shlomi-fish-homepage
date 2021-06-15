@@ -102,18 +102,19 @@ $git_obj->git_in_checkout_task(
 foreach my $repo (
     [ 'Shlomi-Fish-Back-to-my-Homepage-Logo', 1 ],
     uniq(
-        map { m#\A([^/]+)# ? ($1) : ( die "wrong captioned-image '$_'" ) }
-            path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
-    ),
-    'XML-Grammar-Vered',
-    'captioned-images--repo',
-    'how-to-share-code-online',
-    'my-real-person-fan-fiction',
-    'putting-cards-2019-2020',
-    'shlomif-business-card',
-    'shlomif-tech-diary',
-    'validate-your-html',
-    'why-openly-bipolar-people-should-not-be-medicated',
+        (
+            map { m#\A([^/]+)# ? ($1) : ( die "wrong captioned-image '$_'" ) }
+                path("lib/Shlomif/Homepage/captioned-images.txt")->lines_raw(),
+        ),
+        'XML-Grammar-Vered',
+        'how-to-share-code-online',
+        'my-real-person-fan-fiction',
+        'putting-cards-2019-2020',
+        'shlomif-business-card',
+        'shlomif-tech-diary',
+        'validate-your-html',
+        'why-openly-bipolar-people-should-not-be-medicated',
+    )
     )
 {
     $git_task->( 'lib/repos', ( ref($repo) eq '' ? $repo : @$repo ) );

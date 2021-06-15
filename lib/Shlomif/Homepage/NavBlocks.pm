@@ -64,6 +64,57 @@ my $muppets_github =
     _github(
     url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation', );
 
+sub _gen__queen_padme_tales__tr
+{
+    my $self  = shift;
+    my $args  = shift;
+    my $regex = $args->{path_regex};
+
+    return _tr(
+        title => "Queen Padmé Tales",
+        items => [
+            _fp( path => "humour/Queen-Padme-Tales/", ),
+            (
+                grep { $_->path() =~ $regex } _l(
+                    inner_html => "Teaser",
+                    path       => "humour/Queen-Padme-Tales/teaser/",
+                    skip_bold  => 1,
+                ),
+                _l(
+                    inner_html => "vs. The Klingon Warriors",
+                    path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
+                ),
+                _l(
+                    inner_html => "Planting Trees",
+                    path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
+                ),
+                _l(
+                    inner_html => "Take It Over",
+                    path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
+                ),
+                _l(
+                    inner_html => "Nighttime Flight",
+                    path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
+                ),
+                _l(
+                    inner_html => "The Fifth Sith",
+                    path       =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
+                ),
+                _l(
+                    inner_html => "Proposed Cast",
+                    path       => "humour/Queen-Padme-Tales/cast.html",
+                ),
+            ),
+            _github( url => 'https://github.com/shlomif/Queen-Padme-Tales', ),
+        ],
+    );
+}
+
 my %tr_s = (
     'buffy_facts' => _tr(
         title => "“Facts”",
@@ -265,46 +316,15 @@ my %tr_s = (
             $muppets_github,
         ],
     ),
-    'queen_padme_tales' => _tr(
-        title => "Queen Padmé Tales",
-        items => [
-            _fp( path => "humour/Queen-Padme-Tales/", ),
-            _l(
-                inner_html => "Teaser",
-                path       => "humour/Queen-Padme-Tales/teaser/",
-                skip_bold  => 1,
-            ),
-            _l(
-                inner_html => "vs. The Klingon Warriors",
-                path       =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
-            ),
-            _l(
-                inner_html => "Planting Trees",
-                path       =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
-            ),
-            _l(
-                inner_html => "Take It Over",
-                path       =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
-            ),
-            _l(
-                inner_html => "Nighttime Flight",
-                path       =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
-            ),
-            _l(
-                inner_html => "The Fifth Sith",
-                path       =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
-            ),
-            _l(
-                inner_html => "Proposed Cast",
-                path       => "humour/Queen-Padme-Tales/cast.html",
-            ),
-            _github( url => 'https://github.com/shlomif/Queen-Padme-Tales', ),
-        ],
+    'queen_padme_tales' => __PACKAGE__->_gen__queen_padme_tales__tr(
+        {
+            path_regex => qr/./ms,
+        }
+    ),
+    'queen_padme_tales__emwatson' => __PACKAGE__->_gen__queen_padme_tales__tr(
+        {
+            path_regex => qr#(?:teaser|Take-It-Over)#ms,
+        }
     ),
     'selina_mandrake' => _tr(
         title => "Selina Mandrake - The Slayer",
@@ -555,6 +575,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
                 _get_tr('buffy_few_good'),
                 _get_tr('muppets_harry_potter'),
                 _get_tr('terminator_liberation'),
+                _get_tr('queen_padme_tales__emwatson'),
                 _get_tr('EmmaWatson_tech_job'),
                 _get_tr('EmmaWatson_visit_to_Gaza'),
                 _subdiv_tr( title => q{Factoids}, ),

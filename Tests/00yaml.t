@@ -14,8 +14,9 @@ is(
         system(
             qw%prettier --parser yaml --arrow-parens always --tab-width 4 --trailing-comma all -c%,
             (
-                grep { !m#fortunes-shlomif-ids-data|JSON_Data_Persistence# }
-                    @files
+                grep {
+                    !m#\.travis\.yml|fortunes-shlomif-ids-data|JSON_Data_Persistence#
+                } @files
             ),
         ) & 0xFF
     ),

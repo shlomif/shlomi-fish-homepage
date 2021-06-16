@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/real_shlomif.tt2" %]
+
 [% BLOCK rindolf_floaty_img %]
 <a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
 [% END %]
@@ -319,6 +321,12 @@ screenwriter. Remember the name: Shlomi “Rindolf” Fish!
 </p>
 
 [%- END -%]
+
+[% WRAPPER h4_section id = "real_shlomif_success" title = "Success in the Selinaverse; Living in a hell hole" %]
+
+[% INCLUDE real_shlomif %]
+
+[% END %]
 
 [%- END -%]
 

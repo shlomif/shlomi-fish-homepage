@@ -1,9 +1,12 @@
 [%- SET title = "About Myself" -%]
 [%- SET desc = "Shlomi Fish’s Bio - studies, work, writing, open source and open content projects, philosophy and essays" -%]
+
 [% IF shlomif_lang == "he"%]
-[% SET rtl_layout = "1" %]
-[%- SET title = "על אודותיי (שלומי פיש)" %]
-[%- SET desc = "הביוגרפיה של שלומי פיש - לימודים, עבודה, כתיבה, מיזמי קוד פתוח ותוכן פתוח, פילוסופיה וחיבורים." %]
+
+    [% SET rtl_layout = "1" %]
+    [%- SET title = "על אודותיי (שלומי פיש)" %]
+    [%- SET desc = "הביוגרפיה של שלומי פיש - לימודים, עבודה, כתיבה, מיזמי קוד פתוח ותוכן פתוח, פילוסופיה וחיבורים." %]
+
 [% END %]
 
 [%- WRAPPER wrap_html -%]
@@ -111,6 +114,20 @@ and aim at nothing less than becoming the next J.K Rowling.
 piece</a>, “Emma Watson getting interviewed for a software developer job”,
 for some of the things that are wrong in the software industry today.)
 </p>
+
+[% WRAPPER h3_section id = "hell_hole" title = "Living in a hell hole"  %]
+
+<p>
+I suspect I lived in a hell-hole spawned by my fears, and in the
+<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/why-the-so-called-real-world-i-am-trapped-in-makes-little-sense--2020-05-19.asciidoc">Selinaverse</a>, I was
+highly successful, rich, reverred, famous and admired.
+I was a successful author, one of the film industry's biggest
+screenwriters, a world famous "blogger" (= Internet / social media content
+creator), and a remarkable <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/learning_more_from_inet_forums.xhtml">entertainer / educator / amateur philosopher</a>.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER he  %]

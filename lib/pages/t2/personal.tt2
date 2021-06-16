@@ -12,6 +12,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/shlomif_head_photo_tag.tt2" %]
+[% PROCESS "Inc/real_shlomif.tt2" %]
 
 [% INCLUDE lang_switch url_eng="personal.html" url_heb="personal-heb.html" %]
 
@@ -117,51 +118,7 @@ for some of the things that are wrong in the software industry today.)
 
 [% WRAPPER h3_section id = "selinaverse_success" title = "Success in the Selinaverse; Living in a hell hole" %]
 
-<p>
-I suspect I lived in a hell-hole spawned by my fears, and that in the
-<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/why-the-so-called-real-world-i-am-trapped-in-makes-little-sense--2020-05-19.asciidoc">Selinaverse</a>, I was
-highly successful, rich, reverred, famous and admired.
-I was a successful author, one of the film industry's biggest
-screenwriters, a world famous "blogger" (= Internet / social media content
-creator), and a remarkable <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/learning_more_from_inet_forums.xhtml">entertainer / educator / amateur philosopher</a>.
-</p>
-
-<p>
-Aside from being "The-Messiah", I was:
-</p>
-
-<ol>
-
-<li>
-<p>
-most people's favourite candidate
-for being The Terminal Terran Terminator (with the runner up likely being
-<a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>,
-who was The-Alpha-Female for a large part of the years between 2013-2021),
-</p>
-</li>
-
-<li>
-<p>
-A blogger whose blogging and thoughts have caused many terminators to
-ascend.
-</p>
-</li>
-
-<li>
-<p>
-Likely The Emperor of <a href="https://theneverendingstory.fandom.com/wiki/Fantastica">Fantasia</a>, the multiverse of imagination.
-</p>
-</li>
-</ol>
-
-<p>
-This is along with
-my two companions: <a href="[% base_path %]me/rindolf/">Rindolf</a>
-the dwarf from The Unforgettable Realms
-and <a href="[% base_path %]meta/nav-blocks/blocks/#harry_potter_nav_block">Emma Watson</a>; the three of us have been playing the other two in various
-media.
-</p>
+[% INCLUDE real_shlomif %]
 
 [% END %]
 

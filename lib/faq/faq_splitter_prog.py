@@ -427,7 +427,7 @@ def sample_docbook5_call():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
-        base_path=("../" * 3),
+        base_path=("../" * 4),
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",

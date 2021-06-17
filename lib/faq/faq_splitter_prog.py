@@ -177,7 +177,7 @@ def main():
     _faq_gen()
     gen_image_macros_call()
     _screenplays_main()
-    sample_docbook5_call()
+    _docbook5_main()
 
 
 def _faq_gen():
@@ -430,7 +430,7 @@ def generic_generate_from_db5(**args):
     )
 
 
-def sample_docbook5_call():
+def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
@@ -439,6 +439,10 @@ def sample_docbook5_call():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
         "putting-cards-on-the-table-2019-2020/",
+        base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/psychology/hypomanias/",
         base_path=("../" * 4),
     )
 

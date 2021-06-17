@@ -419,6 +419,13 @@ def generic_generate_from_db5(**args):
         container_elem_xpath=(
             "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
         ),
+        list_sections_format=(
+            ".//{xhtml_prefix}section[@class='section']"
+        ),
+        output_dirname="indiv-nodes/",
+        path_to_all_in_one="../",
+        path_to_input="./index.xhtml",
+        path_to_images="../",
         **args,
     )
 
@@ -428,13 +435,11 @@ def sample_docbook5_call():
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
         base_path=("../" * 4),
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../",
-        path_to_input="./index.xhtml",
-        path_to_images="../",
-        list_sections_format=(
-            ".//{xhtml_prefix}section[@class='section']"
-        ),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
+        "putting-cards-on-the-table-2019-2020/",
+        base_path=("../" * 4),
     )
 
 

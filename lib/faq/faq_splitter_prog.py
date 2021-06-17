@@ -177,6 +177,7 @@ def main():
     _faq_gen()
     gen_image_macros_call()
     _screenplays_main()
+    sample_docbook5_call()
 
 
 def _faq_gen():
@@ -255,6 +256,7 @@ def generic_generate_from_(
         path_to_input="ongoing-text.html", latemp_plain_html=False,
         xhtml_article_tag=XHTML_ARTICLE_TAG,
         xhtml_section_tag=XHTML_SECTION_TAG,
+        list_sections_format=None,
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
 
@@ -274,6 +276,8 @@ def generic_generate_from_(
         xhtml_article_tag=xhtml_article_tag,
         xhtml_section_tag=xhtml_section_tag,
     )
+    if list_sections_format:
+        splitter.list_sections_format = list_sections_format
     splitter.process()
 
 
@@ -419,17 +423,18 @@ def generic_generate_from_db5(**args):
     )
 
 
-def sample_docbook5_call__disabled():
+def sample_docbook5_call():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
         base_path=("../" * 3),
-        output_dirname="temp2del/",
-        path_to_all_in_one="./DocBook5" +
-        "/putting-all-cards-on-the-table-2013.raw.html",
-        path_to_input="./DocBook5" +
-        "/putting-all-cards-on-the-table-2013.raw.html",
-        path_to_images="./",
+        output_dirname="indiv-nodes/",
+        path_to_all_in_one="../",
+        path_to_input="./index.xhtml",
+        path_to_images="../",
+        list_sections_format=(
+            ".//{xhtml_prefix}section[@class='section']"
+        ),
     )
 
 

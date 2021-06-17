@@ -59,7 +59,16 @@ class XhtmlSplitter:
             path_to_images="",
             relative_output_dirname="",
             latemp_plain_html=False,
+            list_sections_format=None,
             ):
+        self.list_sections_format = (
+            list_sections_format or
+            (
+                ".//{xhtml_prefix}article |" +
+                " .//{xhtml_prefix}section"
+            )
+        )
+
         self._indiv_node = individual_node_css_class
         self.back_to_source_page_css_class = back_to_source_page_css_class
         self._back_re_css = re.compile(
@@ -167,7 +176,7 @@ class XhtmlSplitter:
             return _xpath(
                 self.ns,
                 self.container_elem,
-                ".//{xhtml_prefix}article | .//{xhtml_prefix}section".format(
+                self.list_sections_format.format(
                     xhtml_prefix=self.xhtml_prefix
                 )
             )
@@ -249,6 +258,9 @@ class XhtmlSplitter:
                         xhtml_prefix=self.xhtml_prefix
                     )
                 )
+                # print(self.input_fn, res)
+                if len(res) == 0:
+                    break
                 assert len(res) == 1
                 id_, header_esc = calc_id_and_header_esc(res[0])
                 rec = {'id': id_, 'header_esc': header_esc, }

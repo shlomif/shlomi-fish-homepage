@@ -42,4 +42,31 @@ section.fancy_sects {
     }
 }
 
+blockquote {
+    border: grey thin solid;
+    padding: 0.5em;
+    // font-style: italic;
+    margin-left: 0.5em;
+    overflow: auto;
+
+    @if false {
+        > p:first-child {
+            &:before {
+                content: "‶";
+            }
+
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        > p:last-child {
+            &:after {
+                content: "″";
+            }
+            margin-bottom: 0;
+            padding-top: 0;
+        }
+    }
+}
+
 @include quote-iframe-styles(false, ".my_rpf.fancy_sects");

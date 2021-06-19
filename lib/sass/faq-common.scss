@@ -1,3 +1,7 @@
+a.indiv_node {
+    @include faq_link;
+}
+
 .faq,
 .indiv_nodes_wrapper,
 .screenplay {
@@ -11,9 +15,6 @@
         > h3,
         > h4 {
             display: inline;
-        }
-        a.indiv_node {
-            @include faq_link;
         }
     }
 }

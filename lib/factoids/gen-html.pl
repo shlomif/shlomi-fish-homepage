@@ -1052,6 +1052,20 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 
 {{ p.links_tt2() }}
 
+[% WRAPPER h3_section id = "facts__common_links" title = "Common Links" %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/shlomif-factoids.html">These factoids in XML-Grammar-Fortune format</a> - also individually wrapped.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [% END %]
 
 [% WRAPPER see_also  %]

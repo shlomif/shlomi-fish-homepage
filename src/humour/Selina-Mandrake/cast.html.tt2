@@ -18,6 +18,8 @@ of the characters of Selina Mandrake.
 
 [%- END -%]
 
+[% WRAPPER h2_section id = "the-cast" title = "The Cast" %]
+
 <section>
 
 <header>
@@ -145,7 +147,9 @@ Frenchman, just like Cardinal Richelieu.
 
 </section>
 
-[% WRAPPER h2_section id = "general-guidelines" title = "General Guidelines"  %]
+[% END %]
+
+[% WRAPPER h2_section id = "general-guidelines" title = "General Guidelines" %]
 
 <ol>
 

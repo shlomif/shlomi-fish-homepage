@@ -82,6 +82,16 @@ class MyTests(html_unit_test.TestCase):
             "and text()='the Hamlet parody scene']"
         )
 
+    def test_factoids_link(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/bits/facts/Chuck-Norris/index.xhtml'
+        )
+        return self.doc(input_fn).has_one(
+            ".//a[contains(@href, 'humour/fortunes/shlomif-factoids.html#"
+            + "shlomif-fact-chuck-1')"
+            + "and text()='These factoids in XML-Grammar-Fortune format']"
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

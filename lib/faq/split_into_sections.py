@@ -113,6 +113,15 @@ class XhtmlSplitter:
             _html_to_string
             if self.latemp_plain_html else etree.tostring)
 
+    def _process_title(self, header_text):
+        """docstring for _process_title"""
+        return re.sub(
+            " - Shlomi Fish['’]s Homesite\\Z",
+            "",
+            header_text,
+            flags=(re.M | re.S)
+        )
+
     def _calc_root(self):
         self.root = (
             etree.HTML
@@ -130,6 +139,7 @@ class XhtmlSplitter:
             self.root,
             main_title_xpath
         )
+        self.main_title = self._process_title(self.main_title)
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
             self.ns,
@@ -166,6 +176,7 @@ class XhtmlSplitter:
             h_tag = _first(self.ns, header_tag, "./*[@id]")
             id_ = _first(self.ns, h_tag, "./@id")
             header_text = _first(self.ns, h_tag, "./text()")
+            header_text = self._process_title(header_text)
             header_esc = html.escape(header_text)
             return id_, header_esc
 

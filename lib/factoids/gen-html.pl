@@ -1058,7 +1058,7 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 
 <li>
 <p>
-<a href="[% base_path %]humour/fortunes/shlomif-factoids.html#shlomif-fact-{{ p.short_id() }}-1">These factoids in XML-Grammar-Fortune format</a> - also individually wrapped.
+<a href="[% base_path %]humour/fortunes/shlomif-factoids.html#shlomif-fact-{{ p.dashed_short_id() }}-1">These factoids in XML-Grammar-Fortune format</a> - also individually wrapped.
 </p>
 </li>
 

@@ -19,6 +19,13 @@ sub img_src_tt2
     return '[% base_path %]' . $self->img_src;
 }
 
+sub dashed_short_id
+{
+    my ( $self, ) = @_;
+
+    return $self->short_id =~ tr/_/-/r;
+}
+
 =begin foo
 
 has ['entry_id', 'entry_text', 'href',

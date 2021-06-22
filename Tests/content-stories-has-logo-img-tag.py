@@ -92,14 +92,27 @@ class MyTests(html_unit_test.TestCase):
             + "and text()='These factoids in XML-Grammar-Fortune format']"
         )
 
+    def _factoids_check_helper(self, input_fn, htmlid):
+        return self.doc(input_fn).has_one(
+            ".//a[contains(@href, 'humour/fortunes/shlomif-factoids.html#"
+            + htmlid + "')"
+            + "and text()='These factoids in XML-Grammar-Fortune format']"
+        )
+
     def test_sglau_factoids_link(self):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Summer-Glau/index.xhtml'
         )
-        return self.doc(input_fn).has_one(
-            ".//a[contains(@href, 'humour/fortunes/shlomif-factoids.html#"
-            + "shlomif-fact-sglau-1')"
-            + "and text()='These factoids in XML-Grammar-Fortune format']"
+        return self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-sglau-1'
+        )
+
+    def test_emma_w_factoids_link(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/bits/facts/Emma-Watson/index.xhtml'
+        )
+        return self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
         )
 
 

@@ -459,12 +459,14 @@ sub generic_get_params
                                 url   => "me/intros/",
                                 title =>
                                     "Introductions of Me to Various Forums",
+                                skip => 1,
                                 subs => [
                                     {
                                         text  => "MIT Writers",
                                         url   => "me/intros/writers/",
                                         title =>
 "My Intro to the MIT Writers Mailing List",
+                                        skip => 1,
                                     },
                                 ],
                             },
@@ -474,6 +476,22 @@ sub generic_get_params
                         text  => "Contact Me",
                         url   => "me/contact-me/",
                         title => "How to Contact Me",
+                    },
+                    {
+                        text  => "“Rindolf” - my nickname",
+                        url   => "me/rindolf/",
+                        title =>
+"The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
+                        subs => [
+                            {
+                                text =>
+"“Rindolfism” - my personal, dynamic, philosophy",
+                                url   => "me/rindolfism/",
+                                title =>
+"Shlomi Fish’s Personal, dynamic, open / free / geeky / share / hacky philosophy",
+                                skip => 1,
+                            },
+                        ],
                     },
                     {
                         text => "My Résumés",
@@ -516,6 +534,7 @@ sub generic_get_params
                         text  => "Interviews",
                         url   => "me/interviews/",
                         title => "Interviews that were conducted with me",
+                        skip  => 1,
                         subs  => [
                             {
                                 text => "Reddit “Ask Me Anything”",
@@ -525,26 +544,12 @@ sub generic_get_params
                         ],
                     },
                     {
-                        text  => "“Rindolf” - my nickname",
-                        url   => "me/rindolf/",
-                        title =>
-"The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
-                        subs => [
-                            {
-                                text =>
-"“Rindolfism” - my personal, dynamic, philosophy",
-                                url   => "me/rindolfism/",
-                                title =>
-"Shlomi Fish’s Personal, dynamic, open / free / geeky / share / hacky philosophy",
-                            },
-                        ],
-                    },
-                    {
                         text => "Relicensing my Creative Works Portfolio",
                         url  =>
                             "me/relicensing-my-entire-portfolio-under-cc-by/",
                         title =>
 "Offer to relicense my whole body of creative works under CC-by if I get enough money",
+                        skip => 1,
                     },
                 ],
             },

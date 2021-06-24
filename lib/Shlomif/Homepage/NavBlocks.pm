@@ -342,6 +342,51 @@ my %tr_s = (
             _github( url => 'http://github.com/shlomif/Selina-Mandrake', ),
         ],
     ),
+    'software_dirs' => _tr(
+        title => "Software Directories",
+        items => [
+            _l(
+                path       => "open-source/portability-libs/",
+                inner_html => "Portability Libraries",
+            ),
+            _l(
+                path       => "open-source/resources/software-tools/",
+                inner_html => "Software Building and Management Tools",
+            ),
+            _l(
+                path       => "open-source/resources/editors-and-IDEs/",
+                inner_html => "Editors and IDEs",
+            ),
+            _l(
+                path       => "open-source/resources/numerical-software/",
+                inner_html => "Numerical Software",
+            ),
+            _l(
+                path       => "open-source/resources/text-processing-tools/",
+                inner_html => "Text Processing Tools",
+            ),
+            _l(
+                path       => "open-source/resources/networking-clients/",
+                inner_html => "Networking Clients",
+            ),
+            _l(
+                path       => "open-source/resources/multimedia-programs/",
+                inner_html => "List of Multimedia Applications",
+            ),
+            _l(
+                path       => "open-source/resources/graphics-programs/",
+                inner_html => "List of Computer Graphics Applications",
+            ),
+            _l(
+                path       => "open-source/resources/databases-list/",
+                inner_html => "List of Database Implementations",
+            ),
+            _l(
+                path => "open-source/resources/software-quality-enhancement/",
+                inner_html => "List of Software quality-enhancement tools",
+            ),
+        ],
+    ),
     'star_trek_wtld' => _tr(
         title => "Star Trek: We, the Living Dead",
         items => [
@@ -681,6 +726,19 @@ q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Ba
                 _get_tr('buffy_few_good'),
                 _get_tr('terminator_liberation'),
                 _get_tr('queen_padme_tales'),
+            ],
+        },
+    ),
+    'software_resources' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'software_resources_nav_block',
+            text_title => "Software Resources",
+            tr_s       => [
+                _master_tr(
+                    title => "Software Resources",
+                ),
+                _subdiv_tr( title => q{Directories}, ),
+                _get_tr('software_dirs'),
             ],
         },
     ),

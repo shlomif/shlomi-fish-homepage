@@ -28,18 +28,12 @@ footer,
         margin-bottom: 1em;
 
         li {
-            &:first-child {
-                border-left-color: transparent;
-            }
-
             display: inline-block;
-            margin-left: 0.2em;
-
+            font-size: 95%;
             $horiz_pad: 0.5em;
 
             padding-left: $horiz_pad;
             padding-right: $horiz_pad;
-            border-left: white solid 1px;
         }
     }
 

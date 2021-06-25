@@ -461,6 +461,7 @@ deviantART</a></p>
 </div>
 </div>
 
+[% SET reduce_footer_size = 1 %]
 [% IF xhtml1 %]
 <div class="footer" id="footer">
 [% ELSE %]
@@ -469,10 +470,12 @@ deviantART</a></p>
 
 <hr/>
 
+[% UNLESS reduce_footer_size %]
 <div class="righty">
 </div>
 
 <div class="foot_left">
+[% END %]
 
 [% INCLUDE webmaster_footer %]
 
@@ -496,7 +499,9 @@ taken from the
 of an EvilPHish”</a> cartoon of
 <a href="http://www.userfriendly.org/">UserFriendly.org</a>.
 </p>
+[% UNLESS reduce_footer_size %]
 </div>
+[% END %]
 
 [%- IF raw_fn_path %]
 <a href="[% base_path || "./" %]"><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage"/></a>

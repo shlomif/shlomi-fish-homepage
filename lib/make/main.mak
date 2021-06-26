@@ -1123,8 +1123,8 @@ docbook_targets: screenplay_targets
 
 $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
-	temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
 	if test -e "$$xslt" ; then \
+		temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
 		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 			-o "$$temp_db5" $< && \
 		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
@@ -1132,7 +1132,7 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
 			-o $@ $< ; \
 	fi
-	$(PERL) -i -lape 's/\s+$$//' $@
+	$(PERL) -i -lpe 's/\s+$$//' $@
 
 $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \

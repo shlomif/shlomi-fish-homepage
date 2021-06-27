@@ -2508,7 +2508,7 @@ Scary thought of the day: <i>The Princess Bride</i>: the 3-D Remake.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "if_ayn_rand_was_born_in_the_1990s"  header = "If Ayn Rand was born in the 1990s…"  repo_href = "https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie"  src = "${base_path}humour/images/Ayn_Rand--to--Christina_Grimmie.svg.webp"  alt = "Ayn Rand→Christina Grimmie"  %]
+[% WRAPPER github_captioned_image_joke id = "if_ayn_rand_was_born_in_the_1990s"  header = "If Ayn Rand was born in the 1990s, she would be Christina Grimmie"  repo_href = "https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie"  src = "${base_path}humour/images/Ayn_Rand--to--Christina_Grimmie.svg.webp"  alt = "Ayn Rand→Christina Grimmie"  %]
 
 [% WRAPPER quote  %]
 <p>
@@ -2756,7 +2756,7 @@ speech</a>.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "pbride_philosophers"  header = "Have you heard of Plato? Aristotle?"  repo_href = "http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers"  src = base_path _ "humour/images/philosophers-princess-bride.svg.webp"  alt = "Princess Bride + Greek Philosophers"  %]
+[% WRAPPER github_captioned_image_joke id = "pbride_philosophers"  header = "Have you heard of Plato? Aristotle? Socrates? Models!!"  repo_href = "http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers"  src = base_path _ "humour/images/philosophers-princess-bride.svg.webp"  alt = "Princess Bride + Greek Philosophers"  %]
 
 [% WRAPPER quote  %]
 <p>
@@ -3074,7 +3074,7 @@ anti-spam measurements.
 
 [%- SET caption = "“Djee-En-You-slash-Linux…Marketing! You’re doing it GNU/right!”" -%]
 
-[% WRAPPER github_captioned_image_joke id = "GNU_slash_Linux"  header = "“Djee-En-You-Slash-Linux”"  repo_href = "https://github.com/shlomif/Captioned-Image-GNU-slash-Linux"  src = base_path _ "humour/images/gnu-slash-linux.svg.webp"  alt = caption %]
+[% WRAPPER github_captioned_image_joke id = "GNU_slash_Linux"  header = "${caption}"  repo_href = "https://github.com/shlomif/Captioned-Image-GNU-slash-Linux"  src = base_path _ "humour/images/gnu-slash-linux.svg.webp"  alt = caption %]
 
 
 [% WRAPPER quote  %]

@@ -1,0 +1,13 @@
+[%- SET title = "Queen Padmé Tales Teaser" -%]
+[%- SET desc = "Fan fiction screeenplays for a web series crossing Star Wars, Star Trek and Internet and IRL life in the 2010s-2020s" -%]
+[%- SET more_keywords = "fanfic,fan fiction,crossovers,screeenplays,screeenplay,star wars,star trek,tiffany alvord,sith,jedi" -%]
+
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+
+[%- WRAPPER wrap_html -%]
+
+<iframe class="iframe-class" src="teaser/"></iframe>
+
+<script src="[% base_path %]js/resize-iframe.js"></script>
+
+[% END %]

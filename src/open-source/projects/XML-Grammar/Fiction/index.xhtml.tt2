@@ -205,6 +205,8 @@ and idea and real person fiction.
 
 [% WRAPPER news_sect  %]
 
+[% IF 0 %]
+
 [% WRAPPER h3_section id = "news-2011-05-22"  title="2011-05-22: ${cpan_dist} version 0.5.1 is out"%]
 
 <p>
@@ -318,6 +320,7 @@ to you for this NaNoWriMo or future ones.
 </p>
 
 [%- END -%]
+[% END %]
 [%- END -%]
 
 [% WRAPPER h2_section id = "coverage"  title="Coverage of ${cpan_dist}" %]

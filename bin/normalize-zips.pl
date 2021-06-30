@@ -30,4 +30,28 @@ File::StripNondeterminism::init();
 
 $File::StripNondeterminism::canonical_time =
     $File::StripNondeterminism::clamp_time = 0;
-for my $fn (@ARGV) { File::StripNondeterminism::handlers::zip::normalize($fn) }
+
+package File::StripNondeterminism::handlers::zip;
+
+sub _epub_filename_cmp
+{
+    return (
+               ( ( $b eq 'mimetype' ) <=> ( $a eq 'mimetype' ) )
+            or ( $a cmp $b )
+    );
+}
+
+package main;
+for my $fn (@ARGV)
+{
+    File::StripNondeterminism::handlers::zip::normalize(
+        $fn,
+        (
+            $fn =~ /\.epub\z/
+            ? ( filename_cmp =>
+                    \&File::StripNondeterminism::handlers::zip::_epub_filename_cmp,
+                )
+            : ()
+        ),
+    );
+}

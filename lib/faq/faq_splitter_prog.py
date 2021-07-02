@@ -415,22 +415,35 @@ def _screenplays_main():
 
 def generic_generate_from_db5(**args):
     TOP_LEVEL_CLASS = 'article'
-    return generic_generate_from_(
-        container_elem_xpath=(
+    extra_args = {
+        'container_elem_xpath': (
             "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
         ),
-        list_sections_format=(
+        'list_sections_format': (
             ".//{xhtml_prefix}section[@class='section']"
         ),
-        output_dirname="indiv-nodes/",
-        path_to_all_in_one="../",
-        path_to_input="./index.xhtml",
-        path_to_images="../",
+        'output_dirname': "indiv-nodes/",
+        'path_to_all_in_one': "../",
+        'path_to_input': "./index.xhtml",
+        'path_to_images': "../",
+            }
+    for k in ['path_to_input', 'path_to_all_in_one', ]:
+        if k in args:
+            del extra_args[k]
+    return generic_generate_from_(
+        **extra_args,
         **args,
     )
 
 
 def _docbook5_main():
+    generic_generate_from_db5(
+        OUT_DN=(
+            "./dest/post-incs/t2/philosophy/culture/" +
+            "my-real-person-fan-fiction/"
+        ),
+        base_path=("../" * 4),
+    )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
@@ -444,6 +457,18 @@ def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/psychology/hypomanias/",
         base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN=(
+            "./dest/post-incs/t2/philosophy/psychology/" +
+            "why-openly-bipolar-people-should-not-be-medicated/"),
+        base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/the-eternal-jew/",
+        base_path=("../" * 3),
+        path_to_all_in_one="../ongoing-text.xhtml",
+        path_to_input="./ongoing-text.xhtml",
     )
 
 

@@ -438,10 +438,24 @@ def generic_generate_from_db5(**args):
 
 def _docbook5_main():
     generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
+        "software-management/end-of-it-slavery/",
+        base_path=("../" * 5),
+    )
+    generic_generate_from_db5(
         OUT_DN=(
             "./dest/post-incs/t2/philosophy/culture/" +
             "my-real-person-fan-fiction/"
         ),
+        base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/" +
+        "case-for-file-swapping/revision-3/",
+        base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/obj-oss/rev2/",
         base_path=("../" * 4),
     )
     generic_generate_from_db5(
@@ -452,6 +466,10 @@ def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
         "putting-cards-on-the-table-2019-2020/",
+        base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/politics/drug-legalisation/",
         base_path=("../" * 4),
     )
     generic_generate_from_db5(

@@ -283,7 +283,7 @@ EOF
         logo_svg =>
 'humour/Buffy/A-Few-Good-Slayers/images/Buffy-A-Few-Good-Slayers-Logo--take1.svg',
         entry_id   => "buffy-few-good",
-        entry_text => "Buffy: a Few Good Slayers - A Screenplay",
+        entry_text => "Buffy: a Few Good Slayers",
         start_date => DateTime->new( year => 2014, ),
         href       => "humour/Buffy/A-Few-Good-Slayers/",
         abstract   => <<'EOF',

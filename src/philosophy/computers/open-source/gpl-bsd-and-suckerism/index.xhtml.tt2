@@ -1,7 +1,6 @@
 [%- SET title = "The GPL, the BSD Licence, and Being a Sucker" -%]
 [%- SET desc = "The GPL, the BSD Licence, and Being a Sucker" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]
@@ -21,7 +20,7 @@ for one’s open-source project and how it relates to being a sucker.
 <dt>Translated to English:</dt>
 <dd>15-October-2005</dd>
 <dt>Last Modified:</dt>
-<dd>10-April-2011</dd>
+<dd>03-July-2021</dd>
 </dl>
 
 [%- END -%]
@@ -34,7 +33,7 @@ discussion in Linmagazine.co.il</a>, a claim was made that people who
 distribute code that they wrote under BSD-style licences are suckers, while
 people who distribute their code under <a href="http://www.gnu.org/licenses/gpl-faq.html">the GPL (GNU General Public Licence)</a>
 are not, since they make sure no one will make a proprietary use of their code. In this essay, I’d like to reply to this in
-a rational manner. (As opposed to the flamefest in the original discussion).
+a rational manner. (As opposed to the flamefest in the original discussion.)
 </p>
 
 <p>
@@ -52,7 +51,7 @@ cause. (see
 <a href="http://en.wikipedia.org/wiki/Objectivist_philosophy">Objectivism</a>).
 But if a person donates (time, money, property, etc.) to someone else he knows
 well, or for a cause he relates to, rationally and out of his or her own
-free will, does this makes him a sucker?
+free will, does this make him a sucker?
 </p>
 
 <p>
@@ -70,8 +69,8 @@ How does it relate to the GPL and the BSD? It is obvious that a person who
 releases code under an open-source licence is contributing for the common good.
 (Albeit he may sometimes have an <a href="https://en.wikipedia.org/wiki/Ethical_egoism">Egoistical</a> interest to do it.) If you’re
 really selfish, (or at least not in an Altruistic mood) then you’ll probably
-want to sell a software that you have written, albeit you may want to make
-sure the source code is viewable. Now, would using an LGPL licence (that
+want to sell a software package that you have written, albeit you may want to
+make sure the source code is viewable. Now, would using an LGPL licence (that
 allows linking to proprietary code) be a suckery act?
 </p>
 
@@ -80,7 +79,7 @@ It isn’t that either. It’s possible that the originator has an interest or a
 desire that people will do a commercial use of his code. Whether it’s
 integration into proprietary code (without non-trivial changes), or even
 distributing code based on these changes. Why? If I wrote a library or a
-module, then it is possible that I’ll want that it people will make the
+module, then it is possible that I’ll want that people will make the
 largest possible use of it. That’s because when I wrote the library, I meant to
 solve a certain problem and I don’t have interest that people will write their
 own code that solves this problem times and again, only because they desire or
@@ -94,7 +93,7 @@ First of all, they helped their neighbour (which naturally also includes
 commercial companies) and not just did a “suckery” act. Secondly, it is
 possible that they want people to integrate and modify this code. Perhaps
 because they want it to be part of an embedded software. Perhaps they want to
-have proprietary derived products that they can draw ideas and inspiration
+have proprietary derivative products that they can draw ideas and inspiration
 from. And perhaps they (and I included) just don’t want to worry what possible
 illegal use people make of their code. If you release a code under the Public
 Domain, then there’s a very small chance that someone will violate its licence.

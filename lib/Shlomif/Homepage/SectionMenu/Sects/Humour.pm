@@ -591,6 +591,12 @@ my $_humour_tree_contents = {
                             title =>
 "True story about asking people by the road about relationships",
                         },
+                        {
+                            text =>
+                                "Showing the rented apartment to a hot girl",
+                            url =>
+"humour/bits/true-stories/showing-the-apartment-to-a-hot-girl/",
+                        },
                     ],
                 },
                 {

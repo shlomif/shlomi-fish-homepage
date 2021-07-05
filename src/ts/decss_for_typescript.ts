@@ -114,7 +114,7 @@ function decode_a_string_with_escape_sequences(str: string): string {
                     ++char_index;
                     ++num;
                     char_val = str.charAt(char_index);
-                    c_code = char_val.charCodeAt(0);
+                    c_code = char_to_digit(char_val);
                 }
 
                 ret += String.fromCharCode(total);

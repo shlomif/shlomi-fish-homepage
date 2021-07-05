@@ -67,42 +67,42 @@ function encode_string_with_escape_sequences(
     return ret;
 }
 
+const my0: number = "0".charCodeAt(0);
 function char_to_digit(str: string): number {
-    const my0: string = "0";
-    return str.charCodeAt(0) - my0.charCodeAt(0);
+    return str.charCodeAt(0) - my0;
 }
 
 function decode_a_string_with_escape_sequences(str: string): string {
     let ret: string = "";
     const len = str.length;
 
-    for (let a = 0; a < len; ++a) {
-        let c = str.charAt(a);
-        if (c == "\n" || c == "\r") {
+    for (let char_index = 0; char_index < len; ++char_index) {
+        let char_val: string = str.charAt(char_index);
+        if (char_val == "\n" || char_val == "\r") {
             // We ignore newlines so skip to the next character
             continue;
         }
 
-        if (c != "\\") {
-            ret += c;
+        if (char_val != "\\") {
+            ret += char_val;
         } else {
-            ++a;
-            c = str.charAt(a);
-            let c_code = char_to_digit(c);
+            ++char_index;
+            char_val = str.charAt(char_index);
+            let c_code = char_to_digit(char_val);
             const is_digit = () => {
                 return c_code >= 0 && c_code <= 9;
             };
-            if (c == "n") {
+            if (char_val == "n") {
                 ret += "\n";
-            } else if (c == "r") {
+            } else if (char_val == "r") {
                 ret += "\r";
-            } else if (c == "a") {
+            } else if (char_val == "a") {
                 ret += "a";
-            } else if (c == "t") {
+            } else if (char_val == "t") {
                 ret += "\t";
-            } else if (c == "b") {
+            } else if (char_val == "b") {
                 ret += "\b";
-            } else if (c == "f") {
+            } else if (char_val == "f") {
                 ret += "\f";
             } else if (is_digit()) {
                 let total: number = 0;
@@ -111,15 +111,15 @@ function decode_a_string_with_escape_sequences(str: string): string {
                 while (is_digit() && num < 3) {
                     total = total * 10 + c_code;
 
-                    ++a;
+                    ++char_index;
                     ++num;
-                    c = str.charAt(a);
-                    c_code = c.charCodeAt(0);
+                    char_val = str.charAt(char_index);
+                    c_code = char_val.charCodeAt(0);
                 }
 
                 ret += String.fromCharCode(total);
             } else {
-                ret += c;
+                ret += char_val;
             }
         }
     }

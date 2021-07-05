@@ -438,6 +438,11 @@ def generic_generate_from_db5(**args):
 
 def _docbook5_main():
     generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/education/" +
+        "introductory-language/",
+        base_path=("../" * 5),
+    )
+    generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "software-management/end-of-it-slavery/",
         base_path=("../" * 5),
@@ -453,6 +458,23 @@ def _docbook5_main():
         OUT_DN="./dest/post-incs/t2/philosophy/" +
         "case-for-file-swapping/revision-3/",
         base_path=("../" * 4),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
+        "high-quality-software/rev2/",
+        base_path=("../" * 5),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
+        "open-source/foss-licences-wars/",
+        base_path=("../" * 5),
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
+        "software-management/perfect-workplace/",
+        base_path=("../" * 5),
+        path_to_all_in_one="../perfect-it-workplace.xhtml",
+        path_to_input="perfect-it-workplace.xhtml",
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/obj-oss/rev2/",

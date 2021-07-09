@@ -116,7 +116,7 @@ foreach my $basename (@file_bases)
     }
 
     my $tree = HTML::TreeBuilder::LibXML->new_from_file(
-        "./lib/fortunes/xhtmls/$basename.compressed.xhtml");
+        "./lib/fortunes/xhtmls/$basename.xhtml");
 
     my $nodes_list   = $tree->findnodes(q{//div[@class = "fortune"]});
     my $plaintext_fn = "dest/pre-incs/t2/humour/fortunes/$basename";

@@ -65,6 +65,15 @@ class MyTests(unittest.TestCase):
             "^\\.\\./#amateurs$", desc_text)
         self.assertTrue(m, 'right relative link: ' + desc_text)
 
+        descs = root.xpath(
+            "./head/link[@media='print']")
+        self.assertEqual(len(descs), 1, 'single print link')
+        # desc_text = descs[0].xpath('@href/text()')[0]
+        desc_text = descs[0].get('href')
+        self.assertEqual(
+            desc_text, "../../../../print.css",
+            'right relative link: ' + desc_text)
+
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
         root = html.parse(input_fn)

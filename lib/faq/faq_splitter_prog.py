@@ -283,7 +283,7 @@ def generic_generate_from_(
     splitter.process()
 
 
-_BASE_COUNT = "./dest/post-incs/t2/".count('/')
+_BASE_COUNT = "./dest/post-incs/t2".count('/')
 
 
 def _calc_base_path(OUT_DN):

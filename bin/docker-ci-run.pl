@@ -7,13 +7,38 @@ use autodie;
 
 use Docker::CLI::Wrapper::Container v0.0.4 ();
 
+package Docker::CLI::Wrapper::Container;
+
+sub commit
+{
+    my ( $self, $args ) = @_;
+
+    $self->docker(
+        { cmd => [ 'commit', $self->container(), $args->{label}, ] } );
+
+    return;
+}
+
+sub run_docker_commit
+{
+    my ( $self, $args ) = @_;
+
+    $self->docker(
+        {
+            cmd => [ 'run', "-d", $args->{label}, ],
+        }
+    );
+
+    return;
+}
+
 package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
 
 has [
-    qw/ container package_manager_install_cmd setup_package_manager sys_deps /]
-    => ( is => 'ro', required => 1 );
+    qw/ container package_manager_install_cmd setup_package_manager snapshot_names_base sys_deps /
+] => ( is => 'ro', required => 1 );
 
 package main;
 
@@ -33,7 +58,8 @@ su -c "apt-get -y install eatmydata netselect-apt sudo"
 # sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 EOF
-            sys_deps => [
+            snapshot_names_base => "shlomif/hpage_debian",
+            sys_deps            => [
                 qw/
                     build-essential
                     cookiecutter
@@ -59,6 +85,7 @@ EOF
                     lynx
                     myspell-hw
                     perl
+                    pysassc
                     python3
                     python3-all
                     python3-dev
@@ -81,6 +108,7 @@ EOF
             container                   => "shlomi_fish_homesite_fedora33",
             package_manager_install_cmd => "sudo dnf -y install",
             setup_package_manager       => '',
+            snapshot_names_base         => "shlomif/hpage_fedora",
             sys_deps                    => [
                 qw/
                     GraphicsMagick
@@ -104,6 +132,7 @@ EOF
                     primesieve-devel
                     python3
                     python3-devel
+                    python3-libsass
                     ruby-devel
                     rubygem-rspec
                     sgml-common
@@ -120,7 +149,10 @@ EOF
 
 sub run_config
 {
-    my ( $self, $sys ) = @_;
+    my ( $self, $args ) = @_;
+
+    my $force_load = $args->{force_load};
+    my $sys        = $args->{sys};
 
     my $cfg = $configs->{$sys}
         or die "no $sys config";
@@ -129,6 +161,7 @@ sub run_config
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $setup_package_manager       = $cfg->setup_package_manager();
     my $sys_deps                    = $cfg->sys_deps();
+    my $snapshot_names_base         = $cfg->snapshot_names_base();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
         { container => $container, sys => $sys, },
@@ -201,20 +234,50 @@ sub run_config
         die "Must be run as \"$^X util-code/docker-ci-run.pl\"!";
     }
 
-    $obj->clean_up();
-    $obj->run_docker();
-    my $temp_git_repo_path = "../temp-git";
-    $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
-    $obj->do_system( { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
-    $obj->docker(
+    my $commit    = $snapshot_names_base . "_1";
+    my $from_snap = 0;
+    eval {
+        my $snap_obj = Docker::CLI::Wrapper::Container->new(
+            { container => $commit, sys => $sys, },
+        );
+        $snap_obj->run_docker_commit( { label => $commit, } );
+        $obj = $snap_obj;
+    };
+    if ($@)
+    {
+        if ($force_load)
         {
-            cmd => [
-                'cp',
-                ( $temp_git_repo_path . "" ),
-                ( $obj->container() . ":/temp-git" ),
-            ]
+            die qq#could not load sys='$sys'!#;
         }
-    );
+
+        $obj->clean_up();
+        $obj->run_docker();
+    }
+    else
+    {
+        $from_snap = 1;
+    }
+    my $temp_git_repo_path = "../temp-git";
+    if ($from_snap)
+    {
+        # body...
+    }
+    else
+    {
+        # else...
+        $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
+        $obj->do_system(
+            { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
+        $obj->docker(
+            {
+                cmd => [
+                    'cp',
+                    ( $temp_git_repo_path . "" ),
+                    ( $obj->container() . ":/temp-git" ),
+                ]
+            }
+        );
+    }
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";
 set -e -x
@@ -249,6 +312,20 @@ cpanm --notest HTML::T5
 cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
+EOSCRIPTTTTTTT
+
+    if ($from_snap)
+    {
+        # body...
+    }
+    else
+    {
+        $obj->exe_bash_code( { code => $script, } );
+        $obj->commit( { label => $commit, } );
+    }
+
+    $script = <<"EOSCRIPTTTTTTT";
+set -e -x
 sudo cpanm --notest @cpan_deps
 sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 perl bin/my-cookiecutter.pl
@@ -289,16 +366,23 @@ PATH="\$PATH:\$HOME/go/bin"
 # bash bin/rebuild
 TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
-
     $obj->exe_bash_code( { code => $script, } );
-    $obj->clean_up();
+
+    # $obj->clean_up();
     return;
 }
+
+use Getopt::Long qw/ GetOptions /;
+
+my $output_fn;
+my $force_load;
+GetOptions( "force-load" => \$force_load, "output|o=s" => \$output_fn, )
+    or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
 foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
-    __PACKAGE__->run_config($sys);
+    __PACKAGE__->run_config( { force_load => $force_load, sys => $sys, } );
 }
 
 print "Success!\n";

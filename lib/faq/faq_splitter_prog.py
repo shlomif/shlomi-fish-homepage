@@ -174,10 +174,11 @@ def gen_image_macros_call():
 
 
 def main():
+    _docbook5_main()
+    # return
     _faq_gen()
     gen_image_macros_call()
     _screenplays_main()
-    _docbook5_main()
 
 
 def _faq_gen():
@@ -260,6 +261,7 @@ def generic_generate_from_(
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
 
+    print("OUT_DN = ", OUT_DN, " ; path_to_all_in_one =", path_to_all_in_one)
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
@@ -438,6 +440,13 @@ def generic_generate_from_db5(**args):
 
 def _docbook5_main():
     generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
+        "putting-cards-on-the-table-2019-2020/",
+        base_path=("../" * 4),
+        path_to_all_in_one="../",
+    )
+    # return
+    generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/education/" +
         "introductory-language/",
         base_path=("../" * 5),
@@ -483,11 +492,6 @@ def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
-        base_path=("../" * 4),
-    )
-    generic_generate_from_db5(
-        OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
-        "putting-cards-on-the-table-2019-2020/",
         base_path=("../" * 4),
     )
     generic_generate_from_db5(

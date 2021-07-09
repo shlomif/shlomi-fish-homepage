@@ -51,6 +51,20 @@ class MyTests(unittest.TestCase):
             "^.*?All People", desc_text)
         self.assertTrue(m)
 
+    def test_putting_cards_2021_links(self):
+        input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
+            'putting-cards-on-the-table-2019-2020/' + \
+            'indiv-nodes/Taylor_Swift.xhtml'
+        root = html.parse(input_fn)
+        descs = root.xpath(
+            "//a[@title='Amateurs vs. Professionals']")
+        self.assertEqual(len(descs), 1, 'single link')
+        # desc_text = descs[0].xpath('@href/text()')[0]
+        desc_text = descs[0].get('href')
+        m = re.match(
+            "^\\.\\./#amateurs$", desc_text)
+        self.assertTrue(m, 'right relative link: ' + desc_text)
+
     def test_faq_desc(self):
         input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
         root = html.parse(input_fn)

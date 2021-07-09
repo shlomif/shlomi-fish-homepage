@@ -157,6 +157,8 @@ class XhtmlSplitter:
                 ofh.write(tree_s)
 
     def process(self):
+        self.c = \
+            ("putting-cards-on-the-table-2019-2020/" in self.output_dirname)
         SECTION_FORMAT = self.section_format
         output_dirname = self.output_dirname
         os.makedirs(output_dirname, exist_ok=True)
@@ -277,15 +279,21 @@ class XhtmlSplitter:
                 rec = {'id': id_, 'header_esc': header_esc, }
                 parents.append(rec)
                 p_iter = p_iter.getparent()
-            for a_el in _xpath(
+
+            def _a_tags():
+                """docstring for _atags"""
+                return _xpath(
                     self.ns, list_elem, "./descendant::{xhtml_prefix}a".format(
-                                xhtml_prefix=self.xhtml_prefix
-                                            )):
+                        xhtml_prefix=self.xhtml_prefix
+                    )
+                )
+            for a_el in _a_tags():
                 href = a_el.get('href')
                 if href is None:
                     continue
                 if href.startswith('#'):
                     a_el.set("href", self.path_to_all_in_one + href)
+                    a_el.set("donotprocess", "true")
             header_tag = _first(
                 self.ns, list_elem, "./{xhtml_prefix}header".format(
                     xhtml_prefix=self.xhtml_prefix
@@ -304,11 +312,13 @@ class XhtmlSplitter:
             a_tag.set("class", self.back_to_source_page_css_class)
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
-            if len(self.path_to_images):
-                for a_elem in _xpath(self.ns,
-                                     list_elem, ".//{xhtml_prefix}a".format(
-                                         xhtml_prefix=self.xhtml_prefix
-                                                                     )):
+            if len(self.path_to_images) and (
+                    True):  # len(self.path_to_all_in_one) == 0):
+                # assert not self.c
+                for a_elem in _a_tags():
+                    if a_elem.get("donotprocess"):
+                        a_elem.attrib.pop("donotprocess")
+                        continue
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
                         continue
@@ -319,6 +329,15 @@ class XhtmlSplitter:
                     a_elem.set(
                         "href", self.path_to_images + href
                     )
+                    if self.c:
+                        # assert not ("../../" in a_elem.get("href"))
+                        pass
+            else:
+                # cleanup
+                for a_elem in _a_tags():
+                    if a_elem.get("donotprocess"):
+                        a_elem.attrib.pop("donotprocess")
+                        continue
             body_string = self._to_string_cb(list_elem)
             formats = {
                 'base_path': self.base_path,

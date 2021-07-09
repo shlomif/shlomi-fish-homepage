@@ -261,7 +261,7 @@ def generic_generate_from_(
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
 
-    print("OUT_DN = ", OUT_DN, " ; path_to_all_in_one =", path_to_all_in_one)
+    # print("OUT_DN = ", OUT_DN, " ; path_to_all_in_one =", path_to_all_in_one)
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
@@ -417,7 +417,11 @@ def _screenplays_main():
 
 def generic_generate_from_db5(**args):
     TOP_LEVEL_CLASS = 'article'
+    OUT_DN = args['OUT_DN']
+    base_path = '../' * (OUT_DN.count('/') - 3)
+    # assert base_path == args['base_path']
     extra_args = {
+        'base_path': base_path,
         'container_elem_xpath': (
             "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
         ),
@@ -442,75 +446,61 @@ def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
         "putting-cards-on-the-table-2019-2020/",
-        base_path=("../" * 4),
         path_to_all_in_one="../",
     )
     # return
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/education/" +
         "introductory-language/",
-        base_path=("../" * 5),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "software-management/end-of-it-slavery/",
-        base_path=("../" * 5),
     )
     generic_generate_from_db5(
         OUT_DN=(
             "./dest/post-incs/t2/philosophy/culture/" +
             "my-real-person-fan-fiction/"
         ),
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/" +
         "case-for-file-swapping/revision-3/",
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "high-quality-software/rev2/",
-        base_path=("../" * 5),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "open-source/foss-licences-wars/",
-        base_path=("../" * 5),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "software-management/perfect-workplace/",
-        base_path=("../" * 5),
         path_to_all_in_one="../perfect-it-workplace.xhtml",
         path_to_input="perfect-it-workplace.xhtml",
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/obj-oss/rev2/",
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy" +
         "/philosophy/putting-all-cards-on-the-table-2013/",
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/politics/drug-legalisation/",
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/psychology/hypomanias/",
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN=(
             "./dest/post-incs/t2/philosophy/psychology/" +
             "why-openly-bipolar-people-should-not-be-medicated/"),
-        base_path=("../" * 4),
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/the-eternal-jew/",
-        base_path=("../" * 3),
         path_to_all_in_one="../ongoing-text.xhtml",
         path_to_input="./ongoing-text.xhtml",
     )

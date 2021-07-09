@@ -283,11 +283,20 @@ def generic_generate_from_(
     splitter.process()
 
 
+_BASE_COUNT = "./dest/post-incs/t2/".count('/')
+
+
+def _calc_base_path(OUT_DN):
+    """docstring for _calc_base_path"""
+    base_path = '../' * (OUT_DN.count('/') - _BASE_COUNT)
+    return base_path
+
+
 def generic_generate(
         OUT_DN, output_dirname,
         path_to_all_in_one, path_to_images="",
         path_to_input="ongoing-text.html",):
-    base_path = '../' * (OUT_DN.count('/') - 3)
+    base_path = _calc_base_path(OUT_DN)
     full_out_dirname = OUT_DN + (output_dirname or '')
     TOP_LEVEL_CLASS = 'screenplay'
 
@@ -418,7 +427,7 @@ def _screenplays_main():
 def generic_generate_from_db5(**args):
     TOP_LEVEL_CLASS = 'article'
     OUT_DN = args['OUT_DN']
-    base_path = '../' * (OUT_DN.count('/') - 3)
+    base_path = _calc_base_path(OUT_DN)
     # assert base_path == args['base_path']
     extra_args = {
         'base_path': base_path,

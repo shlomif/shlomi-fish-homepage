@@ -465,7 +465,7 @@ While the birth parents of
 of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">the Selinaverse</a>
 (<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> , b. 1992)
 were killed in a starship crash when she was 1 years old, she was adopted by her aunt,
-the Archduchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
+the Duchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
 Portman</a>), and her aunt's husband Darth Vader, who volunteered to act as King in effect until
 Padme's coming of age. As a result, Padmé had a happy childhood until she turned 18
 at 2010 and was ready to become the bona fide monarch of Naboo.

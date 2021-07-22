@@ -2472,6 +2472,16 @@ The other says: “This is good because it’s not popular”.
 — Shlomi Fish (though may not be a 100% original sentiment).
 </p>
 
+[% WRAPPER quote  %]
+<p>
+Another kind of fool: "This is bad because it is mainstream.".
+</p>
+[%- END -%]
+
+<p>
+— Shlomi Fish.
+</p>
+
 [%- END -%]
 
 [% WRAPPER heb_header_joke id = "two_kinds_of_fools"  header = "שני סוגי כסילים"  %]
@@ -3143,7 +3153,6 @@ comedians".
 
 [% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
 
-
 [% WRAPPER quote %]
 <p>
 One does not simply say “no” to an Alpha Female.
@@ -3164,7 +3173,6 @@ what they are doing. That is because, among humans, sex appeal
 [%- END -%]
 
 [% WRAPPER github_captioned_image_joke id = "interesting_hypothesis" header = "“Interesting Hypothesis”" repo_href = "https://github.com/shlomif/Captioned-Image-Interesting-Hypothesis" src = base_path _ "humour/images/interesting-hypothesis.svg.png" alt = "“Interesting Hypothesis” as said by Dr. Sheldon Cooper" %]
-
 
 [% WRAPPER quote %]
 <p>
@@ -3288,11 +3296,7 @@ See:
 
 [%- END -%]
 
-
-
-
 [% WRAPPER github_captioned_image_joke id = "badass-fluttershy--terminator-liberation" header = "“Hasta la vista, baby tank girl! When you got to shoot - shoot! Then talk.”" repo_href = "https://github.com/shlomif/captioned-image--badass-fluttershy--terminator-liberation" src = base_path _ "humour/images/captioned-image--badass-fluttershy--terminator-liberation.svg.webp" alt = "Badass Fluttershy" %]
-
 
 [% WRAPPER quote %]
 <p>

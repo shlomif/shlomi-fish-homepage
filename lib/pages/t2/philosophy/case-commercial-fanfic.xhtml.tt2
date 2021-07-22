@@ -22,6 +22,7 @@
 [% SET SMG = '<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>' %]
 [% SET Sesame = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
 [% SET hhfg = '<a href="https://www.shlomifish.org/humour/human-hacking/conclusions/">"The Human Hacking Field Guide"</a>'  %]
+[% SET opencontent = '<a href="https://en.wikipedia.org/wiki/Free_content">open/free content</a>'  %]
 
 
 [% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around come around"</a>' %]
@@ -180,7 +181,7 @@ The recent cultural trend toward openness, freedom, sharing and
 href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">standing
 on the shoulders of giants</a> (= building on the work of your
 predecessors or contemporaries).
-E.g: [% FOSS %], <a href="https://en.wikipedia.org/wiki/Free_content">open/free content</a>,
+E.g: [% FOSS %], [% opencontent %],
 <a href="https://en.wikipedia.org/wiki/Web_2.0">"web 2.0"</a>,
 <a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>.
 </p>
@@ -690,7 +691,7 @@ dichotomy between geek and hacker culture and "mainstream"
 culture. Geeks were considered intelligent, but unattractive,
 shy, anti-social, unathletic, and often without "real-life" social life.
 My 2005 [% hhfg %] story
-presented male and female open source and open content geeks and hackers
+presented male and female open source and [% opencontent %] geeks and hackers
 as competent, confident, sexually attractive, socially capable, assertive, as well as
 popular and coveted. It was written as an antithesis to Paul Graham's <a href="http://www.paulgraham.com/nerds.html">"Why Nerds are Unpopular" essay</a>
 and the <a
@@ -766,7 +767,7 @@ Rand</a>, or <a
 href="https://www.shlomifish.org/humour/fortunes/joel-on-software.html">Joel on
 Software</a>, or <a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric
 S. Raymond</a>, who while I never completely agreed with everything they said
-(and they may have proven wrong in time),
+(and they may have been proven wrong in time),
 often found them of useful food for thought (and none of them claimed what
 they say is <a href="#guidelines_as_dogma">gospel</a>
 or that it will remain accurate as time and technology advance).
@@ -824,7 +825,7 @@ Also see <a href="#all_people_are_good">"Most People are Good"</a> below.
 [% WRAPPER h2_section id = "open_free_share_steal" title = "Openness, Freedom, Sharing, \"Stealing\", Remixing"  %]
 
 <p>
-It is hard to avoid the trend of [% FOSS %], open/free content,
+It is hard to avoid the trend of [% FOSS %], [% opencontent %],
 sharing digital (and often tangible) works with the world,
 making derivative works, and even remixing / mashing-up works:
 </p>
@@ -1993,8 +1994,8 @@ still sells Windows copies, they are being starved of employees.
 <p>
 <b>Note:</b>
 Microsoft has many other products and services, many of them are [% FOSS
-%] and/or provide important services or infrastructure for open source, open
-content, or otherwise geeky, hackery or important projects. So I do not wish to
+%] and/or provide important services or infrastructure for open source,
+[% opencontent %], or otherwise geeky, hackery or important projects. So I do not wish to
 completely demonise them. In fact, I make use of some of the Microsoft-owned <a
 href="https://en.wikipedia.org/wiki/GitHub">GitHub</a> infrastructure for many
 projects of mine, including my home-site, and it seems the user experience of
@@ -2815,7 +2816,7 @@ href="https://www.shlomifish.org/humour/stories/">screenplays</a> filmed and
 produced than I do about being recognised as an innovative and influential, yet
 obscure and "invisible" <a
 href="https://www.shlomifish.org/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">"hacker
-king" or "messiah"</a> of the Web 2.0 / open content revolution.
+king" or "messiah"</a> of the Web 2.0 / [% opencontent %] revolution.
 </p>
 
 <p>
@@ -2957,7 +2958,7 @@ and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_
 [% UNLESS screenplay_shortage__remix %]
 
 <p>
-My secret to success: I'm a 21st century open source + open content + remixer +
+My secret to success: I'm a 21st century open source + [% opencontent %] + remixer +
 fanfic polymath and <a
 href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">openminded</a>
 amateur / geek, and hacker / action hero, entertainer and educator. I have my
@@ -3254,7 +3255,7 @@ Even <a href="https://github.com/electronicarts">EA</a> has FOSS code.
 </p>
 
 <p>
-They said open content is a fad. <a href="https://www.wikimedia.org/">Wikimedia</a>,
+They said [% opencontent %] is a fad. <a href="https://www.wikimedia.org/">Wikimedia</a>,
 <a href="https://en.wikipedia.org/wiki/Fandom_(website)">Wikia</a>
 and countless of blogs, microblogs and social media pages and web forums
 are

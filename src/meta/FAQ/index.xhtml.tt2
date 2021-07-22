@@ -3470,7 +3470,7 @@ Intel Corporation 82579V Gigabit Network Connection.
 </ul>
 
 <p>
-I’m running <a href="http://www.mageia.org/">Mageia Linux</a> on it. This
+I’m running <a href="https://www.debian.org/">Debian GNU/Linux</a> on it. This
 desktop computer replaced my older computer which was a:
 </p>
 
@@ -4159,6 +4159,16 @@ Note that I also write some new code in Python, Julia, bash, C, C++ and other la
 </p>
 
 [%- END -%]
+
+[% WRAPPER faq_h4_section id = "why_did_you_quit_mageia" title = "Why did you quit using and contributing to Mageia Linux?" %]
+
+<p>
+Contributing to Mageia was too time consuming, and Mageia is too obscure,
+unpopular, and mismanaged. I like Fedora and Debian better.
+<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged">Told Atlas to shrug.</a>
+</p>
+
+[% END %]
 
 [%- END -%]
 

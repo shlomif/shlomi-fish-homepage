@@ -68,7 +68,7 @@ easy? Does it really necessitate its own book?
 
 <p>
 <b>Shlomi Fish</b>: Hell no! Mastering <code>cat</code> is not easy at all.
-In fact, mastering <code>cat</code> is almost as difficult as herding cats.
+In fact, mastering <code>cat</code> is almost as difficult as <a href="https://www.youtube.com/watch?v=m_MaJDK3VNE">herding cats</a>.
 </p>
 
 <p>
@@ -205,6 +205,20 @@ Macke’s blog</a>
 [% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2009", ) %]
+
+[% END %]
+
+[% WRAPPER links_sect  %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=m_MaJDK3VNE">EDS: 'Cat Herders'</a>
+</p>
+</li>
+
+</ul>
 
 [% END %]
 

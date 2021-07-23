@@ -24,6 +24,8 @@ my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 my $dom            = $p->parse_file($facts_xml_path);
 
 my %deps;
+my $xpc = XML::LibXML::XPathContext->new();
+$xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 {
     foreach my $lang (qw(en-US he-IL))
@@ -43,8 +45,7 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
             }
         );
 
-        my $xpc = XML::LibXML::XPathContext->new($indiv_dom);
-        $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
+        $xpc->setContextNode($indiv_dom);
 
         if ( $lang eq 'he-IL' )
         {

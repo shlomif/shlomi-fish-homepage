@@ -25,15 +25,15 @@ sub _xpc
 
     return $xpc;
 }
-
-my @nodes = _xpc($dom)->findnodes(q{//xhtml:div[@class='section']});
+my $xpc   = _xpc($dom);
+my @nodes = $xpc->findnodes(q{//xhtml:div[@class='section']});
 
 # print @nodes;
 #
 foreach my $sect (@nodes)
 {
-    my $id    = _xpc($sect)->findvalue(q{xhtml:h2/@id});
-    my $title = _xpc($sect)->findnodes(q{xhtml:h2})->[0]->textContent;
+    my $id    = $xpc->findvalue( q{xhtml:h2/@id}, $sect );
+    my $title = $xpc->findnodes( q{xhtml:h2}, $sect )->[0]->textContent;
 
     my $contents = <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>

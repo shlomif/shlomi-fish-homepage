@@ -11912,5 +11912,102 @@ parts of the staff to prevent them from becoming objects of worship.
         </irc>
     </fortune>
 
+    <fortune id="sharp-c-philosophise-into-a-corner">
+        <meta>
+            <title>#c - Philosophise yourself into a corner</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="shlomif">vdamewood: hi! sup?I don&#39;t like the fact that the new ##programming faq is neutered of links. seems like in your intolerance of me you&#39;ve philosophised yourself into a corner. :P we&#39;re going to lose The-Game™</saying>
+<saying who="Inline">erm, if you get bored of one corner then philosophize yourself onto the other corner....</saying>
+<saying who="Inline">lol</saying>
+<saying who="shlomif">Inline: heh.</saying>
+<saying who="shlomif">Inline++</saying>
+<saying who="shlomif">http://ars.userfriendly.org/cartoons/?id=20060302</saying>
+<saying who="candide">Title of shlomif&#39;s link: UserFriendly Strip Comments</saying>
+<saying who="Inline">at least it&#39;s raining metaphysics erry day.....</saying>
+<saying who="Inline">hahaha</saying>
+<saying who="shlomif">that strip is a remake of https://www.youtube.com/watch?v=KNYI3iINXrQ</saying>
+<saying who="candide">Title of shlomif&#39;s link: Sam the Eagle versus Alice Cooper - YouTube</saying>
+<saying who="shlomif">Inline: metaphysics is my favourite physics ;)</saying>
+<me_is who="Inline">goes take a swim in the sea of concepts then comes out and holds his bucket in the air to fill with metaphysics then philosophizes himself onto his retreat couch</me_is>
+<saying who="Inline">lather, rinse, repeat</saying>
+<saying who="Inline">shlomif: i&#39;m a holidayist</saying>
+<saying who="Inline">lol</saying>
+<saying who="shlomif">Inline: \o/ :D</saying>
+<saying who="shlomif">Inline++ # good joke</saying>
+<saying who="shlomif">Inline: may i tweet it?</saying>
+<saying who="shlomif">we got a bit offtopic though</saying>
+<saying who="shlomif">Inline: &quot;there is no escape from shlomif&#39;s philosophical corner!&quot; ;)</saying>
+<saying who="shlomif">https://www.youtube.com/watch?v=9m-kbBamg_U - &#39;stay there!&#39;</saying>
+<saying who="candide">Title of shlomif&#39;s link: Sesame Street: Grover And Herry Explain Here &amp; There - YouTube</saying>
+<saying who="pr-asadi">Hi guys.</saying>
+<saying who="pr-asadi">How can i define a char array with 10mb size? </saying>
+<saying who="pr-asadi">I do not want use pointer or malloc.</saying>
+<saying who="dave0">pr-asadi: static char array[10*1024*1024];</saying>
+<saying who="shlomif">dave0++</saying>
+<saying who="dave0">dave1</saying>
+<saying who="shlomif">10 MB is peanuts nowadays. </saying>
+<saying who="twkm">still might fail though if the duration is automatic.</saying>
+<saying who="pr-asadi">dave0: How did do static?</saying>
+<saying who="dave0">pr-asadi: because twkm </saying>
+<saying who="twkm">static duration was required.  the static keyword might not be needed, but that depends on context.</saying>
+<saying who="Twix">usually it is not a good idea to put a 10 MB array on the stack. I think usually the stack on linux is only 8 MB big(might be higher now, not sure what the current value is). So putting it into the static memory section might be good idea :&gt;</saying>
+<saying who="Twix">but why do you not like to use malloc? I usually avoid malloc, too. But its because i usually work in microcontrollers</saying>
+<saying who="pr-asadi">So... fgets function does not give char *array type.</saying>
+<saying who="pr-asadi">does not takes*</saying>
+<saying who="Twix">?</saying>
+<saying who="pr-asadi">I should use narrow string(char array[length]).</saying>
+<saying who="twkm">pointer into storage, at least n bytes of it where n is what you provide a the second argument.</saying>
+<saying who="twkm">some prefer using allocated storage there, but automatic, static or thread local is fine too.</saying>
+<saying who="pr-asadi">Twix: What do you mean? I&#39;am a beginner.</saying>
+<saying who="Twix">that the stack size is limited? Or the static memory thing?</saying>
+<saying who="pr-asadi">twkm: I should read more about the static keyword.</saying>
+<saying who="Twix">there are basically 3 memory sections. Maybe 4 if you take thread local memory into account. The stack, the heap and the static memory</saying>
+<saying who="twkm">indeed, storage duration and the meaning of the qualifiers should be learned.</saying>
+<saying who="twkm">ugh.</saying>
+<saying who="Twix">the static memory gets allocated by the compiler/linker. Its size is known at compiletime/before the programm has been started.</saying>
+<me_is who="caveman">has quit (Quit: the ##end of the abyss)</me_is>
+<saying who="Twix">every thing you declare as static never gets deleted. The memory is allocated due the whole program lifetime. E.g. if you have a static variable in a function, it will keep it content between calls of this function</saying>
+<saying who="pr-asadi">Twix: Thanks man. I did know these things. I should read more.</saying>
+<saying who="Twix">you did already know? :o</saying>
+<saying who="Twix">on microcontrollers its neat to use static memory for everything. If you avoid malloc you can make better predictions about the memory consumtion of your program</saying>
+<saying who="Twix">but its more complicated to write a memory efficient program. You need to put a lot of thought how to use these static alloced memory to not waste it</saying>
+<saying who="Twix">On a bigger system i would not recommend this technique and rather simply use malloc to get the buffer you need</saying>
+<saying who="twkm">given char s[n]; or static char s[n]; or char *s = malloc(n); -- which you provide to fgets doesn&#39;t matter to fgets.</saying>
+<saying who="pr-asadi">Twix: Sorry. &quot;I did not&quot; is true.</saying>
+<saying who="Twix">:D</saying>
+<saying who="twkm">of course you must provide n (or less than n) as well, not some larger value.</saying>
+<saying who="Twix">i always use INT_MAX. Works everytime. But if i only could find the reason for those segmention faults ...</saying>
+<saying who="Twix">:&gt;</saying>
+<saying who="Twix">oh hi fputs_ o/</saying>
+<saying who="shlomif">fputs_: hi. sup?</saying>
+<saying who="Posterdati">hi</saying>
+<saying who="Posterdati">is anyone converting fortran77 to c?</saying>
+<saying who="twkm">some have.</saying>
+<saying who="kurahaupo">Posterdati: &quot;is&quot; or &quot;can&quot;?</saying>
+<saying who="Posterdati">is</saying>
+<saying who="Posterdati">I think is the better choice to apply</saying>
+<saying who="kurahaupo">There isn&#39;t much Fortran code left, so even people skilled at doing that probably aren&#39;t doing it now</saying>
+<saying who="Posterdati">not using f2c</saying>
+<saying who="twkm">some things in c99 were specifically to (app)ease such efforts.</saying>
+<saying who="kurahaupo">Or are you looking for someone to help?</saying>
+<saying who="kurahaupo">or to help you?</saying>
+<saying who="Posterdati">kurahaupo: some applications are still mantained in fortran77 due to its speed for linear algebra computations</saying>
+<saying who="Posterdati">vectors arithmetics is faster</saying>
+<saying who="Posterdati">on f77</saying>
+<me_is who="shlomif">only wrote FizzBuzz in fortran</me_is>
+<saying who="kurahaupo">Posterdati: Vector arithmetic will be faster in whichever languages can use the hardware acceleration in modern CPUs</saying>
+<saying who="Posterdati">well comparing the same algorithm in c and fortran77 the latter always win</saying>
+
+            </body>
+            <info>
+                <channel>#c</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

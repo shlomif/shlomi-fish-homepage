@@ -71,6 +71,21 @@ class MyTests(html_unit_test.TestCase):
             "//html/head/meta[@name='description' " +
             "and contains(@content, 'recorded')]")
 
+    def test_raw_mode(self):
+        app = TestApp(fortunes_show.app)
+        assert app
+        resp = app.get('?id=i-thought-using-loops-was-cheating&mode=raw')
+        assert resp.status_code == 200
+        doc = self.doc({
+            'type': 'text',
+            'fn': 'test_raw_mode',
+            'text': resp.text.encode('utf8'),
+        })
+        doc.has_one(
+            "//html/body/div[@class='fortune']/blockquote/" +
+            "p[contains(text(), 'recorded')]"
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

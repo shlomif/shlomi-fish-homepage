@@ -47,6 +47,35 @@ def _emit_error(title, body):
 </html>''' % {'title': title, 'body': body})
 
 
+def _show_by_str_id(raw_mode, str_id):
+    if not str_id:
+        return _emit_error(
+            title='ID parameter not specified',
+            body='''<h1>Error! Must specify ID parameter</h1>
+<p>
+The ID parameter must be specified.
+</p>''')
+
+    cur.execute(
+            '''SELECT f.text, f.title, c.str_id, c.title, f.desc
+FROM fortune_cookies AS f, fortune_collections AS c
+WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
+    data = cur.fetchone()
+    if data:
+        return _display_fortune_from_data(*([raw_mode, str_id] + list(data)))
+    else:
+        return _emit_error(
+            title='URL not found',
+            body='''<h1>URL not found</h1>
+
+<p>
+The fortune ID %s is not recognised.
+If you've reached this URL and think it should
+be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
+Fish (the Webmaster)</a> and let him know of this problem.
+</p>''' % (html.escape(str_id, True)))
+
+
 @app.route(['/'])
 def main():
     response.content_type = 'application/xhtml+xml; charset=utf-8'
@@ -56,7 +85,10 @@ def main():
         return _pick_random()
     elif mode == "str_id":
         str_id = request.query.id
-        return _show_by_str_id(str_id)
+        return _show_by_str_id(raw_mode=False, str_id=str_id)
+    elif mode == "raw":
+        str_id = request.query.id
+        return _show_by_str_id(raw_mode=True, str_id=str_id)
     else:
         return _invalid_mode(mode)
 
@@ -109,12 +141,7 @@ Report this problem to the webmaster.
     redirect(_my_fullpath() + "?id=" + str_id[0])
 
 
-def _display_fortune_from_data(str_id, html_text, html_title,
-                               col_str_id, col_title, description):
-    title = html_title + " - Fortune"
-    base_dir = '../..'
-
-    return template(
+NON_RAW_TEMPLATE = \
                     '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -139,44 +166,38 @@ def _display_fortune_from_data(str_id, html_text, html_title,
 {{!html_text}}
 </div>
 </body>
-</html>''',
-                    base_dir=base_dir,
-                    col_str_id=col_str_id,
-                    col_title=col_title,
-                    description=html.escape(description, True),
-                    fullpath=_my_fullpath(),
-                    html_text=html_text,
-                    str_id=str_id,
-                    title=title)
+</html>'''
+
+RAW_TEMPLATE = \
+                    '''<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>{{title}}</title>
+<meta charset="utf-8" />
+<meta name="description" content="{{description}}" />
+</head>
+<body>
+{{!html_text}}
+</body>
+</html>'''
 
 
-def _show_by_str_id(str_id):
-    if not str_id:
-        return _emit_error(
-            title='ID parameter not specified',
-            body='''<h1>Error! Must specify ID parameter</h1>
-<p>
-The ID parameter must be specified.
-</p>''')
+def _display_fortune_from_data(raw_mode, str_id, html_text, html_title,
+                               col_str_id, col_title, description):
+    title = html_title + " - Fortune"
+    base_dir = '../..'
 
-    cur.execute(
-            '''SELECT f.text, f.title, c.str_id, c.title, f.desc
-FROM fortune_cookies AS f, fortune_collections AS c
-WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
-    data = cur.fetchone()
-    if data:
-        return _display_fortune_from_data(*([str_id] + list(data)))
-    else:
-        return _emit_error(
-            title='URL not found',
-            body='''<h1>URL not found</h1>
-
-<p>
-The fortune ID %s is not recognised.
-If you've reached this URL and think it should
-be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
-Fish (the Webmaster)</a> and let him know of this problem.
-</p>''' % (html.escape(str_id, True)))
+    return template(
+            (RAW_TEMPLATE if raw_mode else NON_RAW_TEMPLATE),
+            base_dir=base_dir,
+            col_str_id=col_str_id,
+            col_title=col_title,
+            description=html.escape(description, True),
+            fullpath=_my_fullpath(),
+            html_text=html_text,
+            str_id=str_id,
+            title=title)
 
 
 if __name__ == "__main__":

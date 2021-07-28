@@ -239,6 +239,10 @@ my $_humour_tree_contents = {
                             url   => "humour/Terminator/Liberation/cast.html",
                             title => "Who I want to play each character",
                         },
+                        {
+                            text => "Image Macros",
+                            url => "humour/Terminator/Liberation/image-macros/",
+                        },
                     ],
                 },
                 {

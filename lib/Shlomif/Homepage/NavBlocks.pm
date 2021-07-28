@@ -559,6 +559,11 @@ sub _get_tr
     );
 }
 
+sub _tr_s
+{
+    return ( map { _get_tr($_) } @_ );
+}
+
 sub _master_tr
 {
     return Shlomif::Homepage::NavBlocks::Master_Tr->new( {@_}, );
@@ -580,11 +585,9 @@ my %table_blocks = (
 q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('star_trek_wtld'),
-                _get_tr('selina_mandrake'),
-                _get_tr('summer_nsa'),
-                _get_tr('buffy_few_good'),
-                _get_tr('queen_padme_tales'),
+                _tr_s(
+                    qw( star_trek_wtld selina_mandrake summer_nsa buffy_few_good queen_padme_tales ),
+                ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('buffy_facts'),
             ],
@@ -600,9 +603,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
 q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('tow_fountainhead'),
-                _get_tr('hhfg'),
-                _get_tr('qoheleth'),
+                _tr_s( qw( tow_fountainhead hhfg qoheleth ), ),
             ],
         },
     ),
@@ -616,13 +617,9 @@ q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction}
 q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emma Watson Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('selina_mandrake'),
-                _get_tr('buffy_few_good'),
-                _get_tr('muppets_harry_potter'),
-                _get_tr('terminator_liberation'),
-                _get_tr('queen_padme_tales__emwatson'),
-                _get_tr('EmmaWatson_tech_job'),
-                _get_tr('EmmaWatson_visit_to_Gaza'),
+                _tr_s(
+                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson EmmaWatson_tech_job EmmaWatson_visit_to_Gaza ),
+                ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('EmmaWatson_facts'),
             ],
@@ -635,8 +632,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
             tr_s       => [
                 _master_tr( title => q{Open Source/Perl/etc. Fanfiction}, ),
                 _subdiv_tr( title => q{Stories and Screenplays}, ),
-                _get_tr('hhfg'),
-                _get_tr('star_trek_wtld'),
+                _tr_s( qw( hhfg star_trek_wtld ), ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('foss_facts'),
                 _subdiv_tr( title => q{Bits}, ),
@@ -653,12 +649,10 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
             tr_s       => [
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
-                _get_tr('the_enemy'),
-                _get_tr('define_zionism'),
-                _get_tr('EmmaWatson_visit_to_Gaza'),
+                _tr_s( qw( the_enemy define_zionism EmmaWatson_visit_to_Gaza ),
+                ),
                 _subdiv_tr( title => q{#SummerNSA} ),
-                _get_tr('summer_nsa'),
-                _get_tr('SummerNSA_effort'),
+                _tr_s( qw( summer_nsa SummerNSA_effort ), ),
             ],
         },
     ),
@@ -672,9 +666,9 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
 q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('star_trek_wtld'),
-                _get_tr('selina_mandrake'),
-                _get_tr('queen_padme_tales'),
+                _tr_s(
+                    qw( star_trek_wtld selina_mandrake queen_padme_tales ),
+                ),
             ],
         },
     ),
@@ -688,8 +682,7 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
 q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{#SummerNSA} ),
-                _get_tr('summer_nsa'),
-                _get_tr('SummerNSA_effort'),
+                _tr_s( qw( summer_nsa SummerNSA_effort ), ),
                 _subdiv_tr( title => q{Other Screenplays}, ),
                 _get_tr('muppets_grammar_nazis'),
                 _subdiv_tr( title => q{Factoids}, ),
@@ -707,8 +700,7 @@ q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfictio
 q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('terminator_liberation'),
-                _get_tr('queen_padme_tales'),
+                _tr_s( qw( terminator_liberation queen_padme_tales ), ),
             ],
         },
     ),
@@ -723,9 +715,9 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
 q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('buffy_few_good'),
-                _get_tr('terminator_liberation'),
-                _get_tr('queen_padme_tales'),
+                _tr_s(
+                    qw( buffy_few_good terminator_liberation queen_padme_tales ),
+                ),
             ],
         },
     ),
@@ -752,8 +744,7 @@ q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Ba
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr('commercial_fanfic_initiative__mission_stmt'),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _get_tr('terminator_liberation'),
-                _get_tr('queen_padme_tales'),
+                _tr_s( qw( terminator_liberation queen_padme_tales ), ),
             ],
         },
         ),

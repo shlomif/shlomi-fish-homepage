@@ -189,15 +189,16 @@ def _display_fortune_from_data(raw_mode, str_id, html_text, html_title,
     base_dir = '../..'
 
     return template(
-            (RAW_TEMPLATE if raw_mode else NON_RAW_TEMPLATE),
-            base_dir=base_dir,
-            col_str_id=col_str_id,
-            col_title=col_title,
-            description=html.escape(description, True),
-            fullpath=_my_fullpath(),
-            html_text=html_text,
-            str_id=str_id,
-            title=title)
+        (RAW_TEMPLATE if raw_mode else NON_RAW_TEMPLATE),
+        base_dir=base_dir,
+        col_str_id=col_str_id,
+        col_title=col_title,
+        description=html.escape(description, True),
+        fullpath=_my_fullpath(),
+        html_text=html_text,
+        str_id=str_id,
+        title=title
+    )
 
 
 if __name__ == "__main__":

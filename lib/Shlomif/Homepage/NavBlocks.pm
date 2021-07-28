@@ -457,6 +457,10 @@ my %tr_s = (
                 inner_html => "Proposed Cast",
                 path       => "humour/Terminator/Liberation/cast.html",
             ),
+            _l(
+                inner_html => "Image Macros",
+                path       => "humour/Terminator/Liberation/image-macros/",
+            ),
             _github(
                 url => 'https://github.com/shlomif/Terminator-Liberation',
             ),

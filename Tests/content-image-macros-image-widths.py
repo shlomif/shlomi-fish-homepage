@@ -156,10 +156,11 @@ class MyTests(unittest.TestCase):
             path = m.group(1)
             if "interesting-hypothesis" not in path:
                 self.assertTrue(re.match(".*\\.webp$", path))
+            wanted_width = 800 if ("little-red-riding" in path) else WIDTH
             self.assertEqual(
                 Image.open("./dest/post-incs/t2/" + path).size[0],
-                WIDTH,
-                "image {} has WIDTH={}".format(path, WIDTH)
+                wanted_width,
+                "image {} has wanted_width={}".format(path, wanted_width)
                 )
 
     def test_terminator_liberation(self):

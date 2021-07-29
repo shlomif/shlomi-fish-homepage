@@ -46,13 +46,13 @@ $dbh->do(
 );
 
 $dbh->do(
-"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, collection_id INTEGER, desc TEXT)"
+"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, info_text TEXT, collection_id INTEGER, desc TEXT)"
 );
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 my $insert_sth = $dbh->prepare(
-"INSERT INTO fortune_cookies (collection_id, str_id, title, text, desc) VALUES(?, ?, ?, ?, ?)"
+"INSERT INTO fortune_cookies (collection_id, str_id, title, text, info_text, desc) VALUES(?, ?, ?, ?, ?, ?)"
 );
 
 my $collections_aref =
@@ -85,6 +85,12 @@ sub _find_h3
 {
     my $node = shift;
     return $node->findnodes(q{descendant::h3[@id]})->[0];
+}
+
+sub _find_info
+{
+    my $node = shift;
+    return $node->findnodes(q{descendant::table[@class='info']})->[0];
 }
 
 sub _next_fortune
@@ -141,12 +147,15 @@ foreach my $basename (@file_bases)
         my $clone = $node->clone();
         my $h3    = _find_h3($clone);
         $h3->detach();
+        my $info = _find_info($clone);
+        $info->detach();
 
-        my $body = $clone->as_XML();
+        my $body = join( "", map { $_->as_XML(); } $clone->childNodes() );
         my $desc = _next_fortune($plaintext_fh);
         substr( $$desc, min( 500, length($$desc) ) ) = '';
         $$desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
-        $insert_sth->execute( $collection_id, $id, $title, $body, $$desc, );
+        $insert_sth->execute( $collection_id, $id, $title, $body,
+            scalar( $info->as_XML() ), $$desc, );
     }
 
 =begin removed

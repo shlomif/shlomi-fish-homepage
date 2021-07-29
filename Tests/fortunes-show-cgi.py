@@ -70,6 +70,9 @@ class MyTests(html_unit_test.TestCase):
         doc.has_one(
             "//html/head/meta[@name='description' " +
             "and contains(@content, 'recorded')]")
+        doc.has_one(
+            "descendant::table[@class='info']"
+        )
 
     def test_raw_mode(self):
         app = TestApp(fortunes_show.app)
@@ -84,6 +87,13 @@ class MyTests(html_unit_test.TestCase):
         doc.has_one(
             "//html/body/div[@class='fortune']/blockquote/" +
             "p[contains(text(), 'recorded')]"
+        )
+        doc.has_one(
+            "//html/body/div[@class='fortune']/blockquote/" +
+            "p[contains(text(), 'recorded')]"
+        )
+        doc.has_none(
+            "//table[@class='info']"
         )
 
 

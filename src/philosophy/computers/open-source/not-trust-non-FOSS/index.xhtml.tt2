@@ -8,7 +8,7 @@
 <b>Publishing Date:</b> 3 March 2014
 </p>
 
-<h2 id="about">About this Article</h2>
+[% WRAPPER h2_section id = "about" title = "About this Article" %]
 
 <p>
 This article aims to explain why I do not trust non-open-source software
@@ -17,7 +17,9 @@ and would rather not depend on them, even if they are technically superior
 to their open source alternatives in some respects.
 </p>
 
-<h2 id="article">The Article</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "article" title = "The Article" %]
 
 <p>
 In this essay, I would like to explain why I do not trust
@@ -122,6 +124,8 @@ which was also the case for the Linux kernel project, with the demise of
 the gratis BitKeeper version altogether.
 </p>
 
+[% END %]
+
 [% WRAPPER links_sect %]
 
 <ul>
@@ -140,9 +144,15 @@ reason why it is important to have the source code of your dependencies.
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=the-old-shareware-and-the-android-apps">"The Old Shareware and the Android Applications"</a> - by Nadav Har'El.
+</p>
+</li>
+
 </ul>
 
-<h3 id="discontinued_proprietary_apps">Some Discontinued Non-FOSS Applications</h3>
+[% WRAPPER h3_section id = "discontinued_proprietary_apps" title = "Some Discontinued Non-FOSS Applications" %]
 
 <ul>
 
@@ -212,11 +222,15 @@ the Apache 2.0 licence, several years later.
 
 [% END %]
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2014", ) %]
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 
@@ -227,5 +241,7 @@ the Apache 2.0 licence, several years later.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

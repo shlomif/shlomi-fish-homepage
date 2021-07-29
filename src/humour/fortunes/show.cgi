@@ -97,14 +97,12 @@ def _invalid_mode(mode):
     mode_esc = html.escape(mode, True)
 
     _emit_error(
-            title='Error! Invalid mode "%s"' % (mode_esc),
-            body='''<h1>Error! Invalid mode "%s".</h1>
-
+        title='Error! Invalid mode "%s"' % (mode_esc),
+        body='''<h1>Error! Invalid mode "%s".</h1>
 <p>
 Only valid modes are <code>random</code> and <code>str_id</code>
 (where <code>str_id</code> is the default).
 </p>''' % (mode_esc))
-    return
 
 
 def _pick_random():
@@ -113,8 +111,8 @@ def _pick_random():
 
     if not max_id:
         _emit_error(
-                title="Query failed",
-                body='''<h1>Query failed</h1>
+            title="Query failed",
+            body='''<h1>Query failed</h1>
 
 <p>
 Report this problem to the webmaster.
@@ -129,8 +127,9 @@ Report this problem to the webmaster.
     str_id = cur.fetchone()
 
     if not str_id:
-        _emit_error(title='Unknown fortune ID',
-                    body='''<h1>lookup_str_id_from_id query failed</h1>
+        _emit_error(
+            title='Unknown fortune ID',
+            body='''<h1>lookup_str_id_from_id query failed</h1>
 <p>
 Report this problem to the webmaster.
 </p>''')

@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 4;
+use Test::More tests => 5;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
 
@@ -21,6 +21,9 @@ $obj->_check_size(
 # TEST
 $obj->_check_size(
     "humour/Summerschool-at-the-NSA/images/xkcd-725-literally.png");
+
+# TEST
+$obj->_check_size("humour/Muppets-Show-TNI/images/xkcd-406-venting.png");
 
 __END__
 

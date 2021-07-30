@@ -137,10 +137,24 @@ Shlomif::Homepage::GenQuadPresMak->new->generate;
 my $future = $git_obj->end();
 
 # $future->await();
+my %f;
+foreach my $rec ( @{ $gen_screenplays_ret->{generate_file_list_promises} }, )
+{
+    my ( $var, $bnlist ) = @{ $rec->() };
+    foreach my $bn (@$bnlist)
+    {
+        ++$f{$var}{$bn};
+    }
+}
+
 path("lib/make/docbook/sf-screenplays.mak")->append_utf8(
     (
-        map { $_->() }
-            ( @{ $gen_screenplays_ret->{generate_file_list_promises} }, )
+        map {
+            my $var = $_;
+            my @bn  = sort keys %{ $f{$var} };
+            @bn ? "$var := @bn\n" : ""
+            }
+            sort keys %f
     ),
     ( @{ $gen_screenplays_ret->{addprefixes} }, ),
 );

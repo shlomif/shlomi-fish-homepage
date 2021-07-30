@@ -32,6 +32,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $graphics_dir_var    = "${base}_ENG_IMAGES__SOURCE_PREFIX";
     my $dest_dir_var        = "${base}_ENG_IMAGES__POST_DEST";
     my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
+    my $files_var           = "${base}_ENG_IMAGES__BASE";
 
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
@@ -44,7 +45,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $copy_screenplay_mak = '';
     my @copy_screenplay_mak__targets;
 
-    my @files_vars;
+    my @files_vars = ($files_var);
     foreach my $doc ( sort { $a->{base} cmp $b->{base} } @$docs )
     {
         my $doc_base = $doc->{base};
@@ -55,8 +56,6 @@ sub _calc_screenplay_doc_makefile_lines
         };
 
         {
-            my $files_var = $gen_name->("IMAGES__BASE");
-            push @files_vars, $files_var;
             my $fn =
 "$screenplay_vcs_base_dir/$github_repo/$subdir/screenplay/${doc_base}.screenplay-text.txt";
 
@@ -69,21 +68,17 @@ sub _calc_screenplay_doc_makefile_lines
                         },
                     }
                 );
-                return (
-                    join(
-                        " ",
-                        "${files_var} :=",
-                        (
-                            map {
-                                my $uri = $_->uri();
-                                $uri =~ s#\A(?:\./)?images/##ms
-                                    or die "non matching uri='$uri'";
-                                $uri
-                            } @{ $got_doc->list_images() }
-                        )
-                        )
-                        . "\n"
-                );
+                return [
+                    $files_var,
+                    [
+                        map {
+                            my $uri = $_->uri();
+                            $uri =~ s#\A(?:\./)?images/##ms
+                                or die "non matching uri='$uri'";
+                            $uri
+                        } @{ $got_doc->list_images() }
+                    ]
+                ];
             };
         }
         my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
@@ -132,7 +127,7 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         . $dest_prefix_dir_var . ")/%: " . "\$("
         . $graphics_dir_var . ")/%\n";
     my $addprefix =
-"${base}_ENG_IMAGES__POST_DEST := \$(addprefix \$($dest_prefix_dir_var)/,"
+        "$dest_dir_var = \$(addprefix \$($dest_prefix_dir_var)/,"
         . join( q# #, map { "\$($_)" } @files_vars ) . ")\n";
     ++( $addprefixes->{$addprefix} );
 

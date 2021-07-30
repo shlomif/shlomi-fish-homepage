@@ -164,8 +164,8 @@ NON_RAW_TEMPLATE = \
 <div class="fortunes_list">
 <div class="fortune">
 {{!html_text}}
-</div>
 {{!html_info_text}}
+</div>
 </div>
 </body>
 </html>'''

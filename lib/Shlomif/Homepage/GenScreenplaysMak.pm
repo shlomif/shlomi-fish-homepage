@@ -11,8 +11,34 @@ use YAML::XS ();
 use XML::Grammar::Screenplay::FromProto::API::ListImages ();
 use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
 
-my $image_lister =
-    XML::Grammar::Screenplay::FromProto::API::ListImages->new( {} );
+package Shlomif::Homepage::GenScreenplaysMak::Lister;
+
+use Moo;
+use File::Update qw( write_on_change );
+
+sub calc_doc__from_proto_text
+{
+    my ( $self, $xml_out_fn, $args ) = @_;
+
+    my $ret = XML::Grammar::Screenplay::API::ImageListDoc->new(
+        {
+            parser_class => 'XML::Grammar::Screenplay::FromProto::Parser::QnD',
+            %$args,
+        }
+    );
+    my $xml_text = $ret->convert($args);
+    $ret->_xml($xml_text);
+    write_on_change( $xml_out_fn, \$xml_text );
+    my $xml_parser = XML::LibXML->new();
+    $xml_parser->validation(0);
+    $ret->_dom( $xml_parser->parse_string( $ret->_xml() ) );
+
+    return $ret;
+}
+
+package Shlomif::Homepage::GenScreenplaysMak;
+
+my $image_lister = Shlomif::Homepage::GenScreenplaysMak::Lister->new( {} );
 
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 
@@ -56,12 +82,15 @@ sub _calc_screenplay_doc_makefile_lines
         };
 
         {
+            my $xml_out_fn = "lib/screenplay-xml/xml/${doc_base}.xml";
+
             my $fn =
 "$screenplay_vcs_base_dir/$github_repo/$subdir/screenplay/${doc_base}.screenplay-text.txt";
 
             push @generate_file_list_promises, sub {
 
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
+                    path($xml_out_fn),
                     {
                         source => {
                             file => $fn,

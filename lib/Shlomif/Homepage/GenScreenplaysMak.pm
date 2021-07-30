@@ -6,6 +6,7 @@ use warnings;
 use Moo;
 
 use Path::Tiny qw/ path /;
+use File::Update qw( write_on_change );
 use YAML::XS ();
 
 use XML::Grammar::Screenplay::FromProto::API::ListImages ();
@@ -82,13 +83,16 @@ sub _calc_screenplay_doc_makefile_lines
         };
 
         {
-            my $xml_out_fn = "lib/screenplay-xml/xml/${doc_base}.xml";
+            my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
+            my $text_out_fn = "lib/screenplay-xml/txt/${doc_base}.txt";
 
             my $fn =
 "$screenplay_vcs_base_dir/$github_repo/$subdir/screenplay/${doc_base}.screenplay-text.txt";
 
             push @generate_file_list_promises, sub {
 
+                my $o = path($text_out_fn);
+                write_on_change( $o, \( path($fn)->slurp_utf8 ) );
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
                     path($xml_out_fn),
                     {

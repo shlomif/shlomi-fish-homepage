@@ -13,12 +13,14 @@ my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
 delete $ENV{MAKEFLAGS};
 
+my %cache;
+
 sub gmake_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    return like( scalar(`gmake $var.show`),
+    return like( scalar( $cache{$var} //= `gmake $var.show` ),
         qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 

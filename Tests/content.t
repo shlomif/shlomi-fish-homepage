@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 13;
+use Test::More tests => 29;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
@@ -104,6 +104,106 @@ qr{<a href=\r?\n?"https://en.wikipedia.org/wiki/NP-completeness" rel=\r?\n?"nofo
 
     # TEST
     $obj->_fortunes_check_size("fortunes-shlomif.epub");
+}
+
+{
+    my $content = path("$POST_DEST/humour/fortunes/shlomif")->slurp_utf8;
+
+    # TEST
+    like(
+        $content,
+        qr{You are banished! You}ms,
+        'Plain text fortune exists and contains text.',
+    );
+
+    $content = path("$POST_DEST/humour/fortunes/shlomif-factoids")->slurp_utf8;
+
+    # TEST
+    unlike(
+        $content,
+qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
+        'Search for "Chuck-Norris"',
+    );
+
+    # TEST
+    unlike(
+        $content,
+        qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EXena[^/]}ms,
+        'Search for "Xena" URLs',
+    );
+
+    #
+    # TEST
+    like( $content, qr{Xena can meet King David}ms, 'Search for "Xena"', );
+    #
+    # TEST
+    like(
+        $content,
+        qr{Xena the Warrior Princess has not met Chuck}ms,
+        'Search for "Xena"',
+    );
+
+    # TEST
+    ok( scalar( -e "$POST_DEST/humour/fortunes/tinic.dat" ),
+        ".dat file exists." );
+
+    # TEST
+    $obj->_fortunes_check_size("fortunes-shlomif-lookup.sqlite3");
+
+    # TEST
+    ok(
+        scalar(
+            -f "$POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.db-postproc.xslt"
+        ),
+        "hhfg xslt exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            -f "$POST_DEST/humour/human-hacking/human-hacking-field-guide-hebrew-v2.txt"
+        ),
+        "hhfg hebrew txt exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            (
+                -s "$POST_DEST/humour/human-hacking/human-hacking-field-guide/background-image.png"
+            ) > 40
+        ),
+        "hhfg png exists",
+    );
+
+    # TEST
+    ok(
+        scalar(
+            (
+                -s "$POST_DEST/humour/human-hacking/human-hacking-field-guide-v2/docbook.css"
+            ) > 20
+        ),
+        "hhfg-v2 docbook.css exists",
+    );
+}
+
+{
+    # TEST
+    $obj->_check_size("js/main_all.js");
+
+    # TEST
+    $obj->_check_size("js/jquery.expander.min.js");
+
+    # TEST
+    $obj->_check_size(
+        "humour/Terminator/Liberation/images/emma-watson-wandless.svg.webp");
+
+    # TEST
+    $obj->_check_size(
+        "humour/Summerschool-at-the-NSA/images/xkcd-725-literally.png");
+
+    # TEST
+    $obj->_check_size("humour/Muppets-Show-TNI/images/xkcd-406-venting.png");
 }
 
 __END__

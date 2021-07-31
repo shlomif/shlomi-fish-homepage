@@ -45,8 +45,8 @@ my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $images_copy_ref, $addprefixes, $_epub_map, $screenplay_vcs_base_dir,
-        $record )
+    my ( $dest_dir_vars, $images_copy_ref, $addprefixes, $_epub_map,
+        $screenplay_vcs_base_dir, $record )
         = @_;
 
     my $base        = $record->{base};
@@ -61,6 +61,7 @@ sub _calc_screenplay_doc_makefile_lines
     my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
     my $files_var           = "${base}_ENG_IMAGES__BASE";
 
+    ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
@@ -221,13 +222,15 @@ EOF
         map { s/\.epub\z/\.raw.html/r =~ s#\A\$\(POST_DEST\)/#\$(PRE_DEST)/#r }
         @_files;
 
-    my $_htmls_dests = join "", map { "$_ \\\n" } @_htmls_files;
-    my $addprefixes  = +{};
-    my $images_copy  = '';
+    my $_htmls_dests  = join "", map { "$_ \\\n" } @_htmls_files;
+    my $addprefixes   = +{};
+    my $dest_dir_vars = +{};
+    my $images_copy   = '';
 
     my @records = (
         map {
-            _calc_screenplay_doc_makefile_lines( ( \$images_copy ),
+            _calc_screenplay_doc_makefile_lines( $dest_dir_vars,
+                ( \$images_copy ),
                 $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $_ )
         } sort { $a->{base} cmp $b->{base} }
             @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") }
@@ -276,6 +279,11 @@ EOF
                     . sprintf( "\n\t\$(call %s,%s)\n\n",
                     $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
             } @_htmls_files
+        ),
+        (
+            "\nALL_SCREENPLAYS__ENG_IMAGES__POST_DESTS = ",
+            join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),
+            "\n"
         ),
     );
 

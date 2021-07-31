@@ -56,10 +56,10 @@ sub _calc_screenplay_doc_makefile_lines
     my $suburl      = $record->{suburl};
 
     my $vcs_dir_var         = "${base}__VCS_DIR";
-    my $graphics_dir_var    = "${base}_ENG_IMAGES__SOURCE_PREFIX";
-    my $dest_dir_var        = "${base}_ENG_IMAGES__POST_DEST";
-    my $dest_prefix_dir_var = "${base}_ENG_IMAGES__POST_DEST_PREFIX";
-    my $files_var           = "${base}_ENG_IMAGES__BASE";
+    my $graphics_dir_var    = "${base}_SCREENPLAY_IMAGES__SOURCE_PREFIX";
+    my $dest_dir_var        = "${base}_SCREENPLAY_IMAGES__POST_DEST";
+    my $dest_prefix_dir_var = "${base}_SCREENPLAY_IMAGES__POST_DEST_PREFIX";
+    my $files_var           = "${base}_SCREENPLAY_IMAGES__BASE";
 
     ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
@@ -281,7 +281,7 @@ EOF
             } @_htmls_files
         ),
         (
-            "\nALL_SCREENPLAYS__ENG_IMAGES__POST_DESTS = ",
+            "\nALL_SCREENPLAYS__SCREENPLAY_IMAGES__POST_DESTS = ",
             join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),
             "\n"
         ),

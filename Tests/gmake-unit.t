@@ -54,9 +54,11 @@ sub dest_test
         )
     {
         # TEST*5
-        gmake_test( 'SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE',
+        gmake_test(
+            'SO_WHO_THE_HELL_IS_QOHELETH_SCREENPLAY_IMAGES__BASE',
             $word,
-            "SO_WHO_THE_HELL_IS_QOHELETH_ENG_IMAGES__BASE - word=$word" );
+            "SO_WHO_THE_HELL_IS_QOHELETH_SCREENPLAY_IMAGES__BASE - word=$word"
+        );
     }
 
     # TEST

@@ -19,17 +19,6 @@ WIDTH = 600
 
 
 class MyTests(unittest.TestCase):
-    def test_share_this_url(self):
-        input_fn = './dest/post-incs/t2/humour/bits/' + \
-            'Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml'
-        root = html.parse(input_fn)
-        share_links = root.xpath(
-            ".//p[@class='share']/a[@href='" +
-            "http://www.addtoany.com/share_save?linkurl=https%3A%2F%2F" +
-            "www.shlomifish.org%2Fhumour%2Fbits%2FAtom-Text-Editor" +
-            "-edits-2_000_001-bytes%2F&linkname=']")
-        self.assertEqual(len(share_links), 1)
-
     def test_faq_inner_links(self):
         input_fn = \
             './dest/post-incs/t2/meta/FAQ/atheism_can_be_a_religion.xhtml'

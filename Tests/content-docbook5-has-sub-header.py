@@ -25,6 +25,17 @@ class MyTests(html_unit_test.TestCase):
             ".//section[header/h3[@id='hacking-heroism']]"
         )
 
+    def test_share_this_url(self):
+        input_fn = './dest/post-incs/t2/humour/bits/' + \
+            'Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml'
+        doc = self.doc(input_fn)
+        doc.has_one(
+            ".//p[@class='share']/a[@href='" +
+            "http://www.addtoany.com/share_save?linkurl=https%3A%2F%2F" +
+            "www.shlomifish.org%2Fhumour%2Fbits%2FAtom-Text-Editor" +
+            "-edits-2_000_001-bytes%2F&linkname=']"
+        )
+
     def test_fanfic(self):
         input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
             'case-for-commercial-fan-fiction/indiv-nodes/' + \
@@ -49,6 +60,13 @@ class MyTests(html_unit_test.TestCase):
         self.doc(input_fn).has_one(
             ".//div[@class='sitemap']/ul/li[a[@href='../humour/']]" +
             "/ul/li/a[@href='../humour/aphorisms/']"
+        )
+
+    def test_factoids_fortune_page__h3_elem(self):
+        input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
+        self.doc(input_fn).has_one(
+            ".//h3[@id='shlomif-fact-xena-1' and " +
+            "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
         )
 
     def test_hebrew_site_map(self):

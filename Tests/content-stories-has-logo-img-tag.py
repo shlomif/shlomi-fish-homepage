@@ -19,13 +19,6 @@ class MyTests(html_unit_test.TestCase):
             "@src='images/Green-d10-dice.webp']"
         )
 
-    def test_factoids(self):
-        input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
-        self.doc(input_fn).has_one(
-            ".//h3[@id='shlomif-fact-xena-1' and " +
-            "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
-        )
-
     def test_factoids_main_page(self):
         input_fn = './dest/post-incs/t2/humour/bits/facts/index.xhtml'
         doc = self.doc(input_fn)

@@ -19,13 +19,6 @@ WIDTH = 600
 
 
 class MyTests(unittest.TestCase):
-    def test_faq_inner_links(self):
-        input_fn = \
-            './dest/post-incs/t2/meta/FAQ/atheism_can_be_a_religion.xhtml'
-        root = html.parse(input_fn)
-        links = root.xpath(".//a[@href='./#religious_belief']")
-        self.assertEqual(len(links), 2)
-
     def test_case4fanfic(self):
         input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
             'case-for-commercial-fan-fiction/' + \

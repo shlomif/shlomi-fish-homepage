@@ -90,6 +90,12 @@ class MyTests(html_unit_test.TestCase):
             ""
             )
 
+    def test_faq_inner_links(self):
+        input_fn = \
+            './dest/post-incs/t2/meta/FAQ/atheism_can_be_a_religion.xhtml'
+        doc = self.doc(input_fn)
+        doc.has_count(".//a[@href='./#religious_belief']", 2)
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

@@ -107,9 +107,11 @@ class MyTests(unittest.TestCase):
             href = link[0].get("href")
             self.assertTrue(href.startswith("indiv-nodes/"))
 
-    def test_main(self):
-        base_dir_path = './dest/post-incs/t2/humour/image-macros/'
-        input_fn = (base_dir_path + 'index.xhtml')
+    def _get_base_dir_path(self):
+        return './dest/post-incs/t2/humour/image-macros/'
+
+    def test_image_macros__relative_links(self):
+        base_dir_path = self._get_base_dir_path()
         fragments_dir = base_dir_path + "indiv-nodes/"
         fragment_fn = fragments_dir + "GNU_slash_Linux.xhtml"
         import os
@@ -143,6 +145,9 @@ class MyTests(unittest.TestCase):
             "node_link_href",
         )
 
+    def test_image_macros_widths(self):
+        base_dir_path = self._get_base_dir_path()
+        input_fn = (base_dir_path + 'index.xhtml')
         root = html.parse(input_fn)
         self._helper_indiv_nodes_test(root, ".//article")
         imgs = root.xpath(".//article/img")

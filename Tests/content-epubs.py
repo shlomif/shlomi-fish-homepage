@@ -21,7 +21,8 @@ class MyTests(unittest.TestCase):
             './dest/post-incs/t2/humour/' +
             'So-Who-The-Hell-Is-Qoheleth/' +
             'So-Who-the-Hell-is-Qoheleth.epub', 'r')
-        xml = zip_obj.open("OEBPS/toc.ncx").read()
+        with zip_obj.open("OEBPS/toc.ncx") as fh:
+            xml = fh.read()
         root = etree.XML(xml)
         self.assertEqual(len(root.xpath(
             ".//ncx:navMap/ncx:navPoint/ncx:navLabel/" +

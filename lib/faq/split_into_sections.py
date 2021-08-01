@@ -324,7 +324,7 @@ class XhtmlSplitter:
                         continue
                     if self._back_re_css.search(a_elem.get("class") or ""):
                         continue
-                    if re.match('.*?\\.(?:html|xhtml)#', href):
+                    if False:  # re.match('.*?\\.(?:html|xhtml)#', href):
                         continue
                     a_elem.set(
                         "href", self.path_to_images + href

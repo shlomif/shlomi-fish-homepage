@@ -135,12 +135,13 @@ NAMESPACES = {
 
 
 def generate_from_image_macros_page(
-        OUT_DN, base_path, relative_output_dirname,
-        path_to_all_in_one, path_to_images="",
+        OUT_DN, relative_output_dirname,
+        path_to_all_in_one, path_to_images,
         path_to_input="index.xhtml",):
     # full_out_dirname = OUT_DN + (output_dirname or '')
     # TOP_LEVEL_CLASS = 'article'
 
+    base_path = _calc_base_path(OUT_DN)
     output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
@@ -163,7 +164,6 @@ def generate_from_image_macros_page(
 def gen_image_macros_call():
     generate_from_image_macros_page(
         OUT_DN="./dest/post-incs/t2/humour/image-macros/",
-        base_path=("../" * 3),
         relative_output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
@@ -420,7 +420,7 @@ def _screenplays_main():
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
-        path_to_images="./",
+        path_to_images="../",
     )
 
 

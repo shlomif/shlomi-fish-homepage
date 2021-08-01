@@ -14,14 +14,14 @@ import html_unit_test
 class MyTests(html_unit_test.TestCase):
     def test_main(self):
         input_fn = './dest/post-incs/t2/humour/Selina-Mandrake/index.xhtml'
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//img[@id='selina_mandrake_logo' and " +
             "@src='images/Green-d10-dice.webp']"
         )
 
     def test_factoids(self):
         input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//h3[@id='shlomif-fact-xena-1' and " +
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
         )
@@ -52,7 +52,7 @@ class MyTests(html_unit_test.TestCase):
             './dest/post-incs/t2/humour/' +
             'by-others/hitchhiker-guide-to-star-trek-tng-htmlised.html'
         )
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//section[header/h2[@id='about']]/descendant::p" +
             "[contains(text(),'This is an HTMLised version')]",
             "describes HTMLised in about",
@@ -60,14 +60,14 @@ class MyTests(html_unit_test.TestCase):
 
     def test_road2heaven(self):
         input_fn = './dest/post-incs/t2/humour/RoadToHeaven/abstract.xhtml'
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//li[contains(" +
             "text(),'החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר')]"
         )
 
     def test_tagline_on_stories_page(self):
         input_fn = './dest/post-incs/t2/humour/stories/index.xhtml'
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//article[@class='story' and " +
             ".//h3/@id='summerschool-at-the-nsa']/p[@class='tagline' " +
             "and contains(text(), 'As the sling shoots')]")
@@ -77,13 +77,13 @@ class MyTests(html_unit_test.TestCase):
             './dest/post-incs/t2/humour/Terminator/Liberation/' +
             'indiv-nodes/hamlet-parody-Cher-parody.xhtml'
         )
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//a[@href='../ongoing-text.html#emulating-arnie-as-hamlet'"
             "and text()='the Hamlet parody scene']"
         )
 
     def _factoids_check_helper(self, input_fn, htmlid):
-        return self.doc(input_fn).has_one(
+        self.doc(input_fn).has_one(
             ".//a[contains(@href, 'humour/fortunes/shlomif-factoids.html#"
             + htmlid + "')"
             + "and text()='These factoids in XML-Grammar-Fortune format']"
@@ -93,7 +93,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Chuck-Norris/index.xhtml'
         )
-        return self._factoids_check_helper(
+        self._factoids_check_helper(
             input_fn=input_fn, htmlid='shlomif-fact-chuck-1'
         )
 
@@ -101,7 +101,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Summer-Glau/index.xhtml'
         )
-        return self._factoids_check_helper(
+        self._factoids_check_helper(
             input_fn=input_fn, htmlid='shlomif-fact-sglau-1'
         )
 
@@ -109,7 +109,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Emma-Watson/index.xhtml'
         )
-        return self._factoids_check_helper(
+        self._factoids_check_helper(
             input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
         )
 

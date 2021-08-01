@@ -2760,7 +2760,7 @@ and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration
 </p>
 
 <p>
-In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> used for code.
+In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> for code.
 </p>
 
 <p>
@@ -2768,12 +2768,16 @@ While I am not ashamed of the site’s sources, they went through a long
 <a href="#site_history">history</a> and
 <a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
 and while I remain a big fan of static site generation, there are probably
-some better approaches out there for that, and often it is simpler to just
+some better approaches out there for that. Furthermore, often it is simpler to just
 write something of your own using a <a href="[% base_path %]open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
 a good <a href="[% base_path %]open-source/resources/software-tools/">build system</a>
 and some code glue. However, for me, converting to something else would be too
 time-consuming, and I've already found some faults in some existing popular
 static site generators that I tried.
+</p>
+
+<p>
+You can find a <a href="[% base_path %]meta/site-source/#techs_used">partial list of technologies</a> that have been used for it.
 </p>
 
 [%- END -%]

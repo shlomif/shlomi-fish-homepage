@@ -96,6 +96,17 @@ class MyTests(html_unit_test.TestCase):
         doc = self.doc(input_fn)
         doc.has_count(".//a[@href='./#religious_belief']", 2)
 
+    def test_rindolfism(self):
+        input_fn = \
+            './dest/post-incs/t2/me/rindolfism/index.xhtml'
+        doc = self.doc(input_fn)
+        doc.has_none(
+            ".//section[header/*/@id='neo_semitism']" +
+            "/section[header/*/@id='rindolfism_canon']")
+        doc.has_one(
+            ".//section[header/*/@id='rindolfism']" +
+            "/section[header/*/@id='rindolfism_canon']")
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

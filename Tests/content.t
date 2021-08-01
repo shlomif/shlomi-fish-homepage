@@ -2,7 +2,11 @@
 
 use strict;
 use warnings;
-use Test::More tests => 29;
+use utf8;
+
+use Test::More tests => 45;
+
+use HTML::Entities qw/ decode_entities /;
 use Path::Tiny qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
@@ -204,6 +208,122 @@ qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
 
     # TEST
     $obj->_check_size("humour/Muppets-Show-TNI/images/xkcd-406-venting.png");
+}
+
+{
+    my $content = path("$POST_DEST/MANIFEST.html")->slurp_utf8;
+
+    # TEST
+    like( $content, qr#<a href="humour/fortunes/\.htaccess">#, "MANIFEST" );
+
+    # TEST
+    unlike(
+        $content,
+        qr#<a href="humour/fortunes/[^"]+\.tar\.gz">#,
+        "MANIFEST fortunes tarball"
+    );
+}
+
+{
+    my $content = path("$POST_DEST/rindolf/intro_to_rindolf.html")->slurp_utf8;
+
+    # TEST
+    like( $content, qr{ \# Prints myfunc\(}, 'Contains a comment.' );
+}
+
+{
+    my $content = path("$POST_DEST/me/rindolf/index.xhtml")->slurp_utf8;
+
+    # TEST
+    like( $content, qr{\[no-"the"!\]}, 'Contains the string' );
+}
+
+{
+    my $content =
+        path(
+"$POST_DEST/humour/bits/Emma-Watson-applying-for-a-software-dev-job/index.xhtml"
+    )->slurp_utf8;
+
+    my $needle =
+q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
+
+    # TEST
+    like( $content, qr{\Q$needle\E}, 'Contains the correct URL.' );
+
+}
+
+{
+    my $content =
+        path("$POST_DEST/humour/bits/Spam-for-Everyone/index.xhtml")
+        ->slurp_utf8;
+
+    my $needle = q#<h2 id="license">#;
+
+    # TEST
+    like( $content, qr{\Q$needle\E}, 'Contains the correct URL.' );
+}
+
+{
+    foreach my $path (
+        path(
+"$POST_DEST/philosophy/culture/case-for-commercial-fan-fiction/index.xhtml"
+        ),
+        path(
+"$POST_DEST/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/context.xhtml"
+        ),
+
+        )
+    {
+        my $content = decode_entities( $path->slurp_utf8() );
+
+        my $needle = q#Queen Padmé#;
+
+        # TEST*2
+        like( $content, qr{\Q$needle\E}, "$path contains the Padme needle", );
+    }
+}
+
+{
+    my $content =
+        path("$POST_DEST/lecture/Vim/beginners/slides/slide24.html")
+        ->slurp_utf8;
+
+    # TEST
+    like( $content, qr/<body/, "vim talk slides" );
+}
+
+{
+    my $content =
+        path("$POST_DEST/humour/Star-Trek/We-the-Living-Dead/ongoing-text.html")
+        ->slurp_utf8;
+
+    # TEST
+    like( $content, qr{<div class="screenplay"}, 'Contains a screenplay div.' );
+
+    # TEST
+    like( $content, qr{\bBashir}, 'Contains a name from the screenplay.' );
+
+    # TEST
+    like( $content, qr{\bKatie}, 'Contains a name from the screenplay.' );
+
+    # TEST
+    like( $content, qr{\bKira}, 'Contains a name from the screenplay.' );
+
+    # TEST
+    like( $content, qr{\bDax}, 'Contains a name from the screenplay.' );
+}
+
+{
+    my $content =
+        path(
+"$POST_DEST/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html"
+    )->slurp_utf8;
+
+    # TEST
+    like( $content, qr{<div class="screenplay"}, 'Contains a screenplay div.' );
+
+    # TEST
+    like( $content, qr{podracer}i, 'Contains "podracer".' );
 }
 
 __END__

@@ -41,13 +41,17 @@ class HtmlTestsDoc:
     def xpath(self, xpath_s):
         return HtmlTestsDocQuery(self, self.root.xpath(xpath_s))
 
+    def has_count(self, xpath_s, count_, blurb=""):
+        """docstring for has_count"""
+        self.harness.assertEqual(len(self.xpath(xpath_s)), count_, blurb)
+
     def has_one(self, xpath_s, blurb=""):
         """docstring for has_one"""
-        self.harness.assertEqual(len(self.xpath(xpath_s)), 1, blurb)
+        self.has_count(xpath_s=xpath_s, count_=1, blurb=blurb)
 
     def has_none(self, xpath_s, blurb=""):
         """docstring for has_none"""
-        self.harness.assertEqual(len(self.xpath(xpath_s)), 0, blurb)
+        self.has_count(xpath_s=xpath_s, count_=0, blurb=blurb)
 
 
 class TestCase(unittest.TestCase):

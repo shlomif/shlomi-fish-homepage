@@ -48,6 +48,23 @@ class MyTests(html_unit_test.TestCase):
             "no double quoting",
         )
 
+    def test_fanfic_link(self):
+        input_fn = 'dest/post-incs/t2/philosophy/culture/' + \
+            'case-for-commercial-fan-fiction/indiv-nodes/' + \
+            'starved_of_employees.xhtml'
+        doc = self.doc(input_fn)
+        xp = doc.xpath("//a[text()='attractive and competent actors']")
+        self.assertEqual(
+            len(xp),
+            1,
+            "no double quoting",
+        )
+        self.assertEqual(
+            xp.xpath_results[0].get('href'),
+            '../#beautiful_people_are_geeks',
+            "href results",
+        )
+
     def test_root_page_has_hosting_link(self):
         input_fn = './dest/post-incs/t2/index.xhtml'
         self.doc(input_fn).has_one(

@@ -11,6 +11,7 @@ Split Shlomi Fish's FAQ-list into individual
 sections or questions.
 """
 
+import copy
 import html
 import os
 import re
@@ -255,6 +256,7 @@ class XhtmlSplitter:
                 if src_path.startswith(("http:", "https:", )):
                     continue
                 img_elem.set("src", self.path_to_images + src_path)
+                img_elem.set("donotprocess", "true")
 
         for list_elem in _list_sections():
             _add_prefix(
@@ -312,12 +314,13 @@ class XhtmlSplitter:
             a_tag.set("class", self.back_to_source_page_css_class)
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
+            a_tag.set("donotprocess", "true")
             if len(self.path_to_images) and (
                     True):  # len(self.path_to_all_in_one) == 0):
                 # assert not self.c
                 for a_elem in _a_tags():
                     if a_elem.get("donotprocess"):
-                        a_elem.attrib.pop("donotprocess")
+                        # a_elem.attrib.pop("donotprocess")
                         continue
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
@@ -329,16 +332,26 @@ class XhtmlSplitter:
                     a_elem.set(
                         "href", self.path_to_images + href
                     )
+                    a_elem.set("donotprocess", "true")
                     if self.c:
                         # assert not ("../../" in a_elem.get("href"))
                         pass
             else:
                 # cleanup
-                for a_elem in _a_tags():
-                    if a_elem.get("donotprocess"):
-                        a_elem.attrib.pop("donotprocess")
-                        continue
-            body_string = self._to_string_cb(list_elem)
+                if 0:
+                    for a_elem in _a_tags():
+                        if a_elem.get("donotprocess"):
+                            a_elem.attrib.pop("donotprocess")
+                            continue
+            output_list_elem = copy.deepcopy(list_elem)
+            for a_elem in _xpath(
+                    self.ns, output_list_elem,
+                    "./descendant::*[@donotprocess]",
+                    ):
+                if a_elem.get("donotprocess"):
+                    a_elem.attrib.pop("donotprocess")
+                    continue
+            body_string = self._to_string_cb(output_list_elem)
             formats = {
                 'base_path': self.base_path,
                 'body': (body_string.decode('utf-8')),

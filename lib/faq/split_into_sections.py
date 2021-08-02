@@ -99,6 +99,7 @@ class XhtmlSplitter:
         else:
             self._r_mode = 'rb'
             self._w_mode = 'wb'
+        self._protect_attr_name = "donotprocess"
 
         # self.root = etree.parse(input_fn)
         with open(input_fn, self._r_mode) as fh:
@@ -169,11 +170,11 @@ class XhtmlSplitter:
 
     def _is_protected(self, elem):
         """docstring for _protect"""
-        return elem.get("donotprocess")
+        return elem.get(self._protect_attr_name)
 
     def _protect(self, elem):
         """docstring for _protect"""
-        elem.set("donotprocess", "true")
+        elem.set(self._protect_attr_name, "true")
 
     def process(self):
         self.c = \
@@ -338,10 +339,10 @@ class XhtmlSplitter:
             for a_elem in _xpath(
                     self.ns,
                     output_list_elem,
-                    "./descendant::*[@donotprocess]",
+                    "./descendant::*[@" + self._protect_attr_name + "]",
                     ):
                 if self._is_protected(a_elem):
-                    a_elem.attrib.pop("donotprocess")
+                    a_elem.attrib.pop(self._protect_attr_name)
             body_string = self._to_string_cb(output_list_elem)
             formats = {
                 'base_path': self.base_path,

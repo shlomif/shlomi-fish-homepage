@@ -164,17 +164,6 @@ class XhtmlSplitter:
         output_dirname = self.output_dirname
         os.makedirs(output_dirname, exist_ok=True)
 
-        def xpath(node, query):
-            return node.xpath(query, namespaces=self.ns)
-
-        def first(node, query):
-            mylist = xpath(node, query)
-            if not len(mylist):
-                raise MyXmlNoResultsFoundError(
-                    "node={} , query={}".format(node, query)
-                )
-            return mylist[0]
-
         def calc_id_and_header_esc(header_tag):
             h_tag = _first(self.ns, header_tag, "./*[@id]")
             id_ = _first(self.ns, h_tag, "./@id")

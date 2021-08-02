@@ -167,6 +167,14 @@ class XhtmlSplitter:
             )
         )
 
+    def _is_protected(self, elem):
+        """docstring for _protect"""
+        return elem.get("donotprocess")
+
+    def _protect(self, elem):
+        """docstring for _protect"""
+        elem.set("donotprocess", "true")
+
     def process(self):
         self.c = \
             ("putting-cards-on-the-table-2019-2020/" in self.output_dirname)
@@ -245,7 +253,7 @@ class XhtmlSplitter:
                 if src_path.startswith(("http:", "https:", )):
                     continue
                 img_elem.set("src", self.path_to_images + src_path)
-                img_elem.set("donotprocess", "true")
+                self._protect(img_elem)
 
         for list_elem in self._list_sections():
             _add_prefix(
@@ -286,7 +294,7 @@ class XhtmlSplitter:
                     continue
                 if href.startswith('#'):
                     a_el.set("href", self.path_to_all_in_one + href)
-                    a_el.set("donotprocess", "true")
+                    self._protect(a_el)
             header_tag = _first(
                 self.ns, list_elem, "./{xhtml_prefix}header".format(
                     xhtml_prefix=self.xhtml_prefix
@@ -305,13 +313,12 @@ class XhtmlSplitter:
             a_tag.set("class", self.back_to_source_page_css_class)
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
-            a_tag.set("donotprocess", "true")
+            self._protect(a_tag)
             if len(self.path_to_images) and (
                     True):  # len(self.path_to_all_in_one) == 0):
                 # assert not self.c
                 for a_elem in _a_tags(list_elem):
-                    if a_elem.get("donotprocess"):
-                        # a_elem.attrib.pop("donotprocess")
+                    if self._is_protected(a_elem):
                         continue
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
@@ -323,7 +330,7 @@ class XhtmlSplitter:
                     a_elem.set(
                         "href", self.path_to_images + href
                     )
-                    a_elem.set("donotprocess", "true")
+                    self._protect(a_elem)
                     if self.c:
                         # assert not ("../../" in a_elem.get("href"))
                         pass
@@ -333,9 +340,8 @@ class XhtmlSplitter:
                     output_list_elem,
                     "./descendant::*[@donotprocess]",
                     ):
-                if a_elem.get("donotprocess"):
+                if self._is_protected(a_elem):
                     a_elem.attrib.pop("donotprocess")
-                    continue
             body_string = self._to_string_cb(output_list_elem)
             formats = {
                 'base_path': self.base_path,

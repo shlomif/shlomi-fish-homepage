@@ -157,6 +157,16 @@ class XhtmlSplitter:
             with open(self.input_fn, self._w_mode) as ofh:
                 ofh.write(tree_s)
 
+    def _list_sections(self):
+        """docstring for _list_sections"""
+        return _xpath(
+            self.ns,
+            self.container_elem,
+            self.list_sections_format.format(
+                xhtml_prefix=self.xhtml_prefix
+            )
+        )
+
     def process(self):
         self.c = \
             ("putting-cards-on-the-table-2019-2020/" in self.output_dirname)
@@ -173,16 +183,6 @@ class XhtmlSplitter:
             return id_, header_esc
 
         self._calc_root()
-
-        def _list_sections():
-            """docstring for _list_sections"""
-            return _xpath(
-                self.ns,
-                self.container_elem,
-                self.list_sections_format.format(
-                    xhtml_prefix=self.xhtml_prefix
-                )
-            )
 
         def _add_prefix(prefix, suffix, list_elem):
             """docstring for _add_prefix"""
@@ -226,7 +226,7 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
-        for list_elem in _list_sections():
+        for list_elem in self._list_sections():
             _add_prefix(
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
@@ -247,7 +247,7 @@ class XhtmlSplitter:
                 img_elem.set("src", self.path_to_images + src_path)
                 img_elem.set("donotprocess", "true")
 
-        for list_elem in _list_sections():
+        for list_elem in self._list_sections():
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
                 suffix="",
@@ -271,14 +271,16 @@ class XhtmlSplitter:
                 parents.append(rec)
                 p_iter = p_iter.getparent()
 
-            def _a_tags():
+            def _a_tags(list_elem):
                 """docstring for _atags"""
                 return _xpath(
-                    self.ns, list_elem, "./descendant::{xhtml_prefix}a".format(
+                    self.ns,
+                    list_elem,
+                    "./descendant::{xhtml_prefix}a".format(
                         xhtml_prefix=self.xhtml_prefix
                     )
                 )
-            for a_el in _a_tags():
+            for a_el in _a_tags(list_elem):
                 href = a_el.get('href')
                 if href is None:
                     continue
@@ -307,7 +309,7 @@ class XhtmlSplitter:
             if len(self.path_to_images) and (
                     True):  # len(self.path_to_all_in_one) == 0):
                 # assert not self.c
-                for a_elem in _a_tags():
+                for a_elem in _a_tags(list_elem):
                     if a_elem.get("donotprocess"):
                         # a_elem.attrib.pop("donotprocess")
                         continue
@@ -325,16 +327,10 @@ class XhtmlSplitter:
                     if self.c:
                         # assert not ("../../" in a_elem.get("href"))
                         pass
-            else:
-                # cleanup
-                if 0:
-                    for a_elem in _a_tags():
-                        if a_elem.get("donotprocess"):
-                            a_elem.attrib.pop("donotprocess")
-                            continue
             output_list_elem = copy.deepcopy(list_elem)
             for a_elem in _xpath(
-                    self.ns, output_list_elem,
+                    self.ns,
+                    output_list_elem,
                     "./descendant::*[@donotprocess]",
                     ):
                 if a_elem.get("donotprocess"):

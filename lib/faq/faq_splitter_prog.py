@@ -254,7 +254,7 @@ def generic_generate_from_(
         container_elem_xpath,
         OUT_DN, base_path, output_dirname,
         path_to_all_in_one, path_to_images="",
-        path_to_input="ongoing-text.html", latemp_plain_html=False,
+        path_to_input="ongoing-text.html", input_is_plain_html=False,
         xhtml_article_tag=XHTML_ARTICLE_TAG,
         xhtml_section_tag=XHTML_SECTION_TAG,
         list_sections_format=None,
@@ -274,7 +274,7 @@ def generic_generate_from_(
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
         relative_output_dirname=output_dirname,
-        latemp_plain_html=latemp_plain_html,
+        input_is_plain_html=input_is_plain_html,
         xhtml_article_tag=xhtml_article_tag,
         xhtml_section_tag=xhtml_section_tag,
     )
@@ -320,7 +320,7 @@ def generic_generate_from_tt2_generated_plain_html5(**args):
     TOP_LEVEL_ID = 'main_text_wrapper'
     return generic_generate_from_(
         container_elem_xpath=("//div[@id='" + TOP_LEVEL_ID + "']"),
-        latemp_plain_html=True,
+        input_is_plain_html=True,
         xhtml_article_tag='article',
         xhtml_section_tag='section',
         **args,

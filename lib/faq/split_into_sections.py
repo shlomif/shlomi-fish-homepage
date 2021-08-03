@@ -59,9 +59,9 @@ class XhtmlSplitter:
             path_to_all_in_one="./",
             path_to_images="",
             relative_output_dirname="",
-            latemp_plain_html=False,
+            input_is_plain_html=False,
             list_sections_format=None,
-            ):
+    ):
         self.list_sections_format = (
             list_sections_format or
             (
@@ -82,9 +82,9 @@ class XhtmlSplitter:
         self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
         self.container_elem_xpath = container_elem_xpath
-        self.latemp_plain_html = latemp_plain_html
+        self.input_is_plain_html = input_is_plain_html
         self.xhtml_prefix = (
-            "" if self.latemp_plain_html else
+            "" if self.input_is_plain_html else
             "xhtml:"
             # (""+'{' + 'xhtml' + '}' + "")
             # (""+'{' + XHTML_NAMESPACE + '}' + "")
@@ -93,7 +93,7 @@ class XhtmlSplitter:
         self.xhtml_section_tag = xhtml_section_tag
         self.section_tags = set([
             self.xhtml_article_tag, self.xhtml_section_tag, ])
-        if self.latemp_plain_html:
+        if self.input_is_plain_html:
             self._r_mode = 'rt'
             self._w_mode = 'wb'
         else:
@@ -113,7 +113,7 @@ class XhtmlSplitter:
 
         self._to_string_cb = (
             _html_to_string
-            if self.latemp_plain_html else etree.tostring)
+            if self.input_is_plain_html else etree.tostring)
 
     def _process_title(self, header_text):
         """docstring for _process_title"""
@@ -127,7 +127,7 @@ class XhtmlSplitter:
     def _calc_root(self):
         self.root = (
             etree.HTML
-            if self.latemp_plain_html
+            if self.input_is_plain_html
             else etree.XML)(
                 self.initial_xml_string
             )
@@ -216,12 +216,12 @@ class XhtmlSplitter:
                 a_tag = (
                     # (lambda x: etree.parse(StringIO(x), etree.HTMLParser()))
                     lxml.html.fragment_fromstring
-                    if self.latemp_plain_html
+                    if self.input_is_plain_html
                     else etree.XML
                 )(
                     (
                         "<{xhtml_prefix}a" + (
-                            "" if self.latemp_plain_html
+                            "" if self.input_is_plain_html
                             else " xmlns:xhtml=\"{xhtml}\""
                         ) +
                         " class=\"{_indiv_node}\""

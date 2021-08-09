@@ -1,6 +1,5 @@
-[%- SET title = "FOSS Licences Wars" -%]
+[%- SET title = "FOSS Licences Wars (revision 2)" -%]
 [%- SET desc = "This article gives an overview of the various options in picking up a licence for one’s Free and Open Source Software (FOSS) project, and tries to give some guidelines for choosing one." -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -14,7 +13,7 @@ for one’s Free and Open Source Software (FOSS) project, and tries to give
 some guidelines for choosing one.
 </p>
 
-[% path_slurp("docbook/5/rendered/foss-licences-wars.xhtml") %]
+[% path_slurp("docbook/5/rendered/foss-licences-wars-rev2.xhtml") %]
 
 <section class="h2">
 
@@ -36,10 +35,10 @@ commentary.
 
 <ul>
 <li>
-<a href="foss-licences-wars.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+<a href="foss-licences-wars-rev2.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
 </li>
 <li>
-<a href="foss-licences-wars.xml">Original DocBook/XML</a>.
+<a href="foss-licences-wars-rev2.xml">Original DocBook/XML</a>.
 </li>
 </ul>
 

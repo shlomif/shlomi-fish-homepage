@@ -8,13 +8,13 @@ First of all my type of girls is:
 
 3. Muscular, athletic, and without too much excess fat, e.g: ["Athletic Babes" on Twitter](https://twitter.com/Athletic_Babes).
 
-4. An "alpha female": the insurgent, rebellious, independent, "bad girl", awe-inspiring, sexy, exciting, girl, who can get out of any trouble she may get into and keeps challenging social norms. Akin to Wesley Snipes in [here](http://www.ericsink.com/entries/hg_denzel.html) , or [Milady de-Winter](https://en.wikipedia.org/wiki/Milady_de_Winter) in [The Three Musketeers](https://en.wikipedia.org/wiki/The_Three_Musketeers).
+4. An ["alpha female"](https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/indiv-nodes/alpha-beta-gamma-omega.xhtml): the insurgent, rebellious, independent, "bad girl", awe-inspiring, sexy, exciting, girl, who can get out of any trouble she may get into and keeps challenging social norms. Akin to Wesley Snipes in [here](http://www.ericsink.com/entries/hg_denzel.html) , or [Milady de-Winter](https://en.wikipedia.org/wiki/Milady_de_Winter) in [The Three Musketeers](https://en.wikipedia.org/wiki/The_Three_Musketeers).
 
 5. Attractive enough and groomed enough.
 
 Do note that per [the story about Nasruddin looking for the perfect woman](https://nice-inspiration.blogspot.com/2011/05/looking-for-perfect-wife.html) only
 to realise she was looking for the perfect man, I am quite lenient in
-my requirements. I also think that while ["johndoemer" had a bad attitude](https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-perl-jobs-EmWatson-Saladin-knights-Templar) it is indicative of the fact that our society has transcended caring too much about such superficial physical parameters for a woman's attractiveness.
+my requirements. I also think that while ["johndoemer" had a bad attitude](https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-perl-jobs-EmWatson-Saladin-knights-Templar) when criticising Emma Watson's looks in an IRC conversation, that conversation is indicative of the fact that our society has transcended caring too much about such superficial physical parameters for a woman's attractiveness.
 
 ----
 
@@ -24,7 +24,7 @@ At that point I was approached by a girl, who looked as in her 20s who was Black
 
 Now we tried various ways of getting the money like using the ATM at the gas station with my card, asking the cashiers at the gas station's store to charge my credit card and give us the money, or asking people to use their own credit card. Eventually, I was able to use the ATM machine back at the hotel where the con took place and extract 20 £ out of it, and give them to the girl, and she was so happy that she ended up kissing me.
 
-She was too strong (or at least too heavy) to resist, and having recalled what I had written in https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#celts_trip__rape about not resisting getting raped and thus enjoying it better, I did not really resist, and it felt good in a way. (No tongues were involved.).
+She was too strong (or at least too heavy) to resist, and having recalled what I had written in [the "So who the Hell is Qoheleth?"'s scene](https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#celts_trip__rape) about not resisting getting raped and thus enjoying it better, I did not really resist, and it felt good in a way. (No tongues were involved.).
 
 After the kiss, we went to some trouble to get her to call her family on my mobile phone, but we were able to eventually (I'm still not fluent with operating my new Android-based smartphone).
 
@@ -45,14 +45,17 @@ to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?t
 
 I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
 
+The kiss may have felt awkward, and having watched [the *Gilmore Girls* first kiss episode](https://www.youtube.com/watch?v=n_KIBDZL5y8), I didn't say "thank you" afterwards.
+
 Back in Tel Aviv, a friend of mine joked that 20 £ was too much to pay for
-such a kiss.  She did say, however, that she was moved by reading the story.
+such a kiss. She did say, however, that she was moved by reading the story.
 
-While you can call it a "rapekiss", I suspect that many first kisses are like that
-despite the mutual kiss popularised by films such as [The Princess Bride](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29).
+While you can call it a "rapekiss", I suspect that many first kisses are like
+that despite the mutual kiss popularised by films such as [The Princess Bride](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29).
 
-While it felt good, it was not good enough for me to prioritise kissing girls over my
-other creative work (whose products [are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
+While it felt good, it was not good enough for me to prioritise kissing girls
+over my other creative work (whose products
+[are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
 
 I tried searching for "shlomi fish" and that girl's given name on google in
 February 2021 and didn't find anything relevant.

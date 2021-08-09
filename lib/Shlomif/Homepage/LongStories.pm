@@ -82,7 +82,7 @@ Will they succeed?
 <p>
 What was the <b>photo</b> of the Parthenon <b>replaced</b> with?<br/>
 Why was <b>Chandler</b> happy to play Peter Keating?<br/>
-Which element is featured in every second-rate <b>romantic novel</b>?<br/>
+Which element is featured in every second-class <b>romantic novel</b>?<br/>
 Which piece of advice did <b>Toohey</b> give Dominique Francon?<br/>
 Why did <b>cruising</b> with Gail Wynand turn out to be a <b>bad idea</b>?<br/>
 And who were the <b>bad</b> guys in the story?
@@ -105,7 +105,7 @@ EOF
         start_date => DateTime->new( year => 2000, ),
         abstract   => <<'EOF',
 <p class="humanity abstract">
-Humanity is a screenplay for a movie
+<i>Humanity</i> is a screenplay for a movie
 that aims to be a parody about humanity and modern life in particular. It
 tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/Semitic">Semitic</a> city in
 <a href="http://en.wikipedia.org/wiki/Canaan">Canaan</a> circa the year
@@ -114,11 +114,11 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 </p>
 
 <p class="humanity abstract">
-The original Humanity project, back in 2000 was my opening shot of the <a
+The original <a href="http://humanity.shlomifish.org/">Humanity project</a>, back in 2000 was my opening shot of the <a
 href="$(ROOT)/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">the
 open content / Web 2.0 revolution</a> aiming to be a "bazaar-style"
 collaborative project for writing a screenplay. It fuzzled out due to the
-clunky CVS UI, but nowadays collaboratively written screenplays are
+clunky <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> UI, but nowadays collaboratively written screenplays are
 common - only using <a href="https://en.wikipedia.org/wiki/List_of_wiki_software">wiki
 software</a>
 or <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git DVCS</a>

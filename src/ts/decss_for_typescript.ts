@@ -197,16 +197,16 @@ function CSSdescramble(sec, key) {
     let ret = "";
     // unsigned char *end=sec+0x800;
 
-    let t1 = (key.charCodeAt(0) ^ sec.charCodeAt(0x54)) | 0x100;
-    let t2 = key.charCodeAt(1) ^ sec.charCodeAt(0x55);
+    let t1: number = (key.charCodeAt(0) ^ sec.charCodeAt(0x54)) | 0x100;
+    let t2: number = key.charCodeAt(1) ^ sec.charCodeAt(0x55);
     // I think this code is little endian.
-    let t3 =
+    let t3: number =
         (key.charCodeAt(2 + 0) ^ sec.charCodeAt(0x56 + 0)) +
         ((key.charCodeAt(2 + 1) ^ sec.charCodeAt(0x56 + 1)) << 8) +
         ((key.charCodeAt(2 + 2) ^ sec.charCodeAt(0x56 + 2)) << 16) +
         ((key.charCodeAt(2 + 3) ^ sec.charCodeAt(0x56 + 3)) << 24);
     // t3=(*((unsigned int *)(key+2)))^(*((unsigned int *)(sec+0x56)));
-    let t4 = t3 & 7;
+    let t4: number = t3 & 7;
     t3 = t3 * 2 + 8 - t4;
     if (false) {
         document.myform.mydebug.value +=
@@ -232,13 +232,14 @@ function CSSdescramble(sec, key) {
     }
     ret += sec.substring(0, 0x80);
     sec_index += 0x80;
-    let t5 = 0;
+    let t5: number = 0;
     while (sec_index != end) {
         t4 = CSStab2[t2] ^ CSStab3[t1];
         t2 = t1 >> 1;
         t1 = ((t1 & 1) << 8) ^ t4;
         t4 = CSStab5[t4];
-        let t6 = (((((((t3 >> 3) ^ t3) >> 1) ^ t3) >> 8) ^ t3) >> 5) & 0xff;
+        let t6: number =
+            (((((((t3 >> 3) ^ t3) >> 1) ^ t3) >> 8) ^ t3) >> 5) & 0xff;
         t3 = (t3 << 8) | t6;
         t6 = CSStab4[t6];
         t5 += t6 + t4;

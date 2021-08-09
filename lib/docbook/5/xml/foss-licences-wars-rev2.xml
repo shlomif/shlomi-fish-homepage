@@ -233,8 +233,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             in many countries, and to avoid other potential legal problems,
             I started distributing my original code under <link
                 xlink:href="http://en.wikipedia.org/wiki/X11_license">the
-                MIT X11 Licence</link>, a BSD-style licence which is the
-            closest one to the Public Domain. If the project I’m
+                MIT X11 Licence</link>, a permissive licence which is
+            close to the Public Domain. If the project I’m
             contributing to has a different licence, then I disclaim any
             explicit or implicit ownership on the code I wrote, and allow
             the existing copyright holders to do with my code as they see
@@ -246,9 +246,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             digital artworks. Most of my essays (including this one) are
             under the <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
                 Commons Attribution Licence</link>, my original (i.e:
-            non-derived-work or fan-art) fictitious stories are under
+            non-derived-work or fan-art) fictitious stories are often under
             <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">the
                 Creative Commons Attribution-Share Alike Licence</link>
+                or <link xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons — Attribution-NonCommercial-ShareAlike</link>
             (which is more GPL-like), and most of the
             photos I took and published were placed under the Public Domain.
         </para>
@@ -327,19 +328,20 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
     </section>
 
-    <section xml:id="public-domain-licences">
+    <section xml:id="permissive-licences">
 
     <info>
-        <title>Public Domain Licences</title>
+        <title>Permissive Licences</title>
     </info>
 
         <para>
-            The first type of licences are public-domain-like licences, also
+            The first type of licences are
+<link
+                xlink:href="http://en.wikipedia.org/wiki/Permissive_free_software_licence">Permissive
+                free software licences</link>, also
             known as
             <link xlink:href="http://en.wikipedia.org/wiki/BSD_licenses">BSD-style
-                licences</link>, <link
-                xlink:href="http://en.wikipedia.org/wiki/Permissive_free_software_licence">Permissive
-                free software licences</link>, or
+                licences</link>, or
             <link xlink:href="http://en.wikipedia.org/wiki/Copycenter">
                 “Copycenter licences”</link>. These licences allow you to do almost
             anything conceivable with the program and its source code,
@@ -355,8 +357,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             Probably the only two actions none of these licences
             allow is removing the original copyright notice, or suing the
             creator of the software for damages (the latter is due to the
-            “no warranty” clause). Some of them pose some additional that
-            do not reduce from their public domain nature.
+            “no warranty” clause). Some of them pose some additional
+            requirements that
+            do not detract from their permissive nature.
         </para>
 
         <para>
@@ -379,7 +382,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
                 <para>
                     Later on, the advertising clause was removed to formulate
-                    3-clause and 2-clause BSD licences, which are both less
+                    the 3-clause and 2-clause BSD licences, which are both less
                     problematic and GPL-compatible.
                 </para>
             </listitem>
@@ -399,8 +402,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <listitem>
                 <para>
                     <link
-                        xlink:href="http://en.wikipedia.org/wiki/Apache_License">the
-                        Apache Licence</link> was formulated for the Apache
+                        xlink:href="http://en.wikipedia.org/wiki/Apache_License">The
+                        Apache License</link> was formulated for the Apache
                     project and has seen several revisions. It includes some
                     language to deal with patent-related issues. The latest
                     version - Apache 2.0 was partially created in order
@@ -419,6 +422,25 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     This licence is also favoured by the
                     <link xlink:href="http://www.openbsd.org/">OpenBSD
                         project</link>.
+                </para>
+            </listitem>
+
+            <listitem>
+                <para>
+                    <link xlink:href="http://en.wikipedia.org/wiki/Artistic_License">Version
+                        2.0 of the Artistic License</link>, which was formulated
+                    by the Perl foundation, is used by <link xlink:href="http://www.parrot.org/">the Parrot Virtual Machine</link>,
+                    some Perl 6 implementations, and other projects. The
+                    original Artistic Licence has problematic phrasing,
+                    and is not recommended for general use, unless possibly
+                    when dually licensed with a different licence (as is the
+                    case for perl 5 and many Perl modules on the CPAN).
+                </para>
+
+                <para>
+                    An anecdote about this licence is that it <link xlink:href="http://perlbuzz.com/2008/02/rem-releases-videos-under-artistic-license-20.html">was
+                        chosen by R.E.M for licensing some
+                        video-clips</link> from one of their albums.
                 </para>
             </listitem>
         </orderedlist>
@@ -478,34 +500,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </listitem>
 
-            <listitem>
-                <para>
-                    <link xlink:href="http://en.wikipedia.org/wiki/Artistic_License">Version
-                        2.0 of the Artistic Licence</link>, which was formulated
-                    by the Perl foundation is used by <link xlink:href="http://www.parrot.org/">the Parrot Virtual Machine</link>,
-                    some Perl 6 implementations, and other projects. The
-                    original Artistic Licence has problematic phrasing,
-                    and is not recommended for general use, unless possibly
-                    when dually licensed with a different licence (as is the
-                    case for perl 5 and many Perl modules on the CPAN).
-                </para>
-
-                <para>
-                    The Artistic Licence version 2 is relatively short and
-                    easy to digest. One note about it is that it allows
-                    distributing binaries that were derived from a modified
-                    source, without the obligation to release the modifications
-                    of the source. However, if one wishes to distribute
-                    a modified source, he must make his modifications under
-                    the same licence.
-                </para>
-
-                <para>
-                    An anecdote about this licence is that it <link xlink:href="http://perlbuzz.com/2008/02/rem-releases-videos-under-artistic-license-20.html">was
-                        chosen by R.E.M for licensing some
-                        video-clips</link> from one of their albums.
-                </para>
-            </listitem>
 
 
             <listitem>
@@ -516,12 +510,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         xlink:href="http://www.mozilla.org/">Mozilla
                         project</link>. It was characterised as a
                     hybridisation of the modified BSD licence and the GPL.
-                    This licence was ruled as GPL-incompatible, which eventually
+                    Initially, this licence was ruled as GPL-incompatible, which eventually
                     caused the Mozilla project to re-license its code
-                    under a triple MPL, GPL and LGPL licence. This is
-                    still the licensing terms of Mozilla projects such as
-                    <link xlink:href="http://www.getfirefox.com/">the
-                        Firefox web-browser</link> up to today.
+                    under a triple MPL, GPL and LGPL licence.
+                    Version 2.0 of the MPL has GPL and LGPL
+                    compatibility.
                 </para>
             </listitem>
 
@@ -548,9 +541,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
 
     <section xml:id="strong-copyleft-licences">
-    <info>
-        <title>Strong Copyleft Licences</title>
-    </info>
+        <info>
+            <title>Strong Copyleft Licences</title>
+        </info>
+
         <para>
             Strong copyleft licences go a step further from weak copyleft
             licences and mandate that any distributed software that links or
@@ -567,7 +561,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <listitem>
                     <para>
                         <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">the
-                            GNU General Public Licence (or GPL for short)</link>,
+                            GNU General Public License (or GPL for short)</link>,
                         which has two common primary versions - version 2 and
                         version 3. The GPL has a complicated language (I read
                         the GPL version 2 once and did not fully understand it)
@@ -590,7 +584,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
                     <para>
                         <link xlink:href="http://en.wikipedia.org/wiki/Sleepycat_License">The
-                            Sleepycat licence</link>. This licence was formulated by
+                            Sleepycat License</link>. This licence was formulated by
                         Sleepycat Software (now part of
                         <link xlink:href="http://www.oracle.com/">Oracle</link>)
                         for use in their Berkeley DB database product. The reason
@@ -612,11 +606,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     </para>
 
                     <para>
-                        Sleepycat has also provided a commercial licence for using
-                        Berkeley DB which allows incorporating it into a larger
-                        work without the need to release the source. This is a
-                        valid business model with originators of GPL-licensed
-                        software and other strong copyleft licences.
+                        Sleepycat has also provided a commercial licence for
+                        using Berkeley DB which allows incorporating it into a
+                        larger work without the need to release the source.
+                        This is a valid business model used by originators of
+                        GPL-licensed software and other strong copyleft
+                        licences.
                     </para>
 
                 </listitem>

@@ -382,9 +382,11 @@ def _screenplays_main():
         "./dest/post-incs/t2/humour/Queen-Padme-Tales/",
             ]:
         for part_suf in [
+            "Nighttime-Flight",
             "Planting-Trees",
             "Queen-Amidala-vs-the-Klingon-Warriors",
             "The-Fifth-Sith",
+            "Take-It-Over",
                 ]:
             part = "Queen-Padme-Tales--" + part_suf
             path_to_input = "{}.html".format(part)

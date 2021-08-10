@@ -5,6 +5,7 @@ use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.8.0;
 use Path::Tiny qw/ path /;
+use File::Update qw/ write_on_change_raw /;
 
 package Shlomif::Homepage::GenMakeHelpers;
 
@@ -143,9 +144,14 @@ foreach my $cmd (
 {
     my_exec_perl($cmd);
 }
-path(
+write_on_change_raw(
+    path("src/me/images/bizcard.svg"),
+    \(
+        path(
 "lib/repos/shlomif-business-card/shlomif-business-card/old-2--bizcard--wo-site-highlights.svg"
-)->copy("src/me/images/bizcard.svg");
+        )->slurp_raw()
+    ),
+);
 
 sub letter_fn
 {

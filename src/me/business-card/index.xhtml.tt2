@@ -1,0 +1,23 @@
+[%- SET title = "My Business Card" -%]
+[%- SET desc = "Shlomi Fish’s business card" -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h3_section id = "png" title = "400px wide PNG" %]
+
+<p>
+<img src="[% base_path %]me/images/bizcard-400w.png" alt="Shlomi Fish’s Business Card" class="bizcard" />
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id = "svg" title = "SVG (Inkscape source)" %]
+
+<p>
+<img src="[% base_path %]me/images/bizcard.min.svg" alt="Shlomi Fish’s Business Card" class="bizcard" style="width: 400px;" />
+</p>
+
+[% END %]
+
+[% END %]

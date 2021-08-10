@@ -143,6 +143,9 @@ foreach my $cmd (
 {
     my_exec_perl($cmd);
 }
+path(
+"lib/repos/shlomif-business-card/shlomif-business-card/old-2--bizcard--wo-site-highlights.svg"
+)->copy("src/me/images/bizcard.svg");
 
 sub letter_fn
 {

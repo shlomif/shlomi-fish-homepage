@@ -30,6 +30,14 @@ and formats.
 
 [%- END -%]
 
+[% WRAPPER h2_section href = "business-card/" id = "business-card" title = "My Business Card" %]
+
+<p>
+My business card.
+</p>
+
+[% END %]
+
 [% WRAPPER h2_section id = "personal-ad"  href = "personal-ad.html"  title = "Personal Ad"  %]
 
 <p>

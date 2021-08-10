@@ -520,6 +520,10 @@ sub generic_get_params
                         ],
                     },
                     {
+                        text => "My Business Card",
+                        url  => "me/business-card/",
+                    },
+                    {
                         text  => "Personal Ad",
                         url   => "me/personal-ad.html",
                         title =>

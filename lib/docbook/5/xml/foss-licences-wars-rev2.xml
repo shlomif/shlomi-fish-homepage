@@ -459,6 +459,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             licences are free software licences that mandate that source code
             that descended from software licensed under them, will remain
             under the same, weak copyleft, licence. However, one can
+            still
             <link xlink:href="http://en.wikipedia.org/wiki/Linker">link</link>
             to weak copyleft code from code under a different licence
             (including non-open-source code), or otherwise incorporate it
@@ -500,9 +501,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </listitem>
 
-
-
-            <listitem>
+            <listitem xml:id="MozillaPL">
                 <para>
                     <link xlink:href="http://en.wikipedia.org/wiki/Mozilla_Public_License">The
                         Mozilla Public Licence (or MPL)</link> was phrased for
@@ -611,7 +610,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         larger work without the need to release the source.
                         This is a valid business model used by originators of
                         GPL-licensed software and other strong copyleft
-                        licences.
+                        licences. See <link xlink:href="https://www.gnu.org/philosophy/selling-exceptions.html">Richard Stallman's "Selling Exceptions to the GNU GPL" essay</link>.
                     </para>
 
                 </listitem>
@@ -678,7 +677,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         <listitem>
             <para>
                 <link xlink:href="http://lwn.net/Articles/246695/">Was considered
-                a contract in a certain judgement</link>.
+                a contract in a certain court case judgement</link>.
             </para>
         </listitem>
 
@@ -812,7 +811,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                 “Cathedral and the Bazaar”</link> series
             was <link xlink:href="http://onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html?page=last&amp;x-order=date&amp;x-maxdepth=0">interviewed
                 by O’ReillyNet</link>, and in the Interview he claimed that
-            BSD-style licences are preferable over the GPL and the LGPL.
+            permissive licences are preferable over the GPL and the LGPL.
             Raymond
             later <link xlink:href="http://osnews.com/story/21192/ESR_GPL_No_Longer_Needed">continued this theme in a different interview</link>.
             </para>
@@ -869,6 +868,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                 permissively licensed software.
             </para>
         </listitem>
+
         <listitem>
             <para>
                 <link xlink:href="http://community.livejournal.com/shlomif_tech/931.html">This
@@ -877,6 +877,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                 and BSDL licences.
             </para>
         </listitem>
+
     </orderedlist>
 
     <para>
@@ -1017,7 +1018,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
         <para>
             If you’re interested in making your software
             as-close-to-PD-as-possible, you should choose the <link
-                xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT/X11
+                xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT/Expat
                 Licence</link> or a similar licence such as
             <link xlink:href="http://en.wikipedia.org/wiki/ISC_license">the
             ISC licence.</link>
@@ -1046,9 +1047,10 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             <link xlink:href="http://en.wikipedia.org/wiki/Sleepycat_License">Sleepycat
                 licence</link>, which is a strong-copyleft licence, that is
             compatible with GPLv2 and above, instead of the GPL and the
-            Artistic 2.0 (or above) licence instead of the LGPL. And naturally
+            <link xlink:href="#MozillaPL">MPL</link> 2.0 (or above) licence
+            instead of the LGPL. Naturally,
             permissive, non-copyleft, open-source licences such as the MIT
-            X11 Licence are an option. What the Sleepycat licence says
+            Expat Licence are an option. What the Sleepycat licence says
             is that code distributed under it, must remain under it, and
             that one must release the source code for publicly-distributed
             binaries that link against it. However, from my understanding, as
@@ -1128,7 +1130,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             <link xlink:href="http://en.wikipedia.org/wiki/OpenBSD">OpenBSD</link>
             project are now re-implementing a lot of software that is only
             available as GPL or similar licences, under BSD-style licences,
-            due to OpenBSD’s more pedantic licensing policy.
+            due to OpenBSD’s stricter licensing policy.
         </para>
 
         <para>
@@ -1368,7 +1370,7 @@ better in this scenario.
 
 <section xml:id="why-I-prefer-permissive-licences">
 <info>
-<title>Why I prefer Permissive Licences?</title>
+<title>Addendum: Why I prefer Permissive Licences?</title>
 </info>
 <para>
 In my coverage of the reasons of why I prefer public domain licences
@@ -1392,7 +1394,7 @@ which I used for somewhat more “serious” stuff than BASIC (though I
 still used QBasic). Back then I wrote two libraries-of-sorts -
 called CCalc (for various mathematical routines) and CSee (for
 graphics) which I intended to distribute as shareware. I don’t
-recall if I wanted to include the source.
+recall if I planned to include the source.
 </para>
 <para>
 I’ve now made them, and some other C code from that era,
@@ -1433,7 +1435,7 @@ with since have shown many misunderstandings of the GPL.
 In any case, I had initiated some FOSS projects under the public-domain which
 didn’t amount to a lot. I also wrote
 <link xlink:href="http://www.shlomifish.org/grad-fu/">a patch for
-GIMP</link> which I made available, but has since taken some other
+GIMP</link> which I made available, but has since then taken some other
 iterations and incarnations to be embedded. And then I released
 <link xlink:href="http://fc-solve.shlomifish.org/">Freecell
 Solver</link> (originally under the Public Domain - now MIT/Expat)
@@ -1497,7 +1499,7 @@ ways and yet you don’t hear that often that people who develop GPLed
 software are “suckers”.
 </para>
 <para>
-I don’t see myself as a sucker just by allowing people (whether
+I don’t see myself as a sucker just by allowing third-parties (whether
 individuals, corporations, governments or any other organisations)
 to use my software in non-free contexts, and don’t think anyone
 should say that the GPL is the “don’t-be-a-sucker” licence because
@@ -1524,16 +1526,18 @@ BSDs, doesn’t mean that the licence was the main reason for it,
 or the only reason.
 </para>
 </listitem>
+
 <listitem>
 <para>
 In accordance to #1 - may be attributed to other factors such as
 Linus Torvalds’ leadership skills, the kernel’s adoption of the
 Bazaar-style of development, the willingness of Linux
 distributions to use the GNU project’s software by default as
-run-time, the cooler name, the lack of initial legal limbo that
+run-time, <link xlink:href="https://libquotes.com/linus-torvalds/quote/lbi7o4k">the cooler name</link>, the lack of initial legal limbo that
 the BSDs had, etc. etc.
 </para>
 </listitem>
+
 <listitem>
 <para>
 One can find examples to projects in other niches that have been
@@ -1543,6 +1547,7 @@ extrapolating from one instance (the kernel) to everything is
 not scientific.
 </para>
 </listitem>
+
 <listitem>
 <para>
 The BSD-based kernels and operating systems are doing fine,
@@ -1553,7 +1558,9 @@ into the Linux kernel). So it’s not as if, they have completely
 “lost”.
 </para>
 </listitem>
+
 </orderedlist>
+
 <para>
 While I’m still using GNU/Linux (Mandriva Linux Cooker in my case)
 because that’s what I’ve grown accustomed to using, I would still
@@ -1562,6 +1569,7 @@ planning on switching to gNewSense or one of the Free Software
 Foundation’s endorsed “100% Free Distributions”, because Mandriva is
 free enough for me.
 </para>
+
 <para>
 To sum up, I’m not trying to dissuade you from licensing your
 software under weak copyleft or strong copyleft licences, but I’m
@@ -1573,6 +1581,7 @@ in the first place, and so it wasn’t.
 <link xlink:href="http://en.wikipedia.org/wiki/Hakuna_matata"><emphasis role="strong">Hakuna
 Matata</emphasis></link>.
 </para>
+
 </section>
 
 </article>    <!-- End of the article -->

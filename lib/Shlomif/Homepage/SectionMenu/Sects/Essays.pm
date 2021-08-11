@@ -299,11 +299,21 @@ my $_section_navmenu_tree_contents = {
 "The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
                         },
                         {
-                            text => "FOSS Licences Wars",
+                            text => "FOSS Licences Wars (Revision 2)",
                             url  =>
-"philosophy/computers/open-source/foss-licences-wars/",
+"philosophy/computers/open-source/foss-licences-wars/rev2/",
                             title =>
 "An overview of open-source licences and some recommendations and opinions",
+                            subs => [
+                                {
+                                    text => "FOSS Licences Wars",
+                                    url  =>
+"philosophy/computers/open-source/foss-licences-wars/",
+                                    title =>
+"An overview of open-source licences and some recommendations and opinions",
+                                    skip => 1,
+                                },
+                            ],
                         },
                         {
                             text => "Why I Don’t Trust Non-FOSS",

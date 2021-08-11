@@ -488,6 +488,10 @@ def _docbook5_main():
     )
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
+        "open-source/foss-licences-wars/rev2/",
+    )
+    generic_generate_from_db5(
+        OUT_DN="./dest/post-incs/t2/philosophy/computers/" +
         "software-management/perfect-workplace/",
         path_to_all_in_one="../perfect-it-workplace.xhtml",
         path_to_input="perfect-it-workplace.xhtml",

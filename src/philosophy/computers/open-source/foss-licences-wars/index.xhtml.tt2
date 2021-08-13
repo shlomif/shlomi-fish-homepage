@@ -5,8 +5,10 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc fancy_sects">
+
 [% default_toc %]
-<h2 id="main_intro">Introduction</h2>
+
+[% WRAPPER h2_section id = "main_intro" title = "Introduction" %]
 
 <p>
 This article gives an overview of the various options in picking up a licence
@@ -14,11 +16,13 @@ for one’s Free and Open Source Software (FOSS) project, and tries to give
 some guidelines for choosing one.
 </p>
 
+[% END %]
+
+[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "foss-licences-wars",  %]
+
 [% path_slurp("docbook/5/rendered/foss-licences-wars.xhtml") %]
 
-<section class="h2">
-
-<h2 id="thanks">Thanks</h2>
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 I’d like to thank <a href="http://nadav.harel.org.il/">Nadav Har’El</a> ,
@@ -28,26 +32,9 @@ I’ve forgotten for reviewing early drafts of this essay and providing useful
 commentary.
 </p>
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="other_formats">Other Formats</h2>
-
-<ul>
-<li>
-<a href="foss-licences-wars.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
-</li>
-<li>
-<a href="foss-licences-wars.xml">Original DocBook/XML</a>.
-</li>
-</ul>
-
-</section>
-
-<section class="h2">
-
-<h2 id="coverage">Coverage and Comments</h2>
+[% WRAPPER h2_section id = "coverage" title = "Coverage and Comments" %]
 
 <ul>
 
@@ -81,8 +68,6 @@ License Minefield”</a> - thanks to
 </li>
 
 </ul>
-
-</section>
 
 </div>
 

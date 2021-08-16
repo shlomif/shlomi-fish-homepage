@@ -2518,7 +2518,7 @@ Scary thought of the day: <i>The Princess Bride</i>: the 3-D Remake.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "if_ayn_rand_was_born_in_the_1990s" img_style = "background: white; border-radius: 0.5em; padding: 1em;" header = "If Ayn Rand was born in the 1990s, she would be Christina Grimmie"  repo_href = "https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie"  src = "${base_path}humour/images/Ayn_Rand--to--Christina_Grimmie.svg.webp"  alt = "Ayn Rand→Christina Grimmie"  %]
+[% WRAPPER github_captioned_image_joke id = "if_ayn_rand_was_born_in_the_1990s" img_class = "solid_bg" header = "If Ayn Rand was born in the 1990s, she would be Christina Grimmie"  repo_href = "https://github.com/shlomif/Captioned-Image-Ayn-Rand-to-Christina-Grimmie"  src = "${base_path}humour/images/Ayn_Rand--to--Christina_Grimmie.svg.webp"  alt = "Ayn Rand→Christina Grimmie"  %]
 
 [% WRAPPER quote  %]
 <p>
@@ -2794,7 +2794,7 @@ Moreover, as the busts indicate, they did some modelling even back then.
 [% PROCESS "Inc/selina_mandrake_img_macros_blocks.tt2" %]
 [% INCLUDE klingon_warriors_watched_sesame_street__image_macro %]
 
-[% WRAPPER github_captioned_image_joke id = "evolution_of_girls_w_weapons"  header = "Evolution of Girls with Weapons"  repo_href = "http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons"  src = base_path _ "humour/images/evolution-of-girls-with-weapons.svg.webp"  alt = "Evolution of Girls with Weapons"  img_style = "border: 0.2em solid black; border-radius: 0.15em;"  %]
+[% WRAPPER github_captioned_image_joke id = "evolution_of_girls_w_weapons"  img_class = "solid_bg" img_style = "border: 0.2em solid black;" header = "Evolution of Girls with Weapons"  repo_href = "http://github.com/shlomif/Captioned-Image-Evolution-of-Girls-with-Weapons"  src = base_path _ "humour/images/evolution-of-girls-with-weapons.svg.webp"  alt = "Evolution of Girls with Weapons" %]
 
 <p>
 Another captioned image / info graphics with some fun at the expense of

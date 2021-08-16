@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 
-use Test::More tests => 11;
+use Test::More tests => 12;
 use XML::LibXML ();
 
 use lib './lib';
@@ -31,7 +31,7 @@ sub _get_doc
 my $master_fn  = "dest/post-incs/t2/meta/nav-blocks/blocks/index.xhtml";
 my $master_doc = __PACKAGE__->_get_doc($master_fn);
 
-# TEST:$num_blocks=11;
+# TEST:$num_blocks=12;
 {
     foreach my $block_id ( @{ $main_obj->list_nav_blocks } )
     {

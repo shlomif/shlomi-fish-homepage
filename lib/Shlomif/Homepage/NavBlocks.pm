@@ -488,6 +488,36 @@ my %tr_s = (
             _github( url => 'http://github.com/shlomif/the-enemy', ),
         ],
     ),
+    'taylor_swift_essays' => _tr(
+        title => "Essays",
+        items => [
+            _l(
+                inner_html =>
+                    "Why Openly Bipolar People Should Not Be Medicated",
+                path =>
+"philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/",
+            ),
+            _l(
+                inner_html =>
+                    "Why I will continue to write my real person fan fiction",
+                path => "philosophy/culture/my-real-person-fan-fiction/",
+            ),
+            _l(
+                inner_html => "Putting Cards on the Table (2019-*)",
+                path       =>
+"philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
+            ),
+        ],
+    ),
+    'taylor_swift_facts' => _tr(
+        title => "“Facts”",
+        items => [
+            _l(
+                inner_html => "Taylor Swift Facts",
+                path       => "humour/bits/facts/Taylor-Swift/",
+            ),
+        ],
+    ),
     'xkcd_facts' => _tr(
         title => "“Facts”",
         items => [
@@ -675,6 +705,22 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
                 ),
             ],
         },
+    ),
+    'taylor_swift' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'taylor_swift_nav_block',
+            text_title => "Taylor Swift",
+            tr_s       => [
+                _master_tr(
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referencing Fanfiction and Essays},
+                ),
+                _subdiv_tr( title => q{Essays} ),
+                _get_tr('taylor_swift_essays'),
+                _subdiv_tr( title => q{Factoids}, ),
+                _get_tr('taylor_swift_facts'),
+            ],
+        }
     ),
     'xkcd' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {

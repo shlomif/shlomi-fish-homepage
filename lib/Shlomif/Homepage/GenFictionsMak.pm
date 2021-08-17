@@ -10,7 +10,7 @@ use YAML::XS ();
 
 sub _calc_fiction_story_makefile_lines
 {
-    my ( $d, $fiction_docs_basenames ) = @_;
+    my ( $d, $fiction_docs_basenames, $o ) = @_;
 
     my $base        = $d->{base};
     my $github_repo = $d->{github_repo};
@@ -63,7 +63,9 @@ sub _calc_fiction_story_makefile_lines
         }
     }
 
-    return \@ret;
+    push @$o, @ret;
+
+    return;
 }
 
 sub generate
@@ -142,15 +144,13 @@ FICT:
     }
 
     my @fiction_docs_basenames;
+    my @o;
 
-    my @o = (
-        map {
-            @{
-                _calc_fiction_story_makefile_lines( $_,
-                    \@fiction_docs_basenames )
-            }
-        } @$fiction_data
-    );
+    foreach my $d (@$fiction_data)
+    {
+        _calc_fiction_story_makefile_lines( $d, \@fiction_docs_basenames, \@o );
+    }
+
     my $dir  = path("lib/make/docbook");
     my $spew = sub {
         my ( $fn, $strs ) = @_;

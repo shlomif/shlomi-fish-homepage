@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ desc _ "</p>")) %]
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppets Show hosts Summer Glau and Chuck Norris mashing up xkcd, <a href=\"https://shlomif.livejournal.com/53966.html\">Ozy and Millie’s Grammar Nazis</a>, <a href=\"\$(ROOT)/humour/bits/facts/Chuck-Norris/\">Chuck Norris Facts</a>, <a href=\"\$(ROOT)/humour/bits/facts/Summer-Glau/\">Summer Glau Facts</a>, etc.</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Summer-Glau-and-Chuck-Norris.html") %]
 

@@ -12,6 +12,8 @@ has [
     'tabs_title', 'title',     'url_base',
 ] => ( is => 'ro', required => 1 );
 
+has ['override_html_anchor'] => ( is => 'ro', );
+
 sub img_src_tt2
 {
     my ($self) = @_;
@@ -23,7 +25,7 @@ sub dashed_short_id
 {
     my ( $self, ) = @_;
 
-    return $self->short_id =~ tr/_/-/r;
+    return ( ( $self->override_html_anchor // $self->short_id ) =~ tr/_/-/r );
 }
 
 =begin foo

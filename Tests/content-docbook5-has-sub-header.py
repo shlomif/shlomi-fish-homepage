@@ -202,6 +202,31 @@ class MyTests(html_unit_test.TestCase):
             input_fn=input_fn, htmlid='shlomif-fact-chuck-1'
         )
 
+    def test_emma_watson_factoids_link(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/bits/facts/Emma-Watson/index.xhtml'
+        )
+        self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
+        )
+
+    def test_in_soviet_russia_factoids_link(self):
+        input_fn = (
+            './dest/' +
+            'post-incs/t2/humour/bits/facts/In-Soviet-Russia/index.xhtml'
+        )
+        self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-soviet-russia-1'
+        )
+
+    def test_larry_wall_factoids_link(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/bits/facts/Larry-Wall/index.xhtml'
+        )
+        self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-larry-wall-fact-1'
+        )
+
     def test_sglau_factoids_link(self):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Summer-Glau/index.xhtml'
@@ -210,12 +235,12 @@ class MyTests(html_unit_test.TestCase):
             input_fn=input_fn, htmlid='shlomif-fact-sglau-1'
         )
 
-    def test_emma_w_factoids_link(self):
+    def test_windows_update_factoids_link(self):
         input_fn = (
-            './dest/post-incs/t2/humour/bits/facts/Emma-Watson/index.xhtml'
+            './dest/post-incs/t2/humour/bits/facts/Windows-Update/index.xhtml'
         )
         self._factoids_check_helper(
-            input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
+            input_fn=input_fn, htmlid='shlomif-fact-win-update-1'
         )
 
 

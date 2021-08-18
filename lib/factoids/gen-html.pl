@@ -203,8 +203,9 @@ reversal (“In Soviet Russia”) on the Wikipedia</a>
 
 </ul>
 EOF
-        meta_desc => "In Soviet Russia, jokes laugh at you.",
-        see_also  => <<'EOF',
+        meta_desc            => "In Soviet Russia, jokes laugh at you.",
+        override_html_anchor => 'soviet-russia',
+        see_also             => <<'EOF',
 <ul>
 
 <li>
@@ -523,7 +524,8 @@ EOF
 EOF
         meta_desc =>
 "Factoids about Larry Wall, the creator of the Perl programming language, and the UNIX patch utility.",
-        see_also => <<'EOF',
+        override_html_anchor => 'larry-wall-fact',
+        see_also             => <<'EOF',
 <p>
 <b>TODO</b>
 </p>
@@ -801,7 +803,8 @@ EOF
 EOF
         meta_desc =>
 "Facts about Windows Update, the slowest and most frutrating package manager in existence.",
-        see_also => <<'EOF',
+        override_html_anchor => 'win-update',
+        see_also             => <<'EOF',
 <ul>
 
 <li>

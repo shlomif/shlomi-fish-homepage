@@ -1,10 +1,11 @@
 [%- SET title = "Muppets: “Harry Potter”" -%]
 [%- SET desc = "Sesame Street hosts the stars of Harry Potter as they battle “He Who Must Not Be Named 2” a.k.a “The Amazing Mumford”" -%]
 [%- SET apply_screenplay_style = 1 -%]
+[%- SET more_keywords = "muppets, harry potter, JK Rowling, Hermione, Emma Watson, Sesame Street, Daniel Radcliffe, wand, screenplay, fanfic, crossover" -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ desc _ "</p>")) %]
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>Sesame Street hosts the stars of Harry Potter as they battle “He Who Must Not Be Named 2” a.k.a <a href=\"https://muppet.fandom.com/wiki/The_Amazing_Mumford\">“The Amazing Mumford”</a>, who is a very deadly Dark Arts magician, who annoys everyone to death.</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Harry-Potter.html") %]
 

@@ -960,9 +960,9 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
         <para>
             Using your own custom licence deprives you of the benefit of using
             a well-reviewed, well-understood and debugged licence. This is
-            similar to writing your own program from scratch instead of
-            using an existing, well-tested software solution. (Thanks to
-            Omer Zak for this analogy.)
+            similar to writing your own program from scratch instead of using
+            an existing, well-tested software solution that already provides
+            that functionality. (Thanks to Omer Zak for this analogy.)
         </para>
 
         <para>
@@ -986,12 +986,20 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             and <link xlink:href="http://perlbuzz.com/2009/07/help-end-licensing-under-same-terms-as-perl-itself.html">covered
                 there again</link>. I’m only going to summarise these
             arguments here, and conclude by saying that using the Artistic
-            Licence Version 2.0 or later, or a GPL-compatible permissive
-            licence such as the MIT/X11 Licence would be preferable.
+            License Version 2.0 or later, or a GPL-compatible permissive
+            licence, such as the MIT/Expat License, would be preferable.
         </para>
 
         <para>
-            Essentially, the licence of perl (the Perl implementation) has
+            Essentially, the licence of perl (the Perl 5 implementation)
+            <footnote xml:id="Perl5_vs_Raku" label="Perl 5">
+                <para>
+                Perl 1-to-5 is not to be confused with
+                <link xlink:href="https://en.wikipedia.org/wiki/Raku_(programming_language)">"Raku", which was formerly called "Perl 6"</link>.
+                </para>
+            </footnote>
+
+            has
             changed several times since its inception - from a non-free licence,
             to the GPL, to a dual GPL and Artistic licensing. Furthermore, the
             Artistic license is not considered free and GPL compatible by the
@@ -1148,13 +1156,13 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
 <section xml:id="why-I-prefer-the-mit-x11-licence">
     <info>
-    <title>Why I Prefer the MIT X11 Licence</title>
+    <title>Why I Prefer the MIT/Expat License</title>
     </info>
 
     <para>
         I personally accept the fact that some developers would like to use
         weak copyleft or strong copyleft licences for their works. However,
-        I still prefer to use the MIT X11 Licence for works that I
+        I still prefer to use the MIT/Expat License for works that I
         originate and now I’d like to explain why:
     </para>
 
@@ -1162,14 +1170,14 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
         <listitem>
             <para>
-                The MIT X11 Licence is short, simple, and easy to understand.
+                The MIT/Expat License is short, simple, and easy to understand.
             </para>
         </listitem>
         <listitem>
             <para>
-                It is practically public domain which is what people innocently
-                expect when they hear terms like “open-source” or
-                “free-as-in-speech software”.
+                It is practically public domain which is what newcomers to the
+                FOSS world innocently expect when they hear terms like
+                “open-source” or “free-as-in-speech software”.
             </para>
         </listitem>
         <listitem>
@@ -1248,7 +1256,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     <para>
         My response is that this was indeed a problem and inconvenienced the
         users of Exceed. However, if X-Windows were GPLed, then the
-        people who made Exceed and wanted to sell it, would not have made it
+        people who made Exceed and wanted to sell it, might not have made it
         in the first place, because they had to make it GPLed and keep
         it as FOSS. So either they would have implemented it from scratch or
         not at all. It is possible that a different group would have created a

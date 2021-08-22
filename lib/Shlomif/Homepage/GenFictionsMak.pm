@@ -10,17 +10,17 @@ use YAML::XS ();
 
 sub _calc_fiction_story_makefile_lines
 {
-    my ( $d, $fiction_docs_basenames, $o ) = @_;
+    my ( $doc_record, $fiction_docs_basenames, $o ) = @_;
 
-    my $base        = $d->{base};
-    my $github_repo = $d->{github_repo};
-    my $subdir      = $d->{subdir};
+    my $base        = $doc_record->{base};
+    my $github_repo = $doc_record->{github_repo};
+    my $subdir      = $doc_record->{subdir};
 
     my $vcs_dir_var = "${base}__VCS_DIR";
 
     my @ret = ("$vcs_dir_var := \$(FICTION_VCS_BASE_DIR)/$github_repo\n\n");
 
-    foreach my $doc ( @{ $d->{docs} } )
+    foreach my $doc ( @{ $doc_record->{docs} } )
     {
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suf};
@@ -136,19 +136,15 @@ q#$(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt#,
     my $fiction_vcs_base_dir = 'lib/fiction-xml/from-vcs';
 
 FICT:
-    foreach my $d (@$fiction_data)
-    {
-        my $github_repo = $d->{github_repo};
-        my $r           = $github_repo;
-        $git_task->( $fiction_vcs_base_dir, $r );
-    }
-
     my @fiction_docs_basenames;
     my @o;
 
-    foreach my $d (@$fiction_data)
+    foreach my $doc_record (@$fiction_data)
     {
-        _calc_fiction_story_makefile_lines( $d, \@fiction_docs_basenames, \@o );
+        my $github_repo = $doc_record->{github_repo};
+        $git_task->( $fiction_vcs_base_dir, $github_repo );
+        _calc_fiction_story_makefile_lines( $doc_record,
+            \@fiction_docs_basenames, \@o );
     }
 
     my $dir  = path("lib/make/docbook");
@@ -171,5 +167,4 @@ FICT:
 
 1;
 
-# __END__
-# # Below is stub documentation for your module. You'd better edit it!
+__END__

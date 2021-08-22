@@ -147,8 +147,17 @@ You can also try to use XHTML 1.1 or XHTML 5 with semantic markup of elements
 for use as a good generic markup.
 </p>
 
-[% WRAPPER h3_section id = "latex"  title = "LaTeX and TeX"  %]
+[% WRAPPER h3_section id = "markdowns" title = "Why the Markdown Dialects Should be Avoided as much as Possible" %]
 
+<p>
+There are too many <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> dialects (e.g: GitHub's, reddit's, Stack Exchange's) each one with its
+<a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">own army and navy (= fragmentation and incompatibilities</a>).
+Moreover, they can only be converted to XHTML.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id = "latex"  title = "LaTeX and TeX"  %]
 
 <p>
 All that put aside, I should note that if you are thinking about using TeX or

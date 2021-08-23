@@ -13,13 +13,27 @@ $(function () {
     const ogRatio = ogHeight / ogWidth;
     let windowWidth = 0; //store windowWidth here, this is just a different way to store this data
 
+    function _h(query) {
+        return $(query).height();
+    }
+
     function setIFrameSize() {
         // if (windowWidth < 480) {
         if (true) {
-            let parentDivWidth = myIFRAME.parent().width(); //be aware this will still only get the height of the first element in this set of elements, you'll have to loop over them if you want to support more than one iframe on a page
+            const parent_wrapper = myIFRAME.parent();
+            let parentDivWidth = parent_wrapper.width(); //be aware this will still only get the height of the first element in this set of elements, you'll have to loop over them if you want to support more than one iframe on a page
+            let parentDivHeight =
+                $(window).height() -
+                _h("#header") -
+                _h("#faux") -
+                _h("footer") -
+                15;
             let newHeight = parentDivWidth * ogRatio;
 
-            const maxh = 600;
+            let maxh = 600;
+            if (parentDivHeight > 0 && maxh > parentDivHeight) {
+                maxh = parentDivHeight;
+            }
             if (newHeight > maxh) {
                 const r = maxh / newHeight;
                 newHeight *= r;

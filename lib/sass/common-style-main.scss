@@ -313,11 +313,15 @@ $about_color: #008000;
         padding-bottom: 3px;
     }
 
-    p,
     h3 {
         margin-left: 0.5em;
         margin-right: 0.5em;
         margin-top: 0;
+    }
+
+    > p,
+    > section > p {
+        margin-left: 2em;
     }
 }
 

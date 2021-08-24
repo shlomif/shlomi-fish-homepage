@@ -134,17 +134,16 @@ please cave, stay, keep, and die!
 
 <p>
 You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
-to the
-left.  Alternatively, you can traverse it page-by-page using the <b>arrows at
-the top</b>. There’s also <a href="#news">a <b>news feed</b></a> for what is
-new on the site, which is updated periodically.
+to the left.  Alternatively, you can traverse it page-by-page using the
+<b>arrows at the top</b>. There’s also <a href="#news">a <b>news feed</b></a>
+for what is new on the site, which is updated periodically.
 </p>
 
 <p>
 Here are some of the things you can find here:
 </p>
 
-<h3 id="humour"><a href="humour/">Humour</a></h3>
+[% WRAPPER h3_section id="humour" href="humour/" title="Humour" %]
 
 <p>
 You can read many <a href="[% base_path %]humour/bits/">shorter bits</a>
@@ -162,11 +161,14 @@ If you do not lack the patience for reading longer texts, you can read
 stories (novellas) and screenplays</a>, which I have written.
 </p>
 
-<h3 id="philosophy"><a href="philosophy/">Articles and Essays</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="philosophy" href="philosophy/" title="Articles and Essays" %]
 
 <p>
 You can read various essays and articles I wrote about politics, software
-development, and software management, the Internet, psychology, and ideology.
+development, and software management, popular culture, the Internet,
+psychology, and ideology.
 </p>
 
 [% BLOCK old_essays_description %]
@@ -183,28 +185,36 @@ fodder for my essays and articles.
 </p>
 [% END %]
 
-<h3 id="open-source"><a href="open-source/">Open Source Software</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="open-source" href="open-source/" title="Open Source Software" %]
 
 <p>
 Links to software I wrote, and some resources with links to other software.
 Knock yourself out!
 </p>
 
-<h3 id="presentations"><a href="lecture/">Presentations</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="presentations" href="lecture/" title="Presentations" %]
 
 <p>
 You can find several technical presentations I have written or maintain
-here.
+here. Some of them may qualify as technical tutorials.
 </p>
 
-<h3 id="puzzles"><a href="puzzles/">Puzzles and Riddles</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="puzzles" href="puzzles/" title="Puzzles and Riddles" %]
 
 <p>
 Some pages with <a href="MathVentures/">Mathematical problems</a>,
 with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles.
 </p>
 
-<h3 id="computer_art"><a href="art/">Computer Art</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="computer_art" href="art/" title="Computer Art" %]
 
 <p>
 You can find my lame attempts for art which I prepared, in
@@ -212,40 +222,47 @@ You can find my lame attempts for art which I prepared, in
 and one piece of music.
 </p>
 
-<h3 id="links"><a href="links.html">Links</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id="links" href="links.html" title="Links" %]
 
 <p>
 There are many links on the site, but I also concentrated many of them in
 one place. Who doesn’t like links?
 </p>
 
-<h3 id="more_about_me">More about me</h3>
+[% END %]
+
+[% WRAPPER h3_section id="more_about_me" title="More about me"%]
 
 <p>
 I maintain a list of <a href="[% base_path %]meta/FAQ/">Frequently Asked Questions (FAQ)</a> about me, this site, and my interests.
 I have a <a href="[% base_path %]personal.html">a bio</a>,
 an <a href="[% base_path %]me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html">TL;DRy "I'm a rockstar software developer"</a> and one as
 <a href="[% base_path %]me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">a writer / entertainer / amateur philosopher</a>.
-I have comprehensive a <a href="[% base_path %]me/contact-me/">contact
+I have a comprehensive <a href="[% base_path %]me/contact-me/">contact
 information page</a>, a page about <a href="[% base_path %]me/rindolf/">my “Rindolf” nickname</a>, and <a href="[% base_path %]meta/old-site-snapshots/">some old snapshots</a> of this site.
 </p>
 
-<h3>Enjoy!</h3>
+[% END %]
+
+[% WRAPPER h3_section id="enjoy" title="Enjoy!"%]
 
 <p>
 I hope you enjoy my web-site. If you do, please
 <a href="[% base_path %]meta/how-to-help/">link here</a> or share a link on
 social media, recommend
-it to your friends, and <a href="[% base_path %]me/contact-me/">drop me a line</a>.
+it to your friends, and/or <a href="[% base_path %]me/contact-me/">drop me a line</a>.
 </p>
 
 <p>
-I'd appreciate <a href="#footer_donate">monetary donations</a>.
+( I'd also appreciate <a href="#footer_donate">monetary donations</a> but I
+blog because <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/">it is fun and educational</a>. )
 </p>
 
+[% END %]
+
 </section>
-
-
 
 <section class="news">
 

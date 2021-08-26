@@ -34,6 +34,8 @@ qr/(?:(?:\.(?:bash|atom|c|cfg|cgi|cmake|conf|cpp|css|desktop|dsl|dtd|ent|ggr|h|h
             |
             lib/presentations/qp/[\w\-_\.0-9/]*?/rendered
             |
+            lib/repos/xslt10-stylesheets
+            |
             # We add node_modules due to Travis-CI build failures. Do not
             # remove!
             node_modules

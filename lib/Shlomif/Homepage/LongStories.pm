@@ -124,8 +124,6 @@ software</a>
 or <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git DVCS</a>
 or similar.
 </p>
-
-
 EOF
     },
     {

@@ -27,7 +27,7 @@
 
 [%- END -%]
 
-<h3 id="hebrew_translation">Hebrew Translation</h3>
+[% WRAPPER h3_section id="hebrew_translation" title="Hebrew Translation"%]
 
 <ul>
 
@@ -41,7 +41,9 @@
 
 </ul>
 
-<h3 id="songs_recordings">Songs’ Recording</h3>
+[% END %]
+
+[% WRAPPER h3_section id="songs_recordings" title="Songs’ Recording"%]
 
 <ul>
 
@@ -51,9 +53,11 @@
 
 </ul>
 
+[% END %]
+
 [% PROCESS humanity_licensing  %]
 
-<h2 id="links">Links</h2>
+[% WRAPPER links_sect  %]
 
 <ul>
 <li>
@@ -61,5 +65,33 @@
 Berlios.de)</a>
 </li>
 </ul>
+
+[% END %]
+
+[% WRAPPER about_sect  %]
+
+<p>
+The original <a href="http://humanity.shlomifish.org/">Humanity project</a>, back in 2000 was my opening shot of the <a
+href="[% base_path %]me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">the
+open content / Web 2.0 revolution</a> aiming to be a "bazaar-style"
+collaborative project for writing a screenplay. It fuzzled out due to the
+clunky <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> UI, but nowadays collaboratively written screenplays are
+common - only using <a href="https://en.wikipedia.org/wiki/List_of_wiki_software">wiki
+software</a>
+or <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git DVCS</a>
+or similar.
+</p>
+
+<p>
+I originally envisioned the film with the first written scenes as having
+been written and filmed by a <a href="https://memory-alpha.fandom.com/wiki/Bajoran">Bajoran</a>
+extraterrestrial (but human-like) visitor to Earth, during an extended period
+of <a href="https://en.wikipedia.org/wiki/Mania">Mania</a> around 1997.
+He came to Earth to study its cultures, and <i>Humanity</i> was his way of parodying
+and paying tribute to them. I also imagined that the terran film crew filmed it
+using 2-D equipment, but it ended up as a 3-D film.
+</p>
+
+[% END %]
 
 [% END %]

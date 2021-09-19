@@ -12,6 +12,7 @@ modify_on_change(
         my $text = shift;
         return (
             ( $$text     =~ s%\@\Qmedia print,amzn-kf8{\E%\@media print{%g ) |
+                ( $$text =~ s%\@\Qmedia amzn-kf8,print{\E%\@media print{%g ) |
                 ( $$text =~ s%\@media amzn-kf8\{[\#a-z,]+\{padding:0\}\}%%g ) );
     },
 );

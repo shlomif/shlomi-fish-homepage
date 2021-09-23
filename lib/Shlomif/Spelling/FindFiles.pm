@@ -70,6 +70,7 @@ sub list_htmls
                 return (
                            ( $path =~ $PRUNE_RE )
                         || ( $path =~ $RAW_HTML_REGEX )
+                        || ( $path =~ m#indiv-nodes/# )
                         || (
                         (
                             $path =~

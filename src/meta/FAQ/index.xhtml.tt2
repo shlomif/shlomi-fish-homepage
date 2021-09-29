@@ -4213,6 +4213,51 @@ one.
 
 [% END %]
 
+[% WRAPPER faq_h4_section id = "why_skip_odd_minor_versions" title = "Why do your projects’ releases skip odd minor version numbers?" %]
+
+<p>
+This is what <a href="https://www.producingoss.com/en/development-cycle.html#release-number-even-odd-strategy">the "Producing OSS" book calls "The Even/Odd Strategy"</a>. Quoting from it ( <a href="https://www.producingoss.com/en/copyright.html">under CC-by-sa</a> ):
+</p>
+
+<blockquote cite="https://www.producingoss.com/en/development-cycle.html#release-number-even-odd-strategy">
+
+<p>Some projects use the parity of the minor number component to
+indicate the stability of the software: even means stable, odd means
+unstable.  This applies only to the minor number, not the major or
+micro numbers.  Increments in the micro number still indicate bug
+fixes (no new features), and increments in the major number still
+indicate big changes, new feature sets, etc.</p>
+
+<p>The advantage of the even/odd system, which has been used by the
+Linux kernel project<a href="https://www.producingoss.com/en/development-cycle.html#ftn.idp3103" class="footnote"><sup class="footnote">[78]</sup></a>
+among others, is that it offers a way to release
+new functionality for testing without subjecting production users to
+potentially unstable code.  People can see from the numbers that
+"2.4.21" is okay to install on their live web server, but that "2.5.1"
+should probably stay confined to home workstation experiments.  The
+development team handles the bug reports that come in from the
+unstable (odd-minor-numbered) series, and when things start to settle
+down after some number of micro releases in that series, they
+increment the minor number (thus making it even), reset the micro
+number back to "0", and release a presumably stable package.</p><p>This system preserves, or at least, does not conflict with, the
+compatibility guidelines given earlier.  It simply overloads the minor
+number with some extra information.  This forces the minor number to
+be incremented about twice as often as would otherwise be necessary,
+but there's no real harm in that.  The even/odd system is probably
+best for projects that have very long release cycles, and which by
+their nature have a high proportion of conservative users who value
+stability above new features.  It is not the only way to get new
+functionality tested in the wild, however.  In
+<a class="xref" href="https://www.producingoss.com/en/stabilizing-a-release.html" title="Stabilizing a Release">the section called “Stabilizing a Release”</a> we will examine another, perhaps more common,
+method of releasing potentially unstable code to the public, in which
+the release number is further marked so that people have an idea of
+the risk/benefit trade-offs immediately on seeing the release's name.
+</p>
+
+</blockquote>
+
+[% END %]
+
 [%- END -%]
 
 [%- END -%]

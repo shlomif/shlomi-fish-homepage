@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 45;
+use Test::More tests => 46;
 
 use HTML::Entities qw/ decode_entities /;
 use Path::Tiny qw/ path /;
@@ -222,6 +222,9 @@ qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
         qr#<a href="humour/fortunes/[^"]+\.tar\.gz">#,
         "MANIFEST fortunes tarball"
     );
+
+    # TEST
+    unlike( $content, qr#<a href="[^"]+\.pl">#, "MANIFEST .pl files links" );
 }
 
 {

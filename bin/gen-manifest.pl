@@ -34,7 +34,10 @@ EOF
         if ( $r->is_file )
         {
             my $p = join( '/', @{ $r->full_components() } );
-            if ( $p !~ m#humour/fortunes.*\.tar\.gz\z# )
+            if (
+                not(   ( $p =~ m#humour/fortunes.*\.tar\.gz\z# )
+                    or ( $p =~ m#lecture/.*\.pl\z# ) )
+                )
             {
                 my $rel_path = escape_html($p);
                 print {$m} qq{<li><a href="$rel_path">$rel_path</a></li>};

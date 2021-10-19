@@ -109,11 +109,12 @@ def generate(output_path, is_act):
         return steps
     steps += gen_steps('before_install')
     steps += gen_steps('install')
-    steps.append({
-        'name': 'xvfb-headless tests',
-        'uses': 'GabrielBB/xvfb-action@v1',
-        'with': gen_steps('script'),
-    })
+    for s in gen_steps('script'):
+        steps.append({
+            'name': 'xvfb-headless tests',
+            'uses': 'GabrielBB/xvfb-action@v1',
+            'with': s,
+        })
     job = 'test-fc-solve'
     o = {'jobs': {job: {'runs-on': 'ubuntu-latest',
          'steps': steps, }},

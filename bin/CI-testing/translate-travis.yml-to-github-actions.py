@@ -93,7 +93,9 @@ def generate(output_path, is_act):
         'perl_modules)"; PATH="$PATH:$GOBIN:$GOPATH/bin:$HOME/go/bin"; } ' + \
         '; local_lib_shim ; '
     local_lib_shim = '. bin/CI-testing/common-env-shim.sh ; '
-    for arr in ['before_install', 'install', 'script']:
+
+    def gen_steps(arr):
+        steps = []
         for command in data[arr]:
             if command == 'systemctl --user start dbus' or \
                     command.startswith('export DBUS_'):
@@ -104,6 +106,14 @@ def generate(output_path, is_act):
                 command
             )
             steps.append({"run": local_lib_shim + command})
+        return steps
+    steps += gen_steps('before_install')
+    steps += gen_steps('install')
+    steps.append({
+        'name': 'xvfb-headless tests',
+        'uses': 'GabrielBB/xvfb-action@v1',
+        'with': gen_steps('script'),
+    })
     job = 'test-fc-solve'
     o = {'jobs': {job: {'runs-on': 'ubuntu-latest',
          'steps': steps, }},

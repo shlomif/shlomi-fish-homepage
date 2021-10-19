@@ -26,15 +26,19 @@ jobs:
         -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt-get --only-upgrade
                 install libnss3
         -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt-get install -qq inkscape
-        -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt update
-        -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt install dbus-user-session
-        -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt install at-spi2-core
-        -   run: . bin/CI-testing/common-env-shim.sh ; export XML_CATALOG_FILES="/etc/xml/catalog
-                $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
-        -   run: . bin/CI-testing/common-env-shim.sh ; TIDYALL_DATA_DIR="$HOME/tidyall_d"
-                bash -x bin/run-ci-build.bash
-        -   run: . bin/CI-testing/common-env-shim.sh ; tar -caf site-dest.tar.xz dest/
-        -   run: . bin/CI-testing/common-env-shim.sh ; set +x
+        -   name: xvfb-headless tests
+            uses: GabrielBB/xvfb-action@v1
+            with:
+            -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt update
+            -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt install dbus-user-session
+            -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt install at-spi2-core
+            -   run: . bin/CI-testing/common-env-shim.sh ; export XML_CATALOG_FILES="/etc/xml/catalog
+                    $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
+            -   run: . bin/CI-testing/common-env-shim.sh ; TIDYALL_DATA_DIR="$HOME/tidyall_d"
+                    bash -x bin/run-ci-build.bash
+            -   run: . bin/CI-testing/common-env-shim.sh ; tar -caf site-dest.tar.xz
+                    dest/
+            -   run: . bin/CI-testing/common-env-shim.sh ; set +x
 name: use-github-actions
 'on':
 - push

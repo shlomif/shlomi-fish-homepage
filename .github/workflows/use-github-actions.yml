@@ -26,37 +26,39 @@ jobs:
         -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt-get --only-upgrade
                 install libnss3
         -   run: . bin/CI-testing/common-env-shim.sh ; sudo apt-get install -qq inkscape
-        -   name: xvfb-headless tests
+        -   name: xvfb-headless tests 1
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; sudo apt update
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; sudo apt update"
+        -   name: xvfb-headless tests 2
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; sudo apt install dbus-user-session
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; sudo apt install
+                    dbus-user-session"
+        -   name: xvfb-headless tests 3
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; sudo apt install at-spi2-core
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; sudo apt install
+                    at-spi2-core"
+        -   name: xvfb-headless tests 4
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; export XML_CATALOG_FILES="/etc/xml/catalog
-                    $HOME/markup-validator/htdocs/sgml-lib/catalog.xml"
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; export XML_CATALOG_FILES=\"/etc/xml/catalog
+                    \$HOME/markup-validator/htdocs/sgml-lib/catalog.xml\""
+        -   name: xvfb-headless tests 5
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; TIDYALL_DATA_DIR="$HOME/tidyall_d"
-                    bash -x bin/run-ci-build.bash
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; TIDYALL_DATA_DIR=\"\$HOME/tidyall_d\"
+                    bash -x bin/run-ci-build.bash"
+        -   name: xvfb-headless tests 6
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; tar -caf site-dest.tar.xz
-                    dest/
-        -   name: xvfb-headless tests
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; tar -caf site-dest.tar.xz
+                    dest/"
+        -   name: xvfb-headless tests 7
             uses: GabrielBB/xvfb-action@v1
             with:
-                run: . bin/CI-testing/common-env-shim.sh ; set +x
+                run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; set +x"
 name: use-github-actions
 'on':
 - push

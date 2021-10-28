@@ -27,3 +27,7 @@ JQUERYUI_JS_DESTS = $(patsubst $(JQUISRCDIR)/%.js,$(JQUIDESTDIR)/%.js,$(JQUERYUI
 $(JQUERYUI_JS_DESTS): $(JQUIDESTDIR)/%.js: $(JQUISRCDIR)/%.js
 	$(MULTI_YUI) -o $@ $<
 
+jquery_ui_sync:
+	rsync -r node_modules/jquery-ui/ui/widgets/ lib/jquery/jquery-ui-trimmed/
+	rsync -r node_modules/jquery-ui/ui/ lib/jquery/jquery-ui-trimmed/
+	git clean -dxf lib/jquery/jquery-ui-trimmed/

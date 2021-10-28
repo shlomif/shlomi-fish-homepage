@@ -1168,6 +1168,11 @@ all_deps: $(CATB_COPY) $(Evilphish_flipped_dest)
 
 all: $(CATB_COPY_POST)
 
+include lib/make/jquery-ui-webpack.mak
+
+all_deps: $(JQUERYUI_JS_DESTS)
+all_deps: $(JQUI_webpack_dest)
+
 copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
 
 mod_files: $(POST_DEST_ALL_MODS)

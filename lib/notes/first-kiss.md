@@ -57,7 +57,7 @@ While it felt good, it was not good enough for me to prioritise kissing girls
 over my other creative work (whose products
 [are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
 
-I tried searching for "shlomi fish" and that girl's given name on google in
+I tried searching for "Shlomi Fish" and that girl's given name on Google in
 February 2021 and didn't find anything relevant.
 
 I think this story uncovered some misfeatures of the financial system.

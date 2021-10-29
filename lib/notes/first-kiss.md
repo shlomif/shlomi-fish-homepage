@@ -75,7 +75,7 @@ found it interesting and notable.
 Will I be Romantically interested in this girl again? If she has lost weight,
 and will come to Tel Aviv, then I guess we can go on a few dates to test the
 grounds and see if there's a click. I'm not sure if I'm the only geeky guy
-with [Messiah-like Meglomania](https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs)
+with [Messiah-like Megalomania](https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs)
 and a desire to [make everybody else Messiahs](https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-gamedev--make-everyone--messiahs)
 she tried to extract money from and kissed. And I do not intend to stay
 "loyal" to her (given I had previous

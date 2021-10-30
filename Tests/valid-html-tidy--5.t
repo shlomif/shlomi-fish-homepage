@@ -29,11 +29,11 @@ Test::HTML::Tidy::Recursive::Tidy5->new(
     {
         filename_filter => sub {
             my $fn = shift;
-            return not(
-                exists $whitelist{$fn}
+            return
+                not( exists $whitelist{$fn}
                 or $fn =~
 m#\A \Q$POST_DEST\E /? (?: MathVentures | js/jquery-ui/ | philosophy/culture/case-for-commercial-fan-fiction ) #x,
-            );
+                );
         },
         targets => [$POST_DEST],
     }

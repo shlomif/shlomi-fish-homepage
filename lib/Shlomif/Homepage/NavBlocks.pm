@@ -683,7 +683,8 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
             tr_s       => [
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
-                _tr_s( qw( the_enemy define_zionism EmmaWatson_visit_to_Gaza ),
+                _tr_s(
+                    qw( the_enemy define_zionism EmmaWatson_visit_to_Gaza ),
                 ),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _tr_s( qw( summer_nsa SummerNSA_effort ), ),

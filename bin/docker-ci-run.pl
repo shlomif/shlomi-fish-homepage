@@ -164,8 +164,7 @@ sub run_config
     my $snapshot_names_base         = $cfg->snapshot_names_base();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
-        { container => $container, sys => $sys, },
-    );
+        { container => $container, sys => $sys, }, );
 
     my @deps = (
         sort { $a cmp $b } (

@@ -25,15 +25,15 @@ has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
 has 'lang'         => ( is => 'ro', isa => 'HashRef',    required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
 has 'path_info'    => ( is => 'rw', isa => 'Str', required => 1, );
-has 'results'      => (
+has 'results' => (
     is      => 'ro',
     isa     => 'HashRef',
     lazy    => 1,
     default => sub { return shift->nav_menu->render(); }
 );
-has 'root'          => ( is => 'rw', required => 1, );
-has 'sections'      => ( is => 'ro', required => 1, );
-has 'title'         => ( is => 'rw' );
+has 'root'     => ( is => 'rw', required => 1, );
+has 'sections' => ( is => 'ro', required => 1, );
+has 'title'    => ( is => 'rw' );
 has '_current_sect' => (
     is      => 'ro',
     isa     => 'Maybe[HashRef]',

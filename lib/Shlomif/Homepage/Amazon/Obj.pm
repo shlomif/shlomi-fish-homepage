@@ -14,7 +14,7 @@ use XML::LibXML::XPathContext         ();
 has 'src_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'lib_dir'      => ( isa => 'Str', is => 'ro', required => 1, );
 has 'xml_basename' => ( isa => 'Str', is => 'ro', required => 1, );
-has 'ps'           => (
+has 'ps' => (
     isa     => 'XML::Grammar::ProductsSyndication',
     is      => 'rw',
     lazy    => 1,

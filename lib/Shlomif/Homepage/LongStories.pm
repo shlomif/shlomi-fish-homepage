@@ -117,7 +117,7 @@ tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/
 The original <a href="http://humanity.shlomifish.org/">Humanity project</a>, back in 2000 was my opening shot of the <a
 href="$(ROOT)/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">the
 open content / Web 2.0 revolution</a> aiming to be a "bazaar-style"
-collaborative project for writing a screenplay. It fuzzled out due to the
+collaborative project for writing a screenplay. It failed due to the
 clunky <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> UI, but nowadays collaboratively written screenplays are
 common - only using <a href="https://en.wikipedia.org/wiki/List_of_wiki_software">wiki
 software</a>

@@ -606,6 +606,33 @@ console-based news reader.
 
 [%- END -%]
 
+[% WRAPPER h2_section id = "remote-command-exec" title = "SSH and similar Remote Command Execution" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.openssh.com/">OpenSSH</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> -
+"a free implementation of SSH and Telnet for Windows and Unix platforms, along with an xterm terminal emulator." (Open Source, MIT/Expat-licensed.)
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://mosh.org/">Mosh ("mobile shell")</a> - <q>Remote terminal application that allows roaming, supports intermittent connectivity, and provides intelligent local echo and line editing of user keystrokes.</q> (Open Source, GPLv3.)
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [% WRAPPER h2_section id = "cmd-line-WWW-clients"  title = "Command Line WWW (HTTP, FTP, etc.) clients"  %]
 
 <ul>

@@ -899,7 +899,7 @@ h3 {
         max-width: 90%;
     }
     pre {
-        overflow: auto;
+        overflow: scroll;
     }
     @include small-screen {
         &.my_rpf {

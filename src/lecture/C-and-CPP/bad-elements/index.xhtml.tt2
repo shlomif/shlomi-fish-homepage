@@ -6,6 +6,8 @@
 
 [% default_toc %]
 
+<div class="fancy_sects lim_width main_text side_toc">
+
 <h2 id="itself">The Text Itself</h2>
 
 [% path_slurp("docbook/5/rendered/c-and-cpp-elements-to-avoid.xhtml") %]
@@ -32,5 +34,7 @@ Attribution 4.0-and-above (CC-by) licence</a>. Enjoy!
 </p>
 
 [%- END -%]
+
+</div>
 
 [% END %]

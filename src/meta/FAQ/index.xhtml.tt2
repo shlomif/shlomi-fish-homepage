@@ -3683,8 +3683,7 @@ You can find a list of languages that I currently know on
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "text_editors"  title = "Which text editors are you using? What is your
-favourite text editor?"  %]
+[% WRAPPER faq_h3_section id = "text_editors"  title = "Which text editors are you using? What is your favourite text editor?"  %]
 
 <p>
 Well, I'm usually using gvim (the Gtk+/GUI version of
@@ -3716,6 +3715,45 @@ partial Vim compatibility, but I didn’t try it, in part because I’m now usin
 quite a lot of Vim extensions written in vimscript and in Vim’s extension
 languages, which are not supported by Evil.
 </p>
+
+[% WRAPPER faq_h4_section id = "past_text_editors"  title = "Which text editors have you used in the past?" %]
+
+<ul>
+
+<li>
+<p>
+I used <a href="https://en.wikipedia.org/wiki/QBasic">QBasic</a> and edit.com
+on DOS, as well as <a href="https://en.wikipedia.org/wiki/Turbo_C%2B%2B">Turbo C++</a>.
+</p>
+</li>
+
+<li>
+<p>
+I used
+<a href="https://en.wikipedia.org/wiki/Joe's_Own_Editor">Joe</a> extensively
+on Unix-like OSes.
+</p>
+</li>
+
+<li>
+<p>
+I also used <a href="https://en.wikipedia.org/wiki/NEdit">NEdit</a>
+on them.
+</p>
+</li>
+
+<li>
+<p>
+I used
+<a href="http://freshmeat.sourceforge.net/projects/cooledit">Cooledit</a>
+in the Technion due to lacking conditions, and was frustrated by its lack
+of Windows-like copy/paste keyboard bindings.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
 
 [%- END -%]
 

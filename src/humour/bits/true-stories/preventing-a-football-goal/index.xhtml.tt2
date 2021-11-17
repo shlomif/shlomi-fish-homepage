@@ -1,0 +1,34 @@
+[%- SET title = "Preventing a football goal" -%]
+[%- SET desc = title -%]
+[%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p>
+When I was in high school, some of my friends, their family members
+and I used to play <a href="https://en.wikipedia.org/wiki/Association_football">football ("soccer")</a> together. During one game, one member
+of the opponent team has advanced enough towards our goal, that several
+of my team members thought it was going to be a score for sure and
+stopped running.
+</p>
+
+<p>
+However, I ran quickly towards the goalposts, and was able to divert the ball
+by kicking it in mid-air, thus preventing a goal. So the lesson is to not give up too easily.
+</p>
+
+[% WRAPPER see_also  %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]links.html#motivational_videos">Links to Motivational Videos</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]

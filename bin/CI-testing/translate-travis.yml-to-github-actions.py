@@ -124,10 +124,12 @@ def generate(output_path, is_act):
             'with': {'run': procstep, },
         })
         count_ += 1
-    job = 'test-fc-solve'
+    job = 'test-site-build'
     o = {'jobs': {job: {'runs-on': 'ubuntu-latest',
          'steps': steps, }},
-         'name': 'use-github-actions', 'on': ['push', ], }
+         'name': 'use-github-actions', 'on': ['push', ],
+         'timeout-minutes': 60,
+         }
     if 'matrix' in data:
         if 'include' in data['matrix']:
             o['jobs'][job]['strategy'] = {'matrix': {'include': [

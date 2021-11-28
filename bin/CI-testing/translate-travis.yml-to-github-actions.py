@@ -125,10 +125,11 @@ def generate(output_path, is_act):
         })
         count_ += 1
     job = 'test-site-build'
-    o = {'jobs': {job: {'runs-on': 'ubuntu-latest',
-         'steps': steps, }},
+    o = {'jobs': {
+         job: {'runs-on': 'ubuntu-latest',
+               'steps': steps,
+               'timeout-minutes': 60, }},
          'name': 'use-github-actions', 'on': ['push', ],
-         'timeout-minutes': 60,
          }
     if 'matrix' in data:
         if 'include' in data['matrix']:

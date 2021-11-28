@@ -59,7 +59,7 @@ jobs:
             uses: GabrielBB/xvfb-action@v1
             with:
                 run: bash -ex -c ". bin/CI-testing/common-env-shim.sh ; set +x"
+        timeout-minutes: 60
 name: use-github-actions
 'on':
 - push
-timeout-minutes: 60

@@ -287,9 +287,6 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
-# Rebuild the embedded docbook4 pages in the $(PRE_DEST) after they are
-# modified.
-
 PUT_CARDS_2013_XHTML := lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
 PUT_CARDS_2013_DEST := $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
 
@@ -391,7 +388,6 @@ $(FORTUNES_SQLITE_DB): $(SRC_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNE
 
 $(FORTUNES_TARGET): $(SRC_FORTUNES_DIR)/index.xhtml.tt2 $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(SRC_FORTUNES_DIR)/Makefile $(SRC_FORTUNES_DIR)/ver.txt
 
-# TODO : extract a macro for this and the rule below.
 $(FORTUNES_DEST_HTMLS): $(PRE_DEST_FORTUNES_DIR)/%.html: lib/fortunes/xhtmls/%.toc-xhtml lib/fortunes/xhtmls/%.xhtml $(DOCS_COMMON_DEPS)
 
 $(SRC_FORTUNES_ALL__TEMP__HTML): $(SRC_FORTUNES_ALL_TT2) $(DOCS_COMMON_DEPS) $(FORTUNES_XHTMLS__FOR_INPUT_PORTIONS) $(FORTUNES_XHTMLS_TOCS)
@@ -612,7 +608,6 @@ LC_PRES_SCMS := \
 LC_PRES_SRC_DIR := $(SRC_SRC_DIR)/$(LC_PRES_PATH)
 LC_PRES_DEST := $(PRE_DEST)/$(LC_PRES_PATH)
 
-# LC_PRES_DEST_HTMLS := $(patsubst %.scm,$(PRE_DEST)/$(LC_PRES_PATH)/%.scm.html,$(LC_PRES_SCMS))
 LC_PRES_SRC_SCMS := $(patsubst %,$(LC_PRES_SRC_DIR)/%,$(LC_PRES_SCMS))
 LC_PRES_DEST_HTMLS__PIVOT := $(patsubst %.scm,$(LC_PRES_DEST)/%.scm.html,notes.scm)
 
@@ -862,15 +857,12 @@ $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCR
 
 FACTOIDS_RENDER_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/lib/factoids/gen-html.pl
 FACTOIDS_TIMESTAMP := lib/factoids/TIMESTAMP
-FACTOIDS_GENERATED_FILES := lib/factoids/indiv-lists-xhtmls/buffy_facts--en-US.xhtml.reduced
 FACTOIDS_GEN_CMD := $(PERL) $(FACTOIDS_RENDER_SCRIPT)
 
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
 
 all: $(FACTOIDS_TIMESTAMP)
-
-# $(FACTOIDS_DOCS_DEST): $(FACTOIDS_GENERATED_FILES)
 
 all: manifest_html
 

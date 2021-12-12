@@ -11,7 +11,8 @@
           "qunit": ["node_modules/@types/qunit"]
       },
       "target":"es2017",
-      "typeRoots": ["/node_modules/@types"]
+      "types": ["jquery"],
+      "typeRoots": ["node_modules/@types", "node_modules"]
   },
   "include": ["../../../src/ts/**/*.ts"]
 }

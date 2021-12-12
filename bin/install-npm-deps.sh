@@ -10,4 +10,8 @@ set -e
 npm install
 PATH="$PATH:$PWD/node_modules/.bin"
 bower install
+for dir in bower_components node_modules
+do
+    (cd "$dir" ; git init . )
+done
 )

@@ -10,7 +10,8 @@
           "big-integer": ["node_modules/big-integer/BigInteger.d.ts"],
           "qunit": ["node_modules/@types/qunit"]
       },
-      "target":"es2017"
+      "target":"es2017",
+      "typeRoots": ["/node_modules/@types"]
   },
   "include": ["../../../src/ts/**/*.ts"]
 }

@@ -338,7 +338,7 @@ my $_humour_tree_contents = {
                         {
                             text  => "The Blue Rabbit’s Log",
                             url   => "humour/Blue-Rabbit-Log/",
-                            title => "Movies that Parody Role-Playing Games",
+                            title => "Films that Parody Role-Playing Games",
                             subs  => [
                                 {
                                     text => "Part I",

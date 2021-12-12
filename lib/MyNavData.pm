@@ -598,8 +598,7 @@ sub generic_get_params
             {
                 text  => "Recommendations",
                 url   => "recommendations/",
-                title =>
-                    "Recommendations of Books, Compact Discs, Movies, etc.",
+                title => "Recommendations of Books, Music Albums, Films, etc.",
             },
             {
                 separator => 1,

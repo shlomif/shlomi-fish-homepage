@@ -2074,13 +2074,14 @@
 
 
                     <p>Last week Kent Beck made a claim that you don’t really
-                        need bug tracking databases when you’re doing Extreme
-                        Programming, because the combination of pair
-                        programming (with persistent code review) and test
-                        driven development (guaranteeing 100% code coverage of
-                        the automated tests) means you hardly ever have
-                        bugs.</p>
-
+                    need bug tracking databases when you’re doing Extreme
+                    Programming, because the combination of pair programming
+                    (with persistent code review) and test driven development
+                    (guaranteeing 100% code coverage of the automated tests)
+                    means you <i>hardly ever have bugs</i>.That didn’t sound
+                    right to me. I looked in our own bug tracking database here
+                    at Fog Creek to see what kinds of bugs were keeping it
+                    busy.</p>
 
 
                     <p>Lo and behold, I discovered that very few of the bugs in

@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 use lib './lib';
+use Test::More skip_all =>
+    "tt tags are already checked by ./Tests/validate-html-using-vnu.py";
 use HTML::Latemp::Local::Paths            ();
 use Test::HTML::Recursive::DeprecatedTags ();
 

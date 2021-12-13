@@ -63,16 +63,26 @@ body.faq_indiv_entry {
     }
     @mixin temp_mobile_friendly_hack() {
         // I'm not sure if img is required
+        a,
+        a *,
         img,
         pre {
             overflow: scroll;
         }
         main {
-            display: inline;
-            overflow: scroll;
+            // display: inline;
+            // overflow: scroll;
         }
     }
     @include temp_mobile_friendly_hack();
+}
+
+@if true {
+    @media (max-width: 450px) {
+        main {
+            max-width: 50vw;
+        }
+    }
 }
 
 #faux {
@@ -109,5 +119,11 @@ body.faq_indiv_entry {
             color: #40ff40;
             background-color: transparent;
         }
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        display: block;
     }
 }

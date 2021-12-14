@@ -10,10 +10,10 @@ use Path::Tiny qw/ path /;
 use URI::Escape::XS qw/ encodeURIComponent /;
 use YAML::XS ();
 
-use HTML::Acronyms                         ();
-use HTML::Latemp::AddToc                   ();
-use Module::Format::AsHTML                 ();
-use Set::CSS                               ();
+use HTML::Acronyms         ();
+use HTML::Latemp::AddToc   ();
+use Module::Format::AsHTML ();
+use Set::CSS v0.2.0 ();
 use Shlomif::Homepage::ArticleIndex        ();
 use Shlomif::Homepage::FortuneCollections  ();
 use Shlomif::Homepage::LicenseBlurbs       ();

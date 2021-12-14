@@ -300,7 +300,8 @@ publicly linked to. Please send comments to
 </p>
 <div id="container-all">
 <button id="show_navbar" class="on">Hide NavBar ⬈</button>
-<main class="main [% IF apply_screenplay_style %]screenplay_style[% END %]" id="main">
+[% IF apply_screenplay_style %][% main_class.insert("screenplay_style"); %][% END %]
+<main[% main_class.as_html() %] id="main">
 [%sect_nav_menu_html%]
 [% IF rtl_layout %]
 <div class="hebrew" xml:lang="he-IL">

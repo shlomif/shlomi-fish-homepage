@@ -243,6 +243,15 @@ class MyTests(html_unit_test.TestCase):
             input_fn=input_fn, htmlid='shlomif-fact-win-update-1'
         )
 
+    def test_screenplay_style(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/Terminator/Liberation/' +
+            'ongoing-text.html'
+        )
+        self.doc(input_fn).has_one(
+            ".//main[contains(@class, 'screenplay_style')]"
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

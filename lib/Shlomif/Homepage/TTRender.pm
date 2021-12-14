@@ -13,6 +13,7 @@ use YAML::XS ();
 use HTML::Acronyms                         ();
 use HTML::Latemp::AddToc                   ();
 use Module::Format::AsHTML                 ();
+use Set::CSS                               ();
 use Shlomif::Homepage::ArticleIndex        ();
 use Shlomif::Homepage::FortuneCollections  ();
 use Shlomif::Homepage::LicenseBlurbs       ();
@@ -309,6 +310,7 @@ sub proc
     $vars->{text_ORIG_URL_PREFIX} = $ORIG_URL_PREFIX;
     $vars->{orig_url}             = $ORIG_URL_PREFIX . $raw_fn_path;
     $vars->{escaped_url}          = encodeURIComponent($full_url);
+    $vars->{main_class}           = Set::CSS->new("main");
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

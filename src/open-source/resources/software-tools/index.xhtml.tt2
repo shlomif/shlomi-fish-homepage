@@ -534,7 +534,7 @@ testing framework by the Open Group.
 </p>
 </li>
 
-<li>
+<li id="TAP">
 <p>
 <a href="http://testanything.org/wiki/index.php/Main_Page">The “Test
 Anything Protocol” (TAP)</a> - a protocol for test scripts to communicate
@@ -547,6 +547,13 @@ heterogeneous test suites written in several languages.
 <p>
 <a href="http://en.wikipedia.org/wiki/FitNesse">FitNesse</a> - a framework
 for acceptance testing (system tests etc.).
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://cmocka.org/">cmocka</a> - an open source (Apache License)
+unit testing framework for C that can emit <a href="#TAP">TAP</a>.
 </p>
 </li>
 

@@ -2,10 +2,9 @@
 [%- SET desc = "Choice of Document Formats" -%]
 [%- SET more_keywords = "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
-
-<div class="fancy_sects">
 
 [% WRAPPER h2_section id = "about"  title = "About this Document"  %]
 
@@ -326,7 +325,5 @@ TODO: Fill in.
 </p>
 
 [%- END -%]
-
-</div>
 
 [% END %]

@@ -2,6 +2,9 @@
 
 [%- PROCESS "stories/selina-common.tt2" -%]
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
+
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]
@@ -40,8 +43,6 @@ into the screenplay in the future in an outline. (May spoil the fun.)
 [%- END -%]
 
 [% default_toc %]
-
-<div class="fancy_sects">
 
 [% IF 0 %]
 
@@ -520,8 +521,5 @@ facts about Buffy Summers, the protagonist of the show.
 </ul>
 
 [%- END -%]
-
-</div>
-
 
 [% END %]

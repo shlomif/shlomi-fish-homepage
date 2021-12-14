@@ -1,13 +1,13 @@
 [%- SET title = "My Cool Links List" -%]
 [%- SET desc = "Shlomi Fish’s Links List: contains links to various sites and pages." -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% SET NSFW = my_acronym( "key" => "NSFW",) %]
 
 [% default_toc %]
-
-<div class="fancy_sects">
 
 <section>
 <h2 id="studies">Studies Related</h2>
@@ -1649,6 +1649,5 @@ predictions of 2009.”</a>.
 
 </ul>
 </section>
-</div>
 
 [% END %]

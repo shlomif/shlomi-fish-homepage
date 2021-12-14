@@ -1,9 +1,9 @@
 [%- SET title = "Shlomi Fish’s Personal Website’s Navigation Blocks" -%]
 [%- SET desc = title -%]
 
-[%- WRAPPER wrap_html -%]
+[% main_class.addClass("fancy_sects") %]
 
-<div class="fancy_sects">
+[%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
@@ -21,7 +21,5 @@
 [%- END -%]
 
 [%- END -%]
-
-</div>
 
 [% END %]

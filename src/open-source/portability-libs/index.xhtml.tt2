@@ -1,4 +1,4 @@
-[%- SET title = "Cross-Platform Abstraction Libraries" -%]
+[%- SET title = "Cross-Platform Abstraction Libraries for Portable Development" -%]
 [%- SET desc = "Cross-Platform libraries for abstracting system services and for portability." -%]
 [%- SET more_keywords = "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" -%]
 
@@ -423,6 +423,36 @@ C++.
 library from the GNOME people.
 </p>
 </li>
+</ul>
+
+<h2 id="consoles">Consoles / Terminals</h2>
+
+<ul>
+
+<li>
+<p>
+<a href="https://pdcurses.org/">PDCurses</a> - <q>a public domain curses library for DOS, OS/2, Windows console, X11 and SDL, implementing most of the functions available in X/Open and System V R4 curses.</q>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.leonerd.org.uk/code/libtickit/">libtickit</a> - <q>This library provides an abstracted mechanism for building interactive full-screen terminal programs. It provides a full set of output drawing functions, and handles keyboard and mouse input events.</q>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/nowres/conio-for-linux">conio for Linux</a> - GPL.
+</p>
+</li>
+
 </ul>
 
 <h2 id="links">Links</h2>

@@ -22,7 +22,7 @@ my $filename = shift(@ARGV)
 {
     my $s = path($filename)->slurp_utf8;
 
-    Shlomif::DocBookClean::cleanup_docbook( \$s );
+    Shlomif::DocBookClean::cleanup_docbook( \$s, $filename, );
 
     $s =~ s{\A.*?<body[^>]*>}{}ms;
     $s =~ s{</body>.*\z}{}ms;

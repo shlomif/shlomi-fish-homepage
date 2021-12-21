@@ -5,6 +5,7 @@
 [% END %]
 
 
+[% main_class.addClass("fancy_sects") %]
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]

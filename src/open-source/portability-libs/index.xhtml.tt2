@@ -47,7 +47,7 @@ services (and not GUI). [% INCLUDE licence_qt %]
 
 [% default_toc %]
 
-<h2 id="data_structures">Data Structures</h2>
+[% WRAPPER h2_section id="data_structures" title="Data Structures"%]
 
 <ul>
 <li>
@@ -102,7 +102,9 @@ functions. LGPLed.
 
 </ul>
 
-<h2 id="system_services">System-Services Abstractions</h2>
+[% END %]
+
+[% WRAPPER h2_section id="system_services" title="System-Services Abstractions"%]
 
 <ul>
 <li>
@@ -215,7 +217,9 @@ a library for threading abstractions (open source).
 
 </ul>
 
-<h2 id="gui">Graphical User-Interface (GUI)</h2>
+[% END %]
+
+[% WRAPPER h2_section id="gui" title="Graphical User-Interface (GUI)"%]
 
 <ul>
 
@@ -312,7 +316,9 @@ other systems)</a>
 
 </ul>
 
-<h2 id="multimedia">Multimedia</h2>
+[% END %]
+
+[% WRAPPER h2_section id="multimedia" title="Multimedia"%]
 
 <ul>
 <li>
@@ -392,7 +398,9 @@ proprietary 3-D engine for games.
 
 </ul>
 
-<h2 id="database">Database Access</h2>
+[% END %]
+
+[% WRAPPER h2_section id="database" title="Database Access"%]
 
 <ul>
 <li>
@@ -425,7 +433,9 @@ library from the GNOME people.
 </li>
 </ul>
 
-<h2 id="consoles">Consoles / Terminals</h2>
+[% END %]
+
+[% WRAPPER h2_section id="consoles" title="Consoles / Terminals"%]
 
 <ul>
 
@@ -455,7 +465,9 @@ library from the GNOME people.
 
 </ul>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER links_sect  %]
 
 <ul>
 
@@ -492,6 +504,8 @@ shiny things”.
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER credits_sect %]
 

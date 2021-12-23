@@ -3,116 +3,11 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/curated_sw_lists.tt2" %]
+
 [% WRAPPER h2_section id = "lists" title = "Curated Lists and Directories of Software Applications" %]
 
-<div class="sub_section">
-
-<h3><a href="[% base_path %]open-source/portability-libs/">Cross-Platform Abstraction Libraries for Portability</a></h3>
-
-<p>
-A small directory of libraries that make writing applications that run on
-UNIXes as well as on Windows 32-bit easier.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/software-tools/" %]">Software Building and Management Tools</a></h3>
-
-<p>
-A small directory of tools for building, configuring and maintaining software.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/editors-and-IDEs/" %]">List of Text Editors and IDEs</a></h3>
-
-<p>
-A list of text editors and IDEs.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/numerical-software/" %]">Numerical Software</a></h3>
-
-<p>
-A short list of some prominent numerical software packages.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/text-processing-tools/" %]">Text Processing Tools</a></h3>
-
-<p>
-A list of some prominent text processing tools such as preprocessors or
-template systems.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/networking-clients/" %]">Networking Clients</a></h3>
-
-<p>
-A list of some prominent networking clients: web-browsers, E-mail clients,
-Instant Messaging (IM) clients, Microblogging clients, FTP clients etc.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/multimedia-programs/" %]">Multimedia Applications</a></h3>
-
-<p>
-A list of some prominent multimedia applications: generic multimedia players,
-dedicated music players, video downloaders, etc.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/graphics-programs/" %]">Graphics Applications</a></h3>
-
-<p>
-A list of some prominent computer graphics applications: raster editors,
-vector editors, 3-D programs, image viewers and organisers, etc.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/databases-list/" %]">List of Database Implementations</a></h3>
-
-<p>
-A list of some prominent database implementations: key/value stores,
-SQL databases, XML databases, distributed databases, etc.
-</p>
-
-<h3><a href="[% "${base_path}open-source/resources/software-quality-enhancement/" %]">Software Quality Enhancement Tools and Links</a></h3>
-
-<p>
-Quite a few people, including me, have been lamenting the
-<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/notes/quality-software--followup-2018.md">poor
-quality</a> of a lot of modern software applications. In order to do something constructive
-to combat this, I decided to collect links to tools and other resources that can help
-enhancing the quality of software.
-</p>
-
-</div>
-
-<section class="h3">
-
-<h3 id="links_to_other_lists">Links to other lists online</h3>
-
-<div class="sub_section">
-
-<ul>
-
-<li>
-<p>
-<a href="http://github.com/sindresorhus/awesome">Curated list of awesome
-lists</a> - on GitHub/etc.
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://linux-sound.org/">Sound &amp; MIDI Software for Linux</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://linas.org/linux/index.html">“Linux Enterprise Computing”</a>
-- “old and out-of-date” lists of software for the Linux operating system. By
-Linas Vepstas and reflects the state of Linux software as of the late 1990s.
-</p>
-</li>
-
-</ul>
-
-</div>
-
-</section>
+[% INCLUDE curated_sw_lists %]
 
 [% END %]
 

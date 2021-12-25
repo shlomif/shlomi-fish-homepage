@@ -287,6 +287,63 @@ my $_section_navmenu_tree_contents = {
             url  => "open-source/resources/",
             subs => [
                 {
+                    text => "Curated Lists",
+                    url  => "open-source/resources/sw-lists/",
+                    subs => [
+
+                        {
+                            url   => "open-source/portability-libs/",
+                            text  => "Portability Libraries",
+                            title => "Index of Libraries for Portability",
+                        },
+                        {
+                            url  => "open-source/resources/software-tools/",
+                            text => "Software Building and Management Tools",
+                        },
+                        {
+                            url   => "open-source/resources/editors-and-IDEs/",
+                            text  => "Editors and IDEs",
+                            title =>
+"Index of Text Editors and Integrated Development Environments",
+                        },
+                        {
+                            url  => "open-source/resources/numerical-software/",
+                            text => "Numerical Software",
+                        },
+                        {
+                            url =>
+                                "open-source/resources/text-processing-tools/",
+                            text => "Text Processing Tools",
+                        },
+                        {
+                            url  => "open-source/resources/networking-clients/",
+                            text => "Networking Clients",
+                            title =>
+"Web browsers, FTP clients, Instant Messaging (IM) clients, File sharing applications and more",
+                        },
+                        {
+                            url => "open-source/resources/multimedia-programs/",
+                            text => "List of Multimedia Applications",
+                        },
+                        {
+                            url   => "open-source/resources/graphics-programs/",
+                            text  => "List of Computer Graphics Applications",
+                            title =>
+"Raster editors, vector editors, image viewers and organisers, 3-D applications and more",
+                        },
+                        {
+                            url  => "open-source/resources/databases-list/",
+                            text => "List of Database Implementations",
+                        },
+                        {
+                            url =>
+"open-source/resources/software-quality-enhancement/",
+                            text =>
+                                "List of Software quality-enhancement tools",
+                        },
+                    ],
+                },
+                {
                     text  => "Favourite OSS",
                     url   => "open-source/favourite/",
                     title => "Favourite Open Source Software of Mine",
@@ -312,54 +369,6 @@ my $_section_navmenu_tree_contents = {
                 {
                     url  => "open-source/resources/tech-tips/",
                     text => "Tech Tips’ Collection",
-                },
-                {
-                    url   => "open-source/portability-libs/",
-                    text  => "Portability Libraries",
-                    title => "Index of Libraries for Portability",
-                },
-                {
-                    url  => "open-source/resources/software-tools/",
-                    text => "Software Building and Management Tools",
-                },
-                {
-                    url   => "open-source/resources/editors-and-IDEs/",
-                    text  => "Editors and IDEs",
-                    title =>
-"Index of Text Editors and Integrated Development Environments",
-                },
-                {
-                    url  => "open-source/resources/numerical-software/",
-                    text => "Numerical Software",
-                },
-                {
-                    url  => "open-source/resources/text-processing-tools/",
-                    text => "Text Processing Tools",
-                },
-                {
-                    url   => "open-source/resources/networking-clients/",
-                    text  => "Networking Clients",
-                    title =>
-"Web browsers, FTP clients, Instant Messaging (IM) clients, File sharing applications and more",
-                },
-                {
-                    url  => "open-source/resources/multimedia-programs/",
-                    text => "List of Multimedia Applications",
-                },
-                {
-                    url   => "open-source/resources/graphics-programs/",
-                    text  => "List of Computer Graphics Applications",
-                    title =>
-"Raster editors, vector editors, image viewers and organisers, 3-D applications and more",
-                },
-                {
-                    url  => "open-source/resources/databases-list/",
-                    text => "List of Database Implementations",
-                },
-                {
-                    url =>
-                        "open-source/resources/software-quality-enhancement/",
-                    text => "List of Software quality-enhancement tools",
                 },
                 {
                     url =>

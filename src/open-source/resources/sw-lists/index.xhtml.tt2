@@ -1,0 +1,14 @@
+[%- SET title = "Curated Lists of Prominent Software Packages" -%]
+[%- SET desc = "Software Resources Pages - lists of prominent alternatives, and beginner and adovcacy sites" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% PROCESS "Inc/curated_sw_lists.tt2" %]
+
+[% WRAPPER h2_section id = "lists" title = "Curated Lists and Directories of Software Applications" %]
+
+[% INCLUDE curated_sw_lists %]
+
+[% END %]
+
+[% END %]

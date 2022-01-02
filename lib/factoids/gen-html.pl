@@ -753,6 +753,15 @@ EOF
 </p>
 </li>
 
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=Zlot0i3Zykw">"Red"</a> - a song Swift
+wrote about her relationship with her hellhole's echo of me: a static site owner
+who was critical of her songs, while being enamoured with many youtube musicians
+especially <a href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina
+Grimmie</a> and <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>. She used www.shlomifish.org as fodder for her songs.
+</p>
+</li>
 </ul>
 EOF
         meta_desc =>

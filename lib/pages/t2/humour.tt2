@@ -2646,6 +2646,8 @@ a prostitute. Treat her with respect, be honest to her
 
 [%- END -%]
 
+[% IF withcensored %]
+
 [% WRAPPER github_captioned_image_joke id = "carpe_diem"  header = "Carpe diem, motherfucker!! Do you speak it?!!"  repo_href = "https://github.com/shlomif/Captioned-Image-Carpe-Diem--Mofo"  src = "${base_path}humour/images/carpe-diem-mofo.svg.webp"  alt = "Carpe diem, motherfucker!! Do you speak it?!!"  %]
 
 [% WRAPPER quote  %]
@@ -2702,8 +2704,9 @@ Glau and Chuck Norris on The Muppets Show</a> [my fanfic with a strong “Carpe 
 
 
 [%- END -%]
+[%- END -%]
 
-
+[% IF withcensored %]
 [% WRAPPER github_captioned_image_joke id = "holocaust_denial"  header = "Holocaust Denial"  repo_href = "http://github.com/shlomif/Captioned-Image-Holocaust"  src = base_path _ "humour/images/Holocaust-did-not-happen.svg.webp"  alt = "“The holocaust did not happen, so shoot me, bitch!”"  %]
 
 [% WRAPPER quote  %]
@@ -2769,6 +2772,7 @@ speech</a>.
 
 [%- END -%]
 
+[%- END -%]
 [% WRAPPER github_captioned_image_joke id = "pbride_philosophers"  header = "Have you heard of Plato? Aristotle? Socrates? Models!!"  repo_href = "http://github.com/shlomif/Captioned-Image-Princess-Bride-Greek-Philosophers"  src = base_path _ "humour/images/philosophers-princess-bride.svg.webp"  alt = "Princess Bride + Greek Philosophers"  %]
 
 [% WRAPPER quote  %]

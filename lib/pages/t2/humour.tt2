@@ -17,6 +17,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET withcensored = 1 %]
+
 [% IF (! captioned_images_only) %]
 [% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
 [%- END -%]

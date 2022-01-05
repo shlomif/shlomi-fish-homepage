@@ -96,6 +96,20 @@ my $_art_tree_contents = {
                             text => "Online Artists",
                             url  => "art/recommendations/music/online-artists/",
                             title => "Some of my favourite online musicians",
+                            subs  => [
+                                {
+                                    text => "Fan Pages",
+                                    url  =>
+"art/recommendations/music/online-artists/fan-pages/",
+                                    subs => [
+                                        {
+                                            text => "Christina Grimmie",
+                                            url  =>
+"art/recommendations/music/online-artists/fan-pages/christina-grimmie/",
+                                        },
+                                    ],
+                                },
+                            ],
                         },
                     ],
                 },

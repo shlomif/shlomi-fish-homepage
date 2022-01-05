@@ -12,6 +12,17 @@
 [% SET lang = "eng" %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
+[% WRAPPER h2_section id = "about-grimmie" title = "About" %]
+
+<p>
+<a href="https://christinagrimmie.com/">Christina Grimmie</a>
+is a New Jersey-born singer, songwriter, musician, and creator,
+whom I destined to be the <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/my-candidates-for-terran-leadership.asciidoc">the
+new Hacker Monarch (= "Messiah")</a>.
+</p>
+
+[% END %]
+
 [% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]
 
 <hr />

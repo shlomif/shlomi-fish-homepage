@@ -3,7 +3,16 @@
 
 [% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf") %]
 
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
+[% END %]
+
 [%- WRAPPER wrap_html -%]
+
+[% SET lang = "eng" %]
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+
+[% PROCESS "lib/Inc/chris_grimmie.tt2" img_style = "float:none;" %]
 
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 

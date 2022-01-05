@@ -14,6 +14,16 @@
 
 [% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]
 
+<hr />
+
+[% WRAPPER h2_section id = "grimmie-is-alive" title = "Christina Grimmie is Alive" %]
+
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+I had a similar moment as well.
+</p>
+
+[% END %]
 
 [% END %]

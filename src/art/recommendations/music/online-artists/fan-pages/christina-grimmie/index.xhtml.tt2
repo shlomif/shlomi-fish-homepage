@@ -12,7 +12,7 @@
 [% SET lang = "eng" %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
-[% PROCESS "lib/Inc/chris_grimmie.tt2" img_style = "float:none;" %]
+[% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]
 
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 

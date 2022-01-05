@@ -23,7 +23,11 @@ new Hacker Monarch (= "Messiah")</a>.
 
 [% END %]
 
+[% WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" %]
+
 [% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]
+
+[% END %]
 
 <hr />
 

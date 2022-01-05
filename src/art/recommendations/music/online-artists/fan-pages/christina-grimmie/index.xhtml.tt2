@@ -1,7 +1,10 @@
 [%- SET title = "Fan page for Christina Grimmie" -%]
 [%- SET desc = "Fan page for Christina Grimmie -- TODO: ADD MORE" -%]
 
+[% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf") %]
+
 [%- WRAPPER wrap_html -%]
 
+<iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 
 [% END %]

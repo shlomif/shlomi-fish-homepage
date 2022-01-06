@@ -41,4 +41,10 @@ I had a similar moment as well.
 
 [% END %]
 
+[% WRAPPER h2_section id = "letter" title = "Letter to Christina" %]
+
+[% path_slurp("asciidocs/letter-to-christina-grimmie.asciidoc.xhtml") %]
+
+[% END %]
+
 [% END %]

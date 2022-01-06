@@ -424,16 +424,26 @@ HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-project
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
-define ASCIIDOCTOR_TO_XTHML5
+define ASCIIDOCTOR_TO_XHTML5
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/clean-up-asciidoctor-xhtml5.pl $@
 endef
 
+define ASCIIDOCTOR_TO_RAW_XHTML5
+	asciidoctor --backend=xhtml5 -e -o $@ $<
+endef
+
+christina_grimmie_letter_source = lib/asciidocs/letter-to-christina-grimmie.asciidoc
+christina_grimmie_letter_html = lib/asciidocs/letter-to-christina-grimmie.asciidoc.xhtml
+
+$(christina_grimmie_letter_html): $(christina_grimmie_letter_source)
+	$(call ASCIIDOCTOR_TO_RAW_XHTML5)
+
 $(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
-	$(call ASCIIDOCTOR_TO_XTHML5)
+	$(call ASCIIDOCTOR_TO_XHTML5)
 
 $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
-	$(call ASCIIDOCTOR_TO_XTHML5)
+	$(call ASCIIDOCTOR_TO_XHTML5)
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 
@@ -1035,6 +1045,8 @@ $(SCREENPLAY_XML__PDFS__POST_DESTS): %.pdf: %.raw.html
 screenplays_pdfs: $(SCREENPLAY_XML__PDFS__POST_DESTS)
 
 docbook_extended: screenplays_pdfs
+
+all_deps: $(christina_grimmie_letter_html)
 
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 

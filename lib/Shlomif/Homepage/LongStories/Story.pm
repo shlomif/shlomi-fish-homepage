@@ -15,6 +15,7 @@ has [ 'entry_extra_html', ]           => ( is => 'ro', default => q{}, );
 has [ 'should_skip_abstract_h_tag', ] => ( is => 'ro', default => q{}, );
 
 has logo_class => ( is => 'ro', );
+has logo_title => ( is => 'ro', );
 
 has logo_id => (
     is      => 'ro',

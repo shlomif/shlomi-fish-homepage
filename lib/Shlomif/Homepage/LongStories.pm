@@ -419,11 +419,13 @@ EOF
     },
     {
         id       => 'queen_padme_tales',
-        tagline  => "Let’s have them all!",
+        tagline  => "Why can’t we have them all?",
         logo_alt => "“Queen Padmé Tales” logo",
         logo_src =>
             "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
         logo_svg   => '//$SKIP',
+        logo_title =>
+qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
@@ -757,11 +759,17 @@ sub _get_logo_tags
 
     return [
         sprintf(
-            qq#<img id="%s" src="%s" alt="%s" class="story_logo%s"/>\n#,
+            qq#<img id="%s" src="%s" alt="%s" class="story_logo%s"%s/>\n#,
             $o->logo_id,
             escape_html( _rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
-            $o->logo_alt, $o->calc_logo_class,
-        ),
+            $o->logo_alt,
+            $o->calc_logo_class,
+            (
+                $o->logo_title
+                ? ( " title=\"" . escape_html( $o->logo_title() ) . "\"" )
+                : ''
+            ),
+        )
     ];
 }
 

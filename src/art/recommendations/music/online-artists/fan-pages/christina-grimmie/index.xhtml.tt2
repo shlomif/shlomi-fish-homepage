@@ -23,6 +23,28 @@ new Hacker Monarch (= "Messiah")</a>.
 
 [% END %]
 
+[% WRAPPER h2_section id = "favourites" title = "Favourite Works" %]
+
+<ol>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=kYX8sjIzjGw">Feelin' Good</a> - deep
+messages lurk in the seemingly simple lyrics.
+( <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#dedication">My midrash</a>. )
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=XciXDEIHdhc">I will always love you</a> -
+cover of Whitney Houston.
+</p>
+</li>
+</ol>
+
+[% END %]
+
 [% WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" %]
 
 [% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]

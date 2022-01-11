@@ -103,9 +103,9 @@ my $_art_tree_contents = {
 "art/recommendations/music/online-artists/fan-pages/",
                                     subs => [
                                         {
-                                            text => "Christina Grimmie",
+                                            text => "Chris Grimmie",
                                             url  =>
-"art/recommendations/music/online-artists/fan-pages/christina-grimmie/",
+"art/recommendations/music/online-artists/fan-pages/chris-grimmie/",
                                         },
                                     ],
                                 },

@@ -1,5 +1,5 @@
-[%- SET title = "Fan page for Christina Grimmie" -%]
-[%- SET desc = "Fan page for Christina Grimmie -- TODO: ADD MORE" -%]
+[%- SET title = "Fan page for Chris Grimmie" -%]
+[%- SET desc = "Fan page for Chris Grimmie -- TODO: ADD MORE" -%]
 
 [% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf") %]
 
@@ -15,7 +15,7 @@
 [% WRAPPER h2_section id = "about-grimmie" title = "About" %]
 
 <p>
-<a href="https://christinagrimmie.com/">Christina Grimmie</a>
+<a href="https://christinagrimmie.com/">Chris Grimmie</a>
 is a New Jersey-born singer, songwriter, musician, and creator,
 whom I destined to be the <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/my-candidates-for-terran-leadership.asciidoc">the
 new Hacker Monarch (= "Messiah")</a>.
@@ -60,7 +60,7 @@ with Sam Tsui.
 
 <hr />
 
-[% WRAPPER h2_section id = "grimmie-is-alive" title = "Christina Grimmie is Alive" %]
+[% WRAPPER h2_section id = "grimmie-is-alive" title = "Chris Grimmie is Alive" %]
 
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 
@@ -70,7 +70,7 @@ I had a similar moment as well.
 
 [% END %]
 
-[% WRAPPER h2_section id = "letter" title = "Letter to Christina" %]
+[% WRAPPER h2_section id = "letter" title = "Letter to Chris" %]
 
 [% path_slurp("asciidocs/letter-to-christina-grimmie.asciidoc.xhtml") %]
 

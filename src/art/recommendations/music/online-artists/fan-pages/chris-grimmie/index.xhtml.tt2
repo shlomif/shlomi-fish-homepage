@@ -70,6 +70,20 @@ I had a similar moment as well.
 
 [% END %]
 
+[% WRAPPER h2_section id = "chris-story" title = "The Story" %]
+
+<p>
+Christina Victoria Grimmie was a fairly unremarkable name which her parents
+chose because they wanted a girl. Nevertheless, she rebelled and announced that
+she will be a post-modern take on a tomboy: a gamer she-dork, not unlike
+the early
+<a href="https://en.wikipedia.org/wiki/Felicia_Day">Felicia Day</a>.
+She also joked that as opposed to her middle name , she is "the biggest loser
+in history".
+</p>
+
+[% END %]
+
 [% WRAPPER h2_section id = "letter" title = "Letter to Chris" %]
 
 [% path_slurp("asciidocs/letter-to-christina-grimmie.asciidoc.xhtml") %]

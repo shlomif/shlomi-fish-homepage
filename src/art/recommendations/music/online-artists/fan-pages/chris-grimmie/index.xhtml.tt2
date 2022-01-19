@@ -1,7 +1,7 @@
 [%- SET title = "Fan page for Chris Grimmie" -%]
 [%- SET desc = "Fan page for Chris Grimmie -- TODO: ADD MORE" -%]
 
-[% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf") %]
+[% main_class.addClass("fancy_sects", "limit_imgs_width", ) %]
 
 [% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
@@ -13,6 +13,10 @@
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
 
 [% WRAPPER h2_section id = "about-grimmie" title = "About" %]
+
+<p>
+<img src="images/christina-grimmie--529031666-r.webp" class="rfloaty" alt="Photo of Christina Grimmie"/>
+</p>
 
 <p>
 <a href="https://christinagrimmie.com/">Chris Grimmie</a>

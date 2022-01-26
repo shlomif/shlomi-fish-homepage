@@ -10,6 +10,7 @@
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET BtVS = my_acronym( "key" => "BtVS", ) %]
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
+[% SET GitHub = '<a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>' %]
 [% SET IANAL = my_acronym( "key" => "IANAL", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET LAH = '<a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>' %]
@@ -1160,7 +1161,7 @@ amend the drafts, which is even more time-consuming. Rinse and repeat.
 <p>
 One can imagine most young
 or young-at-heart screen writers who use code sharing sites
-and services (e.g: GitHub or GitLab), wikis, desktop or online word
+and services (e.g: [% GitHub %] or GitLab), wikis, desktop or online word
 processors, etc. will also sport the same sentiments.
 </p>
 
@@ -1579,7 +1580,7 @@ Our Lives".
 
 <p>
 As an example, we can imagine a young girl to write a funny screenplay
-using Google Docs which pities
+using [% GitHub %] or Google Docs which pities
 <a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a> vs. <a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>
 on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next,
 with <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a> and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
@@ -2012,8 +2013,7 @@ still sells Windows copies, they are being starved of employees.
 Microsoft has many other products and services, many of them are [% FOSS
 %] and/or provide important services or infrastructure for open source,
 [% opencontent %], or otherwise geeky, hackery or important projects. So I do not wish to
-completely demonise them. In fact, I make use of some of the Microsoft-owned <a
-href="https://en.wikipedia.org/wiki/GitHub">GitHub</a> infrastructure for many
+completely demonise them. In fact, I make use of some of the Microsoft-owned [% GitHub %] infrastructure for many
 projects of mine, including my home-site, and it seems the user experience of
 GitHub improved since the acquisition by Microsoft, and I am also
 a fan of <a href="https://en.wikipedia.org/wiki/TypeScript">TypeScript</a>.

@@ -12091,5 +12091,97 @@ based on the profile's previous names.
         </quote>
     </fortune>
 
+    <fortune id="sharp-typescript-discussion-about-programming-languages-and-tools">
+        <meta>
+            <title>#typescript - Programming Languages and Tools</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="trampi">Hi! Where can I find the TypeScript language spec? It was previously available here, but it has been archived: https://github.com/microsoft/TypeScript/tree/main/doc</saying>
+<saying who="systemfault">trampi: There&#39;s no spec, they stopped caring about it a few years ago</saying>
+<saying who="rindolf">systemfault++</saying>
+<saying who="rindolf">IRC karma &gt; gold</saying>
+<saying who="rindolf">;)</saying>
+<saying who="rindolf">I think specs can often be useful for design, though.</saying>
+<saying who="rindolf">sometimes they can be pointless.</saying>
+<saying who="systemfault">:)</saying>
+<saying who="systemfault">I don&#39;t believe anyone would write another complete TypeScript compiler (I&#39;m not talking about a TS stripper, there are already a lot of them)</saying>
+<saying who="rindolf">systemfault: &quot;believe it.&quot; -- http://www.earthstar.co.uk/deep1.htm</saying>
+<saying who="rindolf">or https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/  …</saying>
+<saying who="rindolf">or Chuck for that matter: https://en.wikipedia.org/wiki/Chuck_Norris_facts</saying>
+<saying who="rindolf">;)</saying>
+<saying who="systemfault">Haha :)</saying>
+<saying who="rindolf">systemfault: \o/</saying>
+<saying who="rindolf">systemfault: my sites/blogs have many other jokes</saying>
+<saying who="rindolf">systemfault: do you have WWW presence?</saying>
+<saying who="systemfault">I&#39;ve browsed through your website, it&#39;s fine.</saying>
+<saying who="jadew">hey guys, I have a generic class &lt;T&gt;, and a method that takes &lt;O&gt;, is there a way to constrain O to extend T?</saying>
+<saying who="jadew">hmm, there might be</saying>
+<saying who="rindolf">systemfault: http://old-1998-site.shlomifish.org/ - humble start</saying>
+<saying who="systemfault">I don&#39;t, I bought my domain name but only use it for my Google email account</saying>
+<saying who="systemfault">jadew: have you tried &lt;O extends T&gt; ?</saying>
+<saying who="jadew">yeah, doesn&#39;t work</saying>
+<saying who="systemfault">Can you write a small repro on the TS playground?</saying>
+<saying who="rindolf">systemfault: ah. :|</saying>
+<saying who="jadew">wait, that&#39;s not what I want</saying>
+<saying who="jadew">I want T extends O</saying>
+<saying who="jadew">nevermind, this is a non-issue</saying>
+<saying who="systemfault">Good :)</saying>
+<saying who="systemfault">rindolf: simple websites like that age well, it looks fine on my phone</saying>
+<saying who="rindolf">jadew++ # updating us</saying>
+<saying who="rindolf">systemfault: true, but I want a navigation menu, a breadcrumbs trail/etc</saying>
+<saying who="rindolf">https://everybootstrap.site/ ;)</saying>
+<saying who="sig">hey philosophical question. I think I saw an answer somewhere but forgot it. Why do programming languages have statements? I know the historical reason: FORTRAN had statements and expressions, and then the division just kind of was inherited on to other languages. But is there some tangible BENEFIT from saying &quot;this here is not an expression, it doesn&#39;t return a value you can assign or use elsewhere&quot;?</saying>
+<saying who="systemfault">I don&#39;t know, my guess is simply because of how programming started.</saying>
+<saying who="sig">maybe something to do with sequence points?</saying>
+<saying who="sig">but it&#39;s such an &quot;obvious&quot; thing that you might always want to potentially have a value back from any kind of expression; and, like, why not? It can always be ignored if it&#39;s not needed</saying>
+<saying who="sig">and I mean, new languages get designed all the time. Why does TypeScript have statements (ok, because js). Why does rust have statements?</saying>
+<saying who="sig">https://doc.rust-lang.org/reference/statements.html seems it&#39;s declarations mostly</saying>
+<saying who="systemfault">There&#39;s a classic old paper that could be relevant… &quot;Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs&quot;</saying>
+<saying who="systemfault">By John Bacus</saying>
+<saying who="systemfault">https://www.cs.cmu.edu/~crary/819-f09/Backus78.pdf</saying>
+<saying who="rindolf">systemfault: https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines</saying>
+<saying who="rindolf">sig: https://twitter.com/shlomif/status/1479822015464976389</saying>
+<saying who="rindolf">sig: https://duckduckgo.com/?q=lambda+calculus&amp;atb=v140-1&amp;ia=web , Lambda Calculus, is cool, but gets tedious</saying>
+<saying who="rindolf">https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-programming-German-as-he-is-spoke</saying>
+<saying who="sig">rindolf: Lambda Calculus is tedious because there aren&#39;t good tools; there aren&#39;t good tools because there hasn&#39;t been a billion dollar demand</saying>
+<saying who="sig">systemfault: cool paper. Reminds of Ryan Dahl lamenting how broken NPM and node.js is</saying>
+<saying who="systemfault">sig: Then he went on to create Deno… which isn&#39;t that much better…</saying>
+<saying who="rindolf">sig: perl is not tedious</saying>
+<saying who="systemfault">sig: What will be his next project? Oden? Done? Nedo? Edon? What combination of &quot;Node&quot; is he going to use? ;)</saying>
+<saying who="sig">rindolf: perl also has absolutely nothing to do with lambda calculus :D</saying>
+<saying who="systemfault">Anyway, TL;DR… programming started really close to the machine which is imperative</saying>
+<saying who="sig">systemfault: I don&#39;t know enough history to know if Backus ever got a chance to have a stab at (more) functional languages than fortran and algol…</saying>
+<saying who="rindolf">I used to write Perl in https://en.wikipedia.org/wiki/Joe&#39;s_Own_Editor</saying>
+<saying who="systemfault">The first programming languages were very simple abstractions on top of assembly… because well, CPU and RAM were very limited</saying>
+<saying who="rindolf">sig: my point was that Perl lacks good tools and yet</saying>
+<saying who="systemfault">Perl is dead :P</saying>
+<saying who="sig">ahum, ok</saying>
+<saying who="sig">I was actually super impressed with Perl when I once tried it</saying>
+<saying who="sig">I had this list of files and I wanted to generate an album HTML page</saying>
+<saying who="systemfault">It&#39;s like COBOL, existing codebases will keep being maintained… but I&#39;m not sure that anyone is going to start a new Perl 5 project in 2022</saying>
+<saying who="sig">@files = `ls`   # holy shit did I just parse the filenames in current directory into a list?!</saying>
+<saying who="systemfault">And Perl 6… was renamed Raku.</saying>
+<saying who="rindolf">sig: heh, I did an HTML album too</saying>
+<saying who="avu">sig: you did just parse the filenames in the current directory in a broken way that at best works most of the time, yes :)</saying>
+<saying who="sig">avu: scripting only needs to work for me, right now</saying>
+<saying who="sig">TypeScript is an okay scripting language  &quot;;D&quot;</saying>
+<saying who="sig">hey is it true btw that ts-node isn&#39;t &quot;production quality&quot;? You can&#39;t actually spawn lots of workers using it or whatever</saying>
+<saying who="avu">using ls in scripts is just as wrong in perl as it is in bash</saying>
+<saying who="sig">not if it works  &gt;:3</saying>
+<saying who="rindolf">systemfault: https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f ;)</saying>
+<saying who="rindolf">sig: I find tsc/ts better than raw js.</saying>
+<saying who="rindolf">I also use https://emscripten.org/</saying>
+<saying who="rindolf">Night all. Try dreaming of something more pleasant than COBOL…</saying>
+
+            </body>
+            <info>
+                <channel>#typescript</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

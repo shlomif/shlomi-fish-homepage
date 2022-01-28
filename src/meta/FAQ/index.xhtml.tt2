@@ -2373,7 +2373,7 @@ common look and feel, a style that’s hopefully semantic, converted to use
 All of the source code for the site is available online in various places. I’ve
 prepared <a href="[% site_sources_url %]">a top-to-bottom
 document</a> on how to compile the site from
-scratch). Some of the hand-crafted code was released as
+scratch, but the CI lies less. Some of the hand-crafted code was released as
 <a href="http://web-cpan.shlomifish.org/latemp/">the Latemp static site
 generator</a> or various <a href="[% shlomif_cpan %]">assisting
 CPAN modules</a> under an open-source license.
@@ -2388,7 +2388,8 @@ trying to publicise new attractions in various online resources.
 <p>
 Recently (November 2019) I converted the main pages of the site from
 wml to <a href="https://en.wikipedia.org/wiki/Template_Toolkit">Template Toolkit</a>,
-which is faster and less quirky, and also implemented better caching for the talks' slides.
+which is faster and less quirky, and also implemented better caching for the
+talks' slides.
 </p>
 
 [%- END -%]
@@ -2594,7 +2595,7 @@ because I don't think it matters too much. This is the same kind of
 <a href="http://en.wikipedia.org/wiki/Penis_envy">penis envy</a> (= “my
 $THINGY is bigger than yours”) and false
 <a href="http://www.catb.org/jargon/html/M/machoflops.html">machoflops</a>/etc.
-competitions) and I care little for stuff like that. I'm now trying to
+competitions, and I care little for stuff like that. I'm now trying to
 work on creating more and more good content, enhancing the site usability
 better, and working on better publicity - both using Internet-based media
 and using real-world networking - and don't have the energy to spend time
@@ -2837,7 +2838,7 @@ the text of the link and their URL. Note that it is the
 and it is part of what makes it work. Moreover, I've had this site for many
 years, and it is natural that some of the links have become stale. As a result,
 dealing with these reports have become quite frustrating due to their
-frequency
+frequency.
 </p>
 
 [%- END -%]
@@ -3294,9 +3295,9 @@ advice to <a href="[% base_path
 your own kind of music"</a> and use my own cultural background and interests as
 inspiration for my creative works. Also note that I tend to agree with Larry Wall
 that <a href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">“All
-Truth is God’s Truth”</a> and have recently concluded that
+Truth is God’s Truth”</a> and have also recently concluded that
 <a href="https://twitter.com/shlomif/status/1351069373952360448">"Truth" is
-a function of time</a> and with <a href="https://www.goodreads.com/quotes/941-the-opposite-of-a-correct-statement-is-a-false-statement">Niels Bohr's note</a> that:
+a function of time</a> and like <a href="https://www.goodreads.com/quotes/941-the-opposite-of-a-correct-statement-is-a-false-statement">Niels Bohr's noted</a> that:
 <q>The opposite of a correct statement is a false statement. But the opposite
 of a profound truth may well be another profound truth.</q>
 </p>
@@ -3878,7 +3879,7 @@ I recall that some <a href="https://en.wikipedia.org/wiki/Lisp_(programming_lang
 argued that XML is <a href="https://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>
 for <a href="https://en.wikipedia.org/wiki/S-expression">S-expressions</a>, but I think it
 is a moot point, because we can encode and decode them both to/from a binary stream of 0s and 1s,
-JSON, or most other syntaxes. Syntax is, while often considered marginal, is nevertheless important, and
+JSON, or most other syntaxes. Syntax, while often considered marginal, is nevertheless important, and
 I don't think I'll enjoy writing text documents completely using <a href="https://www.netfunny.com/rhf/jokes/90q2/lispcode.html">S-expressions</a>.
 I also recall reading about a new language that allows mixing and matching both lisp-like code and XML code.
 </p>
@@ -4199,7 +4200,7 @@ Deleting them all will require some time, and also requires entering the passwor
 <p>
 Another factor that makes my repositories more numerous is the fact that I use individual
 repositories for <a href="https://en.wikipedia.org/wiki/Image_macro">image macros</a>,
-for stories and screenplays, and for some essays. I am not a big fan of the
+for stories and screenplays, and for some essays. I am not a purist of the
 <a href="https://en.wikipedia.org/wiki/Monorepo">"monorepo"</a> strategy.
 </p>
 
@@ -4242,7 +4243,7 @@ Note that I also write some new code in Python, Julia, bash, C, C++ and other la
 <p>
 Contributing to Mageia was too time consuming, and Mageia is too obscure,
 unpopular, and mismanaged. I like Fedora and Debian better.
-<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged">Told Atlas to shrug.</a>
+<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged">I told Atlas to shrug.</a>
 </p>
 
 [% END %]
@@ -4468,7 +4469,8 @@ Jewish Bible).
 
 <p>
 Also see <a href="https://en.wikipedia.org/wiki/Superior_orders">"just following orders" or the Nuremberg defence</a>, with
-which the "I just work here" attitude is <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">not different</a>.
+which the "I just work here" attitude is
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">not different</a>.
 </p>
 
 [% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, Nazis, etc. in some of Your Writings?"  %]
@@ -4478,8 +4480,8 @@ I found it suitable to use it for them, so I did. For the record, my
 grandfather lost most of his family during the Holocaust, and so I cannot
 be accused of misusing such facts. <a href="https://en.wikipedia.org/wiki/Steven_Spielberg">Steven Spielberg</a> whose parents
 are Jewish Holocaust survivors, also featured the Nazis or Hitler in many
-films (notably the <a href="https://en.wikipedia.org/wiki/Indiana_Jones_(franchise)"><i>Indiana Jones</i></a> trilogy), so if a fire has caught the
-Firs…
+films (notably the <a href="https://en.wikipedia.org/wiki/Indiana_Jones_(franchise)"><i>Indiana Jones</i></a> trilogy),
+so if a fire has caught the Firs…
 </p>
 
 [%- END -%]

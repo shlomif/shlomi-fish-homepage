@@ -1,0 +1,68 @@
+[%- SET title = "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" -%]
+[%- SET desc = "The Blue Rabbit Log - A Crazy Comedy about Tabletop Role-Playing Games" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'usr-bin-perl') %]
+
+[% WRAPPER h2_section id = "read_online"  title = "The Text"  %]
+
+<ul>
+
+[% SET use_screenplay_html_prefix = 1 %]
+[% SET screenplay_html_prefix="" %]
+[% SET epub_prefix="usr-bin-perl-" %]
+[% PROCESS story_episode_li base = "usr-bin-perl--total", story_title = "Part I - The Ongoing Text",  %]
+
+<li>
+<p>
+[% PROCESS link_to_screenplay basename = "usr-bin-perl--total",  %]
+</p>
+</li>
+
+<li>
+<p>
+<a href="ideas.xhtml">Random Ideas, in HTML format (read online)</a>
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% WRAPPER licence_sect  %]
+
+<p>
+The <i>Blue Rabbit Log</i>’s Screenplay and Ideas are made available under the
+<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-Noncommercial-ShareAlike 3.0 Unported Licence (or at your
+option any later version of this licence)</a>. It is copyright by
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>, 2009.
+</p>
+
+[%- END -%]
+
+[% WRAPPER see_also  %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]art/d-and-d-cartoon--comparing-lances/">D&amp;D Cartoon - comparing horse
+lances.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]MathVentures/3d-outof-4d-mathml.xhtml">“Combinatorics
+and the art of Dungeons and Dragons”</a> - another D&amp;D-inspired page - this
+time about Mathematics.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% END %]

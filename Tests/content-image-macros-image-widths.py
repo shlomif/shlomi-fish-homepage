@@ -66,15 +66,15 @@ class MyTests(unittest.TestCase):
             "^.*?What can you say about your name", desc_text)
         self.assertTrue(m)
 
-    def _helper_indiv_nodes_test(self, root, xpath_str):
+    def _helper_indiv_nodes_test(self, root, xpath_str, name):
         """docstring for _helper_indiv_nodes_test"""
         articles = root.xpath(xpath_str)
-        self.assertTrue(len(articles), "count articles")
+        self.assertTrue(len(articles), "count articles " + name)
         for art in articles:
             link = art.xpath("./header/a[./text() = 'Node Link']")
-            self.assertEqual(len(link), 1)
+            self.assertEqual(len(link), 1, name)
             href = link[0].get("href")
-            self.assertTrue(href.startswith("indiv-nodes/"))
+            self.assertTrue(href.startswith("indiv-nodes/"), name)
 
     def _get_base_dir_path(self):
         return './dest/post-incs/t2/humour/image-macros/'
@@ -118,7 +118,9 @@ class MyTests(unittest.TestCase):
         base_dir_path = self._get_base_dir_path()
         input_fn = (base_dir_path + 'index.xhtml')
         root = html.parse(input_fn)
-        self._helper_indiv_nodes_test(root, ".//article")
+        self._helper_indiv_nodes_test(
+            root, ".//article", base_dir_path
+        )
         imgs = root.xpath(".//article/img")
         self.assertTrue(len(imgs) > 5)
         for img in imgs:
@@ -142,7 +144,8 @@ class MyTests(unittest.TestCase):
         input_fn = './dest/post-incs/t2/humour/Terminator/Liberation/' + \
             'ongoing-text.html'
         root = html.parse(input_fn)
-        self._helper_indiv_nodes_test(root, ".//section")
+        self._helper_indiv_nodes_test(
+            root, ".//section", "test_terminator_liberation")
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

@@ -49,11 +49,18 @@ sub _calc_screenplay_doc_makefile_lines
         $_epub_map, $screenplay_vcs_base_dir, $record )
         = @_;
 
-    my $base        = $record->{base};
-    my $github_repo = $record->{github_repo};
-    my $subdir      = $record->{subdir};
-    my $docs        = $record->{docs};
-    my $suburl      = $record->{suburl};
+    my $base             = $record->{base};
+    my $github_repo      = $record->{github_repo};
+    my $base_github_repo = $github_repo;
+    my $should_clone     = 1;
+    if ( ref($base_github_repo) eq 'HASH' )
+    {
+        $should_clone     = 0;
+        $base_github_repo = $base_github_repo->{tempname};
+    }
+    my $subdir = $record->{subdir};
+    my $docs   = $record->{docs};
+    my $suburl = $record->{suburl};
 
     my $vcs_dir_var         = "${base}__VCS_DIR";
     my $graphics_dir_var    = "${base}_SCREENPLAY_IMAGES__SOURCE_PREFIX";
@@ -63,7 +70,7 @@ sub _calc_screenplay_doc_makefile_lines
 
     ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
-        "$vcs_dir_var := $screenplay_vcs_base_dir/$github_repo/$subdir\n",
+        "$vcs_dir_var := $screenplay_vcs_base_dir/$base_github_repo/$subdir\n",
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
 "$dest_prefix_dir_var := \$(POST_DEST_HUMOUR)/@{[ $suburl // '']}/images\n",
     );
@@ -87,8 +94,25 @@ sub _calc_screenplay_doc_makefile_lines
             my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
             my $text_out_fn = "lib/screenplay-xml/txt/${doc_base}.txt";
 
-            my $fn =
-"$screenplay_vcs_base_dir/$github_repo/$subdir/screenplay/${doc_base}.screenplay-text.txt";
+            my $fn_dir =
+                "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay";
+            my $fn = "$fn_dir/${doc_base}.screenplay-text.txt";
+            if ( not $should_clone )
+            {
+                path($fn_dir)->mkpath;
+
+                path($text_out_fn)->copy( path($fn) );
+                my $gfx_out_dir = path("$fn_dir/../graphics/");
+                my $gfx_bn      = "Green-d10-dice.png";
+                my $gfx_out     = $gfx_out_dir->child($gfx_bn);
+                $gfx_out_dir->mkpath();
+                my $gfx_src = path(
+                    "lib/screenplay-xml/txt/scripts/graphics/Green-d10-dice.png"
+                );
+                path($gfx_src)->copy( path($gfx_out) );
+
+                # path($fn)->copy( path($text_out_fn) );
+            }
 
             push @generate_file_list_promises, sub {
 
@@ -119,14 +143,16 @@ sub _calc_screenplay_doc_makefile_lines
         my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
         my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
         my $dest_varname   = $gen_name->("TXT_FROM_VCS");
-        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
-        my $src_vcs_dir_var   = $gen_name->("SCREENPLAY_XML__SRC_DIR");
+        my $epub_dest_varname    = $gen_name->("EPUB_FROM_VCS");
+        my $src_vcs_dir_var      = $gen_name->("SCREENPLAY_XML__SRC_DIR");
+        my $src_prepare_epub_var = $gen_name->("EPUB_PREPARATION_SCRIPT");
 
         push @epubs, $epub_dest_varname;
         my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
             // ( die "epub_dest_path returned undef for doc_base=$doc_base ." );
 
         push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
+"$src_prepare_epub_var := \$($src_vcs_dir_var)/scripts/prepare-epub.pl\n",
 "$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
 "$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n",
             "$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n",
@@ -135,10 +161,20 @@ sub _calc_screenplay_doc_makefile_lines
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" ),
+            (
+            $should_clone
+            ? ()
+            : (
+"\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${doc_base}-prepare-epub.pl\n"
+                    . "\t"
+                    . qq#mkdir -p \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
+                    . q/$(call COPY)/
+                    . "\n\n" )
+            ),
 
             <<"EOF",
-\$($epub_dest_varname): \$($dest_xhtmlname) \$($src_vcs_dir_var)/scripts/prepare-epub.pl
-\tSCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" REBOOKMAKER="\$(REBOOKMAKER)" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_vcs_dir_var)/scripts/prepare-epub.pl --output "\$\@" "\$($dest_xhtmlname)"
+\$($epub_dest_varname): \$($dest_xhtmlname) \$($src_prepare_epub_var)
+\tSCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" REBOOKMAKER="\$(REBOOKMAKER)" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_prepare_epub_var) --output "\$\@" "\$($dest_xhtmlname)"
 EOF
             ;
 
@@ -167,13 +203,15 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
 
     push @$dest_records,
         +{
+        base_github_repo             => $base_github_repo,
         copy_screenplay_mak          => $copy_screenplay_mak,
         copy_screenplay_mak__targets => \@copy_screenplay_mak__targets,
         docs                         => $docs,
-        github_repo                  => $github_repo,
-        lines                        => \@ret,
         epubs                        => \@epubs,
         generate_file_list_promises  => \@generate_file_list_promises,
+        github_repo                  => $github_repo,
+        lines                        => \@ret,
+        should_clone                 => $should_clone,
         };
 
     return;
@@ -217,6 +255,7 @@ $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
 $(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie.epub \
+$(POST_DEST)/humour/usr-bin-perl/usr-bin-perl--total.epub \
 EOF
 
     my @_files    = ( $epub_dests =~ /(\$\(POST_DEST\)\S+)/g );
@@ -303,7 +342,10 @@ EOF
 
     foreach my $github_repo (@records)
     {
-        $clone_cb->( $github_repo->{github_repo} );
+        if ( $github_repo->{should_clone} )
+        {
+            $clone_cb->( $github_repo->{github_repo} );
+        }
     }
     $clone_cb->('screenplays-common');
 

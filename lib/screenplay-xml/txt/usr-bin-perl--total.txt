@@ -1,0 +1,484 @@
+<s id="top" lang="en" title="/usr/bin/perl">
+
+[
+
+Foo
+
+]
+
+<s id="alan-joining" title="Alan Joining">
+
+Working Title: You don't become a hacker, until the fat lady sings.
+
+Abstract: Alan Summers, a new intern joins the company.
+
+Version: 0.2.5
+
+License: The Open Publication License Version 1.0 or at your option any
+greater version.
+
+Copyright by: Shlomi Fish
+
+[A Black Screen. Some Letters are written one by one to the screen in a fixed
+font]
+
+[
+
+<code_blk syntax="text" tag_role="asciiart" title="perl" alt="perl">
+&#124;#!/usr/bin/perl
+&#124;
+&#124;Then a -w is added and then:
+&#124;
+&#124;#!/usr/bin/perl -w
+&#124;
+&#124;use strict;
+&#124;
+&#124;# Hmmm... now what?
+</code_blk>
+
+]
+
+Paul: Hi, can you please tell me in what language this del_temp_files.py
+of yours is written?
+
+Tony: Python, I think. Why?
+
+Paul: I am not going to maintain a Python script.
+
+Tony: I'll maintain it for you.
+
+Paul: No, you won't. Re-write it in Perl.
+
+Tony: But Python has...
+
+Paul: I'm sure Perl has that too. If you need to install a CPAN module,
+you know you can always do it.
+
+Tony: OK. But in the worst case you can rewrite it from scratch.
+
+Paul: And who will save me from the hit-men that Joel Sposlky is going
+to send to kill me?
+
+Tony: Look, I read his article. It's very nice. But he was talking about
+a 100,000 lines + codebase, not about a 20-liner.
+
+Paul: A little calculation. Let's suppose I want to add a flag. A fix
+for it would take 1 minute to write and debug. Rewriting an entire
+script from scratch would take half an hour. Which is better? Hmmm...
+hard decision.
+
+Tony: I think sometimes it's better to start over.
+
+Paul: Granted. But the add, clean up, add, clean up, cycle takes much
+less time.
+
+[Cut]
+
+[Michelle is standing near a brand new computer]
+
+Michelle: Hmmm... I love the smell of a new workstation in the morning.
+
+Now what should I install? [Picks up a few CDs] Gentoo? Takes
+too long to compile everything. [Puts the CD in a different stack] Debian?
+Takes too long to upgrade to testing. Slackware? The package
+management from hell. S.u.S.e? No.
+
+Red Hat? Mandrake is nicer. [Shouts to the other room] Hey what should I
+install on the new workstation?
+
+From the other room: RedHat! Debian! Slack!
+
+Michelle: Mandrake it is.
+
+[Cut. Tony is sitting in the same room, alone. Alan Enters]
+
+Alan: Hi!
+
+Tony: Hi! Aren't you the new intern?
+
+Alan: Yes. Alan Summers [they shake hands].
+
+Tony: What's your story?
+
+Alan: I'm an English student, studied a bit programming in the university.
+Installed Linux at home and got hooked. Don't know much but I'm getting
+there.
+
+Tony: Here's a gift for you. [gives him a copy of the Perl CD Bookshelf
+from a stack]
+
+Alan: The Perl CD Bookshelf. Gee thanks.
+
+Tony: And you can keep it even if you leave tomorrow. BTW, what's your
+favourite console editor?
+
+Alan: I started with pico, but then realized it was braindead, and looked
+for something similar. Someone told me about joe and I got hooked.
+
+Tony: joe? [shouting] joe? [opens his hands] Man! I love you already! [hugs
+him]
+
+Alan: You use joe too?
+
+Tony: Nah, I'm an Emacs man myself. But joe is much better than pico. You
+should see our Emacs vs. VI shootout in our semi-annual "Simple-Site
+Playing with the Elements Day".
+
+[sits at the computer]
+
+Tony: Now here are some URLs. Read Freshmeat a lot, and I mean a lot. Slashdot
+has good content, but stay away from the comments. SweetCode is a must
+read. To learn perl quickly and nicely, check out this perl tutorial or
+Perl for Perl Newbies [{shameless plug}] of those Haifa Linux Club
+creatures. And while we're at it don't ever miss the Haifa Linux Club site.
+
+Alan: Why?
+
+Tony: they give a lecture about Linux every two weeks and every one is
+online.
+
+Alan: They sound like sick people to me.
+
+Tony: they are. But my best friends are sick.
+
+Alan: Maybe I'm just new here, but can't you prepare a page or a
+small site, with all of these URLs already in place?
+
+Tony: Great idea! Tell you what, I'll work on it now.
+
+Alan: And what should I do?
+
+Tony: Learn Perl. Take your time. And, BTW, you can't avoid reading the man
+pages, but it's not the best source to _start_ learning Perl from.
+
+Alan: OK. I'll just learn.
+
+Tony: And write some programs. You know: the Hanoi Towers, Copy a file. Hmmm...
+I should prepare a list of exercises.
+
+[Cut.]
+
+[Michelle is sitting next to a computer. Alan Enters]
+
+Alan: Hey. I understand you are installing Linux on my computer.
+
+Michelle: Yep. Mandrake 8.2. Now it installs all the packages. Did you
+read "Back to Basics" by Joel Spolsky?
+
+Alan: No, not yet. Albeit I read about him on Slashdot.
+
+Michelle: Brilliant article. Do so. You see this is a 1.7 giga-hertz machine,
+and if something runs fine here, it does not mean it would on our
+extremely loaded server. Make sure your algorithms are sane.
+
+Alan: Can I know your name before this discussion goes any further?
+
+Michelle: Sorry. Michelle Slavsky. Prima Hackeressa here. Not necessarily
+the best hacker and not the CTO, but more experienced than Tanya. For
+now, at least.
+
+Alan: Why?
+
+Michelle: This kid is learning fast!
+
+[Turns her chair]
+
+Michelle: You're Alan right?
+
+Alan: Yep.
+
+[The computer beeps]
+
+Michelle: Oooh. Time to switch a CD.
+
+[Cut]
+
+[Robert enters the room where Michelle and Alan sit next to a computer]
+
+Robert: Hey Mik, and who might you be?
+
+Alan: I'm Alan, the new intern.
+
+Robert: Oh, now I remember. Alan. I guarantee you that I'll forget
+your name, so please don't mind if I ask you what it is. Again.
+
+Alan: That's OK. I tell my name to people on the time, and I'm not
+unlike that either. Back in the university more people know me by name
+than I know theirs.
+
+Robert: Yes, that seems to be the case for everybody. Except that it's
+mathematically impossible... I think.
+
+Never mind, please come to my office later today, and I'll talk to you
+about the Tao of Programming.
+
+Alan: The Tao of Programming.
+
+Robert: That's right. How to become a good programmer. And how to become
+one as quickly as possible. In the One True Way.
+
+Alan: Do you have schedules, BTW?
+
+Robert: Of course. But they are realistic. We never force someone to
+stay late at work if he doesn't want to.
+
+Alan: Why?
+
+Robert: One thing is because tired programmers are sloppy and write bad
+code, and usually can't get anything done anyway. Another thing is
+that both me, being the CTO and the CEO are voluntarist at hearts.
+
+Alan: And Linux is the living proof.
+
+[Pause]
+
+Robert: Did I mention I'm the CTO?
+
+Michelle: Robert, you just did.
+
+Robert: Super. Keep up the good work.
+
+[ Leaves the room]
+
+Michelle: That was Robert - he's amazing. He used to be my guru for a while.
+
+Alan: And who's your guru now.
+
+Michelle: Nobody. I'm guru-less, care-less and free.
+
+Alan: Cool. I wish I could feel that way.
+
+Michelle: You will and when you do, you'll know that You Were
+Enlightened.
+
+Alan: OK.
+
+Michelle: One thing I'll always remember is that he did not know that
+grep could search through files. And I knew that by working with the
+Borland version of grep that I found on Windows.
+
+Alan: Unbelievable. Every half decent manual out there shows you
+"grep hello *" as one of the first example.
+
+Michelle: Yeah. OK, back to business. Now, you know how commands are
+parsed in bash?
+
+Alan: More or less. I know that asterisk expands to the list of files,
+and that double quotes wrap stuff where I can still put variables, and
+single quotes are the same only with dollars and backslashes being that.
+
+Michelle: Good boy. [ Pats his head ] Now, there are some more caveats,
+especially with bash. Back-quotes are your worst nightmare - they execute
+the command and return its output on the command line. Very dangerous.
+But they are treated like a string. $( ... ) is a much nicer version
+that puts them in a sub-shell. Won't work in System V's /bin/sh, but we
+don't care about them.
+
+Alan: Why?
+
+Michelle: I would not touch such a system voluntarily with a ten-meters
+pole. And meters, mind you are over three times longer than feet.
+
+[Cut]
+
+
+[
+
+Cut
+
+Black Screen.
+
+]
+
+Message: Later that day.
+
+Tim: people, people gather around. [Everybody gathers around] First of
+all, I'd like to welcome our newest employee: Alan Summers. Alan: I wish
+you good luck. Work hard, and have fun hard, preferably but not necessarily
+both at the same time.
+
+[ Everybody laughs. ]
+
+Alan: Thanks. I already like this place.
+
+Tim: If you need anything, let me know. We have a bookshelf of books there,
+and we order any books except reading books on demand. Michelle here, takes
+advantage of it to order a lot of pop psychology books, but they have proven
+to be useful.
+
+Alan: Sounds nice, but I think I'll wait before I'll take advantage of it.
+
+Tim: Perfectly fine with me. Now it's time for "donating something to a good
+cause". I talked with my accountant and we have a $1000 this week. So whose
+first?
+
+Tony: I am. We work with CVS. Well, I tried BitKeeper and it kicks ass. Except
+for branching which is nicer on CVS. Problem is: it costs a lot of money, and
+Larry McVoy is rather possessive about it. Now, this guy works on Arch, which
+aims to be a good BitKeeper replacement, it's usable, but isn't quite there
+yet. And now he asks for donation. I think we should give it to him.
+
+Tim: Sounds nice. Does anybody agree?
+
+Everybody: Yes. Yes. Fine by me.
+
+Tim: Oh well. We donated to LWN last week. Meeting is adjurned.
+
+[Cut.]
+
+Robert: Alan, let me tell you the secret of good programming: time. You
+become a better one with every passing day. Three monthes after you
+write a piece of code, it looks like junk to you. That's why people insist
+on their employees to have experience.
+
+But that's not the entire secret: some people are much better programmers
+after a year, than most programmers out there with ten years of experience.
+But that's because they are eager to learn new languages and new technologies
+and know that learning is a dynamic process.
+
+Alan: So? I knew that.
+
+Robert: Well, it's not the only thing I can tell you about becoming a good
+programmer.
+
+Alan: so go on.
+
+Robert: Why thanks! See, good code requires a good design. Without good design,
+you'll end up refactoring it too much. But don't over-engineer. You see,
+you need to have a good design, that can easily be extended.
+
+Alan: How do I do that?
+
+Robert: If you are good, you'll see that a project's TODO list always grows
+or remain constant. Think about all the features you'd like to have and
+think how to implement them. Don't put them in, but make sure they can all be
+implemented with some effort.
+
+Alan: OK. Good.
+
+Robert: Now, rewriting the entire codebase from scratch is something you
+usually should not do...
+
+[The End]
+
+</s>
+
+<s id="linus-torvalds-visiting" title="Linus Torvalds Visiting">
+
+[Linus Torvalds Enters. Applause]
+
+Linus: Hello.
+
+Tony: Hi! You are Linus Torvalds, right?
+
+Linus: Yes.
+
+Tony: Nice to meet you. They shake hands.
+
+[Tony gets back to sitting next to the computer]
+
+[Pause]
+
+Linus: [waits a little] Isn't there something you want to ask me
+or say to me? The patch penguin fiasco? BitKeeper? The Dave Jones Tree?
+
+Tony: Actually, there is one. [Turns to Linus] You're disturbing me.
+
+.
+.
+.
+
+Linus: I met Tony. He was not excited to meet me at all.
+
+Tim: He gets this way. You should have seen the day that Sarah Michelle
+Gellar came to visit.
+
+Linus: Let me guess - you host a "Buffy" fan site.
+
+Tim: 5th place on Google, and it's of one of our employees.
+
+Linus: Of Which one?
+
+Tim: [shrugs] Of Tony of course. He is addicted to the show.
+
+[Pause]
+
+Linus: Now I'm puzzled.
+
+Michelle: You see: he has this idea fix of not trusting people he does
+not know personally or does not know people who know them personally, etc.
+He has some distrust of media, and writing. You should ask him about what
+happened to him in high school, and you'll understand where it came from.
+
+Linus: What happened to him?
+
+Michelle: I'm not telling you.
+
+
+
+</s>
+
+<s id="luther-visiting" title="Luther visiting">
+
+[ The Room Near the Reception. Michelle is working on one of the
+workstations. Tony and Alan are at the back end ]
+
+[ Luther enters, carrying a box. He is black and speaks in a heavy
+southern excent. ]
+
+Luther: Hi all! Michelle, I could swear you are becoming prettier with
+every passing day.
+
+Michelle: Luther! I am _so_ glad to see you. [They hug each other]
+
+Michelle: So what did you bring this time?
+
+Luther: I brought myself.
+
+Michelle: Ohhhh!
+
+Luther: And these chocolate chip cookies my wife prepared just for you.
+
+Michelle: Goodie, let's put them on the counter.
+
+[They go on talking, and meanwhile Tony and Alan are shown]
+
+Alan: Who's he?
+
+Tony: Luther Morrison. He's one of our biggest, and best, clients.
+
+Alan: So he's alone is worse more than this entire company?
+
+Tony: Something like that. Come on, I'll introduce you.
+
+[Tony rises up. (Alan is already standing). They go ]
+
+Tony: Hey Luther! Meet Alan, a new intern here.
+
+Alan: Nice to meet you Mr. Morrison.
+
+Luther: Nice to meet you too, son, but call me Luther from now on.
+
+Alan: Luther. [they shake hands]
+
+Luther: So what do you do, Alan, besides working here?
+
+Alan: I'm studying in UCB in the vain hope of getting a degree in English.
+
+Luther: A degree in English is a fine degree. Not only do you talk in
+English, but you _think_ in English too. And thinking is much more important
+than talking. I think so, at least.
+
+Where's Tim, Tanya and the rest of the gang?
+
+Alan: Tim is in his office.
+
+</s>
+
+<s id="foo" title="Foo">
+
+[ Foo. ]
+
+</s>
+
+</s>

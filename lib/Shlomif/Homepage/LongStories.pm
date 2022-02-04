@@ -682,6 +682,27 @@ travels back in time in order to prevent World War II.
 </p>
 EOF
     },
+    {
+        id         => 'usr-bin-perl',
+        tagline    => "TODO FILL IN",
+        logo_alt   => "#!/usr/bin/perl Logo",
+        logo_src   => "humour/usr-bin-perl/images/usr-bin-perl-logo-small.png",
+        logo_svg   => 'humour/usr-bin-perl/images/usr-bin-perl-logo.svg',
+        entry_id   => "usr-bin-perl",
+        entry_text => "#!/usr/bin/perl",
+        start_date => DateTime->new( year => 2002, ),
+        href       => "humour/usr-bin-perl/",
+        abstract   => <<'EOF',
+<p>
+Screenplays for an (incomplete) series of sitcoms.
+</p>
+
+<p>
+Included here are the beginning of the screenplay of the first part and some
+disorganised ideas for the continuation.
+</p>
+EOF
+    },
 );
 
 my @_Stories       = ( @active_Stories, @inactive_Stories );

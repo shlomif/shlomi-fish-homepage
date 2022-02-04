@@ -1,0 +1,10 @@
+[%- SET title = "The Blue Rabbit Log - Part I" -%]
+[%- SET desc = "The Blue Rabbit Log - Part I - The Player Characters’s Perpetual Villain, Mordox, who is incredibly selfish and totally inconsiderate of everyone’s welfare and interests, decides to permanently get rid of them." -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+
+[%- WRAPPER wrap_html -%]
+
+[% path_slurp("screenplay-xml/rendered-html/usr-bin-perl--total.html") %]
+
+[% END %]

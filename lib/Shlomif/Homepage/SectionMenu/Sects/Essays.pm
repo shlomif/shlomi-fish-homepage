@@ -128,6 +128,7 @@ my $_section_navmenu_tree_contents = {
                         "philosophy/culture/case-for-commercial-fan-fiction/",
                     subs => [
                         {
+                            skip => 1,
                             text => "Reduced Version",
                             url  =>
 "philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version.xhtml",

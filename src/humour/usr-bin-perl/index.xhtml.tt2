@@ -1,5 +1,5 @@
-[%- SET title = "The Blue Rabbit Log - A Crazy Comedy about Role-Playing Games" -%]
-[%- SET desc = "The Blue Rabbit Log - A Crazy Comedy about Tabletop Role-Playing Games" -%]
+[%- SET title = "#!/usr/bin/perl - A sitcom about a small web-development house" -%]
+[%- SET desc = title -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -11,8 +11,8 @@
 
 [% SET use_screenplay_html_prefix = 1 %]
 [% SET screenplay_html_prefix="" %]
-[% SET epub_prefix="usr-bin-perl-" %]
-[% PROCESS story_episode_li base = "usr-bin-perl--total", story_title = "Part I - The Ongoing Text",  %]
+[% SET epub_prefix="" %]
+[% PROCESS story_ongoing_episode_li base = "usr-bin-perl--total", story_title = "Part I - The Ongoing Text",  %]
 
 <li>
 <p>
@@ -33,11 +33,11 @@
 [% WRAPPER licence_sect  %]
 
 <p>
-The <i>Blue Rabbit Log</i>’s Screenplay and Ideas are made available under the
+The <i>#!/usr/bin/perl</i>’s Screenplay and Ideas are made available under the
 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
 Attribution-Noncommercial-ShareAlike 3.0 Unported Licence (or at your
 option any later version of this licence)</a>. It is copyright by
-<a href="http://www.shlomifish.org/">Shlomi Fish</a>, 2009.
+<a href="http://www.shlomifish.org/">Shlomi Fish</a>, 2002.
 </p>
 
 [%- END -%]

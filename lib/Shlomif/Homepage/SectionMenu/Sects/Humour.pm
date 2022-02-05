@@ -378,6 +378,20 @@ my $_humour_tree_contents = {
                                 },
                             ],
                         },
+                        {
+                            text  => "#!/usr/bin/perl",
+                            title =>
+                                "A sitcom about a small web-development house",
+                            url  => "humour/usr-bin-perl/",
+                            subs => [
+                                {
+                                    text  => "Ongoing Text",
+                                    title => "Ongoing Text of the Screenplay",
+                                    url   =>
+                                        "humour/usr-bin-perl/ongoing-text.html",
+                                },
+                            ],
+                        },
                     ],
                 },
             ],

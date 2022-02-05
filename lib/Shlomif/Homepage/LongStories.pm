@@ -43,8 +43,8 @@ up in the morning, goes to his post, and quits. But before he
 leaves, he makes a suggestion that makes his former comrades
 fight each other to death. Join the now ex‐Member of the
 Organisation as he embarks on an ego trip, where he tries to
-prove that A can in fact be not‐A, whether or not Aristotle
-would agree.
+prove that A can in fact be not‐A, despite whatever reservations
+Aristotle may have.
 </p>
 EOF
         entry_extra_html => <<'EOF',

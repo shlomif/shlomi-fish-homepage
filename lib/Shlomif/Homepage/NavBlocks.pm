@@ -643,7 +643,7 @@ q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction}
             tr_s       => [
                 _master_tr(
                     title =>
-q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emma Watson Fanfiction},
+q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s(
@@ -659,7 +659,10 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / Emm
             id         => 'foss_nav_block',
             text_title => "Free & Open Source Software (FOSS)",
             tr_s       => [
-                _master_tr( title => q{Open Source/Perl/etc. Fanfiction}, ),
+                _master_tr(
+                    title =>
+q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction},
+                ),
                 _subdiv_tr( title => q{Stories and Screenplays}, ),
                 _tr_s( qw( hhfg star_trek_wtld ), ),
                 _subdiv_tr( title => q{Factoids}, ),
@@ -725,7 +728,7 @@ q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referenc
             tr_s       => [
                 _master_tr(
                     title =>
-q{Summer Glau / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
+q{<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> / <a href="https://www.explainxkcd.com/"><i>xkcd</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _tr_s( qw( summer_nsa SummerNSA_effort ), ),
@@ -758,7 +761,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
             tr_s => [
                 _master_tr(
                     title =>
-q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
+q{<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-cosmology-v0.4.x.asciidoc#user-content-self-ref">Self-Reference</a> / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s(
@@ -784,9 +787,11 @@ q{Self-Reference / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Ba
         Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'commercial_fanfic_initiative_nav_block',
-            text_title => "The Commercial Fanfic Initiative",
+            text_title => "The Commercial Fan-fiction Initiative",
             tr_s       => [
-                _master_tr( title => q{The Commercial Fanfic Initiative}, ),
+                _master_tr(
+                    title => q{The Commercial Fan-fiction Initiative},
+                ),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr('commercial_fanfic_initiative__mission_stmt'),
                 _subdiv_tr( title => q{Screenplays}, ),

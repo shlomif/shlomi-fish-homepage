@@ -468,17 +468,19 @@ def _screenplays_main():
 def generic_generate_from_db5(**args):
     TOP_LEVEL_CLASS = 'article'
     OUT_DN = args['OUT_DN']
+    cl = "[@class='" + TOP_LEVEL_CLASS + "']"
     base_path = _calc_base_path(OUT_DN)
+    list_sections_format = (
+            "descendant::{xhtml_prefix}section" + cl
+            + "[not(descendant::{xhtml_prefix}section" + cl + ")]"
+        )
     # assert base_path == args['base_path']
     extra_args = {
         'base_path': base_path,
         'container_elem_xpath': (
-            "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
+            "//" + list_sections_format
         ),
-        'list_sections_format': (
-            ".//{xhtml_prefix}section[@class='section']"
-            "[not(descendant::{xhtml_prefix}section[@class='section'])]"
-        ),
+        'list_sections_format': list_sections_format,
         'output_dirname': "indiv-nodes/",
         'path_to_all_in_one': "../",
         'path_to_input': "./index.xhtml",

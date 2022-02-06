@@ -147,7 +147,10 @@ class XhtmlSplitter:
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
             self.ns,
-            self.root, self.container_elem_xpath
+            self.root,
+            self.container_elem_xpath.format(
+                xhtml_prefix=self.xhtml_prefix,
+            ),
         )
 
         class TreeNode:

@@ -41,7 +41,7 @@ def _first(ns, node, query):
     mylist = _xpath(ns, node, query)
     if not len(mylist):
         raise MyXmlNoResultsFoundError(
-            "node={} , query={}".format(etree.tostring(node), query)
+            "node={} , query={}".format(etree.tostring(node)[:800], query)
         )
     return mylist[0]
 
@@ -65,9 +65,9 @@ class XhtmlSplitter:
         self.list_sections_format = (
             list_sections_format or
             (
-                "(.//{xhtml_prefix}article |"
-                " .//{xhtml_prefix}section)["
-                "not(parent::{xhtml_prefix}:section[child::self])"
+                "(descendant::{xhtml_prefix}article |"
+                " descendant::{xhtml_prefix}section)["
+                "not(descendant::{xhtml_prefix}section)"
                 "]"
             )
         )
@@ -152,10 +152,11 @@ class XhtmlSplitter:
 
         class TreeNode:
             def __init__(s, elem):
-                s.elem = copy.deepcopy(elem)
+                # s.elem = copy.deepcopy(elem)
+                s.elem = elem
                 els = _xpath(
                     self.ns,
-                    elem,
+                    s.elem,
                     self.list_sections_format.format(
                         xhtml_prefix=self.xhtml_prefix
                     )

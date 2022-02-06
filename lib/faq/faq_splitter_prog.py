@@ -477,6 +477,7 @@ def generic_generate_from_db5(**args):
         ),
         'list_sections_format': (
             ".//{xhtml_prefix}section[@class='section']"
+            "[not(descendant::{xhtml_prefix}section[@class='section'])]"
         ),
         'output_dirname': "indiv-nodes/",
         'path_to_all_in_one': "../",

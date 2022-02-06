@@ -18,6 +18,28 @@ from split_into_sections import XHTML_SECTION_TAG
 from split_into_sections import XhtmlSplitter
 
 
+def _tag_xpath(tag, TOP_LEVEL_CLASS):
+    return ((
+        "//xhtml:{tag}[{clas} and (not("
+        # "descendant::xhtml:{tag}[{clas}]))]").format(
+        "parent::xhtml:{tag}[{clas}]))]").format(
+            tag=tag,
+            clas="@class='" + TOP_LEVEL_CLASS + "'")
+    )
+
+
+def _section_xpath(TOP_LEVEL_CLASS):
+    return _tag_xpath(
+        tag='section', TOP_LEVEL_CLASS=TOP_LEVEL_CLASS
+    )
+
+
+def _xpath(TOP_LEVEL_CLASS):
+    return _tag_xpath(
+        tag='div', TOP_LEVEL_CLASS=TOP_LEVEL_CLASS
+    )
+
+
 # Removed:
 # <script src="{base_path}js/main_all.js"></script>
 FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
@@ -191,7 +213,7 @@ def _faq_gen():
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
-        container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
+        container_elem_xpath=_xpath(TOP_LEVEL_CLASS=TOP_LEVEL_CLASS),
         ns=NAMESPACES,
     )
     splitter.process()
@@ -308,7 +330,7 @@ def generic_generate(
         output_dirname=full_out_dirname,
         relative_output_dirname=output_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
-        container_elem_xpath=("//xhtml:div[@class='" + TOP_LEVEL_CLASS + "']"),
+        container_elem_xpath=_xpath(TOP_LEVEL_CLASS=TOP_LEVEL_CLASS),
         ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,

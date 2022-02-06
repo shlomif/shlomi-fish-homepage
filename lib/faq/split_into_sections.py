@@ -33,7 +33,7 @@ class MyXmlNoResultsFoundError(Exception):
 
 
 def _xpath(ns, node, query):
-    # print(query, ns)
+    print(query, ns)
     return node.xpath(query, namespaces=ns)
 
 
@@ -65,8 +65,10 @@ class XhtmlSplitter:
         self.list_sections_format = (
             list_sections_format or
             (
-                ".//{xhtml_prefix}article |" +
-                " .//{xhtml_prefix}section"
+                "(.//{xhtml_prefix}article |"
+                " .//{xhtml_prefix}section)["
+                "not(parent::{xhtml_prefix}:section[child::self])"
+                "]"
             )
         )
 
@@ -148,6 +150,26 @@ class XhtmlSplitter:
             self.root, self.container_elem_xpath
         )
 
+        class TreeNode:
+            def __init__(s, elem):
+                s.elem = elem
+                els = _xpath(
+                    self.ns,
+                    elem,
+                    self.list_sections_format.format(
+                        xhtml_prefix=self.xhtml_prefix
+                    )
+                )
+                c = [TreeNode(el) for el in els]
+                s.c = c
+
+            def myiter(self):
+                yield self.elem
+                for el in self.c:
+                    yield from el.myiter()
+
+        self.tree = TreeNode(self.container_elem)
+
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(self.root)
         should = False
@@ -160,13 +182,7 @@ class XhtmlSplitter:
 
     def _list_sections(self):
         """docstring for _list_sections"""
-        return _xpath(
-            self.ns,
-            self.container_elem,
-            self.list_sections_format.format(
-                xhtml_prefix=self.xhtml_prefix
-            )
-        )
+        yield from self.tree.myiter()
 
     def _is_protected(self, elem):
         """docstring for _protect"""

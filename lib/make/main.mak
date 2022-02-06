@@ -1086,6 +1086,7 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
 SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/images/strong-woman-meme-summer-glau/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
 	$(call simple_gm)

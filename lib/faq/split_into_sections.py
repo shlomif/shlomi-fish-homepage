@@ -152,7 +152,7 @@ class XhtmlSplitter:
 
         class TreeNode:
             def __init__(s, elem):
-                s.elem = elem
+                s.elem = copy.deepcopy(elem)
                 els = _xpath(
                     self.ns,
                     elem,

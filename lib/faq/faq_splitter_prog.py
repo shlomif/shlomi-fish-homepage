@@ -20,9 +20,7 @@ from split_into_sections import XhtmlSplitter
 
 def _tag_xpath(tag, TOP_LEVEL_CLASS):
     return ((
-        "//xhtml:{tag}[{clas} and (not("
-        # "descendant::xhtml:{tag}[{clas}]))]").format(
-        "parent::xhtml:{tag}[{clas}]))]").format(
+        "(//xhtml:{tag}[{clas}])[1]").format(
             tag=tag,
             clas="@class='" + TOP_LEVEL_CLASS + "'")
     )

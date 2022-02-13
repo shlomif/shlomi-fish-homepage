@@ -648,7 +648,7 @@ EOF
         entry_text => "The Earth Angel",
         start_date => DateTime->new( month => 4, year => 2013, ),
         href       => "humour/The-Earth-Angel/",
-        abstract   => <<'EOF',
+        abstract   => <<"EOF",
 <p>
 A novella titled “The Earth Angel” in which a colloquial Black man in 2013 Los
 Angeles teaches a copyrights attorney all about life.
@@ -656,7 +656,7 @@ Angeles teaches a copyrights attorney all about life.
 
 <p>
 It seems that I found writing most of this redundant, due to
-<i>Summerschool at the NSA</i> and later <i>Buffy: A Few Good Slayers</i>,
+<a href="\$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool at the NSA</i></a> and later <a href="\$(ROOT)/humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few Good Slayers</i></a>,
 but I’m keeping what I have written so far of it for posterity in its
 preliminary state.
 </p>

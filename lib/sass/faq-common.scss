@@ -23,8 +23,12 @@ a.back_to_faq {
     @include faq_link;
 }
 
-section.fancy_sects {
-    @include mysection;
+.fancy_sects {
+    article,
+    section,
+    &section {
+        @include mysection;
+    }
 }
 
 .fancy_sects {

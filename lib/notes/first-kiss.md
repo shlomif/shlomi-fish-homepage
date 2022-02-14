@@ -41,7 +41,7 @@ Obligatory YouTube videos:
 ## Notes:
 
 I did not try helping that girl in order to kiss her - I helped her because I try
-to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&oldid=1002824276#Charitable_activities ; https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html#emma-watson-and-the-children-get-icecream  .) The kiss was just a happy side-effect.
+to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&oldid=1002824276#Charitable_activities ; ["Emma Watson babysitting children"](https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html#emma-watson-and-the-children-get-icecream)  .) The kiss was just a happy side-effect.
 
 I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
 

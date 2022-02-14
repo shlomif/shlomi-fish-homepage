@@ -1,0 +1,15 @@
+[%- SET title = "The 10th Muse: “Athena Gets Laid” - Ongoing Text" -%]
+[%-# SET desc = "" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p class="skip_to_main" id="sk">
+<a href="#main-scene"><b>Skip the introductions</b></a>
+</p>
+
+[%# long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
+
+[% path_slurp("screenplay-xml/rendered-html/The-10th-Muse--Athena-Gets-Laid.html") %]
+
+[% END %]

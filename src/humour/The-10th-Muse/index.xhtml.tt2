@@ -1,0 +1,75 @@
+[%- SET title = "The 10th Muse" -%]
+[%-# SET desc = "" -%]
+[%- SET more_keywords = "fanfic,fan fiction,crossovers,screeenplays,screeenplay,star trek,tiffany alvord" -%]
+
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'the_10th_muse') %]
+
+[% WRAPPER h2_section id = "read_online"  title = "Read Online"  %]
+
+[% SET epub_prefix= base_path _ "humour/Queen-Padme-Tales/" %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% epub_prefix %]teaser/"><b>Teaser for the pilot episode</b></a> - based on
+<a href="https://github.com/ztzockt/Star-Wars-opening-crawl-from-1977-Remake">the CSS/JS version</a>
+by <a href="https://github.com/ztzockt">Marvin</a>
+(My derivative <a href="https://github.com/shlomif/Star-Wars-opening-crawl-from-1977-Remake/tree/queen-padme-intro--shlomif">branch</a>.)
+</p>
+</li>
+
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors (Pilot Episode)",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Take-It-Over", story_title = "Let’s Take It Over With",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Nighttime-Flight", story_title = "Nighttime Flight",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--The-Fifth-Sith", story_title = "The Fifth Sith",  %]
+</ul>
+
+[% END %]
+
+[% default_toc %]
+
+[% WRAPPER h2_section id="sources" title="Sources"%]
+
+<ul>
+
+<li>
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Queen-Padme-Tales", %]
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
+
+[% END %]
+
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
+
+<p>
+This work uses some characters and concepts from real life, from other
+copyrighted works, and from works that are already Public Domain.
+</p>
+
+<p>
+All the text in <i>Queen Padmé Tales</i> is original, and as far as
+I’m concerned can be used under the terms of
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">the
+Creative Commons Attribution licence Unported (CC-by)</a>
+(either version 4.0, or at your option any later version), but like I said,
+the situation is more complicated than that.
+</p>
+
+[% END %]
+
+[% WRAPPER h2_section id="q_and_a" title="Questions and Answers" %]
+
+[% END %]
+
+[% END %]

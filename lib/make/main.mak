@@ -742,9 +742,13 @@ $(PRE_DEST_HTML_TUT): $(HTML_TUT_HEB_HTML)
 
 screenplay_targets: $(QUEEN_PADME_TALES__teaser_pivot)
 
+sync_teaser_func = mkdir -p $(QUEEN_PADME_TALES__teaser_dir) && rsync -a lib/repos/Star-Wars-opening-crawl-from-1977-Remake/ $(QUEEN_PADME_TALES__teaser_dir)
+
 $(QUEEN_PADME_TALES__teaser_pivot):
-	mkdir -p $(QUEEN_PADME_TALES__teaser_dir)
-	rsync -a lib/repos/Star-Wars-opening-crawl-from-1977-Remake/ $(QUEEN_PADME_TALES__teaser_dir)
+	$(call sync_teaser_func)
+
+sync_teaser:
+	$(call sync_teaser_func)
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && gmake docbook

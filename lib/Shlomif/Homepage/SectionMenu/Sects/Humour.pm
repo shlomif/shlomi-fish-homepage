@@ -313,6 +313,25 @@ my $_humour_tree_contents = {
                     ],
                 },
                 {
+                    text  => "The 10th Muse",
+                    url   => "humour/The-10th-Muse/",
+                    title => "Greek Mythology Fanfic",
+                    subs  => [
+                        {
+                            text => "Episodes",
+                            url  => "humour/The-10th-Muse/episodes/",
+                            skip => 1,
+                            subs => [
+                                {
+                                    text => "Athena Gets Laid",
+                                    url  =>
+"humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.html",
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
                     text => "Inactive",
                     url  => "humour/stories/inactive/",
                     subs => [

@@ -580,14 +580,13 @@ EOF
     {
         id         => 'the_10th_muse',
         tagline    => "“We’re a progressive pantheon after all”",
-        logo_alt   => "“The-10th-Muse” logo",
+        logo_alt   => "“The 10th Muse” logo",
         logo_src   => 'humour/The-10th-Muse/images/the-10th-muse-logo.png',
         logo_svg   => 'humour/The-10th-Muse/images/the-10th-muse-logo.svg',
         logo_title =>
 qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
         entry_id   => "The-10th-Muse",
-        entry_text =>
-            "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
+        entry_text => "The 10th Muse",
         start_date => DateTime->new( month => 2, year => 2022, ),
         href       => "humour/The-10th-Muse/",
         should_skip_abstract_h_tag => 1,

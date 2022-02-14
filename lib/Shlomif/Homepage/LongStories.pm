@@ -19,6 +19,7 @@ my $latemp_acroman =
     HTML::Acronyms->new( dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
 
 my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', no_link => 0, } )->{html};
+my $RPF  = $latemp_acroman->abbr( { key => 'RPF',  no_link => 0, } )->{html};
 
 sub _to_story_objects
 {
@@ -574,6 +575,39 @@ EOF
 TBD
 </p>
 </div>
+EOF
+    },
+    {
+        id         => 'the_10th_muse',
+        tagline    => "“We’re a progressive pantheon after all”",
+        logo_alt   => "“The-10th-Muse” logo",
+        logo_src   => 'humour/The-10th-Muse/images/the-10th-muse-logo.png',
+        logo_svg   => 'humour/The-10th-Muse/images/the-10th-muse-logo.svg',
+        logo_title =>
+qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
+        entry_id   => "The-10th-Muse",
+        entry_text =>
+            "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
+        start_date => DateTime->new( month => 2, year => 2022, ),
+        href       => "humour/The-10th-Muse/",
+        should_skip_abstract_h_tag => 1,
+        abstract                   => <<"EOF",
+<div class="queen_act">
+
+<section>
+
+<header>
+<h2 id="abstract">Abstract</h2>
+</header>
+
+<p>
+Greek Pantheon Fanfic: parody, crossover, $RPF, self-reference.
+</p>
+
+</section>
+
+</div>
+
 EOF
     },
 );

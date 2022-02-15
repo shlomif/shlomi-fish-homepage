@@ -3884,7 +3884,7 @@ some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hip
 longer have any legitimate use. However, while I use JSON and YAML for
 many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
-used to add markup to a substring of the text (like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
+used to add markup to a substring of the text (e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
 </p>
 
 <p>
@@ -3901,10 +3901,17 @@ I also recall reading about a new language that allows mixing and matching both 
 
 <p>
 Now, with respect to <a href="[% base_path %]philosophy/computers/web/choice-of-docs-formats/">HTML 5, the Markdowns and AsciiDoc</a>,
+while I use them sometimes,
 they are less structured and more errorprone than many XML grammars,
-and often are not semantic enough for my use cases.
+and often are not semantic enough for all my use cases.
 I can use <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>,
 Python, or similar, to convert XML to XHTML5 anyway (and I often do).
+</p>
+
+<p>
+Finally, note that I also use some custom formats such as
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/80280dc126c31238580c2556bfe05c836190f617/lib/hunspell/whitelist1.txt">this one</a>
+or <a href="https://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/">Screenplay-Text</a>.
 </p>
 
 [%- END -%]

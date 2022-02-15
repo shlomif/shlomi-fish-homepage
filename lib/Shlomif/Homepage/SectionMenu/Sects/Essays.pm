@@ -63,10 +63,10 @@ my $_section_navmenu_tree_contents = {
                         "A snapshot of my personal philosophy as of March 2013",
                 },
                 {
-                    text => "Putting Cards on the Table (2019-2021)",
+                    text => "Putting Cards on the Table (2019-2022)",
                     url  =>
 "philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
-                    title => "Update to my personal philosophy as of 2019-2021",
+                    title => "Update to my personal philosophy as of 2019-2022",
                 },
             ],
         },

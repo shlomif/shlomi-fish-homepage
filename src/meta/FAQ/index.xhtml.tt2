@@ -3778,27 +3778,35 @@ of Windows-like copy/paste keyboard bindings.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "choice_of_operating_system"  title = "Why are you using your choice of an operating system (= Mageia Linux)?"  %]
+[% WRAPPER faq_h3_section id = "choice_of_operating_system"  title = "Why are you using your choice of an operating system (= Fedora Linux)?"  %]
 
-<p>
-The short answer is that
-<a href="http://en.wikipedia.org/wiki/Mageia">Mageia</a>
-is what I’m used to, what I like, and what I’m
-most comfortable with, and that I find the community of contributors and
-users friendly and helpful, so that is what I’m staying with for now.
-</p>
+<ol>
 
+<li>
 <p>
-My original motivation for trying out Mandrake Linux (which later was renamed
-as “Mandriva Linux” and was even later forked into Mageia), was that I bought
-a 40 GB hard-disk (which was a large capacity for its time) and sought a distribution
-to install on it, that supported ReiserFS which was a file system that had
-<a href="http://en.wikipedia.org/wiki/Journaling_file_system">journaling</a>,
-so I won't have to spend a lot of time in running “ext2.fsck”. Eventually, it
-turned out that ReiserFS caused my hard disk to become faulty (and had no way
-to gracefully handle bad blocks) but in the meanwhile I grew to like Mandriva
-and used it and later its Mageia fork since.
+Fedora has up-to-date software.
 </p>
+</li>
+
+<li>
+<p>
+Fedora has regular releases.
+</p>
+</li>
+
+<li>
+<p>
+Fedora has relatively little contributors' redtape.
+</p>
+</li>
+
+<li>
+<p>
+Its desktop experience is good.
+</p>
+</li>
+
+</ol>
 
 <p>
 That put aside, I still willingly try to help people, who

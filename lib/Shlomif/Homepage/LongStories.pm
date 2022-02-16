@@ -457,7 +457,7 @@ draconian, finicky, and boring, Hollywood-blessed format.
 <section>
 
 <header>
-<h2 id="abstract">Abstract</h2>
+<h2 id="queen_padme_tales__abstract">Abstract</h2>
 </header>
 
 <p>
@@ -596,7 +596,7 @@ qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their 
 <section>
 
 <header>
-<h2 id="abstract">Abstract</h2>
+<h2 id="the_10th_muse__abstract">Abstract</h2>
 </header>
 
 <p>
@@ -837,15 +837,16 @@ sub _get_list_items_tags
 sub _get_common_top_elems
 {
     my ( $self, $args ) = @_;
-    my $ret = [
+    my $story = $self->_get_story($args);
+    my $ret   = [
         @{ $self->_get_tagline_tags($args) },
         @{ $self->_get_logo_tags($args) },
-        sprintf( qq#<div class="abstract%s">\n#,
-            $self->_get_story($args)->calc_logo_class ),
+        sprintf( qq#<div class="abstract%s">\n#, $story->calc_logo_class ),
         (
             $self->_get_should_skip_abstract_h_tag($args)
             ? ()
-            : ( qq#<h2 id="abstract">Abstract</h2>\n#, )
+            : sprintf( qq#<h2 id="%s__abstract">Abstract</h2>\n#,
+                $story->id(), )
         ),
         @{ $self->_get_abstract_tags($args) },
         qq{</div>\n},

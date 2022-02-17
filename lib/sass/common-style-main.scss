@@ -893,23 +893,6 @@ h3 {
     margin: 1em;
 }
 
-.limit_imgs_width,
-.lim_width {
-    img {
-        max-width: 90%;
-    }
-    pre {
-        overflow: scroll;
-    }
-    @include small-screen {
-        &.my_rpf {
-            .page_toc * {
-                overflow: hidden;
-            }
-        }
-    }
-}
-
 .math_illus {
     float: right;
     margin-bottom: 0.5em;

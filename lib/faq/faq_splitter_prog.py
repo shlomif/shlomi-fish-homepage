@@ -213,7 +213,8 @@ title="Normal"/>
 "image/x-icon"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
-<body class="fancy_sects faq_indiv_entry screenplay_indiv_entry">
+<body class="fancy_sects faq_indiv_entry ''' \
+        '''limit_imgs_width screenplay_indiv_entry">
 <div class="header" id="header">
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
 alt="EvilPHish site logo"/></a>

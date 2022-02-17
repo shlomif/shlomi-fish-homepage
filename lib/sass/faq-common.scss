@@ -75,3 +75,20 @@ blockquote {
 }
 
 @include quote-iframe-styles(false, ".my_rpf.fancy_sects");
+
+.limit_imgs_width,
+.lim_width {
+    img {
+        max-width: 90%;
+    }
+    pre {
+        overflow: scroll;
+    }
+    @include small-screen {
+        &.my_rpf {
+            .page_toc * {
+                overflow: hidden;
+            }
+        }
+    }
+}

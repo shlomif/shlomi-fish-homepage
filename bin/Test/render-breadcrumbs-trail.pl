@@ -117,10 +117,8 @@ sub _gen_the_string
             ( $host_url ne $my_THE_filename )
             or (
                 $::nav_menu_test == 2
-                ? (
-                    any { $_->host_url =~ m#Perl/Newbies# }
-                    @$total_leading_path
-                )
+                ? ( any { $_->host_url =~ m#Perl/Newbies# }
+                        @$total_leading_path )
                 : 0
             )
             )

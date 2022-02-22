@@ -583,6 +583,7 @@ EOF
         logo_alt   => "“The 10th Muse” logo",
         logo_src   => 'humour/The-10th-Muse/images/the-10th-muse-logo.png',
         logo_svg   => 'humour/The-10th-Muse/images/the-10th-muse-logo.svg',
+        entry_id   => "The-10th-Muse",
         entry_text => "The 10th Muse",
         start_date => DateTime->new( month => 2, year => 2022, ),
         href       => "humour/The-10th-Muse/",
@@ -604,6 +605,7 @@ in charge of the interactive arts. Thus, it hires Arielle (
 hires in a whites-dominated Pantheon. ( <a href="\$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-nodes/seize_opportunities.xhtml">Reference</a> )
 </p>
 
+<p>
 Fanfic: parody, crossover, $RPF, self-reference.
 </p>
 

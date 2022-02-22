@@ -583,9 +583,6 @@ EOF
         logo_alt   => "“The 10th Muse” logo",
         logo_src   => 'humour/The-10th-Muse/images/the-10th-muse-logo.png',
         logo_svg   => 'humour/The-10th-Muse/images/the-10th-muse-logo.svg',
-        logo_title =>
-qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
-        entry_id   => "The-10th-Muse",
         entry_text => "The 10th Muse",
         start_date => DateTime->new( month => 2, year => 2022, ),
         href       => "humour/The-10th-Muse/",
@@ -600,7 +597,14 @@ qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their 
 </header>
 
 <p>
-Greek Pantheon Fanfic: parody, crossover, $RPF, self-reference.
+The Greek Pantheon of ~2022 AD decides it is high time to hire a 10th muse,
+in charge of the interactive arts. Thus, it hires Arielle (
+<a href="https://en.wikipedia.org/wiki/Regina_King">Regina King</a>
+), an Afro-American woman, who is happy to be among the first Black
+hires in a whites-dominated Pantheon. ( <a href="\$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-nodes/seize_opportunities.xhtml">Reference</a> )
+</p>
+
+Fanfic: parody, crossover, $RPF, self-reference.
 </p>
 
 </section>

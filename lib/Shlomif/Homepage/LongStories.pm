@@ -567,7 +567,7 @@ EOF
         entry_id   => "cookie-monster--the-slayer",
         entry_text => "Cookie Monster - The Slayer",
         start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
-        href       => "humour/Queen-Padme-Tales/",
+        href       => "humour/Cookie-Monster--The-Slayer/",
         should_skip_abstract_h_tag => 1,
         abstract                   => <<'EOF',
 <div class="queen_padme_tales abstract">

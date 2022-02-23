@@ -26,11 +26,12 @@
         padding: 0.3em;
         margin-bottom: 0.5em;
         font-style: italic;
-        color: #080;
+        color: #060;
     }
 
     section.scene {
-        @include mysection($left_hover_color: darkgreen);
+        // @include mysection($left_hover_color: darkgreen);
+        @include mysection($left_hover_color: #0b0);
     }
 }
 

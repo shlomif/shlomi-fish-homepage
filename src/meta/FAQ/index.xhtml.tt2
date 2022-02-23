@@ -250,6 +250,15 @@ should <a href="[% base_path %]me/contact-me/">contact me</a>
 first because the video intercom is unreliable.
 </p>
 
+[% WRAPPER faq_h4_section id = "why_are_you_revealing_your_home_address"  title = "Why are you revealing your home address?"  %]
+
+<p>
+See
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/fear-is-path-to-dark-side.xhtml">my mini-essay about not being paranoid</a>.
+</p>
+
+[%- END -%]
+
 [%- END -%]
 
 [% WRAPPER faq_h3_section id = "what_did_you_study"  title = "What did you study in university / college? Did you study computer science?"  %]
@@ -904,15 +913,6 @@ section</a> - from “Putting all the Cards on the Table (2013)”
 I believe that honesty is the best policy, and trying to be who you are not,
 or keep important details about you not in the open will end up working against
 you, and cause you a lot of aggravations.
-</p>
-
-[%- END -%]
-
-[% WRAPPER faq_h3_section id = "why_are_you_revealing_your_home_address"  title = "Why are you revealing your home address?"  %]
-
-<p>
-See
-<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/fear-is-path-to-dark-side.xhtml">my essay about not being paranoid</a>.
 </p>
 
 [%- END -%]
@@ -3525,7 +3525,8 @@ Intel Corporation 82579V Gigabit Network Connection.
 </ul>
 
 <p>
-I’m running <a href="https://www.debian.org/">Debian GNU/Linux</a> on it. This
+I’m running <a href="https://getfedora.org/">Fedora Linux</a>
+and <a href="https://www.debian.org/">Debian GNU/Linux</a> on it. This
 desktop computer replaced my older computer which was a:
 </p>
 
@@ -3639,8 +3640,8 @@ Acer Nplify™ 802.11b/g/n.
 </ul>
 
 <p>
-This dual-boots between Windows 7 Home something and <a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora Linux</a>
-(which is what I’m using most of the time.).
+It runs
+<a href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora Linux</a>.
 </p>
 
 [%- END -%]
@@ -3793,7 +3794,7 @@ of Windows-like copy/paste keyboard bindings.
 
 <li>
 <p>
-Fedora has up-to-date software.
+<a href="https://en.wikipedia.org/wiki/Fedora_Linux">Fedora</a> has up-to-date software.
 </p>
 </li>
 

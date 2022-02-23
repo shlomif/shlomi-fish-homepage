@@ -606,6 +606,37 @@ hires in a whites-dominated Pantheon. ( <a href="\$(ROOT)/philosophy/philosophy/
 </p>
 
 <p>
+Other planned episodes:
+</p>
+
+<ol>
+
+<li>
+<p>
+Athena took a bet with Dionysus that she will remain under control after
+getting drunk, and loses more than just the bet…
+</p>
+</li>
+
+<li>
+<p>
+Hera was convinced to seduce Zeus, and they both hate the new situation because
+it voids all the excitement.
+</p>
+</li>
+
+<li>
+<p>
+An annual reenactment of The Trojan War, with <a href="https://en.wikipedia.org/wiki/Achilles">Achilles</a>
+being killed using a <a href="https://en.wikipedia.org/wiki/Bazooka">bazooka</a>
+and the Trojan horse being a Trojan pony shaped
+like <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a>.
+</p>
+</li>
+
+</ol>
+
+<p>
 Fanfic: parody, crossover, $RPF, self-reference.
 </p>
 

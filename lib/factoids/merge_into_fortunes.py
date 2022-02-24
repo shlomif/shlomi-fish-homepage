@@ -31,6 +31,10 @@ FULL_NAMES = {"chuck": "Chuck Norris",
                   'url_base': "Summer-Glau",
               },
               "taylor-swift": "Taylor Swift",
+              "windows-update": {
+                  'full_name': "Windows Update",
+                  'url_base': "Windows-Update",
+                  },
               "xena": {
                   'full_name': "Xena the Warrior Princess",
                   'url_base': "Xena",
@@ -55,6 +59,8 @@ class FortunesMerger:
             match = re.match(ID_IS_FACTOID_RE, id_)
             if match:
                 category = match.group(1)
+                if category == 'win-update':
+                    category = 'windows-update'
                 idx = int(match.group(2))
                 if self.max_idxs[category] < idx:
                     self.max_idxs[category] = idx
@@ -99,10 +105,13 @@ class FortunesMerger:
 
         author_str = 'Shlomi Fish'
         newidx = idx + self.max_idxs[facts_basename] + 1
+        category = facts_basename
+        if category == 'windows-update':
+            category = 'win-update'
         new_elem = etree.Element(
             "fortune", id="{}-fact-{}-{}".format(
                 "shlomif",
-                facts_basename,
+                category,
                 newidx
                 ))
         meta = etree.SubElement(new_elem, "meta")

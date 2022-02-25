@@ -12,11 +12,11 @@ all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortune
 non_latemp_targets: art_slogans_targets copy_images_target css_targets generate_nav_data_as_json htaccesses_target hhgg_convert lc_pres_targets mathjax_dest minified_assets mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install svg_nav_images
 
 include lib/make/shlomif_common.mak
+include lib/make/tools.mak
 include lib/make/include.mak
 
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
-REBOOKMAKER := rebookmaker
 
 include lib/make/rules.mak
 
@@ -34,7 +34,6 @@ BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
 POST_DEST_DIRS := $(addprefix $(POST_DEST)/,$(SRC_DIRS))
 
 NAV_DATA_DEP := lib/MyNavData.pm
-NAV_DATA_AS_JSON_BIN := bin/nav-data-as-json
 
 SCREENPLAY_COMMON_INC_DIR := $(LATEMP_ABS_ROOT_SOURCE_DIR)/lib/screenplay-xml/from-vcs/screenplays-common
 
@@ -46,7 +45,6 @@ SRC_FORTUNES_DIR := $(SRC_SRC_DIR)/$(FORTUNES_DIR)
 include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
 MANIFEST_HTML := $(PRE_DEST)/MANIFEST.html
-GEN_SECT_NAV_MENUS := ./bin/gen-sect-nav-menus.pl
 SITE_SOURCE_INSTALL_TARGET := $(POST_DEST)/meta/site-source/INSTALL
 PRE_DEST_FORTUNES_DIR := $(PRE_DEST)/$(FORTUNES_DIR)
 POST_DEST_FORTUNES_DIR := $(POST_DEST)/$(FORTUNES_DIR)
@@ -108,7 +106,7 @@ ALL_HTACCESSES := $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/
 htaccesses_target: $(ALL_HTACCESSES)
 
 $(SRC_FORTUNES_DIR)/my_htaccess.conf: $(SRC_FORTUNES_DIR)/gen-htaccess.pl
-	(cd $(SRC_FORTUNES_DIR) && gmake)
+	(cd $(SRC_FORTUNES_DIR) && $(GNUMAKE))
 
 $(SRC_FORTUNES_ALL_TT2): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $< $@
@@ -405,11 +403,6 @@ $(FORTS_EPUB_DEST): $(FORTUNES_XHTMLS) $(FORTUNES_XHTMLS_TOCS) $(FORTS_EPUB_ALL_
 fortunes-epub: $(FORTS_EPUB_DEST)
 
 fortunes-target: $(FORTUNES_TARGET) fortunes-compile-xmls $(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT) $(FORTUNES_DEST_HTMLS) $(FORTS_EPUB_ALL_COVERS)
-
-INKSCAPE_WRAPPER = ./bin/inkscape-wrapper
-
-simple_gm = gm convert $< $@
-OPTIPNG := optipng -quiet
 
 $(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER_PNG)
 	$(call simple_gm)
@@ -751,7 +744,7 @@ sync_teaser:
 	$(call sync_teaser_func)
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
-	cd $(HTML_TUT_BASE) && gmake docbook
+	cd $(HTML_TUT_BASE) && $(GNUMAKE) docbook
 
 include lib/make/deps.mak
 

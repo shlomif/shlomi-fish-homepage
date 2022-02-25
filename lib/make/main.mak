@@ -21,6 +21,7 @@ SRC_IMAGES += $(BK2HP_SVG_BASE)
 include lib/make/rules.mak
 
 PRE_DEST := $(SRC_DEST)
+STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 
 include lib/factoids/deps.mak
 include lib/make/factoids.mak
@@ -417,15 +418,6 @@ HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-project
 
 mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
 
-define ASCIIDOCTOR_TO_XHTML5
-	asciidoctor --backend=xhtml5 -o $@ $<
-	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/clean-up-asciidoctor-xhtml5.pl $@
-endef
-
-define ASCIIDOCTOR_TO_RAW_XHTML5
-	asciidoctor --backend=xhtml5 -e -o $@ $<
-endef
-
 christina_grimmie_letter_source = lib/asciidocs/letter-to-christina-grimmie.asciidoc
 christina_grimmie_letter_html = lib/asciidocs/letter-to-christina-grimmie.asciidoc.xhtml
 
@@ -439,9 +431,6 @@ $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-pro
 	$(call ASCIIDOCTOR_TO_XHTML5)
 
 all_deps: lib/htmls/The-Enemy-rev5.html-part
-
-EXTRACT_html_script := $(LATEMP_ROOT_SOURCE_DIR)/bin/extract-xhtml.pl
-extract_gzipped_xhtml = gunzip < $< | $(PERL) $(EXTRACT_html_script) -o $@ -
 
 lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz $(EXTRACT_html_script)
 	$(call extract_gzipped_xhtml)
@@ -515,7 +504,7 @@ C_BAD_ELEMS_SRC := lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to
 POST_DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
-	./bin/translate-Vered-XML --output "$@" "$<"
+	$(VERED) --output "$@" "$<"
 
 all: $(POST_DEST__C_BAD_ELEMS)
 
@@ -530,15 +519,6 @@ ART_SLOGANS_DOCS := \
 ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
-
-define EXPORT_INKSCAPE_PNG
-	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<
-	$(OPTIPNG) $@
-endef
-
-define ASCIIDOCTOR_TO_DOCBOOK5
-	asciidoctor --backend=docbook5 -o >(xsltproc bin/clean-up-asciidoctor-docbook5.xslt - > $@) $<
-endef
 
 PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG := $(POST_DEST)/images/twitter-bird-light-bgs-20.png
@@ -814,7 +794,7 @@ TREE_JS_DEST := $(POST_DEST)/js/tree.jquery.js
 EXPANDER_MIN_JS_DEST := $(POST_DEST)/js/jquery.expander.min.js
 EXPANDER_JS_DEST := $(POST_DEST)/js/jquery.expander.js
 EXPANDER_JS_SRC := lib/js/jquery-expander/jquery.expander.js
-MULTI_YUI := ./bin/Run-YUI-Compressor
+MULTI_YUI := $(LATEMP_ROOT_SOURCE_DIR)/bin/Run-YUI-Compressor
 
 $(EXPANDER_MIN_JS_DEST): $(EXPANDER_JS_SRC)
 	$(MULTI_YUI) -o $@ $<
@@ -1022,11 +1002,8 @@ POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
 POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
 POST_DEST_ALL_MODS := $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
 
-PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/post-incs-v2.pl
 PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
 PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
-STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
-find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 
 WMLect_PATH := lecture/WebMetaLecture/slides/examples
 

@@ -529,7 +529,7 @@ BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
-	gm convert -matte -bordercolor none -border 5 $< $@
+	$(IMAGE_CONVERT) -matte -bordercolor none -border 5 $< $@
 	$(OPTIPNG) $@
 
 art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(POST_DEST_HTML_6_LOGO_PNG)
@@ -551,7 +551,7 @@ $(ART_SLOGANS_PNGS): %.png: %.svg
 	$(OPTIPNG) $@
 
 $(ART_SLOGANS_THUMBS): %.thumb.png: %.png
-	gm convert -resize '200' $< $@
+	$(IMAGE_CONVERT) -resize '200' $< $@
 	$(OPTIPNG) $@
 
 $(PRINTER_ICON_PNG): common/images/printer_icon.svg
@@ -563,7 +563,7 @@ $(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
 	$(OPTIPNG) $@
 
 $(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
-	gm convert -resize '50%' $< $@
+	$(IMAGE_CONVERT) -resize '50%' $< $@
 	$(OPTIPNG) $@
 
 LC_PRES_PATH := lecture/Lambda-Calculus/slides
@@ -889,7 +889,7 @@ Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
 Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
 
 $(Evilphish_flipped_dest): $(Evilphish_flipped_src)
-	gm convert -flop $< $@
+	$(IMAGE_CONVERT) -flop $< $@
 
 DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
@@ -923,7 +923,7 @@ all: $(DnD_lances_cartoon_DEST)
 
 Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
-	gm convert $< -define webp:lossless=true $@
+	$(IMAGE_CONVERT) $< -define webp:lossless=true $@
 
 all: $(GRIMMIE_IMG_DEST)
 all: $(Linux1_webp_DEST)
@@ -935,18 +935,18 @@ $(OCT_2014_SGLAU_LET_HTML): $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
 
 $(GRIMMIE_IMG_DEST): $(GRIMMIE_IMG_SRC)
-	gm convert -resize '200x' $< $@
+	$(IMAGE_CONVERT) -resize '200x' $< $@
 
 $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
-	gm convert -resize '200' $< $@
+	$(IMAGE_CONVERT) -resize '200' $< $@
 
 $(RPG_DICE_SET_DEST): $(RPG_DICE_SET_SRC)
-	gm convert -resize '300x' $< $@
+	$(IMAGE_CONVERT) -resize '300x' $< $@
 
 all: $(RPG_DICE_SET_DEST)
 
 $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
-	gm convert -resize '170x' $< $@
+	$(IMAGE_CONVERT) -resize '170x' $< $@
 
 all: $(Shlomif_cutethulhu_DEST)
 

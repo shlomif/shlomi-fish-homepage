@@ -1,6 +1,7 @@
 EXTRACT_html_script := $(LATEMP_ROOT_SOURCE_DIR)/bin/extract-xhtml.pl
 GEN_SECT_NAV_MENUS := $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-sect-nav-menus.pl
 GNUMAKE := gmake
+IMAGE_CONVERT := gm convert
 INKSCAPE_WRAPPER := $(LATEMP_ROOT_SOURCE_DIR)/bin/inkscape-wrapper
 NAV_DATA_AS_JSON_BIN := $(LATEMP_ROOT_SOURCE_DIR)/bin/nav-data-as-json
 OPTIPNG := optipng -quiet
@@ -9,7 +10,7 @@ REBOOKMAKER := rebookmaker
 VERED := $(LATEMP_ROOT_SOURCE_DIR)/bin/translate-Vered-XML
 extract_gzipped_xhtml = gunzip < $< | $(PERL) $(EXTRACT_html_script) -o $@ -
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
-simple_gm = gm convert $< $@
+simple_gm = $(IMAGE_CONVERT) $< $@
 
 define ASCIIDOCTOR_TO_DOCBOOK5
 	asciidoctor --backend=docbook5 -o >(xsltproc bin/clean-up-asciidoctor-docbook5.xslt - > $@) $<

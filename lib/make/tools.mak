@@ -6,7 +6,6 @@ NAV_DATA_AS_JSON_BIN := $(LATEMP_ROOT_SOURCE_DIR)/bin/nav-data-as-json
 OPTIPNG := optipng -quiet
 PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/post-incs-v2.pl
 REBOOKMAKER := rebookmaker
-STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 VERED := $(LATEMP_ROOT_SOURCE_DIR)/bin/translate-Vered-XML
 extract_gzipped_xhtml = gunzip < $< | $(PERL) $(EXTRACT_html_script) -o $@ -
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'

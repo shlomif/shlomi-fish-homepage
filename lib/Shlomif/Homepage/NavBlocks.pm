@@ -115,6 +115,29 @@ sub _gen__queen_padme_tales__tr
     );
 }
 
+sub _commercial_fanfic_initiative__mission_stmt
+{
+    my ($explicit) = @_;
+
+    return _tr(
+        title => (
+            $explicit
+            ? "The Commercial Fan-fiction Initiative"
+            : "Mission Statement"
+        ),
+        items => [
+            _l(
+                inner_html => "Document",
+                path => "philosophy/culture/case-for-commercial-fan-fiction/",
+            ),
+            _github(
+                url =>
+'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/philosophy/culture/case-for-commercial-fan-fiction/index.xhtml.tt2',
+            ),
+        ],
+    );
+}
+
 my %tr_s = (
     'buffy_facts' => _tr(
         title => "“Facts”",
@@ -528,19 +551,10 @@ my %tr_s = (
             _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/" ),
         ],
     ),
-    'commercial_fanfic_initiative__mission_stmt' => _tr(
-        title => "Mission Statement",
-        items => [
-            _l(
-                inner_html => "Document",
-                path => "philosophy/culture/case-for-commercial-fan-fiction/",
-            ),
-            _github(
-                url =>
-'https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/philosophy/culture/case-for-commercial-fan-fiction/index.xhtml.tt2',
-            ),
-        ],
-    ),
+    'commercial_fanfic_initiative__mission_stmt' =>
+        scalar( _commercial_fanfic_initiative__mission_stmt(0) ),
+    'commercial_fanfic_initiative__mission_stmt__w_explicit_title' =>
+        scalar( _commercial_fanfic_initiative__mission_stmt(1) ),
     'foss_fortunes' => _tr(
         title => "Fortune Cookies (Quotes)",
         items => [
@@ -651,6 +665,10 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('EmmaWatson_facts'),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
             ],
         },
     ),

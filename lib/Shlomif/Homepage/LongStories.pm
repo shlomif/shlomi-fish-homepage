@@ -600,8 +600,7 @@ EOF
 <p>
 The Greek Pantheon of ~2022 AD decides it is high time to hire a 10th muse,
 in charge of the interactive arts. Thus, it hires Arielle (
-<a href="https://en.wikipedia.org/wiki/Regina_King">Regina King</a>
-), an Afro-American woman, who is happy to be among the first Black
+<a href="https://en.wikipedia.org/wiki/Regina_King">Regina King</a>, e.g.: in <a href="https://en.wikipedia.org/wiki/Jerry_Maguire">Jerry Maguire</a>), an Afro-American woman, who is happy to be among the first Black
 hires in a whites-dominated Pantheon. ( <a href="\$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-nodes/seize_opportunities.xhtml">Reference</a> )
 </p>
 
@@ -613,7 +612,7 @@ Other planned episodes:
 
 <li>
 <p>
-Athena took a bet with Dionysus that she will remain under control after
+Athena takes a bet with Dionysus that she will remain under control after
 getting drunk, and loses more than just the bet…
 </p>
 </li>

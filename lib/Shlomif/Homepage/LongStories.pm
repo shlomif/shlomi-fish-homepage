@@ -557,27 +557,6 @@ to reduce it.
 EOF
     },
     {
-        id       => 'cookie_monster__the_slayer',
-        tagline  => "TBD!",
-        logo_alt => "“Cookie Monster - The Slayer” logo",
-        logo_src =>
-"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.png",
-        logo_svg =>
-"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.svg",
-        entry_id   => "cookie-monster--the-slayer",
-        entry_text => "Cookie Monster - The Slayer",
-        start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
-        href       => "humour/Cookie-Monster--The-Slayer/",
-        should_skip_abstract_h_tag => 1,
-        abstract                   => <<'EOF',
-<div class="queen_padme_tales abstract">
-<p>
-TBD
-</p>
-</div>
-EOF
-    },
-    {
         id         => 'the_10th_muse',
         tagline    => "“We’re a progressive pantheon after all”",
         logo_alt   => "“The 10th Muse” logo",
@@ -770,6 +749,27 @@ Screenplays for an (incomplete) series of sitcoms.
 Included here are the beginning of the screenplay of the first part and some
 disorganised ideas for the continuation.
 </p>
+EOF
+    },
+    {
+        id       => 'cookie_monster__the_slayer',
+        tagline  => "Me wanna be “Rosh Gadol” about it.",
+        logo_alt => "“Cookie Monster - The Slayer” logo",
+        logo_src =>
+"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.png",
+        logo_svg =>
+"humour/Cookie-Monster--The-Slayer/images/cookie_monster__the_slayer.svg",
+        entry_id   => "cookie-monster--the-slayer",
+        entry_text => "Cookie Monster - The Slayer",
+        start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
+        href       => "humour/Cookie-Monster--The-Slayer/",
+        should_skip_abstract_h_tag => 1,
+        abstract                   => <<'EOF',
+<div class="queen_padme_tales abstract">
+<p>
+Shelved for now.
+</p>
+</div>
 EOF
     },
 );

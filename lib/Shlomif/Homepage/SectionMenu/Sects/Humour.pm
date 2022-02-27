@@ -295,24 +295,6 @@ my $_humour_tree_contents = {
                     ],
                 },
                 {
-                    text => "Cookie Monster - The Slayer",
-                    url  => "humour/Cookie-Monster--The-Slayer/",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/Cookie-Monster--The-Slayer/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                        {
-                            text => "Cast",
-                            url  =>
-                                "humour/Cookie-Monster--The-Slayer/cast.html",
-                            title => "Who I want to play each character",
-                        },
-                    ],
-                },
-                {
                     text  => "The 10th Muse",
                     url   => "humour/The-10th-Muse/",
                     title => "Greek Mythology Fanfic",
@@ -408,6 +390,25 @@ my $_humour_tree_contents = {
                                     title => "Ongoing Text of the Screenplay",
                                     url   =>
                                         "humour/usr-bin-perl/ongoing-text.html",
+                                },
+                            ],
+                        },
+                        {
+                            text => "Cookie Monster - The Slayer",
+                            url  => "humour/Cookie-Monster--The-Slayer/",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Cookie-Monster--The-Slayer/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                                {
+                                    text => "Cast",
+                                    url  =>
+"humour/Cookie-Monster--The-Slayer/cast.html",
+                                    title =>
+                                        "Who I want to play each character",
                                 },
                             ],
                         },

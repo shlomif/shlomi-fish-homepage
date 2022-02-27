@@ -470,7 +470,7 @@ my %tr_s = (
     ),
     'terminator_liberation' => _tr(
         title =>
-"Terminator: Liberation - Starring Schwarzenegger &amp; Emma Watson",
+"Terminator: Liberation - Starring Arnold Schwarzenegger &amp; Emma Watson",
         items => [
             _fp( path => "humour/Terminator/Liberation/", ),
             _ontext(

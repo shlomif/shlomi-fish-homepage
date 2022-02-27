@@ -46,4 +46,16 @@ instead of preserving the status quo.
 
 [% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
 
+[% WRAPPER credits_sect %]
+
+[% WRAPPER h3_section href = "https://wall.alphacoders.com/big.php?i=656941" id = "strong_woman_meme_credits" title = "“Strong Woman” Image starring Summer Glau Credit" %]
+
+<p>
+Meme.
+</p>
+
+[%- END -%]
+
+[%- END -%]
+
 [% END %]

@@ -25,6 +25,7 @@ my $full_db_path = "$script_dir/$db_base_name";
 my $yaml_path    = "$script_dir/fortunes-shlomif-ids-data.yaml";
 
 my ( $yaml, ) = LoadFile($yaml_path);
+$yaml = ( $yaml->{files} or die );
 
 # say $yaml;
 
@@ -119,6 +120,7 @@ sub _next_fortune
 foreach my $basename (@file_bases)
 {
     my $collection_id;
+    my $file_yaml = $yaml->{"$basename.xml"};
 
     my $rv = $collection_query_id_sth->execute($basename);
 
@@ -160,7 +162,7 @@ foreach my $basename (@file_bases)
         my $desc = _next_fortune($plaintext_fh);
         substr( $$desc, min( 500, length($$desc) ) ) = '';
         $$desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
-        my $date = ( $yaml->{files} or die )->{"$basename.xml"}->{$id}->{'date'}
+        my $date = $file_yaml->{$id}->{'date'}
             or Carp::confess("no date for id = $id ; basename = $basename .");
         $insert_sth->execute( $collection_id, $id, $title, $body,
             scalar( $info->as_XML() ),

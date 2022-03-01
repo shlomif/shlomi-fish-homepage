@@ -89,6 +89,8 @@ class MyTests(vnu_validator.VnuTest):
                     |
                 Blue-Rabbit-Log/ideas\\.xhtml
                     |
+                (?: Queen-Padme-Tales/teaser/.*?)
+                    |
                 TheEnemy/The-Enemy-English-v7\\.raw{ext}
                 )
             )

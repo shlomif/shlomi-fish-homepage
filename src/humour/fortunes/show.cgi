@@ -57,7 +57,7 @@ The ID parameter must be specified.
 </p>''')
 
     cur.execute(
-        '''SELECT f.text, f.info_text, f.title, c.str_id, c.title, f.desc
+        '''SELECT f.text, f.info_text, f.title, c.str_id, c.title, f.desc, f.date
 FROM fortune_cookies AS f, fortune_collections AS c
 WHERE ((f.str_id = ?) AND (f.collection_id = c.id))''', (str_id,))
     data = cur.fetchone()
@@ -160,6 +160,9 @@ NON_RAW_TEMPLATE = \
 <ul id="random">
 <li><a href="{{fullpath}}?mode=random">Random Fortune</a></li>
 </ul>
+<ul id="publish_time">
+<li>Published at <time datetime="{{date}}">{{date}}</time></li>
+</ul>
 <h1>{{title}}</h1>
 <div class="fortunes_list">
 <div class="fortune">
@@ -189,7 +192,7 @@ RAW_TEMPLATE = \
 
 def _display_fortune_from_data(
         raw_mode, str_id, html_text, html_info_text, html_title, col_str_id,
-        col_title, description):
+        col_title, description, date):
     title = html_title + " - Fortune"
     base_dir = '../..'
 
@@ -198,6 +201,7 @@ def _display_fortune_from_data(
         base_dir=base_dir,
         col_str_id=col_str_id,
         col_title=col_title,
+        date=date,
         description=html.escape(description, True),
         fullpath=_my_fullpath(),
         html_info_text=html_info_text,

@@ -46,8 +46,11 @@ h1 {
     }
 }
 
-#random li {
-    float: right;
+#random,
+#publish_time {
+    li {
+        float: right;
+    }
 }
 
 #nav li a,

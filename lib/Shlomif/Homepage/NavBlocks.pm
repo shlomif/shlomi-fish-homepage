@@ -51,11 +51,11 @@ sub _tr
     return Shlomif::Homepage::NavBlocks::Tr->new( {@_} );
 }
 
-my $EmmaWatson_tech_interview = _l(
+my $Emma_Watson_tech_interview = _l(
     inner_html => "Emma Watson Interviewing for a software developer job",
     path       => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
 );
-my $EmmaWatson_visit_to_Gaza = _l(
+my $Emma_Watson_visit_to_Gaza = _l(
     inner_html => "Emma Watson visit to Israel and Gaza",
     path       => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
 );
@@ -164,7 +164,7 @@ my %tr_s = (
         title => "Define Zionism",
         items => [ _fp( path => "philosophy/politics/define-zionism/", ), ],
     ),
-    'EmmaWatson_facts' => _tr(
+    'Emma_Watson_facts' => _tr(
         title => "“Facts”",
         items => [
             _l(
@@ -173,13 +173,13 @@ my %tr_s = (
             ),
         ],
     ),
-    'EmmaWatson_tech_job' => _tr(
-        title => "EmmaWatson Tech Interview",
-        items => [ $EmmaWatson_tech_interview, ],
+    'Emma_Watson_tech_job' => _tr(
+        title => "Emma Watson Tech Interview",
+        items => [ $Emma_Watson_tech_interview, ],
     ),
-    'EmmaWatson_visit_to_Gaza' => _tr(
-        title => "EmmaWatson Visit to Israel &amp; Gaza",
-        items => [ $EmmaWatson_visit_to_Gaza, ],
+    'Emma_Watson_visit_to_Gaza' => _tr(
+        title => "Emma Watson Visit to Israel &amp; Gaza",
+        items => [ $Emma_Watson_visit_to_Gaza, ],
     ),
     'foss_bits' => _tr(
         title => "Ultra-short stories",
@@ -237,7 +237,7 @@ my %tr_s = (
                 path =>
                     "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
             ),
-            $EmmaWatson_tech_interview,
+            $Emma_Watson_tech_interview,
             _l(
                 inner_html => "I'm the Real Tim Toady",
                 path       => "humour/bits/Im-The-Real-Tim-Toady/",
@@ -661,10 +661,10 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s(
-                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson EmmaWatson_tech_job EmmaWatson_visit_to_Gaza ),
+                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza ),
                 ),
                 _subdiv_tr( title => q{Factoids}, ),
-                _get_tr('EmmaWatson_facts'),
+                _get_tr('Emma_Watson_facts'),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
@@ -700,7 +700,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction},
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
                 _tr_s(
-                    qw( the_enemy define_zionism EmmaWatson_visit_to_Gaza ),
+                    qw( the_enemy define_zionism Emma_Watson_visit_to_Gaza ),
                 ),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _tr_s( qw( summer_nsa SummerNSA_effort ), ),

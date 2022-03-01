@@ -24,7 +24,6 @@ h1 {
 
 #random {
     float: right;
-    list-style: none;
     margin-left: 0;
     padding-left: 0.5em;
     @mixin needed_random_width_for_floaty {
@@ -47,6 +46,7 @@ h1 {
 
 #random,
 #publish_time {
+    list-style: none;
     margin-bottom: 1.5em;
     li {
         float: right;

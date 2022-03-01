@@ -158,7 +158,7 @@ NON_RAW_TEMPLATE = \
 <li><a href="{{col_str_id}}.html#{{str_id}}">Fortune Cookie</a></li>
 </ul>
 <ul id="random">
-<li><a href="{{fullpath}}?mode=random">Random Fortune</a></li>
+<li><a accesskey="r" href="{{fullpath}}?mode=random">Random Fortune</a></li>
 </ul>
 <ul id="publish_time">
 <li>Published at <time datetime="{{date}}">{{date}}</time></li>

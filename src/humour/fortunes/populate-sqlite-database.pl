@@ -7,6 +7,7 @@ use autodie;
 use Encode qw/ decode_utf8 encode_utf8 /;
 use File::Spec::Functions qw( catpath splitpath rel2abs );
 use List::Util qw/ min /;
+use YAML::XS qw/ LoadFile /;
 
 # The Directory containing the script.
 my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
@@ -21,6 +22,11 @@ use Shlomif::Homepage::FortuneCollections ();
 # STDOUT->autoflush(1);
 
 my $full_db_path = "$script_dir/$db_base_name";
+my $yaml_path    = "$script_dir/fortunes-shlomif-ids-data.yaml";
+
+my ( $yaml, ) = LoadFile($yaml_path);
+
+# say $yaml;
 
 # To reset the database.
 # May not be a good idea in the future.
@@ -46,13 +52,13 @@ $dbh->do(
 );
 
 $dbh->do(
-"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, info_text TEXT, collection_id INTEGER, desc TEXT)"
+"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, info_text TEXT, collection_id INTEGER, desc TEXT, date TEXT)"
 );
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 my $insert_sth = $dbh->prepare(
-"INSERT INTO fortune_cookies (collection_id, str_id, title, text, info_text, desc) VALUES(?, ?, ?, ?, ?, ?)"
+"INSERT INTO fortune_cookies (collection_id, str_id, title, text, info_text, desc, date) VALUES(?, ?, ?, ?, ?, ?, ?)"
 );
 
 my $collections_aref =
@@ -154,8 +160,11 @@ foreach my $basename (@file_bases)
         my $desc = _next_fortune($plaintext_fh);
         substr( $$desc, min( 500, length($$desc) ) ) = '';
         $$desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
+        my $date = ( $yaml->{files} or die )->{"$basename.xml"}->{$id}->{'date'}
+            or Carp::confess("no date for id = $id ; basename = $basename .");
         $insert_sth->execute( $collection_id, $id, $title, $body,
-            scalar( $info->as_XML() ), $$desc, );
+            scalar( $info->as_XML() ),
+            $$desc, $date, );
     }
 
 =begin removed

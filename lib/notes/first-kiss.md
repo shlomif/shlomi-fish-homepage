@@ -30,7 +30,7 @@ After the kiss, we went to some trouble to get her to call her family on my mobi
 
 Anyway, on all the way, I tried to engage her in a two-way conversation because I believed she was in pain, and wanted to distract her mind from thinking about it. I learned more about her like the fact that she was born in the States, and that her father was Jewish, and naturally her given name (which I won't tell here to avoid sharing incriminating details).
 
-We parted way, and I haven't had too much sexual/romantic interest in her to permanently enter into a relationship, but I kinda feel that perhaps it was what God (however manifested) intended for me as my first kiss.
+We parted ways, and I haven't had too much sexual/romantic interest in her to permanently enter into a relationship, but I kinda feel that perhaps it was what God (however manifested) intended for me as my first kiss.
 
 Obligatory YouTube videos:
 
@@ -40,27 +40,27 @@ Obligatory YouTube videos:
 
 ## Notes:
 
-I did not try helping that girl in order to kiss her - I helped her because I try
+1. I did not try helping that girl in order to kiss her - I helped her because I try
 to prioritise helping fellow people. (see https://en.wikipedia.org/w/index.php?title=Sarah_Michelle_Gellar&oldid=1002824276#Charitable_activities ; ["Emma Watson babysitting children"](https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html#emma-watson-and-the-children-get-icecream)  .) The kiss was just a happy side-effect.
 
-I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
+1. I suspect that she was cheating me out of money, but I prefer to err on naivity than on cynicism.
 
-The kiss may have felt awkward, and having watched [the *Gilmore Girls* first kiss episode](https://www.youtube.com/watch?v=n_KIBDZL5y8), I didn't say "thank you" afterwards.
+1. The kiss may have felt awkward, and having watched [the *Gilmore Girls* first kiss episode](https://www.youtube.com/watch?v=n_KIBDZL5y8), I didn't say "thank you" afterwards.
 
-Back in Tel Aviv, a friend of mine joked that 20 £ was too much to pay for
+1. Back in Tel Aviv, a friend of mine joked that 20 £ was too much to pay for
 such a kiss. She did say, however, that she was moved by reading the story.
 
-While you can call it a "rapekiss", I suspect that many first kisses are like
+1. While you can call it a "rapekiss", I suspect that many first kisses are like
 that despite the mutual kiss popularised by films such as [The Princess Bride](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29).
 
-While it felt good, it was not good enough for me to prioritise kissing girls
+1. While it felt good, it was not good enough for me to prioritise kissing girls
 over my other creative work (whose products
 [are often sexualised](https://www.shlomifish.org/meta/FAQ/featuring_sexy_women_and_girls.xhtml) ).
 
-I tried searching for "Shlomi Fish" and that girl's given name on Google in
+1. I tried searching for "Shlomi Fish" and that girl's given name on Google in
 February 2021 and didn't find anything relevant.
 
-I think this story uncovered some misfeatures of the financial system.
+1. I think this story uncovered some misfeatures of the financial system.
 I happen to think that every legal entity should be able to transfer any
 amount of money to any other entity. While money was previously considered
 to be a source of power, like the song goes
@@ -69,10 +69,10 @@ to be a source of power, like the song goes
 [worthy causes](https://www.youtube.com/watch?v=i41qWJ6QjPI)
 or acquiring the skills for them.)
 
-So why did I share this story? "It's the law!" 😉 Seriously now: because I
+1. So why did I share this story? "It's the law!" 😉 Seriously now: because I
 found it interesting and notable.
 
-Will I be Romantically interested in this girl again? If she has lost weight,
+1. Will I be Romantically interested in this girl again? If she has lost weight,
 and will come to Tel Aviv, then I guess we can go on a few dates to test the
 grounds and see if there's a click. I'm not sure if I'm the only geeky guy
 with [Messiah-like Megalomania](https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs)

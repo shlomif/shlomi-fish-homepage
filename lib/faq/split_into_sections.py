@@ -154,25 +154,30 @@ class XhtmlSplitter:
         )
 
         class TreeNode:
-            def __init__(s, elem):
+            def __init__(s, elem, childs):
                 # s.elem = copy.deepcopy(elem)
                 s.elem = elem
-                els = _xpath(
-                    self.ns,
-                    s.elem,
-                    self.list_sections_format.format(
-                        xhtml_prefix=self.xhtml_prefix
-                    )
-                )
-                c = [TreeNode(el) for el in els]
-                s.c = c
+                s.childs = childs
 
             def myiter(self):
                 yield self.elem
-                for el in self.c:
+                for el in self.childs:
                     yield from el.myiter()
 
-        self.tree = TreeNode(self.container_elem)
+        def genTreeNode(elem):
+            kids = []
+            for x in elem:
+                kids += genTreeNode(x)
+            if _xpath(
+                self.ns,
+                elem,
+                self.list_sections_format.format(
+                    xhtml_prefix=self.xhtml_prefix
+                    )):
+                return [TreeNode(elem=elem, childs=kids)]
+            else:
+                return kids
+        self.tree = genTreeNode(self.container_elem)
 
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(self.root)

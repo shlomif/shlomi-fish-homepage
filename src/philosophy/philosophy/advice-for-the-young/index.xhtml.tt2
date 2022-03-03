@@ -1,20 +1,22 @@
 [%- SET title = "Shlomi Fish’s Advice for the Young" -%]
 [%- SET desc = "Shlomi Fish’s Advice for the Young: Live like you were going to die tomorrow, writing to learn and integrate, reverse your growth death" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 There used to be a common meme to offer advice to high school and college
 students. Here is my advice, based on what I know, and practice:
 </p>
 
-<h2 id="live_and_learn">“Live like you were going to die tomorrow; Learn
-like you were going to live forever”</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "live_and_learn" title = "“Live like you were going to die tomorrow; Learn like you were going to live forever”" %]
 
 <p>
 This is the single best piece of advice one could give, but you’d amazed how
@@ -65,7 +67,9 @@ become deprecated and then have to learn something new after not practising
 their learning skills for a long time.
 </p>
 
-<h2 id="recommended_writings">Writings to Learn and Integrate</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "recommended_writings" title = "Writings to Learn and Integrate" %]
 
 <p>
 Learn and Integrate the following things. By integrate, I meat take the time
@@ -102,7 +106,9 @@ are recommended.
 </li>
 </ul>
 
-<h2 id="windows_is_dead">Windows will be dead; Microsoft may or may not Die with it.</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "windows_is_dead" title = "Windows will be dead; Microsoft may or may not Die with it." %]
 
 <p>
 I put my money that practically the majority of people would switch to
@@ -162,8 +168,9 @@ Why is all that important? Because you’d better learn Unix now rather than
 later, knowing that it is going to be the future of computing.
 </p>
 
-<h2 id="technologies_to_learn">Learn Many Different and Orthogonal
-Technologies</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "technologies_to_learn" title = "Learn Many Different and Orthogonal Technologies" %]
 
 <p>
 You should learn the following languages and technologies:
@@ -225,7 +232,9 @@ computer architectures. Too many programmers don’t have a good understanding
 of a how a computer really works, which ends up showing in sub-optimal code.
 </p>
 
-<h2 id="growth_death">Always reverse your growth death.</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "growth_death" title = "Always reverse your growth death." %]
 
 <p>
 Growth death means you’ve stopped to grow, and become more cynical as time
@@ -248,7 +257,9 @@ programming, travels a lot, is very active, and is otherwise very enthusiastic
 about life. So he also still has a living growth.
 </p>
 
-<h2 id="proper_language">Speak and Write Properly in English and in your Mother Tongue</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "proper_language" title = "Speak and Write Properly in English and in your Mother Tongue" %]
 
 <p>
 This is something that Eric S. Raymond suggests in “How to become a Hacker”, but many people still ignore. Speaking in a language with
@@ -271,8 +282,9 @@ language on the Web is even more harmful. (And often mailing lists
 are archived on the Web for posterity).
 </p>
 
-<h2 id="history">Learn History in General and the History of Computing in
-Particular</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "history" title = "Learn History in General and the History of Computing in Particular" %]
 
 <p>
 Paul Graham <a href="http://www.paulgraham.com/essay.html">recommends that
@@ -293,7 +305,9 @@ probably read them. Chatting on the [% my_acronym( "key" => "IRC",) %] in the ap
 help you learn more about it.
 </p>
 
-<h2 id="thanks">Thanks</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 Thanks to the <a href="http://www.freenode.net/">Freenode</a> people Darien,
@@ -301,7 +315,9 @@ crimson_penguin, GXTi and quamaretto for commenting on earlier drafts of this
 essay.
 </p>
 
-<h2 id="other_sources">Other Good Sources of Advice</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "other_sources" title = "Other Good Sources of Advice" %]
 
 <ol>
 <li>
@@ -342,11 +358,15 @@ but also extremely good.
 
 </ol>
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2005", ) %]
 
-<h2 id="meta_info">Meta Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "meta_info" title = "Meta Information" %]
 
 <dl>
 <dt>Written By:</dt>
@@ -358,5 +378,7 @@ but also extremely good.
 <dt>License:</dt>
 <dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>.<!--/Creative Commons License--></dd>
 </dl>
+
+[% END %]
 
 [% END %]

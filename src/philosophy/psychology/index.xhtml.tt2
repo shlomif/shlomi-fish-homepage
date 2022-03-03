@@ -1,13 +1,19 @@
 [%- SET title = "Psychology Writings by Shlomi Fish" -%]
 [%- SET desc = "Psychology Writings by Shlomi Fish" -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
+
+[%- WRAPPER intro -%]
 
 <p>
 These are essays I wrote about psychology.
 </p>
 
-<h2 id="articles">The Articles and Essays</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
 [% SET section_element = "article" %]
 
@@ -51,5 +57,7 @@ suggestions for refactoring, fixing, and modernising one's work.
 [% END %]
 
 [% SET section_element = "section" %]
+
+[% END %]
 
 [% END %]

@@ -44,28 +44,47 @@
 </xsl:template>
 
 <xsl:template match="section">
-    <xsl:element name="h{count(ancestor-or-self::section)}">
-        <xsl:attribute name="id">
-            <xsl:value-of select="@id"/>
-        </xsl:attribute>
-        <xsl:value-of select="@title"/>
-    </xsl:element>
-    <xsl:apply-templates select="section|entry"/>
-</xsl:template>
-
-<xsl:template match="entry">
-    <xsl:element name="h{count(ancestor-or-self::section)+count(ancestor-or-self::entry)}">
-        <xsl:attribute name="id">
-            <xsl:value-of select="@id"/>
-        </xsl:attribute>
-        <xsl:element name="a">
-            <xsl:attribute name="href">
-                <xsl:value-of select="@url"/>
+    <xsl:if test="count(ancestor-or-self::section) = 1">
+        <xsl:element name="h{count(ancestor-or-self::section)}">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@id"/>
             </xsl:attribute>
             <xsl:value-of select="@title"/>
         </xsl:element>
-    </xsl:element>
-    <xsl:apply-templates/>
+        <xsl:apply-templates select="section|entry"/>
+    </xsl:if>
+    <xsl:if test="count(ancestor-or-self::section) &gt; 1">
+        <section>
+            <header>
+                <xsl:element name="h{count(ancestor-or-self::section)}">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@id"/>
+                    </xsl:attribute>
+                    <xsl:value-of select="@title"/>
+                </xsl:element>
+            </header>
+            <xsl:apply-templates select="section|entry"/>
+        </section>
+    </xsl:if>
+</xsl:template>
+
+<xsl:template match="entry">
+    <section>
+        <header>
+            <xsl:element name="h{count(ancestor-or-self::section)+count(ancestor-or-self::entry)}">
+                <xsl:attribute name="id">
+                    <xsl:value-of select="@id"/>
+                </xsl:attribute>
+                <xsl:element name="a">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="@url"/>
+                    </xsl:attribute>
+                    <xsl:value-of select="@title"/>
+                </xsl:element>
+            </xsl:element>
+        </header>
+        <xsl:apply-templates/>
+    </section>
 </xsl:template>
 
 <xsl:template match="p">

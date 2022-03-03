@@ -1,8 +1,11 @@
 [%- SET title = "Shlomi Fish’s Writings about Politics" -%]
 [%- SET desc = "Shlomi Fish’s Writings about Politics" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
+
+[%- WRAPPER intro -%]
 
 <p>
 These are essays that deal with Politics, but from the Philosophical side.
@@ -11,11 +14,13 @@ fresh point-of-views and new insights. They may prove controversial for both
 Left-winged and Right-winged people.
 </p>
 
-<h2>The Articles and Essays</h2>
+[% END %]
 
-<div class="articles_list">
+[% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
-<h3><a href="[% base_path %]philosophy/SummerNSA/">The #SummerNSA Effort</a></h3>
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section id = "SummerNSA" title = "The #SummerNSA Effort" href = "${base_path}philosophy/SummerNSA/" %]
 
 <p>
 An effort to make the NSA more benevolent and transparent, to successfully
@@ -23,67 +28,79 @@ end the open content / Web 2.0 revolution, to make feature films
 of the screenplay “Summerschool at the NSA”, and several other causes.
 </p>
 
-<h3><a href="[% base_path %]philosophy/obj-oss/">Objectivism and Open Source</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "objectivism-and-FOSS" title = "Objectivism and Open Source" href = "${base_path}philosophy/obj-oss/" %]
 
 <p>
 An essay, intended for people who adhere to Ayn Rand’s Objectivism philosophy,
 that explains why the Open Source paradigm is compatible with it.
 </p>
 
-<h3><a href="[% base_path %]philosophy/israel-pales/">A Solution to the
-Israeli-Palestinian Conflict</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "israel-pales" title = "A Solution to the Israeli-Palestinian Conflict" href = "${base_path}philosophy/israel-pales/" %]
 
 <p>
 This is a proposed and innovative solution to the Israeli-Palestinian Conflict.
 </p>
 
-<h3><a href="[% base_path %]philosophy/case-for-file-swapping/">The Case for
-File Swapping</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "case-for-file-swapping" title = "The Case for File Swapping" href = "${base_path}philosophy/case-for-file-swapping/" %]
 
 <p>
 Brings arguments for Internet file-swapping - why it is ethical and should be
 legal, and explains why media companies are not harmed by it.
 </p>
 
-<h3><a href="[% base_path %]philosophy/politics/why-scientology-is-bad/">Why I
-Concluded that Scientology was Bad</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "scientology" title = "Why I Concluded that Scientology was Bad" href = "${base_path}philosophy/politics/why-scientology-is-bad/" %]
 
 <p>
 How I concluded based on very limited data that the Church of Scientology was
 bad and harmful.
 </p>
 
-<h3><a href="[% base_path %]philosophy/politics/drug-legalisation/">The Case for
-Drug Legalisation</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "drug-legalisation" title = "The Case for Drug Legalisation" href = "${base_path}philosophy/politics/drug-legalisation/" %]
 
 <p>
 Why the so-called “War on Drugs” is the real drug problem, and why a
 legalisation of the currently illegal narcotics is the right solution.
 </p>
 
-<h4><a href="[% base_path %]philosophy/politics/drug-legalisation/hebrew.html">Hebrew
-Translation</a></h4>
+[% WRAPPER h4_section id = "drug-legalisation--hebrew" title = "Hebrew Translation" href = "${base_path}philosophy/politics/drug-legalisation/hebrew.html" %]
 
 <p>
 Hebrew translation of the article, under the same licence.
 </p>
 
+[% END %]
 
-<h3><a href="[% base_path %]philosophy/politics/define-zionism/">Define
-“Zionism”!</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "define-zionism" title = "Define “Zionism”!" href = "${base_path}philosophy/politics/define-zionism/" %]
 
 <p>
 An article that tries to find out whether “Zionism” and related terms are
 well-understood and explains where I stand on these issues.
 </p>
 
-<h3><a href="[% base_path %]philosophy/politics/dispelling-myths-about-israel/">Dispelling
-Some Myths about Israel</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "dispelling-myths-about-israel" title = "Dispelling Some Myths about Israel" href = "${base_path}philosophy/politics/dispelling-myths-about-israel/" %]
 
 <p>
 An article that dispels some common myths about Israel.
 </p>
 
-</div>
+[% END %]
+
+[% SET section_element = "section" %]
+
+[% END %]
 
 [% END %]

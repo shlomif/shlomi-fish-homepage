@@ -274,6 +274,7 @@ Otherwise, its Unicode support should be very good.
 [% WRAPPER see_also__dash_id %]
 
 <ul>
+
 <li>
 <p>
 <a href="http://pandoc.org/">Pandoc</a> - converts between many formats
@@ -314,6 +315,13 @@ documentation system.
 <a href="https://shlomif-tech.livejournal.com/74922.html">"The Despair of a Static Site Generator Creator"</a>
 </p>
 </li>
+
+<li>
+<p>
+<a href="[% base_path %]meta/FAQ/why_xml.xhtml">FAQ: "Why are you still using XML?"</a>
+</p>
+</li>
+
 </ul>
 
 [%- END -%]

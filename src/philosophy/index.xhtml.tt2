@@ -1,11 +1,11 @@
 [%- SET title = "Shlomi Fish’s Articles and Essays" -%]
 [%- SET desc = "Shlomi Fish’s Articles and Essays: about computing, politics, general philosophy, education, etc." -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
-<section class="intro">
-
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This section concentrates my articles and
@@ -17,52 +17,67 @@ these do not fall under what is now considered as
 only be considered an
 <a href="http://www.paulgraham.com/opensource.html">amateur</a> philosopher.
 </p>
-</section>
 
-<h2 id="non-fiction-books-recommendations"><a href="books-recommends/">Books’ Reviews</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "non-fiction-books-recommendations" title = "Books’ Reviews" href = "books-recommends/" %]
 
 <p class="indent">
 A list of books I read and can recommend or recommend against. Includes
 technical (computer or Electronics) books and other non-fiction books.
 </p>
 
-<h2 id="topics">Topics</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "topics" title = "Topics" %]
 
 <div class="sub_section">
 
-<h3 id="general-essays"><a href="philosophy/">General Essays</a></h3>
+[% WRAPPER h3_section id = "general-essays" title = "General Essays" href = "philosophy/" %]
 
 <p class="indent">
 General essays, about philosophy proper or about leading a better life.
 </p>
 
-<h3 id="psychology"><a href="psychology/">Psychology</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "psychology" title = "Psychology" href = "psychology/" %]
 
 <p class="indent">
 Writings about Psychology.
 </p>
 
-<h3 id="culture"><a href="culture/">Culture, Art, and Entertainment</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "culture" title = "Culture, Art, and Entertainment" href = "culture/" %]
 
 <p class="indent">
 Writings about popular and obscure art, culture, and entertainment.
 </p>
 
-<h3 id="computing"><a href="computers/">Computing</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "computing" title = "Computing" href = "computers/" %]
 
 <p class="indent">
 Essays about computers: programming, computer society, hacking, etc.
 </p>
 
-<h3 id="politics"><a href="politics/">Politics</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "politics" title = "Politics" href = "politics/" %]
 
 <p class="indent">
 Essays about politics.
 </p>
 
+[% END %]
+
 </div>
 
-<h2 id="random-ideas"><a href="ideas/">Random (Practical) Ideas I have</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "random-ideas" title = "Random (Practical) Ideas I have" href = "ideas/" %]
 
 <p class="indent">
 I have quite a lot of ideas which could prove of value to others. In this,
@@ -70,19 +85,22 @@ I’m trying to put them online in hope they will be materialized by someone
 else. (it’s lame, but everyone else is doing it)
 </p>
 
-<h2 id="resources">Resources</h2>
+[% END %]
+
+[% WRAPPER h2_section id="resources" title="Resources"%]
 
 <div class="sub_section">
 
-<h3 id="blogs"><a href="[% base_path %]me/blogs/">My Blogs</a></h3>
+[% WRAPPER h3_section id = "blogs" title = "My Blogs" href = "${base_path}me/blogs/" %]
 
 <p class="indent">
 I post regular thoughts and smaller-scope, more controversial or less
 finalised essays to my weblogs.
 </p>
 
-<h3 id="hackers-il"><a href="http://groups.yahoo.com/group/hackers-il/">The Hackers-IL
-Archives</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "hackers-il" title = "The Hackers-IL Archives" href = "http://groups.yahoo.com/group/hackers-il/" %]
 
 <p class="indent">
 You can find philosophical posts I wrote there, mainly about computers. Be
@@ -90,40 +108,53 @@ sure to read other people’s comments on them too. Note that I changed my
 mind on some of them after their initial posting.
 </p>
 
-<h3 id="philosophy-il"><a href="http://groups.yahoo.com/group/philosophy-il/">The Philosophy-IL
-Archives</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "philosophy-il" title = "The Philosophy-IL Archives" href = "http://groups.yahoo.com/group/philosophy-il/" %]
 
 <p class="indent">
 Another group that I’m a member of and regularly posts stuff there.
 </p>
 
-<h3 id="advogato"><a href="http://www.advogato.org/">Advogato</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "advogato" title = "Advogato" href = "http://www.advogato.org/" %]
 
 <p class="indent">
 I also post there occasionally.
 </p>
 
-<h3 id="index-to-essays"><a href="Index/">Index to my Essays</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "index-to-essays" title = "Index to my Essays" href = "Index/" %]
 
 <p class="indent">
 An index to the essays I wrote. (Some of which were not published here).
 </p>
 
+[% END %]
+
 </div>
 
-<h2 id="by-others"><a href="by-others/">By Others</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "by-others" title = "By Others" href = "by-others/" %]
 
 <p class="indent">
 These are articles by other people that I keep here - usually such that went
 offline.
 </p>
 
-<h2 id="solving"><a href="solving/">Solving</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "solving" title = "Solving" href = "solving/" %]
 
 <p class="indent">
 A new philosophical-political initiative that outlines several new
 (and experimental) paradigms for advancing Liberalism beyond a
 purely-democratic process.
 </p>
+
+[% END %]
 
 [% END %]

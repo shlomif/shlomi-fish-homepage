@@ -1,46 +1,50 @@
 [%- SET title = "Essays about Open-Source Software" -%]
 [%- SET desc = "Essays related to Free and Open Source Software by Shlomi Fish." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[%- WRAPPER intro -%]
 
 <p>
 Essays related to Free and Open Source Software.
 </p>
 
-<h2 id="articles-list">The Articles List</h2>
+[% END %]
 
-<div class="articles_list">
+[% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
-<h3 id="foss-other-beasts"><a
-href="[% base_path %]philosophy/foss-other-beasts/">Open Source, Free Software
-and Other Beasts</a></h3>
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section id = "foss-other-beasts" title = "Open Source, Free Software and Other Beasts" href = "${base_path}philosophy/foss-other-beasts/" %]
 
 <p>
 An article that introduces the Open Source world to people who are not
 very familiar with it.
 </p>
 
-<h3 id="how-to-start-contributing"><a href="how-to-start-contributing/">How to
-Start Contributing to Open Source</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "how-to-start-contributing" title = "How to Start Contributing to Open Source" href = "how-to-start-contributing/" %]
 
 <p>
 An article explaining in brief how to start contributing to open-source
 software. I’ve been asked this question a lot.
 </p>
 
-<h3 id="gpl-bsd-and-suckerism"><a href="gpl-bsd-and-suckerism/">The GPL, the BSD
-Licence and Being a Sucker</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "gpl-bsd-and-suckerism" title = "The GPL, the BSD Licence and Being a Sucker" href = "gpl-bsd-and-suckerism/" %]
 
 <p>
 An essay that explains why contributing to open source software under any
 licence does not cause you to be exploited by others.
 </p>
 
-<h3 id="linus-bus-factor"><a href="linus-torvalds-bus-factor/">The Linus
-Torvalds Bus Factor</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "linus-bus-factor" title = "The Linus Torvalds Bus Factor" href = "linus-torvalds-bus-factor/" %]
 
 <p>
 An essay that explains why it is a good idea to have multiple committers to
@@ -49,8 +53,9 @@ benevolent dictator is a good idea. It then touches on some logical
 fallacies.
 </p>
 
-<h3 id="foss-licences-wars"><a href="foss-licences-wars/rev2/">FOSS
-Licences Wars</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "foss-licences-wars" title = "FOSS Licences Wars" href = "foss-licences-wars/rev2/" %]
 
 <p>
 This article gives an overview of the various options in picking up a licence
@@ -58,13 +63,18 @@ for one’s Free and Open Source Software (FOSS) project, and tries to give some
 guidelines choosing one.
 </p>
 
-<h3 id="trust-non-foss"><a href="not-trust-non-FOSS/">Why I don’t
-trust Non-open-source Software</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "trust-non-foss" title = "Why I don’t trust Non-open-source Software" href = "not-trust-non-FOSS/" %]
 
 <p>
 Explaining why I prefer not to use and depend on non-open-source software.
 </p>
 
-</div>
+[% END %]
+
+[% SET section_element = "section" %]
+
+[% END %]
 
 [% END %]

@@ -64,7 +64,13 @@ EOF
 }
 else
 {
-    print $HEADER, <<'EOF';
+    my $table = '';
+    for my $k ( sort keys %$::U )
+    {
+        my $url = $::U->{$k};
+        $table .= qq!<tr><td><a href="$url">https://shlom.in/$k</a></td></tr>!;
+    }
+    print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -89,6 +95,13 @@ In the future, there may be a list of public URLs that are pointed by this
 service, but it's not implemented yet. For more information please contact
 <a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
 </p>
+
+<table>
+<tr>
+<th>Short URL</th>
+</tr>
+$table
+<table>
 
 </body>
 </html>

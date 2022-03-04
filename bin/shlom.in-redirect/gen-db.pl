@@ -169,6 +169,13 @@ my @urls = (
 "https://www.shlomifish.org/open-source/resources/graphics-programs/",
         desc => qq{List of Graphics Applications},
     },
+    {
+        id  => "geekyhackers",
+        url =>
+"https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml",
+        desc =>
+qq{Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry (Full Version) - Hacking and Amateur/Geekdom vs. Conformism and Professionalism},
+    },
 );
 
 my %urls_by_id;

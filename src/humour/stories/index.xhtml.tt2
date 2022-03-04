@@ -1,9 +1,10 @@
 [%- SET title = "Shlomi Fish’s Stories" -%]
 [%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength, and beauty" -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
-<div class="fancy_sects">
 [% WRAPPER intro  %]
 
 <p>
@@ -42,7 +43,6 @@ instead of preserving the status quo.
 </p>
 
 [% END %]
-</div>
 
 [% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
 

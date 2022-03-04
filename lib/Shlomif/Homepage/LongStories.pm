@@ -432,8 +432,7 @@ qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their 
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
         start_date => DateTime->new( month => 12, year => 2020, ),
         href       => "humour/Queen-Padme-Tales/",
-        should_skip_abstract_h_tag => 1,
-        abstract                   => <<'EOF',
+        abstract   => <<'EOF',
 <div class="queen_padme_tales abstract">
 
 <section>
@@ -566,11 +565,8 @@ EOF
         entry_text => "The 10th Muse",
         start_date => DateTime->new( month => 2, year => 2022, ),
         href       => "humour/The-10th-Muse/",
-        should_skip_abstract_h_tag => 1,
-        abstract                   => <<"EOF",
-<div class="queen_act">
-
-<section>
+        abstract   => <<"EOF",
+<section class="queen_act">
 
 <header>
 <h2 id="the_10th_muse__abstract">Abstract</h2>
@@ -619,8 +615,6 @@ Fanfic: parody, crossover, $RPF, self-reference.
 </p>
 
 </section>
-
-</div>
 
 EOF
     },
@@ -763,13 +757,10 @@ EOF
         entry_text => "Cookie Monster - The Slayer",
         start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
         href       => "humour/Cookie-Monster--The-Slayer/",
-        should_skip_abstract_h_tag => 1,
-        abstract                   => <<'EOF',
-<div class="queen_padme_tales abstract">
+        abstract   => <<'EOF',
 <p>
 Shelved for now.
 </p>
-</div>
 EOF
     },
 );
@@ -877,15 +868,16 @@ sub _get_common_top_elems
     my $ret   = [
         @{ $self->_get_tagline_tags($args) },
         @{ $self->_get_logo_tags($args) },
-        sprintf( qq#<div class="abstract%s">\n#, $story->calc_logo_class ),
+        sprintf( qq#<section class="abstract%s">\n#, $story->calc_logo_class ),
         (
             $self->_get_should_skip_abstract_h_tag($args)
             ? ()
-            : sprintf( qq#<h2 id="%s__abstract">Abstract</h2>\n#,
+            : sprintf(
+                qq#<header><h2 id="%s__abstract">Abstract</h2></header>\n#,
                 $story->id(), )
         ),
         @{ $self->_get_abstract_tags($args) },
-        qq{</div>\n},
+        qq{</section>\n},
     ];
     return $ret;
 }

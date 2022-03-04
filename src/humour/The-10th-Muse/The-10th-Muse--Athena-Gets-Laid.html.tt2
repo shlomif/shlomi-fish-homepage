@@ -2,6 +2,8 @@
 [%-# SET desc = "" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 <p class="skip_to_main" id="sk">

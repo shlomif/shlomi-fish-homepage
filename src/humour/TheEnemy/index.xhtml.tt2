@@ -2,8 +2,9 @@
 [%- SET desc = "A member of the terrorist organisation “The Organisation” quits, but before he leaves, makes a suggestion that makes his former comrades fight each other to death. Join the now ex‐Member of the Organisation as he embarks on an ego trip, where he tries to prove that A can in fact be not‐A, despite whatever reservations Aristotle may have." -%]
 [%- SET more_keywords = "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" -%]
 
-
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'the_enemy') %]
@@ -277,6 +278,5 @@ discrimination.
 </ul>
 
 [%- END -%]
-
 
 [% END %]

@@ -145,7 +145,10 @@ class MyTests(unittest.TestCase):
             'ongoing-text.html'
         root = html.parse(input_fn)
         self._helper_indiv_nodes_test(
-            root, ".//section", "test_terminator_liberation")
+            root.xpath(".//*[@id='index']")[0],
+            ".//section",
+            "test_terminator_liberation"
+        )
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

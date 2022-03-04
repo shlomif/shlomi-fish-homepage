@@ -23,23 +23,46 @@ from lxml import etree
 
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 ns = {"xml": XML_NS, }
-FULL_NAMES = {"chuck": "Chuck Norris",
-              "emma-watson": "Emma Watson",
-              "nsa": "NSA",
-              "sglau": {
-                  'full_name': "Summer Glau",
-                  'url_base': "Summer-Glau",
-              },
-              "taylor-swift": "Taylor Swift",
-              "windows-update": {
-                  'full_name': "Windows Update",
-                  'url_base': "Windows-Update",
-                  },
-              "xena": {
-                  'full_name': "Xena the Warrior Princess",
-                  'url_base': "Xena",
-                  },
-              }
+FULL_NAMES = {
+    "buffy": {
+    },
+    "chuck": "Chuck Norris",
+    "clarissa": {
+    },
+    "emma-watson": "Emma Watson",
+    "larry-wall-fact": {
+    },
+    "larry-wall-facts": {
+    },
+    "nsa": "NSA",
+    "sglau": {
+        'full_name': "Summer Glau",
+        'url_base': "Summer-Glau",
+    },
+    "soviet-russia": {
+    },
+    "taylor-swift": "Taylor Swift",
+    "windows-update": {
+        'full_name': "Windows Update",
+        'id': "win-update",
+        'url_base': "Windows-Update",
+    },
+    "xena": {
+        'full_name': "Xena the Warrior Princess",
+        'url_base': "Xena",
+    },
+    "xslt": {
+    },
+}
+
+CATEGORIES2IDS = {}
+IDS2CATEGORIES = {}
+for category, rec in FULL_NAMES.items():
+    c = category
+    if 'id' in rec:
+        c = rec['id']
+    CATEGORIES2IDS[c] = category
+    IDS2CATEGORIES[category] = c
 
 ID_IS_FACTOID_RE = re.compile("^[a-z\\-]+-fact-([a-z\\-]+)-([0-9]+)$")
 BASENAME_EXTRACT_RE = re.compile('^([a-z_\\-]*)_facts$')
@@ -56,12 +79,10 @@ class FortunesMerger:
         self.target_list = self.target_root.xpath("./list")[0]
         for targetelem in self.target_root.xpath("./list/fortune"):
             id_ = targetelem.get("id")
-            match = re.match(ID_IS_FACTOID_RE, id_)
-            if match:
-                category = match.group(1)
-                if category == 'win-update':
-                    category = 'windows-update'
-                idx = int(match.group(2))
+            match_ = re.match(ID_IS_FACTOID_RE, id_)
+            if match_:
+                category = CATEGORIES2IDS[match_.group(1)]
+                idx = int(match_.group(2))
                 if self.max_idxs[category] < idx:
                     self.max_idxs[category] = idx
                     self.max_idxs_ids[category] = id_
@@ -105,9 +126,7 @@ class FortunesMerger:
 
         author_str = 'Shlomi Fish'
         newidx = idx + self.max_idxs[facts_basename] + 1
-        category = facts_basename
-        if category == 'windows-update':
-            category = 'win-update'
+        category = IDS2CATEGORIES[facts_basename]
         new_elem = etree.Element(
             "fortune", id="{}-fact-{}-{}".format(
                 "shlomif",

@@ -77,6 +77,14 @@ else
 <head>
 <title>Welcome to http://shlom.in/</title>
 <meta charset="utf-8"/>
+<style>
+td, th
+{
+    border: solid 1pt darkgreen ;
+    padding: 0.5em;
+    text-align: left;
+}
+</style>
 </head>
 <body>
 

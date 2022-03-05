@@ -2,7 +2,9 @@
 [%-# SET desc = "" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-[% main_class.addClass("fancy_sects") %]
+[% IF NOT main_class.has("fancy_sects") %]
+[% THROW "NO fancy_sects ." %]
+[% END %]
 
 [%- WRAPPER wrap_html -%]
 

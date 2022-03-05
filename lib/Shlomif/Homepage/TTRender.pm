@@ -14,22 +14,25 @@ use HTML::Acronyms         ();
 use HTML::Latemp::AddToc   ();
 use Module::Format::AsHTML ();
 use Set::CSS v0.2.0 ();
-use Shlomif::Homepage::ArticleIndex        ();
-use Shlomif::Homepage::FortuneCollections  ();
-use Shlomif::Homepage::LicenseBlurbs       ();
-use Shlomif::Homepage::LongStories         ();
-use Shlomif::Homepage::NavBlocks           ();
-use Shlomif::Homepage::NavBlocks::Renderer ();
-use Shlomif::Homepage::News                ();
-use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
-use Shlomif::Homepage::TocDiv              ();
-use Shlomif::MD                            ();
-use Shlomif::XmlFictionSlurp               ();
-use Template                               ();
-use VimIface                               ();
+use Shlomif::Homepage::ArticleIndex          ();
+use Shlomif::Homepage::FortuneCollections    ();
+use Shlomif::Homepage::LicenseBlurbs         ();
+use Shlomif::Homepage::LongStories           ();
+use Shlomif::Homepage::NavBlocks             ();
+use Shlomif::Homepage::NavBlocks::Renderer   ();
+use Shlomif::Homepage::News                  ();
+use Shlomif::Homepage::P4N_Lect5_HebNotes    ();
+use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+use Shlomif::Homepage::TocDiv                ();
+use Shlomif::MD                              ();
+use Shlomif::XmlFictionSlurp                 ();
+use Template                                 ();
+use VimIface                                 ();
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
+
+my $IS_HUMOUR_RE = qr#\A@{[ get_is_humour_re()]}#;
 
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
@@ -310,7 +313,8 @@ sub proc
     $vars->{text_ORIG_URL_PREFIX} = $ORIG_URL_PREFIX;
     $vars->{orig_url}             = $ORIG_URL_PREFIX . $raw_fn_path;
     $vars->{escaped_url}          = encodeURIComponent($full_url);
-    $vars->{main_class}           = Set::CSS->new("main");
+    $vars->{main_class}           = Set::CSS->new( "main",
+        ( ( $input_tt2_page_path =~ $IS_HUMOUR_RE ) ? ("fancy_sects") : () ) );
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

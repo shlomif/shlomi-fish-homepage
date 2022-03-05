@@ -9,6 +9,8 @@
 
 [% long_stories.calc_common_top_elems(id => 'the_enemy') %]
 
+[% WRAPPER about_sect %]
+
 <p>
 It’s a political satire, but one that is universal in its message, and
 touches on many aspects of politics, logic and Objectivist philosophy.
@@ -26,6 +28,8 @@ can be.
 (I started thinking about a sequel titled <a href="../RoadToHeaven/"><i>The Road to
 Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 </p>
+
+[% END %]
 
 <section class="docbook_formats h2">
 

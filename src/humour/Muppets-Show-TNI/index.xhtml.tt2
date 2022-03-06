@@ -6,7 +6,7 @@
 
 [% long_stories.calc_common_top_elems(id => 'muppets_show_tni') %]
 
-<h2 id="read_online">Read Online</h2>
+[% WRAPPER h2_section id="read_online" title="Read Online"%]
 
 [% SET use_screenplay_html_prefix = 1 %]
 [% SET screenplay_html_prefix="" %]
@@ -17,9 +17,11 @@
 [% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence (Incomplete Episode)",  %]
 </ul>
 
+[% END %]
+
 [% default_toc %]
 
-<h2 id="sources">Sources</h2>
+[% WRAPPER h2_section id="sources" title="Sources"%]
 
 <ul>
 
@@ -29,7 +31,9 @@
 
 </ul>
 
-<h2 id="licensing">Licensing</h2>
+[% END %]
+
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
 
 <p>
 All the text is original, and as far as
@@ -39,6 +43,8 @@ Attribution-Noncommercial-ShareAlike licence Unported (CC-by-sa),
 either version 4.0, or at your option any later version</a>, but
 like I said, the situation is more complicated than that.
 </p>
+
+[% END %]
 
 [% WRAPPER see_also %]
 

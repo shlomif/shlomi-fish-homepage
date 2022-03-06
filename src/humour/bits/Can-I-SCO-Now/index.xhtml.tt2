@@ -23,7 +23,7 @@ culture.
 
 [% END %]
 
-<h2 id="lyrics">Lyrics</h2>
+[% WRAPPER h2_section id="lyrics" title="Lyrics"%]
 
 <p>
 What's the point of claiming your code is illegal?<br/>
@@ -49,9 +49,12 @@ we're going to inflate.
 Can I, can I, SCO now….
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.by_sa_british_blurb( "year" => "2012", ) %]
 
+[% END %]
 
 [% END %]

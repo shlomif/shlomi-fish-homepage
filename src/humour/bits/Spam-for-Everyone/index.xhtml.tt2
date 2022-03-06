@@ -44,7 +44,7 @@ past years, barring many disabled or partially-disabled people from enjoying
 the benefits of this trend.
 </p>
 
-<h2 id="the_campaign">“Spam for Everyone”</h2>
+[% WRAPPER h2_section id="the_campaign" title="“Spam for Everyone”"%]
 
 <p>
 The Foundation for Accessible Spam, a U.S. non-profit, decided to start a
@@ -95,7 +95,9 @@ said many people found a renewed interest in their inbox after spam like this
 passed through their filters.
 </p>
 
-<h2 id="the-future">The Future</h2>
+[% END %]
+
+[% WRAPPER h2_section id="the-future" title="The Future"%]
 
 <p>
 Will the future of spam messages make them less and less accessible for people
@@ -107,6 +109,12 @@ the start of the campaign, “please help spread the word about this campaign
 so everyone can enjoy the finest crop of the world’s spam.”.
 </p>
 
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
+
 [% license_obj.by_sa_license_british( "year" => "2007", head_tag => "h2", ) %]
+
+[% END %]
 
 [% END %]

@@ -89,7 +89,7 @@ releases, and Ubuntu releasing new versions with such a grave bug still
 open only amplifies the problem.”
 </p>
 
-<h2 id="licence">Licence</h2>
+[% WRAPPER h2_section id="licence" title="Licence"%]
 
 <p>
 <!--Creative Commons License-->
@@ -110,7 +110,9 @@ To attribute, please mention my name, and link to this page and
 <a href="http://www.shlomifish.org/">to my homepage</a>.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id="links" title="Links"%]
 
 <ul>
 
@@ -130,5 +132,7 @@ for Ricers”</a>.
 
 </ul>
 
+
+[% END %]
 
 [% END %]

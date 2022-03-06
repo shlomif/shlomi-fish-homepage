@@ -23,7 +23,7 @@ especially Perl culture.
 
 [% END %]
 
-<h2 id="lyrics">Lyrics</h2>
+[% WRAPPER h2_section id="lyrics" title="Lyrics"%]
 
 <p>
 May I have your attention, please?<br />
@@ -48,9 +48,12 @@ It’s the return of the one way, two ways, three ways…<br />
 Well, more than one way, anyway.
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.by_sa_british_blurb( "year" => "2012", ) %]
 
+[% END %]
 
 [% END %]

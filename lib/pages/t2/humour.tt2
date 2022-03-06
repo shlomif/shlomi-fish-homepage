@@ -3259,11 +3259,13 @@ originated from its films' adaptation might add a little to the irony.
 
 <div class="english">
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.by_sa_british_blurb( "year" => "2002", ) %]
 
-<h2 id="credits">Credits</h2>
+[% END %]
+
+[% WRAPPER h2_section id="credits" title="Credits"%]
 
 <ul>
 
@@ -3294,6 +3296,8 @@ taken from knowyourmeme.com and is originally part of <a href="https://en.wikipe
 </li>
 
 </ul>
+
+[% END %]
 
 </div>
 

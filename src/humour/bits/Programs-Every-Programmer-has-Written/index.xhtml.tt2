@@ -100,7 +100,7 @@ program.
 
 </ol>
 
-<h2 id="credits">Licence and Credits</h2>
+[% WRAPPER h2_section id="credits" title="Licence and Credits"%]
 
 <p>
 This article originated from
@@ -117,7 +117,10 @@ Commons Attribution Share Alike Australia Licence</a> dually licensed with
 the Artistic Licence.
 </p>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
 
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
+
+[% END %]
 
 [% END %]

@@ -35,12 +35,14 @@ Torvalds was not available for comments about the proposal to integrate
 GNU Guile into the Linux kernel.
 </p>
 
-<h2 id="about">About</h2>
+[% WRAPPER h2_section id="about" title="About"%]
 
 <p>
 This was originally <a href="http://shlomif-tech.livejournal.com/67311.html">a
 post</a> on one of my blogs.
 </p>
+
+[% END %]
 
 [% WRAPPER credits_sect %]
 
@@ -55,7 +57,7 @@ post</a> on one of my blogs.
 
 [% END %]
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 <p>
 This document is copyright by <a href="http://www.shlomifish.org/">Shlomi
@@ -73,5 +75,7 @@ For securing additional rights, please contact
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
+
+[% END %]
 
 [% END %]

@@ -29,7 +29,7 @@ format</a>
 
 [% default_toc %]
 
-<h2 id="licensing">Licensing</h2>
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
 
 <p>
 All the text in <i>“So, who the hell is Qoheleth?”</i> is original, and as
@@ -41,15 +41,19 @@ Creative Commons Attribution Noncommercial ShareAlike licence Unported (CC-by-nc
 the situation is more complicated than that.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id="links" title="Links"%]
 
 <p>
 TBD.
 </p>
 
+[% END %]
+
 [% WRAPPER credits_sect %]
 
-<h3 id="sky_image_credits">Sky Image Credits</h3>
+[% WRAPPER h3_section id="sky_image_credits" title="Sky Image Credits"%]
 
 <p>
 <a href="http://www.flickr.com/photos/nicholas_t/2368207024">Sky image</a>
@@ -60,7 +64,9 @@ used in the logo taken from Flickr by
 
 [% END %]
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+[% END %]
+
+[% WRAPPER h2_section id="sources_of_inspiration" title="Sources of Inspiration"%]
 
 <ul>
 
@@ -75,7 +81,11 @@ captioned image: “Nothing Sexier”</a>.
 
 [% PROCESS links_to_judaism_and_israel  %]
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
+
+[% END %]
 
 [% WRAPPER see_also %]
 
@@ -91,11 +101,12 @@ captioned image: “Nothing Sexier”</a>.
 
 [% END %]
 
-<h2 id="thanks">Thanks and Acknowledgements</h2>
+[% WRAPPER h2_section id="thanks" title="Thanks and Acknowledgements"%]
 
 <p>
 <b>TODO: FILL IN.</b>
 </p>
 
+[% END %]
 
 [% END %]

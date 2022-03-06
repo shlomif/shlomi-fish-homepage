@@ -29,7 +29,7 @@ format</a>
 
 [% default_toc %]
 
-<h2 id="licensing">Licensing</h2>
+[% WRAPPER h2_section id="licensing" title="Licensing"%]
 
 <p>
 All the text in <i>“Terminator: Liberation”</i> is original, and as
@@ -41,11 +41,15 @@ Creative Commons Attribution Noncommercial ShareAlike licence Unported (CC-by-nc
 the situation is more complicated than that.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id="links" title="Links"%]
 
 <p>
 <b>Fill in</b>.
 </p>
+
+[% END %]
 
 [% WRAPPER credits_sect %]
 
@@ -84,7 +88,7 @@ the situation is more complicated than that.
 
 [% END %]
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+[% WRAPPER h2_section id="sources_of_inspiration" title="Sources of Inspiration"%]
 
 <ul>
 
@@ -138,7 +142,11 @@ and similar fighting games.
 
 [% PROCESS links_to_judaism_and_israel  %]
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
+
+[% END %]
 
 [% WRAPPER see_also %]
 
@@ -154,7 +162,7 @@ and similar fighting games.
 
 [% END %]
 
-<h2 id="thanks">Thanks and Acknowledgements</h2>
+[% WRAPPER h2_section id="thanks" title="Thanks and Acknowledgements"%]
 
 <p>
 <b>TODO: FILL IN.</b>
@@ -176,5 +184,6 @@ Heart exclamation mark emoji taken from the
 
 </ol>
 
+[% END %]
 
 [% END %]

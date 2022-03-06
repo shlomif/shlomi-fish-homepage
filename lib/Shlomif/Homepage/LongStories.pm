@@ -566,12 +566,6 @@ EOF
         start_date => DateTime->new( month => 2, year => 2022, ),
         href       => "humour/The-10th-Muse/",
         abstract   => <<"EOF",
-<section class="queen_act">
-
-<header>
-<h2 id="the_10th_muse__abstract">Abstract</h2>
-</header>
-
 <p>
 The Greek Pantheon of ~2022 AD decides it is high time to hire a 10th muse,
 in charge of the interactive arts. Thus, it hires Arielle (
@@ -613,9 +607,6 @@ like <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</
 <p>
 Fanfic: parody, crossover, $RPF, self-reference.
 </p>
-
-</section>
-
 EOF
     },
 );

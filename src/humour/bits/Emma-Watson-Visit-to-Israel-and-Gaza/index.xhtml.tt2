@@ -13,15 +13,19 @@ and the Gaza strip?
 
 [% default_toc %]
 
-<h2 id="text">Text</h2>
+[% WRAPPER h2_section id="text" title="Text"%]
 
 [% path_slurp("screenplay-xml/rendered-html/Emma-Watson-visit-to-Israel-and-Gaza.html") %]
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
 
-<h2 id="links">Links</h2>
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
 
-<h3 id="links__EmWatson">Emma Watson Links</h3>
+[% END %]
+
+[% WRAPPER h2_section id="links" title="Links"%]
+
+[% WRAPPER h3_section id="links__EmWatson" title="Emma Watson Links"%]
 
 <ul>
 
@@ -30,17 +34,26 @@ and the Gaza strip?
 
 </ul>
 
-<h3 id="links__politics">Political Stories and Essays</h3>
+[% END %]
+
+[% WRAPPER h3_section id="links__politics" title="Political Stories and Essays"%]
 
 <p>
 <b>TODO</b> Fill in.
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 [% license_obj.by_nc_sa_british_blurb (year => "2014")  %]
 
-<h2 id="reception">What other people are saying</h2>
+[% END %]
 
+[% WRAPPER h2_section id="reception" title="What other people are saying"%]
+
+[% END %]
 
 [% END %]

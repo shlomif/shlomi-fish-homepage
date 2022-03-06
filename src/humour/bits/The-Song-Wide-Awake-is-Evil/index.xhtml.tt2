@@ -6,7 +6,7 @@
 
 <img src="katy-perry.webp" alt="Photo of Katy Perry" class="rfloaty" />
 
-<h2 id="context">Context for the Bit</h2>
+[% WRAPPER h2_section id="context" title="Context for the Bit"%]
 
 <p>
 I was chatting in an online chatroom the other day, when someone I talked
@@ -46,8 +46,9 @@ This eventually led to me writing this bit. Note that it is written
 tongue-in-cheek, and I'm actually quite fond of the song.
 </p>
 
-<h2 id="text">The Feature Itself</h2>
+[% END %]
 
+[% WRAPPER h2_section id="text" title="The Feature Itself"%]
 
 <p>
 The song “Wide Awake” by Katy Perry is Evil!!!
@@ -94,13 +95,17 @@ has corrupted me, I’ll give you a link:
 You have been warned.
 </p>
 
-<h2>Conclusion</h2>
+[% END %]
+
+[% WRAPPER h2_section id="conclusion" title="Conclusion"%]
 
 <p>
 This bit was published on 1 April 2016 as an alternative April Fool’s Day
 joke. I originally wrote it some time before it and decided to publish it
 because my other ideas didn't seem as good.
 </p>
+
+[% END %]
 
 [% WRAPPER see_also %]
 
@@ -132,7 +137,7 @@ under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-by-sa<
 
 [% END %]
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 <p>
 This document is copyright by <a href="http://www.shlomifish.org/">Shlomi
@@ -150,5 +155,7 @@ For securing additional rights, please contact
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
+
+[% END %]
 
 [% END %]

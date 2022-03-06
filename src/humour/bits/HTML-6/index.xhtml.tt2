@@ -73,7 +73,7 @@ The W3C and the “HTML 6” development team recommend that everyone convert
 their web sites to the new version as soon as possible.
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 
 <p>
 This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi
@@ -98,5 +98,6 @@ and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>
 
+[% END %]
 
 [% END %]

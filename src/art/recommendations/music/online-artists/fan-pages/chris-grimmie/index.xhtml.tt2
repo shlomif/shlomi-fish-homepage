@@ -1,7 +1,7 @@
 [%- SET title = "Fan page for Chris Grimmie" -%]
 [%- SET desc = "Fan page for Chris Grimmie -- TODO: ADD MORE" -%]
 
-[% main_class.addClass("fancy_sects", "limit_imgs_width", ) %]
+[% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf", ) %]
 
 [% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
@@ -311,7 +311,7 @@ vs. <a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>.
 <img alt="'Everytime we touch' still" src="images/chris-grimmie-everytime-we-touch.webp" />
 </p>
 
-<p>
+<p style="clear:both;">
 Grimmie in <a href="https://www.youtube.com/watch?v=pWZ70lplIj0">an early
 video</a> with her contemporary trademark hair style. Former gamer she-dork or not,
 Christina looked really gorgeous and cute.

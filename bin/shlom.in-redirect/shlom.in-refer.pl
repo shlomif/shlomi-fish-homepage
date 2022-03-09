@@ -99,8 +99,8 @@ it in spam filters.
 </p>
 
 <p>
-In the future, there may be a list of public URLs that are pointed by this
-service, but it's not implemented yet. For more information please contact
+There is a list of public URLs that are pointed by this
+service, below. For more information please contact
 <a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
 </p>
 

@@ -64,10 +64,12 @@ EOF
 }
 else
 {
+    require A;
     my $table = '';
-    for my $k ( sort keys %$::U )
+    for my $k ( sort keys %$::A )
     {
-        my $url = $::U->{$k};
+        my $rec = $::A->{$k};
+        my $url = $rec->{url};
         $table .= qq!<tr><td><a href="$url">https://shlom.in/$k</a></td></tr>!;
     }
     print $HEADER, <<"EOF";

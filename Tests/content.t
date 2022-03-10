@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 46;
+use Test::More tests => 47;
 
 use HTML::Entities qw/ decode_entities /;
 use Path::Tiny qw/ path /;
@@ -327,6 +327,16 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
 
     # TEST
     like( $content, qr{podracer}i, 'Contains "podracer".' );
+}
+
+{
+    my $content =
+        path(
+"$POST_DEST/humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.screenplay-text.txt"
+    )->slurp_utf8;
+
+    # TEST
+    like( $content, qr{\@Athena}, 'Contains username.' );
 }
 
 __END__

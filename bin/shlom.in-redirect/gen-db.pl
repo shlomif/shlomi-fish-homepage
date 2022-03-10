@@ -179,15 +179,22 @@ qq{Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 ge
 );
 
 my %urls_by_id;
+my %data_by_id;
 
 while ( my ( $idx, $rec ) = each(@urls) )
 {
     if ( !( $rec->{id} && $rec->{url} && $rec->{desc} ) )
     {
-        print "Ask Shlomi Fish to fix record No. $idx";
-        exit(0);
+        print "Ask Shlomi Fish to fix record No. $idx [ id = $rec->{id} ]\n";
+        exit(1);
+    }
+    if ( exists( $urls_by_id{ $rec->{id} } ) )
+    {
+        print "Ask Shlomi Fish to fix record No. $idx [ id = $rec->{id} ]\n";
+        exit(1);
     }
     $urls_by_id{ $rec->{id} } = $rec->{url};
+    $data_by_id{ $rec->{id} } = $rec;
 }
 use Data::Dumper;
 $Data::Dumper::Terse    = 1;
@@ -197,3 +204,4 @@ $Data::Dumper::Sortkeys = 1;
 use Path::Tiny qw/ path tempdir tempfile cwd /;
 
 path("D.pm")->spew_utf8( "\$U=", Dumper( \%urls_by_id ), ";\n1;" );
+path("A.pm")->spew_utf8( "\$A=", Dumper( \%data_by_id ), ";\n1;" );

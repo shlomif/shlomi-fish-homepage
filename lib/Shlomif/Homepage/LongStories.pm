@@ -358,7 +358,9 @@ who provide him with many questions, including the million dollar question,
 <p>
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
-and set in a time of great confusion — not unlike our own.
+and set in a time of great confusion — not unlike our own,
+while containing some
+<a href="https://en.wikipedia.org/wiki/Anachronism">anachronisms</a>.
 </p>
 
 EOF

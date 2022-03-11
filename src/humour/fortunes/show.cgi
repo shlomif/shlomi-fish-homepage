@@ -161,7 +161,7 @@ NON_RAW_TEMPLATE = \
 <li><a accesskey="r" href="{{fullpath}}?mode=random">Random Fortune</a></li>
 </ul>
 <ul id="publish_time">
-<li>Published at <time datetime="{{date}}">{{date}}</time></li>
+<li>Published at <time datetime="{{date}}">{{human_date}}</time></li>
 </ul>
 <h1>{{title}}</h1>
 <div class="fortunes_list">
@@ -195,6 +195,9 @@ def _display_fortune_from_data(
         col_title, description, date):
     title = html_title + " - Fortune"
     base_dir = '../..'
+    m = re.search("\\A([0-9]+-[0-9]+-[0-9]+)", date)
+    assert m
+    human_date = m.group(1)
 
     return template(
         (RAW_TEMPLATE if raw_mode else NON_RAW_TEMPLATE),
@@ -206,6 +209,7 @@ def _display_fortune_from_data(
         fullpath=_my_fullpath(),
         html_info_text=html_info_text,
         html_text=html_text,
+        human_date=human_date,
         str_id=str_id,
         title=title
     )

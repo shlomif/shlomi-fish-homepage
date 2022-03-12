@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 
 my @urls = (
     {
@@ -204,4 +205,5 @@ $Data::Dumper::Sortkeys = 1;
 use Path::Tiny qw/ path tempdir tempfile cwd /;
 
 path("D.pm")->spew_utf8( "\$U=", Dumper( \%urls_by_id ), ";\n1;" );
-path("A.pm")->spew_utf8( "\$A=", Dumper( \%data_by_id ), ";\n1;" );
+path("A.pm")
+    ->spew_utf8( "use utf8;\n", "\$A=", Dumper( \%data_by_id ), ";\n1;" );

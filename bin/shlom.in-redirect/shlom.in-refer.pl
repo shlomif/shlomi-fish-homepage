@@ -69,8 +69,10 @@ else
     for my $k ( sort keys %$::A )
     {
         my $rec = $::A->{$k};
+        my $d   = $rec->{desc};
         my $url = $rec->{url};
-        $table .= qq!<tr><td><a href="$url">https://shlom.in/$k</a></td></tr>!;
+        $table .=
+qq!<tr><td><a href="$url">https://shlom.in/$k</a></td><td><p>$d</p></td></tr>!;
     }
     print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
@@ -109,6 +111,7 @@ service, below. For more information please contact
 <table>
 <tr>
 <th>Short URL</th>
+<th>Description</th>
 </tr>
 $table
 <table>

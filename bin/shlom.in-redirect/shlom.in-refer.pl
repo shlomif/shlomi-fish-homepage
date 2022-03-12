@@ -116,6 +116,10 @@ service, below. For more information please contact
 $table
 <table>
 
+<p>
+( <a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/bin/shlom.in-redirect"><b>GitHub Source</b></a>. )
+</p>
+
 </body>
 </html>
 EOF

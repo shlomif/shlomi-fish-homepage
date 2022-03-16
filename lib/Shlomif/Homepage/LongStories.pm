@@ -750,9 +750,13 @@ EOF
         entry_text => "Cookie Monster - The Slayer",
         start_date => DateTime->new( day => 14, month => 6, year => 2021, ),
         href       => "humour/Cookie-Monster--The-Slayer/",
-        abstract   => <<'EOF',
+        abstract   => <<"EOF",
 <p>
-Shelved for now.
+A parody of my <a href="\$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i></a>,
+which is itself a parody of \$(BtVS); starring Cookie Monster and
+Emma Watson.
+Shelved for now given I am wilfully ignorant of baking and cooking
+in general.
 </p>
 EOF
     },

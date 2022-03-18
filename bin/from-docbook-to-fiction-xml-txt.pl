@@ -3,7 +3,9 @@
 use strict;
 use warnings;
 
-use XML::LibXML;
+use XML::LibXML ();
+
+use Path::Tiny qw/ path /;
 
 use Getopt::Long;
 
@@ -32,29 +34,28 @@ sub _esc_for_attr
     return $ret;
 }
 
-my $xml_uri = q{http://www.w3.org/XML/1998/namespace};
+my $XML_URI = q{http://www.w3.org/XML/1998/namespace};
 my $xpc     = XML::LibXML::XPathContext->new();
 
-# $xpc->registerNs('x', q{http://www.w3.org/1999/xhtml});
 $xpc->registerNs( 'db',    q{http://docbook.org/ns/docbook} );
 $xpc->registerNs( 'xlink', q{http://www.w3.org/1999/xlink} );
-$xpc->registerNs( 'xml',   $xml_uri );
+$xpc->registerNs( 'xml',   $XML_URI );
 
 my $parser = XML::LibXML->new();
 
 $parser->load_ext_dtd(0);
 
-my $output_file;
-GetOptions( "o|output=s" => \$output_file, );
+my $output_fn;
+GetOptions( "o|output=s" => \$output_fn, );
 
-my $input_file = shift(@ARGV);
+my $input_fn = shift(@ARGV);
 
-my $doc = $parser->parse_file($input_file);
+my $doc = $parser->parse_file($input_fn);
 
 my ($main_title)    = $xpc->findnodes( q{/db:article/db:info/db:title}, $doc );
 my $main_title_text = $main_title->textContent();
 my ($main_article)  = $xpc->findnodes( q{/db:article}, $doc );
-my $main_id_text    = $main_article->getAttributeNS( $xml_uri, "id" );
+my $main_id_text    = $main_article->getAttributeNS( $XML_URI, "id" );
 
 my @sections = $xpc->findnodes( q{/db:article/db:section}, $doc );
 
@@ -62,7 +63,7 @@ sub _out_section
 {
     my $sect_elem = shift;
 
-    my $id = $sect_elem->getAttributeNS( $xml_uri, "id" );
+    my $id = $sect_elem->getAttributeNS( $XML_URI, "id" );
 
     my ($title_elem) = $xpc->findnodes( q{./db:info/db:title}, $sect_elem );
 
@@ -94,8 +95,4 @@ my $total =
     . join( "\n\n", map { _out_section($_) } @sections )
     . qq{</body>\n\n};
 
-open my $out_fh, ">", $output_file
-    or die "Could not open '$output_file' for output!";
-binmode $out_fh, ":encoding(utf-8)";
-print {$out_fh} $total;
-close($out_fh);
+path($output_fn)->spew_utf8($total);

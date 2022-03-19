@@ -1,0 +1,26 @@
+[%- SET title = "Shlomi Fish’s Fan Pages" -%]
+[%- SET desc = "Shlomi Fish’s Fan Pages: Samantha Smith" -%]
+
+[% main_class.addClass("fancy_sects") %]
+
+[%- WRAPPER wrap_html -%]
+
+[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
+
+[%- WRAPPER intro -%]
+
+<p>
+These are fan pages.
+</p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
+
+[% WRAPPER h3_section id = "samantha-smith" title = "Samantha Smith" href = "samantha-smith/" %]
+
+[% END %]
+
+[% END %]
+
+[% END %]

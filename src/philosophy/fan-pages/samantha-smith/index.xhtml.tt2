@@ -1,0 +1,83 @@
+[%- SET title = "Fan page for Samantha Smith" -%]
+[%- SET desc = "Fan page for Samantha Smith -- TODO: ADD MORE" -%]
+
+[% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf", ) %]
+
+[% BLOCK page_extra_head_elements %]
+<link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
+[% END %]
+
+[%- WRAPPER wrap_html -%]
+
+[% SET lang = "eng" %]
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+
+[% WRAPPER h2_section id = "about-sam-smith" title = "About" %]
+
+<p>
+<img alt="Photo of Christina Grimmie" class="rfloaty" src="images/christina-grimmie--529031666-r.webp" style="float: right; margin: 1em;" />
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Reed Smith</a>
+(b. 29 June 1972)
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="">"The child who slew two mighty superpowers"</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="">"The face that sank a thousand battleships"</a>
+</p>
+</li>
+</ol>
+
+[% END %]
+
+[% WRAPPER h2_section id = "favourites" title = "Favourite Works" %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" %]
+
+[% END %]
+
+<hr />
+
+[% WRAPPER h2_section id = "sam-smith-is-alive" title = "Samantha Smith is Alive" %]
+
+<iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
+
+<p>
+I had a similar moment as well.
+</p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "chris-story" title = "The Story" %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "what-i-learned" title = "What I taught (and learned from) Internet/social media creators (on YouTube and other Internet outlets)" %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "photos" title = "Photos' Gallery" %]
+
+[% END %]
+
+[% WRAPPER see_also  %]
+
+[% END %]
+
+[% WRAPPER credits_sect %]
+
+[%- END -%]
+
+[% END %]

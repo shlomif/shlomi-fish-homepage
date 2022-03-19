@@ -634,6 +634,16 @@ my $_section_navmenu_tree_contents = {
                 },
             ],
         },
+        {
+            text => "Fan Pages",
+            url  => "philosophy/fan-pages/",
+            subs => [
+                {
+                    text => "Samantha Smith",
+                    url  => "philosophy/fan-pages/samantha-smith/",
+                },
+            ],
+        },
     ],
 };
 

@@ -1,7 +1,8 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 
 use strict;
 use warnings;
+use autodie;
 
 use XML::LibXML;
 use XML::LibXML::XPathContext;

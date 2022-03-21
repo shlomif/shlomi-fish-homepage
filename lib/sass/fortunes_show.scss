@@ -53,6 +53,21 @@ h1 {
     }
 }
 
+#publish_time {
+    li {
+        $c: darkviolet;
+        $border: 3px $c solid;
+        $pad: 4px;
+        border-bottom: $border;
+        border-top: $border;
+        color: $c;
+        font-style: italic;
+        font-weight: bold;
+        padding-bottom: $pad;
+        padding-top: $pad;
+    }
+}
+
 #nav li a,
 #random li a {
     text-decoration: none;

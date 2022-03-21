@@ -812,6 +812,17 @@ q{<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-
                 ),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr('commercial_fanfic_initiative__mission_stmt'),
+                _tr(
+                    title => "[Precursor]",
+                    items => [
+                        _l(
+                            inner_html =>
+"Why I will continue to write my real person fan fiction",
+                            path =>
+"philosophy/culture/my-real-person-fan-fiction/",
+                        ),
+                    ],
+                ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s( qw( terminator_liberation queen_padme_tales ), ),
             ],

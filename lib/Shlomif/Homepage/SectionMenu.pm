@@ -25,11 +25,37 @@ has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
 has 'lang'         => ( is => 'ro', isa => 'HashRef',    required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
 has 'path_info'    => ( is => 'rw', isa => 'Str', required => 1, );
+
+sub _mutate__leading_path
+{
+    my ( $self, $leading_path, $idx ) = @_;
+
+    if ( $self->path_info =~ m# \A (?:/)? humour/bits/true-stories/#msx )
+    {
+        my $h = $leading_path->[$idx];
+
+        # die $h->label();
+        $h->label("Stories");
+        $h->title( undef() );
+    }
+    else
+    {
+        # else...
+    }
+    return;
+}
+
 has 'results' => (
     is      => 'ro',
     isa     => 'HashRef',
     lazy    => 1,
-    default => sub { return shift->nav_menu->render(); }
+    default => sub {
+        my $self         = shift;
+        my $results      = $self->nav_menu->render();
+        my $leading_path = $results->{leading_path};
+        $self->_mutate__leading_path( $leading_path, 0 );
+        return $results;
+    },
 );
 has 'root'     => ( is => 'rw', required => 1, );
 has 'sections' => ( is => 'ro', required => 1, );
@@ -220,6 +246,7 @@ sub total_leading_path
     }
     else
     {
+        $self->_mutate__leading_path( \@main_leading_path, 1 );
         my @local_path = @{ $self->results()->{'leading_path'} };
         if ($::nav_menu_test)
         {

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 4;
+use Test::More tests => 5;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -71,6 +71,18 @@ _test(
         blurb    => 'curated lists: IDEs',
         expected => <<'EOF',
 <a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Pages related to Software (mostly Open-Source)">Software</a> → <a href="../" title="Various Software Resources Pages">Resources Pages</a> → <a href="../sw-lists/">Curated Lists</a> → <a href="./" title="Index of Text Editors and Integrated Development Environments">Editors and IDEs</a>
+EOF
+    }
+);
+
+# TEST
+_test(
+    {
+        path =>
+"lib/cache/combined/t2/humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/index.xhtml/breadcrumbs-trail",
+        blurb    => 'true-stories are not "Humour"',
+        expected => <<'EOF',
+<a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../">Stories</a> → <a href="../../" title="Small Scale Funny Works of Mine">Small Scale</a> → <a href="../">True Stories / Memoirs</a> → <a href="./" title="Socialising with an ~11 years old Hermione (“Harry Potter”) Cosplayer and her family at GeekCon Nine Worlds">Socialising with a Young Hermione Cosplayer and Her Family</a>
 EOF
     }
 );

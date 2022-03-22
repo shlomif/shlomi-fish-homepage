@@ -5,45 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro  %]
-
-<p>
-Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>
-and <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
-that I have written, which are mostly humorous
-in part or in whole (but to quote
-<a href="http://en.wikiquote.org/wiki/Peter_Ustinov">Peter Ustinov</a>,
-“Comedy is simply a funny way of being serious”).
-I have many much shorter works <a href="../">in the main section</a>,
-including <a href="[% base_path %]humour/fortunes/">quotes</a>,
-<a href="[% base_path %]humour.html">aphorisms</a>, and
-<a href="[% base_path %]humour/bits/facts/">factoids</a>.
-</p>
-
-<p>
-<b>Note:</b> many of my stories are <b>not</b> too <b>realistic</b>, and aim
-to reflect a better and more idealistic reality than the one many people
-would perceive.
-This is in part because, I am <a href="[% base_path %]me/rindolf/#rindolfism">an
-idealist</a>, and plan to remain so (and my idealism is dynamic and constantly
-changes), and wish that my words and deeds will carry reality <b>forward</b>
-instead of preserving the status quo.
-</p>
-
-[% IF 0 %]
-<img src="[% base_path %]humour/images/14920899703_243677cbf4_o--crop150w.webp" alt="Rainbow Dash from MLP: FiM" class="story_logo" style="float:right; max-width: 40%; " />
-[% ELSE %]
-<p style="text-align: center ;">
-<img alt="Strong Woman Captioned Image starring Summer Glau: “A strong woman understands that the gifts such as logic, decisiveness, and strength, are just as feminine as intuition and emotional connection. She values and uses all of her gifts.”" src="[% base_path %]humour/images/strong-woman-meme-summer-glau/656941.webp" style="float: none; margin: 2em auto; max-width: 60%; max-height: 400px;" title="Summer Glau is a competent geeky polymath hackeress. She doesn't let her emotions permanently interfere with her hacking." />
-</p>
-[% END %]
-
-<p>
-<a href="http://classics.mit.edu/Aristotle/poetics.1.1.html">Like Aristotle notes about Homer</a>, the characters in my fics are <b>competent</b>: confident, open, forgiving, funny [I hope], greedy and ambitious, resourceful, generous, passionate, socially capable, sexually assertive, and sexy.
-</p>
-
-[% END %]
-
+[% PROCESS active_humour_stories__intro  %]
 [% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
 
 [% WRAPPER credits_sect %]

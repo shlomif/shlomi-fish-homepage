@@ -29,285 +29,314 @@ my $_humour_tree_contents = {
             url  => "humour/stories/",
             subs => [
                 {
-                    text  => "The Enemy",
-                    url   => "humour/TheEnemy/",
-                    title => "The Enemy and How I Helped to Fight it",
-                    subs  => [
-                        {
-                            lang  => "he",
-                            text  => "Text in Hebrew",
-                            url   => "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
-                            title => "Text of “The Enemy” In Hebrew",
-                        },
-                        {
-                            text => "Text in English",
-                            url  => "humour/TheEnemy/The-Enemy-English-v7.html",
-                            title => "Text of “The Enemy” In English",
-                        },
-                    ],
-                },
-                {
-                    text  => "TOW The Fountainhead",
-                    url   => "humour/TOneW-the-Fountainhead/",
-                    title => "A Parody on “The Fountainhead” by Ayn Rand",
-                    subs  => [
-                        {
-                            text => "Part 1",
-                            url  =>
-"humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.html",
-                        },
-                        {
-                            text => "Part 2",
-                            url  =>
-"humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
-                        },
-                    ],
-                },
-                {
-                    text  => "Humanity",
-                    url   => "humour/humanity/",
-                    title =>
-                        "A Parody about Humanity and Modern Life in Particular",
+                    text => "Usable",
+                    skip => 1,
+                    url  => "humour/stories/usable/",
                     subs => [
                         {
-                            text  => "Ongoing Text",
-                            url   => "humour/humanity/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                        {
-                            lang  => "he",
-                            text  => "Hebrew Translation",
-                            url   => "humour/humanity/ongoing-text-hebrew.html",
-                            title => "Hebrew translation of the screenplay.",
-                        },
-                        {
-                            text  => "Recordings of Songs",
-                            url   => "humour/humanity/songs/",
-                            title => "Recordings of Songs from the Screenplay",
-                        },
-                    ],
-                },
-                {
-                    text  => "Human Hacking Field Guide",
-                    url   => "humour/human-hacking/",
-                    title =>
-"Story about Teenage Computer Enthusiasts in 2005’s Los Angeles",
-                    subs => [
-                        {
-                            text  => "English Text",
-                            url   => "humour/human-hacking/english-v2.html",
-                            title => "Text of the English original",
-                        },
-                        {
-                            text => "Conclusions and Reviews",
-                            url  => "humour/human-hacking/conclusions/",
-                        },
-                        {
-                            lang  => "ar",
-                            text  => "Arabic Translation",
-                            url   => "humour/human-hacking/arabic-v2.html",
-                            title => "Translation to Literary Arabic by Vieq",
-                        },
-                        {
-                            lang => "he",
-                            text => "Hebrew Translation",
-                            url  => "humour/human-hacking/hebrew-v2.html",
-                        },
-                    ],
-                },
-                {
-                    text => "Star Trek: We the Living Dead",
-                    url  => "humour/Star-Trek/We-the-Living-Dead/",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                    ],
-                },
-                {
-                    text  => "Selina Mandrake - The Slayer (Buffy Parody)",
-                    url   => "humour/Selina-Mandrake/",
-                    title =>
-"Parody and Reflection of Buffy the Vampire Slayer along with other sources of inspiration.",
-                    subs => [
-                        {
-                            text  => "Ongoing Text",
-                            url   => "humour/Selina-Mandrake/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                        {
-                            text  => "Cast",
-                            url   => "humour/Selina-Mandrake/cast.html",
-                            title => "Who I want to play each character",
-                        },
-                        {
-                            text => "Image Macros (“Memes”)",
-                            url  => "humour/Selina-Mandrake/image-macros/",
-                        },
-                    ],
-                },
-                {
-                    text  => "Summerschool at the NSA",
-                    url   => "humour/Summerschool-at-the-NSA/",
-                    title =>
-"Sarah Michelle Gellar and Summer Glau conspire to take the the NSA out of the equation",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/Summerschool-at-the-NSA/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                        {
-                            text => "Cast",
-                            url  => "humour/Summerschool-at-the-NSA/cast.html",
-                        },
-                        {
-                            text => "Conclusions and Reflection",
-                            url  =>
-"humour/Summerschool-at-the-NSA/conclusions-and-reflection.html",
-                        },
-                    ],
-                },
-                {
-                    text  => "Buffy: a Few Good Slayers",
-                    url   => "humour/Buffy/A-Few-Good-Slayers/",
-                    title =>
-"Everyone is happier and more powerful and empowered in a forked version of the Buffy universe, but a crisis emerges",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                    ],
-                },
-                {
-                    text  => "Muppets Fan Fiction",
-                    url   => "humour/Muppets-Show-TNI/",
-                    title => "The Muppets Show / Sesame Street Fan Fiction",
-                    subs  => [
-                        {
-                            text => "Harry Potter",
-                            url  => "humour/Muppets-Show-TNI/Harry-Potter.html",
-                        },
-                        {
-                            text => "Summer Glau and Chuck Norris",
-                            url  =>
-"humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
-                            title =>
-"Summer Glau &amp; Chuck Norris as Grammar Nazis",
-                        },
-                        {
-                            text => "Jennifer Lawrence",
-                            url  =>
-"humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
-                        },
-                    ],
-                },
-                {
-                    text  => "“So, who the hell is Qoheleth?”",
-                    url   => "humour/So-Who-The-Hell-Is-Qoheleth/",
-                    title =>
-"Contemplating what happened to the author of the Scroll of Ecclesiastes shortly after he wrote it.",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                    ],
-                },
-                {
-                    text =>
-                        "Terminator: Liberation - A Self-Referential Parody",
-                    url  => "humour/Terminator/Liberation/",
-                    subs => [
-                        {
-                            text => "Ongoing Text",
-                            url  =>
-"humour/Terminator/Liberation/ongoing-text.html",
-                            title => "Ongoing Text of the Screenplay",
-                        },
-                        {
-                            text  => "Cast",
-                            url   => "humour/Terminator/Liberation/cast.html",
-                            title => "Who I want to play each character",
-                        },
-                        {
-                            text => "Image Macros",
-                            url => "humour/Terminator/Liberation/image-macros/",
-                        },
-                    ],
-                },
-                {
-                    text  => "Queen Padmé Tales",
-                    url   => "humour/Queen-Padme-Tales/",
-                    title => "Star Wars + Star Trek + Real Life Fanfic",
-                    subs  => [
-                        {
-                            text => "Episodes",
-                            url  => "humour/Queen-Padme-Tales/episodes/",
-                            skip => 1,
-                            subs => [
+                            text  => "The Enemy",
+                            url   => "humour/TheEnemy/",
+                            title => "The Enemy and How I Helped to Fight it",
+                            subs  => [
                                 {
-                                    text => "Teaser",
+                                    lang => "he",
+                                    text => "Text in Hebrew",
                                     url  =>
-"humour/Queen-Padme-Tales/teaser-wrap.xhtml",
+"humour/TheEnemy/The-Enemy-Hebrew-v7.html",
+                                    title =>
+                                        "Text of “The Enemy” In Hebrew",
                                 },
                                 {
-                                    text =>
-"Queen Amidala vs. the Klingon Warriors",
-                                    url =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
-                                },
-                                {
-                                    text => "Planting Trees",
+                                    text => "Text in English",
                                     url  =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
-                                },
-                                {
-                                    text => "Take It Over",
-                                    url  =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
-                                },
-                                {
-                                    text => "Nighttime Flight",
-                                    url  =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
-                                },
-                                {
-                                    text => "The Fifth Sith",
-                                    url  =>
-"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
+"humour/TheEnemy/The-Enemy-English-v7.html",
+                                    title =>
+                                        "Text of “The Enemy” In English",
                                 },
                             ],
                         },
                         {
-                            text => "Spec / Plan",
-                            url  => "humour/Queen-Padme-Tales/spec/",
-                        },
-                    ],
-                },
-                {
-                    text  => "The 10th Muse",
-                    url   => "humour/The-10th-Muse/",
-                    title => "Greek Mythology Fanfic",
-                    subs  => [
-                        {
-                            text => "Episodes",
-                            url  => "humour/The-10th-Muse/episodes/",
-                            skip => 1,
+                            text  => "TOW The Fountainhead",
+                            url   => "humour/TOneW-the-Fountainhead/",
+                            title =>
+"A Parody on “The Fountainhead” by Ayn Rand",
                             subs => [
                                 {
-                                    text => "Athena Gets Laid",
+                                    text => "Part 1",
                                     url  =>
+"humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.html",
+                                },
+                                {
+                                    text => "Part 2",
+                                    url  =>
+"humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Humanity",
+                            url   => "humour/humanity/",
+                            title =>
+"A Parody about Humanity and Modern Life in Particular",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  => "humour/humanity/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                                {
+                                    lang => "he",
+                                    text => "Hebrew Translation",
+                                    url  =>
+"humour/humanity/ongoing-text-hebrew.html",
+                                    title =>
+                                        "Hebrew translation of the screenplay.",
+                                },
+                                {
+                                    text  => "Recordings of Songs",
+                                    url   => "humour/humanity/songs/",
+                                    title =>
+"Recordings of Songs from the Screenplay",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Human Hacking Field Guide",
+                            url   => "humour/human-hacking/",
+                            title =>
+"Story about Teenage Computer Enthusiasts in 2005’s Los Angeles",
+                            subs => [
+                                {
+                                    text => "English Text",
+                                    url  =>
+                                        "humour/human-hacking/english-v2.html",
+                                    title => "Text of the English original",
+                                },
+                                {
+                                    text => "Conclusions and Reviews",
+                                    url  => "humour/human-hacking/conclusions/",
+                                },
+                                {
+                                    lang => "ar",
+                                    text => "Arabic Translation",
+                                    url  =>
+                                        "humour/human-hacking/arabic-v2.html",
+                                    title =>
+"Translation to Literary Arabic by Vieq",
+                                },
+                                {
+                                    lang => "he",
+                                    text => "Hebrew Translation",
+                                    url  =>
+                                        "humour/human-hacking/hebrew-v2.html",
+                                },
+                            ],
+                        },
+                        {
+                            text => "Star Trek: We the Living Dead",
+                            url  => "humour/Star-Trek/We-the-Living-Dead/",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Star-Trek/We-the-Living-Dead/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                            ],
+                        },
+                        {
+                            text =>
+                                "Selina Mandrake - The Slayer (Buffy Parody)",
+                            url   => "humour/Selina-Mandrake/",
+                            title =>
+"Parody and Reflection of Buffy the Vampire Slayer along with other sources of inspiration.",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Selina-Mandrake/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                                {
+                                    text  => "Cast",
+                                    url   => "humour/Selina-Mandrake/cast.html",
+                                    title =>
+                                        "Who I want to play each character",
+                                },
+                                {
+                                    text => "Image Macros (“Memes”)",
+                                    url  =>
+                                        "humour/Selina-Mandrake/image-macros/",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Summerschool at the NSA",
+                            url   => "humour/Summerschool-at-the-NSA/",
+                            title =>
+"Sarah Michelle Gellar and Summer Glau conspire to take the the NSA out of the equation",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Summerschool-at-the-NSA/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                                {
+                                    text => "Cast",
+                                    url  =>
+"humour/Summerschool-at-the-NSA/cast.html",
+                                },
+                                {
+                                    text => "Conclusions and Reflection",
+                                    url  =>
+"humour/Summerschool-at-the-NSA/conclusions-and-reflection.html",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Buffy: a Few Good Slayers",
+                            url   => "humour/Buffy/A-Few-Good-Slayers/",
+                            title =>
+"Everyone is happier and more powerful and empowered in a forked version of the Buffy universe, but a crisis emerges",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Buffy/A-Few-Good-Slayers/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Muppets Fan Fiction",
+                            url   => "humour/Muppets-Show-TNI/",
+                            title =>
+                                "The Muppets Show / Sesame Street Fan Fiction",
+                            subs => [
+                                {
+                                    text => "Harry Potter",
+                                    url  =>
+"humour/Muppets-Show-TNI/Harry-Potter.html",
+                                },
+                                {
+                                    text => "Summer Glau and Chuck Norris",
+                                    url  =>
+"humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
+                                    title =>
+"Summer Glau &amp; Chuck Norris as Grammar Nazis",
+                                },
+                                {
+                                    text => "Jennifer Lawrence",
+                                    url  =>
+"humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "“So, who the hell is Qoheleth?”",
+                            url   => "humour/So-Who-The-Hell-Is-Qoheleth/",
+                            title =>
+"Contemplating what happened to the author of the Scroll of Ecclesiastes shortly after he wrote it.",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                            ],
+                        },
+                        {
+                            text =>
+"Terminator: Liberation - A Self-Referential Parody",
+                            url  => "humour/Terminator/Liberation/",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/Terminator/Liberation/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                                {
+                                    text => "Cast",
+                                    url  =>
+"humour/Terminator/Liberation/cast.html",
+                                    title =>
+                                        "Who I want to play each character",
+                                },
+                                {
+                                    text => "Image Macros",
+                                    url  =>
+"humour/Terminator/Liberation/image-macros/",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "Queen Padmé Tales",
+                            url   => "humour/Queen-Padme-Tales/",
+                            title => "Star Wars + Star Trek + Real Life Fanfic",
+                            subs  => [
+                                {
+                                    text => "Episodes",
+                                    url => "humour/Queen-Padme-Tales/episodes/",
+                                    skip => 1,
+                                    subs => [
+                                        {
+                                            text => "Teaser",
+                                            url  =>
+"humour/Queen-Padme-Tales/teaser-wrap.xhtml",
+                                        },
+                                        {
+                                            text =>
+"Queen Amidala vs. the Klingon Warriors",
+                                            url =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html",
+                                        },
+                                        {
+                                            text => "Planting Trees",
+                                            url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
+                                        },
+                                        {
+                                            text => "Take It Over",
+                                            url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
+                                        },
+                                        {
+                                            text => "Nighttime Flight",
+                                            url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--Nighttime-Flight.html",
+                                        },
+                                        {
+                                            text => "The Fifth Sith",
+                                            url  =>
+"humour/Queen-Padme-Tales/Queen-Padme-Tales--The-Fifth-Sith.html",
+                                        },
+                                    ],
+                                },
+                                {
+                                    text => "Spec / Plan",
+                                    url  => "humour/Queen-Padme-Tales/spec/",
+                                },
+                            ],
+                        },
+                        {
+                            text  => "The 10th Muse",
+                            url   => "humour/The-10th-Muse/",
+                            title => "Greek Mythology Fanfic",
+                            subs  => [
+                                {
+                                    text => "Episodes",
+                                    url  => "humour/The-10th-Muse/episodes/",
+                                    skip => 1,
+                                    subs => [
+                                        {
+                                            text => "Athena Gets Laid",
+                                            url  =>
 "humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.html",
+                                        },
+                                    ],
                                 },
                             ],
                         },

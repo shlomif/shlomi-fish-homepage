@@ -1,0 +1,22 @@
+[%- SET title = "Shlomi Fish’s Stories which are in a usable condition" -%]
+[%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength, and beauty" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro %]
+
+<p>
+These are stories I've written which are in a not-too-usable condition,
+and which I do not have near-terms plans of completing.
+</p>
+
+[% END %]
+
+<section class="long_stories">
+<header>
+<h2 id="list-of-stories">List of Active Stories</h2>
+</header>
+[% PROCESS active_humour_stories_list_text  %]
+</section>
+
+[% END %]

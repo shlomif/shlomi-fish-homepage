@@ -67,29 +67,38 @@ my %reduced_sub_trees = (
                 expand => { @humour_expand, capt => 0, },
                 subs   => [
                     {
-                        text  => "The Enemy",
-                        url   => "humour/TheEnemy/",
-                        title => "The Enemy and How I Helped to Fight It",
-                    },
-                    {
-                        text  => "TOW The Fountainhead",
-                        url   => "humour/TOneW-the-Fountainhead/",
-                        title => "The One with the Fountainhead",
-                    },
-                    {
-                        text  => "Human Hacking Field Guide",
-                        url   => "humour/human-hacking/",
-                        title => "The Human Hacking Field Guide",
-                    },
-                    {
-                        text => "We, the Living Dead",
-                        url  => "humour/Star-Trek/We-the-Living-Dead/",
-                    },
-                    {
-                        text  => "Humanity - The Movie",
-                        url   => "humour/humanity/",
-                        title =>
-                            "Parody of Humanity and Modern Life in Particular",
+                        text => "Usable",
+                        skip => 1,
+                        url  => "humour/stories/usable/",
+                        subs => [
+                            {
+                                text  => "The Enemy",
+                                url   => "humour/TheEnemy/",
+                                title =>
+                                    "The Enemy and How I Helped to Fight It",
+                            },
+                            {
+                                text  => "TOW The Fountainhead",
+                                url   => "humour/TOneW-the-Fountainhead/",
+                                title => "The One with the Fountainhead",
+                            },
+                            {
+                                text  => "Human Hacking Field Guide",
+                                url   => "humour/human-hacking/",
+                                title => "The Human Hacking Field Guide",
+                            },
+                            {
+                                text => "We, the Living Dead",
+                                url  => "humour/Star-Trek/We-the-Living-Dead/",
+                            },
+                            {
+                                text  => "Humanity - The Movie",
+                                url   => "humour/humanity/",
+                                title =>
+"Parody of Humanity and Modern Life in Particular",
+                            },
+                        ],
+
                     },
                 ],
             },

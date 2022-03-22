@@ -101,6 +101,7 @@ class MyTests(html_unit_test.TestCase):
             sect +
             "/ul/li[a[@href='../../humour/']]" +
             "/ul/li[a[@href='../../humour/stories/']]" +
+            "/ul/li[a[@href='../../humour/stories/usable/']]" +
             "/ul/li[a[@href='../../humour/TheEnemy/']]" +
             "/ul/li[a[contains(@href, " +
             "'../../humour/TheEnemy/The-Enemy-Hebrew')]]" +

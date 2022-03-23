@@ -669,6 +669,11 @@ my $_humour_tree_contents = {
                             url  =>
 "humour/bits/true-stories/preventing-a-football-goal/",
                         },
+                        {
+                            text => "Avoiding getting run over by a horse",
+                            url  =>
+"humour/bits/true-stories/avoiding-getting-run-over-by-a-horse/",
+                        },
                     ],
                 },
                 {

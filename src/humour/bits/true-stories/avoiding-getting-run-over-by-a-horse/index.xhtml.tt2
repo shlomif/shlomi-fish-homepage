@@ -1,0 +1,25 @@
+[%- SET title = "Avoiding getting run over by a horse" -%]
+[%- SET desc = title -%]
+[%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<p>
+<b>TODO</b>
+</p>
+
+[% WRAPPER see_also  %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]links.html#motivational_videos">Links to Motivational Videos</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]

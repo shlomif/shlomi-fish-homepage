@@ -7,16 +7,15 @@
 
 [% INCLUDE hhgg_st_tng__about_sect hhgg_html = "0" %]
 
-<h2 id="link-to-text"><a
-href="hitchhiker-guide-to-star-trek-tng.txt">Link to Text</a></h2>
+[% WRAPPER h2_section href = "hitchhiker-guide-to-star-trek-tng.txt" id = "link-to-text" title = "Link to Text" %]
 
 <p>
 The original, mostly unmodified version of the text, as mirrored from elsewhere.
 </p>
 
-<h2 id="htmlised-ver"><a
-href="hitchhiker-guide-to-star-trek-tng-htmlised.html">HTMLised
-Version</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "htmlised-ver" title = "HTMLised Version" href = "hitchhiker-guide-to-star-trek-tng-htmlised.html" %]
 
 <p>
 An HTML version of the screenplay, as rendered by
@@ -34,5 +33,7 @@ Tweaked Screenplay-Text screenplay</a>
 </p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

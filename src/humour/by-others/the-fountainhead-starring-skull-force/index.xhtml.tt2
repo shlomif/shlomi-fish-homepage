@@ -4,7 +4,11 @@
 
 [%- WRAPPER wrap_html -%]
 
+[%- WRAPPER note -%]
+
+<header>
 <h2 id="note">Note</h2>
+</header>
 
 <p>
 This is a moderately famous parody of Ayn Rand's Novel
@@ -13,7 +17,11 @@ whose original link has disappeared, and is hereby restored here
 from <a href="http://blank.org/memory/funny/fountainhead/">a mirror</a>.
 </p>
 
-<h2 id="page"><a href="fh_parody.html">The Parody Page</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "page" title = "The Parody Page" href = "fh_parody.html" %]
+
+[% END %]
 
 [% WRAPPER see_also %]
 

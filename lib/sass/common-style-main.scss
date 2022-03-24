@@ -10,14 +10,15 @@
 
 @include text_document_h_tags_sizes;
 
-:link:hover,
-:visited:hover,
-img.highlight:hover,
-.nav_links img:hover,
-.bk2hp:hover,
-.patreon:hover {
-    background-color: #90ee90;
-
+:link,
+:visited,
+img.highlight,
+.nav_links img,
+.bk2hp,
+.patreon {
+    &:hover {
+        background-color: #90ee90;
+    }
     /* LightGreen */
 }
 

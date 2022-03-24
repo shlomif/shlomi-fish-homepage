@@ -28,13 +28,13 @@ a.back_to_faq {
     nav,
     section,
     &section {
-        @include mysection;
+        @include mysection($left_hover_color: #0b0);
     }
 }
 
 .fancy_sects {
     .sub_section {
-        @include mysection;
+        @include mysection($left_hover_color: #0b0);
     }
     li {
         margin-left: 0;

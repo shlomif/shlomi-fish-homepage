@@ -424,9 +424,9 @@ of "fortune cookies"</a> led to me adopting
 
 [% END %]
 
-[% WRAPPER en  %]
+[% WRAPPER h3_section id = "essays" title = ((shlomif_lang == "en") ? "Essays and Philosophy" : "מסות, מאמרים ופילוסופיה")  %]
 
-<h3 id="essays">Essays and Philosophy</h3>
+[% WRAPPER en  %]
 
 <p>
 Being interested in philosophy and being a capable writer, I started writing
@@ -443,7 +443,6 @@ thoughts (among else)</a>.
 [%- END -%]
 
 [% WRAPPER he  %]
-<h3 id="essays">מסות, מאמרים ופילוסופיה</h3>
 
 <p>
 בשל העניין שלי בפילוסופיה ומכיוון שאני מסוגל לכתוב בצורה טובה,
@@ -481,6 +480,8 @@ personal, one-man, dynamic, philosophy.
 , כאשר ”רינדולפיזם“ הנה, הפילוסופיה הדינמית שהינה אישית, וייחודית לי.
 
 </p>
+[%- END -%]
+
 [%- END -%]
 
 [% WRAPPER en  %]

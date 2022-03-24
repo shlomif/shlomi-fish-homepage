@@ -14,9 +14,11 @@ These are recordings of the songs from the screenplay
 
 <div class="lim_width">
 
-<h2 id="buy_the_fish_shlomif_with_amplified_audio"><a href="http://www.youtube.com/watch?v=Y8IeBG_SSt4">“Buy the Fish” - Amplified Audio</a></h2>
+[% WRAPPER h2_section id = "buy_the_fish_shlomif_with_amplified_audio" title = "“Buy the Fish” - Amplified Audio" href = "http://www.youtube.com/watch?v=Y8IeBG_SSt4" %]
 
 <iframe src="https://www.youtube.com/embed/Y8IeBG_SSt4" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
 
 [% BLOCK old_flash__CANCELLING %]
 <object type="application/x-shockwave-flash"
@@ -27,12 +29,19 @@ data="http://www.youtube.com/v/Y8IeBG_SSt4?color2=FBE9EC&amp;version=3">
 </object>
 [% END %]
 
-<h2 id="shlomif_singing_buy_the_fish_in_english"><a href="http://www.youtube.com/watch?v=xvjBojyWPoE">Shlomi
-Fish Singing “Buy the Fish” in English</a></h2>
+
+[% WRAPPER h2_section id = "shlomif_singing_buy_the_fish_in_english" title = "Shlomi Fish Singing “Buy the Fish” in English" href = "http://www.youtube.com/watch?v=xvjBojyWPoE" %]
 
 <iframe src="https://www.youtube.com/embed/xvjBojyWPoE" allowfullscreen="allowfullscreen"></iframe>
 
+[% END %]
+
+[% WRAPPER credits_sect %]
+
 <p class="small"><a href="http://www.tools4noobs.com/online_tools/youtube_xhtml/">Get your own valid XHTML YouTube embed code</a></p>
+
+[% END %]
+
 </div>
 
 [% END %]

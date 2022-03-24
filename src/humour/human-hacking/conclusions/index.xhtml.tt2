@@ -23,7 +23,7 @@ you’ve read the story because it contains many spoilers.
 
 [% END %]
 
-<h2 id="general-thoughts">General Thoughts</h2>
+[% WRAPPER h2_section id = "general-thoughts" title = "General Thoughts" %]
 
 <p>
 This story sprang to my mind one day, almost fully evolved and in its final
@@ -80,9 +80,11 @@ dislike cynicism, and am not content with doom and gloom. I guess I’d rather
 err on naïvety than on cynicism.
 </p>
 
-<h2 id="reviews">Reviews</h2>
+[% END %]
 
-<h3 id="review--israeli-software-developer">By an Israeli Software Developer</h3>
+[% WRAPPER h2_section id = "reviews" title = "Reviews" %]
+
+[% WRAPPER h3_section id = "review--israeli-software-developer" title = "By an Israeli Software Developer" %]
 
 <p>
 A mid-age software developer friend sent me an E-mail after reading the story
@@ -126,7 +128,9 @@ agree to disagree with him about it, while accepting the fact that Jennifer
 learns programming in such a short time as a known bug in the story.
 </p>
 
-<h3 id="review--usa-foss-programmer">U.S.A. [% my_acronym( "key" => "FOSS",) %] Programmer</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "review--usa-foss-programmer" title = "U.S.A. " _ my_acronym( "key" => "FOSS") _ " Programmer" %]
 
 <p>
 A young U.S. [% my_acronym( "key" => "FOSS",) %] programmer (from Louisiana), who studied in high-school
@@ -135,7 +139,9 @@ really great, but mostly it’s depressing me since I know no people like this
 locally. Still wonderful writing though</q>
 </p>
 
-<h3 id="review--usa-home-schooled-female">U.S.A. Home Schooled Female (L)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "review--usa-home-schooled-female" title = "U.S.A. Home Schooled Female (L)" %]
 
 <p>
 A U.S.-based female teenager who was also interested in Linux and
@@ -162,7 +168,9 @@ conversed with me about the story on [% my_acronym( "key" => "IRC",) %] as follo
 </p>
 </blockquote>
 
-<h3 id="review--modus-operandi">Modus Operandi</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "review--modus-operandi" title = "Modus Operandi" %]
 
 <p>
 Modus Operandi
@@ -170,7 +178,7 @@ Modus Operandi
 a critique of the story to the linux-elitists mailing list</a>. He claimed
 that the story misrepresented the attitude of many American girls, and
 showed a lack of understanding of them. He also claimed that most of my
-target audience where kids similar to what Erisa was at first than those
+target audience were kids similar to what Erisa was at first than those
 similar to Jennifer. Some amendments based on Modus’s criticism, or
 ones reached independently, have been integrated into the final versions
 of the story.
@@ -222,10 +230,12 @@ drastic change that Modus Operandi described.
 <p>
 That put aside, I modified the text a little since the revision he read
 originally in order to resolve some of the plot integrity problems he had
-pointed out, and I thank him for it.
+pointed out, and I thank him for that.
 </p>
 
-<h3 id="los-angeles-based-linux-enthusiast">Los Angeles-based Linux Enthusiast</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "los-angeles-based-linux-enthusiast" title = "Los Angeles-based Linux Enthusiast" %]
 
 <p>
 I’ve a met a teenage Linux enthusiast, who is living in Los Angeles and
@@ -235,7 +245,9 @@ and imaginary, he said <q>[It] seems real.</q>. Later on he told me that the
 story shows that we know a lot about American culture there.
 </p>
 
-<h3 id="livejournal-linux-community">The LiveJournal Linux Community</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "livejournal-linux-community" title = "The LiveJournal Linux Community" %]
 
 <p>
 I’ve <a href="http://community.livejournal.com/linux/1860210.html">posted
@@ -246,7 +258,9 @@ that “I didn’t read it, but there’s too much negativity here, so I’ll sa
 ‘nice work!’” which was encouraging.
 </p>
 
-<h3 id="linuxquestions-general-forum">linuxquestions.org Thread</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "linuxquestions-general-forum" title = "linuxquestions.org Thread" %]
 
 <p>
 <a href="http://www.linuxquestions.org/questions/showthread.php?p=4902086">This
@@ -264,7 +278,9 @@ Nice to see the absence of jocks in such a story.
 To which I replied.
 </p>
 
-<h3 id="opensource-subreddit">/r/opensource Subreddit</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "opensource-subreddit" title = "/r/opensource Subreddit" %]
 
 <p>
 The
@@ -276,5 +292,8 @@ has received some positive reputation, and sparked a discussion between
 <a href="http://www.reddit.com/user/YannAnth">YannAuth</a> and me.
 </p>
 
+[% END %]
+
+[% END %]
 
 [% END %]

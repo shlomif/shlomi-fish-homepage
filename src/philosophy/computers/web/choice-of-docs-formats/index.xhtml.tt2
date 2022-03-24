@@ -36,7 +36,7 @@ Finish Date:
 Last Updated:
 </dt>
 <dd>
-2021-January-06
+24-March-2022
 </dd>
 </dl>
 
@@ -85,7 +85,9 @@ both XHTML 1.x as well as XHTML 5 and HTML 5)
 as well as <a href="https://en.wikipedia.org/wiki/PDF">PDF</a>,
 Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
 <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
-formats. It cannot be directly translated to plain text, but can through
+formats. It can be directly translated to plain text, either
+using <a href="#docbookrx">docbookrx</a>,
+or through
 an intermediate format. POD can be translated into DocBook/XML using
 [% cpan.self_mod( "m" => "Pod::PseudoPod::DocBook", ) %].
 </p>
@@ -294,6 +296,12 @@ line tool to translate DocBook/XML to its end formats.
 <a href="https://weasyprint.org/">weasyprint</a> - a solution for converting
 HTML pages to PDFs, which does not require a headless browser engine and
 implements a subset of CSS.
+</p>
+</li>
+
+<li id="docbookrx">
+<p>
+<a href="https://github.com/asciidoctor/docbookrx">docbookrx: (An early version of) a DocBook to AsciiDoc converter written in Ruby.</a>
 </p>
 </li>
 

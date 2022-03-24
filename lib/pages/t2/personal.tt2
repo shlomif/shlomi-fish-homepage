@@ -484,8 +484,9 @@ personal, one-man, dynamic, philosophy.
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "mental_condition" title = ((shlomif_lang == "en") ? "My Mental Condition" : "מצבי הנפשי") %]
+
 [% WRAPPER en  %]
-<h3 id="mental_condition">My Mental Condition</h3>
 
 <p>
 I had periods of <a href="http://en.wikipedia.org/wiki/Depression_%28mood%29">clinical
@@ -528,8 +529,6 @@ such as my mental condition about myself.)
 
 [% WRAPPER he  %]
 
-<h3 id="mental_condition">מצבי הנפשי</h3>
-
 <p>
 סבלתי בעבר
 <a href="http://he.wikipedia.org/wiki/%D7%93%D7%99%D7%9B%D7%90%D7%95%D7%9F">מדיכאונות
@@ -570,6 +569,8 @@ href="[% base_path %]meta/FAQ/#revealing_incriminating_details">התשובה ה�
 
 [% END %]
 
+[% END %]
+
 [% WRAPPER en  %]
 <hr/>
 
@@ -581,7 +582,6 @@ I hope you enjoy my web-site!
 <i>Shlomi Fish</i>
 </p>
 [%- END -%]
-
 
 
 [% WRAPPER he  %]

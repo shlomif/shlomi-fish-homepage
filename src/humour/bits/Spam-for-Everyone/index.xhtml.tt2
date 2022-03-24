@@ -1,7 +1,6 @@
 [%- SET title = "“Spam for Everyone” - The International Campaign for Accessible Spam" -%]
 [%- SET desc = "“Spam for Everyone” - The International Campaign for Accessible Spam" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -113,7 +112,7 @@ so everyone can enjoy the finest crop of the world’s spam.”.
 
 [% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
-[% license_obj.by_sa_license_british( "year" => "2007", head_tag => "h2", ) %]
+[% license_obj.by_sa_british_blurb( "year" => "2007", head_tag => "h2", ) %]
 
 [% END %]
 

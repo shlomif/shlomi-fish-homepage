@@ -52,11 +52,11 @@ sub _tr
     return Shlomif::Homepage::NavBlocks::Tr->new( {@_} );
 }
 
-my $EmmaWatson_tech_interview = _l(
+my $Emma_Watson_tech_interview = _l(
     inner_html => "Emma Watson Interviewing for a software developer job",
     path       => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
 );
-my $EmmaWatson_visit_to_Gaza = _l(
+my $Emma_Watson_visit_to_Gaza = _l(
     inner_html => "Emma Watson visit to Israel and Gaza",
     path       => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
 );
@@ -87,7 +87,7 @@ my %tr_s = (
         title => "Define Zionism",
         items => [ _fp( path => "philosophy/politics/define-zionism/", ), ],
     ),
-    'EmmaWatson_facts' => _tr(
+    'Emma_Watson_facts' => _tr(
         title => "“Facts”",
         items => [
             _l(
@@ -96,13 +96,13 @@ my %tr_s = (
             ),
         ],
     ),
-    'EmmaWatson_tech_job' => _tr(
-        title => "EmmaWatson Tech Interview",
-        items => [ $EmmaWatson_tech_interview, ],
+    'Emma_Watson_tech_job' => _tr(
+        title => "Emma Watson Tech Interview",
+        items => [ $Emma_Watson_tech_interview, ],
     ),
-    'EmmaWatson_visit_to_Gaza' => _tr(
-        title => "EmmaWatson Visit to Israel &amp; Gaza",
-        items => [ $EmmaWatson_visit_to_Gaza, ],
+    'Emma_Watson_visit_to_Gaza' => _tr(
+        title => "Emma Watson Visit to Israel &amp; Gaza",
+        items => [ $Emma_Watson_visit_to_Gaza, ],
     ),
     'foss_bits' => _tr(
         title => "Ultra-short stories",
@@ -142,7 +142,7 @@ my %tr_s = (
                 path =>
                     "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
             ),
-            $EmmaWatson_tech_interview,
+            $Emma_Watson_tech_interview,
         ],
     ),
     'foss_facts' => _tr(
@@ -309,10 +309,10 @@ my %table_blocks = (
                 _get_tr('selina_mandrake'),
                 _get_tr('buffy_few_good'),
                 _get_tr('muppets_harry_potter'),
-                _get_tr('EmmaWatson_tech_job'),
-                _get_tr('EmmaWatson_visit_to_Gaza'),
+                _get_tr('Emma_Watson_tech_job'),
+                _get_tr('Emma_Watson_visit_to_Gaza'),
                 _subdiv_tr( title => q{Factoids}, ),
-                _get_tr('EmmaWatson_facts'),
+                _get_tr('Emma_Watson_facts'),
             ],
         },
     ),
@@ -340,7 +340,7 @@ my %table_blocks = (
                 _subdiv_tr( title => q{Middle East Politics}, ),
                 _get_tr('the_enemy'),
                 _get_tr('define_zionism'),
-                _get_tr('EmmaWatson_visit_to_Gaza'),
+                _get_tr('Emma_Watson_visit_to_Gaza'),
                 _subdiv_tr( title => q{#SummerNSA} ),
                 _get_tr('summer_nsa'),
                 _get_tr('SummerNSA_effort'),

@@ -7,6 +7,8 @@
 
 <div class="main_text">
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <ul>
 <li>
 <b>Perl</b> - There’s more than one way to do it.
@@ -86,7 +88,13 @@ to decide which way to do it.
 </li>
 </ul>
 
+[% END %]
+
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+
 [% license_obj.by_sa_license_british( "year" => "2002", ) %]
+
+[% END %]
 
 [% WRAPPER see_also  %]
 

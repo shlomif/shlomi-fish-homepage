@@ -25,6 +25,7 @@ a.back_to_faq {
 
 .fancy_sects {
     article,
+    nav,
     section,
     &section {
         @include mysection;
@@ -32,7 +33,6 @@ a.back_to_faq {
 }
 
 .fancy_sects {
-    section,
     .sub_section {
         @include mysection;
     }

@@ -16,7 +16,7 @@
 
 [% INCLUDE lang_switch url_eng="personal.html" url_heb="personal-heb.html" %]
 
-<div class="main_text">
+<div class="fancy_sects main_text">
 
 [% WRAPPER en  %]
 [% INCLUDE picture_tag alt = "Picture of Shlomi Fish", class = "eng", title = "Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr",  %]
@@ -26,8 +26,9 @@
 [% INCLUDE picture_tag alt = "תמונה של שלומי פיש", class = "heb", title = "שלומי פיש לובש את חולצת ה-”סאמרסקול ב-NSA“ שלו - לחצו על התמונה לתמונה גדולה יותר בפליקר",  %]
 [%- END -%]
 
+[% WRAPPER h2_section id = "history" title = ((shlomif_lang == "en") ? "History" : "היסטוריה") %]
+
 [% WRAPPER en  %]
-<h2 id="history">History</h2>
 
 <p>
 My name is Shlomi Fish, I’m a guy, and I was born on 5 May, 1977 in Israel. I
@@ -38,7 +39,6 @@ trips to Europe or North America. I have two younger sisters.
 [%- END -%]
 
 [% WRAPPER he  %]
-<h2 id="history">היסטוריה</h2>
 
 <p>
 שמי הוא שלומי פיש ונולדתי בחמישה במאי, 1977 בישראל. חייתי רוב הזמן בישראל מלבד בין הגילאים
@@ -142,8 +142,10 @@ for some of the things that are wrong in the software industry today.)
 
 [%- END -%]
 
+[% END %]
+
+[% WRAPPER h2_section id = "interests" title = ((shlomif_lang == "en") ? "Interests" : "תחומי עניין") %]
 [% WRAPPER en  %]
-<h2 id="interests">Interests</h2>
 
 <p>
 I am particularly interested in writing, blogging and online and offline
@@ -172,7 +174,6 @@ and very fun and can recommend it to anyone.
 [%- END -%]
 
 [% WRAPPER he  %]
-<h2 id="interests">תחומי עניין</h2>
 
 <p>
 אני מתעניין במיוחד במתמטיקה, מחשבים, פילוסופיה וכתיבה. אני מתכנת מאז היותי בן 10, אבל
@@ -561,6 +562,8 @@ href="[% base_path %]meta/FAQ/#revealing_incriminating_details">התשובה ה�
 פרטים מפלילים על אודותיי כמו מצבי הנפשי.
 </p>
 [%- END -%]
+
+[% END %]
 
 [% WRAPPER en  %]
 <hr/>

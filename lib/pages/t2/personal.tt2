@@ -320,8 +320,9 @@ fortune formats, some short stories (“bits”) and
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "foss_contributions" title = ((shlomif_lang == "en") ? "Open-Source Contributions" : "תרומות קוד פתוח") %]
+
 [% WRAPPER en  %]
-<h3 id="foss_contributions">Open-Source Contributions</h3>
 
 <a href="http://www.catb.org/hacker-emblem/"><img src="personal-page--images/glider.svg" style="height:60px;" class="rfloaty" alt="The FOSS Enthusiasts Emblem"/></a>
 
@@ -342,7 +343,6 @@ section.</a>.
 [%- END -%]
 
 [% WRAPPER he  %]
-<h3 id="foss_contributions">תרומות קוד פתוח</h3>
 
 <a href="http://www.catb.org/hacker-emblem/"><img src="personal-page--images/glider.svg" style="height:60px;" class="rfloaty" alt="סמל חובבי הקוד הפתוח"/></a>
 <p>
@@ -421,6 +421,8 @@ of "fortune cookies"</a> led to me adopting
 <b>TODO : FILL IN</b>
 </p>
 [%- END -%]
+
+[% END %]
 
 [% WRAPPER en  %]
 

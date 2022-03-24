@@ -312,7 +312,7 @@ publicly linked to. Please send comments to
 [% END %]
 
 [% UNLESS xhtml1 %]<header>[% END %]
-<h1>[% title %]</h1>
+<h1>[% h1title || title %]</h1>
 [% UNLESS xhtml1 %]</header>[% END %]
 [%- END -%]
 

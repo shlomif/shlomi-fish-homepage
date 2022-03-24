@@ -5,9 +5,9 @@
 
 [% long_stories.calc_common_top_elems(id => 'pope_died_on_sunday') %]
 
-<h2 id="text">Text of the Story</h2>
+[% WRAPPER h2_section id = "text" title = "Text of the Story" %]
 
-<h3 id="english-text">English Text</h3>
+[% WRAPPER h3_section id = "english-text" title = "English Text" %]
 
 <ul>
 
@@ -33,7 +33,9 @@ intermediate format.</a>
 
 </ul>
 
-<h3 id="hebrew-text">Hebrew Text</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "hebrew-text" title = "Hebrew Text" %]
 
 <ul>
 
@@ -59,7 +61,11 @@ intermediate format.</a>
 
 </ul>
 
-<h2 id="source_repo">Source Repository</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "source_repo" title = "Source Repository" %]
 
 <ul>
 
@@ -70,6 +76,8 @@ intermediate format.</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% WRAPPER see_also %]
 
@@ -112,7 +120,7 @@ about Clarissa Darling from <i>Clarissa Explains It All</i>.
 
 [% END %]
 
-<h2 id="old-notes">Old Notes</h2>
+[% WRAPPER h2_section id = "old-notes" title = "Old Notes" %]
 
 <p>
 <b>Note for 3-April-2005:</b> This story is unrelated to the recent
@@ -121,5 +129,7 @@ Paul II</a>. I wrote most of what you can find here several years ago
 . Here’s <a href="http://groups.yahoo.com/group/hackers-il/message/676">my
 first announcement of its writing</a>. It’s not finished yet.
 </p>
+
+[% END %]
 
 [% END %]

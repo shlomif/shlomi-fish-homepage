@@ -187,8 +187,9 @@ and very fun and can recommend it to anyone.
 </p>
 [%- END -%]
 
+[% WRAPPER h3_section id = "stories" title = ((shlomif_lang == "en") ? "Stories and Humour" : "סיפורים והומור") %]
+
 [% WRAPPER en  %]
-<h3 id="stories">Stories and Humour</h3>
 
 <p>
 Aside from all that, there are my literary works. I wrote
@@ -199,7 +200,6 @@ translated it to English.
 [%- END -%]
 
 [% WRAPPER he  %]
-<h3 id="stories">סיפורים והומור</h3>
 
 <p>
 מלבד כל זאת, כתבתי מספר סיפורים שפרסמתי באינטרנט. כתבתי
@@ -316,6 +316,8 @@ fortune formats, some short stories (“bits”) and
 <a href="[% base_path %]humour/bits/facts/">ואוספים של „עובדות“</a>
 (על אודות צ’אק נוריס וכיוצא בזה.).
 </p>
+[%- END -%]
+
 [%- END -%]
 
 [% WRAPPER en  %]

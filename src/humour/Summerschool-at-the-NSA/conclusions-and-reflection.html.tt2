@@ -1,16 +1,19 @@
 [%- SET title = "Conclusions and Reflection of Summerschool at the NSA" -%]
 [%- SET desc = "Reflection and conclusions about the screenplay Summerschool at the NSA which pities Sarah Michelle Gellar and Summer Glau (= the Hollywood actresses) against the U.S. National Security Agency (NSA)" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'summerschool_at_the_nsa') %]
+
+[% WRAPPER about_sect %]
 
 <p>
 Reflection and conclusion about the screenplay Summerschool at the NSA which
 pities Sarah Michelle Gellar and Summer Glau (= the Hollywood actresses)
 against the U.S. National Security Agency (NSA).
 </p>
+
+[% END %]
 
 [% WRAPPER h2_section id = "my-representation-of-smg-and-sglau" title = "My Representation of Ms. Gellar and Ms. Glau" %]
 

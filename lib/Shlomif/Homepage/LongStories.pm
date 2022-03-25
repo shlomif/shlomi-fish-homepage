@@ -256,13 +256,12 @@ federal government organisation whose estimated annual budget is
 several times their combined worth. Does the NSA actually stand
 a chance?
 </p>
+<p class="summernsa abstract">
+This screenplay is surrealistic realism and takes place in April 2013. It is
+far-fetched, but could actually happen. Very farfetched, but could happen.
+</p>
 EOF
         entry_extra_html => <<'EOF',
-<p>
-This screenplay is surrealistic realism and takes place in
-April 2013. Very farfetched, but could happen.
-</p>
-
 <p>
 I see it as a reflection and a modernisation of Ayn Rand’s novel
 <a href="https://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas

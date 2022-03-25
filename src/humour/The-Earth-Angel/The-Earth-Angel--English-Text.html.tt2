@@ -2,21 +2,22 @@
 [%- SET title = "The Earth Angel - English Text" -%]
 [%- SET desc = "The Earth Angel - English Text" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<p><b>By:</b> Shlomi Fish</p>
-
-<h2 id="text">The Text</h2>
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <div class="story">
 
-<h3 id="the-story">The Text</h3>
+[% WRAPPER h3_section id = "the-story" title = "The Text" %]
 
 [% path_slurp("docbook/5/rendered/The-Earth-Angel-english.xhtml") %]
 
+[% END %]
+
 </div>
+
+[% END %]
 
 [% END %]

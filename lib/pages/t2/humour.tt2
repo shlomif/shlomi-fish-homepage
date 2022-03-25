@@ -139,7 +139,10 @@ and quotes page</a>.
 <h2 id="list">רשימת אמרות השפר</h2>
 [% END %]
 
+<section>
+<header>
 [% IF lang == "heb" %][% INCLUDE heb_list_h2 %][% ELSE %][% INCLUDE eng_list_h2  %][% END %]
+</header>
 
 <div class="aphorisms wrap-me lim_width limit_imgs_width">
 
@@ -3256,6 +3259,8 @@ originated from its films' adaptation might add a little to the irony.
 [%- END -%]
 
 </div>
+
+</section>
 
 <div class="english">
 

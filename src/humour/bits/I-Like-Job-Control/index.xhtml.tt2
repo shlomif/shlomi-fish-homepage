@@ -17,7 +17,7 @@ few years ago, but I had the idea for the chorus a long time beforehand.
 
 [% END %]
 
-<h2 id="lyrics">Lyrics</h2>
+[% WRAPPER h2_section id = "lyrics" title = "Lyrics" %]
 
 <p>
 I logged to vipe and<br/>
@@ -122,8 +122,12 @@ So kill another pid with this UID...
 [And repeat to the end.]
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2000", ) %]
+
+[% END %]
 
 [% END %]

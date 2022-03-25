@@ -40,8 +40,10 @@
 
 [% BLOCK facts__header_tabs %]
 
-<h2 id="facts">[% h %]</h2>
+[% WRAPPER h2_section id = "facts" title = h %]
 
 [% INCLUDE facts__en_he_tabs id_base=id_base %]
+
+[% END %]
 
 [% END %]

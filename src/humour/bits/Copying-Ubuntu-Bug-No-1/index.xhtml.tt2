@@ -1,8 +1,9 @@
 [%- SET title = "Copying Ubuntu Bug No. 1" -%]
 [%- SET desc = "“Ubuntu can’t have all the fun only for itself”, open source distributors are saying as they rush to copy its Bug No. 1 titled “Microsoft has a majority market share”." -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <b>Published on:</b> 23-September-2010
@@ -89,7 +90,9 @@ releases, and Ubuntu releasing new versions with such a grave bug still
 open only amplifies the problem.”
 </p>
 
-[% WRAPPER h2_section id="licence" title="Licence"%]
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 <p>
 <!--Creative Commons License-->
@@ -112,7 +115,7 @@ To attribute, please mention my name, and link to this page and
 
 [% END %]
 
-[% WRAPPER h2_section id="links" title="Links"%]
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -131,7 +134,6 @@ for Ricers”</a>.
 </li>
 
 </ul>
-
 
 [% END %]
 

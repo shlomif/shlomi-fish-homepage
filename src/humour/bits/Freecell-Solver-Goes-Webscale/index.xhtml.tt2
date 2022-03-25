@@ -2,8 +2,9 @@
 [%- SET desc = "Freecell Solver™ Goes Webscale - another innovation from Freecell Solver Enterprises™" -%]
 [%- SET more_keywords = "freecell, solver, NoSQL, April Fools Day, webscale, solitaire, games, databases, hash tables, binary tree, optimization" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <b>1 April, 2011, Tel Aviv, Israel:</b>
@@ -46,6 +47,8 @@ Expect the upcoming availability of Freecell Solver™ Webscale™ Edition from
 the <a href="http://fc-solve.shlomifish.org/">homepage</a> of Freecell Solver™.
 </p>
 
+[% END %]
+
 [% WRAPPER see_also %]
 
 <ul>
@@ -67,6 +70,5 @@ it so</a>.
 </ul>
 
 [% END %]
-
 
 [% END %]

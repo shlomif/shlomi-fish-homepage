@@ -1,8 +1,9 @@
 [%- SET title = "Announcing New Israeli Usergroups" -%]
 [%- SET desc = "Announcing New Israeli Usergroups: Tel Aviv cat mongers, Haifa echo chamberists, Jerusalem true believers…" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <b>From:</b> Shlomi Fish<br />
@@ -71,7 +72,9 @@ Best regards,
 — Shlomi Fish
 </p>
 
-<h2 id="about">About</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "about" title = "About" %]
 
 <p>
 This was originally written as
@@ -81,5 +84,6 @@ on 1 April, 2013, and sparked some discussion. It parodies the proliferation
 of over-specialised user groups in the Tel Aviv area as of its writing.
 </p>
 
+[% END %]
 
 [% END %]

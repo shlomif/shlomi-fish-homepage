@@ -18,7 +18,7 @@ in case it will make you chuckle.
 
 [%- END -%]
 
-<h2 id="content">The Content</h2>
+[% WRAPPER h2_section id = "content" title = "The Content" %]
 
 <img src="astronaut.png" alt="NASA Astronaut"/><br/>
 <p>
@@ -54,7 +54,7 @@ COBOL has its own modern web-framework:
 
 <hr/>
 
-<h3 id="other-people-say">What other people say</h3>
+[% WRAPPER h3_section id = "other-people-say" title = "What other people say" %]
 
 <!--
 Taken from: http://en.wikipedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg .
@@ -137,6 +137,10 @@ KTHXBYE
 
 <hr/>
 
+[% END %]
+
+[% WRAPPER h3_section id = "more-features" title = "More of COBOL's Exciting Features" %]
+
 <p>
 COBOL has an Object-Oriented Programming extension called
 “ADD 1 TO COBOL GIVING COBOL”.
@@ -182,7 +186,11 @@ You name it - COBOL doesn’t have it. Get rid of all the cruft, and you only
 have what you need to get the job done!
 </p>
 
-<h2 id="attribution">Attribution (Credits)</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "attribution" title = "Attribution (Credits)" %]
 
 <ol>
 
@@ -221,11 +229,15 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 
 </ol>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2010", ) %]
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -261,5 +273,6 @@ English Wikipedia</a> by <a href="http://commons.wikimedia.org/wiki/User:Dmcginn
 </li>
 </ul>
 
+[% END %]
 
 [% END %]

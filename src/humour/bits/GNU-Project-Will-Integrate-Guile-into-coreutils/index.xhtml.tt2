@@ -1,8 +1,9 @@
 [%- SET title = "The GNU Project Will Integrate GNU Guile into GNU coreutils" -%]
 [%- SET desc = "The GNU Project Will Integrate GNU Guile into GNU coreutils" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <img src="GNU-Guile-logo.min.svg" class="h rfloaty" alt="GNU Guile Logo"/>
 
@@ -35,7 +36,9 @@ Torvalds was not available for comments about the proposal to integrate
 GNU Guile into the Linux kernel.
 </p>
 
-[% WRAPPER h2_section id="about" title="About"%]
+[% END %]
+
+[% WRAPPER h2_section id = "about" title = "About" %]
 
 <p>
 This was originally <a href="http://shlomif-tech.livejournal.com/67311.html">a
@@ -57,7 +60,7 @@ post</a> on one of my blogs.
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 <p>
 This document is copyright by <a href="http://www.shlomifish.org/">Shlomi

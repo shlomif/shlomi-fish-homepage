@@ -1,11 +1,9 @@
 [%- SET title = "“Cracka’s Paradise”" -%]
 [%- SET desc = "A geek parody of Coolio’s song “Gangsta’s Paradise”." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]
-
 
 <p>
 This is a geek parody of Coolio’s
@@ -16,7 +14,7 @@ it.
 
 [% END %]
 
-<h2 id="lyrics">Lyrics</h2>
+[% WRAPPER h2_section id = "lyrics" title = "Lyrics" %]
 
 <p>
 As I surf through the cable of the shadow of death,<br/>
@@ -58,9 +56,12 @@ that the ones we hack,<br/>
 are you and me?
 </p>
 
-<h2 id="license">Copyright and Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2008", ) %]
 
+[% END %]
 
 [% END %]

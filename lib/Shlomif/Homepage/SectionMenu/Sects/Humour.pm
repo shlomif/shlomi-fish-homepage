@@ -551,10 +551,6 @@ my $_humour_tree_contents = {
                     url => "humour/bits/How-many-Wikipedia-Editors/",
                 },
                 {
-                    text => "Announcing Freecell Solver™ Enterprise Edition",
-                    url  => "humour/bits/Freecell-Solver-Enterprise-Edition/",
-                },
-                {
                     text => "COBOL, the New Age Programming Language",
                     url  =>
                         "humour/bits/COBOL-the-New-Age-Programming-Language/",
@@ -579,6 +575,10 @@ my $_humour_tree_contents = {
                     text  => "Can I SCO Now?",
                     url   => "humour/bits/Can-I-SCO-Now/",
                     title => "Another Incomplete Geek Song",
+                },
+                {
+                    text => "Announcing Freecell Solver™ Enterprise Edition",
+                    url  => "humour/bits/Freecell-Solver-Enterprise-Edition/",
                 },
                 {
                     text => "Freecell Solver™ Goes Webscale",

@@ -5,6 +5,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <p>
 <b>1 April, 2017, Tel Aviv, Israel:</b> GitHub Inc. is proud to announce that
 their flagship text editor <a href="https://en.wikipedia.org/wiki/Atom_%28text_editor%29">Atom</a> was finally able to edit a file sized 2,000,001 (= 2 million
@@ -60,6 +62,8 @@ window, use it to run a <a href="http://bellard.org/jslinux/">JavaScript x86 emu
 “We hope that will be enough.” GitHub say as they embark on the remarkable task
 ahead.
 </p>
+
+[% END %]
 
 [% WRAPPER see_also %]
 

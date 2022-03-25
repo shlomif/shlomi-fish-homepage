@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <p>
 <b>1 April, 2015, Tel Aviv, Israel:</b> Today, the World Wide Web Consortium
 (W3C) announced the immediate availability of the new version of the web —
@@ -72,6 +74,8 @@ in C, using the Microsoft Visual C++ compiler.
 The W3C and the “HTML 6” development team recommend that everyone convert
 their web sites to the new version as soon as possible.
 </p>
+
+[% END %]
 
 [% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 

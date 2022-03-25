@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <p>
 <b>1 April, 2014, Tel Aviv, Israel:</b>
 Google announced today that following its popular decision to discontinue
@@ -39,6 +41,8 @@ The same Google spokesman also noted that Google is considering to discontinue
 <a href="http://en.wikipedia.org/wiki/AdSense">Google AdSense</a> and
 AdWords, because they too are proving to undermine its profitability.
 </p>
+
+[% END %]
 
 [% WRAPPER h2_section id="license" title="Copyright and Licence"%]
 

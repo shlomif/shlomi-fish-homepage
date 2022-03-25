@@ -24,7 +24,7 @@ GitHub</a>
 
 [% default_toc %]
 
-<h2 id="licence">Licence</h2>
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 <p>
 The <i>The Earth Angel</i>’s Novella and Ideas are made available under the
@@ -34,7 +34,9 @@ option any later version of this licence)</a>. It is copyright by
 <a href="http://www.shlomifish.org/">Shlomi Fish</a>, 2013.
 </p>
 
-<h2 id="sources_of_inspiration">Sources of Inspiration</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
 
@@ -44,7 +46,9 @@ TODO : Fill in.
 
 </ul>
 
-<h2 id="thanks">Thanks and Acknowledgements</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks and Acknowledgements" %]
 
 <ul>
 
@@ -54,7 +58,9 @@ TODO : Fill in.
 
 </ul>
 
-<h2 id="resources">Resources</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "resources" title = "Resources" %]
 
 <ul>
 <li>
@@ -63,6 +69,9 @@ entry in my weblog</a> about the history and motivation of this story.
 </li>
 </ul>
 
+[% END %]
+
+[% BLOCK removed %]
 <script>
 $(function() {
     $("#previous_vers_accordion").accordion({
@@ -72,7 +81,6 @@ $(function() {
 });
 </script>
 
-[% BLOCK removed %]
 <div id="previous_vers_accordion">
 
 <h2 id="previous-vers">Previous Versions</h2>

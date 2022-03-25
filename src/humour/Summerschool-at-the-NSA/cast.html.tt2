@@ -7,18 +7,20 @@
 
 [% default_toc %]
 
-<h2 id="about">About</h2>
+[% WRAPPER about_sect  %]
 
 <p>
 On this page, I would like to note who I think should be the cast for some
 of the characters of <i>Summerschool at the NSA</i>.
 </p>
 
-<h2>The Cast</h2>
+[%- END -%]
 
-<h3 id="cast__direction">Direction: <a href="http://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris</a></h3>
+[% WRAPPER h2_section id = "the-cast" title = "The Cast" %]
 
-<img src="[% base_path %]humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia" class="story_logo chuck_norris"/>
+[% WRAPPER h3_section id = "cast__direction" title = "Direction: <a href=\"http://en.wikipedia.org/wiki/Chuck_Norris\">Chuck Norris</a>" %]
+
+<img src="[% base_path %]humour/bits/facts/images/chuck-norris-1.jpg" alt="Photo of Chuck Norris from the English Wikipedia"/>
 
 <p>
 Norris is an excellent actor, and director of action films and has recently
@@ -28,27 +30,33 @@ became a bigger star than he ever was and the "alpha male". I want him to
 direct <i>Summerschool at the NSA</i> which is all about action.
 </p>
 
-<h3 id="cast__sglau">Summer Glau: either <a href="http://en.wikipedia.org/wiki/Summer_Glau">herself</a> or <a href="http://en.wikipedia.org/wiki/Megan_Fox">Megan Fox</a> (as fallback)</h3>
+[% END %]
 
-<img src="[% base_path %]humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia" class="story_logo summer_glau"/>
-<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/megan-fox-1.jpg" alt="Photo of Megan Fox from the English Wikipedia" class="story_logo summer_glau"/>
+[% WRAPPER h3_section id = "cast__sglau" title = "Summer Glau: either <a href=\"http://en.wikipedia.org/wiki/Summer_Glau\">herself</a> or <a href=\"http://en.wikipedia.org/wiki/Megan_Fox\">Megan Fox</a> (as fallback)" %]
+
+<img src="[% base_path %]humour/bits/facts/images/summer-glau-1.jpg" alt="Photo of Summer Glau from the English Wikipedia"/>
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/megan-fox-1.jpg" alt="Photo of Megan Fox from the English Wikipedia"/>
 
 <p>
 If Summer can play herself, then so be it, but if not, then I believe Fox can
 be a good substitute, because she’s a great actress.
 </p>
 
-<h3 id="cast__smg">Sarah Michelle Gellar: <a href="http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Herself</a></h3>
+[% END %]
 
-<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/smg-1.jpg" alt="Photo of Sarah Michelle Gellar from the English Wikipedia" class="story_logo sm_gellar"/>
+[% WRAPPER h3_section id = "cast__smg" title = "Sarah Michelle Gellar: <a href=\"http://en.wikipedia.org/wiki/Sarah_Michelle_Gellar\">Herself</a>" %]
+
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/smg-1.jpg" alt="Photo of Sarah Michelle Gellar from the English Wikipedia"/>
 
 <p>
 A bit obvious, right?
 </p>
 
-<h3 id="cast__waitress">The Waitress: <a href="http://en.wikipedia.org/wiki/Jennifer_Lawrence">Jennifer Lawrence</a></h3>
+[% END %]
 
-<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/jenn-lawrence-1.jpg" alt="Photo of Jennifer Lawrence from the English Wikipedia" class="story_logo jenn_law"/>
+[% WRAPPER h3_section id = "cast__waitress" title = "The Waitress: <a href=\"http://en.wikipedia.org/wiki/Jennifer_Lawrence\">Jennifer Lawrence</a>" %]
+
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/jenn-lawrence-1.jpg" alt="Photo of Jennifer Lawrence from the English Wikipedia"/>
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Sic_transit_gloria_mundi">Sic
@@ -57,7 +65,7 @@ autobiography: "Life according to Jennifer Lawrence" subtitled "You used to
 be Sarah Michelle who?!!".
 </p>
 
-<h4 id="cast__waitress__backup">The Waitress backup: <a href="https://www.youtube.com/channel/UCrY87RDPNIpXYnmNkjKoCSw">Alex G</a></h4>
+[% WRAPPER h4_section id = "cast__waitress__backup" title = "The Waitress backup: <a href=\"https://www.youtube.com/channel/UCrY87RDPNIpXYnmNkjKoCSw\">Alex G</a>" %]
 
 <p>
 Lawrence didn't need my help in getting de-Alpha-Femalized - see <a href="https://en.wikipedia.org/wiki/ICloud_leaks_of_celebrity_photos">Celebgate</a>. But she
@@ -82,9 +90,13 @@ that there could not be two at the same time!
 Also, RIP <a href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina Grimmie</a>. You were phenomenal and my favourite for being the next The Hacker Monarch after Summer Glau but you developed arrogance, and became too busy to think and introspect and collaborate with fellow YouTubers and so died from what killed <a href="https://en.wikipedia.org/wiki/Socrates">Socrates</a>, <a href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo</a> and <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a> among others. Wish I would have noticed and warned you in time.
 </p>
 
-<h3 id="cast__andrew">Andrew: <a href="http://en.wikipedia.org/wiki/Chris_Tucker">Chris Tucker</a></h3>
+[% END %]
 
-<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/chris-tucker-1.jpg" alt="Photo of Chris Tucker from the English Wikipedia" class="story_logo chris_tucker"/>
+[% END %]
+
+[% WRAPPER h3_section id = "cast__andrew" title = "Andrew: <a href=\"http://en.wikipedia.org/wiki/Chris_Tucker\">Chris Tucker</a>" %]
+
+<img src="[% base_path %]humour/Summerschool-at-the-NSA/images/chris-tucker-1.jpg" alt="Photo of Chris Tucker from the English Wikipedia"/>
 
 <p>
 I recall seeing Tucker play on
@@ -93,9 +105,13 @@ Linings Playbook</i></a> and feels that the role of Andrew the soldier is
 similar enough to his role there.
 </p>
 
+[%- END -%]
+
 <div class="cl"/>
 
 
 </div>
+
+[%- END -%]
 
 [% END %]

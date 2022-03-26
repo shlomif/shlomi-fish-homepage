@@ -478,6 +478,7 @@ to help Vader, and he encouraged her to do so. On the surface, she is happy:
 </p>
 
 <ul>
+
 <li>
 <p>
 She is the richest person in Naboo and one of the richest women in the galaxy.
@@ -500,6 +501,7 @@ and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</
 are the known extant members.
 </p>
 </li>
+
 </ul>
 
 <p>
@@ -542,9 +544,8 @@ believe are some kind of trick.
 
 <li>
 <p>
-And her biggest pet
-peeve: her bank balance which keeps getting larger, despite her many attempts
-to reduce it.
+And her biggest pet peeve: her positive bank balance which keeps getting
+larger, despite her many attempts to reduce it.
 </p>
 </li>
 

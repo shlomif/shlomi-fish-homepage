@@ -32,7 +32,7 @@ use VimIface                                 ();
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
-my $IS_HUMOUR_RE = qr#\A@{[ get_is_humour_re()]}#;
+my $IS_HUMOUR_RE = qr#\A@{[ get_is_humour_re() ]}#;
 
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;

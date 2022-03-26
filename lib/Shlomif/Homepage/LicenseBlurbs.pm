@@ -57,8 +57,10 @@ sub by_sa_license_british
 
     my $head_tag = $args->{head_tag} // 'h3';
 
-    return qq#<$head_tag id="license">Copyright and Licence</$head_tag>#
-        . $self->by_sa_british_blurb($args);
+    return
+qq#<section><header><$head_tag id="license">Copyright and Licence</$head_tag></header>#
+        . $self->by_sa_british_blurb($args)
+        . qq#</section>#;
 }
 
 sub by_british_blurb

@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[%- WRAPPER intro -%]
+
 [% PROCESS emma_watson_intro  %]
 
 <p>
@@ -10,6 +12,8 @@ Now the question is: what will happen if she decides to visit the
 <a href="http://en.wikipedia.org/wiki/Gaza_envelope">Gaza envelope</a>
 and the Gaza strip?
 </p>
+
+[% END %]
 
 [% default_toc %]
 

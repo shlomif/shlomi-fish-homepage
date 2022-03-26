@@ -1,8 +1,9 @@
 [%- SET title = "Humorous Creations by Other People" -%]
 [%- SET desc = "Shlomi Fish’s mirrors and restorations of humorous works by other people" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[%- WRAPPER intro -%]
 
 <p>
 These are works of humour by other people that are kept here for
@@ -10,7 +11,9 @@ posterity. Mostly they are works that have disappeared from the Internet,
 and could no longer be found.
 </p>
 
-<h2 id="list">The List</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "list" title = "The List" %]
 
 <ul>
 
@@ -152,5 +155,7 @@ hired like programmers?”</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

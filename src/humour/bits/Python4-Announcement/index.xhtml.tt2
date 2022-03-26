@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <img src="Python_logo_and_wordmark.min.svg" class="h rfloaty" alt="Python Logo" />
 
 <p>
@@ -59,6 +61,8 @@ The foundation advises all Python developers to migrate their code to Python
 of <a href="https://pypi.org/project/six/">six.py</a> called "twentyfour.py"
 (24 = 2×3×4) to write code which is compatible with both versions.
 </p>
+
+[% END %]
 
 [% WRAPPER see_also %]
 

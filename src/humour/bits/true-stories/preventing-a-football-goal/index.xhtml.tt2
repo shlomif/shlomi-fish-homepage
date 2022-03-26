@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <p>
 When I was in high school, some of my friends, their family members
 and I used to play <a href="https://en.wikipedia.org/wiki/Association_football">football ("soccer")</a> together. During one game, one member
@@ -16,6 +18,8 @@ stopped running.
 However, I ran quickly towards the goalposts, and was able to divert the ball
 by kicking it in mid-air, thus preventing a goal. So the lesson is to not give up too easily.
 </p>
+
+[% END %]
 
 [% WRAPPER see_also  %]
 

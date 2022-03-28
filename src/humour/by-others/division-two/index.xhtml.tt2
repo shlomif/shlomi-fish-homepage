@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 Division Two magazine was a parodical site that used to reside at
@@ -15,6 +15,10 @@ and am mirroring it <a href="[% d2url %]">at
 [% d2url %]</a>. Enjoy!
 </p>
 
-<h2 id="mirror"><a href="[% d2url %]">The Mirror</a></h2>
+[% END %]
+
+[% WRAPPER h2_section id = "mirror" title = "The Mirror" href = d2url %]
+
+[% END %]
 
 [% END %]

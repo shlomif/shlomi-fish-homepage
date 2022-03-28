@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This bit appeared
@@ -13,7 +13,9 @@ This bit appeared
 original location</a> which now appears to be down.
 </p>
 
-<h2 id="text">The Text</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <i>
@@ -93,5 +95,7 @@ That is why, when the stars are out, they are visible, but when the
 lights are out, they are invisible. And why, when I wind up my watch,
 I start it, but when I wind up this essay, I end it.
 </p>
+
+[% END %]
 
 [% END %]

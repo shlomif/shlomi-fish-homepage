@@ -4,10 +4,13 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 <p>
 This bit appeared <a href="http://web.archive.org/web/20070329063414/http://www.drivl.com/posts/view/700">on drivl.com</a> and is mirrored here.
 </p>
+
+[% END %]
+
 <h2>How to Make Square Corners with CSS</h2>
         <div id="bottom">
             <div id="content">

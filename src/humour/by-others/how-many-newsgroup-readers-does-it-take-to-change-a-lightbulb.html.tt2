@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 I once got this bit in an email, and I do not know who originated it. There
@@ -12,7 +12,9 @@ is at least one variation of it on the web. I’m putting it here for
 posterity.
 </p>
 
-<h2>How many forum members does it take to change a light bulb?</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "the-text" title = "How many forum members does it take to change a light bulb?" %]
 
 <ul>
 
@@ -120,5 +122,7 @@ it all over again.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

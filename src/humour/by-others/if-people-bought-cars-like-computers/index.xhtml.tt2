@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 I remember I saw this bit on the Olde Internet, and found it
@@ -12,9 +12,11 @@ I remember I saw this bit on the Olde Internet, and found it
 and decided to mirror it here as well since I like it so much.
 </p>
 
+[% END %]
+
 <div class="humor bit ppl_bought_cars">
 
-<h2 id="text">The Text</h2>
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <b>General Motors doesn't have a "help line" for people who don't know how to
@@ -71,5 +73,7 @@ CUSTOMER:  "I'm not a technical person!  I just want to go places in my car!"
 </p>
 
 </div>
+
+[% END %]
 
 [% END %]

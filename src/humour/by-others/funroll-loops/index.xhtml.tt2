@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="about">About</h2>
+[% WRAPPER h2_section id = "about" title = "About" %]
 
 <p>
 funroll-loops.info is a web page that collects amusing quotes from users
@@ -13,9 +13,13 @@ badly, so I decided to mirror it here, in order to possibly salvage it
 from oblivion.
 </p>
 
-<h3 id="mirror"><a href="Gentoo-is-Rice.html">Mirror</a></h3>
+[% WRAPPER h3_section id = "mirror" title = "Mirror" href = "Gentoo-is-Rice.html" %]
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -38,5 +42,7 @@ from oblivion.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

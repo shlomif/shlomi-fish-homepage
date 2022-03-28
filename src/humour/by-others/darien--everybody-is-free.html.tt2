@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This is a bit written by Darien (whose blog used to be on
@@ -13,7 +13,9 @@ This is a bit written by Darien (whose blog used to be on
 is placed here for posterity.
 </p>
 
-<h2 id="itself">Everybody’s Free (to Ping Timeout) - by Darien</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "itself" title = "Everybody’s Free (to Ping Timeout) - by Darien" %]
 
 <p>Ladies and gentlemen of the class of IRC:<br />
 Get chanops</p>
@@ -82,5 +84,7 @@ the long-term benefits of chanops have been proved by netadmins, while the rest 
 <p>Be careful whose warez you solicit, but be patient with those who supply it. Warez is a form of piracy; dispensing it is a way of fishing useful software off the net, cracking it, putting it in a RAR file, and trading it online far more than it&#8217;s worth.</p>
 
 <p>But trust me on the chanops. </p>
+
+[% END %]
 
 [% END %]

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This collection of graduate student jokes used to live at
@@ -14,6 +14,10 @@ student, but I have still found it funny.
 </p>
 
 <hr />
+
+[% END %]
+
+[% WRAPPER h2_section id = "toc" title = "Table of Contents" %]
 
 <ol>
 <li><a href="#know">You know you're a grad student when...</a> </li>
@@ -32,7 +36,9 @@ student, but I have still found it funny.
 
 <hr />
 
-<h2 id="know">You know you're a grad student when...</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "know" title = "You know you're a grad student when..." %]
 
 <ul class="circle">
 <li>you can identify universities by their internet domains. </li>
@@ -84,8 +90,10 @@ student, but I have still found it funny.
 
 <hr />
 
+[% END %]
 
-<h2 id="ten">The Top Ten Lies Told by Graduate Students</h2>(according to the Harvard Crimson)
+
+[% WRAPPER h2_section id = "ten" title = "The Top Ten Lies Told by Graduate Students (according to the Harvard Crimson)" %]
 
 <ol class="plain">
 <li><b>10.</b> It doesn't bother me at all that my college roommate is making $80,000 a year on Wall Street. </li>
@@ -102,9 +110,11 @@ student, but I have still found it funny.
 
 <hr />
 
+[% END %]
 
 
-<h2 id="five">Top Five Lies Told by Teaching Assistants:</h2>
+
+[% WRAPPER h2_section id = "five" title = "Top Five Lies Told by Teaching Assistants:" %]
 
 <ol class="plain">
 <li><b>5.</b> I'm not going to grant any extensions. </li>
@@ -116,8 +126,10 @@ student, but I have still found it funny.
 
 <hr />
 
+[% END %]
 
-<h2 id="truth">The truth about grad students, post-docs, and professors</h2>
+
+[% WRAPPER h2_section id = "truth" title = "The truth about grad students, post-docs, and professors" %]
 
 <p>
 A grad student, a post-doc, and a professor are walking through a city park
@@ -152,8 +164,10 @@ The professor says, "I want those guys back in the lab after lunch."
 
 <hr />
 
+[% END %]
 
-<h2 id="diss">Dissertation Humour</h2>
+
+[% WRAPPER h2_section id = "diss" title = "Dissertation Humour" %]
 
 <p>
 One sunny day, a rabbit came out of her hole in the ground to enjoy the fine weather. The day was so nice that she became careless and a fox snuck up behind her and caught her.
@@ -258,13 +272,14 @@ The title of your dissertation doesn't matter. The subject doesn't matter. The r
 
 <hr />
 
+[% END %]
+
+
+[% WRAPPER h2_section id = "tenure" title = "Top ten reasons why God never received tenure:" %]
 
 <p>
 You are probably familiar with the following, based on a column in Ann Landers:
 </p>
-
-
-<h2 id="tenure">Top ten reasons why God never received tenure:</h2>
 
 <ol>
 <li>He never got a Ph.D. </li>
@@ -279,7 +294,9 @@ You are probably familiar with the following, based on a column in Ann Landers:
 <li>He spent too much time teaching and not enough time doing research. </li>
 </ol>
 
-<h2 id="damn">Top ten reasons why He doesn't give a damn:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "damn" title = "Top ten reasons why He doesn't give a damn:" %]
 
 <ol>
 <li>He's the boss. </li>
@@ -298,7 +315,9 @@ You are probably familiar with the following, based on a column in Ann Landers:
 This next list is rather obviously <em>not</em> from Ann Landers:
 </p>
 
-<h2 id="phd">Why God never received a Ph.D.</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "phd" title = "Why God never received a Ph.D." %]
 
 <ol>
 <li>He had only one major publication. </li>
@@ -322,8 +341,10 @@ This next list is rather obviously <em>not</em> from Ann Landers:
 
 <hr />
 
+[% END %]
 
-<h2 id="bloop">Student Bloopers</h2>
+
+[% WRAPPER h2_section id = "bloop" title = "Student Bloopers" %]
 
 <p>
 This is a compilation of actual (ALLEGED) student bloopers collected by teachers.  Grad students who TA will probably NOT be surprised by any of them.
@@ -366,8 +387,10 @@ his career suffered a dramatic decline. </li>
 
 <hr />
 
+[% END %]
 
-<h2 id="barbie">GET GRADUATE SCHOOL BARBIE (TM)</h2>
+
+[% WRAPPER h2_section id = "barbie" title = "GET GRADUATE SCHOOL BARBIE (TM)" %]
 
 <p>
 Graduate School Barbie comes in two forms: Delusional Master's Barbie (tm)
@@ -466,8 +489,10 @@ throat.
 
 <hr />
 
+[% END %]
 
-<h2 id="ling">Linguistics for Academicians and Fellow Travelers</h2>
+
+[% WRAPPER h2_section id = "ling" title = "Linguistics for Academicians and Fellow Travelers" %]
 
 <p>
 The following list of phrases and their definitions might help you understand the mysterious language of science and medicine. These special phrases are also applicable to anyone working on a Ph.D. dissertation or academic paper anywhere!
@@ -498,7 +523,9 @@ The following list of phrases and their definitions might help you understand th
 
 <hr />
 
-<h2 id="dip">University Diplomas!</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "dip" title = "University Diplomas!" %]
 
 <p>
 Why go through all the bother it takes to get a degree from an <em>accredited</em> institution?
@@ -577,5 +604,7 @@ CALL 1-602-XXX-XXXX
 Call 24 hours a day, 7 days a week, including
 Sundays and holidays.
 </pre>
+
+[% END %]
 
 [% END %]

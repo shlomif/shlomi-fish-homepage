@@ -17,7 +17,7 @@
 </p>
 </blockquote>
 
-<h2 id="links">קישורים</h2>
+[% WRAPPER h2_section id = "links" title = "קישורים" %]
 
 <ul>
 
@@ -30,6 +30,8 @@
 </li>
 
 </ul>
+
+[%- END -%]
 
 [%- END -%]
 

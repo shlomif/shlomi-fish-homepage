@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 I saw this bit on the Internet, and found it
@@ -13,9 +13,11 @@ rahul.net</a>
 and decided to mirror it here as well since I like it so much.
 </p>
 
+[% END %]
+
 <div class="humor bit toaster_vs_cs">
 
-<h2 id="text">The Text</h2>
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 
 <p>
@@ -121,6 +123,9 @@ happily ever after.
 <p>
 (Unknown originator.)
 </p>
+
+[%- END -%]
+
 </div>
 
 [% END %]

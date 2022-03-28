@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This bit appeared on Pete Lacey's blog and is mirrored from
@@ -12,7 +12,9 @@ This bit appeared on Pete Lacey's blog and is mirrored from
     harmful stuff page</a>.
 </p>
 
-<h2>The S stands for Simple</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "text" title = "The S stands for Simple" %]
 
 <p><em>By Pete Lacey.</em></p>
 
@@ -176,5 +178,7 @@ simple. That’s what the ‘S’ stood for.”</p>
 <p><strong>Dev</strong>: (blink)</p>
 
 <p><strong>SG</strong>: Let me tell you about UDDI.</p>
+
+[% END %]
 
 [% END %]

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This page was taken from
@@ -13,7 +13,9 @@ on Debunking 911</a>, which in turn was taken from the now defunct Websurdity
 site. Feel free to mirror it.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -46,8 +48,9 @@ its own right.
 </li>
 </ul>
 
+[% END %]
 
-<h2 id="text">Text</h2>
+[% WRAPPER h2_section id = "text" title = "Text" %]
 
 <div class="page death_star_frame limit_imgs_width lim_width">
 <div id="content">
@@ -64,7 +67,7 @@ Wars as an example. This story has been edited by
 and Debunking 9/11. </strong></p>
 <hr />
 
-<h3 id="was_death_star">Uncomfortable Questions: Was the Death Star Attack an Inside Job? [Edited by Debunking911]</h3>
+[% WRAPPER h3_section id = "was_death_star" title = "Uncomfortable Questions: Was the Death Star Attack an Inside Job? [Edited by Debunking911]" %]
 
 <div class="entrytext">
 We’ve all heard the “official conspiracy
@@ -382,8 +385,13 @@ Says that Luke was born with the force then
 says he was trained in the force. Which one
 is it? Was he trained or was he born with
 it?</p></div>
+
+[% END %]
+
 </div>
 </div>
 </div>
+
+[% END %]
 
 [% END %]

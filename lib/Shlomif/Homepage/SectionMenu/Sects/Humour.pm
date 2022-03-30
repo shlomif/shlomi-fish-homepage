@@ -704,6 +704,7 @@ my $_humour_tree_contents = {
 "The IRC Version of “Everybody’s Free to Wear Sunscreen”",
                 },
                 {
+                    lang  => "he",
                     text  => "Technion Bit #1",
                     url   => "humour/by-others/technion-bit-1.html",
                     title => "A bit I found at the Technion",
@@ -765,9 +766,10 @@ my $_humour_tree_contents = {
 "A mirror of a hilarious parodical site that went offline",
                 },
                 {
+                    lang  => "he",
                     text  => "Oded C.’s Stories",
-                    url   => "humour/by-others/oded-c/",
                     title => "Humorous stories by Oded C. in Hebrew",
+                    url   => "humour/by-others/oded-c/",
                 },
                 {
                     text  => "Mirror of funroll-loops.info",
@@ -807,8 +809,8 @@ my $_humour_tree_contents = {
             subs => [
                 {
                     text  => "Films",
-                    url   => "humour/recommendations/films/",
                     title => "Recommendations of Films",
+                    url   => "humour/recommendations/films/",
                 },
             ],
         },

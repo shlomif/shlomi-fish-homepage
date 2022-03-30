@@ -121,43 +121,6 @@ $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 
-ifeq ($(UPLOAD_MATHJAX),1)
-	RSYNC_EXCLUDES :=
-endif
-
-# UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
-UPLOAD_BRIEF = (cd $(POST_DEST) && $(RSYNC) --no-progress --no-verbose $(RSYNC_EXCLUDES) -a . $1 )
-UPLOAD = $(UPLOAD_BRIEF)
-
-upload_deps: all
-
-upload_local: upload_deps
-	$(call UPLOAD,$${HOMEPAGE_SSH_PATH})
-
-upload: upload_local upload_remote_only
-
-upload_remote_only: upload_deps
-	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH})
-
-upload_remote_only_without_deps:
-	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH})
-
-upload_var: upload_deps upload_var_without_deps
-
-upload_var_without_deps:
-	$(call UPLOAD,/var/www/html/shlomif/homepage-local/)
-
-upload_beta: upload_deps
-	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH}/__Beta-kmor)
-
-upload_beta2: upload_deps
-	$(call UPLOAD_BRIEF,$${__HOMEPAGE_REMOTE_PATH}/__Beta-aj2del)
-
-upload_all: upload upload_var upload_local upload_beta
-
-upload_hostgator: upload_deps
-	$(call UPLOAD,'hostgator:public_html/')
-
 $(PRE_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
@@ -1137,5 +1100,7 @@ $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
+
+include lib/make/upload.mak
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

@@ -10,6 +10,7 @@ use Test::File::IsSorted ();
 Test::File::IsSorted::are_sorted(
     [
         ".gitignore",
+        "lib/make/asciidocs2db5-source.mak",
         "lib/make/copies-source.mak",
         "lib/Shlomif/Homepage/captioned-images.txt",
     ],

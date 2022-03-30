@@ -28,6 +28,8 @@ DOCBOOK5_HHFG_IMAGES_POST_DEST := $(addprefix $(DOCBOOK5_HHFG_POST_DEST_DIR)/,$(
 
 docbook_hhfg_images:  $(HHFG_V2_IMAGES_POST_DEST) $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS) $(HHFG_V2_DOCBOOK_css) $(DOCBOOK5_HHFG_IMAGES_POST_DEST)
 
+hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
+
 $(HHFG_V2_DOCBOOK_css): lib/docbook/5/indiv-nodes/human-hacking-field-guide-v2--english/docbook.css
 	mkdir -p $(HHFG_V2_IMAGES_POST_DEST_DIR)
 	cp -f $< $@
@@ -36,3 +38,4 @@ $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml: $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/inde
 	mkdir -p $(HHFG_V2_IMAGES_DEST_DIR)
 	cp -a $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/*.xhtml $(HHFG_V2_IMAGES_DEST_DIR)/
 
+HHFG_SMALL_BANNER_AD_PNG := $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png

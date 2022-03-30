@@ -486,7 +486,6 @@ ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
 PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
 TWITTER_ICON_20_PNG := $(POST_DEST)/images/twitter-bird-light-bgs-20.png
-HHFG_SMALL_BANNER_AD_PNG := $(POST_DEST_HUMOUR)/human-hacking/images/hhfg-ad-468x60.svg.preview.png
 
 BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 
@@ -665,8 +664,6 @@ selina_mandrake__dest_images: $(ALL_SCREENPLAYS__SCREENPLAY_IMAGES__POST_DESTS)
 selina_mandrake: selina_mandrake__dest_images
 
 pope_fiction: $(POPE_ENG_FICTION_XML_SOURCE)
-
-hhfg_fiction: $(HHFG_ENG_DOCBOOK5_SOURCE) $(HHFG_HEB_FICTION_XML_SOURCE)
 
 QUEEN_PADME_TALES__teaser_dir := $(POST_DEST_HUMOUR)/Queen-Padme-Tales/teaser
 QUEEN_PADME_TALES__teaser_pivot := $(QUEEN_PADME_TALES__teaser_dir)/index.xhtml

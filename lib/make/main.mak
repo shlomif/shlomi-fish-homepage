@@ -639,10 +639,6 @@ $(POST_DEST)/fortunes_show.css: $(COMMON_SASS_DEPS)
 
 $(POST_DEST)/fort_total.css: $(FORT_SASS_DEPS) lib/sass/fortunes.scss lib/sass/fortunes_show.scss $(COMMON_SASS_DEPS) lib/sass/screenplay.scss
 
-$(PRE_DEST)/personal.html $(PRE_DEST)/personal-heb.html: lib/pages/t2/personal.tt2
-$(PRE_DEST)/humour.html $(PRE_DEST)/humour-heb.html: lib/pages/t2/humour.tt2
-$(PRE_DEST)/work/hire-me/index.xhtml $(PRE_DEST)/work/hire-me/hebrew.html: lib/pages/t2/hire-me.tt2
-
 docbook_targets: pope_fiction selina_mandrake hhfg_fiction
 
 $(PRE_DEST)/lecture/Perl/Newbies/lecture5-heb-notes.html: $(SRC_SRC_DIR)/lecture/Perl/Newbies/lecture5-notes.txt

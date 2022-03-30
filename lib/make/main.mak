@@ -71,8 +71,6 @@ Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
 
 ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_DEPS) $(PHILOSOPHY_DEPS) $(PUZZLES_DEPS) $(SECTION_MENU_DEPS) $(SOFTWARE_DEPS)
 
-FACTOIDS_NAV_JSON := lib/Shlomif/factoids-nav.json
-
 SRC_CACHE_ALL_STAMP := lib/cache/STAMP.sects-includes
 SRC_CLEAN_STAMP := lib/cache/STAMP.post-dest
 
@@ -762,21 +760,9 @@ all: $(PUT_CARDS_2013_DEST_INDIV)
 $(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
 	$(PERL) $(PUT_CARDS_2013_INDIV_SCRIPT)
 
-FACTOIDS_RENDER_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/lib/factoids/gen-html.pl
-FACTOIDS_TIMESTAMP := lib/factoids/TIMESTAMP
-FACTOIDS_GEN_CMD := $(PERL) $(FACTOIDS_RENDER_SCRIPT)
-
-$(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
-	$(FACTOIDS_GEN_CMD)
-
-all: $(FACTOIDS_TIMESTAMP)
-
 all: manifest_html
 
 manifest_html: $(MANIFEST_HTML)
-
-$(FACTOIDS_NAV_JSON):
-	$(FACTOIDS_GEN_CMD)
 
 LC_LECTURE_ARC_BASE := Lambda-Calculus.tar.gz
 LC_LECTURE_ARC_DIR := $(PRE_DEST)/lecture

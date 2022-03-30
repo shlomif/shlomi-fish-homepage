@@ -1038,29 +1038,7 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
-$(DOCBOOK5_BASE_DIR)/xml/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.xml: $(LATEMP_ROOT_SOURCE_DIR)/lib/asciidocs/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.asciidoc
-	$(call ASCIIDOCTOR_TO_DOCBOOK5)
-
-$(DOCBOOK5_BASE_DIR)/xml/my-real-person-fiction.xml: $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction/README.asciidoc
-	$(call ASCIIDOCTOR_TO_DOCBOOK5)
-
-$(DOCBOOK5_BASE_DIR)/xml/who-gets-the-final-say.xml: $(LATEMP_ROOT_SOURCE_DIR)/lib/asciidocs/who-gets-the-final-say.asciidoc
-	$(call ASCIIDOCTOR_TO_DOCBOOK5)
-
-$(DOCBOOK5_BASE_DIR)/xml/why-openly-bipolar-people-should-not-be-medicated.xml: $(SUB_REPOS_BASE_DIR)/why-openly-bipolar-people-should-not-be-medicated/README.asciidoc
-	$(call ASCIIDOCTOR_TO_DOCBOOK5)
-
-$(DOCBOOK5_BASE_DIR)/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml: $(SRC_SRC_DIR)/open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp.txt
-	$(call ASCIIDOCTOR_TO_DOCBOOK5)
-
-JSON_RES_BASE := me/resumes/Shlomi-Fish-Resume.jsonresume
-
-JSON_RES_DEST := $(POST_DEST)/$(JSON_RES_BASE).json
-
-$(JSON_RES_DEST): $(SRC_SRC_DIR)/$(JSON_RES_BASE).yaml
-	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/my-yaml-2-canonical-json.pl -i $< -o $@
-
-non_latemp_targets: $(JSON_RES_DEST) $(SRC_SRC_FORTUNE_SHOW_PY)
+non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 
 $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
@@ -1069,6 +1047,8 @@ all_deps: $(CATB_COPY) $(Evilphish_flipped_dest)
 
 all: $(CATB_COPY_POST)
 
+include lib/make/asciidocs2db5-generated-include.mak
+include lib/make/json_resume.mak
 include lib/make/jquery-ui-webpack.mak
 
 all_deps: $(JQUERYUI_JS_DESTS)

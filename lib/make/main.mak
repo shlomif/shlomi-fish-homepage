@@ -966,44 +966,6 @@ fastrender-tt2: $(FASTRENDER_DEPS)
 
 copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
-SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/Selina-Mandrake/%.jpg,$(SRC_IMAGES_DEST))
-SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
-SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/images/strong-woman-meme-summer-glau/%.jpg,$(SRC_IMAGES_DEST))
-SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
-$(SRC_jpgs__webps): %.webp: %.jpg
-	$(call simple_gm)
-
-SRC_rjpgs__webps := $(SRC_jpgs__BASE:%.jpg=%--reduced.webp)
-$(SRC_rjpgs__webps): %--reduced.webp: %.jpg
-	$(IMAGE_CONVERT) -resize '200' $< $@
-
-SRC_pngs__BASE := $(filter $(POST_DEST)/humour/bits/%.png,$(SRC_IMAGES_DEST)) \
-	$(POST_DEST_HTML_6_LOGO_PNG) \
-	$(POST_DEST)/humour/images/14920899703_243677cbf4_o--cropped.png \
-	$(POST_DEST)/humour/images/14920899703_243677cbf4_o--crop150w.png \
-	$(POST_DEST)/humour/images/14920899703_243677cbf4_o--crop300w.png \
-	$(POST_DEST)/images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png \
-
-SRC_pngs__webps := $(SRC_pngs__BASE:%.png=%.webp)
-$(SRC_pngs__webps): %.webp: %.png
-	$(call simple_gm)
-
-# slower:
-#$(SRC_pngs__webps): $(SRC_pngs__BASE)
-#	$(PERL) bin/multi-gm.pl .png .webp $^
-
-SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
-SRC_SVGS__MIN := $(SRC_SVGS__BASE:%.svg=%.min.svg)
-SRC_SVGS__svgz := $(SRC_SVGS__BASE:%.svg=%.svgz)
-
-$(SRC_SVGS__MIN): %.min.svg: %.svg
-	minify --svg-precision 5 -o $@ $<
-
-$(SRC_SVGS__svgz): %.svgz: %.min.svg
-	gzip --best -n < $< > $@
-
-minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_rjpgs__webps) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
-
 TEST_TARGETS := Tests/*.{py,t}
 
 PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
@@ -1014,7 +976,9 @@ CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
 
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
+include lib/make/image-files.mak
 
+minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_rjpgs__webps) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets

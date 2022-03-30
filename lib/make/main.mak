@@ -938,25 +938,7 @@ all_deps: $(christina_grimmie_letter_html)
 
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 
-FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ
-FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
-FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
-FAQ_SECTS__PROGRAM := lib/faq/faq_splitter_prog.py
-FAQ_SECTS__LIB_DEPS := lib/faq/split_into_sections.py
-IMAGE_MACRO_SECTS__DIR := $(POST_DEST)/humour/image-macros
-IMAGE_MACRO_SECTS__SRC := $(IMAGE_MACRO_SECTS__DIR)/index.xhtml
-IMAGE_MACRO_SECTS__DEST_DIR := $(IMAGE_MACRO_SECTS__DIR)/indiv-nodes
-
-process_sects_dir = (cd $(1) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(1),$(1))
-
-$(FAQ_SECTS__PIVOT): $(FAQ_SECTS__PROGRAM) $(FAQ_SECTS__LIB_DEPS) $(IMAGE_MACRO_SECTS__SRC)
-	python3 $(FAQ_SECTS__PROGRAM)
-	$(call process_sects_dir,$(FAQ_SECTS__DIR))
-	$(call process_sects_dir,$(IMAGE_MACRO_SECTS__DEST_DIR))
-
-$(FAQ_SECTS__SRC) $(IMAGE_MACRO_SECTS__SRC): $(SRC_CLEAN_STAMP)
-
-all: $(FAQ_SECTS__PIVOT)
+include lib/make/pages-sects.mak
 
 fastrender: fastrender-tt2 $(SRC_FORTUNES_ALL__HTML)
 

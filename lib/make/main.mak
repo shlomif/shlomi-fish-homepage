@@ -909,19 +909,6 @@ all: $(SRC_CLEAN_STAMP)
 
 $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 
-SRC_MODS_DIR := lib/assets/mods
-
-MODS := $(shell cd $(SRC_MODS_DIR) && ls *.{s3m,xm,mod})
-
-ZIP_MODS := $(addsuffix .zip,$(MODS))
-XZ_MODS := $(addsuffix .xz,$(MODS))
-
-POST_DEST_MODS_DIR := $(POST_DEST)/Iglu/shlomif/mods
-dest_mods = $(addprefix $(POST_DEST_MODS_DIR)/,$(1))
-POST_DEST_ZIP_MODS := $(call dest_mods,$(ZIP_MODS))
-POST_DEST_XZ_MODS := $(call dest_mods,$(XZ_MODS))
-POST_DEST_ALL_MODS := $(POST_DEST_ZIP_MODS) $(POST_DEST_XZ_MODS)
-
 PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
 PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
 
@@ -1089,18 +1076,11 @@ all_deps: $(JQUI_webpack_dest)
 
 copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
 
-mod_files: $(POST_DEST_ALL_MODS)
-
-$(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
-	xz -9 --extreme < $< > $@
-
-$(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
-	TZ=UTC zip -joqX9 "$@" "$<"
-
 all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
 
+include lib/make/mod_files.mak
 include lib/make/upload.mak
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

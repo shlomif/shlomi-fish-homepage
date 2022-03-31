@@ -3,20 +3,21 @@ include fortunes-list.mak
 T2_FORTUNES_DIR = .
 PERL = perl
 FORTUNES_PERL := perl -I. -MShlomifFortunesMake -e
-VERSION_FILE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->version_file;')
+perlfunc = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->$1();')
+VERSION_FILE := $(perlfunc version_file)
+:
+VER := $(call perlfunc,ver)
 
-VER := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->ver;')
-
-DIST_BASE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_base;')
+DIST_BASE := $(call perlfunc,dist_base)
 
 SOURCE_FILES_LIST := source-files-list.html
 
 RPM_SPEC := $(DIST_BASE).spec
 RPM_SPEC_IN := $(RPM_SPEC).in
 
-DIST_DIR := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->dist_dir;')
+DIST_DIR := $(call perlfunc,dist_dir)
 
-PACKAGE_BASE := $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->package_base;')
+PACKAGE_BASE := $(call perlfunc,package_base)
 
 FILES := $(FORTUNES_FILES_BASE)
 

@@ -264,7 +264,6 @@ $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HT
 $(PRE_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
-all_deps: $(SRC_FORTUNES_ALL_TT2)
 
 all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
@@ -802,8 +801,6 @@ $(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml:
 
 all: $(SRC_CLEAN_STAMP)
 
-$(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
-
 PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
 PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
 
@@ -845,8 +842,6 @@ copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
 
 TEST_TARGETS := Tests/*.{py,t}
 
-PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
-POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
 POST_DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png
 CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
 CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
@@ -894,9 +889,6 @@ include lib/make/jquery-ui-webpack.mak
 
 all_deps: $(JQUERYUI_JS_DESTS)
 all_deps: $(JQUI_webpack_dest)
-
-copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
-
 all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"

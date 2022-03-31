@@ -90,3 +90,10 @@ $(FORTS_EPUB_COVER_JPG): $(FORTS_EPUB_COVER_PNG)
 $(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
 	$(OPTIPNG) $@
+
+PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
+POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
+
+$(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
+all_deps: $(SRC_FORTUNES_ALL_TT2)
+copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)

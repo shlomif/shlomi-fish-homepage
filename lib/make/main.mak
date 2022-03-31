@@ -67,7 +67,6 @@ META_SUBSECT_DEPS := $(SECTS_DEPS__DIR)/Meta.pm
 PHILOSOPHY_DEPS := $(SECTS_DEPS__DIR)/Essays.pm
 PUZZLES_DEPS := $(SECTS_DEPS__DIR)/Puzzles.pm
 SOFTWARE_DEPS := $(SECTS_DEPS__DIR)/Software.pm
-Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
 
 ALL_SUBSECTS_DEPS := $(ART_DEPS) $(HUMOUR_DEPS) $(LECTURES_DEPS) $(META_SUBSECT_DEPS) $(PHILOSOPHY_DEPS) $(PUZZLES_DEPS) $(SECTION_MENU_DEPS) $(SOFTWARE_DEPS)
 
@@ -88,8 +87,9 @@ site_source_install: $(SITE_SOURCE_INSTALL_TARGET)
 PRE_DEST_HUMOUR := $(PRE_DEST)/humour
 POST_DEST_HUMOUR := $(POST_DEST)/humour
 POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
-all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
-all: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
+
+all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
+all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
 SRC_SRC_FORTUNE_SHOW_SCRIPT := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 FORTUNE_SHOW_PY__BN := fortunes_show.py
@@ -119,47 +119,13 @@ $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 
 RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 
-$(PRE_DEST)/open-source/projects/Spark/mission/index.xhtml : lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 rss:
 	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/fetch-shlomif_hsite-feed.pl
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
-prod_sync_inc = $(1)/include-me.html
-
-PROD_SYND_MUSIC_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/music
-PROD_SYND_MUSIC_INC := $(call prod_sync_inc,$(PROD_SYND_MUSIC_DIR))
-
-PROD_SYND_NON_FICTION_BOOKS_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/non-fiction-books
-PROD_SYND_NON_FICTION_BOOKS_INC := $(call prod_sync_inc,$(PROD_SYND_NON_FICTION_BOOKS_DIR))
-
-PROD_SYND_FILMS_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/prod-synd/films
-PROD_SYND_FILMS_INC := $(call prod_sync_inc,$(PROD_SYND_FILMS_DIR))
-
-$(PRE_DEST)/art/recommendations/music/index.xhtml: $(PROD_SYND_MUSIC_INC)
-
-all_deps: $(PROD_SYND_MUSIC_INC)
-
-GPERL = $(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib
-GPERL_DEPS := $(LATEMP_ROOT_SOURCE_DIR)/lib/Shlomif/Homepage/Amazon/Obj.pm
-
-$(PROD_SYND_MUSIC_INC) : $(PROD_SYND_MUSIC_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/art/recommendations/music/shlomi-fish-music-recommendations.xml $(GPERL_DEPS)
-	$(GPERL) $<
-
-$(PRE_DEST)/philosophy/books-recommends/index.xhtml : $(PROD_SYND_NON_FICTION_BOOKS_INC)
-
-all_deps : $(PROD_SYND_NON_FICTION_BOOKS_INC)
-
-$(PROD_SYND_NON_FICTION_BOOKS_INC) : $(PROD_SYND_NON_FICTION_BOOKS_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/philosophy/books-recommends/shlomi-fish-non-fiction-books-recommendations.xml $(GPERL_DEPS)
-	$(GPERL) $<
-
-$(PRE_DEST_HUMOUR)/recommendations/films/index.xhtml: $(PROD_SYND_FILMS_INC)
-
-all_deps: $(PROD_SYND_FILMS_INC)
-
-$(PROD_SYND_FILMS_INC) : $(PROD_SYND_FILMS_DIR)/gen-prod-synd.pl $(SRC_SRC_DIR)/humour/recommendations/films/shlomi-fish-films-recommendations.xml $(GPERL_DEPS)
-	$(GPERL) $<
+include lib/make/prod-syndicate.mak
 
 SCREENPLAY_XML_BASE_DIR := lib/screenplay-xml
 SCREENPLAY_XML_EPUB_DIR := $(SCREENPLAY_XML_BASE_DIR)/epub
@@ -353,13 +319,7 @@ ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
 ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
-PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
-TWITTER_ICON_20_PNG := $(POST_DEST)/images/twitter-bird-light-bgs-20.png
-
 BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
-
-POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
-
 
 LC_PRES_PATH := lecture/Lambda-Calculus/slides
 
@@ -808,7 +768,7 @@ non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-all_deps: $(CATB_COPY) $(Evilphish_flipped_dest)
+all_deps: $(CATB_COPY)
 
 all: $(CATB_COPY_POST)
 

@@ -1,3 +1,8 @@
+Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
+POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
+PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
+TWITTER_ICON_20_PNG := $(POST_DEST)/images/twitter-bird-light-bgs-20.png
+
 $(GRIMMIE_IMG_DEST): $(GRIMMIE_IMG_SRC)
 	$(IMAGE_CONVERT) -resize '200x' $< $@
 
@@ -7,6 +12,7 @@ $(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
 $(RPG_DICE_SET_DEST): $(RPG_DICE_SET_SRC)
 	$(IMAGE_CONVERT) -resize '300x' $< $@
 
+non_latemp_targets: $(Evilphish_flipped_dest)
 non_latemp_targets: $(RPG_DICE_SET_DEST)
 
 $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)

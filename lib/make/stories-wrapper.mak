@@ -1,0 +1,82 @@
+SCREENPLAY_XML_BASE_DIR := lib/screenplay-xml
+SCREENPLAY_XML_EPUB_DIR := $(SCREENPLAY_XML_BASE_DIR)/epub
+SCREENPLAY_XML_XML_DIR := $(SCREENPLAY_XML_BASE_DIR)/xml
+SCREENPLAY_XML_TXT_DIR := $(SCREENPLAY_XML_BASE_DIR)/txt
+SCREENPLAY_XML_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/html
+SCREENPLAY_XML_RENDERED_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/rendered-html
+
+FICTION_XML_BASE_DIR := lib/fiction-xml
+FICTION_XML_XML_DIR := $(FICTION_XML_BASE_DIR)/xml
+FICTION_XML_TXT_DIR := $(FICTION_XML_BASE_DIR)/txt
+FICTION_XML_DB5_XSLT_DIR := $(FICTION_XML_BASE_DIR)/docbook5-post-proc
+FICTION_XML_TEMP_DB5_DIR := $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
+
+include lib/make/docbook/sf-screenplays.mak
+
+SCREENPLAY_DOCS_ADDITIONS := \
+	ae-interview \
+	Emma-Watson-applying-for-a-software-dev-job \
+	Emma-Watson-visit-to-Israel-and-Gaza \
+	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
+	humanity-excerpt-for-X-G-Screenplay-demo \
+	Mighty-Boosh--Ape-of-Death--Scenes \
+	sussman-interview
+
+SCREENPLAY_DOCS := $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)
+
+FICTION_DOCS_ADDITIONS := \
+	fiction-text-example-for-X-G-Fiction-demo \
+	The-Enemy-Hebrew-rev6 \
+	The-Enemy-Hebrew-v7
+
+FICTION_DOCS := $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
+
+SCREENPLAY_XMLS := $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
+FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIONS))
+
+all: splay
+
+include lib/make/docbook/sf-homepage-quadpres-generated.mak
+
+screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
+
+SCREENPLAY_RENDERED_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_RENDERED_HTML_DIR),html)
+SCREENPLAY_XML_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_HTML_DIR),html)
+
+splay: $(SCREENPLAY_RENDERED_HTMLS) $(SCREENPLAY_XML_HTMLS)
+
+$(SCREENPLAY_XML_HTML_DIR)/%.html: $(SCREENPLAY_XML_XML_DIR)/%.xml
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/screenplay-xml-to-html.pl -o $@ $<
+
+$(SCREENPLAY_XML_RENDERED_HTML_DIR)/%.html: $(SCREENPLAY_XML_HTML_DIR)/%.html
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/extract-screenplay-xml-html.pl -o $@ $<
+
+$(SCREENPLAY_XML_XML_DIR)/%.xml: $(SCREENPLAY_XML_TXT_DIR)/%.txt
+	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/screenplay-text-to-xml.pl -o $@ $<
+
+POST_DEST_HUMOUR_SELINA := $(POST_DEST_HUMOUR)/Selina-Mandrake
+POST_DEST_INTERVIEWS := $(POST_DEST)/open-source/interviews
+
+POST_DEST_SPLAY_HHGG_STTNG := $(POST_DEST_HUMOUR)/by-others/hitchhiker-guide-to-star-trek-tng-hand-tweaked.txt
+
+SCREENPLAY_SOURCES_ON_POST_DEST := $(POST_DEST_INTERVIEWS)/ae-interview.txt $(POST_DEST_INTERVIEWS)/sussman-interview.txt $(POST_DEST_SPLAY_HHGG_STTNG)
+
+include lib/make/hhfg.mak
+
+FICTION_TEXT_SOURCES_ON_POST_DEST := $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.txt $(HHFG_HEB_V2_POST_DEST) $(HHFG_HEB_V2_XSLT_POST_DEST) $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.txt
+
+translate_fiction_text_to_xml = $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/fiction-text-to-xml.pl -o $@ $<
+
+$(FICTION_XMLS): $(FICTION_XML_XML_DIR)/%.xml: $(FICTION_XML_TXT_DIR)/%.txt
+	$(call translate_fiction_text_to_xml)
+
+HHGG_CONVERT_SCRIPT_FN := convert-hitchhiker-guide-to-st-tng-to-screenplay-xml.pl
+HHGG_CONVERT_SCRIPT_SRC := $(LATEMP_ROOT_SOURCE_DIR)/bin/processors/$(HHGG_CONVERT_SCRIPT_FN)
+HHGG_CONVERT_SCRIPT_DEST := $(PRE_DEST_HUMOUR)/by-others/$(HHGG_CONVERT_SCRIPT_FN).txt
+
+hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
+
+$(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(SRC_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
+	$(PERL) $<
+
+screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)

@@ -360,43 +360,6 @@ BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 
 POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 
-$(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
-	$(IMAGE_CONVERT) -matte -bordercolor none -border 5 $< $@
-	$(OPTIPNG) $@
-
-art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(POST_DEST_HTML_6_LOGO_PNG)
-
-$(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
-	$(INKSCAPE_WRAPPER) --export-dpi=60 --export-area-page --export-type=png --export-filename="$@" "$<"
-	$(OPTIPNG) $@
-
-POST_DEST_WINDOWS_UPDATE_SNAIL_ICON := $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
-
-all: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
-
-$(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
-	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<
-	$(OPTIPNG) $@
-
-$(ART_SLOGANS_PNGS): %.png: %.svg
-	$(INKSCAPE_WRAPPER) --export-type=png --export-filename=$@ $<
-	$(OPTIPNG) $@
-
-$(ART_SLOGANS_THUMBS): %.thumb.png: %.png
-	$(IMAGE_CONVERT) -resize '200' $< $@
-	$(OPTIPNG) $@
-
-$(PRINTER_ICON_PNG): common/images/printer_icon.svg
-	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-filename="$@" $<
-	$(OPTIPNG) $@
-
-$(TWITTER_ICON_20_PNG): common/images/twitter-bird-light-bgs.svg
-	$(INKSCAPE_WRAPPER) --export-width=30 --export-type=png --export-filename="$@" $<
-	$(OPTIPNG) $@
-
-$(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-468x60.svg.png
-	$(IMAGE_CONVERT) -resize '50%' $< $@
-	$(OPTIPNG) $@
 
 LC_PRES_PATH := lecture/Lambda-Calculus/slides
 
@@ -702,9 +665,6 @@ Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
 Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
 
-$(Evilphish_flipped_dest): $(Evilphish_flipped_src)
-	$(IMAGE_CONVERT) -flop $< $@
-
 DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
 
 POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
@@ -735,42 +695,11 @@ $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances
 
 all: $(DnD_lances_cartoon_DEST)
 
-Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
-$(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
-	$(IMAGE_CONVERT) $< -define webp:lossless=true $@
-
-all: $(GRIMMIE_IMG_DEST)
-all: $(Linux1_webp_DEST)
-
 $(OCT_2014_SGLAU_LET_PDF): $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"
 
 $(OCT_2014_SGLAU_LET_HTML): $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
 	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
-
-$(GRIMMIE_IMG_DEST): $(GRIMMIE_IMG_SRC)
-	$(IMAGE_CONVERT) -resize '200x' $< $@
-
-$(MY_NAME_IS_RINDOLF_DEST): $(MY_NAME_IS_RINDOLF_SRC)
-	$(IMAGE_CONVERT) -resize '200' $< $@
-
-$(RPG_DICE_SET_DEST): $(RPG_DICE_SET_SRC)
-	$(IMAGE_CONVERT) -resize '300x' $< $@
-
-all: $(RPG_DICE_SET_DEST)
-
-$(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
-	$(IMAGE_CONVERT) -resize '170x' $< $@
-
-all: $(Shlomif_cutethulhu_DEST)
-
-ENEMY_STYLE := $(PRE_DEST)/humour/TheEnemy/The-Enemy-English-v7/style.css
-
-all: $(ENEMY_STYLE)
-
-$(ENEMY_STYLE):
-	mkdir -p "$$(dirname "$@")"
-	touch $@
 
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
@@ -876,7 +805,7 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 
 non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 
-$(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ENEMY_STYLE) $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
+$(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
 all_deps: $(CATB_COPY) $(Evilphish_flipped_dest)

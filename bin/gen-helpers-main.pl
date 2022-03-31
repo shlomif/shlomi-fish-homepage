@@ -173,6 +173,7 @@ foreach my $ext (qw/ xhtml pdf /)
         $fh->touch;
     }
 }
+
 {
     my $idx  = -1;
     my $COPY = qq#\t\$(call COPY)\n#;

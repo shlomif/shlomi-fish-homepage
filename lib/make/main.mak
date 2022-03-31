@@ -703,4 +703,9 @@ TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
 include lib/make/mod_files.mak
 include lib/make/upload.mak
 
+SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
+
+$(SAMSMITHXML):
+	python3 bin/extract-docbook5-node.py lib/repos/shlomif-tech-diary/multiverse-cosmology-v0.4.x.db5.xml '//*[@xml:id="the-terran-terminators"]' > $@
+
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

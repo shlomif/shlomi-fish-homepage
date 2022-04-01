@@ -47,6 +47,7 @@ my $license         = Shlomif::Homepage::LicenseBlurbs->new(
 );
 
 my $base_path;
+my $with_absolute_urls = ( $ENV{LATEMP_ABS} // "" );
 
 my $nav_blocks         = Shlomif::Homepage::NavBlocks->new;
 my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
@@ -300,7 +301,7 @@ sub proc
     my ( $self, $input_tt2_page_path ) = @_;
     $::latemp_filename = $input_tt2_page_path;
     my @fn = split m#/#, $input_tt2_page_path;
-    $base_path = ( '../' x $#fn );
+    $base_path = ( $with_absolute_urls ? $ORIG_URL_PREFIX : ( '../' x $#fn ) );
 
     my $vars = $self->vars;
     $vars->{base_path} = $base_path;

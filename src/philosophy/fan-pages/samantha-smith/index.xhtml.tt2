@@ -62,6 +62,13 @@ I had a similar moment as well.
 
 [% WRAPPER h2_section id = "the-story" title = "The Story" %]
 
+<section class="h2">
+<header>
+<h2>Wrapper</h2>
+</header>
+[% path_slurp("docbook/5/rendered/samsmith.xhtml") %]
+</section>
+
 [% END %]
 
 [% WRAPPER h2_section id = "what-i-learned" title = "What I taught (and learned from) Internet/social media creators (on YouTube and other Internet outlets)" %]

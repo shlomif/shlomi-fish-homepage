@@ -62,12 +62,7 @@ I had a similar moment as well.
 
 [% WRAPPER h2_section id = "the-story" title = "The Story" %]
 
-<section class="h2">
-<header>
-<h2>Wrapper</h2>
-</header>
 [% path_slurp("docbook/5/rendered/samsmith.xhtml") %]
-</section>
 
 [% END %]
 

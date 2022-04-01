@@ -141,8 +141,8 @@ Shalom of Jehovah”.
 <a href="http://en.wikipedia.org/wiki/Shalom">“Shalom”</a> is an ancient Hebrew
 word, that is derived from
 <a href="http://en.wiktionary.org/wiki/Appendix:Proto-Semitic/%C5%A1al%C4%81m-">proto-Semitic
-origins</a> meaning something like “well-being”, “welfare”, "harmony",
-"wholeness", even "prosperity" - not only “peace”. It is an ambiguous noun as the nouns of some ancient Semitic
+origins</a> meaning something like “completeness”: “well-being”, “welfare”, "harmony",
+"wholeness", even "prosperity" - not only “peace”/tranquility. It is an ambiguous noun as the nouns of some ancient Semitic
 languages were. See also
 <a href="http://shlomif.livejournal.com/42172.html">what
 I wrote about it on my blog</a> (and some of the comments I received).
@@ -152,7 +152,7 @@ I wrote about it on my blog</a> (and some of the comments I received).
 True to my name, I often feel that I have "more luck than brains" (as hard as
 it is to believe given many smart people consider me very smart) and while
 enduring some hardships (including physical ones!) was often at the right place
-at the right time (including on a certain Internet/television/etc.  forum or
+at the right time (including on a certain Internet/television/etc. forum or
 resource) and came up on top.
 </p>
 
@@ -664,7 +664,7 @@ your insanity.”)
 My opinions are subject to change - they have changed in the past, and it’s
 likely they will change again. Furthermore, reality is dynamic, and
 Ethics, philosophy and opinions change with time, as technology, culture
-and education progresses.
+and education progress.
 </p>
 
 [%- END -%]
@@ -1510,7 +1510,7 @@ href="https://en.wikipedia.org/wiki/Sturgeon%27s_law">Sturgeon's law</a> (=
 I am currently many of these and more. As I
 <a href="[% base_path %]philosophy/the-eternal-jew/the-eternal-jew/define_myself.xhtml">noted in an essay</a>,
 I define myself as "Shlomi Fish". I have my own
-<a href="[% base_path %]me/rindolf/#rindolfism">philosophy titled
+<a href="[% base_path %]me/rindolf/#rindolfism">hybrid philosophy titled
 "Rindolfism"</a>
 and it changes almost every day.
 </p>
@@ -1684,7 +1684,8 @@ analyse them.
 I don't take the <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Bible</a>
 as gospel and still enjoy it. On the other hand, some
 <a href="#atheism_can_be_a_religion">religious "atheists"</a>
-take it as "anti-gospel" which I find is philosophically immature too.
+take it as "anti-gospel" which I find is philosophically immature just
+like taking it as gospel.
 </p>
 
 [%- END -%]
@@ -1882,7 +1883,7 @@ didn't see that, right? 😉)
 It is true that in some of my stories I featured a conspiracy of <a
 href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">“vampires”</a> (=
 "hackers" or "geeks"),
-which were in fact the good guys in history, and not limited to bona-fide Jews,
+who were in fact the good guys in history, and not limited to bona-fide Jews,
 which was inspired by this and other sources. Nonetheless, these stories are
 fictional, I do not take them at face value myself, and recommend others to
 not take them literally, either (even though they may have implications and
@@ -2301,7 +2302,7 @@ Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
 DNS service, but it had a lot of DNS problems. Thus, I set up
 <a href="https://www.shlomifish.org/">https://www.shlomifish.org/</a>. I didn’t
 take shlomifish.org.il because .il domains used to cost a lot of money, and
-also required co-ordination by a fax message (how low-tech) upon every
+also required co-ordination by a fax message (how low-tech!) upon every
 change. I also didn’t want a .com domain because I feel I’m a private individual
 rather than a company.
 </p>
@@ -2770,7 +2771,7 @@ Many people whom I gave links to the various resources on my site, accused me
 of linking to them in order to drive in traffic for my site. First of all,
 I should note that it sounds like what I call a
 <a href="https://en.wikipedia.org/wiki/Conspiracy_theory">“conspiracy
-theory”</a> where one tries to formulate an
+hypothesis”</a> where one tries to formulate an
 <a href="http://en.wiktionary.org/wiki/ulterior_motive">ulterior motive</a>
 explanation instead of assuming purity of intents.
 </p>
@@ -2880,7 +2881,9 @@ See <a href="#how_site_is_generated">above</a> - most of the site is generated
 using code and data and is served as static content on the server. There are
 about three
 [% my_acronym( "key" => "CGI",) %] scripts written in Perl 5 using
-[% cpan.self_dist( "d" => "CGI-Minimal", ) %] but they do not serve most of the content.
+[% cpan.self_dist( "d" => "CGI-Minimal", ) %],
+or <a href="https://bottlepy.org/docs/dev/">Python and Bottle</a>
+but they do not serve most of the content.
 </p>
 
 <p>

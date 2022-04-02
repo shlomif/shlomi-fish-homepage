@@ -6,7 +6,7 @@
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "vim_include_code.tt2" -%]
 
-<div class="wrap-me lim_width">
+[% main_class.addClass("fancy_sects", "lim_width", "wrap-me", ) %]
 
 [% WRAPPER about_sect  %]
 
@@ -395,6 +395,8 @@ Then after converting it to XML and then to XHTML we get this:
 
 [% WRAPPER h3_section id = "demo-screenplay1"  title = "Screenplay Demo 1"  %]
 
+[% WRAPPER h4_section id = "demo-screenplay1-source" title = "Source" %]
+
 <p>
 If we have this sample screenplay:
 </p>
@@ -402,6 +404,10 @@ If we have this sample screenplay:
 [% WRAPPER shlomif_code_block %]
 [% shlomif_include_colorized_file(fn=>"lib/screenplay-xml/txt/humanity-excerpt-for-X-G-Screenplay-demo.txt") %]
 [% END %]
+
+[% END %]
+
+[% WRAPPER h4_section id = "demo-screenplay1-result" title = "Result" %]
 
 <p>
 Then after converting it to XML and then to XHTML we get this:
@@ -412,6 +418,8 @@ Then after converting it to XML and then to XHTML we get this:
     index_id => 'screenplay_text_index',
     )
 %]
+
+[%- END -%]
 
 [%- END -%]
 
@@ -451,7 +459,5 @@ Also see <a href="https://asciidoctor.org/">Asciidoctor</a>.
 </ul>
 
 [%- END -%]
-
-</div>
 
 [% END %]

@@ -460,8 +460,14 @@ semantic <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a>.
 
 <li>
 <p>
-Screenplay-Text should have a minimum of characters with special meaning to
-have predictable results.
+Screenplay-Text should have a minimum of characters with special meaning,
+in order to generate predictable outputs.
+</p>
+</li>
+
+<li>
+<p>
+Screenplay-Text should support Unicode, UTF-8 and internationalisation well.
 </p>
 </li>
 

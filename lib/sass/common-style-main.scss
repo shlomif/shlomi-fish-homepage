@@ -443,12 +443,14 @@ table.visible,
         margin-bottom: 0.7cm;
     }
 
-    h2 {
-        text-decoration: underline;
-    }
+    @if false {
+        h2 {
+            text-decoration: underline;
+        }
 
-    h3 {
-        text-decoration: underline;
+        h3 {
+            text-decoration: underline;
+        }
     }
 }
 

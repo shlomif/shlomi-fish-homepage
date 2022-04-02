@@ -362,6 +362,22 @@ to you for this NaNoWriMo or future ones.
 
 </li>
 
+<li>
+<p>
+<a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hollywood_screenplay_format.xhtml">Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry - "Ditching Hollywood's Screenplay Format"</a>
+</p>
+
+<ul>
+
+<li>
+<p>
+<a href="https://twitter.com/Lady_Aleena/status/1506102979132538886">Twitter Coverage</a>
+</p>
+</li>
+</ul>
+
+</li>
+
 </ul>
 
 [%- END -%]
@@ -424,6 +440,34 @@ Then after converting it to XML and then to XHTML we get this:
 [%- END -%]
 
 [%- END -%]
+
+[% WRAPPER h2_section id = "design-goals" title = "Design Goals" %]
+
+<ol>
+
+<li>
+<p>
+All valid Screenplay-Text documents should translate to valid Screenplay-XML codes.
+</p>
+</li>
+
+<li>
+<p>
+All valid Screenplay-XML documents should translate to valid and mostly
+semantic <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a>.
+</p>
+</li>
+
+<li>
+<p>
+Screenplay-Text should have a minimum of characters with special meaning to
+have predictable results.
+</p>
+</li>
+
+</ol>
+
+[% END %]
 
 [% WRAPPER h2_section id = "similar"  title = "Similar Projects"  %]
 

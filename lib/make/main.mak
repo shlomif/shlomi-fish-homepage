@@ -126,7 +126,6 @@ rss:
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
 include lib/make/prod-syndicate.mak
-include lib/make/stories-wrapper.mak
 
 PUT_CARDS_2013_XHTML := lib/pages/t2/philosophy/putting-all-cards-on-the-table.xhtml
 PUT_CARDS_2013_DEST := $(PRE_DEST)/philosophy/philosophy/put-cards-2013.xhtml
@@ -196,6 +195,7 @@ lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-E
 DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 include lib/make/docbook/sf-docbook-common.mak
+include lib/make/stories-wrapper.mak
 include lib/make/docbook/sf-fictions.mak
 
 # Avoid docmake's --verbose flag; an optimization
@@ -660,12 +660,6 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 			-o $@ $< ; \
 	fi
 	$(PERL) -i -lpe 's/\s+$$//' $@
-
-$(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
-	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
-	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
-	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
-	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
 
 non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 

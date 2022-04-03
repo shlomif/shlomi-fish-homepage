@@ -80,3 +80,9 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 	$(PERL) $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
+
+$(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
+	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
+	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
+	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
+	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \

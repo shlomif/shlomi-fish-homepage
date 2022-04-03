@@ -177,21 +177,6 @@ $(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious
 $(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
 	$(call ASCIIDOCTOR_TO_XHTML5)
 
-all_deps: lib/htmls/The-Enemy-rev5.html-part
-
-lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz $(EXTRACT_html_script)
-	$(call extract_gzipped_xhtml)
-
-all_deps: lib/htmls/The-Enemy-English-rev5.html-part
-
-lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz $(EXTRACT_html_script)
-	$(call extract_gzipped_xhtml)
-
-all_deps: lib/htmls/The-Enemy-English-rev6.html-part
-
-lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz $(EXTRACT_html_script)
-	$(call extract_gzipped_xhtml)
-
 include lib/make/stories-wrapper.mak
 include lib/make/docbook/sf-docbook-common.mak
 include lib/make/docbook/sf-fictions.mak

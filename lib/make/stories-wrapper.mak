@@ -1,3 +1,16 @@
+lib/htmls/The-Enemy-English-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev5.xhtml.gz $(EXTRACT_html_script)
+	$(call extract_gzipped_xhtml)
+
+lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz $(EXTRACT_html_script)
+	$(call extract_gzipped_xhtml)
+
+lib/htmls/The-Enemy-rev5.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz $(EXTRACT_html_script)
+	$(call extract_gzipped_xhtml)
+
+all_deps: lib/htmls/The-Enemy-English-rev5.html-part
+all_deps: lib/htmls/The-Enemy-English-rev6.html-part
+all_deps: lib/htmls/The-Enemy-rev5.html-part
+
 SCREENPLAY_XML_BASE_DIR := lib/screenplay-xml
 SCREENPLAY_XML_EPUB_DIR := $(SCREENPLAY_XML_BASE_DIR)/epub
 SCREENPLAY_XML_XML_DIR := $(SCREENPLAY_XML_BASE_DIR)/xml

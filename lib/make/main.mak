@@ -149,9 +149,7 @@ $(PRE_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_
 
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
-all: $(PUT_CARDS_2013_DEST) $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
-
-$(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml : $(PUT_CARDS_2013_XHTML_STRIPPED)
+all: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 # Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.

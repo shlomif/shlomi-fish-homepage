@@ -380,6 +380,22 @@ def _screenplays_main():
             )
 
     for OUT_DN in [
+        "./dest/post-incs/t2/humour/The-10th-Muse/",
+            ]:
+        for part_suf in [
+            "Athena-Gets-Laid",
+                ]:
+            part = "The-10th-Muse--" + part_suf
+            path_to_input = "{}.html".format(part)
+            generic_generate(
+                OUT_DN=OUT_DN,
+                output_dirname="{}-indiv-nodes/".format(part),
+                path_to_input=path_to_input,
+                path_to_all_in_one=("../" + path_to_input),
+                path_to_images="../",
+            )
+
+    for OUT_DN in [
         "./dest/post-incs/t2/humour/Queen-Padme-Tales/",
             ]:
         for part_suf in [

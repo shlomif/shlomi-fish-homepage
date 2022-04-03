@@ -3,7 +3,11 @@
 
 [%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 I went on a trip to England, especially for the <a href="https://nineworlds.co.uk/2014.html">Nine Worlds GeekFest con</a> (but continued later on in the Peak District and in Cambridge) and want to share various anecdotes for it. Here's the first one:
@@ -64,15 +68,17 @@ year, and I told her that I hope to go there (and I did hope to).
 
 </ol>
 
-<hr />
+[% WRAPPER h3_section id = "hammer-duel" title = "Air balloon hammer duel" %]
 
 <p>
 During the same con, I invited a young boy to an air balloon hammer duel and he
 accepted. I later realised that as we fought, we both tried not to make the
-opponent's hammer to fall. The point was to prolong the duel.
+opponent's hammer fall. The point was to prolong the duel.
 </p>
 
-<hr />
+[% END %]
+
+[% WRAPPER h3_section id = "Im-not-a-pervert" title = "Accusing me of being a pervert" %]
 
 <p>
 Now for something a little less pleasant: when I told some people on Freenode
@@ -98,12 +104,18 @@ href="https://en.wikipedia.org/wiki/One_Fish_Two_Fish_Red_Fish_Blue_Fish">One Fi
 Also see <a href="[% base_path %]meta/FAQ/featuring_sexy_women_and_girls.xhtml">my FAQ about "You feature sexy women and girls in your works. Are you a pervert?"</a>
 </p>
 
-<hr />
+[% END %]
+
+[% WRAPPER h3_section id = "origin" title = "Origin" %]
 
 <p>A happy (un)?birthday to all!</p>
 
 <p>
 (Originally a <a href="https://www.facebook.com/shlomi.fish/posts/10152215145266981">Facebook Post</a>.)
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

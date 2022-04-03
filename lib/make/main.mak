@@ -520,12 +520,6 @@ all: $(LC_LECTURE_ARC)
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
 	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_ALL=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2021-01-29T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
 
-OCT_2014_SGLAU_LET_DIR := $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10
-OCT_2014_SGLAU_LET_PDF := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.pdf
-OCT_2014_SGLAU_LET_HTML := $(OCT_2014_SGLAU_LET_DIR)/letter-to-sglau.xhtml
-
-all: $(OCT_2014_SGLAU_LET_PDF) $(OCT_2014_SGLAU_LET_HTML)
-
 RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
 GRIMMIE_IMAGES_POST_DEST := $(POST_DEST)/art/recommendations/music/online-artists/fan-pages/chris-grimmie/images
 
@@ -570,12 +564,6 @@ $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances
 	$(call simple_gm)
 
 all: $(DnD_lances_cartoon_DEST)
-
-$(OCT_2014_SGLAU_LET_PDF): $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
-	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to pdf "$$A/$<"
-
-$(OCT_2014_SGLAU_LET_HTML): $(SRC_SRC_DIR)/philosophy/SummerNSA/Letter-to-SGlau-2014-10/letter-to-sglau.odt
-	export A="$$PWD" ; cd $(OCT_2014_SGLAU_LET_DIR) && oowriter --headless --convert-to xhtml "$$A/$<"
 
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
@@ -699,6 +687,7 @@ all_deps: $(SRC_IMAGES_DEST)
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
 
 include lib/make/mod_files.mak
+include lib/make/summer_glau_letter.mak
 include lib/make/upload.mak
 
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml

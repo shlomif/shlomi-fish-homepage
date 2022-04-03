@@ -64,12 +64,7 @@ class XhtmlSplitter:
     ):
         self.list_sections_format = (
             list_sections_format or
-            (
-                "(descendant::{xhtml_prefix}article |"
-                " descendant::{xhtml_prefix}section)["
-                "not(descendant::{xhtml_prefix}section)"
-                "]"
-            )
+            (".[name()='article' or name()='section']").format()
         )
 
         self._indiv_node = individual_node_css_class

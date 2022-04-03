@@ -30,6 +30,7 @@ FICTION_DOCS_ADDITIONS := \
 	The-Enemy-Hebrew-v7
 
 FICTION_DOCS := $(FICTION_DOCS_ADDITIONS) $(FICTION_DOCS_FROM_GEN)
+DOCBOOK5_DOCS += $(FICTION_DOCS)
 
 SCREENPLAY_XMLS := $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIONS))
@@ -82,7 +83,6 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
 $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
-	$(DOCBOOK5_RENDERED_DIR)/fiction-text-example-for-X-G-Fiction-demo.xhtml \
 	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \

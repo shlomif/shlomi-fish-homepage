@@ -192,10 +192,8 @@ all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 lib/htmls/The-Enemy-English-rev6.html-part: $(SRC_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz $(EXTRACT_html_script)
 	$(call extract_gzipped_xhtml)
 
-DOCBOOK5_DOCS += $(FICTION_DOCS)
-
-include lib/make/docbook/sf-docbook-common.mak
 include lib/make/stories-wrapper.mak
+include lib/make/docbook/sf-docbook-common.mak
 include lib/make/docbook/sf-fictions.mak
 
 # Avoid docmake's --verbose flag; an optimization

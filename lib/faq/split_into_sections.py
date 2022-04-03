@@ -143,7 +143,7 @@ class XhtmlSplitter:
         self.container_elem = _first(
             self.ns,
             self.root,
-            self.container_elem_xpath.format(
+            '//' + self.container_elem_xpath.format(
                 xhtml_prefix=self.xhtml_prefix,
             ),
         )
@@ -186,7 +186,7 @@ class XhtmlSplitter:
 
     def _list_sections(self):
         """docstring for _list_sections"""
-        yield from self.tree.myiter()
+        yield from self.tree[0].myiter()
 
     def _is_protected(self, elem):
         """docstring for _protect"""

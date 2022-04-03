@@ -20,7 +20,7 @@ from split_into_sections import XhtmlSplitter
 
 def _tag_xpath(tag, TOP_LEVEL_CLASS):
     return ((
-        ".[name() = '{tag}' and {clas}]").format(
+        "self::node()[name() = '{tag}' and {clas}]").format(
             tag=tag,
             clas="@class='" + TOP_LEVEL_CLASS + "'")
     )
@@ -171,7 +171,7 @@ def generate_from_image_macros_page(
         relative_output_dirname=relative_output_dirname,
         section_format=IMAGE_MACRO_SECTION_FORMAT,
         container_elem_xpath=(
-            ".[name()='div'][./xhtml:article]"
+            "self::node()[name()='div'][./xhtml:article]"
         ),
         ns=NAMESPACES,
         base_path=base_path,
@@ -340,7 +340,9 @@ def generic_generate(
 def generic_generate_from_tt2_generated_plain_html5(**args):
     TOP_LEVEL_ID = 'main_text_wrapper'
     return generic_generate_from_(
-        container_elem_xpath=(".[name()='div'][@id='" + TOP_LEVEL_ID + "']"),
+        container_elem_xpath=(
+            "self::node()[name()='div'][@id='" + TOP_LEVEL_ID + "']"
+        ),
         input_is_plain_html=True,
         xhtml_article_tag='article',
         xhtml_section_tag='section',
@@ -351,7 +353,9 @@ def generic_generate_from_tt2_generated_plain_html5(**args):
 def generic_generate_from_tt2_generated_xhtml5(**args):
     TOP_LEVEL_ID = 'main_text_wrapper'
     return generic_generate_from_(
-        container_elem_xpath=(".[name()='div'][@id='" + TOP_LEVEL_ID + "']"),
+        container_elem_xpath=(
+            "self::node()[name()='div'][@id='" + TOP_LEVEL_ID + "']"
+        ),
         **args,
     )
 
@@ -469,7 +473,7 @@ def generic_generate_from_db5(**args):
     cl = "@class='" + TOP_LEVEL_CLASS + "'"
     base_path = _calc_base_path(OUT_DN)
     list_sections_format = (
-        ".[name() = 'section' and " + cl + ']'
+        "self::node()[name() = 'section' and " + cl + ']'
     )
     # assert base_path == args['base_path']
     extra_args = {

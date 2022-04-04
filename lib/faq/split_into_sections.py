@@ -33,7 +33,7 @@ class MyXmlNoResultsFoundError(Exception):
 
 
 def _xpath(ns, node, query):
-    print(query, ns)
+    # print(query, ns)
     return node.xpath(query, namespaces=ns)
 
 
@@ -64,7 +64,7 @@ class XhtmlSplitter:
     ):
         self.list_sections_format = (
             list_sections_format or
-            (".[name()='article' or name()='section']").format()
+            ("self::node()[local-name()='article' or local-name()='section']")
         )
 
         self._indiv_node = individual_node_css_class
@@ -159,6 +159,11 @@ class XhtmlSplitter:
                 for el in self.childs:
                     yield from el.myiter()
 
+            def __repr__(self):
+                """docstring for __repr__"""
+                return "{" + str(self.elem) + " => [" +\
+                    ", ".join([str(x) for x in self.childs]) + "]" + "}"
+
         def genTreeNode(elem):
             kids = []
             for x in elem:
@@ -173,6 +178,8 @@ class XhtmlSplitter:
             else:
                 return kids
         self.tree = genTreeNode(self.container_elem)
+        print(self.list_sections_format)
+        print(self.tree)
 
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(self.root)
@@ -215,6 +222,7 @@ class XhtmlSplitter:
 
         def _add_prefix(prefix, suffix, list_elem):
             """docstring for _add_prefix"""
+            print('input_fn = ', self.input_fn)
             header_tag = _first(
                 self.ns, list_elem,
                 "./{xhtml_prefix}header".format(

@@ -72,7 +72,7 @@ else
         my $d   = $rec->{desc};
         my $url = $rec->{url};
         $table .=
-qq!<tr><td><a href="$url">https://shlom.in/$k</a></td><td><p>$d</p></td></tr>!;
+qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td><p>$d</p></td></tr>!;
     }
     print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
@@ -87,6 +87,7 @@ td, th
     border: solid 1pt darkgreen ;
     padding: 0.5em;
     text-align: left;
+    vertical-align: top;
 }
 </style>
 </head>

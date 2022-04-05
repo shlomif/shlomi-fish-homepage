@@ -1142,11 +1142,15 @@ geeks about top vs bottom posting.</q>
 
 <p>
 Hollywood's blessed screenplay format is boring, finicky, and requires a lot of
-time to prepare and get right. It only has one proprietary Windows-only program
+time to prepare and get right.
+</p>
+
+[% IF 0 %]
+It only has one proprietary Windows-only program
 and one unmaintained, slow, and non-responsive, open source program - <a
 href="https://en.wikipedia.org/wiki/Celtx">Celtx</a>, that can be used to edit
 it.
-</p>
+[% END %]
 
 <p>
 Moreover, it is poorly documented, cannot be <a href="https://github.com/caramelomartins/awesome-linters">validated and linted</a> by an automated program,
@@ -1168,7 +1172,7 @@ amend the drafts, which is even more time-consuming. Rinse and repeat.
 One can imagine most young
 or young-at-heart screen writers who use code sharing sites
 and services (e.g: [% GitHub %] or GitLab), wikis, desktop or online word
-processors, etc. will also sport the same sentiments.
+processors, or similar tools, will also sport the same sentiments.
 </p>
 
 <p id="hacker-laziness">
@@ -1204,7 +1208,7 @@ using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on
 <p>
 This is while I can spend hundreds of
 hours contributing text, code, and markup, voluntarily and without expecting
-immediate payment, to the public.  And this includes my pro-bono
+immediate payment, to the public. And this includes my pro-bono
 contributions to <a
 href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora
 Linux</a>, which is backed and led by a profitable and well financed for-profit
@@ -1269,9 +1273,11 @@ some poems to her which I didn’t like, and told him why. So he ended up
 improving slowly but surely, until he wrote a truly great poem about her, and
 people loved it.
 </p>
+
 <p><strong class="sayer">Josephus:</strong> Then Phoebe — that’s her name — told him, while crying, that she
 loved the song, but that she still is not going to marry him.
 </p>
+
 <p><strong class="sayer">Alexis:</strong> The Bitch!
 </p>
 
@@ -1308,10 +1314,9 @@ cool guy regardless</a>.
 <p>
 If you do not like a work, please try to comment on why you think it is
 lacking, rather than completely dismissing it or vaguely criticising it ( e.g:
-"it sucks"; "you cannot write"; "it's a waste of space";
-"try to write it as if you were there"
-).  People are often
-amazed by food reviewers in the recently trendy <a
+"it sucks"; "you cannot write"; "it's a waste of space"; "try to write it as if
+you were there").  People are often amazed by food reviewers in the recently
+trendy <a
 href="https://en.wikipedia.org/wiki/Reality_television#Reality_competition/game_shows">cooking
 competition ("reality") shows</a> being very pedantic and pinpointing small and
 large problems, but it comes with experience and "with the territory". So I
@@ -1348,9 +1353,8 @@ Ethics</a>, I do not propose laying off the existing screenreaders.
 </p>
 
 <p>
-I feel this is the current bottleneck, but
-the film studios should also approve of
-<a
+I feel this is the current bottleneck, but the film studios should also approve
+of <a
 href="#originality_is_self_defeating">writing commercial crossovers, parodies and RPFs</a>.
 </p>
 
@@ -1507,7 +1511,7 @@ you are not in a [% MDD %] you may
 notice that most of them consistently featured hacky acting that
 the actor employed. I recall Sharon Stone's
 phony acting in
-<a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)">The Quick and the Dead</a> to be
+<a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)"><i>The Quick and the Dead</i></a> to be
 a feature. I also loved [% SMG %]'s portrayal of a phony, pose, and unlikely
 Buffy in [% BtVS %] and later enjoyed her distinctively high pitching voice
 in the MTv Film awards parodies:
@@ -1591,10 +1595,9 @@ using [% GitHub %] or Google Docs which pities
 on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next,
 with <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a> and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
 as two "evil", but mutually hating one another, arbiters. Might seem ridiculus,
-but if I didn't want entertainment in my life, then I'd go watch
-grass grow.
-It will be a legal
-and "ethical" minefield, but I'd bet it'd be easier to follow and more
+but if I didn't want entertainment in my life, then I'd go watch grass grow.
+It will be a legal and "ethical" minefield, but I'd bet it'd be easier to
+follow and more
 entertaining than <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">Tolkien's "Lord of the Rings"</a>
 was even shortly after LotR was written.
 </p>
@@ -1749,8 +1752,8 @@ creators who frequent conventions/conferences, and making an income out of it),
 or like me publish and publicise their "fics" on the web and social media
 outlets. I suspect the reason several promising T.V. shows (e.g:
 <a href="https://en.wikipedia.org/wiki/Firefly_(TV_series)">Firefly</a>,
-or
-<a href="https://en.wikipedia.org/wiki/Terminator:_The_Sarah_Connor_Chronicles">Terminator: The Sarah Connor Chronicles</a>)
+<a href="https://en.wikipedia.org/wiki/Terminator:_The_Sarah_Connor_Chronicles">Terminator: The Sarah Connor Chronicles</a>,
+or <a href="https://en.wikipedia.org/wiki/Game_Shakers"><i>Game Shakers</i></a>)
 got cancelled recently were that its screenwriters turned "to the dark side"
 so to speak and started using fanfic - elements there, which would be
 a legal and pseudo-ethical minefield.

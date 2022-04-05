@@ -55,10 +55,10 @@ a:hover { background-color: palegreen;}
 </body>
 </html>
 EOF
-
-    Shlomif::DocBookClean::cleanup_docbook( \$contents );
-
-    path(
+    my $fh = path(
 qq#$PRE_DEST/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/$id.xhtml#,
-    )->spew_utf8($contents);
+    );
+    Shlomif::DocBookClean::cleanup_docbook( \$contents, $fh, );
+
+    $fh->spew_utf8($contents);
 }

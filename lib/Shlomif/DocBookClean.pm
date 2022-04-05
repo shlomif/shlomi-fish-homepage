@@ -45,7 +45,6 @@ q#//xhtml:div[@class='titlepage']/descendant::*[starts-with(local-name(), 'h')]#
 sub cleanup_docbook
 {
     my ( $str_ref, $fn ) = @_;
-    $fn //= '';
     my $source  = XML::LibXML->load_xml( string => $$str_ref, );
     my $results = $stylesheet->transform($source);
     if ( "$fn" =~ /c-and-cpp-elements-to-avoid/i )

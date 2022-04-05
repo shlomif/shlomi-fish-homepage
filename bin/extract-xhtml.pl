@@ -31,7 +31,7 @@ $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );
 
     my $s = $body_node->toString();
 
-    Shlomif::DocBookClean::cleanup_docbook( \$s );
+    Shlomif::DocBookClean::cleanup_docbook( \$s, $filename, );
 
     $s =~ s{\A.*?<body[^>]*>}{}ms;
     $s =~ s{</body>\s*(?:</html>)?\s*\z}{}ms;

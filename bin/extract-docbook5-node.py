@@ -7,7 +7,8 @@
 # Licensed under the terms of the MIT license.
 
 """
-
+Extract nodes from XML documents while preserving namespaces
+(as opposed to xmllint).
 """
 
 from lxml import etree
@@ -19,9 +20,10 @@ xpath = sys.argv.pop(1)
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 dbns = "http://docbook.org/ns/docbook"
 ns = {
-    "xhtml": XHTML_NAMESPACE,
     "db": dbns,
-    "xml": XML_NS, "ncx": "http://www.daisy.org/z3986/2005/ncx/",
+    "ncx": "http://www.daisy.org/z3986/2005/ncx/",
+    "xhtml": XHTML_NAMESPACE,
+    "xml": XML_NS,
 }
 with open(in_fn, "rb") as fh:
     xml = fh.read()

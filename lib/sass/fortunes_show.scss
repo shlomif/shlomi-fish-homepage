@@ -96,6 +96,11 @@ h1 {
     &:hover {
         background-color: #adb08f;
     }
+    &:focus {
+        $border_: red solid 3px;
+        border: $border_;
+        // outline: $border_ !important;
+    }
 }
 
 .fortunes_list {

@@ -56,3 +56,11 @@ $(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
 			-o $@ $< ; \
 	fi
 	$(PERL) -i -lpe 's/\s+$$//' $@
+
+SCREENPLAY_XML__RAW_HTMLS__POST_DESTS := $(patsubst $(PRE_DEST)/%,$(POST_DEST)/%,$(SCREENPLAY_XML__RAW_HTMLS__DESTS))
+SCREENPLAY_XML__PDFS__POST_DESTS := $(patsubst %.raw.html,%.pdf,$(SCREENPLAY_XML__RAW_HTMLS__POST_DESTS))
+
+$(SCREENPLAY_XML__PDFS__POST_DESTS): %.pdf: %.raw.html
+	weasyprint "$<" "$@"
+
+screenplays_pdfs: $(SCREENPLAY_XML__PDFS__POST_DESTS)

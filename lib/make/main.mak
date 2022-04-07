@@ -438,14 +438,6 @@ $(SRC_CLEAN_STAMP): $(BK2HP_NEW_PNG) $(DOCBOOK5_INSTALLED_EPUBS) $(FORTS_EPUB_DE
 	rsync -a $(PRE_DEST)/$(WMLect_PATH)/ $(POST_DEST)/$(WMLect_PATH)
 	touch $@
 
-SCREENPLAY_XML__RAW_HTMLS__POST_DESTS := $(patsubst $(PRE_DEST)/%,$(POST_DEST)/%,$(SCREENPLAY_XML__RAW_HTMLS__DESTS))
-SCREENPLAY_XML__PDFS__POST_DESTS := $(patsubst %.raw.html,%.pdf,$(SCREENPLAY_XML__RAW_HTMLS__POST_DESTS))
-
-$(SCREENPLAY_XML__PDFS__POST_DESTS): %.pdf: %.raw.html
-	weasyprint "$<" "$@"
-
-screenplays_pdfs: $(SCREENPLAY_XML__PDFS__POST_DESTS)
-
 docbook_extended: screenplays_pdfs
 
 all_deps: $(christina_grimmie_letter_html)
@@ -491,7 +483,6 @@ include lib/make/mod_files.mak
 include lib/make/summer_glau_letter.mak
 include lib/make/upload.mak
 
-all_deps: $(CATB_COPY)
 all_deps: $(JQUERYUI_JS_DESTS)
 all_deps: $(JQUI_webpack_dest)
 all_deps: $(SRC_IMAGES_DEST)

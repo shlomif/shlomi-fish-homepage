@@ -195,7 +195,6 @@ $(ALL_DIRS__TO_make_dirs): %:
 	mkdir -p $@
 	touch $@
 
-FICTION_DB5S := $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
 C_BAD_ELEMS_SRC := lib/c-begin/C-and-CPP-elements-to-avoid/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 POST_DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid.xml-grammar-vered.xml
 
@@ -477,19 +476,6 @@ minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_rjpgs
 screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets
-
-$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
-	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
-	if test -e "$$xslt" ; then \
-		temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
-		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-			-o "$$temp_db5" $< && \
-		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
-	else \
-		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
-			-o $@ $< ; \
-	fi
-	$(PERL) -i -lpe 's/\s+$$//' $@
 
 non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 

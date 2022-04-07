@@ -41,3 +41,18 @@ sync_teaser:
 
 $(HTML_TUT_HEB_DB): $(HTML_TUT_HEB_TT)
 	cd $(HTML_TUT_BASE) && $(GNUMAKE) docbook
+
+FICTION_DB5S := $(patsubst %,$(DOCBOOK5_XML_DIR)/%.xml,$(FICTION_DOCS))
+
+$(FICTION_DB5S): $(DOCBOOK5_XML_DIR)/%.xml: $(FICTION_XML_XML_DIR)/%.xml
+	xslt="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_DB5_XSLT_DIR)/%.xslt,$<)" ; \
+	if test -e "$$xslt" ; then \
+		temp_db5="$(patsubst $(FICTION_XML_XML_DIR)/%.xml,$(FICTION_XML_TEMP_DB5_DIR)/%.xml,$<)" ; \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o "$$temp_db5" $< && \
+		xsltproc --output "$@" "$$xslt" "$$temp_db5" ; \
+	else \
+		$(PERL) -MXML::Grammar::Fiction::App::ToDocBook -e 'run()' -- \
+			-o $@ $< ; \
+	fi
+	$(PERL) -i -lpe 's/\s+$$//' $@

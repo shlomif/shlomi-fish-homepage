@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 14;
+use Test::More tests => 15;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -92,6 +92,13 @@ sub dest_test
     # TEST
     post_dest_test( 'POST_DEST_XZ_MODS', 'Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
+
+    # TEST
+    gmake_test(
+        'FICTION_DB5S',
+        "lib/docbook/5/xml/The-Pope-Died-on-Sunday-english.xml",
+        "found a fiction docbook"
+    );
 
     # TEST
     post_dest_test( 'POST_DEST_DIRS', "art/original-graphics", "found a dir" );

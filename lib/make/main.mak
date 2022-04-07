@@ -482,24 +482,21 @@ non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)
 $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-all_deps: $(CATB_COPY)
-
 all: $(CATB_COPY_POST)
 
 include lib/make/asciidocs2db5-generated-include.mak
 include lib/make/json_resume.mak
 include lib/make/jquery-ui-webpack.mak
+include lib/make/mod_files.mak
+include lib/make/summer_glau_letter.mak
+include lib/make/upload.mak
 
+all_deps: $(CATB_COPY)
 all_deps: $(JQUERYUI_JS_DESTS)
 all_deps: $(JQUI_webpack_dest)
 all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
-
-include lib/make/mod_files.mak
-include lib/make/summer_glau_letter.mak
-include lib/make/upload.mak
-
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
 SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.db5.xml
 

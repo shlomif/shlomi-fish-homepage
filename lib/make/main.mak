@@ -501,8 +501,9 @@ include lib/make/summer_glau_letter.mak
 include lib/make/upload.mak
 
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
+SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.db5.xml
 
-$(SAMSMITHXML):
-	python3 bin/extract-docbook5-node.py lib/repos/shlomif-tech-diary/multiverse-cosmology-v0.4.x.db5.xml '//*[@xml:id="the-terran-terminators"]' > $@
+$(SAMSMITHXML): $(SAMSMITHXML_SRC)
+	python3 bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

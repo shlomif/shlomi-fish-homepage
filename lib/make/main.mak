@@ -117,8 +117,6 @@ chmod_copy = $(call COPY) ; chmod +x $@
 $(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
 	$(call chmod_copy)
 
-RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
-
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 rss:

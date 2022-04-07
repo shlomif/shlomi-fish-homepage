@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 13;
+use Test::More tests => 14;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -15,13 +15,20 @@ delete $ENV{MAKEFLAGS};
 
 my %cache;
 
+sub re_test
+{
+    my ( $var, $re, $blurb ) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+    return like( scalar( $cache{$var} //= `gmake $var.show` ), $re, $blurb, );
+}
+
 sub gmake_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    return like( scalar( $cache{$var} //= `gmake $var.show` ),
-        qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
+    return re_test( $var, qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 
 sub post_dest_test
@@ -39,6 +46,9 @@ sub dest_test
 }
 
 {
+    # TEST
+    re_test( 'RSYNC_EXCLUDES', qr#--exclude.*?js/MathJax#ms, "RSYNC_EXCLUDES" );
+
     # TEST
     gmake_test( 'DOCBOOK5_EPUB_DIR', 'lib/docbook/5/epub',
         "DOCBOOK5_EPUB_DIR" );

@@ -501,6 +501,9 @@ my %tr_s = (
                 inner_html => "Part 2",
                 path => "humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.html",
             ),
+            _github(
+                url => 'https://github.com/shlomif/TOW-Fountainhead',
+            ),
         ],
     ),
     'the_enemy' => _tr(

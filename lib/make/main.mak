@@ -3,8 +3,6 @@ LATEMP_ROOT_SOURCE_DIR := .
 LATEMP_ABS_ROOT_SOURCE_DIR := $(realpath $(LATEMP_ROOT_SOURCE_DIR))
 SASS_DEBUG_FLAGS :=
 
-MATHJAX_SOURCE_README := lib/js/MathJax/README.md
-
 all: all_deps non_latemp_targets
 
 all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortunes
@@ -222,6 +220,7 @@ include lib/make/sf-css.mak
 include lib/make/stories-targets.mak
 include lib/make/deps.mak
 
+MATHJAX_SOURCE_README := lib/js/MathJax/README.md
 MATHJAX_DEST_DIR := $(POST_DEST)/js/MathJax
 MATHJAX_DEST_README := $(MATHJAX_DEST_DIR)/README.md
 
@@ -238,24 +237,7 @@ SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS := $(patsubst %.pl,$(POST_DEST)/%-pl.t
 plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
 
 include lib/make/sf-javascripts.mak
-
-PRINTABLE_DEST_DIR := dest/printable
-PRINTABLE_RESUMES__HTML__PIVOT := $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
-PRINTABLE_RESUMES__HTML := $(PRINTABLE_RESUMES__HTML__PIVOT) $(addprefix $(PRINTABLE_DEST_DIR)/,Shlomi-Fish-English-Resume.html Shlomi-Fish-Heb-Resume.html Shlomi-Fish-Resume-as-Software-Dev.html)
-
-printable_resumes__html : $(PRINTABLE_RESUMES__HTML__PIVOT)
-
-PRINTABLE_RESUMES__DOCX := $(patsubst %.html,%.docx,$(PRINTABLE_RESUMES__HTML))
-
-$(PRINTABLE_RESUMES__DOCX): %.docx: %.html
-	libreoffice --writer --headless --convert-to docx --outdir $(PRINTABLE_DEST_DIR) $<
-
-$(PRINTABLE_RESUMES__HTML__PIVOT): $(PRE_DEST)/SFresume.html $(PRE_DEST)/SFresume_detailed.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Heb-Resume.html $(PRE_DEST)/me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html
-	bash bin/gen-printable-CVs.sh
-	cp -f $(PRINTABLE_DEST_DIR)/SFresume.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume.html
-	cp -f $(PRINTABLE_DEST_DIR)/SFresume_detailed.html $(PRINTABLE_DEST_DIR)/Shlomi-Fish-English-Resume-Detailed.html
-
-resumes: $(PRINTABLE_RESUMES__DOCX)
+include lib/make/sf-printables.mak
 
 PUT_CARDS_2013_DEST_INDIV := $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
 PUT_CARDS_2013_INDIV_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/bin/split-put-cards-into-divs.pl

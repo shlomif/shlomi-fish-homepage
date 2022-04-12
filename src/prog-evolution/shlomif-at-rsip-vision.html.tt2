@@ -2,6 +2,7 @@
 [%- SET desc = "Some Memoirs of Shlomi Fish when Working at RSIP Vision" -%]
 [%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Cortext, Perl, UNIX, Unix, HTML" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 

@@ -2,6 +2,7 @@
 [%- SET desc = "Some memoirs of Shlomi Fish when Working at Elpas" -%]
 [%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Elpas, Windows" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 

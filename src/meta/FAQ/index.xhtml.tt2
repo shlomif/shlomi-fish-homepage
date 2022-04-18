@@ -3403,12 +3403,16 @@ advice to <a href="[% base_path
 your own kind of music"</a> and use my own cultural background and interests as
 inspiration for my creative works. Also note that I tend to agree with Larry Wall
 that <a href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">“All
-Truth is God’s Truth”</a> and have also recently concluded that
+Truth is God’s Truth”</a>.
+</p>
+
+[% IF 0 %]
+and have also recently concluded that
 <a href="https://twitter.com/shlomif/status/1351069373952360448">"Truth" is
 a function of time</a> and like <a href="https://www.goodreads.com/quotes/941-the-opposite-of-a-correct-statement-is-a-false-statement">Niels Bohr's noted</a> that:
 <q>The opposite of a correct statement is a false statement. But the opposite
 of a profound truth may well be another profound truth.</q>
-</p>
+[% END %]
 
 <p>
 Often, people enjoy my works without being intimately familiar with all

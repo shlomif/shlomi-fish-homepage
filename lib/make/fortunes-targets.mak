@@ -96,6 +96,9 @@ $(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
 	$(OPTIPNG) $@
 
+$(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
+	$(call chmod_copy)
+
 PRE_DEST_FORTUNES_many_files := $(PRE_DEST_FORTUNES)
 POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
 

@@ -13,6 +13,8 @@ include lib/make/shlomif_common.mak
 include lib/make/tools.mak
 include lib/make/include.mak
 
+chmod_copy = $(call COPY) ; chmod +x $@
+
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 
@@ -103,11 +105,6 @@ $(SRC_FORTUNES_ALL_TT2): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-forts-all-in-one-page
 	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $< $@
 
 PRE_DEST_FORTUNES := $(patsubst $(SRC_FORTUNES_DIR)/%,$(PRE_DEST_FORTUNES_DIR)/%,$(wildcard $(SRC_FORTUNES_DIR)/fortunes-shlomif-*.tar.gz))
-
-chmod_copy = $(call COPY) ; chmod +x $@
-
-$(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call chmod_copy)
 
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 

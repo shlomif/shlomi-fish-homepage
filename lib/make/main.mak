@@ -243,51 +243,6 @@ all: $(LC_LECTURE_ARC)
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
 	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_ALL=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2021-01-29T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
 
-RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
-GRIMMIE_IMAGES_POST_DEST := $(POST_DEST)/art/recommendations/music/online-artists/fan-pages/chris-grimmie/images
-
-RPG_DICE_SET_SRC := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
-RPG_DICE_SET_DEST := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
-
-GRIMMIE_IMG_SRC := $(GRIMMIE_IMAGES_POST_DEST)/christina-grimmie--529031666.jpg
-GRIMMIE_IMG_DEST := $(GRIMMIE_IMAGES_POST_DEST)/christina-grimmie--529031666-r.webp
-MY_NAME_IS_RINDOLF_SRC := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
-MY_NAME_IS_RINDOLF_DEST := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
-
-Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
-Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
-Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
-
-DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
-
-POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
-
-MY_RPF_DEST_DIR := $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
-MY_RPF_DEST_PIVOT := $(MY_RPF_DEST_DIR)/euler.webp
-
-OPENLY_BIPOLAR_DEST_DIR := $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
-OPENLY_BIPOLAR_DEST_PIVOT := $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
-
-all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
-all: $(MY_NAME_IS_RINDOLF_DEST)
-
-SUB_REPOS_BASE_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/repos
-
-MY_RPF_SRC_DIR := $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction
-
-$(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp
-	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
-
-OPENLY_BIPOLAR_SRC_DIR := $(SUB_REPOS_BASE_DIR)/why-openly-bipolar-people-should-not-be-medicated
-
-$(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
-	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
-
-$(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
-	$(call simple_gm)
-
-all: $(DnD_lances_cartoon_DEST)
-
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
 
@@ -301,6 +256,7 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
+SUB_REPOS_BASE_DIR := $(LATEMP_ROOT_SOURCE_DIR)/lib/repos
 TECH_BLOG_DIR := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary
 TECH_TIPS_SCRIPT := $(TECH_BLOG_DIR)/extract-tech-tips.pl
 TECH_TIPS_INPUTS := $(addprefix $(TECH_BLOG_DIR)/,old-tech-diary.xhtml tech-diary.xhtml)
@@ -354,9 +310,9 @@ POST_DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images
 CATB_COPY := $(PRE_DEST)/catb-heb.xhtml
 CATB_COPY_POST := $(POST_DEST)/catb-heb.xhtml
 
+include lib/make/image-files.mak
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
-include lib/make/image-files.mak
 
 minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_rjpgs__webps) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
 screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)

@@ -1,0 +1,64 @@
+[%- SET title = "Who will ride Princess Celestia?" -%]
+[%- SET desc = "Does Emma Watson have what it takes to work as a Java enterprise software developer? A satire fan-fiction thought experiment." %]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro %]
+
+[% END %]
+
+[% default_toc %]
+
+[% WRAPPER h2_section id="text" title="Text"%]
+
+[% path_slurp("screenplay-xml/rendered-html/Who-will-ride-Princess-Celestia.html") %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "reception" title = "What other people are saying" %]
+
+<ul>
+
+<li>
+<p>
+«I would not hire Emma Watson. She’d be good for employee morale, but she’d
+also be too distracting.» - <b>osoleve</b> on Freenode’s ##programming.
+</p>
+</li>
+<li>
+<p>
+«I think we would hire Emma Watson based on looks alone. ☺» — <b>glange</b>
+on Freenode’s #objectivism.
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id="coverage" title="Coverage"%]
+
+<ul>
+
+<li>
+<p>
+<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg65063.html">Linux-IL</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id="links" title="Links"%]
+
+[% END %]
+
+[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+
+[% license_obj.by_nc_sa_british_blurb( "year" => "2022", ) %]
+
+[% END %]
+
+[% END %]

@@ -204,23 +204,6 @@ include lib/make/presentations-targets.mak
 include lib/make/sf-css.mak
 include lib/make/stories-targets.mak
 include lib/make/deps.mak
-
-MATHJAX_SOURCE_README := lib/js/MathJax/README.md
-MATHJAX_DEST_DIR := $(POST_DEST)/js/MathJax
-MATHJAX_DEST_README := $(MATHJAX_DEST_DIR)/README.md
-
-mathjax_dest: make-dirs $(MATHJAX_DEST_README)
-
-$(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	@mkdir -p $(MATHJAX_DEST_DIR)/
-	cp -PR lib/js/MathJax/{LICENSE,README.md,es5/} $(MATHJAX_DEST_DIR)/
-
-SCRIPTS_WITH_OFFENDING_EXTENSIONS := MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl
-
-SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS := $(patsubst %.pl,$(POST_DEST)/%-pl.txt,$(SCRIPTS_WITH_OFFENDING_EXTENSIONS))
-
-plaintext_scripts_with_offending_extensions: $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS)
-
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 

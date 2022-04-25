@@ -115,6 +115,24 @@ sub _gen__queen_padme_tales__tr
     );
 }
 
+sub _gen__who_will_ride_princess_celestia__tr
+{
+    my $self  = shift;
+    my $args  = shift;
+    my $regex = $args->{path_regex};
+
+    return _tr(
+        title => "Who will ride Princess Celestia next?",
+        items => [
+            _fp( path => "humour/bits/Who-will-ride-Princess-Celestia/", ),
+            ( grep { $_->path() =~ $regex } () ),
+            _github(
+                url => 'https://github.com/shlomif/shlomi-fish-homepage',
+            ),
+        ],
+    );
+}
+
 sub _commercial_fanfic_initiative__mission_stmt
 {
     my ($explicit) = @_;
@@ -544,6 +562,12 @@ my %tr_s = (
             ),
         ],
     ),
+    'who_will_ride_princess_celestia' =>
+        __PACKAGE__->_gen__who_will_ride_princess_celestia__tr(
+        {
+            path_regex => qr/./ms,
+        }
+        ),
     'xkcd_facts' => _tr(
         title => "“Facts”",
         items => [
@@ -770,7 +794,11 @@ q{<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> / <a href=
 q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
-                _tr_s( qw( terminator_liberation queen_padme_tales ), ),
+                _tr_s(
+                    qw( terminator_liberation queen_padme_tales
+                        who_will_ride_princess_celestia
+                    ),
+                ),
             ],
         },
     ),

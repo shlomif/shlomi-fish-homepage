@@ -19,16 +19,17 @@ my $base = 'Who-will-ride-Princess-Celestia';
 
 # ''
 foreach
-    my $part ( path($filename)->basename =~ /\A\Q$base\E([0-9A-Za-z_\-]+)/g )
+    my $part ( path($filename)->basename =~ /\A\Q$base\E([0-9A-Za-z_\-]*)/g )
 {
     my $epub_basename = $base . $part;
     $obj->epub_basename($epub_basename);
 
+    my $ext = ( $part ? " - $part" : "" );
     $obj->output_json(
         {
             data => {
                 filename => $epub_basename,
-                title    => qq/$base - $part/,
+                title    => qq/$base$ext/,
                 authors  => [
                     {
                         name => "Shlomi Fish",

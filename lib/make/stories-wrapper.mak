@@ -30,7 +30,6 @@ SCREENPLAY_DOCS_ADDITIONS := \
 	Emma-Watson-applying-for-a-software-dev-job \
 	Emma-Watson-visit-to-Israel-and-Gaza \
 	Mighty-Boosh--Ape-of-Death--Scenes \
-	Who-will-ride-Princess-Celestia \
 	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \

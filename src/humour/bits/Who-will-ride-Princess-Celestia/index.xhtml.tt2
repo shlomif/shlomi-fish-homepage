@@ -1,5 +1,7 @@
 [%- SET title = "Who will ride Princess Celestia next?" -%]
-[%- SET desc = "Does Emma Watson have what it takes to work as a Java enterprise software developer? A satire fan-fiction thought experiment." %]
+[%- SET desc = "As an example, we can imagine a young girl to write a funny screenplay using GitHub or Google Docs which pits Emma Watson vs. Kim Kardashian on who gets to ride Princess Celestia (= an intelligent, talking, pony horse) next, with Darth Vader and Haman as two “evil”, but mutually hating one another, arbiters. Might seem ridiculus, but if I didn't want entertainment in my life, then I'd go watch grass grow.  It will be a legal and “ethical” minefield, but I'd bet it'd be easier to follow and more entertaining than Tolkien's “Lord of the Rings” was even shortly after LotR was written." %]
+
+
 [%- SET apply_screenplay_style = 1 -%]
 
 [%- WRAPPER wrap_html -%]
@@ -14,42 +16,7 @@
 
 [% END %]
 
-[% WRAPPER h2_section id = "reception" title = "What other people are saying" %]
-
-<ul>
-
-<li>
-<p>
-«I would not hire Emma Watson. She’d be good for employee morale, but she’d
-also be too distracting.» - <b>osoleve</b> on Freenode’s ##programming.
-</p>
-</li>
-<li>
-<p>
-«I think we would hire Emma Watson based on looks alone. ☺» — <b>glange</b>
-on Freenode’s #objectivism.
-</p>
-</li>
-
-</ul>
-
-[% END %]
-
 [% WRAPPER h2_section id="coverage" title="Coverage"%]
-
-<ul>
-
-<li>
-<p>
-<a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg65063.html">Linux-IL</a>
-</p>
-</li>
-
-</ul>
-
-[% END %]
-
-[% WRAPPER h2_section id="links" title="Links"%]
 
 [% END %]
 

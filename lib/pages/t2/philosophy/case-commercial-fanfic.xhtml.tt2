@@ -2172,6 +2172,8 @@ likely can succeed.
 
 [% WRAPPER h3_section id = "guidelines_as_dogma" title = "Taking Guidelines as Dogma is the Problem" %]
 
+[% WRAPPER h4_section id = "guidelines_as_dogma_intro" title = "Introduction" %]
+
 <blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=emacs-wars" class="fancy">
 
 <p>
@@ -2236,7 +2238,7 @@ by inspiration from <a href="https://en.wikipedia.org/wiki/The_Colbert_Report">t
 
 <p>
 Similarly, I suspect <a
-href="https://www.chabad.org/library/bible_cdo/aid/16099">Ezekiel I</a> was
+href="https://www.chabad.org/library/bible_cdo/aid/16099">chapter I of Ezekiel</a> was
 originally intended as an exaggerated parody of Polytheistic visions of
 revelation by <a href="https://en.wikipedia.org/wiki/Ezekiel">Ezekiel</a> who was <a href="#craziness_and_nevua">a standup
 philosopher/comedian</a>.
@@ -2254,7 +2256,9 @@ education of the Greeks, who may have heard or uttered similar sentiments,
 and found them ridiculous when lumped together.
 </p>
 
-<hr />
+[% END %]
+
+[% WRAPPER h4_section id = "challenging_the_guidelines" title = "Challenging the Guidelines" %]
 
 <p>
 Anyway, as humans we are capable of challenging certain dogmata or taboos in
@@ -2311,7 +2315,6 @@ And we can certainly challenge:
 <ul>
 
 <li>
-<div>
 <blockquote>
 
 <p>
@@ -2319,17 +2322,16 @@ And we can certainly challenge:
 </p>
 
 </blockquote>
+
 <p>
- ( [% LAH %]
-;
-<a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a> ;
-<a href="https://xkcd.com/406/">xkcd: "Venting"</a>)
+What about [% LAH %],
+<a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a>,
+and
+<a href="https://www.explainxkcd.com/wiki/index.php/406:_Venting">xkcd: "Venting"</a>.
 </p>
-</div>
 </li>
 
 <li>
-<div>
 <blockquote>
 
 <p>
@@ -2343,21 +2345,20 @@ format
 ( <a href="#hollywood_screenplay_format">See above</a> )
 </p>
 
-</div>
 </li>
 
 <li>
-<div>
 <p>
 The redditesque "no self-promotion" (which was not enforced by
 Slashdot before reddit was conceived, and still is not enforced by Slashdot
 or by many subreddits).
 </p>
-</div>
 </li>
 </ul>
 
-<hr />
+[% END %]
+
+[% WRAPPER h4_section id = "judges_follow_gut_feeling" title = "Judges follow gut feeling" %]
 
 <blockquote cite="https://www.joelonsoftware.com/2008/03/17/martian-headsets/" class="fancy">
 
@@ -2409,6 +2410,8 @@ were or seemed beneficial at the time that no longer are.
 Guidelines <b>are</b> important for the philosophical processes of thought and
 communication. But they should not be taken as gospel or dogma.
 </p>
+
+[% END %]
 
 [% END %]
 

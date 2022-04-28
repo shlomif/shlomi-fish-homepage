@@ -728,12 +728,26 @@ endeavours.  Moreover, she is often depicted as trying to emulate the
 nerdier/dorkier geeks, and successfully.
 </p>
 
+[% SET tbbt_game_addict_penny_non_broken_yt_video = 1 %]
+[% IF tbbt_game_addict_penny_non_broken_yt_video %]
+
+[%#
+   https://www.youtube.com/watch?v=CRcXQ13I3UI
+   Queen Penolepe | Penny's online gaming addiction | The Big Bang Theory - YouTube
+%]
+
+<iframe src="https://www.youtube.com/embed/CRcXQ13I3UI" allowfullscreen="allowfullscreen"></iframe>
+
+[% ELSE %]
+
 [%#
    https://www.youtube.com/watch?v=Ufr-Y5oROyE
    Big Bang Theory - Penny The Game Addict 2 - YouTube
 %]
 
 <iframe src="https://www.youtube.com/embed/Ufr-Y5oROyE" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
 
 <p>
 Given <a

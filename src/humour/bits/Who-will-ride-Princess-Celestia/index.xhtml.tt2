@@ -6,10 +6,6 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro %]
-
-[% END %]
-
 [% WRAPPER h2_section id="text" title="Text"%]
 
 [% path_slurp("screenplay-xml/rendered-html/Who-will-ride-Princess-Celestia.html") %]

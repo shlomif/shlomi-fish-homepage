@@ -172,3 +172,10 @@ body {
         padding-right: 13px;
     }
 }
+
+.self_photos {
+    img {
+        max-height: 500px;
+        max-width: 70%;
+    }
+}

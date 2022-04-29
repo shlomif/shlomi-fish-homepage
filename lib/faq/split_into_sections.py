@@ -24,6 +24,11 @@ from lxml.html import XHTML_NAMESPACE
 
 XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 XHTML_ARTICLE_TAG = '{' + XHTML_NAMESPACE + '}article'
+XHTML_PREFIX = bytes(
+                    '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html>',
+                    "utf-8"
+                )
+HTML_PREFIX = bytes("<!DOCTYPE html>", "utf-8")
 
 
 class MyXmlNoResultsFoundError(Exception):
@@ -111,20 +116,17 @@ class XhtmlSplitter:
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
 
-        def _xhtml_to_string(x, prefix):
-            ret = etree.tostring(x)
-            if prefix:
-                return bytes(
-                    '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html>',
-                    "utf-8"
-                ) + ret
+        def _xhtml_to_string(dom, add_prefix):
+            ret = etree.tostring(dom)
+            if add_prefix:
+                return XHTML_PREFIX + ret
             else:
                 return ret
 
-        def _html_to_string(x, prefix):
-            ret = lxml.html.tostring(x)
-            if prefix:
-                return bytes("<!DOCTYPE html>", "utf-8") + ret
+        def _html_to_string(dom, add_prefix):
+            ret = lxml.html.tostring(dom)
+            if add_prefix:
+                return HTML_PREFIX + ret
             else:
                 return ret
 
@@ -166,7 +168,9 @@ class XhtmlSplitter:
         )
 
     def _write_master_xml_file(self):
-        tree_s = self._to_string_cb(self.root, True)
+        tree_s = self._to_string_cb(
+            dom=self.root, add_prefix=True,
+        )
         should = False
         with open(self.input_fn, self._r_mode) as ifh:
             curr = ifh.read()
@@ -360,7 +364,9 @@ class XhtmlSplitter:
                     ):
                 if self._is_protected(a_elem):
                     a_elem.attrib.pop(self._protect_attr_name)
-            body_string = self._to_string_cb(output_list_elem, False)
+            body_string = self._to_string_cb(
+                dom=output_list_elem, add_prefix=False,
+            )
             formats = {
                 'base_path': self.base_path,
                 'body': (body_string.decode('utf-8')),

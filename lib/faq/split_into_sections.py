@@ -81,7 +81,6 @@ class XhtmlSplitter:
         self.output_dirname = output_dirname
         self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
-        self.container_elem_xpath = container_elem_xpath
         self.input_is_plain_html = input_is_plain_html
         self.xhtml_prefix = (
             "" if self.input_is_plain_html else
@@ -91,10 +90,14 @@ class XhtmlSplitter:
         )
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
+        self.container_elem_xpath = container_elem_xpath.format(
+            xhtml_prefix=self.xhtml_prefix
+        )
         self.section_tags = set([
             self.xhtml_article_tag, self.xhtml_section_tag, ])
         if self.input_is_plain_html:
             self._r_mode = 'rt'
+            # self._r_mode = 'rb'
             self._w_mode = 'wb'
         else:
             self._r_mode = 'rb'
@@ -108,12 +111,26 @@ class XhtmlSplitter:
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
 
-        def _html_to_string(x):
-            return bytes("<!DOCTYPE html>", "utf-8") + lxml.html.tostring(x)
+        def _xhtml_to_string(x, prefix):
+            ret = etree.tostring(x)
+            if prefix:
+                return bytes(
+                    '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html>',
+                    "utf-8"
+                ) + ret
+            else:
+                return ret
+
+        def _html_to_string(x, prefix):
+            ret = lxml.html.tostring(x)
+            if prefix:
+                return bytes("<!DOCTYPE html>", "utf-8") + ret
+            else:
+                return ret
 
         self._to_string_cb = (
             _html_to_string
-            if self.input_is_plain_html else etree.tostring)
+            if self.input_is_plain_html else _xhtml_to_string)
 
     def _process_title(self, header_text):
         """docstring for _process_title"""
@@ -149,7 +166,7 @@ class XhtmlSplitter:
         )
 
     def _write_master_xml_file(self):
-        tree_s = self._to_string_cb(self.root)
+        tree_s = self._to_string_cb(self.root, True)
         should = False
         with open(self.input_fn, self._r_mode) as ifh:
             curr = ifh.read()
@@ -343,7 +360,7 @@ class XhtmlSplitter:
                     ):
                 if self._is_protected(a_elem):
                     a_elem.attrib.pop(self._protect_attr_name)
-            body_string = self._to_string_cb(output_list_elem)
+            body_string = self._to_string_cb(output_list_elem, False)
             formats = {
                 'base_path': self.base_path,
                 'body': (body_string.decode('utf-8')),

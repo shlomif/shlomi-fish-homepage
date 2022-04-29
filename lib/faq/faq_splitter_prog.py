@@ -451,7 +451,7 @@ def generic_generate_from_db5(**args):
     extra_args = {
         'base_path': base_path,
         'container_elem_xpath': (
-            "//xhtml:section[@class='" + TOP_LEVEL_CLASS + "']"
+            "//{xhtml_prefix}section[@class='" + TOP_LEVEL_CLASS + "']"
         ),
         'list_sections_format': (
             ".//{xhtml_prefix}section[@class='section']"
@@ -474,6 +474,7 @@ def _docbook5_main():
     generic_generate_from_db5(
         OUT_DN="./dest/post-incs/t2/philosophy/philosophy/" +
         "putting-cards-on-the-table-2019-2020/",
+        # input_is_plain_html=True,
         path_to_all_in_one="../",
     )
     # return

@@ -258,7 +258,7 @@ a chance?
 </p>
 <p class="summernsa abstract">
 This screenplay is surrealistic realism and takes place in April 2013. It is
-far-fetched, but could actually happen. Very farfetched, but could happen.
+far-fetched, but could actually happen.
 </p>
 EOF
         entry_extra_html => <<'EOF',

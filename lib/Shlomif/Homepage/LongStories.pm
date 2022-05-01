@@ -301,7 +301,7 @@ EOF
     },
     {
         id         => 'muppets_show_tni',
-        tagline    => "Muppets!",
+        tagline    => "We’d love to learn more about you.",
         logo_alt   => "The Muppets Show TNI",
         logo_src   => "humour/Muppets-Show-TNI/images/muppets-200w.png",
         logo_svg   => '//$SKIP',

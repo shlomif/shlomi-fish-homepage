@@ -790,7 +790,7 @@ at the NSA</i></a> screenplay and Ms. Glau.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address?  People can spam you."  %]
+[% WRAPPER faq_h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address? People can spam you."  %]
 
 <p>
 First of all, in this day and age, it’s unlikely that the spammers <b>will
@@ -2814,7 +2814,9 @@ I’d like my site to be as popular as possible, the real reason why I link
 to pages there is because they are relevant to the discussion at hand. If
 you’re too envious of me linking to my site, then please stop and get your
 own site which you can start populating with interesting content to your
-heart’s content.
+heart’s content. Moreover, you can use my site as a basis by
+<a href="https://www.shlomifish.org/meta/site-source/">forking its public
+version-control repository</a>.
 </p>
 
 [% WRAPPER faq_h4_section id = "advertise_your_site"  title = "Why do you advertise/“spam”/“self-promote” pages from your sites?"  %]
@@ -2901,7 +2903,7 @@ and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration
 </p>
 
 <p>
-In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> for code.
+In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.asciidoc">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> for code.
 </p>
 
 <p>

@@ -1,6 +1,6 @@
 "use strict";
 // Tests for the jQtree generation routines.
-// Copyright by Shlomi Fish, 2012 - see LICENSE.md
+// Copyright by Shlomi Fish, 2012 - see LICENSE.asciidoc
 
 function test_nav_menu_generation()
 {

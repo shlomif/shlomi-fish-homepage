@@ -178,6 +178,29 @@ my %tr_s = (
             ),
         ],
     ),
+    'card_games_bits' => _tr(
+        title => "Ultra-short stories",
+        items => [
+            _l(
+                inner_html => "Freecell Solver™ Enterprise Edition",
+                path       => "humour/bits/Freecell-Solver-Enterprise-Edition/",
+            ),
+            _l(
+                inner_html => "Freecell Solver™ Goes Webscale",
+                path       => "humour/bits/Freecell-Solver-Goes-Webscale/",
+            ),
+            _l(
+                inner_html =>
+                    "Freecell Solver Enterprises™ Acquires Google Inc.",
+                path =>
+"humour/bits/Freecell-Solver-Enterprises-Acquires-Google-Inc/",
+            ),
+            _l(
+                inner_html => "Who will ride Princess Celestia next?",
+                path       => "humour/bits/Who-will-ride-Princess-Celestia/",
+            ),
+        ],
+    ),
     'define_zionism' => _tr(
         title => "Define Zionism",
         items => [ _fp( path => "philosophy/politics/define-zionism/", ), ],
@@ -198,6 +221,25 @@ my %tr_s = (
     'Emma_Watson_visit_to_Gaza' => _tr(
         title => "Emma Watson Visit to Israel &amp; Gaza",
         items => [ $Emma_Watson_visit_to_Gaza, ],
+    ),
+    'card_games_essays' => _tr(
+        title => "Essays",
+        items => [
+            _l(
+                inner_html =>
+                    "“What Makes Software High Quality?” - Revision 2",
+                path => "philosophy/computers/high-quality-software/rev2/",
+            ),
+            _l(
+                inner_html => "Optimising Code for Speed",
+                path       => "philosophy/computers/optimizing-code-for-speed/",
+            ),
+            _l(
+                inner_html => "FOSS Licences Wars (Revision 2)",
+                path       =>
+                    "philosophy/computers/open-source/foss-licences-wars/rev2/",
+            ),
+        ],
     ),
     'foss_bits' => _tr(
         title => "Ultra-short stories",
@@ -660,6 +702,24 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('buffy_facts'),
+            ],
+        },
+    ),
+    'card_games' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'card_games_nav_block',
+            text_title => "Card Games ( e.g: Freecell ) - referencing works",
+            tr_s       => [
+                _master_tr(
+                    title =>
+                        q{Card Games ( e.g: Freecell ) - referencing works},
+                ),
+
+                # do { Carp::confess("freecell TODO"); },
+                _subdiv_tr( title => q{Essays}, ),
+                _tr_s( qw( card_games_essays ), ),
+                _subdiv_tr( title => q{Bits}, ),
+                _get_tr('card_games_bits'),
             ],
         },
     ),

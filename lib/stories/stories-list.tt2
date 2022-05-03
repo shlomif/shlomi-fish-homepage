@@ -106,22 +106,7 @@ requests, and filing bugs/issues in the bug tracker
 </div>
 [% END %]
 
-[% BLOCK active_humour_stories__intro %]
-
-[% WRAPPER intro  %]
-
-<p>
-Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>
-and <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
-that I have written, which are mostly humorous
-in part or in whole (but to quote
-<a href="http://en.wikiquote.org/wiki/Peter_Ustinov">Peter Ustinov</a>,
-“Comedy is simply a funny way of being serious”).
-I have many much shorter works <a href="../">in the main section</a>,
-including <a href="[% base_path %]humour/fortunes/">quotes</a>,
-<a href="[% base_path %]humour.html">aphorisms</a>, and
-<a href="[% base_path %]humour/bits/facts/">factoids</a>.
-</p>
+[% BLOCK active_humour_stories__competence %]
 
 <p>
 <b>Note:</b> many of my stories are <b>not</b> too <b>realistic</b>, and aim
@@ -144,6 +129,26 @@ instead of preserving the status quo.
 <p>
 <a href="http://classics.mit.edu/Aristotle/poetics.1.1.html">Like Aristotle notes about Homer</a>, the characters in my fics are <b>competent</b>: confident, open, forgiving, funny [I hope], greedy and ambitious, resourceful, generous, passionate, socially capable, sexually assertive, and sexy.
 </p>
+[% END %]
+
+[% BLOCK active_humour_stories__intro %]
+
+[% WRAPPER intro  %]
+
+<p>
+Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>
+and <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
+that I have written, which are mostly humorous
+in part or in whole (but to quote
+<a href="http://en.wikiquote.org/wiki/Peter_Ustinov">Peter Ustinov</a>,
+“Comedy is simply a funny way of being serious”).
+I have many much shorter works <a href="../">in the main section</a>,
+including <a href="[% base_path %]humour/fortunes/">quotes</a>,
+<a href="[% base_path %]humour.html">aphorisms</a>, and
+<a href="[% base_path %]humour/bits/facts/">factoids</a>.
+</p>
+
+[% PROCESS active_humour_stories__competence %]
 
 [% END %]
 

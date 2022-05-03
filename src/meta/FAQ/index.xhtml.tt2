@@ -3533,6 +3533,12 @@ Fish (= me): "Hackers make the best warriors"</a> )
 
 [%- END -%]
 
+[% WRAPPER faq_h3_section id = "why_arent_you_faithful_to_the_original_franchises_and_characters" title = "Why aren't you faithful to the original franchises and characters?" %]
+
+[% PROCESS active_humour_stories__competence %]
+
+[%- END -%]
+
 [% WRAPPER faq_h3_section id = "factoids_obsession"  title = "Why are you so obsessed with “facts”/factoids about Chuck Norris/etc.?"  %]
 
 <p>

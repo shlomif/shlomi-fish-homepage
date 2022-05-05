@@ -322,7 +322,7 @@ all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
-SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.db5.xml
+SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
 
 $(SAMSMITHXML): $(SAMSMITHXML_SRC)
 	python3 bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@

@@ -582,6 +582,21 @@ NSA, Publish or Perish!”</a> - captioned image by me.
 <a href="[% base_path %]humour/fortunes/show.cgi?id=smg-next-film">“Sarah
 Michelle Gellar’s Next Movie”</a> - old fortune cookie.
 </p>
+
+<blockquote cite="">
+
+<p>[Discussing the shortage of IT workers as of 1998 on E-mail]</p>
+
+<p>Shlomi Fish to Omer Zak: “Even the NSA doesn’t have enough programmers. But
+it is not likely that they will have more, and that’s because <i>Summerschool
+at the NSA</i> may might as well be the name of Sarah Michelle Gellar’s next
+movie.” </p>
+
+<p>Omer Zak to Shlomi Fish: “And as opposed to <i>I Know What You Did Last
+Summer</i>, it is going to be scary.” </p>
+
+</blockquote>
+
 </li>
 
 <li>
@@ -589,6 +604,49 @@ Michelle Gellar’s Next Movie”</a> - old fortune cookie.
 <a href="[% base_path %]humour/fortunes/show.cgi?id=kilmo-about-the-NSA">“kilmo
 about the NSA”</a> - a sequel to the previous fortune cookie.
 </p>
+
+<blockquote cite="">
+
+<blockquote>
+
+<p> [Discussing the shortage of IT workers as of 1998 on
+E-mail] </p>
+
+<p> Shlomi Fish to Omer Zak: "Even the NSA doesn’t have
+enough programmers. But it is not likely that they will
+have more and that’s because ‘Summerschool at the NSA’
+may might as well be the name of Sarah Michelle
+Gellar’s next movie." </p>
+
+<p> Omer Zak to Shlomi Fish: "And as opposed to ‘I Know
+What You Did Last Summer’ it is going to be scary."
+</p>
+
+</blockquote>
+
+<p> <b>Kilmo:</b> why would you like to make fun of the
+crypto world ? ;) The NSA does know what you did last
+summer.  And by putting this on the web, they know that you
+know.  </p>
+
+
+<p> Which may lead to interesting philosophical issues. BTW, in
+a conference I was attending we were given a sticker
+saying: "NSA - free email backup".  </p>
+
+
+<p> They still have some issue with the retrieval procedures,
+but besides of that  - they are quite a trusted service.  </p>
+
+<p> <b>Shlomi Fish:</b> In my case, I think every random Joe can learn a
+lot about me. Even if he’s not in Google or the NSA or whatever.  </p>
+
+<p> <b>Kilmo:</b> Yep. But this is a world-wide service that
+they offer. (Along with several co-operations, like MI5/6).
+</p>
+
+</blockquote>
+
 </li>
 
 <li>

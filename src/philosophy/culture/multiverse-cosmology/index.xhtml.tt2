@@ -1,6 +1,6 @@
-[%- SET title = "Why I will continue to write my real person fan fiction (fanfic)" -%]
-[%- SET desc = "Why I will continue to write my real person fan fiction (fanfic)" -%]
-[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism" -%]
+[%- SET title = "The multiverse's cosmology v0.4.x" -%]
+[%- SET desc = "the cosmology of the Selinaverse, its Shlomifverse fork, and our view into Fantastecha, the multiverse of imagination." -%]
+[%- SET more_keywords = "cosmology" -%]
 
 
 [%- WRAPPER wrap_html -%]
@@ -19,7 +19,7 @@
 
 <li>
 <p>
-<a href="https://github.com/shlomif/my-real-person-fan-fiction">Source Repository for this essay on GitHub</a>
+<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-cosmology-v0.4.x.docbook5.xml">Source Repository for this essay on GitHub</a>
 </p>
 </li>
 
@@ -30,6 +30,5 @@
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "multiverse-cosmology-v0.4.x",  %]
 
 </div>
-
 
 [% END %]

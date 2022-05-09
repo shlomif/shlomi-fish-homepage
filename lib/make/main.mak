@@ -327,4 +327,9 @@ SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology
 $(SAMSMITHXML): $(SAMSMITHXML_SRC)
 	python3 bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
 
+COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
+
+$(COSMOLOGY_XML): $(SAMSMITHXML_SRC)
+	$(call COPY)
+
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

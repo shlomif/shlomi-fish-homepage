@@ -1053,10 +1053,10 @@ sub _page_to_obj
     my $ret;
     eval { $ret = Shlomif::Homepage::FactoidsPages::Page->new($hash_ref); };
 
-    if ($@)
+    if ( my $err = $@ )
     {
         print "Failed at " . $hash_ref->{id_base} . "!\n";
-        die $@;
+        die $err;
     }
 
     return $ret;

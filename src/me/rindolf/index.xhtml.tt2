@@ -6,6 +6,8 @@
 
 [% PROCESS "Inc/real_shlomif.tt2" %]
 
+[% SET IRC = my_acronym( "key" => "IRC",) %]
+
 [% BLOCK rindolf_floaty_img %]
 <a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
 [% END %]
@@ -17,7 +19,7 @@
 [% WRAPPER h2_section id = "what"  title = "“Rindolf” - Shlomi Fish’s Nickname"  %]
 
 <p>
-I, Shlomi Fish, have decided to allow people on and off [% my_acronym( "key" => "IRC",) %] to call me
+I, Shlomi Fish, have decided to allow people on and off [% IRC %] to call me
 “Rindolf”, due to the fact that some non-Hebrew inclined people have problems
 with my private name - <a href="[% base_path %]meta/FAQ/#your_name">“Shlomi”</a>.
 Some common pet names for Rindolf include “Rin”,
@@ -66,7 +68,7 @@ of my individuality.
 [% INCLUDE rindolf_floaty_img href = "https://drawception.com/viewgame/eydXpMGgOh/inception/", src = "images/evil-reindeer-200w.png", alt = "Evil Reindeer", title = "Photo of “Rindolf” the EvilReindeer",  %]
 
 <p>
-After I started talking intensively on [% my_acronym( "key" => "IRC",) %] at around 2003 and 2004, especially
+After I started talking intensively on [% IRC %] at around 2003 and 2004, especially
 on the <a href="http://freenode.net/">Freenode network</a>, which I can
 still recommend, a few people teased me for being one of Santa Claus’s
 red-nosed
@@ -85,7 +87,7 @@ and Reindeer Evil in particular around the world.
 </p>
 
 <p>
-Some of Rindolf the Evil Reindeer’s appearances on IRC include:
+Some of Rindolf the Evil Reindeer’s appearances on [% IRC %] include:
 </p>
 
 <ol>
@@ -140,7 +142,7 @@ with the sole exception of one's 5 years old little sister. See
 <p>
 I came up with a different midrash during an extended <a href="https://en.wikipedia.org/wiki/Mania">Mania</a> period,
 where as a boy I was asked to pick a nickname and
-said "What is the name of this dog? [answer: Rin Tin Tin] And of this dog? [answer: Dolf] 'Rin Tin Tin' plus 'Dolf': 'Rindolf!'. That sounds like the name of one of your dwarves, <a href="https://buffy.fandom.com/wiki/Rupert_Giles">Giles</a>! 'Rindolf the Bearded'"
+said "What is the name of this dog? [answer: Rin Tin Tin] And of this dog? [answer: Dolf] 'Rin Tin Tin' plus 'Dolf': 'Rindolf!'. That sounds like the name of one of your dwarves, <a href="https://buffy.fandom.com/wiki/Rupert_Giles">Giles</a>! 'Rindolf the Bearded'!"
 </p>
 
 [%- END -%]
@@ -392,6 +394,13 @@ brother.
 <p>
 We also joked that Rindolf the dwarf plays Shlomi Fish in an
 Advanced 21st-Century Earth Adventures campaign.
+</p>
+</li>
+
+<li>
+<p>
+Rudolph, Randolph, and Rindolf, are not a triplet, but rather twins. I
+can't figure out how it works ( 😉 ).
 </p>
 </li>
 

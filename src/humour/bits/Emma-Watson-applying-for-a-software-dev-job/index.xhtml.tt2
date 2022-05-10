@@ -1,6 +1,8 @@
 [%- SET title = "Emma Watson getting interviewed for a software developer job" -%]
 [%- SET desc = "Does Emma Watson have what it takes to work as a Java enterprise software developer? A satire fan-fiction thought experiment." %]
 
+[% main_class.addClass("side_toc") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]

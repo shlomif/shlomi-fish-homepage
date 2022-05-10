@@ -132,8 +132,9 @@ A collection of web-related Perl CPAN modules.
 [% WRAPPER h3_section id="docmake" href="docmake/" title="docmake" %]
 
 <p>
-A tool to convert DocBook/XML to its final formats. Was written as a saner
-alternative to <code>xmlto</code>.
+A perl 5 command-line tool to convert DocBook/XML to its resultant formats.
+Was written as a saner alternative to <code>xmlto</code>, which is written
+in Unix shell and had a maintenance lull at the time.
 </p>
 
 [% END %]

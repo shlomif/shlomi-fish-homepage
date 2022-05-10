@@ -9,8 +9,9 @@
 Docmake is a command line tool to translate
 <a href="http://en.wikipedia.org/wiki/DocBook">DocBook/XML</a> code into
 various resultant formats such as XHTML, RTF, PDF and XSL-FO, using the
-more low-level tools. It aims to be a replacement for
-<a href="http://cyberelk.net/tim/software/xmlto/">xmlto</a>.
+more low-level tools. It aims to be a saner replacement, written in Perl,
+for <a href="http://cyberelk.net/tim/software/xmlto/">xmlto</a>, which is
+written in Unix shell and had a maintenance lull at the time.
 </p>
 
 [%- END -%]
@@ -20,7 +21,6 @@ more low-level tools. It aims to be a replacement for
 [% WRAPPER github_cpan_dist_links     dist = "App-XML-DocBook-Builder"
     github_url = "http://github.com/shlomif/docmake"
     freecode_url = "http://freecode.com/projects/docmake/"  %]
-</github_cpan_dist_links >
 
 [%- END -%]
 

@@ -1197,14 +1197,20 @@ sub _write_processed
     return;
 }
 
+my @deps;
 foreach my $page (@pages)
 {
-    _write_processed(
-        \$TT2__TT_TEXT,
-        { p => $page, },
-        "lib/factoids/pages/" . $page->id_base() . '.tt2'
-    );
+    my $libfn = "lib/factoids/pages/" . $page->id_base() . '.tt2';
+    my $destfn =
+          "dest/pre-incs/t2/humour/bits/facts/"
+        . $page->url_base()
+        . '/index.xhtml';
+
+    push @deps, "${destfn}: $libfn\n";
+    _write_processed( \$TT2__TT_TEXT, { p => $page, }, $libfn, );
 }
+write_on_change( path("lib/make/factoids-deps.mak"), \( join "", sort @deps ),
+);
 
 _write_processed(
     \$TT2__FACTS_BLOCKS_TT_TEXT,

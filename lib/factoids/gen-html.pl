@@ -901,6 +901,21 @@ Log.
 </p>
 </li>
 
+<li>
+
+<p>
+<a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/#starved_of_employees">"Businesses Being Starved of Competent Employees"</a>:
+</p>
+
+<blockquote cite="">
+
+[% PROCESS "Inc/microsoft_deprecating.tt2" %]
+[% INCLUDE mswin_deprecate %]
+
+</blockquote>
+
+</li>
+
 </ul>
 EOF
         short_id   => 'windows_update',

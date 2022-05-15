@@ -135,6 +135,11 @@ my $_section_navmenu_tree_contents = {
                         },
                     ],
                 },
+                {
+                    skip => 0,
+                    text => "The multiverse’s cosmology",
+                    url  => "philosophy/culture/multiverse-cosmology/",
+                },
             ],
         },
         {

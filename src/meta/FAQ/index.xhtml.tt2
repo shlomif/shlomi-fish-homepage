@@ -4152,8 +4152,16 @@ some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hip
 longer have any legitimate use. However, while I use JSON and YAML for
 many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
-used to add markup to a substring of the text (e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
+used to add markup to a substring of the text, e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>:
 </p>
+
+<pre>
+[% FILTER html %]
+<p>
+I like <a href="http://example.com/" title="site">hyperlinks</a> in my XML.
+</p>
+[% END %]
+</pre>
 
 <p>
 I recall that some <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> fans

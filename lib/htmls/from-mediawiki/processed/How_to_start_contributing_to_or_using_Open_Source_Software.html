@@ -536,7 +536,11 @@ Open source software is normally distributed as packed and compressed archives o
 Here’s a coverage of some popular build-systems and how to build code from them:
 </p>
 
+<section>
+
+<header>
 <h5 id="perl.E2.80.99s_Module-Build">perl’s Module-Build </h5>
+</header>
 
 <p>
 <a href="http://search.cpan.org/dist/Module-Build/">Module-Build</a> is Perl 5’s newer build system, which is not dependent on the idiosyncrasies of the system’s shell and its make implementation. To use it one should do something like:
@@ -551,7 +555,13 @@ $ ./Build test
 $ ./Build install
 </pre>
 
+</section>
+
+<section>
+
+<header>
 <h5 id="perl.E2.80.99s_ExtUtils::MakeMaker">perl’s ExtUtils::MakeMaker </h5>
+</header>
 
 <p>
 <a href="http://search.cpan.org/dist/ExtUtils-MakeMaker/">ExtUtils-MakeMaker</a> is Perl 5’s older build system, which generates makefiles and system-specific shell scripts. To use it one should run the following commands:
@@ -566,7 +576,13 @@ $ make test
 $ make install
 </pre>
 
+</section>
+
+<section>
+
+<header>
 <h5 id="GNU_Autotools">GNU Autotools</h5>
+</header>
 
 <p>
 <a href="https://en.wikipedia.org/wiki/GNU_Build_System">GNU Autotools</a> are a popular choice for creating cross-platform build systems for C/C++ and similar programs, but they are pretty old, and cause many problems and so many people recommend using something else instead. To build a program that uses GNU Autotools you need to run:
@@ -579,7 +595,13 @@ $ make
 $ make install
 </pre>
 
+</section>
+
+<section>
+
+<header>
 <h5 id="CMake">CMake</h5>
+</header>
 
 <p>
 <a href="http://en.wikipedia.org/wiki/CMake">wikipedia:CMake</a> is a new cross-platform build-system that aims to be a better alternative to GNU Autotools and sports many enhancements. To build a CMake-based project, use something like:
@@ -592,6 +614,8 @@ $ cmake-gui ..
 $ make
 $ make install
 </pre>
+
+</section>
 
 </section>
 

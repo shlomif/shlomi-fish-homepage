@@ -1,11 +1,11 @@
 [%- SET title = "How to start contributing to or using Open Source Software" -%]
 [%- SET desc = "How to start contributing to or using Open Source Software; a detailed guide with motivation, links and explanations" -%]
 
+[% main_class.addClass("fancy_sects", "lim_width", "side_toc", "wrap-me") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/start-foss-image.tt2" %]
-
-<div class="lim_width wrap-me side_toc">
 
 [% INCLUDE start_foss_image %]
 
@@ -28,7 +28,5 @@ here.
 [% path_slurp("htmls/from-mediawiki/processed/How_to_start_contributing_to_or_using_Open_Source_Software.html") %]
 
 [% INCLUDE start_foss_image_attribution %]
-
-</div>
 
 [% END %]

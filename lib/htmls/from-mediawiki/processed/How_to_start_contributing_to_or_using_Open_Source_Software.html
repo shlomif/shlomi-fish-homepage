@@ -401,7 +401,11 @@ So even if you, like Prof. Lessig, have a thin skin, and can get discouraged by 
 There is some good advice on <a href="http://unarmed.shlomifish.org/909.html">handling Internet criticism</a>  on the “Unarmed but still Dangerous” blog, which builds upon the excellent advice given by <a href="http://en.wikipedia.org/wiki/David_D._Burns">Dr. David D. Burns</a> in the book <a href="http://en.wikipedia.org/wiki/Feeling_Good:_The_New_Mood_Therapy"><i>Feeling Good: The New Mood Therapy</i></a>, which is a self-help guide for Cognitive Therapy, and which discusses how to handle criticism and avoid becoming affected by it.
 </p>
 
+<section>
+
+<header>
 <h4 id="Consider_Finding_a_Mentor">Consider Finding a Mentor</h4>
+</header>
 
 <p>
 Some people will find it easier to survive as open-source contributors by
@@ -420,6 +424,8 @@ See the <a href="http://teachingopensource.org/index.php/FOSS_Mentor_Projects">T
 </li>
 
 </ol>
+
+</section>
 
 </section>
 
@@ -484,7 +490,11 @@ There are probably other ways to contribute, but the important thing is to pick 
 In this section, we will try to briefly touch on various technologies you’ll need to understand in order to effectively contribute to open-source projects. We will refer you to material for further reading.
 </p>
 
+<section>
+
+<header>
 <h4 id="The_UNIX.2FLinux_Command_Line">The UNIX/Linux Command Line </h4>
+</header>
 
 <p>
 While Linux is perfectly usable using a graphical user-interface (GUI), it has a different interface called the command line, in which one types commands using the keyboard and receives feedback using a console / terminal output. To use it you can use KDE’s so-called “konsole” console window, or GNOME’s “gnome-terminal”. In order to work on most open-source projects, you will need to have some familiarity with the Linux command-line. Here are some resources to get you started:
@@ -510,7 +520,13 @@ There’s <a href="http://en.wikibooks.org/wiki/Linux_Guide/Using_the_shell">a W
 The important thing to realize about the UNIX command line is <b>not to be afraid</b> of it. While it may seem intimidating at first, most people will quickly find it to be very convenient and a very powerful tool. Furthermore, it is often a requirement for people who wish to contribute to open-source projects, as many tasks can only be done or are better done there.
 </p>
 
+</section>
+
+<section>
+
+<header>
 <h4 id="Build_Systems">Build Systems</h4>
+</header>
 
 <p>
 Open source software is normally distributed as packed and compressed archives of the source code, which need to be built in order to be installed and deployed on the host system. Downstream distributors tend to take the source packages and prepare binary and ready-to-install packages out of them, which are specific to only one particular package manager (such as <a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">rpm</a> or <a href="http://en.wikipedia.org/wiki/dpkg">dpkg</a>). However, if you plan on contributing to an open-source project you’ll need to know how to build its source code.
@@ -534,6 +550,7 @@ $ ./Build test
 # arguments to install locally.
 $ ./Build install
 </pre>
+
 <h5 id="perl.E2.80.99s_ExtUtils::MakeMaker">perl’s ExtUtils::MakeMaker </h5>
 
 <p>
@@ -576,7 +593,13 @@ $ make
 $ make install
 </pre>
 
+</section>
+
+<section>
+
+<header>
 <h4 id="Version_Control_Systems">Version Control Systems </h4>
+</header>
 
 <p>
 Reading from <a href="http://onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.html">an earlier article</a> written by one of the contributors to this article:
@@ -631,7 +654,13 @@ For help with Bazaar, another distributed version control system written in Pyth
 
 </ol>
 
+</section>
+
+<section>
+
+<header>
 <h4 id="Bug_tracking">Bug tracking</h4>
+</header>
 
 <p>
 As defects (a.k.a “bugs”) and requests for enhancements are introduced to the project, one needs to track them using a bug tracker. “Joel on Software” gives <a href="http://www.joelonsoftware.com/articles/fog0000000029.html">the motivation and how-to of bug-tracking in an essay</a> which you should probably read.
@@ -640,6 +669,8 @@ As defects (a.k.a “bugs”) and requests for enhancements are introduced to th
 <p>
 Most bug-trackers nowadays have a web-based interface, which one can use from the browser and is mostly self-explanatory. So try to use it and if you run into problems consult your co-developers for help. There are too many different implementations of bug trackers to cover them all here, but being web-based, they should not be too hard to use for active contribution.
 </p>
+
+</section>
 
 </section>
 

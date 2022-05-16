@@ -740,7 +740,7 @@ q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction}
     'harry_potter' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'harry_potter_nav_block',
-            text_title => "Harry Potter",
+            text_title => "Harry Potter / Emma Watson Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -797,7 +797,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction},
     'star_trek' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'star_trek_nav_block',
-            text_title => "Star Trek",
+            text_title => "Star Trek Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -829,7 +829,7 @@ q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referenc
     'xkcd' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'xkcd_nav_block',
-            text_title => "Summer Glau/xkcd",
+            text_title => "Summer Glau/xkcd Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -847,7 +847,7 @@ q{<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> / <a href=
     'mlp_fim' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'mlp_fim_nav_block',
-            text_title => "My Little Pony (FiM)",
+            text_title => "My Little Pony (FiM) Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>

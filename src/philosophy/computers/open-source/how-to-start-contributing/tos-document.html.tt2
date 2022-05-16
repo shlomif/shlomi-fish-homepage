@@ -11,7 +11,7 @@
 
 [% default_toc %]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This document is derived from
@@ -22,6 +22,8 @@ under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
 Commons Attribution-ShareAlike 3.0 Unported licence</a> and is now maintained
 here.
 </p>
+
+[% END %]
 
 [% INCLUDE freenode_chan_faq %]
 

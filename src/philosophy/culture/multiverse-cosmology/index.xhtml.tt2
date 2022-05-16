@@ -2,10 +2,9 @@
 [%- SET desc = "the cosmology of the Selinaverse, its Shlomifverse fork, and our view into Fantastecha, the multiverse of imagination." -%]
 [%- SET more_keywords = "cosmology" -%]
 
+[% main_class.addClass("fancy_sects", "lim_width", "side_toc", "wrap-me") %]
 
 [%- WRAPPER wrap_html -%]
-
-<div class="fancy_sects my_rpf limit_imgs_width">
 
 [% default_toc %]
 
@@ -28,7 +27,5 @@
 [% END %]
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "multiverse-cosmology-v0.4.x",  %]
-
-</div>
 
 [% END %]

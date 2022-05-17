@@ -1,3 +1,4 @@
+@import "charsheet-basics";
 @import "mixins";
 // For the screenplays
 
@@ -30,8 +31,10 @@
     }
 
     section.scene {
-        // @include mysection($left_hover_color: darkgreen);
-        @include mysection($left_hover_color: #0b0);
+        @include big-screen {
+            // @include mysection($left_hover_color: darkgreen);
+            @include mysection($left_hover_color: #0b0);
+        }
     }
 }
 

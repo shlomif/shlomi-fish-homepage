@@ -84,12 +84,6 @@ POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-SRC_SRC_FORTUNE_SHOW_SCRIPT := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
-FORTUNE_SHOW_PY__BN := fortunes_show.py
-SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/$(FORTUNE_SHOW_PY__BN)
-SRC_SRC_BOTTLE := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
-POST_DEST_FORTUNE_SHOW_SCRIPT_TXT := $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
-
 htacc = $(addsuffix /.htaccess,$(1))
 SRC_FORTUNES_DIR_HTACCESS := $(call htacc,$(PRE_DEST_FORTUNES_DIR))
 

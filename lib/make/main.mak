@@ -184,14 +184,6 @@ include lib/make/deps.mak
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 
-PUT_CARDS_2013_DEST_INDIV := $(PRE_DEST)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/tie_your_camel.xhtml
-PUT_CARDS_2013_INDIV_SCRIPT := $(LATEMP_ROOT_SOURCE_DIR)/bin/split-put-cards-into-divs.pl
-
-all: $(PUT_CARDS_2013_DEST_INDIV)
-
-$(PUT_CARDS_2013_DEST_INDIV): $(PUT_CARDS_2013_XHTML) $(PUT_CARDS_2013_INDIV_SCRIPT)
-	$(PERL) $(PUT_CARDS_2013_INDIV_SCRIPT)
-
 all: $(MANIFEST_HTML)
 
 LC_LECTURE_ARC_BASE := Lambda-Calculus.tar.gz

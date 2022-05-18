@@ -57,3 +57,15 @@ all_deps: $(TECH_TIPS_OUT)
 
 $(PRE_DEST)/philosophy/computers/web/validate-your-html/index.xhtml: $(SUB_REPOS_BASE_DIR)/validate-your-html/README.md
 $(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml: $(SUB_REPOS_BASE_DIR)/how-to-share-code-online/README.md
+
+SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
+SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
+
+$(SAMSMITHXML): $(SAMSMITHXML_SRC)
+	$(PYTHON) bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
+
+COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
+
+$(COSMOLOGY_XML): $(SAMSMITHXML_SRC)
+	$(call COPY)
+

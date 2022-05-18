@@ -101,7 +101,6 @@ rss:
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
 include lib/make/prod-syndicate.mak
-include lib/make/sf-essays.mak
 # Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.
 
@@ -113,6 +112,7 @@ include lib/make/fortunes-targets.mak
 include lib/make/stories-wrapper.mak
 include lib/make/docbook/sf-docbook-common.mak
 include lib/make/docbook/sf-fictions.mak
+include lib/make/sf-essays.mak
 
 # Avoid docmake's --verbose flag; an optimization
 DOCMAKE_WITH_PARAMS := $(DOCMAKE)
@@ -238,15 +238,5 @@ all_deps: $(JQUI_webpack_dest)
 all_deps: $(SRC_IMAGES_DEST)
 
 TEST_ENV = PYTHONPATH="$${PYTHONPATH}:$(LATEMP_ABS_ROOT_SOURCE_DIR)/Tests/lib"
-SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
-SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
-
-$(SAMSMITHXML): $(SAMSMITHXML_SRC)
-	$(PYTHON) bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
-
-COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
-
-$(COSMOLOGY_XML): $(SAMSMITHXML_SRC)
-	$(call COPY)
 
 .PHONY: bulk-make-dirs fortunes-compile-xmls install_docbook_css_dirs install_docbook_individual_xhtmls install_docbook_xmls make-dirs mod_files presentations_targets

@@ -5,6 +5,7 @@ $(CATB_COPY_POST): $(CATB_COPY)
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html
 $(DOCBOOK5_HHFG_IMAGES_POST_DEST): $(DOCBOOK5_HHFG_POST_DEST_DIR)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(DOCBOOK5_HHFG_DEST_DIR)/index.xhtml
 $(DOCBOOK5_SOURCES_DIR)/hebrew-html-tutorial.xml: $(HTML_TUT_HEB_DB)
+$(DOCBOOK5_SOURCES_DIR)/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 $(EXPANDER_JS_DEST): $(EXPANDER_JS_SRC)
 $(HHFG_HEB_V2_XSLT_POST_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-guide-hebrew-v2.xslt
 $(HHFG_V2_IMAGES_POST_DEST): $(HHFG_V2_IMAGES_POST_DEST_DIR)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml
@@ -27,4 +28,3 @@ $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_test_run_dir)/%: src/
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_too_many_ways_dir)/%: src/images/presentations/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js
-lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml

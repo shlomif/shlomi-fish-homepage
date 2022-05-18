@@ -30,3 +30,5 @@ define EXPORT_INKSCAPE_PNG
 	$(OPTIPNG) $@
 endef
 
+STRIP_HTML_BIN := $(LATEMP_ROOT_SOURCE_DIR)/bin/processors/strip-html-overhead.pl
+strip_html = $(PERL) $(STRIP_HTML_BIN) < $< > $@

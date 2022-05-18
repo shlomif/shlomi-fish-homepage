@@ -23,3 +23,23 @@ $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED): $(HOW_TO_GET_HELP_2013_XHTML) $(STRIP_HT
 $(PRE_DEST)/philosophy/computers/how-to-get-help-online/2013.html: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
 
 all_deps: $(HOW_TO_GET_HELP_2013_XHTML_STRIPPED)
+
+MOJOLICIOUS_LECTURE_SLIDE1 := $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
+
+HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
+
+mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
+
+CHRISTINA_GRIMMIE_LETTER_SOURCE = lib/asciidocs/letter-to-christina-grimmie.asciidoc
+CHRISTINA_GRIMMIE_LETTER_HTML = lib/asciidocs/letter-to-christina-grimmie.asciidoc.xhtml
+
+$(CHRISTINA_GRIMMIE_LETTER_HTML): $(CHRISTINA_GRIMMIE_LETTER_SOURCE)
+	$(call ASCIIDOCTOR_TO_RAW_XHTML5)
+
+$(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
+	$(call ASCIIDOCTOR_TO_XHTML5)
+
+$(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
+	$(call ASCIIDOCTOR_TO_XHTML5)
+
+all_deps: $(CHRISTINA_GRIMMIE_LETTER_HTML)

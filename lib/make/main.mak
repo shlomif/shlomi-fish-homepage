@@ -116,25 +116,6 @@ $(PRE_DEST_HUMOUR)/index.xhtml $(PRE_DEST_HUMOUR)/stories/index.xhtml $(PRE_DEST
 $(PRE_DEST_HUMOUR)/humanity/index.xhtml $(PRE_DEST_HUMOUR)/humanity/ongoing-text.html $(PRE_DEST_HUMOUR)/humanity/buy-the-fish-in-hebrew.html $(PRE_DEST_HUMOUR)/humanity/ongoing-text-hebrew.html : lib/stories/blurbs.tt2
 
 include lib/make/fortunes-targets.mak
-
-MOJOLICIOUS_LECTURE_SLIDE1 := $(PRE_DEST)/lecture/Perl/Lightning/Mojolicious/mojolicious-slides.html
-
-HACKING_DOC := $(PRE_DEST)/open-source/resources/how-to-contribute-to-my-projects/HACKING.html
-
-mojo_pres: $(MOJOLICIOUS_LECTURE_SLIDE1) $(HACKING_DOC)
-
-christina_grimmie_letter_source = lib/asciidocs/letter-to-christina-grimmie.asciidoc
-christina_grimmie_letter_html = lib/asciidocs/letter-to-christina-grimmie.asciidoc.xhtml
-
-$(christina_grimmie_letter_html): $(christina_grimmie_letter_source)
-	$(call ASCIIDOCTOR_TO_RAW_XHTML5)
-
-$(MOJOLICIOUS_LECTURE_SLIDE1): $(SRC_SRC_DIR)/lecture/Perl/Lightning/Mojolicious/mojolicious.asciidoc.txt
-	$(call ASCIIDOCTOR_TO_XHTML5)
-
-$(HACKING_DOC): $(SRC_SRC_DIR)/open-source/resources/how-to-contribute-to-my-projects/HACKING.txt
-	$(call ASCIIDOCTOR_TO_XHTML5)
-
 include lib/make/stories-wrapper.mak
 include lib/make/docbook/sf-docbook-common.mak
 include lib/make/docbook/sf-fictions.mak
@@ -241,8 +222,6 @@ $(SRC_CLEAN_STAMP): $(BK2HP_NEW_PNG) $(DOCBOOK5_INSTALLED_EPUBS) $(FORTS_EPUB_DE
 	touch $@
 
 docbook_extended: screenplays_pdfs
-
-all_deps: $(christina_grimmie_letter_html)
 
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 

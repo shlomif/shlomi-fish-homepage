@@ -9,6 +9,7 @@ PROCESS_ALL_INCLUDES__NON_INPLACE := $(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/post-
 REBOOKMAKER := rebookmaker
 VERED := $(LATEMP_ROOT_SOURCE_DIR)/bin/translate-Vered-XML
 PYTHON = python3
+chmod_copy = $(call COPY) ; chmod +x $@
 extract_gzipped_xhtml = gunzip < $< | $(PERL) $(EXTRACT_html_script) -o $@ -
 find_htmls = find $(1) -name '*.html' -o -name '*.xhtml'
 simple_gm = $(IMAGE_CONVERT) $< $@

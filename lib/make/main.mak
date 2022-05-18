@@ -13,8 +13,6 @@ include lib/make/shlomif_common.mak
 include lib/make/tools.mak
 include lib/make/include.mak
 
-chmod_copy = $(call COPY) ; chmod +x $@
-
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 

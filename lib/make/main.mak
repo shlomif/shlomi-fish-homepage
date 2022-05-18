@@ -295,7 +295,7 @@ SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
 SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
 
 $(SAMSMITHXML): $(SAMSMITHXML_SRC)
-	python3 bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
+	$(PYTHON) bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
 
 COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
 

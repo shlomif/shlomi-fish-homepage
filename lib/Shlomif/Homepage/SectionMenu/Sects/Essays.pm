@@ -136,9 +136,16 @@ my $_section_navmenu_tree_contents = {
                     ],
                 },
                 {
-                    skip => 0,
                     text => "The multiverse’s cosmology",
                     url  => "philosophy/culture/multiverse-cosmology/",
+                    subs => [
+                        {
+                            text =>
+"Why the so called real world makes little sense",
+                            url =>
+"philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/",
+                        },
+                    ],
                 },
             ],
         },

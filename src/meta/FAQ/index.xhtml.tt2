@@ -1318,7 +1318,7 @@ After going public about it, I realised I am in good company as
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id="philosophy" title="Questions about my philosophy / ideology / religion" %]
+[% WRAPPER faq_h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]
 
 [% WRAPPER faq_h3_section id = "religious_belief"  title = "What is your Religious Belief or Inclination?"  %]
 
@@ -1641,7 +1641,7 @@ quite evil and misguided.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
+[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in the Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
 
 <p>
 Yes, I'm fully aware of that, and I think it does not matter too much.
@@ -1763,7 +1763,7 @@ agnostic</a>.
 
 [% END %]
 
-[% WRAPPER faq_h2_section id="israel" title="Questions Related to Me and to Israel" %]
+[% WRAPPER faq_h2_section id = "israel" title = "Questions Related to Me and to Israel" %]
 
 [% WRAPPER faq_h3_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
 
@@ -1975,7 +1975,7 @@ and make all patients and workers there hacker monarchs.
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id="art_and_culture" title="Questions About Art &amp; Culture" %]
+[% WRAPPER faq_h2_section id = "art_and_culture" title = "Questions About Art &amp; Culture" %]
 
 [% WRAPPER faq_h3_section id = "favourite_music"  title = "What kind of Music do you like to listen to?"  %]
 
@@ -2089,7 +2089,7 @@ Do note that I have a lot of <a href="https://www.shlomifish.org/meta/nav-blocks
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id="fav_painter" title="Who is your favourite painter?" %]
+[% WRAPPER faq_h3_section id = "fav_painter" title = "Who is your favourite painter?" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Keith_Parkinson">Keith Parkinson</a>
@@ -2098,9 +2098,9 @@ who drew fantasy art (see <a href="https://duckduckgo.com/?q=keith+parkinson&amp
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id="fiction_books" title="Fiction Books (Literature)" %]
+[% WRAPPER faq_h3_section id = "fiction_books" title = "Fiction Books (Literature)" %]
 
-[% WRAPPER faq_h4_section id="fav_fiction_books" title="What are your favourite fiction books?" %]
+[% WRAPPER faq_h4_section id = "fav_fiction_books" title = "What are your favourite fiction books?" %]
 
 <p>
 My favourite children-oriented book is <a
@@ -2134,7 +2134,7 @@ my <a href="http://www.paulgraham.com/stuff.html">anti-"stuff" policy</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id="tolkien_books" title="What do you think about the other books/films by Tolkien?" %]
+[% WRAPPER faq_h4_section id = "tolkien_books" title = "What do you think about the other books/films by Tolkien?" %]
 
 <ol>
 
@@ -2190,7 +2190,7 @@ however.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id="crime_and_punishment" title="What do you think about Dostoevsky’s Crime and Punishment?" %]
+[% WRAPPER faq_h4_section id = "crime_and_punishment" title = "What do you think about Dostoevsky’s Crime and Punishment?" %]
 
 [% SET cnp = my_acronym( "key" => "Crime&P",) %]
 [% SET cnp_nl = my_acronym( "key" => "Crime&P", "no_link"=>1,) %]
@@ -2275,7 +2275,7 @@ And take my advice at your own risk. If it breaks, you get to keep both pieces. 
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
+[% WRAPPER faq_h4_section id ="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
 
 <p>
 I read the first four installments. My favourite was <a
@@ -3940,7 +3940,7 @@ texts, I sometimes use
 <a href="http://en.wikipedia.org/wiki/Kate_%28text_editor%29">Kate</a>
 instead, with a fallback on
 <a href="http://en.wikipedia.org/wiki/Gedit">gedit</a>. Sometimes, I use Vim
-(the console version) for quick edits or when I cannot or would prefer not to
+(the console version) or neovim's nvim for quick edits or when I cannot or would prefer not to
 use a GUI editor.
 </p>
 
@@ -4228,8 +4228,7 @@ for the Young”</a> essay.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack”
-or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
+[% WRAPPER faq_h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack” or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
 
 <p>
 No, and that is because I am not a
@@ -4336,8 +4335,7 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based
-projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
+[% WRAPPER faq_h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
 
 <p>
 Yes, you can find it in
@@ -4753,7 +4751,7 @@ delivery, which brought me <a href="https://www.reddit.com/r/quotes/comments/dwa
 </p>
 
 <p>
-I've been trying to improve though. <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-using-your-experience-points">mst joked</a>
+I've been trying to improve, though. <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-using-your-experience-points">mst joked</a>
 that <q>every time I level, I put all my XP (= experience points) into "being right" rather than boring things like "tact"</q>,
 but he has been increasingly more tactful lately, and hopefully so have I.
 </p>
@@ -4815,7 +4813,7 @@ which the "I just work here" attitude is
 <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">not different</a>.
 </p>
 
-[% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, Nazis, etc. in some of Your Writings?"  %]
+[% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, the Nazis, etc. in some of Your Writings?"  %]
 
 <p>
 I found it suitable to use it for them, so I did. For the record, my

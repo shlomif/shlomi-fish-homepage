@@ -149,7 +149,7 @@ studying in the vicinity of Los Angeles. Her best friend, Taylor
 to try to become a developer of open source software. He puts her
 under the tutorship of a different friend of his, the female open source
 contributor Eve (<a
-    href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>), who prefers
+href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>), who prefers
 to be called “Erisa”, and who is a self-conscious
 and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
 determined to learn how to become an open source developer from Erisa, but
@@ -180,8 +180,8 @@ have instead remained alive since they were born.
 </p>
 
 <p>
-A Star Trek episode to end all Star Trek episodes, (and, more
-generally - story to end all stories).
+A Star Trek episode to end all Star Trek episodes, (and — more
+generally - a story to end all stories).
 </p>
 EOF
     },
@@ -348,12 +348,14 @@ made a moderate fortune from donations of enthusiastic fans of the
 scroll, and became annoyed by the fact that he has become the object of
 affection of nearly every single young female in his town.
 </p>
+
 <p class="who_is_qoheleth abstract">
 However, nothing could prepare Josephus to the day he ran into a trio of
 female <a href="http://en.wikipedia.org/wiki/Celts">Celtic</a> travellers,
 who provide him with many questions, including the million dollar question,
 “Who is the Qoheleth (Now)?”.
 </p>
+
 <p>
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>

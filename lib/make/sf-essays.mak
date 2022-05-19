@@ -73,3 +73,6 @@ $(COSMOLOGY_XML): $(SAMSMITHXML_SRC)
 
 $(REALWORLDSENSE_XML): $(REALWORLDSENSE_SRC)
 	$(call COPY)
+
+docbook_targets: docbook_hhfg_images
+docbook_targets: screenplay_targets

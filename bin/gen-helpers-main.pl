@@ -25,21 +25,21 @@ sub get_rules_template
 
 sub place_files_into_buckets
 {
-    my ( $self, $host, $files, $buckets ) = @_;
+    my ( $self, $host, $filenames, $buckets ) = @_;
     my $host_id         = $host->{'id'};
     my $is_common       = ( $host_id eq "common" );
     my $_common_buckets = $self->_common_buckets;
 FILE_LOOP:
-    foreach my $f (@$files)
+    foreach my $fn (@$filenames)
     {
-        next FILE_LOOP if $f =~ m#/fortune-shlomif\.spec\z#;
+        next FILE_LOOP if $fn =~ m#/fortune-shlomif\.spec\z#;
     BUCKETS:
         foreach my $bucket (@$buckets)
         {
-            next BUCKETS if not $bucket->{'filter'}->($f);
+            next BUCKETS if not $bucket->{'filter'}->($fn);
             if ($is_common)
             {
-                $_common_buckets->{ $bucket->{name} }->{$f} = 1;
+                $_common_buckets->{ $bucket->{name} }->{$fn} = 1;
             }
 
             if (
@@ -47,19 +47,20 @@ FILE_LOOP:
                 || (
                     !(
                         $bucket->{'filter_out_common'}
-                        && exists( $_common_buckets->{ $bucket->{name} }->{$f} )
+                        && exists(
+                            $_common_buckets->{ $bucket->{name} }->{$fn} )
                     )
                 )
                 )
             {
-                push @{ $bucket->{'results'} }, $bucket->{'map'}->($f);
+                push @{ $bucket->{'results'} }, $bucket->{'map'}->($fn);
             }
 
             next FILE_LOOP;
         }
         die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
             {
-                'file' => $f,
+                'file' => $fn,
                 'host' => $host_id,
             }
         );

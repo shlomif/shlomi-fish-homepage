@@ -7,11 +7,14 @@
 This page contains a list of Star-Trek fan‐fiction by Shlomi Fish.
 </p>
 
-<h2 id="stories">The Stories</h2>
+[% WRAPPER h2_section id = "stories" title = "The Stories" %]
 
-<h3 id="we_the_living_dead"><a href="We-the-Living-Dead/"><i>We,
-the Living Dead</i></a></h3>
+[% WRAPPER h3_section href = "We-the-Living-Dead/" id = "we_the_living_dead" title = "<i>We, the Living Dead</i>" %]
 
 [% long_stories.calc_abstract(id => 'we_the_living_dead') %]
+
+[% END %]
+
+[% END %]
 
 [% END %]

@@ -167,7 +167,7 @@ sub _calc_screenplay_doc_makefile_lines
             : (
 "\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${doc_base}-prepare-epub.pl\n"
                     . "\t"
-                    . qq#mkdir -p \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
+                    . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
                     . q/$(call COPY)/
                     . "\n\n" )
             ),

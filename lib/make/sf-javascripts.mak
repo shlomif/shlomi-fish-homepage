@@ -5,7 +5,7 @@ MATHJAX_DEST_README := $(MATHJAX_DEST_DIR)/README.md
 mathjax_dest: make-dirs $(MATHJAX_DEST_README)
 
 $(MATHJAX_DEST_README): $(MATHJAX_SOURCE_README)
-	@mkdir -p $(MATHJAX_DEST_DIR)/
+	@$(MKDIR) $(MATHJAX_DEST_DIR)/
 	cp -PR lib/js/MathJax/{LICENSE,README.md,es5/} $(MATHJAX_DEST_DIR)/
 
 SCRIPTS_WITH_OFFENDING_EXTENSIONS := MathVentures/gen-bugs-in-square-svg.pl open-source/bits-and-bobs/nowplay-xchat.pl open-source/bits-and-bobs/pmwiki-revert.pl open-source/bits-and-bobs/convert-kabc-dist-lists.pl

@@ -60,12 +60,16 @@ $(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml:
 
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
 SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
+REALWORLDSENSE_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/why-the-so-called-real-world-i-am-trapped-in-makes-little-sense--2020-05-19.docbook5.xml
 
 $(SAMSMITHXML): $(SAMSMITHXML_SRC)
 	$(PYTHON) bin/extract-docbook5-node.py $< '//*[@xml:id="the-terran-terminators"]' > $@
 
 COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
+REALWORLDSENSE_XML := $(DOCBOOK5_SOURCES_DIR)/why-the-so-called-real-world-makes-little-sense.xml
 
 $(COSMOLOGY_XML): $(SAMSMITHXML_SRC)
 	$(call COPY)
 
+$(REALWORLDSENSE_XML): $(REALWORLDSENSE_SRC)
+	$(call COPY)

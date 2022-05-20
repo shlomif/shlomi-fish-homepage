@@ -12,18 +12,6 @@ use NavDataRender                          ();
 use NavSectMenuRender                      ();
 use Path::Tiny qw/ path /;
 use Parallel::Map::Segmented ();
-
-sub get_root
-{
-    my $url = shift;
-
-    $url =~ s#\A/##;
-
-    my $ret = ( ( "../" x ( $url =~ y#/#/# ) ) =~ s#/\z##r );
-
-    return ( ( $ret eq '' ) ? '.' : $ret );
-}
-
 use File::Update qw/ write_on_change /;
 
 my $hosts         = MyNavData::Hosts::get_hosts();
@@ -53,7 +41,7 @@ sub _process_batch
             'ul_classes'     => [],
             'no_leading_dot' => 1,
         );
-        my $ROOT    = get_root($url);
+        my $ROOT    = NavDataRender::get_root($url);
         my $results = NavSectMenuRender->init_section_nav_menu(
             {
                 filename => $filename,

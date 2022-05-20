@@ -99,4 +99,15 @@ sub get_html_head_nav_links
     return $ret;
 }
 
+sub get_root
+{
+    my $url = shift;
+
+    $url =~ s#\A/##;
+
+    my $ret = ( ( "../" x ( $url =~ y#/#/# ) ) =~ s#/\z##r );
+
+    return ( ( $ret eq '' ) ? '.' : $ret );
+}
+
 1;

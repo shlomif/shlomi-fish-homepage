@@ -13,17 +13,6 @@ use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
 
-sub get_root
-{
-    my $url = shift;
-
-    $url =~ s#\A/##;
-
-    my $ret = ( ( "../" x ( $url =~ y#/#/# ) ) =~ s#/\z##r );
-
-    return ( ( $ret eq '' ) ? '.' : $ret );
-}
-
 my $hosts         = MyNavData::Hosts::get_hosts();
 my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
@@ -81,7 +70,7 @@ for my $proto_url ($x)
         'ul_classes'     => [],
         'no_leading_dot' => 1,
     );
-    my $ROOT    = get_root($url);
+    my $ROOT    = NavDataRender::get_root($url);
     my $results = NavSectMenuRender->init_section_nav_menu(
         {
             filename => $filename,
@@ -125,7 +114,7 @@ for my $proto_url ($x)
         'ul_classes'     => [],
         'no_leading_dot' => 1,
     );
-    my $ROOT    = get_root($url);
+    my $ROOT    = NavDataRender::get_root($url);
     my $results = NavSectMenuRender->init_section_nav_menu(
         {
             filename => $filename,

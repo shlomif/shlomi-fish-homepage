@@ -127,21 +127,21 @@ for my $proto_url ("humour/stories/index.xhtml")
         my $up = $nav_links_obj->{$dir};
 
         # TEST*2
-        ok( $up, 'up' );
+        ok( $up, "dir=$dir truthy" );
         my $direct_url = $up->direct_url();
 
         # TEST*2
-        is( $direct_url, "../", "next \$direct_url" );
+        is( $direct_url, "../", "$dir \$direct_url" );
     }
     foreach my $dir (qw/ next /)
     {
         my $up = $nav_links_obj->{$dir};
 
         # TEST
-        ok( $up, 'up' );
+        ok( $up, "dir=$dir truthy" );
         my $direct_url = $up->direct_url();
 
         # TEST
-        is( $direct_url, "../TheEnemy/", "next \$direct_url" );
+        is( $direct_url, "../TheEnemy/", "$dir \$direct_url" );
     }
 }

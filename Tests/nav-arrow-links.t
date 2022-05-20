@@ -47,31 +47,7 @@ for my $proto_url ($x)
         'ul_classes'     => [],
         'no_leading_dot' => 1,
     );
-    my $ROOT    = get_root($url);
-    my $results = NavSectMenuRender->init_section_nav_menu(
-        {
-            filename => $filename,
-            host     => $host,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-            ROOT     => $ROOT,
-        }
-    );
-
-    my $section_nav_menu = $results->{section_nav_menu};
     my $rendered_results = $nav_bar->render();
-
-    my $nav_results = NavDataRender->nav_data_render(
-        {
-            filename => $url,
-            host     => $host,
-            ROOT     => $ROOT,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-        }
-    );
-
-    # warn Dumper({Results => $results,});
-
-    my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
 
     my $nav_links_obj = $rendered_results->{nav_links_obj};
     if (1)    # ( $filename eq '/philosophy/' )
@@ -117,21 +93,7 @@ for my $proto_url ($x)
 
     my $section_nav_menu = $results->{section_nav_menu};
     my $rendered_results = $section_nav_menu->results();
-
-    my $nav_results = NavDataRender->nav_data_render(
-        {
-            filename => $url,
-            host     => $host,
-            ROOT     => $ROOT,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-        }
-    );
-
-    # warn Dumper({Results => $results,});
-
-    my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
-
-    my $nav_links_obj = $rendered_results->{nav_links_obj};
+    my $nav_links_obj    = $rendered_results->{nav_links_obj};
     if (1)
     {
         my $up = $nav_links_obj->{'next'};
@@ -175,19 +137,6 @@ for my $proto_url ($x)
 
     my $section_nav_menu = $results->{section_nav_menu};
     my $rendered_results = $section_nav_menu->results();
-
-    my $nav_results = NavDataRender->nav_data_render(
-        {
-            filename => $url,
-            host     => $host,
-            ROOT     => $ROOT,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-        }
-    );
-
-    # warn Dumper({Results => $results,});
-
-    my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
 
     my $nav_links_obj = $rendered_results->{nav_links_obj};
     foreach my $dir (qw/ prev up /)

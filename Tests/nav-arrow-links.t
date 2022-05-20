@@ -18,9 +18,7 @@ my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
 my $hostp         = "lib/cache/combined/$host";
 
-my $x = "philosophy/index.xhtml";
-
-for my $proto_url ($x)
+for my $proto_url ("philosophy/index.xhtml")
 {
     my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
 
@@ -52,9 +50,7 @@ for my $proto_url ($x)
     }
 }
 
-$x = "humour/index.xhtml";
-
-for my $proto_url ($x)
+for my $proto_url ("humour/index.xhtml")
 {
     my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
 
@@ -96,9 +92,7 @@ for my $proto_url ($x)
     }
 }
 
-$x = "humour/stories/index.xhtml";
-
-for my $proto_url ($x)
+for my $proto_url ("humour/stories/index.xhtml")
 {
     my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
 

@@ -1,3 +1,62 @@
+<:
+
+use Carp::Always;
+use utf8;
+BEGIN
+{
+# $SIG{__DIE__}=sub{return;};
+# $SIG{__WARN__}=sub{return;};
+binmode STDIN, ":encoding(UTF-8)";
+binmode STDOUT, ":encoding(UTF-8)";
+package Text::WrapAsUtf8;
+$Text::WrapAsUtf8::VERSION = '0.0.2';
+
+$INC{"Text/WrapAsUtf8.pm"} = "/home/shlomif/perl5/lib/perl5/Text/WrapAsUtf8.pm";
+
+use parent 'Exporter';
+
+our @EXPORT_OK = (
+    qw(
+        print_utf8
+        wrap_as_utf8
+        )
+);
+
+sub wrap_as_utf8
+{
+    my ($cb) = @_;
+
+    binmode STDOUT, ":encoding(UTF-8)";
+
+    $cb->();
+
+    binmode STDOUT, ":raw";
+    binmode STDOUT, ":encoding(UTF-8)";
+
+    return;
+}
+
+sub print_utf8
+{
+    my (@data) = @_;
+
+    wrap_as_utf8(
+        sub {
+            print @data;
+
+            return;
+        }
+    );
+
+    return;
+}
+
+1;
+
+package main;
+
+};
+:>
 <define-tag body endtag="required">
 <body*{#BODY_PARAMS#}>
 %body

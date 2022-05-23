@@ -1,8 +1,8 @@
 LATEMP_WML_FLAGS =$(shell latemp-config --wml-flags)
 
 COMMON_PREPROC_FLAGS = -I $$HOME/conf/wml/Latemp/lib 
-WML_FLAGS += --passoption=2,-X3074 --passoption=3,-I../lib/ \
-	--passoption=3,-w -I../lib/ $(LATEMP_WML_FLAGS) \
+WML_FLAGS += --passoption=2,-X3330 --passoption=3,-I../lib/ \
+	-I../lib/ $(LATEMP_WML_FLAGS) \
 	-DROOT~. -DLATEMP_THEME=better-scm \
 	-I $${HOME}/apps/wml
 
@@ -81,7 +81,7 @@ t2/philosophy/Index/index.html.wml : lib/article-index/article-index.dtd lib/art
 	touch $@
 
 $(FORTUNES_TARGET): $(T2_FORTUNES_DIR)/index.html.wml $(DOCS_COMMON_DEPS) $(HUMOUR_DEPS) $(T2_FORTUNES_DIR)/Makefile
-	WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) )
+	export PERL_UNICODE=511 ; WML_LATEMP_PATH="$$(perl -MFile::Spec -e 'print File::Spec->rel2abs(shift)' '$@')" ; ( cd $(T2_SRC_DIR) && wml -o "$${WML_LATEMP_PATH}" $(T2_WML_FLAGS) -DLATEMP_FILENAME=$(patsubst $(T2_DEST)/%,%,$(patsubst %.wml,%,$@)) -DPACKAGE_BASE="$$( unset MAKELEVEL ; cd $(FORTUNES_DIR) && make print_package_base )" $(patsubst $(T2_SRC_DIR)/%,%,$<) )
 
 
 T2_DOCS_SRC = $(patsubst $(T2_DEST)/%,$(T2_SRC_DIR)/%.wml,$(T2_DOCS_DEST))

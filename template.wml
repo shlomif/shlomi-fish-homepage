@@ -4,8 +4,10 @@ use Carp::Always;
 use utf8;
 BEGIN
 {
-# $SIG{__DIE__}=sub{return;};
-# $SIG{__WARN__}=sub{return;};
+if (0){
+$SIG{__DIE__}=sub{return;};
+$SIG{__WARN__}=sub{return;};
+}
 binmode STDIN, ":encoding(UTF-8)";
 binmode STDOUT, ":encoding(UTF-8)";
 package Text::WrapAsUtf8;

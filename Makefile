@@ -14,7 +14,7 @@ ALL_DEST_BASE = dest
 
 DOCS_COMMON_DEPS = template.wml lib/MyNavData.pm
 
-all: make-dirs docbook_targets fortunes-target latemp_targets sitemap_targets copy_fortunes site-source-install
+all: make-dirs docbook_targets fortunes-target latemp_targets copy_fortunes site-source-install
 
 include lib/make/gmsl/gmsl
 

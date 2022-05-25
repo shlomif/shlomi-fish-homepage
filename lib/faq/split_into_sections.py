@@ -66,7 +66,9 @@ class XhtmlSplitter:
             relative_output_dirname="",
             input_is_plain_html=False,
             list_sections_format=None,
+            main_title=None,
     ):
+        self.main_title = main_title
         self.list_sections_format = (
             list_sections_format or
             (
@@ -155,11 +157,12 @@ class XhtmlSplitter:
                 xhtml_prefix=self.xhtml_prefix
             )
         # print('main_title_xpath = ', main_title_xpath)
-        self.main_title = _first(
-            self.ns,
-            self.root,
-            main_title_xpath
-        )
+        if not self.main_title:
+            self.main_title = _first(
+                self.ns,
+                self.root,
+                main_title_xpath
+            )
         self.main_title = self._process_title(self.main_title)
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(

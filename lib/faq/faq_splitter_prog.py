@@ -259,6 +259,7 @@ def generic_generate_from_(
         xhtml_article_tag=XHTML_ARTICLE_TAG,
         xhtml_section_tag=XHTML_SECTION_TAG,
         list_sections_format=None,
+        main_title=None,
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
 
@@ -268,6 +269,7 @@ def generic_generate_from_(
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         container_elem_xpath=container_elem_xpath,
         input_fn=(OUT_DN + "/" + path_to_input),
+        main_title=main_title,
         output_dirname=full_out_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
         ns=NAMESPACES,
@@ -436,6 +438,7 @@ def _screenplays_main():
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),
         base_path=("../" * 4),
+        main_title='The Case for Commercial Fan-Fiction',
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",

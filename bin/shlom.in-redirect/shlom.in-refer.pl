@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 use lib '.';
+binmode STDOUT, ':encoding(utf-8)';
 
 =begin debug
 
@@ -72,7 +73,7 @@ else
         my $d   = $rec->{desc};
         my $url = $rec->{url};
         $table .=
-qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td><p>$d</p></td></tr>!;
+qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td class="full"><p><a href="$url">$url</a></p></td><td><p>$d</p></td></tr>!;
     }
     print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,6 +113,7 @@ service, below. For more information please contact
 <table>
 <tr>
 <th>Short URL</th>
+<th>Full URL</th>
 <th>Description</th>
 </tr>
 $table

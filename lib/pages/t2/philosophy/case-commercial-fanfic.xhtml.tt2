@@ -1190,7 +1190,7 @@ processors, or similar tools, will also sport the same sentiments.
 </p>
 
 <p id="hacker-laziness">
-As <a href="http://www.paulgraham.com/popular.html">Paul Graham</a> notes in a
+As <a href="http://www.paulgraham.com/popular.html">Paul Graham notes</a> in a
 different context: <q>Hackers are lazy, in the same way that mathematicians and
 modernist architects are lazy: they hate anything extraneous.</q>
 </p>
@@ -1212,11 +1212,15 @@ of xkcd: "11th grade"</a>) that they will adopt a similar mindset. Even though
 I am 1977-born (so approaching 44 in 2021) there are some time-consuming things
 I have done in the past which I will not repeat such as <a
 href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
-Electrical Engineering in the Technion</a>, or working for distrustful or <a
+Electrical Engineering in the Technion</a>, working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
-bosses (though as the contemporary and more competent me, I may now try to reform them
+bosses, or <a href="https://www.shlomifish.org/meta/FAQ/fiction_books.xhtml">read <i>Lord of the Rings</i> or <i>Crime and Punishment</i></a>.
+
+[% IF 0 %]
+(though as the contemporary and more competent me, I may now try to reform them
 using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">benevolent psychological warfare</a>
 ).
+[% END %]
 </p>
 
 <p>
@@ -1308,8 +1312,25 @@ a different format than either Hollywood's or mine.
 </p>
 
 <p>
-I doubt that the "1 page = 1 minute of film" argument holds much water.
+I doubt that the "1 page = 1 minute of film" argument holds much water:
 </p>
+
+<ol>
+
+<li>
+<p>
+It is probably inaccurate anyway.
+</p>
+</li>
+
+<li>
+<p>
+One can get a similar ballpark estimate by printing the XHTML5 to PDF
+using a custom CSS stylesheet.
+</p>
+</li>
+
+</ol>
 
 [% END %]
 

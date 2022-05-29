@@ -8,6 +8,8 @@
 
 [% default_toc %]
 
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "multiverse-cosmology-v0.4.x",  %]
+
 <h2 id="content">Content</h2>
 
 [% path_slurp("docbook/5/rendered/multiverse-cosmology-v0.4.x.xhtml") %]
@@ -25,7 +27,5 @@
 </ul>
 
 [% END %]
-
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "multiverse-cosmology-v0.4.x",  %]
 
 [% END %]

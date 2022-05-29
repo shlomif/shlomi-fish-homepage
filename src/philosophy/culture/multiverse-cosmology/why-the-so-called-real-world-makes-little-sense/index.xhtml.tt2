@@ -7,6 +7,8 @@
 
 [% default_toc %]
 
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "why-the-so-called-real-world-makes-little-sense",  %]
+
 <h2 id="content">Content</h2>
 
 [% path_slurp("docbook/5/rendered/why-the-so-called-real-world-makes-little-sense.xhtml") %]
@@ -24,7 +26,5 @@
 </ul>
 
 [% END %]
-
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "why-the-so-called-real-world-makes-little-sense",  %]
 
 [% END %]

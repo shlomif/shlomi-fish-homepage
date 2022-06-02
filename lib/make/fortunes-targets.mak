@@ -60,7 +60,7 @@ FORTUNES_XML_TO_XHTML_TOC_XSLT := lib/fortunes/fortune-xml-to-xhtml-toc.xslt
 
 $(FORTUNES_XHTMLS_TOCS): $(FORTUNES_XHTMLS_DIR)/%.toc-xhtml : $(SRC_FORTUNES_DIR)/%.xml $(FORTUNES_XML_TO_XHTML_TOC_XSLT)
 	xsltproc $(FORTUNES_XML_TO_XHTML_TOC_XSLT) $< | \
-	$(PERL) -0777 -lapE 's#\A.*?<ul[^>]*?>#<ul>#ms; s#^[ \t]+##gms; s#[ \t]+$$##gms' - > \
+	$(PERL) -0777 -lap lib/fortunes/clean-fortune-xml-to-xhtml-toc-output.pl - > \
 	$@
 
 $(FORTUNES_TT2S_HTMLS): $(PRE_DEST_FORTUNES_DIR)/%.html: $(FORTUNES_XHTMLS_DIR)/%.xhtml-for-input

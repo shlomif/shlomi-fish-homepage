@@ -7,6 +7,7 @@ css_targets: $(SRC_CSS_TARGETS)
 
 SASS_STYLE := compressed
 # SASS_STYLE := expanded
+SASS_DEBUG_FLAGS :=
 SASS_CMD = pysassc $(SASS_DEBUG_FLAGS) --style $(SASS_STYLE)
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss

@@ -1,7 +1,6 @@
 POST_DEST := dest/post-incs/t2
 LATEMP_ROOT_SOURCE_DIR := .
 LATEMP_ABS_ROOT_SOURCE_DIR := $(realpath $(LATEMP_ROOT_SOURCE_DIR))
-SASS_DEBUG_FLAGS :=
 
 all: all_deps non_latemp_targets
 

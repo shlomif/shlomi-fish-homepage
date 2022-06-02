@@ -9,14 +9,10 @@ use lib './lib';
 
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();
-use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
 
-my $hosts         = MyNavData::Hosts::get_hosts();
-my $host          = 't2';
-my $host_base_url = $hosts->{$host}->{base_url};
-my $hostp         = "lib/cache/combined/$host";
+my $host = 't2';
 
 for my $proto_url ("philosophy/index.xhtml")
 {

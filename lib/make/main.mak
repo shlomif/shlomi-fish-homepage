@@ -5,7 +5,7 @@ SASS_DEBUG_FLAGS :=
 
 all: all_deps non_latemp_targets
 
-all_deps: sects_cache docbook_targets fortunes-epub fortunes-target copy_fortunes
+all_deps: copy_fortunes docbook_targets fortunes-epub fortunes-target sects_cache
 
 non_latemp_targets: art_slogans_targets copy_images_target css_targets generate_nav_data_as_json htaccesses_target hhgg_convert lc_pres_targets mathjax_dest minified_assets mod_files mojo_pres plaintext_scripts_with_offending_extensions printable_resumes__html presentations_targets site_source_install
 
@@ -198,7 +198,7 @@ include lib/make/image-files.mak
 include lib/make/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
 
-minified_assets: $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(BK2HP_SVG_SRC) $(SRC_rjpgs__webps) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(MAIN_TOTAL_MIN_JS_DEST) $(TREE_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(EXPANDER_JS_DEST)
+minified_assets: $(BK2HP_SVG_SRC) $(EXPANDER_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(MAIN_TOTAL_MIN_JS_DEST) $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(SRC_rjpgs__webps) $(TREE_JS_DEST)
 screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 
 non_latemp_targets: $(SRC_SRC_FORTUNE_SHOW_PY)

@@ -19,7 +19,7 @@ use File::Update qw( write_on_change );
 
 sub calc_doc__from_proto_text
 {
-    my ( $self, $xml_out_fn, $args ) = @_;
+    my ( $self, $xml_out_fh, $args ) = @_;
 
     my $ret = XML::Grammar::Screenplay::API::ImageListDoc->new(
         {
@@ -29,7 +29,7 @@ sub calc_doc__from_proto_text
     );
     my $xml_text = $ret->convert($args);
     $ret->_xml($xml_text);
-    write_on_change( $xml_out_fn, \$xml_text );
+    write_on_change( $xml_out_fh, \$xml_text );
     my $xml_parser = XML::LibXML->new();
     $xml_parser->validation(0);
     $ret->_dom( $xml_parser->parse_string( $ret->_xml() ) );
@@ -91,7 +91,7 @@ sub _calc_screenplay_doc_makefile_lines
         };
 
         {
-            my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
+            my $xml_out_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
             my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
 
             my $fn_dir =
@@ -116,7 +116,7 @@ sub _calc_screenplay_doc_makefile_lines
             push @generate_file_list_promises, sub {
                 write_on_change( $text_out_fh, \( $fn->slurp_utf8 ) );
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
-                    path($xml_out_fn),
+                    $xml_out_fh,
                     {
                         source => {
                             file => "$fn",

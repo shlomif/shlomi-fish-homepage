@@ -95,30 +95,31 @@ sub _calc_screenplay_doc_makefile_lines
             my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
 
             my $fn_dir =
-                "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay";
-            my $fn = "$fn_dir/${doc_base}.screenplay-text.txt";
+                path(
+                "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay"
+                );
+            my $fn = $fn_dir->child("${doc_base}.screenplay-text.txt");
             if ( not $should_clone )
             {
-                path($fn_dir)->mkpath;
+                $fn_dir->mkpath;
 
-                $text_out_fh->copy( path($fn) );
+                $text_out_fh->copy($fn);
                 my $gfx_out_dir = path("$fn_dir/../graphics/");
                 my $gfx_bn      = "Green-d10-dice.png";
                 my $gfx_out     = $gfx_out_dir->child($gfx_bn);
                 $gfx_out_dir->mkpath();
-                my $gfx_src = path(
-                    "lib/screenplay-xml/txt/scripts/graphics/Green-d10-dice.png"
-                );
-                path($gfx_src)->copy( path($gfx_out) );
+                my $gfx_src =
+                    path("lib/screenplay-xml/txt/scripts/graphics/$gfx_bn");
+                $gfx_src->copy($gfx_out);
             }
 
             push @generate_file_list_promises, sub {
-                write_on_change( $text_out_fh, \( path($fn)->slurp_utf8 ) );
+                write_on_change( $text_out_fh, \( $fn->slurp_utf8 ) );
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
                     path($xml_out_fn),
                     {
                         source => {
-                            file => $fn,
+                            file => "$fn",
                         },
                     }
                 );

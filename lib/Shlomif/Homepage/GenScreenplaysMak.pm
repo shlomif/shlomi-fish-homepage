@@ -92,7 +92,7 @@ sub _calc_screenplay_doc_makefile_lines
 
         {
             my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
-            my $text_out_fn = "lib/screenplay-xml/txt/${doc_base}.txt";
+            my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
 
             my $fn_dir =
                 "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay";
@@ -101,7 +101,7 @@ sub _calc_screenplay_doc_makefile_lines
             {
                 path($fn_dir)->mkpath;
 
-                path($text_out_fn)->copy( path($fn) );
+                $text_out_fh->copy( path($fn) );
                 my $gfx_out_dir = path("$fn_dir/../graphics/");
                 my $gfx_bn      = "Green-d10-dice.png";
                 my $gfx_out     = $gfx_out_dir->child($gfx_bn);
@@ -110,14 +110,10 @@ sub _calc_screenplay_doc_makefile_lines
                     "lib/screenplay-xml/txt/scripts/graphics/Green-d10-dice.png"
                 );
                 path($gfx_src)->copy( path($gfx_out) );
-
-                # path($fn)->copy( path($text_out_fn) );
             }
 
             push @generate_file_list_promises, sub {
-
-                my $o = path($text_out_fn);
-                write_on_change( $o, \( path($fn)->slurp_utf8 ) );
+                write_on_change( $text_out_fh, \( path($fn)->slurp_utf8 ) );
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
                     path($xml_out_fn),
                     {
@@ -226,8 +222,8 @@ sub _basename
 
 sub generate
 {
-    my $self     = shift;
-    my $args     = shift;
+    my ( $self, $args ) = @_;
+
     my $git_task = $args->{git_task};
 
     my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';

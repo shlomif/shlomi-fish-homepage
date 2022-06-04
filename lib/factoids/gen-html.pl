@@ -109,7 +109,11 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 <section class="facts_wrap">
 
 <header>
+[% IF 1 %]
+<h2>Introduction</h2>
+[% ELSE %]
 <h2>{{ p.title() }}</h2>
+[% END %]
 </header>
 [% END %]
 

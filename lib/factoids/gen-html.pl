@@ -105,11 +105,13 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 
 [% BLOCK facts__{{ p.short_id() }} %]
 
+[% IF NOT nowrap %]
 <section class="facts_wrap">
 
 <header>
 <h2>{{ p.title() }}</h2>
 </header>
+[% END %]
 
 <div class="desc">
 [% INCLUDE facts__img__{{ p.short_id() }} %]
@@ -118,7 +120,9 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 </div>
 </div>
 
+[% IF NOT nowrap %]
 </section>
+[% END %]
 
 [% END %]
 
@@ -126,13 +130,15 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 
 [% BLOCK facts__list %]
 
+<div class="facts_wrap">
 {{ FOREACH p IN pages }}
 
 [% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
-{{ "[% INCLUDE facts__${p.short_id()} %]" }}
+{{ "[% INCLUDE facts__${p.short_id()} nowrap = 1 %]" }}
 [% END %]
 
 {{ END }}
+</div>
 
 [% END %]
 END_OF_TEMPLATE

@@ -138,7 +138,7 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 {{ FOREACH p IN pages }}
 
 [% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
-{{ "[% INCLUDE facts__${p.short_id()} nowrap = 1 %]" }}
+[% INCLUDE facts__{{ p.short_id() }} nowrap = 1 %]
 [% END %]
 
 {{ END }}

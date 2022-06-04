@@ -112,11 +112,13 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 <section class="facts_wrap">
 <header>
 <h2>{{ p.title() }}</h2>
-[% INCLUDE facts__img__{{ p.short_id() }}%]
 </header>
 
 <div class="desc">
+[% INCLUDE facts__img__{{ p.short_id() }}%]
+<div class="abstract">
 {{ p.abstract() }}
+</div>
 </div>
 
 </section>

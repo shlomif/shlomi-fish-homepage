@@ -644,7 +644,9 @@ section {
 .facts_logo {
     @include logo_image;
 
-    float: left;
+    @if false {
+        float: left;
+    }
 
     &.in_soviet_russia,
     &.windows_update,
@@ -872,13 +874,13 @@ h2,
 h3 {
     &.facts,
     &#facts {
-        @include facts_clear;
+        // @include facts_clear;
     }
 }
 
 .facts_sources {
     > header {
-        @include facts_clear;
+        // @include facts_clear;
     }
 }
 

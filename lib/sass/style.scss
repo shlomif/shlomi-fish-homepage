@@ -179,3 +179,14 @@ body {
         max-width: 70%;
     }
 }
+
+.facts_wrap {
+    .desc {
+        display: table-row;
+        > img,
+        > .abstract {
+            display: table-cell;
+            vertical-align: top;
+        }
+    }
+}

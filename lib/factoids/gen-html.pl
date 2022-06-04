@@ -178,9 +178,7 @@ my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 [% END %]
 
 [% WRAPPER see_also  %]
-
 {{ p.see_also() }}
-
 [% END %]
 
 [% END %]

@@ -18,18 +18,14 @@ use Shlomif::Homepage::FactoidsPages::Page ();
 use Carp::Always;
 use List::Util qw/ uniqstr /;
 
-package Data;
-
 my $data_obj    = Shlomif::Homepage::FactoidsPages::Data->new();
 my @pages_proto = @{ $data_obj->calc_data()->{'pages_proto'} };
 
-package main;
+my $xml_parser = XML::LibXML->new;
 
-my $p = XML::LibXML->new;
-
-my $fortune_proc   = XML::Grammar::Fortune->new;
+my $fortune_proc   = XML::Grammar::Fortune->new();
 my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
-my $dom            = $p->parse_file($facts_xml_path);
+my $dom            = $xml_parser->parse_file($facts_xml_path);
 
 my %deps;
 my $xpc = XML::LibXML::XPathContext->new();
@@ -97,25 +93,26 @@ sub _page_to_obj
 
 my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
-my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
+my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 [% PROCESS "Inc/emma_watson.tt2" %]
 
 {{ FOREACH p IN pages }}
+
 [% BLOCK facts__img__{{ p.short_id() }} %]
-
 <!-- Taken from {{ p.img_attribution() }} -->
-
 <img src="{{ p.img_src_tt2() }}" alt="{{ p.img_alt() }}" class="{{ p.img_class() }}" />
 [% END %]
+
 [% BLOCK facts__{{ p.short_id() }} %]
 
 <section class="facts_wrap">
+
 <header>
 <h2>{{ p.title() }}</h2>
 </header>
 
 <div class="desc">
-[% INCLUDE facts__img__{{ p.short_id() }}%]
+[% INCLUDE facts__img__{{ p.short_id() }} %]
 <div class="abstract">
 {{ p.abstract() }}
 </div>
@@ -124,19 +121,23 @@ my $TT2__FACTS_BLOCKS_TT_TEXT = <<'END_OF_TEMPLATE';
 </section>
 
 [% END %]
+
 {{ END }}
 
 [% BLOCK facts__list %]
+
 {{ FOREACH p IN pages }}
+
 [% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
 {{ "[% INCLUDE facts__${p.short_id()} %]" }}
-
 [% END %]
+
 {{ END }}
+
 [% END %]
 END_OF_TEMPLATE
 
-my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
+my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 [% SET title = "{{ p.title() }} [Satire]" %]
 [% SET desc = "{{ p.meta_desc() }}" %]
 
@@ -149,15 +150,11 @@ my $TT2__TT_TEXT = <<'END_OF_TEMPLATE';
 [% PROCESS "factoids/common-out/tags.tt2" %]
 [% PROCESS "stories/stories-list.tt2" %]
 
-
 [% INCLUDE facts__{{ p.short_id() }} %]
-
 [% INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" %]
 
 [% WRAPPER h2_section id="license" title="Copyright and Licence"%]
-
 [% license_obj.{{ p.license_method() }} (year=>"{{ p.license_year() }}") %]
-
 [% END %]
 
 [% WRAPPER links_sect  %]
@@ -224,13 +221,13 @@ foreach my $page (@pages)
         . '/index.xhtml';
 
     push @deps, "${destfn}: $libfn\n";
-    _write_processed( \$TT2__TT_TEXT, { p => $page, }, $libfn, );
+    _write_processed( \$PAGE_TEMPLATE, { p => $page, }, $libfn, );
 }
 write_on_change( path("lib/make/factoids-deps.mak"), \( join "", sort @deps ),
 );
 
 _write_processed(
-    \$TT2__FACTS_BLOCKS_TT_TEXT,
+    \$TT2_GEN__COMMON_INCLUDE,
     { pages => \@pages, },
     "lib/factoids/common-out/tags.tt2",
 );

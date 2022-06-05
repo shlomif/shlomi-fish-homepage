@@ -16,7 +16,7 @@ sub calc_data
 <p>
 These are additions to the
 <a href="https://en.wikipedia.org/wiki/Chuck_Norris_facts">Chuck
-Norris facts</a> trend by my Internet friends and by me. Most of them are kinda
+Norris facts</a> trend by my Internet friends and by me. Most of them are
 geeky (or even computer geeky), but some are more generic.
 </p>
 
@@ -277,6 +277,13 @@ and teachers/mentors.
 <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
 at the NSA</i></a> - another screenplay with a strong Buffy/Sarah Michelle
 Gellar theme.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/bits/facts/Summer-Glau/">Summer Glau Facts</a> -
+about a real-life female.
 </p>
 </li>
 
@@ -759,7 +766,8 @@ EOF
 wrote about her relationship with her mind's hell-hole's echo of me: a static site owner
 who was critical of her songs, while being enamoured with many YouTube musicians
 especially <a href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina
-Grimmie</a> and <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>. She used www.shlomifish.org as fodder for her songs.
+Grimmie</a> and <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>.
+She used www.shlomifish.org as fodder for her songs.
 </p>
 </li>
 </ul>
@@ -896,7 +904,8 @@ EOF
 <li>
 <p>
 <a href="http://unarmed.shlomifish.org/2396.html">“About
-Female Action Heroes”</a> - my post as response to <a href="http://actionflickchick.com/superaction/wired-interviews-the-action-flick-chick-geek-cultures-26-most-awesome-female-ass-kickers/">a post about an interview with
+Female Action Heroes”</a> - my post as response to
+<a href="http://actionflickchick.com/superaction/wired-interviews-the-action-flick-chick-geek-cultures-26-most-awesome-female-ass-kickers/">a post about an interview with
 Action Flick Chick about Geek Culture’s 26 Most Awesome
 Female Ass-Kickers</a>.
 </p>

@@ -255,9 +255,9 @@ my $new_json = JSON::MaybeXS->new(
     ]
 );
 
-my $json_fn = 'lib/Shlomif/factoids-nav.json';
+my $json_fn = path('lib/Shlomif/factoids-nav.json');
 
-write_on_change_no_utf8( scalar( path($json_fn) ), \$new_json, );
+write_on_change_no_utf8( path($json_fn), \$new_json, );
 
 sub _content__process_page
 {

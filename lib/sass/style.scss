@@ -186,7 +186,14 @@ body {
         > img,
         > .abstract {
             display: table-cell;
+            @include padding-lr(1em);
             vertical-align: top;
+        }
+        > img {
+            @include padding-vert(1em);
+        }
+        > .abstract {
+            @include padding-vert(2em);
         }
     }
 }

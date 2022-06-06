@@ -1,12 +1,9 @@
 [%- SET title = "Why I Do Not Trust Non-open-source Software" -%]
 [%- SET desc = "An essay that explains why I do not trust non-open source software and would rather not depend on it." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
-
-<p>
-<b>Publishing Date:</b> 3 March 2014
-</p>
 
 [% WRAPPER h2_section id = "about" title = "About this Article" %]
 
@@ -15,6 +12,10 @@ This article aims to explain why I do not trust non-open-source software
 programs and libraries,
 and would rather not depend on them, even if they are technically superior
 to their open source alternatives in some respects.
+</p>
+
+<p>
+<b>Publishing Date:</b> 3 March 2014
 </p>
 
 [% END %]
@@ -113,6 +114,7 @@ interpretation</a>); because I want my code to be of the maximal available
 use without the need to consult a lawyer; and because I don't want to be
 worried about how it will possibly be abused, when I don't care if it will.
 I'm still using GPLed software, in the hope that I won't get sued.
+See my <a href="[% base_path %]philosophy/computers/open-source/foss-licences-wars/rev2/">"FOSS Licences Wars"</a> essay.
 </p>
 
 <p>

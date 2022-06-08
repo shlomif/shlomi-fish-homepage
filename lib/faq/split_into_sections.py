@@ -149,9 +149,10 @@ class XhtmlSplitter:
         self.root = (
             etree.HTML
             if self.input_is_plain_html
-            else etree.XML)(
-                self.initial_xml_string
-            )
+            else etree.XML
+        )(
+            self.initial_xml_string
+        )
         main_title_xpath = \
             './/{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
                 xhtml_prefix=self.xhtml_prefix
@@ -217,8 +218,8 @@ class XhtmlSplitter:
                 TreeNode(elem=self.container_elem, childs=self.tree, )
             ]
         assert len(self.tree) == 1
-        print(self.list_sections_format)
-        if 0:  # if 'commercial' in self.output_dirname:
+        if False:
+            print(self.list_sections_format)
             print('tree =', self.tree)
 
     def _write_master_xml_file(self):
@@ -235,8 +236,6 @@ class XhtmlSplitter:
 
     def _list_sections(self):
         """docstring for _list_sections"""
-        if True:
-            pass
         if ('commercial' not in self.input_fn):
             yield from self.tree[0].myiter()
         else:
@@ -270,8 +269,6 @@ class XhtmlSplitter:
             header_esc = html.escape(header_text)
             return id_, header_esc
 
-        if 0:  # 'commercial' in self.output_dirname:
-            __import__('pdb').set_trace()
         self._calc_root()
 
         def _add_prefix(prefix, suffix, list_elem):
@@ -419,8 +416,6 @@ class XhtmlSplitter:
                         continue
                     if self._back_re_css.search(a_elem.get("class") or ""):
                         continue
-                    if False:  # re.match('.*?\\.(?:html|xhtml)#', href):
-                        continue
                     a_elem.set(
                         "href", self.path_to_images + href
                     )
@@ -451,6 +446,6 @@ class XhtmlSplitter:
             }
             with open("{}/{}.xhtml".format(output_dirname, id_), "wt") as f:
                 _out_page_text = SECTION_FORMAT.format(**formats)
-                if 0:  # 'commercial' in self.output_dirname:
+                if False:  # 'commercial' in self.output_dirname:
                     __import__('pdb').set_trace()
                 f.write(_out_page_text)

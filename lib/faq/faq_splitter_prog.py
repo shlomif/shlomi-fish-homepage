@@ -298,11 +298,10 @@ def generic_generate_from_(
         path_to_images=path_to_images,
         relative_output_dirname=output_dirname,
         input_is_plain_html=input_is_plain_html,
+        list_sections_format=list_sections_format,
         xhtml_article_tag=xhtml_article_tag,
         xhtml_section_tag=xhtml_section_tag,
     )
-    if list_sections_format:
-        splitter.list_sections_format = list_sections_format
     splitter.process()
 
 
@@ -475,14 +474,13 @@ def generic_generate_from_db5(**args):
     OUT_DN = args['OUT_DN']
     cl = "@class='" + TOP_LEVEL_CLASS + "'"
     base_path = _calc_base_path(OUT_DN)
-    list_sections_format = (
+    container_elem_xpath = (
         "self::node()[local-name() = 'section' and " + cl + ']'
     )
     # assert base_path == args['base_path']
     extra_args = {
         'base_path': base_path,
-        'container_elem_xpath': list_sections_format,
-        # 'list_sections_format': list_sections_format,
+        'container_elem_xpath': container_elem_xpath,
         'output_dirname': "indiv-nodes/",
         'path_to_all_in_one': "../",
         'path_to_input': "./index.xhtml",

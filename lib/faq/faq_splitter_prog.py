@@ -491,6 +491,17 @@ def _docbook5_main():
     )
     generic_generate_from_db5(
         OUT_DN=(
+            "./dest/post-incs/t2/philosophy/culture/multiverse-cosmology/"
+        ),
+    )
+    generic_generate_from_db5(
+        OUT_DN=(
+            "./dest/post-incs/t2/philosophy/culture/multiverse-cosmology/" +
+            "why-the-so-called-real-world-makes-little-sense/"
+        ),
+    )
+    generic_generate_from_db5(
+        OUT_DN=(
             "./dest/post-incs/t2/philosophy/culture/" +
             "my-real-person-fan-fiction/"
         ),

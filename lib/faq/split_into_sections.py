@@ -212,8 +212,14 @@ class XhtmlSplitter:
             return ret
 
         self.tree = wrap_genTreeNode(self.container_elem)
+        if len(self.tree) > 1:
+            self.tree = [
+                TreeNode(elem=self.container_elem, childs=self.tree, )
+            ]
+        assert len(self.tree) == 1
         print(self.list_sections_format)
-        # print(self.tree)
+        if 0:  # if 'commercial' in self.output_dirname:
+            print('tree =', self.tree)
 
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(
@@ -262,11 +268,13 @@ class XhtmlSplitter:
             header_esc = html.escape(header_text)
             return id_, header_esc
 
+        if 0:  # 'commercial' in self.output_dirname:
+            __import__('pdb').set_trace()
         self._calc_root()
 
         def _add_prefix(prefix, suffix, list_elem):
             """docstring for _add_prefix"""
-            print('input_fn = ', self.input_fn)
+            # print('input_fn = ', self.input_fn)
             header_tag = _first(
                 self.ns, list_elem,
                 "./{xhtml_prefix}header".format(
@@ -316,7 +324,7 @@ class XhtmlSplitter:
             )
         self._write_master_xml_file()
 
-        self._calc_root()
+        # self._calc_root()
 
         if len(self.path_to_images):
             for img_elem in _xpath(self.ns,
@@ -330,6 +338,7 @@ class XhtmlSplitter:
                 img_elem.set("src", self.path_to_images + src_path)
                 self._protect(img_elem)
 
+        # print(list(self._list_sections()))
         for list_elem in self._list_sections():
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
@@ -431,4 +440,7 @@ class XhtmlSplitter:
                      for rec in reversed(parents)]),
             }
             with open("{}/{}.xhtml".format(output_dirname, id_), "wt") as f:
-                f.write(SECTION_FORMAT.format(**formats))
+                _out_page_text = SECTION_FORMAT.format(**formats)
+                if 0:  # 'commercial' in self.output_dirname:
+                    __import__('pdb').set_trace()
+                f.write(_out_page_text)

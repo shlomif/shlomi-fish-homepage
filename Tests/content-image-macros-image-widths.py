@@ -70,9 +70,14 @@ class MyTests(unittest.TestCase):
         """docstring for _helper_indiv_nodes_test"""
         articles = root.xpath(xpath_str)
         self.assertTrue(len(articles), "count articles " + name)
-        for art in articles:
+        for idx, art in enumerate(articles):
             link = art.xpath("./header/a[./text() = 'Node Link']")
-            self.assertEqual(len(link), 1, name)
+            self.assertEqual(
+                len(link), 1, "len link idx={idx} name={name}".format(
+                    idx=idx,
+                    name=name,
+                )
+            )
             href = link[0].get("href")
             self.assertTrue(href.startswith("indiv-nodes/"), name)
 

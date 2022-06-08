@@ -103,16 +103,15 @@ class XhtmlSplitter:
         self.section_tags = set([
             self.xhtml_article_tag, self.xhtml_section_tag, ])
         if self.input_is_plain_html:
-            self._r_mode = 'rt'
-            # self._r_mode = 'rb'
-            self._w_mode = 'wb'
+            self._whole_r_mode = 'rt'
         else:
-            self._r_mode = 'rb'
-            self._w_mode = 'wb'
+            self._whole_r_mode = 'rb'
+        self._r_mode = 'rb'
+        self._w_mode = 'wb'
         self._protect_attr_name = "donotprocess"
 
         # self.root = etree.parse(input_fn)
-        with open(input_fn, self._r_mode) as fh:
+        with open(input_fn, self._whole_r_mode) as fh:
             self.initial_xml_string = fh.read()
         self.base_path = (base_path or "../../")
         self.path_to_all_in_one = path_to_all_in_one

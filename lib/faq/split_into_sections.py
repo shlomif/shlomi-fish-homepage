@@ -222,17 +222,23 @@ class XhtmlSplitter:
             print(self.list_sections_format)
             print('tree =', self.tree)
 
+    def _write_file(self, fn, text):
+        should = True
+        try:
+            with open(fn, self._r_mode) as ifh:
+                curr = ifh.read()
+                should = curr != text
+        except FileNotFoundError:
+            pass
+        if should:
+            with open(fn, self._w_mode) as ofh:
+                ofh.write(text)
+
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(
             dom=self.root, add_prefix=True,
         )
-        should = False
-        with open(self.input_fn, self._r_mode) as ifh:
-            curr = ifh.read()
-            should = curr != tree_s
-        if should:
-            with open(self.input_fn, self._w_mode) as ofh:
-                ofh.write(tree_s)
+        return self._write_file(self.input_fn, tree_s)
 
     def _list_sections(self):
         """docstring for _list_sections"""
@@ -444,8 +450,7 @@ class XhtmlSplitter:
                     [" → <a href=\"{id}.xhtml\">{header_esc}</a>".format(**rec)
                      for rec in reversed(parents)]),
             }
-            with open("{}/{}.xhtml".format(output_dirname, id_), "wt") as f:
-                _out_page_text = SECTION_FORMAT.format(**formats)
-                if False:  # 'commercial' in self.output_dirname:
-                    __import__('pdb').set_trace()
-                f.write(_out_page_text)
+            fn = "{}/{}.xhtml".format(output_dirname, id_)
+            _out_page_text = SECTION_FORMAT.format(**formats)
+            _out_page_text = _out_page_text.encode()
+            self._write_file(fn, _out_page_text)

@@ -11,6 +11,7 @@ process_sects_dir = (cd $(1) && ls *.xhtml) | $(call PROC_INCLUDES_COMMON2,$(1),
 
 $(FAQ_SECTS__PIVOT): $(FAQ_SECTS__PROGRAM) $(FAQ_SECTS__LIB_DEPS) $(IMAGE_MACRO_SECTS__SRC)
 	$(PYTHON) $(FAQ_SECTS__PROGRAM)
+	touch $@
 	$(call process_sects_dir,$(FAQ_SECTS__DIR))
 	$(call process_sects_dir,$(IMAGE_MACRO_SECTS__DEST_DIR))
 

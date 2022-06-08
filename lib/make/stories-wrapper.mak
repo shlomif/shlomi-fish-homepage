@@ -27,12 +27,12 @@ FICTION_XML_TEMP_DB5_DIR := $(FICTION_XML_BASE_DIR)/intermediate-docbook5-result
 include lib/make/docbook/sf-screenplays.mak
 
 SCREENPLAY_DOCS_ADDITIONS := \
-	ae-interview \
 	Emma-Watson-applying-for-a-software-dev-job \
 	Emma-Watson-visit-to-Israel-and-Gaza \
+	Mighty-Boosh--Ape-of-Death--Scenes \
+	ae-interview \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
-	Mighty-Boosh--Ape-of-Death--Scenes \
 	sussman-interview
 
 SCREENPLAY_DOCS := $(SCREENPLAY_DOCS_ADDITIONS) $(SCREENPLAY_DOCS_FROM_GEN)

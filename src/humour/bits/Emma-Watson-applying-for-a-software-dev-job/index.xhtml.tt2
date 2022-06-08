@@ -1,6 +1,8 @@
 [%- SET title = "Emma Watson getting interviewed for a software developer job" -%]
 [%- SET desc = "Does Emma Watson have what it takes to work as a Java enterprise software developer? A satire fan-fiction thought experiment." %]
 
+[% main_class.addClass("side_toc") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]
@@ -17,11 +19,7 @@ software</a> developer… ;-).
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="text" title="Text"%]
-
 [% path_slurp("screenplay-xml/rendered-html/Emma-Watson-applying-for-a-software-dev-job.html") %]
-
-[% END %]
 
 [% WRAPPER h2_section id = "reception" title = "What other people are saying" %]
 

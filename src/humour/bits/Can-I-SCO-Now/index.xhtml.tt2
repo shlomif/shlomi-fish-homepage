@@ -23,7 +23,7 @@ culture.
 
 [% END %]
 
-[% WRAPPER h2_section id="lyrics" title="Lyrics"%]
+[% WRAPPER h2_section id = "lyrics" title = "Lyrics" %]
 
 <p>
 What's the point of claiming your code is illegal?<br/>
@@ -51,9 +51,23 @@ Can I, can I, SCO now….
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2012", ) %]
+
+[% END %]
+
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-linux-The-SCO-vs-Linux-TV-Series">“The SCO vs Linux T.V. Series - Fortune”</a>
+</p>
+</li>
+
+</ul>
 
 [% END %]
 

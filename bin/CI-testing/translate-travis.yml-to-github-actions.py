@@ -59,14 +59,10 @@ def generate(output_path, is_act):
         data = yaml.safe_load(infh)
     steps = []
     steps.append({"uses": ("actions/checkout@v2"), })
-    if 0:
+    if False:
         steps.append({
             "run":
             ("cd workflow ; (ls -lrtA ; false)"), })
-    elif 0:
-        steps.append({
-            "run":
-            ("cd . ; (ls -lrtA ; false)"), })
     steps.append({"run": ("sudo apt-get update -qq"), })
     steps.append({
         "run": ("sudo apt-get --no-install-recommends install -y " +
@@ -182,7 +178,6 @@ def generate_windows_yaml(plat, output_path, is_act):
         "uses": "perl-actions/install-with-cpanm@v1",
     }
     steps.append(cpanm_step)
-    # if True:  # plat == 'x86':
     if plat == 'x86':
         mingw = {
             "name": "Set up MinGW",
@@ -234,19 +229,11 @@ def generate_windows_yaml(plat, output_path, is_act):
             if re.search("copy.*?python\\.exe", cmd):
                 continue
             if "choco install strawberryperl" not in cmd:
-                if 0:
+                if False:
                     r = re.sub(
                         "curl\\s+-o\\s+(\\S+)\\s+(\\S+)",
                         "lwp-download \\2 \\1",
                         cmd)
-                elif plat == 'x86':
-                    if cmd.startswith("perl ../source/run-tests.pl"):
-                        continue
-                    r = re.sub(
-                        "--dbm=kaztree",
-                        "--dbm=none",
-                        cmd
-                    )
                 else:
                     r = cmd
                 # See:
@@ -257,7 +244,7 @@ def generate_windows_yaml(plat, output_path, is_act):
                 batch += r + shim + "\n"
         return batch
 
-    if 0:
+    if False:
         steps.append({'name': "install code", "run": _calc_batch_code(
             cmds=data['install']), "shell": "cmd", })
     steps.append({
@@ -299,14 +286,8 @@ def main():
     subprocess.check_call(
             [
                 "bash", "-ce",
-                "perl -lpE 's/^( *)gem/$1sudo gem/;$_=q#    (set -e -x;" +
-                " mkdir -p $HOME/src ; cd $HOME/src ; " +
-                "git clone https://github.com/tdewolff/minify.git " +
-                "; cd minify ; make SHELL=/bin/bash install ; cd .. ; " +
-                "rm -fr minify ; which minify ; )#" +
-                " if /^ *go get.*minify/'" +
-                " < .travis.bash > " +
-                ".ci-github-actions.bash"
+                "perl -lp bin/CI-testing/translate-shell-shim.pl" +
+                " < .travis.bash > .ci-github-actions.bash"
             ])
     if False:
         generate_windows_yaml(

@@ -1,3 +1,46 @@
+RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
+GRIMMIE_IMAGES_POST_DEST := $(POST_DEST)/art/recommendations/music/online-artists/fan-pages/chris-grimmie/images
+
+RPG_DICE_SET_SRC := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
+RPG_DICE_SET_DEST := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp
+
+GRIMMIE_IMG_SRC := $(GRIMMIE_IMAGES_POST_DEST)/christina-grimmie--529031666.jpg
+GRIMMIE_IMG_DEST := $(GRIMMIE_IMAGES_POST_DEST)/christina-grimmie--529031666-r.webp
+MY_NAME_IS_RINDOLF_SRC := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf.jpg
+MY_NAME_IS_RINDOLF_DEST := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.jpg
+
+Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
+Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
+Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
+
+DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
+
+POST_DEST__HUMOUR_IMAGES := $(POST_DEST_HUMOUR)/images
+
+MY_RPF_DEST_DIR := $(POST_DEST)/philosophy/culture/my-real-person-fan-fiction
+MY_RPF_DEST_PIVOT := $(MY_RPF_DEST_DIR)/euler.webp
+
+OPENLY_BIPOLAR_DEST_DIR := $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
+OPENLY_BIPOLAR_DEST_PIVOT := $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
+
+all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
+all: $(MY_NAME_IS_RINDOLF_DEST)
+
+MY_RPF_SRC_DIR := $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction
+
+$(MY_RPF_DEST_PIVOT): $(MY_RPF_SRC_DIR)/euler.webp
+	cp -f $(MY_RPF_SRC_DIR)/*.webp $(MY_RPF_DEST_DIR)/
+
+OPENLY_BIPOLAR_SRC_DIR := $(SUB_REPOS_BASE_DIR)/why-openly-bipolar-people-should-not-be-medicated
+
+$(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
+	cp -f $(OPENLY_BIPOLAR_SRC_DIR)/*.webp $(OPENLY_BIPOLAR_DEST_DIR)/
+
+$(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
+	$(call simple_gm)
+
+all: $(DnD_lances_cartoon_DEST)
+
 Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
 POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
 PRINTER_ICON_PNG := $(POST_DEST)/images/printer_icon.png
@@ -71,6 +114,7 @@ $(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-
 SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/Selina-Mandrake/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/images/strong-woman-meme-summer-glau/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__BASE += $(POST_DEST)/images/TN-Rivendell.jpg
 SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
 	$(call simple_gm)

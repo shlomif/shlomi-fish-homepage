@@ -4,6 +4,10 @@ rebuild()
     (
         set -x
         set -e
+        if false
+        then
+            rm -fr ~/.cookiecutters/cookiecutter--shlomif-latemp-sites/
+        fi
         # It builds faster with no $DISPLAY
         # but inkscape needs it. :-(
         inkscape_actions_require_display_set='true'
@@ -73,7 +77,6 @@ rebuild()
             _gmake_target printable_resumes__html
             _gmake_target presentations_targets
             _gmake_target site_source_install
-            _gmake_target svg_nav_images
             _gmake_target non_latemp_targets
         fi
 

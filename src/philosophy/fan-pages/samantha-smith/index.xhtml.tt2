@@ -15,7 +15,7 @@
 [% WRAPPER h2_section id = "about-sam-smith" title = "About" %]
 
 <p>
-<img alt="Photo of Christina Grimmie" class="rfloaty" src="images/christina-grimmie--529031666-r.webp" style="float: right; margin: 1em;" />
+<img alt="Photo of Samantha Smith" class="rfloaty" src="images/667702-AP830426033.webp" style="float: right; margin: 1em; max-width: 40%;" />
 </p>
 
 <p>
@@ -27,24 +27,16 @@
 
 <li>
 <p>
-<a href="">"The child who slew two mighty superpowers"</a>
+<a href="[% base_path %]humour/Selina-Mandrake/ongoing-text.html">"The child who slew two mighty superpowers"</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="">"The face that sank a thousand battleships"</a>
+<a href="[% base_path %]humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html">"The face that sank a thousand battleships"</a>
 </p>
 </li>
 </ol>
-
-[% END %]
-
-[% WRAPPER h2_section id = "favourites" title = "Favourite Works" %]
-
-[% END %]
-
-[% WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" %]
 
 [% END %]
 
@@ -66,19 +58,21 @@ I had a similar moment as well.
 
 [% END %]
 
-[% WRAPPER h2_section id = "what-i-learned" title = "What I taught (and learned from) Internet/social media creators (on YouTube and other Internet outlets)" %]
-
-[% END %]
-
-[% WRAPPER h2_section id = "photos" title = "Photos' Gallery" %]
-
-[% END %]
-
 [% WRAPPER see_also  %]
 
 [% END %]
 
 [% WRAPPER credits_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.pressherald.com/media/gallery/remembering-manchesters-samantha-smith/">Photo taken from Press Herald</a> - thanks!
+</p>
+</li>
+
+</ul>
 
 [%- END -%]
 

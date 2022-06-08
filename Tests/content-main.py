@@ -81,9 +81,15 @@ class MyTests(html_unit_test.TestCase):
 
     def test_factoids_fortune_page__h3_elem(self):
         input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
-        self.doc(input_fn).has_one(
+        d = self.doc(input_fn)
+        d.has_one(
             ".//h3[@id='shlomif-fact-xena-1' and " +
             "text()='Shlomi Fish’s Xena the Warrior Princess Fact #1']"
+        )
+        d.has_one(
+            ".//blockquote[p[contains(text(), 'Summer Glau can get more with"
+            " a kind word alone than Al Capone could with a kind"
+            " word and a gun.')]]"
         )
 
     def test_hebrew_site_map(self):

@@ -1,0 +1,31 @@
+[%- SET title = "The multiverse's cosmology v0.4.x" -%]
+[%- SET desc = "the cosmology of the Selinaverse, its Shlomifverse fork, and our view into Fantastecha, the multiverse of imagination." -%]
+[%- SET more_keywords = "cosmology" -%]
+
+[% main_class.addClass("fancy_sects", "lim_width", "side_toc", "wrap-me") %]
+
+[%- WRAPPER wrap_html -%]
+
+[% default_toc %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "multiverse-cosmology-v0.4.x",  %]
+
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/multiverse-cosmology-v0.4.x.xhtml") %]
+
+[%- WRAPPER links_sect -%]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-cosmology-v0.4.x.docbook5.xml">Source Repository for this essay on GitHub</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]

@@ -1,11 +1,13 @@
 [%- SET title = "Copyright Terms of Shlomi Fish’s Homesite" -%]
 [%- SET desc = "Copyright Terms of Shlomi Fish’s Homesite: Creative Commons licences, my interpretation of them, etc." -%]
 
+[% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<h2 id="global_copyrights">Global Copyrights’ Terms</h2>
+[% WRAPPER h2_section id = "global_copyrights" title = "Global Copyrights’ Terms" %]
 
 <p>
 To avoid confusion, I decided that
@@ -46,12 +48,11 @@ use it or even license it under a more permissive licence.
 
 <p>
 For more information, see <a
-href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">the
+href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.asciidoc">the
 site's sources' licence file</a>.
 </p>
 
-<h3 id="characters_concepts_plots_and_worlds">Copyright terms for the
-Characters, Concepts, Plot elements, and Worlds</h3>
+[% WRAPPER h3_section id = "characters_concepts_plots_and_worlds" title = "Copyright terms for the Characters, Concepts, Plot elements, and Worlds" %]
 
 <p>
 I believe such copyright concepts as the following are not truly subject
@@ -80,8 +81,9 @@ Commons Community mailing list</a> on 18 February, 2013 (and the related
 thread).
 </p>
 
-<h3 id="paying_for_relicensing">Paying for relicensing my works under less
-restrictive licences</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "paying_for_relicensing" title = "Paying for relicensing my works under less restrictive licences" %]
 
 <p>
 One way to make some money out of my works would be for people who
@@ -92,7 +94,11 @@ interested, you can pay me for relicensing them instead of giving you an
 exemption.
 </p>
 
-<h2 id="cc_intr">How I interpret the Creative Commons Licences</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "cc_intr" title = "How I interpret the Creative Commons Licences" %]
 
 <p>
 Since I’m using some
@@ -102,7 +108,7 @@ interpret them and their implication on you who may wish to reuse or
 redistribute them.
 </p>
 
-<h3 id="public_domain_intr">The Public Domain / CC-Zero</h3>
+[% WRAPPER h3_section id = "public_domain_intr" title = "The Public Domain / CC-Zero" %]
 
 <p>
 If the work is marked as public domain, then you can freely redistribute it,
@@ -134,7 +140,9 @@ of my presentation material, and for some of my old code, or code that
 I find useful to dual-licence under it and the MIT/Expat licence.
 </p>
 
-<h3 id="cc_by_intr">CC-by interpretation (Creative Commons Attribution Licence Unported)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "cc_by_intr" title = "CC-by interpretation (Creative Commons Attribution Licence Unported)" %]
 
 <p>
 First of all, unless noted otherwise I’m always using a certain version of this
@@ -197,7 +205,9 @@ I’m using this licence for most of my essays and articles, and for many blog
 posts.
 </p>
 
-<h3 id="cc_by_sa_intr">CC-by-sa interpretation (Creative Commons Attribution-Share-Alike Licence Unported)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "cc_by_sa_intr" title = "CC-by-sa interpretation (Creative Commons Attribution-Share-Alike Licence Unported)" %]
 
 <p>
 I’m using the Share-Alike variants of the Creative Commons licence for some
@@ -304,7 +314,9 @@ a licence such as CC-by - which will allow differently licensed derivatives,
 either for you or for everybody.
 </p>
 
-<h3 id="cc_by_nc_intr">CC-by-nc interpretation (Creative Commons Attribution Noncommercial Licence Unported)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "cc_by_nc_intr" title = "CC-by-nc interpretation (Creative Commons Attribution Noncommercial Licence Unported)" %]
 
 <p>
 In addition to the CC-by, this licence prohibits commercial use, meaning
@@ -332,7 +344,9 @@ apply a derivative copyright, which they are allowed to do, to also exempt
 people from Internet commercials.
 </p>
 
-<h3 id="cc_by_sa_nc_intr">CC-by-nc-sa interpretation (Creative Commons Attribution Noncommercial Share-Alike Licence Unported)</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "cc_by_sa_nc_intr" title = "CC-by-nc-sa interpretation (Creative Commons Attribution Noncommercial Share-Alike Licence Unported)" %]
 
 <p>
 CC-by-nc-sa sort of combines the restrictions of CC-by-sa and CC-by-nc.
@@ -347,5 +361,9 @@ is still incomplete as of September 2014), and for some of
 <a href="http://www.flickr.com/photos/shlomif/">the Flickr photos</a>,
 which I’ve published and contain photos of my personal friends.
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

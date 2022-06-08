@@ -66,6 +66,10 @@ my $_section_navmenu_tree_contents = {
             url  => "meta/hosting/",
         },
         {
+            text => "Photos of Myself",
+            url  => "meta/self-photos/",
+        },
+        {
             text  => "Old Site Snapshots (Nostalgia)",
             url   => "meta/old-site-snapshots/",
             title => "The site as it looked like many years ago.",

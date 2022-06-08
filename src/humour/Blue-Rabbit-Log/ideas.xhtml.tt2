@@ -6,9 +6,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 [% END %]
 
+[% BLOCK old_non_rdfa_licence %]
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
+alt="Creative Commons License"
+src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a><br/><span
+xmlns:dc="http://purl.org/dc/elements/1.1/">The
+Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#">Shlomi
+Fish</a> is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br/>Based on a
+work at <a xmlns:dc="http://purl.org/dc/elements/1.1/"
+href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
+rel="dc:source">www.shlomifish.org</a>.<br/>Permissions beyond the scope of
+this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
+href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
+rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
+</p>
+[% END %]
+
+[% BLOCK rdfa_enabled_licence %]
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" src="[% base_path %]images/CC-by-nc-sa-88x31.png"/></a><br/><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br/>Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br/>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
+</p>
+[% END %]
 
 [%- WRAPPER wrap_html -%]
+
 [% SET script_type=' type="text/javascript"' %]
+
+[% BLOCK _append_licence %]
+
+[% content %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
+
+[% INCLUDE rdfa_enabled_licence %]
+
+[% END %]
+
+[% END %]
+
+[% WRAPPER _append_licence %]
 
 [% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
@@ -55,8 +94,7 @@ At a certain time, when the PCs explore the first castle, they get a chance
 to see their players. (“and now you will observe your true selves…”). While
 they are seeing them they are very awe-inspired and excited. Afterwards, they
 talk about all the things that changed in their players since the last time
-they saw them. At the end Bryte says
-“and did you see mine? Now she has a pony-tail.”
+they saw them. At the end Bryte says “and did you see mine? Now she has a pony-tail.”
 </p>
 
 [% END %]
@@ -92,9 +130,7 @@ Eventually, there are World’s Wildlife Fund crews all over the place.
 <p>She was supposed to hit a mark in the tree and eventually one of the PCs
 says: “well, you did hit the mark.”</p>
 
-
 [% END %]
-
 
 [% WRAPPER h3_section id = "karl-the-knife-thrower" title = "Karl the Knife-Thrower (or maybe knife → dagger)" %]
 
@@ -127,8 +163,6 @@ bulls-eye.</p>
 [% END %]
 
 [% END %]
-
-
 
 [% WRAPPER h2_section id = "conversations-with-gon" title = "Conversations with Gon:" %]
 
@@ -174,8 +208,6 @@ realities.
 
 <p>Cleric: Something like that.</p>
 
-
-
 [% END %]
 
 [% END %]
@@ -205,7 +237,7 @@ famous Duchess Yorina the Second of Ragenberg…</p>
 
 <p><b>Bryte:</b> Who was Yorina the second?</p>
 
-<p><b>Cleric:</b> I don’t know, why do you ask?</p>
+<p><b>Clover:</b> I don’t know, why do you ask?</p>
 
 <p><b>Bryte:</b> They said she was famous.</p>
 
@@ -215,9 +247,7 @@ keeper, Goldo Haxelot, who was outraged by this act.</p>
 <p><b>TG2:</b> Goldo demanded her that she leaves the vicinity of his inn
 immediately…</p>
 
-
 [% END %]
-
 
 [% END %]
 
@@ -276,7 +306,6 @@ They report the plans of Mordox, giving commentary etc. </p>
 
 [% END %]
 
-
 [% WRAPPER h2_section id = "the-mrs" title = "The MRS" %]
 
 <p>MRS - Musical Recognition Subsystem, a system that was created by Gon the
@@ -305,7 +334,6 @@ order to turn the under-water fire off. It goes to the melody of Back-street
 Boys’ “Everybody (Back-street’s Back)”, with a novel arrangement.</p>
 
 [% END %]
-
 
 [% WRAPPER h2_section id = "origin-of-the-name" title = "How they got the name “The Blue Rabbit Adventuring Company”" %]
 
@@ -481,7 +509,6 @@ pause] Cross-campaign. Or so we hope…”</p>
 
 [% END %]
 
-
 [% WRAPPER h3_section id = "what-became-of-mordox" title = "Mordox" %]
 
 <p>Mordox decided to dedicate his life for benevolent ends, but he still
@@ -496,7 +523,6 @@ cases in his career.</p>
 [% END %]
 
 [% END %]
-
 
 [% WRAPPER h2_section id = "time-travel-parameters" title = "Time Travel Parameters Control" %]
 
@@ -538,37 +564,6 @@ certificates.
 
 [% END %]
 
-[% WRAPPER h2_section id = "licence" title = "Licence" %]
-
-[% BLOCK old_non_rdfa_licence %]
-<p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img
-alt="Creative Commons License"
-src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/></a><br/><span
-xmlns:dc="http://purl.org/dc/elements/1.1/">The
-Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#">Shlomi
-Fish</a> is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
-Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br/>Based on a
-work at <a xmlns:dc="http://purl.org/dc/elements/1.1/"
-href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
-rel="dc:source">www.shlomifish.org</a>.<br/>Permissions beyond the scope of
-this license may be available at <a xmlns:cc="http://creativecommons.org/ns#"
-href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/"
-rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
-</p>
-[% END %]
-
-[% BLOCK rdfa_enabled_licence %]
-<p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" src="[% base_path %]images/CC-by-nc-sa-88x31.png"/></a><br/><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Blue Rabbit Log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/" property="cc:attributionName" rel="cc:attributionURL">Shlomi Fish</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence</a>.<br/>Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://www.shlomifish.org/humour/Blue-Rabbit-Log/" rel="dc:source">www.shlomifish.org</a>.<br/>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.shlomifish.org/me/contact-me/" rel="cc:morePermissions">http://www.shlomifish.org/me/contact-me/</a>.
-</p>
-[% END %]
-
-[% INCLUDE rdfa_enabled_licence %]
-
-[% END %]
-
 [% WRAPPER h2_section id = "see-no-evil" title = "See no Evil" %]
 
 <p>When the PCs get to Galku, and try to extract information out of him he
@@ -578,7 +573,7 @@ interests. Hear no incredible selfishness and total in-consideration of
 everybody else’s welfare and interests.”</p>
 
 <p>
-Bryte ask him “Do you mean ‘See no evil - hear no evil’?” and Galku says
+Bryte asks him “Do you mean ‘See no evil - hear no evil’?” and Galku says
 “I knew it was a good definition!”.
 </p>
 
@@ -599,10 +594,11 @@ Bryte ask him “Do you mean ‘See no evil - hear no evil’?” and Galku says
 <ul>
 <li>
 <p>
-Blor stands on a rock, ignites his machine-bow and start shooting arrows all
+Blor stands on a rock, ignites his machine-bow and starts shooting arrows all
 over the place. The animals get scared, and eventually the camera shows some
-Smurfs who are talking in a muffled tone, and pointing at Blor. They call
-Handy Smurf and he diverts a stream to wash the rock’s standing soil. Then the
+<a href="https://smurfs.fandom.com/wiki/Smurfs_(race)">Smurfs</a> who are
+complaining in a muffled tone, and pointing at Blor. They call
+<a href="https://smurfs.fandom.com/wiki/Handy_Smurf">Handy Smurf</a> and he diverts a stream to wash the rock’s standing soil. Then the
 rock gets carried away on the mud because of the counter-momentum from the
 arrows. It eventually falls over a cliff with Blor on it. Blor is hanging by
 his machine-bow’s string of arrows.
@@ -614,6 +610,21 @@ his machine-bow’s string of arrows.
 deserted Island. </p>
 </li>
 </ul>
+
+[% END %]
+
+[% WRAPPER h2_section id = "the-stream-nymph" title = "Marrying a stream nymph" %]
+
+<p>
+At one point the players got tired of characters simply wandering alone
+into the woods when they wanted to replace them so they tried more imaginative
+outcomes. One ex-PC decided to marry a nymph of a stream. When the PCs
+try to recruit him to help them, his wife is shown, wearing a bathing
+suit and concerned about <a href="https://en.wikipedia.org/wiki/PH">pH (acidity)</a>
+levels in parts of the stream.
+</p>
+
+[% END %]
 
 [% END %]
 

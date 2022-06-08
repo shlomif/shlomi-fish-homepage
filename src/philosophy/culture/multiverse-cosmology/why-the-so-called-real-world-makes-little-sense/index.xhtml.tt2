@@ -1,0 +1,30 @@
+[%- SET title = "Why the so called real world makes little sense" -%]
+[%- SET more_keywords = "cosmology" -%]
+
+[% main_class.addClass("fancy_sects", "lim_width", "side_toc", "wrap-me") %]
+
+[%- WRAPPER wrap_html -%]
+
+[% default_toc %]
+
+[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "why-the-so-called-real-world-makes-little-sense",  %]
+
+<h2 id="content">Content</h2>
+
+[% path_slurp("docbook/5/rendered/why-the-so-called-real-world-makes-little-sense.xhtml") %]
+
+[%- WRAPPER links_sect -%]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/why-the-so-called-real-world-i-am-trapped-in-makes-little-sense--2020-05-19.docbook5.xml">Source Repository for this essay on GitHub</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]

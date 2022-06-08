@@ -19,7 +19,7 @@ use File::Update qw( write_on_change );
 
 sub calc_doc__from_proto_text
 {
-    my ( $self, $xml_out_fn, $args ) = @_;
+    my ( $self, $xml_out_fh, $args ) = @_;
 
     my $ret = XML::Grammar::Screenplay::API::ImageListDoc->new(
         {
@@ -29,7 +29,7 @@ sub calc_doc__from_proto_text
     );
     my $xml_text = $ret->convert($args);
     $ret->_xml($xml_text);
-    write_on_change( $xml_out_fn, \$xml_text );
+    write_on_change( $xml_out_fh, \$xml_text );
     my $xml_parser = XML::LibXML->new();
     $xml_parser->validation(0);
     $ret->_dom( $xml_parser->parse_string( $ret->_xml() ) );
@@ -91,38 +91,35 @@ sub _calc_screenplay_doc_makefile_lines
         };
 
         {
-            my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
-            my $text_out_fn = "lib/screenplay-xml/txt/${doc_base}.txt";
+            my $xml_out_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
+            my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
 
             my $fn_dir =
-                "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay";
-            my $fn = "$fn_dir/${doc_base}.screenplay-text.txt";
+                path(
+                "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay"
+                );
+            my $fn = $fn_dir->child("${doc_base}.screenplay-text.txt");
             if ( not $should_clone )
             {
-                path($fn_dir)->mkpath;
+                $fn_dir->mkpath;
 
-                path($text_out_fn)->copy( path($fn) );
+                $text_out_fh->copy($fn);
                 my $gfx_out_dir = path("$fn_dir/../graphics/");
                 my $gfx_bn      = "Green-d10-dice.png";
                 my $gfx_out     = $gfx_out_dir->child($gfx_bn);
                 $gfx_out_dir->mkpath();
-                my $gfx_src = path(
-                    "lib/screenplay-xml/txt/scripts/graphics/Green-d10-dice.png"
-                );
-                path($gfx_src)->copy( path($gfx_out) );
-
-                # path($fn)->copy( path($text_out_fn) );
+                my $gfx_src =
+                    path("lib/screenplay-xml/txt/scripts/graphics/$gfx_bn");
+                $gfx_src->copy($gfx_out);
             }
 
             push @generate_file_list_promises, sub {
-
-                my $o = path($text_out_fn);
-                write_on_change( $o, \( path($fn)->slurp_utf8 ) );
+                write_on_change( $text_out_fh, \( $fn->slurp_utf8 ) );
                 my $got_doc = $image_lister->calc_doc__from_proto_text(
-                    path($xml_out_fn),
+                    $xml_out_fh,
                     {
                         source => {
-                            file => $fn,
+                            file => "$fn",
                         },
                     }
                 );
@@ -167,7 +164,7 @@ sub _calc_screenplay_doc_makefile_lines
             : (
 "\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${doc_base}-prepare-epub.pl\n"
                     . "\t"
-                    . qq#mkdir -p \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
+                    . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
                     . q/$(call COPY)/
                     . "\n\n" )
             ),
@@ -226,8 +223,8 @@ sub _basename
 
 sub generate
 {
-    my $self     = shift;
-    my $args     = shift;
+    my ( $self, $args ) = @_;
+
     my $git_task = $args->{git_task};
 
     my $screenplay_vcs_base_dir = 'lib/screenplay-xml/from-vcs';
@@ -254,6 +251,7 @@ $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
 $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
 $(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
 $(POST_DEST)/humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.epub \
+$(POST_DEST)/humour/bits/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie.epub \
 $(POST_DEST)/humour/usr-bin-perl/usr-bin-perl--total.epub \

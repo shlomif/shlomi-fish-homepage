@@ -172,3 +172,28 @@ body {
         padding-right: 13px;
     }
 }
+
+.self_photos {
+    img {
+        max-height: 500px;
+        max-width: 70%;
+    }
+}
+
+.facts_wrap {
+    .desc {
+        display: table-row;
+        > img,
+        > .abstract {
+            display: table-cell;
+            @include padding-lr(1em);
+            vertical-align: top;
+        }
+        > img {
+            @include padding-vert(1em);
+        }
+        > .abstract {
+            @include padding-vert(2em);
+        }
+    }
+}

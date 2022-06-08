@@ -1,5 +1,7 @@
 ifeq ($(UPLOAD_MATHJAX),1)
 	RSYNC_EXCLUDES :=
+else
+	RSYNC_EXCLUDES := --exclude='**/js/MathJax/**'
 endif
 
 # UPLOAD = (cd $(POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )

@@ -2,6 +2,7 @@
 [%- SET desc = "Some memoirs of Shlomi Fish about programming when he was a teenager" -%]
 [%- SET more_keywords = "Shlomi Fish, shlomif, Shlomi, Windows, DOS, BASIC, QBASIC, VBA, Visual Basic for Applications, Excel" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 

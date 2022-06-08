@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 use lib '.';
+binmode STDOUT, ':encoding(utf-8)';
 
 =begin debug
 
@@ -20,7 +21,7 @@ debug();
 
 =cut
 
-my $HEADER = "Content-Type: text/html; charset=utf-8\r\n\r\n";
+my $HEADER = "Content-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
 my $path   = $ENV{'REDIRECT_URL'};
 
 if ( !defined($path) and !exists( $ENV{APACHE_REDIRECT_URL} ) )
@@ -72,7 +73,7 @@ else
         my $d   = $rec->{desc};
         my $url = $rec->{url};
         $table .=
-qq!<tr><td><a href="$url">https://shlom.in/$k</a></td><td><p>$d</p></td></tr>!;
+qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td class="full"><p><a href="$url">$url</a></p></td><td><p>$d</p></td></tr>!;
     }
     print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
@@ -87,6 +88,7 @@ td, th
     border: solid 1pt darkgreen ;
     padding: 0.5em;
     text-align: left;
+    vertical-align: top;
 }
 </style>
 </head>
@@ -111,10 +113,11 @@ service, below. For more information please contact
 <table>
 <tr>
 <th>Short URL</th>
+<th>Full URL</th>
 <th>Description</th>
 </tr>
 $table
-<table>
+</table>
 
 <p>
 ( <a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/bin/shlom.in-redirect"><b>GitHub Source</b></a>. )

@@ -31,8 +31,6 @@ technical (computer or Electronics) books and other non-fiction books.
 
 [% WRAPPER h2_section id = "topics" title = "Topics" %]
 
-<div class="sub_section">
-
 [% WRAPPER h3_section id = "general-essays" title = "General Essays" href = "philosophy/" %]
 
 <p class="indent">
@@ -73,8 +71,6 @@ Essays about politics.
 
 [% END %]
 
-</div>
-
 [% END %]
 
 [% WRAPPER h2_section id = "random-ideas" title = "Random (Practical) Ideas I have" href = "ideas/" %]
@@ -88,8 +84,6 @@ else. (it’s lame, but everyone else is doing it)
 [% END %]
 
 [% WRAPPER h2_section id="resources" title="Resources"%]
-
-<div class="sub_section">
 
 [% WRAPPER h3_section id = "blogs" title = "My Blogs" href = "${base_path}me/blogs/" %]
 
@@ -133,8 +127,6 @@ An index to the essays I wrote. (Some of which were not published here).
 </p>
 
 [% END %]
-
-</div>
 
 [% END %]
 

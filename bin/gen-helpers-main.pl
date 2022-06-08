@@ -25,21 +25,21 @@ sub get_rules_template
 
 sub place_files_into_buckets
 {
-    my ( $self, $host, $files, $buckets ) = @_;
+    my ( $self, $host, $filenames, $buckets ) = @_;
     my $host_id         = $host->{'id'};
     my $is_common       = ( $host_id eq "common" );
     my $_common_buckets = $self->_common_buckets;
 FILE_LOOP:
-    foreach my $f (@$files)
+    foreach my $fn (@$filenames)
     {
-        next FILE_LOOP if $f =~ m#/fortune-shlomif\.spec\z#;
+        next FILE_LOOP if $fn =~ m#/fortune-shlomif\.spec\z#;
     BUCKETS:
         foreach my $bucket (@$buckets)
         {
-            next BUCKETS if not $bucket->{'filter'}->($f);
+            next BUCKETS if not $bucket->{'filter'}->($fn);
             if ($is_common)
             {
-                $_common_buckets->{ $bucket->{name} }->{$f} = 1;
+                $_common_buckets->{ $bucket->{name} }->{$fn} = 1;
             }
 
             if (
@@ -47,19 +47,20 @@ FILE_LOOP:
                 || (
                     !(
                         $bucket->{'filter_out_common'}
-                        && exists( $_common_buckets->{ $bucket->{name} }->{$f} )
+                        && exists(
+                            $_common_buckets->{ $bucket->{name} }->{$fn} )
                     )
                 )
                 )
             {
-                push @{ $bucket->{'results'} }, $bucket->{'map'}->($f);
+                push @{ $bucket->{'results'} }, $bucket->{'map'}->($fn);
             }
 
             next FILE_LOOP;
         }
         die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
             {
-                'file' => $f,
+                'file' => $fn,
                 'host' => $host_id,
             }
         );
@@ -105,29 +106,35 @@ use lib './lib';
 use Shlomif::MySystem qw/ my_system my_exec_perl /;
 
 path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
-my $inkscape_wrap = path("./bin/inkscape-wrapper");
+
+sub _run_inkscape
 {
-    my $src = (
+    my $inkscape_wrap = path("./bin/inkscape-wrapper");
+    my $src           = (
         ( scalar(`inkscape --help`) =~ /--export-type/ )
         ? path("./bin/inkscape-wrapper-new.bash")
         : path("./bin/inkscape-wrapper-old.pl")
     );
 
     $src->copy($inkscape_wrap)->chmod(0755);
-}
-my $evilphish_right_face = path("src/images/evilphish-svg--facing-right.svg");
-my_system(
-    [
-        $inkscape_wrap,
-        "--batch-process",
-        "--actions",
+    my $evilphish_right_face =
+        path("src/images/evilphish-svg--facing-right.svg");
+    my_system(
+        [
+            $inkscape_wrap,
+            "--batch-process",
+            "--actions",
 "EditSelectAll;ObjectFlipHorizontally;export-filename:$evilphish_right_face;export-do;",
 
-        # "--export-filename=$evilphish_right_face",
-        "src/images/evilphish-svg--facing-left.svg",
-    ]
-);
-$evilphish_right_face->copy("src/images/evilphish-svg.svg");
+            # "--export-filename=$evilphish_right_face",
+            "src/images/evilphish-svg--facing-left.svg",
+        ]
+    );
+    $evilphish_right_face->copy("src/images/evilphish-svg.svg");
+}
+
+_run_inkscape();
+
 require Shlomif::Homepage::LongStories;
 Shlomif::Homepage::LongStories->new->render_make_fragment;
 require Shlomif::Homepage::FortuneCollections;
@@ -218,19 +225,16 @@ path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 my_exec_perl(
     [ 'lib/images/navigation/section/sect-nav-arrows.pl', "./src/images", ] );
+
 my $generator = Shlomif::Homepage::GenMakeHelpers->new(
-    'hosts' => [
-        map {
-            my $dir      = $_;
-            my $dest_dir = ( ( $dir eq 'src' ) ? 't2' : $dir );
-            +{
-                'id'         => $dir,
-                'source_dir' => $dir,
-                'dest_dir'   => "dest/pre-incs/$dest_dir",
-            }
-        } (qw(common src))
-    ],
-    out_dir                    => $DIR,
+    docs_build_command_cb => sub {
+        my ( undef, $args ) = @_;
+        return sprintf(
+            '$(call %s%s_INCLUDE_TT2_RENDER)',
+            uc( $args->{host}->id ),
+            $args->{is_common} ? "_COMMON" : ""
+        );
+    },
     filename_lists_post_filter => sub {
         my ($args)    = @_;
         my $filenames = $args->{filenames};
@@ -246,18 +250,22 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         }
         return $ret;
     },
-    out_docs_ext          => '.tt2',
-    docs_build_command_cb => sub {
-        my ( undef, $args ) = @_;
-        return sprintf(
-            '$(call %s%s_INCLUDE_TT2_RENDER)',
-            uc( $args->{host}->id ),
-            $args->{is_common} ? "_COMMON" : ""
-        );
-    },
+    hosts => [
+        map {
+            my $dir      = $_;
+            my $dest_dir = ( ( $dir eq 'src' ) ? 't2' : $dir );
+            +{
+                'id'         => $dir,
+                'source_dir' => $dir,
+                'dest_dir'   => "dest/pre-incs/$dest_dir",
+            }
+        } (qw(common src))
+    ],
     images_dest_varname_cb => sub {
         return 'POST_DEST';
     },
+    out_docs_ext => '.tt2',
+    out_dir      => $DIR,
 );
 
 eval { $generator->process_all(); };
@@ -269,5 +277,6 @@ if ( my $Err = $@ )
 }
 
 exit if delete $ENV{LATEMP_STOP_GEN};
+
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );
 my_system( [ 'gmake', '-j1', 'tsc_www', ] );

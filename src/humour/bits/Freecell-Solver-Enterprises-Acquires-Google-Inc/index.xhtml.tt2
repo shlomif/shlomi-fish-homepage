@@ -45,5 +45,10 @@ Search™ it!” instead of “Let’s Google it!”, for an exciting
 Web 3.141592™ experience.
 </p>
 
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
+
+[% license_obj.by_sa_british_blurb( "year" => "2013", ) %]
+
+[% END %]
 
 [% END %]

@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use Carp::Always;
 
 use Shlomif::Homepage::Amazon::Obj ();
 

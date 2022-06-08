@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This article was originally published on
@@ -17,7 +17,9 @@ This article deals with the controversy regarding the anti-Muslim Danish
 Cartoons.
 </p>
 
-<h2 id="article">The Article Itself</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "article" title = "The Article Itself" %]
 
 <div class="mainimage"><img src="https://static.flickr.com/28/96501880_46bfd6e59a.jpg?v=0" style="max-width:90%;height:auto;" alt="“anti-Islamic” Danish cartoon" /></div>
 
@@ -35,5 +37,7 @@ Cartoons.
 </blockquote>
 
 <p>Also, from there, I found my way to another <a href="http://muttawa.blogspot.com/">blog</a>, which goes into great detail about the issue and is well worth the read. </p>
+
+[% END %]
 
 [% END %]

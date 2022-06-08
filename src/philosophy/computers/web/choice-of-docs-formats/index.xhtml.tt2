@@ -9,7 +9,7 @@
 [% WRAPPER h2_section id = "about"  title = "About this Document"  %]
 
 <p>
-This is an overview of popular file formats, which is
+This is an overview of popular documentation file formats, which is
 derived from a reply I wrote to a thread in the
 <a href="http://mail.pm.org/mailman/listinfo/boston-pm">Boston Perl Mongers
 mailing list</a>.
@@ -48,6 +48,54 @@ Last Updated:
 
 [%- END -%]
 
+[% WRAPPER h2_section id = "summary"  title = "TL;DR Summary"  %]
+
+<p>
+My prefered documentation formats are (in order):
+</p>
+
+<ol>
+
+<li>
+<p>
+Custom XML/etc. formats which I translate to DocBook 5 or XHTML5
+using XSLT or similar.
+</p>
+</li>
+
+<li>
+<p>
+<a href="#docbook">DocBook 5/XML</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML 5</a>
+</p>
+</li>
+
+<li>
+<p>
+Perl POD
+</p>
+</li>
+
+<li>
+<p>
+AsciiDoc
+</p>
+</li>
+
+</ol>
+
+<p>
+Sometimes I use <a href="http://template-toolkit.org/">Template Toolkit</a>
+or similar to generate them.
+</p>
+
+[%- END -%]
+
 [% WRAPPER h2_section id = "article"  title = "The Article Itself"  %]
 
 <p>
@@ -75,7 +123,7 @@ plugin for <a href="http://perldoc.perl.org/perlpod.html">POD (Perl’s so-calle
 “Plain, Old, Documentation”)</a>.
 </p>
 
-<p>
+<p id="docbook">
 Just a note about POD: POD is incredibly limited. Some things that you may
 want to try to do with it are not possible. It is not the only generic format
 available, however. One option is naturally
@@ -169,7 +217,7 @@ PostScript or PDF but:
 <ol>
 <li>
 <q>The only thing that can understand TeX is tex</q>. I believe it was said
-much earlier than when Tom Christiansen ported it to the Perl world. It is in
+much earlier than when Tom Christiansen ported that idiom to the Perl world. It is in
 fact much more true for TeX than it is for Perl.
 </li>
 
@@ -242,7 +290,7 @@ That put aside, I found <a href="https://en.wikipedia.org/wiki/Microsoft_Excel">
 and to a lesser extent <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">PowerPoint</a>
 to be useful and usable applications. I avoid using their desktop versions due to
 lack of portability, a non-[% my_acronym( "key" => "FOSS",) %] licence,
-and some decent FOSS alternatives.
+and the availability of some decent FOSS alternatives.
 </p>
 
 [%- END -%]
@@ -302,6 +350,12 @@ implements a subset of CSS.
 <li id="docbookrx">
 <p>
 <a href="https://github.com/asciidoctor/docbookrx">docbookrx: (An early version of) a DocBook to AsciiDoc converter written in Ruby.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://metacpan.org/search?q=HTML%3A%3AWikiConverter">HTML::WikiConverter</a> - convert from HTML to wikis/etc. markups.
 </p>
 </li>
 

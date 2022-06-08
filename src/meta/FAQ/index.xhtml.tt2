@@ -33,6 +33,7 @@
 
 [% SET childhood_mem = "Possibly worse, I lost many of my earliest childhood memories, as I thought about them and remembered them in English." %]
 [% SET SMG = 'Sarah Michelle Gellar' %]
+[% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
 
 <img src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.webp" alt="photo of Shlomi Fish in December 2020" class="highlight" style="float:right;" />
 
@@ -400,8 +401,9 @@ When writing a letter to me, you can start it with
 
 <p>
 Not “Hello Fish”, please! I hate when people call
-me “Fish” to my face, albeit “Mr. Fish” is OK. You can also use my “Rindolf”
-nickname with or without a “Mr.” honorific. Also see <a href="https://www.joelonsoftware.com/2004/01/26/getting-your-resume-read/">Joel on Software's note:</a>
+me “Fish” to my face, albeit “Mr. Fish” is OK. You can also use my
+<a href="#origin_of_rindolf">“Rindolf”
+nickname</a> with or without a “Mr.” honorific. Also see <a href="https://www.joelonsoftware.com/2004/01/26/getting-your-resume-read/">Joel on Software's note:</a>
 </p>
 
 <blockquote cite="https://www.joelonsoftware.com/2004/01/26/getting-your-resume-read/">
@@ -573,7 +575,7 @@ I am still a geek because I'm technologically inclined and enjoy contributing to
 </p>
 
 <p>
-Also note <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/great-hackers.xhtml">my
+Also note <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml">my
 sentiments about attractive girls (and guys) increasingly being geeky</a>.
 </p>
 
@@ -789,7 +791,7 @@ at the NSA</i></a> screenplay and Ms. Glau.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address?  People can spam you."  %]
+[% WRAPPER faq_h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address? People can spam you."  %]
 
 <p>
 First of all, in this day and age, it’s unlikely that the spammers <b>will
@@ -1158,8 +1160,8 @@ people do.
 <li>
 <p>
 <a href="[% base_path %]me/rindolf/images/rpg-dice-set--on-nuc.webp"><img src="[% base_path %]me/rindolf/images/rpg-dice-set--on-nuc--thumb.webp" alt="My set of role-playing games dice" class="faq_float" /></a>
-Following the transition from <a href="[% base_path %]humour/Selina-Mandrake/">Selina Mandrake</a>
-to <a href="[% base_path %]humour/Summerschool-at-the-NSA/">Summerschool at the NSA</a>, I
+Following the transition from <a href="[% base_path %]humour/Selina-Mandrake/"> <i>Selina Mandrake - The Slayer</i></a>
+to <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool at the NSA</i></a>, I
 bought a complete set of <a href="https://en.wikipedia.org/wiki/Tabletop_role-playing_game">Tabletop role-playing games</a>'
 dice, and use it as a symbolic object. This is its photo after being placed
 on my NUC computer along with <a href="#brown_solid_d10">the 1d10 die</a> that I have given
@@ -1240,15 +1242,15 @@ fictional characters - 😊)
 
 </blockquote>
 
+<p>
+Moreover, to quote a dialogue from <a href="[% base_path %]humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html"><i>Queen Padmé Tales</i></a> :
+</p>
+
 <blockquote cite="">
 
 <p><strong class="sayer">Obi-Wan:</strong> I did, yes. Wow! And I thought my (one and only, hah!) girlfriend was bad. Do note, however that I kindof am attracted to the bitch type. One of my many kinks. While my friends are attracted to everything that moves, I see no reason to limit myself ( <a href="https://www.amazon.com/Best-Things-Anybody-Ever-Said/dp/0743235797/ref=sr_1_1">Reference</a> ).
 
 </blockquote>
-
-<p>
-( <a href="[% base_path %]humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html"><i>Queen Padmé Tales</i></a> )
-</p>
 
 <p>
 Do note that there is a difference between being attracted to someone,
@@ -1317,7 +1319,7 @@ After going public about it, I realised I am in good company as
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id="philosophy" title="Questions about my philosophy / ideology / religion" %]
+[% WRAPPER faq_h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]
 
 [% WRAPPER faq_h3_section id = "religious_belief"  title = "What is your Religious Belief or Inclination?"  %]
 
@@ -1410,6 +1412,7 @@ or <a href="https://en.wikipedia.org/wiki/Sam_Harris">Sam Harris</a>
 </p>
 
 </li>
+
 </ul>
 
 [%- END -%]
@@ -1632,7 +1635,8 @@ is wrong, and you may wish to refuse an order, if it seems immoral
 or unethical. And like the film
 <a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)">The Quick and the Dead</a>
 notes one should not be "afraid to live": voice your opinion, whether
-approving or disapproving, offline or online. HR drones who try to find faults
+approving or disapproving, offline or online. HR (= <a href="https://en.wikipedia.org/wiki/Human_resource_management">Human resource management</a>)
+drones who try to find faults
 in your online presence are going to be unhappy anyway, and from
 my impression they are usually wilfully stupid and thus
 quite evil and misguided.
@@ -1640,7 +1644,7 @@ quite evil and misguided.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
+[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in the Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
 
 <p>
 Yes, I'm fully aware of that, and I think it does not matter too much.
@@ -1727,8 +1731,8 @@ which other people and I find irrational. Note however that by the time
 of <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>
 many communist regimes were far more relaxed and rational in practice,
 and I suspect that following the popularity of
-<a href="https://en.wikipedia.org/wiki/The_Colbert_Report">The Colbert
-Report</a>, most of the best "AltRight" neonazi bloggers are parody ones.
+<a href="https://en.wikipedia.org/wiki/The_Colbert_Report"><i>The Colbert
+Report</i></a>, most of the best "AltRight" neonazi bloggers are parody ones.
 </p>
 
 <p>
@@ -1762,7 +1766,7 @@ agnostic</a>.
 
 [% END %]
 
-[% WRAPPER faq_h2_section id="israel" title="Questions Related to Me and to Israel" %]
+[% WRAPPER faq_h2_section id = "israel" title = "Questions Related to Me and to Israel" %]
 
 [% WRAPPER faq_h3_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
 
@@ -1933,7 +1937,7 @@ Seriously now, if you meet such an agent online, they will likely admit it. If
 they approach you in the outside world, they will likely admit it, and
 even invite you for a meal or a drink and are not going to torture you.
 If you're not
-<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/fear-is-path-to-dark-side.xhtml">paranoid</a>
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/fear-is-path-to-dark-side.xhtml">paranoid</a>
 or get into too much trouble (e.g: by being <a href="https://en.wikipedia.org/wiki/Grey_hat">a grey hat net intruder</a>),
 you likely won't ever be approached by them.
 </p>
@@ -1950,7 +1954,6 @@ murder by either side towards the other (sometimes as self-defence), they
 usually were at most a few hundred deaths per year, and a far cry from
 exceeding the natural population growth.
 </p>
-
 
 <p>
 Moreover, given the bad reputation that
@@ -1974,7 +1977,7 @@ and make all patients and workers there hacker monarchs.
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id="art_and_culture" title="Questions About Art &amp; Culture" %]
+[% WRAPPER faq_h2_section id = "art_and_culture" title = "Questions About Art &amp; Culture" %]
 
 [% WRAPPER faq_h3_section id = "favourite_music"  title = "What kind of Music do you like to listen to?"  %]
 
@@ -1982,7 +1985,7 @@ and make all patients and workers there hacker monarchs.
 I mostly listen to Rock and Pop, but have some favourite songs of many genres
 including Dance, Rap/Hip Hop, Soft Music, Classical Music (especially
 Crossover Classic, which I find very fun), Instrumental Music, Country, Rhythm
-and Blues and Soul, Ethnic Rock, etc.
+and Blues and Soul, and Ethnic Rock.
 </p>
 
 <p>
@@ -2001,10 +2004,10 @@ Ariel. My favourite song in English is <a href="https://www.youtube.com/watch?v=
 [% WRAPPER faq_h3_section id = "most_freaky_tv_show"  title = "What is the most freaky TV Show you ever saw?"  %]
 
 <p>
-<a href="https://www.imdb.com/title/tt0061287/">The Prisoner</a> is
+<a href="https://www.imdb.com/title/tt0061287/"><i>The Prisoner</i></a> is
 my epitome of freakiness. I watched it in the summer vacations on Israeli
 television during the 80s. It was still infested with 1960s pre-
-<a href="https://en.wikipedia.org/wiki/Sesame_Street">Sesame Street</a>
+<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>
 paranoia, but otherwise very cool.
 </p>
 
@@ -2083,12 +2086,12 @@ Some of my favourite performances of her:
 </ol>
 
 <p>
-Do note that I have a lot of <a href="https://www.shlomifish.org/meta/nav-blocks/blocks/#buffy_sect">crossover fan fiction about her and Buffy</a>.
+Do note that I have a lot of <a href="[% base_path %]meta/nav-blocks/blocks/#buffy_sect">crossover fan fiction about her and Buffy</a>.
 </p>
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id="fav_painter" title="Who is your favourite painter?" %]
+[% WRAPPER faq_h3_section id = "fav_painter" title = "Who is your favourite painter?" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Keith_Parkinson">Keith Parkinson</a>
@@ -2097,9 +2100,9 @@ who drew fantasy art (see <a href="https://duckduckgo.com/?q=keith+parkinson&amp
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id="fiction_books" title="Fiction Books (Literature)" %]
+[% WRAPPER faq_h3_section id = "fiction_books" title = "Fiction Books (Literature)" %]
 
-[% WRAPPER faq_h4_section id="fav_fiction_books" title="What are your favourite fiction books?" %]
+[% WRAPPER faq_h4_section id = "fav_fiction_books" title = "What are your favourite fiction books?" %]
 
 <p>
 My favourite children-oriented book is <a
@@ -2122,6 +2125,8 @@ is likely that I had had, even back then and at least sub-consciously, a lot of
 contempt for the original work.
 </p>
 
+<img alt="Rivendell image by tednasmith.com" class="highlight" src="[% base_path %]images/TN-Rivendell--reduced.webp" style="float:right;" />
+
 <p>
 Do note that I threw away my only physical copy of <i>The Hobbit</i>
 (a cheap one that featured <a href="https://www.tednasmith.com/tolkien/rivendell/">this
@@ -2131,7 +2136,7 @@ my <a href="http://www.paulgraham.com/stuff.html">anti-"stuff" policy</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id="tolkien_books" title="What do you think about the other books/films by Tolkien?" %]
+[% WRAPPER faq_h4_section id = "tolkien_books" title = "What do you think about the other books/films by Tolkien?" %]
 
 <ol>
 
@@ -2187,7 +2192,7 @@ however.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id="crime_and_punishment" title="What do you think about Dostoevsky’s Crime and Punishment?" %]
+[% WRAPPER faq_h4_section id = "crime_and_punishment" title = "What do you think about Dostoevsky’s Crime and Punishment?" %]
 
 [% SET cnp = my_acronym( "key" => "Crime&P",) %]
 [% SET cnp_nl = my_acronym( "key" => "Crime&P", "no_link"=>1,) %]
@@ -2272,7 +2277,7 @@ And take my advice at your own risk. If it breaks, you get to keep both pieces. 
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
+[% WRAPPER faq_h4_section id ="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
 
 <p>
 I read the first four installments. My favourite was <a
@@ -2294,6 +2299,33 @@ looked up) yet not too dumbed down to be annoying
 </p>
 
 [% END %]
+
+[% END %]
+
+[% WRAPPER faq_h3_section id = "favourite_poems" title = "What are your favourite poems?" %]
+
+<ol>
+
+<li>
+<p>
+<a href="https://www.poetryfoundation.org/poems/46473/if---">If—</a> by
+Rudyard Kipling ( <a href="https://en.wikipedia.org/wiki/If%E2%80%94">Wikipedia page</a> )
+</p>
+</li>
+
+<li>
+<p>
+"Burning Love [mod]" by Will Smith and Jazz ( <a href="https://www.youtube.com/watch?v=5wLM95MpRMk">Reference</a> ; <a href="https://www.reddit.com/r/FreshPrince/comments/d5n1n0/jazz_as_a_pickup_artist/">"Jazz as a pickup artist"</a> ; <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#pick-up-art">"how to approach a MOTAS"</a> )
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=hanah-senesh-walk-to-caesarea">"Walk to Caesarea"</a> - by Hanah Senesh.
+</p>
+</li>
+
+</ol>
 
 [%- END -%]
 
@@ -2380,25 +2412,38 @@ For several reasons:
 </p>
 
 <ol>
+
 <li>
+<p>
 There are many more English speakers (either as their mother tongue or as
 a secondary language) than Hebrew speakers. So I’m reaching a bigger target
 audience by writing in English.
+</p>
 </li>
+
 <li>
+<p>
 Most native Hebrew speakers (i.e: Israelis) can read English well enough to
 understand my English writing. So most of the target audience for writing stuff
 in Hebrew will benefit from it very little.
+</p>
 </li>
+
 <li>
+<p>
 I find it more comfortable and faster to type in English and express myself in
 writing using English for most types of writing (some
 <a href="[% base_path %]humour/">stories I’m writing</a> being an exception).
+</p>
 </li>
+
 <li>
+<p>
 I often use a lot of tech jargon or slang, which is more difficult to
 translate to Hebrew.
+</p>
 </li>
+
 </ol>
 
 <p>
@@ -2635,6 +2680,10 @@ necessary technical skills, you can peruse the pages’ history in the
 <a href="[% site_sources_url %]">version control repository</a>.
 </p>
 
+<p>
+<a href="https://en.wikiquote.org/w/index.php?title=Bill_Gates&amp;oldid=3095914#Misattributed">Bill Gates admitted</a> that he <q>said some stupid things and some wrong things</q> too. Also note the <a href="https://en.wikipedia.org/wiki/Dialectic#Hegelian_dialectic">Hegelian dialectic</a>.
+</p>
+
 [% WRAPPER faq_h4_section id = "are_the_historical_descriptions"  title = "Are the historical descriptions accurate?"  %]
 
 <p>
@@ -2754,12 +2803,14 @@ For more information, see:
 </p>
 
 <ul>
+
 <li>
 <p>
 <a href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_offended/">“Encourage
 criticism and try to get offended”</a>
 </p>
 </li>
+
 </ul>
 
 <p>
@@ -2793,7 +2844,9 @@ I’d like my site to be as popular as possible, the real reason why I link
 to pages there is because they are relevant to the discussion at hand. If
 you’re too envious of me linking to my site, then please stop and get your
 own site which you can start populating with interesting content to your
-heart’s content.
+heart’s content. Moreover, you can use my site as a basis by
+<a href="https://www.shlomifish.org/meta/site-source/">forking its public
+version-control repository</a>.
 </p>
 
 [% WRAPPER faq_h4_section id = "advertise_your_site"  title = "Why do you advertise/“spam”/“self-promote” pages from your sites?"  %]
@@ -2849,6 +2902,21 @@ in a car accident.
 
 [% END %]
 
+[% WRAPPER faq_h4_section id = "do_you_collect_IP_addresses"  title = "Do you use your sites to collect IP addresses?"  %]
+
+<p>
+I rarely go over the monthly reports of the log analysers, to say nothing
+of looking at the raw web server logs. If you still don't believe me,
+you can try using <a href="https://en.wikipedia.org/wiki/Tor_(network)">Tor</a>
+or similar, in order to browse them.
+</p>
+
+<p>
+And frankly, these conspiracy hypotheses are ridiculous.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER faq_h3_section id = "how_site_is_generated"  title = "How is this site generated? Which CMS (Content Management System) are you using?"  %]
@@ -2865,11 +2933,11 @@ and makes use of a <a href="https://en.wikipedia.org/wiki/Continuous_integration
 </p>
 
 <p>
-In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.md">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> for code.
+In modern web developer jargon, one can say I use a <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md">custom static site generator (SSG)</a>. The <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/LICENSE.asciidoc">blanket licence</a> for the sources is CC-by-nc-sa for texts, and the <a href="https://en.wikipedia.org/wiki/Apache_License">ASL 2.0</a> for code.
 </p>
 
 <p>
-While I am not ashamed of the site’s sources, they went through a long
+While I am not ashamed of the site’s sources, they have undergone through a long
 <a href="#site_history">history</a> and
 <a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
 and while I remain a big fan of static site generation, there are probably
@@ -2997,7 +3065,7 @@ PNG images are compressed using
 
 <p>
 Moreover, I recently started to increasingly make use of
-<a href="https://en.wikipedia.org/wiki/WebP">WebP</a>, whose files tends to
+<a href="https://en.wikipedia.org/wiki/WebP">WebP</a>, whose files tend to
 be smaller than PNG and JPEG ones, and look better than JPEG.
 </p>
 
@@ -3037,6 +3105,7 @@ Also see:
 </p>
 
 <ol>
+
 <li>
 <p>
 <a href="https://twitter.com/xbs/status/626781529054834688">Tweet about
@@ -3049,6 +3118,7 @@ average web page size</a>
 <a href="https://www.wired.com/2016/04/average-webpage-now-size-original-doom/">Wired feature about the average web page size</a>
 </p>
 </li>
+
 </ol>
 
 [%- END -%]
@@ -3076,7 +3146,7 @@ doing that because:
 
 <li>
 <p>
-It may harm <a href="./#site_loads_quickly">its load time</a>.
+It may harm <a href="#site_loads_quickly">its load time</a>.
 </p>
 </li>
 
@@ -3244,7 +3314,7 @@ functioning.
 <p>
 Anyway, do you really believe that when <a href="[% base_path %]humour/bits/facts/Taylor-Swift/">Taylor Swift</a>
 depicted her friends and herself laying waste to a whole city
-in the videoclip for <a href="https://en.wikipedia.org/wiki/Bad_Blood_(Taylor_Swift_song)">"Bad Blood"</a>
+in the <a href="https://www.youtube.com/watch?v=QcIy9NiNbmo">videoclip</a> for <a href="https://en.wikipedia.org/wiki/Bad_Blood_(Taylor_Swift_song)">"Bad Blood"</a>
 (and <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
 <a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold Schwarzenegger</a>
 and similar likely showed it more than once) that they actually are indeed so
@@ -3284,9 +3354,8 @@ who was the “alpha male” of a large part of the 1990s (despite his youth),
 raised a
 few eyebrows, when marrying at the age of 18 shortly after
 high school graduation. However, I recently heard of a Jewish couple of a
-husband and wife who were 15 then (with the girl pregnant), and as scary as it
-sounded, it didn’t seem too
-horrid of a thought. Some people
+husband and wife who were 15 years old then (with the girl pregnant), and as
+scary as it sounded, it didn’t seem too horrid of a thought. Some people
 <a href="http://www.youtube.com/watch?v=lQALLGsn-Fk">learn
 faster than others</a>.
 </p>
@@ -3297,7 +3366,7 @@ possessing Marijuana and for its use, but many young and not-so-young people
 I talked with have had a history of Marijuana use, or even Marijuana addiction,
 so I do not hold it against him. See my
 <a href="[% base_path %]philosophy/politics/drug-legalisation/">“The Case
-for Drug Legalisation”</a> for why Marijuana, and all other illegal narcotics,
+for Drug Legalisation”</a> for why I think Marijuana, and all other illegal narcotics,
 should be made legal globally.
 </p>
 
@@ -3308,13 +3377,14 @@ I also have
 <a href="https://twitter.com/shlomif/status/1505075791943589890">a hypothesis</a>
 that pleasure, education (learning and teaching), and creativity / conception,
 are closely intertwined. Since we cannot expect children to avoid having
-fun, or to learn, we must accept the fact that they'll have sexual experiences.
+fun, or to learn, we must accept the fact that they'll have sexual/conceptual
+experiences.
 </p>
 
 <hr />
 
 <p>
-Finally, note that <a href="https://en.wikipedia.org/wiki/E._Nesbit">E Nesbit</a>,
+Moreover, note that <a href="https://en.wikipedia.org/wiki/E._Nesbit">E Nesbit</a>,
 and
 <a href="https://en.wikipedia.org/wiki/J._K._Rowling">JK Rowling</a>
 both featured underage children in their books.
@@ -3331,6 +3401,21 @@ it was criticised for not going against
 (Note that PETA's Twitter may have improved in this aspect since.)
 So please pick on someone your size, or just admit you were
 wrong, and choose a more worthwhile battle.
+</p>
+
+<hr />
+
+<p>
+Am I attracted to attractive underage girls? I admit I am, but no more than
+I am to <a href="#why_are_you_attracted_to_all_these_girls">those who are
+well above the age of consent</a>.
+I suspect most other men do too, and <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#what-to-do-about-being-the-Damascus-alpha-male">repressing</a> these emotions won't make the situation better. (One may still opt to <b>supress</b> them instead, i.e.: acknowledge their presence and not act in accordance to them.)
+</p>
+
+<p>
+Moreover, as of 2022-04-20 the first and only time I recall "getting physical"
+with a MOTAS was <a href="[% base_path %]humour/bits/true-stories/my-first-kiss/">me getting rapekissed</a> (1st base? ½ base?)
+by a girl who looked in her early 20s.
 </p>
 
 [%- END -%]
@@ -3383,12 +3468,16 @@ advice to <a href="[% base_path
 your own kind of music"</a> and use my own cultural background and interests as
 inspiration for my creative works. Also note that I tend to agree with Larry Wall
 that <a href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">“All
-Truth is God’s Truth”</a> and have also recently concluded that
+Truth is God’s Truth”</a>.
+</p>
+
+[% IF 0 %]
+and have also recently concluded that
 <a href="https://twitter.com/shlomif/status/1351069373952360448">"Truth" is
 a function of time</a> and like <a href="https://www.goodreads.com/quotes/941-the-opposite-of-a-correct-statement-is-a-false-statement">Niels Bohr's noted</a> that:
 <q>The opposite of a correct statement is a false statement. But the opposite
 of a profound truth may well be another profound truth.</q>
-</p>
+[% END %]
 
 <p>
 Often, people enjoy my works without being intimately familiar with all
@@ -3403,6 +3492,82 @@ Law</a>,
 I feel that <q>99.95% of the Mishnah and the Talmud are crap</q>,
 and while they contain many gems, they are mostly redundant.
 </p>
+
+<blockquote cite="">
+
+<p>
+There is no way one can expect them (or me) to use only earlier sources than
+1900, because technology as well as art, culture, &amp; entertainment /
+education / amateur philosophy, did not stand still since then, despite being
+increasingly based on Copyright maximalism.
+</p>
+
+<blockquote cite="https://twitter.com/shlomif/status/1337514771936063492" class="fancy">
+
+<p>
+You can never truly appreciate Hamlet until you've read it in the original
+Klingon.
+</p>
+
+<p>
+But all the mightiest Klingon warriors have watched Disney's <a
+href="https://en.wikipedia.org/wiki/The_Lion_King"><i>The Lion King</i></a>
+instead (or in addition), possibly with Klingon subtitles.
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1337514771936063492">@shlomif (= me) tweet</a> )
+</p>
+
+<blockquote cite="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#best_warriors" class="fancy">
+
+<p>
+In my screenplay <a
+href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake - The
+Slayer</i></a>, the protagonist (Selina) runs into three vampire warriors (“The
+Three”) dressed as Klingons, who tell her that “Every mighty Klingon warrior
+has watched [% Sesame_Street %]”.
+</p>
+
+<p>
+As a retort, she exclaims: “Mighty Klingon vampire
+warriors who have watched [% Sesame_Street %]… this decade royally sucks!!”. However,
+most of the best American warriors of the relatively recent past (of all kinds)
+have watched [% Sesame_Street %], because they loved it as happy children (and later
+as adults).
+</p>
+
+</blockquote>
+
+<p>
+( <a
+href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#best_warriors">Shlomi
+Fish (= me): "Hackers make the best warriors"</a> )
+</p>
+
+</blockquote>
+
+[%- END -%]
+
+[% WRAPPER faq_h3_section id = "why_arent_you_faithful_to_the_original_franchises_and_characters" title = "Why aren't you faithful to the original franchises and characters?" %]
+
+<p>
+When I hack on my fics I apply my <a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-cosmology-v0.4.x.asciidoc#user-content-love-and-knowledge">educational and entertainment</a> creative filters, just like
+<a href="https://en.wikipedia.org/wiki/List_of_Walt_Disney_Animation_Studios_films">Disney films</a>
+or The Muppets have been doing for similar sources.
+</p>
+
+<p>
+As <a href="[% base_path %]humour/stories/#intro">I noted:</a>
+</p>
+
+<blockquote cite="">
+
+[% PROCESS active_humour_stories__competence %]
+
+</blockquote>
 
 [%- END -%]
 
@@ -3491,7 +3656,7 @@ Also see <a href="#financial_status">some relicensing options</a>.
 
 <p>
 Do note that I try to provide sources for most of my works - usually on <a href="https://github.com/shlomif?tab=repositories">my GitHub account</a>
-or <a href="https://www.shlomifish.org/open-source/projects/#forges_home_pages">other
+or <a href="[% base_path %]open-source/projects/#forges_home_pages">other
 code sharing sites</a> (where "code" can be <a href="https://en.wikipedia.org/wiki/Markup_language">markup</a> or a different file format).
 As a result, I recommend you peruse them if you wish to keep the best quality.
 </p>
@@ -3501,7 +3666,7 @@ As a result, I recommend you peruse them if you wish to keep the best quality.
 [% WRAPPER faq_h3_section id = "how_do_you_expect_to_afford_the_actors" title = "How do you expect to afford paying the [big name] actors you sport in your screenplays?"  %]
 
 <p>
-First of all note that I believe by observation that <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/beautiful_people_are_geeks.xhtml">most of them are modern-day geeks and "amateurs"</a>
+First of all note that I believe by observation that <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/beautiful_people_are_geeks.xhtml">most of them are modern-day geeks and "amateurs"</a>
 and often agreed to act in films they liked for a relatively small pay.
 For instance, according to <a href="https://en.wikipedia.org/w/index.php?title=Emma_Watson&amp;oldid=1017885388">the wikipedia article about Emma Watson</a>
 and <a href="https://en.wikipedia.org/w/index.php?title=Kirsten_Dunst&amp;oldid=1018684072">the one about Kirsten Dunst</a>
@@ -3510,12 +3675,22 @@ they both played in some independent films, which I presume paid less than
 </p>
 
 <p>
-Secondly, my cast pages (e.g: <a href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html">1</a>; <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/cast.html">2</a>; ) are merely guidelines. Film makers are welcome
+Secondly, my cast pages (e.g: <a href="[% base_path %]humour/Selina-Mandrake/cast.html">1</a>; <a href="[% base_path %]humour/Summerschool-at-the-NSA/cast.html">2</a>; ) are merely guidelines. Film makers are welcome
 to <a href="#may_i_prepare_a_derivative">take them in their own direction</a>
 (or the screenplays themselves).
 </p>
 
 [% END %]
+
+[% WRAPPER faq_h3_section id = "who_is_the_worst_vocalist_on_youtube" title = "If you are the “2nd worst vocalist on YouTube”, who is the first?"  %]
+
+[% # THROW "UNIMPL" %]
+
+<p>
+My future successor. Not unlike <a href="http://www.earthstar.co.uk/deep1.htm">Deep Thought being "the second greatest computer in the Universe of Time and Space"</a>.
+</p>
+
+[%- END -%]
 
 [%- END -%]
 
@@ -3545,7 +3720,7 @@ see:
 <p>
 Note that software development involves other activities than programming (e.g:
 <a href="https://en.wikipedia.org/wiki/Software_quality_assurance">QA</a>,
-writing documentation or <a href="https://en.wikipedia.org/wiki/System_administrator">system
+writing documentation, or <a href="https://en.wikipedia.org/wiki/System_administrator">system
 administration</a>). Moreover, I believe that, despite common belief, writing
 HTML, or many other languages which are not <a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a>, <b>is</b> programming because it requires similar discipline.
 </p>
@@ -3783,7 +3958,7 @@ texts, I sometimes use
 <a href="http://en.wikipedia.org/wiki/Kate_%28text_editor%29">Kate</a>
 instead, with a fallback on
 <a href="http://en.wikipedia.org/wiki/Gedit">gedit</a>. Sometimes, I use Vim
-(the console version) for quick edits or when I cannot or would prefer not to
+(the console version) or neovim's nvim for quick edits or when I cannot or would prefer not to
 use a GUI editor.
 </p>
 
@@ -3995,8 +4170,16 @@ some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hip
 longer have any legitimate use. However, while I use JSON and YAML for
 many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
-used to add markup to a substring of the text (e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>).
+used to add markup to a substring of the text, e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>:
 </p>
+
+<pre>
+[% FILTER html %]
+<p>
+I like <a href="http://example.com/" title="site">hyperlinks</a> in my XML.
+</p>
+[% END %]
+</pre>
 
 <p>
 I recall that some <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> fans
@@ -4022,7 +4205,29 @@ Python, or similar, to convert XML to XHTML5 anyway (and I often do).
 <p>
 Finally, note that I also use some custom formats such as
 <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/80280dc126c31238580c2556bfe05c836190f617/lib/hunspell/whitelist1.txt">this one</a>
-or <a href="https://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/">Screenplay-Text</a>.
+or <a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">Screenplay-Text</a>.
+</p>
+
+<p>
+Relevant links:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="http://xml.silmaril.ie/whyxml.html">The XML FAQ: "Why should I use XML?"</a>
+</p>
+</li>
+
+</ol>
+
+[%- END -%]
+
+[% WRAPPER faq_h3_section id = "do_people_still_use_irc"  title = "Do people still use IRC?"  %]
+
+<p>
+Yes, they/we do. <a href="[% base_path %]humour/fortunes/show.cgi?id=lets-just-kill-prejudice">Old ≠ bad</a>.
 </p>
 
 [%- END -%]
@@ -4041,8 +4246,7 @@ for the Young”</a> essay.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack”
-or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
+[% WRAPPER faq_h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack” or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
 
 <p>
 No, and that is because I am not a
@@ -4149,8 +4353,7 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based
-projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
+[% WRAPPER faq_h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
 
 <p>
 Yes, you can find it in
@@ -4210,6 +4413,12 @@ Freecell Solver written in Perl?</a>
 <p>
 <a href="https://www.perl.com/pub/2000/12/advocacy.html/">Why
 I Hate Advocacy</a> - by Mark-Jason Dominus.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">Larry Wall about "All Truth is God's Truth"</a>
 </p>
 </li>
 
@@ -4316,6 +4525,7 @@ Also see:
 <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-copyrighting-fibonacci">Copyrighting Fibonacci</a>.
 </p>
 </li>
+
 </ul>
 
 [%- END -%]
@@ -4560,7 +4770,7 @@ delivery, which brought me <a href="https://www.reddit.com/r/quotes/comments/dwa
 </p>
 
 <p>
-I've been trying to improve though. <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-using-your-experience-points">mst joked</a>
+I've been trying to improve, though. <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-using-your-experience-points">mst joked</a>
 that <q>every time I level, I put all my XP (= experience points) into "being right" rather than boring things like "tact"</q>,
 but he has been increasingly more tactful lately, and hopefully so have I.
 </p>
@@ -4614,6 +4824,7 @@ a hacker (and — no! Samson was far from being the only action hero in the
 Jewish Bible).
 </p>
 </li>
+
 </ol>
 
 <p>
@@ -4622,7 +4833,7 @@ which the "I just work here" attitude is
 <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">not different</a>.
 </p>
 
-[% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, Nazis, etc. in some of Your Writings?"  %]
+[% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, the Nazis, etc. in some of Your Writings?"  %]
 
 <p>
 I found it suitable to use it for them, so I did. For the record, my
@@ -4643,7 +4854,7 @@ so if a fire has caught the Firs…
 Every person has an inalienable right to expose his or her body in private,
 and to allow people to photograph it, paint it, describe it, etc. Sexual
 activity is also similarly acceptable. Claiming that porn should be illegal
-or illegitimate undermines both the right of free speech, and the right of
+or illegitimate undermines both the right of free expression, and the right of
 a man or a woman to their body.
 </p>
 

@@ -86,6 +86,7 @@
 /lib/docbook/5/essays/human-hacking-field-guide/all-in-one.xhtml
 /lib/docbook/5/essays/introductory-language/all-in-one.xhtml
 /lib/docbook/5/essays/isr-pales-conflict-solution/all-in-one.xhtml
+/lib/docbook/5/essays/multiverse-cosmology-v0.4.x/all-in-one.xhtml
 /lib/docbook/5/essays/my-real-person-fiction/all-in-one.xhtml
 /lib/docbook/5/essays/objectivism-and-open-source-r1/all-in-one.xhtml
 /lib/docbook/5/essays/objectivism-and-open-source/all-in-one.xhtml
@@ -103,6 +104,7 @@
 /lib/docbook/5/essays/what-makes-software-high-quality/all-in-one.xhtml
 /lib/docbook/5/essays/who-gets-the-final-say/all-in-one.xhtml
 /lib/docbook/5/essays/why-openly-bipolar-people-should-not-be-medicated/all-in-one.xhtml
+/lib/docbook/5/essays/why-the-so-called-real-world-makes-little-sense/all-in-one.xhtml
 /lib/docbook/5/fo/A-hashtag-SummerNSA-s-Reading.fo
 /lib/docbook/5/fo/Spark-Pre-Birth-of-a-Modern-Lisp.fo
 /lib/docbook/5/fo/SummerNSA-2014-09-call-for-action.fo
@@ -136,6 +138,7 @@
 /lib/docbook/5/fo/human-hacking-field-guide.fo
 /lib/docbook/5/fo/introductory-language.fo
 /lib/docbook/5/fo/isr-pales-conflict-solution.fo
+/lib/docbook/5/fo/multiverse-cosmology-v0.4.x.fo
 /lib/docbook/5/fo/my-real-person-fiction.fo
 /lib/docbook/5/fo/objectivism-and-open-source-r1.fo
 /lib/docbook/5/fo/objectivism-and-open-source.fo
@@ -146,12 +149,14 @@
 /lib/docbook/5/fo/putting-cards-on-the-table-2019-2020.fo
 /lib/docbook/5/fo/putting-more-cards-on-the-table-2014.fo
 /lib/docbook/5/fo/rindolf-spec.fo
+/lib/docbook/5/fo/samsmith.fo
 /lib/docbook/5/fo/the-eternal-jew.fo
 /lib/docbook/5/fo/usability-of-perl-world-for-newcomers.fo
 /lib/docbook/5/fo/what-makes-software-high-quality-rev2.fo
 /lib/docbook/5/fo/what-makes-software-high-quality.fo
 /lib/docbook/5/fo/who-gets-the-final-say.fo
 /lib/docbook/5/fo/why-openly-bipolar-people-should-not-be-medicated.fo
+/lib/docbook/5/fo/why-the-so-called-real-world-makes-little-sense.fo
 /lib/docbook/5/indiv-nodes
 /lib/docbook/5/rendered/A-hashtag-SummerNSA-s-Reading.xhtml
 /lib/docbook/5/rendered/Spark-Pre-Birth-of-a-Modern-Lisp.xhtml
@@ -186,6 +191,7 @@
 /lib/docbook/5/rendered/human-hacking-field-guide.xhtml
 /lib/docbook/5/rendered/introductory-language.xhtml
 /lib/docbook/5/rendered/isr-pales-conflict-solution.xhtml
+/lib/docbook/5/rendered/multiverse-cosmology-v0.4.x.xhtml
 /lib/docbook/5/rendered/my-real-person-fiction.xhtml
 /lib/docbook/5/rendered/objectivism-and-open-source-r1.xhtml
 /lib/docbook/5/rendered/objectivism-and-open-source.xhtml
@@ -203,6 +209,7 @@
 /lib/docbook/5/rendered/what-makes-software-high-quality.xhtml
 /lib/docbook/5/rendered/who-gets-the-final-say.xhtml
 /lib/docbook/5/rendered/why-openly-bipolar-people-should-not-be-medicated.xhtml
+/lib/docbook/5/rendered/why-the-so-called-real-world-makes-little-sense.xhtml
 /lib/docbook/5/xml/Spark-Pre-Birth-of-a-Modern-Lisp.xml
 /lib/docbook/5/xml/The-Earth-Angel-english.xml
 /lib/docbook/5/xml/The-Earth-Angel-hebrew.xml
@@ -216,11 +223,13 @@
 /lib/docbook/5/xml/hebrew-html-tutorial.xml
 /lib/docbook/5/xml/human-hacking-field-guide-v2--english.xml
 /lib/docbook/5/xml/human-hacking-field-guide-v2--hebrew.xml
+/lib/docbook/5/xml/multiverse-cosmology-v0.4.x.xml
 /lib/docbook/5/xml/my-real-person-fiction.xml
 /lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml
 /lib/docbook/5/xml/samsmith.xml
 /lib/docbook/5/xml/who-gets-the-final-say.xml
 /lib/docbook/5/xml/why-openly-bipolar-people-should-not-be-medicated.xml
+/lib/docbook/5/xml/why-the-so-called-real-world-makes-little-sense.xml
 /lib/ebookmaker
 /lib/factoids/TIMESTAMP
 /lib/factoids/common-out/tags.tt2
@@ -311,6 +320,7 @@
 /lib/make/docbook/sf-homepage-docbooks-generated.mak
 /lib/make/docbook/sf-homepage-quadpres-generated.mak
 /lib/make/docbook/sf-screenplays.mak
+/lib/make/factoids-deps.mak
 /lib/make/include.mak
 /lib/make/long_stories.mak
 /lib/make/rules.mak
@@ -763,6 +773,8 @@
 /lib/screenplay-xml/from-vcs/Terminator-Liberation
 /lib/screenplay-xml/from-vcs/The-10th-Muse
 /lib/screenplay-xml/from-vcs/The-Muppets-Show--The-New-Incarnation
+/lib/screenplay-xml/from-vcs/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia/screenplay/Who-will-ride-Princess-Celestia.screenplay-text.txt
+/lib/screenplay-xml/from-vcs/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia/screenplay/scripts/prepare-epub.pl
 /lib/screenplay-xml/from-vcs/screenplays-common
 /lib/screenplay-xml/from-vcs/usr-bin-perl/usr-bin-perl/graphics/Green-d10-dice.png
 /lib/screenplay-xml/from-vcs/usr-bin-perl/usr-bin-perl/screenplay/scripts/prepare-epub.pl

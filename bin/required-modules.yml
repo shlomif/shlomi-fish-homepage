@@ -77,6 +77,7 @@ required:
         HTML::Selector::XPath: 0
         HTML::T5: 0
         HTML::Toc: 0
+        HTML::Widgets::NavMenu: "1.0902"
         IO::Async::Function: 0
         IO::Async::Loop: 0
         Inline: 0
@@ -98,22 +99,22 @@ required:
         Spork::Shlomify: 0
         String::ShellQuote: 0
         Test::Differences: 0
-        Test::File::IsSorted: 0
+        Test::File::IsSorted: v0.2.0
         Test::Trap: 0
         Text::Hspell: 0
         URI::Escape::XS: 0
         URI::Find: 0
         XML::Feed: 0
-        XML::Grammar::Fiction::App::FromProto: v0.22.2
-        XML::Grammar::Fiction::App::ToDocBook: v0.22.2
+        XML::Grammar::Fiction::App::FromProto: v0.30.0
+        XML::Grammar::Fiction::App::ToDocBook: v0.30.0
         XML::Grammar::Fortune: 0.0800
         XML::Grammar::Fortune::Synd::App: 0.0206
         XML::Grammar::Fortune::ToText: 0.0509
         XML::Grammar::ProductsSyndication: 0
-        XML::Grammar::Screenplay::App::FromProto: v0.22.2
-        XML::Grammar::Screenplay::App::ToHTML: v0.26.0
-        XML::Grammar::Screenplay::FromProto::API::ListImages: v0.22.2
-        XML::Grammar::Screenplay::FromProto::Parser::QnD: v0.22.2
+        XML::Grammar::Screenplay::App::FromProto: v0.30.0
+        XML::Grammar::Screenplay::App::ToHTML: v0.30.0
+        XML::Grammar::Screenplay::FromProto::API::ListImages: v0.30.0
+        XML::Grammar::Screenplay::FromProto::Parser::QnD: v0.30.0
         XML::Grammar::Vered: v0.2.1
     py3_modules:
         PIL: 0

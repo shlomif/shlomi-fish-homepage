@@ -1,0 +1,32 @@
+[% BLOCK mswin_deprecate %]
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a> and
+I have <a
+href="https://github.com/shlomif/shlomif-tech-diary/blob/master/esr-deprecate-windows.md">a
+hypothesis</a> that Microsoft wishes to deprecate the original Microsoft
+Windows Internals, and gradually replace them with an open source
+reimplementation based on Linux. That is because <a href="https://en.wikipedia.org/wiki/Program_optimization">optimising</a>, <a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a>, or
+otherwise enhancing them, have been made more and more discouraged due to the (possibly
+justified) policy to <a
+href="https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/">not
+break legacy 3rd-party applications</a> (including many old ones or ones with
+no source available).  Programmers and other software developers who wish to
+work on them, whether young, old, experienced, or inexperienced, are thus
+frustrated at the process' lack of flexibility and agility that they become
+unhappy, aggravated and complain. Other obstacles are the iffy legal status
+of the codebase, which prevents opensourcing it like <a href="https://en.wikipedia.org/wiki/.NET_Core">.NET Core</a>, and its reported lack of elegance.
+</p>
+
+<p>
+Given these developers can easily find many other
+openings as software developers or other high paying jobs (including
+on different teams within Microsoft)
+and increasingly
+wish to enjoy their work (being <a href="#geek_def">geeks or "amateurs"</a>),
+the team is starved of competent, and enthusiastic workers. Even if Microsoft
+still sells Windows copies, they are being starved of employees.
+</p>
+
+[% END %]
+

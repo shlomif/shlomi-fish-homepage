@@ -688,7 +688,7 @@ cosmonauts).
 
 <p>
 Like the book <a href="https://en.wikipedia.org/wiki/One_Fish,_Two_Fish,_Red_Fish,_Blue_Fish">"One
-Fish, Two Fish, Red Fish, Blue Fish"</a> or the <a href="https://en.wikipedia.org/wiki/There%27s_more_than_one_way_to_do_it">"There's more than one way to do it"</a>,
+Fish, Two Fish, Red Fish, Blue Fish"</a> or the <a href="https://en.wikipedia.org/wiki/There%27s_more_than_one_way_to_do_it">"There's more than one way to do it"</a>
 adage indicate, there are many kinds of <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">hacker monarchs</a>
 (= "master hackers", "hacker kings/hacker queens", "messiahs") and looks or
 qualities can be deceiving.
@@ -728,12 +728,26 @@ endeavours.  Moreover, she is often depicted as trying to emulate the
 nerdier/dorkier geeks, and successfully.
 </p>
 
+[% SET tbbt_game_addict_penny_non_broken_yt_video = 1 %]
+[% IF tbbt_game_addict_penny_non_broken_yt_video %]
+
+[%#
+   https://www.youtube.com/watch?v=CRcXQ13I3UI
+   Queen Penolepe | Penny's online gaming addiction | The Big Bang Theory - YouTube
+%]
+
+<iframe src="https://www.youtube.com/embed/CRcXQ13I3UI" allowfullscreen="allowfullscreen"></iframe>
+
+[% ELSE %]
+
 [%#
    https://www.youtube.com/watch?v=Ufr-Y5oROyE
    Big Bang Theory - Penny The Game Addict 2 - YouTube
 %]
 
 <iframe src="https://www.youtube.com/embed/Ufr-Y5oROyE" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
 
 <p>
 Given <a
@@ -746,7 +760,7 @@ Cuoco</a>, the actress who portrayed Penny, is a hacker and a geek as well.
 <blockquote cite="https://twitter.com/shlomif/status/1364839109068541958" class="fancy">
 
 <p>
-First people were prejudiced about new/old. Then about popular/unpopular. Now they are
+First people were prejudiced about new vs. old. Then about popular vs. unpopular. Now they are
 about "mainstream"ness:
 <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=two-kinds-of-fools">"Two
 kinds of fools"</a>. Let's
@@ -871,7 +885,7 @@ from here. I haven't made any music lately, what with the goat farming and all.
 While not all digital works are explicitly licensed under licences that allow
 building derivatives, or remixes/crossovers/mashups, in practice, most
 talented independent remixers will have no qualms about reusing other
-people's [% proprietary %] work (at least after paying for a licence).
+people's [% proprietary %] work, at least after paying for a licence.
 </p>
 
 <p>
@@ -1142,11 +1156,15 @@ geeks about top vs bottom posting.</q>
 
 <p>
 Hollywood's blessed screenplay format is boring, finicky, and requires a lot of
-time to prepare and get right. It only has one proprietary Windows-only program
+time to prepare and get right.
+</p>
+
+[% IF 0 %]
+It only has one proprietary Windows-only program
 and one unmaintained, slow, and non-responsive, open source program - <a
 href="https://en.wikipedia.org/wiki/Celtx">Celtx</a>, that can be used to edit
 it.
-</p>
+[% END %]
 
 <p>
 Moreover, it is poorly documented, cannot be <a href="https://github.com/caramelomartins/awesome-linters">validated and linted</a> by an automated program,
@@ -1168,11 +1186,11 @@ amend the drafts, which is even more time-consuming. Rinse and repeat.
 One can imagine most young
 or young-at-heart screen writers who use code sharing sites
 and services (e.g: [% GitHub %] or GitLab), wikis, desktop or online word
-processors, etc. will also sport the same sentiments.
+processors, or similar tools, will also sport the same sentiments.
 </p>
 
 <p id="hacker-laziness">
-As <a href="http://www.paulgraham.com/popular.html">Paul Graham</a> notes in a
+As <a href="http://www.paulgraham.com/popular.html">Paul Graham notes</a> in a
 different context: <q>Hackers are lazy, in the same way that mathematicians and
 modernist architects are lazy: they hate anything extraneous.</q>
 </p>
@@ -1191,20 +1209,24 @@ or mixed), collaborators, etc. (see <a
 href="https://www.shlomifish.org/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html">the
 "Earth Angel" concept</a> or the <a href="https://explainxkcd.com/519/">subtext
 of xkcd: "11th grade"</a>) that they will adopt a similar mindset. Even though
-I am 1977-born (so approaching 44 in 2021) there are some time consuming things
+I am 1977-born (so approaching 44 in 2021) there are some time-consuming things
 I have done in the past which I will not repeat such as <a
 href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying
-Electrical Engineering in the Technion</a>, or working for distrustful or <a
+Electrical Engineering in the Technion</a>, working for distrustful or <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">micromanaging</a>
-bosses (though as the contemporary and more competent me, I may now try to reform them
+bosses, or <a href="https://www.shlomifish.org/meta/FAQ/fiction_books.xhtml">reading <i>Lord of the Rings</i> or <i>Crime and Punishment</i></a>.
+
+[% IF 0 %]
+(though as the contemporary and more competent me, I may now try to reform them
 using <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">benevolent psychological warfare</a>
 ).
+[% END %]
 </p>
 
 <p>
 This is while I can spend hundreds of
 hours contributing text, code, and markup, voluntarily and without expecting
-immediate payment, to the public.  And this includes my pro-bono
+immediate payment, to the public. And this includes my pro-bono
 contributions to <a
 href="https://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora
 Linux</a>, which is backed and led by a profitable and well financed for-profit
@@ -1250,7 +1272,7 @@ and I added more features to these grammars as I needed them ( <a href="https://
 
 <p>
 It is also conceivable to write converters from subsets of
-other trendy <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup languages</a> (e.g : <a href="https://en.wikipedia.org/wiki/AsciiDoc">AsciiDoc</a>, or <a href="https://en.wikipedia.org/wiki/Markdown#CommonMark">CommonMark</a> ) other document formats such as Google Docs or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument</a>.
+other trendy <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup languages</a> (e.g : <a href="https://en.wikipedia.org/wiki/AsciiDoc">AsciiDoc</a>, or <a href="https://en.wikipedia.org/wiki/Markdown#CommonMark">CommonMark</a> ) and other document formats such as Google Docs or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument</a>, to these grammars.
 </p>
 
 <p>
@@ -1259,6 +1281,58 @@ href="#originality_is_self_defeating">write crossovers, parodies and RPFs</a>
 from similar reasons. See <a href="#originality_is_self_defeating">this</a> for
 more info.
 </p>
+
+[% WRAPPER h3_section id = "no_true_screenplay" title = "No true Scotsman ^W screenplay" %]
+
+<blockquote cite="https://en.wikipedia.org/wiki/No_true_Scotsman">
+
+<p>
+Person A: "No Scotsman puts sugar on his porridge."
+</p>
+
+<p>
+Person B: "But my uncle Angus is a Scotsman and he puts sugar on his porridge."
+</p>
+
+<p>
+Person A: "But no <b>true</b> Scotsman puts sugar on his porridge."
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://en.wikipedia.org/wiki/No_true_Scotsman">No true Scotsman</a> )
+</p>
+
+<p>
+Some have argued that we can only call texts in the Hollywood-mandated format
+"screenplays". However, I claim that a screenplay is a <a href="https://en.wikipedia.org/wiki/Platonic_realism">Platonic ideal</a> with many conceivable formats.
+In 1990 , <a href="https://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">the screenplay "The Hitchhiker's Guide to Star Trek - The Next Generation"</a> was written in ASCII plaintext and circulated by E-mail, and used
+a different format than either Hollywood's or mine.
+</p>
+
+<p>
+I doubt that the "1 page = 1 minute of film" argument holds much water:
+</p>
+
+<ol>
+
+<li>
+<p>
+It is probably inaccurate anyway.
+</p>
+</li>
+
+<li>
+<p>
+One can get a similar ballpark estimate by printing the XHTML5 to PDF
+using a custom CSS stylesheet.
+</p>
+</li>
+
+</ol>
+
+[% END %]
 
 [% WRAPPER h3_section id = "be_communicative" title = "Be communicative"  %]
 
@@ -1269,9 +1343,11 @@ some poems to her which I didn’t like, and told him why. So he ended up
 improving slowly but surely, until he wrote a truly great poem about her, and
 people loved it.
 </p>
+
 <p><strong class="sayer">Josephus:</strong> Then Phoebe — that’s her name — told him, while crying, that she
 loved the song, but that she still is not going to marry him.
 </p>
+
 <p><strong class="sayer">Alexis:</strong> The Bitch!
 </p>
 
@@ -1308,10 +1384,9 @@ cool guy regardless</a>.
 <p>
 If you do not like a work, please try to comment on why you think it is
 lacking, rather than completely dismissing it or vaguely criticising it ( e.g:
-"it sucks"; "you cannot write"; "it's a waste of space";
-"try to write it as if you were there"
-).  People are often
-amazed by food reviewers in the recently trendy <a
+"it sucks"; "you cannot write"; "it's a waste of space"; "try to write it as if
+you were there").  People are often amazed by food reviewers in the recently
+trendy <a
 href="https://en.wikipedia.org/wiki/Reality_television#Reality_competition/game_shows">cooking
 competition ("reality") shows</a> being very pedantic and pinpointing small and
 large problems, but it comes with experience and "with the territory". So I
@@ -1348,9 +1423,8 @@ Ethics</a>, I do not propose laying off the existing screenreaders.
 </p>
 
 <p>
-I feel this is the current bottleneck, but
-the film studios should also approve of
-<a
+I feel this is the current bottleneck, but the film studios should also approve
+of <a
 href="#originality_is_self_defeating">writing commercial crossovers, parodies and RPFs</a>.
 </p>
 
@@ -1507,7 +1581,7 @@ you are not in a [% MDD %] you may
 notice that most of them consistently featured hacky acting that
 the actor employed. I recall Sharon Stone's
 phony acting in
-<a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)">The Quick and the Dead</a> to be
+<a href="https://en.wikipedia.org/wiki/The_Quick_and_the_Dead_(1995_film)"><i>The Quick and the Dead</i></a> to be
 a feature. I also loved [% SMG %]'s portrayal of a phony, pose, and unlikely
 Buffy in [% BtVS %] and later enjoyed her distinctively high pitching voice
 in the MTv Film awards parodies:
@@ -1529,7 +1603,7 @@ in the MTv Film awards parodies:
 
 [% END %]
 
-[% WRAPPER h2_section id = "originality_is_self_defeating" title = "“Originality” and Franchise Territorialism is self-defeating" %]
+[% WRAPPER h2_section id = "originality_is_self_defeating" title = "“Originality” and Franchise Territorialism are self-defeating" %]
 
 <p>
 Like it or not - most of the popular art in the 20th century was commercial
@@ -1586,15 +1660,14 @@ Our Lives".
 
 <p>
 As an example, we can imagine a young girl to write a funny screenplay
-using [% GitHub %] or Google Docs which pities
+using [% GitHub %] or Google Docs which pits
 <a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a> vs. <a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>
 on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next,
 with <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a> and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
 as two "evil", but mutually hating one another, arbiters. Might seem ridiculus,
-but if I didn't want entertainment in my life, then I'd go watch
-grass grow.
-It will be a legal
-and "ethical" minefield, but I'd bet it'd be easier to follow and more
+but if I didn't want entertainment in my life, then I'd go watch grass grow.
+It will be a legal and "ethical" minefield, but I'd bet it'd be easier to
+follow and more
 entertaining than <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">Tolkien's "Lord of the Rings"</a>
 was even shortly after LotR was written.
 </p>
@@ -1655,10 +1728,10 @@ Fish (= me): "Hackers make the best warriors"</a> )
 If we take <a
 href="https://www.shlomifish.org/humour/Muppets-Show-TNI/Harry-Potter.html">my
 Sesame Street Hosting Harry Potter fan fiction</a> as an example, then it
-mashes together the real world J. K. Rowling, her franchise's characters: Harry
-Potter, Hermione Granger, and Dumbledore; the Muppets' characters: The Amazing
-Mumford, Cookie Monster, and Miss Piggy; various circa 2014 trends (e.g: Sushi,
-and the model Candice Swanepoel, who was mentioned there because she topped <a
+mashes together the real world <a href="https://en.wikipedia.org/wiki/J._K._Rowling">J. K. Rowling</a>, her franchise's characters: Harry
+Potter, Hermione Granger, and Dumbledore; the Muppets' characters: <a href="https://muppet.fandom.com/wiki/The_Amazing_Mumford">The Amazing
+Mumford</a> (a stage magician), Cookie Monster, and Miss Piggy; various circa 2014 trends (e.g: Sushi,
+and the model <a href="https://en.wikipedia.org/wiki/Candice_Swanepoel">Candice Swanepoel</a>, who was mentioned there because she topped <a
 href="https://en.wikipedia.org/wiki/Maxim_(magazine)#Maxim_Hot_100">Maxim's Hot
 100</a> that year); and as icing on the cake it closes with a hack of the
 Beatles song "All you need is love" titled <a
@@ -1671,7 +1744,7 @@ While it also sports a parody of the fable <a
 href="https://en.wikipedia.org/wiki/The_miller%2C_his_son_and_the_donkey">"The
 miller, his son and the donkey"</a>, the donkey there is the <a
 href="https://shrek.fandom.com/wiki/Donkey">one from the Shrek franchise</a> as
-originally voiced by Eddie Murphy, and he ends up being converted
+originally voiced by Eddie Murphy, and he ends up being transformed
 into a bigger and stronger stallion, like in the second Shrek film.
 </p>
 
@@ -1718,9 +1791,9 @@ href="https://www.joelonsoftware.com/2002/05/06/five-worlds/">what Joel on
 Software calls</a> "throwaway code", or "in-house code" or even a lot of
 shrinkwrap (open source/proprietary/etc.) codebases whose performances are not
 too critical, as well as libraries, APIs, and development tools.  Writing
-everything in assembly, or <a
+everything in assembly (or <a
 href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASIC</a>
-if you're really crazy and rich, will be a grand waste of time, and usually
+if you're really crazy and rich) will be a grand waste of time, and usually
 development effort will exceed the runtime of code written using higher level
 languages. <q>Real programmers use a nice [text] editor and a programming
 language and get done in less than O(N!)</q> ( <a
@@ -1748,9 +1821,9 @@ href="https://en.wikipedia.org/wiki/Con_Man_(web_series)">Con-Men</a> (=
 creators who frequent conventions/conferences, and making an income out of it),
 or like me publish and publicise their "fics" on the web and social media
 outlets. I suspect the reason several promising T.V. shows (e.g:
-<a href="https://en.wikipedia.org/wiki/Firefly_(TV_series)">Firefly</a>,
-or
-<a href="https://en.wikipedia.org/wiki/Terminator:_The_Sarah_Connor_Chronicles">Terminator: The Sarah Connor Chronicles</a>)
+<a href="https://en.wikipedia.org/wiki/Firefly_(TV_series)"><i>Firefly</i></a>,
+<a href="https://en.wikipedia.org/wiki/Terminator:_The_Sarah_Connor_Chronicles"><i>Terminator: The Sarah Connor Chronicles</i></a>,
+or <a href="https://en.wikipedia.org/wiki/Game_Shakers"><i>Game Shakers</i></a>)
 got cancelled recently were that its screenwriters turned "to the dark side"
 so to speak and started using fanfic - elements there, which would be
 a legal and pseudo-ethical minefield.
@@ -1987,33 +2060,8 @@ and hacking around the <a href="#guidelines_as_dogma">guidelines</a> (even
 
 [% WRAPPER h3_section id = "starved_of_employees" title = "Businesses Being Starved of Competent Employees" %]
 
-<p>
-<a href="https://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a> and
-I have <a
-href="https://github.com/shlomif/shlomif-tech-diary/blob/master/esr-deprecate-windows.md">a
-hypothesis</a> that Microsoft wishes to deprecate the original Microsoft
-Windows Internals, and gradually replace them with an open source
-reimplementation based on Linux. That is because <a href="https://en.wikipedia.org/wiki/Program_optimization">optimising</a>, <a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a>, or
-otherwise enhancing them, have been made more and more discouraged due to the (possibly
-justified) policy to <a
-href="https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/">not
-break legacy 3rd-party applications</a> (including many old ones or ones with
-no source available).  Programmers and other software developers who wish to
-work on them, whether young, old, experienced, or inexperienced, are thus
-frustrated at the process' lack of flexibility and agility that they become
-unhappy, aggravated and complain. Other obstacles are the iffy legal status
-of the codebase, which prevents opensourcing it like <a href="https://en.wikipedia.org/wiki/.NET_Core">.NET Core</a>, and its reported lack of elegance.
-</p>
-
-<p>
-Given these developers can easily find many other
-openings as software developers or other high paying jobs (including
-on different teams within Microsoft)
-and increasingly
-wish to enjoy their work (being <a href="#geek_def">geeks or "amateurs"</a>),
-the team is starved of competent, and enthusiastic workers. Even if Microsoft
-still sells Windows copies, they are being starved of employees.
-</p>
+[% PROCESS "Inc/microsoft_deprecating.tt2" %]
+[% INCLUDE mswin_deprecate %]
 
 <p>
 <b>Note:</b>
@@ -2169,6 +2217,8 @@ likely can succeed.
 
 [% WRAPPER h3_section id = "guidelines_as_dogma" title = "Taking Guidelines as Dogma is the Problem" %]
 
+[% WRAPPER h4_section id = "guidelines_as_dogma_intro" title = "Introduction" %]
+
 <blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=emacs-wars" class="fancy">
 
 <p>
@@ -2222,8 +2272,8 @@ if they have some fanatical zealots</a>.
 <p>
 And naturally, the harm done by overzealous xkcd fans (who usually at most can
 ban one from an Internet subforum) is small compared to the destructiveness of
-the Nazis, or early communists to say nothing of Genghis Khan's army. Note
-however that I believe <a
+the Nazis, or early communists to say nothing of Genghis Khan's army. Note,
+however, that I believe <a
 href="https://en.wikipedia.org/wiki/Samantha_Smith">later communists were
 reformed</a> and that most of the best <a
 href="https://en.wikipedia.org/wiki/Alt-right">"alt-right"</a> bloggers are <a
@@ -2233,7 +2283,7 @@ by inspiration from <a href="https://en.wikipedia.org/wiki/The_Colbert_Report">t
 
 <p>
 Similarly, I suspect <a
-href="https://www.chabad.org/library/bible_cdo/aid/16099">Ezekiel I</a> was
+href="https://www.chabad.org/library/bible_cdo/aid/16099">chapter I of Ezekiel</a> was
 originally intended as an exaggerated parody of Polytheistic visions of
 revelation by <a href="https://en.wikipedia.org/wiki/Ezekiel">Ezekiel</a> who was <a href="#craziness_and_nevua">a standup
 philosopher/comedian</a>.
@@ -2251,7 +2301,9 @@ education of the Greeks, who may have heard or uttered similar sentiments,
 and found them ridiculous when lumped together.
 </p>
 
-<hr />
+[% END %]
+
+[% WRAPPER h4_section id = "challenging_the_guidelines" title = "Challenging the Guidelines" %]
 
 <p>
 Anyway, as humans we are capable of challenging certain dogmata or taboos in
@@ -2284,7 +2336,7 @@ or Aristotlian Logic:
 <q>Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> open source? Yes, and no.";</q>
 </p>
 <p>
-(That was written before qmail's change of licensing.)
+(That was written in <a href="https://www.amazon.com/qmail-Handbook-Dave-Sill/dp/1893115402/ref=cm_cr_arp_d_bdcrb_top?ie=UTF8">a book I read</a> before qmail's change of licensing.)
 </p>
 
 </li>
@@ -2308,7 +2360,6 @@ And we can certainly challenge:
 <ul>
 
 <li>
-<div>
 <blockquote>
 
 <p>
@@ -2316,17 +2367,16 @@ And we can certainly challenge:
 </p>
 
 </blockquote>
+
 <p>
- ( [% LAH %]
-;
-<a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris facts</a> ;
-<a href="https://xkcd.com/406/">xkcd: "Venting"</a>)
+What about [% LAH %],
+<a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris factoids</a>,
+and
+<a href="https://www.explainxkcd.com/wiki/index.php/406:_Venting">xkcd: "Venting"</a>?
 </p>
-</div>
 </li>
 
 <li>
-<div>
 <blockquote>
 
 <p>
@@ -2340,21 +2390,20 @@ format
 ( <a href="#hollywood_screenplay_format">See above</a> )
 </p>
 
-</div>
 </li>
 
 <li>
-<div>
 <p>
 The redditesque "no self-promotion" (which was not enforced by
 Slashdot before reddit was conceived, and still is not enforced by Slashdot
 or by many subreddits).
 </p>
-</div>
 </li>
 </ul>
 
-<hr />
+[% END %]
+
+[% WRAPPER h4_section id = "judges_follow_gut_feeling" title = "Judges follow gut feeling" %]
 
 <blockquote cite="https://www.joelonsoftware.com/2008/03/17/martian-headsets/" class="fancy">
 
@@ -2396,9 +2445,9 @@ constantly challenge the 'rules' / 'laws' that we abide by to defy our fate. I
 do not encourage people to murder harmless people, vandalise property, rape, or
 steal for vanity (rather than <a
 href="https://www.youtube.com/watch?v=5VdZewCFyfg">for self-support like
-Disney's Alladdin</a>) and you <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">should
-try to "be excellent to each other"</a>, but there are many guidelines that
+Disney's Alladdin</a>) and you should <a
+href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">try
+to "be excellent to each other"</a>, but there are many guidelines that
 were or seemed beneficial at the time that no longer are.
 </p>
 
@@ -2406,6 +2455,8 @@ were or seemed beneficial at the time that no longer are.
 Guidelines <b>are</b> important for the philosophical processes of thought and
 communication. But they should not be taken as gospel or dogma.
 </p>
+
+[% END %]
 
 [% END %]
 
@@ -2433,7 +2484,7 @@ Judges are forbidden to accept "bribes" by law, but even if they did, they are
 getting paid enough for it to not matter and even most rich people have enough
 sense <a
 href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">to
-not be too needy</a> and as <a
+not be too needy and frivolous</a> and as <a
 href="https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!">Richard
 Feynman pointed out</a>, gifts may have an adverse effect.
 </p>
@@ -3188,6 +3239,7 @@ href="#takedown_notices">takedown notices</a> against infringing copies
 </li>
 
 <li>
+
 <p>
 Similarly most forms of
 <a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a>
@@ -3195,6 +3247,21 @@ provide <a href="https://en.wikipedia.org/wiki/Fig_leaf">fig leaf protection</a>
 at best and are often obstacles for legitimate uses, and so are best
 avoided.
 </p>
+
+<blockquote cite="https://www.amazon.com/Only-Mankind-Johnny-Maxwell-Trilogy/dp/0060541873">
+
+<p>
+Basically, there were two sides to the world. There was the entire computer
+games software industry engaged in a tremendous effort to stamp out piracy,
+and there was Wobbler. Currently, Wobbler was in front.
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://www.amazon.com/Only-Mankind-Johnny-Maxwell-Trilogy/dp/0060541873">Terry Pratchett, <i>Only You Can Save Mankind</i></a> )
+</p>
+
 </li>
 
 <li>
@@ -3275,7 +3342,7 @@ Also see <a href="https://www.gotquestions.org/Elijah-prophets-Baal.html">the st
 <p>
 They said [% FOSS %] will never win. Nowadays, Microsoft, and Apple have
 many original FOSS contributions, and hire close-to-full-time open source devs.
-Even <a href="https://github.com/electronicarts">EA</a> has FOSS code.
+Even <a href="https://github.com/electronicarts">Electronic Arts (EA)</a> has FOSS code.
 </p>
 
 <p>
@@ -3367,9 +3434,8 @@ or posts they disagree with (or find <a href="http://shlomifishswiki.branchable.
 
 <li>
 <p>
-subreddit
-administrators who remove my posts from public view - either for being
-blasphemous or due to their delivery being lacking.
+subreddits' administrators who remove my posts from public view - either for
+being blasphemous or due to their delivery being lacking.
 </p>
 </li>
 
@@ -3444,8 +3510,8 @@ that block my domains, and which are often malware in their own right.
 </ul>
 
 <p>
-They are not obstacles to be casually dismissed. But they may not be
-insurmountable. Furthermore, I am not seeking to destroy the commercial
+They are not obstacles to be casually dismissed. But they may be
+surmountable. Furthermore, I am not seeking to destroy the commercial
 film industry this time, but to make them prosper. And I believe
 commercial fanfiction will be nice to have, even if some film studios
 go out of business (which I hope will not happen).
@@ -3488,7 +3554,8 @@ accelerated their "Hollywood unhirability" (but why should it have?)
 
 <p>
 An inspiring song and videoclip by the late YouTube musician.
-<a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#dedication">My midrash of it</a>.
+You can also read
+<a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#dedication">my midrash of it</a>.
 </p>
 
 [% END %]
@@ -3583,7 +3650,6 @@ is an even "worse" crossover problem.
 
 </li>
 
-
 </ul>
 
 [% END %]
@@ -3608,7 +3674,7 @@ to dedicate this essay to his memory.
 passed away in 2018 and wrote or cowrote some of my favourite films
 including <a href="https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29">the Princess Bride</a>,
 [% LAH %],
-Maverick,
+<a href="https://en.wikipedia.org/wiki/Maverick_(film)">Maverick</a>,
 and the lesser known <a href="https://en.wikipedia.org/wiki/Year_of_the_Comet"><i>Year of the Comet</i></a>.
 </p>
 </li>
@@ -3620,11 +3686,19 @@ and the lesser known <a href="https://en.wikipedia.org/wiki/Year_of_the_Comet"><
 [% WRAPPER h3_section id = "dedications_for_mythical" title = "Dedications for the mythical"  %]
 
 <p>
-<todo>living, dead, mythical:
-https://www.youtube.com/watch?v=V_yBN5J4Bjk ( ).
-https://en.wikipedia.org/wiki/William_Goldman ;
-Sean Connerry.
-</todo>
+<a href="https://www.geekwire.com/2011/top-10-reasons-darth-vader-amazing-project-manager/">Darth Vader</a>, who was an amazing project manager,
+and is one of the good guys on my <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen
+Padmé [Amidala] Tales</a> crossover series.
+</p>
+
+<p>
+Spaceballs' <a href="https://spaceballs.fandom.com/wiki/Dark_Helmet">Dark Helmet</a>,
+on the other hand, was an atrocious manager. (Which is also a noteworthy achievement.)
+</p>
+
+<p>
+The characters of <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a>
+and the <a href="https://muppet.fandom.com/wiki/Muppet_Wiki">Muppets' franchise</a>.
 </p>
 
 [% END %]

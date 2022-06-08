@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 13;
+use Test::More tests => 15;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -15,13 +15,20 @@ delete $ENV{MAKEFLAGS};
 
 my %cache;
 
+sub re_test
+{
+    my ( $var, $re, $blurb ) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+
+    return like( scalar( $cache{$var} //= `gmake $var.show` ), $re, $blurb, );
+}
+
 sub gmake_test
 {
     my ( $var, $word, $blurb ) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
 
-    return like( scalar( $cache{$var} //= `gmake $var.show` ),
-        qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
+    return re_test( $var, qr%(?:\A| )\Q$word\E(?:\n|\z| )%ms, $blurb, );
 }
 
 sub post_dest_test
@@ -39,6 +46,9 @@ sub dest_test
 }
 
 {
+    # TEST
+    re_test( 'RSYNC_EXCLUDES', qr#--exclude.*?js/MathJax#ms, "RSYNC_EXCLUDES" );
+
     # TEST
     gmake_test( 'DOCBOOK5_EPUB_DIR', 'lib/docbook/5/epub',
         "DOCBOOK5_EPUB_DIR" );
@@ -82,6 +92,13 @@ sub dest_test
     # TEST
     post_dest_test( 'POST_DEST_XZ_MODS', 'Iglu/shlomif/mods/focus.mod.xz',
         "found a file" );
+
+    # TEST
+    gmake_test(
+        'FICTION_DB5S',
+        "lib/docbook/5/xml/The-Pope-Died-on-Sunday-english.xml",
+        "found a fiction docbook"
+    );
 
     # TEST
     post_dest_test( 'POST_DEST_DIRS', "art/original-graphics", "found a dir" );

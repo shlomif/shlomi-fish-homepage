@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import datetime
 import html
 import os.path
 import random
@@ -195,9 +196,14 @@ def _display_fortune_from_data(
         col_title, description, date):
     title = html_title + " - Fortune"
     base_dir = '../..'
-    m = re.search("\\A([0-9]+-[0-9]+-[0-9]+)", date)
+    m = re.search("\\A(([0-9]+)-([0-9]+)-([0-9]+))", date)
     assert m
+
+    def gi(idx):
+        return int(m.group(idx))
+    d = datetime.date(year=gi(2), month=(gi(3)), day=(gi(4)))
     human_date = m.group(1)
+    human_date = d.strftime("%d-%B-%Y")
 
     return template(
         (RAW_TEMPLATE if raw_mode else NON_RAW_TEMPLATE),

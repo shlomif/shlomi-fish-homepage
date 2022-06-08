@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
 <p>
 Richard Stallman, leader of the Free Software Foundation and the
 GNU Project, today announced the first developers release of GNU Visual
@@ -100,7 +102,9 @@ beta testing the upcoming builds; anyone interested should contact
 gnu@gnu.org to request a copy of the Non-Disclosure Agreement.
 </p>
 
-<h2>Note</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This article was originally published on
@@ -108,5 +112,7 @@ This article was originally published on
 1 April of one year. It was since misplaced there. This is a copy of it that
 is placed here for posterity. It was not written by me (= Shlomi Fish).
 </p>
+
+[% END %]
 
 [% END %]

@@ -24,6 +24,11 @@ from lxml.html import XHTML_NAMESPACE
 
 XHTML_SECTION_TAG = '{' + XHTML_NAMESPACE + '}section'
 XHTML_ARTICLE_TAG = '{' + XHTML_NAMESPACE + '}article'
+XHTML_PREFIX = bytes(
+                    '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html>',
+                    "utf-8"
+                )
+HTML_PREFIX = bytes("<!DOCTYPE html>", "utf-8")
 
 
 class MyXmlNoResultsFoundError(Exception):
@@ -61,7 +66,9 @@ class XhtmlSplitter:
             relative_output_dirname="",
             input_is_plain_html=False,
             list_sections_format=None,
+            main_title=None,
     ):
+        self.main_title = main_title
         self.list_sections_format = (
             list_sections_format or
             ("self::node()[local-name()='article' or local-name()='section']")
@@ -78,7 +85,6 @@ class XhtmlSplitter:
         self.output_dirname = output_dirname
         self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
-        self.container_elem_xpath = container_elem_xpath
         self.input_is_plain_html = input_is_plain_html
         self.xhtml_prefix = (
             "" if self.input_is_plain_html else
@@ -88,10 +94,14 @@ class XhtmlSplitter:
         )
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
+        self.container_elem_xpath = container_elem_xpath.format(
+            xhtml_prefix=self.xhtml_prefix
+        )
         self.section_tags = set([
             self.xhtml_article_tag, self.xhtml_section_tag, ])
         if self.input_is_plain_html:
             self._r_mode = 'rt'
+            # self._r_mode = 'rb'
             self._w_mode = 'wb'
         else:
             self._r_mode = 'rb'
@@ -105,12 +115,23 @@ class XhtmlSplitter:
         self.path_to_all_in_one = path_to_all_in_one
         self.path_to_images = path_to_images
 
-        def _html_to_string(x):
-            return bytes("<!DOCTYPE html>", "utf-8") + lxml.html.tostring(x)
+        def _xhtml_to_string(dom, add_prefix):
+            ret = etree.tostring(dom)
+            if add_prefix:
+                return XHTML_PREFIX + ret
+            else:
+                return ret
+
+        def _html_to_string(dom, add_prefix):
+            ret = lxml.html.tostring(dom)
+            if add_prefix:
+                return HTML_PREFIX + ret
+            else:
+                return ret
 
         self._to_string_cb = (
             _html_to_string
-            if self.input_is_plain_html else etree.tostring)
+            if self.input_is_plain_html else _xhtml_to_string)
 
     def _process_title(self, header_text):
         """docstring for _process_title"""
@@ -133,11 +154,12 @@ class XhtmlSplitter:
                 xhtml_prefix=self.xhtml_prefix
             )
         # print('main_title_xpath = ', main_title_xpath)
-        self.main_title = _first(
-            self.ns,
-            self.root,
-            main_title_xpath
-        )
+        if not self.main_title:
+            self.main_title = _first(
+                self.ns,
+                self.root,
+                main_title_xpath
+            )
         self.main_title = self._process_title(self.main_title)
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
@@ -182,7 +204,9 @@ class XhtmlSplitter:
         print(self.tree)
 
     def _write_master_xml_file(self):
-        tree_s = self._to_string_cb(self.root)
+        tree_s = self._to_string_cb(
+            dom=self.root, add_prefix=True,
+        )
         should = False
         with open(self.input_fn, self._r_mode) as ifh:
             curr = ifh.read()
@@ -371,7 +395,9 @@ class XhtmlSplitter:
                     ):
                 if self._is_protected(a_elem):
                     a_elem.attrib.pop(self._protect_attr_name)
-            body_string = self._to_string_cb(output_list_elem)
+            body_string = self._to_string_cb(
+                dom=output_list_elem, add_prefix=False,
+            )
             formats = {
                 'base_path': self.base_path,
                 'body': (body_string.decode('utf-8')),

@@ -5,6 +5,19 @@
 
 [% long_stories.calc_common_top_elems(id => 'we_the_living_dead') %]
 
+[% BLOCK on_stexp_wikia %]
+
+<li>
+<p>
+<a href="http://stexpanded.wikia.com/wiki/We,_the_Living_Dead">Screenplay’s
+Homepage</a> on the
+<a href="http://stexpanded.wikia.com/">Star Trek
+Fan Art Wikia</a> (so-called “Star Trek Expanded Universe”)
+</p>
+</li>
+
+[%- END -%]
+
 [% WRAPPER screenplay_read_online  %]
 
 <ul>
@@ -17,14 +30,7 @@
 </p>
 </li>
 
-<li>
-<p>
-<a href="http://stexpanded.wikia.com/wiki/We,_the_Living_Dead">Screenplay’s
-Homepage</a> on the
-<a href="http://stexpanded.wikia.com/">Star Trek
-Fan Art Wikia</a> (so-called “Star Trek Expanded Universe”)
-</p>
-</li>
+[% PROCESS on_stexp_wikia %]
 
 </ul>
 
@@ -40,42 +46,60 @@ stories of mine:
 <ol>
 
 <li>
+<p>
 Geek girls and female <a href="http://en.wikipedia.org/wiki/Hacker_%28programmer_subculture%29">hackers</a>.
+</p>
 </li>
 
 <li>
+<p>
 Computers, software, maths, logic and technology.
+</p>
 </li>
 
 <li>
+<p>
 <a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a> and
 Objectivism and related topics like individualism, greed and free economy.
+</p>
 </li>
 
 <li>
+<p>
 Modern life.
+</p>
 </li>
 
 <li>
+<p>
 History of the old world (Near East, Europe, etc.).
+</p>
 </li>
 
 <li>
+<p>
 Individualism, carving your own destiny and
 anti-<a href="http://en.wikipedia.org/wiki/Fatalism">Fatalism</a>.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Jews">Judaism</a>, and
 <a href="http://en.wikipedia.org/wiki/Israel">Israel</a>.
+</p>
 </li>
 
 <li>
+<p>
 Religion, Philosophy, and Mysticism.
+</p>
 </li>
 
 <li>
+<p>
 Friendship, love, and human relationships.
+</p>
 </li>
 
 </ol>
@@ -104,37 +128,52 @@ seems extremely far-fetched.
 <ul>
 
 <li>
+<p>
 <a href="http://memory-alpha.org/en/wiki/Main_Page">Memory Alpha, the Star
 Trek Wiki</a> - a comprehensive wiki for Star Trek.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://stexpanded.wikia.com/wiki/Main_Page">The Star Trek Expanded
 Universe Database - a wiki for Star Trek fan fiction.</a>
+</p>
+<ul>
+[% PROCESS on_stexp_wikia %]
+</ul>
 </li>
 
 <li>
+<p>
 <a href="http://www.fanfiction.net/tv/StarTrek_Deep_Space_Nine/">Star Trek
 Deep Space Nine fan fiction over at FanFiction.net</a>. (More Star Trek shows
 fan fiction is available under their
 <a href="http://www.fanfiction.net/tv/">T.V. shows directory</a>.)
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Star_Trek">Star Trek on the
 Wikipedia</a>.
+</p>
 </li>
 
 <li>
+<p>
 <a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">The Hitchhiker’s
 Guide to Star Trek - The Next Generation</a> - a wonderful cross of both
 the <i>Hitchhiker’s Guide to the Galaxy</i>, and <i>Star Trek: The Next
 Generation</i>.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://wilwheatonbooks.com/free-ebook-from-memories-of-the-future-volume-one-where-no-one-has-gone-before-and-datalore/">Free ebook:
 From Memories of the Future Volume One</a> - by Wil Wheaton, under CC-by-nc-sa.
+</p>
 </li>
 
 </ul>
@@ -144,15 +183,22 @@ From Memories of the Future Volume One</a> - by Wil Wheaton, under CC-by-nc-sa.
 [% WRAPPER h3_section id = "philosophy_links"  title = "Links to the Philosophy Behind the Story"  %]
 
 <ul>
+
 <li>
+<p>
 <a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">“Guide to
 Neo-Tech”</a> - a small article I wrote introducing a willing reader on
 getting started with Neo-Tech.
+</p>
 </li>
+
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Objectivism_(Ayn_Rand)">Objectivism
 in the Wikipedia</a>
+</p>
 </li>
+
 </ul>
 
 [%- END -%]
@@ -164,19 +210,25 @@ in the Wikipedia</a>
 <ul>
 
 <li>
+<p>
 <a href="[% base_path %]philosophy/foss-other-beasts/">“Open Source, Free
 Software and other Beasts”</a> - an essay I wrote introducing the free
 and open-source software world to people who are not familiar with it.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s “How
 to Become a Hacker”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking
 Field Guide</i></a> - another story I wrote about hackerdom.
+</p>
 </li>
 
 </ul>

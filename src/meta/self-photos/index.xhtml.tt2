@@ -1,0 +1,19 @@
+[%- SET title = "Photos of Shlomi Fish" -%]
+
+[% main_class.addClass("fancy_sects", "limit_imgs_width") %]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="self_photos">
+
+<p>
+<img alt="Wearing the #SummerNSA shirt" src="[% base_path %]meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" />
+</p>
+
+<p>
+<img alt="Wearing a red E.T. shirt" src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" />
+</p>
+
+</div>
+
+[% END %]

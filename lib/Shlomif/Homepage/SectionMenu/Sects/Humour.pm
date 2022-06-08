@@ -634,6 +634,10 @@ my $_humour_tree_contents = {
                     url  => "humour/bits/Python4-Announcement/",
                 },
                 {
+                    text => "Who will ride Princess Celestia next?",
+                    url  => "humour/bits/Who-will-ride-Princess-Celestia/",
+                },
+                {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
                     subs => [

@@ -42,9 +42,12 @@ def _xpath(ns, node, query):
     return node.xpath(query, namespaces=ns)
 
 
-def _first(ns, node, query):
+def _first(ns, node, query, debug):
     mylist = _xpath(ns, node, query)
     if not len(mylist):
+        # import pdb
+        if debug:
+            __import__('pdb').set_trace()
         raise MyXmlNoResultsFoundError(
             "node={} , query={}".format(etree.tostring(node)[:800], query)
         )
@@ -158,7 +161,8 @@ class XhtmlSplitter:
             self.main_title = _first(
                 self.ns,
                 self.root,
-                main_title_xpath
+                main_title_xpath,
+                True,
             )
         self.main_title = self._process_title(self.main_title)
         self.main_title_esc = html.escape(self.main_title)
@@ -168,6 +172,7 @@ class XhtmlSplitter:
             '//' + self.container_elem_xpath.format(
                 xhtml_prefix=self.xhtml_prefix,
             ),
+            True,
         )
 
         class TreeNode:
@@ -189,7 +194,7 @@ class XhtmlSplitter:
         def genTreeNode(elem):
             kids = []
             for x in elem:
-                kids += genTreeNode(x)
+                kids += wrap_genTreeNode(x)
             if _xpath(
                 self.ns,
                 elem,
@@ -199,9 +204,16 @@ class XhtmlSplitter:
                 return [TreeNode(elem=elem, childs=kids)]
             else:
                 return kids
-        self.tree = genTreeNode(self.container_elem)
+
+        def wrap_genTreeNode(elem):
+            """docstring for wrap_genTreeNode"""
+            ret = genTreeNode(elem)
+            assert isinstance(ret, list)
+            return ret
+
+        self.tree = wrap_genTreeNode(self.container_elem)
         print(self.list_sections_format)
-        print(self.tree)
+        # print(self.tree)
 
     def _write_master_xml_file(self):
         tree_s = self._to_string_cb(
@@ -217,7 +229,15 @@ class XhtmlSplitter:
 
     def _list_sections(self):
         """docstring for _list_sections"""
-        yield from self.tree[0].myiter()
+        if False:
+            yield from self.tree[0].myiter()
+        else:
+            first = True
+            for el in self.tree[0].myiter():
+                if first:
+                    first = False
+                else:
+                    yield el
 
     def _is_protected(self, elem):
         """docstring for _protect"""
@@ -235,9 +255,9 @@ class XhtmlSplitter:
         os.makedirs(output_dirname, exist_ok=True)
 
         def calc_id_and_header_esc(header_tag):
-            h_tag = _first(self.ns, header_tag, "./*[@id]")
-            id_ = _first(self.ns, h_tag, "./@id")
-            header_text = _first(self.ns, h_tag, "./text()")
+            h_tag = _first(self.ns, header_tag, "./*[@id]", True)
+            id_ = _first(self.ns, h_tag, "./@id", True)
+            header_text = _first(self.ns, h_tag, "./text()", True)
             header_text = self._process_title(header_text)
             header_esc = html.escape(header_text)
             return id_, header_esc
@@ -251,7 +271,7 @@ class XhtmlSplitter:
                 self.ns, list_elem,
                 "./{xhtml_prefix}header".format(
                     xhtml_prefix=self.xhtml_prefix
-                )
+                ), True
             )
             try:
                 a_tag = _first(
@@ -260,7 +280,8 @@ class XhtmlSplitter:
                     "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
                         _indiv_node=self._indiv_node,
                         xhtml_prefix=self.xhtml_prefix
-                    )
+                    ),
+                    False,
                 )
             except MyXmlNoResultsFoundError:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
@@ -291,7 +312,8 @@ class XhtmlSplitter:
             _add_prefix(
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
-                list_elem=list_elem)
+                list_elem=list_elem,
+            )
         self._write_master_xml_file()
 
         self._calc_root()
@@ -351,7 +373,7 @@ class XhtmlSplitter:
             header_tag = _first(
                 self.ns, list_elem, "./{xhtml_prefix}header".format(
                     xhtml_prefix=self.xhtml_prefix
-                )
+                ), True
             )
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
@@ -361,7 +383,7 @@ class XhtmlSplitter:
                 "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
                     _indiv_node=self._indiv_node,
                     xhtml_prefix=self.xhtml_prefix
-                )
+                ), True
             )
             a_tag.set("class", self.back_to_source_page_css_class)
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)

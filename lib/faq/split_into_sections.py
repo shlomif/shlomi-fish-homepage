@@ -220,6 +220,7 @@ class XhtmlSplitter:
                 TreeNode(elem=self.container_elem, childs=self.tree, )
             ]
         assert len(self.tree) == 1
+        self._coords_list = [c for c in self._calc_list_sections()]
         if False:
             print(self.list_sections_format)
             print('tree =', self.tree)
@@ -243,6 +244,10 @@ class XhtmlSplitter:
         return self._write_file(self.input_fn, tree_s)
 
     def _list_sections(self):
+        """docstring for _list_sections"""
+        return self._coords_list
+
+    def _calc_list_sections(self):
         """docstring for _list_sections"""
         if ('commercial' not in self.input_fn):
             yield from self.tree[0].myiter(coord_prefix=[],)

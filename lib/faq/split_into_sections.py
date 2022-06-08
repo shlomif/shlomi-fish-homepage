@@ -181,10 +181,12 @@ class XhtmlSplitter:
                 s.elem = elem
                 s.childs = childs
 
-            def myiter(self):
-                yield self.elem
-                for el in self.childs:
-                    yield from el.myiter()
+            def myiter(self, coord_prefix):
+                yield (coord_prefix, self.elem)
+                for idx, el in enumerate(self.childs):
+                    yield from el.myiter(
+                        coord_prefix=coord_prefix+[idx],
+                    )
 
             def __repr__(self):
                 """docstring for __repr__"""
@@ -242,10 +244,10 @@ class XhtmlSplitter:
     def _list_sections(self):
         """docstring for _list_sections"""
         if ('commercial' not in self.input_fn):
-            yield from self.tree[0].myiter()
+            yield from self.tree[0].myiter(coord_prefix=[],)
         else:
             first = True
-            for el in self.tree[0].myiter():
+            for el in self.tree[0].myiter(coord_prefix=[],):
                 if first:
                     first = False
                 else:
@@ -324,7 +326,7 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
-        for list_elem in self._list_sections():
+        for coords, list_elem in self._list_sections():
             _add_prefix(
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
@@ -347,7 +349,7 @@ class XhtmlSplitter:
                 self._protect(img_elem)
 
         # print(list(self._list_sections()))
-        for list_elem in self._list_sections():
+        for coords, list_elem in self._list_sections():
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
                 suffix="",

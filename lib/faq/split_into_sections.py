@@ -182,7 +182,8 @@ class XhtmlSplitter:
                 s.childs = childs
 
             def myiter(self, coord_prefix):
-                yield (coord_prefix, self.elem)
+                # yield (coord_prefix, self.elem)
+                yield coord_prefix
                 for idx, el in enumerate(self.childs):
                     yield from el.myiter(
                         coord_prefix=coord_prefix+[idx],
@@ -252,6 +253,14 @@ class XhtmlSplitter:
                     first = False
                 else:
                     yield el
+
+    def _lookup_list_elem(self, coords):
+        """docstring for _lookup_list_elem"""
+        ret = self.tree[0]
+        for i, c in enumerate(coords):
+            ret = ret.childs[c]
+        elem = ret.elem
+        return elem
 
     def _is_protected(self, elem):
         """docstring for _protect"""
@@ -326,7 +335,8 @@ class XhtmlSplitter:
                 )
                 header_tag.append(a_tag)
 
-        for coords, list_elem in self._list_sections():
+        for coords in self._list_sections():
+            list_elem = self._lookup_list_elem(coords)
             _add_prefix(
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
@@ -349,7 +359,8 @@ class XhtmlSplitter:
                 self._protect(img_elem)
 
         # print(list(self._list_sections()))
-        for coords, list_elem in self._list_sections():
+        for coords in self._list_sections():
+            list_elem = self._lookup_list_elem(coords)
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
                 suffix="",

@@ -235,7 +235,9 @@ class XhtmlSplitter:
 
     def _list_sections(self):
         """docstring for _list_sections"""
-        if False:
+        if True:
+            pass
+        if ('commercial' not in self.input_fn):
             yield from self.tree[0].myiter()
         else:
             first = True
@@ -275,12 +277,16 @@ class XhtmlSplitter:
         def _add_prefix(prefix, suffix, list_elem):
             """docstring for _add_prefix"""
             # print('input_fn = ', self.input_fn)
-            header_tag = _first(
-                self.ns, list_elem,
-                "./{xhtml_prefix}header".format(
-                    xhtml_prefix=self.xhtml_prefix
-                ), True
-            )
+            try:
+                header_tag = _first(
+                    self.ns, list_elem,
+                    "./{xhtml_prefix}header".format(
+                        xhtml_prefix=self.xhtml_prefix
+                    ),
+                    False,
+                )
+            except MyXmlNoResultsFoundError:
+                return
             try:
                 a_tag = _first(
                     self.ns,
@@ -379,11 +385,15 @@ class XhtmlSplitter:
                 if href.startswith('#'):
                     a_el.set("href", self.path_to_all_in_one + href)
                     self._protect(a_el)
-            header_tag = _first(
-                self.ns, list_elem, "./{xhtml_prefix}header".format(
-                    xhtml_prefix=self.xhtml_prefix
-                ), True
-            )
+            try:
+                header_tag = _first(
+                    self.ns, list_elem, "./{xhtml_prefix}header".format(
+                        xhtml_prefix=self.xhtml_prefix
+                    ),
+                    False,
+                )
+            except MyXmlNoResultsFoundError:
+                continue
             id_, header_esc = calc_id_and_header_esc(header_tag)
 
             a_tag = _first(

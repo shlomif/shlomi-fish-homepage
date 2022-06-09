@@ -174,6 +174,12 @@ class MyTests(unittest.TestCase):
             "./header/a[@class='next'][contains(./text(), 'Next')]"
         )
         self.assertEqual(len(next_), 1, "next", )
+        href = next_[0].get("href")
+        self.assertEqual(
+            href,
+            "indiv-nodes/emulating-arnie-as-hamlet.xhtml",
+            "next href",
+        )
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

@@ -89,6 +89,11 @@ class XhtmlSplitter:
         self.relative_output_dirname = relative_output_dirname
         self.section_format = section_format
         self.input_is_plain_html = input_is_plain_html
+        self._fromstring = (
+            lxml.html.fragment_fromstring
+            if self.input_is_plain_html
+            else etree.XML
+        )
         self.xhtml_prefix = (
             "" if self.input_is_plain_html else
             "xhtml:"
@@ -391,11 +396,7 @@ class XhtmlSplitter:
                 for fmt in reversed([prev_tag, node_tag, next_tag, ]):
                     if not fmt:
                         continue
-                    a_tag = (
-                        lxml.html.fragment_fromstring
-                        if self.input_is_plain_html
-                        else etree.XML
-                    )(
+                    a_tag = self._fromstring(
                         fmt.format(
                             href=a_tag_href_val,
                             _indiv_node=self._indiv_node,

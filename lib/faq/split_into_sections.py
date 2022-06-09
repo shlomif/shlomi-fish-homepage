@@ -262,10 +262,25 @@ class XhtmlSplitter:
     def _lookup_list_elem(self, coords):
         """docstring for _lookup_list_elem"""
         ret = self.tree[0]
+        prev = prev_coords = None
+        next_ = next_coords = None
         for i, c in enumerate(coords):
-            ret = ret.childs[c]
+            arr = ret.childs
+            ret = arr[c]
+            if i == len(coords) - 1:
+                if c > 0:
+                    pc = c - 1
+                    prev_coords = coords[:i] + [pc]
+                    assert len(prev_coords) == len(coords)
+                    prev = arr[pc].elem
+                nc = c + 1
+                if nc < len(arr):
+                    next_coords = coords[:i] + [nc]
+                    assert len(next_coords) == len(coords)
+                    next_ = arr[nc].elem
+
         elem = ret.elem
-        return elem
+        return ((prev_coords, prev), (coords, elem), (next_coords, next_))
 
     def _is_protected(self, elem):
         """docstring for _protect"""
@@ -341,7 +356,9 @@ class XhtmlSplitter:
                 header_tag.append(a_tag)
 
         for coords in self._list_sections():
-            list_elem = self._lookup_list_elem(coords)
+            ((prev_coords, prev), (coords2, list_elem),
+             (next_coords, next_)) = \
+                    self._lookup_list_elem(coords)
             _add_prefix(
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
@@ -365,7 +382,9 @@ class XhtmlSplitter:
 
         # print(list(self._list_sections()))
         for coords in self._list_sections():
-            list_elem = self._lookup_list_elem(coords)
+            ((prev_coords, prev), (coords2, list_elem),
+             (next_coords, next_)) = \
+                    self._lookup_list_elem(coords)
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
                 suffix="",

@@ -341,10 +341,10 @@ class XhtmlSplitter:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
                 a_tag_href_val = (prefix + id_ + suffix)
 
-                prev_tag = ""
+                prev_fmt = ""
                 prev_href = None
                 if prev is not None:
-                    prev_tag = ("<{xhtml_prefix}a" + (
+                    prev_fmt = ("<{xhtml_prefix}a" + (
                         "" if self.input_is_plain_html
                         else " xmlns:xhtml=\"{xhtml}\""
                         ) + " class=\"previous\""
@@ -363,10 +363,10 @@ class XhtmlSplitter:
                         calc_id_and_header_esc(prev_header_tag)
                     prev_href = (prefix + prev_id_ + suffix)
 
-                next_tag = ""
+                next_fmt = ""
                 next_href = None
                 if next_ is not None:
-                    next_tag = ("<{xhtml_prefix}a" + (
+                    next_fmt = ("<{xhtml_prefix}a" + (
                         "" if self.input_is_plain_html
                         else " xmlns:xhtml=\"{xhtml}\""
                         ) + " class=\"next\""
@@ -385,7 +385,7 @@ class XhtmlSplitter:
                         calc_id_and_header_esc(next_header_tag)
                     next_href = (prefix + next_id_ + suffix)
 
-                node_tag = (
+                node_fmt = (
                     "<{xhtml_prefix}a" + (
                         "" if self.input_is_plain_html
                         else " xmlns:xhtml=\"{xhtml}\""
@@ -393,7 +393,7 @@ class XhtmlSplitter:
                     " class=\"{_indiv_node}\""
                     + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                 )
-                for fmt in reversed([prev_tag, node_tag, next_tag, ]):
+                for fmt in reversed([prev_fmt, node_fmt, next_fmt, ]):
                     if not fmt:
                         continue
                     a_tag = self._fromstring(

@@ -2,6 +2,21 @@ a.indiv_node {
     @include faq_link;
 }
 
+@mixin previous_link {
+    &:after {
+        content: " ]";
+    }
+    &:before {
+        content: "[ ";
+    }
+    padding: 0.3em;
+    float: right;
+}
+
+a.previous {
+    @include previous_link;
+}
+
 .faq,
 .indiv_nodes_wrapper,
 .screenplay {

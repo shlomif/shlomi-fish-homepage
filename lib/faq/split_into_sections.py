@@ -309,7 +309,7 @@ class XhtmlSplitter:
 
         self._calc_root()
 
-        def _add_prefix(prefix, suffix, list_elem):
+        def _add_prefix(prefix, suffix, list_elem, prev):
             """docstring for _add_prefix"""
             # print('input_fn = ', self.input_fn)
             try:
@@ -335,27 +335,52 @@ class XhtmlSplitter:
             except MyXmlNoResultsFoundError:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
                 a_tag_href_val = (prefix + id_ + suffix)
-                a_tag = (
-                    # (lambda x: etree.parse(StringIO(x), etree.HTMLParser()))
-                    lxml.html.fragment_fromstring
-                    if self.input_is_plain_html
-                    else etree.XML
-                )(
-                    (
-                        "<{xhtml_prefix}a" + (
-                            "" if self.input_is_plain_html
-                            else " xmlns:xhtml=\"{xhtml}\""
-                        ) +
-                        " class=\"{_indiv_node}\""
-                        + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
-                    ).format(
-                        href=a_tag_href_val,
-                        _indiv_node=self._indiv_node,
-                        xhtml_prefix=self.xhtml_prefix,
-                        **self.ns,
+                prev_tag = ""
+                prev_href = None
+                if prev is not None:
+                    prev_tag = ("<{xhtml_prefix}a" + (
+                        "" if self.input_is_plain_html
+                        else " xmlns:xhtml=\"{xhtml}\""
+                        ) + " class=\"previous\""
+                        + " href=\"{prev_href}\">"
+                        + "Previous Node</{xhtml_prefix}a>"
                     )
+                    prev_header_tag = _first(
+                        self.ns, prev,
+                        "./{xhtml_prefix}header".format(
+                            xhtml_prefix=self.xhtml_prefix
+                        ),
+                        False,
+                    )
+
+                    prev_id_, prev_header_esc = \
+                        calc_id_and_header_esc(prev_header_tag)
+                    prev_href = (prefix + prev_id_ + suffix)
+                node_tag = (
+                    "<{xhtml_prefix}a" + (
+                        "" if self.input_is_plain_html
+                        else " xmlns:xhtml=\"{xhtml}\""
+                    ) +
+                    " class=\"{_indiv_node}\""
+                    + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                 )
-                header_tag.append(a_tag)
+                for fmt in reversed([prev_tag, node_tag]):
+                    if not fmt:
+                        continue
+                    a_tag = (
+                        lxml.html.fragment_fromstring
+                        if self.input_is_plain_html
+                        else etree.XML
+                    )(
+                        fmt.format(
+                            href=a_tag_href_val,
+                            _indiv_node=self._indiv_node,
+                            prev_href=prev_href,
+                            xhtml_prefix=self.xhtml_prefix,
+                            **self.ns,
+                        )
+                    )
+                    header_tag.append(a_tag)
 
         for coords in self._list_sections():
             ((prev_coords, prev), (coords2, list_elem),
@@ -365,6 +390,7 @@ class XhtmlSplitter:
                 prefix=(self.relative_output_dirname),
                 suffix=".xhtml",
                 list_elem=list_elem,
+                prev=prev,
             )
         self._write_master_xml_file()
 
@@ -390,7 +416,9 @@ class XhtmlSplitter:
             _add_prefix(
                 prefix=(self.path_to_all_in_one + "#"),
                 suffix="",
-                list_elem=list_elem)
+                list_elem=list_elem,
+                prev=prev,
+            )
             parents = []
             p_iter = list_elem.getparent()
             while p_iter.tag in self.section_tags:

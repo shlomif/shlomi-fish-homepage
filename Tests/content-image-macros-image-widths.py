@@ -149,11 +149,20 @@ class MyTests(unittest.TestCase):
         input_fn = './dest/post-incs/t2/humour/Terminator/Liberation/' + \
             'ongoing-text.html'
         root = html.parse(input_fn)
+        main = root.xpath(".//*[@id='index']")[0]
         self._helper_indiv_nodes_test(
-            root.xpath(".//*[@id='index']")[0],
+            main,
             ".//section",
             "test_terminator_liberation"
         )
+        scene = main.xpath(
+            ".//section[@id='scene-emma-watson-and-the-children-get-icecream']"
+        )
+        self.assertEqual(len(scene), 1, "scene", )
+        prev = scene[0].xpath(
+            "./header/a[@class='previous'][contains(./text(), 'Previous')]"
+        )
+        self.assertEqual(len(prev), 1, "prev", )
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

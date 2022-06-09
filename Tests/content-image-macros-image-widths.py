@@ -163,6 +163,12 @@ class MyTests(unittest.TestCase):
             "./header/a[@class='previous'][contains(./text(), 'Previous')]"
         )
         self.assertEqual(len(prev), 1, "prev", )
+        href = prev[0].get("href")
+        self.assertEqual(
+            href,
+            "indiv-nodes/emma-watson-finishes-telling-a-story.xhtml",
+            "prev href",
+        )
 
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \

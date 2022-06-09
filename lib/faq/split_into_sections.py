@@ -94,6 +94,10 @@ class XhtmlSplitter:
             if self.input_is_plain_html
             else etree.XML
         )
+        self._xhtml_xmlns = (
+            "" if self.input_is_plain_html
+            else " xmlns:xhtml=\"{xhtml}\""
+        )
         self.xhtml_prefix = (
             "" if self.input_is_plain_html else
             "xhtml:"
@@ -344,10 +348,9 @@ class XhtmlSplitter:
                 prev_fmt = ""
                 prev_href = None
                 if prev is not None:
-                    prev_fmt = ("<{xhtml_prefix}a" + (
-                        "" if self.input_is_plain_html
-                        else " xmlns:xhtml=\"{xhtml}\""
-                        ) + " class=\"previous\""
+                    prev_fmt = (
+                        "<{xhtml_prefix}a" + self._xhtml_xmlns
+                        + " class=\"previous\""
                         + " href=\"{prev_href}\">"
                         + "Previous Node</{xhtml_prefix}a>"
                     )
@@ -366,10 +369,9 @@ class XhtmlSplitter:
                 next_fmt = ""
                 next_href = None
                 if next_ is not None:
-                    next_fmt = ("<{xhtml_prefix}a" + (
-                        "" if self.input_is_plain_html
-                        else " xmlns:xhtml=\"{xhtml}\""
-                        ) + " class=\"next\""
+                    next_fmt = (
+                        "<{xhtml_prefix}a" + self._xhtml_xmlns
+                        + " class=\"next\""
                         + " href=\"{next_href}\">"
                         + "Next Node</{xhtml_prefix}a>"
                     )
@@ -386,11 +388,8 @@ class XhtmlSplitter:
                     next_href = (prefix + next_id_ + suffix)
 
                 node_fmt = (
-                    "<{xhtml_prefix}a" + (
-                        "" if self.input_is_plain_html
-                        else " xmlns:xhtml=\"{xhtml}\""
-                    ) +
-                    " class=\"{_indiv_node}\""
+                    "<{xhtml_prefix}a" + self._xhtml_xmlns
+                    + " class=\"{_indiv_node}\""
                     + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                 )
                 for fmt in reversed([prev_fmt, node_fmt, next_fmt, ]):

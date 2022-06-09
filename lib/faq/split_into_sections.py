@@ -273,11 +273,13 @@ class XhtmlSplitter:
                     prev_coords = coords[:i] + [pc]
                     assert len(prev_coords) == len(coords)
                     prev = arr[pc].elem
+                    assert (prev is not None)
                 nc = c + 1
                 if nc < len(arr):
                     next_coords = coords[:i] + [nc]
                     assert len(next_coords) == len(coords)
                     next_ = arr[nc].elem
+                    assert (next_ is not None)
 
         elem = ret.elem
         return ((prev_coords, prev), (coords, elem), (next_coords, next_))

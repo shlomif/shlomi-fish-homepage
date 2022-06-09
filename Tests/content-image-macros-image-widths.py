@@ -170,6 +170,11 @@ class MyTests(unittest.TestCase):
             "prev href",
         )
 
+        next_ = scene[0].xpath(
+            "./header/a[@class='next'][contains(./text(), 'Next')]"
+        )
+        self.assertEqual(len(next_), 1, "next", )
+
     def test_qoheleth(self):
         base_path_fn = './dest/post-incs/t2/humour/' + \
             'So-Who-The-Hell-Is-Qoheleth/'

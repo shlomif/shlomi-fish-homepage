@@ -335,6 +335,7 @@ class XhtmlSplitter:
             except MyXmlNoResultsFoundError:
                 id_, header_esc = calc_id_and_header_esc(header_tag)
                 a_tag_href_val = (prefix + id_ + suffix)
+
                 prev_tag = ""
                 prev_href = None
                 if prev is not None:
@@ -356,6 +357,29 @@ class XhtmlSplitter:
                     prev_id_, prev_header_esc = \
                         calc_id_and_header_esc(prev_header_tag)
                     prev_href = (prefix + prev_id_ + suffix)
+
+                next_tag = ""
+                next_href = None
+                if next_ is not None:
+                    next_tag = ("<{xhtml_prefix}a" + (
+                        "" if self.input_is_plain_html
+                        else " xmlns:xhtml=\"{xhtml}\""
+                        ) + " class=\"next\""
+                        + " href=\"{next_href}\">"
+                        + "Next Node</{xhtml_prefix}a>"
+                    )
+                    next_header_tag = _first(
+                        self.ns, next_,
+                        "./{xhtml_prefix}header".format(
+                            xhtml_prefix=self.xhtml_prefix
+                        ),
+                        False,
+                    )
+
+                    next_id_, next_header_esc = \
+                        calc_id_and_header_esc(next_header_tag)
+                    next_href = (prefix + next_id_ + suffix)
+
                 node_tag = (
                     "<{xhtml_prefix}a" + (
                         "" if self.input_is_plain_html
@@ -364,7 +388,7 @@ class XhtmlSplitter:
                     " class=\"{_indiv_node}\""
                     + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                 )
-                for fmt in reversed([prev_tag, node_tag]):
+                for fmt in reversed([prev_tag, node_tag, next_tag, ]):
                     if not fmt:
                         continue
                     a_tag = (
@@ -375,6 +399,7 @@ class XhtmlSplitter:
                         fmt.format(
                             href=a_tag_href_val,
                             _indiv_node=self._indiv_node,
+                            next_href=next_href,
                             prev_href=prev_href,
                             xhtml_prefix=self.xhtml_prefix,
                             **self.ns,

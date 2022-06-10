@@ -269,16 +269,7 @@ class XhtmlSplitter:
         return self._coords_list
 
     def _calc_list_sections(self):
-        """docstring for _list_sections"""
-        if ('commercial' not in self.input_fn):
-            yield from self.tree[0].myiter(coord_prefix=[],)
-        else:
-            first = True
-            for el in self.tree[0].myiter(coord_prefix=[],):
-                if first:
-                    first = False
-                else:
-                    yield el
+        yield from self.tree[0].myiter(coord_prefix=[],)
 
     def _lookup_list_elem(self, coords):
         """docstring for _lookup_list_elem"""

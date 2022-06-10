@@ -352,7 +352,7 @@ class XhtmlSplitter:
                         "<{xhtml_prefix}a" + self._xhtml_xmlns
                         + " class=\"previous\""
                         + " href=\"{prev_href}\">"
-                        + "Previous Node</{xhtml_prefix}a>"
+                        + "Prev</{xhtml_prefix}a>"
                     )
                     prev_header_tag = self._get_header(prev)
 
@@ -367,7 +367,7 @@ class XhtmlSplitter:
                         "<{xhtml_prefix}a" + self._xhtml_xmlns
                         + " class=\"next\""
                         + " href=\"{next_href}\">"
-                        + "Next Node</{xhtml_prefix}a>"
+                        + "Next</{xhtml_prefix}a>"
                     )
                     next_header_tag = self._get_header(next_)
 

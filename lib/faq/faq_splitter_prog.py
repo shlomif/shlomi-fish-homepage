@@ -19,10 +19,11 @@ from split_into_sections import XhtmlSplitter
 
 
 def _tag_xpath(tag, TOP_LEVEL_CLASS):
-    return ((
-        "self::node()[local-name() = '{tag}' and {clas}]").format(
+    return (
+        "self::node()[local-name() = '{tag}' and {clas}]".format(
             tag=tag,
-            clas="@class='" + TOP_LEVEL_CLASS + "'")
+            clas="@class='" + TOP_LEVEL_CLASS + "'"
+        )
     )
 
 

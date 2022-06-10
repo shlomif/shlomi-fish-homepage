@@ -161,7 +161,7 @@ class MyTests(unittest.TestCase):
         self.assertEqual(len(scene), 1, "scene", )
         prev = scene[0].xpath(
             "./header/span/a[@class='previous']"
-            "[contains(./text(), 'Previous')]"
+            "[contains(./text(), 'Prev')]"
         )
         self.assertEqual(len(prev), 1, "prev", )
         href = prev[0].get("href")

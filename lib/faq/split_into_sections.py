@@ -111,6 +111,9 @@ class XhtmlSplitter:
             # (""+'{' + 'xhtml' + '}' + "")
             # (""+'{' + XHTML_NAMESPACE + '}' + "")
         )
+        self.list_sections_xpath = self.list_sections_format.format(
+            xhtml_prefix=self.xhtml_prefix
+        )
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
         self.container_elem_xpath = container_elem_xpath.format(
@@ -225,12 +228,7 @@ class XhtmlSplitter:
             kids = []
             for x in elem:
                 kids += wrap_genTreeNode(x)
-            if _xpath(
-                self.ns,
-                elem,
-                self.list_sections_format.format(
-                    xhtml_prefix=self.xhtml_prefix
-                    )):
+            if _xpath(self.ns, elem, self.list_sections_xpath):
                 return [TreeNode(elem=elem, childs=kids)]
             else:
                 return kids

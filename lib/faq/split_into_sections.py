@@ -154,6 +154,14 @@ class XhtmlSplitter:
             flags=(re.M | re.S)
         )
 
+    def _get_header(self, elem):
+        """docstring for _get_header"""
+
+        return _first(
+            self.ns, elem, self._header_xpath,
+            False,
+        )
+
     def _calc_root(self):
         self.root = (
             etree.HTML
@@ -161,6 +169,9 @@ class XhtmlSplitter:
             else etree.XML
         )(
             self.initial_xml_string
+        )
+        self._header_xpath = "./{xhtml_prefix}header".format(
+            xhtml_prefix=self.xhtml_prefix
         )
         main_title_xpath = \
             './/{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
@@ -323,13 +334,7 @@ class XhtmlSplitter:
             """docstring for _add_prefix"""
             # print('input_fn = ', self.input_fn)
             try:
-                header_tag = _first(
-                    self.ns, list_elem,
-                    "./{xhtml_prefix}header".format(
-                        xhtml_prefix=self.xhtml_prefix
-                    ),
-                    False,
-                )
+                header_tag = self._get_header(list_elem)
             except MyXmlNoResultsFoundError:
                 return
             try:
@@ -356,13 +361,7 @@ class XhtmlSplitter:
                         + " href=\"{prev_href}\">"
                         + "Previous Node</{xhtml_prefix}a>"
                     )
-                    prev_header_tag = _first(
-                        self.ns, prev,
-                        "./{xhtml_prefix}header".format(
-                            xhtml_prefix=self.xhtml_prefix
-                        ),
-                        False,
-                    )
+                    prev_header_tag = self._get_header(prev)
 
                     prev_id_, _ = \
                         calc_id_and_header_esc(prev_header_tag)
@@ -377,13 +376,7 @@ class XhtmlSplitter:
                         + " href=\"{next_href}\">"
                         + "Next Node</{xhtml_prefix}a>"
                     )
-                    next_header_tag = _first(
-                        self.ns, next_,
-                        "./{xhtml_prefix}header".format(
-                            xhtml_prefix=self.xhtml_prefix
-                        ),
-                        False,
-                    )
+                    next_header_tag = self._get_header(next_)
 
                     next_id_, _ = \
                         calc_id_and_header_esc(next_header_tag)
@@ -488,12 +481,7 @@ class XhtmlSplitter:
                     a_el.set("href", self.path_to_all_in_one + href)
                     self._protect(a_el)
             try:
-                header_tag = _first(
-                    self.ns, list_elem, "./{xhtml_prefix}header".format(
-                        xhtml_prefix=self.xhtml_prefix
-                    ),
-                    False,
-                )
+                header_tag = self._get_header(list_elem)
             except MyXmlNoResultsFoundError:
                 continue
             id_, header_esc = calc_id_and_header_esc(header_tag)

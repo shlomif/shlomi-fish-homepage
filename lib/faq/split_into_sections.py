@@ -143,7 +143,9 @@ class XhtmlSplitter:
 
         self._to_string_cb = (
             _html_to_string
-            if self.input_is_plain_html else _xhtml_to_string)
+            if self.input_is_plain_html
+            else _xhtml_to_string
+        )
 
     def _process_title(self, header_text):
         """docstring for _process_title"""
@@ -280,8 +282,8 @@ class XhtmlSplitter:
             arr = ret.childs
             ret = arr[c]
             if i == len(coords) - 1:
-                if c > 0:
-                    pc = c - 1
+                pc = c - 1
+                if pc >= 0:
                     prev_coords = coords[:i] + [pc]
                     assert len(prev_coords) == len(coords)
                     prev = arr[pc].elem
@@ -305,8 +307,6 @@ class XhtmlSplitter:
         elem.set(self._protect_attr_name, "true")
 
     def process(self):
-        self.c = \
-            ("putting-cards-on-the-table-2019-2020/" in self.output_dirname)
         SECTION_FORMAT = self.section_format
         output_dirname = self.output_dirname
         os.makedirs(output_dirname, exist_ok=True)
@@ -386,9 +386,8 @@ class XhtmlSplitter:
                     if not fmt:
                         continue
                     tot += fmt
-                tot += (
-                    "</{xhtml_prefix}span>"
-                )
+                tot += "</{xhtml_prefix}span>"
+
                 a_tag = self._fromstring(tot.format(
                     href=a_tag_href_val,
                     _indiv_node=self._indiv_node,
@@ -490,9 +489,7 @@ class XhtmlSplitter:
             a_tag_href_val = (self.path_to_all_in_one + "#" + id_)
             a_tag.set("href", a_tag_href_val)
             self._protect(a_tag)
-            if len(self.path_to_images) and (
-                    True):  # len(self.path_to_all_in_one) == 0):
-                # assert not self.c
+            if len(self.path_to_images):
                 for a_elem in _a_tags(list_elem):
                     if self._is_protected(a_elem):
                         continue
@@ -505,9 +502,6 @@ class XhtmlSplitter:
                         "href", self.path_to_images + href
                     )
                     self._protect(a_elem)
-                    if self.c:
-                        # assert not ("../../" in a_elem.get("href"))
-                        pass
             output_list_elem = copy.deepcopy(list_elem)
             for a_elem in _xpath(
                     self.ns,

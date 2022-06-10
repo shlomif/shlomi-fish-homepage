@@ -311,8 +311,8 @@ class XhtmlSplitter:
 
         def calc_id_and_header_esc(header_tag):
             h_tag = _first(self.ns, header_tag, "./*[@id]", True)
-            id_ = _first(self.ns, h_tag, "./@id", True)
-            header_text = _first(self.ns, h_tag, "./text()", True)
+            id_ = h_tag.get('id')
+            header_text = h_tag.text
             header_text = self._process_title(header_text)
             header_esc = html.escape(header_text)
             return id_, header_esc
@@ -364,7 +364,7 @@ class XhtmlSplitter:
                         False,
                     )
 
-                    prev_id_, prev_header_esc = \
+                    prev_id_, _ = \
                         calc_id_and_header_esc(prev_header_tag)
                     prev_href = (prefix + prev_id_ + suffix)
 
@@ -385,7 +385,7 @@ class XhtmlSplitter:
                         False,
                     )
 
-                    next_id_, next_header_esc = \
+                    next_id_, _ = \
                         calc_id_and_header_esc(next_header_tag)
                     next_href = (prefix + next_id_ + suffix)
 

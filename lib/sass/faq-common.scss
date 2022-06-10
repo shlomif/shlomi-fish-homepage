@@ -4,7 +4,7 @@ a.indiv_node {
 
 @mixin next_link {
     &:after {
-        content: " ]";
+        content: " 🠪  ]";
     }
     &:before {
         content: "[ ";
@@ -22,7 +22,7 @@ a.next {
         content: " ]";
     }
     &:before {
-        content: "[ ";
+        content: "[ 🠨 ";
     }
     padding: 0.3em;
     float: right;

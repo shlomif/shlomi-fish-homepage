@@ -71,7 +71,7 @@ class MyTests(unittest.TestCase):
         articles = root.xpath(xpath_str)
         self.assertTrue(len(articles), "count articles " + name)
         for idx, art in enumerate(articles):
-            link = art.xpath("./header/a[./text() = 'Node Link']")
+            link = art.xpath("./header/span/a[./text() = 'Node Link']")
             self.assertEqual(
                 len(link), 1, "len link idx={idx} name={name}".format(
                     idx=idx,
@@ -160,7 +160,8 @@ class MyTests(unittest.TestCase):
         )
         self.assertEqual(len(scene), 1, "scene", )
         prev = scene[0].xpath(
-            "./header/a[@class='previous'][contains(./text(), 'Previous')]"
+            "./header/span/a[@class='previous']"
+            "[contains(./text(), 'Previous')]"
         )
         self.assertEqual(len(prev), 1, "prev", )
         href = prev[0].get("href")
@@ -171,7 +172,7 @@ class MyTests(unittest.TestCase):
         )
 
         next_ = scene[0].xpath(
-            "./header/a[@class='next'][contains(./text(), 'Next')]"
+            "./header/span/a[@class='next'][contains(./text(), 'Next')]"
         )
         self.assertEqual(len(next_), 1, "next", )
         href = next_[0].get("href")

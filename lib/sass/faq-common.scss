@@ -1,3 +1,7 @@
+span.indiv_node {
+    float: right;
+}
+
 a.indiv_node {
     @include faq_link;
 }
@@ -10,7 +14,7 @@ a.indiv_node {
         content: "[ ";
     }
     padding: 0.3em;
-    float: right;
+    // float: right;
 }
 
 a.next {
@@ -25,7 +29,7 @@ a.next {
         content: "[ 🠨 ";
     }
     padding: 0.3em;
-    float: right;
+    // float: right;
 }
 
 a.previous {

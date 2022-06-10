@@ -47,6 +47,7 @@ def _first(ns, node, query, debug):
     if not len(mylist):
         # import pdb
         if debug:
+            print(etree.tostring(node))
             __import__('pdb').set_trace()
         raise MyXmlNoResultsFoundError(
             "node={} , query={}".format(etree.tostring(node)[:800], query)
@@ -335,7 +336,8 @@ class XhtmlSplitter:
                 a_tag = _first(
                     self.ns,
                     header_tag,
-                    "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
+                    ("./{xhtml_prefix}span/{xhtml_prefix}a"
+                     "[@class='{_indiv_node}']").format(
                         _indiv_node=self._indiv_node,
                         xhtml_prefix=self.xhtml_prefix
                     ),
@@ -392,20 +394,26 @@ class XhtmlSplitter:
                     + " class=\"{_indiv_node}\""
                     + " href=\"{href}\">Node Link</{xhtml_prefix}a>"
                 )
-                for fmt in reversed([prev_fmt, node_fmt, next_fmt, ]):
+                tot = (
+                    "<{xhtml_prefix}span" + self._xhtml_xmlns
+                    + " class=\"{_indiv_node}\">"
+                )
+                for fmt in [prev_fmt, node_fmt, next_fmt, ]:
                     if not fmt:
                         continue
-                    a_tag = self._fromstring(
-                        fmt.format(
-                            href=a_tag_href_val,
-                            _indiv_node=self._indiv_node,
-                            next_href=next_href,
-                            prev_href=prev_href,
-                            xhtml_prefix=self.xhtml_prefix,
-                            **self.ns,
-                        )
-                    )
-                    header_tag.append(a_tag)
+                    tot += fmt
+                tot += (
+                    "</{xhtml_prefix}span>"
+                )
+                a_tag = self._fromstring(tot.format(
+                    href=a_tag_href_val,
+                    _indiv_node=self._indiv_node,
+                    next_href=next_href,
+                    prev_href=prev_href,
+                    xhtml_prefix=self.xhtml_prefix,
+                    **self.ns,
+                ))
+                header_tag.append(a_tag)
 
         for coords in self._list_sections():
             ((prev_coords, prev), (coords2, list_elem),
@@ -493,7 +501,8 @@ class XhtmlSplitter:
             a_tag = _first(
                 self.ns,
                 header_tag,
-                "./{xhtml_prefix}a[@class='{_indiv_node}']".format(
+                ("./{xhtml_prefix}span/{xhtml_prefix}a"
+                 "[@class='{_indiv_node}']").format(
                     _indiv_node=self._indiv_node,
                     xhtml_prefix=self.xhtml_prefix
                 ), True

@@ -55,6 +55,12 @@ def _first(ns, node, query, debug):
     return mylist[0]
 
 
+TITLE_RE = re.compile(
+    " - Shlomi Fish['’]s Homesite\\Z",
+    re.M | re.S,
+)
+
+
 class XhtmlSplitter:
     def __init__(
             self, input_fn, output_dirname,
@@ -149,11 +155,9 @@ class XhtmlSplitter:
 
     def _process_title(self, header_text):
         """docstring for _process_title"""
-        return re.sub(
-            " - Shlomi Fish['’]s Homesite\\Z",
+        return TITLE_RE.sub(
             "",
             header_text,
-            flags=(re.M | re.S)
         )
 
     def _get_header(self, elem):

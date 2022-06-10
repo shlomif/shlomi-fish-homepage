@@ -510,8 +510,7 @@ class XhtmlSplitter:
                     output_list_elem,
                     "./descendant::*[@" + self._protect_attr_name + "]",
                     ):
-                if self._is_protected(a_elem):
-                    a_elem.attrib.pop(self._protect_attr_name)
+                a_elem.attrib.pop(self._protect_attr_name)
             body_string = self._to_string_cb(
                 dom=output_list_elem, add_prefix=False,
             )

@@ -57,6 +57,12 @@ TITLE_RE = re.compile(
 
 
 class XhtmlSplitter:
+    def _x_format(self, s):
+        """docstring for _x_format"""
+        return s.format(
+            xhtml_prefix=self.xhtml_prefix
+        )
+
     def __init__(
             self, input_fn, output_dirname,
             section_format, container_elem_xpath,
@@ -104,11 +110,12 @@ class XhtmlSplitter:
         self.list_sections_xpath = self.list_sections_format.format(
             xhtml_prefix=self.xhtml_prefix
         )
+        self._header_xpath = self._x_format("./{xhtml_prefix}header")
+        self.main_title_xpath = \
+            self._x_format('.//{xhtml_prefix}head/{xhtml_prefix}title/text()')
         self.xhtml_article_tag = xhtml_article_tag
         self.xhtml_section_tag = xhtml_section_tag
-        self.container_elem_xpath = container_elem_xpath.format(
-            xhtml_prefix=self.xhtml_prefix
-        )
+        self.container_elem_xpath = self._x_format(container_elem_xpath)
         self.section_tags = set([
             self.xhtml_article_tag,
             self.xhtml_section_tag,
@@ -167,18 +174,11 @@ class XhtmlSplitter:
         )(
             self.initial_xml_string
         )
-        self._header_xpath = "./{xhtml_prefix}header".format(
-            xhtml_prefix=self.xhtml_prefix
-        )
-        main_title_xpath = \
-            './/{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
-                xhtml_prefix=self.xhtml_prefix
-            )
         if not self.main_title:
             self.main_title = _first(
                 self.ns,
                 self.root,
-                main_title_xpath,
+                self.main_title_xpath,
                 True,
             )
         self.main_title = self._process_title(self.main_title)

@@ -7,8 +7,8 @@
 # Distributed under terms of the MIT license.
 
 """
-Split Shlomi Fish's FAQ-list into individual
-sections or questions.
+Split Shlomi Fish's XHTML5 / HTML5 documents (for example his FAQ-list)
+into individual pages per sections.
 """
 
 from lxml.html import XHTML_NAMESPACE

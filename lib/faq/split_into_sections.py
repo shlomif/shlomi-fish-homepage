@@ -110,7 +110,9 @@ class XhtmlSplitter:
             xhtml_prefix=self.xhtml_prefix
         )
         self.section_tags = set([
-            self.xhtml_article_tag, self.xhtml_section_tag, ])
+            self.xhtml_article_tag,
+            self.xhtml_section_tag,
+        ])
         if self.input_is_plain_html:
             self._whole_r_mode = 'rt'
         else:

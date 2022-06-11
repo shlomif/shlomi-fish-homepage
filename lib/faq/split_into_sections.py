@@ -111,6 +111,7 @@ class XhtmlSplitter:
             xhtml_prefix=self.xhtml_prefix
         )
         self._header_xpath = self._x_format("./{xhtml_prefix}header")
+        self._img_xpath = self._x_format(".//{xhtml_prefix}img")
         self.main_title_xpath = \
             self._x_format('.//{xhtml_prefix}head/{xhtml_prefix}title/text()')
         self.xhtml_article_tag = xhtml_article_tag
@@ -186,9 +187,7 @@ class XhtmlSplitter:
         self.container_elem = _first(
             self.ns,
             self.root,
-            '//' + self.container_elem_xpath.format(
-                xhtml_prefix=self.xhtml_prefix,
-            ),
+            '//' + self.container_elem_xpath,
             True,
         )
 
@@ -392,9 +391,7 @@ class XhtmlSplitter:
         if len(self.path_to_images):
             for img_elem in _xpath(self.ns,
                                    self.container_elem,
-                                   ".//{xhtml_prefix}img".format(
-                                       xhtml_prefix=self.xhtml_prefix
-                                                                   )):
+                                   self._img_xpath,):
                 src_path = img_elem.get("src")
                 if src_path.startswith(("http:", "https:", )):
                     continue

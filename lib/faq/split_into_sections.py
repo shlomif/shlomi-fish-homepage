@@ -107,10 +107,10 @@ class XhtmlSplitter:
             else " xmlns:xhtml=\"{xhtml}\""
         )
         self.xhtml_prefix = ("" if self.input_is_plain_html else "xhtml:")
-        self.list_sections_xpath = self.list_sections_format.format(
-            xhtml_prefix=self.xhtml_prefix
-        )
+        self.list_sections_xpath = self._x_format(self.list_sections_format)
+        self._a_desc_xpath = self._x_format("./descendant::{xhtml_prefix}a")
         self._header_xpath = self._x_format("./{xhtml_prefix}header")
+        self._header_id_xpath = self._x_format("./{xhtml_prefix}header[*/@id]")
         self._img_xpath = self._x_format(".//{xhtml_prefix}img")
         self.main_title_xpath = \
             self._x_format('.//{xhtml_prefix}head/{xhtml_prefix}title/text()')
@@ -415,9 +415,7 @@ class XhtmlSplitter:
                 res = _xpath(
                     self.ns,
                     p_iter,
-                    "./{xhtml_prefix}header[*/@id]".format(
-                        xhtml_prefix=self.xhtml_prefix
-                    )
+                    self._header_id_xpath,
                 )
                 if len(res) == 0:
                     break
@@ -431,9 +429,7 @@ class XhtmlSplitter:
                 return _xpath(
                     self.ns,
                     list_elem,
-                    "./descendant::{xhtml_prefix}a".format(
-                        xhtml_prefix=self.xhtml_prefix
-                    )
+                    self._a_desc_xpath,
                 )
             for a_el in _a_tags(list_elem):
                 href = a_el.get('href')

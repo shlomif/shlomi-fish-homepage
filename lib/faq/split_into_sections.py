@@ -7,8 +7,7 @@
 # Distributed under terms of the MIT license.
 
 """
-Split Shlomi Fish's FAQ-list into individual
-sections or questions.
+Split XHTML5 / HTML5 documents into individual sections.
 """
 
 import copy
@@ -16,7 +15,6 @@ import html
 import os
 import re
 import lxml.html
-# from io import StringIO
 
 from lxml import etree
 from lxml.html import XHTML_NAMESPACE
@@ -32,20 +30,17 @@ HTML_PREFIX = bytes("<!DOCTYPE html>", "utf-8")
 
 
 class MyXmlNoResultsFoundError(Exception):
-    """docstring for MyXmlNoResultsFoundError"""
     def __init__(self, arg):
         super(MyXmlNoResultsFoundError, self).__init__(arg)
 
 
 def _xpath(ns, node, query):
-    # print(query, ns)
     return node.xpath(query, namespaces=ns)
 
 
 def _first(ns, node, query, debug):
     mylist = _xpath(ns, node, query)
     if not len(mylist):
-        # import pdb
         if debug:
             print(etree.tostring(node))
             __import__('pdb').set_trace()
@@ -105,12 +100,7 @@ class XhtmlSplitter:
             "" if self.input_is_plain_html
             else " xmlns:xhtml=\"{xhtml}\""
         )
-        self.xhtml_prefix = (
-            "" if self.input_is_plain_html else
-            "xhtml:"
-            # (""+'{' + 'xhtml' + '}' + "")
-            # (""+'{' + XHTML_NAMESPACE + '}' + "")
-        )
+        self.xhtml_prefix = ("" if self.input_is_plain_html else "xhtml:")
         self.list_sections_xpath = self.list_sections_format.format(
             xhtml_prefix=self.xhtml_prefix
         )
@@ -129,7 +119,6 @@ class XhtmlSplitter:
         self._w_mode = 'wb'
         self._protect_attr_name = "donotprocess"
 
-        # self.root = etree.parse(input_fn)
         with open(input_fn, self._whole_r_mode) as fh:
             self.initial_xml_string = fh.read()
         self.base_path = (base_path or "../../")
@@ -157,15 +146,12 @@ class XhtmlSplitter:
         )
 
     def _process_title(self, header_text):
-        """docstring for _process_title"""
         return TITLE_RE.sub(
             "",
             header_text,
         )
 
     def _get_header(self, elem):
-        """docstring for _get_header"""
-
         return _first(
             self.ns, elem, self._header_xpath,
             False,
@@ -186,7 +172,6 @@ class XhtmlSplitter:
             './/{xhtml_prefix}head/{xhtml_prefix}title/text()'.format(
                 xhtml_prefix=self.xhtml_prefix
             )
-        # print('main_title_xpath = ', main_title_xpath)
         if not self.main_title:
             self.main_title = _first(
                 self.ns,
@@ -207,12 +192,10 @@ class XhtmlSplitter:
 
         class TreeNode:
             def __init__(s, elem, childs):
-                # s.elem = copy.deepcopy(elem)
                 s.elem = elem
                 s.childs = childs
 
             def myiter(self, coord_prefix):
-                # yield (coord_prefix, self.elem)
                 yield coord_prefix
                 for idx, el in enumerate(self.childs):
                     yield from el.myiter(
@@ -220,7 +203,6 @@ class XhtmlSplitter:
                     )
 
             def __repr__(self):
-                """docstring for __repr__"""
                 return "{" + str(self.elem) + " => [" +\
                     ", ".join([str(x) for x in self.childs]) + "]" + "}"
 
@@ -234,7 +216,6 @@ class XhtmlSplitter:
                 return kids
 
         def wrap_genTreeNode(elem):
-            """docstring for wrap_genTreeNode"""
             ret = genTreeNode(elem)
             assert isinstance(ret, list)
             return ret
@@ -269,14 +250,12 @@ class XhtmlSplitter:
         return self._write_file(self.input_fn, tree_s)
 
     def _list_sections(self):
-        """docstring for _list_sections"""
         return self._coords_list
 
     def _calc_list_sections(self):
         yield from self.tree[0].myiter(coord_prefix=[],)
 
     def _lookup_list_elem(self, coords):
-        """docstring for _lookup_list_elem"""
         ret = self.tree[0]
         prev = prev_coords = None
         next_ = next_coords = None
@@ -301,11 +280,9 @@ class XhtmlSplitter:
         return ((prev_coords, prev), (coords, elem), (next_coords, next_))
 
     def _is_protected(self, elem):
-        """docstring for _protect"""
         return elem.get(self._protect_attr_name)
 
     def _protect(self, elem):
-        """docstring for _protect"""
         elem.set(self._protect_attr_name, "true")
 
     def process(self):
@@ -324,8 +301,6 @@ class XhtmlSplitter:
         self._calc_root()
 
         def _add_prefix(prefix, suffix, list_elem, prev):
-            """docstring for _add_prefix"""
-            # print('input_fn = ', self.input_fn)
             try:
                 header_tag = self._get_header(list_elem)
             except MyXmlNoResultsFoundError:
@@ -412,8 +387,6 @@ class XhtmlSplitter:
             )
         self._write_master_xml_file()
 
-        # self._calc_root()
-
         if len(self.path_to_images):
             for img_elem in _xpath(self.ns,
                                    self.container_elem,
@@ -447,7 +420,6 @@ class XhtmlSplitter:
                         xhtml_prefix=self.xhtml_prefix
                     )
                 )
-                # print(self.input_fn, res)
                 if len(res) == 0:
                     break
                 assert len(res) == 1
@@ -457,7 +429,6 @@ class XhtmlSplitter:
                 p_iter = p_iter.getparent()
 
             def _a_tags(list_elem):
-                """docstring for _atags"""
                 return _xpath(
                     self.ns,
                     list_elem,

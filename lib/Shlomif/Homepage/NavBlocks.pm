@@ -870,7 +870,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
             tr_s => [
                 _master_tr(
                     title =>
-q{<a href="https://github.com/shlomif/shlomif-tech-diary/blob/master/multiverse-cosmology-v0.4.x.asciidoc#user-content-self-ref">Self-Reference</a> / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
+q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#self-ref">Self-Reference</a> / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s(

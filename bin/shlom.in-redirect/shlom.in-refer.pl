@@ -56,7 +56,10 @@ if ( my ($id) = $path =~ m{\A/([^/]+)\z} )
 <p>
 This URL alias is not defined. If you've reached this URL and think it should
 be defined please contact <a href="mailto:shlomif@shlomifish.org">Shlomi
-Fish (the Webmaster)</a> and let him know of this problem.
+Fish (the Webmaster)</a> (
+<a href="https://www.shlomifish.org/me/contact-me/">more contact options</a>
+)
+and let him know of this problem.
 </p>
 </body>
 </html>
@@ -75,12 +78,14 @@ else
         $table .=
 qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td class="full"><p><a href="$url">$url</a></p></td><td><p>$d</p></td></tr>!;
     }
+    my $title =
+"Welcome to http://shlom.in/ , the private short URL service of Shlomi Fish";
     print $HEADER, <<"EOF";
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>Welcome to http://shlom.in/</title>
+<title>$title</title>
 <meta charset="utf-8"/>
 <style>
 td, th
@@ -94,7 +99,7 @@ td, th
 </head>
 <body>
 
-<h1>Welcome to http://shlom.in/</h1>
+<h1>$title</h1>
 
 <p>
 This domain serves as <a href="http://www.shlomifish.org/">Shlomi Fish's</a>

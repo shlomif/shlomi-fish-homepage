@@ -66,6 +66,22 @@ class MyTests(unittest.TestCase):
             "^.*?What can you say about your name", desc_text)
         self.assertTrue(m)
 
+    def test_faq_indiv_node_links(self):
+        input_fn = './dest/post-incs/t2/meta/FAQ/your_name.xhtml'
+        root = html.parse(input_fn)
+        headers = root.xpath(".//section/header[h3/@id='your_name']")
+        self.assertEqual(len(headers), 1)
+        goodlinks = headers[0].xpath(
+            "./span[@class='indiv_node']/a[contains(@href, '#your_name') "
+            "and contains(text(), 'Node Link')]"
+        )
+        self.assertEqual(len(goodlinks), 1)
+        badlinks = headers[0].xpath(
+            "./a[@class='indiv_node' and contains(@href, 'your_name') "
+            "and contains(text(), 'Node Link')]"
+        )
+        self.assertEqual(len(badlinks), 0)
+
     def _helper_indiv_nodes_test(self, root, xpath_str, name):
         """docstring for _helper_indiv_nodes_test"""
         articles = root.xpath(xpath_str)

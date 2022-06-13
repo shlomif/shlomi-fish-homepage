@@ -5,7 +5,9 @@
 [%- WRAPPER wrap_html -%]
 
 [%- BLOCK faq_h_section -%]
-[%- WRAPPER h_section h_tag=h_tag h_class=h_tag id=id title=title href=href extra_h_header_contents="<a class=\"indiv_node\" href=\"${id}.xhtml\">Node Link</a>" -%]
+[%- WRAPPER h_section h_tag=h_tag h_class=h_tag id=id title=title href=href
+# extra_h_header_contents="<a class=\"indiv_node\" href=\"${id}.xhtml\">Node Link</a>"
+-%]
 [% content %]
 [%- END -%]
 [%- END -%]

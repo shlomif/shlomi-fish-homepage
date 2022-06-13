@@ -87,10 +87,6 @@ class XhtmlSplitter:
 
         self._indiv_node = individual_node_css_class
         self.back_to_source_page_css_class = back_to_source_page_css_class
-        self._back_re_css = re.compile(
-            "\\b(?:" + re.escape(self.back_to_source_page_css_class) + ")\\b",
-            re.M | re.S
-        )
         self.input_fn = input_fn
         self.ns = ns
         self.output_dirname = output_dirname
@@ -463,8 +459,6 @@ class XhtmlSplitter:
                         continue
                     href = a_elem.get("href")
                     if href.startswith(("http:", "https:", )):
-                        continue
-                    if self._back_re_css.search(a_elem.get("class") or ""):
                         continue
                     a_elem.set(
                         "href", self.path_to_images + href

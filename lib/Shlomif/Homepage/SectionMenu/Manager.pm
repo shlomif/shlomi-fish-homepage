@@ -3,7 +3,7 @@ package Shlomif::Homepage::SectionMenu::Manager;
 use strict;
 use warnings;
 
-use Shlomif::Homepage::SectionMenu           ();
+use Shlomif::Homepage::SectionMenu ();
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
 
 use Shlomif::Homepage::SectionMenu::AllSects ();

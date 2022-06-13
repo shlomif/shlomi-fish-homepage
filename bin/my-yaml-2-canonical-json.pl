@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use YAML::XS qw/ LoadFile /;
+use YAML::XS      qw/ LoadFile /;
 use JSON::MaybeXS qw/ encode_json /;
-use Path::Tiny qw/ path /;
-use Getopt::Long qw/GetOptions/;
+use Path::Tiny    qw/ path /;
+use Getopt::Long  qw/GetOptions/;
 
 my $output_fn;
 my $input_fn;

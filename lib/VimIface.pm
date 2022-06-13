@@ -5,8 +5,8 @@ use strict;
 use warnings;
 
 use Text::VimColor 0.29 ();
-use Path::Tiny qw/ path /;
-use File::ShouldUpdate qw/ should_update /;
+use Path::Tiny          qw/ path /;
+use File::ShouldUpdate  qw/ should_update /;
 
 sub get_syntax_highlighted_html_from_file
 {

@@ -9,11 +9,11 @@ use Moo;
 
 use Shlomif::Homepage::FortuneCollections::Record ();
 
-use JSON::MaybeXS ();
-use List::Util qw(max);
-use Path::Tiny qw/ path /;
+use JSON::MaybeXS    ();
+use List::Util       qw(max);
+use Path::Tiny       qw/ path /;
 use Shlomif::FindLib ();
-use YAML::XS         (qw(LoadFile));
+use YAML::XS (qw(LoadFile));
 
 sub _init_fortune
 {

@@ -12,9 +12,9 @@ use warnings;
 use 5.014;
 use autodie;
 
-use Data::Munge qw/ list2re /;
-use List::Util qw/ none /;
-use Path::Tiny qw/ path tempdir tempfile cwd /;
+use Data::Munge              qw/ list2re /;
+use List::Util               qw/ none /;
+use Path::Tiny               qw/ path tempdir tempfile cwd /;
 use File::Find::Object::Rule ();
 
 my $dir_src = 'dest/post-incs/t2';

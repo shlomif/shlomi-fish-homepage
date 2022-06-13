@@ -6,7 +6,7 @@ use warnings;
 use Moo;
 
 use Path::Tiny qw/ path /;
-use YAML::XS ();
+use YAML::XS   ();
 
 sub _calc_fiction_story_makefile_lines
 {

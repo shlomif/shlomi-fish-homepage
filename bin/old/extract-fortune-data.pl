@@ -6,7 +6,7 @@ use 5.014;
 
 use Path::Tiny qw/ path /;
 use List::Util qw/ first /;
-use YAML::XS qw/ LoadFile DumpFile /;
+use YAML::XS   qw/ LoadFile DumpFile /;
 
 use lib './lib';
 use Shlomif::Homepage::FortuneCollections ();

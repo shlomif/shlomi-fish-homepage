@@ -6,7 +6,7 @@ use lib './lib';
 
 use utf8;
 
-use Path::Tiny qw/ path /;
+use Path::Tiny                 qw/ path /;
 use XML::LibXML                ();
 use HTML::Latemp::Local::Paths ();
 use Shlomif::DocBookClean      ();

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Markdent::Simple::Fragment ();
-use Path::Tiny qw/ path /;
+use Path::Tiny                 qw/ path /;
 
 sub as_text
 {

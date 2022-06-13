@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use JSON::MaybeXS qw( decode_json );
-use Path::Tiny qw/ path /;
+use Path::Tiny    qw/ path /;
 
 use MyNavData                                              ();
 use HTML::Widgets::NavMenu::ToJSON                         ();

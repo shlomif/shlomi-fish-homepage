@@ -7,7 +7,7 @@ use utf8;
 use Test::More tests => 47;
 
 use HTML::Entities qw/ decode_entities /;
-use Path::Tiny qw/ path /;
+use Path::Tiny     qw/ path /;
 use lib './lib';
 use HTML::Latemp::Local::Paths::Test ();
 

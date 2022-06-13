@@ -5,10 +5,10 @@ use warnings;
 
 use Moo;
 
-use Path::Tiny qw/ path /;
-use File::Update qw/ write_on_change /;
-use Template ();
-use Text::VimColor 0.29 ();
+use Path::Tiny                       qw/ path /;
+use File::Update                     qw/ write_on_change /;
+use Template                         ();
+use Text::VimColor 0.29              ();
 use Shlomif::Homepage::Presentations ();
 
 my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";

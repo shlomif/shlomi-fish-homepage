@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use File::Spec ();
+use File::Spec   ();
 use Getopt::Long qw/ GetOptions /;
 
 my $master_url = "http://www.shlomifish.org/humour/fortunes/";

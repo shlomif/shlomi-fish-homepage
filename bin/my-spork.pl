@@ -10,8 +10,8 @@ use warnings;
 use 5.014;
 use autodie;
 
-use Spork::Shlomify ();
-use Path::Tiny qw/ path /;
+use Spork::Shlomify           ();
+use Path::Tiny                qw/ path /;
 use XML::LibXML               ();
 use XML::LibXML::XPathContext ();
 

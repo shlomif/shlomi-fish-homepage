@@ -6,7 +6,7 @@ use utf8;
 
 use Carp ();
 
-use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
+use HTML::Widgets::NavMenu::EscapeHtml     qw( escape_html );
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();
 use MyNavLinks                             ();

@@ -5,9 +5,9 @@ use warnings;
 
 use Moo;
 
-use Path::Tiny qw/ path /;
+use Path::Tiny   qw/ path /;
 use File::Update qw( write_on_change );
-use YAML::XS ();
+use YAML::XS     ();
 
 use XML::Grammar::Screenplay::FromProto::API::ListImages ();
 use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();

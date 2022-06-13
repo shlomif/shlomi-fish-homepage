@@ -10,9 +10,9 @@ use MyNavData                              ();
 use MyNavData::Hosts                       ();
 use NavDataRender                          ();
 use NavSectMenuRender                      ();
-use Path::Tiny qw/ path /;
-use Parallel::Map::Segmented ();
-use File::Update qw/ write_on_change /;
+use Path::Tiny                             qw/ path /;
+use Parallel::Map::Segmented               ();
+use File::Update                           qw/ write_on_change /;
 
 my $hosts         = MyNavData::Hosts::get_hosts();
 my $host          = 't2';

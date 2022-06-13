@@ -7,9 +7,9 @@ use utf8;
 
 use Carp ();
 
-use Shlomif::Homepage::SectionMenu           ();
+use Shlomif::Homepage::SectionMenu ();
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
-use MyNavData::Hosts                         ();
+use MyNavData::Hosts ();
 
 my @personal_expand = ( expand => { bool => 1, capt => 0, }, );
 my @humour_expand   = ( re     => qr#\A@{[ get_is_humour_re()]}#, );

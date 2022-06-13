@@ -12,10 +12,10 @@ use warnings;
 use 5.014;
 use autodie;
 
-use Carp qw/ confess /;
+use Carp         qw/ confess /;
 use Getopt::Long qw/ GetOptions /;
-use Digest ();
-use Time::HiRes qw( stat lstat utime );
+use Digest       ();
+use Time::HiRes  qw( stat lstat utime );
 
 use Path::Tiny qw/ cwd path tempdir tempfile /;
 use Docker::CLI::Wrapper::Container v0.0.4 ();

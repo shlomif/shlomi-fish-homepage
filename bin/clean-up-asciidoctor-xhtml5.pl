@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Path::Tiny qw/ path /;
+use Path::Tiny   qw/ path /;
 use File::Update qw/ modify_on_change /;
 
 modify_on_change(

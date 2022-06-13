@@ -6,11 +6,11 @@ use utf8;
 
 use Moo;
 
-use DateTime       ();
-use HTML::Acronyms ();
-use Path::Tiny qw/ path /;
+use DateTime                           ();
+use HTML::Acronyms                     ();
+use Path::Tiny                         qw/ path /;
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use YAML::XS ();
+use YAML::XS                           ();
 
 use Shlomif::Homepage::LongStories::Story ();
 

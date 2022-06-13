@@ -6,8 +6,8 @@ use utf8;
 
 use lib './lib';
 
-use Path::Tiny qw/ path /;
-use File::Update qw/ write_on_change write_on_change_no_utf8 /;
+use Path::Tiny                qw/ path /;
+use File::Update              qw/ write_on_change write_on_change_no_utf8 /;
 use JSON::MaybeXS             ();
 use XML::LibXML               ();
 use XML::LibXML::XPathContext ();

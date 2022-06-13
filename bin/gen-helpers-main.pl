@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Latemp::GenMakeHelpers v0.8.0;
-use Path::Tiny qw/ path /;
+use Path::Tiny   qw/ path /;
 use File::Update qw/ write_on_change_raw /;
 
 package Shlomif::Homepage::GenMakeHelpers;

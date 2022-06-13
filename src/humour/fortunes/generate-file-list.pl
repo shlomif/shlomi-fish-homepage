@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Path::Tiny qw/ path /;
+use Path::Tiny                         qw/ path /;
 
 open my $arcs_list_fh, "<", "fortunes-list.mak";
 my @lines = <$arcs_list_fh>;

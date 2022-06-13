@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.014;
 use utf8;
-use List::Util qw( any );
+use List::Util             qw( any );
 use MyNavData              ();
 use HTML::Widgets::NavMenu ();
 use MyNavLinks             ();

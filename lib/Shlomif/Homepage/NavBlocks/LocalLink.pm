@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Shlomif::Homepage::RelUrl qw/ _path_info _rel_url /;
+use Shlomif::Homepage::RelUrl          qw/ _path_info _rel_url /;
 use MooX (qw( late ));
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');

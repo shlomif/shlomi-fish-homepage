@@ -5,7 +5,7 @@ use warnings;
 
 use MooX qw( late );
 
-use Path::Tiny qw(path);
+use Path::Tiny    qw(path);
 use JSON::MaybeXS qw(decode_json);
 
 use XML::Grammar::ProductsSyndication ();

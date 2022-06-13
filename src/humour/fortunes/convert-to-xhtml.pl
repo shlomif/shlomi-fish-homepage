@@ -6,7 +6,7 @@ use XML::Grammar::Fortune     ();
 use XML::LibXML               ();
 use URI::Find                 ();
 use XML::LibXML::XPathContext ();
-use Encode qw/ decode /;
+use Encode                    qw/ decode /;
 
 my ( $xml_fn, $out_fn ) = @ARGV;
 

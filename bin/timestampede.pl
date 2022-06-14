@@ -50,7 +50,10 @@ sub run
             $d->addfile($fh);
             close $fh;
             my $h = $d->hexdigest;
-            print sprintf( "%s\t%s\t%f\t%f", $l, $h, @s[ 8, 9 ] ), "\n";
+            print sprintf( "%s\t%s\t%s\t%s",
+                $l, $h, ( map { unpack "H*", pack( "d", $_ ) } @s[ 8, 9 ] ),
+                ),
+                "\n";
         }
     }
     close $dfh;

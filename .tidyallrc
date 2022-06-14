@@ -11,7 +11,7 @@ ignore =
 [PerlTidy]
 select = **/*.{pl,pm,t}
 argv = -ci=4 -bl -cti=0 --character-encoding=none
-ignore = dest/**/* lib/presentations/qp/perl-for-newbies/**/* lib/repos/xslt10-stylesheets/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/* node_modules/**/* bin/shlom.in-redirect/A.pm bin/shlom.in-redirect/D.pm bin/shlom.in-redirect/dest/1/A.pm bin/shlom.in-redirect/dest/1/D.pm bin/shlom.in-redirect/dest/1/shlom.in-refer.pl
+ignore = dest/**/* lib/presentations/qp/**/Contents.pm lib/presentations/qp/perl-for-newbies/**/* lib/repos/xslt10-stylesheets/**/* lib/fiction-xml/from-vcs/**/* lib/screenplay-xml/from-vcs/**/* node_modules/**/* bin/shlom.in-redirect/A.pm bin/shlom.in-redirect/D.pm bin/shlom.in-redirect/dest/1/A.pm bin/shlom.in-redirect/dest/1/D.pm bin/shlom.in-redirect/dest/1/shlom.in-refer.pl
 
 [PerlCritic]
 select = **/*.{pl,pm,t}

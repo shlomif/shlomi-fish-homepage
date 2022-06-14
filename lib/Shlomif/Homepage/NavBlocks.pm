@@ -241,6 +241,34 @@ my %tr_s = (
             ),
         ],
     ),
+    'chuck_norris_essays' => _tr(
+        title => "Essays",
+        items => [
+            _l(
+                inner_html => "Putting All Cards on the Table (2013)",
+                path       =>
+"philosophy/philosophy/putting-all-cards-on-the-table-2013/",
+            ),
+            _l(
+                inner_html => "Putting Cards on the Table (2019-*)",
+                path       =>
+"philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
+            ),
+        ],
+    ),
+    'chuck_norris_facts' => _tr(
+        title => "“Facts”",
+        items => [
+            _l(
+                inner_html => "Chuck Norris Facts",
+                path       => "humour/bits/facts/Chuck-Norris/",
+            ),
+            _l(
+                inner_html => "Summer Glau Facts",
+                path       => "humour/bits/facts/Summer-Glau/",
+            ),
+        ],
+    ),
     'foss_bits' => _tr(
         title => "Ultra-short stories",
         items => [
@@ -722,6 +750,26 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 _get_tr('card_games_bits'),
             ],
         },
+    ),
+    'chuck_norris' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'chuck_norris_nav_block',
+            text_title => "Chuck Norris Fanfiction and Essays",
+            tr_s       => [
+                _master_tr(
+                    title => q{Chuck Norris Fanfiction and Essays},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
+                _subdiv_tr( title => q{Factoids}, ),
+                _get_tr('chuck_norris_facts'),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr('chuck_norris_essays'),
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
+            ],
+        }
     ),
     'friends_tv' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {

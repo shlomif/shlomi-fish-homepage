@@ -13,7 +13,6 @@ Split XHTML5 / HTML5 documents into individual sections.
 import copy
 import html
 import os
-import re
 import lxml.html
 
 from lxml import etree
@@ -50,10 +49,8 @@ def _first(ns, node, query, debug):
     return mylist[0]
 
 
-TITLE_RE = re.compile(
-    " - Shlomi Fish['’]s Homesite\\Z",
-    re.M | re.S,
-)
+def _dummy_process_title(self, title):
+    return title
 
 
 class XhtmlSplitter:
@@ -78,7 +75,11 @@ class XhtmlSplitter:
             input_is_plain_html=False,
             list_sections_format=None,
             main_title=None,
+            process_header_text=_dummy_process_title,
+            process_main_title=_dummy_process_title,
     ):
+        self.process_header_text = process_header_text
+        self.process_main_title = process_main_title
         self.main_title = main_title
         self.list_sections_format = (
             list_sections_format or
@@ -151,12 +152,6 @@ class XhtmlSplitter:
             else _xhtml_to_string
         )
 
-    def _process_title(self, header_text):
-        return TITLE_RE.sub(
-            "",
-            header_text,
-        )
-
     def _get_header(self, elem):
         return _first(
             self.ns, elem, self._header_xpath,
@@ -178,7 +173,10 @@ class XhtmlSplitter:
                 self.main_title_xpath,
                 True,
             )
-        self.main_title = self._process_title(self.main_title)
+        self.main_title = self.process_main_title(
+            self=self,
+            title=self.main_title
+        )
         self.main_title_esc = html.escape(self.main_title)
         self.container_elem = _first(
             self.ns,
@@ -291,7 +289,10 @@ class XhtmlSplitter:
             h_tag = _first(self.ns, header_tag, "./*[@id]", True)
             id_ = h_tag.get('id')
             header_text = h_tag.text
-            header_text = self._process_title(header_text)
+            header_text = self.process_header_text(
+                self=self,
+                title=header_text,
+            )
             header_esc = html.escape(header_text)
             return id_, header_esc
 

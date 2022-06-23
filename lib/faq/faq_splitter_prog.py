@@ -11,11 +11,32 @@ Split Shlomi Fish's XHTML5 / HTML5 documents (for example his FAQ-list)
 into individual pages per sections.
 """
 
+import re
+
 from lxml.html import XHTML_NAMESPACE
 
 from split_into_sections import XHTML_ARTICLE_TAG
 from split_into_sections import XHTML_SECTION_TAG
 from split_into_sections import XhtmlSplitter
+
+
+TITLE_RE = re.compile(
+    " - Shlomi Fish['’]s Homesite\\Z",
+    re.M | re.S,
+)
+
+
+def _process_title(self, title):
+    return TITLE_RE.sub(
+        "",
+        title,
+    )
+
+
+COMMON_TITLE_CBS = {
+    'process_header_text': _process_title,
+    'process_main_title': _process_title,
+}
 
 
 def _tag_xpath(tag, TOP_LEVEL_CLASS):
@@ -156,6 +177,7 @@ def generate_from_image_macros_page(
     base_path = _calc_base_path(OUT_DN)
     output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
+        **COMMON_TITLE_CBS,
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/" + path_to_input),
@@ -194,6 +216,7 @@ def _faq_gen():
     OUT_DN = "./dest/post-incs/t2/meta/FAQ"
     TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
     splitter = XhtmlSplitter(
+        **COMMON_TITLE_CBS,
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/index.xhtml"),
@@ -272,6 +295,7 @@ def generic_generate_from_(
     full_out_dirname = OUT_DN + (output_dirname or '')
 
     splitter = XhtmlSplitter(
+        **COMMON_TITLE_CBS,
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         container_elem_xpath=container_elem_xpath,
@@ -310,6 +334,7 @@ def generic_generate(
     TOP_LEVEL_CLASS = 'screenplay'
 
     splitter = XhtmlSplitter(
+        **COMMON_TITLE_CBS,
         back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
         individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
         input_fn=(OUT_DN + "/" + path_to_input),

@@ -2,10 +2,11 @@
 [%- SET desc = "An essay enumerating some of the trade-offs in programming languages design and why some people will always be unhappy" -%]
 [%- SET more_keywords = "perl, haskell, types, scoping, python, essay, programming, languages, design, advantages, tradeoffs, suck, pleasing everyone, lisp, goto" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 This is an essay that enumerates some trade-offs in the design of programming
@@ -14,7 +15,7 @@ languages, and why some people who have to learn or use the language will always
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "text"  title = "The text"  %]
+[% WRAPPER h2_section id = "text" title = "The text" %]
 
 <p>
 All <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>
@@ -214,7 +215,7 @@ to use.
 
 </ul>
 
-[% WRAPPER h3_section id = "good-design" title = "Guidelines for good programming languages design"  %]
+[% WRAPPER h3_section id = "good-design" title = "Guidelines for good programming languages design" %]
 
 <p>
 So they may suck less…

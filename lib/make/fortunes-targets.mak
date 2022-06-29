@@ -33,7 +33,7 @@ FORTUNES_TEXTS__PRE_DEST := $(patsubst $(SRC_SRC_DIR)/%,$(PRE_DEST)/%,$(FORTUNES
 FORTUNES_DATS__PRE_DEST := $(patsubst $(SRC_SRC_DIR)/%,$(PRE_DEST)/%,$(FORTUNES_DATS))
 SRC_SRC_FORTUNE_SHOW_SCRIPT := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 FORTUNE_SHOW_PY__BN := fortunes_show.py
-SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/$(FORTUNE_SHOW_PY__BN)
+SRC_SRC_FORTUNE_SHOW_PY := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/show.cgi
 SRC_SRC_BOTTLE := $(SRC_SRC_DIR)/$(FORTUNES_DIR)/bottle.py
 POST_DEST_FORTUNE_SHOW_SCRIPT_TXT := $(POST_DEST_FORTUNES_DIR)/show-cgi.txt
 
@@ -103,9 +103,6 @@ $(FORTS_EPUB_COVER_PNG): $(FORTS_EPUB_COVER_SVG)
 	$(INKSCAPE_WRAPPER) --export-width=600 --export-type=png --export-filename="$@" $< && \
 	$(OPTIPNG) $@
 
-$(SRC_SRC_FORTUNE_SHOW_PY): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)
-	$(call chmod_copy)
-
 $(SRC_FORTUNES_ALL_TT2): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-forts-all-in-one-page.pl $(FORTUNES_LIST_PM)
 	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $< $@
 
@@ -115,3 +112,10 @@ POST_DEST_FORTUNES_many_files := $(POST_DEST_FORTUNES_SQLITE_DB)
 $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 all_deps: $(SRC_FORTUNES_ALL_TT2)
 copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
+
+FORTUNES_SHOW_CGI__XHTMLS_PIVOT := dest/post-incs/t2/humour/fortunes/__FORTS-show-cgi-xhtmls/i-thought-using-loops-was-cheating.xhtml
+
+all_deps: $(FORTUNES_SHOW_CGI__XHTMLS_PIVOT)
+
+$(FORTUNES_SHOW_CGI__XHTMLS_PIVOT): copy_fortunes
+	$(TEST_ENV) python3 bin/dump-all-fortunes-show-cgi-xhtmls.py

@@ -117,5 +117,5 @@ FORTUNES_SHOW_CGI__XHTMLS_PIVOT := dest/post-incs/t2/humour/fortunes/__FORTS-sho
 
 all_deps: $(FORTUNES_SHOW_CGI__XHTMLS_PIVOT)
 
-$(FORTUNES_SHOW_CGI__XHTMLS_PIVOT): copy_fortunes
+$(FORTUNES_SHOW_CGI__XHTMLS_PIVOT): $(POST_DEST_FORTUNES_SQLITE_DB)
 	$(TEST_ENV) python3 bin/dump-all-fortunes-show-cgi-xhtmls.py

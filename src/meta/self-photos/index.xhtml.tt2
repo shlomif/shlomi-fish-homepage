@@ -19,9 +19,9 @@
 
 [% END %]
 
-<p>
-<img alt="Wearing a red E.T. shirt" src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" />
-</p>
+[% WRAPPER photo alt = "Wearing a red E.T. shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" %]
+
+[% END %]
 
 </div>
 

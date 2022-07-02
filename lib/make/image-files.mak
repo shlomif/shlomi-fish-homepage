@@ -11,6 +11,8 @@ MY_NAME_IS_RINDOLF_DEST := $(RINDOLF_IMAGES_POST_DEST)/my-name-is-rindolf-200w.j
 
 Shlomif_cutethulhu_SRC := common/images/shlomif-cutethulhu.webp
 Shlomif_cutethulhu_DEST := $(POST_DEST)/images/shlomif-cutethulhu-small.webp
+Shlomif_sglau_shirt_field_SRC := src/meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg
+Shlomif_sglau_shirt_field_DEST := $(POST_DEST)/meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg-400px.webp
 Evilphish_flipped_src := $(POST_DEST)/images/evilphish.png
 
 DnD_lances_cartoon_DEST := $(POST_DEST)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.webp
@@ -62,6 +64,11 @@ $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 	$(IMAGE_CONVERT) -resize '170x' $< $@
 
 non_latemp_targets: $(Shlomif_cutethulhu_DEST)
+
+$(Shlomif_sglau_shirt_field_DEST): $(Shlomif_sglau_shirt_field_SRC)
+	$(IMAGE_CONVERT) -resize '400x' $< $@
+
+non_latemp_targets: $(Shlomif_sglau_shirt_field_DEST)
 
 Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif

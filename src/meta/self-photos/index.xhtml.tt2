@@ -6,9 +6,18 @@
 
 <div class="self_photos">
 
+[% BLOCK photo %]
+
 <p>
-<img alt="Wearing the #SummerNSA shirt" src="[% base_path %]meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" />
+[% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
+<a href="[% img %]">[% tag %]</a>
 </p>
+
+[% END %]
+
+[% WRAPPER photo alt = "Wearing the #SummerNSA shirt" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
+
+[% END %]
 
 <p>
 <img alt="Wearing a red E.T. shirt" src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" />

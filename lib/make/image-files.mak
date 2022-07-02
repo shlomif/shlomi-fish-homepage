@@ -66,7 +66,7 @@ $(Shlomif_cutethulhu_DEST): $(Shlomif_cutethulhu_SRC)
 non_latemp_targets: $(Shlomif_cutethulhu_DEST)
 
 $(Shlomif_sglau_shirt_field_DEST): $(Shlomif_sglau_shirt_field_SRC)
-	$(IMAGE_CONVERT) -resize '400x' $< $@
+	$(IMAGE_CONVERT) -rotate 90 -resize '400x' $< $@
 
 non_latemp_targets: $(Shlomif_sglau_shirt_field_DEST)
 

@@ -2,9 +2,10 @@
 [%- SET desc = "A “Back to my Homepage” graphic artwork similar to the logo of “Back to the future”" -%]
 [%- SET more_keywords = "SVG, svg, inkscape, graphics, back to the future, image, film, movie, homepage, back, web, vector, open source" -%]
 
+[% main_class.addClass("fancy_sects", "lim_width") %]
+
 [%- WRAPPER wrap_html -%]
 
-<div class="lim_width">
 <img src="../../images/bk2hp-v2.svg" alt="Back to my homepage" class="bk2hp"/>
 
 [% WRAPPER h2_section "id" => "about", "title" => "About this image", %]
@@ -134,7 +135,5 @@ SVG files, while running subsequent scripts on them to produce other files
 [%- END -%]
 
 [%- END -%]
-
-</div>
 
 [% END %]

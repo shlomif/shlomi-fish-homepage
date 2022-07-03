@@ -10,7 +10,7 @@
 
 <p>
 [% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
-<a href="[% img %]">[% tag %]</a>
+<a href="[% img _ link_img_ext %]">[% tag %]</a>
 </p>
 
 [% END %]
@@ -20,6 +20,10 @@
 [% END %]
 
 [% WRAPPER photo alt = "Wearing a red E.T. shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" %]
+
+[% END %]
+
+[% WRAPPER photo alt = "Wearing a red E.T. shirt" img = "${base_path}images/shlomif-cutethulhu" img_ext = "-small.webp" link_img_ext = ".webp" %]
 
 [% END %]
 

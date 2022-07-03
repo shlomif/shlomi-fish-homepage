@@ -53,6 +53,7 @@ class MyTests(html_unit_test.TestCase):
         os.makedirs(dest_dir, exist_ok=True, )
         maxidlen = max([len(x) for x in strings_list])
         print('maxidlen = ', maxidlen)
+        assert maxidlen < (1 << 7)
         for str_id in strings_list:
             resp = app.get('?id=' + str_id)
             assert resp.status_code == 200

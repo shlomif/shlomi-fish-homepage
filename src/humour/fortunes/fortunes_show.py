@@ -39,6 +39,7 @@ def _list_all_string_ids():
         'SELECT str_id FROM fortune_cookies ORDER BY str_id',
     )
     strings = cur.fetchall()
+    strings = [s for (s,) in strings]
     return strings
 
 

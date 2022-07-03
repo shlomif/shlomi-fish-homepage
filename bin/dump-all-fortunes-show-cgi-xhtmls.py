@@ -51,8 +51,9 @@ class MyTests(html_unit_test.TestCase):
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
         dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
         os.makedirs(dest_dir, exist_ok=True, )
-        for id_tuple in strings_list:
-            str_id, = id_tuple
+        maxidlen = max([len(x) for x in strings_list])
+        print('maxidlen = ', maxidlen)
+        for str_id in strings_list:
             resp = app.get('?id=' + str_id)
             assert resp.status_code == 200
             text = resp.text  # .encode('utf8')

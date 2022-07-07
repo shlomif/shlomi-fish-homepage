@@ -51,9 +51,18 @@ class MyTests(html_unit_test.TestCase):
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
         dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
         os.makedirs(dest_dir, exist_ok=True, )
-        maxidlen = max([len(x) for x in strings_list])
+        maxidlen = max(len(x) for x in strings_list)
         print('maxidlen = ', maxidlen)
-        assert maxidlen < (1 << 7)
+        RECORD_LEN = (1 << 7)
+        assert maxidlen < RECORD_LEN
+        randfn = containing_dest_dir + "__FORTS-show-cgi-ids.dat"
+        with open(randfn, 'wb') as f:
+            for str_id in strings_list:
+                s = str_id + ("\n" * (RECORD_LEN - len(str_id)))
+                assert len(s) == RECORD_LEN
+                s = s.encode('utf8')
+                assert len(s) == RECORD_LEN
+                f.write(s)
         for str_id in strings_list:
             resp = app.get('?id=' + str_id)
             assert resp.status_code == 200

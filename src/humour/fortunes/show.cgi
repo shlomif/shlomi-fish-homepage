@@ -15,10 +15,38 @@ use 5.008;
 
 use Carp qw/ confess /;
 use CGI  ();
+my $id_re = qr#[A-Za-z][A-Za-z0-9_\-]*#ms;
 
-my $cgi = CGI->new();
-my $id  = $cgi->param('id');
-if ( $id !~ m#\A[A-Za-z][A-Za-z0-9_\-]*\z#ms )
+my $cgi  = CGI->new();
+my $mode = ( $cgi->param('mode') // '' );
+if ( $mode eq "random" )
+{
+    my $filename      = "__FORTS-show-cgi-ids.dat";
+    my @stat          = stat($filename);
+    my $len           = $stat[7];
+    my $RECORD_LEN    = ( 1 << 7 );
+    my $records_count = int( $len / $RECORD_LEN );
+    my $i             = int rand($records_count);
+    my $p             = $i * $RECORD_LEN;
+    open my $fh, '<:raw', $filename
+        or die;
+    seek( $fh, $p, 0 );
+    my $buf = '';
+    read( $fh, $buf, $RECORD_LEN );
+    close $fh;
+
+    if ( my ($id) = ( $buf =~ m#\A(${id_re})\n#ms ) )
+    {
+        # body...
+    }
+    else
+    {
+        die "bad record";
+    }
+
+}
+my $id = $cgi->param('id');
+if ( $id !~ m#\A${id_re}\z#ms )
 {
     die "dangerous ID";
 }

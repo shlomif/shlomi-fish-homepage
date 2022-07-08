@@ -37,7 +37,8 @@ if ( $mode eq "random" )
 
     if ( my ($id) = ( $buf =~ m#\A(${id_re})\n#ms ) )
     {
-        # body...
+        print "Status: 302\r\nLocation: show.cgi?id=${id}\r\n\r\n";
+        exit(0);
     }
     else
     {

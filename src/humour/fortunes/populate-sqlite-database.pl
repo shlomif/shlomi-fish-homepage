@@ -152,7 +152,9 @@ foreach my $basename (@file_bases)
         {
             die "No ID in file '$basename' in " . $node->as_XML . "!";
         }
-        my $clone = $node->clone();
+
+        # my $clone = $node->clone();
+        my $clone = $node;
         my $h3    = _find_h3($clone);
         $h3->detach();
         my $info = _find_info($clone);

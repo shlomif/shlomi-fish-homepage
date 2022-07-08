@@ -4,7 +4,6 @@ use strict;
 use warnings;
 use autodie;
 
-use Encode                qw/ decode_utf8 encode_utf8 /;
 use File::Spec::Functions qw( catpath splitpath rel2abs );
 use List::Util            qw/ min /;
 use YAML::XS              qw/ LoadFile /;

@@ -3,10 +3,7 @@
 use strict;
 use warnings;
 
-use XML::LibXML;
-use XML::LibXML::Reader;
-use XML::LibXML::XPathContext;
-use Getopt::Long;
+use XML::LibXML::Reader ();
 
 my $out_fn;
 
@@ -42,5 +39,4 @@ foreach my $filename (@ARGV)
             }
         }
     }
-
 }

@@ -311,14 +311,14 @@ EOF
         (
             map {
                 my $fn = $_;
-                my $x  = _basename($fn);
-                $x =~ s/\.raw(\.html)\z/$1/;
+                my $bn = _basename($fn);
+                $bn =~ s/\.raw(\.html)\z/$1/;
                 my $heb_filt = '';
-                if ( $x =~ /hebrew/ )
+                if ( $bn =~ /hebrew/ )
                 {
                     $heb_filt = "DIR=rtl";
                 }
-                "${fn}: \$(SCREENPLAY_XML_HTML_DIR)/${x}"
+                "${fn}: \$(SCREENPLAY_XML_HTML_DIR)/${bn}"
                     . sprintf( "\n\t\$(call %s,%s)\n\n",
                     $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
             } @_htmls_files

@@ -38,15 +38,15 @@ import unittest
 
 import html_unit_test
 
-from webtest import TestApp
+# from webtest import TestApp
 sys.path.append('./src/humour/fortunes/')
 import fortunes_show  # noqa:E402
 
 
 class MyTests(html_unit_test.TestCase):
     def test_meta_desc_tag(self):
-        app = TestApp(fortunes_show.app)
-        assert app
+        # app = TestApp(fortunes_show.app)
+        # assert app
         strings_list = fortunes_show._list_all_string_ids()
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
         dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
@@ -64,9 +64,10 @@ class MyTests(html_unit_test.TestCase):
                 assert len(s) == RECORD_LEN
                 f.write(s)
         for str_id in strings_list:
-            resp = app.get('?id=' + str_id)
-            assert resp.status_code == 200
-            text = resp.text  # .encode('utf8')
+            # resp = app.get('?id=' + str_id)
+            # assert resp.status_code == 200
+            # text = resp.text  # .encode('utf8')
+            text = fortunes_show._show_by_str_id(raw_mode=False, str_id=str_id)
             assert len(text) > 0
             # print(text)
             fn = dest_dir + "/" + str_id + ".xhtml"

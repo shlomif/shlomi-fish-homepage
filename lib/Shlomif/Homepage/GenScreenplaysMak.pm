@@ -17,6 +17,9 @@ package Shlomif::Homepage::GenScreenplaysMak::Lister;
 use Moo;
 use File::Update qw( write_on_change );
 
+my $xml_parser = XML::LibXML->new();
+$xml_parser->validation(0);
+
 sub calc_doc__from_proto_text
 {
     my ( $self, $xml_out_fh, $args ) = @_;
@@ -30,8 +33,6 @@ sub calc_doc__from_proto_text
     my $xml_text = $ret->convert($args);
     $ret->_xml($xml_text);
     write_on_change( $xml_out_fh, \$xml_text );
-    my $xml_parser = XML::LibXML->new();
-    $xml_parser->validation(0);
     $ret->_dom( $xml_parser->parse_string( $ret->_xml() ) );
 
     return $ret;

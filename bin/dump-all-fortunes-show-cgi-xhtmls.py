@@ -36,14 +36,12 @@ import os
 import sys
 import unittest
 
-import html_unit_test
-
 # from webtest import TestApp
 sys.path.append('./src/humour/fortunes/')
 import fortunes_show  # noqa:E402
 
 
-class MyTests(html_unit_test.TestCase):
+class MyTests(unittest.TestCase):
     def test_meta_desc_tag(self):
         # app = TestApp(fortunes_show.app)
         # assert app

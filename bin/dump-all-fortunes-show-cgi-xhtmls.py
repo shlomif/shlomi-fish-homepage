@@ -34,18 +34,17 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 import os
 import sys
-import unittest
 
 # from webtest import TestApp
 sys.path.append('./src/humour/fortunes/')
-import fortunes_show  # noqa:E402
+from fortunes_show import _list_all_string_ids, _show_by_str_id  # noqa:E402
 
 
-class MyTests(unittest.TestCase):
-    def test_meta_desc_tag(self):
+class Main:
+    def main(self):
         # app = TestApp(fortunes_show.app)
         # assert app
-        strings_list = fortunes_show._list_all_string_ids()
+        strings_list = _list_all_string_ids()
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
         dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
         os.makedirs(dest_dir, exist_ok=True, )
@@ -65,7 +64,7 @@ class MyTests(unittest.TestCase):
             # resp = app.get('?id=' + str_id)
             # assert resp.status_code == 200
             # text = resp.text  # .encode('utf8')
-            text = fortunes_show._show_by_str_id(raw_mode=False, str_id=str_id)
+            text = _show_by_str_id(raw_mode=False, str_id=str_id)
             assert len(text) > 0
             # print(text)
             fn = dest_dir + "/" + str_id + ".xhtml"
@@ -74,6 +73,4 @@ class MyTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    from pycotap import TAPTestRunner
-    suite = unittest.TestLoader().loadTestsFromTestCase(MyTests)
-    TAPTestRunner().run(suite)
+    Main().main()

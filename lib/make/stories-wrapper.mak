@@ -31,6 +31,7 @@ SCREENPLAY_DOCS_ADDITIONS := \
 	Emma-Watson-visit-to-Israel-and-Gaza \
 	Mighty-Boosh--Ape-of-Death--Scenes \
 	ae-interview \
+	how-ronda-rousey-was-defeated \
 	hitchhikers-guide-to-star-trek-tng-hand-tweaked \
 	humanity-excerpt-for-X-G-Screenplay-demo \
 	sussman-interview

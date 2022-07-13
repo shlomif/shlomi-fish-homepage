@@ -14,10 +14,11 @@ use 5.008;
 # use autodie;
 
 use Carp qw/ confess /;
-use CGI  ();
+use lib "./lib";
+use CGI::Minimal ();
 my $id_re = qr#[A-Za-z][A-Za-z0-9_\-]*#ms;
 
-my $cgi  = CGI->new();
+my $cgi  = CGI::Minimal->new();
 my $mode = ( $cgi->param('mode') // '' );
 if ( $mode eq "random" )
 {

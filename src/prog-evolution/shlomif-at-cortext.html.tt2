@@ -49,9 +49,9 @@ Ran had long hair with huge strands (he still does), and he sat next to a
 Indy computer</a>, that ran
 <a href="http://en.wikipedia.org/wiki/IRIX">IRIX</a> (a flavour of Unix that
 ran on SGI computers), and he was busy editing some code. We started talking.
-I already knew about Berkeley sockets, from my then work, where I started
+I already knew about Berkeley sockets, from my contemporary job, where I started
 working on TCP/IP. Ran said one can write a Berkeley sockets client in Perl in
-10 lines and a Berkeley socket’s server in 20 lines. This sounded very
+10 lines and a Berkeley sockets’ server in 20 lines. This sounded very
 impressive to me. As I looked at the Perl code he wrote, I could not
 understand it.
 </p>
@@ -69,12 +69,12 @@ learn it in a month”. So I set out to learn both UNIX and Perl.
 [% WRAPPER h2_section id = "prepartions"  title = "Preparations"  %]
 
 <p>
-Ran instructed me to buy a Linux CD-ROM and play it, and I went to a computer
-store down town and bought a CD. I partitioned our 800 MB drive using the
-given DOS utility and installed the Slackware of that time (1996) on
-the freed 200 MB. Retrospectively, I can say it had a lot of junk on it,
-and since my computer had a relatively small amount of memory - 8 MB, it
-quite crawled, and more so when I started the
+Ran instructed me to buy a Linux CD-ROM and play with Linux, and I went to a
+computer store down town and bought a CD. I partitioned our 800 MB drive using
+the given DOS utility and installed the Slackware of that time (1996) on the
+freed 200 MB. Retrospectively, I can say it had a lot of junk on it, and since
+my computer had a relatively small amount of memory - 8 MB, it quite crawled,
+and more so when I started the
 <a href="http://en.wikipedia.org/wiki/X_Window_System">X Window System</a>.
 </p>
 
@@ -133,7 +133,7 @@ which I read (originally as a big MS Word document) and loved. It proved
 to be the main literary inspiration for my <i>The Enemy</i> story, with some
 secondary previous inspiration from
 <a href="http://en.wikipedia.org/wiki/The_Metamorphosis">Kafka’s
-<i>The Metamorphosis</i></a> which I had to read and learn in high-school.
+<i>The Metamorphosis</i></a> which I had to read and study in high-school.
 </p>
 
 <p>
@@ -152,11 +152,10 @@ After I had most of the story written, I printed it, and took the printed
 sheets to a friend of mine, who lived in the neighbourhood, who said it was
 funny but not overly so. I immediately understood why he thought so, but it
 took me a long time to revamp it, and then several months later in the Israeli
-winter (when I no longer worked for
-Cortext), I wrote the first part of the story in a paper notebook I had, and
-when I read it to this friend and his younger brother (whom I was also friends
-with), they gave a pretty good review and it served as the basis for all
-future versions of the story.
+winter (when I no longer worked for Cortext), I wrote the first part of the
+story in a paper notebook I had, and when I read it to this friend and his
+younger brother (whom I was also friends with), they gave a pretty good review
+and it served as the basis for all future versions of the story.
 </p>
 
 <p>
@@ -177,7 +176,7 @@ Cortext was quite an operation. The main computer I worked on was a Pentium I
 (about 100 MHz - can’t remember the exact number), that first ran Linux and
 was later converted to a FreeBSD installation. I used it as a UNIX workstation
 to write code on. Most of the other Cortextuals used
-<a href="http://en.wikipedia.org/wiki/Vi">the vi editor</a>, but I could not get
+<a href="http://en.wikipedia.org/wiki/Vi">the vi text editor</a>, but I could not get
 used to it and so installed Emacs (under /usr/local I think) and tried
 to learn it. I didn’t get too far (and until this day could never really
 get used to Emacs). However, I ended up watching a different Cortext worker
@@ -212,10 +211,11 @@ quirky and buggy. So quite a zoo of different systems.
 
 <p>
 All these computers served for our job in setting up sites for clients, using
-HTML (a very old version, where best viewed in the Netscape browser, was the
-de-facto standard), the
+HTML (a very old version of it, which was best viewed in the Netscape browser,
+which was the de-facto standard), the
 <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache
-web server</a>, and [% my_acronym( "key" => "CGI",) %] scripts written in Perl 5. Ah, the bad old days.
+web server</a>, and [% my_acronym( "key" => "CGI",) %] scripts written in Perl
+5. Ah, the bad old days.
 </p>
 
 [%- END -%]
@@ -223,7 +223,7 @@ web server</a>, and [% my_acronym( "key" => "CGI",) %] scripts written in Perl 5
 [% WRAPPER h2_section id = "what-I-learned"  title = "What I Learned"  %]
 
 <p>
-Cortext was my first serious introduction to the Perl 5 programming
+Cortext was my first serious introduction to the Perl 5 programming language
 and to the UNIX family of operating systems, which I have considered my
 preferred technologies, for a long time after that. They were both an epiphany
 for me: Perl 5 because it combined what I heard Larry Wall later call, the
@@ -254,10 +254,10 @@ UNIX and Windows.
 <p>
 I recall that the GNU site seemed like an FTP site with lots of cool software
 that came as source tarballs, and which I knew was free to download, compile
-and use, but did not delve too much into its [% my_acronym( "key" => "FOSS",) %] ideology, and did not
-care too much. I knew miniSQL was shareware with source, and understood I can
-use the GNU software without paying, but it took some time for me to get to
-the bottom of the whole “Free-as-in-speech Software” ideology.
+and use, but did not delve too much into its [% my_acronym( "key" => "FOSS",) %]
+ideology, and did not care too much. I knew miniSQL was shareware with source,
+and understood I can use the GNU software without paying, but it took some time
+for me to get to the bottom of the whole “Free-as-in-speech Software” ideology.
 </p>
 
 [%- END -%]

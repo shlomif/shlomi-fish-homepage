@@ -638,6 +638,10 @@ my $_humour_tree_contents = {
                     url  => "humour/bits/Who-will-ride-Princess-Celestia/",
                 },
                 {
+                    text => "How Ronda Rousey Lost her UFC Streak?",
+                    url  => "humour/bits/How-Ronda-Rousey-Lost-her-UFC-Streak/",
+                },
+                {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
                     subs => [

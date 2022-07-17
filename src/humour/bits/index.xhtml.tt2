@@ -48,6 +48,14 @@ popular <a href="http://www.opensource.org/">open source</a> licences.
 
 [% END %]
 
+[% WRAPPER h3_section id="i_like_job_control" href="I-Like-Job-Control/" title="“I Like Job Control”" %]
+
+<p>
+A humorous geek song to the tune of “I Love Rock-N’-Roll”.
+</p>
+
+[% END %]
+
 [% WRAPPER h3_section id="rms_lint" href="RMS-Lint/" title="Introducing RMS-Lint" %]
 
 <p>
@@ -62,14 +70,6 @@ Slashdot discussion</a>.
 
 <p>
 How compatible are Windows 3.11, Windows 95 and Windows NT 4.0?
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section id="i_like_job_control" href="I-Like-Job-Control/" title="“I Like Job Control”" %]
-
-<p>
-A humorous geek song to the tune of “I Love Rock-N’-Roll”.
 </p>
 
 [% END %]
@@ -116,14 +116,6 @@ everything.
 
 [% END %]
 
-[% WRAPPER h3_section id="fc_solve_ee" href="Freecell-Solver-Enterprise-Edition/" title="Announcing Freecell Solver™ Enterprise Edition" %]
-
-<p>
-You’d better believe it…
-</p>
-
-[% END %]
-
 [% WRAPPER h3_section id="Im_the_Real_Tim_Toady" href="Im-The-Real-Tim-Toady/" title="“I’m the Real Tim Toady”" %]
 
 <p>
@@ -136,6 +128,14 @@ A Geeky Perl song inspired by “I'm the Real Slim Shady” by Eminem.
 
 <p>
 A geeky song sang to the music of “Can I Go Now?” by Jennifer Love Hewitt.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="fc_solve_ee" href="Freecell-Solver-Enterprise-Edition/" title="Announcing Freecell Solver™ Enterprise Edition" %]
+
+<p>
+You’d better believe it…
 </p>
 
 [% END %]
@@ -225,18 +225,18 @@ And to think it is the kind of video that 8 year olds watch twice a day.
 
 [% END %]
 
-[% WRAPPER h3_section id="Atom_2M1" href="Atom-Text-Editor-edits-2_000_001-bytes/" title="Announcement: The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File" %]
-
-<p>
-A remarkable scalability milestone is reached for the popular text editor.
-</p>
-
-[% END %]
-
 [% WRAPPER h3_section id="HTML_6" href="HTML-6/" title="Announcing “HTML 6”, the New Version of the Web" %]
 
 <p>
 A significant step forward…
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id="Atom_2M1" href="Atom-Text-Editor-edits-2_000_001-bytes/" title="Announcement: The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File" %]
+
+<p>
+A remarkable scalability milestone is reached for the popular text editor.
 </p>
 
 [% END %]

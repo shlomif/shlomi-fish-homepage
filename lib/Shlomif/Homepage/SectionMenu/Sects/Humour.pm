@@ -522,12 +522,12 @@ my $_humour_tree_contents = {
                     title => "The Campaign for Accessible Spam",
                 },
                 {
-                    text => "I Like Job Control",
-                    url  => "humour/bits/I-Like-Job-Control/",
-                },
-                {
                     text => "The GPL is not Compatible with Itself",
                     url  => "humour/bits/GPL-is-not-Compatible-with-Itself/",
+                },
+                {
+                    text => "I Like Job Control",
+                    url  => "humour/bits/I-Like-Job-Control/",
                 },
                 {
                     text => "Introducing RMS-Lint",
@@ -617,12 +617,12 @@ my $_humour_tree_contents = {
 "Emma Watson Getting Interviewed for a Software Developer Job",
                 },
                 {
-                    text => "“HTML 6”, the new version of the Web",
-                    url  => "humour/bits/HTML-6/",
-                },
-                {
                     text => "The Song “Wide Awake” by Katy Perry is Evil!",
                     url  => "humour/bits/The-Song-Wide-Awake-is-Evil/",
+                },
+                {
+                    text => "“HTML 6”, the new version of the Web",
+                    url  => "humour/bits/HTML-6/",
                 },
                 {
                     text => "The Atom text editor edits a 2,000,001 bytes file",

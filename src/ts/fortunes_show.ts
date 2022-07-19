@@ -1,4 +1,4 @@
-let altDown = false;
+let altDown: boolean = false;
 
 document.addEventListener("keydown", (ev) => {
     if (ev.keyCode === 18) {

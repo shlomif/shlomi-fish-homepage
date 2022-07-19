@@ -55,6 +55,8 @@ if ( $id !~ m#\A${id_re}\z#ms )
 my $HEADER = "Content-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
 print $HEADER;
 my $body = _utf8_slurp("__FORTS-show-cgi-xhtmls/${id}.xhtml");
+binmode STDOUT, ':encoding(utf8)';
+
 print $body;
 
 sub _utf8_slurp

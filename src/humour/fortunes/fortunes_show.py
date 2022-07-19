@@ -151,8 +151,13 @@ Report this problem to the webmaster.
     redirect(_my_fullpath() + "?id=" + str_id[0])
 
 
+MOBILE_DEVICES_COMPAT_CODE = \
+    '<meta name="viewport" content="width' + \
+    '=device-width, initial-scale=1.0" />\n'
+
+
 NON_RAW_TEMPLATE = \
-                    '''<?xml version="1.0" encoding="utf-8"?>
+    '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -160,8 +165,9 @@ NON_RAW_TEMPLATE = \
 <link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />
 <meta charset="utf-8" />
 <meta name="description" content="{{description}}" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+''' + \
+    MOBILE_DEVICES_COMPAT_CODE + \
+    '''</head>
 <body>
 <ul id="nav">
 <li><a href="/">Shlomi Fish's Homepage</a></li>

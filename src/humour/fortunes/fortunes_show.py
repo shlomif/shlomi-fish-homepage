@@ -167,7 +167,8 @@ NON_RAW_TEMPLATE = \
 <meta name="description" content="{{description}}" />
 ''' + \
     MOBILE_DEVICES_COMPAT_CODE + \
-    '''</head>
+    '''<script src="{{base_dir}}/js/fortunes_show.js"></script>
+</head>
 <body>
 <ul id="nav">
 <li><a href="/">Shlomi Fish's Homepage</a></li>

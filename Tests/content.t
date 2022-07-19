@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 47;
+use Test::More tests => 48;
 
 use HTML::Entities qw/ decode_entities /;
 use Path::Tiny     qw/ path /;
@@ -337,6 +337,14 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
 
     # TEST
     like( $content, qr{\@Athena}, 'Contains username.' );
+}
+
+{
+    # TEST
+    ok(
+        scalar( ( -s "$POST_DEST/js/fortunes_show.js" ) > 40 ),
+        "fortunes_show exists",
+    );
 }
 
 __END__

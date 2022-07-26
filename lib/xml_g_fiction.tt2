@@ -38,3 +38,24 @@ style and formatting).
 </p>
 </li>
 [% END %]
+
+[% BLOCK screenplay_read_online__dwim %]
+
+[% WRAPPER screenplay_read_online  %]
+
+<ul>
+
+[% PROCESS link_to_epub basename = basename,  %]
+
+<li>
+<p>
+<a href="[% basename %].screenplay-text.txt">Source in Screenplay-Text
+format</a>
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[%- END -%]

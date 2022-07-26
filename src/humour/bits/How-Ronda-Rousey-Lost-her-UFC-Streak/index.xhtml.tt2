@@ -21,4 +21,21 @@
 
 [% END %]
 
+[% WRAPPER screenplay_read_online  %]
+
+<ul>
+
+[% PROCESS link_to_epub basename = "How-Ronda-Rousey-Lost-her-UFC-Streak",  %]
+
+<li>
+<p>
+<a href="How-Ronda-Rousey-Lost-her-UFC-Streak.screenplay-text.txt">Source in Screenplay-Text
+format</a>
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
 [% END %]

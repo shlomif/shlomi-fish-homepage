@@ -7,6 +7,7 @@
 [% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
 
 [% WRAPPER screenplay_read_online  %]
+
 <ul>
 
 [% PROCESS story_ongoing_episode_li base = "Terminator--Liberation",  %]
@@ -25,6 +26,7 @@ format</a>
 </li>
 
 </ul>
+
 [%- END -%]
 
 [% default_toc %]

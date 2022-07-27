@@ -121,6 +121,7 @@ $(HHFG_SMALL_BANNER_AD_PNG): $(SRC_SRC_DIR)/humour/human-hacking/images/hhfg-ad-
 SRC_jpgs__BASE := $(filter $(POST_DEST)/humour/Selina-Mandrake/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/bits/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/images/strong-woman-meme-summer-glau/%.jpg,$(SRC_IMAGES_DEST))
+SRC_jpgs__BASE += $(filter $(POST_DEST)/meta/FAQ/images/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(POST_DEST)/images/TN-Rivendell.jpg
 SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg

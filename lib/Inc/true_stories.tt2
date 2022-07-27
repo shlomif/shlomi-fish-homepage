@@ -2,61 +2,14 @@
 
 [% SET section_element = "article" %]
 
-[% WRAPPER h3_section id="who-gets-the-final-say" href="${base_path}humour/bits/true-stories/who-gets-the-final-say/" title="Who gets the final say?" %]
+[% FOREACH storyrec IN true_stories_obj.get_list() %]
 
-<p>
-Who gets the final say, before and after marriage? A memoir.
-</p>
+[%# WRAPPER h3_section id = storyrec.id , href = (base_path _ storyrec.url) , title = (storyrec.title || storyrec.text) %]
+[% WRAPPER h3_section id = storyrec.id , href = (base_path _ storyrec.url) , title = ( storyrec.text ) %]
 
-[% END %]
-
-[% WRAPPER h3_section id="hermione-cosplayer" href="${base_path}humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/" title="Socialising with a Young Hermione Cosplayer and Her Family at GeekCon Nine Worlds" %]
-
-<p>
-A true story about a 37 years old me socialising with a young cosplayer
-of Hermione in a sci-fi/fantasy/etc. convention in Greater London and the
-antagonism I later received about it online
-</p>
+[% storyrec.html %]
 
 [% END %]
-
-[% WRAPPER h3_section id="my-first-kiss" href="${base_path}humour/bits/true-stories/my-first-kiss/" title="The story of my first kiss" %]
-
-<p>
-A memoir.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section id="showing-the-apartment-to-a-hot-girl" href="${base_path}humour/bits/true-stories/showing-the-apartment-to-a-hot-girl/" title="Showing the rented apartment to a hot girl" %]
-
-<p>
-Showing the rented apartment to a hot girl
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section id="preventing-a-football-goal" href="${base_path}humour/bits/true-stories/preventing-a-football-goal/" title="Preventing a football goal" %]
-
-<p>
-Preventing a football goal.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href="${base_path}humour/bits/true-stories/avoiding-getting-run-over-by-a-horse/" id="avoiding-getting-run-over-by-a-horse" title="Avoiding getting run over by a horse" %]
-
-<p>
-Avoiding getting run over by a horse.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href="${base_path}humour/bits/true-stories/sneaking-into-the-van-gogh-museum/" id="sneaking-into-the-van-gogh-museum" title="Sneaking into the van Gogh museum" %]
-
-<p>
-Sneaking into the van Gogh museum.
-</p>
 
 [% END %]
 

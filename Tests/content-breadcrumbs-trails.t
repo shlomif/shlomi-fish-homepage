@@ -82,7 +82,7 @@ _test(
 "lib/cache/combined/t2/humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/index.xhtml/breadcrumbs-trail",
         blurb    => 'true-stories are not "Humour"',
         expected => <<'EOF',
-<a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../">Stories</a> → <a href="../../" title="Small Scale Funny Works of Mine">Small Scale</a> → <a href="../">True Stories / Memoirs</a> → <a href="./" title="Socialising with an ~11 years old Hermione (“Harry Potter”) Cosplayer and her family at GeekCon Nine Worlds">Socialising with a Young Hermione Cosplayer and Her Family</a>
+<a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../">Stories</a> → <a href="../../" title="Small Scale Funny Works of Mine">Small Scale</a> → <a href="../">True Stories / Memoirs</a> → <a href="./" title="Socialising with a young Hermione (“Harry Potter”) cosplayer and her family at GeekCon Nine Worlds">Socialising with a Young Hermione Cosplayer and Her Family</a>
 EOF
     }
 );

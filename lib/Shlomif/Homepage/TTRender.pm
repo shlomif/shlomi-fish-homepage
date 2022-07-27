@@ -23,11 +23,12 @@ use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
 use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
-use Shlomif::Homepage::TocDiv ();
-use Shlomif::MD               ();
-use Shlomif::XmlFictionSlurp  ();
-use Template                  ();
-use VimIface                  ();
+use Shlomif::Homepage::TocDiv      ();
+use Shlomif::Homepage::TrueStories ();
+use Shlomif::MD                    ();
+use Shlomif::XmlFictionSlurp       ();
+use Template                       ();
+use VimIface                       ();
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
@@ -45,6 +46,7 @@ my $license         = Shlomif::Homepage::LicenseBlurbs->new(
         copyright_holder => "Shlomi Fish",
     }
 );
+my $true_stories_obj = Shlomif::Homepage::TrueStories->new();
 
 my $base_path;
 my $with_absolute_urls = ( $ENV{LATEMP_ABS} // "" );
@@ -224,13 +226,14 @@ has vars => (
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
-            is_dev         => $FALSE,
-            cpan           => $cpan,
-            is_forked_site => $FALSE,
-            license_obj    => $license,
-            long_stories   => $long_stories,
-            news_obj       => $news,
-            mytan          =>
+            is_dev           => $FALSE,
+            cpan             => $cpan,
+            is_forked_site   => $FALSE,
+            license_obj      => $license,
+            long_stories     => $long_stories,
+            news_obj         => $news,
+            true_stories_obj => $true_stories_obj,
+            mytan            =>
 qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             d2url               => "http://divisiontwo.shlomifish.org/",
             check_nav_blocks    => \&check_nav_blocks,

@@ -88,7 +88,7 @@ my %reduced_sub_trees = (
                                 title => "The Human Hacking Field Guide",
                             },
                             {
-                                text => "We, the Living Dead",
+                                text => "Star Trek: “We, the Living Dead”",
                                 url  => "humour/Star-Trek/We-the-Living-Dead/",
                             },
                             {

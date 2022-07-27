@@ -9,11 +9,13 @@ use parent 'Shlomif::Homepage::SectionMenu::BaseSectionClass';
 use Shlomif::FindLib                      ();
 use MyNavData::Hosts                      ();
 use Shlomif::Homepage::FortuneCollections ();
+use Shlomif::Homepage::TrueStories        ();
 use JSON::MaybeXS (qw( decode_json ));
 use Path::Tiny qw( path );
 
 my $json_data_fn =
     Shlomif::FindLib->rel_path( [qw(Shlomif factoids-nav.json)] );
+my $true_stories_obj = Shlomif::Homepage::TrueStories->new();
 
 my @both_langs = ( lang => +{ en => 1, "he" => 1, }, );
 
@@ -644,50 +646,7 @@ my $_humour_tree_contents = {
                 {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
-                    subs => [
-                        {
-                            text => "Who gets the final say?",
-                            url  =>
-"humour/bits/true-stories/who-gets-the-final-say/",
-                            title =>
-"True story about asking people by the road about relationships",
-                        },
-                        {
-                            text =>
-"Socialising with a Young Hermione Cosplayer and Her Family",
-                            url =>
-"humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/",
-                            title =>
-"Socialising with an ~11 years old Hermione (“Harry Potter”) Cosplayer and her family at GeekCon Nine Worlds",
-                        },
-                        {
-                            text  => "First Kiss",
-                            url   => "humour/bits/true-stories/my-first-kiss/",
-                            title =>
-"True story about asking people by the road about relationships",
-                        },
-                        {
-                            text =>
-                                "Showing the rented apartment to a hot girl",
-                            url =>
-"humour/bits/true-stories/showing-the-apartment-to-a-hot-girl/",
-                        },
-                        {
-                            text => "Preventing a football goal",
-                            url  =>
-"humour/bits/true-stories/preventing-a-football-goal/",
-                        },
-                        {
-                            text => "Avoiding getting run over by a horse",
-                            url  =>
-"humour/bits/true-stories/avoiding-getting-run-over-by-a-horse/",
-                        },
-                        {
-                            text => "Sneaking into the van Gogh museum",
-                            url  =>
-"humour/bits/true-stories/sneaking-into-the-van-gogh-museum/",
-                        },
-                    ],
+                    subs => scalar( $true_stories_obj->get_nav_list() ),
                 },
                 {
                     text => "Emma Watson’s Visit to Israel and Gaza",

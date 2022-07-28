@@ -61,8 +61,11 @@ class XhtmlSplitter:
         )
 
     def __init__(
-            self, input_fn, output_dirname,
-            section_format, container_elem_xpath,
+            self,
+            input_fn,
+            output_dirname,
+            section_format,
+            container_elem_xpath,
             back_to_source_page_css_class,
             individual_node_css_class,
             ns,

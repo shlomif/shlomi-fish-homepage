@@ -1,8 +1,8 @@
 [%- SET title = "List of Text Processing Tools" -%]
 [%- SET desc = "List of text processing tools: processors, template systems, parser generators, regular expression libraries, etc." -%]
 
-
 [% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
@@ -66,7 +66,7 @@ that it appears to be the most popular preprocessor.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "general_template_systems"  title = "General-purpose Template Systems"  %]
+[% WRAPPER h2_section id = "general_template_systems"  title = "General-Purpose Template Systems"  %]
 
 <ul>
 

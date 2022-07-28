@@ -4181,14 +4181,14 @@ personally <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-ta
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_xml"  title = "Why are you still using XML?"  %]
+[% WRAPPER faq_h3_section id = "why_xml" title = "Why are you still using XML?" %]
 
 <p>
 With the advent of <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
 and similar formats such as <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>,
 some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hipster</a> geeks have proclaimed that XML-based grammars no
 longer have any legitimate use. However, while I use JSON and YAML for
-many tasks, I still find XML (and related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
+many tasks, I still find XML (and <b>some</b> related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
 used to add markup to a substring of the text, e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>:
 </p>
@@ -4209,6 +4209,13 @@ is a moot point, because we can encode and decode them both to/from a binary str
 JSON, or most other syntaxes. Syntax, while often considered marginal, is nevertheless important, and
 I don't think I'll enjoy writing text documents completely using <a href="https://www.netfunny.com/rhf/jokes/90q2/lispcode.html">S-expressions</a>.
 I also recall reading about a new language that allows mixing and matching both lisp-like code and XML code.
+</p>
+
+<hr />
+
+<p>
+In addition, note that I sometimes use <a href="[% base_path %]open-source/resources/text-processing-tools/">template systems or similar tools</a>
+to generate XML documents, and documents in other formats.
 </p>
 
 <hr />
@@ -4237,6 +4244,12 @@ Relevant links:
 <li>
 <p>
 <a href="http://xml.silmaril.ie/whyxml.html">The XML FAQ: "Why should I use XML?"</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]philosophy/computers/web/choice-of-docs-formats/">Choice of Document Formats</a>
 </p>
 </li>
 

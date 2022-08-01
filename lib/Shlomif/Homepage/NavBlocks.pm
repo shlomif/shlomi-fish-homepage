@@ -437,6 +437,12 @@ my %tr_s = (
             path_regex => qr#(?:teaser|Take-It-Over)#ms,
         }
     ),
+    'queen_padme_tales__natalie_portman' =>
+        __PACKAGE__->_gen__queen_padme_tales__tr(
+        {
+            path_regex => qr#(?:teaser|vs-the-Klingon-Warriors)#ms,
+        }
+        ),
     'selina_mandrake' => _tr(
         title => "Selina Mandrake - The Slayer",
         items => [
@@ -967,6 +973,25 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
             ],
         },
         ),
+    'natalie_portman' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'natalie_portman_nav_block',
+            text_title => "Natalie Portman Fanfiction",
+            tr_s       => [
+                _master_tr(
+                    title => q{Natalie Portman Fanfiction},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _tr_s(
+                    qw(  buffy_few_good queen_padme_tales__natalie_portman ),
+                ),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
+            ],
+        },
+    ),
 );
 
 sub get_nav_block

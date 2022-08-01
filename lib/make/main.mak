@@ -161,8 +161,6 @@ $(SRC_CLEAN_STAMP): $(BK2HP_NEW_PNG) $(DOCBOOK5_INSTALLED_EPUBS) $(FORTS_EPUB_DE
 	WMLect_PATH="lecture/WebMetaLecture/slides/examples" ; rsync -a $(PRE_DEST)/$$WMLect_PATH/ $(POST_DEST)/$$WMLect_PATH
 	touch $@
 
-docbook_extended: screenplays_pdfs
-
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
 
 include lib/make/pages-sects.mak

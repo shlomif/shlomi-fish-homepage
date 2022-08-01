@@ -64,3 +64,5 @@ $(SCREENPLAY_XML__PDFS__POST_DESTS): %.pdf: %.raw.html
 	weasyprint "$<" "$@"
 
 screenplays_pdfs: $(SCREENPLAY_XML__PDFS__POST_DESTS)
+
+docbook_extended: screenplays_pdfs

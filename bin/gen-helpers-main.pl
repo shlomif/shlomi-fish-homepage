@@ -159,6 +159,14 @@ write_on_change_raw(
         )->slurp_raw()
     ),
 );
+write_on_change_raw(
+    path("src/me/images/evilphish-monochrome-for-business-card-b-N-w.png"),
+    \(
+        path(
+"lib/repos/shlomif-business-card/shlomif-business-card/evilphish-monochrome-for-business-card-b-N-w.png"
+        )->slurp_raw()
+    ),
+);
 
 sub letter_fn
 {

@@ -231,7 +231,9 @@ foreach my $page (@pages)
     push @deps, "${destfn}: $libfn\n";
     _write_processed( \$PAGE_TEMPLATE, { p => $page, }, $libfn, );
 }
-write_on_change( path("lib/make/factoids-deps.mak"), \( join "", sort @deps ),
+write_on_change(
+    path("lib/make/generated/factoids-deps.mak"),
+    \( join "", sort @deps ),
 );
 
 _write_processed(

@@ -200,7 +200,7 @@ include lib/make/jquery-ui-webpack.mak
 include lib/make/mod_files.mak
 include lib/make/summer_glau_letter.mak
 include lib/make/upload.mak
-include lib/make/factoids-deps.mak
+include lib/make/generated/factoids-deps.mak
 
 all_deps: $(JQUERYUI_JS_DESTS)
 all_deps: $(JQUI_webpack_dest)

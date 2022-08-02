@@ -979,7 +979,8 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
             text_title => "Natalie Portman Fanfiction",
             tr_s       => [
                 _master_tr(
-                    title => q{Natalie Portman Fanfiction},
+                    title =>
+q{<a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> Fanfiction},
                 ),
                 _subdiv_tr( title => q{Screenplays}, ),
                 _tr_s(

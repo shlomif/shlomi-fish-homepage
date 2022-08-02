@@ -1033,7 +1033,7 @@ sub render_make_fragment
         }
     }
 
-    path("lib/make/long_stories.mak")->spew_utf8(
+    path("lib/make/generated/long_stories.mak")->spew_utf8(
         @var_decls,
         "\n",
         @rules,

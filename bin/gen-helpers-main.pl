@@ -230,8 +230,6 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
     );
 }
 
-path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
-
 my_exec_perl(
     [ 'lib/images/navigation/section/sect-nav-arrows.pl', "./src/images", ] );
 
@@ -255,7 +253,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         ];
         if ( $args->{bucket} eq 'DOCS' and $args->{host} eq 'src' )
         {
-            path("${DIR}tt2.txt")->spew_raw( join "\n", (@$ret), "" );
+            path("${DIR}generated/tt2.txt")->spew_raw( join "\n", (@$ret), "" );
         }
         return $ret;
     },
@@ -274,7 +272,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         return 'POST_DEST';
     },
     out_docs_ext => '.tt2',
-    out_dir      => $DIR,
+    out_dir      => "${DIR}generated/",
 );
 
 eval { $generator->process_all(); };
@@ -284,6 +282,8 @@ if ( my $Err = $@ )
     print Data::Dumper->new( [$Err] )->Dump;
     die $Err;
 }
+
+path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 exit if delete $ENV{LATEMP_STOP_GEN};
 

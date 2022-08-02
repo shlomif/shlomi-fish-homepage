@@ -26,7 +26,8 @@ my $obj = Shlomif::Homepage::TTRender->new(
 
 if ( !@filenames )
 {
-    @filenames = path("lib/make/tt2.txt")->lines_raw( { chomp => 1 } );
+    @filenames =
+        path("lib/make/generated/tt2.txt")->lines_raw( { chomp => 1 } );
 }
 Parallel::Map::Segmented->new()->run(
     {

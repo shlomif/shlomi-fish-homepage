@@ -10,12 +10,12 @@ non_latemp_targets: art_slogans_targets copy_images_target css_targets generate_
 
 include lib/make/shlomif_common.mak
 include lib/make/tools.mak
-include lib/make/include.mak
+include lib/make/generated/include.mak
 
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 
-include lib/make/rules.mak
+include lib/make/generated/rules.mak
 
 PRE_DEST := $(SRC_DEST)
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='

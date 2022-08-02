@@ -170,8 +170,10 @@ sub _process_batch
 
 Parallel::Map::Segmented->new()->run(
     {
-        items => [ ( split /\n/, path("lib/make/tt2.txt")->slurp_raw() ), ],
-        nproc => 4,
+        items => [
+            ( split /\n/, path("lib/make/generated/tt2.txt")->slurp_raw() ),
+        ],
+        nproc         => 4,
         batch_size    => 16,
         process_batch => \&_process_batch,
         (

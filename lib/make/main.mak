@@ -181,7 +181,7 @@ CATB_COPY := $(PRE_DEST)/$(CATB_HEB_BN)
 CATB_COPY_POST := $(POST_DEST)/$(CATB_HEB_BN)
 
 include lib/make/image-files.mak
-include lib/make/copies-generated-include.mak
+include lib/make/generated/copies-generated-include.mak
 include lib/make/docbook/screenplays-copy-operations.mak
 
 minified_assets: $(BK2HP_SVG_SRC) $(EXPANDER_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(MAIN_TOTAL_MIN_JS_DEST) $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(SRC_rjpgs__webps) $(TREE_JS_DEST)

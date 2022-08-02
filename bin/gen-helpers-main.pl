@@ -206,13 +206,14 @@ foreach my $ext (qw/ xhtml pdf /)
 qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\n#;
         } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
     );
-    path("${DIR}copies-generated-include.mak")->spew_utf8(
+    path("${DIR}generated/copies-generated-include.mak")->spew_utf8(
         (
             map { $_ . $COPY . "\n" } (
                 sort { $a cmp $b } (
                     path("${DIR}copies-source.mak")->lines_utf8,
-                    path("${DIR}copies-generated-screenplay-images.mak")
-                        ->lines_utf8,
+                    path(
+                        "${DIR}generated/copies-generated-screenplay-images.mak"
+                    )->lines_utf8,
                 )
             ),
         ),

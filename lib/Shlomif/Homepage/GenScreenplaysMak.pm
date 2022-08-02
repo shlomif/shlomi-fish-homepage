@@ -333,7 +333,7 @@ EOF
     );
 
     my $DIR = "lib/make/";
-    path("${DIR}copies-generated-screenplay-images.mak")
+    path("${DIR}generated/copies-generated-screenplay-images.mak")
         ->spew_utf8($images_copy);
     my $clone_cb = sub {
         my ($r) = @_;

@@ -99,6 +99,15 @@ EOF
             id   => "sneaking-into-the-van-gogh-museum",
             text => "Sneaking into the van Gogh museum",
         },
+        {
+            html => <<"EOF",
+<p>
+A case of <a href="https://en.wikipedia.org/wiki/Innumeracy_(book)">innumeracy</a>.
+</p>
+EOF
+            id   => "your-character-must-be-30-years-old",
+            text => "“Your character must be 30 years old”",
+        },
     )
 ];
 

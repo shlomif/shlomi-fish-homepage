@@ -554,7 +554,7 @@ legal</a>, and should not be regulated in any way.
 </p>
 
 <p>
-Note that as of November 2019, I am still taking prescribed <b>psychiatric
+Note that as of July 2022, I am still taking prescribed <b>psychiatric
 drugs</b> which <a href="[% base_path
 %]philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/">I
 hate and think are harmful</a> but am <b>forced</b> to take.
@@ -808,13 +808,19 @@ prevent spam entirely.
 </p>
 
 <p>
+[% IF 0 %]
 I deal with spam by filtering it on the client side. I’m using
 <a href="[% base_path %]open-source/favourite/#spamassassin">SpamAssassin</a>
 to filter my email and so far it’s doing a very good job. Some spam still
 arrives at my inbox, but otherwise very little. There are
 <a href="http://freecode.com/articles/view/964/">several other open-source
 spam filters</a> (and some non-open-source solutions), which you may wish
-to look at. <a href="http://gmail.com/">GMail</a> and other webmail
+to look at.
+[%- ELSE -%]
+I find that manually deleting spam messages is not too time-consuming or
+errorprone.
+[%- END -%]
+<a href="http://gmail.com/">GMail</a> and other webmail
 services also do a good job in filtering spam (regardless of
 <a href="http://shlomif.livejournal.com/46955.html">their other faults</a>).
 </p>
@@ -907,10 +913,9 @@ to mention them many times.
 
 <p>
 While some employers may look down on me for mentioning that, I’d rather work
-for employers who appreciate honesty, sincerity, and openness.
-They should eventually
-realise that keeping non-private details to yourself is a sure recipe to
-lose your mind.
+for employers who appreciate honesty, sincerity, and openness.  They should
+eventually realise that keeping non-private details to yourself is a sure
+recipe to lose your mind.
 </p>
 
 <p>
@@ -933,6 +938,14 @@ For more information, see:
 section</a> - from “Putting all the Cards on the Table (2013)”
 </p>
 </li>
+
+
+<li>
+<p>
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/fear-is-path-to-dark-side.xhtml">Against paranoia</a>
+</p>
+</li>
+
 </ol>
 
 <p>
@@ -962,7 +975,8 @@ most of it, and just spoke Hebrew (which is my mother language).
 After that, I had to regain English much more painfully as I learned it
 at school, and from other sources such as
 <a href="http://en.wikipedia.org/wiki/Adventure_game">computerised Adventure
-games</a>, books, films, Television shows, and the Internet. </p>
+games</a>, books, films, Television shows, and the Internet.
+</p>
 
 <p>
 Shortly after
@@ -996,7 +1010,7 @@ Some of the effective ways I found to improve one's English are:
 <li>
 <p>
 Write. Write a lot. Start a blog. Write about interesting stories from your
-past. Ask your readers to point to the issues in your text (also your code).
+past. Ask your readers to point out the issues in your text (and also in your code).
 Maybe start specialised blogs for writing about a topic that interests you.
 </p>
 </li>
@@ -1073,7 +1087,7 @@ a page in a foreign language) but like most tools, it has
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "asperger_syndrome"  title = "Do you have Asperger syndrome (Asperger’s)?"  %]
+[% WRAPPER faq_h3_section id = "asperger_syndrome" title = "Do you have Asperger syndrome (Asperger’s)?" %]
 
 <p>
 Some people on the Internet told me that they believe I have
@@ -1310,7 +1324,7 @@ strings attached): <a href="https://en.wikipedia.org/w/index.php?title=Sarah_Mic
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "what_was_your_biggest_secret" title = "What was the secret that you were most afraid will be made public knowledge?"  %]
+[% WRAPPER faq_h3_section id = "what_was_your_biggest_secret" title = "What was the secret that you were most afraid will be made public knowledge?" %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-physically-strong-women">That I'm attracted to physically-strong females</a> (and even to muscular ones).
@@ -1423,7 +1437,7 @@ or <a href="https://en.wikipedia.org/wiki/Sam_Harris">Sam Harris</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "ethnicity"  title = "What is your ethnicity? What is your lineage?"  %]
+[% WRAPPER faq_h3_section id = "ethnicity" title = "What is your ethnicity? What is your lineage?" %]
 
 <p>
 I am a <a href="https://en.wikipedia.org/wiki/Jews">Jew</a> by birth and
@@ -1519,7 +1533,7 @@ href="https://en.wikipedia.org/wiki/Sturgeon%27s_law">Sturgeon's law</a> (=
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?"  %]
+[% WRAPPER faq_h3_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?" %]
 
 <p>
 I am currently many of these and more. As I
@@ -1532,7 +1546,7 @@ and it changes almost every day.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "selfishness"  title = "Does the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) make you selfish?"  %]
+[% WRAPPER faq_h3_section id = "selfishness" title = "Does the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) make you selfish?" %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=neo-tech-selfishness">This
@@ -1569,7 +1583,7 @@ as a false dichotomy.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_a_randroid"  title = "Does the fact that you were influenced by Objectivism (= Ayn Rand’s philosophy) make you a “Randroid”?"  %]
+[% WRAPPER faq_h3_section id = "are_you_a_randroid" title = "Does the fact that you were influenced by Objectivism (= Ayn Rand’s philosophy) make you a “Randroid”?" %]
 
 <p>
 The way I see it, a "Randroid" is an overzealous believer in Randianism, who
@@ -1588,7 +1602,7 @@ much. Just note that it is you who are being stupid, prejudiced and labelling.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?"  %]
+[% WRAPPER faq_h3_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?" %]
 
 <p>
 See:
@@ -3405,9 +3419,12 @@ experiences.
 
 <p>
 Moreover, note that <a href="https://en.wikipedia.org/wiki/E._Nesbit">E Nesbit</a>,
+<a href="https://en.wikipedia.org/wiki/J._K._Rowling">JK Rowling</a>,
+<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>,
 and
-<a href="https://en.wikipedia.org/wiki/J._K._Rowling">JK Rowling</a>
-both featured underage children in their books.
+<a href="https://en.wikipedia.org/wiki/List_of_Walt_Disney_Animation_Studios_films">Disney</a>
+
+all featured underage children in their works.
 </p>
 
 <p>

@@ -17,12 +17,16 @@ function build_sect_nav_menu_toggler(): void {
 }
 
 function build_main_nav_menu_toggler() {
+    const el = $(".leading_path a:first");
+    const s = el.attr("href");
     build_toggler({
         default_state: false,
         hide_text: "Hide NavBar ⬈",
         ls_key: toggle_main_key,
         show_text:
-            '<img src="/images/evilphish.png" alt="EvilPHish by Illiad" class="logo" /> Show NavBar ⬋',
+            '<img src="' +
+            (s ? s : "/") +
+            'images/evilphish.png" alt="EvilPHish by Illiad" class="logo" /> Show NavBar ⬋',
         toggled_class: "novis",
         toggled_selector: "#navbar , #main",
         toggler_selector: "#show_navbar",

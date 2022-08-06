@@ -8,6 +8,10 @@
 
 [% BLOCK photo %]
 
+[% SET h_title = alt %]
+
+<h2>[% h_title %]</h2>
+
 <p>
 [% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
 <a href="[% img _ link_img_ext %]">[% tag %]</a>

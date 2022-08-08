@@ -231,10 +231,6 @@ foreach my $page (@pages)
     push @deps, "${destfn}: $libfn\n";
     _write_processed( \$PAGE_TEMPLATE, { p => $page, }, $libfn, );
 }
-write_on_change(
-    path("lib/make/generated/factoids-deps.mak"),
-    \( join "", sort @deps ),
-);
 
 _write_processed(
     \$TT2_GEN__COMMON_INCLUDE,
@@ -282,9 +278,14 @@ my @content =
     map { @{ _content__process_page($_) }; }
     sort { $a->short_id cmp $b->short_id } @pages;
 
-path("lib/factoids/deps.mak")
-    ->spew_utf8( join( " ", "all:", map { $_->{path} } @content ) . "\n",
-    ( map { $_->{line} } @content ) );
+write_on_change(
+    path("lib/make/generated/factoids-deps.mak"),
+    \(
+        ( join "", sort @deps )
+        . join( " ", "all:", map { $_->{path} } @content ) . "\n",
+        ( map { $_->{line} } @content )
+    ),
+);
 
 # No write_on_change() because we want it to have the time of the last run.
 path("lib/factoids/TIMESTAMP")->spew_utf8( time() );

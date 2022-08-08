@@ -20,7 +20,6 @@ include lib/make/generated/rules.mak
 PRE_DEST := $(SRC_DEST)
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 
-include lib/factoids/deps.mak
 include lib/make/factoids.mak
 include lib/make/docbook/sf-fictions-list.mak
 include lib/make/generated/long_stories.mak

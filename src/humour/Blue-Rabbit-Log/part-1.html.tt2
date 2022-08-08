@@ -5,6 +5,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories.calc_common_top_elems(id => 'blue_rabbit') %]
+
 [% path_slurp("screenplay-xml/rendered-html/Blue-Rabbit-Log-part-1.html") %]
 
 [% END %]

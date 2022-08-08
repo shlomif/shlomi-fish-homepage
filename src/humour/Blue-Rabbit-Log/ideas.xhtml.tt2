@@ -33,6 +33,8 @@ rel="cc:morePermissions">http://www.shlomifish.org/humour/Blue-Rabbit-Log/</a>.
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories.calc_common_top_elems(id => 'blue_rabbit') %]
+
 [% SET script_type=' type="text/javascript"' %]
 
 [% BLOCK _append_licence %]

@@ -193,7 +193,7 @@ $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES
 
 all: $(CATB_COPY_POST)
 
-include lib/make/asciidocs2db5-generated-include.mak
+include lib/make/generated/asciidocs2db5-include.mak
 include lib/make/json_resume.mak
 include lib/make/jquery-ui-webpack.mak
 include lib/make/mod_files.mak

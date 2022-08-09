@@ -220,7 +220,7 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
         @captioned_images,
         "all: " . join( " ", sort keys %all_deps ) . "\n\n"
     );
-    path("${DIR}asciidocs2db5-generated-include.mak")->spew_utf8(
+    path("${DIR}generated/asciidocs2db5-include.mak")->spew_utf8(
         (
             map { $_ . "\t\$(call ASCIIDOCTOR_TO_DOCBOOK5)\n" . "\n" } (
                 sort { $a cmp $b }

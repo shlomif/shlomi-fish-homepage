@@ -126,7 +126,7 @@ BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 include lib/make/presentations-targets.mak
 include lib/make/sf-css.mak
 include lib/make/stories-targets.mak
-include lib/make/deps.mak
+include lib/make/generated/deps.mak
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 

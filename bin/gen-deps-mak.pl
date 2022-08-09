@@ -10,4 +10,9 @@ HTML::Latemp::GenDepsTT2->new(
         src_dir => 'src',
         src_var => '$(PRE_DEST)',
     }
-)->run;
+)->run(
+    +{
+        out_fn => "lib/make/generated/deps.mak",
+    }
+
+);

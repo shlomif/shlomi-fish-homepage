@@ -615,7 +615,7 @@ my %tr_s = (
     ),
     'the_10th_muse__wil_wheaton' => __PACKAGE__->_gen__the_10th_muse__tr(
         {
-            path_regex => qr#(?:Athena-Gets-laid | Trojan )#imsx,
+            path_regex => qr#(?:Athena-Gets-Laid | Trojan )#imsx,
         }
     ),
     'tow_fountainhead' => _tr(

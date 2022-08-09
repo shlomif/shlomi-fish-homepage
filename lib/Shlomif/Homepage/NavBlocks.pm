@@ -115,6 +115,30 @@ sub _gen__queen_padme_tales__tr
     );
 }
 
+sub _gen__the_10th_muse__tr
+{
+    my $self  = shift;
+    my $args  = shift;
+    my $regex = $args->{path_regex};
+
+    return _tr(
+        title => "The 10th Muse",
+        items => [
+            _fp( path => "humour/The-10th-Muse/", ),
+            (
+                grep { $_->path() =~ $regex } _l(
+                    inner_html => "Athena Gets Laid",
+                    path       =>
+"humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.html",
+                ),
+            ),
+            _github(
+                url => 'https://github.com/shlomif/Queen-Padme-Tales',
+            ),
+        ],
+    );
+}
+
 sub _gen__who_will_ride_princess_celestia__tr
 {
     my $self  = shift;
@@ -276,7 +300,10 @@ my %tr_s = (
                 inner_html => "GPL Not Compatible with Itself",
                 path       => "humour/bits/GPL-is-not-Compatible-with-Itself/",
             ),
-            _l( inner_html => "RMS Lint", path => "humour/bits/RMS-Lint/", ),
+            _l(
+                inner_html => "RMS Lint",
+                path       => "humour/bits/RMS-Lint/",
+            ),
             _l(
                 inner_html =>
 "Ways to do it According to the Programming Languages of the World",
@@ -374,7 +401,10 @@ my %tr_s = (
                 inner_html => "Larry Wall Facts",
                 path       => "humour/bits/facts/Larry-Wall/",
             ),
-            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/", ),
+            _l(
+                inner_html => "NSA Facts",
+                path       => "humour/bits/facts/NSA/",
+            ),
             _l(
                 inner_html => "Summer Glau Facts",
                 path       => "humour/bits/facts/Summer-Glau/",
@@ -583,6 +613,11 @@ my %tr_s = (
             ),
         ],
     ),
+    'the_10th_muse__wil_wheaton' => __PACKAGE__->_gen__the_10th_muse__tr(
+        {
+            path_regex => qr#(?:Athena-Gets-laid | Trojan )#imsx,
+        }
+    ),
     'tow_fountainhead' => _tr(
         title => "The One with the Fountainhead",
         items => [
@@ -651,7 +686,10 @@ my %tr_s = (
                 inner_html => "Summer Glau Facts",
                 path       => "humour/bits/facts/Summer-Glau/",
             ),
-            _l( inner_html => "NSA Facts", path => "humour/bits/facts/NSA/" ),
+            _l(
+                inner_html => "NSA Facts",
+                path       => "humour/bits/facts/NSA/"
+            ),
         ],
     ),
     'commercial_fanfic_initiative__mission_stmt' =>
@@ -986,6 +1024,24 @@ q{<a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> Fa
                 _tr_s(
                     qw(  buffy_few_good queen_padme_tales__natalie_portman ),
                 ),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
+            ],
+        },
+    ),
+    'wil_wheaton' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'wil_wheaton_nav_block',
+            text_title => "Wil Wheaton Fanfiction",
+            tr_s       => [
+                _master_tr(
+                    title =>
+q{<a href="https://wilwheaton.net/">Wil Wheaton</a> Fanfiction},
+                ),
+                _subdiv_tr( title => q{Screenplays}, ),
+                _tr_s( qw( selina_mandrake the_10th_muse__wil_wheaton ), ),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'

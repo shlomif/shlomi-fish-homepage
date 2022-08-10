@@ -50,7 +50,7 @@ FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIO
 
 all: splay
 
-include lib/make/docbook/sf-homepage-quadpres-generated.mak
+include lib/make/generated/sf-homepage-quadpres-generated.mak
 
 screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
 

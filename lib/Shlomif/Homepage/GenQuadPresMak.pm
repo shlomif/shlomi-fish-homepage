@@ -11,7 +11,7 @@ use Template                         ();
 use Text::VimColor 0.29              ();
 use Shlomif::Homepage::Presentations ();
 
-my $gen_quadpres_fn = "lib/make/docbook/sf-homepage-quadpres-generated.mak";
+my $gen_quadpres_fn = "lib/make/generated/sf-homepage-quadpres-generated.mak";
 
 my $BASENAMES = <<'EOF';
 APIs/grid/index.html.wml

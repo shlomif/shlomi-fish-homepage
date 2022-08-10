@@ -3,6 +3,8 @@ package Shlomif::Homepage::GenFictionsMak;
 use strict;
 use warnings;
 
+use Carp qw/ confess /;
+
 use Moo;
 
 use Path::Tiny qw/ path /;
@@ -51,6 +53,10 @@ sub _calc_fiction_story_makefile_lines
             $dest_suffix      = 'xml';
             $dest_dir_var     = 'DOCBOOK5_XML_DIR';
             $make_cmd         = 'COPY';
+        }
+        else
+        {
+            confess("Unknown type == [$type]");
         }
 
         push @ret,

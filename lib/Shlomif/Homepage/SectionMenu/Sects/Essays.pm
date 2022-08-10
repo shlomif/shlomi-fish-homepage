@@ -40,6 +40,19 @@ my $_section_navmenu_tree_contents = {
                     ],
                 },
                 {
+                    text => "Putting all the Cards on the Table (2013)",
+                    url  =>
+"philosophy/philosophy/putting-all-cards-on-the-table-2013/",
+                    title =>
+                        "A snapshot of my personal philosophy as of March 2013",
+                },
+                {
+                    text => "Putting Cards on the Table (2019-2022)",
+                    url  =>
+"philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
+                    title => "Update to my personal philosophy as of 2019-2022",
+                },
+                {
                     text => "Guide to Neo-Tech",
                     url  => "philosophy/philosophy/guide-to-neo-tech/",
                 },
@@ -54,19 +67,6 @@ my $_section_navmenu_tree_contents = {
 "philosophy/philosophy/closed-books-are-so-19th-century/",
                     title =>
 "Why authors of books should make sure they are publicly available online.",
-                },
-                {
-                    text => "Putting all the Cards on the Table (2013)",
-                    url  =>
-"philosophy/philosophy/putting-all-cards-on-the-table-2013/",
-                    title =>
-                        "A snapshot of my personal philosophy as of March 2013",
-                },
-                {
-                    text => "Putting Cards on the Table (2019-2022)",
-                    url  =>
-"philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
-                    title => "Update to my personal philosophy as of 2019-2022",
                 },
             ],
         },

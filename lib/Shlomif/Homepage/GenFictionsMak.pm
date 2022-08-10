@@ -147,7 +147,7 @@ FICT:
             \@fiction_docs_basenames, \@o );
     }
 
-    my $dir  = path("lib/make/docbook");
+    my $dir  = path("lib/make/generated");
     my $spew = sub {
         my ( $fn, $strs ) = @_;
         return $dir->child($fn)->spew_utf8(@$strs);

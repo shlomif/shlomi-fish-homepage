@@ -21,7 +21,7 @@ PRE_DEST := $(SRC_DEST)
 STRIP_src_dir_DEST := $(PERL) -lpe 's=\A(?:./)?$(PRE_DEST)/?=='
 
 include lib/make/factoids.mak
-include lib/make/docbook/sf-fictions-list.mak
+include lib/make/generated/sf-fictions-list.mak
 include lib/make/generated/long_stories.mak
 
 BK2HP_SVG_SRC := $(SRC_SRC_DIR)/$(BK2HP_SVG_BASE)
@@ -94,7 +94,7 @@ $(PRE_DEST_HUMOUR)/humanity/index.xhtml $(PRE_DEST_HUMOUR)/humanity/ongoing-text
 include lib/make/fortunes-targets.mak
 include lib/make/stories-wrapper.mak
 include lib/make/docbook/sf-docbook-common.mak
-include lib/make/docbook/sf-fictions.mak
+include lib/make/generated/sf-fictions.mak
 include lib/make/sf-essays.mak
 include lib/make/sf-mkdirs.mak
 

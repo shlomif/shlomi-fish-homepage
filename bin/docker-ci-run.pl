@@ -103,7 +103,7 @@ EOF
             ],
         }
     ),
-    'fedora:33' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:36' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora33",
             package_manager_install_cmd => "sudo dnf -y install",
@@ -230,7 +230,7 @@ sub run_config
             and -f "./Tests/gmake-unit.t" )
         )
     {
-        die "Must be run as \"$^X util-code/docker-ci-run.pl\"!";
+        die "Must be run as \"$^X bin/docker-ci-run.pl\"!";
     }
 
     my $commit    = $snapshot_names_base . "_1";

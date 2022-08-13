@@ -5,6 +5,8 @@ use warnings;
 use 5.014;
 use autodie;
 
+use Carp::Always;
+
 use Docker::CLI::Wrapper::Container v0.0.4 ();
 
 package Docker::CLI::Wrapper::Container;
@@ -45,7 +47,7 @@ package main;
 my $configs = {
     'debian:10' => Docker::CLI::Wrapper::Container::Config->new(
         {
-            container                   => "shlomi_fish_homesite_deb10",
+            container                   => "shlomi_fish_homesite_debian",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
             setup_package_manager => <<'EOF',
@@ -105,7 +107,7 @@ EOF
     ),
     'fedora:36' => Docker::CLI::Wrapper::Container::Config->new(
         {
-            container                   => "shlomi_fish_homesite_fedora33",
+            container                   => "shlomi_fish_homesite_fedora",
             package_manager_install_cmd => "sudo dnf -y install",
             setup_package_manager       => '',
             snapshot_names_base         => "shlomif/hpage_fedora",
@@ -329,9 +331,10 @@ cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::Al
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
 sudo cpanm --notest @cpan_deps
 sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+cd ~/source
 pwd
 ls -l
-ls -l bin/
+ls -l bin/ || true
 perl bin/my-cookiecutter.pl
 deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
 gem install asciidoctor compass compass-blueprint

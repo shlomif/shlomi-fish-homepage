@@ -329,6 +329,9 @@ cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::Al
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
 sudo cpanm --notest @cpan_deps
 sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+pwd
+ls -l
+ls -l bin/
 perl bin/my-cookiecutter.pl
 deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
 gem install asciidoctor compass compass-blueprint
@@ -377,7 +380,7 @@ use Getopt::Long qw/ GetOptions /;
 
 my $output_fn;
 my $force_load;
-GetOptions( "force-load" => \$force_load, "output|o=s" => \$output_fn, )
+GetOptions( "force-load!" => \$force_load, "output|o=s" => \$output_fn, )
     or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )

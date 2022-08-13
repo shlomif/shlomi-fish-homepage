@@ -153,6 +153,7 @@ sub run_config
 {
     my ( $self, $args ) = @_;
 
+    my $cleanrun   = $args->{cleanrun};
     my $force_load = $args->{force_load};
     my $sys        = $args->{sys};
 
@@ -237,28 +238,35 @@ sub run_config
 
     my $commit    = $snapshot_names_base . "_1";
     my $from_snap = 0;
-    eval {
-        my $snap_obj = Docker::CLI::Wrapper::Container->new(
-
-            # { container => $commit, sys => $sys, },
-            { container => $container, sys => $sys, },
-        );
-        $snap_obj->run_docker_commit( { label => $commit, } );
-        $obj = $snap_obj;
-    };
-    if ($@)
+    if ($cleanrun)
     {
-        if ($force_load)
-        {
-            die qq#could not load sys='$sys'!#;
-        }
-
-        $obj->clean_up();
         $obj->run_docker();
     }
     else
     {
-        $from_snap = 1;
+        eval {
+            my $snap_obj = Docker::CLI::Wrapper::Container->new(
+
+                # { container => $commit, sys => $sys, },
+                { container => $container, sys => $sys, },
+            );
+            $snap_obj->run_docker_commit( { label => $commit, } );
+            $obj = $snap_obj;
+        };
+        if ($@)
+        {
+            if ($force_load)
+            {
+                die qq#could not load sys='$sys'!#;
+            }
+
+            $obj->clean_up();
+            $obj->run_docker();
+        }
+        else
+        {
+            $from_snap = 1;
+        }
     }
     my $temp_git_repo_path = "../temp-git";
     if ($from_snap)
@@ -315,7 +323,10 @@ EOSCRIPTTTTTTT
     else
     {
         $obj->exe_bash_code( { code => $script, } );
-        $obj->commit( { label => $commit, } );
+        if ( not $cleanrun )
+        {
+            $obj->commit( { label => $commit, } );
+        }
     }
 
     $script = <<"EOSCRIPTTTTTTT";
@@ -383,13 +394,23 @@ use Getopt::Long qw/ GetOptions /;
 
 my $output_fn;
 my $force_load;
-GetOptions( "force-load!" => \$force_load, "output|o=s" => \$output_fn, )
-    or die $!;
+my $cleanrun;
+GetOptions(
+    "cleanrun!"   => \$cleanrun,
+    "force-load!" => \$force_load,
+    "output|o=s"  => \$output_fn,
+) or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
 foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
-    __PACKAGE__->run_config( { force_load => $force_load, sys => $sys, } );
+    __PACKAGE__->run_config(
+        {
+            cleanrun   => $cleanrun,
+            force_load => $force_load,
+            sys        => $sys,
+        }
+    );
 }
 
 print "Success!\n";

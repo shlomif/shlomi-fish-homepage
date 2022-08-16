@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
 [% END %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
+[% PROCESS "Inc/img_macros_blocks.tt2" %]
 
 [% IF lang == "eng" %]
 [% IF captioned_images_only %]
@@ -2889,23 +2890,7 @@ that cannot be fixed.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "nothing_sexier"  header = "“There’s nothing sexier than a man who does not want to have sex.”"  repo_href = "http://github.com/shlomif/Captioned-Image-Nothing-Sexier"  src = base_path _ "humour/images/Nothing-Sexier.svg.webp"  alt = "“As a woman, there is nothing sexier than a man who does not want to have sex.”"  %]
-
-[% WRAPPER quote  %]
-<p>
-“As a woman, there is nothing sexier than a man who does not want to have sex.”
-</p>
-[%- END -%]
-
-<p>
-This is a quote from the Television series
-<a href="http://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> which I’ve
-reused in a screenplay and also decided to place here. Also see
-<a href="https://www.reddit.com/r/howyoudoin/comments/2i7ox2/as_a_woman_there_is_nothing_sexier_one_of_my_most/">a
-Reddit discussion</a> of this captioned image.
-</p>
-
-[%- END -%]
+[% INCLUDE nothing_sexier__image_macro %]
 
 [% WRAPPER eng_header_joke id = "how_to_hide_code"  header = "How to hide your Perl code"  %]
 

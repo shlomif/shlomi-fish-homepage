@@ -247,6 +247,11 @@ my $_humour_tree_contents = {
 "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
                                     title => "Ongoing Text of the Screenplay",
                                 },
+                                {
+                                    text => "Image Macros (“Memes”)",
+                                    url  =>
+"humour/So-Who-The-Hell-Is-Qoheleth/image-macros/",
+                                },
                             ],
                         },
                         {

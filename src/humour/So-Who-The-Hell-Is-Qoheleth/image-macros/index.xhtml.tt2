@@ -1,0 +1,20 @@
+[%- SET title = "“So, who the Hell is Qoheleth?” - An Illustrated Screenplay - Image Macros (“memes”)" -%]
+[%- SET desc = "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." -%]
+
+[%- # PROCESS "Inc/jqui_tabs.tt2" -%]
+
+[%- WRAPPER wrap_html -%]
+[%- SET lang = "eng" -%]
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+
+[% long_stories.calc_common_top_elems(id => 'who_is_qoheleth') %]
+
+<div class="aphorisms wrap-me lim_width limit_imgs_width">
+
+[% PROCESS "Inc/img_macros_blocks.tt2" %]
+
+[% INCLUDE nothing_sexier__image_macro %]
+
+</div>
+
+[% END %]

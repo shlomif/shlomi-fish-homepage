@@ -95,4 +95,23 @@ I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-He
 
 [%- END -%]
 
+[%- END -%]
+
+[% BLOCK it_is_too_easy__image_macro %]
+
+[% WRAPPER github_captioned_image_joke id = "it_is_too_easy" header = "“It is too easy”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--phoebe--it-is-too-easy" src = base_path _ "humour/images/captioned-image--friends--phoebe--it-is-too-easy.svg.webp" alt = "“It is too easy” as said by Phoebe on Friends" %]
+
+[% WRAPPER quote %]
+<p>
+“It is too easy”
+</p>
+[%- END -%]
+
+<p>
+From "Ross and Phoebe argue about Evolution.".
+I used it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#at-the-forum">"Qoheleth" screenplay</a>.
+</p>
+
+[%- END -%]
+
 [% END %]

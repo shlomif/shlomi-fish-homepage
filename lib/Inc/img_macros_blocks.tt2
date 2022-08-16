@@ -115,3 +115,30 @@ I used it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qo
 [%- END -%]
 
 [% END %]
+
+[% BLOCK say_no_to_an_alpha_female__image_macro %]
+
+
+[% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
+
+[% WRAPPER quote %]
+<p>
+One does not simply say “no” to an Alpha Female.
+</p>
+[%- END -%]
+
+<p>
+This purposely alludes to sex, but is about something else.
+In the Bible, <a href="https://en.wikipedia.org/wiki/Rahab">Rahab</a>
+is being visited by Canaanite soldiers who ask her if she hides
+the Israelite spies, and they leave after she testifies that it isn't
+the case. Even today, <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">alpha females</a>
+are held with enough admiration and respect to assume they know
+what they are doing. That is because, among humans, sex appeal
+<a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">corresponds to competence</a>.
+</p>
+
+[%- END -%]
+
+[% END %]
+

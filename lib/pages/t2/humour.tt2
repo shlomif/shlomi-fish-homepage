@@ -3010,55 +3010,7 @@ and why it is a bad idea marketing-wise. Also see <a href="https://github.com/sh
 [%- END -%]
 
 [% INCLUDE wandless_emma_watson__image_macro %]
-
-[% WRAPPER github_captioned_image_joke id = "standup_philosopher"  header = "Stand-up Philosopher"  repo_href = "https://github.com/shlomif/Captioned-Image-Standup-Philosopher"  src = base_path _ "humour/images/Standup-Philosopher.svg.webp"  alt = "Occupation? Stand-up Philosopher! Oh, a bullshit artist" %]
-
-[% WRAPPER quote  %]
-<ul>
-<li>
-- **Bea:** Occupation?
-</li>
-<li>
-- **Mel:** Stand-up Philosopher!
-</li>
-<li>
-- **Bea:** Oh! A bullshit artist!
-</li>
-</ul>
-[%- END -%]
-
-<p>
-Most philosophers at ancient times (and similar phenomena such as
-the Israelite <a href="https://en.wikipedia.org/wiki/Nevi%27im">nev'im</a>)
-were essentially a form of entertainers. I suspect "le-nabé" meant
-"to be crazy / to act crazy" including in today's casual sense.
-These philosophers
-were treated with the same contempt as we now treat actors, models or most
-recently (as of 2014) — reality T.V. show contestants, or independent
-(covers/parodies/remixes/etc.) artists on YouTube and other social media and
-Web resources (e.g.: <a href="https://en.wikipedia.org/wiki/YouTuber">YouTubers</a>).
-</p>
-
-<p>
-Many philosophers were joking and didn't take their philosophies seriously.
-They were often <a href="[% base_path
-%]humour/fortunes/paul-graham.html">amateur</a> (= artists or workers who enjoy
-their work, regardless of how much or how little they were paid; a.k.a:
-"geeks") and polymaths, who accepted different opinions, or people who built,
-parodied, and expanded upon their work.
-</p>
-
-<p>
-I suspect that despite what Jaynes describes in <a
-href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">his book</a>,
-most of the good nev'im and story tellers of ancient times were only <a
-href="https://en.wikipedia.org/wiki/Hypomania">hypomanic</a> (= mildly manic)
-at worse, or possibly manic, who satirised fanatical or cynical zealots, often
-spoke in prose, drama or freeform verse, and were in effect "stand-up
-comedians".
-</p>
-
-[%- END -%]
+[% INCLUDE standup_philosopher__image_macro %]
 
 [% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
 

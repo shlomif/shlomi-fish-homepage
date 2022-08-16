@@ -72,3 +72,27 @@ comedians".
 [%- END -%]
 
 [% END %]
+
+
+[% BLOCK yeah_like_i_could_lose_it__image_macro %]
+
+[% WRAPPER github_captioned_image_joke id = "yeah_like_i_could_lose_it" header = "“Yeah! Like I could lose it!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--yeah-like-i-could-lose-it" src = base_path _ "humour/images/friends--yeah-like-i-could-lose-it.svg-600w.webp" alt = "“Yeah! Like I could lose it!” as said by Ross on Friends" %]
+
+[% WRAPPER quote %]
+<p>
+“Yeah! Like I could lose it!”
+</p>
+[%- END -%]
+
+<p>
+I <a
+href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-cinema--copyright-cannibalism">noted
+when chatting online</a> that the reason Madonna has not been cast into an
+acting role (as of March 2021) was likely not because she lost her acting skills.
+This made me recall <a href="https://www.reddit.com/r/howyoudoin/comments/m0bv5i/ross_in_s04e07_yeah_like_i_could_lose_it/">that scene from <i>Friends</i></a>.
+I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">"Qoheleth" screenplay</a>.
+</p>
+
+[%- END -%]
+
+[% END %]

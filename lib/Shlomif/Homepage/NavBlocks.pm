@@ -587,6 +587,10 @@ my %tr_s = (
             _ontext(
                 path => "humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html",
             ),
+            _l(
+                inner_html => "Image Macros",
+                path => "humour/So-Who-The-Hell-Is-Qoheleth/image-macros/",
+            ),
             _github(
                 url => 'https://github.com/shlomif/So-Who-the-Hell-Is-Qoheleth',
             ),

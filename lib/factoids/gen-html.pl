@@ -197,7 +197,6 @@ END_OF_TEMPLATE
 # some useful options (see below for full list)
 my $config = {
     POST_CHOMP => 1,    # cleanup whitespace
-    EVAL_PERL  => 1,    # evaluate Perl code blocks
 };
 
 # create Template object

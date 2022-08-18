@@ -39,11 +39,13 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container package_manager_install_cmd setup_package_manager snapshot_names_base sys_deps /
+    qw/ container package_manager_install_cmd setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
 
+my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
+my $EN      = "export $NOSYNC";
 my $configs = {
     'debian:10' => Docker::CLI::Wrapper::Container::Config->new(
         {
@@ -60,6 +62,7 @@ su -c "apt-get -y install eatmydata netselect-apt sudo"
 # sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 EOF
+            setup_script_cmd    => "",
             snapshot_names_base => "shlomif/hpage_debian",
             sys_deps            => [
                 qw/
@@ -108,8 +111,9 @@ EOF
     'fedora:36' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
-            package_manager_install_cmd => "sudo dnf -y install",
-            setup_package_manager       => '',
+            package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
+            setup_package_manager       => "sudo dnf -y install nosync ; $EN ;",
+            setup_script_cmd            => "$EN",
             snapshot_names_base         => "shlomif/hpage_fedora",
             sys_deps                    => [
                 qw/
@@ -163,6 +167,7 @@ sub run_config
     my $container                   = $cfg->container();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $setup_package_manager       = $cfg->setup_package_manager();
+    my $setup_script_cmd            = $cfg->setup_script_cmd();
     my $sys_deps                    = $cfg->sys_deps();
     my $snapshot_names_base         = $cfg->snapshot_names_base();
 
@@ -331,7 +336,8 @@ EOSCRIPTTTTTTT
 
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
-sudo -H `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest
+$setup_script_cmd
+sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 # cpanm -vvv IO::Async
 cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
@@ -340,7 +346,7 @@ cpanm --notest HTML::T5
 cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
-sudo cpanm --notest @cpan_deps
+sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
 sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 cd ~/source
 pwd

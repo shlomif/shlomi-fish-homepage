@@ -24,7 +24,7 @@ FICTION_XML_TXT_DIR := $(FICTION_XML_BASE_DIR)/txt
 FICTION_XML_DB5_XSLT_DIR := $(FICTION_XML_BASE_DIR)/docbook5-post-proc
 FICTION_XML_TEMP_DB5_DIR := $(FICTION_XML_BASE_DIR)/intermediate-docbook5-results
 
-include lib/make/docbook/sf-screenplays.mak
+include lib/make/generated/shlomif-screenplays.mak
 
 SCREENPLAY_DOCS_ADDITIONS := \
 	Emma-Watson-applying-for-a-software-dev-job \

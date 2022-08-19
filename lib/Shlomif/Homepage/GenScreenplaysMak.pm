@@ -306,7 +306,7 @@ EOF
     my $CLEAN_NAMESPACES_FUNC__BODY =
         qq{\$1 \$(PERL) -lp bin/screenplay-xml-remove-ns.pl < \$< > \$\@};
 
-    path("lib/make/docbook/sf-screenplays.mak")->spew_utf8(
+    path("lib/make/generated/shlomif-screenplays.mak")->spew_utf8(
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         "$graphics_dir_bn_var := graphics\n",
         ( map { @{ $_->{lines} } } @records ),

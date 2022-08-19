@@ -147,7 +147,7 @@ foreach my $rec ( @{ $gen_screenplays_ret->{generate_file_list_promises} }, )
     }
 }
 
-path("lib/make/docbook/sf-screenplays.mak")->append_utf8(
+path("lib/make/generated/shlomif-screenplays.mak")->append_utf8(
     (
         map {
             my $var = $_;

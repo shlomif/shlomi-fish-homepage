@@ -64,14 +64,15 @@ EOF
                 Shlomif::Homepage::Presentations->new->quadp_presentations
             ),
         },
-        $gen_quadpres_fn,
-    ) or die $tt->error();
-
-    path($gen_quadpres_fn)->edit_utf8(
         sub {
-            s/\n\n+/\n\n/g;
-        }
-    );
+            my $text = shift;
+
+            $text =~ s/\n\n+/\n\n/g;
+
+            path($gen_quadpres_fn)->spew_utf8($text);
+            return;
+        },
+    ) or die $tt->error();
 
     return;
 }

@@ -156,7 +156,8 @@ FICT:
     my $dir  = path("lib/make/generated");
     my $spew = sub {
         my ( $fn, $strs ) = @_;
-        return $dir->child($fn)->spew_utf8(@$strs);
+        $dir->child($fn)->spew_utf8(@$strs);
+        return;
     };
 
     $spew->(

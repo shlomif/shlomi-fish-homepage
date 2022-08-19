@@ -257,7 +257,7 @@ EOF
             $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $doc,
         );
     }
-    path("lib/make/docbook/screenplays-copy-operations.mak")->spew_utf8(
+    path("lib/make/generated/screenplays-copy-operations.mak")->spew_utf8(
         ( map { $_->{copy_screenplay_mak} } @records ),
         (
             "SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS = ",

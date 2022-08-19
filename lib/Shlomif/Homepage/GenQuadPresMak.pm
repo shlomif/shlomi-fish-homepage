@@ -66,9 +66,7 @@ EOF
         },
         sub {
             my $text = shift;
-
             $text =~ s/\n\n+/\n\n/g;
-
             path($gen_quadpres_fn)->spew_utf8($text);
             return;
         },

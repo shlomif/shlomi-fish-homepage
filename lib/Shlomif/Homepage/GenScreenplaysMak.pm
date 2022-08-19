@@ -50,10 +50,11 @@ sub _calc_screenplay_doc_makefile_lines
         $_epub_map, $screenplay_vcs_base_dir, $record )
         = @_;
 
-    my $base             = $record->{base};
-    my $github_repo      = $record->{github_repo};
-    my $base_github_repo = $github_repo;
-    my $should_clone     = 1;
+    my $base               = $record->{base};
+    my $github_repo        = $record->{github_repo};
+    my $base_github_repo   = $github_repo;
+    my $should_clone       = 1;
+    my $epub_scripts_count = 0;
     if ( ref($base_github_repo) eq 'HASH' )
     {
         $should_clone     = 0;
@@ -160,14 +161,18 @@ sub _calc_screenplay_doc_makefile_lines
                 . q/$(call COPY)/
                 . "\n\n" ),
             (
-            $should_clone
-            ? ()
+            $should_clone ? ()
             : (
-"\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${doc_base}-prepare-epub.pl\n"
-                    . "\t"
-                    . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
-                    . q/$(call COPY)/
-                    . "\n\n" )
+                ( not $epub_scripts_count++ )
+                ? (
+"\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl\n"
+                        . "\t"
+                        . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n"
+                        . "\t"
+                        . q/$(call COPY)/
+                        . "\n\n" )
+                : ()
+            )
             ),
 
             <<"EOF",
@@ -252,6 +257,7 @@ $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_1.epub \
 $(POST_DEST)/humour/TOneW-the-Fountainhead/TOW_Fountainhead_2.epub \
 $(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
 $(POST_DEST)/humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.epub \
+$(POST_DEST)/humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.epub \
 $(POST_DEST)/humour/bits/How-Ronda-Rousey-Lost-her-UFC-Streak/How-Ronda-Rousey-Lost-her-UFC-Streak.epub \
 $(POST_DEST)/humour/bits/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \

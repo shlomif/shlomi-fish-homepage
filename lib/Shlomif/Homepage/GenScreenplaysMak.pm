@@ -313,9 +313,9 @@ EOF
     path("${DIR}generated/copies-generated-screenplay-images.mak")
         ->spew_utf8($images_copy);
     my $clone_cb = sub {
-        my ($r) = @_;
-
-        return $git_task->( $screenplay_vcs_base_dir, $r );
+        my ($bn) = @_;
+        $git_task->( $screenplay_vcs_base_dir, $bn );
+        return;
     };
 
     foreach my $github_repo (@records)

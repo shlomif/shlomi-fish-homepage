@@ -40,12 +40,14 @@ sub _calc_screenplay_doc_makefile_lines
     my $dest_dir_var        = "${base}_SCREENPLAY_IMAGES__POST_DEST";
     my $dest_prefix_dir_var = "${base}_SCREENPLAY_IMAGES__POST_DEST_PREFIX";
     my $files_var           = "${base}_SCREENPLAY_IMAGES__BASE";
+    my $src_vcs_dir_var     = "${base}_SCREENPLAY_XML__SRC_DIR";
 
     ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
         "$vcs_dir_var := $screenplay_vcs_base_dir/$base_github_repo/$subdir\n",
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
 "$dest_prefix_dir_var := \$(POST_DEST_HUMOUR)/@{[ $suburl // '']}/images\n",
+        "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
     );
 
     my @epubs;
@@ -114,14 +116,13 @@ sub _calc_screenplay_doc_makefile_lines
         my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
         my $dest_varname   = $gen_name->("TXT_FROM_VCS");
         my $epub_dest_varname    = $gen_name->("EPUB_FROM_VCS");
-        my $src_vcs_dir_var      = $gen_name->("SCREENPLAY_XML__SRC_DIR");
         my $src_prepare_epub_var = $gen_name->("EPUB_PREPARATION_SCRIPT");
 
         push @epubs, $epub_dest_varname;
         my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
             // ( die "epub_dest_path returned undef for doc_base=$doc_base ." );
 
-        push @ret, "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
+        push @ret,
 "$src_prepare_epub_var := \$($src_vcs_dir_var)/scripts/prepare-epub.pl\n",
 "$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
 "$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n",
@@ -134,15 +135,14 @@ sub _calc_screenplay_doc_makefile_lines
             (
             $should_clone ? ()
             : (
-                ( not $epub_scripts_count++ )
-                ? (
+                ( $epub_scripts_count++ ) ? ()
+                : (
 "\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl\n"
                         . "\t"
                         . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n"
                         . "\t"
                         . q/$(call COPY)/
                         . "\n\n" )
-                : ()
             )
             ),
 

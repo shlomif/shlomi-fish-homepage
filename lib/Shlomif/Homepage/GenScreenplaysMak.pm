@@ -9,38 +9,9 @@ use Path::Tiny   qw/ path /;
 use File::Update qw( write_on_change );
 use YAML::XS     ();
 
-use XML::Grammar::Screenplay::FromProto::API::ListImages ();
-use XML::Grammar::Screenplay::FromProto::Parser::QnD     ();
+use Shlomif::Homepage::GenScreenplaysMak::ImageLister ();
 
-package Shlomif::Homepage::GenScreenplaysMak::Lister;
-
-use Moo;
-use File::Update qw( write_on_change );
-
-my $xml_parser = XML::LibXML->new();
-$xml_parser->validation(0);
-
-sub calc_doc__from_proto_text
-{
-    my ( $self, $xml_out_fh, $args ) = @_;
-
-    my $ret = XML::Grammar::Screenplay::API::ImageListDoc->new(
-        {
-            parser_class => 'XML::Grammar::Screenplay::FromProto::Parser::QnD',
-            %$args,
-        }
-    );
-    my $xml_text = $ret->convert($args);
-    $ret->_xml($xml_text);
-    write_on_change( $xml_out_fh, \$xml_text );
-    $ret->_dom( $xml_parser->parse_string( $ret->_xml() ) );
-
-    return $ret;
-}
-
-package Shlomif::Homepage::GenScreenplaysMak;
-
-my $image_lister = Shlomif::Homepage::GenScreenplaysMak::Lister->new( {} );
+my $image_lister = Shlomif::Homepage::GenScreenplaysMak::ImageLister->new( {} );
 
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 

@@ -21,11 +21,10 @@ sub _calc_screenplay_doc_makefile_lines
         $_epub_map, $screenplay_vcs_base_dir, $record )
         = @_;
 
-    my $base               = $record->{base};
-    my $github_repo        = $record->{github_repo};
-    my $base_github_repo   = $github_repo;
-    my $should_clone       = 1;
-    my $epub_scripts_count = 0;
+    my $base             = $record->{base};
+    my $github_repo      = $record->{github_repo};
+    my $base_github_repo = $github_repo;
+    my $should_clone     = 1;
     if ( ref($base_github_repo) eq 'HASH' )
     {
         $should_clone     = 0;
@@ -35,12 +34,13 @@ sub _calc_screenplay_doc_makefile_lines
     my $docs   = $record->{docs};
     my $suburl = $record->{suburl};
 
-    my $vcs_dir_var         = "${base}__VCS_DIR";
-    my $graphics_dir_var    = "${base}_SCREENPLAY_IMAGES__SOURCE_PREFIX";
-    my $dest_dir_var        = "${base}_SCREENPLAY_IMAGES__POST_DEST";
-    my $dest_prefix_dir_var = "${base}_SCREENPLAY_IMAGES__POST_DEST_PREFIX";
-    my $files_var           = "${base}_SCREENPLAY_IMAGES__BASE";
-    my $src_vcs_dir_var     = "${base}_SCREENPLAY_XML__SRC_DIR";
+    my $vcs_dir_var          = "${base}__VCS_DIR";
+    my $graphics_dir_var     = "${base}_SCREENPLAY_IMAGES__SOURCE_PREFIX";
+    my $dest_dir_var         = "${base}_SCREENPLAY_IMAGES__POST_DEST";
+    my $dest_prefix_dir_var  = "${base}_SCREENPLAY_IMAGES__POST_DEST_PREFIX";
+    my $files_var            = "${base}_SCREENPLAY_IMAGES__BASE";
+    my $src_vcs_dir_var      = "${base}_SCREENPLAY_XML__SRC_DIR";
+    my $src_prepare_epub_var = "${base}_SCREENPLAY_EPUB_PREPARATION_SCRIPT";
 
     ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
@@ -48,7 +48,19 @@ sub _calc_screenplay_doc_makefile_lines
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
 "$dest_prefix_dir_var := \$(POST_DEST_HUMOUR)/@{[ $suburl // '']}/images\n",
         "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",
+"$src_prepare_epub_var := \$($src_vcs_dir_var)/scripts/prepare-epub.pl\n",
     );
+
+    if ( not $should_clone )
+    {
+        push @ret,
+            (
+"\n\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl\n"
+                . "\t"
+                . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
+                . q/$(call COPY)/
+                . "\n\n" );
+    }
 
     my @epubs;
     my @generate_file_list_promises;
@@ -115,15 +127,13 @@ sub _calc_screenplay_doc_makefile_lines
         my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
         my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
         my $dest_varname   = $gen_name->("TXT_FROM_VCS");
-        my $epub_dest_varname    = $gen_name->("EPUB_FROM_VCS");
-        my $src_prepare_epub_var = $gen_name->("EPUB_PREPARATION_SCRIPT");
+        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
 
         push @epubs, $epub_dest_varname;
         my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
             // ( die "epub_dest_path returned undef for doc_base=$doc_base ." );
 
         push @ret,
-"$src_prepare_epub_var := \$($src_vcs_dir_var)/scripts/prepare-epub.pl\n",
 "$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
 "$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n",
             "$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n",
@@ -132,20 +142,6 @@ sub _calc_screenplay_doc_makefile_lines
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" ),
-            (
-            $should_clone ? ()
-            : (
-                ( $epub_scripts_count++ ) ? ()
-                : (
-"\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl\n"
-                        . "\t"
-                        . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n"
-                        . "\t"
-                        . q/$(call COPY)/
-                        . "\n\n" )
-            )
-            ),
-
             <<"EOF",
 \$($epub_dest_varname): \$($dest_xhtmlname) \$($src_prepare_epub_var)
 \tSCREENPLAY_COMMON_INC_DIR="\$(SCREENPLAY_COMMON_INC_DIR)" REBOOKMAKER="\$(REBOOKMAKER)" perl -I "\$(SCREENPLAY_COMMON_INC_DIR)" \$($src_prepare_epub_var) --output "\$\@" "\$($dest_xhtmlname)"

@@ -343,6 +343,11 @@ my $_humour_tree_contents = {
                                             url  =>
 "humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.html",
                                         },
+                                        {
+                                            text => "Trojan War Reenactment",
+                                            url  =>
+"humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.html",
+                                        },
                                     ],
                                 },
                             ],

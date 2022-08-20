@@ -126,11 +126,18 @@ sub _gen__the_10th_muse__tr
         items => [
             _fp( path => "humour/The-10th-Muse/", ),
             (
-                grep { $_->path() =~ $regex } _l(
-                    inner_html => "Athena Gets Laid",
-                    path       =>
+                grep { $_->path() =~ $regex } (
+                    _l(
+                        inner_html => "Athena Gets Laid",
+                        path       =>
 "humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.html",
-                ),
+                    ),
+                    _l(
+                        inner_html => "Trojan War Reenactment",
+                        path       =>
+"humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.html",
+                    ),
+                )
             ),
             _github(
                 url => 'https://github.com/shlomif/Queen-Padme-Tales',

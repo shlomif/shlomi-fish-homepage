@@ -1,0 +1,33 @@
+[%- SET title = "The 10th Muse: “Reenancting the Trojan War” - Ongoing Text" -%]
+[%-# SET desc = "" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[% IF NOT main_class.has("fancy_sects") %]
+[% THROW "NO fancy_sects ." %]
+[% END %]
+
+[%- WRAPPER wrap_html -%]
+
+<p class="skip_to_main" id="sk">
+<a href="#main-scene"><b>Skip the introductions</b></a>
+</p>
+
+[% long_stories.calc_common_top_elems(id => 'the_10th_muse') %]
+
+[% path_slurp("screenplay-xml/rendered-html/The-10th-Muse--Trojan-War-Reenactment.html") %]
+
+[% WRAPPER h2_section id = "publicity" title = "Publicity" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://twitter.com/shlomif/status/1488224478509285379">On my Twitter</a>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% END %]

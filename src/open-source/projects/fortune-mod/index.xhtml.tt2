@@ -1,8 +1,11 @@
 [%- SET title = "fortune-mod - display random text quotes on the command line" -%]
 [%- SET desc = "fortune-mod - display random text quotes on the command line" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER about_sect %]
 
 <p>
 This is one of the versions of the
@@ -11,7 +14,9 @@ that displays a random quotation from a database of quotations. It was adapted
 to run on Linux and other systems and is now maintained here.
 </p>
 
-[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Project Links" %]
 
 <ul>
 
@@ -31,7 +36,7 @@ to run on Linux and other systems and is now maintained here.
 
 [%- END -%]
 
-[% WRAPPER licence_sect  %]
+[% WRAPPER licence_sect %]
 
 <p>
 fortune-mod is derived from the NetBSD’s fortune program and retains
@@ -41,9 +46,9 @@ its licence (original 4-clause
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "coverage"  title = "Coverage of fortune-mod"  %]
+[% WRAPPER h2_section id = "coverage" title = "Coverage of fortune-mod" %]
 
-[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage on Reddit"  %]
+[% WRAPPER h3_section id = "coverage-shlomif" title = "Coverage on Reddit" %]
 
 <ul>
 

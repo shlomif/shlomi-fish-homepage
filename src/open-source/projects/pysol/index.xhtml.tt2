@@ -1,10 +1,11 @@
 [%- SET title = "PySol Fan Club Edition" -%]
 [%- SET desc = "An open source and feature-rich collection of Solitaire games" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER about_sect  %]
+[% WRAPPER about_sect %]
 
 <p>
 An open source and feature-rich collection of Solitaire games. I adopted the
@@ -14,7 +15,7 @@ and I are now maintaining it. Contributions are welcome!
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -34,7 +35,7 @@ and I are now maintaining it. Contributions are welcome!
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "similar-projects"  title = "Similar Projects"  %]
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
 
 <ul>
 

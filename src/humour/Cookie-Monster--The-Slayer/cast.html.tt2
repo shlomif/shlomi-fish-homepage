@@ -2,15 +2,15 @@
 
 [%- PROCESS "stories/cookiem-slayer-common.tt2" %]
 
-[%- WRAPPER wrap_html -%]
+[% main_class.addClass("fancy_sects", "side_toc") %]
 
-<div class="side_toc fancy_sects">
+[%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
 [% long_stories.calc_common_top_elems(id => 'cookie_monster__the_slayer') %]
 
-[% WRAPPER about_sect  %]
+[% WRAPPER about_sect %]
 
 <p>
 On this page, I would like to note who I think should be the cast for some
@@ -125,8 +125,5 @@ height and complexion as <a href="#cast__emma_watson">Emma Watson</a>.
 </section>
 
 [%- END -%]
-
-
-</div>
 
 [% END %]

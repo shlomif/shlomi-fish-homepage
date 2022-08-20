@@ -244,13 +244,13 @@ EOF
     my $images_copy   = '';
 
     my @records;
-    foreach my $doc ( sort { $a->{base} cmp $b->{base} }
+    foreach my $record ( sort { $a->{base} cmp $b->{base} }
         @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } )
     {
         _calc_screenplay_doc_makefile_lines(
             ( \@records ),
             $dest_dir_vars, ( \$images_copy ),
-            $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $doc,
+            $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $record,
         );
     }
     path("lib/make/generated/screenplays-copy-operations.mak")->spew_utf8(

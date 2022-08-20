@@ -1,5 +1,7 @@
 [%- SET title = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
-[%- SET desc = "Docmake - a Perl-based tool to Render DocBook/XML" -%]
+[%- SET desc = "Docmake - a Perl-based tool to translate DocBook/XML into XHTML5, PDF, XSL-FO, etc." -%]
+
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 

@@ -47,24 +47,30 @@ package main;
 my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
 my $EN      = "export $NOSYNC";
 my $configs = {
-    'debian:10' => Docker::CLI::Wrapper::Container::Config->new(
+    'debian:sid' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_debian",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
             setup_package_manager => <<'EOF',
-cat /etc/apt/sources.list
-sed -r -i -e 's#^(deb *)[^ ]+( *buster +main.*)$#\1http://mirror.isoc.org.il/pub/debian\2#' /etc/apt/sources.list
-cat /etc/apt/sources.list
+if false
+then
+    cat /etc/apt/sources.list
+    sed -r -i -e 's#^(deb *)[^ ]+( *buster +main.*)$#\1http://mirror.isoc.org.il/pub/debian\2#' /etc/apt/sources.list
+    cat /etc/apt/sources.list
+fi
 # exit 5
 su -c "apt-get update"
 su -c "apt-get -y install eatmydata netselect-apt sudo"
 # sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 EOF
-            setup_script_cmd    => "",
+            setup_script_cmd    => "true",
             snapshot_names_base => "shlomif/hpage_debian",
             sys_deps            => [
+
+                # libpython3-all
+                # myspell-hw
                 qw/
                     build-essential
                     cookiecutter
@@ -84,11 +90,9 @@ EOF
                     libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
-                    libpython3-all
                     libpython3-dev
                     libxml2-dev
                     lynx
-                    myspell-hw
                     perl
                     pysassc
                     python3
@@ -304,9 +308,12 @@ mv /temp-git ~/source
 true || ls -lR /root
 $setup_package_manager
 cd ~/source
-$package_manager_install_cmd glibc-langpack-en glibc-locale-source
-# localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
-localedef --force -i en_US -f UTF-8 en_US.UTF-8
+if false
+then
+    $package_manager_install_cmd glibc-langpack-en glibc-locale-source
+    # localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
+    localedef --force -i en_US -f UTF-8 en_US.UTF-8
+fi
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
 if false
@@ -408,7 +415,7 @@ GetOptions(
 ) or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config(
         {

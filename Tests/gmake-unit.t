@@ -55,7 +55,7 @@ sub dest_test
 
     foreach my $word (
         qw#
-        Friends-S02E04--Nothing-Sexier.svg.jpg
+        Friends-S02E04--Nothing-Sexier.svg.webp
         If-You-Wanna-Be-Sad.svg.jpg
         Standup-Philosopher.svg.webp
         sigourney-weaver--resized.jpg

@@ -17,6 +17,8 @@ mailing list</a>.
 
 [%- END -%]
 
+[% default_toc %]
+
 [% WRAPPER h2_section id = "meta"  title = "Document Information"  %]
 
 <dl class="meta">
@@ -180,7 +182,7 @@ in PHP in the MediaWiki source. I really dislike the default Kwiki format, and
 despite all
 the flood of Kwiki plugins, no-one has written a
 UseModWiki/Oddmuse/MediaWiki-subset format for it yet. I keep intending to
-do that, but I have not find the time for this yet.
+do that, but I have not found the time for this yet.
 </p>
 
 <p>
@@ -215,34 +217,46 @@ PostScript or PDF but:
 </p>
 
 <ol>
+
 <li>
+<p>
 <q>The only thing that can understand TeX is tex</q>. I believe it was said
 much earlier than when Tom Christiansen ported that idiom to the Perl world. It is in
 fact much more true for TeX than it is for Perl.
+</p>
 </li>
 
 <li>
+<p>
 Conversion of LaTeX to DocBook or HTML often doesn’t work quite well.
 Often, the tools are outdated and generate old or invalid HTML, and often
 they break on more than complex LaTeX. TeX and LaTeX are Turing-complete, and
 the syntax is incredibly problematic.
+</p>
 </li>
 
 <li>
+<p>
 LaTeX has poor support for hypertext, and other PDF niceties.
+</p>
 </li>
 
 <li>
+<p>
 PDF and PostScript, which are the default-and-least-error-prone TeX
 output formats, have relatively poor accessibility and internationalisation. For
 example, from my understanding Bi-directional text (mixed Arabic-English
 text, etc.) is rendered visually.
+</p>
 </li>
 
 <li>
+<p>
 It is easier to convert semantic XHTML or DocBook/XML to LaTeX than the
 other way around.
+</p>
 </li>
+
 </ol>
 
 <p>

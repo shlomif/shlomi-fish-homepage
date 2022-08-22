@@ -60,7 +60,8 @@ class Main:
                 s = s.encode('utf8')
                 assert len(s) == RECORD_LEN
                 f.write(s)
-        for data, text in _show_all(raw_mode=False, ):
+        it = _show_all(raw_mode=False, )
+        for data, text in it:
             # resp = app.get('?id=' + str_id)
             # assert resp.status_code == 200
             # text = resp.text  # .encode('utf8')

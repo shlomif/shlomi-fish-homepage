@@ -68,7 +68,8 @@ ORDER BY c.str_id''', )
     while True:
         data = cur.fetchone()
         if data:
-            yield data, _display_fortune_from_data(*([raw_mode] + list(data)))
+            text = _display_fortune_from_data(*([raw_mode] + list(data)))
+            yield data, text
         else:
             return
 

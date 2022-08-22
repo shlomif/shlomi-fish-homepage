@@ -25,7 +25,8 @@ EOF
 sub calc
 {
     my $BODY =
-        Shlomif::MD::as_text("src/lecture/Perl/Newbies/lecture5-notes.txt");
+        Shlomif::MD->new()
+        ->as_text("src/lecture/Perl/Newbies/lecture5-notes.txt");
     return decode_utf8(
         encode_utf8($HEAD) . encode_utf8($BODY) . "\n</body></html>" );
 }

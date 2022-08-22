@@ -248,11 +248,13 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 return ShlomifFortunesMake->package_base;
             },
             fortune_colls_obj => $fortune_colls_obj,
-            print_markdown    => \&Shlomif::MD::as_fixed_xhtml5,
-            longblank         => $LONGBLANK,
-            main_email        => 'shlomif@shlomifish.org',
-            process_title     => \&_process_title,
-            my_acronym        => sub {
+            print_markdown    => sub {
+                return Shlomif::MD->new()->as_fixed_xhtml5(shift);
+            },
+            longblank     => $LONGBLANK,
+            main_email    => 'shlomif@shlomifish.org',
+            process_title => \&_process_title,
+            my_acronym    => sub {
                 my $args = shift;
 
                 return $latemp_acroman->abbr(

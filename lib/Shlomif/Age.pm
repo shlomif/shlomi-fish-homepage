@@ -3,7 +3,7 @@ package Shlomif::Age;
 use strict;
 use warnings;
 
-use DateTime;
+use DateTime ();
 
 sub calc_age
 {

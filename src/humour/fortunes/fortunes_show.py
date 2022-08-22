@@ -58,6 +58,21 @@ def _emit_error(title, body):
 </html>''' % {'title': title, 'body': body})
 
 
+def _show_all(raw_mode):
+    cur.execute(
+        '''SELECT f.str_id, f.text, f.info_text, f.title,
+        c.str_id, c.title, f.desc, f.date
+FROM fortune_cookies AS f, fortune_collections AS c
+WHERE (collection_id = c.id)
+ORDER BY c.str_id''', )
+    while True:
+        data = cur.fetchone()
+        if data:
+            yield data, _display_fortune_from_data(*([raw_mode] + list(data)))
+        else:
+            return
+
+
 def _show_by_str_id(raw_mode, str_id):
     if not str_id:
         return _emit_error(

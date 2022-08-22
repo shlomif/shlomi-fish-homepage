@@ -37,7 +37,7 @@ import sys
 
 # from webtest import TestApp
 sys.path.append('./src/humour/fortunes/')
-from fortunes_show import _list_all_string_ids, _show_by_str_id  # noqa:E402
+from fortunes_show import _list_all_string_ids, _show_all  # noqa:E402
 
 
 class Main:
@@ -60,12 +60,12 @@ class Main:
                 s = s.encode('utf8')
                 assert len(s) == RECORD_LEN
                 f.write(s)
-        for str_id in strings_list:
+        for data, text in _show_all(raw_mode=False, ):
             # resp = app.get('?id=' + str_id)
             # assert resp.status_code == 200
             # text = resp.text  # .encode('utf8')
-            text = _show_by_str_id(raw_mode=False, str_id=str_id)
             assert len(text) > 0
+            str_id = data[0]
             # print(text)
             fn = dest_dir + "/" + str_id + ".xhtml"
             with open(fn, 'wt') as f:

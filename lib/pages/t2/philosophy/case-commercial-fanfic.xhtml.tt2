@@ -6,7 +6,7 @@
 [% THROW "unknown scope = \"$scope\"" %]
 [% END %]
 
-[% INCLUDE "Inc/faq.tt2" %]
+[% PROCESS "Inc/faq.tt2" %]
 
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET BtVS = my_acronym( "key" => "BtVS", ) %]

@@ -30,7 +30,7 @@
 [%- END -%]
 [%- END -%]
 
-[% INCLUDE "Inc/faq.tt2" %]
+[% PROCESS "Inc/faq.tt2" %]
 
 [% SET Technion = "<a href=\"http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology\">Technion</a>" %]
 [% SET site_sources_url = base_path _ "meta/site-source/" %]
@@ -2165,7 +2165,7 @@ Do note that I have a lot of <a href="[% base_path %]meta/nav-blocks/blocks/#buf
 who drew fantasy art (see <a href="https://duckduckgo.com/?q=keith+parkinson&amp;atb=v140-1&amp;iax=images&amp;ia=images">his DuckDuckGo images' search</a>).
 </p>
 
-<img src="[% base_path %]meta/FAQ/images/keith-parkinson-tumblr_owdpxxTMci1sqf5tdo1_1280--reduced.webp" alt="painting by Keith Parkinson" />
+<a href="[% base_path %]meta/FAQ/images/keith-parkinson-tumblr_owdpxxTMci1sqf5tdo1_1280.webp"><img src="[% base_path %]meta/FAQ/images/keith-parkinson-tumblr_owdpxxTMci1sqf5tdo1_1280--reduced.webp" alt="painting by Keith Parkinson" /></a>
 
 [%- END -%]
 

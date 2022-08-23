@@ -3326,39 +3326,7 @@ some sub-repositories).
 
 [% WRAPPER faq_h3_section id = "why_real_person_fiction"  title = "What about your real person fiction?"  %]
 
-<p>
-I feature or reference several celebrities in my stories (whether past
-or present) as a way of
-<a href="http://en.wikipedia.org/wiki/Real_person_fiction">Real
-person fiction</a>. According to the wikipedia page, such fiction is likely
-to be legal if it is done in mostly good taste, which I believe and hope is
-the case for me.
-</p>
-
-<p>
-The general consensus is that a celebrity generally allows himself or herself
-to be a subject of reuse in literature, and that includes me, Shlomi Fish.
-</p>
-
-<p>
-<b>Update (2 November 2019):</b> I have now written a <a
-href="[% base_path %]philosophy/culture/my-real-person-fan-fiction/">more
-comprehensive essay</a> about why writing real person fan fiction is good.
-</p>
-
-<p>
-<b>Update (26 November 2019):</b> I now realise that fan fiction and
-especially real person fiction can be used to help combat the flood of
-new characters and names that plagues many more "original" stories. People
-generally have a rough concept of what characters such as
-<a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
-<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>,
-<a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a>,
-<a href="https://en.wikipedia.org/wiki/Moses">Moses</a>, or
-<a href="https://en.wikipedia.org/wiki/Miss_Piggy">Miss Piggy</a>, are
-like and generally can better remember them because they thought about them
-a lot.
-</p>
+[% INCLUDE why_real_person_fiction__block %]
 
 [%- END -%]
 

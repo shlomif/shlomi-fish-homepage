@@ -241,7 +241,7 @@ GetOptions(
 ) or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config(
         {

@@ -1,6 +1,7 @@
 [%- SET title = "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" -%]
 [%- SET desc = "File-Dir-Dumper - Serialise Meta-Data of Directory Structures" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -11,21 +12,25 @@ a stream of <a href="http://www.json.org/">JSON</a>-dumped data structures,
 as its representation.
 </p>
 
-<h2 id="download">Download</h2>
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <p>
 [%- WRAPPER cpan_dist d = "File-Dir-Dumper" -%]Download File-Dir-Dumper from the
 CPAN[%- END -%]
 </p>
 
-<h2 id="project-links">Project Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 [% WRAPPER github_cpan_dist_links     dist = "File-Dir-Dumper"
     github_url = "https://github.com/shlomif/perl-File-Dir-Dumper"
     freecode_url = "http://freecode.com/projects/file-dir-dumper/"  %]
 [%- END -%]
 
-<h2 id="similar-projects">Similar Projects</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
 
 <ul>
 
@@ -40,6 +45,8 @@ Java and XML.
 </li>
 
 </ul>
+
+[% END %]
 
 [% PROCESS x11_licence name = "File-Dir-Dumper",  %]
 

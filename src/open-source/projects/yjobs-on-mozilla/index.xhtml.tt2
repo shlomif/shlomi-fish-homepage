@@ -1,6 +1,7 @@
 [%- SET title = "Make www.yjobs.co.il Work with Mozilla-based Browsers" -%]
 [%- SET desc = "Make www.yjobs.co.il Work with Mozilla-based Browsers" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -30,7 +31,7 @@ email</a>.
 Happy job hunting!
 </p>
 
-<h2 id="download">Download</h2>
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <ul>
 <li>
@@ -39,7 +40,9 @@ yjobs-proxy-0.1.0.pl.gz</a> (Uncompress with gunzip)
 </li>
 </ul>
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 <p>
 The program includes some JavaScript code that was copied from the
@@ -48,7 +51,9 @@ the terms of the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/Expat
 licence</a>, which is a permissive open-source licence.
 </p>
 
-<h2 id="thanks">Thanks</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 The following projects helped in creating this script:
@@ -80,7 +85,9 @@ JavaScript debugger</a> - also helped in debugging the yjobs code.
 
 </ul>
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 
@@ -100,5 +107,7 @@ English about how the initial version of the script was developed.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

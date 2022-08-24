@@ -1,10 +1,11 @@
 [%- SET title = "PHP Sucks (originally by czth)" -%]
 [%- SET desc = "Links against PHP - PHP Sucks." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This is a copy of a page that went offline from czth.net. I’ll add links to
@@ -50,7 +51,9 @@ and that it makes use of perl regular expression matching (beats
 reinventing the wheel I guess). It just doesn’t have the elegance of
 the perl (IMO). </p>
 
-<h2 id="more-links">More Links (by Shlomi Fish)</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "more-links" title = "More Links (by Shlomi Fish)" %]
 
 <ul>
 <li>
@@ -163,7 +166,9 @@ periodic posts by the forum contributors.
 
 </ul>
 
-<h2 id="jokes">Jokes</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "jokes" title = "Jokes" %]
 
 <ul>
 
@@ -182,5 +187,7 @@ href="php-the-good-parts.jpeg">Local mirror</a>.)
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

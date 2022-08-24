@@ -1,6 +1,7 @@
 [%- SET title = "KSokoban’s Maintenance Fork" -%]
 [%- SET desc = "Maintaining the original KSokoban code and porting it to KDE 4 and KDE Frameworks 5" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -16,13 +17,15 @@ What happened for now is that the code was ported, first to KDE 4 and later
 to be based on Qt 5 and KDE Frameworks 5.
 </p>
 
-<h2 id="download">Download</h2>
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <p>
 None yet. Please clone the repository.
 </p>
 
-<h2 id="project-links">Project Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 <ul>
 
@@ -35,7 +38,9 @@ Fish’s clone of the Mercurial repository.</a> - with more recent changes.
 
 </ul>
 
-<h2 id="similar-projects">Similar Projects</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
 
 <ul>
 
@@ -47,5 +52,7 @@ trademark problems.
 </p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

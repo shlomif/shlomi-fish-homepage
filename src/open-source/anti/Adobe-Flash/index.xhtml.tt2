@@ -1,6 +1,7 @@
 [%- SET title = "Links against Adobe Flash" -%]
 [%- SET desc = "Links against Adobe Flash: the Rich Media Browser Plugin." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -8,7 +9,7 @@
 <b>Last Updated:</b> 7-September-2018
 </p>
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Adobe_Flash">Adobe Flash</a> (formerly
@@ -18,7 +19,9 @@ of web sites prefer out of convenience and inertia, but many users (including
 me) hate. This page collects links against it.
 </p>
 
-<h2 id="links">The Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "The Links" %]
 
 <ol>
 
@@ -109,5 +112,7 @@ third with 316 security bugs.
 </li>
 
 </ol>
+
+[% END %]
 
 [% END %]

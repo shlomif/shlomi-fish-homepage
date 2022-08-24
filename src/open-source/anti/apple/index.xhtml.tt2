@@ -1,6 +1,7 @@
 [%- SET title = "Links against Apple Inc." -%]
 [%- SET desc = "Links against Apple Inc. - their practices, their products, their public image." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -8,7 +9,7 @@
 <b>Last Updated:</b> 11-October-2013
 </p>
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 Some years ago, I talked with my friend and partner for Technion projects
@@ -23,7 +24,9 @@ be superior and cannot see the abuses from their parent company.
 In this page, I’ll try to collect all the bad links about Apple.
 </p>
 
-<h2 id="the-links">The Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "the-links" title = "The Links" %]
 
 <ol>
 
@@ -1205,119 +1208,175 @@ post (in Hebrew) about why Mac OS X is creepy</a> (17-August-2016)
 
 </ol>
 
-<h2 id="jokes">Jokes</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "jokes" title = "Jokes" %]
 
 <ul>
 
 <li>
+<p>
 <b>Mac O’Sucks</b> - my pun on Mac OS X.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/300-page_iPhone_bill">The 300-page
 iPhone Bill</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?v=1xXNoB3t8vM">Conan - iPhone
 Commercial</a> - it’s everything you wanted. (Via <a href="http://sijp.no-ip.info/node/197">Shlomi Israel’s Blog</a>.)
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?v=xgZKjJt-TkU">MadTV - iPhone</a>.
 (Also via <a href="http://sijp.no-ip.info/node/197">Shlomi Israel’s Blog</a>).
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://youtube.com/watch?v=hrpS9m2VF1c">PC vs. Mac on YouTube</a> -
 countering the “I’m a PC, I’m a Mac.”. Also see the related videos.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?v=_hnOCUkbix0">Lenovo X300 commercial
 (vs. MacBook Air)</a> - YouTube video.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://digg.com/apple/Not_Calvin_and_Hobbes_but_Calvin_and_Steve_Jobs_COMIC">“Digg.com
 - Calvin and Steve Jobs”</a> - (via <a href="http://idkn.wordpress.com/2008/08/03/%D7%A1%D7%98%D7%99%D7%91-%D7%92%D7%95%D7%91%D7%A1-%D7%9C%D7%A4%D7%99-calvin-and-hobbs/">Ido Kanner’s Blog</a>).
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://xkcd.com/488/">xkcd - A Webcomic - “Steal This Comic”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://ars.userfriendly.org/cartoons/?id=20071107&amp;mode=classic">UserFriendly -
 Stupid iPhone</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://ars.userfriendly.org/cartoons/?id=20080604&amp;mode=classic">UserFriendly - Safari for Windows</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://img503.imageshack.us/img503/3562/iphoners8.jpg">“iPhone vs.
 Stone”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.iwood3b.com/index.php">“Introducing the
 all new i-wood 3B”</a> - iPhone parody.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://daringfireball.net/2009/05/diary_of_an_app_store_reviewer">Excerpts
 from the Diary of an [iPhone] App Store Reviewer</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.robcottingham.ca/cartoon/2010/01/12/and-theres-a-huge-selection-of-attractive-cases-for-it/">Noise
 to Signal: “And there’s a huge selection of attractive cases for it”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://succeedblog.org/post/332114652/snowwhite-succeed">“Snowwhite
 Succeed”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?v=9_EcybyLJS8">Hitler’s angry reaction
 to the iPad (YouTube Video)</a>.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.robcottingham.ca/cartoon/archive/hold-please/">Noise
 to Signal: “Hold, please”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://fdiv.net/2012/04/01/objectivist-c">Objectivist C</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="apple_legal_team.jpg">Apple’s Legal Team</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/playlist?list=PLEFE01BA954950D82">“Banned
 Apple Promos”</a> - playlist of mock commercials on YouTube
 making fun of Apple products.
+</p>
 </li>
 
 <li>
+<p>
 <a href="Whats_Next_After_iPhone_iPad.jpg">“2008: iPhone ; 2010: iPad…”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=RyWSEwKPo8s">iPad Mini Commercial</a> (from Jimmy Kimmel Live).
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.youtube.com/watch?v=Sn276Zk5B40">“If McDonald’s Advertised
 Like Apple”</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-macOS">macOS</a>
+</p>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

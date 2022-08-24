@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This is a page of links against
@@ -14,7 +14,9 @@ popularity of programming languages. It is maintained here in order to
 educate people about why they should not assign any meaningful value to it.
 </p>
 
-<h2 id="list">The List of Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "list" title = "The List of Links" %]
 
 <ol>
 
@@ -70,5 +72,7 @@ Bunce: “TIOBE or not TIOBE – An Update”</a>
 </li>
 
 </ol>
+
+[% END %]
 
 [% END %]

@@ -1,6 +1,7 @@
 [%- SET title = "Escape from GNU Autohell!" -%]
 [%- SET desc = "Escape from GNU Autohell - why the GNU Autotools suck and why you should convert your project to CMake or a different better GNU Autotools alternative." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -8,7 +9,7 @@
 <b>Last Updated:</b> 28-January-2010
 </p>
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 Almost all GNU packages and most other free and open-source UNIX software
@@ -21,7 +22,9 @@ should instead use <a href="http://www.cmake.org/">CMake</a> or a different
 configuration-and-build system.
 </p>
 
-<h2 id="disadvantages">Disadvantages of GNU Autotools</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "disadvantages" title = "Disadvantages of GNU Autotools" %]
 
 <ol>
 
@@ -113,9 +116,11 @@ Save the developers! Save on carbon emission (from bandwidth and compile times)!
 Escape from GNU Autohell!
 </p>
 
-<h2 id="refute-arguments">Refuting Common Arguments Against CMake</h2>
+[% END %]
 
-<h3 id="poor-docs">CMake is Poorly Documented</h3>
+[% WRAPPER h2_section id = "refute-arguments" title = "Refuting Common Arguments Against CMake" %]
+
+[% WRAPPER h3_section id = "poor-docs" title = "CMake is Poorly Documented" %]
 
 <p>
 CMake has a tutorial and a reference document as a large
@@ -127,8 +132,9 @@ friend’s documentation, which tends to be incomplete, verbose, split
 and confusing.
 </p>
 
-<h3 id="shared-and-static-libs">One cannot build both a shared library and
-a static library in CMake</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "shared-and-static-libs" title = "One cannot build both a shared library and a static library in CMake" %]
 
 <p>
 As a matter of fact, it is possible. Some code to do exactly that is present
@@ -140,8 +146,9 @@ it can be mitigated during the active development stage of the package where
 only one version of the library is needed.
 </p>
 
-<h3 id="not-standard">CMake Does Not Use a Standard Syntax as Opposed to
-Autoconf’s sh+m4</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "not-standard" title = "CMake Does Not Use a Standard Syntax as Opposed to Autoconf’s sh+m4" %]
 
 <p>
 While Bourne Shell (“sh”) and m4 have POSIX standards behind them, they are
@@ -156,8 +163,9 @@ trustworthy, predictable, and reliable. The fact that it isn’t “standard” 
 not make it bad.
 </p>
 
-<h3 id="list-of-parameters">There is no way to get a list of parameters to the
-build in CMake as “cmake --help” does not work.</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "list-of-parameters" title = "There is no way to get a list of parameters to the build in CMake as “cmake --help” does not work." %]
 
 <p>
 “cmake --help” indeed gives you CMake's global help screen instead of the
@@ -166,7 +174,11 @@ the command-line without resorting to ccmake or cmake-gui. Just type
 “cmake -LA” or “cmake -LAH” to get them.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -196,5 +208,7 @@ Software”</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

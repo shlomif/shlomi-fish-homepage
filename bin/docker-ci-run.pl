@@ -9,31 +9,6 @@ use Carp::Always;
 
 use Docker::CLI::Wrapper::Container v0.0.4 ();
 
-package Docker::CLI::Wrapper::Container;
-
-sub commit
-{
-    my ( $self, $args ) = @_;
-
-    $self->docker(
-        { cmd => [ 'commit', $self->container(), $args->{label}, ] } );
-
-    return;
-}
-
-sub run_docker_commit
-{
-    my ( $self, $args ) = @_;
-
-    $self->docker(
-        {
-            cmd => [ 'run', "-d", $args->{label}, ],
-        }
-    );
-
-    return;
-}
-
 package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
@@ -73,41 +48,6 @@ EOF
                 # myspell-hw
                 qw/
                     build-essential
-                    cookiecutter
-                    graphicsmagick
-                    hspell
-                    hunspell-en-gb
-                    libdb5.3-dev
-                    libdbd-sqlite3-perl
-                    libexpat1-dev
-                    libgd-dev
-                    libgdbm-compat-dev
-                    libgdbm-dev
-                    libgmp-dev
-                    libhunspell-dev
-                    libncurses-dev
-                    libpcre2-dev
-                    libpcre3-dev
-                    libperl-dev
-                    libprimesieve-dev
-                    libpython3-dev
-                    libxml2-dev
-                    lynx
-                    perl
-                    pysassc
-                    python3
-                    python3-all
-                    python3-dev
-                    python3-venv
-                    python3-virtualenv
-                    ruby-dev
-                    ruby-rspec
-                    silversearcher-ag
-                    txt2html
-                    vim
-                    xsltproc
-                    xz-utils
-                    zip
                     /,
             ],
         }
@@ -121,37 +61,7 @@ EOF
             snapshot_names_base         => "shlomif/hpage_fedora",
             sys_deps                    => [
                 qw/
-                    GraphicsMagick
-                    docbook-dtds
-                    docbook-style-xsl
-                    docbook5-style-xsl
-                    gd-devel
-                    gdbm-devel
-                    gmp-devel
-                    hspell-devel
-                    libdb-devel
-                    libxml2-devel
-                    libxslt
-                    libxslt-devel
-                    ncurses-devel
-                    pcre-devel
-                    perl-DBD-SQLite
-                    perl-Inline-Python
-                    perl-XML-Parser
-                    perl-generators
-                    primesieve-devel
-                    python3
-                    python3-devel
-                    python3-libsass
-                    ruby-devel
-                    rubygem-rspec
-                    sgml-common
-                    the_silver_searcher
-                    vim
-                    virtualenv
-                    which
-                    xz
-                    /,
+                /,
             ],
         }
     ),
@@ -181,35 +91,8 @@ sub run_config
     my @deps = (
         sort { $a cmp $b } (
             qw/
-                cmake
-                cmake-data
-                cpanminus
-                cppcheck
-                expat
-                fortune-mod
-                hunspell
-                g++
-                gcc
-                git
-                golang
-                inkscape
-                lynx
-                make
                 nodejs
                 npm
-                optipng
-                primesieve
-                pypy3
-                python3
-                python3-cookiecutter
-                python3-pip
-                python3-setuptools
-                python3-virtualenv
-                rsync
-                ruby
-                tidy
-                virtualenv
-                zip
                 /,
             @$sys_deps,
         )
@@ -316,16 +199,6 @@ then
 fi
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
-if false
-then
-    git clone https://github.com/kimwalisch/primesieve
-    cd primesieve
-    cmake .
-    make -j2
-    sudo make install
-    cd ..
-    rm -fr primesieve
-fi
 EOSCRIPTTTTTTT
 
     if ($from_snap)
@@ -344,58 +217,11 @@ EOSCRIPTTTTTTT
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
 $setup_script_cmd
-sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
-# cpanm -vvv IO::Async
-cpanm --notest IO::Async
-cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
-cpanm --notest HTML::T5
-# For wml
-cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
-# For quadp
-cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
-sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
-sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 cd ~/source
 pwd
 ls -l
 ls -l bin/ || true
-perl bin/my-cookiecutter.pl
-deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
-gem install asciidoctor compass compass-blueprint
-PATH="\$HOME/bin:\$PATH"
-( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
-( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
-( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
 bash -x bin/install-npm-deps.sh
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
-( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
-pwd
-echo "HOME=\$HOME"
-if false
-then
-    virtualenv -p `which pypy3` /pypyenv
-    source /pypyenv/bin/activate
-else
-    virtualenv -p `which python3` /python_3_env
-    source /python_3_env/bin/activate
-fi
-
-pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
-`which python3` -m pip install \$pydeps
-export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"
-cmake_build_is_already_part_of_test_sh='true'
-if test "\$cmake_build_is_already_part_of_test_sh" != "true"
-then
-    true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
-fi
-go get -u github.com/tdewolff/minify/cmd/minify
-find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
-PATH="\$PATH:\$HOME/go/bin"
-# bash bin/rebuild
-TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
     $obj->exe_bash_code( { code => $script, } );
 

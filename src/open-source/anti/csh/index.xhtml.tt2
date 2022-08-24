@@ -126,7 +126,7 @@ tcsh forever.
 </li>
 </ol>
 
-<h2 id="alternatives">Alternatives</h2>
+[% WRAPPER h2_section id = "alternatives" title = "Alternatives" %]
 
 <p>
 Instead you should use, learn and teach one of the following shells:
@@ -160,7 +160,9 @@ For academic teaching I suggest teaching the common base of these shells,
 possibly with some bash extensions.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -176,8 +178,12 @@ thread in the Haifa Linux Club mailing list with some comments</a>
 
 </ul>
 
-<h2 id="license">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2007", ) %]
+
+[% END %]
 
 [% END %]

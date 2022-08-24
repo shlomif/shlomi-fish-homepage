@@ -4,13 +4,17 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="note">Note</h2>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 This is a page of links against Java. I do not mean to imply that Java is
 wrong for all purposes (although that may actually be close to be true),
 just link to pages criticising it.
 </p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "The Links" %]
 
 <ul>
 
@@ -55,7 +59,9 @@ harmful.cat-v.org</a> - with many links.
 
 </ul>
 
-<h2 id="jokes">Jokes</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "jokes" title = "Jokes" %]
 
 <ul>
 
@@ -66,5 +72,7 @@ harmful.cat-v.org</a> - with many links.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

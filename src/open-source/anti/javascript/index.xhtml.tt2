@@ -1,6 +1,7 @@
 [%- SET title = "Don’t Abuse JavaScript!" -%]
 [%- SET desc = "Don’t Abuse JavaScript!" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -8,7 +9,7 @@
 <b>Last Updated:</b> 28-January-2010
 </p>
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 JavaScript has become popular due to being useful for scripting browsers,
@@ -22,49 +23,63 @@ superior alternatives.
 This page aims to explain why JavaScript should not be abused for such uses.
 </p>
 
-<h2 id="shortcomings">JavaScript Shortcomings</h2>
+[% END %]
 
-<h3 id="sprintf">No sprintf</h3>
+[% WRAPPER h2_section id = "shortcomings" title = "JavaScript Shortcomings" %]
+
+[% WRAPPER h3_section id = "sprintf" title = "No sprintf" %]
 
 <p>
 JavaScript has no <a href="http://en.wikipedia.org/wiki/Printf">sprintf-like
 function</a> for formatting strings.
 </p>
 
-<h3 id="date-formatting">No date-formatting routines</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "date-formatting" title = "No date-formatting routines" %]
 
 <p>
 In addition to that, JavaScript does not have a date formatting function.
 </p>
 
-<h3 id="implicit-scoping">Implicit scoping - var is optional</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "implicit-scoping" title = "Implicit scoping - var is optional" %]
 
 <p>
 In JavaScript, variables can spring into existence with the <code>var</code>
 keyword being optional.
 </p>
 
-<h3 id="line-break">Line breaks terminate expressions</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "line-break" title = "Line breaks terminate expressions" %]
 
 <p>
 Line breaks (in addition to “;”) terminate expressions. This can cause
 many subtle errors.
 </p>
 
-<h3 id="closures">Starting a closure is not convenient</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "closures" title = "Starting a closure is not convenient" %]
 
 <p>
 One needs to type “(function () { function() { ... } })” to start a closure.
 </p>
 
-<h3 id="foreach">Foreach Loop</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "foreach" title = "Foreach Loop" %]
 
 <p>
 JavaScript’s foreach loop loops on the indices of the list
 instead of its values.
 </p>
 
-<h3 id="swap">Swap Two Variables</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "swap" title = "Swap Two Variables" %]
 
 <p>
 JavaScript has
@@ -72,7 +87,9 @@ JavaScript has
 easy way to swap two variables</a>.
 </p>
 
-<h3 id="size_of_assoc_array">Size of Associative Array</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "size_of_assoc_array" title = "Size of Associative Array" %]
 
 <p>
 JavaScript's objects when used as associative arrays have
@@ -80,7 +97,9 @@ JavaScript's objects when used as associative arrays have
 easy way to get the number of elements contained inside them</a>.
 </p>
 
-<h3 id="filter_map_forEach">Filter, map and forEach</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "filter_map_forEach" title = "Filter, map and forEach" %]
 
 <p>
 Until recently, JavaScript had no built-in
@@ -89,20 +108,26 @@ Until recently, JavaScript had no built-in
 MSIE starting from version 9.
 </p>
 
-<h3 id="ranges">Lack of Numeric Ranges</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "ranges" title = "Lack of Numeric Ranges" %]
 
 <p>
 JavaScript lacks <a href="http://yesudeep.wordpress.com/2009/07/25/implementing-a-pythonic-range-function-in-javascript-2/">numeric ranges</a>.
 </p>
 
-<h3 id="this_var">The ‘this’ variable behaves erratically</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "this_var" title = "The ‘this’ variable behaves erratically" %]
 
 <p>
 The <a href="http://stackoverflow.com/questions/80084/in-javascript-why-is-the-this-operator-inconsistent">‘this’ variable behaves erratically in JavaScript</a>
 and cannot easily be relied upon.
 </p>
 
-<h3 id="repeat_string">No built-in way to repeat a string</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "repeat_string" title = "No built-in way to repeat a string" %]
 
 <p>
 JavaScript has no
@@ -110,13 +135,19 @@ JavaScript has no
 way to repeat the concatenation of a string or an array several times</a>.
 </p>
 
-<h3 id="or_equal">No ||= operator</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "or_equal" title = "No ||= operator" %]
 
 <p>
 JavaScript does not have Perl’s or Ruby’s “||=” operator.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -184,7 +215,9 @@ numbers and integers.
 
 </ul>
 
-<h2 id="hall_of_shame">Hall of Shame</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "hall_of_shame" title = "Hall of Shame" %]
 
 <ul>
 
@@ -199,7 +232,9 @@ Scripting</a> (dropping backwards compatibility with older scripts).
 
 </ul>
 
-<h2 id="jokes">Jokes</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "jokes" title = "Jokes" %]
 
 <ul>
 
@@ -224,5 +259,7 @@ you”</a>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

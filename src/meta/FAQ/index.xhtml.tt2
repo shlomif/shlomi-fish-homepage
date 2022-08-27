@@ -2983,7 +2983,7 @@ in a car accident.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "do_you_collect_IP_addresses"  title = "Do you use your sites to collect IP addresses?"  %]
+[% WRAPPER faq_h4_section id = "do_you_collect_IP_addresses" title = "Do you use your sites to collect IP addresses?" %]
 
 <p>
 I rarely go over the monthly reports of the log analysers, to say nothing
@@ -3311,6 +3311,16 @@ some sub-repositories).
 </li>
 
 </ol>
+
+[%- END -%]
+
+[% WRAPPER faq_h3_section id = "site_hosting" title = "Where is this site hosted?" %]
+
+<p>
+My <a href="[% base_path %]meta/hosting/">web hosting</a> is
+currently HostGator. I use their shared hosting offering in order to ease the
+maintenance burden.
+</p>
 
 [%- END -%]
 

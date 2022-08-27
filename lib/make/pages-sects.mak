@@ -1,8 +1,8 @@
 FAQ_SECTS__DIR := $(POST_DEST)/meta/FAQ
 FAQ_SECTS__PIVOT := $(FAQ_SECTS__DIR)/diet.xhtml
 FAQ_SECTS__SRC := $(FAQ_SECTS__DIR)/index.xhtml
-FAQ_SECTS__PROGRAM := lib/faq/faq_splitter_prog.py
-FAQ_SECTS__LIB_DEPS := lib/faq/split_into_sections.py
+FAQ_SECTS__PROGRAM := lib/split-html/splitter_prog.py
+FAQ_SECTS__LIB_DEPS := lib/split-html/split_into_sections.py
 IMAGE_MACRO_SECTS__DIR := $(POST_DEST)/humour/image-macros
 IMAGE_MACRO_SECTS__SRC := $(IMAGE_MACRO_SECTS__DIR)/index.xhtml
 IMAGE_MACRO_SECTS__DEST_DIR := $(IMAGE_MACRO_SECTS__DIR)/indiv-nodes

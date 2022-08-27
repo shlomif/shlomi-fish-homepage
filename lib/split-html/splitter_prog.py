@@ -33,7 +33,12 @@ def _process_title(self, title):
     )
 
 
-COMMON_TITLE_CBS = {
+BACK_TO_SOURCE_PAGE_CSS_CLASS = "back_to_faq"
+INDIVIDUAL_NODE_CSS_CLASS = "indiv_node"
+
+COMMON_PARAMS = {
+    'back_to_source_page_css_class': BACK_TO_SOURCE_PAGE_CSS_CLASS,
+    'individual_node_css_class': INDIVIDUAL_NODE_CSS_CLASS,
     'process_header_text': _process_title,
     'process_main_title': _process_title,
 }
@@ -154,9 +159,6 @@ Policy</a></li>
 </body>
 </html>'''
 
-BACK_TO_SOURCE_PAGE_CSS_CLASS = "back_to_faq"
-INDIVIDUAL_NODE_CSS_CLASS = "indiv_node"
-
 
 def _wrap(ns):
     return ns
@@ -177,9 +179,7 @@ def generate_from_image_macros_page(
     base_path = _calc_base_path(OUT_DN)
     output_dirname = OUT_DN + "/" + relative_output_dirname
     splitter = XhtmlSplitter(
-        **COMMON_TITLE_CBS,
-        back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
-        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
+        **COMMON_PARAMS,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=output_dirname,
         relative_output_dirname=relative_output_dirname,
@@ -216,9 +216,7 @@ def _faq_gen():
     OUT_DN = "./dest/post-incs/t2/meta/FAQ"
     TOP_LEVEL_CLASS = 'faq fancy_sects lim_width wrap-me'
     splitter = XhtmlSplitter(
-        **COMMON_TITLE_CBS,
-        back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
-        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
+        **COMMON_PARAMS,
         input_fn=(OUT_DN + "/index.xhtml"),
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
@@ -295,9 +293,7 @@ def generic_generate_from_(
     full_out_dirname = OUT_DN + (output_dirname or '')
 
     splitter = XhtmlSplitter(
-        **COMMON_TITLE_CBS,
-        back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
-        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
+        **COMMON_PARAMS,
         container_elem_xpath=container_elem_xpath,
         input_fn=(OUT_DN + "/" + path_to_input),
         main_title=main_title,
@@ -334,9 +330,7 @@ def generic_generate(
     TOP_LEVEL_CLASS = 'screenplay'
 
     splitter = XhtmlSplitter(
-        **COMMON_TITLE_CBS,
-        back_to_source_page_css_class=BACK_TO_SOURCE_PAGE_CSS_CLASS,
-        individual_node_css_class=INDIVIDUAL_NODE_CSS_CLASS,
+        **COMMON_PARAMS,
         input_fn=(OUT_DN + "/" + path_to_input),
         output_dirname=full_out_dirname,
         relative_output_dirname=output_dirname,

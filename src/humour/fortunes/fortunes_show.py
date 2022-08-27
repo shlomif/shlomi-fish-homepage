@@ -58,7 +58,7 @@ def _emit_error(title, body):
 </html>''' % {'title': title, 'body': body})
 
 
-def _show_all(raw_mode):
+def _show_all():
     cur.execute(
         '''SELECT f.str_id, f.text, f.info_text, f.title,
         c.str_id, c.title, f.desc, f.date
@@ -68,8 +68,12 @@ ORDER BY c.str_id''', )
     while True:
         data = cur.fetchone()
         if data:
-            text = _display_fortune_from_data(*([raw_mode] + list(data)))
-            yield data, text
+            texts = {
+                raw_mode: _display_fortune_from_data(
+                    *([raw_mode] + list(data))
+                ) for raw_mode in (False, True)
+            }
+            yield data, texts
         else:
             return
 

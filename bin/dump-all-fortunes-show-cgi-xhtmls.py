@@ -60,11 +60,12 @@ class Main:
                 s = s.encode('utf8')
                 assert len(s) == RECORD_LEN
                 f.write(s)
-        it = _show_all(raw_mode=False, )
-        for data, text in it:
+        it = _show_all()
+        for data, texts in it:
             # resp = app.get('?id=' + str_id)
             # assert resp.status_code == 200
             # text = resp.text  # .encode('utf8')
+            text = texts[False]
             assert len(text) > 0
             str_id = data[0]
             # print(text)

@@ -33,12 +33,24 @@ def _process_title(self, title):
     )
 
 
+def _wrap(ns):
+    return ns
+    return '{' + ns + '}'
+
+
 BACK_TO_SOURCE_PAGE_CSS_CLASS = "back_to_faq"
 INDIVIDUAL_NODE_CSS_CLASS = "indiv_node"
+XML_NS = "http://www.w3.org/XML/1998/namespace"
+NAMESPACES = {
+    "xhtml": _wrap(XHTML_NAMESPACE),
+    "xml": _wrap(XML_NS),
+}
+
 
 COMMON_PARAMS = {
     'back_to_source_page_css_class': BACK_TO_SOURCE_PAGE_CSS_CLASS,
     'individual_node_css_class': INDIVIDUAL_NODE_CSS_CLASS,
+    'ns': NAMESPACES,
     'process_header_text': _process_title,
     'process_main_title': _process_title,
 }
@@ -160,18 +172,6 @@ Policy</a></li>
 </html>'''
 
 
-def _wrap(ns):
-    return ns
-    return '{' + ns + '}'
-
-
-XML_NS = "http://www.w3.org/XML/1998/namespace"
-NAMESPACES = {
-    "xhtml": _wrap(XHTML_NAMESPACE),
-    "xml": _wrap(XML_NS),
-}
-
-
 def generate_from_image_macros_page(
         OUT_DN, relative_output_dirname,
         path_to_all_in_one, path_to_images,
@@ -187,7 +187,6 @@ def generate_from_image_macros_page(
         container_elem_xpath=(
             "self::node()[local-name()='div'][./xhtml:article]"
         ),
-        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
@@ -221,7 +220,6 @@ def _faq_gen():
         output_dirname=OUT_DN,
         section_format=FAQ_SECTION_FORMAT,
         container_elem_xpath=_xpath(TOP_LEVEL_CLASS=TOP_LEVEL_CLASS),
-        ns=NAMESPACES,
     )
     splitter.process()
 
@@ -299,7 +297,6 @@ def generic_generate_from_(
         main_title=main_title,
         output_dirname=full_out_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
-        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,
@@ -336,7 +333,6 @@ def generic_generate(
         relative_output_dirname=output_dirname,
         section_format=SCREENPLAY_SECTION_FORMAT,
         container_elem_xpath=_xpath(TOP_LEVEL_CLASS=TOP_LEVEL_CLASS),
-        ns=NAMESPACES,
         base_path=base_path,
         path_to_all_in_one=path_to_all_in_one,
         path_to_images=path_to_images,

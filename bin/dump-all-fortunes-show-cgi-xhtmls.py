@@ -48,6 +48,8 @@ class Main:
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
         dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
         os.makedirs(dest_dir, exist_ok=True, )
+        raws_dest_dir = containing_dest_dir + "__FORTS-show-cgi-rawxhtmls"
+        os.makedirs(raws_dest_dir, exist_ok=True, )
         maxidlen = max(len(x) for x in strings_list)
         print('maxidlen = ', maxidlen)
         RECORD_LEN = (1 << 7)
@@ -70,6 +72,12 @@ class Main:
             str_id = data[0]
             # print(text)
             fn = dest_dir + "/" + str_id + ".xhtml"
+            with open(fn, 'wt') as f:
+                f.write(text)
+
+            text = texts[True]
+            assert len(text) > 0
+            fn = raws_dest_dir + "/" + str_id + ".xhtml"
             with open(fn, 'wt') as f:
                 f.write(text)
 

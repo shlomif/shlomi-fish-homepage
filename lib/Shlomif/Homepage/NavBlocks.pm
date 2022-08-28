@@ -411,6 +411,10 @@ my %tr_s = (
                     "philosophy/computers/open-source/foss-licences-wars/rev2/",
             ),
             _l(
+                inner_html => "Why I Do Not Trust non-FOSS",
+                path => "philosophy/computers/open-source/not-trust-non-FOSS/",
+            ),
+            _l(
                 inner_html =>
                     "“What Makes Software High Quality?” - Revision 2",
                 path => "philosophy/computers/high-quality-software/rev2/",

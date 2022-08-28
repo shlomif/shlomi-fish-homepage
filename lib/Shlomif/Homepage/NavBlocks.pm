@@ -401,6 +401,11 @@ my %tr_s = (
                 path       => "philosophy/foss-other-beasts/",
             ),
             _l(
+                inner_html => "How to start contributing to FOSS",
+                path       =>
+"philosophy/computers/open-source/how-to-start-contributing/tos-document.html",
+            ),
+            _l(
                 inner_html => "FOSS Licences Wars (Revision 2)",
                 path       =>
                     "philosophy/computers/open-source/foss-licences-wars/rev2/",

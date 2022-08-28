@@ -393,6 +393,29 @@ my %tr_s = (
             ),
         ],
     ),
+    'foss_essays' => _tr(
+        title => "Essays",
+        items => [
+            _l(
+                inner_html => "Open Source, Free Software, and Other Beasts",
+                path       => "philosophy/foss-other-beasts/",
+            ),
+            _l(
+                inner_html => "FOSS Licences Wars (Revision 2)",
+                path       =>
+                    "philosophy/computers/open-source/foss-licences-wars/rev2/",
+            ),
+            _l(
+                inner_html =>
+                    "“What Makes Software High Quality?” - Revision 2",
+                path => "philosophy/computers/high-quality-software/rev2/",
+            ),
+            _l(
+                inner_html => "Optimising Code for Speed",
+                path       => "philosophy/computers/optimizing-code-for-speed/",
+            ),
+        ],
+    ),
     'foss_facts' => _tr(
         title => "“Facts”",
         items => [
@@ -869,7 +892,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
             tr_s       => [
                 _master_tr(
                     title =>
-q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction},
+q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and Essays},
                 ),
                 _subdiv_tr( title => q{Stories and Screenplays}, ),
                 _tr_s( qw( hhfg star_trek_wtld ), ),
@@ -879,6 +902,8 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction},
                 _get_tr('foss_bits'),
                 _subdiv_tr( title => q{Quotes}, ),
                 _get_tr('foss_fortunes'),
+                _subdiv_tr( title => q{Essays}, ),
+                _get_tr('foss_essays'),
             ],
         },
     ),

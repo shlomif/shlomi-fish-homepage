@@ -4,6 +4,7 @@ jobs:
         steps:
         -   uses: actions/checkout@v2
         -   run: sudo apt-get update -qq
+        -   run: sudo apt-get -y remove libgd3 nginx
         -   run: sudo apt-get --no-install-recommends install -y eatmydata
         -   run: sudo eatmydata apt-get --no-install-recommends install -y ack-grep
                 asciidoc build-essential cmake cmake-data cpanminus dbtoepub docbook-defguide

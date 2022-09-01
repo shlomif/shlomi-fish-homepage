@@ -2,6 +2,9 @@ use strict;
 use warnings;
 use utf8;
 
+use File::Spec::Functions qw( catpath splitpath rel2abs );
+use YAML::XS              qw/ LoadFile /;
+
 use XML::Grammar::Fortune     ();
 use XML::LibXML               ();
 use URI::Find                 ();
@@ -9,6 +12,11 @@ use XML::LibXML::XPathContext ();
 use Encode                    qw/ decode /;
 
 my ( $xml_fn, $out_fn ) = @ARGV;
+
+# The Directory containing the script.
+my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
+my ($basename) = ( $xml_fn =~ /([a-zA-Z0-9_\-]+)\.xml\z/ms )
+    or die;
 
 XML::Grammar::Fortune->new( { mode => "validate", } )
     ->run( { input => $xml_fn, } );
@@ -38,6 +46,46 @@ q#//html:table[@class='irc-conversation']/html:tbody/html:tr[@class='saying']/ht
     $finder->find( \$text_content );
 
     $node->setData($text_content);
+}
+my $yaml_path = "$script_dir/fortunes-shlomif-ids-data.yaml";
+
+my ( $yaml, ) = LoadFile($yaml_path);
+$yaml = ( $yaml->{files} or die );
+
+my $file_yaml = $yaml->{"$basename.xml"};
+my $ns        = "http://www.w3.org/1999/xhtml";
+foreach my $node (
+    $xc->findnodes(q#//*[@class='fortune'][html:table[@class='info']]#) )
+{
+    my $nodexc = XML::LibXML::XPathContext->new($node);
+    $nodexc->registerNs( 'html' => $ns );
+    my $id = $nodexc->findnodes(q#html:h3/@id#)->[0]->textContent;
+
+    my $date = $file_yaml->{$id}->{'date'}
+        or Carp::confess("no date for id = $id ; basename = $basename .");
+
+    my $info = $nodexc->findnodes(q#html:table[@class='info']/html:tbody#)->[0];
+    my $tr   = XML::LibXML::Element->new('tr');
+    $tr->setNamespace($ns);
+    my $td;
+    $td = XML::LibXML::Element->new('td');
+    $td->setNamespace($ns);
+    $td->setAttribute( 'class', 'field' );
+    my $bb = XML::LibXML::Element->new('b');
+    $bb->setNamespace($ns);
+    $td->setAttribute( 'class', 'field' );
+    $bb->appendChild( $doc->createTextNode("Published") );
+    $td->appendChild($bb);
+    $tr->appendChild($td);
+    $td = XML::LibXML::Element->new('td');
+    $td->setNamespace($ns);
+    $td->setAttribute( 'class', 'value' );
+    $td->appendChild( $doc->createTextNode( $date =~ s/T.*?\z//mrs ) );
+    $tr->appendChild($td);
+
+    $info->appendChild($tr);
+
+    # print "<<$id>>\n";
 }
 $contents = decode( 'UTF-8', $doc->toString() );
 $contents =~ s# xmlns:xsi="[^"]*"##gms;

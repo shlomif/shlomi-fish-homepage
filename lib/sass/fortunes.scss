@@ -43,6 +43,10 @@
         td {
             border: black thin solid;
             padding: 0.2em 0.5em;
+
+            &.field {
+                font-weight: bold;
+            }
         }
     }
 }

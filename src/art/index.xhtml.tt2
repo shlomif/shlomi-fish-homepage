@@ -7,6 +7,7 @@
 
 <div class="side_toc lim_width">
 [% default_toc %]
+
 <section>
 <h2 id="intro">Introduction</h2>
 
@@ -19,9 +20,13 @@ shamelessly duplicate my efforts and create similar art.
 
 </section>
 
-[% PROCESS common_art__graphics_design  %]
+[% PROCESS common_art__graphics_design %]
 
-[% WRAPPER h2_section id = "slogans"  title = "Slogans" href = "slogans/" %]
+[% WRAPPER h2_section id = "image-macros" title = "Image Macros (a.k.a “Captioned Images” or “Memes”)" href = "${base_path}humour/image-macros/" %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "slogans" title = "Slogans" href = "slogans/" %]
 
 <p>
 Some slogans I came up with (<a href="[% base_path %]humour.html">see my collection
@@ -30,7 +35,7 @@ of aphorisms</a>) - converted to designs.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "photography"  title = "Photography"  %]
+[% WRAPPER h2_section id = "photography" title = "Photography" %]
 
 <p>
 I’m not much of a photographer, but I still enjoy taking photographs using
@@ -48,7 +53,7 @@ November, 2005</a>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "music"  title = "Music"  %]
+[% WRAPPER h2_section id = "music" title = "Music" %]
 
 <ul>
 <li>
@@ -84,7 +89,7 @@ a .zip file).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "by_others"  title="By Others" href="by-others/" %]
+[% WRAPPER h2_section id = "by_others" title="By Others" href="by-others/" %]
 
 <p>
 Mirrors or restorations of artworks by other people.
@@ -92,7 +97,7 @@ Mirrors or restorations of artworks by other people.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "recommendations"  title = "Recommendations"  %]
+[% WRAPPER h2_section id = "recommendations" title = "Recommendations" %]
 
 <ul>
 <li>

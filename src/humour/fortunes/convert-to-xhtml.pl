@@ -27,9 +27,10 @@ my $contents;
 
 my $PREF = '«⋄⋄אבג«';
 my $SUF  = '»גבא⋄⋄»';
+my $ns   = "http://www.w3.org/1999/xhtml";
 my $doc  = XML::LibXML->load_xml( location => $out_fn );
 my $xc   = XML::LibXML::XPathContext->new($doc);
-$xc->registerNs( 'html' => "http://www.w3.org/1999/xhtml" );
+$xc->registerNs( 'html' => $ns, );
 my $finder = URI::Find->new(
     sub {
         my ( $obj, $text ) = @_;
@@ -53,7 +54,6 @@ my ( $yaml, ) = LoadFile($yaml_path);
 $yaml = ( $yaml->{files} or die );
 
 my $file_yaml = $yaml->{"$basename.xml"};
-my $ns        = "http://www.w3.org/1999/xhtml";
 foreach my $node (
     $xc->findnodes(q#//*[@class='fortune'][html:table[@class='info']]#) )
 {

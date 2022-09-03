@@ -3,5 +3,5 @@
 [%- END -%]
 
 [%- BLOCK main_email_mailto -%]
-[% PROCESS mailto_link_to_self email=main_email %]
+[% PROCESS mailto_link_to_self email = main_email %]
 [%- END -%]

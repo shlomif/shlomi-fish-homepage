@@ -71,11 +71,7 @@ foreach my $node (
     $td = XML::LibXML::Element->new('td');
     $td->setNamespace($ns);
     $td->setAttribute( 'class', 'field' );
-    my $bb = XML::LibXML::Element->new('b');
-    $bb->setNamespace($ns);
-    $td->setAttribute( 'class', 'field' );
-    $bb->appendChild( $doc->createTextNode("Published") );
-    $td->appendChild($bb);
+    $td->appendChild( $doc->createTextNode("Published") );
     $tr->appendChild($td);
     $td = XML::LibXML::Element->new('td');
     $td->setNamespace($ns);

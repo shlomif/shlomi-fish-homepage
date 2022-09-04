@@ -21,7 +21,7 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 	./$(NAV_DATA_AS_JSON_BIN) -o $@
 
 OUT_PREF = lib/out-babel/js
-TYPESCRIPT_basenames = decss_for_typescript.js fortunes_show.js resize-iframe.js selfl.js sub_menu.js to-jqtree-2.js to-jqtree.js toggle_sect.js toggler.js
+TYPESCRIPT_basenames = decss_for_typescript.js fortunes-info-datetime.js fortunes_show.js resize-iframe.js selfl.js sub_menu.js to-jqtree-2.js to-jqtree.js toggle_sect.js toggler.js
 DEST_JS_DIR = $(POST_DEST)/js
 dest_jsify = $(addprefix $(DEST_JS_DIR)/,$(1))
 
@@ -78,6 +78,7 @@ MAIN_TOTAL_MIN_JS__SOURCES := \
 	$(DEST_JS_DIR)/to-jqtree-2.js \
 	$(DEST_JS_DIR)/selfl.js \
 	$(DEST_JS_DIR)/sub_menu.js \
+	$(DEST_JS_DIR)/fortunes-info-datetime.js \
 
 $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 	$(MULTI_YUI) -o $@ $(MAIN_TOTAL_MIN_JS__SOURCES)

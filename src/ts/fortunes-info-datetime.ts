@@ -7,7 +7,7 @@ $(document).ready(function (): void {
             if (f == "Published") {
                 const td = tr.find("td.value").first();
                 const d = td.html();
-                if (!/^(([0-9]+)-([0-9]+)-([0-9]+))$/.test(d)) {
+                if (!/^[0-9]+-[0-9]+-[0-9]+$/.test(d)) {
                     alert(d);
                 }
                 td.html('<time datetime="' + d + '">' + d + "</time>");

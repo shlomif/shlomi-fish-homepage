@@ -1,34 +1,7 @@
 [%- SET title = "Shlomi Fish’s Frequently Asked Questions (FAQ) List" -%]
 [%- SET desc = "Shlomi Fish’s Frequently Asked Questions (FAQ) List" -%]
 
-
 [%- WRAPPER wrap_html -%]
-
-[%- BLOCK faq_h_section -%]
-[%- WRAPPER h_section h_tag=h_tag h_class=h_tag id=id title=title href=href
-# extra_h_header_contents = "<a class=\"indiv_node\" href=\"${id}.xhtml\">Node Link</a>"
--%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK faq_h2_section -%]
-[%- WRAPPER faq_h_section h_tag="h2" id=id title=title href=href -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK faq_h3_section -%]
-[%- WRAPPER faq_h_section h_tag="h3" id=id title=title href=href -%]
-[% content %]
-[%- END -%]
-[%- END -%]
-
-[%- BLOCK faq_h4_section -%]
-[%- WRAPPER faq_h_section h_tag="h4" id=id title=title href=href -%]
-[% content %]
-[%- END -%]
-[%- END -%]
 
 [% PROCESS "Inc/faq.tt2" %]
 
@@ -84,9 +57,9 @@ Some related FAQs I co-maintain:
 
 <div class="faq fancy_sects lim_width wrap-me">
 
-[% WRAPPER faq_h2_section id = "about"  title = "About Shlomi Fish"  %]
+[% WRAPPER h2_section id = "about" title = "About Shlomi Fish" %]
 
-[% WRAPPER faq_h3_section id = "who_are_you"  title = "Who are you?"  %]
+[% WRAPPER h3_section id = "who_are_you" title = "Who are you?" %]
 
 <p>
 I am <a href="[% base_path %]personal.html">Shlomi Fish</a>, a professional Israeli
@@ -114,7 +87,7 @@ according to Internet searches).
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "guy_or_girl"  title = "Are you a Guy or a Girl?"  %]
+[% WRAPPER h3_section id = "guy_or_girl" title = "Are you a Guy or a Girl?" %]
 
 <p>
 I am very much a guy, despite what my first name’s suffix (the “i” of
@@ -135,7 +108,7 @@ with the word “my”.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "your_name" title = "What can you say about your name?" %]
+[% WRAPPER h3_section id = "your_name" title = "What can you say about your name?" %]
 
 <p>
 Well, “Shlomi” or “שלומי” in Hebrew (see its <a
@@ -253,7 +226,7 @@ A contraction of "finish" and I like to bring projects and tasks to a usable sta
 
 </ol>
 
-[% WRAPPER faq_h4_section id = "is_shlomi_fish_your_real_name"  title = "Is Shlomi Fish Your Real Name?"  %]
+[% WRAPPER h4_section id = "is_shlomi_fish_your_real_name" title = "Is Shlomi Fish Your Real Name?" %]
 
 <p>
 Despite what the name may imply to non-Israeli people, Shlomi Fish
@@ -266,7 +239,7 @@ for more information about its etymology.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "where_are_you_from"  title = "Where are you from? Where do you live currently?"  %]
+[% WRAPPER h3_section id = "where_are_you_from" title = "Where are you from? Where do you live currently?" %]
 
 <p>
 Well, I was born in Israel in 5 May 1977, and lived in Tel Aviv for a
@@ -290,7 +263,7 @@ should <a href="[% base_path %]me/contact-me/">contact me</a>
 first because the video intercom is unreliable.
 </p>
 
-[% WRAPPER faq_h4_section id = "why_are_you_revealing_your_home_address"  title = "Why are you revealing your home address?"  %]
+[% WRAPPER h4_section id = "why_are_you_revealing_your_home_address" title = "Why are you revealing your home address?" %]
 
 <p>
 See
@@ -301,7 +274,7 @@ See
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "what_did_you_study"  title = "What did you study in university / college? Did you study computer science?"  %]
+[% WRAPPER h3_section id = "what_did_you_study" title = "What did you study in university / college? Did you study computer science?" %]
 
 <p>
 I studied in the [% Technion %], completed my Undergraduate studies and
@@ -328,7 +301,7 @@ and "showy"</a> and more likely to flaunt or utilise my skills.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "your_job"  title = "What is your day job? What do you do for a living? What is your work about?"  %]
+[% WRAPPER h3_section id = "your_job" title = "What is your day job? What do you do for a living? What is your work about?" %]
 
 <p>
 Currently (August 2022) I am happily unemployed, and trying to build
@@ -351,7 +324,7 @@ wonderful, exciting, and wonderous, journey, and I’m not going to give up.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_were_you_unemployed"  title = "You seem very knowledgeable and capable. How come you said you were unemployed?"  %]
+[% WRAPPER h3_section id = "why_were_you_unemployed" title = "You seem very knowledgeable and capable. How come you said you were unemployed?" %]
 
 <p>
 First of all, thanks for thinking highly of me. Otherwise, note that while I
@@ -372,7 +345,7 @@ may have, please contact me and we'll see about that.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "nicknames"  title = "How else are you known?"  %]
+[% WRAPPER h3_section id = "nicknames" title = "How else are you known?" %]
 
 <p>
 I’m also known as “shlomif” or on the [% my_acronym( "key" => "IRC",) %] as “rindolf”.
@@ -383,7 +356,7 @@ also nicknamed the blocky <a href="https://en.wikipedia.org/wiki/Hebrew_alphabet
 "Tetris").
 </p>
 
-[% WRAPPER faq_h4_section id = "origin_of_rindolf"  title = "What is the origin of your “rindolf” IRC nickname?"  %]
+[% WRAPPER h4_section id = "origin_of_rindolf" title = "What is the origin of your “rindolf” IRC nickname?" %]
 
 <p>
 For more information about the name "rindolf", see
@@ -433,7 +406,7 @@ cookies</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "refer_or_address"  title = "How should I address you or refer to you?"  %]
+[% WRAPPER h3_section id = "refer_or_address" title = "How should I address you or refer to you?" %]
 
 <p>
 When writing a letter to me, you can start it with
@@ -480,7 +453,7 @@ On the [% my_acronym( "key" => "IRC",) %], I generally use <a href="#origin_of_r
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "should_i_email"  title = "May I email you about X?"  %]
+[% WRAPPER h3_section id = "should_i_email" title = "May I email you about X?" %]
 
 <p>
 While the amount of emails that I receive is not overwhelming (yet), I still
@@ -558,7 +531,7 @@ created or maintain.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "diet"  title = "What can you tell about your diet?"  %]
+[% WRAPPER h3_section id = "diet" title = "What can you tell about your diet?" %]
 
 <p>
 I don’t drink alcoholic beverages, don’t consume caffeinated beverages,
@@ -606,7 +579,7 @@ but I feel like I need to eat meat. I used to avoid consuming sugary foods
 and beverages, but I now consume them again and am much happier.
 </p>
 
-[% WRAPPER faq_h4_section id = "geek_who_avoids_caffeine" title = "So you avoid caffeine? You call yourself a geek?" %]
+[% WRAPPER h4_section id = "geek_who_avoids_caffeine" title = "So you avoid caffeine? You call yourself a geek?" %]
 
 <p>
 Yes I do! Geeks comes in many shapes and sizes (also see <a href="https://en.wikipedia.org/wiki/One_Fish,_Two_Fish,_Red_Fish,_Blue_Fish"><i>One Fish, Two Fish, Red Fish, Blue Fish</i></a>)
@@ -625,7 +598,7 @@ sentiments about attractive girls (and guys) increasingly being geeky</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "mental_illness"  title = "Do you have any mental illnesses?"  %]
+[% WRAPPER h3_section id = "mental_illness" title = "Do you have any mental illnesses?" %]
 
 <p>
 As a matter of fact, I do. I used to get into
@@ -713,7 +686,7 @@ and education progress.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "which_disabilities_do_you_have"  title = "Which disabilities do you have?" %]
+[% WRAPPER h3_section id = "which_disabilities_do_you_have" title = "Which disabilities do you have?" %]
 
 <p>
 I have the following disabilities:
@@ -813,7 +786,7 @@ So please don't be <a href="https://en.wikipedia.org/wiki/Ableism">ableist</a>.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "irc_part_message"  title = "What is the origin of your IRC part message (“Yay! I’m a Llama again!”)?"  %]
+[% WRAPPER h3_section id = "irc_part_message" title = "What is the origin of your IRC part message (“Yay! I’m a Llama again!”)?" %]
 
 <p>
 It’s a quote from the Disney Animated film
@@ -825,7 +798,7 @@ Emperor’s New Groove</i></a>, which is otherwise highly recommended. Here is
 <p>
 Note: for a while I converted to using «https://www.shlomifish.org/ ; It takes
 Summer Glau exactly a minute to write a rebuttal like in xkcd: “Venting”, and
-she would sign it as Chuck Norris.  ( <a
+she would sign it as Chuck Norris. ( <a
 href="https://www.shlomifish.org/humour/bits/facts/Summer-Glau/">Summer Glau “Facts”</a>
 )», which was part of my activism to promote the
 <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summerschool
@@ -834,7 +807,7 @@ at the NSA</i></a> screenplay and Ms. Glau.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "obscure_email_addr"  title = "Why don’t you obscure/hide your email address? People can spam you."  %]
+[% WRAPPER h3_section id = "obscure_email_addr" title = "Why don’t you obscure/hide your email address? People can spam you." %]
 
 <p>
 First of all, in this day and age, it’s unlikely that the spammers <b>will
@@ -879,7 +852,7 @@ post to the “Joel on Software” forum</a> about
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "evilphish-emblem"  title = "What can you tell about the fish emblem on the top-left corner?"  %]
+[% WRAPPER h3_section id = "evilphish-emblem" title = "What can you tell about the fish emblem on the top-left corner?" %]
 
 <img src="[% base_path %]images/evilphish-svg.min.svg" alt="EvilPHish by
 Illiad" class="highlight evilphish"/>
@@ -924,7 +897,7 @@ the amazing Marc Jeanmougin (Mc) and
 a derivative work of the original by Iliad.
 </p>
 
-[% WRAPPER faq_h4_section id = "fish_alludes_to_christianity"  title = "Does the fish emblem allude to Christianity?"  %]
+[% WRAPPER h4_section id = "fish_alludes_to_christianity" title = "Does the fish emblem allude to Christianity?" %]
 
 <p>
 No, it does not - it is just inspired by <a href="#your_name">my last name</a>:
@@ -937,7 +910,7 @@ have some aversion towards Christianity.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "revealing_incriminating_details"  title = "Why are you revealing incriminating details about yourself? This makes you look bad for potential employers."  %]
+[% WRAPPER h3_section id = "revealing_incriminating_details" title = "Why are you revealing incriminating details about yourself? This makes you look bad for potential employers." %]
 
 <p>
 A few people told me that I shouldn't mention the fact that I have been exempt
@@ -950,7 +923,7 @@ to mention them many times.
 
 <p>
 While some employers may look down on me for mentioning that, I’d rather work
-for employers who appreciate honesty, sincerity, and openness.  They should
+for employers who appreciate honesty, sincerity, and openness. They should
 eventually realise that keeping non-private details to yourself is a sure
 recipe to lose your mind.
 </p>
@@ -993,7 +966,7 @@ you, and cause you a lot of aggravations.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_did_you_learn_english"  title = "How did you learn English?"  %]
+[% WRAPPER h3_section id = "how_did_you_learn_english" title = "How did you learn English?" %]
 
 <p>
 Well, I am Israeli-born, but my parents moved to the United States when
@@ -1036,7 +1009,7 @@ Television shows, and more practice at writing English texts (using computers' k
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_can_I_improve_my_English"  title = "How can I improve my English?"  %]
+[% WRAPPER h3_section id = "how_can_I_improve_my_English" title = "How can I improve my English?" %]
 
 <p>
 Some of the effective ways I found to improve one's English are:
@@ -1124,7 +1097,7 @@ a page in a foreign language) but like most tools, it has
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "asperger_syndrome" title = "Do you have Asperger syndrome (Asperger’s)?" %]
+[% WRAPPER h3_section id = "asperger_syndrome" title = "Do you have Asperger syndrome (Asperger’s)?" %]
 
 <p>
 Some people on the Internet told me that they believe I have
@@ -1142,7 +1115,7 @@ detail what I know.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "d10_dice"  title = "Why are you obsessed with ten-sided dice? (d10) What do you do with them?"  %]
+[% WRAPPER h3_section id = "d10_dice" title = "Why are you obsessed with ten-sided dice? (d10) What do you do with them?" %]
 
 <p>
 I originally ran into
@@ -1231,7 +1204,7 @@ to Summer Glau.
 [%- END -%]
 
 
-[% WRAPPER faq_h3_section id = "link_or_quote_sources_i_dislike"  title = "Why do you link/quote web pages, posts, etc. from originators I dislike?"  %]
+[% WRAPPER h3_section id = "link_or_quote_sources_i_dislike" title = "Why do you link/quote web pages, posts, etc. from originators I dislike?" %]
 
 <p>
 I normally link to such resources which I either agree with, partly agree, or are relevant
@@ -1242,7 +1215,7 @@ and similar fallacies.)
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "do_you_play_chess"  title = "Do you play Chess?"  %]
+[% WRAPPER h3_section id = "do_you_play_chess" title = "Do you play Chess?" %]
 
 <p>
 I do not play Chess a lot, mainly because I do not like it too much. I'm also
@@ -1280,7 +1253,7 @@ a dead dog</a>), but perhaps I should have told him that.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_are_you_attracted_to_all_these_girls" title = "Why are you attracted to so many girls?"  %]
+[% WRAPPER h3_section id = "why_are_you_attracted_to_all_these_girls" title = "Why are you attracted to so many girls?" %]
 
 <p>
 As I noted <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-cinema--copyright-cannibalism">in an IRC conversation</a>:
@@ -1314,7 +1287,7 @@ Do note that there is a difference between being attracted to someone,
 and being in love with them.
 </p>
 
-[% WRAPPER faq_h4_section id = "are_you_in_love_with_celeb" title = "Are you in love with [insert celebrity here]?"  %]
+[% WRAPPER h4_section id = "are_you_in_love_with_celeb" title = "Are you in love with [insert celebrity here]?" %]
 
 <p>
 As of 2022-03-14 , no. I love them as fellow competent <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml">geeky hackers</a>
@@ -1326,7 +1299,7 @@ Romantically/intimately in love with them.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "financial_status" title = "What is your financial status? Are you rich? Are you poor?"  %]
+[% WRAPPER h3_section id = "financial_status" title = "What is your financial status? Are you rich? Are you poor?" %]
 
 <p>
 Currently (2021-02-19) I have some savings in my bank account and live with my
@@ -1361,7 +1334,7 @@ strings attached): <a href="https://en.wikipedia.org/w/index.php?title=Sarah_Mic
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "what_was_your_biggest_secret" title = "What was the secret that you were most afraid will be made public knowledge?" %]
+[% WRAPPER h3_section id = "what_was_your_biggest_secret" title = "What was the secret that you were most afraid will be made public knowledge?" %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-physically-strong-women">That I'm attracted to physically-strong females</a> (and even to muscular ones).
@@ -1376,9 +1349,9 @@ After going public about it, I realised I am in good company as
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]
+[% WRAPPER h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]
 
-[% WRAPPER faq_h3_section id = "religious_belief"  title = "What is your religious belief or inclination?"  %]
+[% WRAPPER h3_section id = "religious_belief" title = "What is your religious belief or inclination?" %]
 
 <p>
 First of all, I should note that one’s general classification of
@@ -1474,7 +1447,7 @@ or <a href="https://en.wikipedia.org/wiki/Sam_Harris">Sam Harris</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "ethnicity" title = "What is your ethnicity? What is your lineage?" %]
+[% WRAPPER h3_section id = "ethnicity" title = "What is your ethnicity? What is your lineage?" %]
 
 <p>
 I am a <a href="https://en.wikipedia.org/wiki/Jews">Jew</a> by birth and
@@ -1537,7 +1510,7 @@ I found it amusing, and kind-of have taken it to my advantage.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "secular_jew" title = "How come you say you are a secular Jew? Isn't Judaism a religion?"  %]
+[% WRAPPER h3_section id = "secular_jew" title = "How come you say you are a secular Jew? Isn't Judaism a religion?" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Jews">Judaism</a> is much more than just
@@ -1570,7 +1543,7 @@ href="https://en.wikipedia.org/wiki/Sturgeon%27s_law">Sturgeon's law</a> (=
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?" %]
+[% WRAPPER h3_section id = "how_do_you_define_yourself" title = "How do you define yourself? Are you a Jew, an Israeli, an agnostic, an Objectivist, a brony, a furry, a muppets' aficciando, a Perler, a Linuxer, a FOSS enthusiast, an optimist, a Pythoneer, …?" %]
 
 <p>
 I am currently many of these and more. As I
@@ -1583,7 +1556,7 @@ and it changes almost every day.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "selfishness" title = "Does the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) make you selfish?" %]
+[% WRAPPER h3_section id = "selfishness" title = "Does the fact that you are/were an Objectivist (= an advocate of Ayn Rand’s philosophy) make you selfish?" %]
 
 <p>
 <a href="[% base_path %]humour/fortunes/show.cgi?id=neo-tech-selfishness">This
@@ -1620,7 +1593,7 @@ as a false dichotomy.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_a_randroid" title = "Does the fact that you were influenced by Objectivism (= Ayn Rand’s philosophy) make you a “Randroid”?" %]
+[% WRAPPER h3_section id = "are_you_a_randroid" title = "Does the fact that you were influenced by Objectivism (= Ayn Rand’s philosophy) make you a “Randroid”?" %]
 
 <p>
 The way I see it, a "Randroid" is an overzealous believer in Randianism, who
@@ -1639,7 +1612,7 @@ much. Just note that it is you who are being stupid, prejudiced and labelling.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?" %]
+[% WRAPPER h3_section id = "why_are_you_the_messiah" , title = "What makes you “The Messiah”? Why do you think everyone should be one?" %]
 
 <p>
 See:
@@ -1701,7 +1674,7 @@ quite evil and misguided.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in the Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?"  %]
+[% WRAPPER h3_section id = "are_you_aware_that_the_jewish_bible_is_fictional" , title = "Are you aware that most of the stories in the Jewish Bible are believed to be fictional, and there is no historical record that attests to them ever taking place?" %]
 
 <p>
 Yes, I'm fully aware of that, and I think it does not matter too much.
@@ -1757,7 +1730,7 @@ like taking it as gospel.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "atheism_can_be_a_religion"  title = "Why do you say that Atheism can be a religion? Atheism is the lack of religion!"  %]
+[% WRAPPER h3_section id = "atheism_can_be_a_religion" title = "Why do you say that Atheism can be a religion? Atheism is the lack of religion!" %]
 
 <p>
 First of all, note that in <a href="https://twitter.com/shlomif/status/1165982522091737088">this tweet</a>,
@@ -1821,7 +1794,7 @@ agnostic</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_not_watch_this_long_must_see_video" title = "Why won't you watch this (long) “must see” video?" %]
+[% WRAPPER h3_section id = "why_not_watch_this_long_must_see_video" title = "Why won't you watch this (long) “must see” video?" %]
 
 <p>
 Like Paul Graham, I <a href="http://paulgraham.com/javacover.html">judge books
@@ -1833,9 +1806,9 @@ that are described as “<b>must</b> see/read/listen” are not really.
 
 [% END %]
 
-[% WRAPPER faq_h2_section id = "israel" title = "Questions Related to Me and to Israel" %]
+[% WRAPPER h2_section id = "israel" title = "Questions Related to Me and to Israel" %]
 
-[% WRAPPER faq_h3_section id = "idf_service"  title = "Did you serve in the Israeli Military (the IDF)?"  %]
+[% WRAPPER h3_section id = "idf_service" title = "Did you serve in the Israeli Military (the IDF)?" %]
 
 <p>
 No, I did not. I’m exempt from service, due to the various
@@ -1862,7 +1835,7 @@ and more anachronistic.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "zionist"  title = "Are you a “Zionist”? Are you an “anti-Zionist”?" %]
+[% WRAPPER h3_section id = "zionist" title = "Are you a “Zionist”? Are you an “anti-Zionist”?" %]
 
 <p>
 See <a href="https://twitter.com/shlomif/status/1021078089797898241">this tweet</a>
@@ -1883,7 +1856,7 @@ by-laws discrimination against non-Jews/Jews/whatever. What does that make me?
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "hebrew_and_arabic"  title = "Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?"  %]
+[% WRAPPER h3_section id = "hebrew_and_arabic" title = "Can speakers of Modern Hebrew understand Spoken Arabic and vice versa?" %]
 
 <p>
 While both Arabic and Hebrew are <a href="https://en.wikipedia.org/wiki/Semitic_languages">Semitic languages</a>, they
@@ -1941,7 +1914,7 @@ in Hebrew reading “An English lesson in an Israeli-Arabic school in the lower 
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "jewish_conspiracy"  title = "Are you aware of any Jewish “Elders of Zion” / Illuminati / “Zionist” conspiracy?"  %]
+[% WRAPPER h3_section id = "jewish_conspiracy" title = "Are you aware of any Jewish “Elders of Zion” / Illuminati / “Zionist” conspiracy?" %]
 
 <p>
 Despite being Jewish by blood and an Israeli resident and citizen, who received
@@ -1969,7 +1942,7 @@ convey some lessons about the real world).
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_an_agent"  title = "Are you a Mossad / Shin Bet / Unit 8200 / NSA / Hizbullah / CIA / etc. agent?"  %]
+[% WRAPPER h3_section id = "are_you_an_agent" title = "Are you a Mossad / Shin Bet / Unit 8200 / NSA / Hizbullah / CIA / etc. agent?" %]
 
 <p>
 I can testify that I am just an unemployed Israeli and secular Jewish web-writer and software developer.
@@ -2011,7 +1984,7 @@ you likely won't ever be approached by them.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "is_it_true_that_israel_genocides_palestinians" title = "Is it true that Israel has been genociding the Palestinians?" %]
+[% WRAPPER h3_section id = "is_it_true_that_israel_genocides_palestinians" title = "Is it true that Israel has been genociding the Palestinians?" %]
 
 <p>
 Not at all. As of February 2021, the number of Palestinian residents in the
@@ -2044,9 +2017,9 @@ and make all patients and workers there hacker monarchs.
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "art_and_culture" title = "Questions About Art &amp; Culture" %]
+[% WRAPPER h2_section id = "art_and_culture" title = "Questions About Art &amp; Culture" %]
 
-[% WRAPPER faq_h3_section id = "favourite_music"  title = "What kind of Music do you like to listen to?"  %]
+[% WRAPPER h3_section id = "favourite_music" title = "What kind of Music do you like to listen to?" %]
 
 <p>
 I mostly listen to Rock and Pop, but have some favourite songs of many genres
@@ -2068,7 +2041,7 @@ Ariel. My favourite song in English is <a href="https://www.youtube.com/watch?v=
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "most_freaky_tv_show"  title = "What is the most freaky TV Show you ever saw?"  %]
+[% WRAPPER h3_section id = "most_freaky_tv_show" title = "What is the most freaky TV Show you ever saw?" %]
 
 <p>
 <a href="https://www.imdb.com/title/tt0061287/"><i>The Prisoner</i></a> is
@@ -2080,7 +2053,7 @@ paranoia, but otherwise very cool.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "funniest_thing_on_tv"  title = "What do you consider the funniest thing on TV?" %]
+[% WRAPPER h3_section id = "funniest_thing_on_tv" title = "What do you consider the funniest thing on TV?" %]
 
 <p>
 <a href="https://he.wikipedia.org/wiki/%D7%97%D7%A6%D7%99_%D7%94%D7%9E%D7%A0%D7%A9%D7%94_(%D7%A1%D7%93%D7%A8%D7%AA_%D7%98%D7%9C%D7%95%D7%95%D7%99%D7%96%D7%99%D7%94)">Hatzi Hamenasheh</a> (= the half of <a href="https://en.wikipedia.org/wiki/Tribe_of_Manasseh">Menasheh</a>).
@@ -2088,7 +2061,7 @@ paranoia, but otherwise very cool.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "biggest_celeb_crush"  title = "Who was your biggest celebrity crush?" %]
+[% WRAPPER h3_section id = "biggest_celeb_crush" title = "Who was your biggest celebrity crush?" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">[% SMG %]</a>. She played <a
@@ -2158,7 +2131,7 @@ Do note that I have a lot of <a href="[% base_path %]meta/nav-blocks/blocks/#buf
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "fav_painter" title = "Who is your favourite painter?" %]
+[% WRAPPER h3_section id = "fav_painter" title = "Who is your favourite painter?" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Keith_Parkinson">Keith Parkinson</a>
@@ -2169,15 +2142,15 @@ who drew fantasy art (see <a href="https://duckduckgo.com/?q=keith+parkinson&amp
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "fiction_books" title = "Fiction Books (Literature)" %]
+[% WRAPPER h3_section id = "fiction_books" title = "Fiction Books (Literature)" %]
 
-[% WRAPPER faq_h4_section id = "fav_fiction_books" title = "What are your favourite fiction books?" %]
+[% WRAPPER h4_section id = "fav_fiction_books" title = "What are your favourite fiction books?" %]
 
 <p>
 My favourite children-oriented book is <a
 href="https://en.wikipedia.org/wiki/The_Hobbit"><i>The Hobbit</i></a> by <a
 href="https://en.wikipedia.org/wiki/J._R._R._Tolkien">Tolkien</a>, which I read
-first in a translation to Hebrew and then several times in English.  Aside from
+first in a translation to Hebrew and then several times in English. Aside from
 high adventure, I now realise it contained a lot of criticism of the
 contemporary English society.
 </p>
@@ -2205,7 +2178,7 @@ my <a href="http://www.paulgraham.com/stuff.html">anti-"stuff" policy</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "tolkien_books" title = "What do you think about the other books/films by Tolkien?" %]
+[% WRAPPER h4_section id = "tolkien_books" title = "What do you think about the other books/films by Tolkien?" %]
 
 <ol>
 
@@ -2261,7 +2234,7 @@ however.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "crime_and_punishment" title = "What do you think about Dostoevsky’s Crime and Punishment?" %]
+[% WRAPPER h4_section id = "crime_and_punishment" title = "What do you think about Dostoevsky’s Crime and Punishment?" %]
 
 [% SET cnp = my_acronym( "key" => "Crime&P",) %]
 [% SET cnp_nl = my_acronym( "key" => "Crime&P", "no_link"=>1,) %]
@@ -2346,7 +2319,7 @@ And take my advice at your own risk. If it breaks, you get to keep both pieces. 
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id ="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
+[% WRAPPER h4_section id ="opinion_on_harry_potter" title="Have you read the Harry Potter books (by J. K. Rowling)? What do you think of them?" %]
 
 <p>
 I read the first four installments. My favourite was <a
@@ -2371,7 +2344,7 @@ looked up) yet not too dumbed down to be annoying
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "favourite_poems" title = "What are your favourite poems?" %]
+[% WRAPPER h3_section id = "favourite_poems" title = "What are your favourite poems?" %]
 
 <ol>
 
@@ -2406,9 +2379,9 @@ Rudyard Kipling ( <a href="https://en.wikipedia.org/wiki/If%E2%80%94">Wikipedia 
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "about_this_site"  title = "About this Site"  %]
+[% WRAPPER h2_section id = "about_this_site" title = "About this Site" %]
 
-[% WRAPPER faq_h3_section id = "shlomifish_org_domain"  title = "Why did you get the www.shlomifish.org domain?"  %]
+[% WRAPPER h3_section id = "shlomifish_org_domain" title = "Why did you get the www.shlomifish.org domain?" %]
 
 <p>
 Well, I originally set up my home-site on shlomif.il.eu.org, which is a free
@@ -2426,7 +2399,7 @@ now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
 
-[% WRAPPER faq_h4_section id = "why_the_www_domain_prefix"  title = "Why are you using the www domain prefix for your site?"  %]
+[% WRAPPER h4_section id = "why_the_www_domain_prefix" title = "Why are you using the www domain prefix for your site?" %]
 
 <p>
 There is no clear consensus whether "www." or plain "shlomifish.org" should
@@ -2440,7 +2413,7 @@ of the bikeshed</a> arguments.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "refer_to_shlomifish.org"  title = "How should I refer to this site?"  %]
+[% WRAPPER h3_section id = "refer_to_shlomifish.org" title = "How should I refer to this site?" %]
 
 <p>
 You can call it “Shlomi Fish’s Homepage”, “Shlomi Fish’s Homesite”,
@@ -2470,7 +2443,7 @@ I picked the appropriate domain for that.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "do_you_want_new_domains" title = "Do you want any new domains?" %]
+[% WRAPPER h3_section id = "do_you_want_new_domains" title = "Do you want any new domains?" %]
 
 <p>
 Currently no, given "they who proliferate possessions, proliferates worries".
@@ -2480,7 +2453,7 @@ domains may confuse the visitors of my sites.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "website_in_english"  title = "Why is this website in English? Why not Hebrew?"  %]
+[% WRAPPER h3_section id = "website_in_english" title = "Why is this website in English? Why not Hebrew?" %]
 
 <p>
 For several reasons:
@@ -2544,7 +2517,7 @@ a choice of some sort.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "spent_on_the_site"  title = "How much time do you spend on this site?"  %]
+[% WRAPPER h3_section id = "spent_on_the_site" title = "How much time do you spend on this site?" %]
 
 <p>
 A lot. I spent several hundreds of hours on the site, possibly several
@@ -2581,7 +2554,7 @@ talks' slides.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_history"  title = "What can you tell me about this site’s history?"  %]
+[% WRAPPER h3_section id = "site_history" title = "What can you tell me about this site’s history?" %]
 
 <p>
 Well, a journey of a thousand miles begins with one small step and continues
@@ -2663,7 +2636,7 @@ article about it</a>, which you can read.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "homesite_or_blog"  title = "Is www.shlomifish.org a blog?"  %]
+[% WRAPPER h3_section id = "homesite_or_blog" title = "Is www.shlomifish.org a blog?" %]
 
 <p>
 The short answer is that www.shlomifish.org is a good, old-fashioned,
@@ -2702,7 +2675,7 @@ to insist that it is not a blog.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "xhtml_11"  title = "Why are you using XHTML 1.1 for many pages on your site while serving them as “text/html”?"  %]
+[% WRAPPER h3_section id = "xhtml_11" title = "Why are you using XHTML 1.1 for many pages on your site while serving them as “text/html”?" %]
 
 <p>
 <b>Update: (November 2019)</b> I am now serving mostly <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a> and also serving it as <code>application/xml+xhtml</code>.
@@ -2734,7 +2707,7 @@ because they contain <a href="http://www.w3.org/Math/">MathML</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "is_everything_here_true"  title = "Is everything you say here true?  Should I take it seriously?"  %]
+[% WRAPPER h3_section id = "is_everything_here_true" title = "Is everything you say here true? Should I take it seriously?" %]
 
 <p>
 The answer is that not everything that I wrote, quoted and/or placed on
@@ -2759,7 +2732,7 @@ necessary technical skills, you can peruse the pages’ history in the
 <a href="https://en.wikiquote.org/w/index.php?title=Bill_Gates&amp;oldid=3095914#Misattributed">Bill Gates admitted</a> that he <q>said some stupid things and some wrong things</q> too. Also note the <a href="https://en.wikipedia.org/wiki/Dialectic#Hegelian_dialectic">Hegelian dialectic</a>.
 </p>
 
-[% WRAPPER faq_h4_section id = "are_the_historical_descriptions"  title = "Are the historical descriptions accurate?"  %]
+[% WRAPPER h4_section id = "are_the_historical_descriptions" title = "Are the historical descriptions accurate?" %]
 
 <p>
 First of all note that I often base my conclusions on limited data and gut feeling.
@@ -2778,7 +2751,7 @@ and my own experience, different people remember past events differently.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_many_visitors"  title = "How many visitors/hits/uniques/etc. does this site get per month?"  %]
+[% WRAPPER h3_section id = "how_many_visitors" title = "How many visitors/hits/uniques/etc. does this site get per month?" %]
 
 <p>
 Please don't ask me that, and that's not because I can't tell you that - it's
@@ -2795,7 +2768,7 @@ on silly statistics.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_not_https"  title = "Why isn’t this site hosted using HTTPS/SSL?"  %]
+[% WRAPPER h3_section id = "why_not_https" title = "Why isn’t this site hosted using HTTPS/SSL?" %]
 
 <p>
 <b>Update: (November 2019)</b> This site <a href="https://twitter.com/shlomif/status/1038141561186541570">now uses HTTPS</a>.
@@ -2850,7 +2823,7 @@ You can mirror the site using <code>wget --mirror</code> if you care about
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "please_delete_offensive_stuff"  title = "Can you please delete offensive/blasphemous/derogatory stuff that appears on your site?"  %]
+[% WRAPPER h3_section id = "please_delete_offensive_stuff" title = "Can you please delete offensive/blasphemous/derogatory stuff that appears on your site?" %]
 
 <p>
 The simple answer to that question is: no. I speak my mind and express myself
@@ -2902,7 +2875,7 @@ But this is assuming I agree with them.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "link_here_to_drive_traffic"  title = "Do you link to your site to drive in traffic?"  %]
+[% WRAPPER h3_section id = "link_here_to_drive_traffic" title = "Do you link to your site to drive in traffic?" %]
 
 <p>
 Many people whom I gave links to the various resources on my site, accused me
@@ -2930,7 +2903,7 @@ heart’s content. Moreover, you can use my site as a basis by
 version-control repository</a>.
 </p>
 
-[% WRAPPER faq_h4_section id = "advertise_your_site"  title = "Why do you advertise/“spam”/“self-promote” pages from your sites?"  %]
+[% WRAPPER h4_section id = "advertise_your_site" title = "Why do you advertise/“spam”/“self-promote” pages from your sites?" %]
 
 <p>
 First of all note that it is <a href="#which_disabilities_do_you_have">"ableism"</a> as
@@ -2975,7 +2948,7 @@ returns seven folds).
 <a
 href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-hurting-people">buu
 almost got himself killed</a> due to frequent online chat hostility and use
-of [% my_acronym( "key" => "IRC",) %] force (kicks, devoices, or bans).  In addition, a former boss of mine who
+of [% my_acronym( "key" => "IRC",) %] force (kicks, devoices, or bans). In addition, a former boss of mine who
 used to walk in the middle of the roads (hubris) in <a
 href="https://en.wikipedia.org/wiki/Gush_Dan">Gush Dan</a>, got badly injured
 in a car accident.
@@ -2983,7 +2956,7 @@ in a car accident.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "do_you_collect_IP_addresses" title = "Do you use your sites to collect IP addresses?" %]
+[% WRAPPER h4_section id = "do_you_collect_IP_addresses" title = "Do you use your sites to collect IP addresses?" %]
 
 <p>
 I rarely go over the monthly reports of the log analysers, to say nothing
@@ -3000,7 +2973,7 @@ And frankly, these conspiracy hypotheses are ridiculous.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "how_site_is_generated"  title = "How is this site generated? Which CMS (Content Management System) are you using?"  %]
+[% WRAPPER h3_section id = "how_site_is_generated" title = "How is this site generated? Which CMS (Content Management System) are you using?" %]
 
 <p>
 Most of the site is comprised
@@ -3036,7 +3009,7 @@ You can find a <a href="[% base_path %]meta/site-source/#techs_used">partial lis
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "is_site_written_in_perl"  title = "Is this site written in Perl?"  %]
+[% WRAPPER h3_section id = "is_site_written_in_perl" title = "Is this site written in Perl?" %]
 
 <p>
 See <a href="#how_site_is_generated">above</a> - most of the site is generated
@@ -3056,7 +3029,7 @@ not run on the web server, nor is required to serve most of it.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "broken_links"  title = "I found some broken links on one of your sites. Should I report them to you?"  %]
+[% WRAPPER h3_section id = "broken_links" title = "I found some broken links on one of your sites. Should I report them to you?" %]
 
 <p>
 I guess I'd be interested to hear reports about them as long as one provides
@@ -3070,7 +3043,7 @@ frequency.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_loads_quickly"  title = "This site loads so quickly. What is your secret?"  %]
+[% WRAPPER h3_section id = "site_loads_quickly" title = "This site loads so quickly. What is your secret?" %]
 
 <p>
 First of all note that I do not consider myself an expert on load time
@@ -3204,7 +3177,7 @@ average web page size</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_looks_old"  title = "Why does the site look old?"  %]
+[% WRAPPER h3_section id = "site_looks_old" title = "Why does the site look old?" %]
 
 <p>
 Well, the site's old fashioned look may be part of its charm, and kind-of lets it
@@ -3215,7 +3188,7 @@ fragments if you think they will improve matters.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_markup_not_formatted"  title = "Why is the site’s markup not formatted nicely?"  %]
+[% WRAPPER h3_section id = "site_markup_not_formatted" title = "Why is the site’s markup not formatted nicely?" %]
 
 <p>
 Some web developers told me they like to keep the markup they emit properly formatted
@@ -3289,7 +3262,7 @@ formatted HTML as an example.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_sources_vcs_repo"  title = "Does this site have a public Git repository (on GitHub / GitLab / etc.)?"  %]
+[% WRAPPER h3_section id = "site_sources_vcs_repo" title = "Does this site have a public Git repository (on GitHub / GitLab / etc.)?" %]
 
 <p>
 Yes, it does. See:
@@ -3314,7 +3287,7 @@ some sub-repositories).
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "site_hosting" title = "Where is this site hosted?" %]
+[% WRAPPER h3_section id = "site_hosting" title = "Where is this site hosted?" %]
 
 <p>
 My <a href="[% base_path %]meta/hosting/">web hosting</a> is
@@ -3326,21 +3299,21 @@ maintenance burden.
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "works_of_fiction"  title = "About my works of fiction."  %]
+[% WRAPPER h2_section id = "works_of_fiction" title = "About my works of fiction." %]
 
-[% WRAPPER faq_h3_section id = "why_fan_fic" title = "Why do you write mostly fan-fiction and crossovers?" %]
+[% WRAPPER h3_section id = "why_fan_fic" title = "Why do you write mostly fan-fiction and crossovers?" %]
 
 [% INCLUDE why_fan_fic__block %]
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_real_person_fiction"  title = "What about your real person fiction?"  %]
+[% WRAPPER h3_section id = "why_real_person_fiction" title = "What about your real person fiction?" %]
 
 [% INCLUDE why_real_person_fiction__block %]
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "featuring_sexy_women_and_girls"  title = "You feature sexy women and girls in your works. Are you a pervert?"  %]
+[% WRAPPER h3_section id = "featuring_sexy_women_and_girls" title = "You feature sexy women and girls in your works. Are you a pervert?" %]
 
 <p>
 Well, I don’t know about you, but I feel that a man who is attracted
@@ -3468,7 +3441,7 @@ with a MOTAS was when a girl who looked in her early 20s
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "idolisation_of_people_and_things"  title = "Do you idolise the celebrities or fictional characters that you feature in your fan fiction?"  %]
+[% WRAPPER h3_section id = "idolisation_of_people_and_things" title = "Do you idolise the celebrities or fictional characters that you feature in your fan fiction?" %]
 
 <p>
 As a matter of fact, it may be considered this way. My fan fiction may be
@@ -3505,7 +3478,7 @@ and stories.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "too_old_or_too_new_sources"  title = "Why are the source works or franchises too old? Why are they more recent than the Jewish canonical Torah? Why do you reference software world / computer geek / open source details?"  %]
+[% WRAPPER h3_section id = "too_old_or_too_new_sources" title = "Why are the source works or franchises too old? Why are they more recent than the Jewish canonical Torah? Why do you reference software world / computer geek / open source details?" %]
 
 <p>
 Well, as you can tell, it is futile to <a
@@ -3599,7 +3572,7 @@ Fish (= me): "Hackers make the best warriors"</a> )
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_arent_you_faithful_to_the_original_franchises_and_characters" title = "Why aren't you faithful to the original franchises and characters?" %]
+[% WRAPPER h3_section id = "why_arent_you_faithful_to_the_original_franchises_and_characters" title = "Why aren't you faithful to the original franchises and characters?" %]
 
 <p>
 When I hack on my fics I apply my <a href="[% base_path %]philosophy/culture/multiverse-cosmology/#love-and-knowledge">educational and entertainment</a> creative filters, just like
@@ -3619,7 +3592,7 @@ As <a href="[% base_path %]humour/stories/#intro">I noted:</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "factoids_obsession"  title = "Why are you so obsessed with “facts”/factoids about Chuck Norris/etc.?"  %]
+[% WRAPPER h3_section id = "factoids_obsession" title = "Why are you so obsessed with “facts”/factoids about Chuck Norris/etc.?" %]
 
 <p>
 I note the significance of the factoids trend <a href="[% base_path
@@ -3656,11 +3629,11 @@ advised me: please don't be too domineering/"pushy". Different people are
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "release_something_perfect" title = "Why don't you cut out contact with the outside world for several years and release a perfect screenplay?"  %]
+[% WRAPPER h3_section id = "release_something_perfect" title = "Why don't you cut out contact with the outside world for several years and release a perfect screenplay?" %]
 
 <p>
 This was popularised by Hollywood, but from my experience is detrimental in
-this day and age (~January 2021).  I find that releasing screenplays (or essays
+this day and age (~January 2021). I find that releasing screenplays (or essays
 or software) in an "imperfect" or even incomplete state, helps getting input
 from readers, reviewers, and collaborators, which even if negative and
 "destructive", helps in the thought process.
@@ -3687,7 +3660,7 @@ Cookie Monster <a href="https://www.youtube.com/watch?v=uCeMZccDMA0">agrees with
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "may_i_prepare_a_derivative" title = "May I prepare a derivative of a screenplay, bit, aphorism, essay, captioned image, or other work (or works) of yours? (E.g: a computer game, a tabletop game, a parody, a video, an animation, an audio file, a picture, a version with some amendments or corrections, a translation to a different language?)"  %]
+[% WRAPPER h3_section id = "may_i_prepare_a_derivative" title = "May I prepare a derivative of a screenplay, bit, aphorism, essay, captioned image, or other work (or works) of yours? (E.g: a computer game, a tabletop game, a parody, a video, an animation, an audio file, a picture, a version with some amendments or corrections, a translation to a different language?)" %]
 
 <p>
 Sure! <a href="https://en.wikipedia.org/wiki/Go_ahead,_make_my_day">Go ahead</a> as
@@ -3711,7 +3684,7 @@ As a result, I recommend you peruse them if you wish to keep the best quality.
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "how_do_you_expect_to_afford_the_actors" title = "How do you expect to afford paying the [big name] actors you sport in your screenplays?"  %]
+[% WRAPPER h3_section id = "how_do_you_expect_to_afford_the_actors" title = "How do you expect to afford paying the [big name] actors you sport in your screenplays?" %]
 
 <p>
 First of all note that I believe by observation that <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/beautiful_people_are_geeks.xhtml">most of them are modern-day geeks and "amateurs"</a>
@@ -3730,7 +3703,7 @@ to <a href="#may_i_prepare_a_derivative">take them in their own direction</a>
 
 [% END %]
 
-[% WRAPPER faq_h3_section id = "who_is_the_worst_vocalist_on_youtube" title = "If you are the “2nd worst vocalist on YouTube”, who is the first?"  %]
+[% WRAPPER h3_section id = "who_is_the_worst_vocalist_on_youtube" title = "If you are the “2nd worst vocalist on YouTube”, who is the first?" %]
 
 [% # THROW "UNIMPL" %]
 
@@ -3742,9 +3715,9 @@ My future successor. Not unlike <a href="http://www.earthstar.co.uk/deep1.htm">
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "computing"  title = "About computing and software development"  %]
+[% WRAPPER h2_section id = "computing" title = "About computing and software development" %]
 
-[% WRAPPER faq_h3_section id = "are-you-a-programmer"  title = "Are you a programmer?"  %]
+[% WRAPPER h3_section id = "are-you-a-programmer" title = "Are you a programmer?" %]
 
 <p>
 Yes, I am. For some of the publicly available source code I wrote (usually [% my_acronym( "key" => "FOSS",) %])
@@ -3775,7 +3748,7 @@ HTML, or many other languages which are not <a href="https://en.wikipedia.org/wi
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "computers-specs"  title = "What are your Computers’ Specifications?"  %]
+[% WRAPPER h3_section id = "computers-specs" title = "What are your Computers’ Specifications?" %]
 
 <p>
 My primary machine is a desktop machine with a:
@@ -3899,7 +3872,7 @@ It replaces an Acer Aspire 5738DZG laptop with the following specs:
 <ul>
 
 <li>
-Intel Pentium(R) Dual-Core CPU       T4300  @ 2.10GHz. (x86-64).
+Intel Pentium(R) Dual-Core CPU T4300 @ 2.10GHz. (x86-64).
 </li>
 
 <li>
@@ -3935,7 +3908,7 @@ It runs
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "programming_languages"  title = "Which Programming Language did you start with? Which programming languages do you know now?"  %]
+[% WRAPPER h3_section id = "programming_languages" title = "Which Programming Language did you start with? Which programming languages do you know now?" %]
 
 <p>
 When I was in the 4th grade (back around 1987), my father bought my family
@@ -3996,7 +3969,7 @@ You can find a list of languages that I currently know on
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "text_editors"  title = "Which text editors are you using? What is your favourite text editor?"  %]
+[% WRAPPER h3_section id = "text_editors" title = "Which text editors are you using? What is your favourite text editor?" %]
 
 <p>
 Well, I'm usually using gvim (the Gtk+/GUI version of
@@ -4029,7 +4002,7 @@ quite a lot of Vim extensions written in vimscript and in Vim’s extension
 languages, which are not supported by Evil.
 </p>
 
-[% WRAPPER faq_h4_section id = "past_text_editors"  title = "Which text editors have you used in the past?" %]
+[% WRAPPER h4_section id = "past_text_editors" title = "Which text editors have you used in the past?" %]
 
 <ul>
 
@@ -4077,7 +4050,7 @@ of Windows-like copy/paste keyboard bindings.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "choice_of_operating_system"  title = "Why are you using your choice of an operating system (= Fedora Linux)?"  %]
+[% WRAPPER h3_section id = "choice_of_operating_system" title = "Why are you using your choice of an operating system (= Fedora Linux)?" %]
 
 <ol>
 
@@ -4145,7 +4118,7 @@ Also note that your experience and preferences may vary.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "bsc_final_projects"  title = "What were your B.Sc.'s Final Projects?"  %]
+[% WRAPPER h3_section id = "bsc_final_projects" title = "What were your B.Sc.'s Final Projects?" %]
 
 <p>
 They were:
@@ -4171,7 +4144,7 @@ seminars manager written in Perl 5.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_duckduckgo"  title = "Why are you using DuckDuckGo? (Instead of Google?)"  %]
+[% WRAPPER h3_section id = "why_duckduckgo" title = "Why are you using DuckDuckGo? (Instead of Google?)" %]
 
 <ol>
 
@@ -4209,7 +4182,7 @@ personally <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-ta
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "why_xml" title = "Why are you still using XML?" %]
+[% WRAPPER h3_section id = "why_xml" title = "Why are you still using XML?" %]
 
 <p>
 With the advent of <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
@@ -4285,7 +4258,7 @@ Relevant links:
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "do_people_still_use_irc"  title = "Do people still use IRC?"  %]
+[% WRAPPER h3_section id = "do_people_still_use_irc" title = "Do people still use IRC?" %]
 
 <p>
 Yes, they/we do. <a href="[% base_path %]humour/fortunes/show.cgi?id=lets-just-kill-prejudice">Old ≠ bad</a>.
@@ -4293,9 +4266,9 @@ Yes, they/we do. <a href="[% base_path %]humour/fortunes/show.cgi?id=lets-just-k
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "foss"  title = "About Free and Open Source Software (FOSS)"  %]
+[% WRAPPER h3_section id = "foss" title = "About Free and Open Source Software (FOSS)" %]
 
-[% WRAPPER faq_h4_section id = "how_to_become_hacker"  title = "How can I become an open-source contributor?"  %]
+[% WRAPPER h4_section id = "how_to_become_hacker" title = "How can I become an open-source contributor?" %]
 
 <p>
 See
@@ -4307,7 +4280,7 @@ for the Young”</a> essay.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "help_me_crack"  title = "Can you help me intrude into/exploit (so-called “crack” or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?"  %]
+[% WRAPPER h4_section id = "help_me_crack" title = "Can you help me intrude into/exploit (so-called “crack” or “hack”) someone’s server/instagram account/IRC account/Twitter/Facebook/etc.?" %]
 
 <p>
 No, and that is because I am not a
@@ -4381,7 +4354,7 @@ From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "are_you_a_hacker"  title = "Are you a hacker?"  %]
+[% WRAPPER h4_section id = "are_you_a_hacker" title = "Are you a hacker?" %]
 
 <p>
 The word "Hacker" can mean several things. It can mean a computer intruder,
@@ -4402,7 +4375,7 @@ people can judge whether I am indeed a hacker of them. And my policy is to
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "how_use_hg"  title = "You’re using Mercurial (on Bitbucket.org/etc.) for some of your projects. How can I learn how to use it?"  %]
+[% WRAPPER h4_section id = "how_use_hg" title = "You’re using Mercurial (on Bitbucket.org/etc.) for some of your projects. How can I learn how to use it?" %]
 
 <p>
 There are some links to tutorials on
@@ -4414,7 +4387,7 @@ Mercurial page</a> of the Better-SCM site. More can be found in a
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "Shlomif_Common_cmake"  title = "When building some of your CMake-based projects, I am getting an error for a missing “Shlomif_Common.cmake” file"  %]
+[% WRAPPER h4_section id = "Shlomif_Common_cmake" title = "When building some of your CMake-based projects, I am getting an error for a missing “Shlomif_Common.cmake” file" %]
 
 <p>
 Yes, you can find it in
@@ -4426,7 +4399,7 @@ downloads.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "how_many_projects"  title = "How many Projects are you Working on?"  %]
+[% WRAPPER h4_section id = "how_many_projects" title = "How many Projects are you Working on?" %]
 
 <p>
 I have originated, maintain, or contribute to more than one project and keep
@@ -4436,7 +4409,7 @@ tasks. You can find some lists and activity logs on <a href="[% base_path %]open
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "github_account"  title = "Do you have a GitHub account?"  %]
+[% WRAPPER h4_section id = "github_account" title = "Do you have a GitHub account?" %]
 
 <p>
 Yes, see <a href="[% base_path %]open-source/projects/#forges_home_pages">this
@@ -4445,7 +4418,7 @@ link</a> for more information.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "thought_you_were_a_Perl_guy"  title = "Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!"  %]
+[% WRAPPER h4_section id = "thought_you_were_a_Perl_guy" title = "Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!" %]
 
 <p>
 While I have written a lot of Perl 5 code, and often still maintain it because
@@ -4487,7 +4460,7 @@ I Hate Advocacy</a> - by Mark-Jason Dominus.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "publishing_proj_euler"  title = "Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?"  %]
+[% WRAPPER h4_section id = "publishing_proj_euler" title = "Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?" %]
 
 <p>
 For several reasons:
@@ -4529,7 +4502,7 @@ employers and other interested parties.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "proj_euler_in_order"  title = "Do you solve the Project Euler problems in their order?"  %]
+[% WRAPPER h4_section id = "proj_euler_in_order" title = "Do you solve the Project Euler problems in their order?" %]
 
 <p>
 No, I don't. I often skip problems which I find too difficult or not interesting
@@ -4539,7 +4512,7 @@ href="https://projecteuler.net/problem=143">No. 143</a>).
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "todo_lists_and_organised"  title = "How do you keep organised? What do you use for To-Do lists?"  %]
+[% WRAPPER h4_section id = "todo_lists_and_organised" title = "How do you keep organised? What do you use for To-Do lists?" %]
 
 <p>
 First of all, see <a href="https://shlomif-tech.livejournal.com/74492.html">this
@@ -4553,7 +4526,7 @@ plugin</a>.
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "explicit_licensing"  title = "Why do you mention that a certain work or post is copyrighted by you and under a certain licence?"  %]
+[% WRAPPER h4_section id = "explicit_licensing" title = "Why do you mention that a certain work or post is copyrighted by you and under a certain licence?" %]
 
 <p>
 First of all note that [% my_acronym( "key" => "IANAL" ) %]/etc. Anyway, I try
@@ -4591,7 +4564,7 @@ Also see:
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "expat_license"  title = "What is the “Expat License”?"  %]
+[% WRAPPER h4_section id = "expat_license" title = "What is the “Expat License”?" %]
 
 <p>
 It is what the FSF <a href="https://www.gnu.org/licenses/license-list.html#Expat">calls</a>
@@ -4601,7 +4574,7 @@ the so-called <a href="https://opensource.org/licenses/MIT">MIT License</a>
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "why_so_many_github_repos"  title = "Why do you have so many GitHub repositories?"  %]
+[% WRAPPER h4_section id = "why_so_many_github_repos" title = "Why do you have so many GitHub repositories?" %]
 
 <p>
 Many of <a href="https://github.com/shlomif?tab=repositories">my GitHub repositories</a> were
@@ -4618,7 +4591,7 @@ for stories and screenplays, and for some essays. I am not a purist of the
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "why_perl"  title = "Why are you still using Perl? Can't you rewrite all your Perl code in Python / JavaScript / TypeScript / Erlang / Intercal / etc.?"  %]
+[% WRAPPER h4_section id = "why_perl" title = "Why are you still using Perl? Can't you rewrite all your Perl code in Python / JavaScript / TypeScript / Erlang / Intercal / etc.?" %]
 
 <p>
 It is true that Perl 5 has somewhat fallen out of favour, but as much as I like Python
@@ -4650,7 +4623,7 @@ Note that I also write some new code in Python, Julia, bash, C, C++ and other la
 
 [%- END -%]
 
-[% WRAPPER faq_h4_section id = "why_did_you_quit_mageia" title = "Why did you quit using and contributing to Mageia Linux?" %]
+[% WRAPPER h4_section id = "why_did_you_quit_mageia" title = "Why did you quit using and contributing to Mageia Linux?" %]
 
 <p>
 Contributing to Mageia was too time consuming, and Mageia is too obscure,
@@ -4660,18 +4633,18 @@ unpopular, and mismanaged. I like <a href="#choice_of_operating_system">Fedora</
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "why_are_you_using_vlc" title = "Why are you using VLC? (Instead of mpv?)" %]
+[% WRAPPER h4_section id = "why_are_you_using_vlc" title = "Why are you using VLC? (Instead of mpv?)" %]
 
 <p>
 First of all note that I use mpv for quickly playing media files from the
-command-line.  Otherwise, I prefer VLC's user-interface and its overall
+command-line. Otherwise, I prefer VLC's user-interface and its overall
 user-experience. It is not perfect, but generally better than mpv's spartan
 one.
 </p>
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "why_skip_odd_minor_versions" title = "Why do your projects’ releases skip odd minor version numbers?" %]
+[% WRAPPER h4_section id = "why_skip_odd_minor_versions" title = "Why do your projects’ releases skip odd minor version numbers?" %]
 
 <p>
 This is what <a href="https://www.producingoss.com/en/development-cycle.html#release-number-even-odd-strategy">the "Producing OSS" book calls "The Even/Odd Strategy"</a>. Quoting from it ( <a href="https://www.producingoss.com/en/copyright.html">under CC-by-sa</a> ):
@@ -4681,8 +4654,8 @@ This is what <a href="https://www.producingoss.com/en/development-cycle.html#rel
 
 <p>Some projects use the parity of the minor number component to
 indicate the stability of the software: even means stable, odd means
-unstable.  This applies only to the minor number, not the major or
-micro numbers.  Increments in the micro number still indicate bug
+unstable. This applies only to the minor number, not the major or
+micro numbers. Increments in the micro number still indicate bug
 fixes (no new features), and increments in the major number still
 indicate big changes, new feature sets, etc.</p>
 
@@ -4690,22 +4663,22 @@ indicate big changes, new feature sets, etc.</p>
 Linux kernel project<a href="https://www.producingoss.com/en/development-cycle.html#ftn.idp3103" class="footnote"><sup class="footnote">[78]</sup></a>
 among others, is that it offers a way to release
 new functionality for testing without subjecting production users to
-potentially unstable code.  People can see from the numbers that
+potentially unstable code. People can see from the numbers that
 "2.4.21" is okay to install on their live web server, but that "2.5.1"
-should probably stay confined to home workstation experiments.  The
+should probably stay confined to home workstation experiments. The
 development team handles the bug reports that come in from the
 unstable (odd-minor-numbered) series, and when things start to settle
 down after some number of micro releases in that series, they
 increment the minor number (thus making it even), reset the micro
 number back to "0", and release a presumably stable package.</p><p>This system preserves, or at least, does not conflict with, the
-compatibility guidelines given earlier.  It simply overloads the minor
-number with some extra information.  This forces the minor number to
+compatibility guidelines given earlier. It simply overloads the minor
+number with some extra information. This forces the minor number to
 be incremented about twice as often as would otherwise be necessary,
-but there's no real harm in that.  The even/odd system is probably
+but there's no real harm in that. The even/odd system is probably
 best for projects that have very long release cycles, and which by
 their nature have a high proportion of conservative users who value
-stability above new features.  It is not the only way to get new
-functionality tested in the wild, however.  In
+stability above new features. It is not the only way to get new
+functionality tested in the wild, however. In
 <a class="xref" href="https://www.producingoss.com/en/stabilizing-a-release.html" title="Stabilizing a Release">the section called “Stabilizing a Release”</a> we will examine another, perhaps more common,
 method of releasing potentially unstable code to the public, in which
 the release number is further marked so that people have an idea of
@@ -4716,7 +4689,7 @@ the risk/benefit trade-offs immediately on seeing the release's name.
 
 [% END %]
 
-[% WRAPPER faq_h4_section id = "use_of_inkscape" title = "For what are you using Inkscape?" %]
+[% WRAPPER h4_section id = "use_of_inkscape" title = "For what are you using Inkscape?" %]
 
 <p>
 I use it for <a href="[% base_path %]humour/image-macros/">captioned images</a> mostly lately.
@@ -4728,9 +4701,9 @@ I use it for <a href="[% base_path %]humour/image-macros/">captioned images</a> 
 
 [%- END -%]
 
-[% WRAPPER faq_h2_section id = "political_correctness"  title = "Political Correctness (or Lack of it)"  %]
+[% WRAPPER h2_section id = "political_correctness" title = "Political Correctness (or Lack of it)" %]
 
-[% WRAPPER faq_h3_section id = "pc_rating"  title = "What is the Approximate Maturity Rating of this Site?"  %]
+[% WRAPPER h3_section id = "pc_rating" title = "What is the Approximate Maturity Rating of this Site?" %]
 
 <p>
 Most of it should be either U (Universal) or PG-Something (Parent Guidance).
@@ -4739,7 +4712,7 @@ I’m not a blatantly pornographic person.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "pc_girl"  title = "Why are you using the terms “girl”, “chick”, etc.?"  %]
+[% WRAPPER h3_section id = "pc_girl" title = "Why are you using the terms “girl”, “chick”, etc.?" %]
 
 <p>
 I’m using the term “girl” for lack of a better term for “a female guy”. I was
@@ -4750,7 +4723,7 @@ particularly derogatory).
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "are_you_a_sexist__are_you_a_feminist"  title = "Are you a sexist? Are you a Feminist?"  %]
+[% WRAPPER h3_section id = "are_you_a_sexist__are_you_a_feminist" title = "Are you a sexist? Are you a Feminist?" %]
 
 <p>
 In general, I support gender equality, lack of double standards, equal opportunities,
@@ -4838,7 +4811,7 @@ but he has been increasingly more tactful lately, and hopefully so have I.
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "pc_nazi"  title = "Why are you using the term “nazi” to refer to people who are “needlessly strict”?"  %]
+[% WRAPPER h3_section id = "pc_nazi" title = "Why are you using the term “nazi” to refer to people who are “needlessly strict”?" %]
 
 <p>
 Because it is an acceptable use for such a word. You can find the
@@ -4894,7 +4867,7 @@ which the "I just work here" attitude is
 <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">not different</a>.
 </p>
 
-[% WRAPPER faq_h4_section id = "pc_nazi_writings"  title = "Why do you mention Hitler, the Nazis, etc. in some of Your Writings?"  %]
+[% WRAPPER h4_section id = "pc_nazi_writings" title = "Why do you mention Hitler, the Nazis, etc. in some of Your Writings?" %]
 
 <p>
 I found it suitable to use it for them, so I did. For the record, my
@@ -4909,7 +4882,7 @@ so if a fire has caught the Firs…
 
 [%- END -%]
 
-[% WRAPPER faq_h3_section id = "pc_porn"  title = "What do you think about Porn?"  %]
+[% WRAPPER h3_section id = "pc_porn" title = "What do you think about Porn?" %]
 
 <p>
 Every person has an inalienable right to expose his or her body in private,
@@ -4932,7 +4905,7 @@ one should be allowed to produce it, distribute it, and experience it. Some
 of the greatest artists in history produced pornographic or erotic artworks.
 </p>
 
-[% WRAPPER faq_h4_section id = "pc_porn_links"  title = "Are there any Links to Porn on your Site?"  %]
+[% WRAPPER h4_section id = "pc_porn_links" title = "Are there any Links to Porn on your Site?" %]
 
 <p>
 There may be some links to soft porn, etc. Or to individual pornographic

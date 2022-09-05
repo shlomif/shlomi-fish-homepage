@@ -111,6 +111,9 @@ EOF
     )
 ];
 
+my $id_lookup =
+    +{ map { $stories_list->[$_]->{'id'} => $_ } keys @$stories_list };
+
 my $nav_list = [ map { _nav_process($_) } @$stories_list ];
 
 sub get_list
@@ -121,6 +124,13 @@ sub get_list
 sub get_nav_list
 {
     return $nav_list;
+}
+
+sub get_html_by_id
+{
+    my ( $self, $id ) = @_;
+
+    return $self->get_list()->[ $id_lookup->{$id} ]->{'html'};
 }
 
 1;

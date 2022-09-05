@@ -6,7 +6,11 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% WRAPPER h2_section id = "preview", title = "Preview" %]
+
 <img src="d-and-d-cartoon-exported.webp" alt="D&amp;D Cartoon - Comparing Lances" class="dnd_cartoon"/>
+
+[% END %]
 
 [% WRAPPER h2_section "id" => "about", "title" => "About this image", %]
 

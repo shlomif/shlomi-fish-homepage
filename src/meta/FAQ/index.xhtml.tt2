@@ -9,6 +9,8 @@
 [% SET site_sources_url = base_path _ "meta/site-source/" %]
 
 [% SET childhood_mem = "Possibly worse, I lost many of my earliest childhood memories, as I thought about them and remembered them in English." %]
+[% SET FOSS = my_acronym( "key" => "FOSS",) %]
+[% SET IRC = my_acronym( "key" => "IRC",) %]
 [% SET SMG = 'Sarah Michelle Gellar' %]
 [% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
 
@@ -71,12 +73,11 @@ the field. I’m actually more of a programmer and a specialised mathematician.
 </p>
 
 <p>
-At the moment, I’m a computer geek (= person who is enthusiastic about
+At the moment, I’m a computer geek (= a person who is enthusiastic about
 computers), and a former dork/"nerd" (= a person without a social life),
 because I recently started to increasingly socialise more. I’m
-interested in
-many other fields, including linguistics, history, writing, children and
-non-children literature, and T.V. and movies.
+interested in many other fields, including linguistics, history, writing,
+children and non-children literature, and T.V. and movies.
 </p>
 
 <p>
@@ -220,7 +221,10 @@ Progressing carefully, but steadily, like a timid little fish.
 
 <li>
 <p>
-A contraction of "finish" and I like to bring projects and tasks to a usable state, and move on [while possibly revisiting them later]: <a href="https://en.wikipedia.org/wiki/Perfection#Paradoxes">Perfection is in imperfection</a>.
+A contraction of "finish" and I like to bring projects and tasks to a usable
+state, and move on [while possibly revisiting them later]:
+<a href="https://en.wikipedia.org/wiki/Perfection#Paradoxes">Perfection is in
+imperfection</a>.
 </p>
 </li>
 
@@ -260,7 +264,7 @@ Currently (January 2021), I live with my parents in Eliyahu Hakim St. No. 4, apa
 (on the Third floor) ( <a href="https://www.google.com/maps/place/Eliyahu+Khakim+St+4,+Tel+Aviv-Yafo/@32.1254617,34.7989148,17z/data=!4m13!1m7!3m6!1s0x151d4914a516fce5:0x8b1c395ce5fd1089!2sEliyahu+Khakim+St+4,+Tel+Aviv-Yafo!3b1!8m2!3d32.1254572!4d34.8011035!3m4!1s0x151d4914a516fce5:0x8b1c395ce5fd1089!8m2!3d32.1254572!4d34.8011035!10m2!1e3!2e1">Google maps</a> ), and I'm usually at home there, usually either using one of my computers,
 or sleeping. Note that if you wish to meet me, whoever you may be, you
 should <a href="[% base_path %]me/contact-me/">contact me</a>
-first because the video intercom is unreliable.
+beforehand because the video intercom is unreliable.
 </p>
 
 [% WRAPPER h4_section id = "why_are_you_revealing_your_home_address" title = "Why are you revealing your home address?" %]
@@ -320,6 +324,7 @@ wonderful, exciting, and wonderous, journey, and I’m not going to give up.
 <a href="http://www.reddit.com/r/writing/comments/2hfphk/challenges_i_face_in_my_quest_to_become_the_next/">“Challenges I face in my quest to become the next big author”</a>
 </p>
 </li>
+
 </ul>
 
 [%- END -%]
@@ -348,7 +353,7 @@ may have, please contact me and we'll see about that.
 [% WRAPPER h3_section id = "nicknames" title = "How else are you known?" %]
 
 <p>
-I’m also known as “shlomif” or on the [% my_acronym( "key" => "IRC",) %] as “rindolf”.
+I’m also known as “shlomif” or on the [% IRC %] as “rindolf”.
 A certain Englishwoman Internet friend of mine, who can be amusing at times,
 has nicknamed me <a href="[% base_path %]humour/fortunes/show.cgi?id=unflattering-nicknames">"Slimy Fish"</a>,
 which I didn't find offensive (possibly because I was no longer underage, and because I liked her; she
@@ -376,23 +381,22 @@ that it has a nice ring.
 </p>
 
 <p>
-The first [% my_acronym( "key" => "IRC",) %] nickname I used was “dori” after one of the dwarves in
-Tolkien’s <a href="http://en.wikipedia.org/wiki/The_Hobbit">the Hobbit</a>.
+The first [% IRC %] nickname I used was “dori” after one of the dwarves in
+Tolkien’s <a href="http://en.wikipedia.org/wiki/The_Hobbit">The Hobbit</a>.
 Later on, I decided it was a too common name, so I switched to “gloin”, the name
 of a different dwarf. Then I wanted something more original, so I picked up
 “rindolf” and the name stuck.
 </p>
 
 <p>
-If I had been able to change it again, I would have picked “shlomif” for my [% my_acronym( "key" => "IRC",)
-%] career, because it is my handle almost everywhere else, but now everyone
-on [% my_acronym( "key" => "IRC",) %] know me as “rindolf” so I feel it's too late (not to mention that,
-in my impression, it is common and acceptable to use a pseudonym on [% my_acronym( "key" => "IRC",) %], to
+If I had been able to change it again, I would have picked “shlomif” for my [% IRC %] career, because it is my handle almost everywhere else, but now everyone
+on [% IRC %] know me as “rindolf” so I feel it's too late (not to mention that,
+in my impression, it is common and acceptable to use a pseudonym on [% IRC %], to
 show some creativity).
 </p>
 
 <p>
-The running joke we have on [% my_acronym( "key" => "IRC",) %], is that Rindolf is the evil twin brother
+The running joke we have on [% IRC %], is that Rindolf is the evil twin brother
 of Santa Claus’s goody-two-shoes reindeer, Rudolph and Randolph, who are
 among his arch-enemies. Rindolf is also one of the cornerstones of the
 Evil Reindeer Evil World Domination Evil Conspiracy, with the evil aim to
@@ -416,7 +420,7 @@ When writing a letter to me, you can start it with
 
 <p>
 Note that using “Hello Fish” is considered disrespectful! I hate when people call
-me “Fish” to my face, albeit “Mr. Fish” is OK. You can also use my
+me “Fish” to my face, albeit “Mr. Fish” is acceptable. You can also use my
 <a href="#origin_of_rindolf">“Rindolf”
 nickname</a> with or without a “Mr.” honorific. Also see <a href="https://www.joelonsoftware.com/2004/01/26/getting-your-resume-read/">Joel on Software's note:</a>
 </p>
@@ -448,7 +452,7 @@ which are my common Internet handles which I use everywhere I can.
 </p>
 
 <p>
-On the [% my_acronym( "key" => "IRC",) %], I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
+On the [% IRC %], I generally use <a href="#origin_of_rindolf">the nickname “<code>rindolf</code>”</a>.
 </p>
 
 [%- END -%]
@@ -542,7 +546,7 @@ negative bio-physical aphrodisiacs to be happy, and neither do you.
 </p>
 
 <p>
-Most of the people I talk with on the [% my_acronym( "key" => "IRC",) %] who
+Most of the people I talk with on the [% IRC %] who
 consume caffeine have become dependent on it and cannot function without their
 morning/mid-morning/midday/etc. coffee. On the other hand, I’m energetic from
 the time I wake up until I go to sleep. As for alcohol, it has negative
@@ -585,7 +589,7 @@ and beverages, but I now consume them again and am much happier.
 Yes I do! Geeks comes in many shapes and sizes (also see <a href="https://en.wikipedia.org/wiki/One_Fish,_Two_Fish,_Red_Fish,_Blue_Fish"><i>One Fish, Two Fish, Red Fish, Blue Fish</i></a>)
 and they don't always completely match the stigmatic "computer geek" archetype (e.g:
 <a href="http://www.catb.org/jargon/html/appendixb.html">A Portrait of J. Random Hacker</a>).
-I am still a geek because I'm technologically inclined and enjoy contributing to [% my_acronym( "key" => "FOSS",)
+I am still a geek because I'm technologically inclined and enjoy contributing to [% FOSS
 %] and open content.
 </p>
 
@@ -625,7 +629,7 @@ am OK.
 <p>
 Note that the opinions I express and what I say are not a consequence of my
 mental status, but rather of the
-<a href="[% base_path %]philosophy/books-recommends/">many
+<a href="[% base_path %]me/rindolf/#rindolfism">many
 philosophical influences</a>, I’ve been exposed to, which I feel made my
 thinking process straighter and more logical. Some people take many common
 “truisms” for granted, but I can often demonstrate they are wrong.
@@ -761,7 +765,9 @@ It is hard and time-consuming for me to type.
 
 <li>
 <p>
-It is hard for me to use <a href="https://en.wikipedia.org/wiki/Speech_recognition">voice recognition</a>. When I say "Shlomi Fish" into my Android smartphone, in
+It is hard for me to use
+<a href="https://en.wikipedia.org/wiki/Speech_recognition">voice
+recognition</a>. When I say "Shlomi Fish" into my Android smartphone, in
 clear Hebrew, it thinks I meant "Shlomo".
 </p>
 </li>
@@ -901,7 +907,7 @@ a derivative work of the original by Iliad.
 
 <p>
 No, it does not - it is just inspired by <a href="#your_name">my last name</a>:
-“Fish”. I am in fact an Israeli and <a href="#secular_jew">Jewish</a>
+“Fish”. I am in fact an Israeli and a <a href="#secular_jew">Jewish</a>
 <a href="#religious_belief">agnostic</a>, and as Jewish Israelis go, we
 have some aversion towards Christianity.
 </p>
@@ -1044,7 +1050,7 @@ too hastily.
 
 <li>
 <p>
-Chat with English speakers on [% my_acronym( "key" => "IRC",) %] - I like
+Chat with English speakers on [% IRC %] - I like
 <a href="https://freenode.net/">Freenode</a> for that and they have an
 ##English channel, but other channels accept
 somewhat off-topicish discussion, especially some #not-channels or channels
@@ -1090,7 +1096,7 @@ non-functional translations, and because it will encourage you to learn less.
 </p>
 
 <p>
-GTranslate has some legitimate use cases (such as trying to get the gist of
+Google Translate has some legitimate use cases (such as trying to get the gist of
 a page in a foreign language) but like most tools, it has
 <a href="https://www.youtube.com/watch?v=LMkJuDVJdTw">its limitations</a>.
 </p>
@@ -2948,7 +2954,7 @@ returns seven folds).
 <a
 href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-hurting-people">buu
 almost got himself killed</a> due to frequent online chat hostility and use
-of [% my_acronym( "key" => "IRC",) %] force (kicks, devoices, or bans). In addition, a former boss of mine who
+of [% IRC %] force (kicks, devoices, or bans). In addition, a former boss of mine who
 used to walk in the middle of the roads (hubris) in <a
 href="https://en.wikipedia.org/wiki/Gush_Dan">Gush Dan</a>, got badly injured
 in a car accident.
@@ -3720,7 +3726,7 @@ My future successor. Not unlike <a href="http://www.earthstar.co.uk/deep1.htm">
 [% WRAPPER h3_section id = "are-you-a-programmer" title = "Are you a programmer?" %]
 
 <p>
-Yes, I am. For some of the publicly available source code I wrote (usually [% my_acronym( "key" => "FOSS",) %])
+Yes, I am. For some of the publicly available source code I wrote (usually [% FOSS %])
 see:
 </p>
 
@@ -3820,9 +3826,7 @@ A standard built-in AC’97 sound-card.
 </ul>
 
 <p>
-I’m using mostly
-<a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">Free
-and Open Source Software</a> (= [% my_acronym( "key" => "FOSS",) %]) on it, and try not to depend on
+I’m using mostly [% FOSS %] on it, and try not to depend on
 non-FOSS software. I documented
 <a href="[% base_path %]philosophy/computers/open-source/not-trust-non-FOSS/">the
 reason why I no longer trust non-FOSS software</a> on my technical weblog.

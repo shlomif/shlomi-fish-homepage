@@ -6,7 +6,7 @@
 [% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
-We were playing tabletop D&amp;D set in the
+We were playing tabletop [% my_acronym( "key" => "DnD",) %] set in the
 <a href="https://forgottenrealms.fandom.com/wiki/Main_Page">Forgotten Realms</a>
 setting, when I wanted my character to have been born in a country about
 2,000 kilometres away from the adventurers' base-city, and with a good road

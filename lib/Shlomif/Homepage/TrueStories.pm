@@ -130,7 +130,8 @@ sub get_html_by_id
 {
     my ( $self, $id ) = @_;
 
-    return $self->get_list()->[ $id_lookup->{$id} ]->{'html'};
+    return $self->get_list()
+        ->[ $id_lookup->{$id} // ( die "unknown id='$id'" ) ]->{'html'};
 }
 
 1;

@@ -163,6 +163,6 @@ BIZCARD_SVG_DIR := $(SRC_SRC_DIR)/me/images
 BIZCARD_SVG_OUTPUT_PATH := $(BIZCARD_SVG_DIR)/$(BIZCARD_SVG_OUTPUT_BN)
 
 $(BIZCARD_SVG_OUTPUT_PATH): $(BIZCARD_SVG_DIR)/$(BIZCARD_SVG_INPUT_BN)
-	( set -e -x ; d="`pwd`" ; md="$${d}/$(BIZCARD_SVG_DIR)" ; HOME="$${md}" python3 /usr/share/inkscape/extensions/image_embed.py < "$<" > "$@" )
+	( set -e -x ; d="`pwd`" ; md="$${d}/$(BIZCARD_SVG_DIR)" ; HOME="$${md}" python3 /usr/share/inkscape/extensions/image_embed.py "$<" > "$@" )
 
 all: $(BIZCARD_SVG_OUTPUT_PATH)

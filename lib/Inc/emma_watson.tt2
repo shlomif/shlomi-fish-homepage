@@ -70,12 +70,15 @@ Muppets Show</i> hosting Harry Potter</a>.
 
 [% BLOCK emma_watson_intro_text %]
 
+[% SET _ew_wikip = "https://en.wikipedia.org/wiki/Emma_Watson" %]
+
 <p>
-<a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a>
+<a href="[% _ew_wikip %]">Emma Watson</a>
 is a 1990-born British activist, actress, and model, who rose to fame playing
 Hermione Granger
 in <a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">the
-Harry Potter films</a>, and (quoting from the Wikipedia page):
+Harry Potter films</a>, and (quoting from
+<a href="[% _ew_wikip %]">the Wikipedia page</a>):
 </p>
 
 <blockquote>

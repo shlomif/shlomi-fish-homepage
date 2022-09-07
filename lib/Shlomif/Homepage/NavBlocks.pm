@@ -801,6 +801,8 @@ sub _subdiv_tr
     return Shlomif::Homepage::NavBlocks::Subdiv_Tr->new( {@_}, );
 }
 
+my $Screenplays_TR = _subdiv_tr( title => q{Screenplays}, );
+
 my %table_blocks = (
     'buffy' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
@@ -811,7 +813,7 @@ my %table_blocks = (
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw( star_trek_wtld selina_mandrake summer_nsa buffy_few_good queen_padme_tales ),
                 ),
@@ -846,7 +848,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 _master_tr(
                     title => q{Chuck Norris Fanfiction and Essays},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
                 _subdiv_tr( title => q{Factoids}, ),
                 _get_tr('chuck_norris_facts'),
@@ -867,7 +869,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s( qw( tow_fountainhead hhfg qoheleth ), ),
             ],
         },
@@ -881,7 +883,7 @@ q{<a href="https://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> Fanfiction}
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a href="https://en.wikipedia.org/wiki/Emma_Watson">Emma Watson</a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza ),
                 ),
@@ -940,7 +942,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw( star_trek_wtld selina_mandrake queen_padme_tales ),
                 ),
@@ -990,7 +992,7 @@ q{<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> / <a href=
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i>My Little Pony</i></a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw( terminator_liberation queen_padme_tales
                         who_will_ride_princess_celestia
@@ -1009,7 +1011,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
                     title =>
 q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#self-ref">Self-Reference</a> / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw( buffy_few_good terminator_liberation queen_padme_tales ),
                 ),
@@ -1051,7 +1053,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                         ),
                     ],
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s( qw( terminator_liberation queen_padme_tales ), ),
             ],
         },
@@ -1065,7 +1067,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s(
                     qw(  buffy_few_good queen_padme_tales__natalie_portman ),
                 ),
@@ -1085,7 +1087,7 @@ q{<a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> Fa
                     title =>
 q{<a href="https://wilwheaton.net/">Wil Wheaton</a> Fanfiction},
                 ),
-                _subdiv_tr( title => q{Screenplays}, ),
+                $Screenplays_TR,
                 _tr_s( qw( selina_mandrake the_10th_muse__wil_wheaton ), ),
             ],
         },

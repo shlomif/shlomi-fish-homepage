@@ -801,6 +801,7 @@ sub _subdiv_tr
     return Shlomif::Homepage::NavBlocks::Subdiv_Tr->new( {@_}, );
 }
 
+my $Factoids_TR    = _subdiv_tr( title => q{Factoids}, );
 my $Screenplays_TR = _subdiv_tr( title => q{Screenplays}, );
 
 my %table_blocks = (
@@ -817,7 +818,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 _tr_s(
                     qw( star_trek_wtld selina_mandrake summer_nsa buffy_few_good queen_padme_tales ),
                 ),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('buffy_facts'),
             ],
         },
@@ -850,7 +851,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 ),
                 $Screenplays_TR,
                 _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('chuck_norris_facts'),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr('chuck_norris_essays'),
@@ -887,7 +888,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 _tr_s(
                     qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza ),
                 ),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('Emma_Watson_facts'),
                 _subdiv_tr( title => q{Essays}, ),
                 _get_tr(
@@ -907,7 +908,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and
                 ),
                 _subdiv_tr( title => q{Stories and Screenplays}, ),
                 _tr_s( qw( hhfg star_trek_wtld ), ),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('foss_facts'),
                 _subdiv_tr( title => q{Bits}, ),
                 _get_tr('foss_bits'),
@@ -960,7 +961,7 @@ q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referenc
                 ),
                 _subdiv_tr( title => q{Essays} ),
                 _get_tr('taylor_swift_essays'),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('taylor_swift_facts'),
             ],
         }
@@ -978,7 +979,7 @@ q{<a href="https://en.wikipedia.org/wiki/Summer_Glau">Summer Glau</a> / <a href=
                 _tr_s( qw( summer_nsa SummerNSA_effort ), ),
                 _subdiv_tr( title => q{Other Screenplays}, ),
                 _get_tr('muppets_grammar_nazis'),
-                _subdiv_tr( title => q{Factoids}, ),
+                $Factoids_TR,
                 _get_tr('xkcd_facts'),
             ],
         }

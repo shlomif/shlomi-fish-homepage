@@ -2,6 +2,7 @@
 [%- SET desc = "List of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." -%]
 [%- SET more_keywords = "bug trackers, software, git, vcs, version control, CVS, subversion, GitLab, GitHub, scons, autoconf, rpm, deb, dpkg, apt, CMake, SourceForge, open source, make, unix, packaging" -%]
 
+[% main_class.addClass("fancy_sects", "software_build") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -16,8 +17,6 @@ doesn't look much worse without it, anyway.
 [% END %]
 
 [% default_toc %]
-
-<div class="fancy_sects software_build">
 
 [% WRAPPER h2_section id = "build"  title = "Software Building"  %]
 
@@ -731,8 +730,6 @@ best practices in the software industry.
 </ul>
 
 [%- END -%]
-
-</div>
 
 [% PROCESS cc_by_licence_section "year" => "2011",  %]
 

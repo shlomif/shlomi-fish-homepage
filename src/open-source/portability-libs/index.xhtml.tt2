@@ -3,7 +3,10 @@
 [%- SET more_keywords = "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" -%]
 
 [% main_class.addClass("fancy_sects") %]
+
 [%- WRAPPER wrap_html -%]
+
+[%- WRAPPER intro -%]
 
 <p>
 Programming an application that can run both on <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a>
@@ -23,6 +26,8 @@ such as <a href="http://www.perl.org/">Perl</a>,
 for such things within the language or bindings to libraries in lower-level
 languages.
 </p>
+
+[% END %]
 
 [% BLOCK licence_qt %]
 LGPLed starting from version 4.5. Previously licensed under either the GPL
@@ -528,9 +533,11 @@ taken from the English Wikipedia under the public domain.
 
 [% END %]
 
-<h2 id="licence">Licence</h2>
+[% WRAPPER h2_section id = "licence"  title = "Licence"  %]
 
 [% license_obj.by_british_blurb( "year" => "2011", ) %]
+
+[% END %]
 
 <!--
 Databases:

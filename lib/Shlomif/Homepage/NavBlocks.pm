@@ -801,6 +801,7 @@ sub _subdiv_tr
     return Shlomif::Homepage::NavBlocks::Subdiv_Tr->new( {@_}, );
 }
 
+my $Essays_TR      = _subdiv_tr( title => q{Essays}, );
 my $Factoids_TR    = _subdiv_tr( title => q{Factoids}, );
 my $Screenplays_TR = _subdiv_tr( title => q{Screenplays}, );
 
@@ -834,7 +835,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 ),
 
                 # do { Carp::confess("freecell TODO"); },
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _tr_s( qw( card_games_essays ), ),
                 _subdiv_tr( title => q{Bits}, ),
                 _get_tr('card_games_bits'),
@@ -853,7 +854,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
                 $Factoids_TR,
                 _get_tr('chuck_norris_facts'),
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _get_tr('chuck_norris_essays'),
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
@@ -890,7 +891,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 ),
                 $Factoids_TR,
                 _get_tr('Emma_Watson_facts'),
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
                 ),
@@ -914,7 +915,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and
                 _get_tr('foss_bits'),
                 _subdiv_tr( title => q{Quotes}, ),
                 _get_tr('foss_fortunes'),
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _get_tr('foss_essays'),
             ],
         },
@@ -959,7 +960,7 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
                     title =>
 q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referencing Fanfiction and Essays},
                 ),
-                _subdiv_tr( title => q{Essays} ),
+                $Essays_TR,
                 _get_tr('taylor_swift_essays'),
                 $Factoids_TR,
                 _get_tr('taylor_swift_facts'),
@@ -1041,7 +1042,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 _master_tr(
                     title => q{The Commercial Fan-fiction Initiative},
                 ),
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _get_tr('commercial_fanfic_initiative__mission_stmt'),
                 _tr(
                     title => "[Precursor]",
@@ -1072,7 +1073,7 @@ q{<a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> Fa
                 _tr_s(
                     qw(  buffy_few_good queen_padme_tales__natalie_portman ),
                 ),
-                _subdiv_tr( title => q{Essays}, ),
+                $Essays_TR,
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
                 ),

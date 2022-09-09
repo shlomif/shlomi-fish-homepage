@@ -923,7 +923,7 @@ Cookie monster agrees with me:
 
 [% END %]
 
-[% WRAPPER h2_section id = "learning_more_from_inet_forums" title = "Education = Entertainment"  %]
+[% WRAPPER h2_section id = "learning_more_from_inet_forums" title = "Education = Entertainment = Conception of Values" %]
 
 <blockquote cite="https://twitter.com/shlomif/status/1357768753241608193" class="removedfancy">
 
@@ -1031,7 +1031,7 @@ limited to sports / food / [% MOTAS %].
 
 <p>
 I think I have learnt more from Internet forums (especially interactive,
-realtime chat, ones), than I did <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">from
+realtime chat, ones), than I did <a href="[% base_path %]philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">from
 Project Euler which I favourably compared to the Technion</a>. I also
 attribute a lot of ideas and inspiration from them.
 </p>
@@ -1050,13 +1050,13 @@ For more information, see:
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/philosophy/philosophy/putting-all-cards-on-the-table-2013/#machines_that_can_give_questions">"The Machines That Can Give You Questions"</a>
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#machines_that_can_give_questions">"The Machines That Can Give You Questions"</a>
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=learned-a-lot-from-my-teachers">"I learned a lot from my teachers, and from my friends more than my teachers, and from my pupils the most."</a>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=learned-a-lot-from-my-teachers">"I learned a lot from my teachers, and from my friends more than my teachers, and from my pupils the most."</a>
 </p>
 </li>
 
@@ -1083,7 +1083,7 @@ will be when adapted to be set there.
 <li>
 <p>
 <a
-href="https://www.shlomifish.org/meta/FAQ/how_did_you_learn_english.xhtml">My
+href="[% base_path %]meta/FAQ/how_did_you_learn_english.xhtml">My
 English dramatically improved <b>after</b> I graduated from high school</a>
 </p>
 </li>
@@ -1091,7 +1091,7 @@ English dramatically improved <b>after</b> I graduated from high school</a>
 <li>
 <p>
 <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-tddpirate-and-pepy-about-top-vs-bottom-posting">"Top
+href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-tddpirate-and-pepy-about-top-vs-bottom-posting">"Top
 vs. Bottom Posting"</a> - <q>Ah, when they ask me how the hell I managed
 to write so good band compositions, I’ll tell them, the secret is to chat with
 geeks about top vs bottom posting.</q>

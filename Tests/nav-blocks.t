@@ -15,15 +15,17 @@ use NavDataRender                            ();
 use Shlomif::Homepage::NavBlocks::Renderer   ();
 use Shlomif::Homepage::NavBlocks             ();
 use Shlomif::Homepage::NavBlocks::TableBlock ();
-use NavBlocks                                ();
+use Shlomif::Homepage::RelUrl (qw/ _set_url /);
+use NavBlocks ();
 
 our $latemp_filename;
+our $latemp_url;
 
 sub _fn
 {
     my $fn = shift;
 
-    $latemp_filename = $fn;
+    _set_url($fn);
 
     return "/$fn";
 }

@@ -5,6 +5,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/faq.tt2" %]
+
 <p>
 Funny short scale stories I wrote - often just a pageful or two.
 </p>
@@ -245,19 +247,7 @@ A remarkable scalability milestone is reached for the popular text editor.
 
 <blockquote cite="">
 
-<p>
-As an example, we can imagine a young girl to write a funny screenplay
-using GitHub or Google Docs which pits
-<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a> vs. <a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>
-on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next,
-with <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a> and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
-as two "evil", but mutually hating one another, arbiters. Might seem ridiculus,
-but if I didn't want entertainment in my life, then I'd go watch grass grow.
-It will be a legal and "ethical" minefield, but I'd bet it'd be easier to
-follow and more
-entertaining than <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">Tolkien's "Lord of the Rings"</a>
-was even shortly after LotR was written.
-</p>
+[% INCLUDE fanfic__ride_princess_celestia_next %]
 
 </blockquote>
 

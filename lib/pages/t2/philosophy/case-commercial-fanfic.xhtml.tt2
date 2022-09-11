@@ -1608,20 +1608,7 @@ href="#wilwheaton_about_crossovers">Wil Wheaton notes in his book</a> "The Happi
 Our Lives".
 </p>
 
-<p>
-As an example, we can imagine a young girl to write a funny screenplay
-using [% GitHub %] or Google Docs which pits
-<a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a> vs. <a href="https://en.wikipedia.org/wiki/Kim_Kardashian">Kim Kardashian</a>
-on who gets to ride <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a> next,
-with <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a> and <a href="https://en.wikipedia.org/wiki/Haman">Haman</a>
-as two "evil", but mutually hating one another, arbiters. Might seem ridiculus,
-but if I didn't want entertainment in my life, then I'd go watch grass grow.
-It will be a legal and "ethical" minefield, but I'd bet it'd be easier to
-follow and more
-entertaining than <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">Tolkien's "Lord of the Rings"</a>
-was even shortly after LotR was written.
-</p>
-
+[% INCLUDE fanfic__ride_princess_celestia_next %]
 [% INCLUDE fanfic__older_sources_than_1900 %]
 
 <p id="muppets_fanfic">
@@ -2102,7 +2089,7 @@ shopworn "omniscient, omnipresent, deity [who cares about your sex life]"
 argument. However, to be frank, it was neither effective, nor desirable. I
 think there are far better insights and memes in <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">the Hebrew Bible</a>, than that
 (despite being a non-observant <a
-href="https://www.shlomifish.org/meta/FAQ/religious_belief.xhtml">agnostic</a>).
+href="[% base_path %]meta/FAQ/religious_belief.xhtml">agnostic</a>).
 </p>
 
 <p>
@@ -2119,7 +2106,7 @@ likely can succeed.
 
 [% WRAPPER h4_section id = "guidelines_as_dogma_intro" title = "Introduction" %]
 
-<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=emacs-wars" class="removedfancy">
+<blockquote cite="[% base_path %]humour/fortunes/show.cgi?id=emacs-wars" class="removedfancy">
 
 <p>
 I've heard a Jew and a Muslim argue in a Damascus café with less passion than
@@ -2156,7 +2143,7 @@ and professional <a href="https://www.reddit.com/r/TMNT/comments/2d9fo7/postrele
 And this is to say nothing of fanatical fans or fanatical foes of Apple Inc., <a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">rust-lang</a>,
 <a href="https://en.wikipedia.org/wiki/Git">git-scm</a>,
 the <a href="https://en.wikipedia.org/wiki/Emacs">Emacs text editor</a>, <a href="https://en.wikipedia.org/wiki/Free_Software_Foundation">FSF/GNU</a>,
-<a href="https://www.shlomifish.org/meta/FAQ/zionist.xhtml">pro/anti-Israel</a> (or
+<a href="[% base_path %]meta/FAQ/zionist.xhtml">pro/anti-Israel</a> (or
 pro/anti-"Zionism"), <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python-Lang</a>, and the <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD family of
 operating systems</a> - all of which have or had notoriously ardent zealots.
 </p>
@@ -2165,7 +2152,7 @@ operating systems</a> - all of which have or had notoriously ardent zealots.
 I decided to try and (at least passively) incorporate memes from other
 idea-systems or franchises
 <a
-href="https://www.shlomifish.org/meta/FAQ/atheism_can_be_a_religion.xhtml">even
+href="[% base_path %]meta/FAQ/atheism_can_be_a_religion.xhtml">even
 if they have some fanatical zealots</a>.
 </p>
 
@@ -2189,7 +2176,7 @@ revelation by <a href="https://en.wikipedia.org/wiki/Ezekiel">Ezekiel</a> who wa
 philosopher/comedian</a>.
 Generations of scholars who considered it holy
 have tried to divine meaning from it, but it is
-pointless: Ezekiel was just <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=mjd-how-to-ask-a-good-question-1">making shit up</a>.
+pointless: Ezekiel was just <a href="[% base_path %]humour/fortunes/show.cgi?id=mjd-how-to-ask-a-good-question-1">making shit up</a>.
 </p>
 
 <p>
@@ -2270,7 +2257,7 @@ And we can certainly challenge:
 
 <p>
 What about [% LAH %],
-<a href="https://www.shlomifish.org/meta/FAQ/factoids_obsession.xhtml">Chuck Norris factoids</a>,
+<a href="[% base_path %]meta/FAQ/factoids_obsession.xhtml">Chuck Norris factoids</a>,
 and
 <a href="https://www.explainxkcd.com/wiki/index.php/406:_Venting">xkcd: "Venting"</a>?
 </p>
@@ -2346,7 +2333,7 @@ do not encourage people to murder harmless people, vandalise property, rape, or
 steal for vanity (rather than <a
 href="https://www.youtube.com/watch?v=5VdZewCFyfg">for self-support like
 Disney's Alladdin</a>) and you should <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">try
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#benevolent-psychological-warfare">try
 to "be excellent to each other"</a>, but there are many guidelines that
 were or seemed beneficial at the time that no longer are.
 </p>
@@ -2383,7 +2370,7 @@ depression</a> ), alienation from their friends and family, or by [% karma %].
 Judges are forbidden to accept "bribes" by law, but even if they did, they are
 getting paid enough for it to not matter and even most rich people have enough
 sense <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">to
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">to
 not be too needy and frivolous</a> and as <a
 href="https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!">Richard
 Feynman pointed out</a>, gifts may have an adverse effect.
@@ -2457,7 +2444,7 @@ very profitable.
 <p>
 For example, I think either Arnold Schwarzenegger or Emma Watson can afford to
 license the franchises which I used in my <a
-href="https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html">"Terminator:
+href="[% base_path %]humour/Terminator/Liberation/ongoing-text.html">"Terminator:
 Liberation"</a> screenplay starring them.  Moreover, they have my (legal and
 spiritual) blessing to change the screenplay as they see fit.
 </p>
@@ -2467,9 +2454,9 @@ Even if they do not license a franchise, then a (for example) "Walt Disney
 Corp. vs. Emma Watson", or perhaps "Walt Disney Corp. vs. Emma Watson
 Productions", or even "Walt Disney Corp. vs. Arnold Schwarzenegger Films" court
 case will <a
-href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">not look good
+href="[% base_path %]humour/bits/facts/Taylor-Swift/">not look good
 to share holders</a>.  Like I like to say: <a
-href="https://www.shlomifish.org/humour/image-macros/indiv-nodes/say_no_to_an_alpha_female.xhtml"><q>One
+href="[% base_path %]humour/image-macros/indiv-nodes/say_no_to_an_alpha_female.xhtml"><q>One
 does not simply say “no” to an Alpha Female</q></a>.
 </p>
 
@@ -2479,7 +2466,7 @@ does not simply say “no” to an Alpha Female</q></a>.
 
 <p>
 Natalie Portman and <a href="https://www.tiffanyalvord.com/">Tiffany Alvord</a>
-can do the same with <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen
+can do the same with <a href="[% base_path %]humour/Queen-Padme-Tales/">Queen
 Padmé [Amidala] Tales</a>, which someone who read the first part of its
 Pilot episode, noted that "it was crazier than <a href="https://en.wikipedia.org/wiki/Run_Lola_Run"><i>Run, Lola, Run</i></a>".
 </p>
@@ -2534,7 +2521,7 @@ Walt Disney Corp. vs. <a href="https://en.wikipedia.org/wiki/Joss_Whedon">Joss W
 
 <li>
 <p>
-The [% MPAA %] vs. <a href="https://www.shlomifish.org/humour/bits/facts/Chuck-Norris/">Chuck Norris</a> Films.
+The [% MPAA %] vs. <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a> Films.
 </p>
 </li>
 
@@ -2564,7 +2551,7 @@ goods (or tangible <a
 href="https://www.youtube.com/watch?v=oNZove4OTtI">merchandice</a>) with a
 minimal, but not maximal price similar to the <a
 href="https://www.humblebundle.com/">Humble Bundle</a> or <a
-href="https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/">bandcamp</a>
+href="[% base_path %]philosophy/computers/web/models-for-commerce/">bandcamp</a>
 models.  Hacks!
 </p>
 
@@ -2587,12 +2574,12 @@ easy to do</a> and brought all of them many sales.
 And today anyone who proposes deploying a Unix-like server that does not
 run an open-source operating system (GNU/Linux or
 BSD or similar)
-except for running legacy applications, is <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-sharp-programming-mac-server">in a state of sin</a>.
+except for running legacy applications, is <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-mac-server">in a state of sin</a>.
 </p>
 
 <p>
 Also see <a
-href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#commercial_fanfic">my
+href="[% base_path %]philosophy/culture/my-real-person-fan-fiction/#commercial_fanfic">my
 earlier thoughts</a> about commercial fan-fiction.
 </p>
 
@@ -2605,7 +2592,7 @@ cosplayers can play as them or one can produce lower-cost animations (including
 href="https://www.reddit.com/r/mylittlepony/comments/kaajb9/commission_fluttershy_as_queen_amidala_of_the/gfdi3b0/">MLP-style
 animations</a>) and solicit money for producing a live action version.  One can
 also solicit money for <a
-href="https://www.shlomifish.org/me/relicensing-my-entire-portfolio-under-cc-by/">relicensing
+href="[% base_path %]me/relicensing-my-entire-portfolio-under-cc-by/">relicensing
 works under less restrictive licences</a> (e.g: "CC-by-nc-sa"→"CC0").
 </p>
 
@@ -2617,7 +2604,7 @@ works under less restrictive licences</a> (e.g: "CC-by-nc-sa"→"CC0").
 
 <p>
 Naturally, there are <a
-href="https://www.shlomifish.org/humour/stories/">older (but still mostly
+href="[% base_path %]humour/stories/">older (but still mostly
 pertinent in my opinion) fanfic screenplays</a> on my site under modifiable
 Creative Commons' licences sporting roles envisioned as played by:
 </p>
@@ -2625,7 +2612,7 @@ Creative Commons' licences sporting roles envisioned as played by:
 <ol>
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/TOneW-the-Fountainhead/">The
+<a href="[% base_path %]humour/TOneW-the-Fountainhead/">The
 cast of Friends</a> as themselves and the characters from
 Ayn Rand's novel <i>The Fountainhead</i>.
 </p>
@@ -2642,7 +2629,7 @@ Vampire Slayer</i></a>.
 <li>
 <p>
 The cast of <a
-href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star
+href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star
 Trek Deep Space Nine (DS9)</a> along with <a
 href="https://en.wikipedia.org/wiki/Melissa_Joan_Hart">Melissa Joan Hart</a>
 and some modernised Biblical characters and some contemporary celebrities of
@@ -2653,7 +2640,7 @@ the [% FOSS %] world.
 <li>
 <p>
 Emma Watson (again!) along with <a
-href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html#the-guide">Wil
+href="[% base_path %]humour/Selina-Mandrake/cast.html#the-guide">Wil
 Wheaton</a>, who is once again playing a big dick on screen ( while advocating
 <a href="https://duckduckgo.com/?q=wheaton%27s+law">the opposite</a> in real
 life ) in a <a href="#lets_have_them_all">politically incorrect parody and
@@ -2663,7 +2650,7 @@ antithesis of "Buffy"</a>.
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/cast.html#cast__smg">Sarah Michelle Gellar</a> and <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/cast.html#cast__sglau">Summer Glau</a> (as played by herself or by Megan Fox)
+<a href="[% base_path %]humour/Summerschool-at-the-NSA/cast.html#cast__smg">Sarah Michelle Gellar</a> and <a href="[% base_path %]humour/Summerschool-at-the-NSA/cast.html#cast__sglau">Summer Glau</a> (as played by herself or by Megan Fox)
 as they try to vanquish an idolised version of the NSA.
 </p>
 </li>
@@ -2680,13 +2667,13 @@ as they try to vanquish an idolised version of the NSA.
 While I am playing the domineering "<b>The</b> Messiah" for now (because
 frankly you guys suck!), there are likely others who reached the same
 conclusions.  And my secret plan for <a
-href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen Padmé
+href="[% base_path %]humour/Queen-Padme-Tales/">Queen Padmé
 [Amidala] Tales</a> is to beget an even greater Hacker Monarch/Messiah, who
 despite being fictional, is an awe-inspiring Renaissance Woman.  But she too
 will likely not be the final word about Messiah-hood just like <a
 href="http://www.earthstar.co.uk/deep1.htm">Deep Thought</a> is only the
 "second greatest computer in the Universe of Time and Space".  Like <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">Moses,
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">Moses,
 Socrates, Muhammad, Saladin, da Vinci, Newton, Richelieu, Dumas, Verne, The
 Beatles, The Muppets, etc,</a> were succeeded, so will Queen Padmé Amidala of
 the Naboo of the Selinaverse.  And it seems likely that people had once taken
@@ -2786,10 +2773,10 @@ by Cimorelli.</a> )
 
 <p>
 I care more about getting my <a
-href="https://www.shlomifish.org/humour/stories/">screenplays</a> filmed and
+href="[% base_path %]humour/stories/">screenplays</a> filmed and
 produced than I do about being recognised as an innovative and influential, yet
 obscure and "invisible" <a
-href="https://www.shlomifish.org/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">"hacker
+href="[% base_path %]me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">"hacker
 king" or "messiah"</a> of the Web 2.0 / [% opencontent %] revolution.
 </p>
 
@@ -2800,15 +2787,14 @@ by their own mismanagement. I also want every individual and organisation in
 the world to improve and prosper ( <a
 href="https://en.wikipedia.org/wiki/Pygmalion_effect">Pygmalion effect</a> vs.
 <a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>; <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-chuck-156"><q>Chuck
+href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-chuck-156"><q>Chuck
 Norris was challenged to fight the world, and accepted. He bet on himself, won,
 and collected the bet money.</q></a>; <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-sglau-29"><q>Summer
+href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-sglau-29"><q>Summer
 Glau can get more with a kind word alone than Al Capone could with a kind word
 and a gun.</q></a>. )
 </p>
 
-[% IF 1 %]
 <p>
 I was probably too young to prevent the death of <a
 href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>, one of
@@ -2825,12 +2811,12 @@ href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina Grimmie</a> at
 age 22 in 2016, who was a singer, songwriter, and YouTube indie artist. I and
 others expected her to dominate the music world, or perhaps the whole world at
 large, for years to come (and become a <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">"hacker
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">"hacker
 monarch"/Messiah</a> so to speak). She was killed by an obsessed fan, who shot
 her, and who committed suicide shortly after shooting her. I believe her death
 was also caused by her not doing things her way, which made her later work
 gradually deteriorate, her sex-appeal (which <a
-href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/meaning-of-able-competent.xhtml#sexiness-as-competence">correlates
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/putting-cards-on-the-table-2019-2020/meaning-of-able-competent.xhtml#sexiness-as-competence">correlates
 with competence</a>) to decline, and she not remaining true to her YouTuber
 roots (e.g: of she doing collaborations with other artists, including the more
 obscure ones). She acted in one film before she died, but even <a
@@ -2840,25 +2826,23 @@ complete turnoff to me.
 
 <hr />
 
-[% END %]
-
 <p>
 Therefore I decided that in my quests to advocate commercial fan-fiction, and
 get my screenplays directed, I will do things my way.  I shall remain living
 with my parents in <a
-href="https://www.shlomifish.org/meta/FAQ/where_are_you_from.xhtml">their
+href="[% base_path %]meta/FAQ/where_are_you_from.xhtml">their
 apartment</a> and will not venture far away from my neighbourhood (= <a
 href="https://en.wikipedia.org/wiki/Ramat_Aviv_Gimel">Ramat Aviv Gimel</a>, in
 northern Tel Aviv, in <a
 href="https://en.wikipedia.org/wiki/Israel">Israel</a>) unescorted.  I plan to
 continue writing and mutating screenplays using <a
-href="https://www.shlomifish.org/open-source/projects/XML-Grammar/Fiction/">my
+href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">my
 own home-grown format</a>, at least until I find or devise a better one, and
 write a semi-automatic converter.
 </p>
 
 <p>
-I plan to <a href="https://www.shlomifish.org/meta/FAQ/release_something_perfect.xhtml">release early and often</a>, and not delete content from my sites that
+I plan to <a href="[% base_path %]meta/FAQ/release_something_perfect.xhtml">release early and often</a>, and not delete content from my sites that
 some others disapprove of. (Though I may add notes that I take it back.)
 </p>
 
@@ -2901,7 +2885,7 @@ href="https://en.wikipedia.org/wiki/Political_correctness">politically correct</
 
 <p>
 But picture Emma Watson as <a
-href="https://www.shlomifish.org/humour/Selina-Mandrake/">Selina Mandrake</a>,
+href="[% base_path %]humour/Selina-Mandrake/">Selina Mandrake</a>,
 a geeky Anglo-American (and <a href="https://en.wikipedia.org/wiki/Caucasian_race">Caucasian</a> naturally, and of any hair colour she fancies) 12th-grade high school
 student, who is
 unathletic and clumsy, loves playing Basketball (but "royally sucks at it"),
@@ -2927,7 +2911,7 @@ King Louis XIII, <b>and</b> the King of England, to "slay"
 
 <p>
 Extremely not politically correct, which is why it is much more honest and fun
-and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_of_Acquisition">"War is good for business!"</a> to quote the Ferengi Rules of Acquisition. And I invite <a href="https://www.shlomifish.org/humour/Selina-Mandrake/cast.html#cast__direction">Whedon to direct it</a>!
+and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_of_Acquisition">"War is good for business!"</a> to quote the Ferengi Rules of Acquisition. And I invite <a href="[% base_path %]humour/Selina-Mandrake/cast.html#cast__direction">Whedon to direct it</a>!
 </p>
 
 [% UNLESS screenplay_shortage__remix %]
@@ -2935,7 +2919,7 @@ and may prove more popular. <a href="https://memory-alpha.fandom.com/wiki/Rules_
 <p>
 My secret to success: I'm a 21st century open source + [% opencontent %] + remixer +
 fanfic polymath and <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">openminded</a>
+href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">openminded</a>
 amateur / geek, and hacker / action hero, entertainer and educator. I have my
 sources of inspiration and my beliefs and my opinions - I do not deny
 them and reuse them, but often challenge them and parody them. I'm
@@ -2968,9 +2952,9 @@ my way</a>, then hopefully some people will love my work and most of the others 
 <p>
 OK, ok <a href="https://www.youtube.com/watch?v=FFrag8ll85w">"Show Me the
 Money!"</a>.  Note that just like Asimov's <a
-href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">Seldon
+href="[% base_path %]philosophy/psychology/changing-the-seldon-plan/">Seldon
 Plan</a>, this plan is not set in stone and <a
-href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/ongoing-text.html">we'll
+href="[% base_path %]humour/Summerschool-at-the-NSA/ongoing-text.html">we'll
 likely have to improvise ("play by ear"), or adapt it to the circumstances</a>.
 Moreover, its items are just guidelines and suggestions, not rules and demands.
 Furthermore, it is likely this will not be the final challenge faced by the
@@ -3062,7 +3046,7 @@ There is industrial utility for gold, silver, etc. that it is a shame to waste
 them on jewellery, given people can buy cheap accessories made out of abundant
 materials if that's their thing (and they look better). It's all about being
 confident anyway: <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-beauty-products-as-the-stone-soup-effect">Beauty
+href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-beauty-products-as-the-stone-soup-effect">Beauty
 Products as the Stone Soup / Placebo Effect</a>
 </p>
 
@@ -3101,7 +3085,7 @@ Start directing films with fanfic: crossovers, [% RPF %], parodies, etc.
 <li>
 <p>
 Film / TV shows / etc. copyright owners should avoid trying to <a
-href="https://www.shlomifish.org/philosophy/case-for-file-swapping/">stamp out
+href="[% base_path %]philosophy/case-for-file-swapping/">stamp out
 piracy</a>. In addition, legitimate low-res (720p/etc.) versions of the
 complete films and TV show episodes should be provided free of charge on
 YouTube/etc. This is for hyperlinking, making <a
@@ -3208,7 +3192,7 @@ exactly why. If you like it, tell them, and try to tell your friends.
 
 [% WRAPPER h3_section id = "fighting_against_the_world" title = "Fighting Against The World"  %]
 
-<blockquote cite="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-chuck-156" class="removedfancy">
+<blockquote cite="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-chuck-156" class="removedfancy">
 
 <p>
 Chuck Norris was challenged to fight the world, and accepted. He bet on
@@ -3218,7 +3202,7 @@ himself, won, and collected the bet money.
 </blockquote>
 
 <p>
-( <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=shlomif-fact-chuck-156">Chuck Norris Facts by Shlomi Fish (= me) and Friends</a>. )
+( <a href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-chuck-156">Chuck Norris Facts by Shlomi Fish (= me) and Friends</a>. )
 </p>
 
 <iframe src="https://www.youtube.com/embed/w81oU-26MqQ" allowfullscreen="allowfullscreen"></iframe>
@@ -3260,7 +3244,7 @@ They said music will never be open. <a href="#better_now_by_choice">Many indepen
 <blockquote cite="https://twitter.com/shlomif/status/1378421699142635525" class="removedfancy">
 
 <p>
-Whether <a href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">Taylor Swift</a> gets the rights for her old songs back or not, it won't change the fact that even though they're her brainchildren, they belong to everyone (who can cover, remix them, &amp; listen to them). Neither Swift nor her record label will likely go bankrupt soon.
+Whether <a href="[% base_path %]humour/bits/facts/Taylor-Swift/">Taylor Swift</a> gets the rights for her old songs back or not, it won't change the fact that even though they're her brainchildren, they belong to everyone (who can cover, remix them, &amp; listen to them). Neither Swift nor her record label will likely go bankrupt soon.
 </p>
 
 </blockquote>
@@ -3270,7 +3254,7 @@ Whether <a href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">Tay
 </p>
 
 <p>
-They even said <a href="https://www.shlomifish.org/philosophy/computers/software/New-Breed-of-Version-Control-Systems/">the CVS version control system will not be replaced</a>,
+They even said <a href="[% base_path %]philosophy/computers/software/New-Breed-of-Version-Control-Systems/">the CVS version control system will not be replaced</a>,
 but Subversion did mostly supplant it, and now
 <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git is
 the dominant version-control system</a>.
@@ -3304,7 +3288,7 @@ And I'm not alone. There are many fan-fiction (or "original" fic) authors who
 would love to see their ideas filmed, but know that submitting them to
 Hollywood studios is futile. There are dozens if not hundreds of unemployable
 formerly "big name" actors, actresses, film makers, and screenwriters.
-There are many disgruntled lawyers who make <a href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#commercial_fanfic">atrocious "Intellectual Property" demands</a>
+There are many disgruntled lawyers who make <a href="[% base_path %]philosophy/culture/my-real-person-fan-fiction/#commercial_fanfic">atrocious "Intellectual Property" demands</a>
 and even put one long paragraph of legalese on a McDonalds' Happy Meal toy.
 And even the Hollywood executives likely feel trapped.
 </p>
@@ -3425,7 +3409,7 @@ go out of business (which I hope will not happen).
 
 <p>
 I created <a
-href="https://www.shlomifish.org/humour/image-macros/indiv-nodes/evolution_of_girls_w_weapons.xhtml">a
+href="[% base_path %]humour/image-macros/indiv-nodes/evolution_of_girls_w_weapons.xhtml">a
 captioned image</a> back in August 2014 which echoed my sentiments that female
 fighters in films have become not-as-intimidating-as-they-could-be.  Taylor
 Swift's delayed (and likely indirect) response, published in 18 May 2015 was
@@ -3455,7 +3439,7 @@ accelerated their "Hollywood unhirability" (but why should it have?)
 <p>
 An inspiring song and videoclip by the late YouTube musician.
 You can also read
-<a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#dedication">my midrash of it</a>.
+<a href="[% base_path %]humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html#dedication">my midrash of it</a>.
 </p>
 
 [% END %]
@@ -3488,12 +3472,12 @@ exalted.
 [% WRAPPER h2_section id = "dedications" title = "Dedications"  %]
 
 <p>
-Following my <a href="https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html#dedications">lead in "Terminator: Liberation"</a>, I will
+Following my <a href="[% base_path %]humour/Terminator/Liberation/ongoing-text.html#dedications">lead in "Terminator: Liberation"</a>, I will
 hereby praise both living and dead great men and women. This time
 I'll
 also add mythical / fictional heroic figures to the mix (which
 many
-<a href="https://www.shlomifish.org/meta/FAQ/are_you_aware_that_the_jewish_bible_is_fictional.xhtml">people unjustly dismiss</a>. )
+<a href="[% base_path %]meta/FAQ/are_you_aware_that_the_jewish_bible_is_fictional.xhtml">people unjustly dismiss</a>. )
 </p>
 
 [% WRAPPER h3_section id = "dedications_living" title = "Living"  %]
@@ -3513,7 +3497,7 @@ films, especially Spaceballs.
 <p>
 I also wish to dedicate this essay to the cast and makers of [% BtVS %],
 including <a href="#film_industry_losing_the_psychological_war">Joss Whedon</a>
-and [% SMG %]. I consider Buffy to be the <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">hacker monarch</a>
+and [% SMG %]. I consider Buffy to be the <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">hacker monarch</a>
 of the brief "Web 1.0" period, comparable to Saladin, The Muppets, Jules Verne
 and The Beatles.
 Unfortunately, the growing prevalence of the Internet and the web (and
@@ -3522,7 +3506,7 @@ with some unfortunate mismanagement decisions (Buffy not ending at high school
 graduation, <a href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>
 being placed in a coma, and the show stopping being aired in Israel
 and possibly other countries) started spelling doom on it.
-While Gellar was <a href="https://www.shlomifish.org/meta/FAQ/biggest_celeb_crush.xhtml">my biggest celebrity crush</a>,
+While Gellar was <a href="[% base_path %]meta/FAQ/biggest_celeb_crush.xhtml">my biggest celebrity crush</a>,
 a role model,
 and the "queen of the (1.0) Web", she was dethroned by Natalie Portman
 soon after that, who in turn gave way to Jennifer Lopez,
@@ -3536,15 +3520,15 @@ not immune to their psychological effects.
 </p>
 
 <p>
-<a href="https://www.shlomifish.org/humour/by-others/hitchhiker-guide-to-star-trek-tng.html">"The Hitchhiker's Guide to Star Trek - The Next Generation"</a>
+<a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">"The Hitchhiker's Guide to Star Trek - The Next Generation"</a>
 had already been written in 1990 and circulated by email, and I found it
 even funnier than <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">the original H2G2</a>.
 The web 1.0 and especially <a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>
 only amplified the "problem", and I
-had no qualms of writing <a href="https://www.shlomifish.org/humour/TOneW-the-Fountainhead/">my Friends / Fountainhead crossover</a>
+had no qualms of writing <a href="[% base_path %]humour/TOneW-the-Fountainhead/">my Friends / Fountainhead crossover</a>
 back in 1998.
 My
-<a href="https://www.shlomifish.org/humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the Living Dead”</a>
+<a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the Living Dead”</a>
 is an even "worse" crossover problem.
 </p>
 
@@ -3590,7 +3574,7 @@ and the lesser known <a href="https://en.wikipedia.org/wiki/Year_of_the_Comet"><
 <li>
 <p>
 <a href="https://www.geekwire.com/2011/top-10-reasons-darth-vader-amazing-project-manager/">Darth Vader</a>, who was an amazing project manager,
-and is one of the good guys on my <a href="https://www.shlomifish.org/humour/Queen-Padme-Tales/">Queen
+and is one of the good guys on my <a href="[% base_path %]humour/Queen-Padme-Tales/">Queen
 Padmé [Amidala] Tales</a> crossover series.
 </p>
 </li>

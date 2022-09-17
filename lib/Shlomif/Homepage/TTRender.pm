@@ -58,12 +58,13 @@ my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
         host => 't2',
     }
 );
+my $latemp_fn;
 
 sub check_nav_blocks
 {
     my ($args) = @_;
     my $names  = $args->{names};
-    my $page   = $::latemp_filename;
+    my $page   = $latemp_fn;
     $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
 
     my $want = $nav_blocks->lookup_page_blocks($page);
@@ -103,7 +104,7 @@ sub _render_nav_blocks
     $names = [ sort @$names ];
 
     my $ret  = '';
-    my $page = $::latemp_filename;
+    my $page = $latemp_fn;
 
     foreach my $name (@$names)
     {
@@ -144,7 +145,7 @@ sub render_compact_nav_blocks
 
 =cut
 
-    my $page = $::latemp_filename;
+    my $page = $latemp_fn;
     $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
 
     my $names = $nav_blocks->lookup_page_blocks($page);
@@ -305,7 +306,7 @@ sub _inc
 sub proc
 {
     my ( $self, $input_tt2_page_path ) = @_;
-    _set_url($input_tt2_page_path);
+    _set_url( $latemp_fn = $input_tt2_page_path );
     my @fn = split m#/#, $input_tt2_page_path;
     $base_path = ( $with_absolute_urls ? $ORIG_URL_PREFIX : ( '../' x $#fn ) );
 

@@ -51,7 +51,7 @@ class Main:
         raws_dest_dir = containing_dest_dir + "__FORTS-show-cgi-rawxhtmls"
         os.makedirs(raws_dest_dir, exist_ok=True, )
         maxidlen = max(len(x) for x in strings_list)
-        print('maxidlen = ', maxidlen)
+        # print('maxidlen = ', maxidlen)
         RECORD_LEN = (1 << 7)
         assert maxidlen < RECORD_LEN
         randfn = containing_dest_dir + "__FORTS-show-cgi-ids.dat"

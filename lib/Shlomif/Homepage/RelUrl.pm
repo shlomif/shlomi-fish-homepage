@@ -51,10 +51,9 @@ sub _path_info
 
 sub _set_url
 {
-    my ($from_text)     = @_;
-    my $latemp_is_slash = _is_slash_terminated($from_text);
-    my $latemp_filename = $from_text;
-    my $latemp_obj      = _text_to_url_obj($latemp_filename);
+    my ($latemp_filename) = @_;
+    my $latemp_is_slash   = _is_slash_terminated($latemp_filename);
+    my $latemp_obj        = _text_to_url_obj($latemp_filename);
     $latemp_fn = HTML::Widgets::NavMenu::Url::Obj->new(
         +{
             filename => $latemp_filename,

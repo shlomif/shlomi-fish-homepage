@@ -22,7 +22,7 @@ use Shlomif::Homepage::NavBlocks           ();
 use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
 use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
-use Shlomif::Homepage::RelUrl                (qw/ _set_url /);
+use Shlomif::Homepage::RelUrl                (qw/ _set_url _url_obj /);
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
 use Shlomif::Homepage::TocDiv      ();
 use Shlomif::Homepage::TrueStories ();
@@ -307,6 +307,7 @@ sub proc
 {
     my ( $self, $input_tt2_page_path ) = @_;
     _set_url( $latemp_fn = $input_tt2_page_path );
+    $long_stories->fn( _url_obj() );
     my @fn = split m#/#, $input_tt2_page_path;
     $base_path = ( $with_absolute_urls ? $ORIG_URL_PREFIX : ( '../' x $#fn ) );
 

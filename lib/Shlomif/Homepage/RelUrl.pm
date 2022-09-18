@@ -5,7 +5,12 @@ use warnings;
 
 use parent 'Exporter';
 my $latemp_fn;
-our @EXPORT_OK = (qw( _path_info _rel_url _set_url ));
+our @EXPORT_OK = (qw( _path_info _rel_url _set_url _url_obj ));
+
+sub _url_obj
+{
+    return $latemp_fn;
+}
 
 sub _is_slash_terminated
 {

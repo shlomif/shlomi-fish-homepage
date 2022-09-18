@@ -14,6 +14,8 @@ use YAML::XS                           ();
 
 use Shlomif::Homepage::LongStories::Story ();
 
+has 'fn' => ( is => 'rw', );
+
 my $ACRONYMS_FN = "lib/acronyms/list1.yaml";
 my $latemp_acroman =
     HTML::Acronyms->new( dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
@@ -795,7 +797,12 @@ sub _get_tagline_tags
     ];
 }
 
-use Shlomif::Homepage::RelUrl qw/ _rel_url /;
+sub _rel_url
+{
+    my $self = shift;
+
+    return $self->fn->get_relative_url( shift, 1 );
+}
 
 sub _get_should_skip_abstract_h_tag
 {
@@ -823,7 +830,7 @@ sub _process_html
 
     $html_code =~
         s#"(?: (?: \$\(ROOT\) / ) | (?: \[\% \s* base_path \s* \%\]))([^"]+?)"#
-        q{"} . _rel_url($1) . q{"}
+        q{"} . $self->_rel_url($1) . q{"}
     #egx;
 
     $html_code =~ s#\$\(BtVS\)#$BtVS#g;
@@ -841,7 +848,7 @@ sub _get_logo_tags
         sprintf(
             qq#<img id="%s" src="%s" alt="%s" class="story_logo%s"%s/>\n#,
             $o->logo_id,
-            escape_html( _rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
+            escape_html( $self->_rel_url( $o->logo_src =~ s/\.png\z/.webp/r ) ),
             $o->logo_alt,
             $o->calc_logo_class,
             (
@@ -899,7 +906,9 @@ sub _get_story_entry_tags
 qq{<%s class="story" id="%s"><a href="%s">%s</a> (<span class="start_date">%s</span>)</%s>\n},
             $tag,
             ( $o->entry_id || ( die "no entry_id for $id" ) ),
-            escape_html( _rel_url( $o->href || ( die "no href for $id" ) ) ),
+            escape_html(
+                $self->_rel_url( $o->href || ( die "no href for $id" ) )
+            ),
             ( $o->entry_text || ( die "no entry_text for $id" ) ),
             ( $o->start_date->year() || ( die "no start_date for $id" ) ),
             $tag,
@@ -972,7 +981,7 @@ sub calc_all_stories_entries
         my $tag = $args->{tag};
         return $self->calc_all_stories_entries(
             { only_inactives => [0], %$args, } )
-            . qq#<section><header><$tag><a href="@{[_rel_url("humour/stories/inactive/")]}">Inactive Stories</a></$tag></header>#
+            . qq#<section><header><$tag><a href="@{[$self->_rel_url("humour/stories/inactive/")]}">Inactive Stories</a></$tag></header>#
             . qq#<div class="fancy_sects">#
             . $self->calc_all_stories_entries(
             {

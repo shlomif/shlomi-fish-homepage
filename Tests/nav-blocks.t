@@ -15,7 +15,7 @@ use NavDataRender                            ();
 use Shlomif::Homepage::NavBlocks::Renderer   ();
 use Shlomif::Homepage::NavBlocks             ();
 use Shlomif::Homepage::NavBlocks::TableBlock ();
-use Shlomif::Homepage::RelUrl (qw/ _set_url /);
+use Shlomif::Homepage::RelUrl (qw/ _set_url _url_obj /);
 use NavBlocks ();
 
 sub _fn
@@ -43,6 +43,7 @@ sub _fn
             nav_menu => $nav_bar,
         }
     );
+    $r->fn( _url_obj() );
 
     {
         my $link = Shlomif::Homepage::NavBlocks::LocalLink->new(
@@ -107,6 +108,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
             nav_menu => $nav_bar,
         }
     );
+    $r->fn( _url_obj() );
 
     {
         my @links = (
@@ -188,6 +190,7 @@ EOF
             nav_menu => $nav_bar,
         }
     );
+    $r->fn( _url_obj() );
 
     {
         my $subdiv_tr = Shlomif::Homepage::NavBlocks::Subdiv_Tr->new(
@@ -259,6 +262,7 @@ foreach my $ext ( '', 'index.xhtml', )
             nav_menu => $nav_bar,
         }
     );
+    $r->fn( _url_obj() );
 
     my $block = NavBlocks->new->get_nav_block('buffy');
 

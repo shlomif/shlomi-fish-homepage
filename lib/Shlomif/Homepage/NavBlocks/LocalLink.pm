@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
-use Shlomif::Homepage::RelUrl          qw/ _path_info _rel_url /;
 use MooX (qw( late ));
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');
@@ -47,9 +46,9 @@ sub _render_helper
     my ( $self, $args ) = @_;
 
     my $r         = $args->{renderer};
-    my $normalize = sub { return shift =~ s#/index\.x?html\z#/#gr };
+    my $normalize = sub { return shift =~ s#/index\.x?html\z#/#r; };
 
-    if ( $normalize->( $self->path ) eq $normalize->( _path_info() ) )
+    if ( $normalize->( $self->path ) eq $normalize->( $r->fn->filename() ) )
     {
         if ( !$self->skip_bold )
         {
@@ -67,7 +66,7 @@ sub _render_helper
                 ? sprintf( q# class="%s"#, $self->css_class )
                 : ''
             ),
-            escape_html( _rel_url( $self->path ) ),
+            escape_html( $r->fn->get_relative_url( $self->path, 1, ) ),
             $self->inner_html(),
         );
     }

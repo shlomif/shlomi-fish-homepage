@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use MooX qw( late );
 
+has 'fn'          => ( is => 'rw', );
 has 'host'        => ( is => 'ro', isa => 'Str', required => 1 );
 has 'count_bolds' => ( is => 'rw', isa => 'Int', default  => 0 );
 

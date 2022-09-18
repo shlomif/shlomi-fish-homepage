@@ -18,9 +18,6 @@ use Shlomif::Homepage::NavBlocks::TableBlock ();
 use Shlomif::Homepage::RelUrl (qw/ _set_url /);
 use NavBlocks ();
 
-our $latemp_filename;
-our $latemp_url;
-
 sub _fn
 {
     my $fn = shift;

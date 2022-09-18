@@ -5,7 +5,7 @@ use warnings;
 
 use parent 'Exporter';
 my $latemp_fn;
-our @EXPORT_OK = (qw( _rel_url _set_url _url_obj ));
+our @EXPORT_OK = (qw( _set_url _url_obj ));
 
 sub _url_obj
 {
@@ -32,11 +32,6 @@ sub _text_to_url_obj
         HTML::Widgets::NavMenu::Url->new( $text,
         ( _is_slash_terminated($text) || ( $text eq "" ) ), "server", );
     return $url;
-}
-
-sub _rel_url
-{
-    return $latemp_fn->get_relative_url( shift, 1, );
 }
 
 sub _set_url

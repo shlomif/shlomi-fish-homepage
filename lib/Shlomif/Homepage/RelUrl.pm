@@ -29,19 +29,9 @@ sub _text_to_url_obj
     return $url;
 }
 
-sub _get_relative_url
-{
-    my ( $from_url, $to_text, $no_leading_dot ) = @_;
-
-    my $to_url = _text_to_url_obj($to_text);
-    my $ret    = $from_url->_get_relative_url( $to_url, $latemp_fn->is_slash(),
-        $no_leading_dot, );
-    return $ret;
-}
-
 sub _rel_url
 {
-    return _get_relative_url( $latemp_fn->obj(), shift, 1 );
+    return $latemp_fn->get_relative_url( shift, 1, );
 }
 
 sub _path_info

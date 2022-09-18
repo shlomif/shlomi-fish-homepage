@@ -1,6 +1,7 @@
 [%- SET title = "About “Rindolf” - Shlomi Fish’s Nickname" -%]
 [%- SET desc = "About “Rindolf” - Shlomi Fish’s Nickname: Rindolf the Dwarven Warrior, the IRC nickname, Rindolf the Evil Reindeer, and “Rindolfism”" -%]
 
+[% main_class.addClass("fancy_sects", "lim_width", "side_toc") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -12,11 +13,9 @@
 <a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
 [% END %]
 
-<div class="side_toc fancy_sects lim_width">
-
 [% default_toc %]
 
-[% WRAPPER h2_section id = "what"  title = "“Rindolf” - Shlomi Fish’s Nickname"  %]
+[% WRAPPER h2_section id = "what" title = "“Rindolf” - Shlomi Fish’s Nickname" %]
 
 <p>
 I, Shlomi Fish, have decided to allow people on and off [% IRC %] to call me
@@ -28,9 +27,9 @@ Some common pet names for Rindolf include “Rin”,
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "rindolf_the_dwarf"  title = "Rindolf the Dwarven Warrior"  %]
+[% WRAPPER h2_section id = "rindolf_the_dwarf" title = "Rindolf the Dwarven Warrior" %]
 
-[% INCLUDE rindolf_floaty_img href = "http://clockworkgods.wikia.com/wiki/Dwarf", src = "images/500px-Dwarf_miner--200w.jpg", alt = "Dwarven Warrior with a Pick", title = "Photo of a Dwarven Warrior with a War pick",  %]
+[% INCLUDE rindolf_floaty_img href = "http://clockworkgods.wikia.com/wiki/Dwarf", src = "images/500px-Dwarf_miner--200w.jpg", alt = "Dwarven Warrior with a Pick", title = "Photo of a Dwarven Warrior with a War pick", %]
 
 <p>
 Rindolf was a dwarven warrior that I played in an
@@ -63,16 +62,15 @@ of my individuality.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "rindolf_the_evil_reindeer"  title = "Rindolf the Evil Reindeer"  %]
+[% WRAPPER h2_section id = "rindolf_the_evil_reindeer" title = "Rindolf the Evil Reindeer" %]
 
-[% INCLUDE rindolf_floaty_img href = "https://drawception.com/viewgame/eydXpMGgOh/inception/", src = "images/evil-reindeer-200w.png", alt = "Evil Reindeer", title = "Photo of “Rindolf” the EvilReindeer",  %]
+[% INCLUDE rindolf_floaty_img href = "https://drawception.com/viewgame/eydXpMGgOh/inception/", src = "images/evil-reindeer-200w.png", alt = "Evil Reindeer", title = "Photo of “Rindolf” the EvilReindeer", %]
 
 <p>
 After I started talking intensively on [% IRC %] at around 2003 and 2004, especially
 on the <a href="http://freenode.net/">Freenode network</a>, which I can
 still recommend, a few people teased me for being one of Santa Claus’s
-red-nosed
-reindeer or his “reingeek” or whatever. This was done by reference to
+red-nosed reindeer or his “reingeek” or whatever. This was done by reference to
 <a href="http://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer">Rudolph
 the Red-Nosed Reindeer</a> and his oft-cited brother “Randolph”. At first,
 I found it annoying, but after a while decided to take it to my advantage.
@@ -112,9 +110,9 @@ Some of Rindolf the Evil Reindeer’s appearances on [% IRC %] include:
 
 </ol>
 
-[% WRAPPER h3_section id = "gandalfs_reindeer"  title = "Gandalf’s Reindeer"  %]
+[% WRAPPER h3_section id = "gandalfs_reindeer" title = "Gandalf’s Reindeer" %]
 
-[% INCLUDE rindolf_floaty_img href = "images/my-name-is-rindolf.jpg", src = "images/my-name-is-rindolf-200w.jpg", alt = "My Name is Rindolf", title = "Gandalf saying “My name is Rindolf”",  %]
+[% INCLUDE rindolf_floaty_img href = "images/my-name-is-rindolf.jpg", src = "images/my-name-is-rindolf-200w.jpg", alt = "My Name is Rindolf", title = "Gandalf saying “My name is Rindolf”", %]
 
 <p>
 Some people told me the name “Rindolf” reminds them of that of
@@ -126,7 +124,7 @@ of evil magic using his EvilAntlers™.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "the_rindolf_algo"  title = "The Rindolf Algorithm"  %]
+[% WRAPPER h3_section id = "the_rindolf_algo" title = "The Rindolf Algorithm" %]
 
 <p>
 Rindolf has devised The Rindolf Algorithm, which is a sophisticated encryption
@@ -137,7 +135,7 @@ with the sole exception of one's 5 years old little sister. See
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "rintintin_and_dolf"  title = "Rin Tin Tin + Dolf = Rindolf"  %]
+[% WRAPPER h3_section id = "rintintin_and_dolf" title = "Rin Tin Tin + Dolf = Rindolf" %]
 
 <p>
 I came up with a different midrash during an extended <a href="https://en.wikipedia.org/wiki/Mania">Mania</a> period,
@@ -147,7 +145,7 @@ said "What is the name of this dog? [answer: Rin Tin Tin] And of this dog? [answ
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "rindolf_aim_very_high_hitlower"  title = "Rindolf “Aim Very High” Hitlower"  %]
+[% WRAPPER h3_section id = "rindolf_aim_very_high_hitlower" title = "Rindolf “Aim Very High” Hitlower" %]
 
 <p>
 Not only is Rindolf an evil Reindeer, but he is also the notorious insane
@@ -160,9 +158,9 @@ very high</b> in the hope that I will hit the aim or perhaps a little lower,
 and so settled on this nickname.
 </p>
 
-[% WRAPPER h4_section id = "the_hacker_monarch"  title = "The Hacker Monarch (= The Messiah)"  %]
+[% WRAPPER h4_section id = "the_hacker_monarch" title = "The Hacker Monarch (= The Messiah)" %]
 
-[% INCLUDE rindolf_floaty_img href = "${base_path}humour/bits/facts/Summer-Glau/", src = "${base_path}humour/bits/facts/images/summer-glau-1-200w.jpg", alt = "Photo of Summer Glau from the English Wikipedia", title = "Summer Glau",  %]
+[% INCLUDE rindolf_floaty_img href = "${base_path}humour/bits/facts/Summer-Glau/", src = "${base_path}humour/bits/facts/images/summer-glau-1-200w.jpg", alt = "Photo of Summer Glau from the English Wikipedia", title = "Summer Glau", %]
 
 <p>
 I concluded that
@@ -189,7 +187,7 @@ awesomeness.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "from_the_invisible_to_alpha_male"  title = "From the Invisible to the Alpha Male"  %]
+[% WRAPPER h4_section id = "from_the_invisible_to_alpha_male" title = "From the Invisible to the Alpha Male" %]
 
 <p>
 Meanwhile, I’m glad I’m no longer playing
@@ -217,9 +215,9 @@ pluralism, joy and happiness.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "passing_the_baton"  title = "Passing the Baton"  %]
+[% WRAPPER h4_section id = "passing_the_baton" title = "Passing the Baton" %]
 
-[% INCLUDE rindolf_floaty_img href = "images/brown-1d10-SGlau-LARGE.jpg", src = "images/brown-1d10-SGlau-scaled.jpg", alt = "My ten-sided-die “Schartz” ring/amulet of power", title = "My ten-sided-die “Schartz” ring/amulet of power",  %]
+[% INCLUDE rindolf_floaty_img href = "images/brown-1d10-SGlau-LARGE.jpg", src = "images/brown-1d10-SGlau-scaled.jpg", alt = "My ten-sided-die “Schwartz” ring/amulet of power", title = "My ten-sided-die “Schwartz” ring/amulet of power", %]
 
 <p>
 I hope I can meet Summer Glau at the upcoming
@@ -243,7 +241,7 @@ the same coin</a>). Now Summer will decide what to do with it.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "sic_transit_gloria"  title = "Sic Transit Gloria"  %]
+[% WRAPPER h4_section id = "sic_transit_gloria" title = "Sic Transit Gloria" %]
 
 <p>
 I was the hacker king and it was a great honour, but I guess that
@@ -254,7 +252,7 @@ if asked I would have known this day would come.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "looking_into_the_future"  title = "Looking into the Future"  %]
+[% WRAPPER h4_section id = "looking_into_the_future" title = "Looking into the Future" %]
 
 <p>
 In the meanwhile:
@@ -266,19 +264,17 @@ motherfucker!!! Do you speak it?! And:
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "update_long_live_us_hacker_monarchs"  title = "Update: Long Live, us, [no-\"the\"!] Hacker Monarchs!" %]
+[% WRAPPER h4_section id = "update_long_live_us_hacker_monarchs" title = "Update: Long Live, us, [no-\"the\"!] Hacker Monarchs!" %]
 
-[% INCLUDE rindolf_floaty_img href = "${base_path}philosophy/SummerNSA/", src = "${base_path}humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png", alt = "Summerschool at the NSA Logo", title = "Summerschool at the NSA Logo",  %]
+[% INCLUDE rindolf_floaty_img href = "${base_path}philosophy/SummerNSA/", src = "${base_path}humour/Summerschool-at-the-NSA/images/summernsa-logo-small.png", alt = "Summerschool at the NSA Logo", title = "Summerschool at the NSA Logo", %]
 
 <p>
 (<b>2014-Sep-07</b>)
 Following the <a href="http://unarmed.shlomifish.org/3001.html">call for
 action</a> for “Finishing
-Off The Open Content / Web 2.0 Revolution (#SummerNSA)”, I have
-become tired of remaining <b>The</b> Hacker monarch.
-As a result, I mentally decided to quit prematurely and let the whole world
-go to hell.
-This was done per advice of
+Off The Open Content / Web 2.0 Revolution (#SummerNSA)”, I have become tired of
+remaining <b>The</b> Hacker monarch.  As a result, I mentally decided to quit
+prematurely and let the whole world go to hell.  This was done per advice of
 <a href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</a>,
 who was the wonderful The Hacker King of the Open Source/Usenet revolution
 (~1983-1997), and quite The Invisible as well (by choice).</p>
@@ -301,10 +297,9 @@ competition.)
 
 <p>
 Therefore, I plan on remaining <b>an</b> awesome hacker monarch for the
-foreseeable future,
-and will be joined by Ms. Glau and by other people who are willing to play
-that role. Perhaps future historians will designate some people in particular
-as being that in the present, but such global
+foreseeable future, and will be joined by Ms. Glau and by other people who are
+willing to play that role. Perhaps future historians will designate some people
+in particular as being that in the present, but such global
 <a href="http://en.wikipedia.org/wiki/Superlative">superlatives</a>
 probably ought to die for now.
 </p>
@@ -338,7 +333,7 @@ screenwriter. Remember the name: Shlomi “Rindolf” Fish!
 [% PROCESS "Inc/rindolfism.tt2" %]
 [% INCLUDE rindolfism_block %]
 
-[% WRAPPER h2_section id = "rindolf_trivia"  title = "Trivia"  %]
+[% WRAPPER h2_section id = "rindolf_trivia" title = "Trivia" %]
 
 <ul>
 
@@ -440,7 +435,5 @@ Gandalf photo with caption provided by a Facebook friend of a friend.
 </ul>
 
 [%- END -%]
-
-</div>
 
 [% END %]

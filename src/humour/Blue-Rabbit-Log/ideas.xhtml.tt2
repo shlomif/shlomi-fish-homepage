@@ -62,6 +62,8 @@ main screenplay yet. See <a href="#licence">below for the licence</a>.
 
 [% END %]
 
+[% default_toc %]
+
 [% WRAPPER h2_section id = "the-movies" title = "The Films" %]
 
 <ul>
@@ -101,7 +103,7 @@ they saw them. At the end Bryte says “and did you see mine? Now she has a pony
 
 [% END %]
 
-[% WRAPPER h2_section id = "conversations-with-gon" title = "Conversations with Gon:" %]
+[% WRAPPER h2_section id = "conversations-with-gon" title = "Conversations with Gon, the gnome inventor:" %]
 
 [% WRAPPER h3_section id = "gon-as-the-black-sheep" title = "Black Sheep" %]
 
@@ -283,9 +285,7 @@ immediately…</p>
 
 [% END %]
 
-[% END %]
-
-[% WRAPPER h2_section id = "the-angry-demon" title = "The Angry Demon" %]
+[% WRAPPER h3_section id = "the-angry-demon" title = "The Angry Demon" %]
 
 <p>
 Mordox summons a demon. The tour guides arrive and say “Well, as you can
@@ -325,6 +325,8 @@ of other populations of demons…
 </p>
 
 </blockquote>
+
+[% END %]
 
 [% END %]
 

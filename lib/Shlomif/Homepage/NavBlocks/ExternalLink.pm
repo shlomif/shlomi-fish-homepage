@@ -31,4 +31,5 @@ sub render
         $self->inner_html(),
     );
 }
+
 1;

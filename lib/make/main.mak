@@ -67,22 +67,13 @@ POST_DEST_POPE := $(POST_DEST_HUMOUR)/Pope
 all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml
 all_deps: $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml
 
-htacc = $(addsuffix /.htaccess,$(1))
-SRC_FORTUNES_DIR_HTACCESS := $(call htacc,$(PRE_DEST_FORTUNES_DIR))
-
-ALL_HTACCESSES := $(call htacc,$(PRE_DEST_FORTUNES_DIR) $(addprefix $(PRE_DEST)/,art lecture/PostgreSQL-Lecture philosophy/culture philosophy/culture/case-for-commercial-fan-fiction))
-
-htaccesses_target: $(ALL_HTACCESSES)
-
-$(SRC_FORTUNES_DIR)/my_htaccess.conf: $(SRC_FORTUNES_DIR)/gen-htaccess.pl
-	(cd $(SRC_FORTUNES_DIR) && $(GNUMAKE))
-
 $(PRE_DEST)/philosophy/Index/index.xhtml : lib/article-index/article-index.dtd lib/article-index/article-index.xml lib/article-index/article-index.xsl
 
 rss:
 	$(PERL) $(LATEMP_ROOT_SOURCE_DIR)/bin/fetch-shlomif_hsite-feed.pl
 	touch $(SRC_SRC_DIR)/index.xhtml.tt2 $(SRC_SRC_DIR)/old-news.html.tt2
 
+include lib/make/htaccesses.mak
 include lib/make/prod-syndicate.mak
 # Rebuild the pages containing the links to $(SRC_SRC_DIR)/humour/stories upon changing
 # the lib/stories.

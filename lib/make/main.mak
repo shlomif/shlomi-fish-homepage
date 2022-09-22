@@ -100,18 +100,6 @@ $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 
 all: $(POST_DEST__C_BAD_ELEMS)
 
-ART_SLOGANS_DOCS := \
-	chromaticd/kiss-me-my-blog-post-got-chormaticd \
-	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
-	dont-believe-in-fairies/dont-believe-in-fairies  \
-	give-me-ascii/give-me-ASCII-or-give-me-death \
-	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
-	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
-
-ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
-ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
-ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
-
 BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 
 include lib/make/presentations-targets.mak

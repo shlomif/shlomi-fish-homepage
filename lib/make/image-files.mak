@@ -84,6 +84,18 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	$(IMAGE_CONVERT) -matte -bordercolor none -border 5 $< $@
 	$(OPTIPNG) $@
 
+ART_SLOGANS_DOCS := \
+	chromaticd/kiss-me-my-blog-post-got-chormaticd \
+	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
+	dont-believe-in-fairies/dont-believe-in-fairies  \
+	give-me-ascii/give-me-ASCII-or-give-me-death \
+	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
+	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \
+
+ART_SLOGANS_PATHS := $(addprefix $(POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS))
+ART_SLOGANS_PNGS := $(addsuffix .png,$(ART_SLOGANS_PATHS))
+ART_SLOGANS_THUMBS := $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
+
 art_slogans_targets: $(ART_SLOGANS_THUMBS) $(BUFFY_A_FEW_GOOD_SLAYERS__SMALL_LOGO_PNG) $(THE_ENEMY_SMALL_LOGO_PNG) $(HHFG_SMALL_BANNER_AD_PNG) $(PRINTER_ICON_PNG) $(TWITTER_ICON_20_PNG) $(BK2HP_NEW_PNG) $(POST_DEST_HTML_6_LOGO_PNG)
 
 $(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg

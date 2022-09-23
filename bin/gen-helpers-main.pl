@@ -103,7 +103,7 @@ sub get_initial_buckets
 package main;
 
 use lib './lib';
-use Shlomif::MySystem qw/ my_system my_exec_perl /;
+use Shlomif::MySystem qw/ my_exec_perl my_system /;
 
 path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
 
@@ -239,7 +239,7 @@ my $generator = Shlomif::Homepage::GenMakeHelpers->new(
         return sprintf(
             '$(call %s%s_INCLUDE_TT2_RENDER)',
             uc( $args->{host}->id ),
-            $args->{is_common} ? "_COMMON" : ""
+            ( $args->{is_common} ? "_COMMON" : "" ),
         );
     },
     filename_lists_post_filter => sub {

@@ -56,12 +56,8 @@ licences.
 
 [% WRAPPER h2_section id = "large-scale" title = "Large-scale Creations" href = "stories/" %]
 
-<div class="sub_section">
-
 <div class="collapse">
 [% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
-</div>
-
 </div>
 
 [% END %]

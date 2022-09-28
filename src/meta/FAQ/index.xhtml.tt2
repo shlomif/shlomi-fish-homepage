@@ -34,7 +34,10 @@ I can link to it.
 Some related FAQs I co-maintain:
 </p>
 
+[% BLOCK shlomif_faqs_links %]
+
 <ul>
+
 <li>
 <p>
 <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn">Freenode ##programming channel FAQ</a>.
@@ -53,7 +56,22 @@ Some related FAQs I co-maintain:
 </p>
 </li>
 
+<li>
+<p>
+<a href="./">My Personal FAQ</a>
+</p>
+</li>
+
 </ul>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE shlomif_faqs_links %]
+[% PROCESS shlomif_faqs_links %]
+[% END %]
+
+[% INCLUDE shlomif_faqs_links %]
 
 [% default_toc %]
 
@@ -87,6 +105,12 @@ according to Internet searches).
 </p>
 
 [%- END -%]
+
+[% WRAPPER h3_section id = "which_faqs_do_you_comaint" title = "Which FAQs do you comaintain?" %]
+
+[% INCLUDE shlomif_faqs_links %]
+
+[% END %]
 
 [% WRAPPER h3_section id = "guy_or_girl" title = "Are you a Guy or a Girl?" %]
 

@@ -850,10 +850,10 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 _master_tr(
                     title => q{Chuck Norris Fanfiction and Essays},
                 ),
-                $Screenplays_TR,
-                _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
                 $Factoids_TR,
                 _get_tr('chuck_norris_facts'),
+                $Screenplays_TR,
+                _tr_s( 'muppets_grammar_nazis', 'buffy_few_good', ),
                 $Essays_TR,
                 _get_tr('chuck_norris_essays'),
                 _get_tr(

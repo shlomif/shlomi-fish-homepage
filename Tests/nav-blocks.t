@@ -343,3 +343,38 @@ EOF
         "Render a block.",
     );
 }
+
+{
+    my $foss_bits = Shlomif::Homepage::NavBlocks::_get_tr('foss_bits');
+    use Shlomif::Homepage::SectionMenu::Sects::Humour ();
+    my %t =
+        Shlomif::Homepage::SectionMenu::Sects::Humour->get_params(
+        { lang => { 'en' => 1, } } );
+    my $t = $t{tree_contents};
+    ($t) = ( grep { $_->{url} eq 'humour/bits/' } @{ $t->{subs} } );
+    my %i;
+    while ( my ( $i, $rec ) = each( @{ $t->{'subs'} } ) )
+    {
+        $i{ $rec->{url} } = $i;
+    }
+    my $pos    = 1;
+    my $x      = $foss_bits->items;
+    my $lookup = sub {
+        return $i{ $x->[ $pos + shift ]->path() } // ( die "foo" );
+    };
+    my $path = sub {
+        return $x->[ $pos + shift ]->path() // ( die "pathfoo" );
+    };
+    while ( $pos < @$x )
+    {
+        my $verdict = ( $lookup->(-1) < $lookup->(0) );
+        if ( not $verdict )
+        {
+            die "bar == " . $path->(0);
+        }
+    }
+    continue
+    {
+        ++$pos;
+    }
+}

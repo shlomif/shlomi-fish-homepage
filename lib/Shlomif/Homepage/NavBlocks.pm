@@ -304,17 +304,17 @@ my %tr_s = (
         title => "Ultra-short stories",
         items => [
             _l(
+                inner_html =>
+"Ways to do it According to the Programming Languages of the World",
+                path => "humour/ways_to_do_it.html",
+            ),
+            _l(
                 inner_html => "GPL Not Compatible with Itself",
                 path       => "humour/bits/GPL-is-not-Compatible-with-Itself/",
             ),
             _l(
                 inner_html => "RMS Lint",
                 path       => "humour/bits/RMS-Lint/",
-            ),
-            _l(
-                inner_html =>
-"Ways to do it According to the Programming Languages of the World",
-                path => "humour/ways_to_do_it.html",
             ),
             _l(
                 inner_html => "Cracka’s Paradise",
@@ -329,10 +329,6 @@ my %tr_s = (
                 path => "humour/bits/Programs-Every-Programmer-has-Written/",
             ),
             _l(
-                inner_html => "Freecell Solver™ Enterprise Edition",
-                path       => "humour/bits/Freecell-Solver-Enterprise-Edition/",
-            ),
-            _l(
                 inner_html => "COBOL — The New Age Programming Language",
                 path => "humour/bits/COBOL-the-New-Age-Programming-Language/",
             ),
@@ -341,25 +337,11 @@ my %tr_s = (
                 path       => "humour/bits/Copying-Ubuntu-Bug-No-1/",
             ),
             _l(
-                inner_html => "Announcing New Versions of the GPL",
-                path       => "humour/bits/New-versions-of-the-GPL/",
-            ),
-            _l(
-                inner_html =>
-                    "The Atom text editor edits a 2,000,001 bytes file",
-                path => "humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/",
-            ),
-            _l(
-                inner_html => "“HTML 6”, the new version of the Web",
-                path       => "humour/bits/HTML-6/",
-            ),
-            _l(
                 inner_html =>
                     "It’s not a Fooware - It’s an Operating System",
                 path =>
                     "humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/",
             ),
-            $Emma_Watson_tech_interview,
             _l(
                 inner_html => "I'm the Real Tim Toady",
                 path       => "humour/bits/Im-The-Real-Tim-Toady/",
@@ -367,6 +349,10 @@ my %tr_s = (
             _l(
                 inner_html => "“Can I SCO Now?”",
                 path       => "humour/bits/Can-I-SCO-Now/",
+            ),
+            _l(
+                inner_html => "Freecell Solver™ Enterprise Edition",
+                path       => "humour/bits/Freecell-Solver-Enterprise-Edition/",
             ),
             _l(
                 inner_html => "Freecell Solver™ Goes Webscale",
@@ -386,6 +372,20 @@ my %tr_s = (
                 inner_html => "GNU Will Integrate GNU Guile into GNU coreutils",
                 path       =>
 "humour/bits/GNU-Project-Will-Integrate-Guile-into-coreutils/",
+            ),
+            _l(
+                inner_html => "Announcing New Versions of the GPL",
+                path       => "humour/bits/New-versions-of-the-GPL/",
+            ),
+            $Emma_Watson_tech_interview,
+            _l(
+                inner_html => "“HTML 6”, the new version of the Web",
+                path       => "humour/bits/HTML-6/",
+            ),
+            _l(
+                inner_html =>
+                    "The Atom text editor edits a 2,000,001 bytes file",
+                path => "humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/",
             ),
             _l(
                 inner_html => "Announcing Python 4",

@@ -352,20 +352,20 @@ EOF
         { lang => { 'en' => 1, } } );
     my $t = $t{tree_contents};
     ($t) = ( grep { $_->{url} eq 'humour/bits/' } @{ $t->{subs} } );
-    my %i;
+    my %url2idx;
     while ( my ( $i, $rec ) = each( @{ $t->{'subs'} } ) )
     {
-        $i{ $rec->{url} } = $i;
+        $url2idx{ $rec->{url} } = $i;
     }
-    my $pos  = 1;
-    my $x    = $foss_bits->items;
-    my $path = sub {
-        return $x->[ $pos + shift ]->path() // ( die "pathfoo" );
+    my $pos   = 1;
+    my $items = $foss_bits->items;
+    my $path  = sub {
+        return $items->[ $pos + shift ]->path() // ( die "pathfoo" );
     };
     my $lookup = sub {
-        return $i{ $path->(@_) } // ( die "foo" );
+        return $url2idx{ $path->(@_) } // ( die "foo" );
     };
-    while ( $pos < @$x )
+    while ( $pos < @$items )
     {
         my $verdict = ( $lookup->(-1) < $lookup->(0) );
         if ( not $verdict )

@@ -5,7 +5,7 @@ use warnings;
 
 use utf8;
 
-use Test::More tests => 11;
+use Test::More tests => 12;
 use Test::Differences (qw(eq_or_diff));
 
 use lib './Tests/lib';
@@ -357,13 +357,13 @@ EOF
     {
         $i{ $rec->{url} } = $i;
     }
-    my $pos    = 1;
-    my $x      = $foss_bits->items;
-    my $lookup = sub {
-        return $i{ $x->[ $pos + shift ]->path() } // ( die "foo" );
-    };
+    my $pos  = 1;
+    my $x    = $foss_bits->items;
     my $path = sub {
         return $x->[ $pos + shift ]->path() // ( die "pathfoo" );
+    };
+    my $lookup = sub {
+        return $i{ $path->(@_) } // ( die "foo" );
     };
     while ( $pos < @$x )
     {
@@ -377,4 +377,7 @@ EOF
     {
         ++$pos;
     }
+
+    # TEST
+    pass("order of foss_bits");
 }

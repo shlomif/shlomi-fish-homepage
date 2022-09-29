@@ -25,10 +25,11 @@ if ( $mode eq "random" )
     my $filename      = "__FORTS-show-cgi-ids.dat";
     my @stat          = stat($filename);
     my $len           = $stat[7];
-    my $RECORD_LEN    = ( 1 << 7 );
-    my $records_count = int( $len / $RECORD_LEN );
+    my $BITS          = 7;
+    my $RECORD_LEN    = ( 1 << $BITS );
+    my $records_count = ( $len >> $BITS );
     my $i             = int rand($records_count);
-    my $p             = $i * $RECORD_LEN;
+    my $p             = ( $i << $BITS );
     open my $fh, '<:raw', $filename
         or die;
     seek( $fh, $p, 0 );

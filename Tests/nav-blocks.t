@@ -350,10 +350,10 @@ EOF
     my %t =
         Shlomif::Homepage::SectionMenu::Sects::Humour->get_params(
         { lang => { 'en' => 1, } } );
-    my $t = $t{tree_contents};
-    ($t) = ( grep { $_->{url} eq 'humour/bits/' } @{ $t->{subs} } );
+    my $tree = $t{tree_contents};
+    ($tree) = ( grep { $_->{url} eq 'humour/bits/' } @{ $tree->{subs} } );
     my %url2idx;
-    while ( my ( $i, $rec ) = each( @{ $t->{'subs'} } ) )
+    while ( my ( $i, $rec ) = each( @{ $tree->{'subs'} } ) )
     {
         $url2idx{ $rec->{url} } = $i;
     }

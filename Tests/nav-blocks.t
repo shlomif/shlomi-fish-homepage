@@ -355,14 +355,10 @@ EOF
     my $tree = $t{tree_contents};
     my $subs =
         ( first { $_->{url} eq 'humour/bits/' } @{ $tree->{subs} } )->{'subs'};
-    my %url2idx;
-    while ( my ( $i, $rec ) = each(@$subs) )
-    {
-        $url2idx{ $rec->{url} } = $i;
-    }
-    my $pos   = 1;
-    my $items = $foss_bits->items;
-    my $path  = sub {
+    my %url2idx = ( map { $subs->[$_]->{url} => $_ } keys(@$subs) );
+    my $pos     = 1;
+    my $items   = $foss_bits->items;
+    my $path    = sub {
         return $items->[ $pos + shift ]->path() // ( die "pathfoo" );
     };
     my $lookup = sub {

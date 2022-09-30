@@ -8,6 +8,8 @@ use utf8;
 use Test::More tests => 12;
 use Test::Differences (qw(eq_or_diff));
 
+use List::Util qw/ first /;
+
 use lib './Tests/lib';
 use lib './lib';
 
@@ -351,9 +353,10 @@ EOF
         Shlomif::Homepage::SectionMenu::Sects::Humour->get_params(
         { lang => { 'en' => 1, } } );
     my $tree = $t{tree_contents};
-    ($tree) = ( grep { $_->{url} eq 'humour/bits/' } @{ $tree->{subs} } );
+    my $subs =
+        ( first { $_->{url} eq 'humour/bits/' } @{ $tree->{subs} } )->{'subs'};
     my %url2idx;
-    while ( my ( $i, $rec ) = each( @{ $tree->{'subs'} } ) )
+    while ( my ( $i, $rec ) = each(@$subs) )
     {
         $url2idx{ $rec->{url} } = $i;
     }

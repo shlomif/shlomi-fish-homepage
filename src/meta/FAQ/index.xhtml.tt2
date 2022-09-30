@@ -1332,6 +1332,14 @@ Romantically/intimately in love with them.
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "are_you_a_bot" title = "Are you a bot [= a chat robot]?" %]
+
+<p>
+As far as I know, I am a flesh-and-blood human. See <a href="https://en.wikipedia.org/wiki/Evil_demon">Descartes' "Evil Demon" concept</a> though.
+</p>
+
+[% END %]
+
 [% WRAPPER h3_section id = "financial_status" title = "What is your financial status? Are you rich? Are you poor?" %]
 
 <p>
@@ -2356,8 +2364,9 @@ written. (Even though I have some reservations about its message.)
 
 <li>
 <p>
-I'm not going to read [% cnp %] again willingly, unless someone pays me a
-<a href="https://www.youtube.com/watch?v=bJrqpR_7VSo">shitload of money</a>.
+I'm not going to read [% cnp %] again willingly.
+[% IF 0 %], unless someone pays me a
+<a href="https://www.youtube.com/watch?v=bJrqpR_7VSo">shitload of money</a>.[% END %]
 </p>
 </li>
 
@@ -2417,7 +2426,7 @@ looked up) yet not too dumbed down to be annoying
 <li>
 <p>
 <a href="https://www.poetryfoundation.org/poems/46473/if---">If—</a> by
-ard Kipling ( <a href="https://en.wikipedia.org/wiki/If%E2%80%94">Wikipedia page</a> )
+Rudyard Kipling ( <a href="https://en.wikipedia.org/wiki/If%E2%80%94">Wikipedia page</a> )
 </p>
 </li>
 

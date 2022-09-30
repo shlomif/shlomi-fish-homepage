@@ -61,13 +61,13 @@ A memoir.
 </p>
 EOF
             id    => "my-first-kiss",
-            text  => "First Kiss",
+            text  => "My first kiss",
             title => "The story of my first kiss",
         },
         {
             html => <<"EOF",
 <p>
-Showing the rented apartment to a hot girl
+Showing the rented apartment to a hot girl.
 </p>
 EOF
             id   => "showing-the-apartment-to-a-hot-girl",

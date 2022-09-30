@@ -356,7 +356,7 @@ EOF
     my $subs =
         ( first { $_->{url} eq 'humour/bits/' } @{ $tree->{subs} } )->{'subs'};
     my %url2idx = ( map { $subs->[$_]->{url} => $_ } keys(@$subs) );
-    my $pos     = 1;
+    my $pos     = 0;
     my $items   = $foss_bits->items;
     my $path    = sub {
         return $items->[ $pos + shift ]->path() // ( die "pathfoo" );
@@ -364,17 +364,13 @@ EOF
     my $lookup = sub {
         return $url2idx{ $path->(@_) } // ( die "foo" );
     };
-    while ( $pos < @$items )
+    while ( ( ++$pos ) < @$items )
     {
         my $verdict = ( $lookup->(-1) < $lookup->(0) );
         if ( not $verdict )
         {
             die "bar == " . $path->(0);
         }
-    }
-    continue
-    {
-        ++$pos;
     }
 
     # TEST

@@ -277,11 +277,15 @@ def generate_windows_yaml(plat, output_path, is_act):
     def _myfilt(path):
         is32 = ("\\pkg-build\\" in path)
         return (is32 if plat == 'x86' else (not is32))
-    steps += [{
-        'name': "upload build artifacts - " + art['name'],
-        'uses': "actions/upload-artifact@v2",
-        'with': art
-    } for art in data['artifacts'] if _myfilt(art['path'])]
+    steps += [
+        {
+            'name': "upload build artifacts - " + art['name'],
+            'uses': "actions/upload-artifact@v2",
+            'with': art,
+        }
+        for art in data['artifacts']
+        if _myfilt(art['path'])
+    ]
     skel['name'] = ("windows-x86" if plat == 'x86' else 'windows-x64')
     skel['on'] = ['push']
     _write(output_path=output_path, data=skel, )

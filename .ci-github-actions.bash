@@ -9,7 +9,7 @@
 #
 set -e
 set -x
-export PERL_CPANM_OPT="-v"
+# export PERL_CPANM_OPT="-v"
 arg_name="$1"
 shift
 if test "$arg_name" != "--cmd"

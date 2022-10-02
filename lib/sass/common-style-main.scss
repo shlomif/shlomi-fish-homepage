@@ -306,6 +306,11 @@ $about_color: #008000;
     margin-left: 1em;
     margin-right: 10pt;
 
+    > .wrapper {
+        padding: 10px;
+        padding-top: 0;
+    }
+
     h2 {
         margin-top: 0;
         background-color: $about_color;
@@ -315,14 +320,8 @@ $about_color: #008000;
     }
 
     h3 {
-        margin-left: 0.5em;
         margin-right: 0.5em;
         margin-top: 0;
-    }
-
-    > p,
-    > section > p {
-        margin-left: 2em;
     }
 }
 

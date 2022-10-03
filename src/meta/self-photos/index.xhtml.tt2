@@ -10,24 +10,28 @@
 
 [% SET h_title = alt %]
 
+[% IF not id %]
+[% THROW "no id" %]
+[% END %]
+
 <h2>[% h_title %]</h2>
 
 <p>
-[% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
+[% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
 <a href="[% img _ link_img_ext %]">[% tag %]</a>
 </p>
 
 [% END %]
 
-[% WRAPPER photo alt = "Wearing the #SummerNSA shirt" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
+[% WRAPPER photo alt = "Wearing the #SummerNSA shirt" id = "SummerNSA-shirt-field-2022" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
 
 [% END %]
 
-[% WRAPPER photo alt = "Wearing a red E.T. shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" %]
+[% WRAPPER photo alt = "Wearing a red E.T. shirt" id = "red-ET-shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" %]
 
 [% END %]
 
-[% WRAPPER photo alt = "Wearing a Cutethulhu shirt" img = "${base_path}images/shlomif-cutethulhu" img_ext = "-small.webp" link_img_ext = ".webp" %]
+[% WRAPPER photo alt = "Wearing a Cutethulhu shirt" id = "Cutethulhu-shirt" img = "${base_path}images/shlomif-cutethulhu" img_ext = "-small.webp" link_img_ext = ".webp" %]
 
 [% END %]
 

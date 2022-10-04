@@ -4,7 +4,7 @@ document.addEventListener("keydown", (ev) => {
     if (ev.keyCode === 18) {
         altDown = true;
     } else if (ev.keyCode === 82 && altDown) {
-        pressRandomButton();
+        gotoRandom();
     }
 });
 
@@ -14,7 +14,6 @@ document.addEventListener("keyup", (ev) => {
     }
 });
 
-function pressRandomButton() {
-    // console.log("Random button pressed!");
+function gotoRandom(): void {
     window.location.href = "?mode=random";
 }

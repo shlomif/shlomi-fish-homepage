@@ -1,0 +1,15 @@
+== ABOUT
+
+This repository contains the sources for Shlomi Fish’s Homesite (
+http://www.shlomifish.org/ ), which is mostly a
+https://github.com/shlomif/shlomif-tech-diary/blob/master/static-site-generators--despair.md[generated
+static site].
+
+For build instructions see the file link:./INSTALL.md[INSTALL.md], which
+may be somewhat out-of-date as documentation goes, so you may prefer
+perusing the link:./bin/CI-testing/translate-travis.yml-to-github-actions.py[github actions' configuration]. As some wisemen said before,
+https://blog.codinghorror.com/learn-to-read-the-source-luke/["Use thesource, Luke!"].
+
+There's link:./TODO.quicktask[a todo list] which is maintained using the
+Vim quicktask plugin - https://github.com/aaronbieber/vim-quicktask ,
+and one can also use GitHub Issues.

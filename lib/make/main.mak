@@ -98,7 +98,7 @@ POST_DEST__C_BAD_ELEMS := $(POST_DEST)/lecture/C-and-CPP/bad-elements/c-and-cpp-
 $(DOCBOOK5_SOURCES_DIR)/c-and-cpp-elements-to-avoid.xml: $(C_BAD_ELEMS_SRC)
 	$(VERED) --output "$@" "$<"
 
-all: $(POST_DEST__C_BAD_ELEMS)
+non_latemp_targets: $(POST_DEST__C_BAD_ELEMS)
 
 BK2HP_NEW_PNG := $(POST_DEST)/images/bk2hp.png
 
@@ -109,7 +109,7 @@ include lib/make/generated/deps.mak
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 
-all: $(MANIFEST_HTML)
+non_latemp_targets: $(MANIFEST_HTML)
 
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
@@ -124,7 +124,7 @@ $(SRC_DOCS_DEST): $(PRE_DEST)/%: \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
 	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
 
-all: $(SRC_CLEAN_STAMP)
+all_deps: $(SRC_CLEAN_STAMP)
 
 PROC_INCLUDES_COMMON2 = APPLY_TEXTS=1 xargs $(PROCESS_ALL_INCLUDES__NON_INPLACE) --mode=minify --minifier-conf=bin/html-min-cli-config-file.conf --texts-dir=lib/ads --source-dir=$(1) --dest-dir=$(2) --
 PROC_INCLUDES_COMMON := $(call PROC_INCLUDES_COMMON2,$(PRE_DEST),$(POST_DEST))
@@ -168,7 +168,7 @@ screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 $(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
 	$(PERL) $<
 
-all: $(CATB_COPY_POST)
+non_latemp_targets: $(CATB_COPY_POST)
 
 include lib/make/generated/asciidocs2db5-include.mak
 include lib/make/json_resume.mak

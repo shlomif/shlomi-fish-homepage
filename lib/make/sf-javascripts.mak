@@ -36,8 +36,8 @@ OUT_BABEL_JSES = $(patsubst $(DEST_JS_DIR)/%,$(OUT_PREF)/%,$(DEST_BABEL_JSES))
 $(DEST_BABEL_JSES): $(DEST_JS_DIR)/%.js: $(OUT_PREF)/%.js
 	$(MULTI_YUI) -o $@ $<
 
-all: $(call dest_jsify, fortunes_show.js)
-all: $(call dest_jsify, resize-iframe.js)
+non_latemp_targets: $(call dest_jsify,fortunes_show.js)
+non_latemp_targets: $(call dest_jsify,resize-iframe.js)
 
 # run_tsc = tsc --target es6 --moduleResolution node --module $1 --outDir $$(dirname $@) $<
 run_tsc = tsc --project lib/typescript/$1/tsconfig.json

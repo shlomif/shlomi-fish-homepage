@@ -25,8 +25,9 @@ MY_RPF_DEST_PIVOT := $(MY_RPF_DEST_DIR)/euler.webp
 OPENLY_BIPOLAR_DEST_DIR := $(POST_DEST)/philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/
 OPENLY_BIPOLAR_DEST_PIVOT := $(OPENLY_BIPOLAR_DEST_DIR)/alan_turing.webp
 
-all: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
-all: $(MY_NAME_IS_RINDOLF_DEST)
+non_latemp_targets: image_files
+image_files: $(MY_RPF_DEST_PIVOT) $(OPENLY_BIPOLAR_DEST_PIVOT)
+image_files: $(MY_NAME_IS_RINDOLF_DEST)
 
 MY_RPF_SRC_DIR := $(SUB_REPOS_BASE_DIR)/my-real-person-fan-fiction
 
@@ -41,7 +42,7 @@ $(OPENLY_BIPOLAR_DEST_PIVOT): $(OPENLY_BIPOLAR_SRC_DIR)/alan_turing.webp
 $(DnD_lances_cartoon_DEST): $(SRC_SRC_DIR)/art/d-and-d-cartoon--comparing-lances/d-and-d-cartoon-exported.png
 	$(call simple_gm)
 
-all: $(DnD_lances_cartoon_DEST)
+image_files: $(DnD_lances_cartoon_DEST)
 
 Evilphish_flipped_dest := $(POST_DEST)/images/evilphish-flipped.png
 POST_DEST_HTML_6_LOGO_PNG := $(POST_DEST_HUMOUR)/bits/HTML-6/HTML-6-logo.png
@@ -74,8 +75,8 @@ Linux1_webp_DEST := $(POST_DEST)/art/images/linux1.webp
 $(Linux1_webp_DEST): $(SRC_SRC_DIR)/art/images/linux1.gif
 	$(IMAGE_CONVERT) $< -define webp:lossless=true $@
 
-all: $(GRIMMIE_IMG_DEST)
-all: $(Linux1_webp_DEST)
+image_files: $(GRIMMIE_IMG_DEST)
+image_files: $(Linux1_webp_DEST)
 
 $(Evilphish_flipped_dest): $(Evilphish_flipped_src)
 	$(IMAGE_CONVERT) -flop $< $@
@@ -104,7 +105,7 @@ $(POST_DEST_HTML_6_LOGO_PNG): $(SRC_SRC_DIR)/humour/bits/HTML-6/HTML-6-logo.svg
 
 POST_DEST_WINDOWS_UPDATE_SNAIL_ICON := $(POST_DEST_HUMOUR)/bits/facts/images/windows-update-snail.png
 
-all: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
+image_files: $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON) $(POST_DEST_FIERY_Q_PNG)
 
 $(POST_DEST_WINDOWS_UPDATE_SNAIL_ICON): $(SRC_SRC_DIR)/humour/bits/facts/images/snail.svg
 	$(INKSCAPE_WRAPPER) --export-width=200 --export-type=png --export-filename="$@" $<
@@ -177,4 +178,4 @@ BIZCARD_SVG_OUTPUT_PATH := $(BIZCARD_SVG_DIR)/$(BIZCARD_SVG_OUTPUT_BN)
 $(BIZCARD_SVG_OUTPUT_PATH): $(BIZCARD_SVG_DIR)/$(BIZCARD_SVG_INPUT_BN)
 	( set -e -x ; d="`pwd`" ; md="$${d}/$(BIZCARD_SVG_DIR)" ; HOME="$${md}" python3 /usr/share/inkscape/extensions/image_embed.py "$<" > "$@" )
 
-all: $(BIZCARD_SVG_OUTPUT_PATH)
+image_files: $(BIZCARD_SVG_OUTPUT_PATH)

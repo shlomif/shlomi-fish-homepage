@@ -6,7 +6,7 @@ PYTHON := python3
 $(FACTOIDS_TIMESTAMP): $(FACTOIDS_RENDER_SCRIPT) lib/factoids/shlomif-factoids-lists.xml
 	$(FACTOIDS_GEN_CMD)
 
-all: $(FACTOIDS_TIMESTAMP)
+all_deps: $(FACTOIDS_TIMESTAMP)
 
 FACTOIDS_NAV_JSON := lib/Shlomif/factoids-nav.json
 

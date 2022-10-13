@@ -48,7 +48,7 @@ DOCBOOK5_DOCS += $(FICTION_DOCS)
 SCREENPLAY_XMLS := $(patsubst %,$(SCREENPLAY_XML_XML_DIR)/%.xml,$(SCREENPLAY_DOCS))
 FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIONS))
 
-all: splay
+non_latemp_targets: splay
 
 include lib/make/generated/sf-homepage-quadpres-generated.mak
 

@@ -2,7 +2,7 @@ POST_DEST := dest/post-incs/t2
 LATEMP_ROOT_SOURCE_DIR := .
 LATEMP_ABS_ROOT_SOURCE_DIR := $(realpath $(LATEMP_ROOT_SOURCE_DIR))
 
-all: all_deps non_latemp_targets all_post_latemp_deps
+all: all_deps non_latemp_targets post_latemp_deps
 
 all_deps: copy_fortunes docbook_targets fortunes-epub fortunes-target sects_cache
 

@@ -70,7 +70,9 @@ command! -bar D :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"\[\% PROCESS rell
 command! H :s!\v^\<h([2-6]) id\=\"([^\"]+)\"\>((\<[^\>]+\><bar>[^\<]+)+)\<\/h\1\>$![% WRAPPER h\1_section id = "\2" title = "\3" %]!
 let @s='[% IF 0 %]'
 let @e='[% END %]'
+let @b='[% main_class.addClass("fancy_sects") %]'
 " map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>
 map <F6> :S<cr>
 map <F6> :H<cr>
 command! I :%s!\vinkscape(.*)\-\-export\-png!\$(INKSCAPE_WRAPPER)\1--export-type=png --export-file!
+command! SM :Ack 'main_class' src/

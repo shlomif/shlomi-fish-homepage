@@ -475,15 +475,15 @@ table.visible,
 
 .designs {
     th {
-        vertical-align: top;
         text-align: left;
+        vertical-align: top;
     }
 
     td {
-        vertical-align: top;
-        text-align: left;
         border: 1.5pt black solid;
-        padding: 2pt;
+        padding: 7px 15px;
+        text-align: left;
+        vertical-align: top;
     }
 
     border-collapse: collapse;

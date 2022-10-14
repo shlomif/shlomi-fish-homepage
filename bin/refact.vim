@@ -66,6 +66,7 @@ command! -bar D execute("S") | :s/\v\.wml/.tt2/
 command! M :s/\v^\<latemp_meta_desc *\"([^\"]+)\" *\/ *\>$/[% SET desc="\1" %]/
 command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_(abstract|common_top_elems|logo)\((\'\w+')\)\; \:\>/[% long_stories__calc_\1(id => \2) %]/
 command! -bar S :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"([^\"]+)\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section id = "\2" title = "\4" href = "\3" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
+command! -bar D :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"\[\% PROCESS rellink url \= \"([^\"]+)\" *\,? *\%\]\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section id = "\2" href = "\${base_path}\3" title = "\4" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
 command! H :s!\v^\<h([2-6]) id\=\"([^\"]+)\"\>((\<[^\>]+\><bar>[^\<]+)+)\<\/h\1\>$![% WRAPPER h\1_section id = "\2" title = "\3" %]!
 let @s='[% IF 0 %]'
 let @e='[% END %]'

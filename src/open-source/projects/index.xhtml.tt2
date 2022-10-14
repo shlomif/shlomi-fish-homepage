@@ -1,32 +1,37 @@
 [%- SET title = "Shlomi Fish’s Open Source Projects" -%]
 [%- SET desc = "Shlomi Fish’s Open Source Projects" -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/open_source.tt2" %]
 
 [% default_toc %]
 
-<h2 id="forges_home_pages">My home pages on Various Software Development Hubs (Forges)</h2>
+[% WRAPPER h2_section id="forges_home_pages" title="My home pages on Various Software Development Hubs (Forges)"%]
 
 [% PROCESS home_pages_on_forges  %]
 
-<h2 id="games-related">Games Related</h2>
+[% END %]
 
-<div class="sub_section">
+[% WRAPPER h2_section id="games-related" title="Games Related"%]
 
-<h3 id="freecell-solver"><a href="[% PROCESS rellink url = "open-source/projects/freecell-solver/",  %]">Freecell Solver</a></h3>
+[% WRAPPER h3_section id = "freecell-solver" href = "${base_path}open-source/projects/freecell-solver/" title = "Freecell Solver" %]
 
 <p>
 A program and a library written in C, that automatically solves games of
 Freecell and similar Solitaire variants.
 </p>
 
-<h3 id="pysol"><a href="[% PROCESS rellink url = "open-source/projects/pysol/",  %]">PySol Fan Club Edition</a></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "pysol" href = "${base_path}open-source/projects/pysol/" title = "PySol Fan Club Edition" %]
 
 <p>
 An open source and feature-rich collection of Solitaire games.
 </p>
+
+[% END %]
 
 [% WRAPPER h3_section id="japanese-puzzle-games" href="japanese-puzzle-games/" title="Solvers and Generators for Japanese Puzzle Games" %]
 
@@ -72,11 +77,9 @@ Frameworks 5.
 
 [% END %]
 
-</div>
+[% END %]
 
-<h2 id="text-authoring">Web-Related and Text Authoring/Processing</h2>
-
-<div class="sub_section">
+[% WRAPPER h2_section id="text-authoring" title="Web-Related and Text Authoring/Processing"%]
 
 [% WRAPPER h3_section id="website-meta-lang" href="website-meta-language/" title="Website META Language" %]
 
@@ -86,11 +89,7 @@ Engelschall and later maintained by Denis Barbier. I currently maintain it,
 but cannot recommend it due to it being slow and somewhat quirky.
 </p>
 
-[% END %]
-
-<div class="sub_section">
-
-<h4 id="latemp"><a href="[% PROCESS rellink url = "open-source/projects/latemp/",  %]">Latemp - a static site generator</a></h4>
+[% WRAPPER h4_section id = "latemp" href = "${base_path}open-source/projects/latemp/" title = "Latemp - a static site generator" %]
 
 <p>
 Latemp is a static site generator for generating sophisticated
@@ -101,7 +100,9 @@ Language</a> by Ralf S. Engelschall and Denis Barbier. This site
 generated using Latemp.
 </p>
 
-<h4 id="quad-pres"><a href="[% PROCESS rellink url = "open-source/projects/quad-pres/",  %]">Quad-Pres</a></h4>
+[% END %]
+
+[% WRAPPER h4_section id = "quad-pres" href = "${base_path}open-source/projects/quad-pres/" title = "Quad-Pres" %]
 
 <p>
 Short for Quick-and-Dirty Presentations, this is a tool written in Perl for
@@ -109,7 +110,9 @@ preparing HTML presentations. Based on
 <a href="website-meta-language/">Website META Language</a>.
 </p>
 
-</div>
+[% END %]
+
+[% END %]
 
 [% WRAPPER h3_section id="xml-grammar" href="XML-Grammar/" title="The XML-Grammar Meta-Project" %]
 
@@ -139,11 +142,9 @@ in Unix shell and had a maintenance lull at the time.
 
 [% END %]
 
-</div>
+[% END %]
 
-<h2 id="system-tools">System Tools</h2>
-
-<div class="sub_section">
+[% WRAPPER h2_section id="system-tools" title="System Tools"%]
 
 [% WRAPPER h3_section id="file-dir-dumper" href="File-Dir-Dumper/" title="File-Dir-Dumper" %]
 
@@ -221,11 +222,9 @@ A download accelerator with a key improvement.
 
 [% END %]
 
-</div>
+[% END %]
 
-<h2 id="qa">Testing and QA</h2>
-
-<div class="sub_section">
+[% WRAPPER h2_section id="qa" title="Testing and QA"%]
 
 [% WRAPPER h3_section id="test.pm-converter" href="Test.pm-Converter/" title="Convert from Test.pm" %]
 
@@ -246,7 +245,7 @@ allows for heterogeneous test suites. I adopted libtap and maintain it.
 
 [% END %]
 
-</div>
+[% END %]
 
 [% WRAPPER h2_section id="ip-noise" href="http://comnet.technion.ac.il/~cn1w02/" title="IP-Noise Simulator" %]
 
@@ -304,15 +303,15 @@ machines.
 
 [% WRAPPER h2_section id="no-longer-of-interest" title="Projects that are no longer of interest"%]
 
-<div class="sub_section">
-
-<h3 id="yjobs-on-mozilla"><a href="[% PROCESS rellink url = "open-source/projects/yjobs-on-mozilla/",  %]">Workaround to Get yjobs.co.il Working with Firefox</a></h3>
+[% WRAPPER h3_section id="yjobs-on-mozilla" href = "${base_path}open-source/projects/yjobs-on-mozilla/" title="Workaround to Get yjobs.co.il Working with Firefox" %]
 
 <p>
 This is a local proxy, that allows one to operate <a href="http://www.yjobs.co.il/">the yjobs.co.il Israeli job-board</a> using Firefox, and other
 Mozilla-based browsers. No longer of interest because yjobs.co.il now works
 fine in Firefox and other standards-compliant browsers without it.
 </p>
+
+[% END %]
 
 [% WRAPPER h3_section id="gradient-fu" href="${base_path}grad-fu/" title="Gradient-Fu Patch for the GIMP" %]
 
@@ -323,8 +322,6 @@ into GIMP 2.2.x and above and its functionality is built-in there.
 </p>
 
 [% END %]
-
-</div>
 
 [% END %]
 

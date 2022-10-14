@@ -1,12 +1,15 @@
 [%- SET title = "Solver and Generator for ABC Path" -%]
 [%- SET desc = "Solver and Generator for ABC Path: a riddle game, as featured on brainbashers.com." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
 [% SET modname = "Games-ABC_Path-Solver" %]
 
 [% SET gen_modname = "Games-ABC_Path-Generator" %]
+
+[%- WRAPPER about_sect -%]
 
 <p>
 [% modname %] is a Perl 5 CPAN distribution which implements a solver
@@ -34,6 +37,8 @@ an in-browser game in the future.
 <p>
 Currently, documentation is a little lacking.
 </p>
+
+[% END %]
 
 [% WRAPPER h2_section id = "links"  title = "Project Links"  %]
 

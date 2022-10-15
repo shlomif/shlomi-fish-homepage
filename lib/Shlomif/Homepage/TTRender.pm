@@ -323,8 +323,9 @@ sub proc
     $vars->{text_ORIG_URL_PREFIX} = $ORIG_URL_PREFIX;
     $vars->{orig_url}             = $ORIG_URL_PREFIX . $raw_fn_path;
     $vars->{escaped_url}          = encodeURIComponent($full_url);
-    $vars->{main_class}           = Set::CSS->new( "main",
-        ( ( $input_tt2_page_path =~ $IS_HUMOUR_RE ) ? ("fancy_sects") : () ) );
+    my $NOT_FRONT_PAGE = scalar( length($raw_fn_path) > 1 );
+    $vars->{main_class} =
+        Set::CSS->new( "main", ( $NOT_FRONT_PAGE ? ( "fancy_sects", ) : () ), );
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _inc( $input_tt2_page_path, $inc );

@@ -62,21 +62,25 @@ dedicated music players, video downloaders, etc.
 
 [% END %]
 
-<h3 id="graphics-programs"><a href="[% "${base_path}open-source/resources/graphics-programs/" %]">Graphics Applications</a></h3>
+[% WRAPPER h3_section href = "${base_path}open-source/resources/graphics-programs/" id = "graphics-programs" title = "Graphics Applications" %]
 
 <p>
 A list of some prominent computer graphics applications: raster editors,
 vector editors, 3-D programs, image viewers and organisers, etc.
 </p>
 
-<h3 id="databases-list"><a href="[% "${base_path}open-source/resources/databases-list/" %]">List of Database Implementations</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/databases-list/" id = "databases-list" title = "List of Database Implementations" %]
 
 <p>
 A list of some prominent database implementations: key/value stores,
 SQL databases, XML databases, distributed databases, etc.
 </p>
 
-<h3 id="software-quality-enhancement"><a href="[% "${base_path}open-source/resources/software-quality-enhancement/" %]">Software Quality Enhancement Tools and Links</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/software-quality-enhancement/" id = "software-quality-enhancement" title = "Software Quality Enhancement Tools and Links" %]
 
 <p>
 Quite a few people, including me, have been lamenting the
@@ -85,6 +89,8 @@ quality</a> of a lot of modern software applications. In order to do something c
 to combat this, I decided to collect links to tools and other resources that can help
 enhancing the quality of software.
 </p>
+
+[% END %]
 
 </div>
 

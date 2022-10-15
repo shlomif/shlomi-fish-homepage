@@ -181,6 +181,7 @@ def generate_from_image_macros_page(
     splitter = XhtmlSplitter(
         **COMMON_PARAMS,
         input_fn=(OUT_DN + "/" + path_to_input),
+        main_title="Shlomif’s Memes",
         output_dirname=output_dirname,
         relative_output_dirname=relative_output_dirname,
         section_format=IMAGE_MACRO_SECTION_FORMAT,

@@ -39,7 +39,7 @@ and configurable, text editor.
 
 [% END %]
 
-[% WRAPPER h2_section id = "tech-tips" title = "Collection of Tech Tips" href = "tech-tips/" %]
+[% WRAPPER h2_section href = "tech-tips/" id = "tech-tips" title = "Collection of Tech Tips" %]
 
 <p>
 My collection of technical/software-related tips as concentrated from the
@@ -48,7 +48,7 @@ individual entries on my weblogs.
 
 [% END %]
 
-[% WRAPPER h2_section id = "israeli-foss" title = "Israeli-Related FOSS Resources" href = "israel/" %]
+[% WRAPPER h2_section href = "israel/" id = "israeli-foss" title = "Israeli-Related FOSS Resources" %]
 
 <div class="sub_section">
 
@@ -73,7 +73,7 @@ Hackers-IL.
 
 [% END %]
 
-[% WRAPPER h2_section id = "favourite-foss" title = "Favourite Free Software" href = "../favourite/" %]
+[% WRAPPER h2_section href = "../favourite/" id = "favourite-foss" title = "Favourite Free Software" %]
 
 <p>
 This contains a list of some of my favourite free software packages out
@@ -82,7 +82,7 @@ there.
 
 [% END %]
 
-[% WRAPPER h2_section id = "interviews" title = "Interviews with Open Source People" href = "../interviews/" %]
+[% WRAPPER h2_section href = "../interviews/" id = "interviews" title = "Interviews with Open Source People" %]
 
 <p>
 These are a collection of interviews I conducted with people of the open

@@ -74,11 +74,7 @@ enhancing the quality of software.
 
 </div>
 
-<section class="h3">
-
-<h3 id="links_to_other_lists">Links to other lists online</h3>
-
-<div class="sub_section">
+[% WRAPPER h3_section id = "links_to_other_lists" title = "Links to other lists online" %]
 
 <ul>
 
@@ -105,8 +101,6 @@ Linas Vepstas and reflects the state of Linux software as of the late 1990s.
 
 </ul>
 
-</div>
-
-</section>
+[% END %]
 
 [% END %]

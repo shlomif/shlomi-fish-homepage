@@ -2,67 +2,81 @@
 
 <div class="sub_section">
 
-<h3><a href="[% base_path %]open-source/portability-libs/">Cross-Platform Abstraction Libraries for Portability</a></h3>
+[% WRAPPER h3_section href = "${base_path}open-source/portability-libs/" id = "portability-libs" title = "Cross-Platform Abstraction Libraries for Portability" %]
 
 <p>
 A small directory of libraries that make writing applications that run on
 UNIXes as well as on Windows 32-bit easier.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/software-tools/" %]">Software Building and Management Tools</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/software-tools/" id = "software-tools" title = "Software Building and Management Tools" %]
 
 <p>
 A small directory of tools for building, configuring and maintaining software.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/editors-and-IDEs/" %]">List of Text Editors and IDEs</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/editors-and-IDEs/" id = "editors-and-IDEs" title = "List of Text Editors and IDEs" %]
 
 <p>
 A list of text editors and IDEs.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/numerical-software/" %]">Numerical Software</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/numerical-software/" id = "numerical-software" title = "Numerical Software" %]
 
 <p>
 A short list of some prominent numerical software packages.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/text-processing-tools/" %]">Text Processing Tools</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/text-processing-tools/" id = "text-processing-tools" title = "Text Processing Tools" %]
 
 <p>
 A list of some prominent text processing tools such as preprocessors or
 template systems.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/networking-clients/" %]">Networking Clients</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/networking-clients/" id = "networking-clients" title = "Networking Clients" %]
 
 <p>
 A list of some prominent networking clients: web-browsers, E-mail clients,
 Instant Messaging (IM) clients, Microblogging clients, FTP clients etc.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/multimedia-programs/" %]">Multimedia Applications</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/resources/multimedia-programs/" id = "multimedia-programs" title = "Multimedia Applications" %]
 
 <p>
 A list of some prominent multimedia applications: generic multimedia players,
 dedicated music players, video downloaders, etc.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/graphics-programs/" %]">Graphics Applications</a></h3>
+[% END %]
+
+<h3 id="graphics-programs"><a href="[% "${base_path}open-source/resources/graphics-programs/" %]">Graphics Applications</a></h3>
 
 <p>
 A list of some prominent computer graphics applications: raster editors,
 vector editors, 3-D programs, image viewers and organisers, etc.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/databases-list/" %]">List of Database Implementations</a></h3>
+<h3 id="databases-list"><a href="[% "${base_path}open-source/resources/databases-list/" %]">List of Database Implementations</a></h3>
 
 <p>
 A list of some prominent database implementations: key/value stores,
 SQL databases, XML databases, distributed databases, etc.
 </p>
 
-<h3><a href="[% "${base_path}open-source/resources/software-quality-enhancement/" %]">Software Quality Enhancement Tools and Links</a></h3>
+<h3 id="software-quality-enhancement"><a href="[% "${base_path}open-source/resources/software-quality-enhancement/" %]">Software Quality Enhancement Tools and Links</a></h3>
 
 <p>
 Quite a few people, including me, have been lamenting the
@@ -100,6 +114,8 @@ Linas Vepstas and reflects the state of Linux software as of the late 1990s.
 </li>
 
 </ul>
+
+</section>
 
 [% END %]
 

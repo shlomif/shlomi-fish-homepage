@@ -67,6 +67,8 @@ command! M :s/\v^\<latemp_meta_desc *\"([^\"]+)\" *\/ *\>$/[% SET desc="\1" %]/
 command! L :s/\v^\<\: Shlomif\:\:Homepage\:\:LongStories\-\>render_(abstract|common_top_elems|logo)\((\'\w+')\)\; \:\>/[% long_stories__calc_\1(id => \2) %]/
 command! -bar S :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"([^\"]+)\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section id = "\2" title = "\4" href = "\3" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
 command! -bar D :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"\[\% PROCESS rellink url \= \"([^\"]+)\" *\,? *\%\]\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section id = "\2" href = "\${base_path}\3" title = "\4" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
+command! -bar S2 :s!\v\[\% \"(\$\{base_path\})!\1! | :s!\v\" \%\]\"!"! | :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"([^\"]+)\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section href = "\3" id = "\2" title = "\4" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
+command! -bar D2 :s!\v^\<h([1-6]) id\=\"([^\"]+)\"\>\<a href\=\"\[\% PROCESS rellink url \= \"([^\"]+)\" *\,? *\%\]\"\>([^\<]+)\<\/a\>\<\/h\1\>$![% WRAPPER h\1_section href = "\${base_path}\3" id = "\2" title = "\4" %]! | :s!\v\[\% base_path \%\]!\${base_path}!
 command! H :s!\v^\<h([2-6]) id\=\"([^\"]+)\"\>((\<[^\>]+\><bar>[^\<]+)+)\<\/h\1\>$![% WRAPPER h\1_section id = "\2" title = "\3" %]!
 let @s='[% IF 0 %]'
 let @e='[% END %]'
@@ -77,3 +79,7 @@ map <F6> :H<cr>
 command! I :%s!\vinkscape(.*)\-\-export\-png!\$(INKSCAPE_WRAPPER)\1--export-type=png --export-file!
 command! SM :Ack 'main_class' src/
 command! SP :s!\v( id *\= *)(.*)( href *\= *\"[^\"]+\")!\3\1\2!
+
+function! AddIDs()
+    %s!\v(<h3)(.*)(/([^\/\"]+)/")!\1 id="\4"\2\3!
+endfunction

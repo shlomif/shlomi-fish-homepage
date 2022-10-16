@@ -28,8 +28,15 @@ my $contents;
 my $PREF = '«⋄⋄אבג«';
 my $SUF  = '»גבא⋄⋄»';
 my $ns   = "http://www.w3.org/1999/xhtml";
-my $doc  = XML::LibXML->load_xml( location => $out_fn );
-my $xc   = XML::LibXML::XPathContext->new($doc);
+
+sub _ns_elem
+{
+    my $elem = XML::LibXML::Element->new(shift);
+    $elem->setNamespace($ns);
+    return $elem;
+}
+my $doc = XML::LibXML->load_xml( location => $out_fn );
+my $xc  = XML::LibXML::XPathContext->new($doc);
 $xc->registerNs( 'html' => $ns, );
 my $finder = URI::Find->new(
     sub {
@@ -65,13 +72,11 @@ foreach my $node (
         or Carp::confess("no date for id = $id ; basename = $basename .");
 
     my $info = $nodexc->findnodes(q#html:table[@class='info']/html:tbody#)->[0];
-    my $tr   = XML::LibXML::Element->new('tr');
-    $tr->setNamespace($ns);
+    my $tr   = _ns_elem('tr');
     foreach my $p ( [ 'field', 'Published' ],
         [ 'value', scalar( $date =~ s/T.*?\z//mrs ) ] )
     {
-        my $td = XML::LibXML::Element->new('td');
-        $td->setNamespace($ns);
+        my $td = _ns_elem('td');
         $td->setAttribute( 'class', $p->[0] );
         $td->appendChild( $doc->createTextNode( $p->[1] ) );
         $tr->appendChild($td);

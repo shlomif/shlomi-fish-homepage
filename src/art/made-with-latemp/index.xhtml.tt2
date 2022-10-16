@@ -1,10 +1,10 @@
 [%- SET title = "Shlomi Fish’s Art- “Made with Latemp”" -%]
 [%- SET desc = "The “Made with Latemp” logo." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
+
 <p>
 <b>Written at</b>: 02-Jun-2006
 </p>
@@ -13,8 +13,8 @@
 
 <p>
 This is a button I made for use with sites created using the
-<a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a> content-management
-system. It was created using <a href="http://www.inkscape.org/">Inkscape</a>,
+<a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a> static site
+generator. It was created using <a href="http://www.inkscape.org/">Inkscape</a>,
 a cross-platform vector-graphics package (which I ran on Linux).
 </p>
 
@@ -41,6 +41,7 @@ bottom.
 I’m pretty happy with the results, even though it did not require too much
 effort.
 </p>
+
 </div>
 
 [% END %]

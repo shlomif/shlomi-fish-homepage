@@ -16,7 +16,6 @@ use Template                               ();
 use Shlomif::Homepage::FactoidsPages::Data ();
 use Shlomif::Homepage::FactoidsPages::Page ();
 use Carp::Always;
-use List::Util qw/ uniqstr /;
 
 my $data_obj    = Shlomif::Homepage::FactoidsPages::Data->new();
 my @pages_proto = @{ $data_obj->calc_data()->{'pages_proto'} };
@@ -256,25 +255,8 @@ my $json_fn = path('lib/Shlomif/factoids-nav.json');
 
 write_on_change_no_utf8( path($json_fn), \$new_json, );
 
-sub _content__process_page
-{
-    my ($page) = @_;
-
-    my $id   = $page->id_base;
-    my $path = $page->url_base;
-    my $pre_incs_path =
-        "dest/pre-incs/t2/humour/bits/facts/${path}/index.xhtml";
-    return [
-        +{
-            'path' => $pre_incs_path,
-            line   => "$pre_incs_path: "
-                . join( " ", uniqstr( sort @{ $deps{$id} } ) ) . "\n",
-        },
-    ];
-}
-
 my @content =
-    map { @{ _content__process_page($_) }; }
+    map { @{ $_->makefile_deps( \%deps ) }; }
     sort { $a->short_id cmp $b->short_id } @pages;
 
 write_on_change(

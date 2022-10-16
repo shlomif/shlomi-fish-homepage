@@ -5,6 +5,8 @@ use warnings;
 
 use Moo;
 
+use List::Util qw/ uniqstr /;
+
 has [
     'abstract',   'id_base',   'img_alt',        'img_attribution',
     'img_class',  'img_src',   'license_method', 'license_year',
@@ -26,6 +28,25 @@ sub dashed_short_id
     my ( $self, ) = @_;
 
     return ( ( $self->override_html_anchor // $self->short_id ) =~ tr/_/-/r );
+}
+
+sub makefile_deps
+{
+    my ( $page, $deps ) = @_;
+
+    my $id   = $page->id_base;
+    my $path = $page->url_base;
+    my $pre_incs_path =
+        "dest/pre-incs/t2/humour/bits/facts/${path}/index.xhtml";
+    return [
+        +{
+            'path' => $pre_incs_path,
+            line   => (
+                "$pre_incs_path: "
+                    . join( " ", uniqstr( sort @{ $deps->{$id} } ) ) . "\n"
+            ),
+        },
+    ];
 }
 
 =begin foo

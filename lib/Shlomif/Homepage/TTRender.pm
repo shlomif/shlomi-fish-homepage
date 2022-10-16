@@ -22,8 +22,7 @@ use Shlomif::Homepage::NavBlocks           ();
 use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
 use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
-use Shlomif::Homepage::RelUrl                (qw/ _set_url _url_obj /);
-use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+use Shlomif::Homepage::RelUrl (qw/ _set_url _url_obj /);
 use Shlomif::Homepage::TocDiv      ();
 use Shlomif::Homepage::TrueStories ();
 use Shlomif::MD                    ();
@@ -31,10 +30,12 @@ use Shlomif::XmlFictionSlurp       ();
 use Template                       ();
 use VimIface                       ();
 
+# use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
 
-my $IS_HUMOUR_RE = qr#\A@{[ get_is_humour_re() ]}#;
+# my $IS_HUMOUR_RE = qr#\A@{[ get_is_humour_re() ]}#;
 
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
@@ -296,7 +297,7 @@ my $DEST       = path( '.', "dest", "pre-incs", $LATEMP_SERVER, ) . '';
 my $INC_PREF   = qq#\n(((((include "cache/combined/$LATEMP_SERVER#;
 my $INC_SUFFIX = qq#")))))\n#;
 
-sub _inc
+sub _generate_include
 {
     my ( $input_tt2_page_path, $id ) = @_;
     return sprintf( "%s/%s/%s%s",
@@ -328,7 +329,7 @@ sub proc
         Set::CSS->new( "main", ( $NOT_FRONT_PAGE ? ( "fancy_sects", ) : () ), );
     my $set = sub {
         my ( $name, $inc ) = @_;
-        $vars->{$name} = _inc( $input_tt2_page_path, $inc );
+        $vars->{$name} = _generate_include( $input_tt2_page_path, $inc );
         return;
     };
     $set->( 'leading_path_string',           "breadcrumbs-trail" );

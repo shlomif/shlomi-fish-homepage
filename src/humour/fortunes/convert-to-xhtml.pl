@@ -35,9 +35,15 @@ sub _ns_elem
     $elem->setNamespace($ns);
     return $elem;
 }
-my $doc = XML::LibXML->load_xml( location => $out_fn );
-my $xc  = XML::LibXML::XPathContext->new($doc);
-$xc->registerNs( 'html' => $ns, );
+
+sub _ns_xc
+{
+    my $xc = XML::LibXML::XPathContext->new(shift);
+    $xc->registerNs( 'html' => $ns, );
+    return $xc;
+}
+my $doc    = XML::LibXML->load_xml( location => $out_fn );
+my $xc     = _ns_xc($doc);
 my $finder = URI::Find->new(
     sub {
         my ( $obj, $text ) = @_;
@@ -64,9 +70,8 @@ my $file_yaml = $yaml->{"$basename.xml"};
 foreach my $node (
     $xc->findnodes(q#//*[@class='fortune'][html:table[@class='info']]#) )
 {
-    my $nodexc = XML::LibXML::XPathContext->new($node);
-    $nodexc->registerNs( 'html' => $ns );
-    my $id = $nodexc->findnodes(q#html:h3/@id#)->[0]->textContent;
+    my $nodexc = _ns_xc($node);
+    my $id     = $nodexc->findnodes(q#html:h3/@id#)->[0]->textContent;
 
     my $date = $file_yaml->{$id}->{'date'}
         or Carp::confess("no date for id = $id ; basename = $basename .");

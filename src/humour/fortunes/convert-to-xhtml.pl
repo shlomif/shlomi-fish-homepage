@@ -67,17 +67,15 @@ foreach my $node (
     my $info = $nodexc->findnodes(q#html:table[@class='info']/html:tbody#)->[0];
     my $tr   = XML::LibXML::Element->new('tr');
     $tr->setNamespace($ns);
-    my $td;
-    $td = XML::LibXML::Element->new('td');
-    $td->setNamespace($ns);
-    $td->setAttribute( 'class', 'field' );
-    $td->appendChild( $doc->createTextNode("Published") );
-    $tr->appendChild($td);
-    $td = XML::LibXML::Element->new('td');
-    $td->setNamespace($ns);
-    $td->setAttribute( 'class', 'value' );
-    $td->appendChild( $doc->createTextNode( $date =~ s/T.*?\z//mrs ) );
-    $tr->appendChild($td);
+    foreach my $p ( [ 'field', 'Published' ],
+        [ 'value', scalar( $date =~ s/T.*?\z//mrs ) ] )
+    {
+        my $td = XML::LibXML::Element->new('td');
+        $td->setNamespace($ns);
+        $td->setAttribute( 'class', $p->[0] );
+        $td->appendChild( $doc->createTextNode( $p->[1] ) );
+        $tr->appendChild($td);
+    }
 
     $info->appendChild($tr);
 

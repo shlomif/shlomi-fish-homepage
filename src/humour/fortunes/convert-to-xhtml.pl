@@ -23,11 +23,10 @@ XML::Grammar::Fortune->new( { mode => "validate", } )
 XML::Grammar::Fortune->new(
     { mode => "convert_to_html", output_mode => "filename" } )
     ->run( { input => $xml_fn, output => $out_fn } );
-my $contents;
 
-my $PREF = '«⋄⋄אבג«';
-my $SUF  = '»גבא⋄⋄»';
-my $ns   = "http://www.w3.org/1999/xhtml";
+my $PREFIX = '«⋄⋄אבג«';
+my $SUFFIX = '»גבא⋄⋄»';
+my $ns     = "http://www.w3.org/1999/xhtml";
 
 sub _ns_elem
 {
@@ -47,7 +46,7 @@ my $xc     = _ns_xc($doc);
 my $finder = URI::Find->new(
     sub {
         my ( $obj, $text ) = @_;
-        return qq#$PREF$text$SUF#;
+        return qq#$PREFIX$text$SUFFIX#;
     }
 );
 foreach my $node (
@@ -91,11 +90,13 @@ foreach my $node (
 
     # print "<<$id>>\n";
 }
+my $contents;
 $contents = decode( 'UTF-8', $doc->toString() );
 $contents =~ s# xmlns:xsi="[^"]*"##gms;
 $contents =~ s/[ \t]+$//gms;
 
-$contents =~ s#\Q$PREF\E(.*?)\Q$SUF\E#<a href="$1" rel="nofollow">$1</a>#gms;
+$contents =~
+    s#\Q$PREFIX\E(.*?)\Q$SUFFIX\E#<a href="$1" rel="nofollow">$1</a>#gms;
 
 sub _to_xhtml5
 {

@@ -3,8 +3,8 @@
 use strict;
 use warnings;
 
-use XML::LibXML;
-use Path::Tiny qw/ path /;
+use XML::LibXML ();
+use Path::Tiny  qw/ path /;
 
 my $filename = "shlomif-fav.xml";
 

@@ -217,7 +217,7 @@ sub _write_processed
     return;
 }
 
-my @deps;
+my @pages_deps;
 foreach my $page (@pages)
 {
     my $libfn = "lib/factoids/pages/" . $page->id_base() . '.tt2';
@@ -226,7 +226,7 @@ foreach my $page (@pages)
         . $page->url_base()
         . '/index.xhtml';
 
-    push @deps, "${destfn}: $libfn\n";
+    push @pages_deps, sprintf( "%s: %s\n", $destfn, $libfn );
     _write_processed( \$PAGE_TEMPLATE, { p => $page, }, $libfn, );
 }
 
@@ -262,7 +262,7 @@ my @content =
 write_on_change(
     path("lib/make/generated/factoids-deps.mak"),
     \(
-        ( join "", sort @deps )
+        ( join "", sort @pages_deps )
         . join( " ", "all:", map { $_->{path} } @content ) . "\n",
         ( map { $_->{line} } @content )
     ),

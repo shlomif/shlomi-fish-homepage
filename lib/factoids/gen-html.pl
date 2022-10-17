@@ -102,7 +102,7 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 <img src="{{ p.img_src_tt2() }}" alt="{{ p.img_alt() }}" class="{{ p.img_class() }}" />
 [% END %]
 
-[% BLOCK facts__{{ p.short_id() }} %]
+[% BLOCK facts__section__{{ p.short_id() }} %]
 
 [% IF NOT nowrap %]
 <section class="facts_wrap">
@@ -137,7 +137,7 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 {{ FOREACH p IN pages }}
 
 [% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
-[% INCLUDE facts__{{ p.short_id() }} nowrap = 1 %]
+[% INCLUDE facts__section__{{ p.short_id() }} nowrap = 1 %]
 [% END %]
 
 {{ END }}
@@ -159,7 +159,7 @@ my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 [% PROCESS "factoids/common-out/tags.tt2" %]
 [% PROCESS "stories/stories-list.tt2" %]
 
-[% INCLUDE facts__{{ p.short_id() }} %]
+[% INCLUDE facts__section__{{ p.short_id() }} %]
 [% INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" %]
 
 [% WRAPPER h2_section id="license" title="Copyright and Licence"%]

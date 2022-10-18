@@ -26,15 +26,15 @@ my $fortune_proc   = XML::Grammar::Fortune->new();
 my $facts_xml_path = './lib/factoids/shlomif-factoids-lists.xml';
 my $dom            = $xml_parser->parse_file($facts_xml_path);
 
-my %deps;
+my %makefile_deps;
 my $xpc = XML::LibXML::XPathContext->new();
 $xpc->registerNs( 'xhtml', "http://www.w3.org/1999/xhtml" );
 foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
 {
+    my $list_id = $list_node->value;
+
     foreach my $lang (qw(en-US he-IL))
     {
-        my $list_id = $list_node->value;
-
         my $basename  = "$list_id--$lang";
         my $indiv_dom = $fortune_proc->perform_xslt_translation(
             {
@@ -70,7 +70,7 @@ foreach my $list_node ( $dom->findnodes("//list/\@xml:id") )
             "lib/factoids/indiv-lists-xhtmls/$basename.xhtml.reduced";
         write_on_change( scalar( path($reduced_xhtml) ),
             \( $node->toString =~ s/\s+xmlns:xsi="[^"]+"//gr ) );
-        push @{ $deps{$list_id} }, $reduced_xhtml;
+        push @{ $makefile_deps{$list_id} }, $reduced_xhtml;
     }
 }
 
@@ -256,7 +256,7 @@ my $json_fn = path('lib/Shlomif/factoids-nav.json');
 write_on_change_no_utf8( path($json_fn), \$new_json, );
 
 my @content =
-    map { @{ $_->makefile_deps( \%deps ) }; }
+    map { @{ $_->makefile_deps( \%makefile_deps ) }; }
     sort { $a->short_id cmp $b->short_id } @pages;
 
 write_on_change(

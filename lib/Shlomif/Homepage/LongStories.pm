@@ -1051,6 +1051,8 @@ sub render_make_fragment
         "\tgm convert \$< \$\@\n\n",
 "art_slogans_targets: \$(LONG_STORIES__SMALL_LOGO_PNGS) \$(LONG_STORIES__SMALL_LOGO_WEBPS)\n\n",
     );
+
+    return;
 }
 
 1;

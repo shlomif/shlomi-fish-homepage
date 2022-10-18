@@ -292,12 +292,11 @@ The Demonic underworld is held under tight control in a forked version of the
 <a href="https://en.wikipedia.org/wiki/Buffyverse">Buffy universe</a> where
 the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
 ended up happier and more powerful, and men and women have equal opportunities
-when it comes to fighting Demons. A
-new class of tenth grade (sophomore) students start the three year demon
-fighting program in the scholastic year of 2014/2015 in Sunnydale High School,
-while the older Scooby Gang, who are their teachers and mentors, have to deal
-with the usual set of problems that come with being teachers, parents,
-spouses and adults.
+when it comes to fighting Demons. A new class of tenth grade (sophomore)
+students start the three year demon fighting program in the scholastic year of
+2014/2015 in Sunnydale High School, while the older Scooby Gang, who are their
+teachers and mentors, have to deal with the usual set of problems that come
+with being teachers, parents, spouses and adults.
 </p>
 EOF
     },
@@ -361,9 +360,8 @@ who provide him with many questions, including the million dollar question,
 <p>
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
-and set in a time of great confusion — not unlike our own,
-while containing some
-<a href="https://en.wikipedia.org/wiki/Anachronism">anachronisms</a>.
+and set in a time of great confusion — not unlike our own, while containing
+some <a href="https://en.wikipedia.org/wiki/Anachronism">anachronisms</a>.
 </p>
 
 EOF
@@ -431,7 +429,7 @@ EOF
             "humour/Queen-Padme-Tales/images/queen_padme_tales_logo.png",
         logo_svg   => '//$SKIP',
         logo_title =>
-qq#The Tacos are a reference to the "Porque no los dos" Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
+qq#The Tacos are a reference to the “Porque no los dos” Taco commercial ; their many toppings allude to the general pluralism/crossover theme#,
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
@@ -471,9 +469,11 @@ of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">th
 (<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> , b. 1992)
 were killed in a starship crash when she was 1 years old, she was adopted by her aunt,
 the Duchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
-Portman</a>), and her aunt's husband Darth Vader, who volunteered to act as King in effect until
-Padme's coming of age. As a result, Padmé had a happy childhood until she turned 18
-at 2010 and was ready to become the bona fide monarch of Naboo.
+Portman</a>), and her aunt's husband
+<a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a>, who
+volunteered to act as King in effect until Padme's coming of age. As a result,
+Padmé had a happy childhood until she turned 18 at 2010 and was ready to become
+the bona fide monarch of Naboo.
 </p>
 
 <p>
@@ -695,7 +695,8 @@ Angeles teaches a copyrights attorney all about life.
 
 <p>
 It seems that I found writing most of this redundant, due to
-<a href="\$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool at the NSA</i></a> and later <a href="\$(ROOT)/humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few Good Slayers</i></a>,
+<a href="\$(ROOT)/humour/Summerschool-at-the-NSA/"><i>Summerschool at the NSA</i></a>
+and later <a href="\$(ROOT)/humour/Buffy/A-Few-Good-Slayers/"><i>Buffy: A Few Good Slayers</i></a>,
 but I’m keeping what I have written so far of it for posterity in its
 preliminary state.
 </p>
@@ -757,10 +758,8 @@ EOF
         abstract   => <<"EOF",
 <p>
 A parody of my <a href="\$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i></a>,
-which is itself a parody of \$(BtVS); starring Cookie Monster and
-Emma Watson.
-Shelved for now given I am wilfully ignorant of baking and cooking
-in general.
+which is itself a parody of \$(BtVS); starring Cookie Monster and Emma Watson.
+Shelved for now given I am wilfully ignorant of baking and cooking in general.
 </p>
 EOF
     },

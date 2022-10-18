@@ -348,7 +348,7 @@ of philosophy, and wrote the Biblical scroll of
 Soon after that, he became the most notorious celebrity in his town,
 made a moderate fortune from donations of enthusiastic fans of the
 scroll, and became annoyed by the fact that he has become the object of
-affection of nearly every single young female in his town.
+affection of nearly every unmarried young female in Damascus.
 </p>
 
 <p class="who_is_qoheleth abstract">

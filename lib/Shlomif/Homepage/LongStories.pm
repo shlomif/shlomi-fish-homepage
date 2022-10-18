@@ -981,13 +981,12 @@ sub calc_all_stories_entries
         return $self->calc_all_stories_entries(
             { only_inactives => [0], %$args, } )
             . qq#<section><header><$tag><a href="@{[$self->_url_to("humour/stories/inactive/")]}">Inactive Stories</a></$tag></header>#
-            . qq#<div class="fancy_sects">#
             . $self->calc_all_stories_entries(
             {
                 only_inactives => [1],
                 %$args, tag => ( $tag =~ s#(h)([0-9]+)#$1 . ($2 + 1)#er )
             }
-            ) . "</div></section>";
+            ) . "</section>";
     }
     return join( '', @{ $self->_get_all_stories_entries_tags($args) }, );
 }

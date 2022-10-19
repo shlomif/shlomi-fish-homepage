@@ -52,16 +52,19 @@ sub _map_data
     if ( ref $thing eq 'HASH' )
     {
         my $url = $thing->{"url"};
-        my $s   = "src/$url";
-        if (
-            not(
-                  ( $url =~ m#/\z# or ( !length $url ) )
-                ? ( -f "$s/index.xhtml.tt2" or -f "$s/index.html.tt2" )
-                : ( -f "$s.tt2" )
-            )
-            )
+        if ( defined $url )
         {
-            die qq#"$url" does not exist!#;
+            my $s = "src/$url";
+            if (
+                not(
+                      ( $url =~ m#/\z# or ( !length $url ) )
+                    ? ( -f "$s/index.xhtml.tt2" or -f "$s/index.html.tt2" )
+                    : ( -f "$s.tt2" )
+                )
+                )
+            {
+                die qq#"$url" does not exist!#;
+            }
         }
         return +{
             map {

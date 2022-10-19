@@ -43,7 +43,8 @@ on Shlomi Fish’s personal website. See <a href="[% text_ORIG_URL_PREFIX %]meta
 [% ELSE %]
 
 <p>
-Written, designed, and maintained by Shlomi Fish,
+Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
+and <a href="[% base_path %]me/rindolf/">“Rindolf”</a>),
 [% PROCESS main_email_mailto -%],
 [% PROCESS mailto_link_to_self email = "shlomif@gmail.com" -%].
 </p>

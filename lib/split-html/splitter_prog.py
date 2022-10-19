@@ -115,8 +115,9 @@ Policy</a></li>
 "Frequently asked questions list">FAQ</a></li>
 <li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
 </ul>
-<p>Written, designed, and maintained by Shlomi Fish, <a href=
-"mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
+<p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
+and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
+<a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
 </div>
 <a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
 "bk2hp" alt="Back to my Homepage"/></a></footer>
@@ -163,8 +164,9 @@ Policy</a></li>
 "Frequently asked questions list">FAQ</a></li>
 <li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
 </ul>
-<p>Written, designed, and maintained by Shlomi Fish, <a href=
-"mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
+<p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
+and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
+<a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
 </div>
 <a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
 "bk2hp" alt="Back to my Homepage"/></a></footer>
@@ -270,8 +272,9 @@ Policy</a></li>
 "Frequently asked questions list">FAQ</a></li>
 <li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
 </ul>
-<p>Written, designed, and maintained by Shlomi Fish, <a href=
-"mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
+<p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
+and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
+<a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
 </div>
 <a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
 "bk2hp" alt="Back to my Homepage"/></a></footer>

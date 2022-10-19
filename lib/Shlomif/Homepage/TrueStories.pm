@@ -109,6 +109,15 @@ EOF
             id   => "your-character-must-be-30-years-old",
             text => "“Your character must be 30 years old”",
         },
+        {
+            html => <<"EOF",
+<p>
+Conversations with People on Buses.
+</p>
+EOF
+            id   => "bus-conversations",
+            text => "Conversations with People on Buses",
+        },
     )
 ];
 

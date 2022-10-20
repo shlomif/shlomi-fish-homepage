@@ -12,14 +12,14 @@ import sys
 random.seed()
 
 # The Directory containing the script.
-script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(script_dir)
+script_dirname = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(script_dirname)
 from bottle import Bottle, abort, redirect, request, response, \
     run, template  # noqa: E402
 
 DB_BASE_NAME = "fortunes-shlomif-lookup.sqlite3"
 
-full_db_path = script_dir + "/" + DB_BASE_NAME
+full_db_path = script_dirname + "/" + DB_BASE_NAME
 
 dbh = sqlite3.connect(full_db_path)
 cur = dbh.cursor()

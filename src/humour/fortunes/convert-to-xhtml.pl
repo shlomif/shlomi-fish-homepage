@@ -14,7 +14,7 @@ use Encode                    qw/ decode /;
 my ( $xml_fn, $out_fn ) = @ARGV;
 
 # The Directory containing the script.
-my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
+my $script_dirname = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 my ($basename) = ( $xml_fn =~ /([a-zA-Z0-9_\-]+)\.xml\z/ms )
     or die;
 
@@ -60,7 +60,7 @@ q#//html:table[@class='irc-conversation']/html:tbody/html:tr[@class='saying']/ht
 
     $node->setData($text_content);
 }
-my $yaml_path = "$script_dir/fortunes-shlomif-ids-data.yaml";
+my $yaml_path = "$script_dirname/fortunes-shlomif-ids-data.yaml";
 
 my ( $yaml, ) = LoadFile($yaml_path);
 $yaml = ( $yaml->{files} or die );

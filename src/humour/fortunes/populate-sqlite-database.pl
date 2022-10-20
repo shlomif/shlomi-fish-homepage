@@ -9,7 +9,7 @@ use List::Util            qw/ min /;
 use YAML::XS              qw/ LoadFile /;
 
 # The Directory containing the script.
-my $script_dir = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
+my $script_dirname = catpath( ( splitpath( rel2abs $0 ) )[ 0, 1 ] );
 
 my $db_base_name = "fortunes-shlomif-lookup.sqlite3";
 
@@ -20,8 +20,8 @@ use Shlomif::Homepage::FortuneCollections ();
 
 # STDOUT->autoflush(1);
 
-my $full_db_path = "$script_dir/$db_base_name";
-my $yaml_path    = "$script_dir/fortunes-shlomif-ids-data.yaml";
+my $full_db_path = "$script_dirname/$db_base_name";
+my $yaml_path    = "$script_dirname/fortunes-shlomif-ids-data.yaml";
 
 my ( $yaml, ) = LoadFile($yaml_path);
 $yaml = ( $yaml->{files} or die );

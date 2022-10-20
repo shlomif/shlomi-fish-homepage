@@ -8,19 +8,19 @@ my $master_url = "http://www.shlomifish.org/humour/fortunes/";
 
 my $atom_arg;
 my $rss_arg;
-my $dir_arg;
+my $dirname_arg;
 
 GetOptions(
     "atom=s" => \$atom_arg,
-    "dir=s"  => \$dir_arg,
+    "dir=s"  => \$dirname_arg,
     "rss=s"  => \$rss_arg,
 ) or die "Getopt::Long failed - $!";
 
-my $abs_dir  = File::Spec->rel2abs($dir_arg);
-my $abs_atom = File::Spec->rel2abs($atom_arg);
-my $abs_rss  = File::Spec->rel2abs($rss_arg);
+my $abs_dirname = File::Spec->rel2abs($dirname_arg);
+my $abs_atom    = File::Spec->rel2abs($atom_arg);
+my $abs_rss     = File::Spec->rel2abs($rss_arg);
 
-open my $arcs_list_fh, "<", "$dir_arg/fortunes-list.mak";
+open my $arcs_list_fh, "<", "$dirname_arg/fortunes-list.mak";
 my @lines = <$arcs_list_fh>;
 close($arcs_list_fh);
 
@@ -34,9 +34,9 @@ my @cmd_line = (
     "-e",
     "run(); exit(0);",
     "--",
-    "--dir" => $abs_dir,
+    "--dir" => $abs_dirname,
     ( map { ( "--xml-file", "$_.xml" ) } (@fortunes) ),
-    "--yaml-data"   => "$abs_dir/fortunes-shlomif-ids-data.yaml",
+    "--yaml-data"   => "$abs_dirname/fortunes-shlomif-ids-data.yaml",
     "--atom-output" => $abs_atom,
     "--rss-output"  => $abs_rss,
     "--master-url"  => $master_url,

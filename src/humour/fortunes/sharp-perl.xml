@@ -8046,5 +8046,48 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-perl-behaving-differently-under-macos">
+        <meta>
+            <title>“It&#39;s behaving differently under MacOS”</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="PapaChub">Is there a way to bypass the `realpath couldn&#39;t resolve &quot;/usr/bin/foo&quot;` check when I run (in bash): exec -a foo perl -E &#39;say $0&#39; ? (i.e., don&#39;t bother *looking* for the interpreter; just run...)</saying>
+<saying who="rindolf">PapaChub: $^X ?</saying>
+<saying who="PapaChub">When would I set that?</saying>
+<saying who="rindolf">perlbot: eval: [ $^X ]</saying>
+<saying who="perlbot">rindolf: [&quot;$PERLS/blead-2022-05-28/bin/perl5.37.1&quot;]</saying>
+<saying who="PapaChub"># exec -a foo perl -E &#39;say $0&#39;</saying>
+<saying who="PapaChub">ARGH!! I see it&#39;s behaving differently under MacOS... &gt;:-|</saying>
+<saying who="rindolf">PapaChub: mac o&#39;sucks… ;]</saying>
+<saying who="rindolf">j/k</saying>
+<saying who="PapaChub">It can be maddening, that&#39;s for sure... *sigh*</saying>
+<saying who="rindolf">&quot;The difference between theory and practice is that in theory, there is no difference between theory and practice, while in practice, there is.&quot;</saying>
+<saying who="rindolf">1 + 1 = 2.0073 ;]</saying>
+<saying who="rindolf">https://metacpan.org/pod/Acme::NewMath</saying>
+<saying who="Paperbot_">Link title(s): [ Acme::NewMath - Perl extension for escaping the humdrum mathematics that dorks like Pythagoras ga... ]</saying>
+<saying who="japh">do any of you use some kind of perl debugger interface in vim? tips?</saying>
+<saying who="rindolf">i use &quot;perl -d&quot;/etc. in konsole, but outside nvim/gvim. i also contributed to perl5db.pl</saying>
+<saying who="japh">https://metacpan.org/pod/Vim::Debug::Manual found this, trying it out</saying>
+<saying who="Paperbot_">Link title(s): [ Vim::Debug::Manual - Integrate the Perl debugger with Vim - metacpan.org ]</saying>
+<saying who="rindolf">https://www.shlomifish.org/humour/bits/It-s-not-a-Fooware-It-s-an-Operating-System/ ;]</saying>
+<saying who="Paperbot_">Link title(s): [ It’s not a Fooware - It’s an Operating System - Shlomi Fish’s Homesite ]</saying>
+<saying who="Kernspin">Guten Morgen / Bonjour / Доброе утро / Good morning.</saying>
+<saying who="choroba">I see your Guten Morgen / Bonjour / Доброе утро / Good morning and raise you Dobré ráno / Hyvää huomenta</saying>
+<saying who="Kernspin">choroba: Hyvää huomenta is Finnish, I know this already. In what language is Dobré ráno?</saying>
+<saying who="choroba">It&#39;s Czech</saying>
+<saying who="Kernspin">choroba: Ok, nice!</saying>
+<saying who="rindolf">i will add בוקר טוב [boqqer tov] in leshon haqodesh</saying>
+<saying who="rindolf">tetris letters ;]</saying>
+
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

@@ -57,7 +57,7 @@ Now for a little critique: HHFG has many plot devices and many elements
 that are not very realistic: Jennifer learns how to hack too quickly, it is
 unlikely that all the four kids would be accepted to Stanford, and Jennifer
 is unlikely to care about her attractiveness for acceptance to colleges and
-consider [% my_acronym( "key" => "FOSS",) %] hacking as a good way so lately (among other things.).
+consider [% FOSS %] hacking as a good way so lately (among other things.).
 Despite all that, two American teenagers I talked to (see below) asked me
 if it was a true story, which made me glad I could write it in such a
 convincing way. (The story is fully fictitious, by the way.)
@@ -106,7 +106,7 @@ learn software development incredibly fast.
 
 <p>
 My conclusion is that the story is not good as a single story with a
-single plot line.  But as a series of short stories (like the TV series,
+single plot line. But as a series of short stories (like the TV series,
 in which each chapter has its own story with beginning and conclusion,
 but there is a common theme which develops over time) - it can be good
 one.
@@ -114,8 +114,8 @@ one.
 
 <p>
 Leave the characters in, and allow them to develop a bit from story to
-story.  Then each story can illustrate a concept from the Free Software
-culture.  Try to work a conflict and resolution into each story.
+story. Then each story can illustrate a concept from the Free Software
+culture. Try to work a conflict and resolution into each story.
 </p>
 </blockquote>
 
@@ -130,10 +130,10 @@ learns programming in such a short time as a known bug in the story.
 
 [% END %]
 
-[% WRAPPER h3_section id = "review--usa-foss-programmer" title = "U.S.A. " _ my_acronym( "key" => "FOSS") _ " Programmer" %]
+[% WRAPPER h3_section id = "review--usa-foss-programmer" title = "U.S.A. " _ FOSS _ " Programmer" %]
 
 <p>
-A young U.S. [% my_acronym( "key" => "FOSS",) %] programmer (from Louisiana), who studied in high-school
+A young U.S. [% FOSS %] programmer (from Louisiana), who studied in high-school
 then, whom I forced…erm - requested to read my story, said: <q>This story is
 really great, but mostly it’s depressing me since I know no people like this
 locally. Still wonderful writing though</q>
@@ -147,7 +147,7 @@ locally. Still wonderful writing though</q>
 A U.S.-based female teenager who was also interested in Linux and
 open-source, and who was Pennsylvania-based and home-schooled, whom I’ll
 call “L”,
-conversed with me about the story on [% my_acronym( "key" => "IRC",) %] as follows:
+conversed with me about the story on [% IRC %] as follows:
 </p>
 
 <blockquote>

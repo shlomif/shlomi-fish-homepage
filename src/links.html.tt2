@@ -5,8 +5,6 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% SET NSFW = my_acronym( "key" => "NSFW",) %]
-
 [% default_toc %]
 
 <section>
@@ -846,7 +844,7 @@ Trek: The Next Generation</a> - an insanely funny cross of both
 <li>
 <a href="[% base_path %]humour/by-others/darien--everybody-is-free.html">Everybody’s
 Free (to Ping Timeout)</a> - a very amusing spoof where the 90’s anthem
-“Everybody’s Free (to Wear Sunscreen)” meets the [% my_acronym( "key" => "IRC",) %] world.
+“Everybody’s Free (to Wear Sunscreen)” meets the [% IRC %] world.
 </li>
 <li>
 <a href="[% base_path %]humour/GNU-Visual-Basic/GNU-Visual-Basic.html">GNU Visual
@@ -1748,7 +1746,7 @@ interesting Manga graphics and sketches.
 </li>
 <li>
 <a href="http://web-server.net/g/brasil/">Pictures from Brazil</a> - Pictures
-of Brazil from a trip by an [% my_acronym( "key" => "IRC",) %] correspondent.
+of Brazil from a trip by an [% IRC %] correspondent.
 </li>
 <li>
 <a href="http://www.daemonisch.be/">BSDs Wallpapers</a> - Wallpapers based

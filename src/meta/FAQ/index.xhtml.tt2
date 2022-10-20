@@ -9,8 +9,6 @@
 [% SET site_sources_url = base_path _ "meta/site-source/" %]
 
 [% SET childhood_mem = "Possibly worse, I lost many of my earliest childhood memories, as I thought about them and remembered them in English." %]
-[% SET FOSS = my_acronym( "key" => "FOSS",) %]
-[% SET IRC = my_acronym( "key" => "IRC",) %]
 [% SET SMG = 'Sarah Michelle Gellar' %]
 [% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
 
@@ -1264,7 +1262,7 @@ Some anecdotes regarding my experience with Chess enthusiasts are:
 
 <li>
 <p>
-Someone on [% my_acronym( "key" => "IRC",) %] told us that he thinks everyone should be forced to play Chess
+Someone on [% IRC %] told us that he thinks everyone should be forced to play Chess
 (in a true <a href="https://en.wikipedia.org/wiki/Authoritarianism">authoritarian</a>
 fashion in my opinion). This is while I recall reading that in
 <a href="https://en.wikipedia.org/wiki/South_Africa">South Africa</a>
@@ -2140,7 +2138,7 @@ paranoia, but otherwise very cool.
 <p>
 <a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">[% SMG %]</a>. She played <a
 href="https://buffy.fandom.com/wiki/Buffy_Summers">Buffy Summers</a>
-on [% my_acronym( "key" => "BtVS", ) %] and I was 20 at the time.
+on [% BtVS %] and I was 20 at the time.
 She is about my age, and I recall that her reported
 avoidance of consuming caffeine, alcohol, tobacco, and harder drugs,
 partly convinced me <a href="#diet">to avoid them as well</a>.
@@ -3130,7 +3128,7 @@ You can find a <a href="[% base_path %]meta/site-source/#techs_used">partial lis
 See <a href="#how_site_is_generated">above</a> - most of the site is generated
 using code and data and is served as static content on the server. There are
 about three
-[% my_acronym( "key" => "CGI",) %] scripts written in Perl 5 using
+[% CGI %] scripts written in Perl 5 using
 [% cpan.self_dist( "d" => "CGI-Minimal", ) %],
 or <a href="https://bottlepy.org/docs/dev/">Python and Bottle</a>
 but they do not serve most of the content.
@@ -4637,7 +4635,7 @@ plugin</a>.
 [% WRAPPER h4_section id = "explicit_licensing" title = "Why do you mention that a certain work or post is copyrighted by you and under a certain licence?" %]
 
 <p>
-First of all note that [% my_acronym( "key" => "IANAL" ) %]/etc. Anyway, I try
+First of all note that [% IANAL %]/etc. Anyway, I try
 to give explicit and more permissive licences (e.g: <a
 href="https://creativecommons.org/">Creative Commons</a> ones) to all my posts
 and works because otherwise they are <a

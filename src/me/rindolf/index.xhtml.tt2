@@ -7,8 +7,6 @@
 
 [% PROCESS "Inc/real_shlomif.tt2" %]
 
-[% SET IRC = my_acronym( "key" => "IRC",) %]
-
 [% BLOCK rindolf_floaty_img %]
 <a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
 [% END %]

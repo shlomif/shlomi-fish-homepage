@@ -1,3 +1,4 @@
+[% SET API = my_acronym( "key" => "API", ) %]
 [% SET BtVS = my_acronym( "key" => "BtVS", ) %]
 [% SET CGI = my_acronym( "key" => "CGI", ) %]
 [% SET DnD = my_acronym( "key" => "DnD", ) %]
@@ -5,6 +6,7 @@
 [% SET IANAL = my_acronym( "key" => "IANAL", ) %]
 [% SET IRC = my_acronym( "key" => "IRC", ) %]
 [% SET MPAA = my_acronym( "key" => "MPAA", ) %]
-[% SET NSFW = my_acronym( "key" => "NSFW",) %]
+[% SET NSFW = my_acronym( "key" => "NSFW", ) %]
 [% SET RIAA = my_acronym( "key" => "RIAA", ) %]
+[% SET SQL = my_acronym( "key" => "SQL", ) %]
 [% SET SVG = my_acronym( "key" => "SVG", ) %]

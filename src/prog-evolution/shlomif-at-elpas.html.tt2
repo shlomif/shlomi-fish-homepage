@@ -31,8 +31,6 @@ Last Updated:
 </dd>
 </dl>
 
-[% SET SQL = my_acronym( "key" => "SQL",) %]
-
 [% WRAPPER h2_section id = "how_i_started"  title = "How I started Working in Elpas"  %]
 
 <p>
@@ -126,7 +124,7 @@ a few other consultants who brought us to a realisation: since we needed to
 query the database in real time, we couldn’t afford to construct [% SQL %] queries
 send them to an [% SQL %] server that will parse them, process them relatively
 inefficiently, and then return the results over a stream which will need to
-be processed and parsed (to say nothing of [% my_acronym( "key" => "API",) %] overhead). We needed something
+be processed and parsed (to say nothing of [% API %] overhead). We needed something
 much faster, and my original vector-based database was as good as any.
 </p>
 

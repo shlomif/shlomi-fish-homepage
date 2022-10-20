@@ -214,7 +214,7 @@ All these computers served for our job in setting up sites for clients, using
 HTML (a very old version of it, which was best viewed in the Netscape browser,
 which was the de-facto standard), the
 <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache
-web server</a>, and [% my_acronym( "key" => "CGI",) %] scripts written in Perl
+web server</a>, and [% CGI %] scripts written in Perl
 5. Ah, the bad old days.
 </p>
 
@@ -254,7 +254,7 @@ UNIX and Windows.
 <p>
 I recall that the GNU site seemed like an FTP site with lots of cool software
 that came as source tarballs, and which I knew was free to download, compile
-and use, but did not delve too much into its [% my_acronym( "key" => "FOSS",) %]
+and use, but did not delve too much into its [% FOSS %]
 ideology, and did not care too much. I knew miniSQL was shareware with source,
 and understood I can use the GNU software without paying, but it took some time
 for me to get to the bottom of the whole “Free-as-in-speech Software” ideology.

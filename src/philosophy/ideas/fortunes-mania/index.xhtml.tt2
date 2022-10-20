@@ -41,7 +41,7 @@ few are categorised into the topics’ pages.
 
 <p>
 <a href="http://www.bash.org/">The Quote Database</a> is a collection of
-user-submitted [% my_acronym( "key" => "IRC",) %] conversations. The problem with it is that the quotes
+user-submitted [% IRC %] conversations. The problem with it is that the quotes
 still have to be accepted by the editors, and reportedly they have a large
 backlog. The quotes are not categorised in any way, and they are all plain
 text.
@@ -70,7 +70,7 @@ program is no longer satisfactory. By all means, fortunes should also contain
 styling, hyperlinks, various media, etc. One can think of several export
 formats: <a href="http://www.dpawson.co.uk/docbook/">DocBook/XML</a>, plain
 text, HTML, the various Wiki formats etc. One can also think of several
-import formats: plain text, [% my_acronym( "key" => "IRC",) %] conversations (whose logs have variable
+import formats: plain text, [% IRC %] conversations (whose logs have variable
 formats), HTML snippets, the various Wiki formats, etc.
 </p>
 

@@ -83,3 +83,8 @@ command! SP :s!\v( id *\= *)(.*)( href *\= *\"[^\"]+\")!\3\1\2!
 function! AddIDs()
     %s!\v(<h3)(.*)(/([^\/\"]+)/")!\1 id="\4"\2\3!
 endfunction
+
+function! ReplaceAcronym()
+    s/my_acronym( *"key" *=> *"\([a-zA-Z_]\+\)" *,\? *)/\1/
+endfunction
+s/my_acronym( *"key" *=> *"\([a-zA-Z_]\+\)" *,\? *)/\1/

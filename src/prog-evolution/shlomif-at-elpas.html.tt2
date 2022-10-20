@@ -31,7 +31,7 @@ Last Updated:
 </dd>
 </dl>
 
-[% WRAPPER h2_section id = "how_i_started"  title = "How I started Working in Elpas"  %]
+[% WRAPPER h2_section id = "how_i_started" title = "How I started Working in Elpas" %]
 
 <p>
 I started working in <a href="http://www.elpas.com/">Elpas</a> after I
@@ -71,12 +71,12 @@ system.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "start"  title = "Let’s start coding!"  %]
+[% WRAPPER h2_section id = "start" title = "Let’s start coding!" %]
 
 <p>
 I had a rough idea of what was required. So what I did was to gradually
 eliminate the <a href="http://www.birdstep.com/">Raima database</a> that was
-managed on  the UNIX, and to implement it internally in our program. I
+managed on the UNIX, and to implement it internally in our program. I
 started to do it using arrays of structs, which I binary searched to find a
 record, and then sorted using <code>qsort()</code> to add a new record. At that
 time, I was told this was called vectors, which now I know is just a fancy
@@ -92,7 +92,7 @@ that so they told me to start with Microsoft Access.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "access"  title = "Let’s start coding with Access"  %]
+[% WRAPPER h2_section id = "access" title = "Let’s start coding with Access" %]
 
 <p>
 Access... we had Access 2.0, and I had to find a way to work against it from
@@ -128,9 +128,15 @@ be processed and parsed (to say nothing of [% API %] overhead). We needed someth
 much faster, and my original vector-based database was as good as any.
 </p>
 
+<p>
+<b>Note:</b> given the facts that modern hardware is faster now,
+and that there are faster <a href="[% base_path %]open-source/resources/databases-list/">SQL/etc. databases</a> (for example: SQLite), then avoiding
+[% SQL %] may no longer be necessary.
+</p>
+
 [%- END -%]
 
-[% WRAPPER h2_section id = "back_to_basic"  title = "Back to Basics"  %]
+[% WRAPPER h2_section id = "back_to_basic" title = "Back to Basics" %]
 
 <p>
 So I started finishing the vector-based database, which was I had started
@@ -159,7 +165,7 @@ I finished the work some time before the date most of the other people at my
 office went to the CeBIT conference to present our products. I didn’t travel
 to Germany for it, and during the conference, I still came to work, to
 continue working on many of my priorities. My father and I still said to
-each other that “When the cats are away, the mice go out and play.”.
+each other that “When the cats are away, the mice will play.”.
 </p>
 
 <p>
@@ -172,7 +178,7 @@ products, and many of them were very impressed.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "why_i_quit"  title = "Why I quit?"  %]
+[% WRAPPER h2_section id = "why_i_quit" title = "Why I quit?" %]
 
 <p>
 For a long time I worked for minimal wage at Elpas. This was a bit before
@@ -185,7 +191,7 @@ programmers earned even twice as that.
 <p>
 Eventually my pay was raised somewhat, but it was still very low. So I decided
 to look for a better job. My friend told me about Cortext, who were a
-web-site shop, and I went to a job interview of sorts in Tel Aviv University,
+web-site development shop, and I went to a job interview of sorts in Tel Aviv University,
 where the future Cortextuals were about to graduate from TAU. There I was
 offered about 25 ILS/hour, which was still better, so I accepted, and quit
 my job in Elpas, after they hired a newer, more experienced programmer.
@@ -199,7 +205,7 @@ wage. Nevertheless, I was out of Elpas for good.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "conclusion"  title = "Conclusion"  %]
+[% WRAPPER h2_section id = "conclusion" title = "Conclusion" %]
 
 <p>
 I really liked working at Elpas because I learned many new concepts and
@@ -226,7 +232,7 @@ and we should have got some better consultants in the start.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "thanks"  title = "Thanks"  %]
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 Thanks to the Freenode people Windrose and uberspaced for reviewing this

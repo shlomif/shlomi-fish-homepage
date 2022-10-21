@@ -3046,7 +3046,6 @@ gospel, appalling, or obvious.
 
 [% WRAPPER github_captioned_image_joke id = "sic_transit_gloria_jenn_law" header = "Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/sic-transit-gloria--j-law" src = base_path _ "humour/images/sic-transit-gloria--j-law--Demotivational_Poster.svg.webp" alt = "Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”" %]
 
-
 [% WRAPPER quote %]
 <p>
 Sic Transit Gloria J-Law! “You used to be Sarah Michelle Who??”
@@ -3237,19 +3236,29 @@ attractive significant other at a time.
 
 [%- END -%]
 
+[% WRAPPER github_captioned_image_joke id = "mere_moral_compass" header = "“I am not a mere moral compass! I am a moral global positioning system!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/Moral-GPS" src = base_path _ "humour/images/captioned-image--moral-gps-600.webp" alt = "“I am not a mere moral compass! I am a moral global positioning system!”" %]
+
+[% WRAPPER quote %]
+<p>
+“I am not a mere moral compass! I am a moral global positioning system!”
+</p>
+[%- END -%]
+
+[%- END -%]
+
 </div>
 
 </section>
 
 <div class="english">
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id="license" title="Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2002", ) %]
 
 [% END %]
 
-[% WRAPPER h2_section id="credits" title="Credits"%]
+[% WRAPPER h2_section id="credits" title="Credits" %]
 
 <ul>
 

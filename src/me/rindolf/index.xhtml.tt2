@@ -11,6 +11,8 @@
 <a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
 [% END %]
 
+<div class="" id="main_text_wrapper">
+
 [% default_toc %]
 
 [% WRAPPER h2_section id = "what" title = "“Rindolf” - Shlomi Fish’s Nickname" %]
@@ -433,5 +435,7 @@ Gandalf photo with caption provided by a Facebook friend of a friend.
 </ul>
 
 [%- END -%]
+
+</div>
 
 [% END %]

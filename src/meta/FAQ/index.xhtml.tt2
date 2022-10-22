@@ -3140,6 +3140,26 @@ content, but the site's source code is not limited to Perl, and this code does
 not run on the web server, nor is required to serve most of it.
 </p>
 
+<p>
+I believe the [% CGI %] scripts are:
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/src/humour/fortunes/show.cgi">The fortune cookies' "show.cgi" script</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/bin/shlom.in-redirect">shlom.in’s service</a> - <a href="https://shlom.in/">https://shlom.in/</a> .
+</p>
+</li>
+
+</ol>
+
 [%- END -%]
 
 [% WRAPPER h3_section id = "broken_links" title = "I found some broken links on one of your sites. Should I report them to you?" %]

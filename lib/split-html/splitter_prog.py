@@ -461,7 +461,7 @@ def _screenplays_main():
     TOP_LEVEL_ID = 'main_text_wrapper'
     generic_generate_from_tt2_generated_plain_html5(
         OUT_DN=("./dest/post-incs/t2/me/rindolf/"),
-        base_path=("../" * 2),
+        base_path=("../" * 3),
         container_elem_xpath=(
             "self::node()[local-name()='div'][@id='" + TOP_LEVEL_ID + "']"
         ),

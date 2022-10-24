@@ -116,14 +116,6 @@ tags:
 include lib/make/sf-post-dest.mak
 include lib/make/pages-sects.mak
 
-fastrender: fastrender-tt2 $(SRC_FORTUNES_ALL__HTML)
-
-fastrender-tt2: $(FASTRENDER_DEPS)
-	@echo $(MAKE) fastrender-tt2
-	perl bin/tt-render.pl
-
-copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)
-
 TEST_TARGETS := Tests/*.{py,t}
 
 POST_DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images/fiery-Q.png

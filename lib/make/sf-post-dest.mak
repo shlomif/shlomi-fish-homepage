@@ -25,3 +25,11 @@ $(SRC_CLEAN_STAMP): $(BK2HP_NEW_PNG) $(DOCBOOK5_INSTALLED_EPUBS) $(FORTS_EPUB_DE
 	touch $@
 
 FASTRENDER_DEPS := $(patsubst $(PRE_DEST)/%,$(SRC_SRC_DIR)/%.tt2,$(SRC_DOCS_DEST)) all_deps
+
+fastrender: fastrender-tt2 $(SRC_FORTUNES_ALL__HTML)
+
+fastrender-tt2: $(FASTRENDER_DEPS)
+	@echo $(MAKE) fastrender-tt2
+	perl bin/tt-render.pl
+
+copy_images_target: $(SRC_IMAGES_DEST) $(SRC_COMMON_IMAGES_DEST)

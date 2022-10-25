@@ -356,6 +356,12 @@ herself.
 </p>
 </li>
 
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=clarissa-darling">"The story of Clarissa Darling (in the Selinaverse)"</a>
+</p>
+</li>
+
 </ul>
 EOF
             short_id   => 'clarissa',

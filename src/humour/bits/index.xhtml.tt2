@@ -101,7 +101,7 @@ A useful checklist.
 
 [% END %]
 
-[% WRAPPER h3_section id="cobol" href="COBOL-the-New-Age-Programming-Language/" title="COBOL - the New Age Programming Language" %]
+[% WRAPPER h3_section href = "COBOL-the-New-Age-Programming-Language/" id = "cobol" title = "COBOL - the New Age Programming Language" %]
 
 <p>
 The best programming language that ever existed or that can ever exist.
@@ -109,7 +109,7 @@ The best programming language that ever existed or that can ever exist.
 
 [% END %]
 
-[% WRAPPER h3_section id="it_s_an_os" href="It-s-not-a-Fooware-It-s-an-Operating-System/" title="It’s not a Fooware - It’s an Operating System" %]
+[% WRAPPER h3_section href = "It-s-not-a-Fooware-It-s-an-Operating-System/" id = "it_s_an_os" title = "It’s not a Fooware - It’s an Operating System" %]
 
 <p>
 Software applications which are so comprehensive that they contain (almost)
@@ -118,7 +118,7 @@ everything.
 
 [% END %]
 
-[% WRAPPER h3_section id="Im_the_Real_Tim_Toady" href="Im-The-Real-Tim-Toady/" title="“I’m the Real Tim Toady”" %]
+[% WRAPPER h3_section href = "Im-The-Real-Tim-Toady/" id = "Im_the_Real_Tim_Toady" title = "“I’m the Real Tim Toady”" %]
 
 <p>
 A Geeky Perl song inspired by “I'm the Real Slim Shady” by Eminem.
@@ -126,7 +126,7 @@ A Geeky Perl song inspired by “I'm the Real Slim Shady” by Eminem.
 
 [% END %]
 
-[% WRAPPER h3_section id="Can_I_SCO_Now" href="Can-I-SCO-Now/" title="“Can I SCO Now?”" %]
+[% WRAPPER h3_section href = "Can-I-SCO-Now/" id = "Can_I_SCO_Now" title = "“Can I SCO Now?”" %]
 
 <p>
 A geeky song sang to the music of “Can I Go Now?” by Jennifer Love Hewitt.
@@ -275,8 +275,6 @@ notable for having kept a fairly long streak of consecutive wins.
 This real-person-fiction ("RPF") screenplay presents a hypothesis of how she
 achieved that.
 </p>
-
-
 
 [% END %]
 

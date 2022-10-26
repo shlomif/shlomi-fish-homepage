@@ -76,6 +76,7 @@ let @b='[% main_class.addClass("fancy_sects") %]'
 " map <F6> /\v\<get-var \S+ *\/ *\%\]<cr>:s/\v\<get-var (\S+) *\/ *\%\]/\${\1}/<cr>:s/\v\/?\>$/%]/<cr>
 map <F6> :S<cr>
 map <F6> :H<cr>
+map <F7> :S<cr>
 command! I :%s!\vinkscape(.*)\-\-export\-png!\$(INKSCAPE_WRAPPER)\1--export-type=png --export-file!
 command! SM :Ack 'main_class' src/
 command! SP :s!\v( id *\= *)(.*)( href *\= *\"[^\"]+\")!\3\1\2!

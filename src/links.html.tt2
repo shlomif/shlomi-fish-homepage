@@ -180,9 +180,7 @@ Haifux.
 
 [% END %]
 
-<section>
-
-<h3 id="foss_hackers_il"><a href="https://groups.yahoo.com/neo/groups/hackers-il/info">Hackers-IL</a></h3>
+[% WRAPPER h3_section href = "https://groups.yahoo.com/neo/groups/hackers-il/info" id = "foss_hackers_il" title = "Hackers-IL" %]
 
 <p>
 Hackers-IL is a community of Israeli-oriented
@@ -190,18 +188,18 @@ Hackers-IL is a community of Israeli-oriented
 (= technological enthusiasts, not computer intruders) focused on discussing
 philosophical computing issues and discussing other areas of science.
 </p>
-</section>
-<section>
 
-<h3 id="foss_advogato"><a href="http://www.advogato.org/">Advogato - Open-Source Advocacy</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.advogato.org/" id = "foss_advogato" title = "Advogato - Open-Source Advocacy" %]
 
 <p>
 A web-site dedicated to open-source advocacy.
 </p>
-</section>
-<section>
 
-<h3 id="foss_perl"><a href="http://www.perl.org/">Perl</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.perl.org/" id = "foss_perl" title = "Perl" %]
 
 <p>
 Perl is a high-level, dynamic and powerful programming language. I hope
@@ -233,17 +231,14 @@ by chromatic about Modern Perl programming.
 </li>
 
 </ul>
-</section>
+
+[% END %]
 
 </section>
 
-<section>
+[% WRAPPER h2_section id = "software_gurus" title = "Software “Gurus”" %]
 
-<h2 id="software_gurus">Software “Gurus”</h2>
-
-<section>
-
-<h3 id="software_gurus_esr"><a href="http://www.catb.org/~esr/">Eric S. Raymond</a></h3>
+[% WRAPPER h3_section href = "http://www.catb.org/~esr/" id = "software_gurus_esr" title = "Eric S. Raymond" %]
 
 <p>
 Eric Raymond is the number one Open-Source Guru. On his homepage one can
@@ -251,11 +246,9 @@ find the seminal <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">T
 engineer should read), and other truly enlightening articles.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_joel_on_software"><a href="http://www.joelonsoftware.com/">Joel on Software</a></h3>
+[% WRAPPER h3_section href = "http://www.joelonsoftware.com/" id = "software_gurus_joel_on_software" title = "Joel on Software" %]
 
 <p>
 Joel Spolsky is an experienced information technology worker who maintains
@@ -265,22 +258,18 @@ there, but some of his articles are very enlightening. He also has a
 funny and amusing style of writing.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_paul_graham"><a href="http://www.paulgraham.com/">Paul Graham</a></h3>
+[% WRAPPER h3_section href = "http://www.paulgraham.com/" id = "software_gurus_paul_graham" title = "Paul Graham" %]
 
 <p>
 Paul Graham is an experienced programmer in LISP and other languages.
 His articles are insightful, interesting and thought-provoking.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_david_a_wheeler"><a href="http://www.dwheeler.com/">David A. Wheeler</a></h3>
+[% WRAPPER h3_section href = "http://www.dwheeler.com/" id = "software_gurus_david_a_wheeler" title = "David A. Wheeler" %]
 
 <p>
 An open source engineer and consultant. His lines-of-code counter program
@@ -288,11 +277,9 @@ An open source engineer and consultant. His lines-of-code counter program
 is much more awe-striking. Has other good articles.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_linas_vepstas"><a href="http://linas.org/">Linas Vepstas</a></h3>
+[% WRAPPER h3_section href = "http://linas.org/" id = "software_gurus_linas_vepstas" title = "Linas Vepstas" %]
 
 <p>
 His web-site contains pages with a lot of information about RAID in Linux,
@@ -300,11 +287,9 @@ CORBA, clusters, bug tracking, and other topics. Also has some software he
 wrote, papers on software freedom and other oddities.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_rick_moen"><a href="http://www.linuxmafia.com/~rick/">Rick Moen</a></h3>
+[% WRAPPER h3_section href = "http://www.linuxmafia.com/~rick/" id = "software_gurus_rick_moen" title = "Rick Moen" %]
 
 <p>
 Net-geek for hire and Linux Guru extra-ordinaire. Contains more philosophical
@@ -313,12 +298,9 @@ forking does not happen a lot and is not a threat, and a guide to establishing
 a successful Linux User Group.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_goingware"><a href="http://www.goingware.com/">Michael David
-Crawford (GoingWare)</a></h3>
+[% WRAPPER h3_section href = "http://www.goingware.com/" id = "software_gurus_goingware" title = "Michael David Crawford (GoingWare)" %]
 
 <p>
 His web-site contains a large collection of articles for interest. Among them
@@ -326,11 +308,9 @@ there is <a href="http://www.goingware.com/tips/legal-downloads.html">“Links
 to Tens of Thousands of Legal Music Downloads”</a>.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_gurus_jamie_zawinsky"><a href="http://www.jwz.org/">Jamie Zawinski</a></h3>
+[% WRAPPER h3_section href = "http://www.jwz.org/" id = "software_gurus_jamie_zawinsky" title = "Jamie Zawinski" %]
 
 <p>
 A very famous software developer, and his homepage that contains a lot of
@@ -339,9 +319,9 @@ interesting information and links. See also
 about him</a>.
 </p>
 
-</section>
+[% END %]
 
-</section>
+[% END %]
 
 <section>
 

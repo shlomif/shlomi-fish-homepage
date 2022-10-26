@@ -727,9 +727,7 @@ MOD player.
 
 [% END %]
 
-<section>
-
-<h2 id="humour">Humour</h2>
+[% WRAPPER h2_section id = "humour" title = "Humour" %]
 
 <ul>
 <li>
@@ -763,9 +761,8 @@ Wikipedia</a>. Includes <a href="http://uncyclopedia.org/wiki/Redundancy">an art
 Humor Collection</a> - contains several directories of various jokes.
 </li>
 </ul>
-<section>
 
-<h3 id="humour_cartoon_strips">Cartoon Strips</h3>
+[% WRAPPER h3_section id = "humour_cartoon_strips" title = "Cartoon Strips" %]
 
 <ul>
 <li>
@@ -858,10 +855,10 @@ random thoughts. Pretty funny.
 </li>
 
 </ul>
-</section>
-<section>
 
-<h3 id="humour_funny_stories">Funny Stories</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "humour_funny_stories" title = "Funny Stories" %]
 
 <ul>
 <li>
@@ -1200,10 +1197,10 @@ post to the Linux kernel mailing list on 1 April 2016.
 </li>
 
 </ul>
-</section>
-<section>
 
-<h3 id="humour_funny_pictures">Funny Pictures</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "humour_funny_pictures" title = "Funny Pictures" %]
 
 <ul>
 <li>
@@ -1237,10 +1234,10 @@ mirror</a>.)
 </li>
 
 </ul>
-</section>
-<section>
 
-<h3 id="humour_funny_videos">Funny or Fun Videos</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "humour_funny_videos" title = "Funny or Fun Videos" %]
 
 <ul>
 <li>
@@ -1427,11 +1424,7 @@ open source software. I especially like <i>Big Buck Bunny</i>, the <i>Caminandes
 </li>
 </ul>
 
-<section>
-
-<header>
-<h4 id="motivational_videos">Motivational Videos</h4>
-</header>
+[% WRAPPER h4_section id = "motivational_videos" title = "Motivational Videos" %]
 
 <ul>
 
@@ -1546,7 +1539,7 @@ from <i>Not Another Teen Movie</i></a> - funny but better than many serious ones
 
 </ul>
 
-</section>
+[% END %]
 
 [% WRAPPER h4_section id = "rule_bending" title = "Rule bending ; “do what you want” ; hacking"  %]
 
@@ -1668,11 +1661,9 @@ from the film <a href="https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_T
 
 [% END %]
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="funny_music">Funny Music</h3>
+[% WRAPPER h3_section id = "funny_music" title = "Funny Music" %]
 
 <ul>
 
@@ -1688,10 +1679,9 @@ catonmat.com.
 
 </ul>
 
-</section>
-<section>
+[% END %]
 
-<h3 id="online_games">Online Games and Puzzles</h3>
+[% WRAPPER h3_section id = "online_games" title = "Online Games and Puzzles" %]
 
 <ul>
 <li>
@@ -1743,12 +1733,12 @@ problems using the computer.
 </li>
 
 </ul>
-</section>
 
-</section>
+[% END %]
 
-<section>
-<h2 id="pictures">Wallpapers and Other Pictures</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "pictures" title = "Wallpapers and Other Pictures" %]
 
 <ul>
 <li>
@@ -1828,10 +1818,10 @@ Desktop Wallpapers for Widescreen, High Definition, Mobile” - several
 categories.
 </li>
 </ul>
-</section>
 
-<section>
-<h2 id="music">Music to Buy and Download</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "music" title = "Music to Buy and Download" %]
 
 <ul>
 <li>
@@ -1857,9 +1847,7 @@ Download and listen to many albums, of many genres, legally.
 </li>
 </ul>
 
-<section>
-
-<h3 id="music-free-downloads">Free Musical Downloads</h3>
+[% WRAPPER h3_section id = "music-free-downloads" title = "Free Musical Downloads" %]
 
 <ul>
 
@@ -1899,11 +1887,12 @@ Danger”.
 </li>
 
 </ul>
-</section>
 
-</section>
-<section>
-<h2 id="web_design">Web Design and Programming</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "web_design" title = "Web Design and Programming" %]
 
 <ul>
 <li>
@@ -1932,10 +1921,10 @@ Names</a> -a list of the HTML colour names that are accepted by the browsers,
 and will be part of CSS 3.0.
 </li>
 </ul>
-</section>
-<section>
 
-<h2 id="various">Various Sites of Interest</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "various" title = "Various Sites of Interest" %]
 
 <ul>
 <li>
@@ -1951,6 +1940,7 @@ predictions of 2009.”</a>.
 </li>
 
 </ul>
-</section>
+
+[% END %]
 
 [% END %]

@@ -519,10 +519,7 @@ and Hebrew podcast about Free Software and other Tech issues.
 
 [% END %]
 
-<section>
-
-<h2 id="net_search">Favourite Pages for Searching and Locating Resources on
-the Web</h2>
+[% WRAPPER h2_section id = "net_search" title = "Favourite Pages for Searching and Locating Resources on the Web" %]
 
 <p>
 Here’s a list of some of my favourite sites on the web that can direct
@@ -544,11 +541,10 @@ utilities.
 <li><a href="http://freecode.com/">Freecode</a> - a comprehensive directory of
 software for Linux (no longer updated)</li>
 </ul>
-</section>
 
-<section>
+[% END %]
 
-<h2 id="reference_sites">Interesting Reference Sites</h2>
+[% WRAPPER h2_section id = "reference_sites" title = "Interesting Reference Sites" %]
 
 <ul>
 
@@ -657,25 +653,19 @@ for portability.
 </li>
 </ul>
 
-</section>
+[% END %]
 
-<section>
+[% WRAPPER h2_section id = "software" title = "Software" %]
 
-<h2 id="software">Software</h2>
-
-<section>
-
-<h3 id="software_foss"><a href="[% base_path %]open-source/favourite/">Open Source Software</a></h3>
+[% WRAPPER h3_section href = "${base_path}open-source/favourite/" id = "software_foss" title = "Open Source Software" %]
 
 <p>
 Refer to this link, for a page about my favourite open source.
 </p>
 
-</section>
+[% END %]
 
-<section>
-
-<h3 id="software_commercial">Non-open-source software</h3>
+[% WRAPPER h3_section id = "software_commercial" title = "Non-open-source software" %]
 
 <p>
 Who says all commercial software is bad? Here’s some of the
@@ -699,10 +689,10 @@ Alpha translucency well. (For a program with this capability, my favourite
 is the open-source <a href="http://www.inkscape.org/">Inkscape</a>.)
 </li>
 </ul>
-</section>
 
-<section>
-<h3 id="mod_music_files">MOD Files</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "mod_music_files" title = "MOD Files" %]
 
 <p>
 MOD Files are music files that are based on recorded instruments, played at
@@ -732,8 +722,10 @@ library.</li>
 MOD player.
 </li>
 </ul>
-</section>
-</section>
+
+[% END %]
+
+[% END %]
 
 <section>
 

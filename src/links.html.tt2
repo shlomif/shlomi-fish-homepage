@@ -7,43 +7,47 @@
 
 [% default_toc %]
 
-<section>
-<h2 id="studies">Studies Related</h2>
+[% WRAPPER h2_section id = "studies" title = "Studies Related" %]
 
-<h3 id="technion"><a href="http://www.technion.ac.il/">The Technion Home Page</a></h3>
+[% WRAPPER h3_section href = "http://www.technion.ac.il/" id = "technion" title = "The Technion Home Page" %]
 
 <p>
 The university where I studied.
 </p>
 
-<h3 id="technion_ee"><a href="http://www.ee.technion.ac.il/">Department of Electrical Engineering</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.ee.technion.ac.il/" id = "technion_ee" title = "Department of Electrical Engineering" %]
 
 <p>
 My Department.
 </p>
 
-<h3 id="technion_ee_comnet"><a href="http://comnet.technion.ac.il/">The Computer Networks Laboratory</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://comnet.technion.ac.il/" id = "technion_ee_comnet" title = "The Computer Networks Laboratory" %]
 
 <p>
 A very cool laboratory where I did my projects and liked to hang out in.
 </p>
 
-</section>
+[% END %]
 
-<h2 id="current_workplaces">Current Workplaces</h2>
+[% END %]
 
-<section>
-<h2 id="past_workplaces">Past Workplaces</h2>
+[% WRAPPER h2_section id = "current_workplaces" title = "Current Workplaces" %]
 
+[% WRAPPER h2_section id = "past_workplaces" title = "Past Workplaces" %]
 
-<h3 id="workplaces_rsip"><a href="http://rsip-vision.com/">Ron
-Soferman Image Processing (RSIP)</a></h3>
+[% WRAPPER h3_section href = "http://rsip-vision.com/" id = "workplaces_rsip" title = "Ron Soferman Image Processing (RSIP)" %]
 
 <p>
 An Image Processing Consulting Firm.
 </p>
 
-<h3 id="past_workplaces_pti"><a href="http://www.pti.co.il/">PTI - Perl Technology Israel</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.pti.co.il/" id = "past_workplaces_pti" title = "PTI - Perl Technology Israel" %]
 
 <p>
 PTI is a small consulting and training firm that specialises in open source
@@ -53,20 +57,23 @@ system</a>, and <a href="https://en.wikipedia.org/wiki/Git">Git</a>. They are ve
 many important events and activities.
 </p>
 
-<h3 id="past_workplaces_elpas"><a href="http://www.elpas.co.il/">Elpas Electro-optic Systems Ltd.</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.elpas.co.il/" id = "past_workplaces_elpas" title = "Elpas Electro-optic Systems Ltd." %]
 
 <p>
 These are my previous workplaces. Check them out, if you’d like.
 </p>
 
-</section>
+[% END %]
 
-<section>
+[% END %]
+
+[% END %]
+
 <h2 id="philosophy">Philosophy and Politics</h2>
 
-<section>
-
-<h3 id="philosophy_objectivism"><a href="http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/">The Google Directory Objectivism Branch</a></h3>
+[% WRAPPER h3_section href = "http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/" id = "philosophy_objectivism" title = "The Google Directory Objectivism Branch" %]
 
 <p>
 I became very interested in Objectivism in the past few years, so I recommend
@@ -81,11 +88,10 @@ The Google Directory branch (based on
 for Objectivist resources on the web, and there is a lot of introductory
 material there.
 </p>
-</section>
 
-<section>
+[% END %]
 
-<h3 id="philosophy_neo_tech"><a href="http://www.neo-tech.com/">The Neo-Tech Homepage</a></h3>
+[% WRAPPER h3_section href = "http://www.neo-tech.com/" id = "philosophy_neo_tech" title = "The Neo-Tech Homepage" %]
 
 <p>
 “Neo-Tech” is an extension of Objectivism that I also became familiar with. It
@@ -105,9 +111,10 @@ See my <a href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">guide t
 Neo Tech</a> for an explanation on how to use the material that can be found
 online.
 </p>
-</section>
-<section>
-<h3 id="godless_geeks"><a href="http://www.godlessgeeks.com/">Atheists of Silicon Valley</a></h3>
+
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.godlessgeeks.com/" id = "godless_geeks" title = "Atheists of Silicon Valley" %]
 
 <p>
 Many good resources about Atheism. Includes:
@@ -117,7 +124,8 @@ Three Hundreds Proofs of God’s Existence</a> (humorous), and
 <a href="http://www.godlessgeeks.com/LINKS/BibleQuotes.htm">Quotes from
 the Christian Bible</a>.
 </p>
-</section>
+
+[% END %]
 
 </section>
 
@@ -148,9 +156,8 @@ Users - now part of the activity of “Hamakor”, the Israeli Society for
 open-source software.
 </p>
 </section>
-<section>
 
-<h3 id="foss_haifux"><a href="http://www.haifux.org/">The Haifa Linux Club</a></h3>
+[% WRAPPER h3_section href = "http://www.haifux.org/" id = "foss_haifux" title = "The Haifa Linux Club" %]
 
 <p>
 The Haifa Linux Club (or Haifux for short) gives lectures on Linux-related
@@ -159,10 +166,10 @@ topics every two weeks, and organises other events, such as
 lectures on a myriad of topics there, and enjoy going to listen to the
 other people lecturing.
 </p>
-</section>
-<section>
 
-<h3 id="foss_telux"><a href="http://www.cs.tau.ac.il/telux/">Tel Aviv Open Source Club</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.cs.tau.ac.il/telux/" id = "foss_telux" title = "Tel Aviv Open Source Club" %]
 
 <p>
 The Tel Aviv Open Source Club (or Telux or TelFOSS for short) is a club in a
@@ -170,7 +177,9 @@ similar format to Haifux. Due to the fact that I had been living in Tel
 Aviv, I tended to attend its lectures and be more active there, instead of in
 Haifux.
 </p>
-</section>
+
+[% END %]
+
 <section>
 
 <h3 id="foss_hackers_il"><a href="https://groups.yahoo.com/neo/groups/hackers-il/info">Hackers-IL</a></h3>

@@ -323,9 +323,7 @@ about him</a>.
 
 [% END %]
 
-<section>
-
-<h2 id="friends">My Friends’ Home Pages</h2>
+[% WRAPPER h2_section id = "friends" title = "My Friends’ Home Pages" %]
 
 <ul>
 
@@ -390,9 +388,7 @@ open source projects including 3dpl (= a three dimensional programming language)
 
 </ul>
 
-<section>
-
-<h3 id="friends_haifux">Haifa Linux Clubbers</h3>
+[% WRAPPER h3_section id = "friends_haifux" title = "Haifa Linux Clubbers" %]
 
 <ul>
 
@@ -421,11 +417,10 @@ open source projects including 3dpl (= a three dimensional programming language)
 </li>
 
 </ul>
-</section>
 
-<section>
+[% END %]
 
-<h3 id="friends_perl_il">Israeli Perl Mongers</h3>
+[% WRAPPER h3_section id = "friends_perl_il" title = "Israeli Perl Mongers" %]
 
 <ul>
 
@@ -455,10 +450,9 @@ open source projects including 3dpl (= a three dimensional programming language)
 
 </ul>
 
-</section>
-<section>
+[% END %]
 
-<h3 id="friends_weblogs">Weblogs I like to read</h3>
+[% WRAPPER h3_section id = "friends_weblogs" title = "Weblogs I like to read" %]
 
 <p>
 Weblogs are the latest (as of late 2003) craze in the Internet and everybody
@@ -485,10 +479,10 @@ mostly personal stuff, literary impressions, etc.</li>
 at use.perl.org</a> - kept strictly related to his Perl activities. As a result,
 it has a high signal-to-noise ratio, but it’s not updated often.</li>
 </ul>
-</section>
-<section>
 
-<h3 id="netcasts">Netcasts</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "netcasts" title = "Netcasts" %]
 
 <p>
 Netcasts (or Audiocasts/videocasts/vlogs/podcasts) are irregularly updated
@@ -520,8 +514,10 @@ and Hebrew podcast about Free Software and other Tech issues.
 </li>
 
 </ul>
-</section>
-</section>
+
+[% END %]
+
+[% END %]
 
 <section>
 

@@ -129,8 +129,7 @@ the Christian Bible</a>.
 
 </section>
 
-<section>
-<h2 id="foss">Linux and Free Software</h2>
+[% WRAPPER h2_section id = "foss" title = "Linux and Free Software" %]
 
 <section>
 <h3 id="foss_linux"><a href="http://www.linux.org/">The Linux’s Homepage</a></h3>
@@ -242,7 +241,7 @@ by chromatic about Modern Perl programming.
 
 [% END %]
 
-</section>
+[% END %]
 
 [% WRAPPER h2_section id = "software_gurus" title = "Software “Gurus”" %]
 

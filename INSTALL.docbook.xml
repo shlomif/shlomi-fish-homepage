@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+<info>
+<title>shlomifish.org INSTALL [by Shlomi Fish]</title>
+<date>2022-10-27</date>
+<authorgroup>
+<author>
+<personname>
+<firstname>Shlomi</firstname>
+<surname>Fish</surname>
+</personname>
+<affiliation>
+<address>
+<email>shlomif@shlomifish.org</email>
+<uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+</address>
+</affiliation>
+</author>
+</authorgroup>
+<copyright>
+<year>2022</year>
+<holder>Shlomi Fish</holder>
+</copyright>
+<legalnotice xml:id="main_legal_notice">
+<info>
+<title>CC-by dedication</title>
+</info>
+<para>
+<!--Creative Commons License-->
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License (CC-by)</link> (or at your option a greater version of it).
+</para>
+</legalnotice>
+</info>
+
+<section xml:id="main">
+
+<info>
+<title>Main</title>
+</info>
+
+<para>
+Follow the following steps to build the homesite:
+</para>
+<orderedlist numeration="arabic">
+<listitem>
+<para>
+Install git - http://git-scm.com/ .
+</para>
+</listitem>
+<listitem>
+<para>
+Install perl 5.16.x (or later) in case it’s not already installed.
+You should have a package for it for your system.
+</para>
+</listitem>
+<listitem>
+<para>
+Install Website Meta Language (version 2.28.0 or later):
+</para>
+</listitem>
+</orderedlist>
+<para>
+https://github.com/thewml/website-meta-language/releases
+</para>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="4">
+<para>
+Run and configure CPAN (see - https://perl-begin.org/topics/cpan/
+) and type:
+</para>
+</listitem>
+</orderedlist>
+<programlisting language="bash">
+export PERL_MM_USE_DEFAULT=1
+perl -MCPAN -e 'install App::Deps::Verify Task::Sites::ShlomiFish'
+</programlisting>
+<para>
+or:
+</para>
+<programlisting language="bash">
+export PERL_MM_USE_DEFAULT=1
+perl -MCPANPLUS -e 'install App::Deps::Verify Task::Sites::ShlomiFish'
+</programlisting>
+<para>
+or:
+</para>
+<programlisting language="bash">
+export PERL_MM_USE_DEFAULT=1
+cpanm App::Deps::Verify Task::Sites::ShlomiFish
+</programlisting>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="5">
+<para>
+Install Latemp:
+</para>
+</listitem>
+</orderedlist>
+<para>
+See https://web-cpan.shlomifish.org/latemp/ and
+https://github.com/thewml/latemp .
+</para>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="6">
+<para>
+Add Latemp to the beginning of your path:
+</para>
+</listitem>
+</orderedlist>
+<programlisting language="bash">
+PATH=&quot;$HOME/apps/latemp/bin:$PATH&quot;
+</programlisting>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="7">
+<para>
+Install the latest version of Quad-Pres from:
+</para>
+</listitem>
+</orderedlist>
+<para>
+See https://www.shlomifish.org/quad-pres/ and
+https://github.com/shlomif/quad-pres
+</para>
+<programlisting language="bash">
+git clone https://github.com/shlomif/quad-pres
+cd quad-pres/installer
+</programlisting>
+<para>
+See its INSTALL file. Put a working <literal>quadp</literal>
+executable in your shell’s PATH.
+</para>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="8">
+<para>
+Install the wml-affiliations.
+</para>
+</listitem>
+</orderedlist>
+<programlisting language="bash">
+git clone https://github.com/shlomif/wml-affiliations trunk
+cd trunk/wml
+bash Install.bash
+</programlisting>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="9">
+<para>
+Install the wml-extended-apis:
+</para>
+</listitem>
+</orderedlist>
+<programlisting language="bash">
+git clone https://github.com/thewml/wml-extended-apis trunk
+cd trunk/xhtml/1.x/
+bash Install.bash
+</programlisting>
+<orderedlist numeration="arabic">
+<listitem override="10">
+<para>
+Install <link xlink:href="https://inkscape.org/">inkscape</link> -
+version 1.0.x-or-later is recommended, and put its executable in
+the path.
+</para>
+</listitem>
+<listitem>
+<para>
+Install jing and put it in the path:
+</para>
+</listitem>
+</orderedlist>
+<para>
+http://www.thaiopensource.com/relaxng/jing.html
+</para>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="12">
+<para>
+Install Apache FOP and put it in the path:
+</para>
+</listitem>
+</orderedlist>
+<para>
+http://xmlgraphics.apache.org/fop/
+</para>
+<orderedlist numeration="arabic">
+<listitem override="13">
+<para>
+Install
+<link xlink:href="http://optipng.sourceforge.net/">optipng</link>
+and put it in the path
+</para>
+</listitem>
+<listitem>
+<para>
+Put the XHTML 1.1 DTDs , the XHTML 1.0 DTDs , etc. in your
+<literal>XML_CATALOG_FILES</literal> environment variable.
+</para>
+</listitem>
+</orderedlist>
+<para>
+An easy way to do that is to do:
+</para>
+<programlisting language="bash">
+git clone https://github.com/w3c/markup-validator.git
+</programlisting>
+<para>
+And set <literal>XML_CATALOG_FILES</literal> to
+<quote>/etc/xml/catalog
+$(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml</quote>
+</para>
+<orderedlist numeration="arabic" spacing="compact">
+<listitem override="15">
+<para>
+Do the following to build the site, after all dependencies were
+installed:
+</para>
+</listitem>
+</orderedlist>
+<programlisting language="bash">
+git clone https://github.com/shlomif/shlomi-fish-homepage.git trunk
+cd trunk
+./gen-helpers
+gmake
+gmake docbook_extended
+gmake test
+</programlisting>
+<para>
+The site’s pages and data files should be in
+<literal>dest/post-incs/t2/</literal> .
+</para>
+</section>
+</article>

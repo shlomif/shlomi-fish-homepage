@@ -28,7 +28,7 @@ If you have any other questions or comments regarding this series, then
 
 [%- END -%]
 
-<h2 id="material">Available Material</h2>
+[% WRAPPER h2_section id = "material" title = "Available Material" %]
 
 <div class="visible">
 <table>
@@ -73,13 +73,17 @@ material on the slides. (<a href="lecture5-heb-notes.html">HTML format</a>.)
 </li>
 </ul>
 
-<h3 id="external-material">From External Sources</h3>
+[% WRAPPER h3_section id = "external-material" title = "From External Sources" %]
 
 <ul>
 <li>
 <a href="vhll-slides.pdf">“The Taming of the Camel” by Larry Wall</a>
 </li>
 </ul>
+
+[% END %]
+
+[% END %]
 
 [% WRAPPER links_sect  %]
 

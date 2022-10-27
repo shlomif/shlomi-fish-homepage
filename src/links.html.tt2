@@ -71,7 +71,7 @@ These are my previous workplaces. Check them out, if you’d like.
 
 [% END %]
 
-<h2 id="philosophy">Philosophy and Politics</h2>
+[% WRAPPER h2_section id = "philosophy" title = "Philosophy and Politics" %]
 
 [% WRAPPER h3_section href = "http://www.google.com/Top/Society/Philosophy/Movements/Objectivism/" id = "philosophy_objectivism" title = "The Google Directory Objectivism Branch" %]
 
@@ -127,13 +127,11 @@ the Christian Bible</a>.
 
 [% END %]
 
-</section>
+[% END %]
 
 [% WRAPPER h2_section id = "foss" title = "Linux and Free Software" %]
 
-<section>
-<h3 id="foss_linux"><a href="http://www.linux.org/">The Linux’s Homepage</a></h3>
-<h3 id="foss_hamakor"><a href="http://www.hamakor.org.il/">Hamakor - The Israeli Society for Free &amp; Open Source Software</a></h3>
+[% WRAPPER h3_section href = "http://www.linux.org/" id = "foss_linux" title = "The Linux’s Homepage" %]
 
 <p>
 I’m very interested in computers. For a long time I knew DOS and Windows were
@@ -150,11 +148,20 @@ on his computer.
 
 <p>
 The Linux’s homepage contains most of the information you’ll need to know about
-the Linux operating system. I’m also a member of the Israeli Group of Linux
+the Linux operating system.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.hamakor.org.il/" id = "foss_hamakor" title = "Hamakor - The Israeli Society for Free &amp; Open Source Software" %]
+
+<p>
+I’m also a member of the Israeli Group of Linux
 Users - now part of the activity of “Hamakor”, the Israeli Society for
 open-source software.
 </p>
-</section>
+
+[% END %]
 
 [% WRAPPER h3_section href = "http://www.haifux.org/" id = "foss_haifux" title = "The Haifa Linux Club" %]
 

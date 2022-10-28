@@ -7,87 +7,228 @@
 <h2>Part 1: Command Line</h2>
 
 <ol>
-<li>Opening a terminal. (The Terminal Icon on KDE)</li>
+<li>
+<p>
+Opening a terminal. (The Terminal Icon on KDE)
+</p>
+</li>
 
-<li>Exiting from a terminal. (exit or the X button)</li>
+<li>
+<p>
+Exiting from a terminal. (exit or the X button)
+</p>
+</li>
 
-<li>The Command Loop</li>
+<li>
+<p>
+The Command Loop
+</p>
+</li>
 
-<li>cd</li>
+<li>
+<p>
+cd
+</p>
+</li>
 
-<li>pwd</li>
+<li>
+<p>
+pwd
+</p>
+</li>
 
-<li>ls<br />
+<li>
+<p>
+ls<br />
 <ul>
 <li>
+<p>
 Flags: -l -a -R
+</p>
 </li>
 </ul>
+</p>
 </li>
 
-<li>mkdir</li>
+<li>
+<p>
+mkdir
+</p>
+</li>
 
-<li>cp<br />
+<li>
+<p>
+cp<br />
 <ul>
-<li>Flags: -r -i -f</li>
+<li>
+<p>
+Flags: -r -i -f
+</p>
+</li>
 </ul>
+</p>
 </li>
 
-<li>mv<br />
+<li>
+<p>
+mv<br />
 <ul>
-<li>Flags: -i -f</li>
+<li>
+<p>
+Flags: -i -f
+</p>
+</li>
 </ul>
+</p>
 </li>
 
-<li>rm<br />
+<li>
+<p>
+rm<br />
 <ul>
-<li>Flags: -r -i -f</li>
+<li>
+<p>
+Flags: -r -i -f
+</p>
+</li>
 </ul>
+</p>
 </li>
 
-<li>wildcards and their use (*, ?, [ ])</li>
+<li>
+<p>
+wildcards and their use (*, ?, [ ])
+</p>
+</li>
 
-<li>less/more<br />
+<li>
+<p>
+less/more<br />
 <ol>
-<li>Quitting with q</li>
-<li>Next Page with space/Page-Down</li>
-<li>Previous Page with b/Page-Up</li>
-<li>To the end with &gt;</li>
-<li>To the beginning with &lt;</li>
-<li>One line down with Down-Arrow/j</li>
-<li>One line up with Up-Arrow/k</li>
-<li>Moving Sideways: Right-Arrow/Left-Arrow</li>
-<li>Searching with / (forward) and ? (backward)</li>
+<li>
+<p>
+Quitting with q
+</p>
+</li>
+<li>
+<p>
+Next Page with space/Page-Down
+</p>
+</li>
+<li>
+<p>
+Previous Page with b/Page-Up
+</p>
+</li>
+<li>
+<p>
+To the end with &gt;
+</p>
+</li>
+<li>
+<p>
+To the beginning with &lt;
+</p>
+</li>
+<li>
+<p>
+One line down with Down-Arrow/j
+</p>
+</li>
+<li>
+<p>
+One line up with Up-Arrow/k
+</p>
+</li>
+<li>
+<p>
+Moving Sideways: Right-Arrow/Left-Arrow
+</p>
+</li>
+<li>
+<p>
+Searching with / (forward) and ? (backward)
+</p>
+</li>
 </ol>
+</p>
 </li>
 
-<li>kdehelp</li>
+<li>
+<p>
+kdehelp
+</p>
+</li>
 
-<li>man</li>
+<li>
+<p>
+man
+</p>
+</li>
 
-<li>makewhatis + apropos</li>
+<li>
+<p>
+makewhatis + apropos
+</p>
+</li>
 
-<li>The “--help” and “-h” switches.</li>
+<li>
+<p>
+The “--help” and “-h” switches.
+</p>
+</li>
 
-<li>find<br />
+<li>
+<p>
+find<br />
 <ul>
-<li>Flags: -name</li>
+<li>
+<p>
+Flags: -name
+</p>
+</li>
 </ul>
+</p>
 </li>
 
-<li>Piping:<br />
+<li>
+<p>
+Piping:<br />
 <ul>
-<li>&gt;</li>
-<li> |, </li>
-<li>2&gt;&amp;1</li>
+<li>
+<p>
+&gt;
+</p>
+</li>
+<li>
+<p> |, </p>
+</li>
+<li>
+<p>
+2&gt;&amp;1
+</p>
+</li>
 </ul>
+</p>
 </li>
 
-<li> Shell Goodies:<br />
+<li>
+<p> Shell Goodies:<br />
 <ul>
-<li>The command history (up and down arrows)</li>
-<li>TAB filename completion</li>
-<li>Ctrl+A, Ctrl+E, ALT-F, ALT-B</li>
+<li>
+<p>
+The command history (up and down arrows)
+</p>
+</li>
+<li>
+<p>
+TAB filename completion
+</p>
+</li>
+<li>
+<p>
+Ctrl+A, Ctrl+E, ALT-F, ALT-B
+</li>
 </ul>
 </li>
 </ol>
@@ -95,42 +236,73 @@ Flags: -l -a -R
 <h2>Part 2: Job Control / Interaction With X</h2>
 
 <ol>
-<li>Ctrl+Z</li>
-<li>Ctrl+C</li>
-<li>&amp;</li>
-<li>bg</li>
+<li>
+Ctrl+Z
+</li>
+<li>
+Ctrl+C
+</li>
+<li>
+&amp;
+</li>
+<li>
+bg
+</li>
 </ol>
 
 <h2>Part 3: vi</h2>
 
 <ol>
-<li>Invoking vi (vi/vim/gvim)</li>
+<li>
+Invoking vi (vi/vim/gvim)
+</li>
 
-<li>Exiting (:q and :q!)</li>
+<li>
+Exiting (:q and :q!)
+</li>
 
-<li>Saving the file (:w)</li>
+<li>
+Saving the file (:w)
+</li>
 
-<li>Moving around:
+<li>
+Moving around:
 <ul>
-<li>The Arrow Keys + h-j-k-l</li>
+<li>
+The Arrow Keys + h-j-k-l
+</li>
 </ul>
 </li>
-<li>Adding text (i/a) and getting back to command mode (ESC)</li>
+<li>
+Adding text (i/a) and getting back to command mode (ESC)
+</li>
 
-<li>Deleting text:<br />
+<li>
+Deleting text:<br />
 <ul>
-<li>x/DEL</li>
-<li>dd</li>
+<li>
+x/DEL
+</li>
+<li>
+dd
+</li>
 </ul>
 </li>
 <li> Advanced movement commands:
 <ul>
-<li>0 and $</li>
-<li>gg and G</li>
-<li>digits + movement</li>
+<li>
+0 and $
+</li>
+<li>
+gg and G
+</li>
+<li>
+digits + movement
+</li>
 </ul>
 </li>
-<li> Getting help: (:help)</li>
+<li> Getting help: (:help)
+</li>
 
 </ol>
 

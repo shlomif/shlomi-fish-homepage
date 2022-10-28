@@ -1,7 +1,6 @@
 [%- SET title = "Presentations Category - Software Management" -%]
 [%- SET desc = "Presentations Category - Software Management" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -11,15 +10,19 @@ These are presentations by Shlomi Fish about software management.
 <ul>
 
 <li>
+<p>
 <a href="[% base_path %]lecture/CatB/">“The Cathedral and the Bazaar” series</a>
 - a presentation about the
 <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">Cathedral and
 the Bazaar series</a> by Eric S. Raymond.
+</p>
 </li>
 
 <li>
+<p>
 <a href="[% base_path %]lecture/joel-test/">The Joel Test</a> - a Hebrew
 presentation about <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">the Joel Test</a>.
+</p>
 </li>
 
 </ul>

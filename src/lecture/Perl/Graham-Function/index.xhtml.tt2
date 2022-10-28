@@ -12,37 +12,51 @@ Quiz-of-the-Week</a> that was done about it.
 
 <ul>
 <li>
+<p>
 <a href="slides/"><b>The slides</b></a>
+</p>
 </li>
 <li>
+<p>
 <a href="g8-pl.txt">The original source</a>, that is discussed in the presentation.
+</p>
 </li>
 <li>
+<p>
 <a href="http://use.perl.org/~Shlomi+Fish/journal/32132">A blog entry</a> I
 wrote about
 [% cpan.self_dist( "d" => "Math-GrahamFunction", ) %],
 which is a CPAN module, that is derived from the original code.
+</p>
 </li>
 </ul>
 
-<h2>The Code in Other Languages</h2>
+[% WRAPPER h2_section id = "code-in-other-langs" title = "The Code in Other Languages" %]
 
 <ul>
 
 <li>
+<p>
 <a href="https://github.com/shlomif/lisp-graham-function">Graham
 function calculation in Common Lisp</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="https://github.com/shlomif/shlomif-perl-snippets/blob/master/Perl-6--v6/graham.p6">Port of the
 original code to Perl 6</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="graham.ml">Port of the original code to O’Caml</a>
+</p>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 <a href="http://www.template-toolkit.org/">The Template Toolkit</a> is a
@@ -13,24 +13,34 @@ presents the motivation behind needing a templating system in the first place,
 and then explains why one should choose the Template Toolkit.
 </p>
 
-<h2 id="slides">The Slides</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "slides" title = "The Slides" %]
 
 <ul>
 
 <li>
+<p>
 <a href="intro-to-template-toolkit.odp">OpenDocument Format (ODP)</a>
 (OpenOffice.org, etc.)
+</p>
 </li>
 
 <li>
+<p>
 <a href="intro-to-template-toolkit.pdf">PDF</a> (Acrobat Reader, etc.)
+</p>
 </li>
 
 <li>
+<p>
 <a href="tt-proceedings.sxw">Proceedings for the Conference</a> (in SXW
 format - OpenOffice.org, etc.).
+</p>
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

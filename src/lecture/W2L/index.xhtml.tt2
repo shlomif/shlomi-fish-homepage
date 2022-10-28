@@ -1,7 +1,6 @@
 [%- SET title = "“Welcome to Linux” Presentations by Shlomi Fish" -%]
 [%- SET desc = "Presentations that have been given as part of the Israeli Welcome to Linux series, that aims to introduce Linux to beginners." -%]
 
-
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/lectures.tt2" %]
 

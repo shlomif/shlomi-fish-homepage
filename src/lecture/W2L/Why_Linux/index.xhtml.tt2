@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s “Why Linux” Lecture" -%]
 [%- SET desc = "Shlomi Fish’s “Why Linux” Lecture" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -11,12 +10,19 @@ and why they are using it. I was one of them and this is what I wrote.
 </p>
 
 <ul>
+
 <li>
+<p>
 <a href="hebrew.html">Hebrew</a>
+</p>
 </li>
+
 <li>
+<p>
 <a href="english.txt">English</a>
+</p>
 </li>
+
 </ul>
 
 [% END %]

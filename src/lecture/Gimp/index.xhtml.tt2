@@ -29,37 +29,58 @@ This talk has now been updated to GIMP 2.2. The
 are still available, but it is recommended not to use GIMP 1.2 any more.
 </p>
 
-<h2 id="material">The presentation's Material</h2>
+[% WRAPPER h2_section id = "material" title = "The presentation's Material" %]
 
 <ul>
 
 [% PROCESS qp_lect dir = "2.2-slides", %]
 
 <li>
+<p>
 <a href="1/gimp_lecture_summary.txt">Summary of the Talk</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="1/images/">Images for the talk</a>
+</p>
 </li>
 
 </ul>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
-<li><a href="http://www.gimp.org/">The GIMP’s Homepage</a></li>
+<li>
+<p>
+<a href="http://www.gimp.org/">The GIMP’s Homepage</a>
+</p>
+</li>
 
-<li><a href="http://gimp-savvy.com/">Gimp-Savvy</a> - Some Gimp Resources.</li>
+<li>
+<p>
+<a href="http://gimp-savvy.com/">Gimp-Savvy</a> - Some Gimp Resources.
+</p>
+</li>
 
-<li><a href="http://manual.gimp.org/">The Gimp’s User Manual</a> - a
+<li>
+<p>
+<a href="http://manual.gimp.org/">The Gimp’s User Manual</a> - a
 comprehensive manual about the GIMP. Available on-line
-or for download.</li>
+or for download.
+</li>
 
-<li><a href="http://gimp-savvy.com/BOOK/">Grokking the GIMP</a> - a Gimp book
-which is freely available online.</li>
+<li>
+<a href="http://gimp-savvy.com/BOOK/">Grokking the GIMP</a> - a Gimp book
+which is freely available online.
+</li>
 
 </ul>
+
+[% END %]
 
 [% END %]

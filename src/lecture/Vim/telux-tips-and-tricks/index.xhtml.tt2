@@ -1,7 +1,6 @@
 [%- SET title = "Vim Tips and Tricks Session at the Tel Aviv Linux Club" -%]
 [%- SET desc = "Vim Tips and Tricks Session at the Tel Aviv Linux Club" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,39 +9,55 @@ Club</a> met to hold a session of sharing tips and tricks for
 the <a href="http://www.vim.org/">Vim</a> editor.
 </p>
 
-<h2 id="material">The Material from the Presentation</h2>
+[% WRAPPER h2_section id = "material" title = "The Material from the Presentation" %]
 
 <ul>
 <li>
+<p>
 <a href="vim-lecture-log.txt">Log of the Meeting</a>
+</p>
 </li>
 </ul>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 <li>
+<p>
 <a href="http://shlomif.livejournal.com/tag/vim">More Vim Tips on my
 LiveJournal blog</a> and <a href="http://community.livejournal.com/shlomif_tech/tag/vim">continued on my Technical blog</a>.
+</p>
 </li>
 <li>
+<p>
 <a href="http://vim.wikia.com/wiki/Main_Page">Vim Tips Wiki</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% base_path %]open-source/projects/conf/vim/">Shlomi Fish’s Vim
 Configuration Files</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://ik.homelinux.org/index.rhtml/linux/vim/configuration">Ido
 Kanner’s Vim Configurations</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://webdragon.net/htmlcss.php#vim">WebDragon’s Vim
 configuration</a>
+</p>
 </li>
 </ul>
 
-<h2 id="notes">Notes</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "notes" title = "Notes" %]
 
 <ul>
 <li id="firefox-keywords">
@@ -61,5 +76,7 @@ page in www.mozilla.org about “smart keywords”</a> for more information.
 </p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

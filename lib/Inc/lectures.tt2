@@ -6,29 +6,43 @@
 
 <ul>
 <li>
+<p>
 <a href="[% base_path %]lecture/mini/mdda/">Meta-Data Database Access</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% base_path %]lecture/Perl/Graham-Function/">Presentation about Finding the
 Graham Function</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% base_path %]lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
 Templating System for Perl</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS t2_lect url = "Opt-Multi-Task-in-PDL" %]">Optimising Multitasking in
 PDL</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS t2_lect url = "Test-Run" %]">Test::Run - a New and Improved Test Harness</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS t2_lect url = "Too-Many-Ways" %]">There are too Many Ways to Do it</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS t2_lect url = "Mojolicious" %]">Mojolicious and Mojolicious::Lite</a> -
 a presentation about the web-development frameworks.
+</p>
 </li>
 </ul>
 [% END %]
@@ -36,29 +50,41 @@ a presentation about the web-development frameworks.
 [% BLOCK w2l_talks_list %]
 <ul>
 <li>
+<p>
 <a href="[% base_path %]lecture/W2L/Basic_Use/">Basic Use</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% base_path %]lecture/W2L/Network/">Networking in Linux</a> - content authored by
 Shachar Reindel.
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Development/",  %]">Development
 under Linux</a> - the content of this presentation was originally authored
 by Meir Maor. <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Technion/",  %]">An older incarnation of this
 presentation</a> is also available.
+</p>
 </li>
 <li>
+<p>
 <a href="[% base_path %]lecture/W2L/Why_Linux/">What Linux is to Me</a>
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Blitz/",  %]">The Blitz Lecture (in
 Hebrew)</a> - getting up to speed with Linux.
+</p>
 </li>
 <li>
+<p>
 <a href="[% PROCESS rellink host = "t2", url = "lecture/W2L/Mini-Intro/",  %]">The Mini-Intro
 Lecture (in Hebrew)</a> - getting up to speed with Linux. (More modernised
 version of the Blitz).
+</p>
 </li>
 </ul>
 [% END %]

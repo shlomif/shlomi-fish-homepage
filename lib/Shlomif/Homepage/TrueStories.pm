@@ -112,7 +112,7 @@ EOF
         {
             html => <<"EOF",
 <p>
-Conversations with People on Buses.
+Conversations with people on buses.
 </p>
 EOF
             id   => "bus-conversations",

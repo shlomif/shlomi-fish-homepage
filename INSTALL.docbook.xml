@@ -57,19 +57,15 @@ You should have a package for it for your system.
 <para>
 Install Website Meta Language (version 2.28.0 or later):
 </para>
-</listitem>
-</orderedlist>
 <para>
-https://github.com/thewml/website-meta-language/releases
+<link xlink:href="https://github.com/thewml/website-meta-language/releases">https://github.com/thewml/website-meta-language/releases</link>
 </para>
-<orderedlist numeration="arabic" spacing="compact">
-<listitem override="4">
+</listitem>
+<listitem>
 <para>
-Run and configure CPAN (see - https://perl-begin.org/topics/cpan/
+Run and configure CPAN (see - <link xlink:href="https://perl-begin.org/topics/cpan/">https://perl-begin.org/topics/cpan/</link>
 ) and type:
 </para>
-</listitem>
-</orderedlist>
 <programlisting language="bash">
 export PERL_MM_USE_DEFAULT=1
 perl -MCPAN -e 'install App::Deps::Verify Task::Sites::ShlomiFish'
@@ -88,34 +84,28 @@ or:
 export PERL_MM_USE_DEFAULT=1
 cpanm App::Deps::Verify Task::Sites::ShlomiFish
 </programlisting>
-<orderedlist numeration="arabic" spacing="compact">
-<listitem override="5">
+</listitem>
+<listitem>
 <para>
 Install Latemp:
 </para>
-</listitem>
-</orderedlist>
 <para>
 See https://web-cpan.shlomifish.org/latemp/ and
 https://github.com/thewml/latemp .
 </para>
-<orderedlist numeration="arabic" spacing="compact">
-<listitem override="6">
+</listitem>
+<listitem>
 <para>
 Add Latemp to the beginning of your path:
 </para>
-</listitem>
-</orderedlist>
 <programlisting language="bash">
 PATH=&quot;$HOME/apps/latemp/bin:$PATH&quot;
 </programlisting>
-<orderedlist numeration="arabic" spacing="compact">
-<listitem override="7">
+</listitem>
+<listitem>
 <para>
 Install the latest version of Quad-Pres from:
 </para>
-</listitem>
-</orderedlist>
 <para>
 See https://www.shlomifish.org/quad-pres/ and
 https://github.com/shlomif/quad-pres
@@ -128,31 +118,27 @@ cd quad-pres/installer
 See its INSTALL file. Put a working <literal>quadp</literal>
 executable in your shell’s PATH.
 </para>
-<orderedlist numeration="arabic" spacing="compact">
-<listitem override="8">
+</listitem>
+<listitem>
 <para>
 Install the wml-affiliations.
 </para>
-</listitem>
-</orderedlist>
 <programlisting language="bash">
 git clone https://github.com/shlomif/wml-affiliations trunk
 cd trunk/wml
 bash Install.bash
 </programlisting>
-<orderedlist numeration="arabic" spacing="compact">
+</listitem>
 <listitem override="9">
 <para>
 Install the wml-extended-apis:
 </para>
-</listitem>
-</orderedlist>
 <programlisting language="bash">
 git clone https://github.com/thewml/wml-extended-apis trunk
 cd trunk/xhtml/1.x/
 bash Install.bash
 </programlisting>
-<orderedlist numeration="arabic">
+</listitem>
 <listitem override="10">
 <para>
 Install <link xlink:href="https://inkscape.org/">inkscape</link> -
@@ -164,22 +150,18 @@ the path.
 <para>
 Install jing and put it in the path:
 </para>
-</listitem>
-</orderedlist>
 <para>
 http://www.thaiopensource.com/relaxng/jing.html
 </para>
-<orderedlist numeration="arabic" spacing="compact">
+</listitem>
 <listitem override="12">
 <para>
 Install Apache FOP and put it in the path:
 </para>
-</listitem>
-</orderedlist>
 <para>
 http://xmlgraphics.apache.org/fop/
 </para>
-<orderedlist numeration="arabic">
+</listitem>
 <listitem override="13">
 <para>
 Install
@@ -192,8 +174,6 @@ and put it in the path
 Put the XHTML 1.1 DTDs , the XHTML 1.0 DTDs , etc. in your
 <literal>XML_CATALOG_FILES</literal> environment variable.
 </para>
-</listitem>
-</orderedlist>
 <para>
 An easy way to do that is to do:
 </para>
@@ -205,14 +185,12 @@ And set <literal>XML_CATALOG_FILES</literal> to
 <quote>/etc/xml/catalog
 $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml</quote>
 </para>
-<orderedlist numeration="arabic" spacing="compact">
+</listitem>
 <listitem override="15">
 <para>
 Do the following to build the site, after all dependencies were
 installed:
 </para>
-</listitem>
-</orderedlist>
 <programlisting language="bash">
 git clone https://github.com/shlomif/shlomi-fish-homepage.git trunk
 cd trunk
@@ -225,5 +203,7 @@ gmake test
 The site’s pages and data files should be in
 <literal>dest/post-incs/t2/</literal> .
 </para>
+</listitem>
+</orderedlist>
 </section>
 </article>

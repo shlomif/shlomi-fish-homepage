@@ -229,6 +229,7 @@ $(POST_DEST)/humour/bits/How-Ronda-Rousey-Lost-her-UFC-Streak/How-Ronda-Rousey-L
 $(POST_DEST)/humour/bits/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie.epub \
+$(POST_DEST)/humour/tempbits/end-game-for-shlomif-as-a-false-prophet/end-game-for-shlomif-as-a-false-prophet.epub \
 $(POST_DEST)/humour/usr-bin-perl/usr-bin-perl--total.epub \
 EOF
 

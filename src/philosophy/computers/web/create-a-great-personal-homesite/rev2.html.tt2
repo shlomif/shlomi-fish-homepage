@@ -1003,7 +1003,7 @@ love. The more you care for your home site, the more popular it will become,
 the more visitors it will attract and the more fun you’ll have.
 </p>
 
-<h3 id="critique">Critique of some Home Sites</h3>
+[% WRAPPER h3_section id = "critique" title = "Critique of some Home Sites" %]
 
 <p>
 The purpose of this section is to review some prominent home sites which I’m
@@ -1104,7 +1104,7 @@ is also good. Sometimes this hierarchy as far as the URLs is concerned
 has been broken, due to historical or other reasons.
 </p>
 
-<h4 id="critique_djb">Daniel J. Bernstein’s Personal Site</h4>
+[% WRAPPER h4_section id = "critique_djb" title = "Daniel J. Bernstein’s Personal Site" %]
 
 <p>
 <a href="http://cr.yp.to/">Daniel J. Bernstein’s Personal Site</a> is probably
@@ -1115,7 +1115,9 @@ etc. There is no navigation menu, or any other organisational or navigation
 aids.
 </p>
 
-<h4 id="critique_self">Critique of my Own Personal Home Site</h4>
+[% END %]
+
+[% WRAPPER h4_section id = "critique_self" title = "Critique of my Own Personal Home Site" %]
 
 <p>
 <a href="http://www.shlomifish.org/">My home site</a> has a common look and
@@ -1154,7 +1156,11 @@ The breadcrumbs trail and the section navigation menus compensate for part
 of that, but it’s still a problem.
 </p>
 
-<h3 id="conclusion">Conclusion</h3>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h3_section id = "conclusion" title = "Conclusion" %]
 
 <p>
 Having a good web-site is a lot of hard work, but it’s also very fun and
@@ -1173,7 +1179,9 @@ present and future web sites.
 So until then, happy web-authoring!
 </p>
 
-<h3 id="links">Links and More Information</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "links" title = "Links and More Information" %]
 
 <p>
 <a href="http://www.catb.org/~esr/">Eric S. Raymond</a> has written
@@ -1197,7 +1205,9 @@ has written
 good essay about White Hat Search Engine Optimisation</a>.
 </p>
 
-<h3 id="acknowledgements">Acknowledgements</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "acknowledgements" title = "Acknowledgements" %]
 
 <p>
 Thanks to Sagiv Barhoom, to <a href="http://freenode.net/">the Freenode IRC
@@ -1206,7 +1216,9 @@ Windrose and kaitlyn, and to <a href="http://oftc.net/">the OFTC IRC network</a>
 this essay.
 </p>
 
-<h3 id="footnotes">Footnotes</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "footnotes" title = "Footnotes" %]
 
 <p id="footnote-weblogs-interesting">
 <b>[Interesting Weblogs]</b> - one note about weblogs - they should be both
@@ -1221,6 +1233,8 @@ If you want to write about several different topics, then start new blogs or
 at least create separate categories with
 <a href="http://en.wikipedia.org/wiki/Web_feed">separate web feeds</a>.
 </p>
+
+[% END %]
 
 [% END %]
 

@@ -295,7 +295,7 @@ encompassing as possible, but it is possible some points are missing or some
 will need to be added in the future.
 </p>
 
-<h5 id="pres_security">Security</h5>
+[% WRAPPER h5_section id = "pres_security" title = "Security" %]
 
 <p>
 A website needs to be secure. The most possibly secure web site is a static
@@ -330,7 +330,9 @@ still have a security problem. But it is still probably a better idea than
 deploying your own CMS on a normal hosting account.
 </p>
 
-<h5 id="pres_navigation">Navigation Aids</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_navigation" title = "Navigation Aids" %]
 
 <p>
 In my previous article
@@ -365,7 +367,9 @@ menu, or if you’re using a content management system that manages the pages
 internally.
 </p>
 
-<h5 id="pres_visual_appeal">Visual Appeal</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_visual_appeal" title = "Visual Appeal" %]
 
 <p>
 A good site has good visual appeal. It is pleasing to the eye, interesting
@@ -377,7 +381,9 @@ are plain HTML pages, with no dedicated blocks, then the site will be harder
 to navigate and also look unprofessional.
 </p>
 
-<h5 id="pres_valid_markup">Valid and Semantic Markup</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_valid_markup" title = "Valid and Semantic Markup" %]
 
 <a href="http://www.flickr.com/photos/piez/528978348/"
 title="Cat Walk by Pieze on Flickr. Available under CC-by"><img
@@ -415,8 +421,9 @@ example if you want to make a text larger, you should use CSS instead of
 designating it as a heading (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.).
 </p>
 
+[% END %]
 
-<h5 id="pres_colour_choice">Colour Choice</h5>
+[% WRAPPER h5_section id = "pres_colour_choice" title = "Colour Choice" %]
 
 <p>
 Aside from looking attractive, the choice of colours in a site needs to be
@@ -444,7 +451,9 @@ it may not be much of an issue. And if all the important content is in text,
 it will always be accessible enough.
 </p>
 
-<h5 id="pres_responsiveness">Responsiveness</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_responsiveness" title = "Responsiveness" %]
 
 <p>
 The pages of a good web site load quickly and the web site as a whole feels
@@ -459,7 +468,9 @@ Good web-sites heavily optimise for limiting the bandwidth, because it affects
 broadband users, and people with a slow connectivity much more so.
 </p>
 
-<h5 id="pres_no_annoyances">Various Annoyances</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_no_annoyances" title = "Various Annoyances" %]
 
 <p>
 There are many common annoyances in web-sites. Some of the most common ones
@@ -504,7 +515,9 @@ hate it. Some people completely disable Flash on their default browsers.
 </li>
 </ol>
 
-<h5 id="pres_nice_urls">Nice URLs</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_nice_urls" title = "Nice URLs" %]
 
 <p>
 Imagine the URL <code>http://www.myhost.tld/index.php?section=about&amp;subsection=personal&amp;page=bio</code>.
@@ -527,7 +540,9 @@ people’s homepages</a> and see what kind of things they have there to see
 how to appropriately section and sub-section your home site.
 </p>
 
-<h5 id="pres_absolute_links">Absolute Links</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_absolute_links" title = "Absolute Links" %]
 
 <p>
 A good site shouldn’t have any links like
@@ -539,7 +554,9 @@ calculate the relative link to an absolute path within the site, is not very
 hard using with some rudimentary programming skills.
 </p>
 
-<h5 id="pres_email">E-mail for Giving Feedback</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_email" title = "E-mail for Giving Feedback" %]
 
 <p>
 A web-site should have a meaningful E-mail at the footer for giving
@@ -579,7 +596,9 @@ thread that I started on the <i>Joel on Software</i> forum</a> about
 “E-mail at the bottom of every page”.
 </p>
 
-<h5 id="pres_usability">Usability, Accessibility and Portability</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_usability" title = "Usability, Accessibility and Portability" %]
 
 <p>
 Usability, accessibility and portability are related topics that are all
@@ -625,7 +644,9 @@ way around very easily.
 </li>
 </ul>
 
-<h5 id="pres_site_news">Site News</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_site_news" title = "Site News" %]
 
 <p>
 Visitors who frequent the site would probably like to know what has changed
@@ -643,7 +664,9 @@ that allow users to concentrate the news items from various sites. A good
 web-site should have such feeds for what has changed there.
 </p>
 
-<h5 id="pres_site_search">Site Search</h5>
+[% END %]
+
+[% WRAPPER h5_section id = "pres_site_search" title = "Site Search" %]
 
 <p>
 A search engine for your site is a wonderful enhancement for your site. You
@@ -651,6 +674,8 @@ can easily set up such a search engine using
 <a href="http://www.google.com/searchcode.html">the Google Search Code</a>
 and similar services from other online search engines.
 </p>
+
+[% END %]
 
 [% END %]
 
@@ -710,7 +735,7 @@ from the so-called <a
 href="http://en.wikipedia.org/wiki/Slashdot_effect">Slasdhot effect</a>.
 </p>
 
-<h5 id="publicity_SEO">Search Engine Optimisation</h5>
+[% WRAPPER h5_section id = "publicity_SEO" title = "Search Engine Optimisation" %]
 
 <p>
 One aspect of making sure your site gets a lot of traffic is white-hat
@@ -753,6 +778,8 @@ content to put on my site.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]
 

@@ -44,9 +44,11 @@ Last Updated:
 </dd>
 </dl>
 
-<h3 id="licence">Licence</h3>
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2009", ) %]
+
+[% END %]
 
 [% END %]
 
@@ -54,7 +56,7 @@ Last Updated:
 
 [% WRAPPER h2_section id = "article-itself" title = "The Article Itself" %]
 
-<h3 id="intro-to-2nd-rev">Introduction to the Second Revision</h3>
+[% WRAPPER h3_section id = "intro-to-2nd-rev" title = "Introduction to the Second Revision" %]
 
 <p>
 It’s amazing how much has changed since I’ve published this article
@@ -110,7 +112,9 @@ and enlighten you about how to create a wonderful personal web-site
 state-of-the-art in the general quality of such web-sites.
 </p>
 
-<h3 id="intro">Introduction</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "intro" title = "Introduction" %]
 
 <p>
 We’ve all seen it - the bad home site: flashy or non-standard colours,
@@ -162,7 +166,7 @@ Alternatively make sure you have a personal web site as well as a blog using a
 content management system (CMS) that is more suitable for one.
 </p>
 
-<h4 id="why_have_one">Why have a Home Site?</h4>
+[% WRAPPER h4_section id = "why_have_one" title = "Why have a Home Site?" %]
 
 <p>
 So why should you bother with having a personal home site? There are several
@@ -199,7 +203,11 @@ src="rmag-park-shlomif-1-465w.jpg" alt="Photo of a Park in Northern Tel Aviv"
 /></a>
 </div>
 
-<h3 id="elements_of_a_good_site">Elements of a Good Site</h3>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h3_section id = "elements_of_a_good_site" title = "Elements of a Good Site" %]
 
 <p>
 The elements that make a good home site are divided into two: content and
@@ -742,7 +750,9 @@ content to put on my site.
 
 </ul>
 
-<h3 id="how_to_build">How to Build such a site?</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "how_to_build" title = "How to Build such a site?" %]
 
 <p>
 By now, you probably have a good idea about what to put and not to put in a
@@ -1003,6 +1013,8 @@ love. The more you care for your home site, the more popular it will become,
 the more visitors it will attract and the more fun you’ll have.
 </p>
 
+[% END %]
+
 [% WRAPPER h3_section id = "critique" title = "Critique of some Home Sites" %]
 
 <p>
@@ -1015,7 +1027,7 @@ I will conclude by reviewing <a href="http://www.shlomifish.org/">my own
 personal site</a>.
 </p>
 
-<h4 id="critique_paul_graham">Paul Graham’s Home Site</h4>
+[% WRAPPER h4_section id = "critique_paul_graham" title = "Paul Graham’s Home Site" %]
 
 [%- BLOCK pg_url -%]
 http://www.paulgraham.com/[% u %].html
@@ -1052,7 +1064,9 @@ agrees with me</a>. I might also think of “Harry Potter”,
 but in the case of Graham’s site it stands for “Hackers and Painters”.
 </p>
 
-<h4 id="critique_joel">The Joel on Software Site</h4>
+[% END %]
+
+[% WRAPPER h4_section id = "critique_joel" title = "The Joel on Software Site" %]
 
 <p>
 The <a href="http://www.joelonsoftware.com/">Joel on Software</a> site hosts
@@ -1082,7 +1096,9 @@ but there are still some leftover articles like that.
 The site looks great, and is very aesthetic and pleasing.
 </p>
 
-<h4 id="critique_esr">Eric S. Raymond’s Site</h4>
+[% END %]
+
+[% WRAPPER h4_section id = "critique_esr" title = "Eric S. Raymond’s Site" %]
 
 <p>
 <a href="http://www.catb.org/~esr/">Eric S. Raymond’s Home site</a> contains
@@ -1103,6 +1119,8 @@ The pages in the site are arranged hierarchically. So for example
 is also good. Sometimes this hierarchy as far as the URLs is concerned
 has been broken, due to historical or other reasons.
 </p>
+
+[% END %]
 
 [% WRAPPER h4_section id = "critique_djb" title = "Daniel J. Bernstein’s Personal Site" %]
 

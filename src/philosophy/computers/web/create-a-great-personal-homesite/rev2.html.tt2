@@ -214,7 +214,7 @@ The elements that make a good home site are divided into two: content and
 presentation. Let’s tackle them one at a time.
 </p>
 
-<h4 id="great_content">Great Content</h4>
+[% WRAPPER h4_section id = "great_content" title = "Great Content" %]
 
 <p>
 Filling your home site with a lot of content takes a lot of time
@@ -284,7 +284,9 @@ more ideas on what to put there. But you first need to overcome the first
 obstacle and actually get a web-site.
 </p>
 
-<h4 id="good_presentation">Good Presentation</h4>
+[% END %]
+
+[% WRAPPER h4_section id = "good_presentation" title = "Good Presentation" %]
 
 <p>
 Now for the second aspect of a great site: a good presentation. This involves
@@ -650,7 +652,9 @@ can easily set up such a search engine using
 and similar services from other online search engines.
 </p>
 
-<h4 id="publicity">Publicity</h4>
+[% END %]
+
+[% WRAPPER h4_section id = "publicity" title = "Publicity" %]
 
 <a href="http://www.flickr.com/photos/shlomif/2691616941/"
 title="Photo of a Nerium Oleander by Shlomi Fish. Public Domain"><img
@@ -749,6 +753,8 @@ content to put on my site.
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]
 

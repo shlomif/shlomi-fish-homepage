@@ -2,14 +2,13 @@
 [%- SET desc = "How to create a Great Personal Internet Home Site" -%]
 [%- SET more_keywords = "Shlomi Fish, Shlomi, Fish, HTML, Homesite, Homepage, Home, Page, Site, Perl, PHP, Python, JavaScript, Content, Presentations" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="limit_imgs_width lim_width wrap-me side_toc">
 
 [% default_toc %]
 
-<h2 id="about">About this Document</h2>
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
 <p>
 This document explains why and how to create a great personal homesite. The
@@ -20,7 +19,9 @@ text can be found below.
 <a href="#article-itself"><b>Skip to the main content</b></a>
 </p>
 
-<h2 id="meta">Document Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -47,9 +48,11 @@ Last Updated:
 
 [% license_obj.by_british_blurb( "year" => "2009", ) %]
 
+[% END %]
+
 <div class="article">
 
-<h2 id="article-itself">The Article Itself</h2>
+[% WRAPPER h2_section id = "article-itself" title = "The Article Itself" %]
 
 <h3 id="intro-to-2nd-rev">Introduction to the Second Revision</h3>
 
@@ -1219,9 +1222,11 @@ at least create separate categories with
 <a href="http://en.wikipedia.org/wiki/Web_feed">separate web feeds</a>.
 </p>
 
-<h2 id="coverage">Coverage and Comments</h2>
+[% END %]
 
-<h3 id="coverage-rev1">For the First Revision</h3>
+[% WRAPPER h2_section id = "coverage" title = "Coverage and Comments" %]
+
+[% WRAPPER h3_section id = "coverage-rev1" title = "For the First Revision" %]
 
 <ul>
 <li>
@@ -1237,6 +1242,10 @@ at least create separate categories with
 Joel on Software forum</a>
 </li>
 </ul>
+
+[% END %]
+
+[% END %]
 
 </div>
 

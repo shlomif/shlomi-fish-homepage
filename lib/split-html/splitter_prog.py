@@ -448,6 +448,7 @@ def _screenplays_main():
                 "Harry-Potter",
                 "Jennifer-Lawrence",
                 "Summer-Glau-and-Chuck-Norris",
+                "Tiffany-Alvord",
                 ]:
             path_to_input = "{}.html".format(part)
             generic_generate(

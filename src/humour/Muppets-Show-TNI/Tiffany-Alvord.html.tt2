@@ -1,0 +1,11 @@
+[%- SET title = "Muppets: With Tiffany Alvord" -%]
+[%- SET desc = "The Muppets Show hosts Tiffany Alvord" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ desc _ "</p>")) %]
+
+[% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Tiffany-Alvord.html") %]
+
+[% END %]

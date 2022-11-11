@@ -233,6 +233,11 @@ my $_humour_tree_contents = {
                                     url  =>
 "humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
                                 },
+                                {
+                                    text => "Tiffany Alvord",
+                                    url  =>
+"humour/Muppets-Show-TNI/Tiffany-Alvord.html",
+                                },
                             ],
                         },
                         {

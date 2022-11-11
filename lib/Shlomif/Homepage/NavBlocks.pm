@@ -496,6 +496,16 @@ my %tr_s = (
             $muppets_github,
         ],
     ),
+    'muppets_tiffany_alvord' => _tr(
+        title => "Tiffany Alvord Fanfiction",
+        items => [
+            _l(
+                inner_html => "Tiffany Alvord on The Muppets",
+                path       => "humour/Muppets-Show-TNI/Tiffany-Alvord.html",
+            ),
+            $muppets_github,
+        ],
+    ),
     'queen_padme_tales' => __PACKAGE__->_gen__queen_padme_tales__tr(
         {
             path_regex => qr/./ms,
@@ -1091,6 +1101,22 @@ q{<a href="https://wilwheaton.net/">Wil Wheaton</a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s( qw( selina_mandrake the_10th_muse__wil_wheaton ), ),
+            ],
+        },
+    ),
+    'tiffany_alvord' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'tiffany_alvord_nav_block',
+            text_title => "Tiffany Alvord Fanfiction",
+            tr_s       => [
+                _master_tr(
+                    title =>
+q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
+                ),
+                $Screenplays_TR,
+                _tr_s(
+                    qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord ),
+                ),
             ],
         },
     ),

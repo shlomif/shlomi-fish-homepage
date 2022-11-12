@@ -497,7 +497,7 @@ my %tr_s = (
         ],
     ),
     'muppets_tiffany_alvord' => _tr(
-        title => "Tiffany Alvord Fanfiction",
+        title => "Muppets Fanfiction",
         items => [
             _l(
                 inner_html => "Tiffany Alvord on The Muppets",
@@ -1116,6 +1116,10 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
                 $Screenplays_TR,
                 _tr_s(
                     qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord ),
+                ),
+                $Essays_TR,
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
                 ),
             ],
         },

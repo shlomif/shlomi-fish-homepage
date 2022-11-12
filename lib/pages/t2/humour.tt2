@@ -3172,7 +3172,7 @@ One does not simply see a meme only once.
 
 [%- END -%]
 
-[% WRAPPER github_captioned_image_joke id = "i_wanna_make_your_penny_drop" header = "“Babe, I wanna make your penny drop!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/bbt--i-wanna-make-your-penny-drop" src = base_path _ "humour/images/captioned-image--bbt--i-wanna-make-your-penny-drop-600.webp" alt = "“Babe, I wanna make your penny drop!”" %]
+[% WRAPPER github_captioned_image_joke id = "i_wanna_make_your_penny_drop" header = "“Babe, I wanna make your penny drop!”" joke_wrapper_class = "high_img" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/bbt--i-wanna-make-your-penny-drop" src = base_path _ "humour/images/captioned-image--bbt--i-wanna-make-your-penny-drop-600.webp" alt = "“Babe, I wanna make your penny drop!”" %]
 
 [% WRAPPER quote %]
 <p>

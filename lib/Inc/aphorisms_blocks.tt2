@@ -5,7 +5,7 @@
 [% BLOCK header_joke %]
 [% WRAPPER joke  %]
 
-<article>
+<article[% IF joke_wrapper_class %] class="[% joke_wrapper_class %]" [% END %]>
 
 <header>
 <h3 id="[% id %]">[% header %]</h3>

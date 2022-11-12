@@ -11,7 +11,7 @@ SASS_DEBUG_FLAGS :=
 SASS_CMD = pysassc $(SASS_DEBUG_FLAGS) --style $(SASS_STYLE)
 
 FORT_SASS_DEPS := lib/sass/fortunes.scss
-COMMON_SASS_DEPS := lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/faq-common.scss lib/sass/faq-indiv.scss lib/sass/footer.scss lib/sass/mixins.scss
+COMMON_SASS_DEPS := lib/sass/bk2hp.scss lib/sass/common-body.scss lib/sass/common-style--bottom-imports.scss lib/sass/common-style-main.scss lib/sass/common-style.scss lib/sass/defs.scss lib/sass/faq-common.scss lib/sass/faq-indiv.scss lib/sass/footer.scss lib/sass/mixins.scss
 
 $(SRC_CSS_TARGETS): $(POST_DEST)/%.css: lib/sass/%.scss $(COMMON_SASS_DEPS)
 	$(SASS_CMD) $< $@

@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ desc _ "</p>")) %]
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppets Show hosts <a href=\"https://www.tiffanyalvord.com/\">Tiffany Alvord</a>.</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Tiffany-Alvord.html") %]
 

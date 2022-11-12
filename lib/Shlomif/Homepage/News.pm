@@ -278,7 +278,7 @@ sub render_front_page
         [ @items[ 0 .. ( $self->num_on_front() - 1 ) ] ] );
 }
 
-sub render_old
+sub render_old_news
 {
     my $self  = shift;
     my @items = @{ $self->items() };

@@ -146,7 +146,7 @@ for what is new on the site, which is updated periodically.
 Here are some of the things you can find here:
 </p>
 
-[% WRAPPER h3_section id="humour" href="humour/" title="Humour" %]
+[% WRAPPER h3_section id = "humour" href = "humour/" title = "Humour" %]
 
 <p>
 You can read many <a href="[% base_path %]humour/bits/">shorter bits</a>
@@ -166,11 +166,11 @@ stories (novellas) and screenplays</a>, which I have written.
 
 [% END %]
 
-[% WRAPPER h3_section id="philosophy" href="philosophy/" title="Articles and Essays" %]
+[% WRAPPER h3_section id = "philosophy" href = "philosophy/" title = "Articles and Essays" %]
 
 <p>
 You can read various essays and articles I wrote about politics, software
-development, and software management, popular culture, the Internet,
+development and software management, popular culture, the Internet,
 psychology, and ideology.
 </p>
 
@@ -190,7 +190,7 @@ fodder for my essays and articles.
 
 [% END %]
 
-[% WRAPPER h3_section id="open-source" href="open-source/" title="Open Source Software" %]
+[% WRAPPER h3_section id = "open-source" href = "open-source/" title = "Open Source Software" %]
 
 <p>
 Links to software I wrote, and some resources with links to other software.
@@ -199,7 +199,7 @@ Knock yourself out!
 
 [% END %]
 
-[% WRAPPER h3_section id="presentations" href="lecture/" title="Presentations" %]
+[% WRAPPER h3_section id = "presentations" href = "lecture/" title = "Presentations" %]
 
 <p>
 You can find several technical presentations I have written or maintain
@@ -208,7 +208,7 @@ here. Some of them may qualify as technical tutorials.
 
 [% END %]
 
-[% WRAPPER h3_section id="puzzles" href="puzzles/" title="Puzzles and Riddles" %]
+[% WRAPPER h3_section id = "puzzles" href = "puzzles/" title = "Puzzles and Riddles" %]
 
 <p>
 Some pages with <a href="MathVentures/">Mathematical problems</a>,
@@ -217,7 +217,7 @@ with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles.
 
 [% END %]
 
-[% WRAPPER h3_section id="computer_art" href="art/" title="Computer Art" %]
+[% WRAPPER h3_section id = "computer_art" href = "art/" title = "Computer Art" %]
 
 <p>
 You can find my lame attempts for art which I prepared, in
@@ -227,7 +227,7 @@ and one piece of music.
 
 [% END %]
 
-[% WRAPPER h3_section id="links" href="links.html" title="Links" %]
+[% WRAPPER h3_section id = "links" href = "links.html" title = "Links" %]
 
 <p>
 There are many links on the site, but I also concentrated many of them in
@@ -236,7 +236,7 @@ one place. Who doesn’t like links?
 
 [% END %]
 
-[% WRAPPER h3_section id="more_about_me" title="More about me"%]
+[% WRAPPER h3_section id = "more_about_me" title = "More about me"%]
 
 <p>
 I maintain a list of <a href="[% base_path %]meta/FAQ/">Frequently Asked Questions (FAQ)</a> about me, this site, and my interests.
@@ -249,7 +249,7 @@ information page</a>, a page about <a href="[% base_path %]me/rindolf/">my “Ri
 
 [% END %]
 
-[% WRAPPER h3_section id="enjoy" title="Enjoy!"%]
+[% WRAPPER h3_section id = "enjoy" title = "Enjoy!"%]
 
 <p>
 I hope you enjoy my web-site. If you do, please

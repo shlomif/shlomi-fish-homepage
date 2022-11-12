@@ -965,8 +965,6 @@ sub calc_logo
 sub calc_common_top_elems
 {
     my ( $self, $args ) = @_;
-    my $id            = $args->{id};
-    my $abstract_text = $args->{abstract_text};
 
     return join( '', @{ $self->_get_common_top_elems($args) }, );
 }
@@ -1023,7 +1021,7 @@ sub render_make_fragment
         if ( $logo_svg ne '//$SKIP' )
         {
             push @rules,
-"\$($m_id): \$(SRC_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n\n"
+"\$($m_id): \$(SRC_SRC_DIR)/$logo_svg\n\t\$(call EXPORT_INKSCAPE_PNG)\n"
                 ,;
 
             $deps .= " \$($m_id)";
@@ -1033,8 +1031,7 @@ sub render_make_fragment
             if ( not exists $png_stories{ $s->id } )
             {
                 push @rules,
-                    "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n\n"
-                    ,;
+                    "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n",;
             }
             $pngs .= " \$($m_id)";
         }
@@ -1045,11 +1042,11 @@ sub render_make_fragment
         "\n",
         @rules,
         "\n",
-        "LONG_STORIES__SMALL_LOGO_PNGS := $deps $pngs\n\n",
-"LONG_STORIES__SMALL_LOGO_WEBPS := \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n\n",
+        "LONG_STORIES__SMALL_LOGO_PNGS := $deps $pngs\n",
+"LONG_STORIES__SMALL_LOGO_WEBPS := \$(patsubst %.png,%.webp,\$(filter %.png,\$(LONG_STORIES__SMALL_LOGO_PNGS)))\n",
         "\$(LONG_STORIES__SMALL_LOGO_WEBPS): %.webp: %.png\n",
-        "\tgm convert \$< \$\@\n\n",
-"art_slogans_targets: \$(LONG_STORIES__SMALL_LOGO_PNGS) \$(LONG_STORIES__SMALL_LOGO_WEBPS)\n\n",
+        "\tgm convert \$< \$\@\n",
+"art_slogans_targets: \$(LONG_STORIES__SMALL_LOGO_PNGS) \$(LONG_STORIES__SMALL_LOGO_WEBPS)\n",
     );
 
     return;

@@ -198,9 +198,11 @@ class MyTests(html_unit_test.TestCase):
         input_fn = './dest/post-incs/t2/old-news.html'
 
         self.doc(input_fn).has_one(
-            ".//div[@class='news_item' and "
+            ".//div["
+            "@class='news_item' and "
             "descendant::h3[@id='shlomifish.org_news_2014_10_05'] and "
-            "descendant::a[contains(@href, '/So-Who-The-Hell-Is-Qoheleth/')]]"
+            "descendant::a[contains(@href, '/So-Who-The-Hell-Is-Qoheleth/')]"
+            "]"
         )
 
     def _factoids_check_helper(self, input_fn, htmlid):

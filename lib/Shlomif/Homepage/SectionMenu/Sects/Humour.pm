@@ -214,7 +214,7 @@ my $_humour_tree_contents = {
                             text  => "Muppets Fan Fiction",
                             url   => "humour/Muppets-Show-TNI/",
                             title =>
-                                "The Muppets Show / Sesame Street Fan Fiction",
+                                "The Muppet Show / Sesame Street Fan Fiction",
                             subs => [
                                 {
                                     text => "Harry Potter",

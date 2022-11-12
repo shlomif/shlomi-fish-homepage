@@ -1,11 +1,11 @@
 [%- SET title = "Muppets: Summer Glau &amp; Chuck Norris as Grammar Nazis" -%]
-[%- SET desc = "The Muppets Show hosts Summer Glau and Chuck Norris mashing up xkcd, Ozy and Millie’s Grammar Nazis, Chuck Norris Facts, Summer Glau Facts, etc." -%]
+[%- SET desc = "The Muppet Show hosts Summer Glau and Chuck Norris mashing up xkcd, Ozy and Millie’s Grammar Nazis, Chuck Norris Facts, Summer Glau Facts, etc." -%]
 [%- SET apply_screenplay_style = 1 -%]
 [%- SET more_keywords = "muppets, grammar nazis, Summer Glau, Chuck Norris, xkcd, Lucky Luke, Ozy and Millie, O&amp;M" -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppets Show hosts Summer Glau and Chuck Norris mashing up xkcd, <a href=\"https://shlomif.livejournal.com/53966.html\">Ozy and Millie’s Grammar Nazis</a>, <a href=\"\$(ROOT)/humour/bits/facts/Chuck-Norris/\">Chuck Norris Facts</a>, <a href=\"\$(ROOT)/humour/bits/facts/Summer-Glau/\">Summer Glau Facts</a>, etc.</p>")) %]
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppet Show hosts Summer Glau and Chuck Norris mashing up xkcd, <a href=\"https://shlomif.livejournal.com/53966.html\">Ozy and Millie’s Grammar Nazis</a>, <a href=\"\$(ROOT)/humour/bits/facts/Chuck-Norris/\">Chuck Norris Facts</a>, <a href=\"\$(ROOT)/humour/bits/facts/Summer-Glau/\">Summer Glau Facts</a>, etc.</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Summer-Glau-and-Chuck-Norris.html") %]
 

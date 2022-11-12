@@ -500,7 +500,7 @@ my %tr_s = (
         title => "Muppets Fanfiction",
         items => [
             _l(
-                inner_html => "Tiffany Alvord on The Muppets",
+                inner_html => "Tiffany Alvord on The Muppet Show",
                 path       => "humour/Muppets-Show-TNI/Tiffany-Alvord.html",
             ),
             $muppets_github,

@@ -198,7 +198,7 @@ class MyTests(html_unit_test.TestCase):
         input_fn = './dest/post-incs/t2/old-news.html'
 
         self.doc(input_fn).has_one(
-            ".//div["
+            ".//article["
             "@class='news_item' and "
             "descendant::h3[@id='shlomifish.org_news_2014_10_05'] and "
             "descendant::a[contains(@href, '/So-Who-The-Hell-Is-Qoheleth/')]"

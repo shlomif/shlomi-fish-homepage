@@ -25,12 +25,6 @@ has 'items' => (
     },
 );
 
-has '_is_html5' => (
-    is      => 'rw',
-    isa     => 'Bool',
-    default => 0,
-);
-
 my @old_news_items = (
     {
         'date' => DateTime->new( year => 2005, month => 3, day => 22 ),
@@ -248,8 +242,11 @@ sub get_item_html
     my $date  = $item->{date};
     my $title = $item->{title};
 
-    my $article      = $self->_is_html5 ? 'article' : 'div';
-    my $article_attr = $self->_is_html5 ? ''        : ' class="news_item"';
+    # my $article      = $self->_is_html5 ? 'article' : 'div';
+    # my $article_attr = $self->_is_html5 ? ''        : ' class="news_item"';
+
+    my $article      = 'article';
+    my $article_attr = ' class="news_item"';
 
     return
           qq{<$article$article_attr><h3 class="newsitem" id="}
@@ -270,13 +267,10 @@ sub render_items
 
 sub render_front_page
 {
-    my $self          = shift;
-    my $orig_is_html5 = $self->_is_html5();
-    $self->_is_html5(1);
+    my $self  = shift;
     my @items = reverse( @{ $self->items() } );
     my $ret =
         $self->render_items( [ @items[ 0 .. ( $self->num_on_front() - 1 ) ] ] );
-    $self->_is_html5($orig_is_html5);
     return $ret;
 }
 

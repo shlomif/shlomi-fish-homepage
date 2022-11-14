@@ -23,7 +23,6 @@ has 'items' => (
     default => sub {
         return shift->calc_items();
     },
-    lazy => 1,
 );
 
 has '_is_html5' => (
@@ -271,11 +270,14 @@ sub render_items
 
 sub render_front_page
 {
-    my $self = shift;
+    my $self          = shift;
+    my $orig_is_html5 = $self->_is_html5();
     $self->_is_html5(1);
     my @items = reverse( @{ $self->items() } );
-    return $self->render_items(
-        [ @items[ 0 .. ( $self->num_on_front() - 1 ) ] ] );
+    my $ret =
+        $self->render_items( [ @items[ 0 .. ( $self->num_on_front() - 1 ) ] ] );
+    $self->_is_html5($orig_is_html5);
+    return $ret;
 }
 
 sub render_old_news

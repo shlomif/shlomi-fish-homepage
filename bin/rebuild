@@ -45,7 +45,7 @@ rebuild()
         fi
         time ./gen-helpers
 
-        if false
+        if test "$LATEMP_PROFILE" = '1'
         then
             _gmake_target copy_images_target
             _gmake_target sects_cache
@@ -59,7 +59,7 @@ rebuild()
 
         _gmake_target fastrender
 
-        if false
+        if test "$LATEMP_PROFILE" = '1'
         then
             _gmake_target all_deps
             _gmake_target splay

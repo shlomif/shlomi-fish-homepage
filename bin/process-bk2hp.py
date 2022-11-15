@@ -19,9 +19,9 @@ from lxml import etree
 
 @click.command()
 @click.option('--input', required=True, type=str,
-              help='The number of sides in each die')
+              help='The input filename')
 @click.option('--output', required=True, type=str,
-              help='The number of sides in each die')
+              help='The output filename')
 def main(input, output):
     ns = {"svg": "http://www.w3.org/2000/svg", }
     with open(input, "rb") as fh:

@@ -36,6 +36,9 @@ DOCS_COMMON_DEPS := $(NAV_DATA_DEP)
 FORTUNES_DIR := humour/fortunes
 SRC_FORTUNES_DIR := $(SRC_SRC_DIR)/$(FORTUNES_DIR)
 
+$(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
+	python3 bin/process-bk2hp.py --output $@ --input $<
+
 include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
 MANIFEST_HTML := $(PRE_DEST)/MANIFEST.html

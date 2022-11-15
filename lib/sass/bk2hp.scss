@@ -1,9 +1,12 @@
 .bk2hp {
-    // background-color: #90ee90;
-    background-color: #beb;
-    border: 0;
-    border: white solid 3px;
-    border-radius: 10px;
+    @if false {
+        // background-color: #90ee90;
+        background-color: #beb;
+        border: 0;
+        border: white solid 3px;
+        border-radius: 10px;
+    }
+
     height: 140px;
     padding: 15px;
     margin-top: 2em;

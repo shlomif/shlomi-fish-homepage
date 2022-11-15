@@ -1,5 +1,4 @@
 $(ALL_HTACCESSES): $(PRE_DEST)/%/.htaccess: $(SRC_SRC_DIR)/%/my_htaccess.conf
-$(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-homepage-logo/back-to-my-homepage--scripted-final--with-gradient-applied--cropped.svg
 $(CATB_COPY): $(SRC_SRC_DIR)/homesteading/$(CATB_HEB_BN)
 $(CATB_COPY_POST): $(CATB_COPY)
 $(DOCBOOK5_ALL_IN_ONE_XHTMLS_CSS): %/style.css: $(DOCMAKE_STYLE_CSS) %/all-in-one.html

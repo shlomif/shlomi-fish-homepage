@@ -33,7 +33,9 @@ Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 
 <section class="docbook_formats h2">
 
+<header>
 <h2 id="formats">Formats</h2>
+</header>
 
 <ul>
 
@@ -43,7 +45,7 @@ Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 </p>
 </li>
 
-[% PROCESS story_episode_li base = "The-Enemy-English-v7", story_title = "English HTML",  %]
+[% PROCESS story_episode_li base = "The-Enemy-English-v7" story_title = "English HTML" %]
 
 </ul>
 
@@ -64,7 +66,7 @@ Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 
 </ul>
 
-<h2 id="licence">Licence</h2>
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 <p>
 <!--Creative Commons License-->
@@ -78,6 +80,8 @@ Commons Attribution-ShareAlike 2.5 License</a> (or at your option a
 greater version of this license). Year of copyright is 1997.
 <!--/Creative Commons License-->
 </p>
+
+[%- END -%]
 
 [%- END -%]
 
@@ -151,7 +155,7 @@ relatively negligible.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "thanks"  title = "Thanks and Acknowledgements"  %]
+[% WRAPPER h2_section id = "thanks" title = "Thanks and Acknowledgements" %]
 
 <ul>
 
@@ -203,7 +207,7 @@ entry in my weblog</a> about the history and motivation of this story.
 </li>
 </ul>
 
-<h2 id="previous-vers">Previous Versions</h2>
+[% WRAPPER h2_section id = "previous-vers" title = "Previous Versions" %]
 
 <details>
 <summary>Previous Versions</summary>
@@ -257,6 +261,8 @@ etc.)
 </ul>
 
 </details>
+
+[%- END -%]
 
 [%- END -%]
 

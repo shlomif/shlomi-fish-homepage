@@ -1,13 +1,12 @@
 [%- SET title = "Shlomi Fish’s Original Graphical Artworks" -%]
 [%- SET desc = "Original Graphical Artworks by Shlomi Fish - Logos, slogans, etc." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc lim_width">
 [% default_toc %]
 
-[% PROCESS common_art__graphics_design  %]
+[% PROCESS common_art__graphics_design %]
 </div>
 
 [% END %]

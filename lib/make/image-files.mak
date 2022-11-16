@@ -88,7 +88,7 @@ $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 ART_SLOGANS_DOCS := \
 	chromaticd/kiss-me-my-blog-post-got-chormaticd \
 	CPP-supports-OOP/CPP-supports-OOP-as-much-as \
-	dont-believe-in-fairies/dont-believe-in-fairies  \
+	dont-believe-in-fairies/dont-believe-in-fairies \
 	give-me-ascii/give-me-ASCII-or-give-me-death \
 	lottery-all-you-need-is-a-dollar/lottery-all-you-need-is-a-dollar \
 	what-do-you-mean-by-wdym/what-do-you-mean-by-wdym \

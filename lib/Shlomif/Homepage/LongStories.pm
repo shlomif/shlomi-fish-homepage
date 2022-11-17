@@ -445,7 +445,7 @@ qq#The Tacos are a reference to the “Porque no los dos” Taco commercial ; th
 </header>
 
 <p>
-This ambitious series of screenplays breaks a long time taboo against writing
+This ambitious series of screenplays breaks a long-time taboo against writing
 <i>Star Wars</i> and <i>Star Trek</i> crossovers, but also aims to make
 the case for commercial yet free/open (<a href="https://creativecommons.org/">Creative Commons</a>
 / etc.) fan fiction / crossovers / real person fiction

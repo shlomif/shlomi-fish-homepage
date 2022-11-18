@@ -66,6 +66,35 @@ my $muppets_github =
     _github(
     url => 'http://github.com/shlomif/The-Muppets-Show--The-New-Incarnation', );
 
+my @muppets_pages = (
+    _l(
+        inner_html => "Harry Potter on Sesame Street",
+        path       => "humour/Muppets-Show-TNI/Harry-Potter.html",
+    ),
+    _l(
+        inner_html => "Grammar Nazis",
+        path => "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
+    ),
+    _l(
+        inner_html => "Tiffany Alvord on The Muppet Show",
+        path       => "humour/Muppets-Show-TNI/Tiffany-Alvord.html",
+    ),
+);
+
+sub _gen_muppets__tr
+{
+    my ( $self, $regex ) = @_;
+
+    return _tr(
+        title => "Muppets Fanfiction",
+        items => [
+            $muppets_front_page,
+            ( grep { $_->path() =~ $regex } @muppets_pages ),
+            $muppets_github,
+        ],
+    );
+}
+
 sub _gen__queen_padme_tales__tr
 {
     my $self  = shift;
@@ -477,41 +506,12 @@ my %tr_s = (
             ),
         ],
     ),
-    'muppets_grammar_nazis' => _tr(
-        title => "Muppets Fanfiction",
-        items => [
-            $muppets_front_page,
-            _l(
-                inner_html => "Grammar Nazis",
-                path       =>
-                    "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
-            ),
-            $muppets_github,
-        ],
-    ),
-    'muppets_harry_potter' => _tr(
-        title => "Muppets Fanfiction",
-        items => [
-            $muppets_front_page,
-            _l(
-                inner_html => "Harry Potter on Sesame Street",
-                path       => "humour/Muppets-Show-TNI/Harry-Potter.html",
-            ),
-            $muppets_github,
-        ],
-    ),
-    'muppets_tiffany_alvord' => _tr(
-        title => "Muppets Fanfiction",
-        items => [
-            $muppets_front_page,
-            _l(
-                inner_html => "Tiffany Alvord on The Muppet Show",
-                path       => "humour/Muppets-Show-TNI/Tiffany-Alvord.html",
-            ),
-            $muppets_github,
-        ],
-    ),
-    'queen_padme_tales' => __PACKAGE__->_gen__queen_padme_tales__tr(
+    'muppets_grammar_nazis' =>
+        __PACKAGE__->_gen_muppets__tr(qr#/Summer-Glau#ms),
+    'muppets_harry_potter' =>
+        __PACKAGE__->_gen_muppets__tr(qr#/Harry-Potter#ms),
+    'muppets_tiffany_alvord' => __PACKAGE__->_gen_muppets__tr(qr#/Tiffany#ms),
+    'queen_padme_tales'      => __PACKAGE__->_gen__queen_padme_tales__tr(
         {
             path_regex => qr/./ms,
         }

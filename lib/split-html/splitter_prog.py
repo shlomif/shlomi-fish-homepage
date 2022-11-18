@@ -410,6 +410,7 @@ def _screenplays_main():
             ]:
         for part_suf in [
             "Athena-Gets-Laid",
+            "Trojan-War-Reenactment",
                 ]:
             part = "The-10th-Muse--" + part_suf
             path_to_input = "{}.html".format(part)

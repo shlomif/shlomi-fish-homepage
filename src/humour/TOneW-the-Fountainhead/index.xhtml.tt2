@@ -12,11 +12,11 @@
 
 [% long_stories.calc_common_top_elems(id => 'tow_the_fountainhead') %]
 
-[% WRAPPER screenplay_read_online  %]
+[% WRAPPER screenplay_read_online %]
 
 <ul>
-[% PROCESS story_episode_li base = "TOW_Fountainhead_1", story_title = "The One with the Fountainhead - Part 1",  %]
-[% PROCESS story_episode_li base = "TOW_Fountainhead_2", story_title = "The One with the Fountainhead - Part 2",  %]
+[% PROCESS story_episode_li base = "TOW_Fountainhead_1", story_title = "The One with the Fountainhead - Part 1", %]
+[% PROCESS story_episode_li base = "TOW_Fountainhead_2", story_title = "The One with the Fountainhead - Part 2", %]
 </ul>
 
 [%- END -%]
@@ -28,15 +28,15 @@
 <ul>
 
 <li>
-[% PROCESS screenplay_github_repo     url = "http://github.com/shlomif/TOW-Fountainhead",  %]
+[% PROCESS screenplay_github_repo url = "http://github.com/shlomif/TOW-Fountainhead", %]
 </li>
 
 <li>
-[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_1", screenplay_desc = "Part 1 - ",  %]
+[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_1", screenplay_desc = "Part 1 - ", %]
 </li>
 
 <li>
-[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_2", screenplay_desc = "Part 2 - ",  %]
+[% PROCESS link_to_screenplay basename = "TOW_Fountainhead_2", screenplay_desc = "Part 2 - ", %]
 </li>
 
 </ul>
@@ -201,11 +201,10 @@ to cross <i>Friends</i> and [% fhbook %] in a similar fashion.
 
 <li>
 <p>
-[% fhbooklink %]
-- the actual novel by Ayn Rand, which I have read, and enjoyed immensely and it
-is probably my favourite “Adult-oriented book”. I have heard mixed opinions of
-it from other people who have read it, but even some people who disliked the book
-appear to enjoy my parody.
+[% fhbooklink %] - the actual novel by Ayn Rand, which I have read, and enjoyed
+immensely and it is probably my favourite “Adult-oriented book”. I have heard
+mixed opinions of it from other people who have read it, but even some people
+who disliked the book appear to enjoy my parody.
 </p>
 </li>
 

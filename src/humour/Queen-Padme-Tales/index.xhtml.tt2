@@ -8,7 +8,7 @@
 
 [% long_stories.calc_common_top_elems(id => 'queen_padme_tales') %]
 
-[% WRAPPER h2_section id = "read_online"  title = "Read Online"  %]
+[% WRAPPER h2_section id = "read_online" title = "Read Online" %]
 
 [% SET epub_prefix= base_path _ "humour/Queen-Padme-Tales/" %]
 
@@ -23,18 +23,18 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 </p>
 </li>
 
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors (Pilot Episode)",  %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees",  %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Take-It-Over", story_title = "Let’s Take It Over With",  %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Nighttime-Flight", story_title = "Nighttime Flight",  %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--The-Fifth-Sith", story_title = "The Fifth Sith",  %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors (Pilot Episode)", %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees", %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Take-It-Over", story_title = "Let’s Take It Over With", %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--Nighttime-Flight", story_title = "Nighttime Flight", %]
+[% PROCESS story_episode_li base = "Queen-Padme-Tales--The-Fifth-Sith", story_title = "The Fifth Sith", %]
 </ul>
 
 [% END %]
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="sources" title="Sources"%]
+[% WRAPPER h2_section id = "sources" title = "Sources" %]
 
 <ul>
 
@@ -46,7 +46,7 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 
 [% END %]
 
-[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
 
@@ -60,7 +60,7 @@ the name and the rough format.
 <li>
 <p>
 <a href="https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace">Star Wars: Episode I The Phantom Menace</a> -
-inspired the characters of Queen Padmé, Obi-Wan Kenobi, Qui-Jon, Darth Vader, Anakin Skywalker, etc.
+inspired the characters of Queen Padmé, Obi-Wan Kenobi, <a href="https://starwars.fandom.com/wiki/Qui-Gon_Jinn/Legends">Qui-Gon Jinn</a>, Darth Vader, Anakin Skywalker, etc.
 </p>
 
 <p>
@@ -142,7 +142,7 @@ true during a Mania episode in the late 1990s).
 
 [% END %]
 
-[% WRAPPER h2_section id="licensing" title="Licensing"%]
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
 This work uses some characters and concepts from real life, from other
@@ -160,7 +160,7 @@ the situation is more complicated than that.
 
 [% END %]
 
-[% WRAPPER h2_section id="q_and_a" title="Questions and Answers" %]
+[% WRAPPER h2_section id = "q_and_a" title = "Questions and Answers" %]
 
 [% WRAPPER h3_section id = "the_tacos" title = "What's the deal with the photo of the tacos?" %]
 
@@ -182,11 +182,6 @@ As a result, I decided to use it as a logo.
 </p>
 
 [% END %]
-
-[% END %]
-
-[% UNLESS avoid_nav_blocks %]
-
 
 [% END %]
 

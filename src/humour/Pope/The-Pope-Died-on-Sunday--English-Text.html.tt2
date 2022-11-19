@@ -2,7 +2,6 @@
 [%- SET title = "The Pope Died on Sunday - English Text" -%]
 [%- SET desc = "English text for a story about a hectic week in the life of an American graphics’ artist" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'pope_died_on_sunday') %]
@@ -13,7 +12,7 @@
 
 <div class="story">
 
-[% path_slurp("docbook/5/rendered/The-Pope-Died-on-Sunday-english.xhtml") %]
+[% h_dec_path_slurp("docbook/5/rendered/The-Pope-Died-on-Sunday-english.xhtml") %]
 
 </div>
 

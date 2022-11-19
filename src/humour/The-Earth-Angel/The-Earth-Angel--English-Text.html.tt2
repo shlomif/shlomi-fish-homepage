@@ -10,11 +10,7 @@
 
 <div class="story">
 
-[% WRAPPER h3_section id = "the-story" title = "The Text" %]
-
-[% path_slurp("docbook/5/rendered/The-Earth-Angel-english.xhtml") %]
-
-[% END %]
+[% h_dec_path_slurp("docbook/5/rendered/The-Earth-Angel-english.xhtml") %]
 
 </div>
 

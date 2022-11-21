@@ -10,18 +10,6 @@
 
 @include text_document_h_tags_sizes;
 
-:link,
-:visited,
-img.highlight,
-.nav_links img,
-.bk2hp,
-.patreon {
-    &:hover {
-        background-color: #90ee90;
-    }
-    /* LightGreen */
-}
-
 .navbar {
     &.novis {
         display: none;

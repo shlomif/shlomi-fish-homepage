@@ -146,3 +146,15 @@ blockquote {
     max-width: none;
     width: auto;
 }
+
+:link,
+:visited,
+img.highlight,
+.nav_links img,
+.bk2hp,
+.patreon {
+    &:hover {
+        background-color: #90ee90;
+    }
+    /* LightGreen */
+}

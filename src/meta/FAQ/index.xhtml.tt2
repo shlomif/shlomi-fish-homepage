@@ -1426,6 +1426,14 @@ however manifested, sexy</a>.
 
 [% END %]
 
+[% WRAPPER h3_section id = "what_is_your_fav_colour" title = "What is your favourite colour?" %]
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Chartreuse_(color)">Yellow-green</a>.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]
@@ -4448,7 +4456,7 @@ See my <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-
 
 <li>
 <p>
-There are several IRC networks, so if one has an issue, others are often
+There are several IRC networks, so if one exhibits an issue, others are often
 unaffected by it.
 </p>
 </li>

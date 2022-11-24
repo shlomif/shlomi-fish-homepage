@@ -89,6 +89,8 @@ class MyTests(vnu_validator.VnuTest):
                     |
                 Blue-Rabbit-Log/ideas\\.xhtml
                     |
+Selina-Mandrake/indiv-nodes/dartagnan-advice-to-kate\\.xhtml
+                    |
                 TheEnemy/The-Enemy-English-v7\\.raw{ext}
                 )
             )

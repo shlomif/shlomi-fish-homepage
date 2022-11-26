@@ -601,7 +601,7 @@ it voids all the excitement.
 
 <li>
 <p>
-An annual reenactment of The Trojan War, with <a href="https://en.wikipedia.org/wiki/Achilles">Achilles</a>
+An annual <a href="\$(ROOT)/humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.html">reenactment of The Trojan War</a>, with <a href="https://en.wikipedia.org/wiki/Achilles">Achilles</a>
 being killed using a <a href="https://en.wikipedia.org/wiki/Bazooka">bazooka</a>
 and the Trojan horse being a Trojan pony shaped
 like <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a>.

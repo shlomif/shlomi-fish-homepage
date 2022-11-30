@@ -344,7 +344,8 @@ EOSCRIPTTTTTTT
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
 $setup_script_cmd
-sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
+pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
+sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install \$pydeps"
 # cpanm -vvv IO::Async
 cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
@@ -383,7 +384,6 @@ else
     source /python_3_env/bin/activate
 fi
 
-pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"
 cmake_build_is_already_part_of_test_sh='true'

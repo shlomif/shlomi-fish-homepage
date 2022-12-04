@@ -671,9 +671,14 @@ my %tr_s = (
             ),
         ],
     ),
+    'the_10th_muse__mlpfim' => __PACKAGE__->_gen__the_10th_muse__tr(
+        {
+            path_regex => qr#(?: Trojan )#imsx,
+        }
+    ),
     'the_10th_muse__wil_wheaton' => __PACKAGE__->_gen__the_10th_muse__tr(
         {
-            path_regex => qr#(?:Athena-Gets-Laid | Trojan )#imsx,
+            path_regex => qr#(?: Athena-Gets-Laid | Trojan )#imsx,
         }
     ),
     'tow_fountainhead' => _tr(
@@ -1012,7 +1017,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
                 $Screenplays_TR,
                 _tr_s(
                     qw( terminator_liberation queen_padme_tales
-                        who_will_ride_princess_celestia
+                        who_will_ride_princess_celestia the_10th_muse__mlpfim
                     ),
                 ),
             ],

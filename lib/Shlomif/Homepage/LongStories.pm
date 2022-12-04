@@ -357,7 +357,7 @@ who provide him with many questions, including the million dollar question,
 “Who is the Qoheleth (Now)?”.
 </p>
 
-<p>
+<p class="who_is_qoheleth abstract">
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
 and set in a time of great confusion — not unlike our own, while containing
@@ -574,9 +574,10 @@ EOF
         abstract   => <<"EOF",
 <p>
 The <a href="https://en.wikipedia.org/wiki/Twelve_Olympians">Greek Pantheon</a> of ~2022 AD decides it is high time to hire a 10th muse,
-in charge of the interactive arts. Thus, it hires Arielle (
-<a href="https://en.wikipedia.org/wiki/Regina_King">Regina King</a>, e.g.: in <a href="https://en.wikipedia.org/wiki/Jerry_Maguire">Jerry Maguire</a>), an Afro-American woman, who is happy to be among the first Black
-hires in a whites-dominated Pantheon. ( <a href="\$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-nodes/seize_opportunities.xhtml">Reference</a> )
+in charge of the interactive arts. Thus, it hires Arielle (<a href="https://en.wikipedia.org/wiki/Regina_King">Regina King</a>,
+e.g.: in <a href="https://en.wikipedia.org/wiki/Jerry_Maguire">Jerry Maguire</a>),
+an Afro-American woman, who is happy to be among the first Black
+hires in a whites-dominated Pantheon. (<a href="\$(ROOT)/philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-nodes/seize_opportunities.xhtml">Reference</a>.)
 </p>
 
 <p>

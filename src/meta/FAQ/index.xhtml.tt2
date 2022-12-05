@@ -4961,6 +4961,31 @@ I use it for <a href="[% base_path %]humour/image-macros/">captioned images</a> 
 
 [%- END -%]
 
+[% WRAPPER h4_section id = "why_is_your_uptime_so_low" title = "Why is your uptime so low?" %]
+
+<p>
+Reading from <a href="https://www.facebook.com/shlomi.fish/posts/pfbid0YsLGVJLj7a5ug3tBkuBcpvmFQXi94VmdSTfiaRRKGQQ61LBnBzognW7eQiM4erxol">my Facebook post</a>:
+</p>
+
+<blockquote cite="">
+
+<p>
+Today I'd like to share a story told by a friend. At his workplace, they had a
+computer running Gentoo Linux which wasn't rebooted for a while and accumulated
+a large uptime. Then one day they had to reboot it for some reason. This friend
+gave me one guess to guess what happened then. I guessed that "it didn't work".
+I was right.
+</p>
+
+</blockquote>
+
+<p>
+While mainframe computers tend to accumulate years of uptime, I suspect their
+software and hardware made some design compromises to accommodate for that.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [%- END -%]

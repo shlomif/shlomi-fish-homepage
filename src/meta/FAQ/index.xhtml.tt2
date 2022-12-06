@@ -1457,6 +1457,20 @@ There are 24 hours in a day.
 
 [% END %]
 
+[% WRAPPER h3_section id = "i_hate_one_of_your_works" title = "I think one of your works sucks" %]
+
+<blockquote cite="">
+
+[% INCLUDE communicative_criticism__block %]
+
+</blockquote>
+
+<p>
+( <a href=""></a> )
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]

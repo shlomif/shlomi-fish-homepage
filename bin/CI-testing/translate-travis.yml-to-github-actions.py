@@ -99,6 +99,7 @@ def generate(output_path, is_act):
         data['addons']['apt']['packages'] +
         [
             "golang", "libxslt1-dev", "nodejs", "npm",
+            "python3-numpy",
             "rsync", "ruby", "ruby-dev", "vim",
         ]
     )

@@ -86,7 +86,7 @@ def generate(output_path, is_act):
         '''
         See: https://github.com/actions/runner-images/issues/6153
         '''
-        steps.append({"run": ("sudo apt-get -y remove"
+        steps.append({"run": ("sudo apt-get -y remove "
                               "libgd3 libunwind-14 nginx"), })
     _libgd_workaround(steps=steps)
     steps.append({

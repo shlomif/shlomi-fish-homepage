@@ -1,0 +1,49 @@
+[%- SET title = "Docker-CLI-Wrapper - a wrapper to the Docker (or podman) command-line interfaces" -%]
+
+[% main_class.addClass("fancy_sects") %]
+
+[%- WRAPPER wrap_html -%]
+
+<p>
+This is a wrapper to the Docker (or podman) command-line interfaces.
+</p>
+
+[% WRAPPER h2_section id = "download" title = "Download" %]
+
+<p>
+[%- WRAPPER cpan_dist d = "Docker-CLI-Wrapper" -%]Download Docker-CLI-Wrapper from the
+CPAN[%- END -%]
+</p>
+
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
+
+[% WRAPPER github_cpan_dist_links     dist = "Docker-CLI-Wrapper"
+    github_url = "https://github.com/shlomif/perl-Docker-CLI-Wrapper"
+    freecode_url = "http://freecode.com/projects/file-dir-dumper/"  %]
+[%- END -%]
+
+[% END %]
+
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
+
+<ul>
+
+<li>
+<a href="http://code.google.com/p/xml-dir-listing/">xml-dir-listing</a> -
+based on Java and XML.
+</li>
+
+<li>
+<a href="http://dir2xml.sourceforge.net/">dir2xml</a> - also based on
+Java and XML.
+</li>
+
+</ul>
+
+[% END %]
+
+[% PROCESS x11_licence name = "Docker-CLI-Wrapper" %]
+
+[% END %]

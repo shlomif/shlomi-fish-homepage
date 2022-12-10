@@ -185,6 +185,12 @@ my $_section_navmenu_tree_contents = {
                     title => "A download accelerator with a key improvement.",
                 },
                 {
+                    text  => "Docker-CLI-Wrapper",
+                    url   => "open-source/projects/Docker-CLI-Wrapper/",
+                    title =>
+"A wrapper to the Docker (or podman) command-line interfaces",
+                },
+                {
                     text  => "KSokoban Maintenance",
                     url   => "open-source/projects/ksokoban/",
                     title =>

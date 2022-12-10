@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" -%]
 [%- SET desc = "Shlomi Fish Introducing Himself to the MIT Writers Mailing List" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -22,7 +21,7 @@ reader’s sake I have split this document into sections, so if one section
 bores you, just skip to the next.
 </p>
 
-<h2 id="section-1">Personal:</h2>
+[% WRAPPER h2_section id = "section-1" title = "Personal:" %]
 
 <p>
 My biography can be found here:
@@ -70,14 +69,16 @@ Extreme Programming or Peopleware, explicitly state that one should maintain a
 40-hours week.
 </p>
 
-<h2 id="section-2">Writing:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "section-2" title = "Writing:" %]
 
 <p>
 Cutting to the chase, I’d like to say that I write both fiction and
 non-fiction. My fiction consists of the following creations:
 </p>
 
-<h3 id="the_enemy"><a href="http://www.shlomifish.org/humour/TheEnemy/">1. <i>The Enemy and How I Helped to Fight it</i></a></h3>
+[% WRAPPER h3_section href = "http://www.shlomifish.org/humour/TheEnemy/" id = "the_enemy" title = "1. The Enemy and How I Helped to Fight it" %]
 
 <p>
 This is a political satire (with a much more general moral) about the situation
@@ -115,7 +116,9 @@ somewhat more common, but I have other priorities first.
 Despite its shortcomings, I consider this my best and favourite piece yet.
 </p>
 
-<h3 id="towtf"><a href="http://www.shlomifish.org/humour/TOneW-the-Fountainhead/">2. <i>The One with the Fountainhead</i></a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.shlomifish.org/humour/TOneW-the-Fountainhead/" id = "towtf" title = "2. The One with the Fountainhead" %]
 
 <p>
 This is a parody of Ayn Rand’s book, <i>The Fountainhead</i> modelled around a
@@ -141,7 +144,9 @@ online as well.
 Read and enjoy!
 </p>
 
-<h3><a href="http://www.shlomifish.org/humour/Pope/">3. <i>The Pope died on Sunday</i></a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.shlomifish.org/humour/Pope/" id = "pope" title = "3. The Pope died on Sunday" %]
 
 <p>
 A humorous story that describes a rather insane week in the life of a
@@ -150,7 +155,9 @@ time being, and heavily under-finished. I received some very good reviews of
 it from some people I know.
 </p>
 
-<h3>4. <i>The Human Hacking Field Guide</i></h3>
+[% END %]
+
+[% WRAPPER h3_section id = "hhfg" title = "4. The Human Hacking Field Guide" %]
 
 <p>
 The story is written in English, and focuses on high-school teenagers at
@@ -173,7 +180,9 @@ URL. (as long as you implicitly promise not to disclose it to someone else
 without my permission)
 </p>
 
-<h3><a href="http://www.shlomifish.org/humour/humanity/">5. <i>Humanity</i></a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.shlomifish.org/humour/humanity/" id = "humanity" title = "5. Humanity" %]
 
 <p>
 This is a screenplay for a film that aims to be a parody of Humanity and
@@ -186,7 +195,9 @@ elements, each associated with a skit.
 I personally find it very amusing, but your kilometrage may vary.
 </p>
 
-<h3>6. More small-scale creations:</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "small-scale" title = "6. More small-scale creations:" %]
 
 <p>
 Check:
@@ -196,7 +207,11 @@ Check:
 <a href="http://www.shlomifish.org/humour/">http://www.shlomifish.org/humour/</a>
 </p>
 
-<h2>Non-fiction Writings:</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "non-fiction" title = "Non-fiction Writings:" %]
 
 <p>
 In the course of time I wrote a lot of articles, essays, and the like about
@@ -222,7 +237,9 @@ favourite keywords. Perhaps I need to index my favourite creations and put
 them or link to them from my site, but once again, have other priorities.
 </p>
 
-<h2>Technical Work:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "tech-work" title = "Technical Work:" %]
 
 <p>
 Despite the fact that I studied Electrical Engineering in the Technion, I’m
@@ -293,7 +310,9 @@ clueful than to use automatic graphical front-ends and generators to generate
 them.
 </p>
 
-<h2>Language:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "language" title = "Language:" %]
 
 <p>
 I am very enthusiastic about the way I express myself in both Hebrew and
@@ -313,7 +332,9 @@ I do have aspirations of getting a Ph.D. in Linguistics someday, but it’s not
 a high priority, because lingual experts still need to eat.
 </p>
 
-<h2>Philosophy:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "philosophy" title = "Philosophy:" %]
 
 <p>
 So far there were four books that influenced me the most:
@@ -367,7 +388,9 @@ but I will need some perpetual financial income to embark on it, which I don’t
 have now.
 </p>
 
-<h2>Personal #2:</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "personal-2" title = "Personal #2:" %]
 
 <p>
 I like to bike, take walks in my neighbourhood and hike. I also like to swim,
@@ -424,5 +447,7 @@ links interesting.
 <p>
 <i>Shlomi Fish</i>
 </p>
+
+[% END %]
 
 [% END %]

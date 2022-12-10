@@ -1,12 +1,11 @@
 [%- SET title = "Interviews with Me" -%]
 [%- SET desc = "Interviews of Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 These are links to interviews that were conducted with me. The
@@ -14,31 +13,38 @@ These are links to interviews that were conducted with me. The
 different people</a> are present on a different page in the link.
 </p>
 
-<h2 id="interviews">The Interviews</h2>
+[% END %]
 
-<h3 id="reddit_AMA"><a href="reddit-AMA/">Reddit.com “Ask Me Anything”</a></h3>
+[% WRAPPER h2_section id = "interviews" title = "The Interviews" %]
+
+[% WRAPPER h3_section href = "reddit-AMA/" id = "reddit_AMA" title = "Reddit.com “Ask Me Anything”" %]
 
 <p>
 Reddit.com “Ask me anything” (“IAmA… AMA”) interviews which are open to
 questions from the public.
 </p>
 
+[% END %]
 
-<h3 id="dok"><a href="http://2dok.wordpress.com/2007/07/10/99/">Dotan Kamber’s
-Interview with me</a></h3>
+[% WRAPPER h3_section href = "http://2dok.wordpress.com/2007/07/10/99/" id = "dok" title = "Dotan Kamber’s Interview with me" %]
 
 <p>
 A Hebrew interview with me that was featured on
 <a href="http://2dok.wordpress.com/">Dotan’s blog</a> on July, 2007.
 </p>
 
-<h3 id="zulo"><a href="http://schools.whatsup.org.il/doc/shlomi_fish/">Zulo
-Interview with Shlomi Fish</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://schools.whatsup.org.il/doc/shlomi_fish/" id = "zulo" title = "Zulo Interview with Shlomi Fish" %]
 
 <p>
 A Hebrew interview with me on the <a href="http://www.zulo.org.il/">zulo.org.il
 Israeli site</a> for Linux and open-source software enthusiasts.
 Conducted by <a href="http://meital.blogli.co.il/">Meital Bourvine</a>.
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

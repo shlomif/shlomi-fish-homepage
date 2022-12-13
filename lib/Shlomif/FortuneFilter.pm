@@ -36,7 +36,7 @@ sub _handle
         }
         push @o, $l;
     }
-    print join "\n", @o, "";
+    print join "\n", @o, '%', "";
     return 0;
 }
 
@@ -53,7 +53,7 @@ sub run
         {
             if (@lines)
             {
-                print "%\n" if not $self->_handle( \@lines );
+                $self->_handle( \@lines );
             }
             else
             {
@@ -75,6 +75,7 @@ sub run
     return;
 }
 
+Shlomif::FortuneFilter->new->run;
 1;
 
 # __END__

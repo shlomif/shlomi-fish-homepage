@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use URI::Find ();
+use WWW::Shorten::IsGd;
 
 our @ISA         = qw(Exporter);
 our %EXPORT_TAGS = ( 'all' => [qw()] );
@@ -11,6 +12,13 @@ our @EXPORT_OK   = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT      = qw();
 our $VERSION     = '0.000001';
 require Exporter;
+
+my $shorten_finder = URI::Find->new(
+    sub {
+        my ( $obj, $text ) = @_;
+        return makeashorterlink($text);
+    }
+);
 
 my $finder = URI::Find->new(
     sub {

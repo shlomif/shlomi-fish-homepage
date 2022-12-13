@@ -48,6 +48,7 @@ sub _handle
             and do
             {
                 $finder->find( \$l );
+                $l =~ s#\s+\z##ms;
                 length($l) > 80;
             }
             )

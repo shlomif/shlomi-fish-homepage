@@ -3,12 +3,21 @@ package Shlomif::FortuneFilter;
 use strict;
 use warnings;
 
+use URI::Find ();
+
 our @ISA         = qw(Exporter);
 our %EXPORT_TAGS = ( 'all' => [qw()] );
 our @EXPORT_OK   = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT      = qw();
 our $VERSION     = '0.000001';
 require Exporter;
+
+my $finder = URI::Find->new(
+    sub {
+        my ( $obj, $text ) = @_;
+        return "";
+    }
+);
 
 sub new
 {
@@ -26,7 +35,14 @@ sub _handle
     my @o;
     foreach my $l (@$ll)
     {
-        if ( length($l) > 80 )
+        if (
+            length($l) > 80
+            and do
+            {
+                $finder->find( \$l );
+                length($l) > 80;
+            }
+            )
         {
             return -1;
         }

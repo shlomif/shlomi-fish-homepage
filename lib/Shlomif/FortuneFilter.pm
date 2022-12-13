@@ -20,6 +20,26 @@ sub new
     return $self;
 }
 
+sub _handle
+{
+    my ( $self, $ll ) = @_;
+    my @o;
+    foreach my $l (@$ll)
+    {
+        if ( length($l) > 80 )
+        {
+            return -1;
+        }
+        else
+        {
+            # else...
+        }
+        push @o, $l;
+    }
+    print join "\n", @o, "";
+    return 0;
+}
+
 sub run
 {
     my ( $self, ) = @_;
@@ -33,7 +53,7 @@ sub run
         {
             if (@lines)
             {
-                $self->_handle( \@lines );
+                print "%\n" if not $self->_handle( \@lines );
             }
             else
             {

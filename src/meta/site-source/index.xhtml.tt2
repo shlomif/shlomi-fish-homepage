@@ -193,12 +193,14 @@ and
 </p>
 </li>
 
+[% IF 0 %]
 <li>
 <p>
 <a href="[% base_path %]quad-pres/">Quad-Pres</a>: a presentations slides
 generator by me.
 </p>
 </li>
+[% END %]
 
 <li>
 <p>

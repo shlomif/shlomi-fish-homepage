@@ -1,6 +1,6 @@
-#include '../template.wml'
-<subject "Quad-Pres" />
+[%- SET title = "Quad-Pres" -%]
 
+[%- WRAPPER wrap_html -%]
 <p>
 Quad-Pres stands for "Quick and Dirty Presentations" and is a Perl and
 <a href="http://thewml.org/">Website Meta Language</a> based framework to
@@ -143,3 +143,4 @@ is no duplicacy in the lectures. It also generates a script in the lecture's
 source directory that can serve the lecture dynamically to a web page.
 </p>
 
+[% END %]

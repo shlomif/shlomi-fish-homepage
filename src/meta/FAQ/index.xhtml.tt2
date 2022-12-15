@@ -230,7 +230,8 @@ I had not given my last name a lot of thought until relatively recently
 
 <li>
 <p>
-Progressing carefully, but steadily, like a timid little fish.
+Progressing carefully, but steadily, like a timid little fish exploring the
+ocean.
 </p>
 </li>
 
@@ -951,8 +952,9 @@ have some aversion towards Christianity.
 [% WRAPPER h3_section id = "revealing_incriminating_details" title = "Why are you revealing incriminating details about yourself? This makes you look bad for potential employers." %]
 
 <p>
-A few people told me that I shouldn't mention the fact that I have been exempt
-from military service or that I used to get into clinical depressions and
+A few people told me that I shouldn't mention the fact that I have been
+<a href="#idf_service">exempt
+from military service</a> or that I used to get into clinical depressions and
 still get into hypomanias, because other people may think less of me. My
 response is that these are real and <b>honest</b> details about myself, that
 I would rather not keep to myself given the context, and the fact that I had
@@ -963,7 +965,7 @@ to mention them many times.
 While some employers may look down on me for mentioning that, I’d rather work
 for employers who appreciate honesty, sincerity, and openness. They should
 eventually realise that keeping non-private details to yourself is a sure
-recipe to lose your mind.
+recipe to losing your mind.
 </p>
 
 <p>
@@ -1329,7 +1331,7 @@ and being in love with them.
 [% WRAPPER h4_section id = "are_you_in_love_with_celeb" title = "Are you in love with [insert celebrity here]?" %]
 
 <p>
-As of 2022-03-14 , no. I love them as fellow competent <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml">geeky hackers</a>
+As of 2022-03-14, no. I love them as fellow competent <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml">geeky hackers</a>
 and admit that sexual attraction is implied, but I'm not
 Romantically/intimately in love with them.
 </p>
@@ -1372,8 +1374,8 @@ In my terresterial hell hole, the situation is different:
 <p>
 I have some savings in my bank account and live with my
 parents and am supported by them
-and also receive <a href="https://en.wikipedia.org/wiki/Bituah_Leumi">national insurance</a>
-. So while I'm not poor, I am not rich either.
+and also receive <a href="https://en.wikipedia.org/wiki/Bituah_Leumi">national insurance</a>.
+So while I'm not poor, I am not rich either.
 </p>
 
 <p>
@@ -2335,7 +2337,7 @@ is likely that I had had, even back then and at least sub-consciously, a lot of
 contempt for the original work.
 </p>
 
-<img alt="Rivendell image by tednasmith.com" class="highlight" src="[% base_path %]images/TN-Rivendell--reduced.webp" style="float:right;" />
+<img alt="Rivendell image by tednasmith.com" src="[% base_path %]images/TN-Rivendell--reduced.webp" />
 
 <p>
 Do note that I threw away my only physical copy of <i>The Hobbit</i>
@@ -2894,6 +2896,8 @@ to insist that it is not a blog.
 <b>Update: (November 2019)</b> I am now serving mostly <a href="https://en.wikipedia.org/wiki/XHTML#XHTML5">XHTML5</a> pages and also serving them as <code>application/xml+xhtml</code>.
 </p>
 
+<hr />
+
 <p>
 I feel that validating against an XHTML schema makes my code cleaner and less
 buggy, because I need to have closing tags, as well as use a trailing “/” for
@@ -2986,6 +2990,8 @@ on silly statistics.
 <p>
 <b>Update: (November 2019)</b> This site <a href="https://twitter.com/shlomif/status/1038141561186541570">now uses HTTPS</a>.
 </p>
+
+<hr />
 
 <p>
 For several reasons:
@@ -4417,7 +4423,7 @@ and similar formats such as <a href="https://en.wikipedia.org/wiki/YAML">YAML</a
 some <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">hipster</a> geeks have proclaimed that XML-based grammars no
 longer have any legitimate use. However, while I use JSON and YAML for
 many tasks, I still find XML (and <b>some</b> related technologies such as <a href="https://en.wikipedia.org/wiki/DocBook">DocBook 5</a>,
-<a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a> ) of use. Part of the reason is that XML can be
+<a href="https://en.wikipedia.org/wiki/XPath">XPath</a>, <a href="https://en.wikipedia.org/wiki/RELAX_NG">RELAX NG</a>, and <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>) of use. Part of the reason is that XML can be
 used to add markup to a substring of the text, e.g.: like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>:
 </p>
 

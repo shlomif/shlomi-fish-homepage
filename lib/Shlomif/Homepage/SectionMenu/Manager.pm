@@ -22,6 +22,12 @@ my @sections = (
         'title' => "Essays Section Menu",
     },
     {
+        'id'    => "me",
+        'regex' => qr#\A(/me/|/personal)#,
+        'class' => "Shlomif::Homepage::SectionMenu::Sects::Me",
+        'title' => "About Myself Section Menu",
+    },
+    {
         'id'    => "puzzles",
         'regex' => qr{\A/(?:(?:puzzles|MathVentures)/|toggle.html\z)},
         'class' => "Shlomif::Homepage::SectionMenu::Sects::Puzzles",

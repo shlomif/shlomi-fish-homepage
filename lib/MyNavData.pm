@@ -11,8 +11,7 @@ use Shlomif::Homepage::SectionMenu ();
 use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
 use MyNavData::Hosts ();
 
-my @personal_expand = ( expand => { bool => 1, capt => 0, }, );
-my @humour_expand   = ( re     => qr#\A@{[ get_is_humour_re()]}#, );
+my @humour_expand = ( re => qr#\A@{[ get_is_humour_re()]}#, );
 my @humour_aphorisms_expand =
     ( re =>
         qr{^(?:humour/(?:aphorisms/|fortunes/|bits/facts/)|(?:humour\.html$))}
@@ -407,7 +406,8 @@ sub generic_get_params
     my $get_sub_tree = sub {
         my ($sect_name) = @_;
 
-        if ($is_fully_expanded)
+        if ( $is_fully_expanded
+            or ( $sect_name eq 'Shlomif::Homepage::SectionMenu::Sects::Me' ) )
         {
             my $sect_to_ret =
                 Shlomif::Homepage::SectionMenu->get_modified_sub_tree(
@@ -440,120 +440,7 @@ sub generic_get_params
                 text => "Shlomi Fish’s Homepage",
                 url  => "",
             },
-            {
-                text => "About Myself",
-                url  => "me/",
-                @personal_expand,
-                subs => [
-                    {
-                        text   => "Bio",
-                        url    => "personal.html",
-                        title  => "A Short Biography of Myself",
-                        expand => { re => "^(?:me/|personal/)", },
-                        subs   => [
-                            {
-                                text  => "Intros",
-                                url   => "me/intros/",
-                                title =>
-                                    "Introductions of Me to Various Forums",
-                                skip => 1,
-                                subs => [
-                                    {
-                                        text  => "MIT Writers",
-                                        url   => "me/intros/writers/",
-                                        title =>
-"My Intro to the MIT Writers Mailing List",
-                                        skip => 1,
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                    {
-                        text  => "Contact Me",
-                        url   => "me/contact-me/",
-                        title => "How to Contact Me",
-                    },
-                    {
-                        text  => "“Rindolf” - my nickname",
-                        url   => "me/rindolf/",
-                        title =>
-"The history and etymology of “Rindolf”, Shlomi Fish’s Nickname",
-                        subs => [
-                            {
-                                text =>
-"“Rindolfism” - my personal, dynamic, philosophy",
-                                url   => "me/rindolfism/",
-                                title =>
-"Shlomi Fish’s Personal, dynamic, open / free / geeky / share / hacky philosophy",
-                                skip => 1,
-                            },
-                        ],
-                    },
-                    {
-                        text => "My Résumés",
-                        url  => "me/resumes/",
-                        subs => [
-                            {
-                                text => "Résumé as a Software Dev",
-                                url  =>
-"me/resumes/Shlomi-Fish-Resume-as-Software-Dev.html",
-                            },
-                            {
-                                text => "English Résumé",
-                                url  => "SFresume.html",
-                                skip => 1,
-                            },
-                            {
-                                text => "Detailed English Résumé",
-                                url  => "SFresume_detailed.html",
-                                skip => 1,
-                            },
-                            {
-                                text => "Résumé as a Writer and Entertainer",
-                                url  =>
-"me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html",
-                            },
-                        ],
-                    },
-                    {
-                        text => "My Business Card",
-                        url  => "me/business-card/",
-                    },
-                    {
-                        text  => "Personal Ad",
-                        url   => "me/personal-ad.html",
-                        title =>
-"My Personal Ad: what I’m looking for in a prospective girlfriend and what I can add to the relationship.",
-                    },
-                    {
-                        text  => "My Weblogs",
-                        url   => "me/blogs/",
-                        title => "Links to my online journals.",
-                    },
-                    {
-                        text  => "Interviews",
-                        url   => "me/interviews/",
-                        title => "Interviews that were conducted with me",
-                        skip  => 1,
-                        subs  => [
-                            {
-                                text => "Reddit “Ask Me Anything”",
-                                url  => "me/interviews/reddit-AMA/",
-                                skip => 1,
-                            },
-                        ],
-                    },
-                    {
-                        text => "Relicensing my Creative Works Portfolio",
-                        url  =>
-                            "me/relicensing-my-entire-portfolio-under-cc-by/",
-                        title =>
-"Offer to relicense my whole body of creative works under CC-by if I get enough money",
-                        skip => 1,
-                    },
-                ],
-            },
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Me'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Humour'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Essays'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Puzzles'),

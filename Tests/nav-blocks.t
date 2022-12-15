@@ -18,7 +18,8 @@ use Shlomif::Homepage::NavBlocks::Renderer   ();
 use Shlomif::Homepage::NavBlocks             ();
 use Shlomif::Homepage::NavBlocks::TableBlock ();
 use Shlomif::Homepage::RelUrl (qw/ _set_url _url_obj /);
-use NavBlocks ();
+use NavBlocks                                 ();
+use Shlomif::Homepage::SectionMenu::Sects::Me ();
 
 sub _fn
 {

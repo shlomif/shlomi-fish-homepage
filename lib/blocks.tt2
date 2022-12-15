@@ -212,7 +212,7 @@ publicly linked to. Please send comments to
 [% END %]
 
 [% BLOCK docbook_formats_w_base %]
-[% INCLUDE docbook_formats h2_id=h2_id h2_text=h2_text indiv_href=base _ "/" epub_href=base _".epub" orig_xml_href=base _".xml" pdf_href=base _".pdf" %]
+[% INCLUDE docbook_formats h2_id = h2_id h2_text = h2_text indiv_href = base _ "/" epub_href = base _ ".epub" orig_xml_href = base _ ".xml" pdf_href = base _ ".pdf" %]
 [% END %]
 
 [% PROCESS "common_art.tt2" %]

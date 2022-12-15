@@ -1,0 +1,65 @@
+#include '../template.wml'
+<subject "Quad-Pres - Download" />
+
+<h2>Stable</h2>
+
+<define-tag version_link>
+<a href="http://download.berlios.de/quad-pres/quad-pres-%0.tar.gz">Version
+%0</a>
+</define-tag>
+
+<p>
+<a href="quad-pres-0.30.0.tar.xz">Version 0.30.0</a>
+</p>
+
+<h2>Development</h2>
+
+<p>
+<version_link "$(DEVEL_VERSION)" />
+</p>
+
+<h2>Notes</h2>
+
+<p>
+To compile as an RPM, run the command <tt>rpm -tb</tt> on the archive.
+</p>
+
+<h2>Old Versions</h2>
+
+<ul>
+<li>
+<a href="quad-pres-0.28.1.tar.xz">Version 0.28.1</a>
+</li>
+<li>
+<a href="quad-pres-0.26.0.tar.xz">Version 0.26.0</a>
+</li>
+<li>
+<a href="quad-pres-0.24.1.tar.xz">Version 0.24.1</a>
+</li>
+<li>
+<a href="quad-pres-0.22.0.tar.xz">Version 0.22.0</a>
+</li>
+<li>
+<a href="quad-pres-0.20.0.tar.xz">Version 0.20.0</a>
+</li>
+<li>
+<a href="quad-pres-0.16.0.tar.xz">Version 0.16.0</a>
+</li>
+<li>
+<a href="quad-pres-0.14.0.tar.bz2">Version 0.14.0</a>
+</li>
+<li>
+<version_link "0.8.0" />
+</li>
+<li>
+<version_link "0.10.3" />
+</li>
+<li>
+<version_link "0.12.0" />
+</li>
+</ul>
+
+<p>
+Other versions can be extracted from <a href="https://svn.berlios.de/svnroot/repos/quad-pres/">the Subversion repository</a>.
+</p>
+

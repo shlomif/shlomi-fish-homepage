@@ -1,0 +1,145 @@
+#include '../template.wml'
+<subject "Quad-Pres" />
+
+<p>
+Quad-Pres stands for "Quick and Dirty Presentations" and is a Perl and
+<a href="http://thewml.org/">Website Meta Language</a> based framework to
+create HTML presentations.
+</p>
+
+<p>
+You can find documentation and instructions in
+<a href="http://www.shlomifish.org/lecture/Quad-Pres/slides/">this lecture</a> I prepared. If you
+have any other questions contact me at
+<a href="mailto:shlomif@cpan.org">shlomif@cpan.org</a>.
+</p>
+
+<h2 id="features">Features</h2>
+
+<ol>
+<li>
+Uses <a href="http://thewml.org/">Website Meta Language</a>.
+</li>
+<li>
+Organizes the lecture into a hierarchy of sections and subections.
+</li>
+<li>
+Generates tables of contents, and navigation links.
+</li>
+<li>
+Links to a common <a href="http://www.w3.org/Style/CSS/">CSS</a> StyleSheet.
+</li>
+<li>
+A common HTML header and footer.
+</li>
+<li>
+Can be generated into a web-server directory or dynamically served using a
+CGI script in the presentation directory.
+</li>
+<li>
+Written in pure Perl and so is very portable.
+</li>
+<li>
+The generated code is compliant to XHTML 1.0.
+</li>
+<li>
+Support multiple themes that customize the look and feel of the slides.
+</li>
+<li>
+Supports setting several parameters to the pages: doctype strictness,
+language, character set, body direction.
+</li>
+</ol>
+
+<h2>Examples</h2>
+
+<ul>
+<li>
+<a href="CatB-Quad-Pres-Lecture.tar.gz">A Quad-Pres Lecture about "the
+Cathedral and the Bazaar" series</a>
+</li>
+<li>
+<a href="W2L-Basic-Use-Lecture.tar.gz">A Lecture about Linux Basic Use</a>
+</li>
+</ul>
+
+<p>
+<a href="http://www.shlomifish.org/lecture/">Here
+are the final forms of the sample lectures</a>.
+</p>
+
+<h2 id="news">News</h2>
+
+<h3 id="news_2016_04_02">02-Apr-2016</h3>
+
+<p>
+A new stable version - 0.18.0 - was released today. This version fixes
+fixes the RPM .spec to use the .tar.xz file, and removes carriage returns
+and trailing whitespace.
+</p>
+
+<h3 id="news_2016_03_23">23-Mar-2016</h3>
+
+<p>
+A new stable version - 0.16.0 - was released today. This version fixes
+some old E-mails and URLs and fixes the RPM .spec.
+</p>
+
+<h3 id="news_2014_10_10">10-Oct-2014</h3>
+
+<p>
+A new stable version - 0.14.0 - was released today. This version added a
+test suite and converted to use CMake instead of GNU Autotools.
+</p>
+
+<h3 id="news_2006_08_27">27-Aug-2006</h3>
+
+<p>
+A new stable version - 0.12.0 - was released today. Changes in this version
+are:
+</p>
+
+<ol>
+<li>
+Added the Template-Toolkit configurable configuration directives.
+</li>
+<li>
+Added the $translate_control_text subroutine.
+</li>
+<li>
+Fixed some unicode problems.
+</li>
+<li>
+Some other bug-fixes.
+</li>
+<li>
+Added an automated test suite.
+</li>
+</ol>
+
+<h3 id="news_2003_10_20">20-Oct-2003</h3>
+
+<p>
+Released version 0.10.3 up on the heels of 0.10.1, with some important
+fixes.
+</p>
+
+<h3 id="news_2003_10_16">16-Oct-2003</h3>
+
+<p>
+Quad-Pres version 0.10.1 was released. This version features a multi-theme
+feature, that enable to customize the look and feel of the slides. Moreover,
+it is possible to specify several parameters as language, character set,
+and body direction. Other than that, a test suite was written to verify that
+some features of the program are not broken.
+</p>
+
+<h3 id="news_2003_02_07">7-Feb-2003</h3>
+
+<p>
+Quad-Pres version 0.8.0 was released. As opposed to previous versions, this
+version is now installed in a central place in the system, so there
+is no duplicacy in the lectures. It also generates a script in the lecture's
+source directory that can serve the lecture dynamically to a web page.
+</p>
+

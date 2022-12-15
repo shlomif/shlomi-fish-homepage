@@ -1,0 +1,28 @@
+a:hover, img.highlight:hover { background-color : lightgreen }
+td.navbar
+{
+    background-image : url(./images/pa051.jpg) ;
+    background-color: #C5CAE2 ;
+    width : 20% ;
+    border-color : green;
+    border-width : thick;
+    border-style : double;
+}
+p.desc { margin-left : 3em }
+ul.navbarmain { padding-left : 1em ; margin-left : 1em ; font-size : 90%}
+ul.navbarnested { padding-left : 0em ; margin-left : 2em }
+h3.newsitem { text-indent: 3em }
+p.newsitem { margin-left : 6em }
+div.indent { margin-left : 3em }
+p.indent { margin-left : 3em  }
+div.rightalign { text-align : right }
+/*
+    Make sure the links inside the navigation bar are highlited
+    with a different colour. That's CSS 2.
+    http://www.zvon.org/xxl/CSS2Tutorial/Examples/example3.html
+*/
+td.navbar a:hover { background-color : orange }
+td.main { padding-left : 1em ; margin-left : 1em }
+h2.plain{ color : black ; border : none }
+h2 { padding-left : 0.5em ; background-color : #ccddff; }
+td.navbar h2 { color: black ; border : none ; font-size: large ; margin-left : 1em ;}

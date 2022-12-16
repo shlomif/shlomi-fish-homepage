@@ -1340,12 +1340,11 @@ better in this scenario.
 
     <listitem>
         <para>
-            Write a command line executable that uses the library, invoke it,
-            and process its output. This strategy was taken by the developers of
-            the open-source
-            <link
-                xlink:href="http://pysolfc.sourceforge.net/">PySolFC</link> out of
-            convenience using my existing “fc-solve” executable.
+            Write a command line executable that uses the library.  Then,
+            invoke the executable, and parse and process its output. This
+            strategy was taken by the developers of the open-source <link
+            xlink:href="http://pysolfc.sourceforge.net/">PySolFC</link> out of
+            implementation convenience using my existing “fc-solve” executable.
         </para>
     </listitem>
 

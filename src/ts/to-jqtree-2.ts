@@ -1,5 +1,14 @@
 "use strict";
 function shlomif_load_nav(page_path) {
+    $(() => {
+        const footer = $("body > footer");
+        footer.prepend(
+            '<p><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
+                page_path +
+                (/\/$/.test(page_path) ? "" : ".tt2") +
+                '">Page source</a></p>',
+        );
+    });
     $.getJSON(
         get_relative_path({
             rel_path: page_path,

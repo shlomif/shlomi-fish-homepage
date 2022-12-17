@@ -37,7 +37,7 @@ function shlomif_load_nav(page_path) {
             const has_ls: boolean =
                 typeof localStorage !== "undefined" && localStorage !== null;
             const storage_key: string = "shlomifish.org_main_nav_menu_data";
-            let was_storage_already_populated = false;
+            let was_storage_already_populated: boolean = false;
             if (has_ls) {
                 was_storage_already_populated = localStorage.getItem(
                     storage_key,

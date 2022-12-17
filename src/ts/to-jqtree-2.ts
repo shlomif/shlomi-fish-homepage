@@ -1,5 +1,5 @@
 "use strict";
-function shlomif_load_nav(page_path) {
+function shlomif_load_nav(page_path: string): void {
     $(() => {
         const footer = $("body > footer");
         footer.prepend(

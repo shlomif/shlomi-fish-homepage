@@ -1,12 +1,12 @@
 [% IF is_dev %]
 <script [% script_type %] src="[% base_path %]js/jq.js"></script>
 <script [% script_type %] src="[% base_path %]js/tree.jquery.js"></script>
-<script [% script_type %] src="[% base_path %]js/toggler.js"></script>
-<script [% script_type %] src="[% base_path %]js/toggle_sect.js"></script>
-<script [% script_type %] src="[% base_path %]js/to-jqtree.js"></script>
-<script [% script_type %] src="[% base_path %]js/to-jqtree-2.js"></script>
-<script [% script_type %] src="[% base_path %]js/selfl.js"></script>
-<script [% script_type %] src="[% base_path %]js/sub_menu.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/toggler.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/toggle_sect.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/to-jqtree.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/to-jqtree-2.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/selfl.js"></script>
+<script [% script_type %] src="[% base_path %]js/non-minified/sub_menu.js"></script>
 [% ELSE %]
 <script [% script_type %] src="[% base_path %]js/main_all.js"></script>
 [% END %]

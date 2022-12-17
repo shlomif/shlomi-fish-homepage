@@ -23,7 +23,9 @@ $(NAV_DATA_AS_JSON): $(NAV_DATA_DEP) $(NAV_DATA_AS_JSON_BIN) lib/Shlomif/Homepag
 OUT_PREF = lib/out-babel/js
 TYPESCRIPT_basenames = decss_for_typescript.js fortunes-info-datetime.js fortunes_show.js resize-iframe.js selfl.js sub_menu.js to-jqtree-2.js to-jqtree.js toggle_sect.js toggler.js
 DEST_JS_DIR = $(POST_DEST)/js
+NON_MIN__DEST_JS_DIR = $(POST_DEST)/js/non-minified
 dest_jsify = $(addprefix $(DEST_JS_DIR)/,$(1))
+non_min__dest_jsify = $(addprefix $(NON_MIN__DEST_JS_DIR)/,$(1))
 
 TYPESCRIPT_DEST_FILES = $(patsubst %.js,$(OUT_PREF)/%.js,$(TYPESCRIPT_basenames))
 TYPESCRIPT_DEST_FILES__NODE = $(patsubst %.js,lib/for-node/js/%.js,$(TYPESCRIPT_basenames))
@@ -31,6 +33,7 @@ TYPESCRIPT_COMMON_DEFS_FILES = src/ts/jq_qs.d.ts
 TYPESCRIPT_COMMON_DEPS =
 
 DEST_BABEL_JSES = $(call dest_jsify,$(JSES_js_basenames) $(TYPESCRIPT_basenames))
+NON_MIN__DEST_BABEL_JSES = $(call non_min__dest_jsify,$(JSES_js_basenames) $(TYPESCRIPT_basenames))
 OUT_BABEL_JSES = $(patsubst $(DEST_JS_DIR)/%,$(OUT_PREF)/%,$(DEST_BABEL_JSES))
 
 $(DEST_BABEL_JSES): $(DEST_JS_DIR)/%.js: $(OUT_PREF)/%.js
@@ -38,9 +41,13 @@ $(DEST_BABEL_JSES): $(DEST_JS_DIR)/%.js: $(OUT_PREF)/%.js
 
 non_latemp_targets: $(call dest_jsify,fortunes_show.js)
 non_latemp_targets: $(call dest_jsify,resize-iframe.js)
+non_latemp_targets: $(NON_MIN__DEST_BABEL_JSES)
 
 # run_tsc = tsc --target es6 --moduleResolution node --module $1 --outDir $$(dirname $@) $<
 run_tsc = tsc --project lib/typescript/$1/tsconfig.json
+
+$(NON_MIN__DEST_BABEL_JSES): $(NON_MIN__DEST_JS_DIR)/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS)
+	$(call run_tsc,non-minified)
 
 $(TYPESCRIPT_DEST_FILES): $(OUT_PREF)/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS)
 	$(call run_tsc,www)
@@ -48,13 +55,16 @@ $(TYPESCRIPT_DEST_FILES): $(OUT_PREF)/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS
 $(TYPESCRIPT_DEST_FILES__NODE): lib/for-node/js/%.js: src/ts/%.ts $(TYPESCRIPT_COMMON_DEPS)
 	$(call run_tsc,cmdline)
 
+tsc_non_min_www:
+	$(call run_tsc,non-minified)
+
 tsc_www:
 	$(call run_tsc,www)
 
 tsc_cmdline:
 	$(call run_tsc,cmdline)
 
-serial_run: tsc_www tsc_cmdline
+serial_run: tsc_non_min_www tsc_www tsc_cmdline
 
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 
@@ -85,4 +95,3 @@ $(MAIN_TOTAL_MIN_JS_DEST): $(MULTI_YUI) $(MAIN_TOTAL_MIN_JS__SOURCES)
 
 $(TREE_JS_DEST): bower_components/jqTree/tree.jquery.js
 	$(call COPY)
-

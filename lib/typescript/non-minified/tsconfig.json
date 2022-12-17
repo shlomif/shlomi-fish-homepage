@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "module": "amd",
+      "moduleResolution": "node",
+      "noImplicitReturns": true,
+      "outDir": "../../../dest/post-incs/t2/js/non-minified",
+      "paths": {
+          "big-integer": ["node_modules/big-integer/BigInteger.d.ts"],
+          "qunit": ["node_modules/@types/qunit"]
+      },
+      "target":"es2017",
+      "types": ["jquery"],
+      "typeRoots": ["node_modules/@types", "node_modules"]
+  },
+  "include": ["../../../src/ts/**/*.ts"]
+}

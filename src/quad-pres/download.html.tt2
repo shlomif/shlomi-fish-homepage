@@ -1,12 +1,15 @@
-#include '../template.wml'
-<subject "Quad-Pres - Download" />
+[%- SET title = "Quad-Pres - Download" -%]
+
+[%- WRAPPER wrap_html -%]
 
 <h2>Stable</h2>
 
+[% IF 0 %]
 <define-tag version_link>
 <a href="http://download.berlios.de/quad-pres/quad-pres-%0.tar.gz">Version
 %0</a>
 </define-tag>
+[% END %]
 
 <p>
 <a href="quad-pres-0.30.0.tar.xz">Version 0.30.0</a>
@@ -14,14 +17,16 @@
 
 <h2>Development</h2>
 
+[% IF 0 %]
 <p>
 <version_link "$(DEVEL_VERSION)" />
 </p>
+[% END %]
 
 <h2>Notes</h2>
 
 <p>
-To compile as an RPM, run the command <tt>rpm -tb</tt> on the archive.
+To compile as an RPM, run the command <code>rpmbuild -tb</code> on the archive.
 </p>
 
 <h2>Old Versions</h2>
@@ -48,6 +53,7 @@ To compile as an RPM, run the command <tt>rpm -tb</tt> on the archive.
 <li>
 <a href="quad-pres-0.14.0.tar.bz2">Version 0.14.0</a>
 </li>
+[% IF 0 %]
 <li>
 <version_link "0.8.0" />
 </li>
@@ -57,9 +63,11 @@ To compile as an RPM, run the command <tt>rpm -tb</tt> on the archive.
 <li>
 <version_link "0.12.0" />
 </li>
+[% END %]
 </ul>
 
 <p>
-Other versions can be extracted from <a href="https://svn.berlios.de/svnroot/repos/quad-pres/">the Subversion repository</a>.
+Other versions can be extracted from <a href="https://github.com/shlomif/quad-pres">the GitHub repository</a>.
 </p>
 
+[% END %]

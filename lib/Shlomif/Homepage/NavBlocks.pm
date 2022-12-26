@@ -506,6 +506,7 @@ my %tr_s = (
             ),
         ],
     ),
+    'muppets_all'           => __PACKAGE__->_gen_muppets__tr(qr#.#ms),
     'muppets_grammar_nazis' =>
         __PACKAGE__->_gen_muppets__tr(qr#/Summer-Glau#ms),
     'muppets_harry_potter' =>
@@ -1127,6 +1128,23 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
                 _tr_s(
                     qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord ),
                 ),
+                $Essays_TR,
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
+            ],
+        },
+    ),
+    'muppets' => Shlomif::Homepage::NavBlocks::TableBlock->new(
+        {
+            id         => 'muppets_nav_block',
+            text_title => "Muppets Fanfiction",
+            tr_s       => [
+                _master_tr(
+                    title => q{Muppets Fanfiction},
+                ),
+                $Screenplays_TR,
+                _tr_s( qw( muppets_all ), ),
                 $Essays_TR,
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'

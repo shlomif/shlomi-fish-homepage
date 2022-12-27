@@ -103,7 +103,6 @@ can be both different and great.
 
 [% WRAPPER github_captioned_image_joke id = "gotta-be-a-badass-to-play-one" header = "“Gotta be a badass to play one in the movies”" repo_href = "https://github.com/shlomif/Captioned-Image-Badass-Schwarzenegger" src = base_path _ "humour/images/gotta-be-a-badass-to-play-one.svg.webp" alt = "Gotta be a badass to play one in the movies" %]
 
-
 [% WRAPPER quote %]
 
 <p>
@@ -190,3 +189,30 @@ See:
 [%- END -%]
 
 [%- END -%]
+
+[% BLOCK little_red_riding_hood_of_messiahs__imgmacro %]
+
+[% WRAPPER github_captioned_image_joke id = "little_red_riding_hood_of_messiahs" header = "“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”" repo_href = "https://github.com/shlomif/Captioned-Image--Little-Red-Riding-Hood-of-Messiahs" src = base_path _ "humour/images/little-red-riding-hood-of-messiahs-800.webp" alt = "“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”" %]
+
+[% WRAPPER quote %]
+<p>
+“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”
+</p>
+[%- END -%]
+
+<p>
+Photo of <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a> holding guns with the caption of “I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”.
+</p>
+
+<p>
+See <a href="[% base_path %]philosophy/the-eternal-jew/#reception">the Midrash</a>.
+</p>
+
+[%- END -%]
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE little_red_riding_hood_of_messiahs__imgmacro %]
+[% PROCESS little_red_riding_hood_of_messiahs__imgmacro %]
+[% END %]

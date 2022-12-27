@@ -3111,25 +3111,7 @@ She is, in a sense, a <a href="https://en.wiktionary.org/wiki/litmus_test">litmu
 [% INCLUDE badass_Schwarzenegger %]
 [% INCLUDE badass_fluttershy %]
 [% INCLUDE it_is_too_easy__image_macro %]
-
-[% WRAPPER github_captioned_image_joke id = "little_red_riding_hood_of_messiahs" header = "“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”" repo_href = "https://github.com/shlomif/Captioned-Image--Little-Red-Riding-Hood-of-Messiahs" src = base_path _ "humour/images/little-red-riding-hood-of-messiahs-800.webp" alt = "“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”" %]
-
-
-[% WRAPPER quote %]
-<p>
-“I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”
-</p>
-[%- END -%]
-
-<p>
-Photo of <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a> holding guns with the caption of “I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”.
-</p>
-
-<p>
-See <a href="[% base_path %]philosophy/the-eternal-jew/#reception">the Midrash</a>.
-</p>
-
-[%- END -%]
+[% INCLUDE little_red_riding_hood_of_messiahs__imgmacro %]
 
 [% WRAPPER github_captioned_image_joke id = "one_does_not_simply_read_tolkien_lotr" header = "One does not simply read Tolkien’s Lord of the Rings" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/One-does-not-Simply-Read-LotR" src = base_path _ "humour/images/one-does-not-simply-read-tolkiens-lotr-600.webp" alt = "One does not simply read Tolkien’s Lord of the Rings" %]
 

@@ -1144,7 +1144,7 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
                     title => q{Muppets Fanfiction},
                 ),
                 $Screenplays_TR,
-                _tr_s( qw( muppets_all ), ),
+                _tr_s( qw( muppets_all the_10th_muse__mlpfim ), ),
                 $Essays_TR,
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'

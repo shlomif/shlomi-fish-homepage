@@ -4,6 +4,9 @@
 [% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
+[% SET lang = "eng" %]
+[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+[% PROCESS "Inc/emma_watson_img_macros_blocks.tt2" %]
 
 [%- WRAPPER about_sect -%]
 
@@ -120,11 +123,7 @@ the greatest compliments I can possibly get.
 
 [% WRAPPER h3_section id="combined_meme" title="Combined Meme"%]
 
-<img src="[% base_path %]humour/images/little-red-riding-hood-of-messiahs-800.webp" alt="I’m the Little Red Riding Hood of Messiahs…" class="max_width" /><br />
-
-<p>
-(Photo of <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a> holding guns with the caption of “I’m the Little Red Riding Hood of Messiahs — my Apocalypse is badder than yours”.).
-</p>
+[% INCLUDE little_red_riding_hood_of_messiahs__imgmacro %]
 
 [% END %]
 

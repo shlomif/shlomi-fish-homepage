@@ -24,3 +24,19 @@
     height: 40px;
     max-width: 90%;
 }
+
+.faq_bk2hp {
+    @if true {
+        // background-color: #90ee90;
+        // background-color: #beb;
+        border: 0;
+        border: black solid 3px;
+        border-radius: 10px;
+    }
+
+    height: 100px;
+    padding: 15px;
+    margin-top: 2em;
+    // max-width: 1000px 50%;
+    max-width: 30%;
+}

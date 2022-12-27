@@ -3582,6 +3582,12 @@ maintenance burden.
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "back_to_my_homepage_link_image" title = "What can you tell about the “Back to my Homepage” link’s image?" %]
+
+<img src="[% base_path %]images/bk2hp-v2.min.svg" class="faq_bk2hp" alt="Back to my Homepage"/>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "works_of_fiction" title = "About my works of fiction." %]

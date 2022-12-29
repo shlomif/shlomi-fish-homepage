@@ -152,9 +152,15 @@ blockquote {
 img.highlight,
 .nav_links img,
 .bk2hp,
-.patreon {
+.patreon,
+.site_icon {
     &:hover {
         background-color: #90ee90;
     }
     /* LightGreen */
+}
+
+.site_icon {
+    border: 0;
+    margin-bottom: 0.5em;
 }

@@ -14,6 +14,32 @@ use NavSectMenuRender                      ();
 
 my $host = 't2';
 
+sub _calc_nav_links
+{
+    my ( $proto_url, ) = @_;
+    my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
+
+    my $filename = "/$url";
+
+    # print "start filename=$filename\n";
+    my $ROOT    = NavDataRender::get_root($url);
+    my $results = NavSectMenuRender->init_section_nav_menu(
+        {
+            filename => $filename,
+            host     => $host,
+            lang     => +{ ar => 1, en => 1, he => 1, },
+            ROOT     => $ROOT,
+        }
+    );
+
+    my $section_nav_menu = $results->{section_nav_menu};
+    my $rendered_results = $section_nav_menu->results();
+
+    my $nav_links_obj = $rendered_results->{nav_links_obj};
+
+    return ( $nav_links_obj, );
+}
+
 for my $proto_url ("philosophy/index.xhtml")
 {
     my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
@@ -48,24 +74,7 @@ for my $proto_url ("philosophy/index.xhtml")
 
 for my $proto_url ("humour/index.xhtml")
 {
-    my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
-
-    my $filename = "/$url";
-
-    # print "start filename=$filename\n";
-    my $ROOT    = NavDataRender::get_root($url);
-    my $results = NavSectMenuRender->init_section_nav_menu(
-        {
-            filename => $filename,
-            host     => $host,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-            ROOT     => $ROOT,
-        }
-    );
-
-    my $section_nav_menu = $results->{section_nav_menu};
-    my $rendered_results = $section_nav_menu->results();
-    my $nav_links_obj    = $rendered_results->{nav_links_obj};
+    my ( $nav_links_obj, ) = _calc_nav_links( $proto_url, );
     if (1)
     {
         my $up = $nav_links_obj->{'next'};
@@ -81,25 +90,7 @@ for my $proto_url ("humour/index.xhtml")
 
 for my $proto_url ("humour/stories/index.xhtml")
 {
-    my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
-
-    my $filename = "/$url";
-
-    # print "start filename=$filename\n";
-    my $ROOT    = NavDataRender::get_root($url);
-    my $results = NavSectMenuRender->init_section_nav_menu(
-        {
-            filename => $filename,
-            host     => $host,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-            ROOT     => $ROOT,
-        }
-    );
-
-    my $section_nav_menu = $results->{section_nav_menu};
-    my $rendered_results = $section_nav_menu->results();
-
-    my $nav_links_obj = $rendered_results->{nav_links_obj};
+    my ( $nav_links_obj, ) = _calc_nav_links( $proto_url, );
     foreach my $dir (qw/ prev up /)
     {
         my $up = $nav_links_obj->{$dir};
@@ -126,25 +117,8 @@ for my $proto_url ("humour/stories/index.xhtml")
 
 for my $proto_url ("humour/Blue-Rabbit-Log/index.xhtml")
 {
-    my $url = $proto_url =~ s#(?:\A|/)\Kindex\.x?html\z##r;
+    my ( $nav_links_obj, ) = _calc_nav_links( $proto_url, );
 
-    my $filename = "/$url";
-
-    # print "start filename=$filename\n";
-    my $ROOT    = NavDataRender::get_root($url);
-    my $results = NavSectMenuRender->init_section_nav_menu(
-        {
-            filename => $filename,
-            host     => $host,
-            lang     => +{ ar => 1, en => 1, he => 1, },
-            ROOT     => $ROOT,
-        }
-    );
-
-    my $section_nav_menu = $results->{section_nav_menu};
-    my $rendered_results = $section_nav_menu->results();
-
-    my $nav_links_obj = $rendered_results->{nav_links_obj};
     foreach my $dir (qw/ next /)
     {
         my $up = $nav_links_obj->{$dir};

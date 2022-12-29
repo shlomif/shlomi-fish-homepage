@@ -353,7 +353,7 @@ shlomif_load_nav("[% raw_fn_path %]");
 [% HEBREW_XML_LANG_SCRIPT %]
 </main>
 <[% nav_tag %] class="navbar" id="navbar">
-<div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img src="[% base_path %]images/evilphish-svg.min.svg" alt="EvilPHish by Illiad" class="highlight" style="border:0;margin-bottom:0.5em;"/></a></div>
+<div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img src="[% base_path %]images/evilphish-flipped.png" alt="EvilPHish by Illiad" class="highlight" style="border:0;margin-bottom:0.5em;"/></a></div>
 
 [% nav_links_with_accesskey %]
 <div id="nav_menu">

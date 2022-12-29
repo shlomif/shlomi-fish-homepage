@@ -76,6 +76,10 @@ my @muppets_pages = (
         path => "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
     ),
     _l(
+        inner_html => "Jennifer Lawrence on The Muppet Show",
+        path       => "humour/Muppets-Show-TNI/Jennifer-Lawrence.html",
+    ),
+    _l(
         inner_html => "Tiffany Alvord on The Muppet Show",
         path       => "humour/Muppets-Show-TNI/Tiffany-Alvord.html",
     ),

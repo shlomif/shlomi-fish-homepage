@@ -53,15 +53,6 @@ for my $proto_url ("humour/index.xhtml")
     my $filename = "/$url";
 
     # print "start filename=$filename\n";
-
-    my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
-        coords_stop    => 1,
-        'path_info'    => $filename,
-        'current_host' => $host,
-        MyNavData::get_params(),
-        'ul_classes'     => [],
-        'no_leading_dot' => 1,
-    );
     my $ROOT    = NavDataRender::get_root($url);
     my $results = NavSectMenuRender->init_section_nav_menu(
         {
@@ -95,15 +86,6 @@ for my $proto_url ("humour/stories/index.xhtml")
     my $filename = "/$url";
 
     # print "start filename=$filename\n";
-
-    my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
-        coords_stop    => 1,
-        'path_info'    => $filename,
-        'current_host' => $host,
-        MyNavData::get_params(),
-        'ul_classes'     => [],
-        'no_leading_dot' => 1,
-    );
     my $ROOT    = NavDataRender::get_root($url);
     my $results = NavSectMenuRender->init_section_nav_menu(
         {
@@ -149,15 +131,6 @@ for my $proto_url ("humour/Blue-Rabbit-Log/index.xhtml")
     my $filename = "/$url";
 
     # print "start filename=$filename\n";
-
-    my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
-        coords_stop    => 1,
-        'path_info'    => $filename,
-        'current_host' => $host,
-        MyNavData::get_params(),
-        'ul_classes'     => [],
-        'no_leading_dot' => 1,
-    );
     my $ROOT    = NavDataRender::get_root($url);
     my $results = NavSectMenuRender->init_section_nav_menu(
         {

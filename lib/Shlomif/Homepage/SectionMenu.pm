@@ -50,7 +50,11 @@ has 'results' => (
     isa     => 'HashRef',
     lazy    => 1,
     default => sub {
-        my $self         = shift;
+        my $self = shift;
+        if ( not $self->nav_menu )
+        {
+            Carp::confess("nav_menu not specified");
+        }
         my $results      = $self->nav_menu->render();
         my $leading_path = $results->{leading_path};
         $self->_mutate__leading_path( $leading_path, 0 );

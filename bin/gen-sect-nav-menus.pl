@@ -52,9 +52,13 @@ sub _process_batch
         );
 
         my $section_nav_menu = $results->{section_nav_menu};
-        my $rendered_results = $nav_bar->render();
 
-        my $leading_path = $rendered_results->{leading_path};
+        my $rendered_results2 = $nav_bar->render();
+        my $rendered_results;
+        eval { $rendered_results = $section_nav_menu->results() };
+        $rendered_results ||= $rendered_results2;
+
+        my $leading_path = $rendered_results2->{leading_path};
 
         my $nav_results = NavDataRender->nav_data_render(
             {
@@ -70,6 +74,7 @@ sub _process_batch
         my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
 
         my $nav_links_obj = $rendered_results->{nav_links_obj};
+        $nav_links_obj ||= $rendered_results2->{nav_links_obj};
 
         my $out = sub {
             my ( $id, $ref ) = @_;

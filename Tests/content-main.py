@@ -270,6 +270,12 @@ class MyTests(html_unit_test.TestCase):
             ".//main[contains(@class, 'screenplay_style')]"
         )
 
+    def test_bluerabbit(self):
+        input_fn = 'dest/post-incs/t2/humour/Blue-Rabbit-Log/index.xhtml'
+        self.doc(input_fn).has_one(
+            ".//head/link[@rel='next' and @href='part-1.html']",
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

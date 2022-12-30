@@ -19,8 +19,8 @@ use MooX (qw( late ));
 
 use HTML::Widgets::NavMenu ();
 
-has 'bottom_code'  => ( is => 'rw', isa => 'Maybe[Str]', required => 1, );
-has 'current_host' => ( is => 'rw', isa => 'Str',        required => 1, );
+has 'bottom_code'  => ( is => 'ro', isa => 'Maybe[Str]', required => 1, );
+has 'current_host' => ( is => 'ro', isa => 'Str',        required => 1, );
 has 'empty'        => ( is => 'rw', isa => 'Bool',       default  => 0, );
 has 'lang'         => ( is => 'ro', isa => 'HashRef',    required => 1, );
 has 'nav_menu'     => ( is => 'rw', );
@@ -233,7 +233,7 @@ qq{<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>\n}
             . join( "\n", @{ $self->results()->{html} } )
             . qq{\n</div>\n}
             . qq{\n</div>\n}
-            . ( defined( $self->bottom_code() ) ? $self->bottom_code() : "" )
+            . ( $self->bottom_code() // "" )
             . qq{\n<div id="aft_sub_menu"></div>\n};
     }
 }

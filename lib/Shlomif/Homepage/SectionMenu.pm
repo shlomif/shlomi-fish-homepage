@@ -4,20 +4,10 @@ use strict;
 use warnings;
 use 5.014;
 
-package Shlomif::Homepage::SectionMenu::NavLinks;
-
-use parent 'HTML::Latemp::NavLinks::GenHtml::ArrowImages';
-
-sub get_image_base
-{
-    return 'sect-arr-';
-}
-
-package Shlomif::Homepage::SectionMenu;
-
 use MooX (qw( late ));
 
-use HTML::Widgets::NavMenu ();
+use HTML::Widgets::NavMenu                   ();
+use Shlomif::Homepage::SectionMenu::NavLinks ();
 
 has 'bottom_code'  => ( is => 'ro', isa => 'Maybe[Str]', required => 1, );
 has 'current_host' => ( is => 'ro', isa => 'Str',        required => 1, );

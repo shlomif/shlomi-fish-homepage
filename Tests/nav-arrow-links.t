@@ -75,16 +75,16 @@ for my $proto_url ("philosophy/index.xhtml")
 for my $proto_url ("humour/index.xhtml")
 {
     my ( $nav_links_obj, ) = _calc_nav_links( $proto_url, );
-    if (1)
+    foreach my $dir (qw/ next /)
     {
-        my $up = $nav_links_obj->{'next'};
+        my $up = $nav_links_obj->{$dir};
 
         # TEST
-        ok( $up, 'next' );
+        ok( $up, $dir );
         my $direct_url = $up->direct_url();
 
         # TEST
-        is( $direct_url, "stories/", "next \$direct_url" );
+        is( $direct_url, "stories/", "$dir \$direct_url" );
     }
 }
 

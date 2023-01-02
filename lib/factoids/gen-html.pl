@@ -147,7 +147,7 @@ my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
 END_OF_TEMPLATE
 
 my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
-[% SET title = "{{ p.title() }} [Satire]" %]
+[% SET title = "{{ p.title() }}" %]
 [% SET desc = "{{ p.meta_desc() }}" %]
 
 [% WRAPPER wrap_html %]

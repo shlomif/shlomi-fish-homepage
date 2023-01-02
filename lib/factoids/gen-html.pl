@@ -262,9 +262,9 @@ my @content =
 write_on_change(
     path("lib/make/generated/factoids-deps.mak"),
     \(
-        ( join "", sort @pages_deps )
-        . join( " ", "all:", map { $_->{path} } @content ) . "\n",
-        ( map { $_->{line} } @content )
+          ( join "", sort @pages_deps )
+        . join( " ", "all:", map { $_->{path} } @content ) . "\n"
+            . ( join "", map { $_->{line} } @content )
     ),
 );
 

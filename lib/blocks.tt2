@@ -256,6 +256,7 @@ publicly linked to. Please send comments to
 
 <html [% IF latemp_plain_html %]lang="[% html_lang %]"[% ELSE %]xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]"[% END %]>
 <head>
+[% SET title = title _ title_suffix %]
 <title>[% process_title(title=title) %]</title>
 [% IF xhtml1 %]
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>

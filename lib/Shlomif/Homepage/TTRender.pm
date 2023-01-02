@@ -30,7 +30,8 @@ use Shlomif::XmlFictionSlurp       ();
 use Template                       ();
 use VimIface                       ();
 
-# use Shlomif::Homepage::SectionMenu::IsHumour (qw/ get_is_humour_re /);
+use Shlomif::Homepage::SectionMenu::IsHumour (
+    qw/ get_is_humour_re humour_should_mutate_title /);
 
 has printable => ( is => 'ro', required => 1 );
 has stdout    => ( is => 'ro', required => 1 );
@@ -330,6 +331,8 @@ sub proc
     $vars->{text_ORIG_URL_PREFIX} = $ORIG_URL_PREFIX;
     $vars->{orig_url}             = $ORIG_URL_PREFIX . $raw_fn_path;
     $vars->{escaped_url}          = encodeURIComponent($full_url);
+    $vars->{title_suffix} =
+        ( humour_should_mutate_title($raw_fn_path) ? qq" [satire]" : "" );
     my $NOT_FRONT_PAGE = scalar( length($raw_fn_path) > 1 );
     $vars->{main_class} =
         Set::CSS->new( "main", ( $NOT_FRONT_PAGE ? ( "fancy_sects", ) : () ), );

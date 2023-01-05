@@ -1,11 +1,12 @@
 .fortunes_list {
     .irc-conversation {
         .who {
-            vertical-align: top;
-            text-align: right;
             color: #33d;
-            padding-right: 7pt;
+            font-weight: bold;
             padding-left: 10pt;
+            padding-right: 7pt;
+            text-align: right;
+            vertical-align: top;
             white-space: nowrap;
         }
 
@@ -33,6 +34,8 @@
     }
 
     table.irc-conversation {
+        background-color: white;
+        padding: 1em;
         overflow: hidden;
     }
 

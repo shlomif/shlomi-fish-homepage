@@ -27,7 +27,7 @@
             </info>
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License ( CC-BY )</link> (or at your option a greater version of it).
         <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Work rdf:about="">
             <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -233,7 +233,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             in many countries, and to avoid other potential legal problems,
             I started distributing my original code under <link
                 xlink:href="http://en.wikipedia.org/wiki/X11_license">the
-                MIT X11 Licence</link>, a permissive licence which is
+                MIT / Expat Licence</link>, a permissive licence which is
             close to the Public Domain. If the project I’m
             contributing to has a different licence, then I disclaim any
             explicit or implicit ownership on the code I wrote, and allow
@@ -245,12 +245,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             Note that I’m using different terms for other types of
             digital artworks. Most of my essays (including this one) are
             under the <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
-                Commons Attribution Licence</link>, my original (i.e:
+                Commons Attribution Licence (CC-by)</link>, my original (i.e:
             non-derived-work or fan-art) fictitious stories are often under
             <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">the
-                Creative Commons Attribution-Share Alike Licence</link>
-                or <link xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons — Attribution-NonCommercial-ShareAlike</link>
-            (which is more GPL-like), and most of the
+                Creative Commons Attribution-Share Alike Licence (CC-by-sa)</link>
+                or <link xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons — Attribution-NonCommercial-ShareAlike (CC-by-nc-sa)</link>
+            (which are more GPL-like), and most of the
             photos I took and published were placed under the Public Domain.
         </para>
     </section>
@@ -304,7 +304,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     for this.
                 </para>
 
-        </listitem></orderedlist>
+            </listitem>
+        </orderedlist>
 
         <para>
 
@@ -363,7 +364,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
         <para>
-            Prominent examples of Public Domain licences include:
+            Prominent examples of permissive licences include:
         </para>
 
         <orderedlist>
@@ -391,7 +392,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <para>
                     The <link
                         xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT
-                        X11 Licence</link> was created by MIT for their
+                        X11 License</link> was created by MIT for their
                     X Window System software. It explicitly allows to do
                     many activities with the licensed code, including
                     sub-licensing, which means converting derived works
@@ -409,7 +410,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     version - Apache 2.0 was partially created in order
                     to be compatible with version 2 of the GPL, but the
                     FSF ruled the Apache Licence as incompatible with it.
-                    The Apache Licence, however, was declared as compatible
+                    The Apache License, however, was declared as compatible
                     with version 3 of the GPL.
                 </para>
             </listitem>
@@ -432,7 +433,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     2.0 of the Artistic License</link>, which was formulated by
                     <link xlink:href="https://www.perlfoundation.org/">The Perl
                     Foundation</link>, is used by the Parrot Virtual
-                    Machine, some <link xlink:href="https://en.wikipedia.org/wiki/Raku_(programming_language)">Perl 6/Raku</link> implementations, and other
+                    Machine, by some <link xlink:href="https://en.wikipedia.org/wiki/Raku_(programming_language)">Perl 6/Raku</link> implementations, and by other
                     projects. The original Artistic License has problematic
                     phrasing, and is not recommended for general use, unless
                     possibly when dually licensed with a different licence (as
@@ -484,11 +485,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <para>
                     <link
                         xlink:href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">The GNU
-                        Lesser General Public Licence (or LGPL for short)</link>
+                        Lesser General Public License (or LGPL for short)</link>
                     - this licence was formulated by the <link
                         xlink:href="http://www.fsf.org/">Free
                         Software Foundation</link> based on the
-                    <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public Licence (or GPL)</link>. Its text is longer
+                    <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License (or GPL)</link>. Its text is longer
                     than the GPL, and it is reportedly a more complicated
                     licence. Other than the general
                     “you-can-link-it-against-everything-as-long-as-you-keep-inclusive-code-LGPLed”,
@@ -506,7 +507,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <listitem xml:id="MozillaPL">
                 <para>
                     <link xlink:href="http://en.wikipedia.org/wiki/Mozilla_Public_License">The
-                        Mozilla Public Licence (or MPL)</link> was phrased for
+                        Mozilla Public License (or MPL)</link> was phrased for
                     the public source release of the <link
                         xlink:href="http://www.mozilla.org/">Mozilla
                         project</link>. It was characterised as a
@@ -620,6 +621,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             </orderedlist>
     </section>
 </section>
+
 <section xml:id="uncertainty">
     <info>
     <title>Uncertainty in Categorising Licences</title>
@@ -633,7 +635,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <para>
         The original <link
             xlink:href="http://en.wikipedia.org/wiki/Artistic_License">Artistic
-            Licence</link> (authored by <link xlink:href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</link> for dual-licensing perl) is:
+            License</link> (authored by <link xlink:href="http://en.wikipedia.org/wiki/Larry_Wall">Larry Wall</link> for dual-licensing perl) is:
     </para>
 
     <itemizedlist>
@@ -690,15 +692,15 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
 
     <para>
-        The Artistic Licence was later clarified into the Clarified Artistic
-        Licence which incorporated the minimum changes to make it “free” and
+        The Artistic License was later clarified into the Clarified Artistic
+        License which incorporated the minimum changes to make it “free” and
         GPL-compatible, and now has a new and improved version - Artistic 2.0,
         which is considered free and GPL-compatible by everybody, and is
         generally preferable for newer projects.
     </para>
 
     <para>
-    Moreover, the Apache 2.0 Licence was specifically phrased to be
+    Moreover, the Apache 2.0 License was specifically phrased to be
     GPL-compatible, and is considered GPL compatible by the Apache Software
     Foundation, but the FSF concluded that, while it was a free-software
     licence, it was not compatible with the GPLv2 (although it is with the
@@ -707,7 +709,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
 
     <para>
-The Creative Commons Attribution (CC-by) and Attribution-ShareAlike Licences
+The Creative Commons Attribution (CC-by) and Attribution-ShareAlike licences
 (CC-by-sa) are considered free (but not GPL-compatible) by the FSF (see
 <link xlink:href="http://www.gnu.org/philosophy/license-list.html#OtherLicenses">their licences page</link>), while the
 Debian legal team concluded that they were not free up to version 3.0, which
@@ -773,8 +775,8 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     <orderedlist>
         <listitem>
             <para>
-                <link xlink:href="http://en.wikipedia.org/wiki/Ken_Coar">Ken Coar</link>
-                ,famous for his involvement with the Apache project,
+                <link xlink:href="http://en.wikipedia.org/wiki/Ken_Coar">Ken Coar</link>,
+                famous for his involvement with the Apache project,
                 published an
                 <link xlink:href="http://ken.coar.org/musings/free-source.html">essay
                     titled “Ken’s Musings about Free Software and Open Source”</link>
@@ -858,7 +860,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                 <link xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/4279">replied</link> saying
                 that copyleft licences may sometime aid in making sure
                 that no problem should be solved twice, because they prevent
-                proprietary solutions that later on need to be implemented
+                proprietary solutions that later on need to be re-implemented
                 as open-source software.
             </para>
             <para>
@@ -1002,7 +1004,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             has
             changed several times since its inception - from a non-free licence,
             to the GPL, to a dual GPL and Artistic licensing. Furthermore, the
-            Artistic license is not considered free and GPL compatible by the
+            Artistic License is not considered free and GPL compatible by the
             Free Software Foundation, so it’s not a wise choice, and the
             GPL has its share of problems too (see below) so it’s not a wise
             choice either.
@@ -1016,7 +1018,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </info>
 
         <para>
-            It is not wise to licence one’s code under the Public Domain
+            It is not wise to license one’s code under the Public Domain
             because the Public Domain is not widely understood or
             accepted internationally, and because licensing code under the
             Public Domain may not be possible.
@@ -1029,7 +1031,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             If you’re interested in making your software
             as-close-to-PD-as-possible, you should choose the <link
                 xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT/Expat
-                Licence</link> or a similar licence such as
+                License</link> or a similar licence such as
             <link xlink:href="http://en.wikipedia.org/wiki/ISC_license">the
             ISC licence.</link>
         </para>
@@ -1042,8 +1044,8 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </info>
 
         <para>
-            The GNU General Public Licence (GPL) and GNU Lesser General
-            Public Licence (LGPL) contain many additional restrictions to the
+            The GNU General Public License (GPL) and GNU Lesser General
+            Public License (LGPL) contain many additional restrictions to the
             concept of copyleft, and are very misunderstood, over-hyped, and
             don’t maintain compatibility with newer versions. Even
             <link xlink:href="http://discuss.joelonsoftware.com/default.asp?joel.3.642822.36">the LGPL is
@@ -1060,13 +1062,13 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             <link xlink:href="#MozillaPL">MPL</link> 2.0 (or above) licence
             instead of the LGPL. Naturally,
             permissive, non-copyleft, open-source licences such as the MIT
-            Expat Licence are an option. What the Sleepycat licence says
+            Expat License are an option. What the Sleepycat licence says
             is that code distributed under it, must remain under it, and
             that one must release the source code for publicly-distributed
             binaries that link against it. However, from my understanding, as
             opposed to the GPL, this source code doesn’t have to be completely
             free. It doesn’t have the additional
-            restrictions on licences compatibility that the GPL has, nor does
+            restrictions on licences’ compatibility that the GPL has, nor does
             it have the other obscure and not-well-understood restrictions
             that the GPL has.
         </para>

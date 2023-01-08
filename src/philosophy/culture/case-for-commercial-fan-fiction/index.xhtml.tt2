@@ -11,6 +11,8 @@ Essay / mission statement: why the fact that competent and attractive girls and 
 %]
 [%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, actors, actresses, professionalism, Emma Watson, copyrights, open, free, Arnold Schwarzenegger, fanfic, fan fiction, hacking, action, hero, comedy, parody, Paul Graham, commercial, IRC, geeky, RPF, real person fiction, geek, geeky, hackers, philosophy, philosophers, david, goliath" -%]
 
+[% main_class.addClass("quotes_styling") %]
+
 [%- WRAPPER wrap_html -%]
 
 [% INCLUDE "pages/t2/philosophy/case-commercial-fanfic.xhtml.tt2" scope = "full" %]

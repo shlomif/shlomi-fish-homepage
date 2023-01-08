@@ -1493,6 +1493,14 @@ as too vague, and go on with the rest of my life:
 
 [% END %]
 
+[% WRAPPER h3_section id = "how-can-i-gift-you" title = "How can I gift you?" %]
+
+<p>
+See <a href="[% base_path %]meta/how-to-help/">this page</a>.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "philosophy" title = "Questions about my philosophy / ideology / religion" %]

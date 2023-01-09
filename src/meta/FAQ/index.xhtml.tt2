@@ -3272,10 +3272,12 @@ You can find a <a href="[% base_path %]meta/site-source/#techs_used">partial lis
 <hr />
 
 <p>
-Some people asked if I am running a Content Management System ("CMS") on my
+Some people asked if I am running a content management system ("CMS") on my
 hosting's web-service, and the answer is "no". I am not running <a
 href="http://shlomifishswiki.branchable.com/WordPress/">WordPress</a>,
-MovableType, Drupal, Joomla, or whatever.
+MovableType, Drupal, Joomla, or whatever. As far as the web-server is
+concerned, my site is static files that are served directly from the
+filesystem.
 </p>
 
 [%- END -%]

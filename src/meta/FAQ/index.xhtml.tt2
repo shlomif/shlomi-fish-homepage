@@ -32,43 +32,6 @@ I can link to it.
 Some related FAQs I co-maintain:
 </p>
 
-[% BLOCK shlomif_faqs_links %]
-
-<ul>
-
-<li>
-<p>
-<a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn">Freenode’s ##programming channel’s FAQ</a>.
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://fc-solve.shlomifish.org/faq.html">The Freecell Solver FAQ</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://perl-begin.org/FAQs/freenode-perl/">Freenode's #perl’s FAQ</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="[% base_path %]meta/FAQ/">My Personal FAQ</a>
-</p>
-</li>
-
-</ul>
-
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE shlomif_faqs_links %]
-[% PROCESS shlomif_faqs_links %]
-[% END %]
-
 [% INCLUDE shlomif_faqs_links %]
 
 [% default_toc %]

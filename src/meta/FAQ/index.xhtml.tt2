@@ -3255,8 +3255,8 @@ In modern web developer jargon, one can say I use a <a href="https://github.com/
 <p>
 While I am not ashamed of the site’s sources, they have undergone through a long
 <a href="#site_history">history</a> and
-<a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>,
-and while I remain a big fan of static site generation, there are probably
+<a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>.
+While I remain a big fan of static site generation, there are probably
 some better approaches out there for that. Furthermore, often it is simpler to just
 write something of your own using a <a href="[% base_path %]open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
 a good <a href="[% base_path %]open-source/resources/software-tools/">build system</a>
@@ -3267,6 +3267,15 @@ static site generators that I tried.
 
 <p>
 You can find a <a href="[% base_path %]meta/site-source/#techs_used">partial list of technologies</a> that have been used for it.
+</p>
+
+<hr />
+
+<p>
+Some people asked if I am running a Content Management System ("CMS") on my
+hosting's web-service, and the answer is "no". I am not running <a
+href="http://shlomifishswiki.branchable.com/WordPress/">WordPress</a>,
+MovableType, Drupal, Joomla, or whatever.
 </p>
 
 [%- END -%]

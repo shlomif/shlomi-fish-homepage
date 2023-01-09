@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/faq.tt2" %]
+
 [% WRAPPER h2_section id = "bio"  href = base_path _ "personal.html"  title = "My Bio"  %]
 
 <p>
@@ -102,7 +104,6 @@ A Public Key which you can assign to your
 
 [% WRAPPER h2_section id = "my-sites"  title = "A List of Sites I Maintain"  %]
 
-
 <ul>
 
 <li>
@@ -159,6 +160,16 @@ A Public Key which you can assign to your
 </p>
 </li>
 </ul>
+
+<p>
+Some FAQs I co-maintain:
+</p>
+
+[% INCLUDE shlomif_faqs_links %]
+
+[% END %]
+
+[% IF 0 %]
 
 [%- END -%]
 

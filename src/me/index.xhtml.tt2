@@ -1,7 +1,6 @@
 [%- SET title = "About: Shlomi Fish" -%]
 [%- SET desc = "About Shlomi Fish: biography, contact information, C.V.s, personal ad, blogs, and his rindolf nickname." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/faq.tt2" %]
@@ -102,79 +101,6 @@ A Public Key which you can assign to your
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "my-sites"  title = "A List of Sites I Maintain"  %]
-
-<ul>
-
-<li>
-<p>
-<a href="https://www.shlomifish.org/">Shlomi Fish's Home site</a>.
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://fc-solve.shlomifish.org/">Freecell Solver</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://perl-begin.org/">Perl Beginners' Site</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://vim.begin-site.org/">The Vim Beginners’ Site</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://better-scm.shlomifish.org/">Better SCM</a> - a site
-for advocacy and information about version-control systems (historical)
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://gringotts.shlomifish.org/">Gringotts - a Safebox for your Data</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://web-cpan.shlomifish.org/">Web-CPAN</a> - a collection of
-CPAN / Perl packages.
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://web-cpan.shlomifish.org/latemp/">Latemp</a> - a
-static site generator.
-</p>
-</li>
-
-<li>
-<p>
-<a href="https://www.shlomifish.org/quad-pres/">Quad-Pres</a> - a
-generator of XHTML5 presentation slides.
-</p>
-</li>
-</ul>
-
-<p>
-Some FAQs I co-maintain:
-</p>
-
-[% INCLUDE shlomif_faqs_links %]
-
-[% END %]
-
-[% IF 0 %]
-
-[%- END -%]
+[% INCLUDE my_sites %]
 
 [% END %]

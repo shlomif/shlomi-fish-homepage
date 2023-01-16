@@ -3253,8 +3253,12 @@ attractive significant other at a time.
 [% WRAPPER quote %]
 
 <p>
+[% strip__q %]:
+</p>
+
+<p>
 <a href="https://en.wikiquote.org/wiki/Mr._T">Mr. T:</a>
-[% strip__q %]
+<q>I pity the fool who doesn’t accessorize!</q>
 </p>
 
 [%- END -%]
@@ -3265,7 +3269,7 @@ attractive significant other at a time.
 
 <li>
 <p>
-<a href="https://twitter.com/TheMuppets/status/610861044626550784">Photo taken from this tweet</a> - thanks!
+Photo taken from a web-search - thanks!
 </p>
 </li>
 

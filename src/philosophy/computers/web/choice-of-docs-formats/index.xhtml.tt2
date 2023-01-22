@@ -6,7 +6,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "about"  title = "About this Document"  %]
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
 <p>
 This is an overview of popular documentation file formats, which is
@@ -19,7 +19,7 @@ mailing list</a>.
 
 [% default_toc %]
 
-[% WRAPPER h2_section id = "meta"  title = "Document Information"  %]
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -42,7 +42,7 @@ Last Updated:
 </dd>
 </dl>
 
-[% WRAPPER h3_section id = "licence"  title = "Licence"  %]
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2006", ) %]
 
@@ -50,7 +50,7 @@ Last Updated:
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "summary"  title = "TL;DR Summary"  %]
+[% WRAPPER h2_section id = "summary" title = "TL;DR Summary" %]
 
 <p>
 My prefered documentation formats are (in order):
@@ -98,7 +98,7 @@ or similar to generate them.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "article"  title = "The Article Itself"  %]
+[% WRAPPER h2_section id = "article" title = "The Article Itself" %]
 
 <p>
 A previous correspondent wrote:
@@ -208,7 +208,7 @@ Moreover, they can only be converted to XHTML.
 
 [% END %]
 
-[% WRAPPER h3_section id = "latex"  title = "LaTeX and TeX"  %]
+[% WRAPPER h3_section id = "latex" title = "LaTeX and TeX" %]
 
 <p>
 All that put aside, I should note that if you are thinking about using TeX or
@@ -275,7 +275,7 @@ and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "word-processors"  title = "Note about Word Processors"  %]
+[% WRAPPER h3_section id = "word-processors" title = "Note about Word Processors" %]
 
 <p>
 One may be tempted to use <a href="https://en.wikipedia.org/wiki/Word_processor_program">word
@@ -288,7 +288,7 @@ is their conversion to output formats tends to be non-semantic if not completely
 in the case of Word, have a huge problem with maintaining compatibility of documents
 created with newer or older versions. As I
 <a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
-in a Reddit comment</a>, Word processors are the kind of programs that are created by smart
+in a Reddit comment</a>, word processors are the kind of programs that are created by smart
 people for people who are less smart than them, because smart programmers can
 use text editors and markup languages. I have written a <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/selling-for-stupider-ppl.xhtml">mini-essay about “Selling for people stupider than you”</a>.
 </p>
@@ -309,7 +309,7 @@ and the availability of some decent FOSS alternatives.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "more-about-POD"  title = "More about POD"  %]
+[% WRAPPER h3_section id = "more-about-POD" title = "More about POD" %]
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The
@@ -402,7 +402,7 @@ documentation system.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "coverage"  title = "Coverage and Comments"  %]
+[% WRAPPER h2_section id = "coverage" title = "Coverage and Comments" %]
 
 <p>
 TODO: Fill in.

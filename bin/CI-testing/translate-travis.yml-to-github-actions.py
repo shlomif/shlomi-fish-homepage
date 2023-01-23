@@ -129,10 +129,10 @@ def generate(output_path, is_act):
             )
             steps.append({"run": local_lib_shim + command})
         return steps
-    steps += gen_steps('before_install')
-    steps += gen_steps('install')
+    steps += gen_steps(arr='before_install')
+    steps += gen_steps(arr='install')
     count_ = 1
-    for s in gen_steps('script'):
+    for s in gen_steps(arr='script'):
         procstep = "bash -ex -c \"" + \
             re.sub(
                 "([\\\\\"\\$])",
@@ -274,7 +274,7 @@ def generate_windows_yaml(plat, output_path, is_act):
     steps.append({
         'name': "install and test_script code",
         "run": _calc_batch_code(
-            cmds=(data['install']+data['test_script'])
+            cmds=(data['install'] + data['test_script'])
         ),
         "shell": "cmd",
     })
@@ -289,7 +289,7 @@ def generate_windows_yaml(plat, output_path, is_act):
             'with': art,
         }
         for art in data['artifacts']
-        if _myfilt(art['path'])
+        if _myfilt(path=art['path'])
     ]
     skel['name'] = ("windows-x86" if plat == 'x86' else 'windows-x64')
     skel['on'] = ['push']

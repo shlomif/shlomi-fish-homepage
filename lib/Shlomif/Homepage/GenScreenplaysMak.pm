@@ -275,6 +275,20 @@ EOF
     my $CLEAN_NAMESPACES_FUNC__BODY =
         qq{\$1 \$(PERL) -lp bin/screenplay-xml-remove-ns.pl < \$< > \$\@};
 
+    my $clean_ns = sub {
+        my ($fn) = @_;
+        my $bn = _basename($fn);
+        $bn =~ s/\.raw(\.html)\z/$1/;
+        my $heb_filt = '';
+        if ( $bn =~ /hebrew/ )
+        {
+            $heb_filt = "DIR=rtl";
+        }
+        return "${fn}: \$(SCREENPLAY_XML_HTML_DIR)/${bn}\n"
+            . sprintf( "\t\$(call %s,%s)\n\n",
+            $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
+    };
+
     path("lib/make/generated/shlomif-screenplays.mak")->spew_utf8(
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         "$graphics_dir_bn_var := graphics\n",
@@ -285,21 +299,7 @@ EOF
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n",
 "$epub_dests_varname := \\\n$epub_dests\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n",
-        (
-            map {
-                my $fn = $_;
-                my $bn = _basename($fn);
-                $bn =~ s/\.raw(\.html)\z/$1/;
-                my $heb_filt = '';
-                if ( $bn =~ /hebrew/ )
-                {
-                    $heb_filt = "DIR=rtl";
-                }
-                "${fn}: \$(SCREENPLAY_XML_HTML_DIR)/${bn}"
-                    . sprintf( "\n\t\$(call %s,%s)\n\n",
-                    $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
-            } @_htmls_files
-        ),
+        ( map { $clean_ns->($_) } @_htmls_files ),
         (
             "\nALL_SCREENPLAYS__SCREENPLAY_IMAGES__POST_DESTS = ",
             join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),

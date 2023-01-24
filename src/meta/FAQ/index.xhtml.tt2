@@ -1243,7 +1243,6 @@ to Summer Glau.
 
 [%- END -%]
 
-
 [% WRAPPER h3_section id = "link_or_quote_sources_i_dislike" title = "Why do you link/quote web pages, posts, etc. from originators I dislike?" %]
 
 <p>
@@ -2420,6 +2419,7 @@ funny, succinct, and memorable. I may gladly read it again sometimes.
 The film <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"><i>The Lord of the Rings: The Fellowship of the Ring</i></a> could have been more enjoyable if the cinema my father and I watched
 it on would have provided an intermission, because by the end of its 3 hours we really had to pee. (Re <a href="http://www.quotationspage.com/quote/23596.html">Alfred Hitchcock's quote</a>.)
 </p>
+
 <p>
 My father and other family (but not I) have watched the other two films on DVD at home, which was easily capable of
 being paused and sought. I do enjoy the <a href="https://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor">"One does not simply"</a> snowclone,
@@ -2777,7 +2777,7 @@ common look and feel, a style that’s hopefully semantic, converted to use
 All of the source code for the site is available online in various places. I’ve
 prepared <a href="[% site_sources_url %]">a top-to-bottom
 document</a> on how to compile the site from
-scratch, but the CI lies less. Some of the hand-crafted code was released as
+scratch, but the CI scripts lie less. Some of the hand-crafted code was released as
 <a href="http://web-cpan.shlomifish.org/latemp/">the Latemp static site
 generator</a> or various <a href="[% shlomif_cpan %]">assisting
 CPAN modules</a> under an open-source license.
@@ -2821,7 +2821,7 @@ I recall that I had <a href="[% base_path %]humour.html">the Aphorisms collectio
 with a few jokes I originated, as well as
 <a href="[% base_path %]toggle.html">the report about the
 algorithmic solution to the Toggle Squares
-puzzle</a> I sent to its originator (with whom I was corresponding at
+puzzle</a> which I had sent to its originator (with whom I was corresponding at
 the time). And it also had a rudimentary pageful of links, and a bio.
 </p>
 
@@ -3160,7 +3160,7 @@ and slow typing due to hand paralysis.
 A lot of people think of blindness or deafness as the only disabilities, but there are many more, including
 <a href="[% base_path %]philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/">bipolar disorder</a>,
 Schizophrenia, and even lacking or non-native knowledge of English and other languages. Some Haredi Jews locally block YouTube,
-due to a Jewish Law prohibition on hearing female vocalists.
+due to a Jewish Law prohibition on men hearing female vocalists.
 </p>
 
 <p>
@@ -3330,7 +3330,7 @@ the text of the link and their URL. Note that it is the
 <a href="[% base_path %]humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature of the web that links get broken</a>
 and it is part of what makes it work. Moreover, I've had this site for many
 years, and it is natural that some of the links have become stale. As a result,
-dealing with these reports have become quite frustrating due to their
+dealing with these broken-hyperlinks-reports have become quite frustrating due to their
 frequency.
 </p>
 
@@ -3339,7 +3339,7 @@ frequency.
 [% WRAPPER h3_section id = "site_loads_quickly" title = "This site loads so quickly. What is your secret?" %]
 
 <p>
-First of all note that I do not consider myself an expert on load time
+First of all, note that I do not consider myself an expert on load time
 optimisations, and you may be able to find better advice elsewhere using
 web searches.
 </p>
@@ -3877,7 +3877,7 @@ As <a href="[% base_path %]humour/stories/#intro">I noted:</a>
 
 <blockquote cite="">
 
-[% PROCESS active_humour_stories__competence %]
+[% INCLUDE active_humour_stories__competence %]
 
 </blockquote>
 
@@ -4368,6 +4368,7 @@ Fedora has regular releases.
 Linux</a> installations tend to become un-updatable / un-upgradable if left
 unattended for long.)
 </p>
+
 </li>
 
 <li>
@@ -4393,7 +4394,7 @@ fairly quickly.
 <li>
 <p>
 I find the RPM / DNF / etc. stack easier to use than dpkg and apt.
-I also am more versed in "hacking" *.src.rpm packages than in debian's
+I also am more versed in hacking *.src.rpm packages than in debian's
 toolchain.
 </p>
 </li>
@@ -5074,7 +5075,7 @@ the risk/benefit trade-offs immediately on seeing the release's name.
 [% WRAPPER h4_section id = "use_of_inkscape" title = "For what are you using Inkscape?" %]
 
 <p>
-I use it for <a href="[% base_path %]humour/image-macros/">captioned images</a> mostly lately.
+Lately, I've been mostly using it for <a href="[% base_path %]humour/image-macros/">captioned images</a>.
 </p>
 
 [%- END -%]
@@ -5282,7 +5283,7 @@ grandfather lost most of his family during the Holocaust, and so I cannot
 be accused of misusing such facts. <a href="https://en.wikipedia.org/wiki/Steven_Spielberg">Steven Spielberg</a> whose parents
 are Jewish Holocaust survivors, also featured the Nazis or Hitler in many
 films (notably the <a href="https://en.wikipedia.org/wiki/Indiana_Jones_(franchise)"><i>Indiana Jones</i></a> trilogy),
-so if a fire has caught the Firs…
+so if a fire has caught the Firs, what will the moss on the wall say?
 </p>
 
 [%- END -%]

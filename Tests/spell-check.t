@@ -7,7 +7,7 @@ use lib './lib';
 
 use Test::More;
 
-if ( $ENV{SKIP_SPELL_CHECK} )
+if ( ( $ENV{SKIP_SPELL_CHECK} // '' ) =~ m#(?:\A|,)en(?:,|\z)#ms )
 {
     plan skip_all => 'Skipping spell check due to environment variable';
 }

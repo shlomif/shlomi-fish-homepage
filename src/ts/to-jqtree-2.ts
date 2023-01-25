@@ -5,7 +5,7 @@ function shlomif_load_nav(page_path: string): void {
         footer.prepend(
             '<p><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
                 page_path +
-                (/\/$/.test(page_path) ? "" : ".tt2") +
+                (page_path === "" || /\/$/.test(page_path) ? "" : ".tt2") +
                 '">Page source</a></p>',
         );
     });

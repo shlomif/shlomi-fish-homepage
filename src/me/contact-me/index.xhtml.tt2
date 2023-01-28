@@ -44,8 +44,10 @@ File an issue on my
 <li>
 <p>
 You can also try emailing
-[% PROCESS mailto_link_to_self email = "shlomif@gmail.com"
-%][% " " %] as well as <a href="mailto:[% main_email %]">my other E-mail</a>.
+[% INCLUDE mailto_link_to_self email = "shlomif@gmail.com"
+%][% " " %] as well as
+[% INCLUDE main_email_mailto prefix = "my other E-mail, "
+%].
 </p>
 </li>
 
@@ -73,7 +75,7 @@ ShlomiFish@jabber.org
 <dt>Homepage:</dt>
 <dd>[% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]</dd>
 <dt>E-mail:</dt>
-<dd>[% PROCESS main_email_mailto %]</dd>
+<dd>[% INCLUDE main_email_mailto %]</dd>
 <dt>Name in Hebrew:</dt>
 <dd>שלומי פיש</dd>
 <dt>Instant Messaging:</dt>
@@ -109,7 +111,7 @@ ShlomiFish@jabber.org
 <dt>Freecode (formerly Freshmeat)</dt>
 <dd>[% INCLUDE url_body_link href = "http://freecode.com/~shlomif/",  %]</dd>
 <dt>GMail</dt>
-<dd>(<b>Note:</b> please E-mail me there in addition to <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% PROCESS mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
+<dd>(<b>Note:</b> please E-mail me there in addition to <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% INCLUDE mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
 <dt>CPAN</dt>
 <dd>[% INCLUDE url_body_link href = "http://metacpan.org/author/SHLOMIF",  %]</dd>
 <dt>Advogato</dt>

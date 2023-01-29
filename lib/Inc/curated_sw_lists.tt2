@@ -1,7 +1,5 @@
 [% BLOCK curated_sw_lists %]
 
-<div class="sub_section">
-
 [% WRAPPER h3_section href = "${base_path}open-source/portability-libs/" id = "portability-libs" title = "Cross-Platform Abstraction Libraries for Portability" %]
 
 <p>
@@ -92,8 +90,6 @@ enhancing the quality of software.
 
 [% END %]
 
-</div>
-
 [% WRAPPER h3_section id = "links_to_other_lists" title = "Links to other lists online" %]
 
 <ul>
@@ -120,8 +116,6 @@ Linas Vepstas and reflects the state of Linux software as of the late 1990s.
 </li>
 
 </ul>
-
-</section>
 
 [% END %]
 

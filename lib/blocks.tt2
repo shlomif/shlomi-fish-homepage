@@ -9,7 +9,7 @@
 %]
 <ul class="bt_nav">
 <li>
-<a href="https://www.patreon.com/shlomif"><img class="patreon" src="[% base_path %]images/patreon.svg" alt="Patreon account" title="Support me using Patreon" /></a>
+<a href="https://www.patreon.com/shlomif"><img alt="Patreon account" class="patreon" src="[% base_path %]images/patreon.svg" title="Support me using Patreon" /></a>
 </li>
 <li>
 <a href="[% base_path || "./" %]">Home</a>
@@ -161,7 +161,9 @@ License</a>, a permissive software licence.
 [% BLOCK docbook_formats %]
 <section class="docbook_formats h2">
 
+<header>
 <h2 id="[% h2_id %]">[% h2_text %]</h2>
+</header>
 
 <ul>
 
@@ -354,7 +356,7 @@ shlomif_load_nav("[% raw_fn_path %]");
 [% HEBREW_XML_LANG_SCRIPT %]
 </main>
 <[% nav_tag %] class="navbar" id="navbar">
-<div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img src="[% base_path %]images/evilphish-flipped.png" alt="EvilPHish by Illiad" class="site_icon"/></a></div>
+<div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img alt="EvilPHish by Illiad" class="site_icon" src="[% base_path %]images/evilphish-flipped.png"/></a></div>
 
 [% nav_links_with_accesskey %]
 <div id="nav_menu">
@@ -362,7 +364,7 @@ shlomif_load_nav("[% raw_fn_path %]");
 </div>
 <div class="about_author">
 
-<div class="center"><img src="[% base_path %]images/shlomif-cutethulhu-small.webp" alt="Photo of Shlomi Fish" title="Head shot of Shlomi Fish"/></div>
+<div class="center"><img alt="Photo of Shlomi Fish" src="[% base_path %]images/shlomif-cutethulhu-small.webp" title="Head shot of Shlomi Fish"/></div>
 
 <p>
 <a href="[% base_path %]#about_site">Shlomi Fish</a>
@@ -388,13 +390,11 @@ It is easy to reach Shlomi using a large number of
 Wiki</a></li>
 </ul>
 <p><a href="https://www.mozilla.org/firefox/new/" class=
-"bless"><img class="bless" alt="Get Firefox!" title=
+"bless"><img alt="Get Firefox!" class="bless" title=
 "Get Firefox! A safer, faster, better web-browser." src=
 "[% base_path %]images/get-firefox.png"/></a></p>
 <p><a href="http://perl-begin.org/" title=
-"The Perl Beginners' Site" class="bless"><img src=
-"[% base_path %]images/perl-begin.png" alt="The Perl Beginners' Site" class=
-"bless"/></a></p>
+"The Perl Beginners' Site" class="bless"><img alt="The Perl Beginners' Site" class="bless" src="[% base_path %]images/perl-begin.png"/></a></p>
 
 [%- IF xhtml1 %]
 <p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless">
@@ -513,12 +513,10 @@ of an EvilPHish”</a> cartoon of
 [% END %]
 
 [%- IF raw_fn_path %]
-<a href="[% base_path || "./" %]"><img src="[% base_path %]images/bk2hp-v2.min.svg" class="bk2hp" alt="Back to my Homepage"/></a>
+<a href="[% base_path || "./" %]"><img alt="Back to my Homepage" class="bk2hp" src="[% base_path %]images/bk2hp-v2.min.svg"/></a>
 [% ELSE %]
 <div class="rightalign">
-<a href="[% base_path %]meta/hosting/#hostgator"><img src="[% base_path %]images/hostgator.png"
-   alt="Hosted at HostGator" class="highlight" style="border : 0"
-   title="Hosted at HostGator"/></a>
+<a href="[% base_path %]meta/hosting/#hostgator"><img alt="Hosted at HostGator" class="highlight" src="[% base_path %]images/hostgator.png" style="border : 0" title="Hosted at HostGator"/></a>
 </div>
 [% END -%]
 

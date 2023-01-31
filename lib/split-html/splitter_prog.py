@@ -476,14 +476,14 @@ def _screenplays_main():
     )
 
     TOP_LEVEL_ID = 'main_text_wrapper'
-    generic_generate_from_tt2_generated_plain_html5(
+    generic_generate_from_(
         OUT_DN=("./dest/post-incs/t2/philosophy/culture/" +
                 "case-for-commercial-fan-fiction/"),
         base_path=("../" * 4),
         container_elem_xpath=(
             "self::node()[local-name()='div'][@id='" + TOP_LEVEL_ID + "']"
         ),
-        input_is_plain_html=True,
+        input_is_plain_html=False,
         main_title='The Case for Commercial Fan-Fiction',
         output_dirname="indiv-nodes/",
         path_to_all_in_one="../",

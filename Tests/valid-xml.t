@@ -39,8 +39,7 @@ Test::HTML::Tidy::Recursive::XML->new(
             return
                 not( exists $whitelist{$fn}
                 or $fn =~
-m#\A \Q$POST_DEST\E /? (?: MathVentures | js/jquery-ui/ | philosophy/culture/case-for-commercial-fan-fiction ) #x,
-                );
+                m#\A \Q$POST_DEST\E /? (?: MathVentures | js/jquery-ui/ ) #x, );
         },
         targets => [$POST_DEST],
     }

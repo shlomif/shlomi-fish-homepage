@@ -99,8 +99,6 @@ Selina-Mandrake/indiv-nodes/dartagnan-advice-to-kate\\.xhtml
                 |
             (?: philosophy/fan-pages/samantha-smith/samsmith.*? )
                 |
-            (?: philosophy/culture/case-for-commercial-fan-fic.*? )
-                |
             (?: open-source/projects/Park-Lisp/
                 park-lisp-informal-spec.raw{ext})
                 |

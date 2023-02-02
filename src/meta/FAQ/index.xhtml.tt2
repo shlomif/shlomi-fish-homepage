@@ -12,7 +12,8 @@
 [% SET SMG = 'Sarah Michelle Gellar' %]
 [% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
 
-<img src="[% base_path %]images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.webp" alt="photo of Shlomi Fish in December 2020" class="highlight" style="float:right;" />
+[% SET self_photo_url = base_path _ 'images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.webp' %]
+<img alt="photo of Shlomi Fish in December 2020" class="highlight" src="[% self_photo_url %]" style="float:right;" />
 
 <p>
 This document is a list of questions and answers to common questions I have
@@ -41,6 +42,8 @@ Some related FAQs I co-maintain:
 [% WRAPPER h2_section id = "about" title = "About Shlomi Fish" %]
 
 [% WRAPPER h3_section id = "who_are_you" title = "Who are you?" %]
+
+<img alt="photo of Shlomi Fish in December 2020" class="highlight" src="[% self_photo_url %]" />
 
 <p>
 I am <a href="[% base_path %]personal.html">Shlomi Fish</a>, a professional Israeli

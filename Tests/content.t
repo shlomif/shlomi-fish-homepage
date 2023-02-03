@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 48;
+use Test::More tests => 49;
 
 use HTML::Entities qw/ decode_entities /;
 use Path::Tiny     qw/ path /;
@@ -215,6 +215,10 @@ qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
 
     # TEST
     like( $content, qr#<a href="humour/fortunes/\.htaccess">#, "MANIFEST" );
+
+    # TEST
+    like( $content, qr#<a href="humour/fortunes/fortunes-shlomif\.epub">#,
+        "MANIFEST" );
 
     # TEST
     unlike(

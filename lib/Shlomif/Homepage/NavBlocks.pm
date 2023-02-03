@@ -1040,7 +1040,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( buffy_few_good terminator_liberation queen_padme_tales ),
+                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton ),
                 ),
             ],
         },

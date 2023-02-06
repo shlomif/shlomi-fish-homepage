@@ -9,9 +9,10 @@ use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
-my $PRE_DEST = HTML::Latemp::Local::Paths->new->t2_pre_dest;
+my $PRE_DEST  = HTML::Latemp::Local::Paths->new->t2_pre_dest;
+my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
-open my $m, '>', "$PRE_DEST/MANIFEST.html";
+open my $m, '>', "$POST_DEST/MANIFEST.html";
 
 $m->print(<<'EOF');
 <?xml version="1.0" encoding="utf-8"?>

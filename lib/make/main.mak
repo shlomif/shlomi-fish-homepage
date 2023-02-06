@@ -41,7 +41,7 @@ $(BK2HP_SVG_SRC): lib/repos/Shlomi-Fish-Back-to-my-Homepage-Logo/back-to-my-home
 
 include $(SRC_FORTUNES_DIR)/fortunes-list.mak
 
-MANIFEST_HTML := $(PRE_DEST)/MANIFEST.html
+MANIFEST_HTML := $(POST_DEST)/MANIFEST.html
 SITE_SOURCE_INSTALL_TARGET := $(POST_DEST)/meta/site-source/INSTALL
 PRE_DEST_FORTUNES_DIR := $(PRE_DEST)/$(FORTUNES_DIR)
 POST_DEST_FORTUNES_DIR := $(POST_DEST)/$(FORTUNES_DIR)
@@ -111,7 +111,7 @@ include lib/make/generated/deps.mak
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 
-non_latemp_targets: $(MANIFEST_HTML)
+all: $(MANIFEST_HTML)
 
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .
@@ -133,7 +133,7 @@ include lib/make/generated/screenplays-copy-operations.mak
 minified_assets: $(BK2HP_SVG_SRC) $(EXPANDER_JS_DEST) $(EXPANDER_MIN_JS_DEST) $(MAIN_TOTAL_MIN_JS_DEST) $(SRC_SVGS__MIN) $(SRC_SVGS__svgz) $(SRC_jpgs__webps) $(SRC_pngs__webps) $(SRC_rjpgs__webps) $(TREE_JS_DEST)
 screenplay_targets: $(SCREENPLAY_SOURCES_ON_POST_DEST__EXTRA_TARGETS)
 
-$(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS)
+$(MANIFEST_HTML): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $(ALL_HTACCESSES) $(SPORK_LECTURES_DEST_STARTS) $(FORTS_EPUB_DEST) $(SRC_CLEAN_STAMP)
 	$(PERL) $<
 
 non_latemp_targets: $(CATB_COPY_POST)

@@ -21,6 +21,11 @@ use Shlomif::Homepage::RelUrl (qw/ _set_url _url_obj /);
 use NavBlocks                                 ();
 use Shlomif::Homepage::SectionMenu::Sects::Me ();
 
+sub _inline
+{
+    return shift() =~ s/[\n\r]//gmrs;
+}
+
 sub _fn
 {
     my $fn = shift;
@@ -160,7 +165,7 @@ q{<li><p><a class="ext github" href="http://github.com/shlomif/Selina-Mandrake">
         # TEST
         eq_or_diff(
             $r->render( { obj => $tr } ),
-            <<'EOF',
+            ( <<'EOF' =~ s/[\n\r]//gmrs ),
 <tr>
 <td><b>Selina Mandrake - The Slayer</b></td>
 <td>
@@ -208,7 +213,7 @@ EOF
         # TEST
         eq_or_diff(
             $r->render( { obj => $subdiv_tr } ),
-            <<'EOF',
+            _inline(<<'EOF'),
 <tr class="subdiv">
 <th colspan="2">Screenplays</th>
 </tr>
@@ -238,7 +243,7 @@ EOF
         # TEST
         eq_or_diff(
             $r->render( { obj => $master_tr, table => $table, } ),
-            <<'EOF',
+            _inline(<<'EOF'),
 <tr class="main_title">
 <th colspan="2">Harry Potter/Emma Watson Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#harry_potter_nav_block">Link</a></th>
 </tr>
@@ -271,7 +276,8 @@ foreach my $ext ( '', 'index.xhtml', )
 
     # TEST*$ext
     eq_or_diff(
-        [ $r->render( { obj => $block } ), ], [ <<'EOF', ],
+        [ $r->render( { obj => $block } ), ],
+        [ ( <<'EOF' =~ s/[\n\r]//gmrs ), ],
 <table id="buffy_nav_block">
 <tr class="main_title">
 <th colspan="2">Buffy Fanfiction <a class="to_block" href="../../meta/nav-blocks/blocks/#buffy_nav_block">Link</a></th>

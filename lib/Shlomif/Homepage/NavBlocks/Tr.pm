@@ -23,7 +23,7 @@ sub render
 
     my $r = $args->{renderer};
 
-    return join '', map { "$_\n" } "<tr>",
+    return join '', "<tr>",
         sprintf( qq{<td><b>%s</b></td>}, $self->title ),
         "<td>",
         "<ul>",

@@ -32,12 +32,10 @@ sub collect_local_links
 sub render
 {
     my ( $self, $args ) = @_;
-
-    return join '', map { "$_\n" } sprintf( q{<table id="%s">}, $self->id ), (
-        map {
-            $args->{renderer}->render( { table => $self, %$args, obj => $_, } );
-        } @{ $self->tr_s }
-        ),
+    my $renderer = $args->{renderer};
+    return join '', sprintf( q{<table id="%s">}, $self->id ),
+        ( map { $renderer->render( { table => $self, %$args, obj => $_, } ); }
+            @{ $self->tr_s } ),
         "</table>",
         ;
 }

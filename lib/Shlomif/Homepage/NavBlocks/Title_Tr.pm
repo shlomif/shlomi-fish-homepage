@@ -27,7 +27,7 @@ sub render
     my ( $self, $args ) = @_;
 
     return join '',
-        map { "$_\n" } sprintf( q{<tr class="%s">}, $self->css_class ),
+        sprintf( q{<tr class="%s">},          $self->css_class ),
         sprintf( qq{<th colspan="2">%s</th>}, $self->title_html($args) ),
         "</tr>",
         ;

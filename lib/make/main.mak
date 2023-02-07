@@ -111,7 +111,7 @@ include lib/make/generated/deps.mak
 include lib/make/sf-javascripts.mak
 include lib/make/sf-printables.mak
 
-all: $(MANIFEST_HTML)
+post_latemp_deps: $(MANIFEST_HTML)
 
 tags:
 	ctags -R --exclude='.git/**' --exclude='*~' .

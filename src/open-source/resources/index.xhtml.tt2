@@ -13,29 +13,31 @@
 
 [% WRAPPER h2_section id = "beginners_sites" title = "Topical Portals, and Beginners’ Sites" %]
 
-<div class="sub_section">
-
-<h3 id="better-scm"><a href="http://better-scm.shlomifish.org/">The “Better SCM” Initiative</a></h3>
+[% WRAPPER h3_section href = "http://better-scm.shlomifish.org/" id = "better-scm" title = "The “Better SCM” Initiative" %]
 
 <p>
 An initiative meant to advance the projects that aim to create better publicly
 available tools for version control.
 </p>
 
-<h3 id="perl-begin"><a href="http://perl-begin.org/">The Perl Beginners Site</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://perl-begin.org/" id = "perl-begin" title = "The Perl Beginners Site" %]
 
 <p>
 A site for Perl beginners.
 </p>
 
-<h3 id="vim-begin"><a href="http://vim.begin-site.org/">The Vim Beginners Site</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://vim.begin-site.org/" id = "vim-begin" title = "The Vim Beginners Site" %]
 
 <p>
 A site for Vim beginners. Vim is an open-source, cross-platform, powerful,
 and configurable, text editor.
 </p>
 
-</div>
+[% END %]
 
 [% END %]
 
@@ -50,26 +52,26 @@ individual entries on my weblogs.
 
 [% WRAPPER h2_section href = "israel/" id = "israeli-foss" title = "Israeli-Related FOSS Resources" %]
 
-<div class="sub_section">
-
 <p>
 These are software resources that are somehow related to Israel.
 </p>
 
-<h3 id="guide-to-israeli-foss-resources"><a href="israel/guide-to-israeli-foss-resources/">Guide to Israeli Free and Open Source Software Resources</a></h3>
+[% WRAPPER h3_section href = "israel/guide-to-israeli-foss-resources/" id = "guide-to-israeli-foss-resources" title = "Guide to Israeli Free and Open Source Software Resources" %]
 
 <p>
 A guide to the online resources about Free and Open Source Software in Israel.
 </p>
 
-<h3 id="list-of-israeli-foss"><a href="israel/list-of-projects/">List of Israeli Open Source Projects</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "israel/list-of-projects/" id = "list-of-israeli-foss" title = "List of Israeli Open Source Projects" %]
 
 <p>
 A list of Israeli open-source projects that used to be on the wiki of
 Hackers-IL.
 </p>
 
-</div>
+[% END %]
 
 [% END %]
 

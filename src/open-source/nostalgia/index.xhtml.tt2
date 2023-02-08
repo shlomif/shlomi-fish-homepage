@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s Ancient Code" -%]
 [%- SET desc = "Nostalgia: old/ancient code by Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -9,7 +8,7 @@ I found a zip file lying around on the hard disk, containing some source
 code files I wrote
 back in my DOS days for Turbo C++. It can be downloaded from
 <a href="progs/">this directory</a>. The licence for all this code is
-MIT/Expat licence, but I don’t think it’s worth much, because it’s 16-bit and
+the MIT/Expat licence, but I don’t think it’s worth much, because it’s 16-bit and
 may only run on DOS, and there are probably much superior alternatives
 <a href="http://freecode.com/">available somewhere</a>.
 </p>
@@ -25,21 +24,24 @@ descriptions of some of them:
 [%- END -%]
 
 <ul>
+
 <li id="csee">
 <p>
-[% PROCESS file name="csee.h" %], [% PROCESS file name="csee.cpp" %] -
+[% INCLUDE file name="csee.h" %], [% INCLUDE file name="csee.cpp" %] -
 C-See - a library of various graphical routines.
 </p>
 </li>
+
 <li id="ccalc">
 <p>
-[% PROCESS file name="ccalc.cpp" %] - C-Calc - a library of mathematical and
+[% INCLUDE file name="ccalc.cpp" %] - C-Calc - a library of mathematical and
 number theory routines.
 </p>
 </li>
+
 <li id="gregorian_to_jewish">
 <p>
-[% PROCESS file name="gtoj.c" %], [% PROCESS file name="gtoj2.cpp" %], [% PROCESS file name="gtoj.h" %] -
+[% INCLUDE file name="gtoj.c" %], [% INCLUDE file name="gtoj2.cpp" %], [% INCLUDE file name="gtoj.h" %] -
 some routines to convert dates of
 <a href="http://en.wikipedia.org/wiki/Gregorian_calendar">the
 Gregorian Calendar</a> to the
@@ -53,23 +55,27 @@ Encyclopedia. I first used some C++ paradigms, but then converted it entirely
 to C.
 </p>
 </li>
+
 <li id="bezier">
 <p>
-[% PROCESS file name="bezier.cpp" %] - a program to generate Bezier Curves.
+[% INCLUDE file name="bezier.cpp" %] - a program to render Bezier Curves.
 </p>
 </li>
+
 <li id="mandelbroot">
 <p>
-[% PROCESS file name="mandelbr.cpp" %] - a program to generate the Manelbrot set. (Who
+[% INCLUDE file name="mandelbr.cpp" %] - a program to generate the Manelbrot set. (Who
 didn’t write something like that?)
 </p>
 </li>
+
 <li id="cdd">
 <p>
-[% PROCESS file name="cdd.cpp" %] - a program to change a drive and a directory at
+[% INCLUDE file name="cdd.cpp" %] - a program to change a drive and a directory at
 once. Like <code>cdd d:\progs\tcc</code>.
 </p>
 </li>
+
 </ul>
 
 [% END %]

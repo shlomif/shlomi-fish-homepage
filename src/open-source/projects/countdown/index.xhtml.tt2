@@ -10,19 +10,23 @@ but while displaying the remaining time in seconds. Using the <code>--to</code>
 flag, it is also possible to specify an end time in the future.
 </p>
 
-<h2 id="download">Download</h2>
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <p>
 <a href="http://metacpan.org/release/App-Countdown">Download
 countdown from the CPAN</a>
 </p>
 
-<h2 id="project-links">Project Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 [% WRAPPER github_cpan_dist_links     dist = "App-Countdown"
     github_url = "https://github.com/shlomif/App-Countdown"
     freecode_url = "http://freecode.com/projects/app-countdown"  %]
 [%- END -%]
+
+[% END %]
 
 [% PROCESS x11_licence name = "countdown",  %]
 

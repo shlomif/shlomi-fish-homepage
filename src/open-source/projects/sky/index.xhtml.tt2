@@ -1,10 +1,10 @@
 [%- SET title = "sky - a convenient uploading interface" -%]
 [%- SET desc = "sky - allow one to upload files to a remote host with a web service and give back the URL." -%]
 
+[% main_class.addClass("lim_width", "wrap-me") %]
 
 [%- WRAPPER wrap_html -%]
 
-<div class="wrap-me lim_width">
 <p>
 sky is a wrapper around uploaders such as
 <a href="http://en.wikipedia.org/wiki/Rsync">rsync</a>, which uploads a file
@@ -12,7 +12,7 @@ to a remote host with a web service, and gives you a URL that will allow other
 people to download it immediately.
 </p>
 
-<h2 id="examples">Examples</h2>
+[% WRAPPER h2_section id = "examples" title = "Examples" %]
 
 <p>
 Say you want to upload an <a href="http://en.wikipedia.org/wiki/Vorbis">Ogg
@@ -74,22 +74,26 @@ sites:
                 target_dir: 'Files/files/video/'
 </pre>
 
-<h2 id="download">Download</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <p>
 <a href="https://metacpan.org/release/App-Sky">Download
 sky from the CPAN</a>
 </p>
 
-<h2 id="project-links">Project Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 [% WRAPPER github_cpan_dist_links     dist = "App-Sky"
     github_url = "https://github.com/shlomif/Sky-uploader"
     freecode_url = "http://freecode.com/projects/app-sky"  %]
 [%- END -%]
 
-[% PROCESS x11_licence name = "sky",  %]
+[% END %]
 
-</div>
+[% PROCESS x11_licence name = "sky",  %]
 
 [% END %]

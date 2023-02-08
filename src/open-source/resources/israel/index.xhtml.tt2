@@ -1,21 +1,23 @@
 [%- SET title = "Israel-Related Open Source Resources" -%]
 [%- SET desc = "Israel-Related Open Source Resources" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="guide-to-israeli-foss-resources/">Guide to Israeli Free
-and Open Source Software Resources</a></h2>
+[% WRAPPER h2_section href = "guide-to-israeli-foss-resources/" id = "guide-to-israeli-foss-resources" title = "Guide to Israeli Free and Open Source Software Resources" %]
 
 <p>
 A guide to the online resources about Free and Open Source Software in Israel.
 </p>
 
-<h2><a href="list-of-projects/">List of Israeli Open Source Projects</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "list-of-projects/" id = "list-of-projects" title = "List of Israeli Open Source Projects" %]
 
 <p>
 A list of Israeli open-source projects that used to be on the wiki of
 Hackers-IL.
 </p>
+
+[% END %]
 
 [% END %]

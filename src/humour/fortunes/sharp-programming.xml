@@ -7128,5 +7128,95 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-programming-X-Y-problem">
+        <meta>
+            <title>X-Y Problem</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="eson123">so question, i am intending to make a feature where a user makes a purchase or anything, it will send an email to the admin, but that does require me to create an email first and put it in the config in the backend, is there anyhow i can send email anonymously ?</saying>
+<saying who="rindolf">eson123: hi</saying>
+<saying who="eson123">oh hi</saying>
+<saying who="rindolf">eson123: https://www.shlomifish.org/humour/image-macros/indiv-nodes/set_up_email_service.xhtml</saying>
+<saying who="bayaz">Title: Shlomif’s Memes - “One does not simply set up an E-mail service.”</saying>
+<saying who="eson123">rindolf: oh no, that&#39;s more unecessary work</saying>
+<saying who="rindolf">eson123: you can use &#39;do-not-reply@eson123site.tld&#39;</saying>
+<saying who="eson123">doesn&#39;t that still require me to setup my own email server ?</saying>
+<saying who="rindolf">eson123: no, see the DNS MX record</saying>
+<saying who="rindolf">eson123:</saying>
+<saying who="PlanckWalk">Yes, generally anything can send mail *to* an address.</saying>
+<saying who="PlanckWalk">If you don&#39;t own the receiving server it&#39;s a good idea to whitelist your sending thing though.</saying>
+<saying who="PlanckWalk">(Which may involve SPF and DMARC and so on)</saying>
+<saying who="OverCoder">hello</saying>
+<saying who="OverCoder">I need a nice way to manage secrets in a giga project</saying>
+<saying who="OverCoder">What felt like the best way to manage secrets is Google Secret Manager</saying>
+<saying who="InPhase">I simply setup an email service.  And it works more reliably than all the other email services I have access to.  It wasn&#39;t really too hard.</saying>
+<saying who="OverCoder">but for compute resources, we don&#39;t use GCP computes (yet), because they&#39;re very expensive</saying>
+<saying who="OverCoder">This &quot;giga project&quot; is actually a monorepo, and secrets can be text or files</saying>
+<saying who="OverCoder">I&#39;m not quite sure how to manage this stuff nicely</saying>
+<saying who="OverCoder">Some secret files may be shared by all packages</saying>
+<saying who="OverCoder">some files are scoped to specific packages</saying>
+<saying who="OverCoder">etc.</saying>
+<saying who="InPhase">There are a few extra steps now compared to setting up email services in the 90s, but not really that much.</saying>
+<saying who="OverCoder">Also Docker Compose is used to bring up all the packages</saying>
+<saying who="OverCoder">so the question is, what&#39;s a nice way to manage secrets</saying>
+<saying who="PlanckWalk">Yes, I run my own email server</saying>
+<saying who="PlanckWalk">Also, setting up a special purpose server that only sends or receives mail on a single address is very trivial.</saying>
+<saying who="PlanckWalk">You can then mostly not care what goofball anti-spam measures the rest of the world lurches into.</saying>
+<saying who="PlanckWalk">There&#39;s still a piece of equipment in a mine in Western Australia which reliably sends reports.  I set it up in 2002.</saying>
+<saying who="PlanckWalk">It doesn&#39;t have any fancy antispam stuff and the receiving email server doesn&#39;t care.</saying>
+<saying who="OverCoder">how do you guys manage things like bucket names in code</saying>
+<saying who="OverCoder">or basically any identifier for some resource on a cloud provider</saying>
+<saying who="OverCoder">I can&#39;t wrap my head around this</saying>
+<saying who="OverCoder">every solution I come up with ends up gross</saying>
+<saying who="OverCoder">like I don&#39;t want to hardware `some-whatever-value` every time I want to access the bucket named `some-whatever-value`</saying>
+<saying who="OverCoder">because (1) it sounds easy to type `some-whetever-value` accidentally and spend 5 hours trying to figure out what&#39;s wrong</saying>
+<saying who="OverCoder">(2) I don&#39;t like that the validation is not compile time</saying>
+<saying who="OverCoder">(3) I don&#39;t like how hard it is to change that name later, yes Ctrl-Shift-F may work but it&#39;s not very elegant</saying>
+<saying who="OverCoder">(4) it&#39;s not possible to tell how many buckets a service uses at a glance</saying>
+<saying who="OverCoder">I&#39;m not even being specific about bucket names either, but any cloud provider resource including service accounts, cloud functions, pubsub subscriptions, etc.</saying>
+<saying who="rindolf">OverCoder: wrap in an object?</saying>
+<saying who="OverCoder">rindolf, something like this right?  https://irc.overcoder.dev/uploads/81ed78804ecdf0d0/image.png</saying>
+<saying who="OverCoder">thing is, for example TypeScript has a feature where it can validate strings to conform to a certain shape</saying>
+<saying who="OverCoder">so for example I want the `users` bucket to only contain keys of certain formats and only</saying>
+<saying who="OverCoder">not sure how to put this together entirely</saying>
+<saying who="OverCoder">I mean yes I could write an entire giga types file and type checks all this stuff</saying>
+<saying who="OverCoder">but overall I&#39;m confused as what people do</saying>
+<saying who="OverCoder">because the issue seems not google-able</saying>
+<saying who="OverCoder">as if I am googling a problem no one has</saying>
+<me_is who="OverCoder">is confused</me_is>
+<saying who="rindolf">OverCoder: more like `MyBucketName(name=&#39;myname&#39;) `</saying>
+<saying who="OverCoder">rindolf, yes but what validates `myname` is even remotely a relevant name on cloud?</saying>
+<saying who="rindolf">OverCoder: your tests suite</saying>
+<saying who="OverCoder">tests are ridiculous</saying>
+<saying who="OverCoder">it&#39;s just typing the code twice</saying>
+<saying who="OverCoder">i don&#39;t do it</saying>
+<saying who="enxine">me either. i don&#39;t code too. i make an infinite loop and wait for random bytes to arrange in a program i want.</saying>
+<saying who="rindolf">OverCoder: with code introspection then?</saying>
+<saying who="OverCoder">what&#39;s that</saying>
+<saying who="rindolf">enxine: heh</saying>
+<saying who="supperman">buckets should be clearly labelled, mashed potatos, gravy, macaronis, etc</saying>
+<saying who="rindolf">enxine: https://shlomifishswiki.branchable.com/slash-dev-null_is_WebScale/</saying>
+<saying who="bayaz">Title: slash-dev-null is WebScale</saying>
+<saying who="enxine">hehe</saying>
+<saying who="decider">why not just put everything into a json file and load it at run time? its not great but seems like its the standard way of handling these things</saying>
+<saying who="ornx">code doesn&#39;t work, any tips?</saying>
+<saying who="rindolf">OverCoder: google / ddg it</saying>
+<saying who="ornx">thx bro, i&#39;ll see if that works</saying>
+<saying who="ornx">okay i googled &quot;why doesn&#39;t my code work&quot; and i think the issue might be that i have something called an &quot;X-Y problem&quot;? is there an easy solution for that?</saying>
+<saying who="edgar-rft">use Z only</saying>
+<saying who="nitrix">Ask about the X instead of the Y.</saying>
+<saying who="nitrix">Aka, don&#39;t ask the derived question, ask the original.</saying>
+<saying who="rindolf">heh; ornx++</saying>
+
+            </body>
+            <info>
+                <channel>##programming</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

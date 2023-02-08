@@ -498,7 +498,7 @@ She has enough time to contribute on Internet content and code sharing sites.
 <li>
 <p>
 She has many supporting friends, including her boyfriend Anakin Skywalker
-(<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>)
+(<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>),
 a promising Jedi-wannabe who is about her age, with aspirations
 for joining the mysterious but revered jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>

@@ -1,11 +1,11 @@
 [% BLOCK home_pages_on_forges %]
-<div class="sub_section">
+
 <p>
 <a href="[% base_path %]open-source/projects/">Open Source Projects</a> I initiated. Mostly small to
 medium scale.
 </p>
 
-<h3 id="cpan"><a href="http://metacpan.org/author/SHLOMIF">My CPAN Modules</a></h3>
+[% WRAPPER h3_section href = "http://metacpan.org/author/SHLOMIF" id = "cpan" title = "My CPAN Modules" %]
 
 <p>
 I wrote several modules for <a href="http://metacpan.org/">CPAN</a> - the
@@ -13,27 +13,35 @@ Comprehensive Perl Archive Network. Also see
 <a href="http://perlresume.org/SHLOMIF">my Perl Résumé at perlresume.org</a>.
 </p>
 
-<h3 id="github_page"><a href="http://github.com/shlomif">My GitHub Page</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://github.com/shlomif" id = "github_page" title = "My GitHub Page" %]
 
 <p>
 GitHub is a software-development and code sharing site, and I use it for
 hosting some git repositories, and to collaborate with some other users of it.
 </p>
 
-<h3 id="bitbucket_page"><a href="http://bitbucket.org/shlomif">My Bitbucket Page</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://bitbucket.org/shlomif" id = "bitbucket_page" title = "My Bitbucket Page" %]
 
 <p>
 Bitbucket is a software-development and code sharing site, similar in spirit
 and concept to GitHub, but with some advantages.
 </p>
 
-<h3 id="pypi_page"><a href="https://pypi.org/user/shlomif-gmail/">PyPI Page</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://pypi.org/user/shlomif-gmail/" id = "pypi_page" title = "PyPI Page" %]
 
 <p>
 Page at <a href="https://en.wikipedia.org/wiki/Python_Package_Index">the Python Package Index</a>.
 </p>
 
-<h3 id="sourceforge_page"><a href="http://sourceforge.net/users/shlomif">SourceForge Page</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://sourceforge.net/users/shlomif" id = "sourceforge_page" title = "SourceForge Page" %]
 
 <p>
 One of the original open source software development sites, SourceForge.net has
@@ -42,18 +50,23 @@ that I inherited from other people, and also have a lot of Quality Assurance
 work there.
 </p>
 
-<h3 id="googlecode_page"><a href="http://code.google.com/u/shlomif@gmail.com/">Google Code Page</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://code.google.com/u/shlomif@gmail.com/" id = "googlecode_page" title = "Google Code Page" %]
 
 <p>
 My activity at the free-of-charge code hosting facility from Google.
 </p>
 
-<h3 id="bits"><a href="[% base_path %]open-source/bits.html">Bits and Bobs</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "${base_path}open-source/bits.html" id = "bits" title = "Bits and Bobs" %]
 
 <p>
 A random collection of small programs I created, and are made available to
 the public.
 </p>
 
-</div>
+[% END %]
+
 [% END %]

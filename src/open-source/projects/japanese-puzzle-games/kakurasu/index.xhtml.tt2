@@ -1,7 +1,6 @@
 [%- SET title = "Kakurasu Solver" -%]
 [%- SET desc = "Kakurasu Solver" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -14,7 +13,7 @@ be freely re-used under the terms of the
 <a href="http://en.wikipedia.org/wiki/MIT_License">MIT/Expat licence</a>.
 </p>
 
-<h2 id="download">Download</h2>
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 [% SET ver = "0.2.0" %]
 [% SET arc = "kakurasu_solver-${ver}.tar.gz" %]
@@ -27,7 +26,9 @@ be freely re-used under the terms of the
 
 </ul>
 
-<h2 id="project-links">Project Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 <ul>
 
@@ -38,7 +39,9 @@ code, a web-interface to it, an issue tracker and some downloads.
 
 </ul>
 
-<h2 id="similar-projects">Similar Projects</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
 
 <ul>
 
@@ -52,7 +55,10 @@ Sudoku Solvers</a> (there are a lot of them).
 Tatham’s Portable Puzzle Collection</a> - contains generators and solvers
 for many puzzles.
 </li>
+
 </ul>
+
+[% END %]
 
 [% PROCESS x11_licence name = "The Kakurasu Solver",  %]
 

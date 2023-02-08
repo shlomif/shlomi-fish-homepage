@@ -2,7 +2,6 @@
 [%- SET desc = "Software resources on Shlomi Fish’s sites: projects, resource pages, pages against bad software, and interviews." -%]
 [%- SET more_keywords = "open, source, open source, free software, free, software, freecell, solver, perl, cpan, linux, unix, programs, applications, libraries, apis" -%]
 
-
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/open_source.tt2" %]
 
@@ -15,53 +14,63 @@ Software</a>. I also maintain some software-related resources, and also have
 some <a href="[% base_path %]philosophy/computers/">essays about computing</a>.
 </p>
 
-<h2 id="projects">Open Source Projects</h2>
+[% WRAPPER h2_section href = "projects/" id = "projects" title = "Open Source Projects" %]
 
 [% PROCESS home_pages_on_forges  %]
 
-<h2 id="contributions"><a href="contributions/">Contributions to Open Source Software</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "contributions/" id = "contributions" title = "Contributions to Open Source Software" %]
 
 <p>
 This page lists contributions I made to open-source projects which I have
 not initiated.
 </p>
 
-<h2 id="resources"><a href="resources/">Software Resources Sites</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "resources/" id = "resources" title = "Software Resources Sites" %]
 
 <p>
 Various software sites and resource links.
 </p>
 
-<div class="sub_section">
-
-<h3 id="favourite"><a href="favourite/">Favourite Free Software</a></h3>
+[% WRAPPER h3_section href = "favourite/" id = "favourite" title = "Favourite Free Software" %]
 
 <p>
 This contains a list of some of my favourite free software packages out
 there.
 </p>
 
-<h3 id="interviews"><a href="interviews/">Interviews with Open Source People</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "interviews/" id = "interviews" title = "Interviews with Open Source People" %]
 
 <p>
 These are a collection of interviews I conducted with people of the open
 source community.
 </p>
 
-</div>
+[% END %]
 
-<h2 id="anti"><a href="anti/">Pages against Bad Software</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "anti/" id = "anti" title = "Pages against Bad Software" %]
 
 <p>
 These are pages dedicated to educate people on why they shouldn’t use certain
 bad programs.
 </p>
 
-<h2 id="nostalgia"><a href="nostalgia/">Nostalgia - Some Ancient Software of Mine</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "nostalgia/" id = "nostalgia" title = "Nostalgia - Some Ancient Software of Mine" %]
 
 <p>
 These are old programs I wrote for DOS during high school, mostly in
 <a href="http://en.wikipedia.org/wiki/Turbo_C++">Turbo C++</a>.
 </p>
+
+[% END %]
 
 [% END %]

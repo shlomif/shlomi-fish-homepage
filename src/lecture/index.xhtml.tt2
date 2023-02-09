@@ -8,32 +8,36 @@
 
 [% default_toc %]
 
-<h2 id="perl-for-newbies"><a href="Perl/Newbies/">Perl
-for Perl Newbies</a></h2>
+[% WRAPPER h2_section href = "Perl/Newbies/" id = "perl-for-newbies" title = "Perl for Perl Newbies" %]
 
 <p>
 A series of talks that teach Perl for Perl beginners. No knowledge of
 any other programming language is required, but it will be helpful.
 </p>
 
-<h2 id="html-tutorial"><a href="[% PROCESS rellink url = "lecture/HTML-Tutorial/", host = "t2", %]">HTML Tutorial (for Standards Compliance)</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "HTML-Tutorial/" id = "html-tutorial" title = "HTML Tutorial (for Standards Compliance)" %]
 
 <p>
 A Public-Domain HTML Tutorial (currently available only in Hebrew) for
 how to write standard and semantic HTML.
 </p>
 
-<h2 id="web-publishing-using-lamp"><a href="[% PROCESS rellink url = "lecture/LAMP/", host = "t2", %]">Web Publishing
-Using LAMP</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "LAMP/" id = "web-publishing-using-lamp" title = "Web Publishing Using LAMP" %]
 
 <p>
 A presentation about web publishing using the popular LAMP - Linux, Apache,
 MySQL and Perl/PHP/Python platform.
 </p>
 
-<h2 id="soft_mgmt">Software Management</h2>
+[% END %]
 
-<h3 id="catb"><a href="CatB/">The Cathedral and the Bazaar - an Overview</a></h3>
+[% WRAPPER h2_section id = "soft_mgmt" title = "Software Management" %]
+
+[% WRAPPER h3_section href = "CatB/" id = "catb" title = "The Cathedral and the Bazaar - an Overview" %]
 
 <div class="indent">
 <p>
@@ -42,7 +46,9 @@ is considered one of the most important works on the Open Source world.
 </p>
 </div>
 
-<h3 id="joel-test"><a href="joel-test/">The Joel Test</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "joel-test/" id = "joel-test" title = "The Joel Test" %]
 
 <div class="indent">
 <p>
@@ -53,15 +59,21 @@ development team.
 </p>
 </div>
 
+[% END %]
+
+[% END %]
+
 [% WRAPPER h2_section id = "programming-languages" title = "Programming Languages" %]
 
-<h3 id="c-bad-elems"><a href="C-and-CPP/bad-elements/">C and C++ Elements to Avoid</a></h3>
+[% WRAPPER h3_section href = "C-and-CPP/bad-elements/" id = "c-bad-elems" title = "C and C++ Elements to Avoid" %]
 
 <p>
 Coding Elements and anti-patterns that should be avoided in C and C++.
 </p>
 
-<h3 id="scheme-and-lc"><a href="Lambda-Calculus/">Scheme and Lambda Calculus</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "Lambda-Calculus/" id = "scheme-and-lc" title = "Scheme and Lambda Calculus" %]
 
 <p>
 A presentation that briefly covers the Scheme programming language and
@@ -69,7 +81,9 @@ then use it to present the Lambda Calculus: a model for programming,
 which is a full-fledge programming language with just two primitives.
 </p>
 
-<h3 id="haskell-for-perlers"><a href="Perl/Haskell/">Haskell for Perl Programmers</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "Perl/Haskell/" id = "haskell-for-perlers" title = "Haskell for Perl Programmers" %]
 
 <p>
 A Haskell for Perl Programmers introduction. (part of the Israeli Perl
@@ -77,6 +91,8 @@ Mongers, Foreign Language Introductions). Perl-specific knowledge is not
 required and can be substituted by knowledge of a similar programming
 language.
 </p>
+
+[% END %]
 
 [%- END -%]
 
@@ -205,7 +221,7 @@ Solver. Covers history, technologies, architecture and exotic bugs.
 
 [%- END -%]
 
-<h2 id="lightning-talks"><a href="cat/lightning-talks/">Mini Presentations ("Lightning Talks")</a></h2>
+[% WRAPPER h2_section href = "cat/lightning-talks/" id = "lightning-talks" title = "Mini Presentations (“Lightning Talks”)" %]
 
 <div class="indent">
 <p>
@@ -215,6 +231,8 @@ Short presentations on various topics.
 [% PROCESS lightning_talks_list %]
 
 </div>
+
+[% END %]
 
 </div>
 

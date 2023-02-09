@@ -1,14 +1,13 @@
 [%- SET title = "Presentations on Shlomi Fish’s Projects" -%]
 [%- SET desc = "Presentations on Shlomi Fish’s Projects: Freecell Solver, LM-Solve and Test-Run" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
 These are presentations about my <a href="[% PROCESS rellink host = "t2", url = "open-source/",  %]">Open Source Projects</a>.
 </p>
 
-<h2>Presentations about Freecell Solver</h2>
+[% WRAPPER h2_section id = "Freecell-Solver" title = "Presentations about Freecell Solver" %]
 
 <ul>
 <li>
@@ -31,8 +30,14 @@ Project Introduction</a>
 </li>
 </ul>
 
-<h2><a href="[% base_path %]lecture/LM-Solve/">LM-Solve - a Logic Mazes Solver</a></h2>
+[% END %]
 
-<h2><a href="[% base_path %]lecture/Perl/Lightning/Test-Run/">Test::Run - a New and Improved Test Harness</a></h2>
+[% WRAPPER h2_section href = "${base_path}lecture/LM-Solve/" id = "LM-Solve" title = "LM-Solve - a Logic Mazes Solver" %]
+
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}lecture/Perl/Lightning/Test-Run/" id = "Test-Run" title = "Test::Run - a New and Improved Test Harness" %]
+
+[% END %]
 
 [% END %]

@@ -1,31 +1,36 @@
 [%- SET title = "Recommendations" -%]
 [%- SET desc = "Recommendations of books, compact discs, films, etc." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
 These are recommendations of books, compact discs, movies, etc.
 </p>
 
-<h2 id="non_fiction_books"><a href="[% base_path %]philosophy/books-recommends/">Non-fiction Books</a></h2>
+[% WRAPPER h2_section href = "${base_path}philosophy/books-recommends/" id = "non_fiction_books" title = "Non-fiction Books" %]
 
 <p>
 Recommendations of non-fiction books such as technical books or popular
 science ones.
 </p>
 
-<h2 id="music"><a href="[% base_path %]art/recommendations/music/">Music</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}art/recommendations/music/" id = "music" title = "Music" %]
 
 <p>
 Recommendations of musical compact discs that I enjoy listening to.
 </p>
 
-<h2 id="films"><a href="[% base_path %]humour/recommendations/films/">Films</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}humour/recommendations/films/" id = "films" title = "Films" %]
 
 <p>
 Recommendations of films (a.k.a “movies”, or “motion pictures”) I saw and
 liked.
 </p>
+
+[% END %]
 
 [% END %]

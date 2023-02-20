@@ -126,6 +126,10 @@ class XhtmlSplitter:
             self.xhtml_article_tag,
             self.xhtml_section_tag,
         ])
+        self._hn_xpath = self._x_format(
+            "./{xhtml_prefix}header/*[" + " or ".join([
+                "local-name()='h{}'".format(i)
+                for i in range(1, 6+1)]) + "]")
         if self.input_is_plain_html:
             self._whole_r_mode = 'rt'
         else:
@@ -209,21 +213,43 @@ class XhtmlSplitter:
                 return "{" + str(self.elem) + " => [" +\
                     ", ".join([str(x) for x in self.childs]) + "]" + "}"
 
-        def genTreeNode(elem):
+        def genTreeNode(level, elem):
             kids = []
-            for x in elem:
-                kids += wrap_genTreeNode(x)
             if _xpath(self.ns, elem, self.list_sections_xpath):
+                delta = 1
+            else:
+                delta = 0
+            for x in elem:
+                kids += wrap_genTreeNode(level+delta, x)
+            if delta:
+                is_found = _xpath(
+                    self.ns,
+                    elem,
+                    self._header_xpath,
+                )
+                # print(is_found)
+                if is_found:
+                    is_found2 = _xpath(
+                        self.ns,
+                        elem,
+                        self._hn_xpath,
+                    )
+                    assert len(is_found2) == 1
+                    if 0:
+                        hlevel = \
+                            int(etree.QName(is_found2[0].tag).localname[-1])
+                        print(level, hlevel-2)
+                        assert level == hlevel-2
                 return [TreeNode(elem=elem, childs=kids)]
             else:
                 return kids
 
-        def wrap_genTreeNode(elem):
-            ret = genTreeNode(elem)
+        def wrap_genTreeNode(level, elem):
+            ret = genTreeNode(level, elem)
             assert isinstance(ret, list)
             return ret
 
-        self.tree = wrap_genTreeNode(self.container_elem)
+        self.tree = wrap_genTreeNode(0, self.container_elem)
         if len(self.tree) > 1:
             self.tree = [
                 TreeNode(elem=self.container_elem, childs=self.tree, )

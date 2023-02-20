@@ -128,8 +128,10 @@ class XhtmlSplitter:
         ])
         self._hn_xpath = self._x_format(
             "./{xhtml_prefix}header/*[" + " or ".join([
-                "local-name()='h{}'".format(i)
-                for i in range(1, 6+1)]) + "]")
+                "(local-name() = 'h{}')".format(i)
+                for i in range(1, 6+1)
+            ]) + "]"
+        )
         if self.input_is_plain_html:
             self._whole_r_mode = 'rt'
         else:
@@ -235,9 +237,10 @@ class XhtmlSplitter:
                         self._hn_xpath,
                     )
                     assert len(is_found2) == 1
-                    if 0:
-                        hlevel = \
-                            int(etree.QName(is_found2[0].tag).localname[-1])
+                    if False:
+                        hlevel = int(
+                            etree.QName(is_found2[0].tag).localname[1:]
+                        )
                         print(level, hlevel-2)
                         assert level == hlevel-2
                 return [TreeNode(elem=elem, childs=kids)]

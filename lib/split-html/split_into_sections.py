@@ -215,14 +215,14 @@ class XhtmlSplitter:
                 return "{" + str(self.elem) + " => [" +\
                     ", ".join([str(x) for x in self.childs]) + "]" + "}"
 
-        def genTreeNode(level, elem):
+        def genTreeNode(level, diffs, elem):
             kids = []
             if _xpath(self.ns, elem, self.list_sections_xpath):
                 delta = 1
             else:
                 delta = 0
             for x in elem:
-                kids += wrap_genTreeNode(level+delta, x)
+                kids += wrap_genTreeNode(level+delta, diffs, x)
             if delta:
                 is_found = _xpath(
                     self.ns,
@@ -237,22 +237,26 @@ class XhtmlSplitter:
                         self._hn_xpath,
                     )
                     assert len(is_found2) == 1
+                    hlevel = int(
+                        etree.QName(is_found2[0].tag).localname[1:]
+                    )
+                    diff = hlevel - level
+                    diffs.add(diff)
                     if False:
-                        hlevel = int(
-                            etree.QName(is_found2[0].tag).localname[1:]
-                        )
                         print(level, hlevel-2)
-                        assert level == hlevel-2
+                        assert diff == 2
                 return [TreeNode(elem=elem, childs=kids)]
             else:
                 return kids
 
-        def wrap_genTreeNode(level, elem):
-            ret = genTreeNode(level, elem)
+        def wrap_genTreeNode(level, diffs, elem):
+            ret = genTreeNode(level, diffs, elem)
             assert isinstance(ret, list)
             return ret
 
-        self.tree = wrap_genTreeNode(0, self.container_elem)
+        diffs = set()
+        self.tree = wrap_genTreeNode(0, diffs, self.container_elem)
+        assert len(diffs) == 1
         if len(self.tree) > 1:
             self.tree = [
                 TreeNode(elem=self.container_elem, childs=self.tree, )

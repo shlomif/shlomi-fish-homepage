@@ -68,67 +68,22 @@ EOF
 }
 else
 {
-    require A;
-    my $table = '';
-    for my $k ( sort keys %$::A )
-    {
-        my $rec = $::A->{$k};
-        my $d   = $rec->{desc};
-        my $url = $rec->{url};
-        $table .=
-qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td class="full"><p><a href="$url">$url</a></p></td><td><p>$d</p></td></tr>!;
-    }
-    my $title =
-"Welcome to http://shlom.in/ , the private short URL service of Shlomi Fish";
-    print $HEADER, <<"EOF";
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<title>$title</title>
-<meta charset="utf-8"/>
-<style>
-td, th
+    my $h = _utf8_slurp("front.txt");
+    print $HEADER, $h;
+}
+
+sub _utf8_slurp
 {
-    border: solid 1pt darkgreen ;
-    padding: 0.5em;
-    text-align: left;
-    vertical-align: top;
+    my $filename = shift;
+
+    open my $in, '<:encoding(utf8)', $filename
+        or die "Cannot open '$filename' for slurping - $!";
+
+    local $/;
+    my $contents = <$in>;
+
+    close($in);
+
+    return $contents;
 }
-</style>
-</head>
-<body>
 
-<h1>$title</h1>
-
-<p>
-This domain serves as <a href="http://www.shlomifish.org/">Shlomi Fish's</a>
-<b>non-public</b> URL shortening service. As such, it is fully under his
-control, does not have a convenient web-interface to add more links, and
-cannot be used to redirect to spam links. Therefore, I ask you not to block
-it in spam filters.
-</p>
-
-<p>
-There is a list of public URLs that are pointed by this
-service, below. For more information please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
-</p>
-
-<table>
-<tr>
-<th>Short URL</th>
-<th>Full URL</th>
-<th>Description</th>
-</tr>
-$table
-</table>
-
-<p>
-( <a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/bin/shlom.in-redirect"><b>GitHub Source</b></a>. )
-</p>
-
-</body>
-</html>
-EOF
-}

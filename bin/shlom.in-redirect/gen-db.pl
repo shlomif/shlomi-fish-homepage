@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
 
+use 5.014;
 use strict;
 use warnings;
 use utf8;
@@ -220,7 +221,7 @@ qq!<tr><td><p><a href="$url">https://shlom.in/$k</a></p></td><td class="full"><p
 }
 my $title =
 "Welcome to http://shlom.in/ , the private short URL service of Shlomi Fish";
-path("front.txt")->spew_utf8(<<"EOF");
+path("front.txt")->spew_utf8( <<"EOF" =~ s#[\n\r]##gmrs );
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -230,7 +231,7 @@ path("front.txt")->spew_utf8(<<"EOF");
 <style>
 td, th
 {
-    border: solid 1pt darkgreen ;
+    border: solid 1pt darkgreen;
     padding: 0.5em;
     text-align: left;
     vertical-align: top;

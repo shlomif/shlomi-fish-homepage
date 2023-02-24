@@ -243,17 +243,11 @@ td, th
 <h1>$title</h1>
 
 <p>
-This domain serves as <a href="http://www.shlomifish.org/">Shlomi Fish's</a>
-<b>non-public</b> URL shortening service. As such, it is fully under his
-control, does not have a convenient web-interface to add more links, and
-cannot be used to redirect to spam links. Therefore, I ask you not to block
-it in spam filters.
+This domain serves as <a href="http://www.shlomifish.org/">Shlomi Fish's</a> <b>non-public</b> URL shortening service. As such, it is fully under his control, does not have a convenient web-interface to add more links, and cannot be used to redirect to spam links. Therefore, I ask you not to block it in spam filters.
 </p>
 
 <p>
-There is a list of public URLs that are pointed by this
-service, below. For more information please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
+There is a list of public URLs that are pointed by this service, below. For more information please contact <a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>.
 </p>
 
 <table>

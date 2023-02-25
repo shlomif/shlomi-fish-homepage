@@ -8,4 +8,18 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Tiffany-Alvord.html") %]
 
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]meta/FAQ/#are_you_an_agent">“Are you an agent?”</a> - <q>Furthermore, it is commonly acknowledged that <a href="https://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a> is a quadruple Mossad→FBI→Shin Bet→CIA agent.</q>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [% END %]

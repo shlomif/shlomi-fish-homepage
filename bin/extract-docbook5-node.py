@@ -17,16 +17,21 @@ import sys
 
 in_fn = sys.argv.pop(1)
 xpath = sys.argv.pop(1)
+baseurl = sys.argv.pop(1)
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 dbns = "http://docbook.org/ns/docbook"
 ns = {
     "db": dbns,
     "ncx": "http://www.daisy.org/z3986/2005/ncx/",
     "xhtml": XHTML_NAMESPACE,
+    "xlink": "http://www.w3.org/1999/xlink",
     "xml": XML_NS,
 }
 with open(in_fn, "rb") as fh:
     xml = fh.read()
 root = etree.XML(xml)
 node = root.xpath(xpath, namespaces=ns, )[0]
+attr = '{xlink}href'.format(xlink=("{" + ns['xlink'] + "}"))
+for link in node.xpath(".//*[starts-with(@xlink:href, '#')]", namespaces=ns, ):
+    link.set(attr, baseurl + link.get(attr))
 print(etree.tostring(node).decode('utf-8'), end='')

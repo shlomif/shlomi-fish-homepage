@@ -61,9 +61,10 @@ $(PRE_DEST)/philosophy/computers/how-to-share-code-for-getting-help/index.xhtml:
 SAMSMITHXML := $(DOCBOOK5_SOURCES_DIR)/samsmith.xml
 SAMSMITHXML_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/multiverse-cosmology-v0.4.x.docbook5.xml
 REALWORLDSENSE_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/why-the-so-called-real-world-i-am-trapped-in-makes-little-sense--2020-05-19.docbook5.xml
+EXTRACT_XML_PY_SCRIPT := bin/extract-docbook5-node.py
 
-$(SAMSMITHXML): $(SAMSMITHXML_SRC)
-	$(PYTHON) bin/extract-docbook5-node.py $< '//*[@xml:id="history-lesson-about-the-muppeteers"]' > $@
+$(SAMSMITHXML): $(SAMSMITHXML_SRC) $(EXTRACT_XML_PY_SCRIPT)
+	$(PYTHON) $(EXTRACT_XML_PY_SCRIPT) $< '//*[@xml:id="history-lesson-about-the-muppeteers"]' 'https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/' > $@
 
 COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
 REALWORLDSENSE_XML := $(DOCBOOK5_SOURCES_DIR)/why-the-so-called-real-world-makes-little-sense.xml

@@ -20,8 +20,8 @@ CPAN[%- END -%]
 [% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
 [% WRAPPER github_cpan_dist_links     dist = "Docker-CLI-Wrapper"
-    github_url = "https://github.com/shlomif/perl-Docker-CLI-Wrapper"
-    freecode_url = "http://freecode.com/projects/file-dir-dumper/"  %]
+    github_url = "https://github.com/shlomif/Docker-CLI-Wrapper"
+%]
 [%- END -%]
 
 [% END %]

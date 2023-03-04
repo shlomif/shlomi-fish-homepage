@@ -2944,6 +2944,8 @@ to insist that it is not a blog.
 
 <hr />
 
+<blockquote cite="">
+
 <p>
 I feel that validating against an XHTML schema makes my code cleaner and less
 buggy, because I need to have closing tags, as well as use a trailing “/” for
@@ -2967,6 +2969,8 @@ Note that some pages in the <a href="[% base_path %]MathVentures/">Math-Ventures
 section</a> end with the <code>.xhtml</code> suffix and are served as XHTML
 because they contain <a href="http://www.w3.org/Math/">MathML</a>.
 </p>
+
+</blockquote>
 
 [%- END -%]
 
@@ -3039,6 +3043,8 @@ on silly statistics.
 
 <hr />
 
+<blockquote cite="">
+
 <p>
 For several reasons:
 </p>
@@ -3085,6 +3091,8 @@ You can mirror the site using <code>wget --mirror</code> if you care about
 </li>
 
 </ol>
+
+</blockquote>
 
 [%- END -%]
 
@@ -3678,7 +3686,7 @@ depicted her friends and herself laying waste to a whole city
 in the <a href="https://www.youtube.com/watch?v=QcIy9NiNbmo">videoclip</a> for her
 song <a href="https://en.wikipedia.org/wiki/Bad_Blood_(Taylor_Swift_song)">"Bad Blood"</a>
 (and <a href="[% base_path %]humour/bits/facts/Chuck-Norris/">Chuck Norris</a>,
-<a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold Schwarzenegger</a>
+<a href="https://en.wikipedia.org/wiki/Arnold_Schwarzenegger">Arnold Schwarzenegger</a>,
 and similar likely showed it more than once) that they actually are indeed so
 violent in real life? While sometimes I felt like going on a mayhem
 rage when there was a lot
@@ -4234,12 +4242,12 @@ Acer Nplify™ 802.11b/g/n.
 
 </ul>
 
-[%- END -%]
-
 <p>
 It runs
 <a href="https://en.wikipedia.org/wiki/Fedora_Linux">Fedora Linux</a>.
 </p>
+
+[%- END -%]
 
 [%- END -%]
 
@@ -4268,7 +4276,7 @@ when I was in the 9th grade, this time on a 386 SX with
 some later versions of DOS, and later on with
 <a href="http://en.wikipedia.org/wiki/Turbo_C%2B%2B">Borland Turbo C++</a>
 3.0 (which sported a much more primitive variant of C++ compared to today’s
-flavours). Despite knowing C and C/C++, I still found QBasic of use, due to
+flavours). Despite knowing C and C/C++, I still found QBasic useful, due to
 my ability to rapidly develop code in it (what Larry Wall later called
 “whipuptitude” in some of his talks.). I also may have dabbled with Excel’s
 <a href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual
@@ -4643,9 +4651,9 @@ The protocol has open specifications, and some [% FOSS %] servers and clients.
 
 <li>
 <p>
-IRC chatrooms / "channels" are more discoverable than those of many newer
-services which have paranoid "privacy" measurements in place. E.g.: Python's
-channel is usually "#python".
+IRC chatrooms, which are known as "channels", are more discoverable than those
+of many newer services which have paranoid "privacy" measurements in place.
+E.g.: Python's channel is usually "#python".
 </p>
 
 <p>
@@ -4965,8 +4973,8 @@ First of all note that [% IANAL %]/etc. Anyway, I try
 to give explicit and more permissive licences (e.g: <a
 href="https://creativecommons.org/">Creative Commons</a> ones) to all my posts
 and works because otherwise they are <a
-href="https://en.wikipedia.org/wiki/All_rights_reserved">All Rights
-Reserved</a> by default and so under much more restrictive implicit licensing
+href="https://en.wikipedia.org/wiki/All_rights_reserved">“All Rights
+Reserved”</a> by default and so under much more restrictive implicit licensing
 conditions. I know that <a
 href="https://en.wikipedia.org/wiki/Ashleigh_Brilliant">Ashleigh Brilliant</a>
 got copyright to apply to relatively short sentences (which most of my posts are
@@ -5053,7 +5061,7 @@ and other <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFI
 Note that I also write some new code in Python, Julia, bash, C, C++, and other languages.
 </p>
 
-<blockquote cite="">
+<blockquote cite="https://twitter.com/shlomif/status/1490175665597030405">
 
 <p>
 Shlomi Fish on Twitter: "From #IRC : One thing we appreciate about #perl #CPAN,
@@ -5153,7 +5161,7 @@ Lately, I've been mostly using it for <a href="[% base_path %]humour/image-macro
 Reading from <a href="https://www.facebook.com/shlomi.fish/posts/pfbid0YsLGVJLj7a5ug3tBkuBcpvmFQXi94VmdSTfiaRRKGQQ61LBnBzognW7eQiM4erxol">my Facebook post</a>:
 </p>
 
-<blockquote cite="">
+<blockquote cite="https://www.facebook.com/shlomi.fish/posts/pfbid0YsLGVJLj7a5ug3tBkuBcpvmFQXi94VmdSTfiaRRKGQQ61LBnBzognW7eQiM4erxol">
 
 <p>
 Today I'd like to share a story told by a friend. At his workplace, they had a
@@ -5219,7 +5227,7 @@ and not being <a href="https://knowyourmeme.com/memes/wheatons-law">a jerk ("Whe
 </p>
 
 <p>
-I do admit I have a sexist side: either pro-female:
+I do admit I have sexist sides. Either pro-female:
 </p>
 
 <ul>
@@ -5326,7 +5334,7 @@ benevolent people.
 <p>
 Furthermore I should note that using "nazi" like that actually underlines
 the main reason which caused the deterioration of the Nazis in Nazi
-Germany due the fact that they were too insistent on being strict and
+Germany. It wase the fact that they were too insistent on being strict and
 avoid breaking or bending the rules, or voicing any antagonism towards
 Nazism there. This made them into tragic victims who accepted their fate
 of death and stagnation instead of being action heroes or “hackers” who

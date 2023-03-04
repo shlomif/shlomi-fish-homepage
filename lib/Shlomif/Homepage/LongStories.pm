@@ -155,7 +155,7 @@ href="https://buffy.fandom.com/wiki/Faith_Lehane">Faith</a>), who prefers
 to be called “Erisa”, and who is a self-conscious
 and rebelling punk, with whom Jennifer finds it hard to deal. Jennifer remains
 determined to learn how to become an open source developer from Erisa, but
-there are some surprises along the road.
+there are some surprises along the way.
 </p>
 EOF
     },
@@ -500,7 +500,7 @@ She has enough time to contribute on Internet content and code sharing sites.
 She has many supporting friends, including her boyfriend Anakin Skywalker
 (<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>),
 a promising Jedi-wannabe who is about her age, with aspirations
-for joining the mysterious but revered jedi order of Siths, of which only Vader
+for joining the mysterious but revered Jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>
 are the known extant members.
 </p>

@@ -227,6 +227,13 @@ class MyTests(html_unit_test.TestCase):
         self._factoids_check_helper(
             input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
         )
+        doc = self.doc(input_fn)
+        res = doc.xpath(
+            ".//a[contains(text(), 'the Wikipedia page')]"
+        )
+        self.assertTrue((len(res) > 0), "len(facts)")
+        node = res.xpath_results[0]
+        self.assertTrue(("wikipedia" in node.get('href')), "href")
 
     def test_in_soviet_russia_factoids_link(self):
         input_fn = (

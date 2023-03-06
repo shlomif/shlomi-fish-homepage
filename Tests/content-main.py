@@ -205,8 +205,8 @@ class MyTests(html_unit_test.TestCase):
             "]"
         )
 
-    def _factoids_check_helper(self, input_fn, htmlid):
-        self.doc(input_fn).has_one(
+    def _factoids_check_helper(self, input_fn, htmlid, doc=None):
+        (doc or self.doc(input_fn)).has_one(
             ".//a[contains(@href, 'humour/fortunes/shlomif-factoids.html#"
             + htmlid + "')"
             + "and text()='These factoids in XML-Grammar-Fortune format']"
@@ -224,10 +224,11 @@ class MyTests(html_unit_test.TestCase):
         input_fn = (
             './dest/post-incs/t2/humour/bits/facts/Emma-Watson/index.xhtml'
         )
-        self._factoids_check_helper(
-            input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1'
-        )
         doc = self.doc(input_fn)
+        self._factoids_check_helper(
+            input_fn=input_fn, htmlid='shlomif-fact-emma-watson-1',
+            doc=doc,
+        )
         res = doc.xpath(
             ".//a[contains(text(), 'the Wikipedia page')]"
         )

@@ -233,7 +233,7 @@ class MyTests(html_unit_test.TestCase):
         )
         self.assertTrue((len(res) > 0), "len(facts)")
         node = res.xpath_results[0]
-        self.assertTrue(("wikipedia" in node.get('href')), "href")
+        self.assertIn("wikipedia.org", node.get('href'))
 
     def test_in_soviet_russia_factoids_link(self):
         input_fn = (

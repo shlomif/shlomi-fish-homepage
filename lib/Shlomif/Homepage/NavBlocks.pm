@@ -514,7 +514,7 @@ my %tr_s = (
     'muppets_grammar_nazis' =>
         __PACKAGE__->_gen_muppets__tr(qr#/Summer-Glau#ms),
     'muppets_harry_potter' =>
-        __PACKAGE__->_gen_muppets__tr(qr#/Harry-Potter#ms),
+        __PACKAGE__->_gen_muppets__tr(qr#/(?:Harry-Potter|Tiffany-Alvord)#ms),
     'muppets_tiffany_alvord' => __PACKAGE__->_gen_muppets__tr(qr#/Tiffany#ms),
     'queen_padme_tales'      => __PACKAGE__->_gen__queen_padme_tales__tr(
         {

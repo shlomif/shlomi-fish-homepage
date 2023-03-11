@@ -8,6 +8,16 @@
 
 [% PROCESS "Inc/faq.tt2" %]
 
+[% BLOCK pygm %]
+<a
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#the_pygmalion_effect_and_the_golem_effect">Pygmalion effect vs.
+the Golem effect</a>
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE pygm %]
+[% PROCESS pygm %]
+[% END %]
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
 [% SET GitHub = '<a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>' %]
@@ -1871,9 +1881,7 @@ href="https://www.geekwire.com/2011/top-10-reasons-darth-vader-amazing-project-m
 
 <p>
 Since I have at least subconsciously (and lately consciously) believed everyone
-can improve and change, and grow (see the <a
-href="https://en.wikipedia.org/wiki/Pygmalion_effect">Pygmalion effect</a> vs.
-<a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>) and
+can improve and change, and grow (see the [% INCLUDE pygm %]) and
 treated them like that, they eventually usually did improve.
 </p>
 
@@ -2739,9 +2747,7 @@ king" or "messiah"</a> of the Web 2.0 / [% opencontent %] revolution.
 And I care even more about flesh-and-blood people not dying physically and
 prematurely for whatever reason, or otherwise get physically injured, usually
 by their own mismanagement. I also want every individual and organisation in
-the world to improve and prosper ( <a
-href="https://en.wikipedia.org/wiki/Pygmalion_effect">Pygmalion effect</a> vs.
-<a href="https://en.wikipedia.org/wiki/Golem_effect">the Golem effect</a>; <a
+the world to improve and prosper ( [% INCLUDE pygm %]; <a
 href="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-chuck-156"><q>Chuck
 Norris was challenged to fight the world, and accepted. He bet on himself, won,
 and collected the bet money.</q></a>; <a

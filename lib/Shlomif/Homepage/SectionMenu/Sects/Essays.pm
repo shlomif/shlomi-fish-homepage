@@ -47,10 +47,10 @@ my $_section_navmenu_tree_contents = {
                         "A snapshot of my personal philosophy as of March 2013",
                 },
                 {
-                    text => "Putting Cards on the Table (2019-2022)",
+                    text => "Putting Cards on the Table (2019-*)",
                     url  =>
 "philosophy/philosophy/putting-cards-on-the-table-2019-2020/",
-                    title => "Update to my personal philosophy as of 2019-2022",
+                    title => "Update to my personal philosophy as of 2019-2023",
                 },
                 {
                     text => "Guide to Neo-Tech",
@@ -233,7 +233,7 @@ my $_section_navmenu_tree_contents = {
                     url   => "philosophy/politics/define-zionism/",
                     title => (
                               "What is “Zionism” really? What "
-                            . "does anti-Israel, anti-Zionist, etc. mean?"
+                            . "do “anti-Israel”, “anti-Zionist”, etc. mean?"
                     ),
                     subs => [
                         {
@@ -264,7 +264,7 @@ my $_section_navmenu_tree_contents = {
                     text  => "When C is the Best?",
                     url   => "philosophy/computers/when-c-is-best/",
                     title =>
-"An Essay that Explains when the C Language should be used instead of Other Languages",
+"An essay that explains when the C language should be used instead of other languages",
                     subs => [
                         {
                             text => "The Text Itself",
@@ -309,7 +309,7 @@ my $_section_navmenu_tree_contents = {
                             url  =>
 "philosophy/computers/open-source/linus-torvalds-bus-factor/",
                             title =>
-"The Virtue of Multiple Committers and Overthrowing the Benevolent Dictator",
+"The virtue of having multiple committers and overthrowing the benevolent dictator",
                         },
                         {
                             text => "FOSS Licences Wars",
@@ -338,7 +338,7 @@ my $_section_navmenu_tree_contents = {
                 {
                     text  => "Software Management",
                     url   => "philosophy/computers/software-management/",
-                    title => "Managing Software Teams, People, Projects",
+                    title => "Managing software teams, people, projects",
                     subs  => [
                         {
                             text => "The End of IT Slavery",
@@ -352,7 +352,7 @@ my $_section_navmenu_tree_contents = {
                             url  =>
 "philosophy/computers/software-management/perfect-workplace/",
                             title =>
-"How to make an Info-Tech Workplace Where Programmers Will Be Happy, Want to Stay, Be Super-Productive and Efficient and will Rave About",
+"How to make an info-tech workplace where programmers will be happy, want to stay, be super-productive and efficient and will rave about",
                             subs => [
                                 {
                                     text => "Revision 1",
@@ -465,7 +465,7 @@ my $_section_navmenu_tree_contents = {
                             url  =>
 "philosophy/computers/web/choice-of-docs-formats/",
                             title =>
-"Coverage of the Current Choice of Document Formats",
+"Coverage of the current choice of document formats",
                         },
                         {
                             text => "The “Use qmail instead” Syndrome",
@@ -480,14 +480,14 @@ my $_section_navmenu_tree_contents = {
                             text => "Online Communities",
                             url  =>
                                 "philosophy/computers/web/online-communities/",
-                            title => "Reflections on Online Communities",
+                            title => "Reflections on online communities",
                         },
                         {
                             text => "Models for Web-based Commerce",
                             url  =>
                                 "philosophy/computers/web/models-for-commerce/",
                             title =>
-"Alternative Models for Web-based Commerce that Do Not Involve Intrusive Advertising",
+"Alternative models for web-based commerce that do not involve intrusive advertising",
                         },
                         {
                             text => "Validate Your HTML",
@@ -513,7 +513,7 @@ my $_section_navmenu_tree_contents = {
                             url  =>
 "philosophy/computers/education/introductory-language/",
                             title =>
-"What is the best Introductory Programming Language?",
+"What is the best introductory programming language?",
                         },
                     ],
                 },
@@ -608,14 +608,14 @@ my $_section_navmenu_tree_contents = {
                     text  => "Unixdoc",
                     url   => "philosophy/ideas/unixdoc/",
                     title =>
-"An Integrated Offline and Online Documentation Framework",
+"An integrated offline and online documentation framework",
                 },
             ],
         },
         {
             text  => "Index to Essays",
             url   => "philosophy/Index/",
-            title => "Index to Essays and Articles I wrote.",
+            title => "Index to essays and articles I wrote.",
         },
         {
             text => "By Others",

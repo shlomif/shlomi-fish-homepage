@@ -470,13 +470,13 @@ open source projects including 3dpl (= a three dimensional programming language)
 
 <p>
 Weblogs are the latest (as of late 2003) craze in the Internet and everybody
-and his mother have to have one (me included). I used to be quite a sporadic
+and his mother have to have one (me included). [% IF 0 %]I used to be quite sporadic
 in my weblog and news-site reading, until I installed an RSS aggregator,
 which fetches RSS feeds for the new entries and allows me to view them.
 This has changed my life and now I can read much more news blog entries, etc.
-without visiting dozens of sites. Here’s my
+without visiting dozens of sites. [% END %] Here’s my
 <a href="me/rss-feeds.opml">OPML file</a> which contains all the blogs
-I monitor. Here is a smaller list, which will probably go unmaintained
+I used to monitor. Here is a smaller list, which will probably go unmaintained
 eventually.
 </p>
 

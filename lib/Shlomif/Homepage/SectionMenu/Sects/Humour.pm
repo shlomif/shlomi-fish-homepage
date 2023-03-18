@@ -357,6 +357,18 @@ my $_humour_tree_contents = {
                                 },
                             ],
                         },
+                        {
+                            text => "All in an Atypical Day’s Work",
+                            url  => "humour/All-in-an-Atypical-Day-Work/",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/All-in-an-Atypical-Day-Work/ongoing-text.html",
+                                    title => "Ongoing Text of the Screenplay",
+                                },
+                            ],
+                        },
                     ],
                 },
                 {

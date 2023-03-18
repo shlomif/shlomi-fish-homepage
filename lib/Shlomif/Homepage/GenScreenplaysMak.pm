@@ -90,7 +90,22 @@ sub _calc_screenplay_doc_makefile_lines
             {
                 $fn_dir->mkpath;
 
-                $text_out_fh->copy($fn);
+                if (    ( $fn =~ m#All-in-an-Atypical-Day-Work#ms )
+                    and ( not -f $fn ) )
+                {
+                    my $tt_out_fh = path(
+"lib/screenplay-xml/tt2-txt/${doc_base}.screenplay-text.txt.tt2"
+                    );
+                    system("tpage '$tt_out_fh' > '$fn'");
+                    if ( not -f $fn )
+                    {
+                        die qq#foo#;
+                    }
+                }
+                else
+                {
+                    $text_out_fh->copy($fn);
+                }
                 my $gfx_out_dir = path("$fn_dir/../graphics/");
                 my $gfx_bn      = "Green-d10-dice.png";
                 my $gfx_out     = $gfx_out_dir->child($gfx_bn);
@@ -205,6 +220,7 @@ sub generate
     my $epub_dests_varname        = 'SCREENPLAY_XML__EPUBS_DESTS';
     my $raw_htmls__dests__varname = 'SCREENPLAY_XML__RAW_HTMLS__DESTS';
     my $epub_dests                = <<'EOF';
+$(POST_DEST)/humour/All-in-an-Atypical-Day-Work/All-in-an-Atypical-Day-Work.epub \
 $(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(POST_DEST)/humour/Cookie-Monster--The-Slayer/Cookie-Monster--The-Slayer.epub \

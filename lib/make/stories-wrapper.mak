@@ -15,6 +15,7 @@ SCREENPLAY_XML_BASE_DIR := lib/screenplay-xml
 SCREENPLAY_XML_EPUB_DIR := $(SCREENPLAY_XML_BASE_DIR)/epub
 SCREENPLAY_XML_XML_DIR := $(SCREENPLAY_XML_BASE_DIR)/xml
 SCREENPLAY_XML_TXT_DIR := $(SCREENPLAY_XML_BASE_DIR)/txt
+SCREENPLAY_XML_TT2_TXT_DIR := $(SCREENPLAY_XML_BASE_DIR)/tt2-txt
 SCREENPLAY_XML_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/html
 SCREENPLAY_XML_RENDERED_HTML_DIR := $(SCREENPLAY_XML_BASE_DIR)/rendered-html
 
@@ -92,6 +93,9 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(SRC_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
+
+$(ALL-IN-AN-ATYPICAL-DAY-WORK__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/All-in-an-Atypical-Day-Work.screenplay-text.txt.tt2
+	tpage $< > $@
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 

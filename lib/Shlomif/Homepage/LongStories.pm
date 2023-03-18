@@ -616,6 +616,28 @@ Fanfic: parody, crossover, $RPF, self-reference.
 </p>
 EOF
     },
+    {
+        id         => 'All-in-an-Atypical-Day-Work',
+        tagline    => "Love is Evil, and Evil is Love",
+        logo_alt   => "1d10 die",
+        logo_class => "selina",
+        logo_src   => "humour/Selina-Mandrake/images/Green-d10-dice.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "All-in-an-Atypical-Day-Work",
+        entry_text => "All in an Atypical Day’s Work",
+        start_date => DateTime->new( year => 2023, ),
+        href       => "humour/All-in-an-Atypical-Day-Work/",
+        abstract   => <<'EOF',
+<p class="abstract">
+</p>
+<p>
+</p>
+EOF
+        entry_extra_html => <<'EOF',
+<p>
+</p>
+EOF
+    },
 );
 
 my @inactive_Stories = _to_story_objects(
@@ -1007,6 +1029,7 @@ sub render_make_fragment
     my @rules;
     my $deps = '';
     my $pngs = '';
+    my %processed_srcs;
 
     foreach my $s (@_Stories)
     {
@@ -1029,12 +1052,16 @@ sub render_make_fragment
         }
         else
         {
-            if ( not exists $png_stories{ $s->id } )
+            if ( not $processed_srcs{$logo_src}++ )
             {
-                push @rules,
-                    "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n",;
+                if ( not exists $png_stories{ $s->id } )
+                {
+                    push @rules,
+"\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n"
+                        ,;
+                }
+                $pngs .= " \$($m_id)";
             }
-            $pngs .= " \$($m_id)";
         }
     }
 

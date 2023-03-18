@@ -1,0 +1,11 @@
+[% PROCESS "stories/selina-common.tt2" %]
+[%- SET title = "All in an Atypical Day’s Work - Ongoing Text" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'All-in-an-Atypical-Day-Work') %]
+
+[% path_slurp("screenplay-xml/rendered-html/All-in-an-Atypical-Day-Work.html") %]
+
+[% END %]

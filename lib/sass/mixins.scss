@@ -63,13 +63,13 @@ $navbar_margin: 0.5em;
 }
 
 @mixin highlight_div_frame {
-    border: 2pt solid darkgreen;
+    border: 2pt solid black;
     padding: 1em;
     margin-bottom: 2em;
     overflow: hidden;
 
     &:hover {
-        border-color: #787;
+        border-color: #0b0;
     }
 
     @include rounded_corners(10px);

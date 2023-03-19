@@ -35,8 +35,12 @@
 
     table.irc-conversation {
         background-color: white;
-        padding: 1em;
         overflow: hidden;
+
+        > tbody {
+            display: table-cell;
+            padding: 1em;
+        }
     }
 
     .info {

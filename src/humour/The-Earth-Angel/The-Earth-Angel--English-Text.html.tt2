@@ -4,6 +4,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories.calc_common_top_elems(id => 'the_earth_angel') %]
+
 [% default_toc %]
 
 [% WRAPPER h2_section id = "text" title = "The Text" %]

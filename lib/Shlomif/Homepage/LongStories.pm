@@ -625,7 +625,7 @@ EOF
         logo_svg   => '//$SKIP',
         entry_id   => "All-in-an-Atypical-Day-Work",
         entry_text => "All in an Atypical Day’s Work",
-        start_date => DateTime->new( year => 2023, ),
+        start_date => DateTime->new( day => 20, month => 3, year => 2023, ),
         href       => "humour/All-in-an-Atypical-Day-Work/",
         abstract   => <<'EOF',
 <p class="abstract">

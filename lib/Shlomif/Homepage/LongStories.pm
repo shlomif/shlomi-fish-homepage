@@ -632,6 +632,8 @@ EOF
 <a href="$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
 Norwegian EvilReindeer is threatening to turn Christmas into EvilChristmas
 by stealing all the Christmas' presents and the Chanukkah coins.
+His twin brothers, Rudolph Hitlower and Randolph Hitlower, recruit
+<a href="https://hero.fandom.com/wiki/Mane_Six">the Mane Six</a>
 </p>
 EOF
         entry_extra_html => <<'EOF',

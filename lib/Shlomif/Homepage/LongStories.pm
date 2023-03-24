@@ -630,7 +630,8 @@ EOF
         abstract   => <<'EOF',
 <p class="abstract">
 <a href="$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
-Norwegian EvilReindeer is threatening to turn Christmas into
+Norwegian EvilReindeer is threatening to turn Christmas into EvilChristmas
+by stealing all the Christmas' presents and the Chanukkah coins.
 </p>
 EOF
         entry_extra_html => <<'EOF',

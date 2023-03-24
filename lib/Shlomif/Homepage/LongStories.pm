@@ -629,8 +629,8 @@ EOF
         href       => "humour/All-in-an-Atypical-Day-Work/",
         abstract   => <<'EOF',
 <p class="abstract">
-</p>
-<p>
+<a href="$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
+Norwegian EvilReindeer is threatening to turn Christmas into
 </p>
 EOF
         entry_extra_html => <<'EOF',

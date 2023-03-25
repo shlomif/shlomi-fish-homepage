@@ -90,8 +90,7 @@ sub _calc_screenplay_doc_makefile_lines
             {
                 $fn_dir->mkpath;
 
-                if (    ( $fn =~ m#All-in-an-Atypical-Day-Work#ms )
-                    and ( not -f $fn ) )
+                if ( $doc->{tt2} and ( not -f $fn ) )
                 {
                     my $tt_out_fh = path(
 "lib/screenplay-xml/tt2-txt/${doc_base}.screenplay-text.txt.tt2"

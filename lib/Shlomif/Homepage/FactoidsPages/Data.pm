@@ -67,11 +67,16 @@ with thousands of factoids.
 
 <li>
 <p>
+<a href="https://parade.com/968666/parade/chuck-norris-jokes/">101 Best Chuck Norris Jokes - Parade</a>
+</p>
+</li>
+
+<li>
+<p>
 <a href="http://www.direct2tv.com/chuck-norris-turns-73.html">Chuck Norris
 Turns 73</a> (again).
 </p>
 </li>
-
 
 <li>
 

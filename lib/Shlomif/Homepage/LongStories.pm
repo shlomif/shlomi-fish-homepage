@@ -23,6 +23,12 @@ my $latemp_acroman =
 my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', no_link => 0, } )->{html};
 my $RPF  = $latemp_acroman->abbr( { key => 'RPF',  no_link => 0, } )->{html};
 
+my $FAN_FIC_PARA = <<"EOF";
+<p>
+Fanfic: parody, crossover, $RPF, self-reference.
+</p>
+EOF
+
 sub _to_story_objects
 {
     return ( map { Shlomif::Homepage::LongStories::Story->new($_) } @_ );
@@ -611,9 +617,7 @@ like <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</
 
 </ol>
 
-<p>
-Fanfic: parody, crossover, $RPF, self-reference.
-</p>
+$FAN_FIC_PARA
 EOF
     },
     {
@@ -627,9 +631,9 @@ EOF
         entry_text => "All in an Atypical Day’s Work",
         start_date => DateTime->new( day => 20, month => 3, year => 2023, ),
         href       => "humour/All-in-an-Atypical-Day-Work/",
-        abstract   => <<'EOF',
+        abstract   => <<"EOF",
 <p class="abstract">
-<a href="$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
+<a href="\$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
 Norwegian EvilReindeer is threatening to turn Christmas into EvilChristmas
 by stealing all the Christmas' presents and the Chanukkah coins.
 His twin brothers, Rudolph Hitlower and Randolph Hitlower,
@@ -637,6 +641,8 @@ Santa Claus’ right-hoof reindeer, recruit the elite commando unit,
 <a href="https://hero.fandom.com/wiki/Mane_Six">the Mane Six</a>,
 and together go to the Selinaverse's Norway to try to prevent that.
 </p>
+
+$FAN_FIC_PARA
 EOF
         entry_extra_html => <<'EOF',
 <p>

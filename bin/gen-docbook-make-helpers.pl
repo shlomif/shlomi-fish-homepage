@@ -24,7 +24,7 @@ $git_obj->git_in_checkout_task(
         repo         => "MathJax",
         user         => "mathjax",
         base_dirname => "lib/js",
-        branch       => '3.2.0',
+        branch       => '3.2.2',
     }
 );
 

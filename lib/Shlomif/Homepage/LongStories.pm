@@ -634,7 +634,7 @@ EOF
         abstract   => <<"EOF",
 <p class="abstract">
 <a href="\$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
-Norwegian EvilReindeer is threatening to turn Christmas into EvilChristmas
+Norwegian EvilReindeer, is threatening to turn Christmas into EvilChristmas,
 by stealing all the Christmas' presents and the Chanukkah coins.
 His twin brothers, Rudolph Hitlower and Randolph Hitlower,
 Santa Claus’ right-hoof reindeer, recruit the elite commando unit,

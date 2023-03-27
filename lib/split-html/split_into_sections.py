@@ -402,6 +402,24 @@ class XhtmlSplitter:
                     if not fmt:
                         continue
                     tot += fmt
+                section_tag = header_tag.getparent()
+                try:
+                    a2_tag = _first(
+                        self.ns,
+                        section_tag,
+                        ("./{xhtml_prefix}a[./{xhtml_prefix}img"
+                         "[@class='rindolf']]").format(
+                            xhtml_prefix=self.xhtml_prefix
+                        ),
+                        False,
+                    )
+                    tot += "<{xhtml_prefix}br/>"
+                    tot += self._to_string_cb(
+                        dom=a2_tag, add_prefix=False,
+                    ).decode('utf-8')
+                    section_tag.remove(a2_tag)
+                except MyXmlNoResultsFoundError:
+                    pass
                 tot += "</{xhtml_prefix}span>"
 
                 a_tag = self._fromstring(tot.format(

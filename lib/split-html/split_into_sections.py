@@ -413,7 +413,7 @@ class XhtmlSplitter:
                         ),
                         False,
                     )
-                    tot += "<{xhtml_prefix}br/>"
+                    tot += ("<{xhtml_prefix}br/>" * 2)
                     tot += self._to_string_cb(
                         dom=a2_tag, add_prefix=False,
                     ).decode('utf-8')

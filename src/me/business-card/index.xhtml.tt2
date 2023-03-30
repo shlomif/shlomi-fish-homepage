@@ -1,7 +1,6 @@
 [%- SET title = "My Business Card" -%]
 [%- SET desc = "Shlomi Fish’s business card" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h3_section id = "png" title = "400px wide PNG" %]
@@ -53,7 +52,6 @@ href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a> ; Mobile:
 </ul>
 
 </blockquote>
-
 
 [% END %]
 

@@ -2,7 +2,7 @@
 [%- SET desc = "List of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." -%]
 [%- SET more_keywords = "bug trackers, software, git, vcs, version control, CVS, subversion, GitLab, GitHub, scons, autoconf, rpm, deb, dpkg, apt, CMake, SourceForge, open source, make, unix, packaging" -%]
 
-[% main_class.addClass("fancy_sects", "software_build") %]
+[% main_class.addClass("software_build") %]
 
 [%- WRAPPER wrap_html -%]
 

@@ -6,7 +6,7 @@
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "vim_include_code.tt2" -%]
 
-[% main_class.addClass("fancy_sects", "lim_width", "wrap-me", ) %]
+[% main_class.addClass("lim_width", "wrap-me", ) %]
 
 [% WRAPPER about_sect  %]
 

@@ -1,6 +1,6 @@
 [%- SET title = "Photos of Shlomi Fish" -%]
 
-[% main_class.addClass("fancy_sects", "limit_imgs_width") %]
+[% main_class.addClass("limit_imgs_width") %]
 
 [%- WRAPPER wrap_html -%]
 

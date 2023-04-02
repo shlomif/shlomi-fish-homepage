@@ -2,7 +2,7 @@
 
 [%- PROCESS "stories/cookiem-slayer-common.tt2" %]
 
-[% main_class.addClass("fancy_sects", "side_toc") %]
+[% main_class.addClass("side_toc") %]
 
 [%- WRAPPER wrap_html -%]
 

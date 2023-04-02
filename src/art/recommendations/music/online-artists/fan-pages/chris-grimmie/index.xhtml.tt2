@@ -1,7 +1,7 @@
 [%- SET title = "Fan page for Chris Grimmie" -%]
 [%- SET desc = "Fan page for Chris Grimmie -- a New Jersey-born singer, songwriter, musician, and creator, whom I destined to be the new Hacker Monarch (= “Messiah”)." -%]
 
-[% main_class.addClass("fancy_sects", "limit_imgs_width", "my_rpf", ) %]
+[% main_class.addClass("limit_imgs_width", "my_rpf", ) %]
 
 [% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>

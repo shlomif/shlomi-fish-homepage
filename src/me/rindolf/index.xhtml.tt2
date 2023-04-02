@@ -1,7 +1,7 @@
 [%- SET title = "About “Rindolf” - Shlomi Fish’s Nickname" -%]
 [%- SET desc = "About “Rindolf” - Shlomi Fish’s Nickname: Rindolf the Dwarven Warrior, the IRC nickname, Rindolf the Evil Reindeer, and “Rindolfism”" -%]
 
-[% main_class.addClass("fancy_sects", "lim_width", "side_toc") %]
+[% main_class.addClass("lim_width", "side_toc") %]
 
 [%- WRAPPER wrap_html -%]
 

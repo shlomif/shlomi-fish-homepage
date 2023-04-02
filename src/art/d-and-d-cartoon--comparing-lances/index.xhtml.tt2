@@ -2,7 +2,7 @@
 [%- SET desc = "A Dungeons-and-Dragons cartoon that Shlomi Fish prepared" -%]
 [%- SET more_keywords = "dungeons,dragons,d&amp;d,rpg,frp,role playing games,cartoon,comic,joke,lances,horse,inkscape,SVG,funny,humor" -%]
 
-[% main_class.addClass("fancy_sects", "lim_width") %]
+[% main_class.addClass("lim_width") %]
 
 [%- WRAPPER wrap_html -%]
 

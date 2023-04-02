@@ -1,7 +1,7 @@
 [%- SET title = "Presentations given by Shlomi Fish" -%]
 [%- SET desc = "Slides and material for technical presentations given by Shlomi Fish. Linux, Perl, Web publishing, software management, software development." -%]
 
-[% main_class.addClass("fancy_sects", "side_toc") %]
+[% main_class.addClass("side_toc") %]
 
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/lectures.tt2" %]

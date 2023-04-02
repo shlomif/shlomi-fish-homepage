@@ -131,6 +131,8 @@ sub _run_inkscape
         ]
     );
     $evilphish_right_face->copy("src/images/evilphish-svg.svg");
+
+    return;
 }
 
 _run_inkscape();

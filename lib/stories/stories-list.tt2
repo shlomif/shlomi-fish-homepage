@@ -90,13 +90,13 @@ requests, and filing bugs/issues in the bug tracker
 <header>
 <h2 id="active_stories">Active Stories</h2>
 </header>
-[% PROCESS active_humour_stories_list_text  %]
+[% INCLUDE active_humour_stories_list_text  %]
 </section>
 <section>
 <header>
 <h2 id="inactive_stories"><a href="[% base_path %]humour/stories/inactive/">Inactive Stories</a></h2>
 </header>
-[% PROCESS inactive_humour_stories_list_text  %]
+[% INCLUDE inactive_humour_stories_list_text  %]
 </section>
 [% UNLESS no_stories_wrapper %]
 </section>

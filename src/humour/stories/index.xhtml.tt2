@@ -1,8 +1,6 @@
 [%- SET title = "Shlomi Fish’s Stories" -%]
 [%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength, and beauty" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS active_humour_stories__intro  %]

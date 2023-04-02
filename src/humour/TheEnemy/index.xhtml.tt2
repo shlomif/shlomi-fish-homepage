@@ -3,7 +3,6 @@
 [%- SET more_keywords = "humour, humor, funny, story, web, fiction, web fiction, political, politics, israel, lebanon, middle east, objectivism, hizbullah, hezbollah, satire, internet fiction" -%]
 
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
-[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 

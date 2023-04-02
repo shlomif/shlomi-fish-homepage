@@ -3,8 +3,6 @@
 
 [%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "text" title = "The Text" %]

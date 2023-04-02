@@ -80,7 +80,6 @@ requests, and filing bugs/issues in the bug tracker
 
 [% BLOCK humour_stories_list_text %]
 
-<div class="fancy_sects">
 [% UNLESS no_stories_wrapper %]
 <section class="long_stories">
 <header>
@@ -103,7 +102,6 @@ requests, and filing bugs/issues in the bug tracker
 </section>
 [% END %]
 
-</div>
 [% END %]
 
 [% BLOCK active_humour_stories__competence %]

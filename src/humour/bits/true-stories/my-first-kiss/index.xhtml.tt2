@@ -1,8 +1,6 @@
 [%- SET title = "My First Kiss" -%]
 [%- SET desc = "Obligatory report about my first kiss" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "text" title = "The Text" %]

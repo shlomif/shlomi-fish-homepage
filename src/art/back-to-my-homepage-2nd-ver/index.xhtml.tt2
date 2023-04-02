@@ -2,7 +2,7 @@
 [%- SET desc = "A “Back to my Homepage” graphic artwork similar to the logo of “Back to the future”" -%]
 [%- SET more_keywords = "SVG, svg, inkscape, graphics, back to the future, image, film, movie, homepage, back, web, vector, open source" -%]
 
-[% main_class.addClass("fancy_sects", "lim_width") %]
+[% main_class.addClass("lim_width") %]
 
 [%- WRAPPER wrap_html -%]
 

@@ -1,7 +1,7 @@
 [%- SET title = "Shlomi Fish’s Funny Bits" -%]
 [%- SET desc = "Shlomi Fish’s Funny Bits - shorter than novellas or short stories, and longer than an aphorism." -%]
 
-[% main_class.addClass("fancy_sects", "limit_imgs_width", ) %]
+[% main_class.addClass("limit_imgs_width", ) %]
 
 [%- WRAPPER wrap_html -%]
 

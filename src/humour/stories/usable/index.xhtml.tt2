@@ -3,15 +3,15 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE active_humour_stories__intro  %]
+[% INCLUDE active_humour_stories__intro %]
 
 <section class="long_stories">
 <header>
 <h2 id="list-of-stories">List of Active Stories</h2>
 </header>
-[% PROCESS active_humour_stories_list_text  %]
+[% INCLUDE active_humour_stories_list_text %]
 </section>
 
-[% INCLUDE active_humour_stories__credits  %]
+[% INCLUDE active_humour_stories__credits %]
 
 [% END %]

@@ -50,7 +50,7 @@ requests, and filing bugs/issues in the bug tracker
 <a href="ongoing-text.html"><b>The Ongoing Text</b></a>
 </p>
 <ul>
-[% PROCESS link_to_epub basename = epub_prefix _ base,  %]
+[% PROCESS link_to_epub basename = epub_prefix _ base, %]
 </ul>
 </li>
 [% END %]
@@ -61,7 +61,7 @@ requests, and filing bugs/issues in the bug tracker
 <a href="[% (use_screenplay_html_prefix ? screenplay_html_prefix : epub_prefix) _ base %].html"><b>[% story_title %]</b></a>
 </p>
 <ul>
-[% PROCESS link_to_epub basename = epub_prefix _ base,  %]
+[% PROCESS link_to_epub basename = epub_prefix _ base, %]
 </ul>
 </li>
 [% END %]
@@ -90,13 +90,13 @@ requests, and filing bugs/issues in the bug tracker
 <header>
 <h2 id="active_stories">Active Stories</h2>
 </header>
-[% INCLUDE active_humour_stories_list_text  %]
+[% INCLUDE active_humour_stories_list_text %]
 </section>
 <section>
 <header>
 <h2 id="inactive_stories"><a href="[% base_path %]humour/stories/inactive/">Inactive Stories</a></h2>
 </header>
-[% INCLUDE inactive_humour_stories_list_text  %]
+[% INCLUDE inactive_humour_stories_list_text %]
 </section>
 [% UNLESS no_stories_wrapper %]
 </section>
@@ -131,7 +131,7 @@ instead of preserving the status quo.
 
 [% BLOCK active_humour_stories__intro %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>

@@ -3,9 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE active_humour_stories__intro  %]
-[% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
-
-[% INCLUDE active_humour_stories__credits  %]
+[% INCLUDE active_humour_stories__intro %]
+[% INCLUDE humour_stories_list_text no_stories_wrapper = 1 %]
+[% INCLUDE active_humour_stories__credits %]
 
 [% END %]

@@ -3,8 +3,6 @@
 [%- SET desc = "$cpan_dist - wrappers for writing your own XML grammar modules" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [%- WRAPPER about_sect -%]

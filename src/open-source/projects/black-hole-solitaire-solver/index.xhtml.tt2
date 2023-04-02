@@ -2,8 +2,6 @@
 [%- SET desc = "Solver for Golf Solitaire, Black Hole Solitaire, and All in a Row Solitaire" -%]
 [%- SET more_keywords = "solver, solitaire, golf, black, hole, patience, card, game, card games, c, open source, FOSS, perl, CPAN, software" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect %]

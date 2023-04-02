@@ -2,8 +2,6 @@
 [%- SET desc = "Cross-Platform libraries for abstracting system services and for portability." -%]
 [%- SET more_keywords = "portability,libraries,portable,cross,platform,abstraction,library,qt,wx,gtk,glib,c,c++,stl,porting,unix,windows,linux,apple,mac os" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [%- WRAPPER intro -%]

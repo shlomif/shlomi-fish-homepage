@@ -2,8 +2,6 @@
 [%- SET desc = "Choice of Document Formats" -%]
 [%- SET more_keywords = "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki, markdown, AsciiDoc" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "about" title = "About this Document" %]

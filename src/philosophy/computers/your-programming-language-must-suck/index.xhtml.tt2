@@ -2,8 +2,6 @@
 [%- SET desc = "An essay enumerating some of the trade-offs in programming languages design and why some people will always be unhappy" -%]
 [%- SET more_keywords = "perl, haskell, types, scoping, python, essay, programming, languages, design, advantages, tradeoffs, suck, pleasing everyone, lisp, goto" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]

@@ -1,8 +1,6 @@
 [%- SET title = "List of Text Processing Tools" -%]
 [%- SET desc = "List of text processing tools: processors, template systems, parser generators, regular expression libraries, etc." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]

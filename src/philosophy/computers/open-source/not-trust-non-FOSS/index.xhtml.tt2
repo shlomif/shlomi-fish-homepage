@@ -1,8 +1,6 @@
 [%- SET title = "Why I Do Not Trust Non-open-source Software" -%]
 [%- SET desc = "An essay that explains why I do not trust non-open source software and would rather not depend on it." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "about" title = "About this Article" %]

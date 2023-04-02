@@ -2,7 +2,6 @@
 [%- SET desc = "List of network clients: IM clients, FTP clients, dedicated IRC clients, web browsers, RSS aggregators, microblogging clients, E-mail clients, P2P clients" -%]
 
 
-[% main_class.addClass("fancy_sects") %]
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]

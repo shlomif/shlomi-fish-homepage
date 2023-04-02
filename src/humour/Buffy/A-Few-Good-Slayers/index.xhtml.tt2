@@ -1,8 +1,6 @@
 [%- SET title = "Buffy - a Few Good Slayers" -%]
 [%- SET desc = "The Demonic underworld is held under tight control in a forked version of the Buffy universe where the Scooby Gang all ended up happier and more powerful, and men and women have equal opportunities when it comes to fighting Demons. A new class of students start the three year demon fighting program in the year of 2014/2015, while the older Scooby Gang who are their teachers and mentors have to deal with the usual set of problems that come with being teachers, parents, spouses and adults." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'buffy_a_few_good_slayers') %]

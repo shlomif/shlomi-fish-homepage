@@ -1,8 +1,6 @@
 [%- SET title = "Shlomi Fish’s Open Source Projects" -%]
 [%- SET desc = "Shlomi Fish’s Open Source Projects" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/open_source.tt2" %]
 

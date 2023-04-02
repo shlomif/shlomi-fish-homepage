@@ -1,8 +1,6 @@
 [%- SET title = "My Cool Links List" -%]
 [%- SET desc = "Shlomi Fish’s Links List: contains links to various sites and pages." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]

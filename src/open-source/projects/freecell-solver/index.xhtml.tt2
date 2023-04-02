@@ -1,8 +1,6 @@
 [%- SET title = "Freecell Solver" -%]
 [%- SET desc = "Freecell Solver is a set of APIs and command line programs, written in C, to solve deals of Freecell and similar variants of card Solitaire." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER about_sect %]

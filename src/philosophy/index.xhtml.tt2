@@ -1,8 +1,6 @@
 [%- SET title = "Shlomi Fish’s Articles and Essays" -%]
 [%- SET desc = "Shlomi Fish’s Articles and Essays: about computing, politics, general philosophy, education, etc." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "intro" title = "Introduction" %]

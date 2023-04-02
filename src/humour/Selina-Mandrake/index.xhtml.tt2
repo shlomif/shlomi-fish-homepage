@@ -3,8 +3,6 @@
 [%- PROCESS "stories/selina-common.tt2" -%]
 [%- PROCESS "Inc/jqui_tabs.tt2" -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'selina_mandrake') %]

@@ -2,7 +2,6 @@
 [%- SET desc = "List of Graphics Applications: image browsers, raster editors, vector editors, 3-D programs" -%]
 [%- SET more_keywords = "graphics, computer graphics, open source, raster, gimp, GIMP, gwenview, linux, FOSS, free, software, list, images, gui, vector, inkscape, 3-D" -%]
 
-[% main_class.addClass("fancy_sects") %]
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]

@@ -1,8 +1,6 @@
 [%- SET title = "PHP Sucks (originally by czth)" -%]
 [%- SET desc = "Links against PHP - PHP Sucks." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "note" title = "Note" %]

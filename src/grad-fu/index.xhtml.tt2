@@ -1,8 +1,6 @@
 [%- SET title = "Gradient-Fu Patch for the GIMP" -%]
 [%- SET desc = "Patch for old versions of the GIMP to be able to perform gradient operations from within scripts and plug-ins." -%]
 
-[% main_class.addClass("fancy_sects") %]
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "recent-note" title = "Recent Note" %]

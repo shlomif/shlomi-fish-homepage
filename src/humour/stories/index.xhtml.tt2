@@ -6,6 +6,6 @@
 [% INCLUDE active_humour_stories__intro  %]
 [% PROCESS humour_stories_list_text no_stories_wrapper = 1  %]
 
-[% PROCESS active_humour_stories__credits  %]
+[% INCLUDE active_humour_stories__credits  %]
 
 [% END %]

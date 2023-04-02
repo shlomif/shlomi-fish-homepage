@@ -146,7 +146,7 @@ including <a href="[% base_path %]humour/fortunes/">quotes</a>,
 <a href="[% base_path %]humour/bits/facts/">factoids</a>.
 </p>
 
-[% PROCESS active_humour_stories__competence %]
+[% INCLUDE active_humour_stories__competence %]
 
 [% END %]
 

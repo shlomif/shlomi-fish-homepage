@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% PROCESS active_humour_stories__intro  %]
+[% INCLUDE active_humour_stories__intro  %]
 
 <section class="long_stories">
 <header>

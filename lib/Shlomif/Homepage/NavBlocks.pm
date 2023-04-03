@@ -801,6 +801,19 @@ my %tr_s = (
             ),
         ],
     ),
+    'atypical_day' => _tr(
+        title => "All in an Atypical Day’s Work",
+        items => [
+            _fp( path => "humour/All-in-an-Atypical-Day-Work/", ),
+            _ontext(
+                path => "humour/All-in-an-Atypical-Day-Work/ongoing-text.html",
+            ),
+            _github(
+                url =>
+"https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/humour/All-in-an-Atypical-Day-Work/",
+            ),
+        ],
+    ),
 );
 
 sub _get_tr
@@ -1023,6 +1036,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
                 _tr_s(
                     qw( terminator_liberation queen_padme_tales
                         who_will_ride_princess_celestia the_10th_muse__mlpfim
+                        atypical_day
                     ),
                 ),
             ],
@@ -1040,7 +1054,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton ),
+                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton atypical_day ),
                 ),
             ],
         },

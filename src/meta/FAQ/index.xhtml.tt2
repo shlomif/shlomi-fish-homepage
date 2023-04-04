@@ -35,6 +35,29 @@ Some related FAQs I co-maintain:
 
 [% INCLUDE shlomif_faqs_links %]
 
+[% BLOCK karma %]
+
+<p>
+Furthermore, like Ayn Rand in <a href="#fav_fiction_books"><i>The
+Fountainhead</i></a> I believe in <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#karma">karma</a>, and that being nasty and unkind to
+people can bite you further down the road (while being kind and generous
+returns seven folds).
+<a
+href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-hurting-people">buu
+almost got himself killed</a> due to frequent online chat hostility and use
+of [% IRC %] force (kicks, devoices, or bans). In addition, a former boss of mine who
+used to walk in the middle of the roads (hubris) in <a
+href="https://en.wikipedia.org/wiki/Gush_Dan">Gush Dan</a>, got badly injured
+in a car accident.
+</p>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE karma %]
+[% PROCESS karma %]
+[% END %]
+
 [% default_toc %]
 
 <div class="faq fancy_sects lim_width wrap-me">
@@ -2037,6 +2060,10 @@ I have a taboo against trying to separate couples.
 </p>
 </li>
 
+<li>
+[% INCLUDE karma %]
+</li>
+
 </ol>
 
 [% END %]
@@ -3268,19 +3295,7 @@ and many people <a href="https://en.wikipedia.org/wiki/Equivocation">equivocate<
 them in order to censor me.
 </p>
 
-<p>
-Furthermore, like Ayn Rand in <a href="#fav_fiction_books"><i>The
-Fountainhead</i></a> I believe in karma, and that being nasty and unkind to
-people can bite you further down the road (while being kind and generous
-returns seven folds).
-<a
-href="[% base_path %]humour/fortunes/show.cgi?id=sharp-perl-hurting-people">buu
-almost got himself killed</a> due to frequent online chat hostility and use
-of [% IRC %] force (kicks, devoices, or bans). In addition, a former boss of mine who
-used to walk in the middle of the roads (hubris) in <a
-href="https://en.wikipedia.org/wiki/Gush_Dan">Gush Dan</a>, got badly injured
-in a car accident.
-</p>
+[% INCLUDE karma %]
 
 [% END %]
 

@@ -280,10 +280,11 @@ One may be tempted to use <a href="https://en.wikipedia.org/wiki/Word_processor_
 processors</a> such as <a href="https://en.wikipedia.org/wiki/Microsoft_Word">Microsoft Word</a>
 or <a href="https://en.wikipedia.org/wiki/LibreOffice">LibreOffice</a> Writer, and they
 provide the XML-based standards of <a href="https://en.wikipedia.org/wiki/OpenDocument">ODF</a>
-and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">.docx</a>. Part of the problem
-is their conversion to output formats tends to be non-semantic if not completely
+and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">.docx</a>.
+However, part of the problem with them
+is that their conversion to output formats tends to be non-semantic if not completely
 <a href="[% base_path %]philosophy/computers/web/validate-your-html/">non-valid</a>, and at least
-in the case of Word, have a huge problem with maintaining compatibility of documents
+in the case of MS Word, have a huge problem with maintaining compatibility of documents
 created with newer or older versions. As I
 <a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
 in a Reddit comment</a>, word processors are the kind of programs that are created by smart
@@ -299,8 +300,8 @@ over Microsoft Word (and later LibreOffice Writer) due to its "reveal codes" fea
 (but WordPerfect was not ported to Microsoft Windows in time for it to be usable).
 That put aside, I found <a href="https://en.wikipedia.org/wiki/Microsoft_Excel">Excel</a>,
 <a href="https://en.wikipedia.org/wiki/Microsoft_Visio">Visio</a>,
-and to a lesser extent <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">PowerPoint</a>
-to be useful and usable applications. I avoid using their desktop versions due to
+and to a lesser extent <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">PowerPoint</a>,
+to be useful and usable applications. Nevertheless, I avoid using their desktop versions due to
 lack of portability, a non-[% FOSS %] licence,
 and the availability of some decent FOSS alternatives.
 </p>
@@ -311,7 +312,7 @@ and the availability of some decent FOSS alternatives.
 
 <p>
 Going full circle now - POD is a good option if it does what you need. The
-Camel Book and other perl books were written in POD. I wrote some
+Camel Book and some other perl books were written in POD. I wrote some
 documentation for Perl and non-Perl projects in POD. I also write some of
 my
 <a href="https://en.wikipedia.org/wiki/Man_page">man pages</a>
@@ -361,7 +362,7 @@ implements a subset of CSS.
 
 <li id="docbookrx">
 <p>
-<a href="https://github.com/asciidoctor/docbookrx">docbookrx: (An early version of) a DocBook to AsciiDoc converter written in Ruby.</a>
+<a href="https://github.com/asciidoctor/docbookrx">docbookrx: (An early version of) a DocBook to AsciiDoc converter.</a>
 </p>
 </li>
 

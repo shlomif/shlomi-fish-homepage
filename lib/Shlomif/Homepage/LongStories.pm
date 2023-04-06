@@ -406,7 +406,7 @@ WATSON!
 </blockquote>
 
 <p>
-( <a href="$(ROOT)/philosophy/culture/case-for-commercial-fan-fiction/#bad_acting_emwatson">Reference and Midrash.</a> )
+( <a href="$(ROOT)/philosophy/culture/case-for-commercial-fan-fiction/#bad_acting_emma_watson">Reference and Midrash.</a> )
 </p>
 
 <p>

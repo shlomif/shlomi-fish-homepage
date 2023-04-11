@@ -8089,5 +8089,70 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-perl-samba-vs-smb-on-mswin">
+        <meta>
+            <title>Samba vs. SMB on MS Windows</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="hlz">i just switched from arch to freebsd :P</saying>
+<saying who="rindolf">hlz: as a desktop OS?</saying>
+<saying who="hlz">kind of. i&#39;m planning on building a new computer in the near future for music production (windows). so i plan on using this current desktop as a file server for data storage, torrenting, etc. will keep a monitor connected to it so it wont be headless; this way i&#39;ll still have a *nix computer to play with. freebsd has built-in zfs which meets my needs.... more stable, not rolling release like arch so</saying>
+<saying who="hlz">i wont have to update packges everyday. just something stable and fun to use on the side :P rindolf</saying>
+<saying who="rindolf">hlz: ah...</saying>
+<saying who="rindolf">hlz: [[5. An interesting talk happened a bit before the panel. The man who set to</saying>
+<saying who="rindolf">me had an &quot;Something Insurance&quot; on his tag. I wondered what an insurance</saying>
+<saying who="rindolf">company did with Linux and asked him. He said: &quot;a file server&quot;. That&#39;s</saying>
+<saying who="rindolf">right an _SMB_ file server. Why not Windows? Windows 2000 Professional</saying>
+<saying who="rindolf">allows only 10 connections, so they setup an extra Linux server. This</saying>
+<saying who="rindolf">allows thousands of simultaenous connections, and at a much greater speed.</saying>
+<saying who="rindolf">They have quite a lot of scanned images which open almost instanteously in</saying>
+<saying who="rindolf">Linux. Thus, instead of buying Windows 2000 Server, they got a Linux</saying>
+<saying who="rindolf">server at the cost of the hardware, with very low TCO. (it&#39;s stable and</saying>
+<saying who="rindolf">you can block its IP completely on the firewall]]</saying>
+<saying who="rindolf">-- me at https://web.archive.org/web/20041221161703/https://mirror.hamakor.org.il/archives/linux-il/04-2003/1357.html</saying>
+<saying who="Paperbot_">Link title(s): [ Linux-IL: My impressions from the event [was Re: The tiger didn&#39;t know what hit him...] ]</saying>
+<saying who="buZz">holy wall</saying>
+<saying who="buZz">rindolf: hahah same experience here, samba is soooo much faster than any native SMB fileserver</saying>
+<saying who="buZz">night and day really</saying>
+<saying who="buZz">especially with &gt;1 user</saying>
+<saying who="hlz">:D</saying>
+<saying who="buZz">it also always amuses me that SMB filesharing is just a relic from LanManager days</saying>
+<saying who="rindolf">buZz: heh.  +1</saying>
+<saying who="buZz">rindolf: and toDAY we still use lanmanager relics!</saying>
+<saying who="buZz">if you have a LDAP setup for WPA Enterprise</saying>
+<saying who="buZz">it will require NTLM(!!!!!!!) encrypted passwords in your ldap</saying>
+<saying who="buZz">aka ~2 seconds to bruteforce on a atom</saying>
+<saying who="rindolf">LOL</saying>
+<saying who="thrig">the other AD stuff I&#39;ve seen for LDAP involved cleartext passwords getting passed around so I was like uh no passwords in LDAP</saying>
+<saying who="buZz">thrig: ldap on linux can use SSL just fine</saying>
+<saying who="buZz">but you&#39;r talking about ldap on windos?</saying>
+<saying who="buZz">havent touched that in ages</saying>
+<saying who="thrig">SSL is very much unrelated to janky password handling in LDAP</saying>
+<saying who="kjetilho">thrig: the bind operation usually requires you to send the cleartext password to the server, yes.  the password should be hashed in the LDAP database, though.</saying>
+<saying who="kjetilho">this is really par for the course for most protocols, e.g., IMAP, SMTP</saying>
+<saying who="thrig">&quot;wow this is shitty&quot; and I kept the passwords in kerberos</saying>
+<saying who="rindolf">hlz: i like non-purely-rollng-OSes too: fedora, deb testing</saying>
+<saying who="buZz">thrig: yeah kerberos is fix for it, but such a drag to setup</saying>
+<saying who="hlz">rindolf: i&#39;ve only used arch. it&#39;s the linux i started with. befor that i installed linux mint once i think lol :D</saying>
+<saying who="hlz">i&#39;m still just more of a hobbyist to be honest. aside from all the nice open source software and useful command line programs; i also just really like being in a tiling window manager and not having to move applications around on the screen all the time :&gt;</saying>
+<saying who="rindolf">hlz: https://www.shlomifish.org/prog-evolution/shlomif-at-cortext.html</saying>
+<saying who="Paperbot_">Link title(s): [ Shlomi Fish at Cortext: HTML, UNIX and Perl - oh my! - Shlomi Fish’s Homesite ]</saying>
+<saying who="hlz">what&#39;s this? this is you?</saying>
+<saying who="rindolf">hlz: yes</saying>
+<saying who="hlz">haha nice. i&#39;m reading</saying>
+<saying who="hlz">i definitely would like to learn more about the command line, shell scripting, and perl.</saying>
+<saying who="rindolf">perlbot: faq</saying>
+<saying who="perlbot">rindolf: The #perl FAQ is at http://perl-begin.org/FAQs/freenode-perl/ . Make sure you skim over it before asking questions. The Perl FAQ is http://faq.perl.org/ .</saying>
+
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

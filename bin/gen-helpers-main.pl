@@ -110,8 +110,9 @@ path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
 sub _run_inkscape
 {
     my $inkscape_wrap = path("./bin/inkscape-wrapper");
+    my $inkscape_help = scalar(`inkscape --help`);
     my $src           = (
-        ( scalar(`inkscape --help`) =~ /--export-type/ )
+        ( $inkscape_help =~ /--export-type/ )
         ? path("./bin/inkscape-wrapper-new.bash")
         : path("./bin/inkscape-wrapper-old.pl")
     );
@@ -119,12 +120,21 @@ sub _run_inkscape
     $src->copy($inkscape_wrap)->chmod(0755);
     my $evilphish_right_face =
         path("src/images/evilphish-svg--facing-right.svg");
+    my $flip = "EditSelectAll;ObjectFlipHorizontally;";
+    if ( $inkscape_help =~ /--action-list/ )
+    {
+        if (1)
+        {
+            $flip = "select-all:all;object-flip-horizontal;";
+        }
+    }
+
     my_system(
         [
             $inkscape_wrap,
             "--batch-process",
             "--actions",
-"EditSelectAll;ObjectFlipHorizontally;export-filename:$evilphish_right_face;export-do;",
+            "${flip}export-filename:$evilphish_right_face;export-do;",
 
             # "--export-filename=$evilphish_right_face",
             "src/images/evilphish-svg--facing-left.svg",

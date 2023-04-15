@@ -35,7 +35,7 @@ Some related FAQs I co-maintain:
 
 [% INCLUDE shlomif_faqs_links %]
 
-[% BLOCK karma %]
+[% BLOCK karma_block %]
 
 <p>
 Furthermore, like Ayn Rand in <a href="#fav_fiction_books"><i>The
@@ -54,8 +54,8 @@ in a car accident.
 [% END %]
 
 [% IF 0 %]
-[% INCLUDE karma %]
-[% PROCESS karma %]
+[% INCLUDE karma_block %]
+[% PROCESS karma_block %]
 [% END %]
 
 [% default_toc %]
@@ -2061,7 +2061,7 @@ I have a taboo against trying to separate couples.
 </li>
 
 <li>
-[% INCLUDE karma %]
+[% INCLUDE karma_block %]
 </li>
 
 <li>
@@ -3302,7 +3302,7 @@ and many people <a href="https://en.wikipedia.org/wiki/Equivocation">equivocate<
 them in order to censor me.
 </p>
 
-[% INCLUDE karma %]
+[% INCLUDE karma_block %]
 
 [% END %]
 

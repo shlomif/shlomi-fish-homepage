@@ -18,15 +18,16 @@ sub _calc_lang_tree
     my $ret = +{%$tree};
 
     my $rec_lang = ( delete( $ret->{lang} ) // { "en" => 1, } );
-    if ( '' eq ref $rec_lang )
+    if ( '' eq ref($rec_lang) )
     {
         $rec_lang = { $rec_lang => 1, };
     }
     if ( exists $ret->{subs} )
     {
         my $subs = [
-            grep { $self->_check_subtree($_) }
-            map  { $self->_calc_lang_tree( $lang, $_ ) } @{ $ret->{subs} }
+
+            # grep { $self->_check_subtree($_) }
+            map { $self->_calc_lang_tree( $lang, $_ ) } @{ $ret->{subs} }
         ];
         if (@$subs)
         {

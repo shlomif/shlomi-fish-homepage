@@ -8,7 +8,7 @@
 [% PROCESS "Inc/real_shlomif.tt2" %]
 
 [% BLOCK rindolf_floaty_img %]
-<a href="[% href %]"><img src="[% src %]" alt="[% alt %]" title="[% title %]" class="rindolf" /></a>
+<a href="[% href %]"><img alt="[% alt %]" class="rindolf" src="[% src %]" title="[% title %]" /></a>
 [% END %]
 
 <div id="main_text_wrapper">

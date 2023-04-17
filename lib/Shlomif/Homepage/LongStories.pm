@@ -623,7 +623,7 @@ EOF
     {
         id         => 'All-in-an-Atypical-Day-Work',
         tagline    => "Love is Evil, and Evil is Love",
-        logo_alt   => "1d10 die",
+        logo_alt   => "Evil Reindeer",
         logo_class => "selina",
         logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
         logo_svg   => '//$SKIP',

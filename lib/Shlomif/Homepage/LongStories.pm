@@ -625,7 +625,7 @@ EOF
         tagline    => "Love is Evil, and Evil is Love",
         logo_alt   => "1d10 die",
         logo_class => "selina",
-        logo_src   => "humour/Selina-Mandrake/images/Green-d10-dice.png",
+        logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
         logo_svg   => '//$SKIP',
         entry_id   => "All-in-an-Atypical-Day-Work",
         entry_text => "All in an Atypical Day’s Work",
@@ -1026,6 +1026,7 @@ sub calc_all_stories_entries
 my %png_stories = (
     map { $_ => 1 }
         qw#
+        All-in-an-Atypical-Day-Work
         muppets_show_tni
         queen_padme_tales
         selina_mandrake

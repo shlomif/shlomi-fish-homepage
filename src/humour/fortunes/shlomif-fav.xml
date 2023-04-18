@@ -7272,15 +7272,14 @@ It doesn’t yet do anything useful.
             <body>
 
             <blockquote>
+
             <blockquote><p>So what should I do to eliminate it?</p></blockquote>
 
             <p>
-
             Maybe Just Nothing
             </p>
 
             <p>
-
             The issue is that you can't special case get_current_coords to be
             truish, as far as Devel::Cover is concerned - it might not be.
             </p>
@@ -7299,14 +7298,12 @@ It doesn’t yet do anything useful.
             </blockquote>
 
             <p>
-
             While I agree coverage is not a race, I disagree that a human should have
             to disambiguate between real missing coverage and a false negative.  At
             least not more than once.
             </p>
 
             <p>
-
             I'll make the same argument "no broken windows" argument here that I do
             about warnings and tests: eliminate all warnings, even if they are dubious.
             Ensure all tests pass eliminating all false negatives.  Do not leave any
@@ -7318,12 +7315,11 @@ It doesn’t yet do anything useful.
             </p>
 
             <p>
-
             The Pragmatic Programmer does a good job with this argument.
             http://www.pragmaticprogrammer.com/ppbook/extracts/no_broken_windows.html
             </p>
-            <p>
 
+            <p>
             So goes the same with coverage.  Red should be a BAD color, something you
             do not want to see.  You want to eliminate the red.  But sometimes its a
             false negative.  In that case there should be some way to tell the tool
@@ -7334,13 +7330,11 @@ It doesn’t yet do anything useful.
             </p>
 
             <p>
-
             What's missing is a way to let Devel::Cover know that a bit of coverage is
             not necessary.  The first way to do this which pops into my mind is a comment.
             </p>
 
             <p>
-
             my $foo = $bar || default();  # DC ignore X|0
             </p>
 
@@ -7350,7 +7344,6 @@ It doesn’t yet do anything useful.
             </p>
 
             <p>
-
             Ignored conditions would be green, but perhaps a slightly different shade of
             green so they can be spotted if you're looking for them.
             </p>
@@ -7406,20 +7399,15 @@ It doesn’t yet do anything useful.
                 in hand, asking myself ``Which one is closest to what I want?''
                 Because: </p>
 
-                <p>
+                <p> 2. Good programmers know what to write. Great ones know
+                what to rewrite (and reuse).  </p>
 
-                2. Good programmers know what to write. Great ones know what to rewrite
-                (and reuse).  </p>
-
-                <p>
-
-                While I don't claim to be a great programmer, I try to imitate one. An
+                <p> While I don't claim to be a great programmer, I try to imitate one. An
                 important trait of the great ones is constructive laziness. They know that you
                 get an A not for effort but for results, and that it's almost always easier to
                 start from a good partial solution than from nothing at all.  </p>
 
-                <p>
-                Linus Torvalds, for example, didn't actually try to write Linux from scratch.
+                <p> Linus Torvalds, for example, didn't actually try to write Linux from scratch.
                 Instead, he started by reusing code and ideas from Minix, a tiny Unix-like
                 operating system for PC clones. Eventually all the Minix code went away or was
                 completely rewritten—but while it was there, it provided scaffolding for the
@@ -7618,13 +7606,13 @@ passion than the emacs wars."
             <quote>
                 <body>
 
-                <p>
+<p>
 There's the story of Mullah Nasruddin, who was asked why he never married and answered, "I was looking for the perfect wife. I went to Damascus and met a wonderful woman but she had no spiritual side. Then I went to Cairo and met a woman who was deeply spiritual, but we didn't communicate well. I went from place to place looking for the perfect woman, then finally I found her and she was beautiful and spiritual and we communicated well. She was perfect."
 </p>
 
 <p>
 Then his friend asked why he didn’t marry her, and Mullah Nasruddin replied, "Unfortunately, she was looking for the perfect man!".
-                </p>
+</p>
 
                 </body>
                 <info>
@@ -7641,7 +7629,7 @@ Then his friend asked why he didn’t marry her, and Mullah Nasruddin replied, "
             <quote>
                 <body>
 
-                <p>
+<p>
 Of her charitable pursuits, she (= Sarah Michelle Gellar) says:
 </p>
 
@@ -7656,7 +7644,6 @@ And now that I have the time, it's amazing.
 </p>
 
 </blockquote>
-
 
                 </body>
                 <info>
@@ -7689,6 +7676,7 @@ And now that I have the time, it's amazing.
             </meta>
             <quote>
                 <body>
+
 <p>
 Seems like these four rabbis had a series of theological arguments, and three
 were always in accord against the fourth.  One day, the odd rabbi out, with
@@ -7699,7 +7687,7 @@ so they too will know that I understand Your laws."
 </p>
 
 <p>
-	It was a beautiful, sunny day.  As soon as the rabbi finished his
+It was a beautiful, sunny day.  As soon as the rabbi finished his
 plaint, a storm cloud moved across the sky above the four.  It rumbled once
 and dissolved.  "A sign from God!  See, I'm right, I knew it!"  But the other
 three disagreed, pointing out that stormclouds form on hot days.

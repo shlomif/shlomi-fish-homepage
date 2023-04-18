@@ -21,6 +21,8 @@
 <a href="[% img _ link_img_ext %]">[% tag %]</a>
 </p>
 
+[% content %]
+
 [% END %]
 
 [% END %]
@@ -38,6 +40,11 @@
 [% END %]
 
 [% WRAPPER photo alt = "Wearing a My Little Pony shirt" id = "MLP-FiM-shirt-2014" img = "${base_path}meta/self-photos/images/shlomif-mlp-fim-shirt-img_2781.jpg" img_ext = "-400px.webp" %]
+
+<p>
+<a href="https://www.flickr.com/photos/shlomif/albums/72157646708777940">From a trip to England</a>
+for <a href="https://nineworlds.co.uk/">Nine Worlds Convention</a>.
+</p>
 
 [% END %]
 

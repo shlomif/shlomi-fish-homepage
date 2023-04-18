@@ -1045,7 +1045,8 @@ sub render_make_fragment
 
     foreach my $s (@_Stories)
     {
-        my $uc_id    = uc( $s->id );
+        my $id       = $s->id;
+        my $uc_id    = uc($id);
         my $logo_src = $s->logo_src;
         my $logo_svg = $s->logo_svg;
 
@@ -1066,7 +1067,7 @@ sub render_make_fragment
         {
             if ( not $processed_srcs{$logo_src}++ )
             {
-                if ( not exists $png_stories{ $s->id } )
+                if ( not exists $png_stories{$id} )
                 {
                     push @rules,
 "\$($m_id): \$(SRC_SRC_DIR)/$logo_src\n\t\$(call COPY)\n"

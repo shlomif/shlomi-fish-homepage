@@ -3,10 +3,10 @@
 use strict;
 use warnings;
 
-use IO::All qw/ io /;
-use Data::Dumper;
+use IO::All      qw/ io /;
+use Data::Dumper qw/ /;
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 
 my %images = (
     1 => {

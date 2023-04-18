@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use MooX qw/ late /;
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 
 extends('Shlomif::Homepage::NavBlocks::Thingy');
 

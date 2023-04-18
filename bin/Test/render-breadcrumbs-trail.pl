@@ -9,7 +9,7 @@ use MyNavData              ();
 use HTML::Widgets::NavMenu ();
 use MyNavLinks             ();
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 
 binmode STDOUT, ':encoding(utf8)';
 

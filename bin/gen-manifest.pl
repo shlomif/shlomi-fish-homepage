@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 
 use File::Find::Object                 ();
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 

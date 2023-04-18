@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use HTML::Widgets::NavMenu::EscapeHtml qw(escape_html);
+use HTML::Widgets::NavMenu::EscapeHtml qw( escape_html );
 
 use List::Util qw(min);
 

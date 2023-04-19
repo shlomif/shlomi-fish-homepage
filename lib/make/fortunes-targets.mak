@@ -70,12 +70,12 @@ FORTUNES_TIDY := tidy -asxhtml -utf8 -quiet --tidy-mark no
 $(FORTUNES_TEXTS): $(SRC_FORTUNES_DIR)/%: $(SRC_FORTUNES_DIR)/%.xml
 	$(PERL) $(SRC_FORTUNES_DIR)/validate-and-convert-to-plaintext.pl $< $@
 
-$(FORTUNES_yaml_data) $(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(SRC_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
+$(FORTUNES_ATOM_FEED) $(FORTUNES_RSS_FEED): $(SRC_FORTUNES_DIR)/generate-web-feeds.pl $(FORTUNES_XMLS_SRC)
 	$(PERL) $< --atom $(FORTUNES_ATOM_FEED) --rss $(FORTUNES_RSS_FEED) --dir $(SRC_FORTUNES_DIR)
 
 fortunes_yaml_data: $(FORTUNES_yaml_data)
 
-fortunes-target: fortunes_yaml_data
+fortunes-target: fortunes_yaml_data $(FORTUNES_ATOM_FEED)
 
 $(FORTUNES_SQLITE_DB): $(SRC_FORTUNES_DIR)/populate-sqlite-database.pl $(FORTUNES_XHTMLS) $(FORTUNES_LIST__DEPS) $(FORTUNES_TEXTS__PRE_DEST)
 	$(PERL) -I $(LATEMP_ROOT_SOURCE_DIR)/lib $<

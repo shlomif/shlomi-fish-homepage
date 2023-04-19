@@ -15,7 +15,7 @@ endfunction
 
 function! Foo_link()
     let @e='[% END %]'
-    let ret_ = '[% WRAPPER '.submatch(1).'_section id="'.submatch(2).'" href="' .submatch(3). '" title="'.submatch(4)."\" %]"
+    let ret_ = '[% WRAPPER '.submatch(1).'_section href = "'.submatch(3).'" id = "' .submatch(2). '" title = "'.submatch(4)."\" %]"
     let ret_ = substitute(ret_, "\\v\\[\\% *base_path *\\%\\]", "\${base_path}", "")
 
     return ret_

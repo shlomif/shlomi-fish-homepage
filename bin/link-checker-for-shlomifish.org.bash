@@ -1,4 +1,6 @@
-perl -Ilib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base='http://localhost/shlomif/homepage-local/' \
+base='http://localhost/shlomif/homepage-local/'
+base='http://localhost:2400/sites/hp/'
+perl -Ilib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" \
     --before-insert-skip='//.+?//' \
     --before-insert-skip='\.(?:js|epub|zip|diff|pl|xsl|xslt|rtf|tar\.xz|txt|raw\.html)\z' \
     --before-insert-skip='art/by-others/(?:BertycoX/BertycoX-dirs|Yachar/Yachar-dirs)/\z' \

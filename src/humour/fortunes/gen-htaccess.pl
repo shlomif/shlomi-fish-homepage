@@ -2,9 +2,10 @@
 
 use strict;
 use warnings;
+use 5.014;
+use autodie;
 
-use IO::Handle;
-use Getopt::Long qw(GetOptions);
+use Getopt::Long qw( GetOptions );
 
 my $output_filename;
 GetOptions( 'o=s' => \$output_filename, );
@@ -27,7 +28,7 @@ foreach my $base (@basenames)
         my $type = ( ( $ext eq '' ) ? "ForceType text/plain\n" : '' );
         $o->print(<<"EOF");
 <Files "$base$ext">
-${type}        Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; rel=\\"canonical\\""
+${type}Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; rel=\\"canonical\\""
 </Files>
 EOF
     }

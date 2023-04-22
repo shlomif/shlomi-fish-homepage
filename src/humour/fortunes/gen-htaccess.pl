@@ -23,7 +23,7 @@ $o->print("AddType text/plain .txt\n");
 $o->print("AddDefaultCharset utf-8\n");
 foreach my $base (@basenames)
 {
-    foreach my $ext ( '', '.xml', '.xhtml' )
+    foreach my $ext ( '', '.xhtml', '.xml' )
     {
         my $type = ( ( $ext eq '' ) ? "ForceType text/plain\n" : '' );
         $o->print(<<"EOF");
@@ -33,3 +33,4 @@ ${type}Header add Link "<http://www.shlomifish.org/humour/fortunes/$base.html>; 
 EOF
     }
 }
+close $o;

@@ -984,7 +984,7 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( star_trek_wtld selina_mandrake queen_padme_tales ),
+                    qw( star_trek_wtld selina_mandrake buffy_few_good queen_padme_tales ),
                 ),
             ],
         },

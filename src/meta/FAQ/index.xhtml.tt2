@@ -912,7 +912,7 @@ to look at.
 [%- ELSE -%]
 I find that manually deleting spam messages is not too time-consuming or
 errorprone.
-[%- END -%]
+[% END %]
 <a href="http://gmail.com/">GMail</a> and other webmail
 services also do a good job in filtering spam (regardless of
 <a href="http://shlomif.livejournal.com/46955.html">their other faults</a>).
@@ -985,8 +985,8 @@ a derivative work of the original by Iliad.
 <p>
 No, it does not - it is just inspired by <a href="#your_name">my last name</a>:
 “Fish”. I am in fact an Israeli and a <a href="#secular_jew">Jewish</a>
-<a href="#religious_belief">agnostic</a>, and as Jewish Israelis go, we
-have some aversion towards Christianity.
+<a href="#religious_belief">agnostic</a>, and as Jewish Israelis go, I
+have some natural aversion towards Christianity.
 </p>
 
 [%- END -%]
@@ -1105,7 +1105,7 @@ Some of the effective ways I found to improve one's English are:
 <p>
 Write. Write a lot. Start a blog. Write about interesting stories from your
 past. Ask your readers to point out the issues in your text (and also in your
-code).  Maybe start specialised blogs for writing about a topic that interests
+code). Maybe start specialised blogs for writing about a topic that interests
 you.
 </p>
 </li>
@@ -1294,9 +1294,9 @@ to Summer Glau.
 I normally link to such resources which I either agree with, partly agree, or
 are relevant to the discussion at hand. That does not mean I think everything
 these originators have published is true, but that does not mean that <b>none
-of their posts</b> are of merit (see <a
+of their posts</b> are of merit. See <a
 href="https://en.wikipedia.org/wiki/Ad_hominem">ad hominem</a> and similar
-fallacies.)
+fallacies.
 </p>
 
 [%- END -%]
@@ -1572,7 +1572,7 @@ explain what all those mean:
 <p>
 I’m <b>agnostic</b> because I’m not sure whether God — however he/she/they/it are
 manifested — exists or not. I suspect they do, but don’t take chances and
-<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/tie_your_camel.xhtml">don’t
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#tie_your_camel">don’t
 wish to risk dying</a> - now or ever.
 </p>
 </li>
@@ -1621,7 +1621,7 @@ Also see <a href="[% base_path %]humour/fortunes/show.cgi?id=larry-wall-all-trut
 <p>
 I am <b>anti-Fatalistic</b> because I believe that humans’ survival mechanism
 - <a href="http://en.wikipedia.org/wiki/Reason">reason</a> - operates
-<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5/putting-all-cards-on-the-table-2013/dont_just_go_with_the_flow.xhtml"><b>by
+<a href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/#dont_just_go_with_the_flow"><b>by
 choice</b></a>, and not automatically, and that we have
 <a href="http://en.wikipedia.org/wiki/Free_will">free will</a>. This is as
 opposed to the new age crop of neo-Deterministic materialistic atheists who
@@ -2066,7 +2066,7 @@ I have a taboo against trying to separate couples.
 
 <li>
 <p>
-I would prefer to avoid eating "חמץ" (= "chametz") during Passover.
+I would prefer to avoid eating <a href="https://en.wikipedia.org/wiki/Chametz">"חמץ" (= "chametz")</a> during Passover.
 However, it wasn't doable for many years, due to <a href="#which_disabilities_do_you_have">poor physical health</a>.
 </p>
 </li>
@@ -2418,7 +2418,7 @@ than Buffy Summers.
 </p>
 
 <p>
-Do note that I have a lot of <a href="[% base_path %]meta/nav-blocks/blocks/#buffy_sect">crossover fan fiction about her and Buffy</a>.
+Do note that I have created a lot of <a href="[% base_path %]meta/nav-blocks/blocks/#buffy_sect">crossover fan fiction about her and Buffy</a>.
 </p>
 
 [%- END -%]
@@ -2686,7 +2686,7 @@ Rudyard Kipling ( <a href="https://en.wikipedia.org/wiki/If%E2%80%94">Wikipedia 
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "who-are-your-fav-MLP-FiM-characters" title = "Who are your favourite My Little Pony: Friendship is Magic characters? (+ “Who is [the] best pony?”)" %]
+[% WRAPPER h3_section id = "who-are-your-fav-MLP-FiM-characters" title = "Who are your favourite My Little Pony: Friendship is Magic characters? (+ “Who is best pony?”)" %]
 
 <p>
 <a href="https://mlp.fandom.com/wiki/Discord">Discord</a> is a natural favourite.
@@ -2738,10 +2738,10 @@ now redirects to www.shlomifish.org. This is also the case for shlomifish.com,
 which I bought later.
 </p>
 
-[% WRAPPER h4_section id = "why_the_www_domain_prefix" title = "Why are you using the www domain prefix for your site?" %]
+[% WRAPPER h4_section id = "why_the_www_domain_prefix" title = "Why are you using the “www.” domain prefix for your site?" %]
 
 <p>
-There is no clear consensus whether "www." or plain "shlomifish.org" should
+There is no clear consensus whether “www.” or plain "shlomifish.org" should
 be used. It makes the URLs somewhat longer but I also have
 <a href="https://shlom.in/">shlom.in</a> which is even shorter.
 Also see <a href="https://en.wikipedia.org/wiki/Law_of_triviality">colour
@@ -2971,7 +2971,7 @@ social media and user-generated-content sites on every page of my home site.
 In case you’re interested in setting up a personal web site of your own, I
 wrote
 <a href="[% base_path %]philosophy/computers/web/create-a-great-personal-homesite/">an
-article about it</a>, which you can read.
+essay about it</a>, which you can read.
 </p>
 
 [%- END -%]
@@ -3681,7 +3681,7 @@ minifying it, and the proper formatting may vary according to taste.
 Just like we often compile and link source codes to binary executables and
 libraries, (even if the source code is publicly available), so we can think of
 minifying web markups as compiling them in order to improve the <a
-href="https://en.wikipedia.org/wiki/User_experience">user experience</a>.  That
+href="https://en.wikipedia.org/wiki/User_experience">user experience</a>. That
 does not imply I do that in order to <a
 href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#how-do-i-hideobscureencrypt-my-source-code-to-prevent-end-users-from-learning-how-it-works">obscure
 the inner mechanisms of the software</a>.

@@ -118,6 +118,15 @@ EOF
             id   => "bus-conversations",
             text => "Conversations with People on Buses",
         },
+        {
+            html => <<"EOF",
+<p>
+Fencing with plastic hammers during the Israeli Independence Day.
+</p>
+EOF
+            id   => "fencing-with-plastic-hammers",
+            text => "Fencing with plastic hammers",
+        },
     )
 ];
 

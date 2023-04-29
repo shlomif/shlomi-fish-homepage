@@ -11,7 +11,7 @@
 <p>
 This is a quote from the Television series
 <a href="http://en.wikipedia.org/wiki/Friends"><i>Friends</i></a> which I’ve
-reused in a screenplay and also decided to place here. Also see
+reused in <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/">a screenplay</a> and also decided to place here. Also see
 <a href="https://www.reddit.com/r/howyoudoin/comments/2i7ox2/as_a_woman_there_is_nothing_sexier_one_of_my_most/">a
 Reddit discussion</a> of this captioned image.
 </p>
@@ -27,13 +27,13 @@ Reddit discussion</a> of this captioned image.
 [% WRAPPER quote  %]
 <ul>
 <li>
-- **Bea:** Occupation?
+<b>Bea:</b> Occupation?
 </li>
 <li>
-- **Mel:** Stand-up Philosopher!
+<b>Mel:</b> Stand-up Philosopher!
 </li>
 <li>
-- **Bea:** Oh! A bullshit artist!
+<b>Bea:</b> Oh! A bullshit artist!
 </li>
 </ul>
 [%- END -%]
@@ -53,7 +53,7 @@ Web resources (e.g.: <a href="https://en.wikipedia.org/wiki/YouTuber">YouTubers<
 <p>
 Many philosophers were joking and didn't take their philosophies seriously.
 They were often <a href="[% base_path
-%]humour/fortunes/paul-graham.html">amateur</a> (= artists or workers who enjoy
+%]humour/fortunes/paul-graham.html">amateurs</a> (= artists or workers who enjoy
 their work, regardless of how much or how little they were paid; a.k.a:
 "geeks") and polymaths, who accepted different opinions, or people who built,
 parodied, and expanded upon their work.
@@ -75,7 +75,7 @@ comedians".
 
 [% BLOCK yeah_like_i_could_lose_it__image_macro %]
 
-[% WRAPPER github_captioned_image_joke id = "yeah_like_i_could_lose_it" header = "“Yeah! Like I could lose it!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--yeah-like-i-could-lose-it" src = base_path _ "humour/images/friends--yeah-like-i-could-lose-it.svg-600w.webp" alt = "“Yeah! Like I could lose it!” as said by Ross on Friends" %]
+[% WRAPPER github_captioned_image_joke alt = "“Yeah! Like I could lose it!” as said by Ross on Friends" id = "yeah_like_i_could_lose_it" header = "“Yeah! Like I could lose it!”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--yeah-like-i-could-lose-it" src = base_path _ "humour/images/friends--yeah-like-i-could-lose-it.svg-600w.webp" %]
 
 [% WRAPPER quote %]
 <p>
@@ -85,11 +85,11 @@ comedians".
 
 <p>
 I <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-cinema--copyright-cannibalism">noted
+href="[% base_path %]humour/fortunes/show.cgi?id=sharp-cinema--copyright-cannibalism">noted
 when chatting online</a> that the reason Madonna has not been cast into an
 acting role (as of March 2021) was likely not because she lost her acting skills.
 This made me recall <a href="https://www.reddit.com/r/howyoudoin/comments/m0bv5i/ross_in_s04e07_yeah_like_i_could_lose_it/">that scene from <i>Friends</i></a>.
-I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">"Qoheleth" screenplay</a>.
+I later reused it in my <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">"Qoheleth" screenplay</a>.
 </p>
 
 [%- END -%]
@@ -98,7 +98,7 @@ I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-He
 
 [% BLOCK it_is_too_easy__image_macro %]
 
-[% WRAPPER github_captioned_image_joke id = "it_is_too_easy" header = "“It is too easy”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--phoebe--it-is-too-easy" src = base_path _ "humour/images/captioned-image--friends--phoebe--it-is-too-easy.svg.webp" alt = "“It is too easy” as said by Phoebe on Friends" %]
+[% WRAPPER github_captioned_image_joke alt = "“It is too easy” as said by Phoebe on Friends" id = "it_is_too_easy" header = "“It is too easy”" repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/friends--phoebe--it-is-too-easy" src = base_path _ "humour/images/captioned-image--friends--phoebe--it-is-too-easy.svg.webp" %]
 
 [% WRAPPER quote %]
 <p>
@@ -108,7 +108,7 @@ I later reused it in my <a href="https://www.shlomifish.org/humour/So-Who-The-He
 
 <p>
 From "Ross and Phoebe argue about Evolution.".
-I used it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#at-the-forum">"Qoheleth" screenplay</a>.
+I used it in my <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#at-the-forum">"Qoheleth" screenplay</a>.
 </p>
 
 [%- END -%]
@@ -118,7 +118,7 @@ I used it in my <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qo
 [% BLOCK say_no_to_an_alpha_female__image_macro %]
 
 
-[% WRAPPER github_captioned_image_joke id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" alt = "One does not simply say “no” to an Alpha Female" %]
+[% WRAPPER github_captioned_image_joke alt = "One does not simply say “no” to an Alpha Female" id = "say_no_to_an_alpha_female" header = "One does not simply say “no” to an Alpha Female" repo_href = "https://github.com/shlomif/Captioned-Image-One-does-not-Simply-Say-No-to-an-Alpha-Female" src = base_path _ "humour/images/one-does-not-simply-say-no-to-an-alpha-female.svg.webp" %]
 
 [% WRAPPER quote %]
 <p>
@@ -131,10 +131,14 @@ This purposely alludes to sex, but is about something else.
 In the Bible, <a href="https://en.wikipedia.org/wiki/Rahab">Rahab</a>
 is being visited by Canaanite soldiers who ask her if she hides
 the Israelite spies, and they leave after she testifies that it isn't
-the case. Even today, <a href="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">alpha females</a>
+the case. Even today, <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#alpha-beta-gamma-omega">alpha females</a>
 are held with enough admiration and respect to assume they know
 what they are doing. That is because, among humans, sex appeal
-<a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">corresponds to competence</a>.
+<a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#meaning-of-able-competent">corresponds to competence</a>.
+</p>
+
+<p>
+I used it in my <a href="[% base_path %]humour/So-Who-The-Hell-Is-Qoheleth/ongoing-text.html#at-the-forum">"Qoheleth" screenplay</a>.
 </p>
 
 [%- END -%]

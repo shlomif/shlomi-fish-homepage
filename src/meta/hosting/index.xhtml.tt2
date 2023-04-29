@@ -1,10 +1,9 @@
 [%- SET title = "About this Site’s Hosting" -%]
 [%- SET desc = "About Shlomi Fish’s site hosting." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="hostgator">Hostgator</h2>
+[% WRAPPER h2_section id = "hostgator" title = "Hostgator" %]
 
 <p>
 www.shlomifish.org and related sites are hosted at
@@ -16,7 +15,7 @@ much because my sites are mostly static), and that the panel interface (cPanel
 I believe) is quite confusing. But otherwise, I'm very happy.
 </p>
 
-<h3 id="affiliate">Affiliate Banner</h3>
+[% WRAPPER h3_section id = "affiliate" title = "Affiliate Banner" %]
 
 [% IF 1 %]
 <p>
@@ -34,7 +33,11 @@ Web Hosting; Unlimited Bandwidth; Unlimited Disk Space; Free Website Builder</a>
 using this affiliate link.
 </p>
 
-<h2 id="heptagon">Heptagon</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "heptagon" title = "Heptagon" %]
 
 <p>
 shlomifish.org used to be hosted at
@@ -51,6 +54,9 @@ href="http://www.webhostingsearch.com/dedicated-server.php">dedicated
 server hosting</a> for example - then have a look at our long term buddies:
 the Web Hosting Search.
 </p>
+
+[% END %]
+
 [% END %]
 
 [% END %]

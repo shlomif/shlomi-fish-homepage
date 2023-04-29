@@ -1,39 +1,46 @@
 [%- SET title = "My Résumés" -%]
 [%- SET desc = "Shlomi Fish’s Résumés - English brief, English detailed and in Hebrew." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="Shlomi-Fish-Resume-as-Software-Dev.html">Résumé
-as a Software Developer</a></h2>
+[% WRAPPER h2_section href = "Shlomi-Fish-Resume-as-Software-Dev.html" id = "Resume-as-Software-Dev" title = "Résumé as a Software Developer" %]
 
 <p>
 A short C.V. as a software developer.
 </p>
 
-<h2><a href="[% base_path %]SFresume.html">English Résumé</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}SFresume.html" id = "english-long" title = "English Résumé" %]
 
 <p>
 A C.V. in English.
 </p>
 
-<h2><a href="[% base_path %]SFresume_detailed.html">A Detailed English Résumé</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}SFresume_detailed.html" id = "detailed" title = "A Detailed English Résumé" %]
 
 <p>
 A more detailed Curriculum Vitae in English as well.
 </p>
 
-<h2><a href="Shlomi-Fish-Heb-Resume.html">Résumé in Hebrew</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "Shlomi-Fish-Heb-Resume.html" id = "hebrew-long" title = "Résumé in Hebrew" %]
 
 <p>
 My Hebrew résumé in HTML format.
 </p>
 
-<h2><a href="Shlomi-Fish-Resume-as-Writer-Entertainer.html">Résumé
-as a Writer and an Entertainer</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "Shlomi-Fish-Resume-as-Writer-Entertainer.html" id = "Resume-as-Writer-Entertainer" title = "Résumé as a Writer and an Entertainer" %]
 
 <p>
 A short C.V. as a writer and entertainer.
 </p>
+
+[% END %]
 
 [% END %]

@@ -1,8 +1,9 @@
 base='http://localhost/shlomif/homepage-local/'
 base='http://localhost:2400/sites/hp/'
-perl -Ilib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" \
+perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" \
     --before-insert-skip='//.+?//' \
     --before-insert-skip='/Files/files/video/[^/]+\.webm\z' \
+    --before-insert-skip='/\.htaccess\z' \
     --before-insert-skip='/art/by-others/(?:BertycoX/BertycoX-dirs|Yachar/Yachar-dirs)/\z' \
     --before-insert-skip='/humour/fortunes/(?:bbt|friends|joel-on-software|nyh-sigs|osp_rules|paul-graham|sharp-perl|sharp-programming|shlomif|shlomif-factoids|shlomif-fav|subversion|tinic)\z' \
     --before-insert-skip='/humour/fortunes/fortunes_show\.(?:cgi|py)\z' \
@@ -19,5 +20,4 @@ perl -Ilib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App
     --before-insert-skip='/open-source/projects/yjobs' \
     --before-insert-skip='/philosophy/solving/' \
     --before-insert-skip='\.(?:diff|epub|js|pl|raw\.html|rtf|tar\.xz|txt|zip|xsl|xslt)\z' \
-    --before-insert-skip='\.htaccess\z' \
     ;

@@ -19,6 +19,18 @@ my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
 my $hostp         = "lib/cache/combined/$host";
 
+my $nav_links_template = <<'EOF';
+[% USE HTML %]
+[% FOREACH b = buttons %]
+[% IF ( NOT( b.dir == 'top' || b.dir == 'up' ) ) %]
+[% SET key = b.dir.substr(0, 1) %]
+[% IF b.exists %]
+<link href="[% HTML.escape(b.link_obj.direct_url()) %]" rel="[% b.dir %]" title="[% b.link_obj.title() %]"/>
+[% END %]
+[% END %]
+[% END %]
+EOF
+
 sub _process_batch
 {
     for my $proto_url ( @{ $_[0] } )
@@ -105,8 +117,9 @@ sub _process_batch
         $out->(
             'html_head_nav_links',
             \(
-                NavDataRender->get_html_head_nav_links(
-                    { nav_links_obj => $nav_links_obj }
+                $shlomif_nav_links_renderer->_get_nav_buttons_html(
+                    nav_links_template => $nav_links_template,
+                    sorted             => 1,
                 )
             ),
         );

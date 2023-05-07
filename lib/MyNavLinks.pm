@@ -27,7 +27,11 @@ sub _get_nav_buttons_html
     );
 
     my $vars = {
-        'buttons'        => $self->_get_buttons(),
+        'buttons' => scalar(
+            $args{sorted}
+            ? [ sort { $a->{dir} cmp $b->{dir} } @{ $self->_get_buttons() } ]
+            : $self->_get_buttons()
+        ),
         'root'           => $root,
         'with_accesskey' => $with_accesskey,
         'image_base'     => $self->get_image_base(),

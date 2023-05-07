@@ -284,6 +284,12 @@ class MyTests(html_unit_test.TestCase):
             ".//head/link[@rel='next' and @href='part-1.html']",
         )
 
+    def test_blogs_rel_next(self):
+        input_fn = 'dest/post-incs/t2/me/blogs/index.xhtml'
+        self.doc(input_fn).has_one(
+            ".//head/link[@rel='next' and contains(@href, 'humour')]",
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

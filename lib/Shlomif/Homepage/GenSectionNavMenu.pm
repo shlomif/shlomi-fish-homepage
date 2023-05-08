@@ -173,7 +173,7 @@ sub process_batch
             );
             my $html = join(
                 '',
-                map { "$_\n" } @{
+                @{
                     $hebrew_nav_results->{shlomif_main_expanded_nav_bar}
                         ->gen_site_map() || ( die "hebrew site map" )
                 }
@@ -189,4 +189,3 @@ sub process_batch
 1;
 
 __END__
-# # Below is stub documentation for your module. You'd better edit it!

@@ -85,8 +85,11 @@ sub process_batch
 
         my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
 
-        my $nav_links_obj = $rendered_results->{nav_links_obj};
-        $nav_links_obj ||= $rendered_results2->{nav_links_obj};
+        if (0)
+        {
+            my $nav_links_obj = $rendered_results->{nav_links_obj};
+            $nav_links_obj ||= $rendered_results2->{nav_links_obj};
+        }
 
         my $out = sub {
             my ( $id, $ref ) = @_;

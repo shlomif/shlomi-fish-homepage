@@ -3433,15 +3433,7 @@ I believe the [% CGI %] scripts are:
 
 [% WRAPPER h3_section id = "broken_links" title = "I found some broken links on one of your sites. Should I report them to you?" %]
 
-<p>
-I guess I'd be interested to hear reports about them as long as one provides
-the text of the link and their URL. Note that it is the
-<a href="[% base_path %]humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature of the web that links get broken</a>
-and it is part of what makes it work. Moreover, I've had this site for many
-years, and it is natural that some of the links have become stale. As a result,
-dealing with these broken-hyperlinks-reports have become quite frustrating due
-to their frequency.
-</p>
+[% INCLUDE faq__broken_links %]
 
 [%- END -%]
 

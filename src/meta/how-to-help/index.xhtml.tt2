@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/faq.tt2" %]
+
 <p>
 If you like this site, there are several ways in which you can help me with
 it. Here is a list of some of them:
@@ -78,12 +80,7 @@ Bad phrasing.
 </p>
 </li>
 <li>
-<p>
-<s>Broken hyperlinks.</s> - please do not report broken links. It is the
-<a href="[% base_path %]humour/fortunes/show.cgi?id=tim-berners-lee-the-WWW-and-the-dexter-model">nature
-of the web</a> that links get broken, and sometimes I have nothing to do about it but
-wait. Please don't waste my time E-mailing me about them.
-</p>
+[% INCLUDE faq__broken_links %]
 </li>
 <li>
 <p>

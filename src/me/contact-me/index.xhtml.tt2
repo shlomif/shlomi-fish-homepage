@@ -11,16 +11,16 @@
 <script src="[% base_path %]js/my-expander.js"></script>
 [% END %]
 
-[% WRAPPER h2_section id = "contact_me"  title = "How to contact me / How to reach me"  %]
+[% WRAPPER h2_section id = "contact_me" title = "How to contact me / How to reach me" %]
 
 <p>
 This page lists the various ways in which I (= Shlomi Fish) can be contacted.
 <b>Note:</b> I recently decided to give the best ways to contact me (due to
 usability, accessibility, and [% FOSS %] considerations.
-Last updated on 2020-12-08 .)
+Last updated on 2023-05-09 .)
 </p>
 
-[% WRAPPER h3_section id="best-ways-to-contact" title="Best ways to contact me:"%]
+[% WRAPPER h3_section id = "best-ways-to-contact" title = "Best ways to contact me:" %]
 
 [% IF 0 %]
 <s><a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id)</s>
@@ -77,11 +77,11 @@ smartphone was stolen.
 
 [% END %]
 
-[% WRAPPER h3_section id = "primary-contact-ways" title = "Secondary ways"  %]
+[% WRAPPER h3_section id = "primary-contact-ways" title = "Secondary ways" %]
 
 <dl class="contact">
 <dt>Homepage:</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.shlomifish.org/", %]</dd>
 <dt>E-mail:</dt>
 <dd>[% INCLUDE main_email_mailto %]</dd>
 <dt>Name in Hebrew:</dt>
@@ -106,7 +106,7 @@ smartphone was stolen.
 
 [% END %]
 
-[% WRAPPER h3_section id = "more_contact_details"  title = "More Contact Details"  %]
+[% WRAPPER h3_section id = "more_contact_details" title = "More Contact Details" %]
 
 <dl id="more_contacts_list" class="contact">
 
@@ -118,64 +118,65 @@ Israel</dd>
 <dt>[% IRC %]:</dt>
 <dd><code>rindolf</code> on <a href="http://www.freenode.org/">FreeNode</a>,
 <a href="http://www.efnet.org/">EF-Net</a>,
-<a href="http://www.oftc.net/">OFTC</a> and
+<a href="http://www.oftc.net/">OFTC</a>,
+<a href="http://irc.perl.org/">Perl.org</a> and
 <a href="http://www.xach.com/gimpnet/">GIMP-Net</a>.
 </dd>
 <dt>Freecode (formerly Freshmeat)</dt>
-<dd>[% INCLUDE url_body_link href = "http://freecode.com/~shlomif/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://freecode.com/~shlomif/", %]</dd>
 <dt>GMail</dt>
-<dd>(<b>Note:</b> please E-mail me there in addition to <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% INCLUDE mailto_link_to_self email = "shlomif@gmail.com",  %]</dd>
+<dd>(<b>Note:</b> please E-mail me there in addition to <a href="mailto:[% main_email %]">my regular E-mail</a>!) [% INCLUDE mailto_link_to_self email = "shlomif@gmail.com", %]</dd>
 <dt>CPAN</dt>
-<dd>[% INCLUDE url_body_link href = "http://metacpan.org/author/SHLOMIF",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://metacpan.org/author/SHLOMIF", %]</dd>
 <dt>Advogato</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.advogato.org/person/shlomif/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.advogato.org/person/shlomif/", %]</dd>
 <dt>Dmoz (Open Directory Project)</dt>
-<dd>[% INCLUDE url_body_link href = "http://dmoz.org/profiles/shlomif.html",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://dmoz.org/profiles/shlomif.html", %]</dd>
 <dt>Live Journal</dt>
-<dd>[% INCLUDE url_body_link href = "http://shlomif.livejournal.com/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://shlomif.livejournal.com/", %]</dd>
 [% BLOCK __remove_use_perl_link %]
 <dt>Use Perl</dt>
-<dd>[% INCLUDE url_body_link href = "http://use.perl.org/~Shlomi+Fish/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://use.perl.org/~Shlomi+Fish/", %]</dd>
 [% END %]
 <dt>Yahoo</dt>
-<dd>[% INCLUDE url_body_link href = "http://profiles.yahoo.com/shlomif2",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://profiles.yahoo.com/shlomif2", %]</dd>
 <dt>Flickr</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.flickr.com/photos/shlomif/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.flickr.com/photos/shlomif/", %]</dd>
 <dt>PyPI (Python Package Index)</dt>
-<dd>[% INCLUDE url_body_link href = "https://pypi.org/user/shlomif-gmail/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "https://pypi.org/user/shlomif-gmail/", %]</dd>
 <dt>Frappr</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.frappr.com/shlomifish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.frappr.com/shlomifish", %]</dd>
 <dt>StumbleUpon</dt>
-<dd>[% INCLUDE url_body_link href = "http://shlomif.stumbleupon.com/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://shlomif.stumbleupon.com/", %]</dd>
 <dt>Last.fm</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.last.fm/user/shlomif/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.last.fm/user/shlomif/", %]</dd>
 <dt>Ohloh</dt>
-<dd>[% INCLUDE url_body_link href = "https://www.ohloh.net/accounts/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "https://www.ohloh.net/accounts/shlomif", %]</dd>
 <dt>Stack Overflow</dt>
-<dd>[% INCLUDE url_body_link href = "http://stackoverflow.com/users/7709/shlomi-fish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://stackoverflow.com/users/7709/shlomi-fish", %]</dd>
 <dt>FanFiction.net</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.fanfiction.net/~shlomifish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.fanfiction.net/~shlomifish", %]</dd>
 <dt>FictionPress.com</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.fictionpress.com/~shlomifish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.fictionpress.com/~shlomifish", %]</dd>
 <dt>Micro-blogging</dt>
 <dd>
 <dl>
-<dt>Identi.ca</dt>
-<dd>[% INCLUDE url_body_link href = "http://identi.ca/shlomif/all",  %]</dd>
 <dt>Twitter.com</dt>
-<dd>[% INCLUDE url_body_link href = "http://twitter.com/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://twitter.com/shlomif", %]</dd>
+<dt>Identi.ca</dt>
+<dd>[% INCLUDE url_body_link href = "http://identi.ca/shlomif/all", %]</dd>
 <dt>Plurk (Micro-blogging)</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.plurk.com/shlomif",  %] (<a href="http://plurk.com/shlomif/invite">an invite to Plurk from me</a>)</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.plurk.com/shlomif", %] (<a href="http://plurk.com/shlomif/invite">an invite to Plurk from me</a>)</dd>
 </dl>
 </dd>
 <dt>Facebook</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.facebook.com/shlomi.fish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.facebook.com/shlomi.fish", %]</dd>
 <dt>LinkedIn</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.linkedin.com/profile/view?id=757307",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.linkedin.com/profile/view?id=757307", %]</dd>
 <dt>YouTube</dt>
-<dd>[% INCLUDE url_body_link href = "http://www.youtube.com/user/ShlomiFish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://www.youtube.com/user/ShlomiFish", %]</dd>
 <dt>Slashdot.org</dt>
-<dd>[% INCLUDE url_body_link href = "http://slashdot.org/~Shlomi+Fish",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://slashdot.org/~Shlomi+Fish", %]</dd>
 
 <dt>Wikipedia and related wikis</dt>
 <dd>
@@ -183,19 +184,19 @@ Israel</dd>
 <dl>
 
 <dt><a href="http://en.wikipedia.org/">English Wikipedia</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://en.wikipedia.org/wiki/User:Shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://en.wikipedia.org/wiki/User:Shlomif", %]</dd>
 
 <dt><a href="http://he.wikipedia.org/">Hebrew Wikipedia</a></dt>
 <dd><a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9:Shlomif">http://he.wikipedia.org/wiki/משתמש:Shlomif</a></dd>
 
 <dt><a href="http://en.wiktionary.org/">English Wiktionary</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://en.wiktionary.org/wiki/User:Shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://en.wiktionary.org/wiki/User:Shlomif", %]</dd>
 
 <dt><a href="http://en.wikiquote.org/">English Wikiquote</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://en.wikiquote.org/wiki/User:Shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://en.wikiquote.org/wiki/User:Shlomif", %]</dd>
 
 <dt><a href="http://en.wikibooks.org/wiki/Main_Page">English Wikibooks</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://en.wikibooks.org/wiki/User:Shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://en.wikibooks.org/wiki/User:Shlomif", %]</dd>
 
 </dl>
 </dd>
@@ -206,25 +207,25 @@ Israel</dd>
 <dl>
 
 <dt><a href="http://sourceforge.net/">SourceForge.net</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://sourceforge.net/users/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://sourceforge.net/users/shlomif", %]</dd>
 
 <dt><a href="http://github.com/">GitHub</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://github.com/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://github.com/shlomif", %]</dd>
 
 <dt><a href="https://about.gitlab.com/">GitLab</a></dt>
-<dd>[% INCLUDE url_body_link href = "https://gitlab.com/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "https://gitlab.com/shlomif", %]</dd>
 
 <dt><a href="http://bitbucket.org/">Bitbucket</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://bitbucket.org/shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://bitbucket.org/shlomif", %]</dd>
 
 <dt><a href="http://developer.berlios.de/">BerliOS</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://developer.berlios.de/users/shlomif/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://developer.berlios.de/users/shlomif/", %]</dd>
 
 <dt><a href="http://code.google.com/">Google Code</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://code.google.com/u/shlomif@gmail.com/",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://code.google.com/u/shlomif@gmail.com/", %]</dd>
 
 <dt><a href="http://gitorious.org/">Gitorious</a></dt>
-<dd>[% INCLUDE url_body_link href = "http://gitorious.org/~shlomif",  %]</dd>
+<dd>[% INCLUDE url_body_link href = "http://gitorious.org/~shlomif", %]</dd>
 
 </dl>
 

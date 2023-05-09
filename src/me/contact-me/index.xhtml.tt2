@@ -22,13 +22,17 @@ Last updated on 2020-12-08 .)
 
 [% WRAPPER h3_section id="best-ways-to-contact" title="Best ways to contact me:"%]
 
+[% IF 0 %]
+<s><a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id)</s>
+[% END %]
+
 <ol>
 
 <li>
 <p>
-The best ways to contact me are likely <a href="https://www.facebook.com/shlomi.fish">Facebook
-shlomi.fish</a>
-private chat or <s><a href="https://telegram.org/">Telegram.org</a> (using +972-54-6232377 as the phone id)</s> <a href="#XMPP">XMPP</a>.
+The best ways to contact me are likely <a
+href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a> private
+chat or <a href="#XMPP">XMPP</a>.
 </p>
 </li>
 
@@ -63,7 +67,12 @@ ShlomiFish@jabber.org
 / Libera.chat.
 </p>
 </li>
+
 </ol>
+
+<p>
+<b>Note:</b> I am no longer
+</p>
 
 [% END %]
 

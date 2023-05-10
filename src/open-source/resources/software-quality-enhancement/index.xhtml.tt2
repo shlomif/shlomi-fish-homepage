@@ -8,7 +8,7 @@
 
 <div class="software_build">
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 Quite a few people, including me, have been lamenting the
@@ -20,7 +20,7 @@ to enhance the quality of software.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "linters"  title = "Linters"  %]
+[% WRAPPER h2_section id = "linters" title = "Linters" %]
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Lint_(software)">linters</a> are programs
@@ -46,7 +46,7 @@ a list for linters and autoformatters.
 
 </ul>
 
-[% WRAPPER h3_section id = "auto_formatters" title = "Code autoformatters"  %]
+[% WRAPPER h3_section id = "auto_formatters" title = "Code autoformatters" %]
 
 <ul>
 
@@ -83,14 +83,14 @@ all-in-one autoformatter and validator - with many backends.
 to run many individual checking tools. By the Debian project and other contributors.
 </p>
 </li>
+
 </ul>
 
 [% END %]
 
-
 [% END %]
 
-[% WRAPPER h2_section id = "profiler" title = "Profilers"  %]
+[% WRAPPER h2_section id = "profiler" title = "Profilers" %]
 
 <p>
 Profilers are programs that report which parts of the code consume a lot
@@ -110,11 +110,12 @@ of time, memory or other resources, to allow for a more effective optimisation.
 <a href="https://metacpan.org/pod/Devel::NYTProf">Devel::NYTProf</a> - an advanced profiler for Perl 5.
 </p>
 </li>
+
 </ul>
 
 [% END %]
 
-[% WRAPPER h2_section id = "mem_debuggers" title = "Memory Debuggers"  %]
+[% WRAPPER h2_section id = "mem_debuggers" title = "Memory Debuggers" %]
 
 <ul>
 
@@ -169,7 +170,7 @@ Black Arch Linux distribution.
 
 [% END %]
 
-[% WRAPPER h2_section id = "text-checkers" title = "Checkers for invalid text"  %]
+[% WRAPPER h2_section id = "text-checkers" title = "Checkers for invalid text" %]
 
 <ul>
 
@@ -207,7 +208,7 @@ case-insensitive filesystems such as <a href="https://en.wikipedia.org/wiki/File
 
 [% END %]
 
-[% WRAPPER h2_section id = "proof-assistants" title = "Proof Assistants / Interactive Theorem Provers"  %]
+[% WRAPPER h2_section id = "proof-assistants" title = "Proof Assistants / Interactive Theorem Provers" %]
 
 <p>
 Allows one to prove the correctness of code, thus reducing the list of defects.
@@ -237,7 +238,7 @@ Allows one to prove the correctness of code, thus reducing the list of defects.
 
 [% END %]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -291,6 +292,6 @@ essay.
 
 </div>
 
-[% PROCESS cc_by_nc_sa_licence_section "year" => "2020",  %]
+[% PROCESS cc_by_nc_sa_licence_section "year" => "2020", %]
 
 [% END %]

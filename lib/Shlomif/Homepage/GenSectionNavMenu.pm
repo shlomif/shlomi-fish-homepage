@@ -18,6 +18,14 @@ my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
 my $hostp         = "lib/cache/combined/$host";
 
+my @nav_bar_params = (
+    coords_stop    => 1,
+    'current_host' => $host,
+    MyNavData::get_params(),
+    'ul_classes'     => [],
+    'no_leading_dot' => 1,
+);
+
 my $nav_links_template = <<'EOF';
 [% USE HTML %]
 [% FOREACH b = buttons %]
@@ -45,14 +53,9 @@ sub process_batch
 
         # print "start filename=$filename\n";
 
-        my $nav_bar = HTML::Widgets::NavMenu::JQueryTreeView->new(
-            coords_stop    => 1,
-            'path_info'    => $filename,
-            'current_host' => $host,
-            MyNavData::get_params(),
-            'ul_classes'     => [],
-            'no_leading_dot' => 1,
-        );
+        my $nav_bar =
+            HTML::Widgets::NavMenu::JQueryTreeView->new( @nav_bar_params,
+            'path_info' => $filename, );
         my $ROOT    = NavDataRender::get_root($url);
         my $results = NavSectMenuRender->init_section_nav_menu(
             {

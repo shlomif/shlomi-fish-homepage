@@ -241,3 +241,32 @@ $ss_margin: 2em;
         }
     }
 }
+
+@mixin styled_blockquote {
+    blockquote {
+        border: grey thin solid;
+        padding: 0.5em;
+        // font-style: italic;
+        margin-left: 0.5em;
+        overflow: auto;
+
+        @if false {
+            > p:first-child {
+                &:before {
+                    content: "‶";
+                }
+
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            > p:last-child {
+                &:after {
+                    content: "″";
+                }
+                margin-bottom: 0;
+                padding-top: 0;
+            }
+        }
+    }
+}

@@ -159,7 +159,7 @@ sub process_batch
                 \(
                     join(
                         '',
-                        map { "$_\n" } @{
+                        @{
                             $nav_results->{shlomif_main_expanded_nav_bar}
                                 ->gen_site_map()
                         }

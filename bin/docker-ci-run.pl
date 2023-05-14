@@ -39,7 +39,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container package_manager_install_cmd setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
+    qw/ container package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -52,6 +52,7 @@ my $configs = {
             container                   => "shlomi_fish_homesite_debian",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
+            pip_options           => "--break-system-packages",
             setup_package_manager => <<'EOF',
 if false
 then
@@ -112,10 +113,11 @@ EOF
             ],
         }
     ),
-    'fedora:36' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:38' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
+            pip_options                 => "--break-system-packages",
             setup_package_manager       => "sudo dnf -y install nosync ; $EN ;",
             setup_script_cmd            => "$EN",
             snapshot_names_base         => "shlomif/hpage_fedora",
@@ -170,6 +172,7 @@ sub run_config
 
     my $container                   = $cfg->container();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
+    my $pip_options                 = $cfg->pip_options();
     my $setup_package_manager       = $cfg->setup_package_manager();
     my $setup_script_cmd            = $cfg->setup_script_cmd();
     my $sys_deps                    = $cfg->sys_deps();
@@ -249,6 +252,7 @@ sub run_config
     my $from_snap = 0;
     if ($cleanrun)
     {
+        $obj->clean_up();
         $obj->run_docker();
     }
     else
@@ -345,7 +349,7 @@ EOSCRIPTTTTTTT
 set -e -x
 $setup_script_cmd
 pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
-sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install \$pydeps"
+sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
 # cpanm -vvv IO::Async
 cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
@@ -391,7 +395,11 @@ if test "\$cmake_build_is_already_part_of_test_sh" != "true"
 then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
-go get -u github.com/tdewolff/minify/cmd/minify
+gourl="github.com/tdewolff/minify/cmd/minify"
+if ! go get -u "\$gourl"
+then
+    go install "\$gourl\@latest"
+fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"
 # bash bin/rebuild

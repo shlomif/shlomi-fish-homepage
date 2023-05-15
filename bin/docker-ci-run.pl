@@ -397,11 +397,23 @@ if test "\$cmake_build_is_already_part_of_test_sh" != "true"
 then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
-gourl="github.com/tdewolff/minify/cmd/minify"
-go mod
-if ! go get -u "\$gourl"
+if true
 then
-    go install "\$gourl\@latest"
+    a="`pwd`"
+    mkdir -p \$HOME/src
+    cd \$HOME/src
+    git clone https://github.com/tdewolff/minify.git
+    cd minify
+    make install
+    cd "\$a"
+else
+    gourl="github.com/tdewolff/minify/cmd/minify"
+    # go mod init
+    go mod init shlomifish.org/golang/m
+    if ! go get -u "\$gourl"
+    then
+        go install "\$gourl\@latest"
+    fi
 fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"

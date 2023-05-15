@@ -398,6 +398,7 @@ then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
 gourl="github.com/tdewolff/minify/cmd/minify"
+go mod
 if ! go get -u "\$gourl"
 then
     go install "\$gourl\@latest"

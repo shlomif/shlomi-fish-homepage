@@ -113,15 +113,17 @@ EOF
             ],
         }
     ),
-    'fedora:38' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:39' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
-            pip_options                 => "--break-system-packages",
-            setup_package_manager       => "sudo dnf -y install nosync ; $EN ;",
-            setup_script_cmd            => "$EN",
-            snapshot_names_base         => "shlomif/hpage_fedora",
-            sys_deps                    => [
+
+            # pip_options                 => "--break-system-packages",
+            pip_options           => "",
+            setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
+            setup_script_cmd      => "$EN",
+            snapshot_names_base   => "shlomif/hpage_fedora",
+            sys_deps              => [
                 qw/
                     GraphicsMagick
                     docbook-dtds
@@ -423,7 +425,7 @@ GetOptions(
 ) or die $!;
 
 # foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
+foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
 {
     __PACKAGE__->run_config(
         {

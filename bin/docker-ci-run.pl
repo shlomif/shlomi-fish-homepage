@@ -294,6 +294,15 @@ sub run_config
         $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
         $obj->do_system(
             { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
+        $obj->do_system(
+            {
+                cmd => [
+qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq"mkdir -p ../temp-git/\$_ ;cp -a \$_/ ../temp-git/\$_");'
+#,
+                ]
+            }
+        );
+
         $obj->docker(
             {
                 cmd => [

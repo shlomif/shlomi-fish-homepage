@@ -303,6 +303,16 @@ sub run_config
                 ]
             }
         );
+        my $suf = '--clones';
+        $obj->docker(
+            {
+                cmd => [
+                    'cp',
+                    ( "../trunk" . $suf . "" ),
+                    ( $obj->container() . ":/temp-git" . $suf ),
+                ]
+            }
+        );
     }
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $script = <<"EOSCRIPTTTTTTT";

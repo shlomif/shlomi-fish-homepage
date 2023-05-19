@@ -321,6 +321,7 @@ export LC_ALL=en_US.UTF-8
 export LANG="\$LC_ALL"
 export LANGUAGE="en_US:en"
 mv /temp-git ~/source
+mv /temp-git--clones ~/source--clones
 true || ls -lR /root
 $setup_package_manager
 cd ~/source

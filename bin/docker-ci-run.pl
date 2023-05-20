@@ -324,11 +324,15 @@ qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq"mkdir -p `dirname 
         );
     }
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
-    my $script = <<"EOSCRIPTTTTTTT";
-set -e -x
+    my $locale = <<"EOSCRIPTTTTTTT";
 export LC_ALL=en_US.UTF-8
 export LANG="\$LC_ALL"
 export LANGUAGE="en_US:en"
+EOSCRIPTTTTTTT
+
+    my $script = <<"EOSCRIPTTTTTTT";
+set -e -x
+$locale
 mv /temp-git ~/source
 mv /temp-git--clones ~/source--clones
 true || ls -lR /root
@@ -369,6 +373,7 @@ EOSCRIPTTTTTTT
 
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
+$locale
 $setup_script_cmd
 pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"

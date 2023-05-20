@@ -297,7 +297,7 @@ sub run_config
         $obj->do_system(
             {
                 cmd => [
-qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq"mkdir -p ../temp-git/\$_ ;cp -a \$_/ ../temp-git/\$_");'
+qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq"mkdir -p `dirname ../temp-git/\$_` ;cp -a \$_/ ../temp-git/\$_");'
 #,
                 ]
             }

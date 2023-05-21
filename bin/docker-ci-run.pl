@@ -39,7 +39,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
+    qw/ container install_langpack package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -50,6 +50,7 @@ my $configs = {
     'debian:sid' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_debian",
+            install_langpack            => "false",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
             pip_options           => "--break-system-packages",
@@ -116,6 +117,7 @@ EOF
     'fedora:39' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
+            install_langpack            => "true",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
             # pip_options                 => "--break-system-packages",
@@ -173,6 +175,7 @@ sub run_config
         or die "no $sys config";
 
     my $container                   = $cfg->container();
+    my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $pip_options                 = $cfg->pip_options();
     my $setup_package_manager       = $cfg->setup_package_manager();
@@ -338,11 +341,11 @@ mv /temp-git--clones ~/source--clones
 true || ls -lR /root
 $setup_package_manager
 cd ~/source
-if false
+if $install_langpack
 then
     $package_manager_install_cmd glibc-langpack-en glibc-locale-source
     # localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
-    localedef --force -i en_US -f UTF-8 en_US.UTF-8
+    # localedef --force -i en_US -f UTF-8 en_US.UTF-8
 fi
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake

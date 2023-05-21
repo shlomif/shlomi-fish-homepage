@@ -450,6 +450,14 @@ else
 fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"
+_local_dbtoepub="`pwd`/lib/repos/xslt10-stylesheets/xsl/epub/bin/dbtoepub"
+if test -e "\$_local_dbtoepub"
+then
+    export DBTOEPUB="/usr/bin/ruby \$_local_dbtoepub"
+elif test -x /usr/bin/dbtoepub
+then
+    export DBTOEPUB="/usr/bin/ruby \$(which dbtoepub)"
+fi
 # bash bin/rebuild
 TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT

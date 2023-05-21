@@ -168,6 +168,7 @@ sub run_config
     my ( $self, $args ) = @_;
 
     my $cleanrun   = $args->{cleanrun};
+    my $cleanup    = $args->{cleanup};
     my $force_load = $args->{force_load};
     my $sys        = $args->{sys};
 
@@ -258,6 +259,10 @@ sub run_config
     if ($cleanrun)
     {
         $obj->clean_up();
+        if ($cleanup)
+        {
+            die "doing only --cleanup!";
+        }
         $obj->run_docker();
     }
     else
@@ -459,8 +464,10 @@ use Getopt::Long qw/ GetOptions /;
 my $output_fn;
 my $force_load;
 my $cleanrun;
+my $cleanup;
 GetOptions(
     "cleanrun!"   => \$cleanrun,
+    "cleanup!"    => \$cleanup,
     "force-load!" => \$force_load,
     "output|o=s"  => \$output_fn,
 ) or die $!;
@@ -471,6 +478,7 @@ foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
     __PACKAGE__->run_config(
         {
             cleanrun   => $cleanrun,
+            cleanup    => $cleanup,
             force_load => $force_load,
             sys        => $sys,
         }

@@ -301,11 +301,18 @@ sub run_config
         # else...
         $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
         $obj->do_system(
-            { cmd => [ 'git', 'clone', '.', $temp_git_repo_path ] } );
+            {
+                cmd => [
+                    'git',                  'clone',
+                    '--recurse-submodules', '.',
+                    $temp_git_repo_path
+                ]
+            }
+        );
         $obj->do_system(
             {
                 cmd => [
-qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq"mkdir -p `dirname ../temp-git/\$_` ;cp -a \$_/ ../temp-git/\$_");'
+qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq[d=../temp-git/\$_ ; if test -d \\\$d ; then exit 0 ; fi ; mkdir -p `dirname \\\$d` ;cp -a \$_/ ../temp-git/\$_]);'
 #,
                 ]
             }

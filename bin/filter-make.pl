@@ -3,9 +3,9 @@
 use strict;
 use warnings;
 
-exec( 'zenfilter', '--count-step=200', '--last=50' );
+# exec( 'zenfilter', '--count-step=200', '--last=50' );
 
-# exec( 'zenfilter', '--count-step=200', '--last=500' );
+exec( 'zenfilter', '--count-step=200', '--last=500' );
 
 =head1 COPYRIGHT & LICENSE
 

@@ -392,7 +392,7 @@ EOSCRIPTTTTTTT
 set -e -x
 $locale
 $setup_script_cmd
-pydeps="beautifulsoup4 bs4 click cookiecutter lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
+pydeps="beautifulsoup4 bs4 click cookiecutter cssselect lxml pycotap rebookmaker vnu_validator weasyprint zenfilter Pillow WebTest"
 sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
 # cpanm -vvv IO::Async
 cpanm --notest IO::Async

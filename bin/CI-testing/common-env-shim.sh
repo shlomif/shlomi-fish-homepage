@@ -15,7 +15,7 @@ local_lib_shim() {
     test -e "$_local_dbtoepub" || git submodule update --init --recursive
     if test -e "$_local_dbtoepub"
     then
-        export DBTOEPUB="/usr/bin/ruby $_local_dbtoepub"
+        export DBTOEPUB="${DBTOEPUB:-/usr/bin/ruby $_local_dbtoepub}"
     fi
 }
 local_lib_shim ;

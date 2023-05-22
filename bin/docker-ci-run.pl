@@ -150,6 +150,8 @@ EOF
                     python3-devel
                     python3-libsass
                     ruby-devel
+                    rubygem-nokogiri
+                    rubygem-rexml
                     rubygem-rspec
                     sgml-common
                     the_silver_searcher

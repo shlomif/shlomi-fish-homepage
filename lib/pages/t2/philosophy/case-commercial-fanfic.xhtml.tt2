@@ -3,7 +3,7 @@
 [% ELSIF scope == "full" %]
 [% SET screenplay_shortage__remix = "" %]
 [% ELSE %]
-[% THROW "unknown scope = \"$scope\"" %]
+[% THROW "unknown scope = “$scope”" %]
 [% END %]
 
 [% PROCESS "Inc/faq.tt2" %]
@@ -855,7 +855,7 @@ Also see <a href="#all_people_are_good">"Most People are Good"</a> below.
 
 [% END %]
 
-[% WRAPPER h2_section id = "open_free_share_steal" title = "Openness, Freedom, Sharing, \"Stealing\", Remixing"  %]
+[% WRAPPER h2_section id = "open_free_share_steal" title = "Openness, Freedom, Sharing, “Stealing”, Remixing"  %]
 
 <p>
 It is hard to avoid the trend of [% FOSS %], [% opencontent %],

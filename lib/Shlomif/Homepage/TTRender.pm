@@ -158,10 +158,9 @@ sub render_compact_nav_blocks
     my $ret = '';
 
     $ret .= $NAV_BLOCKS__START;
-
     $ret .= _render_nav_blocks( { 'names' => $names } );
-
     $ret .= qq#</nav>#;
+
     return $ret;
 }
 

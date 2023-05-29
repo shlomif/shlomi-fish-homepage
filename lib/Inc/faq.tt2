@@ -290,9 +290,7 @@ site was unacceptable, and they were far too vague.
 [% PROCESS communicative_criticism__block %]
 [% END %]
 
-[% BLOCK my_sites %]
-
-[% WRAPPER h2_section id = "my-sites" title = "A List of Sites I Maintain" %]
+[% BLOCK my_sites__raw %]
 
 <ul>
 
@@ -360,6 +358,19 @@ Some FAQs I co-maintain:
 </p>
 
 [% INCLUDE shlomif_faqs_links %]
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE my_sites__raw %]
+[% PROCESS my_sites__raw %]
+[% END %]
+
+[% BLOCK my_sites %]
+
+[% WRAPPER h2_section id = "my-sites" title = "A List of Sites I Maintain" %]
+
+[% INCLUDE my_sites__raw %]
 
 [% END %]
 

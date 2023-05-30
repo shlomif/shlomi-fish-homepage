@@ -38,7 +38,7 @@ This document is Copyright by @{[$self->copyright_holder()]}, $year, and is avai
 under the
 terms of <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/$version/">the Creative Commons
-Attribution-ShareAlike License $version Unported</a> (or at your option any
+Attribution-ShareAlike License (CC-by-sa) $version Unported</a> (or at your option any
 later version).
 </p>
 
@@ -79,7 +79,7 @@ This document is Copyright by <a href="$url">@{[$self->copyright_holder()]}</a>,
 under the
 terms of <a rel="license"
 href="http://creativecommons.org/licenses/by/$version/">the Creative Commons
-Attribution License $version Unported</a> (or at your option any
+Attribution License (CC-by) $version Unported</a> (or at your option any
 later version of that licence).
 </p>
 
@@ -133,7 +133,7 @@ This document is Copyright by @{[$self->copyright_holder()]}, $year, and is made
 available under the
 terms of <a rel="license"
 href="http://creativecommons.org/licenses/by-nc-sa/$version/">the Creative Commons
-Attribution Noncommercial ShareAlike License $version Unported</a> (or at your
+Attribution Noncommercial ShareAlike License (CC-by-nc-sa) $version Unported</a> (or at your
 option any later version).
 </p>
 

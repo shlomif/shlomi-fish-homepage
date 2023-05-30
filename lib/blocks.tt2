@@ -8,9 +8,11 @@
 [%# patreon.svg from https://www.flaticon.com/free-icon/patreon_2111574?term=patreon&page=1&position=1&page=1&position=1&related_id=2111574&origin=tag
 %]
 <ul class="bt_nav">
+[% IF 0 %]
 <li>
 <a href="https://www.patreon.com/shlomif"><img alt="Patreon account" class="patreon" src="[% base_path %]images/patreon.svg" title="Support me using Patreon" /></a>
 </li>
+[% END %]
 <li>
 <a href="[% base_path || "./" %]">Home</a>
 </li>

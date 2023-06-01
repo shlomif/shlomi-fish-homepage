@@ -492,17 +492,36 @@ GetOptions(
     "output|o=s"  => \$output_fn,
 ) or die $!;
 
-# foreach my $sys ( grep { /debian/ } sort { $a cmp $b } ( keys %$configs ) )
-foreach my $sys ( grep { /fedora/ } sort { $a cmp $b } ( keys %$configs ) )
+# enable hires wallclock timing if possible
+use Benchmark ':hireswallclock';
+
+my %times;
+
+my @systems_names =
+    ( grep { /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
+SYSTEMS:
+foreach my $sys (@systems_names)
 {
-    __PACKAGE__->run_config(
-        {
-            cleanrun   => $cleanrun,
-            cleanup    => $cleanup,
-            force_load => $force_load,
-            sys        => $sys,
+    $times{$sys} = timeit(
+        1,
+        sub {
+            __PACKAGE__->run_config(
+                {
+                    cleanrun   => $cleanrun,
+                    cleanup    => $cleanup,
+                    force_load => $force_load,
+                    sys        => $sys,
+                }
+            );
+            return;
         }
     );
+}
+
+TIMES:
+foreach my $sys (@systems_names)
+{
+    print $sys, ": ", timestr( $times{$sys} ), "\n";
 }
 
 print "Success!\n";

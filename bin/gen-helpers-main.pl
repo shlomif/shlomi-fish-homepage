@@ -300,4 +300,4 @@ path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 exit if delete $ENV{LATEMP_STOP_GEN};
 
 my_system( [ 'gmake', 'bulk-make-dirs', 'sects_cache', 'mathjax_dest', ] );
-my_system( [ 'gmake', '-j3', 'tsc_cmdline', 'tsc_non_min_www', 'tsc_www', ] );
+my_system( [ 'gmake', '-j1', 'tsc_cmdline', 'tsc_non_min_www', 'tsc_www', ] );

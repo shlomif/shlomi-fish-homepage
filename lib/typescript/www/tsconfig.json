@@ -7,12 +7,13 @@
       "noImplicitReturns": true,
       "outDir": "../../../lib/out-babel/js",
       "paths": {
-          "big-integer": ["node_modules/big-integer/BigInteger.d.ts"],
-          "qunit": ["node_modules/@types/qunit"]
+          "big-integer": ["../../../node_modules/big-integer/BigInteger.d.ts"],
+          "jquery": ["../../../node_modules/@types/jquery/JQuery.d.ts"],
+          "qunit": ["../../../node_modules/@types/qunit"]
       },
       "target":"es2017",
       "types": ["jquery"],
-      "typeRoots": ["node_modules/@types", "node_modules"]
+      "typeRoots": ["../../../node_modules/@types", "../../../node_modules"]
   },
   "include": ["../../../src/ts/**/*.ts"]
 }

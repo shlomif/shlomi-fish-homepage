@@ -391,6 +391,10 @@ my $_section_navmenu_tree_contents = {
 "philosophy/computers/your-programming-language-must-suck/",
                 },
                 {
+                    text => "The “Broken Window” Fallacy",
+                    url  => "philosophy/computers/the-broken-window-fallacy/",
+                },
+                {
                     text  => "Perl",
                     url   => "philosophy/computers/perl/",
                     title =>

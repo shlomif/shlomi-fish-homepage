@@ -1,0 +1,88 @@
+[%- SET title = "The “Broken Window” Fallacy" -%]
+[%- SET desc = "FILL IN" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro %]
+
+<p>
+This is an essay
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "text" title = "The text" %]
+
+<p>
+This is the first in a series of essays about common fallacy patterns in the
+computer world. The first is what I call the <a href="http://en.wikipedia.org/wiki/Parable_of_the_broken_window">Broken Window Fallacy</a> of computers. As
+you may know in the broken window fallacy, one says that if something is
+damaged then it generates more revenue to the economy, because one will have
+to fix the damage. However, as is demonstrated in the article, it might as
+well been done differently.
+</p>
+
+<p>
+I talked with a few people on IRC about how I hated the fact that most people
+are still using Windows which is quickly getting infected with
+<a href="http://en.wikipedia.org/wiki/Malware">malware</a>, or
+<a href="http://www.shlomifish.org/no-ie/">Internet Explorer</a>, which
+is lagging behind Firefox and other browsers in its support for web standards,
+and makes the job of the web designer much harder. So they told me that it is
+actually a good thing because that way someone has to fight the malware (a
+very uphill battle), and they have more work as web developers.
+</p>
+
+<p>
+In a podcast Interview with him
+<a href="http://www.joelonsoftware.com/AboutMe.html">Joel Spolsky</a> said
+that Open Source Software will reduce the demand for programmers, because they
+make some tasks easier. And so programmers are happier, but they have to
+work less. He missed the point that a lot of proprietary software also does
+that, because it costs a fraction of the cost it would take to develop all
+this functionality from scratch. But that's not the main thing that is wrong
+in this argument.
+</p>
+
+<p>
+The problem is that tech workers can never run out of things to do. In the
+time they have to adapt their web-sites for MSIE, they can better spend on
+things like having better functionality, more web-sites, more pages. The time
+people spend making sure their Windows systems are free of malware, is better
+spent happpily using Linux and getting some actual, productive work done.
+</p>
+
+<p>
+So Windows and MSIE are a huge strain on society. I can never run out of
+things to do. At the moment, I have an idea for a commercial site, several
+essays I'm working on, tons of ideas for other essays, open source software
+to write, and lots of external open-source projects that would love to have
+me as a contributor. Trying to adapt my sites to broken proprietary software
+only slows me down. It also slows you down if you're a developer.
+</p>
+
+<p>
+So don't fall into the "broken window" fallacy. Encourage everyone around
+you to switch away from MSIE and Windows.
+</p>
+
+[%- END -%]
+
+[% WRAPPER links_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://shlomif-tech.livejournal.com/57811.html">Original version</a> - as a post
+on my tech blog.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% PROCESS cc_by_licence_section year = "2023" %]
+
+[% END %]

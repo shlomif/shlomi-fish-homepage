@@ -94,6 +94,7 @@ EOF
                     libprimesieve-dev
                     libpython3-dev
                     libxml2-dev
+                    libxslt1-dev
                     lynx
                     perl
                     pysassc
@@ -263,7 +264,8 @@ sub run_config
         $obj->clean_up();
         if ($cleanup)
         {
-            die "doing only --cleanup!";
+            warn "doing only --cleanup!";
+            return;
         }
         $obj->run_docker();
     }
@@ -498,7 +500,7 @@ use Benchmark ':hireswallclock';
 my %times;
 
 my @systems_names =
-    ( grep { /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
+    ( grep { 0 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

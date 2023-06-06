@@ -6,7 +6,7 @@
 [% WRAPPER intro %]
 
 <p>
-This is an essay
+Why ongoing and unnecessary problems are likely a net economical and psychological loss.
 </p>
 
 [%- END -%]
@@ -26,7 +26,7 @@ well been done differently.
 I talked with a few people on IRC about how I hated the fact that most people
 are still using Windows which is quickly getting infected with
 <a href="http://en.wikipedia.org/wiki/Malware">malware</a>, or
-<a href="http://www.shlomifish.org/no-ie/">Internet Explorer</a>, which
+<a href="[% base_path %]no-ie/">Internet Explorer</a>, which
 is lagging behind Firefox and other browsers in its support for web standards,
 and makes the job of the web designer much harder. So they told me that it is
 actually a good thing because that way someone has to fight the malware (a

@@ -76,6 +76,9 @@ EOF
                 qw/
                     build-essential
                     cookiecutter
+                    docbook-xsl
+                    docbook-xsl-ns
+                    docbook5-xml
                     graphicsmagick
                     hspell
                     hunspell-en-gb
@@ -500,7 +503,7 @@ use Benchmark ':hireswallclock';
 my %times;
 
 my @systems_names =
-    ( grep { 0 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
+    ( grep { 1 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

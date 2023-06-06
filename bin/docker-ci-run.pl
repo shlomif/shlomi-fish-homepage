@@ -503,7 +503,7 @@ use Benchmark ':hireswallclock';
 my %times;
 
 my @systems_names =
-    ( grep { 1 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
+    ( grep { 0 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

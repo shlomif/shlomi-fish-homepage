@@ -32,6 +32,18 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 </legalnotice>
 </info>
 
+<section xml:id="docker">
+
+<info>
+<title>Docker script</title>
+</info>
+
+<programlisting>
+perl bin/docker-ci-run.pl --cleanrun 2&gt;&amp;1 | tee "${HOME}/shlomif-homepage.build.out.txt"
+</programlisting>
+
+</section>
+
 <section xml:id="main">
 
 <info>

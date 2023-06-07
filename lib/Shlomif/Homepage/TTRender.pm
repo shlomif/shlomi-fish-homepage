@@ -310,9 +310,9 @@ sub _generate_include
         $INC_PREF, $input_tt2_page_path, $id, $INC_SUFFIX );
 }
 
-sub proc
+sub render
 {
-    my ( $self, $input_tt2_page_path ) = @_;
+    my ( $self, $input_tt2_page_path, $INPUT, ) = @_;
     _set_url( $latemp_fn = $input_tt2_page_path );
     $long_stories->fn( _url_obj() );
     $nav_block_renderer->fn( _url_obj() );
@@ -358,20 +358,27 @@ sub proc
     $set->( 'nav_menu_html',      "main_nav_menu_html" );
     $set->( 'sect_nav_menu_html', "sect-navmenu" );
     my $html = '';
-    $template->process( "src/$input_tt2_page_path.tt2",
-        $vars, \$html, binmode => ':utf8', )
+    $template->process( $INPUT, $vars, \$html, binmode => ':utf8', )
         or die $template->error();
-
     $toc->add_toc( \$html );
+    return ( \$html, [ $DEST, @fn, ], );
+}
+
+sub proc
+{
+    my ( $self, $input_tt2_page_path ) = @_;
+    my ( $htmlref, $pathref ) =
+        $self->render( $input_tt2_page_path, "src/$input_tt2_page_path.tt2", );
     if ( $self->stdout )
     {
         binmode STDOUT, ':encoding(utf-8)';
-        print $html;
+        print $$htmlref;
     }
     else
     {
-        path( $DEST, @fn, )->spew_utf8($html);
+        path(@$pathref)->spew_utf8($$htmlref);
     }
+    return;
 }
 
 1;

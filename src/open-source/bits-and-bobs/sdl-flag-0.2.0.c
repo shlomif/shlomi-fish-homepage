@@ -2,6 +2,10 @@
 #include <math.h>
 #include <signal.h>
 
+#ifndef SDLVER
+#define SDLVER 1
+#endif
+
 #include <SDL.h>
 
 
@@ -99,7 +103,9 @@ int main(int argc, char * argv[])
 
     Uint8 fill_color, pen_color;
 
+#if SDLVER == 1
     SDL_Surface *screen;
+#endif
     SDL_Rect * rects;
     SDL_Rect * the_rect;
     SDL_Event event;
@@ -130,13 +136,24 @@ int main(int argc, char * argv[])
      * Initialize the display in a 640x480 8-bit palettized mode,
      * requesting a software surface
      */
+#if SDLVER == 2
+SDL_Window *screen = SDL_CreateWindow("My Game Window",
+                          SDL_WINDOWPOS_UNDEFINED,
+                          SDL_WINDOWPOS_UNDEFINED,
+                          640, 480,
+                          SDL_WINDOW_FULLSCREEN | SDL_WINDOW_OPENGL);
+#else
     screen = SDL_SetVideoMode(640, 480, 8, SDL_SWSURFACE);
+#endif
     if ( screen == NULL ) {
         fprintf(stderr, "Couldn't set 640x480x8 video mode: %s\n",
                         SDL_GetError());
         exit(1);
     }
 
+#if SDLVER == 2
+SDL_Renderer *renderer = SDL_CreateRenderer(screen, -1, 0);
+#endif
 #if 0
     fill_color = (Uint8)SDL_MapRGB(screen->format, 0x00, 0x00, 0x00);
     pen_color = (Uint8)SDL_MapRGB(screen->format, 0xFF, 0xFF, 0xFF);

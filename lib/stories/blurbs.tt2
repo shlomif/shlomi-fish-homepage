@@ -1,6 +1,6 @@
-[% BLOCK humanity_licensing %]
+[%- BLOCK humanity_licensing -%]
 
-[% WRAPPER h2_section id="licence" title="Licence"%]
+[%- WRAPPER h2_section id = "licence" title = "Licence" -%]
 
 <p>
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img
@@ -19,6 +19,6 @@ href="http://www.shlomifish.org/me/contact-me/"
 >http://www.shlomifish.org/me/contact-me/</a>.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

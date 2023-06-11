@@ -1,4 +1,4 @@
-[% BLOCK project_euler_progress %]
+[%- BLOCK project_euler_progress -%]
 <p>
 Solved 405
 <a href="https://projecteuler.net/">Project Euler</a> problems, which only
@@ -7,4 +7,4 @@ Solved 405
 <p>
 <img src="https://projecteuler.net/profile/shlomif.png" alt="Shlomi Fish’s Project Euler badge"/>
 </p>
-[% END %]
+[%- END -%]

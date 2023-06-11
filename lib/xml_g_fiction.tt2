@@ -2,30 +2,30 @@
 This header contains macros related to XML-Grammar-Fiction ,
 XML-Grammar-Screenplay , Fiction-Text , Fiction-XML, Screenplay-Text
 and Screenplay-XML .
-%]
+-%]
 
-[% BLOCK link_to_fiction_text %]
+[%- BLOCK link_to_fiction_text -%]
 <a href="[% basename %].txt">[% screenplay_desc %]Source in text format</a>
 (requires
 <a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction’s</a> Fiction-Text processing, in order to render)
-[% END %]
+[%- END -%]
 
-[% BLOCK link_to_screenplay %]
+[%- BLOCK link_to_screenplay -%]
 <a href="[% basename %].txt">[% screenplay_desc %]Source in text format</a>
 (requires
 <a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">XML-Grammar-Fiction’s</a> Screenplay-Text processing, in order to render)
-[% END %]
+[%- END -%]
 
-[% BLOCK link_to_epub_only %]
+[%- BLOCK link_to_epub_only -%]
 <li>
 <p>
 <a href="[% basename %].epub">EPUB eBook</a> - (free download).
 </p>
 </li>
-[% END %]
+[%- END -%]
 
-[% BLOCK link_to_epub %]
-[% PROCESS link_to_epub_only basename=basename %]
+[%- BLOCK link_to_epub -%]
+[%- PROCESS link_to_epub_only basename=basename -%]
 <li>
 <p>
 <a href="[% basename %].raw.html">Raw HTML</a> - (view online without
@@ -37,15 +37,15 @@ style and formatting).
 <a href="[% basename %].pdf">PDF</a> - (view online or download for free).
 </p>
 </li>
-[% END %]
+[%- END -%]
 
-[% BLOCK screenplay_read_online__dwim %]
+[%- BLOCK screenplay_read_online__dwim -%]
 
-[% WRAPPER screenplay_read_online  %]
+[%- WRAPPER screenplay_read_online -%]
 
 <ul>
 
-[% PROCESS link_to_epub basename = basename,  %]
+[%- PROCESS link_to_epub basename = basename, -%]
 
 <li>
 <p>

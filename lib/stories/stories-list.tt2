@@ -1,30 +1,32 @@
-[% BLOCK tagline %]
+[%- BLOCK tagline -%]
 <h2 id="tagline">[% text %]</h2>
-[% END %]
+[%- END -%]
 
-[% BLOCK humour_link %][% base_path %]humour/[% humour_href %][% END %]
+[%- BLOCK humour_link -%]
+[% base_path %]humour/[% humour_href %]
+[%- END -%]
 
-[% BLOCK humour_story %]
+[%- BLOCK humour_story -%]
 <div class="story">
 <[% tag %] id="[% id %]"><a
 href="[% INCLUDE humour_link %]">[% text %]</a></[% tag %]>
-[% content %]
+[%- content -%]
 </div>
-[% END %]
+[%- END -%]
 
-[% BLOCK inactive_humour_stories_list_text %]
+[%- BLOCK inactive_humour_stories_list_text -%]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[1], paragraph_tagline=>1, tag=>'h3') %]
+[%- long_stories.calc_all_stories_entries(only_inactives=>[1], paragraph_tagline=>1, tag=>'h3') -%]
 
-[% END %]
+[%- END -%]
 
-[% BLOCK active_humour_stories_list_text %]
+[%- BLOCK active_humour_stories_list_text -%]
 
-[% long_stories.calc_all_stories_entries(only_inactives=>[0], paragraph_tagline=>1, tag=>'h3',) %]
+[%- long_stories.calc_all_stories_entries(only_inactives=>[0], paragraph_tagline=>1, tag=>'h3',) -%]
 
-[% END %]
+[%- END -%]
 
-[% BLOCK rejects_road_to_heaven %]
+[%- BLOCK rejects_road_to_heaven -%]
 
 <humour_story tag="h4" id="road-to-heaven" humour_href="RoadToHeaven/"
 text="The Road to Heaven is Paved with Bad Intentions">
@@ -36,75 +38,74 @@ to prevent World War II.
 
 </humour_story>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK screenplay_github_repo %]
+[%- BLOCK screenplay_github_repo -%]
 <a href="[% url %]">Version control <b>repository</b> for the
 screenplay’s source</a> on GitHub. It is useful for cloning, sending pull
 requests, and filing bugs/issues in the bug tracker
-[% END %]
+[%- END -%]
 
-[% BLOCK story_ongoing_episode_li %]
+[%- BLOCK story_ongoing_episode_li -%]
 <li>
 <p>
 <a href="ongoing-text.html"><b>The Ongoing Text</b></a>
 </p>
 <ul>
-[% PROCESS link_to_epub basename = epub_prefix _ base, %]
+[%- PROCESS link_to_epub basename = epub_prefix _ base, -%]
 </ul>
 </li>
-[% END %]
+[%- END -%]
 
-[% BLOCK story_episode_li %]
+[%- BLOCK story_episode_li -%]
 <li>
 <p>
 <a href="[% (use_screenplay_html_prefix ? screenplay_html_prefix : epub_prefix) _ base %].html"><b>[% story_title %]</b></a>
 </p>
 <ul>
-[% PROCESS link_to_epub basename = epub_prefix _ base, %]
+[%- PROCESS link_to_epub basename = epub_prefix _ base, -%]
 </ul>
 </li>
-[% END %]
+[%- END -%]
 
-
-[% BLOCK screenplay_read_online %]
+[%- BLOCK screenplay_read_online -%]
 <div class="docbook_formats h2">
 
 <h2 id="read">Read Online or Download (Formats)</h2>
 
-[% content %]
+[%- content -%]
 
 </div>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK humour_stories_list_text %]
+[%- BLOCK humour_stories_list_text -%]
 
-[% UNLESS no_stories_wrapper %]
+[%- UNLESS no_stories_wrapper -%]
 <section class="long_stories">
 <header>
 <h2 id="list-of-stories">List of Stories</h2>
 </header>
-[% END %]
+[%- END -%]
 <section>
 <header>
 <h2 id="active_stories">Active Stories</h2>
 </header>
-[% INCLUDE active_humour_stories_list_text %]
+[%- INCLUDE active_humour_stories_list_text -%]
 </section>
 <section>
 <header>
 <h2 id="inactive_stories"><a href="[% base_path %]humour/stories/inactive/">Inactive Stories</a></h2>
 </header>
-[% INCLUDE inactive_humour_stories_list_text %]
+[%- INCLUDE inactive_humour_stories_list_text -%]
 </section>
-[% UNLESS no_stories_wrapper %]
+[%- UNLESS no_stories_wrapper -%]
 </section>
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% BLOCK active_humour_stories__competence %]
+[%- BLOCK active_humour_stories__competence -%]
 
 <p>
 <b>Note:</b> many of my stories are <b>not</b> too <b>realistic</b>, and aim
@@ -116,22 +117,22 @@ changes), and wish that my words and deeds will carry reality <b>forward</b>
 instead of preserving the status quo.
 </p>
 
-[% IF 0 %]
+[%- IF 0 -%]
 <img src="[% base_path %]humour/images/14920899703_243677cbf4_o--crop150w.webp" alt="Rainbow Dash from MLP: FiM" class="story_logo" style="float:right; max-width: 40%; " />
-[% ELSE %]
+[%- ELSE -%]
 <p style="text-align: center ;">
 <img alt="Strong Woman Captioned Image starring Summer Glau: “A strong woman understands that the gifts such as logic, decisiveness, and strength, are just as feminine as intuition and emotional connection. She values and uses all of her gifts.”" src="[% base_path %]humour/images/strong-woman-meme-summer-glau/656941.webp" style="float: none; margin: 2em auto; max-width: 60%; max-height: 400px;" title="Summer Glau is a competent geeky polymath hackeress. She doesn't let her emotions permanently interfere with her hacking." />
 </p>
-[% END %]
+[%- END -%]
 
 <p>
 <a href="http://classics.mit.edu/Aristotle/poetics.1.1.html">Like Aristotle notes about Homer</a>, the characters in my fics are <b>competent</b>: confident, open, forgiving, funny [I hope], greedy and ambitious, resourceful, generous, passionate, socially capable, sexually assertive, and sexy.
 </p>
-[% END %]
+[%- END -%]
 
-[% BLOCK active_humour_stories__intro %]
+[%- BLOCK active_humour_stories__intro -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 Here you can read <a href="http://en.wikipedia.org/wiki/Novella">novellas</a>
@@ -146,17 +147,17 @@ including <a href="[% base_path %]humour/fortunes/">quotes</a>,
 <a href="[% base_path %]humour/bits/facts/">factoids</a>.
 </p>
 
-[% INCLUDE active_humour_stories__competence %]
+[%- INCLUDE active_humour_stories__competence -%]
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% BLOCK active_humour_stories__credits %]
+[%- BLOCK active_humour_stories__credits -%]
 
-[% WRAPPER credits_sect %]
+[%- WRAPPER credits_sect -%]
 
-[% WRAPPER h3_section href = "https://wall.alphacoders.com/big.php?i=656941" id = "strong_woman_meme_credits" title = "“Strong Woman” Image starring Summer Glau Credit" %]
+[%- WRAPPER h3_section href = "https://wall.alphacoders.com/big.php?i=656941" id = "strong_woman_meme_credits" title = "“Strong Woman” Image starring Summer Glau Credit" -%]
 
 <p>
 Meme.

@@ -1,7 +1,7 @@
-[% BLOCK art__my_image %]
+[%- BLOCK art__my_image -%]
 
-[% SET full_url = "${base_path}art/$url" %]
-[% SET full_thumb_url = "${base_path}art/$thumb_url" %]
+[%- SET full_url = "${base_path}art/$url" -%]
+[%- SET full_thumb_url = "${base_path}art/$thumb_url" -%]
 
 <article class="design">
 
@@ -13,13 +13,13 @@
     src="[% full_thumb_url %]" alt="[% thumb_alt %]"
     /></a>
 
-[% content %]
+[%- content -%]
 
 </article>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK common_art__graphics_design %]
+[%- BLOCK common_art__graphics_design -%]
 
 <div class="graphic_designs">
 
@@ -123,4 +123,4 @@ A Dungeons&amp;Dragons themed cartoon I created - comparing horse lances.
 
 </div>
 
-[% END %]
+[%- END -%]

@@ -78,7 +78,7 @@ to donate less, and other well-off people may opt to follow suit as well.
 [%- END -%]
 
 [%- BLOCK rellink -%]
-[% base_path _ url %]
+[%- base_path _ url -%]
 [%- END -%]
 
 [%- BLOCK github_cpan_dist_links -%]

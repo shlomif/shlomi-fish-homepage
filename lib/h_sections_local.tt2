@@ -1,4 +1,3 @@
-[%# PROCESS "h_sections.tt2" %]
 [%- BLOCK h_section -%]
 [% SET section_element = (section_element || "section") %]
 [%# THROW "dr section_element = ${section_element}" %]

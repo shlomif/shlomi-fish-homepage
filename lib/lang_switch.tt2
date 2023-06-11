@@ -1,4 +1,4 @@
-[% BLOCK lang_switch %]
+[%- BLOCK lang_switch -%]
 <div class="lang_switch">
 <ul>
 <li class="title"><b>Switch Language</b></li>
@@ -6,4 +6,4 @@
 <li class="lang"><a href="[% url_heb %]">Hebrew (עברית)</a></li>
 </ul>
 </div>
-[% END %]
+[%- END -%]

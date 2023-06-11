@@ -242,9 +242,9 @@ publicly linked to. Please send comments to
 <a href="http://perldoc.perl.org/functions/[% f %].html">[% content %]</a>
 [%- END -%]
 
-[% BLOCK url_body_link %]
+[%- BLOCK url_body_link -%]
 <a href="[% href %]">[% href %]</a>
-[% END %]
+[%- END -%]
 
 [%- BLOCK start_html -%]
 [% UNLESS latemp_plain_html %]
@@ -260,13 +260,13 @@ publicly linked to. Please send comments to
 
 <html [% IF latemp_plain_html %]lang="[% html_lang %]"[% ELSE %]xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]"[% END %]>
 <head>
-[% SET title = title _ title_suffix %]
+[%- SET title = title _ title_suffix -%]
 <title>[% process_title(title=title) %]</title>
-[% IF xhtml1 %]
+[%- IF xhtml1 -%]
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-[% ELSE %]
+[%- ELSE -%]
 <meta charset="utf-8"/>
-[% END %]
+[%- END -%]
 <meta name="author" content="Shlomi Fish"/>
 <meta name="description" content="[% desc || title %]"/>
 <meta name="keywords" content="Shlomi Fish,Shlomi,Fish,Perl,Humour,Israel,Programming,Open Source,Free Software,Presentations,Philosophy,Freecell,Freecell Solver,GIMP,Software[% more_keywords ? ("," _ more_keywords) : "" %]"/>
@@ -278,20 +278,20 @@ publicly linked to. Please send comments to
 [% # Let the browser know that the website is optimized for mobile
 %]
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-[% INCLUDE "Inc/head_javascripts.tt2" %]
+[%- INCLUDE "Inc/head_javascripts.tt2" -%]
 [%- UNLESS raw_fn_path %]
 <link rel="alternate" type="application/rss+xml" title="Shlomi Fish’s Homepage RSS Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/rss"/>
 <link rel="alternate" type="application/atom+xml" title="Shlomi Fish’s Atom Feed" href="http://www.livejournal.com/community/shlomif_hsite/data/atom"/>
-[% END %]
+[%- END -%]
 
 [% TRY %]
 [% INCLUDE page_extra_head_elements %]
 [% CATCH file %]
 [% END %]
 
-[% IF apply_screenplay_style %]
+[%- IF apply_screenplay_style -%]
 <link rel="stylesheet" href="[% base_path %]screenplay.css" media="screen"/>
-[% END %]
+[%- END -%]
 </head>
 
 <body[% body_params %]>
@@ -299,7 +299,7 @@ publicly linked to. Please send comments to
 <div id="header">
 
 <div class="leading_path">
-[% leading_path_string %]
+[%- leading_path_string -%]
 </div>
 </div>
 
@@ -324,19 +324,19 @@ publicly linked to. Please send comments to
 [% UNLESS xhtml1 %]</header>[% END %]
 [%- END -%]
 
-[% BLOCK share_this_button %]
+[%- BLOCK share_this_button -%]
 <p class="share">
 <a href="http://www.addtoany.com/share_save?linkurl=[% escaped_url %]&amp;linkname="><img src="[% base_path %]images/share_save_171_16.png" width="171" height="16" class="bless" alt="Share/Bookmark"/></a><br/>
 </p>
 [%- END -%]
 
-[% BLOCK hebrew_div %]
+[%- BLOCK hebrew_div -%]
 <div class="hebrew" xml:lang="he-IL">
-[% content %]
+[%- content -%]
 </div>
-[% END %]
+[%- END -%]
 
-[% BLOCK comments_engine_xhtml5 %]
+[%- BLOCK comments_engine_xhtml5 -%]
 <script src="https://utteranc.es/client.js"
         data-repo="shlomif/shlomif-homesite-comments"
         data-issue-term="url"
@@ -345,7 +345,7 @@ publicly linked to. Please send comments to
         crossorigin="anonymous"
         async="async">
 </script>
-[% END %]
+[%- END -%]
 
 [%- BLOCK end_html -%]
 <script [% script_type %]>
@@ -360,9 +360,9 @@ shlomif_load_nav("[% raw_fn_path %]");
 <[% nav_tag %] class="navbar" id="navbar">
 <div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img alt="EvilPHish by Illiad" class="site_icon" src="[% base_path %]images/evilphish-flipped.png"/></a></div>
 
-[% nav_links_with_accesskey %]
+[%- nav_links_with_accesskey -%]
 <div id="nav_menu">
-[% nav_menu_html %]
+[%- nav_menu_html -%]
 </div>
 <div class="about_author">
 
@@ -486,9 +486,9 @@ deviantART</a></p>
 </div>
 
 <div class="foot_left">
-[% END %]
+[%- END -%]
 
-[% INCLUDE webmaster_footer %]
+[%- INCLUDE webmaster_footer -%]
 
 <p>
 If you like what you see here, or have any comments, suggestions, or

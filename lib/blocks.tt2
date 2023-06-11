@@ -123,14 +123,14 @@ control and other resources.
 
 [%- END -%]
 
-[% BLOCK eng_qp_lect %]
-[% PROCESS qp_lect dir = "slides", %]
-[% END %]
+[%- BLOCK eng_qp_lect -%]
+[%- PROCESS qp_lect dir = "slides", -%]
+[%- END -%]
 
-[% PROCESS "h_sections_local.tt2" %]
-[% PROCESS "Inc/common_sections.tt2" %]
+[%- PROCESS "h_sections_local.tt2" -%]
+[%- PROCESS "Inc/common_sections.tt2" -%]
 
-[% BLOCK x11_licence %]
+[%- BLOCK x11_licence -%]
 [% WRAPPER licence_sect %]
 
 <p>
@@ -139,8 +139,8 @@ under <a href="http://en.wikipedia.org/wiki/MIT_License">the MIT/Expat
 License</a>, a permissive software licence.
 </p>
 
-[% END %]
-[% END %]
+[%- END -%]
+[%- END -%]
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
@@ -160,7 +160,7 @@ License</a>, a permissive software licence.
 </section>
 [%- END -%]
 
-[% BLOCK docbook_formats %]
+[%- BLOCK docbook_formats -%]
 <section class="docbook_formats h2">
 
 <header>
@@ -197,10 +197,10 @@ page per section.
 </ul>
 
 </section>
-[% END %]
+[%- END -%]
 
-[% BLOCK under_construction_note %]
-[% WRAPPER note  %]
+[%- BLOCK under_construction_note -%]
+[%- WRAPPER note -%]
 
 <header>
 <h2 id="under-construction-note">Note</h2>
@@ -213,22 +213,22 @@ publicly linked to. Please send comments to
 </p>
 
 [%- END -%]
-[% END %]
+[%- END -%]
 
-[% BLOCK docbook_formats_w_base %]
-[% INCLUDE docbook_formats h2_id = h2_id h2_text = h2_text indiv_href = base _ "/" epub_href = base _ ".epub" orig_xml_href = base _ ".xml" pdf_href = base _ ".pdf" %]
-[% END %]
+[%- BLOCK docbook_formats_w_base -%]
+[%- INCLUDE docbook_formats h2_id = h2_id h2_text = h2_text indiv_href = base _ "/" epub_href = base _ ".epub" orig_xml_href = base _ ".xml" pdf_href = base _ ".pdf" -%]
+[%- END -%]
 
-[% PROCESS "common_art.tt2" %]
-[% PROCESS "lang_switch.tt2" %]
-[% PROCESS "Inc/nav_blocks.tt2" %]
-[% PROCESS "Inc/riddle.tt2" %]
-[% PROCESS "Inc/judaism_and_israel.tt2" %]
-[% PROCESS "Inc/emma_watson.tt2" %]
-[% PROCESS "Inc/proj_euler.tt2" %]
-[% PROCESS "stories/blurbs.tt2" %]
-[% PROCESS "stories/stories-list.tt2" %]
-[% PROCESS "xml_g_fiction.tt2" %]
+[%- PROCESS "common_art.tt2" -%]
+[%- PROCESS "lang_switch.tt2" -%]
+[%- PROCESS "Inc/nav_blocks.tt2" -%]
+[%- PROCESS "Inc/riddle.tt2" -%]
+[%- PROCESS "Inc/judaism_and_israel.tt2" -%]
+[%- PROCESS "Inc/emma_watson.tt2" -%]
+[%- PROCESS "Inc/proj_euler.tt2" -%]
+[%- PROCESS "stories/blurbs.tt2" -%]
+[%- PROCESS "stories/stories-list.tt2" -%]
+[%- PROCESS "xml_g_fiction.tt2" -%]
 
 [%- BLOCK cpan_dist -%]
 <a href="http://metacpan.org/release/[% d %]">[% content %]</a>

@@ -17,5 +17,5 @@ my $obj = Shlomif::Homepage::TTRender->new(
     my ($htmlref) = $obj->render( "art/index.xhtml", \ "[% base_path %]" );
 
     # TEST
-    like( $$htmlref, qr#\A\s{,25}\.\./\z#ms, "->render base_path test", )
+    like( $$htmlref, qr#\A\s{,20}\.\./\z#ms, "->render base_path test", )
 }

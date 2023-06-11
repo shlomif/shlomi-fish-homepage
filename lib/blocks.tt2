@@ -1,10 +1,10 @@
-[% PROCESS "Inc/acronyms.tt2" %]
-[% PROCESS "Inc/email.tt2" %]
+[%- PROCESS "Inc/acronyms.tt2" -%]
+[%- PROCESS "Inc/email.tt2" -%]
 
-[% SET html_lang = "en" %]
-[% SET HEBREW_XML_LANG_SCRIPT = '' %]
+[%- SET html_lang = "en" -%]
+[%- SET HEBREW_XML_LANG_SCRIPT = '' -%]
 
-[% BLOCK webmaster_footer %]
+[%- BLOCK webmaster_footer -%]
 [%# patreon.svg from https://www.flaticon.com/free-icon/patreon_2111574?term=patreon&page=1&position=1&page=1&position=1&related_id=2111574&origin=tag
 %]
 <ul class="bt_nav">
@@ -75,13 +75,13 @@ to donate less, and other well-off people may opt to follow suit as well.
 
 </div>
 
-[% END %]
+[%- END -%]
 
 [%- BLOCK rellink -%]
 [% base_path _ url %]
 [%- END -%]
 
-[% BLOCK github_cpan_dist_links %]
+[%- BLOCK github_cpan_dist_links -%]
 <ul>
 
 <li>
@@ -99,9 +99,9 @@ control and other resources.
 [% content %]
 
 </ul>
-[% END %]
+[%- END -%]
 
-[% BLOCK qp_lect %]
+[%- BLOCK qp_lect %]
 
 <li>
 <p>
@@ -121,7 +121,7 @@ control and other resources.
 </p>
 </li>
 
-[% END %]
+[%- END -%]
 
 [% BLOCK eng_qp_lect %]
 [% PROCESS qp_lect dir = "slides", %]

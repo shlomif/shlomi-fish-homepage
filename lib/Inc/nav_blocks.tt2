@@ -1,4 +1,4 @@
-[% BLOCK nav_blocks %]
+[%- BLOCK nav_blocks -%]
 
 <div class="nav_blocks">
 
@@ -6,8 +6,8 @@
 <h2 id="nav_blocks">Navigation Blocks</h2>
 </header>
 
-[% content %]
+[%- content -%]
 
 </div>
 
-[% END %]
+[%- END -%]

@@ -1,4 +1,4 @@
-[% BLOCK emma_watson_common_links %]
+[%- BLOCK emma_watson_common_links -%]
 
 <li>
 <p>
@@ -20,9 +20,9 @@ Twitter feed.
 </p>
 </li>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK emma_watson__see_also %]
+[%- BLOCK emma_watson__see_also -%]
 
 <li>
 <p>
@@ -66,16 +66,16 @@ Street</i> / <i>The Muppet Show</i> hosting Harry Potter</a>.
 </p>
 </li>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK emma_watson_intro_text %]
+[%- BLOCK emma_watson_intro_text -%]
 
-[% SET emmaw_wikip = "https://en.wikipedia.org/wiki/Emma_Watson" %]
+[%- SET emmaw_wikip = "https://en.wikipedia.org/wiki/Emma_Watson" -%]
 
 <p>
 <a href="[% GET emmaw_wikip %]">Emma Watson</a>
-is a 1990-born British activist, actress, and model, who rose to fame playing
-Hermione Granger
+is a 1990-born British creator, activist, actress, and model, who rose to fame
+playing Hermione Granger
 in <a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">the
 Harry Potter films</a>, and (quoting from
 <a href="[% GET emmaw_wikip %]">the Wikipedia page</a>):
@@ -89,9 +89,9 @@ conducted by Empire magazine. In May 2014, BuzzFeed dubbed her the “most
 </p>
 </blockquote>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK emma_watson_intro %]
+[%- BLOCK emma_watson_intro -%]
 
 <!--
 Taken from: https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg
@@ -99,6 +99,6 @@ Taken from: https://en.wikipedia.org/wiki/File:Emma_Watson_2013.jpg
 
 <img src="[% base_path %]humour/bits/facts/images/emwatson-small.webp" alt="Photo of Emma Watson from the Wikipedia" class="story_logo emma_watson"/>
 
-[% PROCESS emma_watson_intro_text  %]
+[%- INCLUDE emma_watson_intro_text  -%]
 
-[% END %]
+[%- END -%]

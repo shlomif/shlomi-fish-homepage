@@ -1,5 +1,5 @@
-[% BLOCK riddle %]
+[%- BLOCK riddle -%]
 <blockquote class="riddle">
-[% content %]
+[%- content -%]
 </blockquote>
-[% END %]
+[%- END -%]

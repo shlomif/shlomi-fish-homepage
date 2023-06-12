@@ -36,14 +36,14 @@
 </li>
 </ul>
 
-[% IF is_forked_site %]
+[%- IF is_forked_site -%]
 
 <p>
 This page is derived from the <a href="[% orig_url %]">original page</a>
 on Shlomi Fish’s personal website. See <a href="[% text_ORIG_URL_PREFIX %]meta/copyrights/">the Creative Commons copyright terms</a>.
 </p>
 
-[% ELSE %]
+[%- ELSE -%]
 
 <p>
 Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
@@ -52,7 +52,7 @@ and <a href="[% base_path %]me/rindolf/">“Rindolf”</a>),
 [% PROCESS mailto_link_to_self email = "shlomif@gmail.com" -%].
 </p>
 
-[% END %]
+[%- END -%]
 
 <div id="footer_donate">
 
@@ -63,7 +63,7 @@ that bring me joy, and make me a little poorer financially, I'd appreciate
 <a href="https://www.shlomifish.org/meta/donate/">donations</a>.
 </p>
 
-[% IF 0 %]
+[%- IF 0 -%]
 
 <p>
 Specifically, my father requested that if I ever meet <a href="https://www.shlomifish.org/humour/bits/facts/Taylor-Swift/">Taylor Swift</a>,
@@ -71,7 +71,7 @@ I'd ask her to donate 17 million U.S. Dollars to his account. Note that she may 
 to donate less, and other well-off people may opt to follow suit as well.
 </p>
 
-[% END %]
+[%- END -%]
 
 </div>
 
@@ -131,7 +131,7 @@ control and other resources.
 [%- PROCESS "Inc/common_sections.tt2" -%]
 
 [%- BLOCK x11_licence -%]
-[% WRAPPER licence_sect %]
+[%- WRAPPER licence_sect -%]
 
 <p>
 [% name %] [% IF plural %]are[% ELSE %]is[% END %] free and open-source software (FOSS) distributed
@@ -144,19 +144,19 @@ License</a>, a permissive software licence.
 
 [%- BLOCK cc_by_licence_section -%]
 [%- WRAPPER licence_sect %]
-[% license_obj.by_british_blurb(version=(version||"3.0"), year=year) %]
+[%- license_obj.by_british_blurb(version=(version||"3.0"), year=year) -%]
 [%- END -%]
 [%- END -%]
 
 [%- BLOCK cc_by_nc_sa_licence_section -%]
 [%- WRAPPER licence_sect %]
-[% license_obj.by_nc_sa_british_blurb(year=year) %]
+[%- license_obj.by_nc_sa_british_blurb(year=year) -%]
 [%- END -%]
 [%- END -%]
 
 [%- BLOCK note -%]
 <section class="note">
-[% content %]
+[%- content -%]
 </section>
 [%- END -%]
 
@@ -247,9 +247,9 @@ publicly linked to. Please send comments to
 [%- END -%]
 
 [%- BLOCK start_html -%]
-[% UNLESS latemp_plain_html %]
+[%- UNLESS latemp_plain_html -%]
 <?xml version="1.0" encoding="utf-8"?>
-[% END %]
+[%- END -%]
 
 [% TRY %]
 [% INCLUDE latemp_html_doctype %]
@@ -315,9 +315,9 @@ publicly linked to. Please send comments to
 [% IF apply_screenplay_style %][% main_class.addClass("screenplay_style") %][% END %]
 <main[% main_class.as_html() %] id="main">
 [%sect_nav_menu_html%]
-[% IF rtl_layout %]
+[%- IF rtl_layout -%]
 <div class="hebrew" xml:lang="he-IL">
-[% END %]
+[%- END -%]
 
 [% UNLESS xhtml1 %]<header>[% END %]
 <h1>[% h1title || title %]</h1>
@@ -401,19 +401,19 @@ Wiki</a></li>
 [%- IF xhtml1 %]
 <p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless">
 <img class="highlight bless" src="[% base_path %]images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
-[% ELSE %]
+[%- ELSE -%]
 <p><a href="http://validator.w3.org/check/referer" title=
 "Valid XHTML5!" class="bless"><img class="highlight bless" src=
 "[% base_path %]images/xh11-btn.png" alt="Valid XHTML5!"/></a></p>
-[% END -%]
+[%- END -%]
 
 <p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
 class="bless"><img class="highlight bless" src="[% base_path %]images/css-btn.png"
 alt="Valid CSS!"/></a></p>
 
 [%- TRY %]
-[% INCLUDE page_blog_roll %]
-[% CATCH file %]
+[%- INCLUDE page_blog_roll -%]
+[%- CATCH file -%]
 [% END -%]
 
 (((((include "shlomif_elsewhere.htmlish")))))
@@ -472,16 +472,16 @@ deviantART</a></p>
 </div>
 </div>
 
-[% SET reduce_footer_size = 1 %]
-[% IF xhtml1 %]
+[%- SET reduce_footer_size = 1 -%]
+[%- IF xhtml1 -%]
 <div class="footer" id="footer">
-[% ELSE %]
+[%- ELSE -%]
 <footer id="footer">
-[% END %]
+[%- END -%]
 
 <hr/>
 
-[% UNLESS reduce_footer_size %]
+[%- UNLESS reduce_footer_size -%]
 <div class="righty">
 </div>
 
@@ -510,23 +510,23 @@ taken from the
 of an EvilPHish”</a> cartoon of
 <a href="http://www.userfriendly.org/">UserFriendly.org</a>.
 </p>
-[% UNLESS reduce_footer_size %]
+[%- UNLESS reduce_footer_size -%]
 </div>
-[% END %]
+[%- END -%]
 
-[%- IF raw_fn_path %]
+[%- IF raw_fn_path -%]
 <a href="[% base_path || "./" %]"><img alt="Back to my Homepage" class="bk2hp" src="[% base_path %]images/bk2hp-v2.min.svg"/></a>
-[% ELSE %]
+[%- ELSE -%]
 <div class="rightalign">
 <a href="[% base_path %]meta/hosting/#hostgator"><img alt="Hosted at HostGator" class="highlight" src="[% base_path %]images/hostgator.png" style="border : 0" title="Hosted at HostGator"/></a>
 </div>
-[% END -%]
+[%- END -%]
 
-[%- IF xhtml1 %]
+[%- IF xhtml1 -%]
 </div>
-[% ELSE %]
+[%- ELSE -%]
 </footer>
-[% END -%]
+[%- END -%]
 
 </body>
 </html>
@@ -534,18 +534,18 @@ of an EvilPHish”</a> cartoon of
 
 [%- BLOCK wrap_html -%]
 
-[% IF rtl_layout %]
-[% SET is_hebrew = 1 %]
-[% SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '</div>' %]
-[% END %]
+[%- IF rtl_layout -%]
+[%- SET is_hebrew = 1 -%]
+[%- SET HEBREW_XML_LANG_SCRIPT = HEBREW_XML_LANG_SCRIPT _ '</div>' -%]
+[%- END -%]
 
-[% IF xhtml1 %]
-[% SET script_type=' type="text/javascript"' %]
-[% SET nav_tag='div' %]
-[% ELSE %]
-[% SET script_type=' ' %]
-[% SET nav_tag='nav' %]
-[% END %]
+[%- IF xhtml1 -%]
+[%- SET script_type = ' type = "text/javascript"' -%]
+[%- SET nav_tag = 'div' -%]
+[%- ELSE -%]
+[%- SET script_type = ' ' -%]
+[%- SET nav_tag = 'nav' -%]
+[%- END -%]
 
 [%- PROCESS start_html -%]
 
@@ -553,9 +553,9 @@ of an EvilPHish”</a> cartoon of
 [%- toc_div( collapse => "true", ) -%]
 [%- END -%]
 
-[% content %]
+[%- content -%]
 [%- IF fn_path != 'meta/nav-blocks/blocks/' -%]
-[% INCLUDE render_compact_nav_blocks %]
+[%- INCLUDE render_compact_nav_blocks -%]
 [%- END -%]
 [%- PROCESS end_html -%]
 [%- END -%]

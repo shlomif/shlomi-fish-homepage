@@ -1,6 +1,13 @@
 base='http://localhost/shlomif/homepage-local/'
 base='http://localhost:2400/sites/hp/'
-perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" \
+ocs="--only-check-site-flow"
+args=""
+if test "$1" = "$ocs"
+then
+    shift
+    args+=" $ocs"
+fi
+perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" $args \
     --before-insert-skip='//.+?//' \
     --before-insert-skip='/Files/files/video/[^/]+\.webm\z' \
     --before-insert-skip='/\.htaccess\z' \

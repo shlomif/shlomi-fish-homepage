@@ -18,46 +18,46 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% FOREACH l_base = quadp_presentations.keys.sort %]
 
 [% SET l = "pres_" _ l_base %]
-[% SET v = String.new(l).upper() %]
+[% SET uc_variable_base = String.new(l).upper() %]
 [% SET val = quadp_presentations.$l_base %]
 [% SET files = val.src_files %]
 
-[% v %]_BASE := [% val.src_dir %]
-[% SET stamp = v _ "_STAMP" %]
+[% uc_variable_base %]_BASE := [% val.src_dir %]
+[% SET stamp = uc_variable_base _ "_STAMP" %]
 [% SET vstamp = "\$(" _ stamp _ ")" %]
-[% stamp %] := $([% v %]_BASE)/FINISH_STAMP
+[% stamp %] := $([% uc_variable_base %]_BASE)/FINISH_STAMP
 
-[% v %]_DEPS := $(patsubst %,$([% v %]_BASE)/%,Contents.pm Contents.yml template.wml)
-[% v %]_DEST := $(PRE_DEST)/[% val.dest_dir %]
-[% v %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% val.all_in_one_html_dir %]
-[% v %]_DEST_INDEX := $([% v %]_DEST)/index.html
-[% v %]_DEST_all_in_one_html_dir_INDEX := $([% v %]_DEST_all_in_one_html_dir)/index.html
-[% v %]_files := [% files.join(" ") %]
-[% v %]_DEST_FILES := $(patsubst %,$([% v %]_DEST)/%,$([% v %]_files))
-[% v %]_SRC_FILES := $(patsubst %,$([% v %]_BASE)/src/%.wml,$([% v %]_files))
+[% uc_variable_base %]_DEPS := $(patsubst %,$([% uc_variable_base %]_BASE)/%,Contents.pm Contents.yml template.wml)
+[% uc_variable_base %]_DEST := $(PRE_DEST)/[% val.dest_dir %]
+[% uc_variable_base %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% val.all_in_one_html_dir %]
+[% uc_variable_base %]_DEST_INDEX := $([% uc_variable_base %]_DEST)/index.html
+[% uc_variable_base %]_DEST_all_in_one_html_dir_INDEX := $([% uc_variable_base %]_DEST_all_in_one_html_dir)/index.html
+[% uc_variable_base %]_files := [% files.join(" ") %]
+[% uc_variable_base %]_DEST_FILES := $(patsubst %,$([% uc_variable_base %]_DEST)/%,$([% uc_variable_base %]_files))
+[% uc_variable_base %]_SRC_FILES := $(patsubst %,$([% uc_variable_base %]_BASE)/src/%.wml,$([% uc_variable_base %]_files))
 
-[% SET targets = "\$(" _ v _ "_DEST_INDEX) \$(" _ v _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ v _ "_DEST_FILES)" %]
+[% SET targets = "\$(" _ uc_variable_base _ "_DEST_INDEX) \$(" _ uc_variable_base _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ uc_variable_base _ "_DEST_FILES)" %]
 [% pres_targets_files.push(targets) %]
 [% l %]: [% targets %]
 
 [% BLOCK cmd %]
-[% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% v %]_BASE) && [% IF val.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
+[% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% uc_variable_base %]_BASE) && [% IF val.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
 [% "\t" %]touch [% vstamp %]
 [% END %]
 
 [% pres_targets.push(l) %]
 
-[% vstamp %]: $([% v %]_DEPS) $([% v %]_BASE)/src/index.html.wml $([% v %]_SRC_FILES)
+[% vstamp %]: $([% uc_variable_base %]_DEPS) $([% uc_variable_base %]_BASE)/src/index.html.wml $([% uc_variable_base %]_SRC_FILES)
 [%- INCLUDE cmd %]
 
-$([% v %]_DEST_INDEX) $([% v %]_DEST_FILES): [% vstamp %]
+$([% uc_variable_base %]_DEST_INDEX) $([% uc_variable_base %]_DEST_FILES): [% vstamp %]
 
-[% v %]_SRC_all_in_one_html_dir := $([% v %]_BASE)/all-in-one
+[% uc_variable_base %]_SRC_all_in_one_html_dir := $([% uc_variable_base %]_BASE)/all-in-one
 
-$([% v %]_SRC_all_in_one_html_dir)/index.html: [% vstamp %]
+$([% uc_variable_base %]_SRC_all_in_one_html_dir)/index.html: [% vstamp %]
 
-$([% v %]_DEST_all_in_one_html_dir_INDEX): $([% v %]_SRC_all_in_one_html_dir)/index.html
-[% "\t" %]rsync -r $([% v %]_SRC_all_in_one_html_dir)/ $$(dirname $@)
+$([% uc_variable_base %]_DEST_all_in_one_html_dir_INDEX): $([% uc_variable_base %]_SRC_all_in_one_html_dir)/index.html
+[% "\t" %]rsync -r $([% uc_variable_base %]_SRC_all_in_one_html_dir)/ $$(dirname $@)
 
 [% END %]
 

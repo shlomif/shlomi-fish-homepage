@@ -23,9 +23,9 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% SET files = val.src_files %]
 
 [% uc_variable_base %]_BASE := [% val.src_dir %]
-[% SET stamp = uc_variable_base _ "_STAMP" %]
-[% SET vstamp = "\$(" _ stamp _ ")" %]
-[% stamp %] := $([% uc_variable_base %]_BASE)/FINISH_STAMP
+[% SET stamp_fn_varname = uc_variable_base _ "_STAMP" %]
+[% SET deref_stamp_fn_var = "\$(" _ stamp_fn_varname _ ")" %]
+[% stamp_fn_varname %] := $([% uc_variable_base %]_BASE)/FINISH_STAMP
 
 [% uc_variable_base %]_DEPS := $(patsubst %,$([% uc_variable_base %]_BASE)/%,Contents.pm Contents.yml template.wml)
 [% uc_variable_base %]_DEST := $(PRE_DEST)/[% val.dest_dir %]
@@ -42,19 +42,19 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 
 [% BLOCK cmd %]
 [% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% uc_variable_base %]_BASE) && [% IF val.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
-[% "\t" %]touch [% vstamp %]
+[% "\t" %]touch [% deref_stamp_fn_var %]
 [% END %]
 
 [% pres_targets.push(lecture_main_target) %]
 
-[% vstamp %]: $([% uc_variable_base %]_DEPS) $([% uc_variable_base %]_BASE)/src/index.html.wml $([% uc_variable_base %]_SRC_FILES)
+[% deref_stamp_fn_var %]: $([% uc_variable_base %]_DEPS) $([% uc_variable_base %]_BASE)/src/index.html.wml $([% uc_variable_base %]_SRC_FILES)
 [%- INCLUDE cmd %]
 
-$([% uc_variable_base %]_DEST_INDEX) $([% uc_variable_base %]_DEST_FILES): [% vstamp %]
+$([% uc_variable_base %]_DEST_INDEX) $([% uc_variable_base %]_DEST_FILES): [% deref_stamp_fn_var %]
 
 [% uc_variable_base %]_SRC_all_in_one_html_dir := $([% uc_variable_base %]_BASE)/all-in-one
 
-$([% uc_variable_base %]_SRC_all_in_one_html_dir)/index.html: [% vstamp %]
+$([% uc_variable_base %]_SRC_all_in_one_html_dir)/index.html: [% deref_stamp_fn_var %]
 
 $([% uc_variable_base %]_DEST_all_in_one_html_dir_INDEX): $([% uc_variable_base %]_SRC_all_in_one_html_dir)/index.html
 [% "\t" %]rsync -r $([% uc_variable_base %]_SRC_all_in_one_html_dir)/ $$(dirname $@)

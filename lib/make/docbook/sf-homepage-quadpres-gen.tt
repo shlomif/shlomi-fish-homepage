@@ -15,11 +15,11 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% # The Perl-for-Newbies files handling.
 %]
 
-[% FOREACH l_base = quadp_presentations.keys.sort %]
+[% FOREACH lecture_base = quadp_presentations.keys.sort %]
 
-[% SET l = "pres_" _ l_base %]
+[% SET l = "pres_" _ lecture_base %]
 [% SET uc_variable_base = String.new(l).upper() %]
-[% SET val = quadp_presentations.$l_base %]
+[% SET val = quadp_presentations.$lecture_base %]
 [% SET files = val.src_files %]
 
 [% uc_variable_base %]_BASE := [% val.src_dir %]

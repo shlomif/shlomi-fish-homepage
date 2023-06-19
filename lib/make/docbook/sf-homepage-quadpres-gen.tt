@@ -17,8 +17,8 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 
 [% FOREACH lecture_base = quadp_presentations.keys.sort %]
 
-[% SET l = "pres_" _ lecture_base %]
-[% SET uc_variable_base = String.new(l).upper() %]
+[% SET lecture_main_target = "pres_" _ lecture_base %]
+[% SET uc_variable_base = String.new(lecture_main_target).upper() %]
 [% SET val = quadp_presentations.$lecture_base %]
 [% SET files = val.src_files %]
 
@@ -38,14 +38,14 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 
 [% SET targets = "\$(" _ uc_variable_base _ "_DEST_INDEX) \$(" _ uc_variable_base _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ uc_variable_base _ "_DEST_FILES)" %]
 [% pres_targets_files.push(targets) %]
-[% l %]: [% targets %]
+[% lecture_main_target %]: [% targets %]
 
 [% BLOCK cmd %]
 [% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% uc_variable_base %]_BASE) && [% IF val.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
 [% "\t" %]touch [% vstamp %]
 [% END %]
 
-[% pres_targets.push(l) %]
+[% pres_targets.push(lecture_main_target) %]
 
 [% vstamp %]: $([% uc_variable_base %]_DEPS) $([% uc_variable_base %]_BASE)/src/index.html.wml $([% uc_variable_base %]_SRC_FILES)
 [%- INCLUDE cmd %]

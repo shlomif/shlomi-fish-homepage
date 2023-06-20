@@ -19,17 +19,17 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 
 [% SET lecture_main_target = "pres_" _ lecture_base %]
 [% SET uc_variable_base = String.new(lecture_main_target).upper() %]
-[% SET val = quadp_presentations.$lecture_base %]
-[% SET files = val.src_files %]
+[% SET lecture_record = quadp_presentations.$lecture_base %]
+[% SET files = lecture_record.src_files %]
 
-[% uc_variable_base %]_BASE := [% val.src_dir %]
+[% uc_variable_base %]_BASE := [% lecture_record.src_dir %]
 [% SET stamp_fn_varname = uc_variable_base _ "_STAMP" %]
 [% SET deref_stamp_fn_var = "\$(" _ stamp_fn_varname _ ")" %]
 [% stamp_fn_varname %] := $([% uc_variable_base %]_BASE)/FINISH_STAMP
 
 [% uc_variable_base %]_DEPS := $(patsubst %,$([% uc_variable_base %]_BASE)/%,Contents.pm Contents.yml template.wml)
-[% uc_variable_base %]_DEST := $(PRE_DEST)/[% val.dest_dir %]
-[% uc_variable_base %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% val.all_in_one_html_dir %]
+[% uc_variable_base %]_DEST := $(PRE_DEST)/[% lecture_record.dest_dir %]
+[% uc_variable_base %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% lecture_record.all_in_one_html_dir %]
 [% uc_variable_base %]_DEST_INDEX := $([% uc_variable_base %]_DEST)/index.html
 [% uc_variable_base %]_DEST_all_in_one_html_dir_INDEX := $([% uc_variable_base %]_DEST_all_in_one_html_dir)/index.html
 [% uc_variable_base %]_files := [% files.join(" ") %]
@@ -41,7 +41,7 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% lecture_main_target %]: [% targets %]
 
 [% BLOCK cmd %]
-[% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% uc_variable_base %]_BASE) && [% IF val.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
+[% "\t" %]export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $([% uc_variable_base %]_BASE) && [% IF lecture_record.lang == 'he' -%]$(QUADPRES_RUN_he)[%- ELSE -%]$(QUADPRES_RUN_en)[%- END %])
 [% "\t" %]touch [% deref_stamp_fn_var %]
 [% END %]
 

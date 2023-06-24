@@ -1,14 +1,13 @@
 [%- SET title = "A #SummerNSA’s Reading" -%]
 [%- SET desc = "Summarising the #SummerNSA effort - Summerschool at the NSA" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "A-hashtag-SummerNSA-s-Reading",  %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 <div class="limit_imgs_width lim_width wrap-me">
 
@@ -16,5 +15,6 @@
 
 </div>
 
+[% END %]
 
 [% END %]

@@ -2,10 +2,9 @@
 [%- SET title = "10 סיבות שבגללן חברות צריכות לשקול ללכת לפי התקנים של הווב" -%]
 [%- SET desc = "10 סיבות שבגללן חברות צריכות לשקול ללכת לפי התקנים של הווב" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="translator-note">הערת המתרגם - Translator’s Note</h2>
+[% WRAPPER h2_section id = "translator-note" title = "הערת המתרגם - Translator’s Note" %]
 
 <p>
 מאמר זה תורגם
@@ -19,7 +18,9 @@
 This article was translated from <a href="http://www.webinmind.net/2006/06/16/10-reasons-for-companies-to-consider-web-standards/">the English original</a>, which was written by <a href="http://webinmind.net/">Mashhoor Al Dubayan</a>. It was translated by <a href="http://www.shlomifish.org/">Shlomi Fish</a>.
 </p>
 
-<h2 id="the-article">המאמר עצמו</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "the-article" title = "המאמר עצמו" %]
 
 <p>
 בארצי, ערב הסעודית, אין כמעט שום חברה שלוקחת בחשבון את תקני הווב כשהיא מעצבת את האתרים
@@ -222,5 +223,7 @@ FrontPage 2003
 מסחריים כדי לבדוק עד כמה טוב קודדו. תוכלו לראות בעצמכם
 שזה מגוחך עד כמה לא מאומתים דפי הווב שלהם.
 </p>
+
+[% END %]
 
 [% END %]

@@ -3,14 +3,16 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This page contains articles and essays by people who are not me,
 mostly which appeared on the Internet and disappeared.
 </p>
 
-<h2 id="the_list">The List</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "the_list" title = "The List" %]
 
 <ul>
 
@@ -38,5 +40,7 @@ about the book <a href="http://shop.oreilly.com/product/9780596007836.do"><i>Tim
 </p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

@@ -1,10 +1,9 @@
 [%- SET title = "The #SummerNSA (Summerschool at the NSA) Effort" -%]
 [%- SET desc = "A political/philosophical effort based on “Summerschool at the NSA” and “NSA Facts”" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 The #SummerNSA effort has its origins in
@@ -17,7 +16,9 @@ at the NSA</a> screenplay which features the Hollywood actresses
 Sarah Michelle Gellar and Summer Glau as themselves.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -29,7 +30,9 @@ Shlomi Fish Wiki</a>.
 </li>
 </ul>
 
-<h2 id="resources_below">Resources Below This Page</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "resources_below" title = "Resources Below This Page" %]
 
 <ul>
 
@@ -57,5 +60,6 @@ sent via physical mail.
 </li>
 </ul>
 
+[% END %]
 
 [% END %]

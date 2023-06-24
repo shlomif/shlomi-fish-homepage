@@ -1,10 +1,9 @@
 [%- SET title = "The “Use qmail instead!” Syndrome" -%]
 [%- SET desc = "The “Use qmail instead!” Syndrome" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 I originally wrote this essay
@@ -12,7 +11,9 @@ I originally wrote this essay
 but decided to also put it here for posterity.
 </p>
 
-<h2 id="meta">Document Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -35,7 +36,9 @@ Last Updated:
 </dd>
 </dl>
 
-<h2 id="body">The Essay Itself</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "body" title = "The Essay Itself" %]
 
 <p>
 A few years ago, I’ve noticed a pattern in
@@ -112,8 +115,12 @@ one’s reason (as always) and the recommendation to avoid the
 “use qmail instead” syndrome is just a general guideline.
 </p>
 
-<h3 id="licence">Licence</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2006", ) %]
+
+[% END %]
 
 [% END %]

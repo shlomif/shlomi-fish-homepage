@@ -10,9 +10,11 @@
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/putting-all-cards-on-the-table-2013",  %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("docbook/5/rendered/putting-all-cards-on-the-table-2013.xhtml") %]
+
+[% END %]
 
 </div>
 

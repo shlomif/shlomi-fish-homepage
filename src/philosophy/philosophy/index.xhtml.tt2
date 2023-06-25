@@ -10,27 +10,23 @@ whatever between them.
 
 <div class="fancy_sects limit_imgs_width">
 
-<section>
-
-<header>
-<h2 id="list">The Articles and Essays</h2>
-</header>
+[% WRAPPER h2_section id = "list" title = "The Articles and Essays" %]
 
 [% WRAPPER h3_section id = "summaries_of_my_philosophy" title = "Summaries of my personal philosophy (“Rindolfism”)" %]
 
-<article>
-<h4 id="the_eternal_jew"><a href="[% base_path %]philosophy/the-eternal-jew/">The Eternal Jew</a></h4>
+[% SET section_element = "article" %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/the-eternal-jew/" id = "the_eternal_jew" title = "The Eternal Jew" %]
 
 <p>
 An article that nicely summarizes the principals of my view on self and of
 life. Do you think highly of yourself? Do you think highly of yourself enough?
 Do you think you can influence the world? It’s all there.
 </p>
-</article>
 
-<article>
+[% END %]
 
-<h4 id="put_cards_2013"><a href="putting-all-cards-on-the-table-2013/">Putting all the Cards on the Table (2013)</a></h4>
+[% WRAPPER h4_section href = "putting-all-cards-on-the-table-2013/" id = "put_cards_2013" title = "Putting all the Cards on the Table (2013)" %]
 
 <p>
 What is the problem with
@@ -57,58 +53,56 @@ usable, and there's more to come. Not a perfect essay, and not for everyone,
 but imperfect and sweet.
 </p>
 
-</article>
+[% END %]
 
-<article>
-
-<h4 id="put_cards_2019_2020"><a href="putting-cards-on-the-table-2019-2020/">Putting Cards on the Table (2019-*)</a></h4>
+[% WRAPPER h4_section href = "putting-cards-on-the-table-2019-2020/" id = "put_cards_2019_2020" title = "Putting Cards on the Table (2019-*)" %]
 
 <p>
 A work-in-progress update to <a href="#put_cards_2013">the previous attempt</a>
 to codify <a href="[% base_path %]me/rindolf/#rindolfism">Rindolfism</a>.
 </p>
 
-</article>
+[% END %]
+
+[% SET section_element = "section" %]
 
 [% END %]
 
-[% WRAPPER h3_section id = "other-essays" title = "Other essays"  %]
+[% WRAPPER h3_section id = "other-essays" title = "Other essays" %]
 
-<article>
+[% SET section_element = "article" %]
 
-<h3 id="guide_to_neo_tech"><a href="guide-to-neo-tech/">Guide to Neo-Tech</a></h3>
+[% WRAPPER h4_section href = "guide-to-neo-tech/" id = "guide_to_neo_tech" title = "Guide to Neo-Tech" %]
 
 <p>
 A guide to the online Neo-Tech resources.
 </p>
 
-</article>
+[% END %]
 
-<article>
-
-<h3 id="advice_for_the_young"><a href="advice-for-the-young/">Advice for the Young</a></h3>
+[% WRAPPER h4_section href = "advice-for-the-young/" id = "advice_for_the_young" title = "Advice for the Young" %]
 
 <p>
 Some advice for people, especially young ones. Mostly intended for those
 who are interested in computing, but some of it is also pertinent to others.
 </p>
 
-</article>
+[% END %]
 
-<article>
-
-<h3 id="closed_books"><a href="closed-books-are-so-19th-century/">Why Closed Books are So 19th Century</a></h3>
+[% WRAPPER h4_section href = "closed-books-are-so-19th-century/" id = "closed_books" title = "Why Closed Books are So 19th Century" %]
 
 <p>
 An Essay explaining why authors of books should make sure they are available
 online free-of-charge.
 </p>
 
-</article>
+[% END %]
+
+[% SET section_element = "section" %]
 
 [% END %]
 
-</section>
+[% END %]
 
 </div>
 

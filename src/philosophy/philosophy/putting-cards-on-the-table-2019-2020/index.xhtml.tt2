@@ -1,7 +1,6 @@
 [%- SET title = "Putting Cards on the Table (2019-*)" -%]
 [%- SET desc = "Putting Cards on the Table (2019-*): codifying my philosophy in regards to everything I have to say: about self esteem, resourcefulness, being an action hero, not caring what other people think about you, and honesty." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
@@ -10,15 +9,13 @@
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "putting-cards-on-the-table-2019-2020",  %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("docbook/5/rendered/putting-cards-on-the-table-2019-2020.xhtml") %]
 
-<section>
+[% END %]
 
-<header>
-<h2 id="links">Links</h2>
-</header>
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 <li>
@@ -27,7 +24,9 @@
 </p>
 </li>
 </ul>
-</section>
+
+[% END %]
+
 </div>
 
 [% END %]

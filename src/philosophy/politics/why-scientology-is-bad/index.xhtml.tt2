@@ -1,14 +1,9 @@
 [%- SET title = "Why I Concluded that Scientology is Bad" -%]
 [%- SET desc = "This is an essay about why I concluded (based on very limited data) that the Scientology modern religion was bad." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER note %]
-
-<header>
-<h2 id="note">Note</h2>
-</header>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 Given <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/">this essay</a>

@@ -9,9 +9,11 @@
 
 [% default_toc %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("docbook/5/rendered/about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua.xhtml") %]
+
+[% END %]
 
 [%- WRAPPER links_sect -%]
 

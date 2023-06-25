@@ -29,21 +29,29 @@ This work is licensed under the <a href="http://creativecommons.org/licenses/by/
 -->
 </p>
 
-<h2 id="itself">The Article Itself</h2>
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
 
-<h3 id="body">Body</h3>
+[% WRAPPER h3_section id = "body" title = "Body" %]
 
 [% path_slurp("docbook/5/rendered/case-for-drug-legalisation--hebrew-v3.xhtml") %]
 
-<h2 id="other_formats">Other Formats</h2>
+[% END %]
 
-<h3 id="version_3">3rd Version</h3>
+[% END %]
+
+[% WRAPPER h2_section id = "other_formats" title = "Other Formats" %]
+
+[% WRAPPER h3_section id = "version_3" title = "3rd Version" %]
 
 <ul>
 <li>
 <a href="case-for-drug-legalisation--hebrew-v3.xml">Original DocBook/XML</a>
 </li>
 </ul>
+
+[% END %]
+
+[% END %]
 
 </div>
 

@@ -14,17 +14,21 @@
 
 [% default_toc %]
 
-<h2 id="itself">The Article Itself</h2>
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
 
-<h3 id="body">Body</h3>
+[% WRAPPER h3_section id = "body" title = "Body" %]
 
 [% path_slurp("docbook/5/rendered/case-for-drug-legalisation-v3.xhtml") %]
 
-[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "case-for-drug-legalisation-v3",  %]
+[% END %]
 
-<h2 id="prev_vers">Previous Versions</h2>
+[% PROCESS docbook_formats_w_base base = "case-for-drug-legalisation-v3", h2_id = "other_formats", h2_text = "Other Formats", %]
 
-<h3 id="revision_2">2nd Revision</h3>
+[% END %]
+
+[% WRAPPER h2_section id = "prev_vers" title = "Previous Versions" %]
+
+[% WRAPPER h3_section id = "revision_2" title = "2nd Revision" %]
 
 <ul>
 <li>
@@ -32,13 +36,19 @@
 </li>
 </ul>
 
-<h3 id="revision_1">1st Revision</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "revision_1" title = "1st Revision" %]
 
 <ul>
 <li>
 <a href="case-for-drug-legalisation.xml">Original DocBook/XML</a>
 </li>
 </ul>
+
+[% END %]
+
+[% END %]
 
 </div>
 

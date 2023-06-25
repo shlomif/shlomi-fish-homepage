@@ -2,16 +2,17 @@
 [%- SET desc = "Why Openly Bipolar People Should Not Be Medicated" -%]
 [%- SET more_keywords = "psychology, bipolar, depression, MDD, disorder, alan turing, turing, drugs, medication, therapy, psychiatry, mania, hypomania, Taylor Swift" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc why_openly_bipolar">
 
 [% default_toc %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("docbook/5/rendered/why-openly-bipolar-people-should-not-be-medicated.xhtml") %]
+
+[% END %]
 
 [%- WRAPPER links_sect -%]
 

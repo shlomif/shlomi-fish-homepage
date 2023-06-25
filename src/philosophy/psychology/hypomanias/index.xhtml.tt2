@@ -11,9 +11,9 @@ clinical depressions, clinical anxieties and especially hypomanias (=
 
 <div class="side_toc">
 
-<h2 id="main_title">Dealing with Hypomanias</h2>
+[% WRAPPER h2_section id = "main_title" title = "Dealing with Hypomanias" %]
 
-<h3 id="main_intro">Introduction</h3>
+[% WRAPPER h3_section id = "main_intro" title = "Introduction" %]
 
 <p>
 This article gives some advice on how to deal with periods of
@@ -23,17 +23,25 @@ clinical depressions, clinical anxieties and especially hypomanias (=
 
 [% default_toc %]
 
-<h3 id="itself">The Article Itself - 2nd Revision</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "itself" title = "The Article Itself - 2nd Revision" %]
 
 [% path_slurp("docbook/5/rendered/dealing-with-hypomanias.xhtml") %]
 
+[% END %]
+
+[% END %]
+
 [% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "dealing-with-hypomanias",  %]
 
-<h2 id="coverage">Coverage</h2>
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <p>
 <b>TODO :</b> fill in.
 </p>
+
+[% END %]
 
 </div>
 

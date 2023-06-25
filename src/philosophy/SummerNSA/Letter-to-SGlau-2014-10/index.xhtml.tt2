@@ -1,16 +1,17 @@
 [%- SET title = "Letter to Summer Glau (from Shlomi Fish) - sent on October 2014" -%]
 [%- SET desc = "TODO: FILL IN" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 TODO : FILL IN.
 </p>
 
-<h2 id="contents">Contents</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "contents" title = "Contents" %]
 
 <ol>
 
@@ -41,7 +42,9 @@ TODO : FILL IN.
 
 </ol>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 
@@ -53,5 +56,6 @@ TODO : FILL IN.
 
 </ul>
 
+[% END %]
 
 [% END %]

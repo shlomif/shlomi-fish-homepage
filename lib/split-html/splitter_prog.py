@@ -73,7 +73,7 @@ def _xpath(TOP_LEVEL_CLASS):
 
 # Removed:
 # <script src="{base_path}js/main_all.js"></script>
-FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
+SECTION_FORMAT__HEAD = '''<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -81,8 +81,7 @@ FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <meta charset="utf-8"/>
 <meta name="description" content=
 "{main_title} - {title}"/>
-<link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen" title=
-"Normal"/>
+<link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen"/>
 <link rel="stylesheet" href="{base_path}print.css" media="print"/>
 <link rel="shortcut icon" href="{base_path}favicon.ico" type=
 "image/x-icon"/>
@@ -91,8 +90,10 @@ FAQ_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
 <body class="fancy_sects faq_indiv_entry">
 <div class="header" id="header">
 <a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
-alt="EvilPHish site logo"/></a>
-<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
+alt="EvilPHish site logo"/></a>'''
+
+FAQ_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
+    '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
 Homepage</a> → <a href="../" title=
 "Information about this Site">Meta Info</a> → <a href="./" title=
 "Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
@@ -124,25 +125,8 @@ and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
 </body>
 </html>'''
 
-IMAGE_MACRO_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<title>{main_title} - {title}</title>
-<meta charset="utf-8"/>
-<meta name="description" content=
-"{main_title} - {title}"/>
-<link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen"/>
-<link rel="stylesheet" href="{base_path}print.css" media="print"/>
-<link rel="shortcut icon" href="{base_path}favicon.ico" type=
-"image/x-icon"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-</head>
-<body class="fancy_sects faq_indiv_entry">
-<div class="header" id="header">
-<a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
-alt="EvilPHish site logo"/></a>
-<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
+IMAGE_MACRO_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
+    '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
 Homepage</a> →
 <a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}

@@ -1,16 +1,15 @@
 [%- SET title = "“Usability” of the Perl Online World for Newcomers - Version 1" -%]
 [%- SET desc = "“Usability” of the Perl Online World for Newcomers - Version 1" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p class="skip_to_main">
 <a href="#itself"><b>Skip to the main content</b></a>
 </p>
 
-<h2 id="main_text">Usability of the Perl Online World for Newcomers</h2>
+[% WRAPPER h2_section id = "main_text" title = "Usability of the Perl Online World for Newcomers" %]
 
-<h3 id="main_intro">Introduction</h3>
+[% WRAPPER h3_section id = "main_intro" title = "Introduction" %]
 
 <p>
 This is an essay I’ve written and published (on a different place) that
@@ -20,7 +19,9 @@ received a lot of commentary, both supporting, and criticising.
 
 [% default_toc %]
 
-<h3 id="itself">The Article Itself - 2nd Revision</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "itself" title = "The Article Itself - 2nd Revision" %]
 
 [% path_slurp("docbook/5/rendered/usability-of-perl-world-for-newcomers.xhtml") %]
 
@@ -28,10 +29,16 @@ received a lot of commentary, both supporting, and criticising.
 
 [% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base=db5_base %]
 
-<h2 id="coverage">Coverage</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <p>
 <b>TODO :</b> fill in.
 </p>
+
+[% END %]
 
 [% END %]

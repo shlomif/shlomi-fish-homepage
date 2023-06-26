@@ -3,11 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER note %]
-
-<header>
-<h2 id="note">Note</h2>
-</header>
+[% WRAPPER h2_section id = "note" title = "Note" %]
 
 <p>
 I now agree with <a href="https://rationalwiki.org/wiki/Neo-Tech">rational wiki</a>
@@ -26,7 +22,7 @@ as of February 2021.
 
 [% END %]
 
-[% BLOCK old__note  %]
+[% BLOCK old__note %]
 
 <p>
 The Neo-Tech pages linked from this page have been down in recent years, so

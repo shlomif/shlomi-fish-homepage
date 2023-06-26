@@ -1,15 +1,16 @@
 [%- SET title = "#SummerNSA: 2014 Sep’s Call for Action" -%]
 [%- SET desc = "The “Summerschool at the NSA”/“#SummerNSA” effort’s Call for Action: Finishing Off The Open Content/Web 2.0 Revolution (~2000-2014)" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
 [% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/SummerNSA-2014-09-call-for-action",  %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("docbook/5/rendered/SummerNSA-2014-09-call-for-action.xhtml") %]
+
+[% END %]
 
 [% END %]

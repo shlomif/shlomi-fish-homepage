@@ -101,7 +101,7 @@ control and other resources.
 </ul>
 [%- END -%]
 
-[%- BLOCK qp_lect %]
+[%- BLOCK qp_lect -%]
 
 <li>
 <p>
@@ -143,13 +143,13 @@ License</a>, a permissive software licence.
 [%- END -%]
 
 [%- BLOCK cc_by_licence_section -%]
-[%- WRAPPER licence_sect %]
+[%- WRAPPER licence_sect -%]
 [%- license_obj.by_british_blurb(version=(version||"3.0"), year=year) -%]
 [%- END -%]
 [%- END -%]
 
 [%- BLOCK cc_by_nc_sa_licence_section -%]
-[%- WRAPPER licence_sect %]
+[%- WRAPPER licence_sect -%]
 [%- license_obj.by_nc_sa_british_blurb(year=year) -%]
 [%- END -%]
 [%- END -%]
@@ -233,7 +233,6 @@ publicly linked to. Please send comments to
 [%- BLOCK cpan_dist -%]
 <a href="http://metacpan.org/release/[% d %]">[% content %]</a>
 [%- END -%]
-
 [%- BLOCK pdoc -%]
 <a href="http://perldoc.perl.org/[% d %].html">[% d %][% content %]</a>
 [%- END -%]
@@ -251,12 +250,12 @@ publicly linked to. Please send comments to
 <?xml version="1.0" encoding="utf-8"?>
 [%- END -%]
 
-[% TRY %]
-[% INCLUDE latemp_html_doctype %]
-[% CATCH file %]
+[%- TRY -%]
+[%- INCLUDE latemp_html_doctype -%]
+[%- CATCH file -%]
 <!DOCTYPE html>
 [%# THROW "foo start_html $fn_path" %]
-[% END %]
+[%- END -%]
 
 <html [% IF latemp_plain_html %]lang="[% html_lang %]"[% ELSE %]xmlns="http://www.w3.org/1999/xhtml" xml:lang="[% html_lang %]"[% END %]>
 <head>

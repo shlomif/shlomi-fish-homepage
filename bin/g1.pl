@@ -23,4 +23,3 @@ s#(<div class=")([\w\s]+?)(">)#
     my ($s,$m,$e)=($1,$2,$3);
     $s . join(" ",sort split /\s+/,$m) . $e
 #egms;
-

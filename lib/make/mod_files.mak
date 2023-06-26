@@ -18,4 +18,3 @@ $(POST_DEST_XZ_MODS): $(POST_DEST_MODS_DIR)/%.xz: $(SRC_MODS_DIR)/%
 
 $(POST_DEST_ZIP_MODS): $(POST_DEST_MODS_DIR)/%.zip: $(SRC_MODS_DIR)/%
 	TZ=UTC zip -joqX9 "$@" "$<"
-

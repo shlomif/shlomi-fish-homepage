@@ -16,4 +16,3 @@ f()
 (echo "== $a == " ; f < $b ) >> $bdest
 done
 gvimdiff $adest $bdest +colorscheme" apprentice" +"exe \"normal \\<c-w>J\""
-

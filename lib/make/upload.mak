@@ -36,4 +36,3 @@ upload_all: upload upload_var upload_local upload_beta
 
 upload_hostgator: upload_deps
 	$(call UPLOAD,'hostgator:public_html/')
-

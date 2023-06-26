@@ -66,5 +66,3 @@ for step=1:steps
 end
 
 % Now ret is ready for prime time so we return it.
-
-

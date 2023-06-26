@@ -86,4 +86,3 @@ sub _utf8_slurp
 
     return $contents;
 }
-

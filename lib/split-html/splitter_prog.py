@@ -221,28 +221,14 @@ def _faq_gen():
     splitter.process()
 
 
-SCREENPLAY_SECTION_FORMAT = '''<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<title>{main_title} - {title}</title>
-<meta charset="utf-8"/>
-<meta name="description" content=
-"{main_title} - {title}"/>
-<link rel="stylesheet" href="{base_path}faq-indiv.css" media="screen"/>
-<link rel="stylesheet" href="{base_path}screenplay.css" media="screen"
-title="Normal"/>
-<link rel="stylesheet" href="{base_path}print.css" media="print"/>
-<link rel="shortcut icon" href="{base_path}favicon.ico" type=
-"image/x-icon"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-</head>
-<body class="fancy_sects faq_indiv_entry ''' \
-        '''limit_imgs_width screenplay_indiv_entry">
-<div class="header" id="header">
-<a href="{base_path}"><img src="{base_path}images/evilphish-flipped.png"
-alt="EvilPHish site logo"/></a>
-<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
+SCREENPLAY_SECTION_FORMAT__HEAD = _generate_section_format__head(
+    bodyclasses=' limit_imgs_width screenplay_indiv_entry',
+    stylesheets='<link rel="stylesheet" href="{base_path}screenplay.css"' +
+    ' media="screen" title="Normal"/>',
+)
+
+SCREENPLAY_SECTION_FORMAT = SCREENPLAY_SECTION_FORMAT__HEAD + \
+        '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
 Homepage</a> →
 <a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}

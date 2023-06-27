@@ -11,6 +11,7 @@
 
 [% SET lang = "eng" %]
 [% PROCESS "Inc/aphorisms_blocks.tt2" %]
+[% PROCESS "Inc/faq.tt2" %]
 
 [% WRAPPER h2_section id = "about-grimmie" title = "About" %]
 
@@ -311,12 +312,7 @@ is usually a waste of time, energy, and love. Most violators are giving you free
 <ol>
 
 <li>
-<p>
-<a href="https://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a> wrote
-that "reputation is better than fine oil".
-Around ~2000 <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=greatest-threat-to-authors">Tim O'Reilly noted</a>: <q>The greatest threat to authors and creative
-artists is not piracy — it’s obscurity.</q>.
-</p>
+[% INCLUDE piracy_vs_obscurity %]
 </li>
 
 </ol>

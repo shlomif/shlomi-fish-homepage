@@ -206,7 +206,6 @@ was even shortly after LotR was written.
 [% PROCESS fanfic__ride_princess_celestia_next %]
 [% END %]
 
-
 [% BLOCK communicative_criticism__block %]
 
 <blockquote cite="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/" class="removedfancy">
@@ -402,4 +401,20 @@ Please don't waste my time E-mailing me about them.
 [% IF 0 %]
 [% INCLUDE faq__broken_links %]
 [% PROCESS faq__broken_links %]
+[% END %]
+
+[% BLOCK piracy_vs_obscurity %]
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Ecclesiastes">Ecclesiastes</a> wrote
+that "reputation is better than fine oil".
+Around ~2000 <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=greatest-threat-to-authors">Tim O'Reilly noted</a>: <q>The greatest threat to authors and creative
+artists is not piracy — it’s obscurity.</q>.
+</p>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE piracy_vs_obscurity %]
+[% PROCESS piracy_vs_obscurity %]
 [% END %]

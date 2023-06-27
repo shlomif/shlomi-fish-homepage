@@ -130,10 +130,8 @@ Homepage</a> → <a href="../" title=
 "Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
 {breadcrumbs_trail}
 → <b>{title}</b>
-</div>
-</div>
-<main class="faq faux main">
-{body}</main>''' + SECTION_FORMAT__SUFFIX
+</div></div><main class="faq faux main">{body}</main>''' + \
+    SECTION_FORMAT__SUFFIX
 
 IMAGE_MACRO_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
     '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
@@ -141,11 +139,8 @@ Homepage</a> →
 <a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}
 → <b>{title}</b>
-</div>
-</div>
-<main class="faq faux main">
-{body}</main>
-''' + SECTION_FORMAT__SUFFIX
+</div></div><main class="faq faux main">{body}</main>''' + \
+    SECTION_FORMAT__SUFFIX
 
 
 def generate_from_image_macros_page(
@@ -214,12 +209,9 @@ Homepage</a> →
 <a href="{path_to_all_in_one}" title="{main_title}">{main_title}</a>
 {breadcrumbs_trail}
 → <b>{title}</b>
-</div>
-</div>
-<div id="faux">
-<main class="main faq screenplay">
-{body}</main>
-</div>''' + SECTION_FORMAT__SUFFIX
+</div></div><div id="faux">''' + \
+        '''<main class="main faq screenplay">{body}</main></div>''' + \
+        SECTION_FORMAT__SUFFIX
 
 
 def generic_generate_from_(

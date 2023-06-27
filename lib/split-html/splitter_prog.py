@@ -101,18 +101,7 @@ SECTION_FORMAT__HEAD = _generate_section_format__head(
     stylesheets='',
 )
 
-FAQ_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
-    '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
-Homepage</a> → <a href="../" title=
-"Information about this Site">Meta Info</a> → <a href="./" title=
-"Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
-{breadcrumbs_trail}
-→ <b>{title}</b>
-</div>
-</div>
-<main class="faq faux main">
-{body}</main>
-<footer>
+SECTION_FORMAT__SUFFIX = '''<footer>
 <div class="foot_left">
 <ul class="bt_nav">
 <li><a href="{base_path}">Home</a></li>
@@ -134,6 +123,18 @@ and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
 </body>
 </html>'''
 
+FAQ_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
+    '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
+Homepage</a> → <a href="../" title=
+"Information about this Site">Meta Info</a> → <a href="./" title=
+"Frequently Asked Questions and Answers List (FAQ)">FAQ</a>
+{breadcrumbs_trail}
+→ <b>{title}</b>
+</div>
+</div>
+<main class="faq faux main">
+{body}</main>''' + SECTION_FORMAT__SUFFIX
+
 IMAGE_MACRO_SECTION_FORMAT = SECTION_FORMAT__HEAD + \
     '''<div class="leading_path"><a href="{base_path}">Shlomi Fish’s
 Homepage</a> →
@@ -144,27 +145,7 @@ Homepage</a> →
 </div>
 <main class="faq faux main">
 {body}</main>
-<footer>
-<div class="foot_left">
-<ul class="bt_nav">
-<li><a href="{base_path}">Home</a></li>
-<li><a href="{base_path}me/">About</a></li>
-<li><a href="{base_path}me/contact-me/">Contact Us</a></li>
-<li><a href="{base_path}meta/privacy-policy/">Privacy Policy</a></li>
-<li><a href="{base_path}meta/anti-spam-policy/">Anti-Spam
-Policy</a></li>
-<li><a href="{base_path}meta/FAQ/" title=
-"Frequently asked questions list">FAQ</a></li>
-<li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
-</ul>
-<p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
-and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
-<a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
-</div>
-<a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
-"bk2hp" alt="Back to my Homepage"/></a></footer>
-</body>
-</html>'''
+''' + SECTION_FORMAT__SUFFIX
 
 
 def generate_from_image_macros_page(
@@ -238,28 +219,7 @@ Homepage</a> →
 <div id="faux">
 <main class="main faq screenplay">
 {body}</main>
-</div>
-<footer>
-<div class="foot_left">
-<ul class="bt_nav">
-<li><a href="{base_path}">Home</a></li>
-<li><a href="{base_path}me/">About</a></li>
-<li><a href="{base_path}me/contact-me/">Contact Us</a></li>
-<li><a href="{base_path}meta/privacy-policy/">Privacy Policy</a></li>
-<li><a href="{base_path}meta/anti-spam-policy/">Anti-Spam
-Policy</a></li>
-<li><a href="{base_path}meta/FAQ/" title=
-"Frequently asked questions list">FAQ</a></li>
-<li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
-</ul>
-<p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
-and <a href="{base_path}me/rindolf/">“Rindolf”</a>),
-<a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>.</p>
-</div>
-<a href="{base_path}"><img src="{base_path}images/bk2hp-v2.min.svg" class=
-"bk2hp" alt="Back to my Homepage"/></a></footer>
-</body>
-</html>'''
+</div>''' + SECTION_FORMAT__SUFFIX
 
 
 def generic_generate_from_(

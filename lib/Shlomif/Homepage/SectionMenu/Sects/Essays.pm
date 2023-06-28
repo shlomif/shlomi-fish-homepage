@@ -155,6 +155,10 @@ my $_section_navmenu_tree_contents = {
             title => "Essays about Politics and Philosophical Politics",
             subs  => [
                 {
+                    expand => {
+                        re =>
+"^philosophy/(?:philosophy/SummerNSA-2014-09-call-for-action/|politics/)",
+                    },
                     text  => "#SummerNSA",
                     url   => "philosophy/SummerNSA/",
                     title =>

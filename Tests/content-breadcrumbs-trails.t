@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 6;
+use Test::More tests => 7;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -95,6 +95,18 @@ _test(
         blurb    => 'true-stories are not "Humour"',
         expected => <<'EOF',
 <a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../">Stories</a> → <a href="../../" title="Small Scale Funny Works of Mine">Small Scale</a> → <a href="../">True Stories / Memoirs</a> → <a href="./" title="Socialising with a young Hermione (“Harry Potter”) cosplayer and her family at GeekCon Nine Worlds">Socialising with a Young Hermione Cosplayer and Her Family</a>
+EOF
+    }
+);
+
+# TEST
+_test(
+    {
+        path =>
+"lib/cache/combined/t2/philosophy/philosophy/SummerNSA-2014-09-call-for-action/index.xhtml/breadcrumbs-trail",
+        blurb    => 'SummerNSA call4action is below #SummerNSA',
+        expected => <<'EOF',
+<a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Various Essays and Articles about Technology and Philosophy in General">Essays</a> → <a href="../../politics/" title="Essays about Politics and Philosophical Politics">Political Essays</a> → <a href="../../SummerNSA/" title="The #SummerNSA / “Summerschool at the NSA” effort">#SummerNSA</a> → <a href="./">Sep 2014 Call for Action</a>
 EOF
     }
 );

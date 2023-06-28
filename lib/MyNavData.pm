@@ -286,7 +286,8 @@ my %reduced_sub_trees = (
                 text   => "General Philosophy",
                 url    => "philosophy/philosophy/",
                 expand => {
-                    re => "^philosophy/(?:philosophy/|the-eternal-jew/)"
+                    re =>
+"^philosophy/(?:(?:philosophy/(?!SummerNSA))|the-eternal-jew/)"
                 },
             },
             {
@@ -330,7 +331,10 @@ my %reduced_sub_trees = (
                 url   => "philosophy/politics/",
                 title => "Essays about Politics and "
                     . "Philosophical Politics",
-                expand => { re => "^philosophy/politics/", },
+                expand => {
+                    re =>
+"^philosophy/(?:philosophy/SummerNSA-2014-09-call-for-action/|politics/)",
+                },
             },
             {
                 text  => "Index to Essays",

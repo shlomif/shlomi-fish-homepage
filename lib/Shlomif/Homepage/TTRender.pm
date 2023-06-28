@@ -234,6 +234,7 @@ has vars => (
         my $self = shift;
         return +{
             ( $self->printable ? ( PRINTABLE => 1 ) : () ),
+            QOH_TITLE        => $long_stories->qoh_title(),
             is_dev           => $FALSE,
             cpan             => $cpan,
             is_forked_site   => $FALSE,

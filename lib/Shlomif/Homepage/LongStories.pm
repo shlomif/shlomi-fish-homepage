@@ -34,6 +34,15 @@ sub _to_story_objects
     return ( map { Shlomif::Homepage::LongStories::Story->new($_) } @_ );
 }
 
+my $QOH_TITLE = "“So, who the Hell is Qoheleth?”";
+
+sub qoh_title
+{
+    my ($self) = @_;
+
+    return $QOH_TITLE;
+}
+
 my @active_Stories = _to_story_objects(
     {
         id         => 'the_enemy',
@@ -332,14 +341,14 @@ EOF
         id      => 'who_is_qoheleth',
         tagline =>
 "What had been, is what will be. There is nothing new under the sun.",
-        logo_alt   => "“So, who the Hell is Qoheleth?” Logo",
+        logo_alt   => "$QOH_TITLE Logo",
         logo_class => "who_is_qoheleth",
         logo_src   =>
 "humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth-small.png",
         logo_svg =>
             'humour/So-Who-The-Hell-Is-Qoheleth/images/who-is-qoheleth.svg',
         entry_id   => "who-is-qoheleth",
-        entry_text => "“So, who the Hell is Qoheleth?”",
+        entry_text => $QOH_TITLE,
         start_date => DateTime->new( year => 2014, ),
         href       => "humour/So-Who-The-Hell-Is-Qoheleth/",
         abstract   => <<'EOF',

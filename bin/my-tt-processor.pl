@@ -30,9 +30,6 @@ sub run
 {
     my $output_fn;
 
-    my $obj = Docker::CLI::Wrapper::Container->new(
-        { container => "rinutils--deb--test-build", sys => "debian:sid", } );
-
     GetOptions( "output|o=s" => \$output_fn, )
         or die "errror in cmdline args: $!";
 

@@ -38,7 +38,7 @@ sub run
         die "Output filename not specified! Use the -o|--output flag!";
     }
     my $input_fn = path( shift @ARGV );
-    my ($htmlref) = $obj->render( "art/index.xhtml", $input_fn, );
+    my ($htmlref) = $obj->render( "art/index.xhtml", $input_fn->stringify(), );
     path($output_fn)->spew_utf8($$htmlref);
 
     exit(0);

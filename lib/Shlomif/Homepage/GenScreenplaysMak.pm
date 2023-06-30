@@ -95,7 +95,7 @@ sub _calc_screenplay_doc_makefile_lines
                     my $tt_out_fh = path(
 "lib/screenplay-xml/tt2-txt/${doc_base}.screenplay-text.txt.tt2"
                     );
-                    system("tpage '$tt_out_fh' > '$fn'");
+                    system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {
                         die qq#foo#;

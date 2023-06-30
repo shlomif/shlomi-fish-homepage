@@ -95,7 +95,7 @@ $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVER
 	$(PERL) $<
 
 $(ALL-IN-AN-ATYPICAL-DAY-WORK__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/All-in-an-Atypical-Day-Work.screenplay-text.txt.tt2
-	tpage $< > $@
+	$(PERL) bin/my-tt-processor.pl -o $@ $<
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 

@@ -40,7 +40,9 @@ sub run
     {
         die "Output filename not specified! Use the -o|--output flag!";
     }
-    $obj->do_system( { cmd => [ "git", "clone", "-b", $BRANCH, $URL, ] } );
+    my $input_fn = path( shift @ARGV );
+    my ($htmlref) = $obj->render( "art/index.xhtml", $input_fn, );
+    path($output_fn)->spew_utf8($$htmlref);
 
     exit(0);
 }

@@ -12,10 +12,11 @@ use warnings;
 use 5.014;
 use autodie;
 
-use Carp                                   qw/ confess /;
-use Getopt::Long                           qw/ GetOptions /;
-use Path::Tiny                             qw/ cwd path tempdir tempfile /;
-use Docker::CLI::Wrapper::Container v0.0.4 ();
+use Carp         qw/ confess /;
+use Getopt::Long qw/ GetOptions /;
+use Path::Tiny   qw/ cwd path tempdir tempfile /;
+
+# use Docker::CLI::Wrapper::Container v0.0.4 ();
 
 use lib "./lib";
 

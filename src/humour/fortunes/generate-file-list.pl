@@ -43,11 +43,11 @@ EOF
 
 $out->append_utf8(
     map { "$_\n" }
-        map {
+    map {
         my $escaped = escape_html($_);
         qq{<li><a href="$escaped">$escaped</a></li>}
-        }
-        sort { $a cmp $b } (
+    }
+    sort { $a cmp $b } (
         ( map { ( "$_.xml", $_, "$_.dat" ) } @fortunes ),
         (
             map { $_->basename; }
@@ -58,7 +58,7 @@ $out->append_utf8(
         "Makefile",
         "ver.txt",
         "show-cgi.txt",
-        )
+    )
 );
 
 $out->append_utf8(<<"EOF");

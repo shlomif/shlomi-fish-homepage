@@ -72,8 +72,8 @@ sub _map_data
                 exists( $keys_briefing{$k} )
                     ? ( $keys_briefing{$k} => _map_data( $thing->{$k} ) )
                     : ( die "Unknown key $k" );
-                }
-                grep { !exists( $_exclude_keys{$_} ) }
+            }
+            grep { !exists( $_exclude_keys{$_} ) }
                 keys(%$thing)
         };
     }

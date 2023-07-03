@@ -277,9 +277,8 @@ EOF
             join(
                 " ",
                 (
-                    sort    { $a cmp $b }
-                        map { @{ $_->{copy_screenplay_mak__targets} } }
-                        @records
+                    sort { $a cmp $b }
+                    map  { @{ $_->{copy_screenplay_mak__targets} } } @records
                 )
             )
         ),

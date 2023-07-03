@@ -127,12 +127,12 @@ EOF
             lang        => $lang,
             'src_dir'   => $dir,
             'src_files' => [
-                sort     { $a cmp $b }
-                    grep { $include_cb->($_) }
+                sort { $a cmp $b }
+                grep { $include_cb->($_) }
 
-                    # Filtering out explicitly because it has its own separate
-                    # dependency.
-                    grep { $_ ne "index.html" } @files
+                # Filtering out explicitly because it has its own separate
+                # dependency.
+                grep { $_ ne "index.html" } @files
             ],
         };
     }

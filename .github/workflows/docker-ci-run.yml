@@ -1,0 +1,19 @@
+# THIS FILE IS NOT GENERATED
+jobs:
+    test-docker-ci-run:
+        runs-on: ubuntu-latest
+        steps:
+        -   uses: actions/checkout@v2
+        -   run: sudo apt-get update -qq
+        -   run: sudo apt-get -y remove libgd3 libunwind-14 nginx
+        -   run: sudo apt-get --no-install-recommends install -y eatmydata
+        -   run: sudo eatmydata apt-get --no-install-recommends install -y build-essential cpanminus libperl-dev libxml2-dev libxslt1-dev perl xz-utils zip
+        -   run: sudo cpanm --verbose Carp Carp::Always Docker::CLI::Wrapper::Container File::Find::Object::Rule File::Update Future::Utils IO::Async Moo Path::Tiny Template Text::VimColor XML::Grammar::Screenplay::API::ImageListDoc YAML::XS
+        -   run: sudo -H `which python3` -m pip install cookiecutter
+        -   run: perl bin/my-cookiecutter.pl
+        -   run: perl bin/gen-docbook-make-helpers.pl
+        -   run: perl bin/docker-ci-run.pl
+        timeout-minutes: 60
+name: test-docker-ci-run
+'on':
+- push

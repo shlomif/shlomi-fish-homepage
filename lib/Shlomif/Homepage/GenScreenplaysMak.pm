@@ -98,7 +98,7 @@ sub _calc_screenplay_doc_makefile_lines
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {
-                        die qq#foo#;
+                        STDERR->print("File '$fn' does not exist.\n");
                     }
                 }
                 else
@@ -115,25 +115,32 @@ sub _calc_screenplay_doc_makefile_lines
             }
 
             push @generate_file_list_promises, sub {
-                write_on_change( $text_out_fh, \( $fn->slurp_utf8 ) );
-                my $got_doc = $image_lister->calc_doc__from_proto_text(
-                    $xml_out_fh,
-                    {
-                        source => {
-                            file => "$fn",
-                        },
-                    }
-                );
+                my $got_doc;
+                eval {
+                    write_on_change( $text_out_fh, \( $fn->slurp_utf8 ) );
+                    $got_doc = $image_lister->calc_doc__from_proto_text(
+                        $xml_out_fh,
+                        {
+                            source => {
+                                file => "$fn",
+                            },
+                        }
+                    );
+                };
                 return [
                     $files_var,
-                    [
-                        map {
-                            my $uri = $_->uri();
-                            $uri =~ s#\A(?:\./)?images/##ms
-                                or die "non matching uri='$uri'";
-                            $uri
-                        } @{ $got_doc->list_images() }
-                    ]
+                    (
+                        $got_doc
+                        ? [
+                            map {
+                                my $uri = $_->uri();
+                                $uri =~ s#\A(?:\./)?images/##ms
+                                    or die "non matching uri='$uri'";
+                                $uri
+                            } @{ $got_doc->list_images() }
+                            ]
+                        : []
+                    ),
                 ];
             };
         }

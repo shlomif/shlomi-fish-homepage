@@ -44,6 +44,9 @@ has [
 
 package main;
 
+use Cwd            qw/ getcwd /;
+use File::Basename qw/ basename /;
+
 my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
 my $EN      = "export $NOSYNC";
 my $configs = {
@@ -334,12 +337,13 @@ qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq[d=../temp-git/\$_ 
                 ]
             }
         );
-        my $suf = '--clones';
+        my $trunkbn = basename( getcwd() );
+        my $suf     = '--clones';
         $obj->docker(
             {
                 cmd => [
                     'cp',
-                    ( "../trunk" . $suf . "" ),
+                    ( "../$trunkbn" . $suf . "" ),
                     ( $obj->container() . ":/temp-git" . $suf ),
                 ]
             }

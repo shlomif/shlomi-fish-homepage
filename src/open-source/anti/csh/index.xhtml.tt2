@@ -1,7 +1,6 @@
 [%- SET title = "Stop Using (and Teaching) C-Shell and Tcsh" -%]
 [%- SET desc = "Stop Using (and Teaching) C-Shell and Tcsh: why they suck, and why they should be avoided." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -52,29 +51,40 @@ do.
 <li>
 
 <ol>
+
 <li>
+<p>
 Bash is the default scripting and login shell on Linux.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.kornshell.com/">ksh - the Korn Shell</a>, a Bourne-shell
 derivative, is the default login and scripting shell on
 non-GNU System V systems.
+</p>
 </li>
 
 <li>
+<p>
 On recent versions of Mac OS X, bash is the default scripting and login shell.
+</p>
 </li>
 
 <li>
+<p>
 Only on the Open Source BSD variants, ash (a slightly enhanced Bourne
 shell implementation) is the scripting shell and tcsh is the default login
 shell.
+</p>
 </li>
 
 <li>
+<p>
 On cygwin the default shell is bash. <a href="http://www.zsh.org/">zsh</a> is
 available for either cygwin or for non-cygwinned win32.
+</p>
 </li>
 
 </ol>
@@ -122,8 +132,8 @@ For this generation the choice is clear: bash or zsh that combine both good
 programmability and good interactive use. There’s no reason to keep using
 tcsh forever.
 </p>
-
 </li>
+
 </ol>
 
 [% WRAPPER h2_section id = "alternatives" title = "Alternatives" %]
@@ -135,16 +145,20 @@ Instead you should use, learn and teach one of the following shells:
 <ol>
 
 <li>
+<p>
 <a href="http://www.gnu.org/software/bash/">GNU Bash - the
 Bourne-Again-Shell</a> - an extended Bourne-shell-compatible shell, with
 good usability. Great for both interactive use and scripting. The default
 shell on many systems.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.zsh.org/">Zsh - the Z-shell</a> - the Emacs of shells:
 a shell that has everything, including the kitchen sink. Also Bourne-shell
 derived.
+</p>
 </li>
 
 </ol>
@@ -167,13 +181,17 @@ possibly with some bash extensions.
 <ul>
 
 <li>
+<p>
 <a href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg44679.html">A
 Linux-IL thread with many comments</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://www.mail-archive.com/lin-club%40vipe.technion.ac.il/msg00643.html">A
 thread in the Haifa Linux Club mailing list with some comments</a>
+</p>
 </li>
 
 </ul>

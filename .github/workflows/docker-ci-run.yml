@@ -9,11 +9,11 @@ jobs:
         -   run: sudo apt-get --no-install-recommends install -y eatmydata
         -   run: sudo eatmydata apt-get --no-install-recommends install -y build-essential cpanminus libperl-dev libxml2-dev libxslt1-dev perl xz-utils zip
         # see https://rt.cpan.org/Public/Bug/Display.html?id=134394
-        -   run: 'install_MooX_late_deps() { sudo cpanm --verbose Module::Runtime; } ; install_MooX_late_deps'
+        # -   run: 'install_MooX_late_deps() { sudo cpanm --verbose Module::Runtime; } ; install_MooX_late_deps'
         # -   run: sudo cpanm --verbose Carp Carp::Always Docker::CLI::Wrapper::Container File::Find::Object::Rule File::Update Future::Utils IO::Async Moo Path::Tiny Template Text::VimColor XML::Grammar::Screenplay::API::ImageListDoc YAML::XS
         -   run: sudo cpanm --verbose Carp Carp::Always Docker::CLI::Wrapper::Container Moo Path::Tiny
-        -   run: sudo -H `which python3` -m pip install cookiecutter
-        -   run: perl bin/my-cookiecutter.pl
+        # -   run: sudo -H `which python3` -m pip install cookiecutter
+        # -   run: perl bin/my-cookiecutter.pl
         # -   run: perl bin/gen-docbook-make-helpers.pl
         -   run: perl bin/docker-ci-run.pl
         timeout-minutes: 60

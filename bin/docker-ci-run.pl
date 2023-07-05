@@ -172,6 +172,8 @@ EOF
     ),
 };
 
+my $COPY_CLONES_DIR = 0;
+
 sub run_config
 {
     my ( $self, $args ) = @_;
@@ -337,17 +339,20 @@ qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq[d=../temp-git/\$_ 
                 ]
             }
         );
-        my $trunkbn = basename( getcwd() );
-        my $suf     = '--clones';
-        $obj->docker(
-            {
-                cmd => [
-                    'cp',
-                    ( "../$trunkbn" . $suf . "" ),
-                    ( $obj->container() . ":/temp-git" . $suf ),
-                ]
-            }
-        );
+        if ($COPY_CLONES_DIR)
+        {
+            my $trunkbn = basename( getcwd() );
+            my $suf     = '--clones';
+            $obj->docker(
+                {
+                    cmd => [
+                        'cp',
+                        ( "../$trunkbn" . $suf . "" ),
+                        ( $obj->container() . ":/temp-git" . $suf ),
+                    ]
+                }
+            );
+        }
     }
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
     my $locale = <<"EOSCRIPTTTTTTT";
@@ -360,7 +365,10 @@ EOSCRIPTTTTTTT
 set -e -x
 $locale
 mv /temp-git ~/source
-mv /temp-git--clones ~/source--clones
+if test "$COPY_CLONES_DIR" != "0"
+then
+    mv /temp-git--clones ~/source--clones
+fi
 true || ls -lR /root
 $setup_package_manager
 cd ~/source

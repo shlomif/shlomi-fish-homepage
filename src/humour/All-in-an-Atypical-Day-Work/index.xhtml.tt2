@@ -13,15 +13,11 @@
 
 [% PROCESS story_ongoing_episode_li base = "All-in-an-Atypical-Day-Work", %]
 
-[% IF 0 %]
-
 <li>
 <p>
-[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Selina-Mandrake", %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/screenplay-xml/tt2-txt/All-in-an-Atypical-Day-Work.screenplay-text.txt.tt2", %]
 </p>
 </li>
-
-[% END %]
 
 [% IF 0 %]
 
@@ -84,6 +80,12 @@ pull request</a> I sent him. Thanks, Marcelo, for your great work!
 [% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/me/rindolf/#rindolf_the_evil_reindeer">IRC (Freenode/etc.) conversations</a> -
+</p>
+</li>
 
 </ul>
 

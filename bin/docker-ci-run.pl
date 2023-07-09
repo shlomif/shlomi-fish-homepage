@@ -121,7 +121,7 @@ EOF
             ],
         }
     ),
-    'fedora:39' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:38' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             install_langpack            => "true",

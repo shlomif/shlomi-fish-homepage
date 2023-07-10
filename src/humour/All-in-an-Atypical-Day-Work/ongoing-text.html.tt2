@@ -3,8 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'All-in-an-Atypical-Day-Work') %]
+[%- long_stories.calc_common_top_elems(id => 'All-in-an-Atypical-Day-Work') -%]
 
-[% path_slurp("screenplay-xml/rendered-html/All-in-an-Atypical-Day-Work.html") %]
+[%- path_slurp("screenplay-xml/rendered-html/All-in-an-Atypical-Day-Work.html") -%]
 
-[% END %]
+[%- END -%]

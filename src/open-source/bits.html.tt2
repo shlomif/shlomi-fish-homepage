@@ -1,7 +1,6 @@
 [%- SET title = "Open Source Bits and Bobs" -%]
 [%- SET desc = "Shlomi Fish’s Open Source Bits and Bobs" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
@@ -154,6 +153,10 @@ it that was improved by me to some extent.
 
 <h2 id="fluttering_flag"><a href="[% INCLUDE bit_link href = "sdl-flag-0.2.0.c" , %]">SDL
 Fluttering Flag</a></h2>
+
+<p>
+<b>Note:</b> there is now a <a href="https://github.com/shlomif/sdl2-pointerless/blob/shlomif-flag-demo/src/main.c">port to SDL 2.x</a> (note the git branch).
+</p>
 
 <p>
 This is a fluttering flag, not quite unlike the one presented at the

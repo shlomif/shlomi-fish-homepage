@@ -1,7 +1,6 @@
 [%- SET title = "Programs Every Programmer Has Written" -%]
 [%- SET desc = "Programs Every Programmer Has Written" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -99,6 +98,37 @@ program.
 </li>
 
 </ol>
+
+[% WRAPPER h2_section id = "portfolios" title = "Portfolios" %]
+
+<p>
+Programmers' portfolios of these:
+</p>
+
+[% WRAPPER h3_section id = "portfolios-shlomif" title = "Shlomi Fish’s" %]
+
+<ol>
+
+<li>
+<p>
+Hello, world:
+</p>
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/shlomif-c-snippets/blob/master/shlomif-c-snippets/hello_world.c">C</a>.
+</p>
+</li>
+
+</ul>
+</li>
+
+</ol>
+
+[% END %]
+
+[% END %]
 
 [% WRAPPER h2_section id="credits" title="Licence and Credits"%]
 

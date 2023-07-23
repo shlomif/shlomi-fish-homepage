@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 1;
+use Test::More tests => 2;
 
 use lib "./lib";
 
@@ -18,4 +18,12 @@ my $obj = Shlomif::Homepage::TTRender->new(
 
     # TEST
     like( $$htmlref, qr#\A\.\./\z#ms, "->render base_path test", )
+}
+
+{
+    my ($htmlref) = $obj->render( "humour/bits/index.xhtml",
+        \qq|<a href="[% base_path %]">Home</a>| );
+
+    # TEST
+    is( $$htmlref, qq|<a href="../../">Home</a>|, "->render base_path test", )
 }

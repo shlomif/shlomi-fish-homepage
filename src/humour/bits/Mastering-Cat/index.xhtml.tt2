@@ -15,11 +15,11 @@
 </p>
 
 <p>
-Shlomi Fish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>
+Shlomi Fish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>,
 has taken the time to sit down with us for an interview on his latest
 book, <i>Mastering cat</i>. In this 344 pages-long book, Fish details
-everything  you wanted to know about the UNIX <code>cat</code> command. We
-decided to  have an interview with him to find out more about the
+everything you wanted to know about the UNIX <code>cat</code> command. We
+decided to have an interview with him to find out more about the
 book’s motivation, content, and philosophy.
 </p>
 
@@ -39,7 +39,7 @@ book’s motivation, content, and philosophy.
 <b>Shlomi Fish</b>: Well, I realised people use <code>cat</code> so often
 that they don’t take the time to fully investigate it and learn it.
 For example, many people I worked with believed that <code>cat</code> can
-only be used to output one file at a  time. So to output several files
+only be used to output one file at a time. So to output several files
 they used something like:
 </p>
 
@@ -92,7 +92,7 @@ already in its own file, you can simply use <code>cat prefix.txt
 <p>
 Of course, if you want to append the same text to both the start and
 the end of a file, you can’t do that with <code>cat - myfile.txt -</code>.
-It simply doesn’t work that way. So, I end up explaining a lot about
+It simply doesn’t work that way. So I end up explaining a lot about
 UNIX pipeline concepts in the book.
 </p>
 
@@ -221,6 +221,5 @@ Macke’s blog</a>
 </ul>
 
 [% END %]
-
 
 [% END %]

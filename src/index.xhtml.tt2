@@ -84,7 +84,7 @@ open source, web culture, Internet freedom, etc. from the author of
 OpenID-enabling http://www.shlomifish.org/ - see:
 http://blog.woobling.org/2009/05/your-openid-sucks.html
 %]
-[%SET openid="http://shlomif.livejournal.com/"%]
+[% SET openid = "http://shlomif.livejournal.com/" %]
 <meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
 <link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
 <link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
@@ -137,13 +137,13 @@ please cave, stay, keep, and die!
 
 <p>
 You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
-to the left.  Alternatively, you can traverse it page-by-page using the
+to the left. Alternatively, you can traverse it page-by-page using the
 <b>arrows at the top</b>. There’s also <a href="#news">a <b>news feed</b></a>
 for what is new on the site, which is updated periodically.
 </p>
 
 <p>
-Here are some of the things you can find here:
+Here are some of the resources you can find here:
 </p>
 
 [% WRAPPER h3_section id = "humour" href = "humour/" title = "Humour" %]
@@ -249,7 +249,7 @@ information page</a>, a page about <a href="[% base_path %]me/rindolf/">my “Ri
 
 [% END %]
 
-[% WRAPPER h3_section id = "enjoy" title = "Enjoy!"%]
+[% WRAPPER h3_section id = "enjoy" title = "Enjoy!" %]
 
 <p>
 I hope you enjoy my web-site. If you do, please

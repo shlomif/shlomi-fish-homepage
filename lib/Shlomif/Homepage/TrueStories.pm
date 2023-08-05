@@ -145,6 +145,14 @@ sub get_nav_list
     return $nav_list;
 }
 
+sub _get_record_by_id
+{
+    my ( $self, $id ) = @_;
+
+    return $self->get_list()
+        ->[ $id_lookup->{$id} // ( die "unknown id='$id'" ) ];
+}
+
 sub get_html_by_id
 {
     my ( $self, $id ) = @_;

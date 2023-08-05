@@ -66,7 +66,9 @@ then
 fi
 # exit 5
 su -c "apt-get update"
-su -c "apt-get -y install eatmydata netselect-apt sudo"
+su -c "apt-get -y install eatmydata locales netselect-apt sudo"
+printf "%s\n%s\n" "en_US.UTF-8 UTF-8" "C.UTF-8 UTF-8" > /etc/locale.gen
+sudo dpkg-reconfigure --frontend=noninteractive locales
 # sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 EOF
@@ -100,6 +102,7 @@ EOF
                     libprimesieve-dev
                     libpython3-dev
                     libxml2-dev
+                    libxml2-utils
                     libxslt1-dev
                     lynx
                     perl
@@ -515,7 +518,7 @@ use Benchmark ':hireswallclock';
 my %times;
 
 my @systems_names =
-    ( grep { 0 or /fedora/ms } sort { $a cmp $b } ( keys %$configs ) );
+    ( grep { 1 ? 1 : /debian/ms } sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

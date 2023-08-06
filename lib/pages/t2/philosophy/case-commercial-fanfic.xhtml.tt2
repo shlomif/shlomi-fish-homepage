@@ -100,7 +100,7 @@ thematic pages of quotes or essays.
 
 <div class="indiv_nodes_wrapper limit_imgs_width my_rpf side_toc" id="main_text_wrapper">
 
-[% toc_div( "collapse" => "1", ) %]
+[% toc_div() %]
 
 [% UNLESS screenplay_shortage__remix %]
 

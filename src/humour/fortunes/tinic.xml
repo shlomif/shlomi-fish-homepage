@@ -1451,5 +1451,35 @@ Bastard Operator from Hell". (which is a highly recommended read).
           </info>
       </quote>
     </fortune>
+
+    <fortune id="gilboa-davara-about-moore-law">
+      <meta>
+        <title>Gilboa Davara about Moore’s Law</title>
+      </meta>
+      <quote>
+          <body>
+
+<blockquote>
+
+<p>A couple of years ago I worked for a medical software development company. I was working on the database development side. (We had our own proprietary object oriented database)</p>
+
+<p>Our database was pretty cool; it could handle an hospital level load on a dual Pentium Pro machine. (Which was a far cry from most big iron machines that were used back then.)</p>
+
+<p>Our medical software side used PowerBuilder (and later VB) to develop the medical applications. To put it mildly, the medical application itself, was by far, slower and heavier then the medical database that it was built upon. While 50 clients could run easily on a Pentium I 90 MHz with 32MB of RAM , the medical application ran like shit on a Pentium I 166 MHz with 64MB of RAM machine!</p>
+
+<p>And every-time we pointed this anomaly to the med team, they claimed that "new machines are bound, new CPUs; by the time we are out, CPU power won't be an issue."</p>
+
+<p>You know what, that med software now runs slower than a dead dog on a top-level Pentium 3 / Pentium 4 / Athlon machine… nothing has changed.</p>
+
+</blockquote>
+
+          </body>
+          <info>
+              <author>Gilboa Davara</author>
+              <work href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg27751.html">Linux-IL post</work>
+          </info>
+      </quote>
+    </fortune>
+
   </list>
 </collection>

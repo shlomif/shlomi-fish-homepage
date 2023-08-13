@@ -249,6 +249,7 @@ $(POST_DEST)/humour/Terminator/Liberation/Terminator--Liberation.epub \
 $(POST_DEST)/humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.epub \
 $(POST_DEST)/humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.epub \
 $(POST_DEST)/humour/bits/How-Ronda-Rousey-Lost-her-UFC-Streak/How-Ronda-Rousey-Lost-her-UFC-Streak.epub \
+$(POST_DEST)/humour/bits/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after.epub \
 $(POST_DEST)/humour/bits/Who-will-ride-Princess-Celestia/Who-will-ride-Princess-Celestia.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie-hebrew.epub \
 $(POST_DEST)/humour/humanity/Humanity-Movie.epub \

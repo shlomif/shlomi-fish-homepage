@@ -1,0 +1,28 @@
+[%- SET title = "One does not simply start a story with “And they all lived happily ever after”" -%]
+
+[%- SET apply_screenplay_style = 1 -%]
+[% main_class.addClass("limit_imgs_width", "ride_celestia") %]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "Text" %]
+
+[% path_slurp("screenplay-xml/rendered-html/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after.html") %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
+
+[% license_obj.by_nc_sa_british_blurb( "year" => "2022", ) %]
+
+[% END %]
+
+[% WRAPPER screenplay_read_online__dwim basename = "One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after" %]
+
+[%- END -%]
+
+[% END %]

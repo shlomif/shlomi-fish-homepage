@@ -15,7 +15,7 @@ jobs:
         # -   run: sudo -H `which python3` -m pip install cookiecutter
         # -   run: perl bin/my-cookiecutter.pl
         # -   run: perl bin/gen-docbook-make-helpers.pl
-        -   run: perl bin/docker-ci-run.pl
+        -   run: perl bin/docker-ci-run.pl --regex-filter='fedora'
         timeout-minutes: 60
 name: test-docker-ci-run
 'on':

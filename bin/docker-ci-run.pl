@@ -505,11 +505,14 @@ my $output_fn;
 my $force_load;
 my $cleanrun;
 my $cleanup;
+my $regex_filter = '.';
+
 GetOptions(
-    "cleanrun!"   => \$cleanrun,
-    "cleanup!"    => \$cleanup,
-    "force-load!" => \$force_load,
-    "output|o=s"  => \$output_fn,
+    "cleanrun!"      => \$cleanrun,
+    "cleanup!"       => \$cleanup,
+    "force-load!"    => \$force_load,
+    "regex-filter=s" => \$regex_filter,
+    "output|o=s"     => \$output_fn,
 ) or die $!;
 
 # enable hires wallclock timing if possible
@@ -518,7 +521,7 @@ use Benchmark ':hireswallclock';
 my %times;
 
 my @systems_names =
-    ( grep { 1 ? 1 : /debian/ms } sort { $a cmp $b } ( keys %$configs ) );
+    ( grep { /$regex_filter/ms } sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

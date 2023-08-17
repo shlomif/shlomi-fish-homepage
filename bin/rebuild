@@ -20,7 +20,7 @@ rebuild()
             local tgt="$1"
             shift
 
-            if ! time gmake -j"$ncpus" "$tgt"
+            if ! time gmake "$tgt"
             then
                 echo "$tgt failed"
                 false
@@ -30,7 +30,7 @@ rebuild()
         }
         _gmake_target()
         {
-            time gmake -j"$ncpus" "$1"
+            time gmake "$1"
         }
         ncpus="$(nproc)"
         if test -z "$ncpus"

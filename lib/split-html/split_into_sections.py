@@ -166,8 +166,10 @@ class XhtmlSplitter:
             if self.input_is_plain_html
             else _xhtml_to_string
         )
-
-        self._prune_and_graft_xpath = prune_and_graft_xpath
+        if prune_and_graft_xpath:
+            self._prune_and_graft_xpath = self._x_format(prune_and_graft_xpath)
+        else:
+            self._prune_and_graft_xpath = None
 
     def _get_header(self, elem):
         return _first(
@@ -408,9 +410,7 @@ class XhtmlSplitter:
                         a2_tag = _first(
                             self.ns,
                             section_tag,
-                            (self._prune_and_graft_xpath).format(
-                                xhtml_prefix=self.xhtml_prefix
-                            ),
+                            self._prune_and_graft_xpath,
                             False,
                         )
                         tot += ("<{xhtml_prefix}br/>" * 2)

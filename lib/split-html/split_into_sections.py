@@ -234,20 +234,17 @@ class XhtmlSplitter:
                 )
                 # print(is_found)
                 if is_found:
-                    is_found2 = _xpath(
+                    found_h_tag = _xpath(
                         self.ns,
                         elem,
                         self._hn_xpath,
                     )
-                    assert len(is_found2) == 1
+                    assert len(found_h_tag) == 1
                     hlevel = int(
-                        etree.QName(is_found2[0].tag).localname[1:]
+                        etree.QName(found_h_tag[0].tag).localname[1:]
                     )
                     diff = hlevel - level
                     diffs.add(diff)
-                    if False:
-                        print(level, hlevel-2)
-                        assert diff == 2
                 return [TreeNode(elem=elem, childs=kids)]
             else:
                 return kids

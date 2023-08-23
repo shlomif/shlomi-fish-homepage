@@ -223,6 +223,7 @@ def generic_generate_from_(
         xhtml_section_tag=XHTML_SECTION_TAG,
         list_sections_format=None,
         main_title=None,
+        prune_and_graft_xpath=None,
         ):
     full_out_dirname = OUT_DN + (output_dirname or '')
 
@@ -241,6 +242,7 @@ def generic_generate_from_(
         list_sections_format=list_sections_format,
         xhtml_article_tag=xhtml_article_tag,
         xhtml_section_tag=xhtml_section_tag,
+        prune_and_graft_xpath=prune_and_graft_xpath,
     )
     splitter.process()
 
@@ -405,6 +407,9 @@ def _screenplays_main():
         path_to_all_in_one="../",
         path_to_input="./index.xhtml",
         path_to_images="../",
+        prune_and_graft_xpath=(
+            "./{xhtml_prefix}a[./{xhtml_prefix}"
+            "img[@class='rindolf']]"),
     )
 
     TOP_LEVEL_ID = 'main_text_wrapper'

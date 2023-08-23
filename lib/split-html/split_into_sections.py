@@ -81,6 +81,7 @@ class XhtmlSplitter:
             process_header_text=_dummy_process_title,
             process_main_title=_dummy_process_title,
             section_format_cb=None,
+            prune_and_graft_xpath=None,
     ):
         self.process_header_text = process_header_text
         self.process_main_title = process_main_title
@@ -165,6 +166,8 @@ class XhtmlSplitter:
             if self.input_is_plain_html
             else _xhtml_to_string
         )
+
+        self._prune_and_graft_xpath = prune_and_graft_xpath
 
     def _get_header(self, elem):
         return _first(
@@ -402,9 +405,6 @@ class XhtmlSplitter:
                     if not fmt:
                         continue
                     tot += fmt
-                self._prune_and_graft_xpath = \
-                    "./{xhtml_prefix}a[./{xhtml_prefix}img" \
-                    "[@class='rindolf']]"
                 if self._prune_and_graft_xpath:
                     section_tag = header_tag.getparent()
                     try:

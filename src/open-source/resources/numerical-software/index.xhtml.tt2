@@ -4,12 +4,11 @@
 <link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
 [% END %]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 This is a small, hand-maintained, directory of numerical software:
@@ -19,7 +18,7 @@ matrix/tensor-based packages, etc.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "tensor-based"  title = "Tensor-based"  %]
+[% WRAPPER h2_section id = "tensor-based" title = "Tensor-based" %]
 
 <ul>
 
@@ -78,7 +77,7 @@ an open-source IDL-clone.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "spreadsheets"  title = "Spreadsheets"  %]
+[% WRAPPER h2_section id = "spreadsheets" title = "Spreadsheets" %]
 
 <ul>
 
@@ -140,7 +139,7 @@ Python-based and oriented spreadsheet that uses python formulae.
 
 </ul>
 
-[% WRAPPER h3_section id = "web-based-spreadsheets" title = "Web-based Spreadsheets"  %]
+[% WRAPPER h3_section id = "web-based-spreadsheets" title = "Web-based Spreadsheets" %]
 
 <ul>
 
@@ -162,9 +161,10 @@ grid / spreadsheet". Open source under the MIT licence.
 <p>
 <a href="https://github.com/SheetJS/sheetjs">SheetJS</a> - JavaScript reader and writer for
 spreadsheet formats (e.g: <a href="https://www.howtogeek.com/392333/what-is-an-xlsx-file-and-how-do-i-open-one/">*.xlsx</a>
-or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument .ods</a>. Open source under the Apache License.
+or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument .ods</a>). Open source under the Apache License.
 </p>
 </li>
+
 </ul>
 
 [% END %]
@@ -172,10 +172,9 @@ or <a href="https://en.wikipedia.org/wiki/OpenDocument">OpenDocument .ods</a>. O
 [% # End of Spreadsheets.
 %]
 
-
 [%- END -%]
 
-[% WRAPPER h2_section id = "CASes"  title = "Computer Algebra Systems (CASes)"  %]
+[% WRAPPER h2_section id = "CASes" title = "Computer Algebra Systems (CASes)" %]
 
 <ul>
 
@@ -237,10 +236,9 @@ Open-source.
 [% # End of Computer Algebra Systems (CASes).
 %]
 
-
 [%- END -%]
 
-[% WRAPPER h2_section id = "statistical"  title = "Statistical Software"  %]
+[% WRAPPER h2_section id = "statistical" title = "Statistical Software" %]
 
 <ul>
 
@@ -263,10 +261,9 @@ program for Statistics. Should be very complete.
 [% # End of Statistical Software
 %]
 
-
 [%- END -%]
 
-[% WRAPPER h2_section id = "libraries"  title = "Libraries"  %]
+[% WRAPPER h2_section id = "libraries" title = "Libraries" %]
 
 <ul>
 
@@ -308,12 +305,11 @@ restrictive).
 [% # End of libraries
 %]
 
-
 [%- END -%]
 
-[% WRAPPER h2_section id = "calculators"  title = "Calculators"  %]
+[% WRAPPER h2_section id = "calculators" title = "Calculators" %]
 
-[% WRAPPER h3_section id = "gui-calculators"  title = "Graphical (GUI) Calculators"  %]
+[% WRAPPER h3_section id = "gui-calculators" title = "Graphical (GUI) Calculators" %]
 
 <ul>
 
@@ -350,7 +346,7 @@ BC or Matlab. Open source, GPLv3.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "cli-calculators"  title = "Command Line Calculators"  %]
+[% WRAPPER h3_section id = "cli-calculators" title = "Command Line Calculators" %]
 
 <ul>
 
@@ -378,12 +374,11 @@ Unix Programming Environment</a>.
 [% # End of calculators
 %]
 
-
 [%- END -%]
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -406,6 +401,6 @@ with many comments.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2009",  %]
+[% PROCESS cc_by_licence_section "year" => "2009", %]
 
 [% END %]

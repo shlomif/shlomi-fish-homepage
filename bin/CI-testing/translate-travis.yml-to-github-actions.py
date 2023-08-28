@@ -296,7 +296,17 @@ def generate_windows_yaml(plat, output_path, is_act):
     _write(output_path=output_path, data=skel, )
 
 
+def generate_docker_ci(output_path):
+    """docstring for main"""
+    with open("./bin/CI-testing/docker-ci-run.yml", "rt") as infh:
+        data = yaml.safe_load(infh)
+    _write(output_path=output_path, data=data, )
+
+
+
+
 def main():
+    generate_docker_ci(output_path=".github/workflows/docker-ci-run.yml",)
     generate(
         output_path=".github/workflows/use-github-actions.yml",
         is_act=False,

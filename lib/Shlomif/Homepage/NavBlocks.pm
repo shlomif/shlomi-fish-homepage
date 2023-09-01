@@ -199,6 +199,28 @@ sub _gen__who_will_ride_princess_celestia__tr
     );
 }
 
+sub _gen__start_with_happily_after__tr
+{
+    my $self  = shift;
+    my $args  = shift;
+    my $regex = $args->{path_regex};
+
+    return _tr(
+        title =>
+"One does not simply start a story with “And they all lived happily ever after”",
+        items => [
+            _fp(
+                path =>
+"humour/bits/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after/",
+            ),
+            ( grep { $_->path() =~ $regex } () ),
+            _github(
+                url => 'https://github.com/shlomif/shlomi-fish-homepage',
+            ),
+        ],
+    );
+}
+
 sub _commercial_fanfic_initiative__mission_stmt
 {
     my ($explicit) = @_;
@@ -741,6 +763,12 @@ my %tr_s = (
             ),
         ],
     ),
+    'start_with_happily_after' =>
+        __PACKAGE__->_gen__start_with_happily_after__tr(
+        {
+            path_regex => qr/./ms,
+        }
+        ),
     'who_will_ride_princess_celestia' =>
         __PACKAGE__->_gen__who_will_ride_princess_celestia__tr(
         {
@@ -1037,6 +1065,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
                     qw( terminator_liberation queen_padme_tales
                         who_will_ride_princess_celestia the_10th_muse__mlpfim
                         atypical_day
+                        start_with_happily_after
                     ),
                 ),
             ],

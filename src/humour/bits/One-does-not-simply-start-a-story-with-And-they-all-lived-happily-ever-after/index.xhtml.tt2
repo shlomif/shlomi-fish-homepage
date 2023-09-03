@@ -1,6 +1,7 @@
 [%- SET title = "One does not simply start a story with “And they all lived happily ever after”" -%]
 
 [%- SET apply_screenplay_style = 1 -%]
+[% main_class.addClass("start_a_story") %]
 
 [%- WRAPPER wrap_html -%]
 

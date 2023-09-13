@@ -93,84 +93,84 @@ sub _page_to_obj
 my @pages = ( map { _page_to_obj($_); } @pages_proto );
 
 my $TT2_GEN__COMMON_INCLUDE = <<'END_OF_TEMPLATE';
-[% PROCESS "Inc/emma_watson.tt2" %]
+[%- PROCESS "Inc/emma_watson.tt2" -%]
 
-{{ FOREACH p IN pages }}
+{{- FOREACH p IN pages -}}
 
-[% BLOCK facts__img__{{ p.short_id() }} %]
+[%- BLOCK facts__img__{{ p.short_id() }} -%]
 <!-- Taken from {{ p.img_attribution() }} -->
 <img src="{{ p.img_src_tt2() }}" alt="{{ p.img_alt() }}" class="{{ p.img_class() }}" />
-[% END %]
+[%- END -%]
 
-[% BLOCK facts__section__{{ p.short_id() }} %]
+[%- BLOCK facts__section__{{ p.short_id() }} -%]
 
-[% IF NOT nowrap %]
+[%- IF NOT nowrap -%]
 <section class="facts_wrap">
 
 <header>
-[% IF 1 %]
+[%- IF 1 -%]
 <h2>Introduction</h2>
-[% ELSE %]
+[%- ELSE -%]
 <h2>{{ p.title() }}</h2>
-[% END %]
+[%- END -%]
 </header>
-[% END %]
+[%- END -%]
 
 <div class="desc">
-[% INCLUDE facts__img__{{ p.short_id() }} %]
+[%- INCLUDE facts__img__{{ p.short_id() }} -%]
 <div class="abstract">
 {{ p.abstract() }}
 </div>
 </div>
 
-[% IF NOT nowrap %]
+[%- IF NOT nowrap -%]
 </section>
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-{{ END }}
+{{- END -}}
 
-[% BLOCK facts__list %]
+[%- BLOCK facts__list -%]
 
 <div class="facts_wrap">
-{{ FOREACH p IN pages }}
+{{- FOREACH p IN pages -}}
 
-[% WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" %]
-[% INCLUDE facts__section__{{ p.short_id() }} nowrap = 1 %]
-[% END %]
+[%- WRAPPER h3_section id="facts-{{ p.short_id() }}" sect_class="facts" href="{{ p.url_base() }}/" title="{{ p.title() }}" -%]
+[%- INCLUDE facts__section__{{ p.short_id() }} nowrap = 1 -%]
+[%- END -%]
 
-{{ END }}
+{{- END -}}
 </div>
 
-[% END %]
+[%- END -%]
 END_OF_TEMPLATE
 
 my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
-[% SET title = "{{ p.title() }}" %]
-[% SET desc = "{{ p.meta_desc() }}" %]
+[%- SET title = "{{ p.title() }}" -%]
+[%- SET desc = "{{ p.meta_desc() }}" -%]
 
-[% WRAPPER wrap_html %]
+[%- WRAPPER wrap_html -%]
 
-[% PROCESS "Inc/emma_watson.tt2" %]
-[% PROCESS "Inc/factoids_jqui_tabs_multi_lang.tt2" %]
-[% PROCESS "Inc/nav_blocks.tt2" %]
-[% PROCESS "Inc/summer_glau.tt2" %]
-[% PROCESS "factoids/common-out/tags.tt2" %]
-[% PROCESS "stories/stories-list.tt2" %]
+[%- PROCESS "Inc/emma_watson.tt2" -%]
+[%- PROCESS "Inc/factoids_jqui_tabs_multi_lang.tt2" -%]
+[%- PROCESS "Inc/nav_blocks.tt2" -%]
+[%- PROCESS "Inc/summer_glau.tt2" -%]
+[%- PROCESS "factoids/common-out/tags.tt2" -%]
+[%- PROCESS "stories/stories-list.tt2" -%]
 
-[% INCLUDE facts__section__{{ p.short_id() }} %]
-[% INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" %]
+[%- INCLUDE facts__section__{{ p.short_id() }} -%]
+[%- INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" -%]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
-[% license_obj.{{ p.license_method() }} (year=>"{{ p.license_year() }}") %]
-[% END %]
+[%- WRAPPER h2_section id="license" title="Copyright and Licence"-%]
+[%- license_obj.{{ p.license_method() }} (year=>"{{ p.license_year() }}") -%]
+[%- END -%]
 
-[% WRAPPER links_sect  %]
+[%- WRAPPER links_sect  -%]
 
 {{ p.links_tt2() }}
 
-[% WRAPPER h3_section id = "facts__common_links" title = "Common Links" %]
+[%- WRAPPER h3_section id = "facts__common_links" title = "Common Links" -%]
 
 <ul>
 
@@ -180,19 +180,19 @@ my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 </p>
 </li>
 
-[% INCLUDE chuck_norris_factoids_trend_significance__links %]
+[%- INCLUDE chuck_norris_factoids_trend_significance__links -%]
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER see_also  %]
+[%- WRAPPER see_also  -%]
 {{ p.see_also() }}
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 END_OF_TEMPLATE
 
 # some useful options (see below for full list)

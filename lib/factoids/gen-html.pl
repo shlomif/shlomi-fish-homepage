@@ -180,6 +180,36 @@ my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 </p>
 </li>
 
+<li>
+
+<p>
+<a href="[% base_path %]meta/FAQ/factoids_obsession.xhtml">Shlomi Fish’s FAQ - Why are you so obsessed with “facts”/factoids about Chuck Norris/etc.?</a>
+</p>
+
+<ul>
+
+<li>
+<p>
+<a
+href="[% base_path %]philosophy/philosophy/putting-all-cards-on-the-table-2013/">“Putting
+all the Cards on the Table (2013)”</a> (also by me) - mentions what is the
+second major battle that Chuck Norris lost.
+</p>
+</li>
+
+<li>
+<p>
+<a
+href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/">“Putting
+Cards on the Table (2019-*)”</a> (also by me) - additional update on
+Chuck Norris and the facts.
+</p>
+</li>
+
+</ul>
+
+</li>
+
 </ul>
 
 [% END %]

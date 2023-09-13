@@ -31,13 +31,15 @@ one (<a href="#facts-sglau">Summer Glau</a>).
 
 <section class="facts_lists_list">
 
+<header>
 <h2 id="the-collections">The Collections</h2>
+</header>
 
 [% INCLUDE facts__list %]
 
 </section>
 
-[% WRAPPER h2_section id = "sources" sect_class="facts_sources" title = "Source Files and Code" %]
+[% WRAPPER h2_section id = "sources" sect_class = "facts_sources" title = "Source Files and Code" %]
 
 <ul>
 
@@ -70,9 +72,21 @@ appropriate <a href="[% base_path %]humour/fortunes/">fortunes collection</a>.
 
 [% END %]
 
+[% WRAPPER h2_section id = "links" title = "Links" %]
+
+<ul>
+
+[% INCLUDE chuck_norris_factoids_trend_significance__links %]
+
+</ul>
+
+[% END %]
+
 <section class="thanks">
 
+<header>
 <h2 id="thanks" class="facts">Thanks</h2>
+</header>
 
 <ul>
 <li>

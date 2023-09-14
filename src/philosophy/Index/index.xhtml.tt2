@@ -1,9 +1,8 @@
 [%- SET title = "Index to Shlomi Fish’s Essays" -%]
 [%- SET desc = "Index to Shlomi Fish’s Essays" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% article_index__body() %]
+[%- article_index__body() -%]
 
-[% END %]
+[%- END -%]

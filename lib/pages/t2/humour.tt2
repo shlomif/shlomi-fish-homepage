@@ -3313,6 +3313,39 @@ Flock aimed to be the browser for the social web, but I found it the completely 
 
 [%- END -%]
 
+[% SET id = "One-does-not-Simply-start-a-story-with-And-they-all-lived-happily-ever-after" %]
+[% SET strip__q = "One does not simply start a story with “And they all lived happily ever after”" %]
+[% WRAPPER github_captioned_image_joke id = "${id}" header = strip__q repo_href = "https://github.com/shlomif/captioned-images--repo/tree/master/${id}" src = base_path _ "humour/images/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after-600.webp" alt = strip__q %]
+
+[% WRAPPER quote %]
+
+<p>
+[% strip__q %]:
+</p>
+
+<p>
+<a href="https://en.wikiquote.org/wiki/Mr._T">Mr. T:</a>
+<q>I pity the fool who doesn’t accessorize!</q>
+</p>
+
+[%- END -%]
+
+[% WRAPPER comment %]
+
+<ul>
+
+<li>
+<p>
+Photo taken from a web-search - thanks!
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[%- END -%]
+
 </div>
 
 </section>

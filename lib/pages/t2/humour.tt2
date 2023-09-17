@@ -21,7 +21,7 @@
 [% SET withcensored = 1 %]
 
 [% IF (! captioned_images_only) %]
-[% INCLUDE lang_switch url_eng="humour.html" url_heb="humour-heb.html" %]
+[% INCLUDE lang_switch url_eng = "humour.html" url_heb = "humour-heb.html" %]
 [%- END -%]
 
 <div class="[% IF captioned_images_only %]faq [% END %]main_text side_toc">
@@ -3341,13 +3341,13 @@ Having watched the skit <a href="https://www.youtube.com/watch?v=Gl3e-OUnavQ">Se
 
 <div class="english">
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence" %]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2002", ) %]
 
 [% END %]
 
-[% WRAPPER h2_section id="credits" title="Credits" %]
+[% WRAPPER h2_section id = "credits" title = "Credits" %]
 
 <ul>
 

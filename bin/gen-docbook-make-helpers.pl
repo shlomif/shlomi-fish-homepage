@@ -8,7 +8,7 @@ use Carp       ();
 use List::Util qw/ uniq /;
 use Path::Tiny qw/ path /;
 use lib './lib';
-use HTML::Latemp::DocBook::GenMakeMod    ();
+use HTML::Latemp::DocBook::GenMake       ();
 use Shlomif::Homepage::Git               ();
 use Shlomif::Homepage::GenQuadPresMak    ();
 use Shlomif::Homepage::GenFictionsMak    ();
@@ -125,7 +125,7 @@ my $gen_screenplays_ret = Shlomif::Homepage::GenScreenplaysMak->new->generate(
 
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => $git_task, } );
 
-HTML::Latemp::DocBook::GenMakeMod->new(
+HTML::Latemp::DocBook::GenMake->new(
     {
         dest_var         => '$(PRE_DEST)',
         disable_docbook4 => 1,

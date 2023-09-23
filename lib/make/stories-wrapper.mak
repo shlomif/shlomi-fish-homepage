@@ -55,8 +55,7 @@ include lib/make/generated/sf-homepage-quadpres-generated.mak
 
 $(PRES_WEBSITE_META_LECTURE_STAMP): $(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf
 $(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf: $(PRES_WEBSITE_META_LECTURE_DEPS) $(PRES_WEBSITE_META_LECTURE_BASE)/src/index.html.wml $(PRES_WEBSITE_META_LECTURE_SRC_FILES)
-	export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLOPTS="$(QUADPRES__WML_OPTS)"; (cd $(PRES_WEBSITE_META_LECTURE_BASE) && $(QUADPRES_RUN_en))
-	touch $(PRES_WEBSITE_META_LECTURE_STAMP)
+	$(call PRES_WEB_PUBLISHING_WITH_LAMP_render)
 
 screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
 

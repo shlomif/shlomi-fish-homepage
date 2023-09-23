@@ -25,6 +25,8 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% uc_variable_base %]_BASE := [% lecture_record.src_dir %]
 [% SET stamp_fn_varname = uc_variable_base _ "_STAMP" %]
 [% SET deref_stamp_fn_var = "\$(" _ stamp_fn_varname _ ")" %]
+[% SET render_func_varname = uc_variable_base _ "_render" %]
+[% SET deref_render_func_var = "\$(" _ render_func_varname _ ")" %]
 [% stamp_fn_varname %] := $([% uc_variable_base %]_BASE)/FINISH_STAMP
 
 [% uc_variable_base %]_DEPS := $(patsubst %,$([% uc_variable_base %]_BASE)/%,Contents.pm Contents.yml template.wml)
@@ -46,8 +48,10 @@ export PRE_DEST="$(PWD)/$(PRE_DEST)" TAR_OPTIONS="$(QUADPRES__TAR_OPTIONS)" WMLO
 
 [% pres_targets.push(lecture_main_target) %]
 
+[% render_func_varname %] = [% INCLUDE cmd %]
+
 [% deref_stamp_fn_var %]: $([% uc_variable_base %]_DEPS) $([% uc_variable_base %]_BASE)/src/index.html.wml $([% uc_variable_base %]_SRC_FILES)
-[% "\t" %][% INCLUDE cmd %]
+[% "\t" %]$(call [% render_func_varname %])
 
 $([% uc_variable_base %]_DEST_INDEX) $([% uc_variable_base %]_DEST_FILES): [% deref_stamp_fn_var %]
 

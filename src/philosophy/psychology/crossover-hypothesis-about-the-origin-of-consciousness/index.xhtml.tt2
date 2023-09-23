@@ -2,7 +2,6 @@
 [%- SET desc = "Consciousness and craziness and a hypothesis about their origins" -%]
 [%- SET more_keywords = "psychology, bipolar, depression, MDD, disorder, drugs, medication, therapy, psychiatry, mania, hypomania" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc why_openly_bipolar">
@@ -29,7 +28,7 @@ To be discussed.
 
 [% END %]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua",  %]
+[% PROCESS docbook_formats_w_base base = "about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua" h2_id = "formats" h2_text = "Formats" %]
 
 </div>
 

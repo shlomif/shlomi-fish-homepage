@@ -29,7 +29,7 @@ Last Updated:
 </dd>
 </dl>
 
-[% WRAPPER h2_section id = "xt_basic_dos"  title = "XTs, BASICs and DOS"  %]
+[% WRAPPER h2_section id = "xt_basic_dos" title = "XTs, BASICs and DOS" %]
 
 <p>
 The first time I programmed was for an
@@ -46,8 +46,8 @@ learn the language.
 </p>
 
 <p>
-One of the property of the BIOS was that you could not save your programs.
-If the computer was rebooted (in order to load a floppy disk to play an
+One property of the BIOS’ BASIC was that you could not save your programs.
+If the computer was rebooted (for example: in order to load a floppy disk to play an
 old DOS game like Digger), you had to type it all over again. Luckily,
 Mahsheveth introduced DOS and using files and the native DOS basic interpreter
 in the fourth chapter and we could save our files on floppy disks instead.
@@ -84,10 +84,10 @@ like Visual Basic in this regard.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "learning_c"  title = "Learning C"  %]
+[% WRAPPER h2_section id = "learning_c" title = "Learning C" %]
 
 <p>
-My friend became a better DOS engineer than I was, and soon bought Microsoft
+My friend became a better DOS developer than I was, and soon bought Microsoft
 Quick C, learned about programming hardware and over-riding the BIOS, x86
 Assembler and other things. Back then, the only languages we knew about were
 BASIC (which we knew was nice and easy but pretty lame), Pascal (compiled, and
@@ -99,11 +99,11 @@ Awk? Perl? Tcl? SmallTalk? Matlab? We’ve never heard of them at all.
 <p>
 So I instructed my father to buy me a C compiler package in one of his trips
 abroad and he bought me Borland’s Turbo C++. I learned C and C++ through its
-manual. One of the thing I did not understand was pointers, until I went to
-a hike where an army programmer explained to me that they were simply
-addresses in memory which I can put or take values from, and a bit about
+manual. One of the thing I did not understand was pointers, until I went to a
+hiking trip during which an army programmer explained to me that they were
+simply addresses in memory which I can put or take values from, and a bit about
 pointer arithmetics. This gave me a large momentum. I also learned about
-classes and objects and templates  which although a simple concept fascinated
+classes and objects and templates which although a simple concept fascinated
 me.
 </p>
 
@@ -111,9 +111,9 @@ me.
 I took my liberty to write a module of components which I dubbed
 <code>CSEE.c</code>, for
 doing various graphical things. My friend was at first surprised at that (it
-was not a standalone program), but later on told me people distributed and
-sold such libraries and software development kits all the time. It included
-some very nifty user-land routines, but I doubt it will run on anything
+was not a standalone program), but later on told me people distributed and sold
+such libraries and software development kits all the time. It included some
+nifty (in my opinion) user-land routines, but I doubt it will run on anything
 aside from an old Borland DOS Compiler.
 </p>
 
@@ -125,23 +125,29 @@ ways), and other stuff. The code should work on any 16-bit compiler but will
 take some tweaking to get it to be 32-bit and 64-bit ready. Note that
 everything it does can be done with GNU’s GMP, or OpenSSL, or other open-source
 components available on the Net. I can distribute it as open-source but see
-little point in doing so, because it’s pretty much useless in today’s standard,
+little point in doing so, because it’s pretty much useless in today’s standards,
 and a mathematically-inclined programmer can write such routines on his
 own.
 </p>
 
+<p>
+<b>Update:</b> CCALC and CSEE can be downloaded
+<a href="[% base_path %]open-source/nostalgia/">from here</a>
+under the MIT/Expat licence.
+</p>
+
 [%- END -%]
 
-[% WRAPPER h2_section id = "some_basic_programs_that_saved_the_day"  title = "Some BASIC Programs that Saved the Day"  %]
+[% WRAPPER h2_section id = "some_basic_programs_that_saved_the_day" title = "Some BASIC Programs that Saved the Day" %]
 
 <p>
 When my father bought a CD-ROM drive for our computer
-(a double-speed one - !), he  brought a pack of 10 example CDs that were
+(a double-speed one - !), he brought a pack of 10 example CDs that were
 legitimate but were bought for a very small price. One of them contained
 various demos, by <a href="http://en.wikipedia.org/wiki/Future_Crew">the
 Future Crew</a>, the Electro Motive Force and others. I was very impressed by
 <a href="http://en.wikipedia.org/wiki/Unreal_(demo)">“Unreal”</a>. I remember
-the  Fluttering Flag effect they had and had an idea on how to reproduce it.
+the Fluttering Flag effect they had and had an idea on how to reproduce it.
 </p>
 
 <p>
@@ -160,9 +166,9 @@ very impressed, and requested that I kept the program there.
 Another issue was when my friend wondered what was the average of a 4d6
 minus the least score method of generating AD&amp;D abilities was. He used a C
 (or BASIC perhaps) program with several loops to calculate. I actually tried to
-find a mathematical solution and was eventually able to. (refer to <a
+find a mathematical solution and was eventually able to. (Refer to <a
 href="[% base_path %]MathVentures/3d-outof-4d-mathml.xhtml">my “Combinatorics and the
-Art of Dungeons and Dragons” article</a> ).
+Art of Dungeons and Dragons” article</a>.)
 But I did check my final result (which I could calculate with a hand
 calculator) with a program I wrote to see they were identical.
 </p>
@@ -184,10 +190,10 @@ on other people I told them this riddle) found has a polynomial complexity,
 which is much nicer than exponential.
 </p>
 
-[% WRAPPER h3_section id = "the_most_underestimated_feature_of_excel"  title = "The Most Under-estimated Feature of Excel"  %]
+[% WRAPPER h3_section id = "the_most_underestimated_feature_of_excel" title = "The Most Under-estimated Feature of Excel" %]
 
 <p>
-When my father bought Excel 4.0 for Windows 3.1 I realized it came with a nice
+When my father bought Excel 4.0 for Windows 3.1, I realized it came with a nice
 scripting language called Visual Basic for Applications. It enabled me to write
 a factorial function, access the contents of cell, and script every aspect of
 the application. I liked it very much.
@@ -219,7 +225,7 @@ program. That was after I learned UNIX)
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "income"  title = "Positive (albeit Small) Income"  %]
+[% WRAPPER h2_section id = "income" title = "Positive (albeit Small) Income" %]
 
 <p>
 My first gig was to translate a document from English to Hebrew. I remember my
@@ -263,7 +269,8 @@ has quite a lot of religious caveats. Nevertheless, the code was eventually
 working. I use some C++ features, but my friend later insisted on his program
 being pure C and said I should convert them all to C. A beautiful class I
 wrote and some operator overloading of it had to be sacrificed for this
-sake.</p>
+sake.
+</p>
 
 <p>
 My friend integrated the code with his project, and later he phoned me
@@ -307,7 +314,7 @@ you wish to earn money. But this is out of the scope of this document.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "israeli_edu_system"  title = "A Brief Encounter with Pascal and the Israeli Education System"  %]
+[% WRAPPER h2_section id = "israeli_edu_system" title = "A Brief Encounter with Pascal and the Israeli Education System" %]
 
 <p>
 When I joined the 10th grade, my first grade of high school, we had
@@ -340,8 +347,8 @@ knew it was a much less effective algorithm.
 <p>
 She was surprised when I told her about Fermat’s method for checking primality
 ((i^p-i) mod p = 0), but naturally I eventually discovered it can have false
-positives albeit extremely rarely. (refer to Abelson and Sussman’s
-<a href="http://mitpress.mit.edu/sicp/">“Structure and Interpretation of Computer Programs”</a> for more information).
+positives albeit extremely rarely. (Refer to Abelson and Sussman’s
+<a href="http://mitpress.mit.edu/sicp/">“Structure and Interpretation of Computer Programs”</a> for more information.)
 </p>
 
 <p>
@@ -353,7 +360,8 @@ specialisation in Physics that was critical for
 (which I eventually started learning Electrical Engineering in). So, I
 decided that since CS would not teach me much new, I’ll take Arabic, which may
 prove useful for better understanding of the Arabic Language and Arab
-culture.</p>
+culture.
+</p>
 
 <p>
 I don’t regret this choice. Although I mostly remember obscure grammatical
@@ -364,14 +372,16 @@ did learn a bit about the Arabic culture through such lessons.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "epilogue"  title = "Epilogue"  %]
+[% WRAPPER h2_section id = "epilogue" title = "Epilogue" %]
 
-<p>After I graduated from high school, I became bored, so my father
+<p>
+After I graduated from high school, I became bored, so my father
 arranged for a job interview in <a href="shlomif-at-elpas.html">Elpas</a>, a
 company ran by one of his close friends, who finished his army service as an
 engineer to start a startup Electro-optics company. I eventually got the job,
-and so started earning  a living as a programmer, while still largely
-dependant on my parents.</p>
+and so started earning a living as a programmer, while still largely
+dependant on my parents.
+</p>
 
 <p>
 I was eventually found unsuitable for Army service, which I actually wanted to
@@ -401,11 +411,11 @@ one, but still a computer enthusiast.
 
 <p>
 My suggestion to wannabe hackers today is to start working on a Linux
-system.  A <a href="http://en.wikipedia.org/wiki/Mandriva_Linux">Mandriva
+system. A <a href="http://en.wikipedia.org/wiki/Mandriva_Linux">Mandriva
 Linux</a> system with
 KDE and everything installed and configured, is equally as usable as Windows,
 but offers much more development capabilities at the fraction of the cost. It’
-s also based on UNIX, which is an entire  software engineering culture of its
+s also based on UNIX, which is an entire software engineering culture of its
 own, which you can explore should you like to. But when I was 10 years old,
 XTs could only run DOS, and so that’s what we had to do. I still believe my
 DOS days gave me an edge on some UNIX programmers, because I am very
@@ -417,7 +427,7 @@ you get”</i>. I want <i>“What you want is what you get ASAP”</i>.
 <p>
 Today with KDE, GNOME and other graphical environments, even many children
 who are introduced to Linux, will find the command line intimidating. I don’t
-say using a GUI does not has its advantages. But you must get to like the
+say using a GUI does not have its advantages. But you must get to like the
 command line and to see things in your mind’s eye. Programming, designing
 styled text and creating graphics happens mostly in the mind, not in your
 IDE, WYSIWYG word processor or Graphics program. One should realize that
@@ -427,7 +437,7 @@ you.
 
 <p>
 Programming and computing without using the mind’s eye eventually numbs out
-imagination and creativity . One is used to point-and-click and getting
+imagination and creativity. One is used to point-and-click and getting
 immediate results instead of thinking about them carefully and then
 implementing them. But the damage is not irreversible.
 </p>

@@ -1,7 +1,6 @@
 [%- SET title = "Shlomi Fish’s Art - Better SCM Logo" -%]
 [%- SET desc = "How I created the Better SCM Logo" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -19,7 +18,7 @@ I wanted to create a suitable logo image for the
 and still maintain. Now “SCM” stands for “Source Configuration Management”
 which encompasses the term
 <a href="[% base_path %]philosophy/computers/software/New-Breed-of-Version-Control-Systems/">“Version
-Control”</a>, which is a methodology used by programmers and other developers
+Control”</a>, which is a method used by programmers and other developers
 to maintain the history of their source code.
 </p>
 
@@ -55,7 +54,7 @@ translucent to enable seeing the “Better” below it.
 <p>
 <a href="better-scm-logo.svg">The Inkscape SVG source of the logo</a> may
 be instructive for further investigation or building upon this effort. Just
-note that the fonts used there may be have a restrictive license.
+note that the fonts used there might have a restrictive license.
 </p>
 
 [% END %]

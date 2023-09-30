@@ -484,7 +484,7 @@ of the Naboo of <a href="https://buffyfanfiction.fandom.com/wiki/Selinaverse">th
 (<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a> , b. 1992)
 were killed in a starship crash when she was 1 years old, she was adopted by her aunt,
 the Duchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
-Portman</a>), and her aunt's husband
+Portman</a>), and her aunt's husband,
 <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a>, who
 volunteered to act as King in effect until Padmé's coming of age. As a result,
 Padmé had a happy childhood until she turned 18 at 2010 and was ready to become
@@ -512,7 +512,7 @@ She has enough time to contribute on Internet content and code sharing sites.
 
 <li>
 <p>
-She has many supporting friends, including her boyfriend Anakin Skywalker
+She has many supporting friends, including her boyfriend, Anakin Skywalker
 (<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>),
 a promising Jedi-wannabe who is about her age, with aspirations
 for joining the mysterious but revered Jedi order of Siths, of which only Vader

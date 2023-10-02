@@ -356,6 +356,18 @@ English: Speaking, Reading, and Writing.
 </p>
 </li>
 
+<li>
+<p>
+Literary Arabic: rusty, partial, and non-functional knowledge.
+</p>
+</li>
+
+<li>
+<p>
+French: rusty, partial, and incomplete knowledge.
+</p>
+</li>
+
 </ol>
 
 [% END %]
@@ -548,8 +560,11 @@ or <b>“Teach me programming / software development”</b>
 emails. See my
 <a href="[% base_path %]philosophy/computers/open-source/how-to-start-contributing/">How
 Can I Start Contributing to Free and Open Source Software (FOSS)</a> essay
-instead. If you’re living in Tel Aviv and vicinity and are
+instead.
+[% IF 0 %]
+If you’re living in Tel Aviv and vicinity and are
 willing to pay for me giving you private lessons, then this is an option.
+[% END %]
 </p>
 </li>
 
@@ -968,7 +983,7 @@ at the NSA</i></a> screenplay and Ms. Glau.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "obscure_email_addr" title = "Why don’t you obscure/hide your email address? People can spam you." %]
+[% WRAPPER h3_section id = "obscure_email_addr" title = "Why don’t you obscure/hide your email address? People can spam you!" %]
 
 <p>
 First of all, in this day and age, it’s unlikely that the spammers <b>will
@@ -1183,7 +1198,7 @@ Some of the effective ways I found to improve one's English are:
 <p>
 Write. Write a lot. Start a blog. Write about interesting stories from your
 past. Ask your readers to point out the issues in your text (and also in your
-code). Maybe start specialised blogs for writing about a topic that interests
+code). Maybe start specialised blogs for writing about topics that interest
 you.
 </p>
 </li>
@@ -1384,7 +1399,7 @@ fallacies.
 <p>
 I do not play Chess a lot, mainly because I do not like it too much. I'm also
 not a very good Chess player, but one should hopefully not avoid
-doing something because they are bad at it.
+doing something just because they are bad at it.
 </p>
 
 <p>
@@ -1497,7 +1512,7 @@ In my terresterial hell, the situation is different:
 <p>
 I have some savings in my bank account and live with my
 parents and am supported by them
-and also receive <a href="https://en.wikipedia.org/wiki/Bituah_Leumi">national insurance</a>.
+and also receive <a href="https://en.wikipedia.org/wiki/Bituah_Leumi">national insurance</a> pension.
 So while I'm not poor, I am not rich either.
 </p>
 
@@ -2025,7 +2040,7 @@ and <a href=
 </blockquote>
 
 <p>
-Just because a story or a saga are fictional, does not invalidate the fact
+Just because a story or a saga are fictional, it does not invalidate the fact
 that we can enjoy them, learn from them, use them for inspiration, and
 analyse them.
 </p>
@@ -2034,8 +2049,8 @@ analyse them.
 I don't take the <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Bible</a>
 as gospel and still enjoy it. On the other hand, some
 <a href="#atheism_can_be_a_religion">religious "atheists"</a>
-take it as "anti-gospel" which I find is philosophically immature just
-like taking it as gospel.
+take it as "counter-gospel" which I find is as philosophically immature
+as taking it as gospel.
 </p>
 
 [%- END -%]
@@ -2080,7 +2095,7 @@ of <a href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>
 many communist regimes were far more relaxed and rational in practice,
 and I suspect that following the popularity of
 <a href="https://en.wikipedia.org/wiki/The_Colbert_Report"><i>The Colbert
-Report</i></a>, most of the best "AltRight" neonazi bloggers are parody ones.
+Report</i></a>, most of the best "AltRight" neo-Nazi bloggers are parody ones.
 </p>
 
 <p>
@@ -2128,7 +2143,7 @@ I agree with Vanini that
 <a href="https://en.wikipedia.org/wiki/Perfection#Paradoxes">perfection is in
 imperfection</a>. I try to bring the works I care about to usable states,
 while possibly revisiting or amending them later. The Internet, the web,
-and version control systems, are great for that.
+and modern version control systems (e.g: git-scm), are great for that.
 </p>
 
 [% END %]
@@ -2235,7 +2250,7 @@ Also see:
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/Tu_quoque">Tu quoque</a>.
+<a href="https://en.wikipedia.org/wiki/Tu_quoque">Ad hominem Tu quoque</a>.
 </p>
 </li>
 
@@ -2417,7 +2432,7 @@ they approach you in the outside world, they will likely admit it, and
 even invite you for a meal or a drink and are not going to torture you.
 If you're not
 <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/fear-is-path-to-dark-side.xhtml">paranoid</a>
-or get into too much trouble (e.g: by being <a href="https://en.wikipedia.org/wiki/Grey_hat">a grey hat net intruder</a>),
+or get into too much trouble (e.g: by being <a href="https://en.wikipedia.org/wiki/Grey_hat">a grey hat Internet intruder</a>),
 you likely won't ever be approached by them.
 </p>
 

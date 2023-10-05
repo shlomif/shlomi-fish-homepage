@@ -136,11 +136,12 @@ See:
 [%- END -%]
 
 [% BLOCK badass_fluttershy %]
-[% WRAPPER github_captioned_image_joke id = "badass-fluttershy--terminator-liberation" header = "“Hasta la vista, baby tank girl! When you got to shoot - shoot! Then talk.”" repo_href = "https://github.com/shlomif/captioned-image--badass-fluttershy--terminator-liberation" src = base_path _ "humour/images/captioned-image--badass-fluttershy--terminator-liberation.svg.webp" alt = "Badass Fluttershy" %]
+[% WRAPPER github_captioned_image_joke id = "badass-fluttershy--terminator-liberation" header = "“Hasta la vista, baby tank girl! When you got to shoot - shoot! Then talk!”" repo_href = "https://github.com/shlomif/captioned-image--badass-fluttershy--terminator-liberation" src = base_path _ "humour/images/captioned-image--badass-fluttershy--terminator-liberation.svg.webp" alt = "Badass Fluttershy" %]
 
 [% WRAPPER quote %]
+
 <p>
-“Hasta la vista, baby tank girl! When you got to shoot - shoot! Then talk.”
+“Hasta la vista, baby tank girl! When you got to shoot - shoot! Then talk!”
 </p>
 
 [%- END -%]

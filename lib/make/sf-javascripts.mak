@@ -41,6 +41,7 @@ $(DEST_BABEL_JSES): $(DEST_JS_DIR)/%.js: $(OUT_PREF)/%.js
 
 non_latemp_targets: $(call dest_jsify,fortunes_show.js)
 non_latemp_targets: $(call dest_jsify,resize-iframe.js)
+non_latemp_targets: $(DEST_BABEL_JSES)
 non_latemp_targets: $(NON_MIN__DEST_BABEL_JSES)
 
 # run_tsc = tsc --target es6 --moduleResolution node --module $1 --outDir $$(dirname $@) $<

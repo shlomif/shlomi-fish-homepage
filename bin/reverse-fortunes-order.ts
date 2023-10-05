@@ -4,4 +4,13 @@
 //
 // Thanks!
 
-$(".fortunes_list").append($(".fortunes_list div.fortune").get().reverse());
+function jq_reverse(parent_sel: string, child_sel: string): void {
+    // body...
+    $(parent_sel).append(
+        $(parent_sel + " " + child_sel)
+            .get()
+            .reverse(),
+    );
+    return;
+}
+jq_reverse(".fortunes_list", "div.fortune");

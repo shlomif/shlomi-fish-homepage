@@ -1889,7 +1889,7 @@ Muppet Show</i></a> )
 
 <p>
 Even though I tried to find truly malevolent people per <a
-href="https://www.shlomifish.org/philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a> and some possible
+href="[% base_path %]philosophy/philosophy/guide-to-neo-tech/">Neo-Tech</a> and some possible
 interpretations of my Israeli-taught mostly-Tanakh Judaism, I was unable to run into a
 truly evil person. Even historical mass-murderers (e.g: Stalin, Mao, Hitler,
 Genghis Khan, Attila the Hun, Alexander of Macedonia, even <a
@@ -1923,8 +1923,8 @@ parliament, legal system, etc. workers are) - just possibly misguided.
 
 <p>
 Moreover, changing your future is often easy given
-<a href="https://www.shlomifish.org/meta/FAQ/religious_belief.xhtml">free will</a>
-and <a href="https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">refusing superior orders</a>
+<a href="[% base_path %]meta/FAQ/religious_belief.xhtml">free will</a>
+and <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#big-minded-vs-small-minded">refusing superior orders</a>
 and hacking around the <a href="#guidelines_as_dogma">guidelines</a> (even
 "rules" or "laws").
 </p>
@@ -1949,7 +1949,7 @@ a fan of <a href="https://en.wikipedia.org/wiki/TypeScript">TypeScript</a>.
 Lawyers have been demonised, but I think most of the lawyers employed by the
 offenses in the <a
 href="https://en.wikipedia.org/wiki/Smartphone_patent_wars">Smartphone patent
-wars</a> asked for a reassignment or quit in disgust, or they will.  These
+wars</a> asked for a reassignment or quit in disgust, or they will. These
 "Smartphone wars" are a rerun of the <a
 href="https://en.wikipedia.org/wiki/William_Jennens">"Jennens vs. Jennens"
 court case</a> which gave many lawyers more work to do and made them a little
@@ -1993,7 +1993,7 @@ I suspect the recent <a href="https://en.wikipedia.org/wiki/Youtube-dl">RIAA (=
 "Recording Industry Association of America") takedown request against
 youtube-dl's GitHub repository</a> was done by a
 techsavvy lawyer employee of the [% RIAA %], who had the legal capability to file it
-on behalf of the RIAA as a whole, and hoped to save future work this way.  This
+on behalf of the RIAA as a whole, and hoped to save future work this way. This
 is given the [% RIAA %] <a
 href="https://boingboing.net/2004/11/06/save-canadas-interne.html">foolishly
 sends takedown notices</a> to many publicly accessible web sites that host
@@ -2008,14 +2008,14 @@ href="https://memory-alpha.fandom.com/wiki/The_Nagus_(episode)">Quark's
 approving reaction to Rom (= his brother and employee) having attempted to
 murder him</a> in a Star Trek DS9 episode. I think the real solution is to
 completely stop sending these takedown notices and <a
-href="https://www.shlomifish.org/philosophy/case-for-file-swapping/">accept
+href="[% base_path %]philosophy/case-for-file-swapping/">accept
 piracy as a necessary "evil"</a> (and possibly sponsor better user interfaces
 for file sharing sites and practice less censorship).
 </p>
 
 <p>
 There is an ongoing transition to <a href="#hacking_and_amateur__vs__conformism_and_professional">the geeks and hackers' culture</a>,
-which no one can stop ( see <a href="https://www.shlomifish.org/humour/Summerschool-at-the-NSA/"><i>Summmerschool at the NSA</i></a> )
+which no one can stop ( see <a href="[% base_path %]humour/Summerschool-at-the-NSA/"><i>Summmerschool at the NSA</i></a> )
 and a <a href="#open_free_share_steal">trend towards openness, freedom, and sharing</a>
 of cultural / code / scientific / tangible
 works.
@@ -2037,9 +2037,9 @@ sites as distribution channels for their songs, was that there were enough
 independent musicians who provided (sometimes not too inferior and often
 superior) covers of the songs and didn't care too much about getting direct ad
 revenue. It's not as if one gets penalised for getting a million views (or <a
-href="https://en.wikipedia.org/w/index.php?title=List_of_most-viewed_YouTube_videos&amp;oldid=1004942122">much
+href="https://en.wikipedia.org/w/index.php?title=List_of_most-viewed_YouTube_videos&amp;oldid=1004942122">many
 more</a>) rather than a mere one hundred. Furthermore, to <a
-href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=greatest-threat-to-authors">quote
+href="[% base_path %]humour/fortunes/show.cgi?id=greatest-threat-to-authors">quote
 Tim O'Reilly</a> <q>The greatest threat to authors and creative artists is not
 piracy — it’s obscurity.</q>.
 </p>
@@ -2052,7 +2052,7 @@ more blurry).
 </p>
 
 <p>
-As an analogy, The <a href="https://en.wikipedia.org/wiki/Catholic_Church">Roman Catholic</a> church used to burn at stake girls who
+As an analogy, The <a href="https://en.wikipedia.org/wiki/Catholic_Church">Roman Catholic church</a> used to burn at stake girls who
 admitted to having premarital sex even once. On the other hand, <a
 href="https://en.wikipedia.org/wiki/Madonna">Madonna</a>, who identifies as a
 Catholic, and boasted of having had premarital sex with dozens of willing men,
@@ -2118,7 +2118,7 @@ href="http://shlomifishswiki.branchable.com/Rules_are_Just_Guidelines/">guidelin
 <p>
 I met open-minded, enlightened, even self-critical, observant
 Jews, Christians, or Muslims (and a Sri-Lankan woman, who took care of my
-grandmother during her later years, identifies as <a href="https://www.shlomifish.org/meta/FAQ/thought_you_were_a_Perl_guy.xhtml">both a Christian and a Buddhist</a>).
+grandmother during her later years, identifies as <a href="[% base_path %]meta/FAQ/thought_you_were_a_Perl_guy.xhtml">both a Christian and a Buddhist</a>).
 I also met close-minded and "professionally fanatic"
 <a href="https://xkcd.com/">xkcd</a> fans,
 or
@@ -2177,8 +2177,8 @@ and found them ridiculous when lumped together.
 [% WRAPPER h4_section id = "challenging_the_guidelines" title = "Challenging the Guidelines" %]
 
 <p>
-Anyway, as humans we are capable of challenging certain dogmata or taboos in
-certain cases.  This includes:
+Anyway, as humans, we are capable of challenging certain dogmata or taboos in
+certain cases. This includes:
 <a href="https://metacpan.org/pod/Acme::NewMath">Peano's axioms of arithmetics</a>:
 </p>
 
@@ -2204,8 +2204,9 @@ or Aristotlian Logic:
 <li>
 
 <p>
-<q>Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> open source? Yes, and no.";</q>
+<q>Is <a href="https://en.wikipedia.org/wiki/Qmail">qmail</a> open source? Yes, and no."</q>
 </p>
+
 <p>
 (That was written in <a href="https://www.amazon.com/qmail-Handbook-Dave-Sill/dp/1893115402/ref=cm_cr_arp_d_bdcrb_top?ie=UTF8">a book I read</a> before qmail's change of licensing.)
 </p>
@@ -2217,11 +2218,13 @@ or Aristotlian Logic:
 <p>
 <q>I believe in God, and I don't believe in God.</q>
 </p>
+
 <p>
 (As I overheard one local young school girl say to her friend a few weeks ago.)
 </p>
 
 </li>
+
 </ul>
 
 <p>
@@ -2260,7 +2263,6 @@ format
 <p>
 ( <a href="#hollywood_screenplay_format">See above</a> )
 </p>
-
 </li>
 
 <li>
@@ -2331,7 +2333,7 @@ communication. But they should not be taken as gospel or dogma.
 
 [% END %]
 
-[% WRAPPER h3_section id = "money_cant_buy_you_love" title = "Money can't buy you love"  %]
+[% WRAPPER h3_section id = "money_cant_buy_you_love" title = "Money can't buy you love" %]
 
 <iframe src="https://www.youtube.com/embed/srwxJUXPHvE" allowfullscreen="allowfullscreen"></iframe>
 
@@ -2408,7 +2410,7 @@ mashed together the franchises of previous generations, along with [% RPF
 
 <p>
 These were funny or entertaining by people who were not familiar with their
-origins and sources of inspiration (often indirect or subconscious ones).  I
+origins and sources of inspiration (often indirect or subconscious ones). I
 enjoy watching Monty Python's <a href="https://www.youtube.com/watch?v=0lczHvB3Y9s">"Romans go home!"</a> skit despite not being taught Latin, and enjoyed reading
 <a href="https://en.wikipedia.org/wiki/The_Three_Musketeers"><i>The Three
 Musketeers</i></a> despite not being an expert in French history.
@@ -2429,7 +2431,7 @@ very profitable.
 For example, I think either Arnold Schwarzenegger or Emma Watson can afford to
 license the franchises which I used in my <a
 href="[% base_path %]humour/Terminator/Liberation/ongoing-text.html">"Terminator:
-Liberation"</a> screenplay starring them.  Moreover, they have my (legal and
+Liberation"</a> screenplay starring them. Moreover, they have my (legal and
 spiritual) blessing to change the screenplay as they see fit.
 </p>
 
@@ -2439,7 +2441,7 @@ Corp. vs. Emma Watson", or perhaps "Walt Disney Corp. vs. Emma Watson
 Productions", or even "Walt Disney Corp. vs. Arnold Schwarzenegger Films" court
 case will <a
 href="[% base_path %]humour/bits/facts/Taylor-Swift/">not look good
-to share holders</a>.  Like I like to say: <a
+to share holders</a>. Like I like to say: <a
 href="[% base_path %]humour/image-macros/indiv-nodes/say_no_to_an_alpha_female.xhtml"><q>One
 does not simply say “no” to an Alpha Female</q></a>.
 </p>
@@ -2470,8 +2472,8 @@ Back after [% Sesame_Street %] started airing and became notorious for its high 
 educational value (and political activism as for example its friendly,
 benevolent, and lovable "monsters" alluded to the contemporary western
 perception of the Communists), it was a labour of love by a large group of
-people.  Nevertheless, they had one poster child figure: <a
-href="https://en.wikipedia.org/wiki/Jim_Henson">Jim Henson</a>.  As a result
+people. Nevertheless, they had one poster child figure: <a
+href="https://en.wikipedia.org/wiki/Jim_Henson">Jim Henson</a>. As a result,
 when his company embarked on creating a somewhat more "adult-oriented" and
 commercial project <a href="https://en.wikipedia.org/wiki/The_Muppet_Show"><i>The
 Muppet Show</i></a>, it was renamed to <a
@@ -2524,14 +2526,14 @@ Even: Megacorp vs. <a href="https://en.wikipedia.org/wiki/Ariel_Winter">Ariel Wi
 
 </ul>
 
-[% WRAPPER h3_section id = "freeing_franchises" title = "Freeing Franchises"  %]
+[% WRAPPER h3_section id = "freeing_franchises" title = "Freeing Franchises" %]
 
 <p>
 I can further suggest the owners of major (and minor) franchises to put them
 under <a
 href="https://en.wikipedia.org/wiki/Permissive_software_license">permissive
 copyright licences</a>, requesting that a donation be made in case there is
-profit.  If one cannot legally accept donations, then they can sell digital
+profit. If one cannot legally accept donations, then they can sell digital
 goods (or tangible <a
 href="https://www.youtube.com/watch?v=oNZove4OTtI">merchandice</a>) with a
 minimal, but not maximal price similar to the <a
@@ -2546,7 +2548,7 @@ models. Hacks!
 <iframe src="https://www.youtube.com/embed/oNZove4OTtI" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
-They can do it either by agreement or unilaterally.  As an analogy, I recall
+They can do it either by agreement or unilaterally. As an analogy, I recall
 that back in the late 1990s, there was an initial resistance by vendors of <a
 href="https://en.wikipedia.org/wiki/List_of_relational_database_management_systems">commercial
 SQL databases</a> to release official <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> ports of their databases (which
@@ -2556,7 +2558,7 @@ However, then they announced their intentions to do so one by one, and
 it was <a
 href="https://linux.slashdot.org/story/98/08/01/0948200/we-just-typed-make">technologically
 easy to do</a> and brought all of them many sales.
-And today anyone who proposes deploying a Unix-like server that does not
+And today anyone who proposes deploying a UNIX-like server that does not
 run an open-source operating system (GNU/Linux or
 BSD or similar)
 except for running legacy applications, is <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-sharp-programming-mac-server">in a state of sin</a>.
@@ -2575,7 +2577,7 @@ practice, by hacking around them. As alternatives to the more famous actors,
 cosplayers can play as them or one can produce lower-cost animations (including
 <a
 href="https://www.reddit.com/r/mylittlepony/comments/kaajb9/commission_fluttershy_as_queen_amidala_of_the/gfdi3b0/">MLP-style
-animations</a>) and solicit money for producing a live action version.  One can
+animations</a>) and solicit money for producing a live action version. One can
 also solicit money for <a
 href="[% base_path %]me/relicensing-my-entire-portfolio-under-cc-by/">relicensing
 works under less restrictive licences</a> (e.g: "CC-by-nc-sa"→"CC0").
@@ -2662,7 +2664,7 @@ href="http://www.earthstar.co.uk/deep1.htm">Deep Thought</a> is only the
 href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#hacker-monarchs">Moses,
 Socrates, Muhammad, Saladin, da Vinci, Newton, Richelieu, Dumas, Verne, The
 Beatles, The Muppets, etc,</a> were succeeded, so will Queen Padmé Amidala of
-the Naboo of the Selinaverse.  And it seems likely that people had once taken
+the Naboo of the Selinaverse. And it seems likely that people had once taken
 Socrates, Plato, Aristotle, Saladin, Richelieu, or Dumas not as seriously as
 some people later took The Muppets, The Beatles, Buffy, or the Web 2.0
 Bloggers, or xkcd.
@@ -2737,15 +2739,15 @@ But I have <a href="#the-plan">a plan forward</a>.
 
 [% UNLESS screenplay_shortage__remix %]
 
-[% WRAPPER h2_section id = "do_it_my_way" title = "Do it my way"  %]
+[% WRAPPER h2_section id = "do_it_my_way" title = "Do it my way" %]
 
 <blockquote cite="https://www.youtube.com/watch?v=FktDDKNrWjk" class="removedfancy">
 
 <p>
 All their criticism started to get to me: their opinions, their ideas, their
 words, their vision. Then I realised: this is my life. I'm not going to waste
-my time trying to be something I'm not. I'm gonna be fearless.  I'm going to take
-control, and I'm going to do it my way.
+my time trying to be something I'm not. I'm gonna be fearless. I'm going to
+take control, and I'm going to do it my way.
 </p>
 
 </blockquote>
@@ -2804,7 +2806,7 @@ and a gun.</q></a>
 <p>
 I was probably too young to prevent the death of <a
 href="https://en.wikipedia.org/wiki/Samantha_Smith">Samantha Smith</a>, one of
-the youngest known hacker monarchs up to her time.  I believe she died because
+the youngest known hacker monarchs up to her time. I believe she died because
 in her later career as a child actress, she didn't insist on doing things her
 way, until she was killed by a private nighttime flight plane crash, which she
 took due to <a href="https://en.wikipedia.org/wiki/Hubris">hubris</a> and
@@ -2875,7 +2877,7 @@ to my writings.
 
 [% END %]
 
-[% WRAPPER h2_section id = "lets_have_them_all" title = "Why can't we have them all?"  %]
+[% WRAPPER h2_section id = "lets_have_them_all" title = "Why can't we have them all?" %]
 
 <iframe src="https://www.youtube.com/embed/vqgSO8_cRio" allowfullscreen="allowfullscreen"></iframe>
 
@@ -2951,13 +2953,13 @@ my way</a>, then hopefully some people will love my work and most of the others 
 
 [% END %]
 
-[% WRAPPER h2_section id = "the-plan" title = "The Plan"  %]
+[% WRAPPER h2_section id = "the-plan" title = "The Plan" %]
 
 <iframe src="https://www.youtube.com/embed/FFrag8ll85w" allowfullscreen="allowfullscreen"></iframe>
 
 <p>
 OK, ok <a href="https://www.youtube.com/watch?v=FFrag8ll85w">"Show Me the
-Money!"</a>.  Note that just like Asimov's <a
+Money!"</a>. Note that just like Asimov's <a
 href="[% base_path %]philosophy/psychology/changing-the-seldon-plan/">Seldon
 Plan</a>, this plan is not set in stone and <a
 href="[% base_path %]humour/Summerschool-at-the-NSA/ongoing-text.html">we'll
@@ -2979,7 +2981,7 @@ Anyway, I suggest:
 Screenplay readers to also accept screenplays in easier to write and to get
 right formats, which should have open source, portable, and easy-to-install,
 validators and <a
-href="https://github.com/caramelomartins/awesome-linters">linters</a>.  They
+href="https://github.com/caramelomartins/awesome-linters">linters</a>. They
 should also accept and tolerate some relatively minor errors.
 [% INCLUDE ref href="#hollywood_screenplay_format" %]
 </p>
@@ -3131,7 +3133,7 @@ href="#takedown_notices">takedown notices</a> against infringing copies
 <li>
 
 <p>
-Similarly most forms of
+Similarly, most forms of
 <a href="https://en.wikipedia.org/wiki/Digital_rights_management">DRM</a>
 provide <a href="https://en.wikipedia.org/wiki/Fig_leaf">fig leaf protection</a>
 at best and are often obstacles for legitimate uses, and so are best
@@ -3194,9 +3196,9 @@ exactly why. If you like it, tell them, and try to tell your friends.
 
 [% END %]
 
-[% WRAPPER h2_section id = "epilogue" title = "Epilogue"  %]
+[% WRAPPER h2_section id = "epilogue" title = "Epilogue" %]
 
-[% WRAPPER h3_section id = "fighting_against_the_world" title = "Fighting Against The World"  %]
+[% WRAPPER h3_section id = "fighting_against_the_world" title = "Fighting Against The World" %]
 
 <blockquote cite="[% base_path %]humour/fortunes/show.cgi?id=shlomif-fact-chuck-156" class="removedfancy">
 
@@ -3346,7 +3348,7 @@ is the best-in-class blog engine, <a href="http://shlomifishswiki.branchable.com
 <li>
 <p>
 People's tendency to either over-idolise or demonise other people,
-organisations, or idea systems, and take them as gospel or anti-gospel.
+organisations, or idea systems, and take them as gospel or counter-gospel.
 </p>
 </li>
 
@@ -3409,15 +3411,15 @@ go out of business (which I hope will not happen).
 
 [% END %]
 
-[% WRAPPER h3_section id = "what_the_future_holds" title = "What the Future Holds?"  %]
+[% WRAPPER h3_section id = "what_the_future_holds" title = "What the Future Holds?" %]
 
-[% WRAPPER h4_section id = "bad_blood" title = "Bad Blood"  %]
+[% WRAPPER h4_section id = "bad_blood" title = "Bad Blood" %]
 
 <p>
 I created <a
 href="[% base_path %]humour/image-macros/indiv-nodes/evolution_of_girls_w_weapons.xhtml">a
 captioned image</a> back in August 2014 which echoed my sentiments that female
-fighters in films have become not-as-intimidating-as-they-could-be.  Taylor
+fighters in films have become not-as-intimidating-as-they-could-be. Taylor
 Swift's delayed (and likely indirect) response, published in 18 May 2015 was
 this videoclip for her song <a
 href="https://en.wikipedia.org/wiki/Bad_Blood_%28Taylor_Swift_song%29">Bad
@@ -3429,13 +3431,13 @@ Blood</a>:
 <p>
 One should note that the female entertainers in the clip marketed themselves as
 singers and/or models, despite the fact that they were technically acting in
-the clip.  If they were actresses, appearing in that clip would have
+the clip. If they were actresses, appearing in that clip would have
 accelerated their "Hollywood unhirability" (but why should it have?)
 </p>
 
 [% END %]
 
-[% WRAPPER h4_section id = "grimmie__feeling_good" title = "Christina Grimmie's “Feelin’ Good”"  %]
+[% WRAPPER h4_section id = "grimmie__feeling_good" title = "Christina Grimmie's “Feelin’ Good”" %]
 
 [%# https://www.youtube.com/watch?v=kYX8sjIzjGw
 #%]
@@ -3450,7 +3452,7 @@ You can also read
 
 [% END %]
 
-[% WRAPPER h4_section id = "the_lion_king__opening_scene" title = "The Lion King’s Opening Scene"  %]
+[% WRAPPER h4_section id = "the_lion_king__opening_scene" title = "The Lion King’s Opening Scene" %]
 
 [%# https://www.youtube.com/watch?v=GibiNy4d4gc
 #%]
@@ -3475,7 +3477,7 @@ exalted.
 
 [% END %]
 
-[% WRAPPER h2_section id = "dedications" title = "Dedications"  %]
+[% WRAPPER h2_section id = "dedications" title = "Dedications" %]
 
 <p>
 Following my <a href="[% base_path %]humour/Terminator/Liberation/ongoing-text.html#dedications">lead in "Terminator: Liberation"</a>, I will
@@ -3486,7 +3488,7 @@ many
 <a href="[% base_path %]meta/FAQ/are_you_aware_that_the_jewish_bible_is_fictional.xhtml">people unjustly dismiss</a>. )
 </p>
 
-[% WRAPPER h3_section id = "dedications_living" title = "Living"  %]
+[% WRAPPER h3_section id = "dedications_living" title = "Living" %]
 
 <ul>
 
@@ -3529,7 +3531,7 @@ not immune to their psychological effects.
 <a href="[% base_path %]humour/by-others/hitchhiker-guide-to-star-trek-tng.html">"The Hitchhiker's Guide to Star Trek - The Next Generation"</a>
 had already been written in 1990 and circulated by email, and I found it
 even funnier than <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">the original H2G2</a>.
-The web 1.0 and especially <a href="https://en.wikipedia.org/wiki/User-generated_content">User-generated content</a>
+The web 1.0 and especially <a href="https://en.wikipedia.org/wiki/User-generated_content">the User-generated content trend</a>
 only amplified the "problem", and I
 had no qualms of writing <a href="[% base_path %]humour/TOneW-the-Fountainhead/">my Friends / Fountainhead crossover</a>
 back in 1998.
@@ -3544,7 +3546,7 @@ is an even "worse" crossover problem.
 
 [% END %]
 
-[% WRAPPER h3_section id = "dedications_for_deceased" title = "Dedications for the deceased"  %]
+[% WRAPPER h3_section id = "dedications_for_deceased" title = "Dedications for the deceased" %]
 
 <ul>
 
@@ -3605,7 +3607,7 @@ and of the <a href="https://muppet.fandom.com/wiki/Muppet_Wiki">Muppets' franchi
 
 [% END %]
 
-[% INCLUDE cc_by_licence_section "version" => "4.0", "year" => "2021",  %]
+[% INCLUDE cc_by_licence_section "version" => "4.0", "year" => "2021", %]
 
 [%- WRAPPER links_sect -%]
 
@@ -3667,6 +3669,6 @@ Parodied "[Movie] Star Wars" logo taken from
 
 [% END %]
 
-[%# PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction",  %]
+[%# PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction", %]
 
 </div>

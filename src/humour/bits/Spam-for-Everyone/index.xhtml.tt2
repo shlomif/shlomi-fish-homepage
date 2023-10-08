@@ -1,5 +1,4 @@
 [%- SET title = "“Spam for Everyone” - The International Campaign for Accessible Spam" -%]
-[%- SET desc = "“Spam for Everyone” - The International Campaign for Accessible Spam" -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -43,7 +42,7 @@ past years, barring many disabled or partially-disabled people from enjoying
 the benefits of this trend.
 </p>
 
-[% WRAPPER h2_section id="the_campaign" title="“Spam for Everyone”"%]
+[% WRAPPER h2_section id = "the_campaign" title = "“Spam for Everyone”" %]
 
 <p>
 The Foundation for Accessible Spam, a U.S. non-profit, decided to start a
@@ -83,12 +82,12 @@ me. Now if you’ll excuse me — I need to purge my spam folder.”
 
 <p>
 Some spammers who were influenced by the campaign enough to make their spam
-more accessible, said they found creative ways to get passed spam filters.
+more accessible, said they found creative ways to get past spam filters.
 Cathelyn Bronox, a distinguished spammer said she opted to send text only
 messages, but making her spam more varied. “I found that there’s a limit to
 how many of the old and cliché spam a typical spam receiving netizen
 is going to respond to.” Ms. Bronox said, “Instead I started offering fresh
-and unique spam about more variable topics, in order to pass through
+and unique spam about more varied topics, in order to pass through
 the spam traps: furniture, trips to exotic places, children books, etc”. She
 said many people found a renewed interest in their inbox after spam like this
 passed through their filters.
@@ -96,7 +95,7 @@ passed through their filters.
 
 [% END %]
 
-[% WRAPPER h2_section id="the-future" title="The Future"%]
+[% WRAPPER h2_section id = "the-future" title = "The Future" %]
 
 <p>
 Will the future of spam messages make them less and less accessible for people

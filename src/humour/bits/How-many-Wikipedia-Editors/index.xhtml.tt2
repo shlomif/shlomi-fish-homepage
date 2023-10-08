@@ -1,6 +1,4 @@
 [%- SET title = "How many Wikipeders does it take to Change a Light Bulb?" -%]
-[%- SET desc = "How many Wikipeders does it take to Change a Light Bulb?" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -107,15 +105,15 @@ create it and start the cycle all over again.
 </li>
 </ul>
 
-[% WRAPPER h2_section id="about" title="About this Document"%]
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
-[% WRAPPER h3_section id="license" title="Copyright and License"%]
+[% WRAPPER h3_section id = "license" title = "Copyright and License" %]
 
 <p>
 This document is Copyright by Shlomi Fish, 2009, and is available under the
 terms of either <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/3.0/">the Creative Commons
-Attribution-ShareAlike License 3.0 Unported</a> (or at your option any
+Attribution-ShareAlike License (CC-by-sa) 3.0 Unported</a> (or at your option any
 later version) or alternatively
 <a href="http://www.gnu.org/copyleft/fdl.html">the GNU Free Documentation
 License, version 1.3</a> (or at your option any later version).
@@ -123,7 +121,7 @@ License, version 1.3</a> (or at your option any later version).
 
 [% END %]
 
-[% WRAPPER h3_section id="inspiration" title="Inspiration"%]
+[% WRAPPER h3_section id = "inspiration" title = "Inspiration" %]
 
 <p>
 The main inspiration for this document has been the document
@@ -149,7 +147,7 @@ While being based on something real, it is kind-of amusing .
 
 [% END %]
 
-[% WRAPPER h2_section id="other-wikipedia-humour" title="Other Wikipedia Humour"%]
+[% WRAPPER h2_section id = "other-wikipedia-humour" title = "Other Wikipedia Humour" %]
 
 <ul>
 
@@ -187,7 +185,7 @@ CollegeHumor video</a>
 </li>
 
 <li>
-<a href="http://uncyclopedia.wikia.com/">Uncylcopedia</a> - the
+<a href="http://uncyclopedia.wikia.com/">Uncyclopedia</a> - the
 premier “content-free” Encyclopedia.
 </li>
 
@@ -227,7 +225,7 @@ starting from 6 July, 2006</a> (may require registration).
 
 [% END %]
 
-[% WRAPPER h2_section id="similar-bits" title="Similar Bits Elsewhere"%]
+[% WRAPPER h2_section id = "similar-bits" title = "Similar Bits Elsewhere" %]
 
 <ul>
 

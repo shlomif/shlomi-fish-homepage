@@ -751,11 +751,11 @@ EOF
 <li>
 <p>
 <a href="https://www.youtube.com/watch?v=Zlot0i3Zykw">"Red"</a> - a song Swift
-wrote about her relationship with her mind's hell-hole's echo of me: a static site owner
+wrote about her relationship with her mind's hell's echo of me: a static website owner
 who was critical of her songs, while being enamoured with many YouTube musicians
 especially <a href="https://en.wikipedia.org/wiki/Christina_Grimmie">Christina
 Grimmie</a> and <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>.
-She used www.shlomifish.org as fodder for her songs.
+She later used www.shlomifish.org as fodder for her songs.
 </p>
 </li>
 </ul>

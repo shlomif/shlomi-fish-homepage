@@ -79,6 +79,14 @@ class MyTests(html_unit_test.TestCase):
             "/ul/li/a[@href='../humour/aphorisms/']"
         )
 
+    def test_fortunes_page__published_elem(self):
+        input_fn = ('./dest/post-incs/t2/humour/fortunes/'
+                    '__FORTS-show-cgi-xhtmls/windows-minus-minus.xhtml')
+        d = self.doc(input_fn)
+        d.has_one(
+            ".//table/tbody/tr/td[@class='field' and text()='Published']"
+        )
+
     def test_factoids_fortune_page__h3_elem(self):
         input_fn = './dest/post-incs/t2/humour/fortunes/shlomif-factoids.html'
         d = self.doc(input_fn)

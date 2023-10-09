@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 
-use File::Spec::Functions qw( catpath splitpath rel2abs );
+use File::Spec::Functions qw( catpath rel2abs splitpath );
 use YAML::XS              qw/ LoadFile /;
 
 use XML::Grammar::Fortune     ();
@@ -41,6 +41,7 @@ sub _ns_xc
     $xc->registerNs( 'html' => $ns, );
     return $xc;
 }
+
 my $doc    = XML::LibXML->load_xml( location => $out_fn );
 my $xc     = _ns_xc($doc);
 my $finder = URI::Find->new(
@@ -69,14 +70,16 @@ my $file_yaml = $yaml->{"$basename.xml"};
 foreach my $node (
     $xc->findnodes(q#//*[@class='fortune'][html:table[@class='info']]#) )
 {
-    my $nodexc = _ns_xc($node);
-    my $id     = $nodexc->findnodes(q#html:h3/@id#)->[0]->textContent;
+    my $node_xpath_ctx = _ns_xc($node);
+    my $id = $node_xpath_ctx->findnodes(q#html:h3/@id#)->[0]->textContent;
 
     my $date = $file_yaml->{$id}->{'date'}
         or Carp::confess("no date for id = $id ; basename = $basename .");
 
-    my $info = $nodexc->findnodes(q#html:table[@class='info']/html:tbody#)->[0];
-    my $tr   = _ns_elem('tr');
+    my $info =
+        $node_xpath_ctx->findnodes(q#html:table[@class='info']/html:tbody#)
+        ->[0];
+    my $tr = _ns_elem('tr');
     foreach my $p ( [ 'field', 'Published' ],
         [ 'value', scalar( $date =~ s/T.*?\z//mrs ) ] )
     {

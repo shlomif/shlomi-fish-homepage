@@ -1,14 +1,13 @@
 [%- SET title = "Why Closed Books are So 19th-Century" -%]
 [%- SET desc = "This document will explain why it is a bad idea, in this day and age, to write a book that is not available online for everyone to see, link to, redistribute, and possibly modify." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
 
 [% default_toc %]
 
-[% WRAPPER h2_section id = "abstract"  title = "Abstract"  %]
+[% WRAPPER h2_section id = "abstract" title = "Abstract" %]
 
 <p>
 This document will explain why it is a bad idea, in this day and age, to write
@@ -18,7 +17,7 @@ and possibly modify.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "motivation"  title = "Motivation"  %]
+[% WRAPPER h2_section id = "motivation" title = "Motivation" %]
 
 <img src="book.min.svg" alt="An Open Book" style="max-height: 150px;float:left; margin:0.5em;" />
 
@@ -52,18 +51,18 @@ To which he <a href="http://www.askbjoernhansen.com/2008/05/16/javascript_the_go
 </p>
 
 <blockquote>
-    <p>
-    Why would it be available for free?
-    </p>
+<p>
+Why would it be available for free?
+</p>
 
-    <p>
-    Please support the publisher and the author by paying them the $20 (Amazon
-    US) or the £13 (Amazon UK) to buy the book.
-    </p>
+<p>
+Please support the publisher and the author by paying them the $20 (Amazon
+US) or the £13 (Amazon UK) to buy the book.
+</p>
 
-    <p>
-     - ask
-    </p>
+<p>
+- ask
+</p>
 </blockquote>
 
 <p>
@@ -81,16 +80,16 @@ many important and influential historical books. However, as computer
 networking became faster, less error-prone, and more ubiquitous - a different
 medium of communicating knowledge has emerged: the Internet. To
 <a href="http://www.boingboing.net/2004/11/06/save-canadas-interne.html">quote
-    Cory Doctorow</a>:
+Cory Doctorow</a>:
 </p>
 
 <blockquote>
-    <p>
-    The Internet has one overarching feature that makes it superior to the
-    technologies that preceded it: it can copy arbitrary blobs of data from one
-    place to another at virtually no cost, in virtually no time, with virtually
-    no control. This is not a bug. This is what the Internet is supposed to do.
-    </p>
+<p>
+The Internet has one overarching feature that makes it superior to the
+technologies that preceded it: it can copy arbitrary blobs of data from one
+place to another at virtually no cost, in virtually no time, with virtually
+no control. This is not a bug. This is what the Internet is supposed to do.
+</p>
 </blockquote>
 
 <p>
@@ -118,16 +117,16 @@ and complicates things.
 In this article, I’d like to note why non-open books (or at least books that
 are not available online) are as pointless as
 <a href="[% base_path %]philosophy/foss-other-beasts/">non-open-source
-    software</a>.
+software</a>.
 </p>
 
 [% END %]
 
-[% WRAPPER h2_section id = "some-quotes"  title = "Some Quotes"  %]
+[% WRAPPER h2_section id = "some-quotes" title = "Some Quotes" %]
 
 <p>
 In my older essay <a href="[% base_path %]philosophy/case-for-file-swapping/">the
-    Case for File Swapping</a>, I made the claim that while copyrights are
+Case for File Swapping</a>, I made the claim that while copyrights are
 an important concept, the Law must not restrict non-commercial distribution
 of copyrighted works. Naturally, due to a generation gap,
 governments and copyright-owners have not yet given in to the fact that the
@@ -149,24 +148,24 @@ about online encyclopedias</a>:
 </p>
 
 <blockquote>
-    <p>
-    The second big element of Web 2.0 is democracy. We now have several
-    examples to prove that <a
-        href="http://www.paulgraham.com/opensource.html">amateurs</a> can
-    surpass professionals, when they have
-    the right kind of system to channel their efforts. <a
-        href="http://wikipedia.org/">Wikipedia</a> may be the
-    most famous. Experts have given Wikipedia middling reviews, but they miss
-    the critical point: it’s good enough. And it’s free, which means people
-    actually read it. On the web, <b>articles you have to pay for might as well
-        not exist</b>. Even if you were willing to pay to read them yourself,
-    you can’t link to them. They’re not part of the conversation.
-    </p>
+<p>
+The second big element of Web 2.0 is democracy. We now have several
+examples to prove that <a
+href="http://www.paulgraham.com/opensource.html">amateurs</a> can
+surpass professionals, when they have
+the right kind of system to channel their efforts. <a
+href="http://wikipedia.org/">Wikipedia</a> may be the
+most famous. Experts have given Wikipedia middling reviews, but they miss
+the critical point: it’s good enough. And it’s free, which means people
+actually read it. On the web, <b>articles you have to pay for might as well
+not exist</b>. Even if you were willing to pay to read them yourself,
+you can’t link to them. They’re not part of the conversation.
+</p>
 </blockquote>
 
 <p>
 Graham continues to <a
-    href="http://www.paulgraham.com/opensource.html">say that</a>:
+href="http://www.paulgraham.com/opensource.html">say that</a>:
 </p>
 
 <blockquote>
@@ -180,29 +179,29 @@ that.
 <p>
 Mr. Graham is not the only or the first one to say things along this line.
 Previously, <a
-    href="http://catb.org/~esr/">Eric S. Raymond</a> had written his
+href="http://catb.org/~esr/">Eric S. Raymond</a> had written his
 <a href="http://catb.org/~esr/faqs/hacker-howto.html">“How to Become a Hacker”</a> (= software enthusiast), and has been propagating
-    similar ideas in
+similar ideas in
 <a href="http://catb.org/~esr/writings/cathedral-bazaar/">his “The
 Cathedral and the Bazaar” series of essays</a> (an older version of which was
 also published as a paperback book). <a
-    href="http://catb.org/~esr/faqs/hacker-howto.html#believe2">Quoting</a>
+href="http://catb.org/~esr/faqs/hacker-howto.html#believe2">Quoting</a>
 from the guide:
 </p>
 
 <blockquote>
 
-    <p> 2. <b>No problem should ever have to be solved twice.</b>  </p>
+<p> 2. <b>No problem should ever have to be solved twice.</b> </p>
 
-    <p> Creative brains are a valuable, limited resource. They shouldn’t be
-    wasted on re-inventing the wheel when there are so many fascinating new
-    problems waiting out there.  </p>
+<p> Creative brains are a valuable, limited resource. They shouldn’t be
+wasted on re-inventing the wheel when there are so many fascinating new
+problems waiting out there. </p>
 
-    <p> To behave like a hacker, you have to believe that the thinking time of
-    other hackers is precious — so much so that it’s almost a moral duty for
-    you to share information, solve problems and then give the solutions away
-    just so other hackers can solve new problems instead of having to
-    perpetually re-address old ones.  </p>
+<p> To behave like a hacker, you have to believe that the thinking time of
+other hackers is precious — so much so that it’s almost a moral duty for
+you to share information, solve problems and then give the solutions away
+just so other hackers can solve new problems instead of having to
+perpetually re-address old ones. </p>
 
 </blockquote>
 
@@ -214,14 +213,14 @@ cannot share your work with other people.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "the-problems"  title = "The Problems with Closed Books"  %]
+[% WRAPPER h2_section id = "the-problems" title = "The Problems with Closed Books" %]
 
 <p>
 I can think of several important problems with the fact that some books
 are closed:
 </p>
 
-[% WRAPPER h3_section id = "no-linking-problem"  title = "1. Their Closed Nature Makes One Unable to Effectively Link to Them"  %]
+[% WRAPPER h3_section id = "no-linking-problem" title = "1. Their Closed Nature Makes One Unable to Effectively Link to Them" %]
 
 <p>
 If I want to point someone at a text on the wikipedia, I can give him a
@@ -262,7 +261,7 @@ resources and philosophy.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "quoting-problem"  title = "2. It Makes Quoting and Re-using The Books Harder"  %]
+[% WRAPPER h3_section id = "quoting-problem" title = "2. It Makes Quoting and Re-using The Books Harder" %]
 
 <p>
 It’s much easier to quote an online document than an offline one. Either
@@ -284,7 +283,7 @@ context of grander document (like I did earlier).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "not-preventing-piracy-problem"  title = "3. Closing the Books Doesn’t Prevent Illegal Use"  %]
+[% WRAPPER h3_section id = "not-preventing-piracy-problem" title = "3. Closing the Books Doesn’t Prevent Illegal Use" %]
 
 <p>
 When <a href="https://en.wikipedia.org/wiki/J._K._Rowling">J. K. Rowling</a> released the 6th Harry Potter book, she decided not to make
@@ -357,7 +356,7 @@ articles from a blog.)
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "critique-problem"  title = "4. Closing the Books Makes Critique and Commenting Harder"  %]
+[% WRAPPER h3_section id = "critique-problem" title = "4. Closing the Books Makes Critique and Commenting Harder" %]
 
 <p>
 If you have a non-publicly-available book, and you discover an error in it,
@@ -395,7 +394,7 @@ and inspired from it.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "admission-of-failure"  title = "5. It’s an Admission of Failure"  %]
+[% WRAPPER h3_section id = "admission-of-failure" title = "5. It’s an Admission of Failure" %]
 
 <p>
 Let’s say you’ve found that the current built-in documentation of a software
@@ -477,7 +476,7 @@ legitimate uses that I mentioned.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "does-not-hurt-sales"  title = "6. Keeping the books closed does not Encourage Sales"  %]
+[% WRAPPER h3_section id = "does-not-hurt-sales" title = "6. Keeping the books closed does not Encourage Sales" %]
 
 <p>
 Many books (and other works) that were made available online have become
@@ -507,7 +506,7 @@ succeed eventually.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "conclusion"  title = "Conclusion"  %]
+[% WRAPPER h2_section id = "conclusion" title = "Conclusion" %]
 
 <p>
 In this day and age, you should look into online publishing as another
@@ -532,7 +531,7 @@ Creative Commons</a> for more information.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "thanks"  title = "Thanks"  %]
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 Thanks to <a href="http://jwn.name/">firespeaker</a> for doing some
@@ -541,7 +540,7 @@ copy-editing of this document.
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -594,11 +593,17 @@ works under free or semi-free licences, and search for such works.
 </p>
 </li>
 
+<li>
+<p>
+<a href="https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/">“Alternative” Profitable Models for Web-based Commerce - Shlomi Fish’s Homesite</a>
+</p>
+</li>
+
 </ul>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 
@@ -657,7 +662,7 @@ by <a href="https://www.openclipart.org/user-detail/cyber-nomad">cyber-nomad</a>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "meta_info"  title = "Meta Information"  %]
+[% WRAPPER h2_section id = "meta_info" title = "Meta Information" %]
 
 <dl>
 <dt>Written By:</dt>
@@ -667,7 +672,7 @@ by <a href="https://www.openclipart.org/user-detail/cyber-nomad">cyber-nomad</a>
 <dt>Last Updated:</dt>
 <dd>11-November-2018</dd>
 <dt>Licence:</dt>
-<dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Licence</a> (or at your option, any later version).<!--/Creative Commons License--></dd>
+<dd><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution (CC-by) 2.5 Licence</a> (or at your option, any later version).<!--/Creative Commons License--></dd>
 </dl>
 
 [%- END -%]

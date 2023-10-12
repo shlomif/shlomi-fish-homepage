@@ -1,6 +1,7 @@
 [%- SET title = "Perl-Related Essays" -%]
 [%- SET desc = "Essays related to the Perl programming language: the Joy of Perl, Critique of where Perl 6 is heading, etc." -%]
 
+[% main_class.addClass("fancy_sects") %]
 
 [%- WRAPPER wrap_html -%]
 
@@ -11,10 +12,9 @@ programming languages.
 
 [% default_toc %]
 
-<h2 id="articles-list">The Articles List</h2>
+[% WRAPPER h2_section id = "articles-list" title = "The Articles List" %]
 
-<h3 id="newcomers"><a href="[% base_path %]philosophy/perl-newcomers/">“Usability”
-of the Perl Online World for Newcomers</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/perl-newcomers/" id = "newcomers" title = "“Usability” of the Perl Online World for Newcomers" %]
 
 <p>
 How usable is the Perl Online World and community for Newcomers? Is the
@@ -22,23 +22,29 @@ situation as good as with other technologies? Can they quickly learn the
 language? Will they feel at home?
 </p>
 
-<h3 id="joy-of-perl"><a href="joy-of-perl/">The Joy of Perl</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "joy-of-perl/" id = "joy-of-perl" title = "The Joy of Perl" %]
 
 <p>
 An essay that explains why I like Perl so much.
 </p>
 
-<h3 id="perl6-critique"><a href="perl6-critique/">Critique of Where Perl 6
-is Heading</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "perl6-critique/" id = "perl6-critique" title = "Critique of Where Perl 6 is Heading" %]
 
 <p>
 An article explaining why I believed Perl 6 was the wrong idea.
 </p>
 
-<h2 id="more-perl-articles">More Perl Articles</h2>
+[% END %]
 
-<h3 id="use-perl"><a href="http://use.perl.org/~Shlomi+Fish/journal/">On
-my use.perl.org Blog</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "more-perl-articles" title = "More Perl Articles" %]
+
+[% WRAPPER h3_section href = "http://use.perl.org/~Shlomi+Fish/journal/" id = "use-perl" title = "On my use.perl.org Blog" %]
 
 <p>
 I used to blog about Perl on
@@ -68,12 +74,17 @@ Two Idioms</a>
 
 </ul>
 
-<h3 id="shlomif-tech"><a href="http://community.livejournal.com/shlomif_tech/tag/perl">perl
-tag on my LiveJournal technical blog</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://community.livejournal.com/shlomif_tech/tag/perl" id = "shlomif-tech" title = "perl tag on my LiveJournal technical blog" %]
 
 <p>
 More recently, I moved most of my Perl blogging there.
 </p>
+
+[% END %]
+
+[% END %]
 
 [% WRAPPER see_also__dash_id %]
 

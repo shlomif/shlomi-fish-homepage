@@ -2,10 +2,9 @@
 [%- SET desc = "Explains the distinction between a homepage (or homesite) and a blog, and why this site is not a blog" -%]
 [%- SET more_keywords = "HTML, Homesite, Homepage, Home, Blog, Weblog, Tags, Categories, RSS" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="about">About this Document</h2>
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
 <p>
 This documents explains the distinction between a homepage (or homesite) and
@@ -14,7 +13,9 @@ from <a href="http://allium.zgp.org/pipermail/linux-elitists/2007-April/011919.h
 post to the Linux-Elitists mailing list</a>.
 </p>
 
-<h2 id="meta">Document Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -37,11 +38,15 @@ Last Updated:
 </dd>
 </dl>
 
-<h3 id="licence">Licence</h3>
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2007", ) %]
 
-<h2 id="itself">The Article Itself</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
 
 <p>
 As you may know since the Internet boom circa 1996, many people started their
@@ -59,25 +64,35 @@ is:
 <ol>
 
 <li>
+<p>
 A stream of posts on various topics, ordered by date.
+</p>
 </li>
 
 <li>
+<p>
 Usually has <a href="http://en.wikipedia.org/wiki/Web_feed">a web feed</a>.
+</p>
 </li>
 
 <li>
+<p>
 Should have comments. I
 <a href="http://shlomif.livejournal.com/11085.html">left
 Advogato</a> due to this reason among others.
+</p>
 </li>
 
 <li>
+<p>
 Normally either personal, random or dedicated to a certain topic.
+</p>
 </li>
 
 <li>
+<p>
 Usually flat and non-hierarchical. At most has tags.
+</p>
 </li>
 
 </ol>
@@ -89,33 +104,43 @@ Now my homesite on the other hand, and several other homesites as well is:
 <ol>
 
 <li>
+<p>
 Organised in a tree (“About myself”, “Humour”, “Puzzles”, “Computer Art”,
 “Software”, etc.). The categories contain many resources not commonly present
 in a blog, and there for people to browse and see.
+</p>
 </li>
 
 <li>
+<p>
 Has a central navigation menu and sub-navigation menus. Most blogs are flat
 or at most have tags which are completely different.
+</p>
 </li>
 
 <li>
+<p>
 Has many resources that are not normally present in blogs. How many times
 have you seen a full 10,000-words-long story posted to a blog? Or pages that
 only contain links.
+</p>
 </li>
 
 <li>
+<p>
 Many of the pages there are constantly updated. A blog entry normally
 remains mostly static after a while, while the pages of my homesite are
 very dynamic.
+</p>
 </li>
 
 <li>
+<p>
 There are no comments in any of the pages. It’s a static HTML site. Had it
 been a blog, I would have made sure to give a nested comments facility. I
 admit that I often post a notice about them to mailing lists, news sites, web
 forums, etc. But they are not blog entries.
+</p>
 </li>
 
 </ol>
@@ -132,5 +157,7 @@ home sites using Movable Type, WordPress, or their likes. Normally, the blogger
 maintains the front page of the site as a blog, and adds a page or two about
 other things. I personally always look down on such sites.
 </p>
+
+[% END %]
 
 [% END %]

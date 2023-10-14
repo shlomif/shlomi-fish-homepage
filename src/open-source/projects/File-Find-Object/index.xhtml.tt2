@@ -13,15 +13,21 @@ to traverse directory trees. However, it has some serious limitations:
 <ol>
 
 <li>
+<p>
 It cannot be instantiated, and also makes use of some global variables.
+</p>
 </li>
 
 <li>
+<p>
 It cannot be easily interrupted in the middle.
+</p>
 </li>
 
 <li>
+<p>
 It does not have an iterative interface.
+</p>
 </li>
 
 </ol>
@@ -51,6 +57,7 @@ of File::Find.
     github_url = "https://github.com/shlomif/perl-file-find-object"
     freecode_url = "http://freecode.com/projects/file-find-object/"  %]
 [%- END -%]
+
 [%- END -%]
 
 [% WRAPPER h3_section id = "links-file-find-object-rule"  title = "File-Find-Object-Rule"  %]
@@ -58,6 +65,7 @@ of File::Find.
 [% WRAPPER github_cpan_dist_links     dist = "File-Find-Object-Rule"
     github_url = "https://github.com/shlomif/perl-file-find-object-rule"  %]
 [%- END -%]
+
 [%- END -%]
 
 [%- END -%]
@@ -81,7 +89,7 @@ to the modifications disclaimed.
 
 [% WRAPPER news_sect  %]
 
-[% SET xsac=cpan.self_dist( "d" => "Class-XSAccessor", ) %]
+[% SET xsac = cpan.self_dist( "d" => "Class-XSAccessor", ) %]
 [% WRAPPER h3_section id = "news-2009-06-26"  title = "2009-06-26: File-Find-Object-Rule Version 0.0300"  %]
 
 <p>
@@ -130,24 +138,32 @@ information can be found in the Changes file in the distribution.
 <ul>
 
 <li>
+<p>
 <a href="http://use.perl.org/~Shlomi+Fish/journal/37750">File-Find-Object
 Refactoring</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://community.livejournal.com/shlomif_tech/20200.html">“Shavin’
 Another Second”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://community.livejournal.com/shlomif_tech/22145.html">“Should
 We Include a Better Alternative to Fild-Find in the perl5 Core?”</a>
 (16-February-2009)
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://community.livejournal.com/shlomif_tech/29315.html">“What
 you can do with File-Find-Object (that you can’t with File::Find)”</a>
+</p>
 </li>
 
 </ul>

@@ -33,46 +33,56 @@ markup languages</b> that are in turn converted to the XML.
 <ol>
 
 <li>
+<p>
 <a href="Base/">XML-GrammarBase</a> - base classes and roles/traits, for
 processing XML grammars.
+</p>
 </li>
 
 <li>
+<p>
 
 <a href="http://web-cpan.shlomifish.org/modules/XML-CompareML/">XML-CompareML</a>
 - an XML grammar for managing multi-system and multi-item comparisons. (Not
 in the XML-Grammar namespace for historical reasons.)
+</p>
 </li>
 
 <li>
+<p>
 <a href="Fiction/">XML-Grammar-Fiction</a> - for authoring prose (such as
 stories, novellas or novels). Includes a convenient well-formed text format.
-<br />
+</p>
 
 <ul>
 
 <li>
+<p>
 <b>XML-Grammar-Screenplay</b> -
 for writing <a href="http://en.wikipedia.org/wiki/Screenplay">screenplays</a>
 and other scripts (for plays, T.V. shows, etc.). Includes a convenient
 proto-text format.
+</p>
 </li>
 
 </ul>
-
 </li>
 
 <li>
+<p>
 <a href="http://web-cpan.shlomifish.org/modules/XML-Grammar-Fortune/">XML-Grammar-Fortune</a> -
 allows one to collect quotes (or Unix-like fortune cookies) using
 an XML grammar, with a lot of rich meta-data, and to produce XHTML and
 plain-text from them.
+</p>
 </li>
 
 <li>
+<p>
 [% cpan.self_dist( "d" => "XML-Grammar-ProductsSyndication", ) %] -
 an XML grammar for creating lists of products. See
 <a href="[% base_path %]recommendations/">my recommendations page</a> for examples.
+</p>
 </li>
 
 <li>
@@ -81,6 +91,7 @@ an XML grammar for creating lists of products. See
 an XML grammar for managing some technical documents.
 </p>
 </li>
+
 </ol>
 
 [%- END -%]

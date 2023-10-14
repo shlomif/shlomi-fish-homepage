@@ -1,12 +1,12 @@
 [%- SET title = "How To Get Help Online" -%]
 [%- SET desc = "“How to Get Help Online” - Points to useful Internet Resources for Getting Help With One’s Problems and Questions - Probably Technical " -%]
-[%- SET more_keywords = "help, assist, assitance, stack overflow, stack exchange, questions, mailing lists, forums, search, google, duck duck go, guide, IRC, chat" -%]
+[%- SET more_keywords = "help, assist, assistance, stack overflow, stack exchange, questions, mailing lists, forums, search, google, duck duck go, guide, IRC, chat" -%]
 
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This is a document that aims to refer to the Internet’s best resources
@@ -14,12 +14,18 @@ This is a document that aims to refer to the Internet’s best resources
 in time to reflect changes on the Internet.
 </p>
 
-<h2 id="editions">Editions of the Document</h2>
+[% END %]
 
-<h3 id="edition_2013"><a href="2013.html">2013 Edition</a></h3>
+[% WRAPPER h2_section id = "editions" title = "Editions of the Document" %]
+
+[% WRAPPER h3_section href = "2013.html" id = "edition_2013" title = "2013 Edition" %]
 
 <p>
 2013’s Edition.
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

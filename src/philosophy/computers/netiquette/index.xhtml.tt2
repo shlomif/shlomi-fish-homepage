@@ -1,11 +1,14 @@
 [%- SET title = "Articles about Netiquette" -%]
 [%- SET desc = "Articles about Netiquette - The Proper Internet Behaviour" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="sections">Sections</h2>
+[% WRAPPER h2_section id = "sections" title = "Sections" %]
 
-<h3 id="email_netiquette"><a href="email/">Email Netiquette</a></h3>
+[% WRAPPER h3_section href = "email/" id = "email_netiquette" title = "Email Netiquette" %]
+
+[% END %]
+
+[% END %]
 
 [% END %]

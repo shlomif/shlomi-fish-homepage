@@ -1,23 +1,27 @@
 [%- SET title = "Articles about E-mail Netiquette" -%]
 [%- SET desc = "Articles about E-mail Netiquette - In-Reply-To, reply to list, etc." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="the_articles">The Articles</h2>
+[% WRAPPER h2_section id = "the_articles" title = "The Articles" %]
 
-<h3 id="reply_to_start_new_thread"><a href="start-new-thread.html">How to
-Start a New Thread</a></h3>
+[% WRAPPER h3_section href = "start-new-thread.html" id = "reply_to_start_new_thread" title = "How to Start a New Thread" %]
 
 <p>
 Why you should not reply to an existing message in order to start a new thread.
 </p>
 
-<h3 id="reply_to_list"><a href="reply-to-list.html">Reply to List</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "reply-to-list.html" id = "reply_to_list" title = "Reply to List" %]
 
 <p>
 Why you should reply to the list if the original message was a mailing list
 post.
 </p>
+
+[% END %]
+
+[% END %]
 
 [% END %]

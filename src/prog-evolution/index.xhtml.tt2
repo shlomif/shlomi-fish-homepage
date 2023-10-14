@@ -1,8 +1,9 @@
 [%- SET title = "My Evolution as a Programmer" -%]
 [%- SET desc = "Shlomi Fish’s evolution as a programmer, where he shares his memoires from his older years." -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro %]
 
 <p>
 These are my memoirs of myself as a software engineer with many interesting
@@ -10,9 +11,12 @@ anecdotes. It is work in progress. I hope you’ll find it amusing and a bit
 instructive.
 </p>
 
-<h2>Chapters</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "chapters" title = "Chapters" %]
 
 <table class="visible">
+
 <tr>
 <td>
 <a href="pre-elpas.html">The Pre-Elpas Years</a>
@@ -22,6 +26,7 @@ Describes Shlomi Fish as a child and teenager programmer before his first
 serious job as one.
 </td>
 </tr>
+
 <tr>
 <td>
 <a href="shlomif-at-elpas.html">At Elpas</a>
@@ -31,6 +36,7 @@ Describes my experiences in <a href="http://www.elpas.com/">Elpas</a> -
 my first workplace as a programmer.
 </td>
 </tr>
+
 <tr>
 <td>
 <a href="shlomif-at-cortext.html">At Cortext</a>
@@ -42,5 +48,7 @@ Windows, and Perl.
 </tr>
 
 </table>
+
+[% END %]
 
 [% END %]

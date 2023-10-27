@@ -1,28 +1,28 @@
 [%- SET title = "Who will ride Princess Celestia next?" -%]
-[%- SET desc = "As an example, we can imagine a young girl to write a funny screenplay using GitHub or Google Docs which pits Emma Watson vs. Kim Kardashian on who gets to ride Princess Celestia (= an intelligent, talking, pony horse) next, with Darth Vader and Haman as two “evil”, but mutually hating one another, arbiters. Might seem ridiculus, but if I didn't want entertainment in my life, then I'd go watch grass grow.  It will be a legal and “ethical” minefield, but I'd bet it'd be easier to follow and more entertaining than Tolkien's “Lord of the Rings” was even shortly after LotR was written." %]
+[%- SET desc = "As an example, we can imagine a young girl to write a funny screenplay using GitHub or Google Docs which pits Emma Watson vs. Kim Kardashian on who gets to ride Princess Celestia (= an intelligent, talking, pony horse) next, with Darth Vader and Haman as two “evil”, but mutually hating one another, arbiters. Might seem ridiculus, but if I didn't want entertainment in my life, then I'd go watch grass grow. It will be a legal and “ethical” minefield, but I'd bet it'd be easier to follow and more entertaining than Tolkien's “Lord of the Rings” was even shortly after LotR was written." %]
 
 [%- SET apply_screenplay_style = 1 -%]
 [% main_class.addClass("limit_imgs_width", "ride_celestia") %]
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id="text" title="Text"%]
+[% WRAPPER h2_section id = "text" title = "Text" %]
 
 [% path_slurp("screenplay-xml/rendered-html/Who-will-ride-Princess-Celestia.html") %]
 
 [% END %]
 
-[% WRAPPER h2_section id="coverage" title="Coverage"%]
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_nc_sa_british_blurb( "year" => "2022", ) %]
 
 [% END %]
 
-[% WRAPPER screenplay_read_online__dwim basename = "Who-will-ride-Princess-Celestia", %]
+[% WRAPPER screenplay_read_online__dwim basename = "Who-will-ride-Princess-Celestia" %]
 
 [%- END -%]
 

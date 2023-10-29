@@ -419,7 +419,7 @@ WATSON!
 </p>
 
 <p>
-A self-referential parody of the <a
+A self-referential and illustrated parody of the <a
 href="https://terminator.fandom.com/wiki/Terminator_(franchise)">Terminator
 franchise</a>, with <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma
 Watson</a> as herself and her cosplayer, <a href="https://www.facebook.com/hannah.saunders.1213">Hannah</a>,

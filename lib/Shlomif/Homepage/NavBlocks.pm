@@ -56,7 +56,7 @@ my $Emma_Watson_tech_interview = _l(
     path       => "humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
 );
 my $Emma_Watson_visit_to_Gaza = _l(
-    inner_html => "Emma Watson visit to Israel and Gaza",
+    inner_html => "Emma Watson’s visit to Israel and Gaza",
     path       => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
 );
 
@@ -303,11 +303,11 @@ my %tr_s = (
         ],
     ),
     'Emma_Watson_tech_job' => _tr(
-        title => "Emma Watson Tech Interview",
+        title => "Emma Watson’s Tech Interview",
         items => [ $Emma_Watson_tech_interview, ],
     ),
     'Emma_Watson_visit_to_Gaza' => _tr(
-        title => "Emma Watson Visit to Israel &amp; Gaza",
+        title => "Emma Watson’s Visit to Israel &amp; Gaza",
         items => [ $Emma_Watson_visit_to_Gaza, ],
     ),
     'card_games_essays' => _tr(

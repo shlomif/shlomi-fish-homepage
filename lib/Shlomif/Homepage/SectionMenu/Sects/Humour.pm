@@ -646,6 +646,12 @@ my $_humour_tree_contents = {
 "Emma Watson Getting Interviewed for a Software Developer Job",
                 },
                 {
+                    text => "Emma Watson’s Visit to Israel and Gaza",
+                    url  => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
+                    title =>
+"Emma Watson visiting the Gaza envelope and the Gaza strip",
+                },
+                {
                     text => "The Song “Wide Awake” by Katy Perry is Evil!",
                     url  => "humour/bits/The-Song-Wide-Awake-is-Evil/",
                 },
@@ -680,12 +686,6 @@ my $_humour_tree_contents = {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
                     subs => scalar( $true_stories_obj->get_nav_list() ),
-                },
-                {
-                    text => "Emma Watson’s Visit to Israel and Gaza",
-                    url  => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
-                    title =>
-"Emma Watson visiting the Gaza envelope and the Gaza strip",
                 },
             ],
         },

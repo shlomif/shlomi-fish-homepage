@@ -1,57 +1,70 @@
 [%- SET title = "Wonderous are the ways of Microsoft" -%]
-[%- SET desc = "Wonderous are the ways of Microsoft" -%]
 
 [%- WRAPPER wrap_html -%]
 
 <ol>
 
 <li>
+<p>
 The Windows 95 explorer can handle long filenames. The Windows 95
 “file manager” cannot. On Windows NT 4.0, both the explorer and the
 “file manager” handle long filenames.
+</p>
 </li>
 
 <li>
+<p>
 The Edit command-prompt utility that comes with Windows 95 can
 handle long filenames and open more than one file at once. Windows NT
 4.0’s Edit cannot.
+</p>
 </li>
 
 <li>
-Edit, as we all knows, relies on QBASIC.EXE, at least on DOS and
+<p>
+Edit, as we all know, relies on QBASIC.EXE, at least on DOS and
 Windows 3.11. Windows NT 4.0 follows the DOS 5.0/6.0 tradition and
 includes its help file for BASIC programmers to use as reference.
-Windows 95 does not. (how is a programmer who doesn’t have the time
+Windows 95 does not. (How is a programmer who doesn’t have the time
 and/or resources and/or sense to download Perl for Win32 and/or half
 the DJGPP distribution is supposed to program the wretched thing?)
+</p>
 </li>
 
 <li>
+<p>
 Speaking of Edit: on all Windows 3.11, Windows 95, and Windows NT,
 Edit can handle files containing only “line-feed” characters at the end
 of the line, (such as those originating from UNIXes) pretty well, and
 even converts them to CR-LF when saving (a nice “feature”). Notepad on
 the other hand does not, and places many adjacent lines on one line.
+</p>
 </li>
 
 <li>
+<p>
 Notepad for Windows 95, as was Windows 3.11’s Notepad, is limited
 and can only view files whose file-length does not exceed 64 KB. NT’s
 notepad can view files of any size.
+</p>
 </li>
 
 <li>
+<p>
 BTW, for an editor with no replace feature (at least not on
 Windows 95), no regular-expression search and replace, no indentation
 support, no syntax-highlighting and no macros and scriptability
 features: notepad is one hell of an editor!
+</p>
 </li>
 
 <li>
+<p>
 Windows 95 supply DOS programs with int 21h functions for long
 file names. Thus, DJGPP ports of UNIX utilities can work in style.
 Windows NT, on the other hand, does not. Thus, DJGPP programs cannot
 work in style.
+</p>
 </li>
 
 </ol>

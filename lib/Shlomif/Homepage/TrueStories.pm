@@ -7,12 +7,47 @@ use utf8;
 
 use Moo;
 
+use Path::Tiny qw/ cwd path tempdir tempfile /;
+
+sub _calc_url
+{
+    my ($url_base) = @_;
+
+    return "humour/bits/true-stories/${url_base}/";
+}
+
+sub _calc_dir
+{
+    my ($url_base) = @_;
+
+    return path( "src/" . _calc_url($url_base) );
+}
+
+sub _mainfile
+{
+    my ($dir) = @_;
+
+    return $dir->child("index.xhtml.tt2");
+}
+
+my $SRC = "avoiding-getting-run-over-by-a-horse";
+
 sub _process
 {
     my ($rec) = @_;
+    my $url_base = ( $rec->{url_base} //= $rec->{id} );
+    $rec->{url} //= _calc_url($url_base);
+    my $dir = _calc_dir($url_base);
+    my $fn  = _mainfile($dir);
+    if ( not -f $fn )
+    {
+        my $srcdir = _calc_dir($SRC);
+        my $srcfn  = _mainfile($srcdir);
+        $dir->mkdir();
+        $srcfn->copy($fn);
+        system( "git", "add", "$fn" );
+    }
 
-    $rec->{url_base} //= $rec->{id};
-    $rec->{url}      //= "humour/bits/true-stories/$rec->{url_base}/";
     return $rec;
 }
 

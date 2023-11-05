@@ -162,6 +162,15 @@ EOF
             id   => "fencing-with-plastic-hammers",
             text => "Fencing with plastic hammers",
         },
+        {
+            html => <<"EOF",
+<p>
+TODO.
+</p>
+EOF
+            id   => "does-he-keep-kashruth",
+            text => "“Does he keep Kashruth?”",
+        },
     )
 ];
 

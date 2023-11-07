@@ -23,7 +23,7 @@ sub _calc_dir
     return path( "src/" . _calc_url($url_base) );
 }
 
-sub _mainfile
+sub _calc_dir_main_file
 {
     my ($dir) = @_;
 
@@ -38,11 +38,11 @@ sub _process
     my $url_base = ( $rec->{url_base} //= $rec->{id} );
     $rec->{url} //= _calc_url($url_base);
     my $dir = _calc_dir($url_base);
-    my $fn  = _mainfile($dir);
+    my $fn  = _calc_dir_main_file($dir);
     if ( not -f $fn )
     {
         my $srcdir = _calc_dir($SRC);
-        my $srcfn  = _mainfile($srcdir);
+        my $srcfn  = _calc_dir_main_file($srcdir);
         $dir->mkdir();
         $srcfn->copy($fn);
         system( "git", "add", "$fn" );
@@ -55,9 +55,11 @@ sub _nav_process
 {
     my ($rec) = @_;
     $rec = +{%$rec};
+
     delete $rec->{html};
     delete $rec->{id};
     delete $rec->{url_base};
+
     return $rec;
 }
 

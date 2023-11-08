@@ -400,7 +400,7 @@ So without further ado, Rindolfism's canon consists of these resources:
 
 <li>
 <p>
-<a href="[% base_path %]meta/FAQ/">My [% my_acronym( "key" => "FAQ", "no_link"=>1, ) %]</a>
+<a href="[% base_path %]meta/FAQ/">My [% my_acronym( "key" => "FAQ", "link" => 0, ) %]</a>
 </p>
 </li>
 

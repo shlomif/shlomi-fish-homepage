@@ -20,8 +20,8 @@ my $ACRONYMS_FN = "lib/acronyms/list1.yaml";
 my $latemp_acroman =
     HTML::Acronyms->new( dict => scalar( YAML::XS::LoadFile($ACRONYMS_FN) ) );
 
-my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', no_link => 0, } )->{html};
-my $RPF  = $latemp_acroman->abbr( { key => 'RPF',  no_link => 0, } )->{html};
+my $BtVS = $latemp_acroman->abbr( { key => 'BtVS', link => 1, } )->{html};
+my $RPF  = $latemp_acroman->abbr( { key => 'RPF',  link => 1, } )->{html};
 
 my $FAN_FIC_PARA = <<"EOF";
 <p>

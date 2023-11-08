@@ -2715,8 +2715,8 @@ however.
 
 [% WRAPPER h4_section id = "crime_and_punishment" title = "What do you think about Dostoevsky’s Crime and Punishment?" %]
 
-[% SET cnp = my_acronym( "key" => "Crime&P",) %]
-[% SET cnp_nl = my_acronym( "key" => "Crime&P", "no_link"=>1,) %]
+[% SET cnp = my_acronym( "key" => "Crime&P", ) %]
+[% SET cnp_nl = my_acronym( "key" => "Crime&P", "link" => 0, ) %]
 
 <ol>
 

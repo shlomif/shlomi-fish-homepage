@@ -267,8 +267,15 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
                 my $args = shift;
 
                 return $latemp_acroman->abbr(
-                    { key => $args->{key}, no_link => $args->{no_link}, } )
-                    ->{html};
+                    {
+                        key => $args->{key},
+                        (
+                            exists( $args->{link} )
+                            ? ( link => $args->{link} )
+                            : ()
+                        ),
+                    }
+                )->{html};
             },
             shlomif_cpan      => $shlomif_cpan,
             default_toc       => $DEFAULT_TOC_DIV,

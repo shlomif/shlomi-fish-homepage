@@ -1,10 +1,9 @@
 [%- SET title = "Shlomi Fish’s Aphorisms and Quotes" -%]
 [%- SET desc = "Directory for Aphorisms and Quotes by Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "original_aphorisms" title = "Collection of Humorous Quotes" href="${base_path}humour.html"  %]
+[% WRAPPER h2_section href = "${base_path}humour.html" id = "original_aphorisms" title = "Collection of Humorous Quotes" %]
 
 <p>
 A collection of humorous or insightful quotes of my own (or of people I know).
@@ -13,7 +12,7 @@ Regularly updated.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "fortune_cookies" title = "Fortunes Cookies" href="${base_path}humour/fortunes/"  %]
+[% WRAPPER h2_section href = "${base_path}humour/fortunes/" id = "fortune_cookies" title = "Fortunes Cookies" %]
 
 <p>
 Quotes I like or came up with, in an XML-based format that generates plaintext
@@ -23,7 +22,7 @@ original quotes, and factoids and favourite quotes.
 
 [% END %]
 
-[% WRAPPER h2_section id = "facts" title = "Collections of “Facts”" href="${base_path}humour/bits/facts/" sect_class="bordered" %]
+[% WRAPPER h2_section href = "${base_path}humour/bits/facts/" id = "facts" sect_class = "bordered" title = "Collections of “Facts”" %]
 
 <p>
 Starting from the meme of the
@@ -38,7 +37,7 @@ and even <a href="[% base_path %]humour/bits/facts/XSLT/">XSLT</a> and
 
 [% END %]
 
-[% WRAPPER h2_section id = "image-macros" title = "Image Macros" href="${base_path}humour/image-macros/" %]
+[% WRAPPER h2_section href = "${base_path}humour/image-macros/" id = "image-macros" title = "Image Macros" %]
 
 <p>
 A collection of image macros / captioned images / "memes" I created.
@@ -46,7 +45,7 @@ A collection of image macros / captioned images / "memes" I created.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "tweets-archive" title = "twitter.com/shlomif Tweets archive data" href="${base_path}humour/aphorisms/twitter-tweets-archive/" %]
+[% WRAPPER h2_section href = "${base_path}humour/aphorisms/twitter-tweets-archive/" id = "tweets-archive" title = "twitter.com/shlomif Tweets archive data" %]
 
 <p>
 The @shlomif twitter tweets. (Thanks to <a href="https://gist.github.com/tiffany352/9ee7e0d4fd7e08ede9d0314df9eab672">tiffany352</a>!).

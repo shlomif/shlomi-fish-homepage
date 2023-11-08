@@ -285,6 +285,12 @@ class MyTests(html_unit_test.TestCase):
         self.doc(input_fn).has_one(
             ".//*[@id='queen_padme_tales__abstract']"
         )
+        input_fn = (
+            './dest/post-incs/t2/humour/Queen-Padme-Tales/index.xhtml'
+        )
+        self.doc(input_fn).has_one(
+            ".//*[@id='queen_padme_tales__abstract']"
+        )
 
     def test_screenplay_style(self):
         input_fn = (

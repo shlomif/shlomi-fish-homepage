@@ -924,7 +924,7 @@ sub _get_common_top_elems
                 $self->_get_should_skip_abstract_h_tag($args)
                 ? ""
                 : sprintf( qq# id="%s__abstract"#, $story->id(), )
-            )
+            ),
         ),
         @{ $self->_get_abstract_tags($args) },
         qq{</section>\n},

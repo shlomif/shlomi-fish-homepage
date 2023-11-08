@@ -15,12 +15,6 @@
 
 [% END %]
 
-[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
-
-[% license_obj.by_nc_sa_british_blurb( "year" => "2023", ) %]
-
-[% END %]
-
 [% WRAPPER screenplay_read_online__dwim basename = "One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after" %]
 
 [%- END -%]

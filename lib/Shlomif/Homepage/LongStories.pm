@@ -448,6 +448,7 @@ qq#The Tacos are a reference to the “Porque no los dos” Taco commercial ; th
         entry_id   => "queen--padme--tales",
         entry_text =>
             "Queen Padmé Tales (Star Wars / Star Trek / Real Life Crossover)",
+        should_skip_abstract_h_tag => 1,
         start_date => DateTime->new( month => 12, year => 2020, ),
         href       => "humour/Queen-Padme-Tales/",
         abstract   => <<'EOF',
@@ -917,12 +918,13 @@ sub _get_common_top_elems
         @{ $self->_get_tagline_tags($args) },
         @{ $self->_get_logo_tags($args) },
         sprintf( qq#<section class="abstract%s">\n#, $story->calc_logo_class ),
-        (
-            $self->_get_should_skip_abstract_h_tag($args)
-            ? ()
-            : sprintf(
-                qq#<header><h2 id="%s__abstract">Abstract</h2></header>\n#,
-                $story->id(), )
+        sprintf(
+            qq#<header><h2%s>Abstract</h2></header>\n#,
+            scalar(
+                $self->_get_should_skip_abstract_h_tag($args)
+                ? ""
+                : sprintf( qq# id="%s__abstract"#, $story->id(), )
+            )
         ),
         @{ $self->_get_abstract_tags($args) },
         qq{</section>\n},

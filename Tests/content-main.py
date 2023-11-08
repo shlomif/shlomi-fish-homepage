@@ -277,6 +277,15 @@ class MyTests(html_unit_test.TestCase):
             input_fn=input_fn, htmlid='shlomif-fact-win-update-1'
         )
 
+    def test_queen_padme_screenplay(self):
+        input_fn = (
+            './dest/post-incs/t2/humour/Queen-Padme-Tales/'
+            'Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html'
+        )
+        self.doc(input_fn).has_one(
+            ".//*[@id='queen_padme_tales__abstract']"
+        )
+
     def test_screenplay_style(self):
         input_fn = (
             './dest/post-incs/t2/humour/Terminator/Liberation/' +

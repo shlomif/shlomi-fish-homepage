@@ -507,7 +507,7 @@ She is the richest person in Naboo and one of the richest women in the galaxy.
 
 <li>
 <p>
-She has enough time to contribute on Internet content and code sharing sites.
+She has enough free time to contribute on Internet content and code sharing sites.
 </p>
 </li>
 
@@ -778,7 +778,7 @@ EOF
         href       => "humour/usr-bin-perl/",
         abstract   => <<'EOF',
 <p>
-Screenplays for an (incomplete) series of sitcoms.
+Screenplays for an (incomplete) series of sitcoms about a web-development shop.
 </p>
 
 <p>
@@ -831,11 +831,11 @@ sub get_tagline
 
 sub _get_tagline_tags
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
     my $tag_elem  = 'p';
     my $tag_id    = 'tagline';
-    my $tag_title = $self->get_tagline($id);
+    my $tag_title = $self->get_tagline($args);
     return [ qq#<${tag_elem} id="$tag_id">#, $tag_title, qq#</${tag_elem}>\n#,
     ];
 }
@@ -905,9 +905,9 @@ sub _get_logo_tags
 
 sub _get_list_items_tags
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    return [ @{ $self->_get_abstract_tags($id) }, ];
+    return [ @{ $self->_get_abstract_tags($args) }, ];
 }
 
 sub _get_common_top_elems
@@ -1002,9 +1002,9 @@ sub calc_abstract
 
 sub calc_logo
 {
-    my ( $self, $id ) = @_;
+    my ( $self, $args ) = @_;
 
-    return join( '', @{ $self->_get_logo_tags($id) } );
+    return join( '', @{ $self->_get_logo_tags($args) } );
 }
 
 sub calc_common_top_elems

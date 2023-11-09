@@ -3646,7 +3646,7 @@ That put aside, here are some factors that may contribute to this:
 
 <li>
 <p>
-Some of it has to do with my <a href="[% base_path %]meta/hosting/">web hosting</a>,
+Some of it has to do with my <a href="#site_hosting">web hosting</a>,
 currently HostGator. While not perfect, I am quite happy with them, and
 can recommend them for shared hosting.
 </p>
@@ -3919,7 +3919,9 @@ some sub-repositories).
 <p>
 My <a href="[% base_path %]meta/hosting/">web hosting</a> is
 currently HostGator. I use their shared hosting offering in order to ease the
-maintenance burden.
+maintenance burden. "Shared hosting" is as opposed to a VPS or a dedicated
+server. That is: I am given ssh/rsync/.htaccess/CGI/PHP/perl5, but no root (=
+the UNIX "superuser").
 </p>
 
 [%- END -%]

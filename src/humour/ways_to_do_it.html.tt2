@@ -1,8 +1,7 @@
 [%- SET title = "Ways to do it According to the Programming Languages of the World" -%]
-[%- SET desc = "Ways to do it According to the Programming Languages of the World" -%]
-
 
 [%- WRAPPER wrap_html -%]
+
 [% INCLUDE "pages/t2/humour/ways_to_do_it.tt2" %]
 
 <div class="main_text">
@@ -126,11 +125,7 @@ to decide which way to do it.
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
-
 [% license_obj.by_sa_license_british( "year" => "2002", ) %]
-
-[% END %]
 
 [% WRAPPER see_also  %]
 
@@ -153,6 +148,5 @@ to decide which way to do it.
 [%- END -%]
 
 </div>
-
 
 [% END %]

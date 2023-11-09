@@ -6,6 +6,4 @@
 
 [% path_slurp("docbook/5/rendered/who-gets-the-final-say.xhtml") %]
 
-[% license_obj.by_sa_license_british(year="2020",head_tag="h2", version="4.0") %]
-
 [% END %]

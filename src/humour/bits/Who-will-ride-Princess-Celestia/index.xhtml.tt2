@@ -16,12 +16,6 @@
 
 [% END %]
 
-[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
-
-[% license_obj.by_nc_sa_british_blurb( "year" => "2022", ) %]
-
-[% END %]
-
 [% WRAPPER screenplay_read_online__dwim basename = "Who-will-ride-Princess-Celestia" %]
 
 [%- END -%]

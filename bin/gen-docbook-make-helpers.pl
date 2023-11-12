@@ -37,30 +37,6 @@ $git_obj->git_in_checkout_task(
     }
 );
 
-# Replaced with rebookmaker anyway due to a lack of an explicit (and FOSS)
-# licence:
-#
-# https://pypi.org/project/rebookmaker/
-#
-# Previously broken due to the bug in this pull-request:
-#    - https://github.com/setanta/ebookmaker/pull/7
-#
-# I switched to my fork before the "rebookmaker" rewrite.
-#
-# system('cd lib && git clone https://github.com/setanta/ebookmaker.git');
-if (0)
-{
-    $git_obj->git_in_checkout_task(
-        {
-            pivot_bn     => "README.md",
-            repo         => "ebookmaker",
-            user         => "shlomif",
-            base_dirname => "lib",
-            branch       => "shlomif-conversion-to-floss",
-        }
-    );
-}
-
 $git_obj->git_in_checkout_task(
     {
         pivot_bn     => "hebrew-html-tutorial/hebrew-html-tutorial.xml.tt",

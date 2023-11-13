@@ -28,11 +28,11 @@ def _test_finder():
 # _test_finder()
 
 
-class MyTests:
-    def main(self):
+class HtmlCheckDuplicateIDs:
+    def main(self, root):
         """docstring for main"""
         return self.check_files(
-            paths_list=_find_htmls(root="dest/post-incs/t2/")
+            paths_list=_find_htmls(root=root)
         )
 
     def check_files(self, paths_list):
@@ -60,9 +60,11 @@ class MyTests:
 
 
 if __name__ == '__main__':
-    MyTests().main()
+    HtmlCheckDuplicateIDs().main(root="dest/post-incs/t2/")
     if False:
         from pycotap import TAPTestRunner
         import unittest
-        suite = unittest.TestLoader().loadTestsFromTestCase(MyTests)
+        suite = unittest.TestLoader().loadTestsFromTestCase(
+            HtmlCheckDuplicateIDs
+        )
         TAPTestRunner().run(suite)

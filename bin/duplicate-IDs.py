@@ -30,14 +30,14 @@ def _test_finder():
 
 class MyTests:
     def main(self):
-        verdict = {}
+        offending_files = {}
         for input_fn in _find_htmls(root="dest/post-incs/t2/"):
             # doc = self.doc(input_fn)
             doc = html_unit_test.HtmlTestsDoc(None, input_fn)
-            results = doc.xpath('//*/@id').xpath_results
+            ids_list = doc.xpath('//*/@id').xpath_results
             found = set()
             dups = set()
-            for x in results:
+            for x in ids_list:
                 if x in found:
                     # print("{}: [ {} ]".format(input_fn, x))
                     dups.add(x)
@@ -45,12 +45,12 @@ class MyTests:
                     found.add(x)
             if len(dups) > 0:
                 print("DUPLICATES! {}:".format(input_fn), sorted(list(dups)))
-                verdict[input_fn] = dups
+                offending_files[input_fn] = dups
                 # raise BaseException(x)
-            # print("{}:".format(input_fn), sorted(list(results)))
-        ret = (len(verdict) == 0)
+            # print("{}:".format(input_fn), sorted(list(ids_list)))
+        ret = (len(offending_files) == 0)
         assert ret
-        return ret, verdict
+        return ret, offending_files
 
 
 if __name__ == '__main__':

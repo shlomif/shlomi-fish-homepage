@@ -21,7 +21,7 @@ def _find_htmls(root):
 
 
 def _test_finder():
-    for x in _find_htmls("dest/post-incs/t2/"):
+    for x in _find_htmls(root="dest/post-incs/t2/"):
         print(x)
 
 
@@ -30,7 +30,7 @@ def _test_finder():
 
 class MyTests:
     def main(self):
-        for input_fn in _find_htmls("dest/post-incs/t2/"):
+        for input_fn in _find_htmls(root="dest/post-incs/t2/"):
             # doc = self.doc(input_fn)
             doc = html_unit_test.HtmlTestsDoc(None, input_fn)
             results = doc.xpath('//*/@id').xpath_results

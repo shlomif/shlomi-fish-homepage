@@ -48,7 +48,9 @@ class MyTests:
                 verdict[input_fn] = dups
                 # raise BaseException(x)
             # print("{}:".format(input_fn), sorted(list(results)))
-        assert len(verdict) == 0
+        ret = (len(verdict) == 0)
+        assert ret
+        return ret, verdict
 
 
 if __name__ == '__main__':

@@ -7,12 +7,30 @@
 # Distributed under terms of the MIT license.
 
 import html_unit_test
+import os
+from os.path import join
+
+
+def _find_htmls(root):
+    """docstring for find_htmls"""
+    for dirpath, _, fns in os.walk(root):
+        for fn in fns:
+            if fn.endswith(('.html', '.xhtml')):
+                path = join(dirpath, fn)
+                yield path
+
+
+def _test_finder():
+    for x in _find_htmls("dest/post-incs/t2/"):
+        print(x)
+
+
+# _test_finder()
 
 
 class MyTests:
     def main(self):
-        import sys
-        for input_fn in sys.argv[1:]:
+        for input_fn in _find_htmls("dest/post-incs/t2/"):
             # doc = self.doc(input_fn)
             doc = html_unit_test.HtmlTestsDoc(None, input_fn)
             results = doc.xpath('//*/@id').xpath_results

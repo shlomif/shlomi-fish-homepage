@@ -10,7 +10,7 @@ from html_unit_test import HtmlCheckDuplicateIDs
 
 
 if __name__ == '__main__':
-    HtmlCheckDuplicateIDs().main(root="dest/post-incs/t2/")
+    HtmlCheckDuplicateIDs().check_dir_tree(root="dest/post-incs/t2/")
     if False:
         from pycotap import TAPTestRunner
         import unittest

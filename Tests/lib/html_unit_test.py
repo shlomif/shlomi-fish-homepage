@@ -79,8 +79,7 @@ def _test_finder():
 
 
 class HtmlCheckDuplicateIDs:
-    def main(self, root):
-        """docstring for main"""
+    def check_dir_tree(self, root):
         return self.check_files(
             paths_list=_find_htmls(root=root)
         )

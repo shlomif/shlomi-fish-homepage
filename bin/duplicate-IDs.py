@@ -30,8 +30,14 @@ def _test_finder():
 
 class MyTests:
     def main(self):
+        """docstring for main"""
+        return self.check_files(
+            paths_list=_find_htmls(root="dest/post-incs/t2/")
+        )
+
+    def check_files(self, paths_list):
         offending_files = {}
-        for input_fn in _find_htmls(root="dest/post-incs/t2/"):
+        for input_fn in paths_list:
             # doc = self.doc(input_fn)
             doc = html_unit_test.HtmlTestsDoc(None, input_fn)
             ids_list = doc.xpath('//*/@id').xpath_results

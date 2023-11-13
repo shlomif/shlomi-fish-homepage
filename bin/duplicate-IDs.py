@@ -30,6 +30,7 @@ def _test_finder():
 
 class MyTests:
     def main(self):
+        verdict = {}
         for input_fn in _find_htmls(root="dest/post-incs/t2/"):
             # doc = self.doc(input_fn)
             doc = html_unit_test.HtmlTestsDoc(None, input_fn)
@@ -44,8 +45,10 @@ class MyTests:
                     found.add(x)
             if len(dups) > 0:
                 print("DUPLICATES! {}:".format(input_fn), sorted(list(dups)))
+                verdict[input_fn] = dups
                 # raise BaseException(x)
             # print("{}:".format(input_fn), sorted(list(results)))
+        assert len(verdict) == 0
 
 
 if __name__ == '__main__':

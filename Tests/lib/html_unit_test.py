@@ -18,18 +18,18 @@ from lxml import html
 
 
 class HtmlTestsDocQuery:
-    """docstring for HtmlTestsDocQuery"""
+    """Single query results"""
     def __init__(self, doc, xpath_results):
         self.doc = doc
         self.xpath_results = xpath_results
 
     def __len__(self):
-        """docstring for __len__"""
+        """implementing len(self)"""
         return len(self.xpath_results)
 
 
 class HtmlTestsDoc:
-    """docstring for HtmlTestsDoc"""
+    """A single HTML document wrapper"""
     def __init__(self, harness, fn):
         self.harness = harness
         if isinstance(fn, dict):
@@ -44,15 +44,15 @@ class HtmlTestsDoc:
         return HtmlTestsDocQuery(self, self.root.xpath(xpath_s))
 
     def has_count(self, xpath_s, count_, blurb=""):
-        """docstring for has_count"""
+        """is the length of xpath_s’s results count_"""
         self.harness.assertEqual(len(self.xpath(xpath_s)), count_, blurb)
 
     def has_one(self, xpath_s, blurb=""):
-        """docstring for has_one"""
+        """is the length of xpath_s’s results 1"""
         self.has_count(xpath_s=xpath_s, count_=1, blurb=blurb)
 
     def has_none(self, xpath_s, blurb=""):
-        """docstring for has_none"""
+        """is the length of xpath_s’s results 0"""
         self.has_count(xpath_s=xpath_s, count_=0, blurb=blurb)
 
 
@@ -62,7 +62,7 @@ class TestCase(unittest.TestCase):
 
 
 def _find_htmls(root):
-    """docstring for find_htmls"""
+    """find X/HTML files in 'root'"""
     for dirpath, _, fns in os.walk(root):
         for fn in fns:
             if fn.endswith(('.html', '.xhtml')):

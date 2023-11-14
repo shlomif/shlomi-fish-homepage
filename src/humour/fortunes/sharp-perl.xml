@@ -8154,5 +8154,62 @@
         </irc>
     </fortune>
 
+    <fortune id="sharp-perl-modern-web-sites">
+        <meta>
+            <title>Modern Websites’ Style</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="aindilis">Is there a good RPA / Web Automation tool that works with Perl? I have had a long standing project to create a deliberative softbot to automate lots of tasks, and now with LLMs it&#39;s possible for it to read and act on the information it will scrape.</saying>
+<saying who="simcop2387">aindilis: something like Playwright might be what you want, https://metacpan.org/pod/Playwright</saying>
+<saying who="Paperbot">Link title(s): [ Playwright - Perl client for Playwright - metacpan.org ]</saying>
+<saying who="aindilis">simcop2387: great, ty!</saying>
+<saying who="LeoNerd">I need a name for a module. I&#39;ve written a thing to do simple command/response or pub/sub over a local probably-unix socket...</saying>
+<saying who="LeoNerd">Because I couldn&#39;t find one and was annoyed at that fact</saying>
+<saying who="simcop2387">LeoNerd: so a very simple RPC type mechanism?</saying>
+<saying who="simcop2387">IO::Async::RemoteFunction? though that probably isn&#39;t it exactly or ::ObjectRemote just to irk mst :)</saying>
+<saying who="LeoNerd">Mmm well it&#39;s not based on IO::Async for a start ;)</saying>
+<me_is who="simcop2387">clutches perls!</me_is>
+<saying who="simcop2387">LeoNerd: what?</saying>
+<saying who="LeoNerd">Future::IO</saying>
+<saying who="aindilis">LeoNerd: I once wrote a interprocess communication system for Perl. is that what you&#39;re looking for?</saying>
+<saying who="LeoNerd">No</saying>
+<saying who="aindilis">k</saying>
+<me_is who="jelly">googles playwright vs selenium and does not get any smarter</me_is>
+<saying who="aindilis">jelly: is selenium still alive?</saying>
+<saying who="jelly">yes</saying>
+<saying who="aindilis">awesome, yeah I don&#39;t know node very well</saying>
+<saying who="rindolf">aindilis: heh, &#39;people&#39; assume irc, perl, xml, are dead too</saying>
+<saying who="simcop2387">jelly: they&#39;re nearly the same but Playwright is a bit better for working with multiple types of browsers and languages is my understanding</saying>
+<saying who="rindolf">https://www.shlomifish.org/meta/FAQ/#computing</saying>
+<saying who="Paperbot">Link title(s): [ Shlomi Fish’s Frequently Asked Questions (FAQ) List - Shlomi Fish’s Homesite ]</saying>
+<saying who="aindilis">rindolf: I neither assumed it was dead or alive</saying>
+<saying who="LeoNerd">If its major version number hasn&#39;t changed in a while then obviously it&#39;s dead</saying>
+<saying who="LeoNerd">If its website hasn&#39;t been rewritten with more javascript and more alpha-blended rounded corners, then obviously it&#39;s dead</saying>
+<saying who="aindilis">ah, I will tell the AI tha rule</saying>
+<saying who="aindilis">are we back to round corners again?</saying>
+<saying who="LeoNerd">Uh, wait.. what year is it? Oh, no.. sorry, no corners at all. No edges either.</saying>
+<saying who="LeoNerd">All your buttons must be flat plain black text on the exact same white background as the real background so users can&#39;t see where the edges of the button are</saying>
+<saying who="LeoNerd">That&#39;s how you can tell it&#39;s &quot;modern&quot; now</saying>
+<saying who="LeoNerd">Sorry, did I say black on white? I meant grey on a slightly different grey</saying>
+<saying who="rindolf">LeoNerd: heh</saying>
+<saying who="fuzzix">It&#39;s like The Net - you have to click a little pi symbol in the corner to get the *real* control panel ... &quot;I&#39;m in&quot;</saying>
+<saying who="simcop2387">LeoNerd: yea i fscking hate that grey on grey low contrast BS that&#39;s been going everywhere</saying>
+<saying who="simcop2387">fuzzix: &quot;I know this.  It&#39;s a unix system!&quot;</saying>
+<saying who="LeoNerd">You Nicks? Nope, never heard of him</saying>
+<saying who="rindolf">github++ added underlines to hyperlinks</saying>
+<saying who="LeoNerd">github-- # should never have removed them in the goddamn first place</saying>
+<saying who="rindolf">LeoNerd: https://perl.plover.com/yak/12views/samples/notes.html#sl-9 - &#39;new versions&#39;</saying>
+<saying who="Paperbot">Link title(s): [ Twelve Views of Mark Jason Dominus ]</saying>
+
+            </body>
+            <info>
+                <channel>#perl</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

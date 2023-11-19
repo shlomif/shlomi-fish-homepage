@@ -206,6 +206,57 @@ was even shortly after LotR was written.
 [% PROCESS fanfic__ride_princess_celestia_next %]
 [% END %]
 
+[% BLOCK avoiding_non_helpful_criticism %]
+
+<p>
+If you do not like a work, please try to comment on why you think it is
+lacking, rather than completely dismissing it or vaguely criticising it.
+Some examples for such non-helpful criticism are:
+</p>
+
+<ul>
+
+<li>
+<p>
+"It sucks."
+</p>
+</li>
+
+<li>
+<p>
+"You cannot write."
+</p>
+</li>
+
+<li>
+<p>
+"It’s a waste of space."
+</p>
+</li>
+
+<li>
+<p>
+"Try to write it as if you were there."
+</p>
+</li>
+
+</ul>
+
+<p>
+People are often amazed by food reviewers in the recently
+trendy <a
+href="https://en.wikipedia.org/wiki/Reality_television#Reality_competition/game_shows">cooking
+competition ("reality") shows</a> being very pedantic and pinpointing small and
+large problems, but it comes with experience and "with the territory". So I
+applaud these reviewers.
+</p>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE avoiding_non_helpful_criticism %]
+[% PROCESS avoiding_non_helpful_criticism %]
+[% END %]
 [% BLOCK communicative_criticism__block %]
 
 <blockquote cite="https://www.shlomifish.org/humour/So-Who-The-Hell-Is-Qoheleth/" class="removedfancy">
@@ -253,48 +304,7 @@ cool guy regardless</a>.
 
 <hr />
 
-<p>
-If you do not like a work, please try to comment on why you think it is
-lacking, rather than completely dismissing it or vaguely criticising it.
-Some examples for such non-helpful criticism are:
-</p>
-
-<ul>
-
-<li>
-<p>
-"It sucks."
-</p>
-</li>
-
-<li>
-<p>
-"You cannot write."
-</p>
-</li>
-
-<li>
-<p>
-"It’s a waste of space."
-</p>
-</li>
-
-<li>
-<p>
-"Try to write it as if you were there."
-</p>
-</li>
-
-</ul>
-
-<p>
-People are often amazed by food reviewers in the recently
-trendy <a
-href="https://en.wikipedia.org/wiki/Reality_television#Reality_competition/game_shows">cooking
-competition ("reality") shows</a> being very pedantic and pinpointing small and
-large problems, but it comes with experience and "with the territory". So I
-applaud these reviewers.
-</p>
+[% INCLUDE avoiding_non_helpful_criticism %]
 
 <p>
 Telling a contributor why you dislike their work will make reworked and future

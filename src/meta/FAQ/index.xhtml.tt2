@@ -4631,8 +4631,9 @@ The reason I am using gvim instead of vim, is because many terminal emulators
 on Linux (including Konsole which is my preferred one) mess up with the
 Hebrew/Latin bidirectionality too much (enough to confuse vim), because the
 syntax highlighting looks nicer there, because the mouse support is better,
-because I like and use the menubar, and because it does not start much slower
-than Vim. If the console-based Vim works for you, feel free to use it.
+because I like and use the menubar, because Unicode characters are often
+displayed better, and because it does not start much slower than Vim. If the
+console-based Vim works for you, feel free to use it.
 </p>
 
 <p>
@@ -4886,13 +4887,14 @@ while I use them sometimes,
 they are less structured and more errorprone than many XML grammars,
 and often are not semantic enough for all my use cases.
 I can use <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>,
-Python, or similar, to convert XML to XHTML5 anyway (and I often do).
+Python, or similar, to convert XML to XHTML5 anyway, whether directly
+or indirectly. And I often do.
 </p>
 
 <p>
 Finally, note that I also use some custom formats such as
 <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/80280dc126c31238580c2556bfe05c836190f617/lib/hunspell/whitelist1.txt">the one I defined for whitelists of spell-checkers</a>
-or <a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">Screenplay-Text</a>.
+or the so-called <a href="[% base_path %]open-source/projects/XML-Grammar/Fiction/">Screenplay-Text format</a>.
 </p>
 
 <p>
@@ -4947,7 +4949,7 @@ Some advantages of [% IRC %] are:
 
 <li>
 <p>
-The protocol is simple enough to allow implementing reliable/secure IRC servers.
+The protocol is simple enough to allow implementing mostly reliable and secure IRC servers.
 </p>
 </li>
 
@@ -5052,11 +5054,14 @@ cracking. For more insights, see:
 </p>
 
 <ul>
+
 <li>
+
 <p>
 <a href="http://www.catb.org/esr/writings/unix-koans/script-kiddie.html">“Master
 Foo and the Script Kiddie”</a> - a modern UNIX koan by Eric Raymond.
 </p>
+
 </li>
 
 <li>
@@ -5101,7 +5106,7 @@ A: This is cracking. Begone, cretin.
 
 <p>
 From <a href="http://catb.org/~esr/faqs/hacker-howto.html">Eric Raymond’s
-“How to Become a Hacker”</a>
+“How to Become a Hacker”</a>.
 </p>
 
 </li>
@@ -5272,10 +5277,9 @@ href="https://projecteuler.net/problem=143">No. 143</a>).
 
 <p>
 First of all, see <a href="https://shlomif-tech.livejournal.com/74492.html">this
-post I wrote</a> about why E-mail is not only a to-do list and
-other resources that serve as virtual to-do lists. For my proper to-do lists, I
-use
-<a href="https://www.vim.org/">gvim/vim</a>, either using plaintext or
+post I wrote</a> about why E-mail is not only a to-do list, and about the fact
+that other resources serve as virtual to-do lists. For my proper to-do lists, I
+use <a href="https://www.vim.org/">gvim/vim</a>, either using plaintext or
 using the <a href="https://github.com/aaronbieber/vim-quicktask">vim-quicktask
 plugin</a>.
 </p>
@@ -5368,7 +5372,7 @@ with annual major releases, and with as little <a href="http://blogs.perl.org/us
 active as <a href="https://en.wikipedia.org/wiki/Python_Package_Index">PyPI</a>
 or <a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a>, but still proves
 useful often, and also avoids breaking backward compatibility as much as possible.
-Moreover, I can make use of modules and libraries in other languages using
+Moreover, I can often make use of modules and libraries in other languages using
 <a href="https://metacpan.org/pod/distribution/Inline/lib/Inline.pod">the Inline::* family</a>
 of CPAN modules
 and other <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFIs</a>.
@@ -5699,7 +5703,7 @@ So if a fire has caught the firs, what will the moss on the wall say?
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "pc_jehovah" title = "Why do you write the 'sacred name': Jehovah / “יהוה”?" %]
+[% WRAPPER h3_section id = "pc_jehovah" title = "Why do you write the 'sacred name': “Jehovah” / “יהוה”?" %]
 
 <p>
 See <a href="[% base_path %]philosophy/culture/multiverse-cosmology/#jehovah">"Multiverse cosmology"</a>.
@@ -5720,10 +5724,10 @@ a man or a woman to their body.
 </p>
 
 <p>
-Furthermore, the artwork that a person decides to enjoy in his free time, is of
-no concern to the Peace and Justice in a Liberal country, and should not be
-enforced. Only when a person is influenced from such artwork in his everyday
-actions, then he may be prosecuted.
+Furthermore, the choice of artwork that a person decides to experience in his
+free time, is of no concern to the Peace and Justice in a Liberal country, and
+should not be enforced. Only when a person is influenced from such artwork in
+his everyday actions, then he may be prosecuted.
 </p>
 
 <p>

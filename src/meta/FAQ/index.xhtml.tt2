@@ -3637,7 +3637,10 @@ I believe the [% CGI %] scripts are:
 
 <p>
 I picked it as an implementation language-agnostic extension, to make
-the web-server's configuration easier.
+the web-server's configuration easier. I don't know whether they are
+being run as [% CGI %] or a different technology in practice. I also
+do not care too much, as long as they run fast enough, which seems to
+usually be the case so far.
 </p>
 
 [%- END -%]

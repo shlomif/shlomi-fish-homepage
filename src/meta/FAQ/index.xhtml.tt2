@@ -3633,6 +3633,15 @@ I believe the [% CGI %] scripts are:
 
 [%- END -%]
 
+[% WRAPPER h3_section id = "why_cgi" title = "Why do some of the server-side scripts have a “.cgi” extension?" %]
+
+<p>
+I picked it as an implementation language-agnostic extension, to make
+the web-server's configuration easier.
+</p>
+
+[%- END -%]
+
 [% WRAPPER h3_section id = "broken_links" title = "I found some broken links on one of your sites. Should I report them to you?" %]
 
 [% INCLUDE faq__broken_links %]

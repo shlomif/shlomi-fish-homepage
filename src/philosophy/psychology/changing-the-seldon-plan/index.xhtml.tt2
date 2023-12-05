@@ -92,13 +92,13 @@ open-source out there as the Seldon Plan which powers all the open-source
 programs in use, and empowers us and end-users, then we should not
 feel detrimental or afraid to change the code that we use everyday. And
 people should not deploy code that they are not confident enough in changing,
-modernising and adapting to their needs.
+modernising, and adapting to their needs.
 </p>
 
 <p>
 One cannot usually expect code to remain the same forever. As time progresses,
 we can expect there to be code rot, features that needs to be added, tests
-that need to be added, or as is often the case in Perl 5 and other languages,
+that need to be added, or, as is often the case in Perl 5 and other languages,
 paradigms that are considered to be bad and that should be changed to newer
 and safer paradigms. If you're lucky, the original developer or a co-maintainer
 can do that for you, but sometimes an end-user needs to stand up and volunteer
@@ -116,9 +116,9 @@ sees bug. Hacker doesn't want bug. Hacker fixes bug.".
 
 [% END %]
 
-[% WRAPPER h2_section id = "replies" title = "Follow ups"  %]
+[% WRAPPER h2_section id = "replies" title = "Follow ups" %]
 
-[% WRAPPER h3_section href = "https://shlomif-tech.livejournal.com/37969.html?thread=30033#t30033" id = "reply-you-seem-to-forget" title = "Anonymous: “You seem to forget…”"  %]
+[% WRAPPER h3_section href = "https://shlomif-tech.livejournal.com/37969.html?thread=30033#t30033" id = "reply-you-seem-to-forget" title = "Anonymous: “You seem to forget…”" %]
 
 <blockquote cite="https://shlomif-tech.livejournal.com/37969.html?thread=30033#t30033">
 
@@ -133,7 +133,7 @@ famous "Don't throw out the code" admonition.
 
 [% END %]
 
-[% WRAPPER h3_section href = "http://szabgab.com/blog/2009/11/1259431123.html" id = "reply-by-szabgab" title = "Gabor Szabo: What does “If it ain't broke, don't fix it.” really mean?"  %]
+[% WRAPPER h3_section href = "http://szabgab.com/blog/2009/11/1259431123.html" id = "reply-by-szabgab" title = "Gabor Szabo: What does “If it ain't broke, don't fix it.” really mean?" %]
 
 <blockquote cite="http://szabgab.com/blog/2009/11/1259431123.html">
 
@@ -141,11 +141,11 @@ famous "Don't throw out the code" admonition.
 broke, don't fix it</b>. The latest appearance was in response to <a
 href="http://community.livejournal.com/shlomif_tech/37969.html">Shlomi
 Fish</a> suggesting that some Ancient Perl code should be replaced by
-Modern Perl code.  </p>
+Modern Perl code. </p>
 
 <p> I am not saying that every piece of code should be rewritten
 every 6 months, but in my understanding that sentence actually
-translates to <b>let's wait till it breaks and then panic</b>.  </p>
+translates to <b>let's wait till it breaks and then panic</b>. </p>
 
 <p> I think people who say that sentence are afraid that the new
 version will break something. Sure, there is always a chance that a
@@ -153,12 +153,12 @@ change introduces an error, but, if we are afraid to touch the code,
 what will happen when later on we encounter a case where it does not
 work? For example, if we need to use it in a new environment. Will we
 have the courage to change the code then? How much will it cost in
-money, time, and lost sleep?  </p>
+money, time, and lost sleep? </p>
 
 <p> I think we have been trying to teach ourselves that we
 should have really good test coverage of our code and then we
 can easily refactor it and get rid of technical debt. So why
-do we keep hearing that sentence?  </p>
+do we keep hearing that sentence? </p>
 
 </blockquote>
 
@@ -185,7 +185,7 @@ The same is also true on modernising Perl 5 code. Modern Perl has evolved from (
 </p>
 
 <p>
-The main point I was trying to convey was that you should be confident enough and willing to refactor and modernise Perl code as you encounter it. The person who asked for help in my link did not lack the time to revamp the code - he just wasn't confident enough. While some ancient Perl code is still mostly working fine and can be left alone, you shouldn't uphold any bad code with an aura of holiness, especially not if you're seeking help with it.
+The main point I was trying to convey was that you should be confident enough and willing to refactor and modernise Perl code as you encounter it. The person who asked for help in my link did not lack the time to revamp the code - he just wasn't confident enough. While some ancient Perl code is still mostly working fine and can be left alone, you should not uphold any bad code with an aura of holiness. Especially not if you're seeking help with it.
 </p>
 
 <p>
@@ -193,7 +193,7 @@ I don't advocate throwing away working code, but even Joel on Software <a href="
 </p>
 
 <p>
-I didn't intend to imply that you should stop everything you're doing right now and modernise and refactor all the Perl code you have and/or use to make it squeaky clean. But you do need to do it if you're constantly using or tweaking it, and please do it before and after you've asked the Perl experts for help on it, because we don't know where and how "ancient", non-idiomatic or inelegant Perl code will break, and we care too much about code craftsmanship. The issues being discussed are not unique to Perl, but they influence Perl to a possibly larger extent.
+I didn't intend to imply that you should stop everything you're doing right now and modernise and refactor all the Perl code you have and/or use to make it squeaky clean. But you do need to do it if you're constantly using or tweaking it, and please do it before and after you've asked the Perl experts for help on it. That is because we don't know where and how "ancient", non-idiomatic, or inelegant, Perl code will break, and we care too much about code craftsmanship. The issues being discussed are not unique to Perl, but they influence Perl to a possibly larger extent.
 </p>
 
 </blockquote>

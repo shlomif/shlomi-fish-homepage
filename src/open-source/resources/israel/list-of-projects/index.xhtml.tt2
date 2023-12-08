@@ -1,12 +1,10 @@
 [%- SET title = "List of Israeli Open-Source Projects" -%]
-[%- SET desc = "List of Israeli Open-Source Projects" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This is a list of Israeli open-source projects that used to reside on
@@ -28,8 +26,9 @@ Also refer to the <a href="https://github.com/lirantal/awesome-opensource-israel
 Open Source Israel list</a> on GitHub for some additional links.
 </p>
 
-<h2 id="Large_or_Very_Large_Scale_Projects"> Large or Very Large Scale
-Projects </h2>
+[% END %]
+
+[% WRAPPER h2_section id = "Large_or_Very_Large_Scale_Projects" title = "Large or Very Large Scale Projects" %]
 
 <ul>
 
@@ -107,7 +106,9 @@ licence.
 
 </ul>
 
-<h2 id="Medium_Scale_Projects">Medium Scale Projects</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "Medium_Scale_Projects" title = "Medium Scale Projects" %]
 
 <ul>
 
@@ -338,7 +339,9 @@ more transparent. (BSD licensed).
 
 </ul>
 
-<h2 id="Small_Scale_Projects">Small Scale Projects</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "Small_Scale_Projects" title = "Small Scale Projects" %]
 
 <ul>
 
@@ -414,7 +417,9 @@ easily listen to radio stations from the command line.
 
 </ul>
 
-<h2 id="Linux_Distributions">Linux Distributions</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "Linux_Distributions" title = "Linux Distributions" %]
 
 <ul>
 
@@ -473,7 +478,9 @@ System.
 
 </ul>
 
-<h2 id="Web_Sites">Web-sites</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "Web_Sites" title = "Web-sites" %]
 
 <ul>
 
@@ -498,8 +505,12 @@ the site of the Knesset, the Israeli parliament.
 
 </ul>
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2011", ) %]
+
+[% END %]
 
 [% END %]

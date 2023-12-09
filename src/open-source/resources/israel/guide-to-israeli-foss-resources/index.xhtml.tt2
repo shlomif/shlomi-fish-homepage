@@ -4,7 +4,7 @@
 
 [% default_toc %]
 
-<h2 id="portals">Portals, News, etc.</h2>
+[% WRAPPER h2_section id = "portals" title = "Portals, News, etc." %]
 
 <ul>
 
@@ -83,7 +83,9 @@ newsletter in Hebrew by Ynon Perek.
 
 </ul>
 
-<h2 id="forums">Forums</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "forums" title = "Forums" %]
 
 <ul>
 
@@ -149,7 +151,9 @@ forum</a>
 
 </ul>
 
-<h2 id="clubs">Clubs and Associations</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "clubs" title = "Clubs and Associations" %]
 
 <ul>
 
@@ -280,7 +284,7 @@ in Israel</a> - currently lacks events from some clubs.
 
 </ul>
 
-<h3 id="meetup.com-groups">Meetup.com Groups</h3>
+[% WRAPPER h3_section id = "meetup.com-groups" title = "Meetup.com Groups" %]
 
 <ul>
 
@@ -409,7 +413,11 @@ standards.
 
 </ul>
 
-<h2 id="conferences">Conferences</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "conferences" title = "Conferences" %]
 
 <ul>
 
@@ -437,7 +445,9 @@ series of presentations introducing Linux to beginners.
 
 </ul>
 
-<h2 id="downloads">Software Downloads and Other mirrors</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "downloads" title = "Software Downloads and Other mirrors" %]
 
 <ul>
 
@@ -456,7 +466,9 @@ in Israel.</a>
 
 </ul>
 
-<h2 id="wikis">Wikis</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "wikis" title = "Wikis" %]
 
 <ul>
 
@@ -515,7 +527,9 @@ Wiki</a>
 
 </ul>
 
-<h2 id="lists">Lists of Resources</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "lists" title = "Lists of Resources" %]
 
 <ul>
 
@@ -539,8 +553,12 @@ TODO: Add:
 * Ivrix.org.il (once it is restored).
 -->
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2011", ) %]
+
+[% END %]
 
 [% END %]

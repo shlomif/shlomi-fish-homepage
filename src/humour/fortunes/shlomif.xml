@@ -13216,5 +13216,94 @@ He replied: “There is no privacy here.”.
         </irc>
     </fortune>
 
+    <fortune id="sharp-linux-offtopic--nixdoc-WinXP-style-and-modern-Web">
+        <meta>
+            <title>nixdoc, Windows XP style, and the modern Web</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="Insayne">Oh, Hey</saying>
+<saying who="neoncortex">hey.</saying>
+<saying who="Insayne">what&#39;s up?</saying>
+<saying who="neoncortex">at the moment, Im contemplating my computer screen, resting.</saying>
+<saying who="neoncortex">just finished my system documentation searching tool, now resting a little to start writing other tools.</saying>
+<saying who="Insayne">ah, cool</saying>
+<saying who="rindolf">neoncortex: hi, i&#39;m reminded of  https://www.shlomifish.org/philosophy/ideas/unixdoc/</saying>
+<saying who="neoncortex">rindolf: thats interesting, I called my tool nixdoc.</saying>
+<saying who="neoncortex">its much simpler I suppose, it is just a gui that allows you to search, manual pages and info pages, and open them, in pdf.</saying>
+<saying who="rindolf">neoncortex: ah. git url?</saying>
+<saying who="rindolf">neoncortex: i&#39;m trying2repress the memory of GNU info</saying>
+<saying who="rascul">info pages are ok but gnu&#39;s info browser is kinda crappy but there exists pinfo which is kinda lynx like</saying>
+<saying who="neoncortex">rindolf: I did not published.  I is really simple and I dont know if people would be interested.  When you open it, you see this: https://0x0.st/H3Un.jpg .  Then you can search a info page, for example: https://0x0.st/H3U5.jpg, then you can position you cursor in any of the results file, click view: https://0x0.st/H3UR.jpg .</saying>
+<saying who="rascul">there&#39;s also tkinfo</saying>
+<saying who="neoncortex">same with manpages, with the difference that you can filter by section, also.</saying>
+<saying who="rindolf">https://www.gnu.org/manual/manual.html has ok UX though</saying>
+<saying who="rascul">i generally prefer gnu&#39;s html stuff to the info pages</saying>
+<saying who="rascul">well i guess the html stuff is just the info pages as html though</saying>
+<saying who="neoncortex">rascul: hm, tkinfo is interesting, but I do rather read the info pages sequentially, in one document.</saying>
+<saying who="neoncortex">thats why I read them in pdf.</saying>
+<saying who="neoncortex">also goddam apropos, when you search with sections like: apropos -s 1,2 whatever, it does not deliver in order.  I fixed that, I do, in the case above, two apropos calls sequentially, and present the results xD</saying>
+<saying who="rindolf">neoncortex: your screenies have a winxp vibe \o/</saying>
+<saying who="neoncortex">rindolf: its themed with windows xp themes, yes xD</saying>
+<saying who="Slimey">hehe</saying>
+<saying who="neoncortex">it feels alive, not that gray/white blob modern.  I remember how ugly I thought windows xp was at the time, but damn, I do rather use that.</saying>
+<saying who="rindolf">neoncortex: https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-perl-modern-web-sites</saying>
+<saying who="neoncortex">rindolf: exactly.</saying>
+<saying who="rocks">tl;dr</saying>
+<saying who="neoncortex">tldr: modern applications are just a white/gray box with black text, look like death.</saying>
+<saying who="neoncortex">like the rindolf link state, sometimes not even black, just less white.</saying>
+<saying who="neoncortex">like, damn, this is not a art project, or a magazine page, it is a tool.</saying>
+<saying who="neoncortex">and thats ironic: to have your white retangle with some text, you need 27 frameworks, and some good memory.</saying>
+<saying who="neoncortex">plan9 can do the same, with 0 overhead xD</saying>
+<saying who="The_Blode">With rounded corners</saying>
+<saying who="BlueyHealer">and it will not display without JS on</saying>
+<saying who="The_Blode">Oh hey</saying>
+<saying who="neoncortex">no, it will not.  It does less with more.  Amazing.</saying>
+<saying who="The_Blode">Lots of sites simply do not work without JS.</saying>
+<saying who="BlueyHealer">ye but some have no excuse for such behavior</saying>
+<saying who="neoncortex">yeah, I just click the back button, generally.</saying>
+<saying who="The_Blode">Yep just to get the analytics for their own purposes</saying>
+<saying who="The_Blode">I wonder if someone has / is developing some application that can translate a website into a useable &quot;clean&quot; version</saying>
+<saying who="The_Blode">Using clean JS code</saying>
+<saying who="The_Blode">Detoxify websites if you will</saying>
+<saying who="The_Blode">I guess you can block certain JS script but it would be nice to have a tool do it all</saying>
+<saying who="neoncortex">that is one thing that is in back of my mind for a time.  You need a proxy web translator.  Something that will interpret a modern web page, and present a sane version.  There is a project, that uses webkit, read the page, and translates it into images, with clickable links, and all.  It was made for old machines with ancient browsers to browse the web.</saying>
+<saying who="The_Blode">Oldweb?</saying>
+<saying who="neoncortex">I dont remember the name.  Im searching my notes, I think I wrote something about it.</saying>
+<saying who="The_Blode">Yeah, I&#39;m aware of that project...but I believe it takes archive.org pages and makes them &quot;usable&quot;</saying>
+<saying who="The_Blode">Maybe I could look into creating something too :) it might be a nice thing to have.</saying>
+<saying who="neoncortex">found it in my notes: webkit-rendering-proxy, https://github.com/tenox7/wrp</saying>
+<saying who="The_Blode">Interesting! Thank you</saying>
+<saying who="neoncortex">=D</saying>
+<saying who="The_Blode">One for BlueyHealer</saying>
+<saying who="The_Blode">But I&#39;ll also give this a go</saying>
+<saying who="The_Blode">Yeah...I believe I have seen this before.</saying>
+<saying who="rocks">You could always just get a non-old computer. Centralizing processing of some page rendering still means it has to happen somewhere</saying>
+<saying who="The_Blode">Or not...this is what the Oldweb is using -&gt; https://webrecorder.net/</saying>
+<saying who="neoncortex">rocks: sure, but it is even more secure, since you have a web interpreting server, that, in case of bugs or whatever, will not infect your machine.</saying>
+<saying who="neoncortex">you are basically insulated from it.</saying>
+<saying who="rocks">I think it has been forever since the last time I was infected by a web site</saying>
+<saying who="neoncortex">rocks: I never crashed a car, and yet I use the seat belt.  To be fair, the police would ticket me, but still xD</saying>
+<saying who="neoncortex">I crashed a motorcycle, but thats another story.</saying>
+<saying who="neoncortex">my current setup include firejailing web browsers, but that wrp would be even better.</saying>
+<saying who="rocks">-EPARANOIA</saying>
+<saying who="neoncortex">ha</saying>
+<saying who="rocks">If you really believe that web services are a threat, you would keep them on a completely separate system to other things you care about</saying>
+<saying who="rocks">Not rely on just more layers of technology as a comfort blanket</saying>
+<saying who="neoncortex">that may be the next step, yes.</saying>
+<saying who="neoncortex">but firejail with -private is good.</saying>
+<saying who="neoncortex">err, --private</saying>
+<saying who="neoncortex">pressed the wrong button ¬_¬</saying>
+
+
+            </body>
+            <info>
+                <channel>##Linux-offtopic</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

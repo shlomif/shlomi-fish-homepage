@@ -61,29 +61,28 @@ my $nav_block_renderer = Shlomif::Homepage::NavBlocks::Renderer->new(
     }
 );
 my $latemp_fn;
+my $raw_fn_path;
 
 sub check_nav_blocks
 {
     my ($args) = @_;
-    my $names  = $args->{names};
-    my $page   = $latemp_fn;
-    $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
+    my $names = $args->{names};
 
-    my $want = $nav_blocks->lookup_page_blocks($page);
+    my $want = $nav_blocks->lookup_page_blocks($raw_fn_path);
 
     if (0)
     {
-        if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
+        if ( ( $raw_fn_path ne "meta/nav-blocks/blocks/" )
             and $nav_block_renderer->flush_found() )
         {
-            my $err = qq#NavBlock had no page "$page"!\n#;
+            my $err = qq#NavBlock had no page "$raw_fn_path"!\n#;
             print {*STDERR} "err=\n\n$err\n\n";
             die $err;
         }
     }
     if ( !defined($want) )
     {
-        warn qq{no nav_block_renderer for page='$page'};
+        warn qq{no nav_block_renderer for page='$raw_fn_path'};
         return;
     }
     my $canonicalize_lists = sub {
@@ -105,18 +104,17 @@ sub _render_nav_blocks
     my $names = $args->{names};
     $names = [ sort @$names ];
 
-    my $ret  = '';
-    my $page = $latemp_fn;
+    my $ret = '';
 
     foreach my $name (@$names)
     {
         $ret .= $nav_block_renderer->render(
             { obj => $nav_blocks->get_nav_block($name), } );
 
-        if ( ( $page ne "meta/nav-blocks/blocks/index.xhtml" )
+        if ( ( $raw_fn_path ne "meta/nav-blocks/blocks/" )
             and $nav_block_renderer->flush_found() )
         {
-            my $err = qq#NavBlock "$name" had no page "$page"!\n#;
+            my $err = qq#NavBlock "$name" had no page "$raw_fn_path"!\n#;
             print {*STDERR} "err=\n\n$err\n\n";
             die $err;
         }
@@ -147,10 +145,11 @@ sub render_compact_nav_blocks
 
 =cut
 
-    my $page = $latemp_fn;
-    $page =~ s#(?:\A|/)\Kindex\.x?html\z##;
-
-    my $names = $nav_blocks->lookup_page_blocks($page);
+    if ( $raw_fn_path eq 'meta/nav-blocks/blocks/' )
+    {
+        return '';
+    }
+    my $names = $nav_blocks->lookup_page_blocks($raw_fn_path);
     if ( not defined $names )
     {
         return '';
@@ -331,7 +330,7 @@ sub render
     $vars->{base_path} = $base_path;
     $license->base_path($base_path);
     $vars->{fn_path} = $input_tt2_page_path;
-    my $raw_fn_path = ( $vars->{raw_fn_path} =
+    $raw_fn_path = ( $vars->{raw_fn_path} =
             $input_tt2_page_path =~ s#(?:\A|/)\Kindex\.x?html\z##r );
     my $full_url = $FULL_URL_PREFIX . $raw_fn_path;
     $vars->{canonical_url}        = $full_url;

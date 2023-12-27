@@ -556,9 +556,7 @@ of an EvilPHish”</a> cartoon of
 [%- END -%]
 
 [%- content -%]
-[%- IF fn_path != 'meta/nav-blocks/blocks/' -%]
 [%- INCLUDE render_compact_nav_blocks -%]
-[%- END -%]
 [%- PROCESS end_html -%]
 [%- END -%]
 

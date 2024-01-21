@@ -13305,5 +13305,110 @@ He replied: “There is no privacy here.”.
         </irc>
     </fortune>
 
+    <fortune id="sharp-xml--lots-of-AI-generated-spam-would-be-awesome">
+        <meta>
+            <title>#xml: “lots of low-quality, non-original, often non-functional, content” would be awesome</title>
+        </meta>
+        <irc>
+            <body>
+
+<me_is who="Klinda">(~loren@2a0e:418:46a8:0:f8e3:2575:a15c:8d85) has joined</me_is>
+<saying who="Klinda">demib0y, if you use xml the google search does it rank you low?</saying>
+<saying who="rindolf">Klinda: hi. What do you mean /?</saying>
+<saying who="rindolf">XHTML5?</saying>
+<saying who="rindolf">brwser-side XSLT?</saying>
+<saying who="Klinda">I don&#39;t know I am not good in web development</saying>
+<saying who="rindolf">Klinda: https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#why-should-i-learn-how-to-program-properly</saying>
+<saying who="Klinda">rindolf, you like to post links instead of talking ahah</saying>
+<saying who="demib0y">hi Klinda</saying>
+<saying who="demib0y">Klinda, do you mean, if you use some arbitrary XML vocabulary rather than XHTML, does your Web site show up lower in Google results?</saying>
+<saying who="demib0y">if so, likely yes, because Google won&#39;t know how to generate snippet results</saying>
+<saying who="demib0y">the Google Web crawler does not seem to run XSLT</saying>
+<saying who="demib0y">as a result, server-side transformations are generally better.</saying>
+<saying who="Klinda">xhtml is html ?</saying>
+<saying who="demib0y">it&#39;s HTML represented in XML</saying>
+<saying who="demib0y">so e.g. you can run XSLT or XQuery on it in the Web server, and also serve it up to google&#39;s bot and to browsers</saying>
+<saying who="rindolf">demib0y: server-side or SSGed</saying>
+<saying who="rindolf">demib0y: and thx4helping</saying>
+<saying who="Klinda">demib0y, is it just a conversion to make think are you using html to google?</saying>
+<saying who="dodobrain">Klinda, it is a lot easier to interpret is what he is saying. and thats what goog will do. use the simplest/fastest/least_resource_hungry method(s) to parse/interpret/rank/etc.</saying>
+<saying who="Klinda">but why do you have a particular thing about xml vs html?</saying>
+<saying who="dodobrain">pure xml would mean it can contain anything! (i mean you have your own custom elements, etc. with xhtml your known elements are limited in scope and atleast goog&#39;s parser/whatever is able to interpret it (mostly?)</saying>
+<saying who="dodobrain">what do you mean by your question? i&#39;m not understanding it</saying>
+<saying who="Klinda">I think here you prefer bulding site with xml instead of html</saying>
+<saying who="dodobrain">really? what gave you that impression?</saying>
+<saying who="dodobrain">xml isnt so popular for serving webpages</saying>
+<saying who="Klinda">because you are on #xml</saying>
+<saying who="Klinda">for what propuse are you here ? XD</saying>
+<saying who="dodobrain">xml is used for a lot more things than just &quot;building sites&quot;</saying>
+<saying who="Klinda">like what?</saying>
+<saying who="dodobrain">https://en.wikipedia.org/wiki/XML#Applications</saying>
+<saying who="dodobrain">mainly for data exchange.. you know your json, i hope? well, json is useless because there is no schema definition on it</saying>
+<saying who="Klinda">json it&#39;s cool</saying>
+<saying who="dodobrain">there is json-schema but its not as elegant as xml schemas</saying>
+<saying who="Klinda">xml what offers more</saying>
+<saying who="dodobrain">with xml, the dtds and schemas and other xml files are *all* xml files themselves</saying>
+<saying who="dodobrain">validation and transformation is better on xml</saying>
+<saying who="Klinda">I guess I should try it to understand</saying>
+<saying who="dodobrain">anyway, i&#39;m not sure what your objective is. i consider myself an xml noob who hasnt used xml (directly or indirectly) for a long while (prolly 7 years or so)</saying>
+<saying who="dodobrain">others here can explain and help you better i&#39;m sure</saying>
+<saying who="rindolf">Klinda: https://www.shlomifish.org/meta/FAQ/why_xml.xhtml</saying>
+<saying who="dodobrain">Klinda, given a json blob and say you want to extract data out of it, the way to do it is to write a program to extract the data out. now if the data you need to extract needs to change, you edit your program or rewrite it from scratch</saying>
+<saying who="dodobrain">with xml input files, you define the operations needed to do the extraction and never actually write a program directly but you specify the operations that need to happen to extract/transform the data you need</saying>
+<saying who="dodobrain">and the beautiful thing about this is that list of operations you write is itself an xml file! so you can run validations/etc. on your transformation operations themselves :)</saying>
+<saying who="Klinda">is it popular to do or not?</saying>
+<saying who="Klinda">or all use json?</saying>
+<saying who="rindolf">Klinda: sorry  if i&#39;m too blunt, but you need 2 be less wilfully ignorant and lazy to be educable here</saying>
+<saying who="Klinda">I don&#39;t care about web development, I will be an ai engineer btw, I can&#39;t be jesus chirst</saying>
+<saying who="rindolf">Klinda: then why did u ask about google-indexing?</saying>
+<saying who="Klinda">I want to build a personal site or maybe sites which uses ml models</saying>
+<saying who="rindolf">Klinda: ml = machine-learning?</saying>
+<saying who="Klinda">yes</saying>
+<saying who="Klinda">I have to study react.js and a back-end like flask/django/ I think</saying>
+<saying who="rindolf">Klinda: generating sites using ML sounds like spamming</saying>
+<saying who="Klinda">what do you mean?</saying>
+<saying who="rindolf">Klinda: what isn&#39;t clear?</saying>
+<saying who="Klinda">spamming in what sense?</saying>
+<saying who="Klinda">I said that as backend has a model in which users can interact with it</saying>
+<saying who="rindolf">Klinda: spammming as in &quot;generating lots of low-quality, non-original, often non-functional, content&quot;</saying>
+<saying who="Klinda">why not?</saying>
+<saying who="Klinda">ai will be the next big thing ahah</saying>
+<saying who="Klinda">much better than just being a slave and work as backend and frontend</saying>
+<saying who="Klinda">I don&#39;t see how one can have a degree and do a web dev</saying>
+<saying who="Klinda">you can do also without</saying>
+<saying who="Klinda">also nasa is going to use ai</saying>
+<saying who="Klinda">only you, you don&#39;t like it ahah</saying>
+<saying who="rindolf">Klinda: something is wrong in your english comprehension</saying>
+<saying who="rindolf">Klinda: &quot;[lots of] low-quality, non-original, often non-functional, content&quot; isnt a good thing</saying>
+<saying who="Klinda">for you is bad</saying>
+<saying who="Klinda">I am studying in a master of ai</saying>
+<saying who="Klinda">and you want to make me cry I did a wrong stuff?</saying>
+<saying who="Klinda">ahah</saying>
+<saying who="Klinda">cool part</saying>
+<saying who="rindolf">Klinda: [[Is a certain software technology good just because I heard that NASA uses it?</saying>
+<saying who="rindolf">NASA is large (and has a large budget) and has been around for many decades, and so uses many different technologies, some of them may not be too recommended in the general case. While the Python homepage used to proclaim that &quot;NASA uses Python&quot;, with a photo of an astronaut, and it is technically true, it was largely marketing built on common ignorance.</saying>
+<saying who="rindolf">Among the other technologies that NASA has used are:</saying>
+<saying who="rindolf">    Fortran</saying>
+<saying who="rindolf">    COBOL</saying>
+<saying who="rindolf">    VAX</saying>
+<saying who="rindolf">    Forth</saying>
+<saying who="rindolf">    Assembly</saying>
+<saying who="rindolf">    Perl 5</saying>
+<saying who="rindolf">    Windows, MS Word, and MS Outlook</saying>
+<saying who="rindolf">Note that we do not mean to imply that Python or whatever are bad just because NASA uses them, just that you should not use that fact as an argument in their favour.]]</saying>
+<saying who="Klinda">try next time</saying>
+<saying who="Klinda">https://www.spaceappschallenge.org/2023/challenges/</saying>
+<saying who="Klinda">I partecipate to this</saying>
+
+
+            </body>
+            <info>
+                <channel>#xml</channel>
+                <network>Freenode</network>
+                <tagline>I didn’t have enugh natural stupidity so I'm seeking a much greater artificial one</tagline>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

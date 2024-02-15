@@ -26,6 +26,7 @@ sub _mutate__leading_path
 
         # die $h->label();
         $h->label("Stories");
+        $self->title("Stories");
         $h->title( undef() );
     }
     else
@@ -215,7 +216,11 @@ sub get_html
 qq{<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>\n}
             . qq{<div class="sub_menu">\n}
             . qq{<h2>}
-            . $self->title()
+            . (
+            $self->path_info =~ m# \A (?:/)? humour/bits/true-stories/#msx
+            ? "Stories Section Menu"
+            : $self->title()
+            )
             . qq{</h2>\n}
             . $self->get_nav_links()
             . qq{<button id="toggle_sect_menu" class="toggle_sect_menu off" title="Show or Hide the Section Navigation Menu">Show</button>\n}

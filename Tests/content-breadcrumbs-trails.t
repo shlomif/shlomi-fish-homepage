@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 7;
+use Test::More tests => 8;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -17,6 +17,18 @@ sub _test
 
     return is( $content . "\n",
         $expected, "$path breadcrumbs trail content is right - $blurb" );
+}
+
+sub _starts_with
+{
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    my ($args) = @_;
+    my ( $path, $expected, $blurb ) = @$args{qw(path expected blurb)};
+
+    my $content = path($path)->slurp_utf8;
+
+    return is( substr( $content, 0, length($expected) ),
+        $expected, "$path section nav-menu content starts right - $blurb" );
 }
 
 # TEST
@@ -95,6 +107,20 @@ _test(
         blurb    => 'true-stories are not "Humour"',
         expected => <<'EOF',
 <a href="../../../../">Shlomi Fish’s Homepage</a> → <a href="../../../">Stories</a> → <a href="../../" title="Small Scale Funny Works of Mine">Small Scale</a> → <a href="../">True Stories / Memoirs</a> → <a href="./" title="Socialising with a young Hermione (“Harry Potter”) cosplayer and her family at GeekCon Nine Worlds">Socialising with a Young Hermione Cosplayer and Her Family</a>
+EOF
+    }
+);
+
+# TEST
+_starts_with(
+    {
+        path =>
+"lib/cache/combined/t2/humour/bits/true-stories/socialising-with-a-young-hermione-cosplayer/index.xhtml/sect-navmenu",
+        blurb    => 'true-stories are not "Humour"',
+        expected => <<'EOF',
+<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>
+<div class="sub_menu">
+<h2>Stories Section Menu</h2>
 EOF
     }
 );

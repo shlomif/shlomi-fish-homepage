@@ -3,104 +3,9 @@
 use strict;
 use warnings;
 
-use HTML::Latemp::GenMakeHelpers v0.8.0;
-use Path::Tiny   qw/ path /;
-use File::Update qw/ write_on_change_raw /;
-
-package Shlomif::Homepage::GenMakeHelpers;
-
-use parent 'HTML::Latemp::GenMakeHelpers';
-
-sub get_rules_template
-{
-    my ( $self, $host ) = @_;
-
-    my $ret = $self->SUPER::get_rules_template( $host, );
-
-    return $ret =~ s#((?:[^\n]+\n)+)(\n)#
-        my ($para, $sep) = ($1, $2);
-        (($para =~ /ttml|wml/i) ? "" : $para) . $sep
-        #egmrs =~ s/\n{3,}/\n\n/gmrs;
-}
-
-sub place_files_into_buckets
-{
-    my ( $self, $host, $filenames, $buckets ) = @_;
-    my $host_id         = $host->{'id'};
-    my $is_common       = ( $host_id eq "common" );
-    my $_common_buckets = $self->_common_buckets;
-FILE_LOOP:
-    foreach my $fn (@$filenames)
-    {
-        next FILE_LOOP if $fn =~ m#/fortune-shlomif\.spec\z#;
-    BUCKETS:
-        foreach my $bucket (@$buckets)
-        {
-            next BUCKETS if not $bucket->{'filter'}->($fn);
-            if ($is_common)
-            {
-                $_common_buckets->{ $bucket->{name} }->{$fn} = 1;
-            }
-
-            if (
-                $is_common
-                || (
-                    !(
-                        $bucket->{'filter_out_common'}
-                        && exists(
-                            $_common_buckets->{ $bucket->{name} }->{$fn} )
-                    )
-                )
-                )
-            {
-                push @{ $bucket->{'results'} }, $bucket->{'map'}->($fn);
-            }
-
-            next FILE_LOOP;
-        }
-        die HTML::Latemp::GenMakeHelpers::Error::UncategorizedFile->new(
-            {
-                'file' => $fn,
-                'host' => $host_id,
-            }
-        );
-    }
-}
-
-sub get_initial_buckets
-{
-    my ( $self, $host ) = @_;
-
-    return [
-        {
-            'name'   => "IMAGES",
-            'filter' => sub {
-                my $fn = shift;
-                return ( $fn !~ /\.tt2\z/ )
-                    && ( -f $self->_make_path( $host, $fn ) );
-            },
-        },
-        {
-            'name'   => "DIRS",
-            'filter' => sub {
-                my $fn = shift;
-                return ( -d $self->_make_path( $host, $fn ) );
-            },
-            filter_out_common => 1,
-        },
-        {
-            'name'   => "DOCS",
-            'filter' => sub {
-                return shift() =~ /\.x?html\.tt2\z/;
-            },
-            'map' => sub {
-                return shift() =~ s#\.tt2\z##r;
-            },
-        },
-    ];
-}
-
-package main;
+use File::Find::Object ();
+use File::Update       qw/ write_on_change_raw /;
+use Path::Tiny         qw/ path /;
 
 use lib './lib';
 use Shlomif::MySystem qw/ my_exec_perl my_system /;
@@ -245,55 +150,68 @@ qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($de
 my_exec_perl(
     [ 'lib/images/navigation/section/sect-nav-arrows.pl', "./src/images", ] );
 
-my $generator = Shlomif::Homepage::GenMakeHelpers->new(
-    docs_build_command_cb => sub {
-        my ( undef, $args ) = @_;
-        return sprintf(
-            '$(call %s%s_INCLUDE_TT2_RENDER)',
-            uc( $args->{host}->id ),
-            ( $args->{is_common} ? "_COMMON" : "" ),
-        );
-    },
-    filename_lists_post_filter => sub {
-        my ($args)    = @_;
-        my $filenames = $args->{filenames};
-        my $ret       = [
-            grep {
-                not(   m#\Ahumour/fortunes/\S+(?:\.tar\.gz|\.sqlite3)\z#
-                    || m#\Aimages/bk2hp-v2\.(?:svgz?|min\.svg)\z# )
-            } @$filenames
-        ];
-        if ( $args->{bucket} eq 'DOCS' and $args->{host} eq 'src' )
-        {
-            path("${DIR}generated/tt2.txt")->spew_raw( join "\n", (@$ret), "" );
-        }
-        return $ret;
-    },
-    hosts => [
-        map {
-            my $dir      = $_;
-            my $dest_dir = ( ( $dir eq 'src' ) ? 't2' : $dir );
-            +{
-                'id'         => $dir,
-                'source_dir' => $dir,
-                'dest_dir'   => "dest/pre-incs/$dest_dir",
-            }
-        } (qw(common src))
-    ],
-    images_dest_varname_cb => sub {
-        return 'POST_DEST';
-    },
-    out_docs_ext => '.tt2',
-    out_dir      => "${DIR}generated/",
-);
-
-eval { $generator->process_all(); };
-if ( my $Err = $@ )
+my %buckets_by_dir;
+foreach my $host ( "common", "src" )
 {
-    require Data::Dumper;
-    print Data::Dumper->new( [$Err] )->Dump;
-    die $Err;
+    my $HOST_IS_COMMON = ( $host eq 'common' );
+    my @docs_paths;
+    my @dirs_paths;
+    my @images_paths;
+    my $tree = File::Find::Object->new( {}, $host );
+
+FIND_FILES:
+    while ( my $r = $tree->next_obj() )
+    {
+        my $path = join "/", @{ $r->full_components() };
+        if (   $path =~ m#\Ahumour/fortunes/\S+(?:\.tar\.gz|\.sqlite3)\z#
+            or $path =~ m#\Aimages/bk2hp-v2\.(?:svgz?|min\.svg)\z# )
+        {
+            next FIND_FILES;
+        }
+        if ( $r->is_file() )
+        {
+            if ( $path =~ s#\.x?html\K\.tt2\z##ms )
+            {
+                push @docs_paths, $path;
+            }
+            else
+            {
+                push @images_paths, $path;
+            }
+        }
+        elsif ( $r->is_dir() )
+        {
+            if ( length($path)
+                and ( $HOST_IS_COMMON ? 1 : ( not -e "common/$path" ) ) )
+            {
+                push @dirs_paths, $path;
+            }
+        }
+    }
+    @docs_paths            = sort @docs_paths;
+    @dirs_paths            = sort @dirs_paths;
+    @images_paths          = sort @images_paths;
+    $buckets_by_dir{$host} = +{
+        docs   => \@docs_paths,
+        dirs   => \@dirs_paths,
+        images => \@images_paths,
+    };
 }
+
+path("${DIR}generated/tt2.txt")
+    ->spew_raw( join "\n", ( @{ $buckets_by_dir{'src'}{'docs'} } ), "" );
+path("${DIR}generated/include.mak")->spew_utf8(
+    map {
+        my $host = $_;
+        map {
+            my $key = $_;
+            join( " ",
+                uc( $host . "_" . $key ),
+                ":=", @{ $buckets_by_dir{$host}{$key} } )
+                . "\n"
+        } qw( images dirs docs )
+    } qw( common src )
+);
 
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 

@@ -15,7 +15,7 @@ include lib/make/generated/include.mak
 BK2HP_SVG_BASE := images/bk2hp-v2.svg
 SRC_IMAGES += $(BK2HP_SVG_BASE)
 
-include lib/make/generated/rules.mak
+include lib/make/sf-filefind-rules.mak
 
 PRE_DEST := $(SRC_DEST)
 

@@ -111,7 +111,7 @@ sub dest_test
 {
     # TEST
     unlike(
-        path("lib/make/generated/rules.mak")->slurp_raw(),
+        path("lib/make/sf-filefind-rules.mak")->slurp_raw(),
         qr/ttml/i, "No rules for unused ttml/TTML",
     );
 }

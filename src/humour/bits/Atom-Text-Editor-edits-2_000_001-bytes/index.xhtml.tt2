@@ -9,22 +9,24 @@
 <p>
 <b>1 April, 2017, Tel Aviv, Israel:</b> GitHub Inc. is proud to announce that
 their flagship text editor, <a href="https://en.wikipedia.org/wiki/Atom_%28text_editor%29">Atom</a>, was finally able to edit a file sized 2,000,001 (= 2 million
-and one) bytes. ”This is really exciting.” said one company representative.
+and one) bytes. “This is really exciting.”, said one company representative.
 “After deploying Atom on an <a href="https://en.wikipedia.org/w/index.php?title=High-performance_computing&amp;redirect=no">HPC</a>
 machine with 256 GB of RAM, custom compiling it for full utilisation
 of resources, and waiting for 30 minutes, we were able to load such a large
-file. We then pressed a key, waited for it to think for a minute and watched
+file. We then pressed a key, waited for it to think for a minute, and watched
 it crash with a <a href="http://en.wikipedia.org/wiki/Segmentation_fault">segfault</a>. Success!”
 </p>
 
 <p>
-<img alt="Logo of the Atom Text Editor" class="rfloaty" src="Atom_icon.png"/>
+<img alt="Logo of the Atom Text Editor" class="rfloaty" src="Atom_icon.png" />
 </p>
 
 <p>
-Industry experts are claiming that this will allow Atom which was first released
-in 2014, to finally <a href="https://passy.svbtle.com/building-vim-from-1993-today">catch up with the Vim text editor</a>, whose 1993 version could comfortably
-edit files over 100 Megabytes in size.
+Industry experts are claiming that this will allow Atom, which was first
+released in 2014, to finally <a
+href="https://passy.svbtle.com/building-vim-from-1993-today">catch up with the
+Vim text editor</a>, whose 1993 version could comfortably edit files over 100
+Megabytes in size.
 </p>
 
 <p>
@@ -55,11 +57,12 @@ to a new framework titled “Positron”, which will embed a browser inside a GU
 window, use it to run a <a href="http://bellard.org/jslinux/">JavaScript x86 emulator</a>, run Linux inside, and then simply run <a href="https://en.wikipedia.org/wiki/Vi">vi</a> there.
 </p>
 </li>
+
 </ol>
 
 <p>
-“We hope that will be enough.”, GitHub say as they embark on the remarkable task
-ahead.
+“We hope that will be enough.”, GitHub say as they embark on the remarkable
+task ahead.
 </p>
 
 [% END %]
@@ -84,7 +87,7 @@ from 1993 today</a>
 
 <li>
 <p>
-<a href="https://www.xkcd.com/378/">xkcd: Real Programmers</a>
+<a href="https://www.explainxkcd.com/wiki/index.php/378:_Real_Programmers">xkcd: Real Programmers</a>
 </p>
 </li>
 
@@ -106,7 +109,7 @@ showing Electron apps are super slow and eat memory like there is no tomorrow</a
 
 [% END %]
 
-[% WRAPPER h2_section id = "license" title = "Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 <p>
 This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi

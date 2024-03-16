@@ -2,14 +2,13 @@
 [%- SET desc = "Announcement: The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File" -%]
 [%- SET more_keywords = "github, GitHub, April Fools Day, Atom, text editor, vim, scalability, joke, Electron, JavaScript, CoffeeScript, HPC" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>
 <b>1 April, 2017, Tel Aviv, Israel:</b> GitHub Inc. is proud to announce that
-their flagship text editor <a href="https://en.wikipedia.org/wiki/Atom_%28text_editor%29">Atom</a> was finally able to edit a file sized 2,000,001 (= 2 million
+their flagship text editor, <a href="https://en.wikipedia.org/wiki/Atom_%28text_editor%29">Atom</a>, was finally able to edit a file sized 2,000,001 (= 2 million
 and one) bytes. ”This is really exciting.” said one company representative.
 “After deploying Atom on an <a href="https://en.wikipedia.org/w/index.php?title=High-performance_computing&amp;redirect=no">HPC</a>
 machine with 256 GB of RAM, custom compiling it for full utilisation
@@ -19,12 +18,12 @@ it crash with a <a href="http://en.wikipedia.org/wiki/Segmentation_fault">segfau
 </p>
 
 <p>
-<img src="Atom_icon.png" class="rfloaty" alt="Logo of the Atom Text Editor"/>
+<img alt="Logo of the Atom Text Editor" class="rfloaty" src="Atom_icon.png"/>
 </p>
 
 <p>
 Industry experts are claiming that this will allow Atom which was first released
-in 2014 to finally <a href="https://passy.svbtle.com/building-vim-from-1993-today">catch up with the Vim text editor</a> whose 1993 version could comfortably
+in 2014, to finally <a href="https://passy.svbtle.com/building-vim-from-1993-today">catch up with the Vim text editor</a>, whose 1993 version could comfortably
 edit files over 100 Megabytes in size.
 </p>
 
@@ -52,14 +51,14 @@ to <a href="http://en.wikipedia.org/wiki/VBScript">VBScript</a>.
 <li>
 <p>
 Switching from the <a href="http://en.wikipedia.org/wiki/Electron_%28software_framework%29">Electron software framework</a>
-to a new framework titled “Positron” which will embed a browser inside a GUI
-window, use it to run a <a href="http://bellard.org/jslinux/">JavaScript x86 emulator</a>, run Linux inside and then simply run <a href="https://en.wikipedia.org/wiki/Vi">vi</a> there.
+to a new framework titled “Positron”, which will embed a browser inside a GUI
+window, use it to run a <a href="http://bellard.org/jslinux/">JavaScript x86 emulator</a>, run Linux inside, and then simply run <a href="https://en.wikipedia.org/wiki/Vi">vi</a> there.
 </p>
 </li>
 </ol>
 
 <p>
-“We hope that will be enough.” GitHub say as they embark on the remarkable task
+“We hope that will be enough.”, GitHub say as they embark on the remarkable task
 ahead.
 </p>
 
@@ -107,14 +106,14 @@ showing Electron apps are super slow and eat memory like there is no tomorrow</a
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence"%]
 
 <p>
 This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi
 Fish</a>, 2017, and is available
 under the
-terms of <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/">the Creative Commons
+terms of <a
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">the Creative Commons
 Attribution-Noncommercial-ShareAlike License 3.0 Unported</a> (or at your option any
 later version).
 </p>
@@ -127,7 +126,7 @@ from the English Wikipedia.
 
 <p>
 For securing additional rights, please contact
-<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>,
 and see <a href="http://www.shlomifish.org/meta/copyrights/">the
 explicit requirements</a> that are being spelt from abiding by that licence.
 </p>

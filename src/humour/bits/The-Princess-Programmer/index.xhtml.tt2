@@ -1,0 +1,74 @@
+[%- SET title = "The Princess Programmer" -%]
+[%- # SET desc = "" -%]
+[%- # SET more_keywords = "github, GitHub, April Fools Day, Atom, text editor, vim, scalability, joke, Electron, JavaScript, CoffeeScript, HPC" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
+<p>
+Once upon a time, in a distant kingdom, lived a beautiful princess.
+She had beautiful hair. In fact, its colour was your favourite hair colour.
+She also had beautiful eyes. Their colour was your favourite eyes’ colour.
+Even if it is incompatible with your favourite hair colour.
+She was kind, noble, passionate, and was loved by her parents, her family,
+her friends, and her citizens.
+</p>
+
+<p>
+As princesses go, she was also an <a href="https://mlp.fandom.com/wiki/Alicorns">alicorn</a>. (All princesses in Equestria are alicorns, and all alicorns are princesses. Sometimes, it is nice to have more than one word to call members of the same <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a>.)
+</p>
+
+<p>
+But even beautiful and loved princesses get bored, and so did the subject
+of this tale. So she found a job working as a programmer.
+</p>
+
+<p>
+She read and wrote source codes in many programming languages, for many
+platforms and architectures, and for many employers / clients / commissioners.
+But then she ran into a problem. You see: she had to hack on both <a href="https://en.wikipedia.org/wiki/Perl">Perl (5)</a> codes and Perl 6 (which would later be renamed to <a href="https://en.wikipedia.org/wiki/Raku_(programming_language)">”Raku”</a>) codes, and found that the DuckDuckGo search engine had a bias towards yielding Perl 5 results.
+</p>
+
+<p>
+As a result, the beautiful princess, volunteered to try to help improve DuckDuckGo. One potential improvement path she and her co-workers tried was to translate its code from Perl 5 to Perl 6. The search-engine with the translated code in general functioned fairly well, but now had a bias towards yielding Perl 6 results.
+</p>
+
+[% END %]
+
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<b>TODO: add more</b>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
+
+<p>
+This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi
+Fish</a>, 2024, and is available
+under the
+terms of <a
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">the Creative Commons
+Attribution-Noncommercial-ShareAlike License 4.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>,
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+[% END %]
+
+[% END %]

@@ -298,6 +298,14 @@ achieved that.
 
 [% END %]
 
+[% WRAPPER h3_section id="The-Princess-Programmer" href="The-Princess-Programmer/" title="The Princess Programmer" %]
+
+<p>
+A post-post-Modern fairy tale.
+</p>
+
+[% END %]
+
 [% PROCESS "Inc/true_stories.tt2" %]
 
 [% WRAPPER h3_section id = "true-stories" title = "True Stories" %]

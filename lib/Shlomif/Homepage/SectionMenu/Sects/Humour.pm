@@ -683,6 +683,10 @@ my $_humour_tree_contents = {
 "humour/bits/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after/",
                 },
                 {
+                    text => "The Princess Programmer",
+                    url  => "humour/bits/The-Princess-Programmer/",
+                },
+                {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
                     subs => scalar( $true_stories_obj->get_nav_list() ),

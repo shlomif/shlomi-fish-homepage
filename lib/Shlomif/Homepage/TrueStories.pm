@@ -173,6 +173,17 @@ EOF
             id   => "does-he-keep-kashruth",
             text => "“Does he keep Kashruth?”",
         },
+        {
+            html => <<"EOF",
+<p>
+A story about my classmates and I participating in an Israel-wide mathematics
+competition for teams from high schools, during the 12th grade, and later
+working on solving the previously-unsolved riddles from the problems-sheet.
+</p>
+EOF
+            id   => "twelfth-grade-mathematics-competition",
+            text => "12th Grade Mathematics Competition",
+        },
     )
 ];
 

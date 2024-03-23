@@ -645,7 +645,7 @@ EOF
 <p class="abstract">
 <a href="\$(ROOT)/me/rindolf/">Rindolf “Aim Very High” Hitlower</a>, the
 Norwegian EvilReindeer, is threatening to turn Christmas into EvilChristmas,
-by stealing all the Christmas' presents and the Chanukkah coins.
+by having stolen all the Christmas' presents and the Chanukkah coins.
 His twin brothers, Rudolph Hitlower and Randolph Hitlower,
 Santa Claus’ right-hoof reindeer, recruit the elite commando unit,
 <a href="https://hero.fandom.com/wiki/Mane_Six">the Mane Six</a>,
@@ -655,8 +655,6 @@ and together go to the Selinaverse's Norway to try to prevent that.
 $FAN_FIC_PARA
 EOF
         entry_extra_html => <<'EOF',
-<p>
-</p>
 EOF
     },
 );

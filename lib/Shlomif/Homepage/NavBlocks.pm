@@ -733,6 +733,15 @@ my %tr_s = (
             _github( url => 'http://github.com/shlomif/the-enemy', ),
         ],
     ),
+    'the_princess_programmer' => _tr(
+        title => "The Princess Programmer",
+        items => [
+            _l(
+                inner_html => "Text",
+                path       => "humour/bits/The-Princess-Programmer/",
+            ),
+        ],
+    ),
     'taylor_swift_essays' => _tr(
         title => "Essays",
         items => [
@@ -867,6 +876,7 @@ sub _subdiv_tr
     return Shlomif::Homepage::NavBlocks::Subdiv_Tr->new( {@_}, );
 }
 
+my $Bits_TR        = _subdiv_tr( title => q{Bits}, );
 my $Essays_TR      = _subdiv_tr( title => q{Essays}, );
 my $Factoids_TR    = _subdiv_tr( title => q{Factoids}, );
 my $Screenplays_TR = _subdiv_tr( title => q{Screenplays}, );
@@ -903,7 +913,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
                 # do { Carp::confess("freecell TODO"); },
                 $Essays_TR,
                 _tr_s( qw( card_games_essays ), ),
-                _subdiv_tr( title => q{Bits}, ),
+                $Bits_TR,
                 _get_tr('card_games_bits'),
             ],
         },
@@ -977,7 +987,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and
                 _tr_s( qw( hhfg star_trek_wtld ), ),
                 $Factoids_TR,
                 _get_tr('foss_facts'),
-                _subdiv_tr( title => q{Bits}, ),
+                $Bits_TR,
                 _get_tr('foss_bits'),
                 _subdiv_tr( title => q{Quotes}, ),
                 _get_tr('foss_fortunes'),
@@ -1068,6 +1078,8 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
                         start_with_happily_after
                     ),
                 ),
+                $Bits_TR,
+                _tr_s( qw( the_princess_programmer ), ),
             ],
         },
     ),
@@ -1085,6 +1097,8 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 _tr_s(
                     qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton atypical_day ),
                 ),
+                $Bits_TR,
+                _tr_s( qw( the_princess_programmer ), ),
             ],
         },
     ),

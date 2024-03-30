@@ -448,6 +448,10 @@ my %tr_s = (
                 inner_html => "Announcing Python 4",
                 path       => "humour/bits/Python4-Announcement/",
             ),
+            _l(
+                inner_html => "The Princess Programmer",
+                path       => "humour/bits/The-Princess-Programmer/",
+            ),
         ],
     ),
     'foss_essays' => _tr(

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use List::Util qw/ all /;
 
 use lib './lib';
@@ -24,5 +24,10 @@ is(
         } @$documents
     ),
     1,
-    "db_ver is 5"
+    "case-for-file-swapping-rev3 is present and only once",
 );
+
+# TEST
+is_deeply( [ sort { $a->{base} cmp $b->{base} } @$documents ],
+    $documents, "Are sorted", );
+

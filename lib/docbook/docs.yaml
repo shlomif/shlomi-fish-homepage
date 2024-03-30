@@ -1,6 +1,42 @@
+- base: A-hashtag-SummerNSA-s-Reading
+  db_ver: 5
+  id: A-SummerNSA-Reading
+  path: philosophy/SummerNSA/A-SummerNSA-Reading/
+- base: Spark-Pre-Birth-of-a-Modern-Lisp
+  db_ver: 5
+  id: Spark-Pre-Birth-of-a-Modern-Lisp
+  path: open-source/projects/Spark/mission
+- base: SummerNSA-2014-09-call-for-action
+  db_ver: 5
+  id: SummerNSA-2014-09-call-for-action
+  path: philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5
+- base: The-Enemy-English-v7
+  custom_css: 1
+  db_ver: 5
+  del_revhistory: 1
+  id: The-Enemy-English-v7
+  path: humour/TheEnemy
+- base: The-Enemy-English-v8
+  custom_css: 1
+  db_ver: 5
+  del_revhistory: 1
+  id: The-Enemy-English-v8
+  path: humour/TheEnemy
+- base: about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua
+  db_ver: 5
+  id: about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua
+  path: philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness
+- base: c-and-cpp-elements-to-avoid
+  db_ver: 5
+  id: c-and-cpp-elements-to-avoid
+  path: lecture/C-and-CPP/bad-elements/
 - base: case-for-drug-legalisation
   db_ver: 5
   id: case-for-drug-legalisation
+  path: philosophy/politics/drug-legalisation
+- base: case-for-drug-legalisation--hebrew-v3
+  db_ver: 5
+  id: case-for-drug-legalisation--hebrew-v3
   path: philosophy/politics/drug-legalisation
 - base: case-for-drug-legalisation-rev2
   db_ver: 5
@@ -9,10 +45,6 @@
 - base: case-for-drug-legalisation-v3
   db_ver: 5
   id: case-for-drug-legalisation-v3
-  path: philosophy/politics/drug-legalisation
-- base: case-for-drug-legalisation--hebrew-v3
-  db_ver: 5
-  id: case-for-drug-legalisation--hebrew-v3
   path: philosophy/politics/drug-legalisation
 - base: case-for-file-swapping
   db_ver: 5
@@ -27,10 +59,6 @@
   db_ver: 5
   id: case-for-file-swapping-rev3
   path: philosophy/case-for-file-swapping/revision-3
-- base: about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua
-  db_ver: 5
-  id: about-the-origins-of-consciousness-craziness-and-normativity-conformism-and-nevua
-  path: philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness
 - base: dealing-with-hypomanias
   db_ver: 5
   id: dealing-with-hypomanias
@@ -44,90 +72,10 @@
   db_ver: 5
   id: foss-and-other-beasts
   path: philosophy/foss-other-beasts/revision-2
-- base: hebrew-html-tutorial
+- base: foss-and-other-beasts-v3
   db_ver: 5
-  id: hebrew-html-tutorial
-  no_epub: 1
-  path: lecture/HTML-Tutorial/v1/xhtml1/hebrew
-- base: introductory-language
-  db_ver: 5
-  id: introductory-language
-  path: philosophy/computers/education/introductory-language
-- base: isr-pales-conflict-solution
-  db_ver: 5
-  id: isr-pales-conflict-solution
-  path: philosophy/israel-pales
-- base: my-real-person-fiction
-  db_ver: 5
-  id: my-real-person-fiction
-  path: philosophy/culture/my-real-person-fan-fiction
-- base: objectivism-and-open-source-r1
-  db_ver: 5
-  dest_base: objectivism-and-open-source
-  id: objectivism-and-open-source
-  path: philosophy/obj-oss
-- base: objectivism-and-open-source
-  db_ver: 5
-  id: objectivism-and-open-source-r2
-  path: philosophy/obj-oss/rev2
-- base: rindolf-spec
-  db_ver: 5
-  id: rindolf-spec
-  path: rindolf
-- base: the-eternal-jew
-  db_ver: 5
-  id: the-eternal-jew
-  path: philosophy/the-eternal-jew
-- base: what-makes-software-high-quality
-  db_ver: 5
-  id: what-makes-software-high-quality
-  path: philosophy/computers/high-quality-software
-- base: what-makes-software-high-quality-rev2
-  db_ver: 5
-  id: what-makes-software-high-quality-rev2
-  path: philosophy/computers/high-quality-software/rev2
-- base: perfect-it-workplace
-  db_ver: 5
-  id: perfect-it-workplace
-  path: philosophy/computers/software-management/perfect-workplace
-- base: park-lisp-informal-spec
-  db_ver: 5
-  id: park-lisp-informal-spec
-  path: open-source/projects/Park-Lisp
-- base: putting-all-cards-on-the-table-2013
-  db_ver: 5
-  id: putting-all-cards-on-the-table-2013
-  path: philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5
-- base: putting-more-cards-on-the-table-2014
-  db_ver: 5
-  id: putting-more-cards-on-the-table-2014
-  path: philosophy/philosophy/putting-more-cards-on-the-table-2014/DocBook5
-- base: Spark-Pre-Birth-of-a-Modern-Lisp
-  db_ver: 5
-  id: Spark-Pre-Birth-of-a-Modern-Lisp
-  path: open-source/projects/Spark/mission
-- base: SummerNSA-2014-09-call-for-action
-  db_ver: 5
-  id: SummerNSA-2014-09-call-for-action
-  path: philosophy/philosophy/SummerNSA-2014-09-call-for-action/DocBook5
-- base: A-hashtag-SummerNSA-s-Reading
-  db_ver: 5
-  id: A-SummerNSA-Reading
-  path: philosophy/SummerNSA/A-SummerNSA-Reading/
-- base: human-hacking-field-guide
-  custom_css: 1
-  db_ver: 5
-  id: human-hacking-field-guide
-  path: humour/human-hacking
-- base: human-hacking-field-guide-v2--arabic
-  db_ver: 5
-  id: human-hacking-field-guide-v2--arabic
-  path: humour/human-hacking/arabic-v2
-- base: perfect-it-workplace-v2
-  db_ver: 5
-  id: perfect-it-workplace-v2
-  path: philosophy/computers/software-management/perfect-workplace/v2
-  work_in_progress: 1
+  id: foss-and-other-beasts-v3
+  path: philosophy/foss-other-beasts/version-3
 - base: foss-licences-wars
   db_ver: 5
   id: foss-licences-wars
@@ -137,37 +85,105 @@
   id: foss-licences-wars-rev2
   path: philosophy/computers/open-source/foss-licences-wars/rev2/
   work_in_progress: 1
-- base: putting-cards-on-the-table-2019-2020
+- base: hebrew-html-tutorial
   db_ver: 5
-  id: putting-cards-on-the-table-2019-2020
+  id: hebrew-html-tutorial
   no_epub: 1
-  path: philosophy/philosophy/putting-cards-on-the-table-2019-2020
+  path: lecture/HTML-Tutorial/v1/xhtml1/hebrew
+- base: human-hacking-field-guide
+  custom_css: 1
+  db_ver: 5
+  id: human-hacking-field-guide
+  path: humour/human-hacking
+- base: human-hacking-field-guide-v2--arabic
+  db_ver: 5
+  id: human-hacking-field-guide-v2--arabic
+  path: humour/human-hacking/arabic-v2
 - base: human-hacking-field-guide-v2--english
   custom_css: 1
   db_ver: 5
   del_revhistory: 1
   id: human-hacking-field-guide-v2
   path: humour/human-hacking
-- base: foss-and-other-beasts-v3
+- base: introductory-language
   db_ver: 5
-  id: foss-and-other-beasts-v3
-  path: philosophy/foss-other-beasts/version-3
-- base: samsmith
+  id: introductory-language
+  path: philosophy/computers/education/introductory-language
+- base: isr-pales-conflict-solution
   db_ver: 5
-  id: samsmith
-  path: philosophy/fan-pages/samantha-smith/
+  id: isr-pales-conflict-solution
+  path: philosophy/israel-pales
 - base: multiverse-cosmology-v0.4.x
   db_ver: 5
   id: multiverse-cosmology-v0.4.x
   path: philosophy/culture/multiverse-cosmology
+- base: my-real-person-fiction
+  db_ver: 5
+  id: my-real-person-fiction
+  path: philosophy/culture/my-real-person-fan-fiction
+- base: objectivism-and-open-source
+  db_ver: 5
+  id: objectivism-and-open-source-r2
+  path: philosophy/obj-oss/rev2
+- base: objectivism-and-open-source-r1
+  db_ver: 5
+  dest_base: objectivism-and-open-source
+  id: objectivism-and-open-source
+  path: philosophy/obj-oss
+- base: park-lisp-informal-spec
+  db_ver: 5
+  id: park-lisp-informal-spec
+  path: open-source/projects/Park-Lisp
+- base: perfect-it-workplace
+  db_ver: 5
+  id: perfect-it-workplace
+  path: philosophy/computers/software-management/perfect-workplace
+- base: perfect-it-workplace-v2
+  db_ver: 5
+  id: perfect-it-workplace-v2
+  path: philosophy/computers/software-management/perfect-workplace/v2
+  work_in_progress: 1
+- base: putting-all-cards-on-the-table-2013
+  db_ver: 5
+  id: putting-all-cards-on-the-table-2013
+  path: philosophy/philosophy/putting-all-cards-on-the-table-2013/DocBook5
+- base: putting-cards-on-the-table-2019-2020
+  db_ver: 5
+  id: putting-cards-on-the-table-2019-2020
+  no_epub: 1
+  path: philosophy/philosophy/putting-cards-on-the-table-2019-2020
+- base: putting-more-cards-on-the-table-2014
+  db_ver: 5
+  id: putting-more-cards-on-the-table-2014
+  path: philosophy/philosophy/putting-more-cards-on-the-table-2014/DocBook5
+- base: reflections-on-software-quality-trends
+  db_ver: 5
+  id: reflections-on-software-quality-trends
+  path: philosophy/computers/high-quality-software
+- base: rindolf-spec
+  db_ver: 5
+  id: rindolf-spec
+  path: rindolf
+- base: samsmith
+  db_ver: 5
+  id: samsmith
+  path: philosophy/fan-pages/samantha-smith/
+- base: the-eternal-jew
+  db_ver: 5
+  id: the-eternal-jew
+  path: philosophy/the-eternal-jew
 - base: usability-of-perl-world-for-newcomers
   db_ver: 5
   id: usability-of-perl-world-for-newcomers
   path: philosophy/perl-newcomers/v1
-- base: c-and-cpp-elements-to-avoid
+- base: what-makes-software-high-quality
   db_ver: 5
-  id: c-and-cpp-elements-to-avoid
-  path: lecture/C-and-CPP/bad-elements/
+  id: what-makes-software-high-quality
+  path: philosophy/computers/high-quality-software
+- base: what-makes-software-high-quality-rev2
+  db_ver: 5
+  id: what-makes-software-high-quality-rev2
+  path: philosophy/computers/high-quality-software/rev2
 - base: who-gets-the-final-say
   db_ver: 5
   id: who-gets-the-final-say
@@ -180,19 +196,3 @@
   db_ver: 5
   id: why-the-so-called-real-world-makes-little-sense
   path: philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense
-- base: The-Enemy-English-v7
-  custom_css: 1
-  db_ver: 5
-  del_revhistory: 1
-  id: The-Enemy-English-v7
-  path: humour/TheEnemy
-- base: The-Enemy-English-v8
-  custom_css: 1
-  db_ver: 5
-  del_revhistory: 1
-  id: The-Enemy-English-v8
-  path: humour/TheEnemy
-- base: reflections-on-software-quality-trends
-  db_ver: 5
-  id: reflections-on-software-quality-trends
-  path: philosophy/computers/high-quality-software

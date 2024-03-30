@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+
+<info>
+
+<title>Reflections on Software Quality Trends</title>
+
+<authorgroup>
+<author>
+<personname>
+<firstname>Shlomi</firstname>
+<surname>Fish</surname>
+</personname>
+<affiliation>
+<address>
+<email>shlomif@shlomifish.org</email>
+<uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+</address>
+</affiliation>
+</author>
+</authorgroup>
+<copyright>
+<year>2018</year>
+<holder>Shlomi Fish</holder>
+</copyright>
+<legalnotice xml:id="main_legal_notice">
+<para>
+<!--Creative Commons License-->
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution Noncommercial ShareAlike 4.0 Licence (CC-by-nc-sa)</link> (or at your option a greater version of it).
+<!--/Creative Commons License-->
+</para>
+</legalnotice>
+
+</info>
+
+<section xml:id="intro">
+
+<info>
+<title>Introduction</title>
+</info>
+
+<para>
+<emphasis role="bold">TODO:</emphasis>
+</para>
+
+</section>
+
+<section xml:id="main">
+
+<info>
+<title>Main</title>
+</info>
+
+<para>
+<emphasis role="strong">Note:</emphasis> there is a similar essay on
+<link xlink:href="https://tonsky.me/blog/disenchantment/">software
+disenchantment</link> and probably many other similar ones.
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Essay: reflections on how software quality has improved/worsened.
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/">http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed">https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="http://perl-begin.org/tutorials/bad-elements/">http://perl-begin.org/tutorials/bad-elements/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/">http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn#what-are-some-best-practices-in-programming-that-i-should-adopt">https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn#what-are-some-best-practices-in-programming-that-i-should-adopt</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Follow-up on
+<link xlink:href="https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml">FAQ
+- “This site loads so quickly. What is your secret?”</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Freecell Solver speedups (
+    <link xlink:href="https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks">https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks</link>
+), new features (
+<link xlink:href="http://fc-solve.shlomifish.org/features.html">http://fc-solve.shlomifish.org/features.html</link>
+), tests suite, CI, etc.
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Cost of code complexity and readability
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Learned about
+<link xlink:href="https://en.wikipedia.org/wiki/Continuous_integration">CI</link>
+from
+<link xlink:href="https://perlhacks.com/2012/03/you-must-hate-version-control-systems/">https://perlhacks.com/2012/03/you-must-hate-version-control-systems/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Since the essays were written, some apps improved while others
+got worse.
+</para>
+</listitem>
+<listitem>
+<para>
+Electron-based apps:
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<link xlink:href="http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/">http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/">https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/</link>
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Software becoming slower and more resource hungry:
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<link xlink:href="https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b">https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://twitter.com/TheoVanGrind/status/888850519564984322">https://twitter.com/TheoVanGrind/status/888850519564984322</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://twitter.com/xbs/status/626781529054834688">https://twitter.com/xbs/status/626781529054834688</link>
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Windows Update — slow:
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<link xlink:href="http://www.shlomifish.org/humour/bits/facts/Windows-Update/">http://www.shlomifish.org/humour/bits/facts/Windows-Update/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Reportedly still breaks the system sometimes
+</para>
+</listitem>
+<listitem>
+<para>
+Gets invoked at inconvenient times
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Like at computer shutdown
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Red Hat’s dnf
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+kinda slow
+</para>
+</listitem>
+<listitem>
+<para>
+hopefully
+<link xlink:href="https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/">will
+improve</link>
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Mostly Positive:
+<link xlink:href="https://www.videolan.org/vlc/">VLC</link>
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Easy to use interface
+</para>
+</listitem>
+<listitem>
+<para>
+Popular among many Windows and macOS users.
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Mostly Positive:
+<link xlink:href="https://en.wikipedia.org/wiki/Emscripten">Emscripten</link>
+/ asm.js / WebAssembly
+</para>
+</listitem>
+<listitem>
+<para>
+Mostly Positive:
+<link xlink:href="https://en.wikipedia.org/wiki/PyPy">pypy</link>
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Fast
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+KDE/Plasma’s update from 3 to 4 was poorly done, and so was
+4→5.
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Seems like most people except for the KDE core developers
+do not appreciate the emphasis on the so-called
+<link xlink:href="https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it">“Activities”</link>
+instead of on virtual workspaces.
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://bugs.kde.org/show_bug.cgi?id=343246">https://bugs.kde.org/show_bug.cgi?id=343246</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="http://www.trinitydesktop.org/">http://www.trinitydesktop.org/</link>
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Mostly Positive:
+<link xlink:href="https://en.wikipedia.org/wiki/CMake">cmake</link>
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+Not perfect but less errorprone and faster than GNU
+Autotools
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="http://www.shlomifish.org/open-source/anti/autohell/">http://www.shlomifish.org/open-source/anti/autohell/</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://en.wikipedia.org/wiki/Meson_(software)">https://en.wikipedia.org/wiki/Meson_(software)</link>
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>
+Reflections on “Simple” in the context of software:
+</para>
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<link xlink:href="https://shlomif-tech.livejournal.com/64318.html">https://shlomif-tech.livejournal.com/64318.html</link>
+</para>
+</listitem>
+<listitem>
+<para>
+Simple may imply lacking features or being hard to use.
+</para>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="comment-i-wrote">
+<title>Comment I wrote</title>
+<para>
+On
+<link xlink:href="https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b">https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b</link>
+:
+</para>
+<para>
+Hi! Good article. I should note that based on what I wrote
+<link xlink:href="https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?">here</link> — Prof.
+Knuth may have been wrong because many small optimisations
+eventually can add to a significant improvement. Perhaps sometimes
+an optimisation is not worth it because the program is already fast
+enough, but I feel that we have accumulated too much junk bloatware
+recently (see
+    <link xlink:href="https://github.com/shlomif/shlomi-fish-homepage/blob/4d2c897b486f0c7cfc0b7fe29f3f49b61fb8054a/lib/notes/quality-software--followup-2018.md">my
+    notes</link> ).
+</para>
+<para>
+Regarding the “it’s good there is more work for me”, this is the
+<link xlink:href="https://shlomif-tech.livejournal.com/741.html">broken
+window fallacy</link> — and it is also echoed in the
+<link xlink:href="http://www.catb.org/esr/faqs/hacker-howto.html">“how
+to become a hacker (not ‘cracker’) howto”</link>. You likely have
+better things to do than to fix others’ past failures.
+</para>
+
+</section>
+
+</section> <!-- / main -->
+
+<section xml:id="licence">
+
+<info><title>Licence</title></info>
+
+<para>
+This work is copyright by <link xlink:href="http://www.shlomifish.org/">Shlomi
+Fish</link> and licensed under the <link
+xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Attribution-Non Commercial-ShareAlike licence version 4.0 (CC-by-nc-sa)</link> (or any later
+    version). See <link xlink:href="http://www.shlomifish.org/meta/copyrights/">my
+interpretation of it</link>.
+</para>
+
+</section>
+
+</article>

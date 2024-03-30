@@ -92,6 +92,8 @@ class MyTests(vnu_validator.VnuTest):
 Selina-Mandrake/indiv-nodes/dartagnan-advice-to-kate\\.xhtml
                     |
                 TheEnemy/The-Enemy-English-v7\\.raw{ext}
+                    |
+                TheEnemy/The-Enemy-English-v8\\.raw{ext}
                 )
             )
                 |

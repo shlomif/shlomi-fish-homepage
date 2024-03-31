@@ -7,14 +7,9 @@ LONG TERM:
         * src/humour/TOneW-the-Fountainhead/
         * Add a href link.
       @ Added [Wed 2020-12-02]
-    - FAQ: "What is your uptime?"
-      @ Added [Sat 2020-11-28]
     - fortune-mod: put the documentation online as HTML.
         * They were converted to DocBook 5.
       @ Added [Sat 2020-10-17]
-    - Fortunes: implement an explicit/per-version tarball release cmd.
-        * Instead of the implicitly packaged tarball.
-      @ Added [Wed 2020-06-24]
     - Fortunes: add a raw html/raw text modes to show.cgi
         * for easy copypaste
         * consider option for getting rid of "Work/Author" metadata.
@@ -564,5 +559,13 @@ COMPLETED TASKS:
         * https://www.shlomifish.org/meta/FAQ/#advertise_your_site
         @ DONE [Sun 2022-12-04]
       @ Added [Thu 2019-09-12]
+    - FAQ: "What is your uptime?"
+        * https://www.shlomifish.org/meta/FAQ/#why_is_your_uptime_so_low
+        @ DONE [Sun 2024-03-31]
+      @ Added [Sat 2020-11-28]
+    - Fortunes: implement an explicit/per-version tarball release cmd.
+        * Instead of the implicitly packaged tarball.
+        @ DONE [Sun 2024-03-31]
+      @ Added [Wed 2020-06-24]
 
 # vim:ft=quicktask:sw=4:ts=4

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -82,6 +82,19 @@ EOF
             blurb    => 'Star-Trek/We-the-Living-Dead',
             expected => <<'EOF',
 <a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="My Humorous Creations">Humour</a> → <a href="../../stories/" title="Large-Scale Stories I Wrote">Stories</a> → <a href="../../stories/usable/">Usable</a> → <a href="./">Star Trek: “We, the Living Dead”</a>
+EOF
+        }
+    );
+
+    # TEST
+    _test(
+        {
+            path =>
+"lib/cache/combined/t2/humour/Queen-Padme-Tales/cast.html/breadcrumbs-trail",
+            blurb =>
+'The Queen-Padme-Tales cast page should be part of the site-flow',
+            expected => <<'EOF',
+<a href="../../">Shlomi Fish’s Homepage</a> → <a href="../" title="My Humorous Creations">Humour</a> → <a href="../stories/">Stories</a> → <a href="../stories/usable/">Usable</a> → <a href="./" title="Star Wars + Star Trek + Real Life Fanfic">Queen Padmé Tales</a> → <a href="cast.html" title="Who I want to play each character">Cast</a>
 EOF
         }
     );

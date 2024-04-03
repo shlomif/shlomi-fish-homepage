@@ -328,6 +328,14 @@ my $_humour_tree_contents = {
                                     ],
                                 },
                                 {
+                                    text => "Cast",
+                                    url => "humour/Queen-Padme-Tales/cast.html",
+                                    title =>
+                                        "Who I want to play each character",
+
+                                    # skip => 1,
+                                },
+                                {
                                     text => "Spec / Plan",
                                     url  => "humour/Queen-Padme-Tales/spec/",
                                 },

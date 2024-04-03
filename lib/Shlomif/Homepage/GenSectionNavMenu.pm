@@ -101,6 +101,11 @@ sub process_batch
         };
 
         $out->( 'sect-navmenu', \( $section_nav_menu->get_html ), );
+        if ( $url =~ m#/Queen-Padme.*cast\.html\z# )
+        {
+            # print "url=$url\n";
+            $DB::single = 1;
+        }
         $out->(
             'breadcrumbs-trail',
             \(

@@ -21,5 +21,5 @@ runspell()
 
 editspell()
 {
-    nvim-qt -- -o lib/hunspell/whitelist1.txt "$spelling_errors_filename_1" "$spelling_errors_filename_2"
+    gvim -o lib/hunspell/whitelist1.txt "$spelling_errors_filename_1" "$spelling_errors_filename_2"
 }

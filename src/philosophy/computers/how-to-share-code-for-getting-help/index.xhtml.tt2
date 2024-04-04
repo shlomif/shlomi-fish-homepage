@@ -4,7 +4,11 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% print_markdown(fn=>'lib/repos/how-to-share-code-online/README.md') %]
+[%- IF 0 -%]
+[%# print_markdown(fn=>'lib/repos/how-to-share-code-online/README.md') %]
+[%- END -%]
+
+[% path_slurp("docbook/5/rendered/how-to-share-code-online.xhtml") %]
 
 [% WRAPPER credits_sect %]
 

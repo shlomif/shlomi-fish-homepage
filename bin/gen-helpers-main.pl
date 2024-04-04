@@ -174,7 +174,7 @@ FIND_FILES:
             {
                 push @docs_paths, $path;
             }
-            else
+            elsif ( $path !~ m#(?:\~)\z#ms )
             {
                 push @images_paths, $path;
             }

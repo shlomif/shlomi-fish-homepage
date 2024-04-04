@@ -86,8 +86,5 @@ $(SW_QUALITY_REFLECTIONS_ESSAY__MARKDOWN): $(SW_QUALITY_REFLECTIONS_ESSAY__DOCBO
 HOW_TO_SHARE_CODE_ESSAY__IN_REPO := lib/repos/how-to-share-code-online/how-to-share-code-online.docbook5.xml
 HOW_TO_SHARE_CODE_ESSAY__DOCBOOK5 := $(DOCBOOK5_XML_DIR)/how-to-share-code-online.xml
 
-$(HOW_TO_SHARE_CODE_ESSAY__DOCBOOK5): $(HOW_TO_SHARE_CODE_ESSAY__IN_REPO)
-	$(call COPY)
-
 docbook_targets: docbook_hhfg_images
 docbook_targets: screenplay_targets

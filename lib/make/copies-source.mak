@@ -10,6 +10,7 @@ $(HHFG_HEB_V2_XSLT_POST_DEST): $(FICTION_XML_DB5_XSLT_DIR)/human-hacking-field-g
 $(HHFG_V2_IMAGES_POST_DEST): $(HHFG_V2_IMAGES_POST_DEST_DIR)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml
 $(HHFG_V2_IMAGES_POST_DEST_FROM_VCS): $(HHFG_V2_IMAGES_POST_DEST_DIR_FROM_VCS)/%: $(DOCBOOK5_BASE_DIR)/style/human-hacking-field-guide/% $(HHFG_V2_IMAGES_DEST_DIR)/index.xhtml
 $(HHGG_CONVERT_SCRIPT_DEST): $(HHGG_CONVERT_SCRIPT_SRC)
+$(HOW_TO_SHARE_CODE_ESSAY__DOCBOOK5): $(HOW_TO_SHARE_CODE_ESSAY__IN_REPO)
 $(POST_DEST_FIERY_Q_PNG): lib/screenplay-xml/from-vcs/Star-Trek--We-the-Living-Dead/star-trek--we-the-living-dead/graphics/Fiery-Q--no-background--one-layer--reduced.png
 $(POST_DEST_FORTUNES_many_files): $(POST_DEST)/%: $(SRC_SRC_DIR)/%
 $(POST_DEST_FORTUNE_SHOW_SCRIPT_TXT): $(SRC_SRC_FORTUNE_SHOW_SCRIPT)

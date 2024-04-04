@@ -23,9 +23,9 @@ sub as_fixed_xhtml5
 
     return $self->as_text( $args->{fn} ) =~
         s#align="(left|right)"#style="float:$1;"#gr =~ s#(<img )([^>]+)(>)#
-    my ($s, $mid, $e)=($1, $2, $3);
-    $mid.=" /" if $mid !~ m%/\s*\z%;
-    $s.$mid.$e
+            my ($start, $mid, $end) = ($1, $2, $3);
+            $mid .= " /" if $mid !~ m%/\s*\z%;
+            $start . $mid . $end
         #egr =~ s#<hr>#<hr />#gr;
 }
 

@@ -515,8 +515,8 @@ She has enough free time to contribute on Internet content and code sharing site
 <p>
 She has many supporting friends, including her boyfriend, Anakin Skywalker
 (<a href="https://www.youtube.com/jakecoco/about">Jake Coco</a>),
-a promising Jedi-wannabe who is about her age, with aspirations
-for joining the mysterious but revered Jedi order of Siths, of which only Vader
+a promising jedi-wannabe, who is about her age, and with aspirations
+for joining the mysterious but revered jedi order of Siths, of which only Vader
 and <a href="https://starwars.fandom.com/wiki/Darth_Sidious">Emperor Palpatine</a>
 are the known extant members.
 </p>
@@ -556,9 +556,9 @@ even in his emails.
 <p>
 Her spirit friends, who are animated characters from
 <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki"><i>My Little Pony: Friendship Is Magic</i></a>
-and other franchises, who appear at the seemingly least desirable moments, and
-whom everyone can see, hear, photograph, and record, but whom many people
-believe are some kind of trick.
+and other fantastical universes, who appear at the seemingly least desirable
+moments, and whom everyone can see, hear, photograph, and record, but whom many
+people believe are some kind of trick.
 </p>
 </li>
 

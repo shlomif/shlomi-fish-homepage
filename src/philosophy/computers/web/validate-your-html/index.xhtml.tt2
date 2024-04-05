@@ -8,7 +8,11 @@
 <img src="Valid_XHTML_1.0.min.svg" style="height:100px;" class="rfloaty" alt="Valid XHTML 1.0 Logo" title="One of the valid markup logos." />
 </p>
 
-[% print_markdown(fn=>'lib/repos/validate-your-html/README.md') %]
+[%- IF 0 -%]
+[%# print_markdown(fn=>'lib/repos/validate-your-html/README.md') %]
+[%- END -%]
+
+[% path_slurp("docbook/5/rendered/validate-your-html.xhtml") %]
 
 [% WRAPPER credits_sect %]
 

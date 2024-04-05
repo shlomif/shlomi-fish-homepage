@@ -27,4 +27,5 @@ $(SITE_SOURCE_INSTALL_TARGET): INSTALL.docbook.xml
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__test_run): $(SPORK_test_run_dir)/%: src/lecture/images/%
 $(SPORK_LECTS_SOURCE_DOWNLOADED_IMAGES__too_many): $(SPORK_too_many_ways_dir)/%: src/images/presentations/%
 $(SRC_FORTUNES_ALL__HTML): %/$(FORTUNES_ALL_IN_ONE__BASE): %/$(FORTUNES_ALL_IN_ONE__TEMP__BASE) fastrender-tt2
+$(VALIDATE_YOUR_HTML_ESSAY__DOCBOOK5): $(VALIDATE_YOUR_HTML_ESSAY__IN_REPO)
 common/js/jq.js: node_modules/jquery/dist/jquery.min.js

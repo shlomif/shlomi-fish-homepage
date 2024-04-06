@@ -2,13 +2,13 @@ package Shlomif::Homepage::SectionMenu::BaseSectionClass;
 
 use strict;
 use warnings;
-use List::Util qw/ any /;
+use List::Util qw/ none notall /;
 
 sub _check_subtree
 {
     my ( $self, $t ) = @_;
 
-    return ( ( $t->{subs} && @{ $t->{subs} } ) || ( !$t->{skip} ) );
+    return ( ( $t->{subs} && @{ $t->{subs} } ) || ( !$t->{_lang_skip} ) );
 }
 
 sub _calc_lang_tree
@@ -18,9 +18,12 @@ sub _calc_lang_tree
     my $ret = +{%$tree};
 
     my $rec_lang = ( delete( $ret->{lang} ) // { "en" => 1, } );
-    if ( '' eq ref $rec_lang )
+    if ('')
     {
-        $rec_lang = { $rec_lang => 1, };
+        if ( '' eq ref $rec_lang )
+        {
+            $rec_lang = { $rec_lang => 1, };
+        }
     }
     if ( exists $ret->{subs} )
     {
@@ -30,7 +33,7 @@ sub _calc_lang_tree
         ];
         if (@$subs)
         {
-            if ( grep { !defined } @$subs )
+            if ( notall { defined } @$subs )
             {
                 die;
             }
@@ -45,20 +48,24 @@ sub _calc_lang_tree
             delete $ret->{subs};
         }
     }
-    if ( not( any { exists( $rec_lang->{$_} ) } keys %$lang ) )
+    if (    ( not $ret->{subs} )
+        and ( none { exists( $rec_lang->{$_} ) } keys %$lang ) )
     {
-        $ret->{skip} = 1;
+        # die "not any lang; skip.";
+        $ret->{_lang_skip} = 1;
+        return $ret;
     }
-    else
+    $ret->{lang} = $rec_lang;
+
+    if ('')
     {
-        $ret->{lang} = $rec_lang;
+        if ( $self->_check_subtree($ret) )
+        {
+            $ret->{lang} //= $rec_lang;
+        }
     }
 
-    if ( $self->_check_subtree($ret) )
-    {
-        $ret->{lang} //= $rec_lang;
-    }
-    if ( !defined $ret )
+    if ( not( defined $ret ) )
     {
         die;
     }
@@ -69,8 +76,6 @@ my @langs = (qw/ ar en he /);
 
 sub _available_langs
 {
-    my ( $self, $p ) = @_;
-
     return \@langs;
 }
 

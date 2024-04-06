@@ -41,7 +41,7 @@ my $_humour_tree_contents = {
                             title => "The Enemy and How I Helped to Fight it",
                             subs  => [
                                 {
-                                    lang => "he",
+                                    lang => +{ "he" => 1, },
                                     text => "Text in Hebrew",
                                     url  =>
 "humour/TheEnemy/The-Enemy-Hebrew-v7.html",
@@ -87,7 +87,7 @@ my $_humour_tree_contents = {
                                     title => "Ongoing Text of the Screenplay",
                                 },
                                 {
-                                    lang => "he",
+                                    lang => +{ "he" => 1, },
                                     text => "Hebrew Translation",
                                     url  =>
 "humour/humanity/ongoing-text-hebrew.html",
@@ -119,7 +119,7 @@ my $_humour_tree_contents = {
                                     url  => "humour/human-hacking/conclusions/",
                                 },
                                 {
-                                    lang => "ar",
+                                    lang => +{ "ar" => 1, },
                                     text => "Arabic Translation",
                                     url  =>
                                         "humour/human-hacking/arabic-v2.html",
@@ -127,7 +127,7 @@ my $_humour_tree_contents = {
 "Translation to Literary Arabic by Vieq",
                                 },
                                 {
-                                    lang => "he",
+                                    lang => +{ "he" => 1, },
                                     text => "Hebrew Translation",
                                     url  =>
                                         "humour/human-hacking/hebrew-v2.html",
@@ -332,8 +332,7 @@ my $_humour_tree_contents = {
                                     url => "humour/Queen-Padme-Tales/cast.html",
                                     title =>
                                         "Who I want to play each character",
-
-                                    # skip => 1,
+                                    skip => 1,
                                 },
                                 {
                                     text => "Spec / Plan",
@@ -395,7 +394,7 @@ my $_humour_tree_contents = {
 "humour/Pope/The-Pope-Died-on-Sunday--English-Text.html",
                                 },
                                 {
-                                    lang => "he",
+                                    lang => +{ "he" => 1, },
                                     text => "Hebrew Text",
                                     url  =>
 "humour/Pope/The-Pope-Died-on-Sunday--Hebrew-Text.html",
@@ -493,7 +492,7 @@ my $_humour_tree_contents = {
 "Collection of my own Funny (or Insightful) Quotes and Aphorisms",
                     subs => [
                         {
-                            lang  => "he",
+                            lang  => +{ "he" => 1, },
                             text  => "Hebrew Versions of the Aphorisms",
                             url   => "humour-heb.html",
                             title => "The Aphorisms in Hebrew",
@@ -537,7 +536,7 @@ my $_humour_tree_contents = {
 "Ways to Do it According to the Programming Languages of the World",
                     subs => [
                         {
-                            lang => "he",
+                            lang => +{ "he" => 1, },
                             text => "Hebrew Translation",
                             url  => "humour/ways_to_do_it-heb.html",
                         },
@@ -721,7 +720,7 @@ my $_humour_tree_contents = {
 "The IRC Version of “Everybody’s Free to Wear Sunscreen”",
                 },
                 {
-                    lang  => "he",
+                    lang  => +{ "he" => 1, },
                     text  => "Technion Bit #1",
                     url   => "humour/by-others/technion-bit-1.html",
                     title => "A bit I found at the Technion",
@@ -783,7 +782,7 @@ my $_humour_tree_contents = {
 "A mirror of a hilarious parodical site that went offline",
                 },
                 {
-                    lang  => "he",
+                    lang  => +{ "he" => 1, },
                     text  => "Oded C.’s Stories",
                     title => "Humorous stories by Oded C. in Hebrew",
                     url   => "humour/by-others/oded-c/",

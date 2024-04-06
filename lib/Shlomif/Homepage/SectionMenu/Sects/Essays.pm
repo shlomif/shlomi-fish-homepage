@@ -88,7 +88,7 @@ my $_section_navmenu_tree_contents = {
                         "A (non-original) story with self-growth implications",
                     subs => [
                         {
-                            lang => "he",
+                            lang => +{ "he" => 1, },
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/psychology/elephant-in-the-circus/hebrew.html",
@@ -225,7 +225,7 @@ my $_section_navmenu_tree_contents = {
                     title => "Why the War on Drugs is the Real Drug Problem",
                     subs  => [
                         {
-                            lang => "he",
+                            lang => +{ "he" => 1, },
                             text => "Hebrew Translation",
                             url  =>
 "philosophy/politics/drug-legalisation/hebrew.html",
@@ -241,7 +241,7 @@ my $_section_navmenu_tree_contents = {
                     ),
                     subs => [
                         {
-                            lang => "he",
+                            lang => +{ "he" => 1, },
                             text => "Hebrew Translation",
                             url  => "philosophy/politics/define-zionism/heb/",
                         },
@@ -636,7 +636,7 @@ my $_section_navmenu_tree_contents = {
                     title => "James Carr about the anti-Muslim Cartoons",
                 },
                 {
-                    lang => "he",
+                    lang => +{ "he" => 1, },
                     text =>
 "Hebrew Translation of “Ten Reasons for Web Standards”",
                     url =>

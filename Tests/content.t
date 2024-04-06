@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 49;
+use Test::More tests => 50;
 
 use HTML::Entities qw/ decode_entities /;
 use Path::Tiny     qw/ path /;
@@ -61,13 +61,19 @@ q{<a href="#how_i_started">How I started Working for Cortext</a>}
 }
 
 {
-    my $content =
-        path(
-"$POST_DEST/philosophy/politics/drug-legalisation/case-for-drug-legalisation/style.css"
-    )->slurp_raw;
+    foreach my $path (
+        "$POST_DEST/humour/TheEnemy/The-Enemy-English-v8/style.css",
+"$POST_DEST/philosophy/politics/drug-legalisation/case-for-drug-legalisation/style.css",
+        )
+    {
+        my $content = path( $path, )->slurp_raw;
 
-    # TEST
-    ok( scalar( index( $content, q{palegreen} ) >= 0 ), 'Contains CSS', );
+        # TEST*2
+        ok(
+            scalar( index( $content, q{palegreen} ) >= 0 ),
+            qq#"$path" contains CSS#,
+        );
+    }
 }
 
 {

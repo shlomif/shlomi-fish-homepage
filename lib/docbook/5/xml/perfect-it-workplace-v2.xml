@@ -1205,7 +1205,7 @@
                             <![CDATA[
 function create_employee(params)
 {
-    my emp = emp.new();
+    let emp = Employee.new();
 
     emp.set_birth_year(params[year]);
 
@@ -1224,7 +1224,7 @@ function create_employee(params)
                         </programlisting>
                         <para>
                         Then it would be a good idea to extract the
-                        complex <literal>emp.set_salary()</literal> call to
+                        complex <literal>emp.set_salary()</literal> call into
                         a simple <literal>emp.calculate_salary()</literal>
                         method. This
                         <link

@@ -998,12 +998,12 @@ function create_employee(params)
 
     emp.set_birth_year(params[year]);
 
-    emp.set_experience_years(param[exp_amount]);
+    emp.set_experience_years(params[exp_amount]);
 
     emp.set_education(params[education]);
 
     ### Calculate the salary:
-    emp.set_salary(emp.calc_education_factor(emp.get_education()) * emp.set_experience_years());
+    emp.set_salary(emp.calc_education_factor(emp.get_education()) * emp.get_experience_years());
 
     ### More stuff snipped.
 

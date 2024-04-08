@@ -148,9 +148,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             (“Joel on Software”)</link> wrote his notorious blog post
         <link xlink:href="http://www.joelonsoftware.com/items/2006/09/01.html">“Language
             Wars”</link>, many people asked whether he has
-        “jumped the shark” and that his blog will go downhill from there. I too have read
-        the post, and agreed, that while it had a few good points, it was
-        too based on “feeling rather than knowing”. Joel later on posted
+        “jumped the shark” and that his blog will go downhill from there. After reading
+        the post, I agreed, that while it had a few good points, it was
+        based on “feeling rather than knowing” too much. Joel later on posted
         many good articles and shorter entries on his blog, but many people
         still recalled it as a very low-point in the blog.
     </para>
@@ -166,7 +166,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
 
     <para>
-        I should note that I am not a lawyer, and only write this according
+        I should note that <emphasis role="bold">I am not a lawyer</emphasis>, and only write this according
         to my best knowledge, understanding and experience.
         <footnote xml:id="ianal" label="IANAL">
             <para>
@@ -208,12 +208,13 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             releasing my code as open-source software, I used <link
                 xlink:href="http://en.wikipedia.org/wiki/Public_domain">the
                 Public Domain</link>. So, for example,
-            <link xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link>
+            <link xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver</link>,
             which is one of my earliest projects and still one
             of the most successful, used to carry a
                 <filename>COPYING</filename> file with the
                 following contents:
         </para>
+
         <blockquote>
             <para>
                 Relax, this is not GPL software, but rather it is distributed
@@ -242,16 +243,20 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
         <para>
-            Note that I’m using different terms for other types of
-            digital artworks. Most of my essays (including this one) are
-            under the <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
-                Commons Attribution Licence (CC-by)</link>, my original (i.e:
+            Note that I’m using different terms for other types of digital
+            artworks. Most of my essays (including this one) are under the
+            <link
+            xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative
+            Commons Attribution Licence (CC-by)</link>, my original (i.e:
             non-derived-work or fan-art) fictitious stories are often under
-            <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">the
-                Creative Commons Attribution-Share Alike Licence (CC-by-sa)</link>
-                or <link xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons — Attribution-NonCommercial-ShareAlike (CC-by-nc-sa)</link>
-            (which are more GPL-like), and most of the
-            photos I took and published were placed under the Public Domain.
+            <link
+            xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">the
+            Creative Commons Attribution-Share Alike Licence (CC-by-sa)</link>
+            or <link
+            xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+            Commons Attribution-NonCommercial-ShareAlike (CC-by-nc-sa)</link>
+            (which are more GPL-like), and most of the photos I took and
+            published were placed under the Public Domain.
         </para>
     </section>
 </section>
@@ -259,6 +264,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <info>
     <title>Types of Licences</title>
     </info>
+
     <section xml:id="what-is-a-free-software-licence">
     <info>
         <title>What is a Free Software Licence?</title>
@@ -280,6 +286,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
             </listitem>
             <listitem>
+
                 <para>
                     The freedom to study how the program works, and adapt it to
                     your needs. Access to the source code is a precondition
@@ -308,7 +315,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </orderedlist>
 
         <para>
-
             The <link
                 xlink:href="http://www.opensource.org/docs/definition_plain.php">Open
                 Source definition</link> is similar, but some licences can
@@ -317,7 +323,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             there is free as well. (And few people would like to create an
             open-source licence that’s not endorsed by the Free Software
             foundation.)
-
         </para>
 
         <para>
@@ -373,7 +378,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     <link xlink:href="http://en.wikipedia.org/wiki/BSD_licenses">The
                         various BSD licences</link>, under which
                     the “Berkeley Software Development” UNIX variant
-                    were made available. The original 4-clause
+                    was made available. The original 4-clause
                     BSD licence contained an additional <link
                         xlink:href="http://www.gnu.org/philosophy/bsd.html">advertising clause</link>,
                     that required publishing the names of the copyright
@@ -395,7 +400,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         X11 License</link> was created by MIT for their
                     X Window System software. It explicitly allows to do
                     many activities with the licensed code, including
-                    sub-licensing, which means converting derived works
+                    sub-licensing, which means converting derivative works
                     of the code to different licences.
                 </para>
             </listitem>
@@ -407,13 +412,14 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         Apache License</link> was formulated for the Apache
                     project and has seen several revisions. It includes some
                     language to deal with patent-related issues. The latest
-                    version - Apache 2.0 was partially created in order
+                    version - Apache 2.0 - was partly created in order
                     to be compatible with version 2 of the GPL, but the
-                    FSF ruled the Apache Licence as incompatible with it.
-                    The Apache License, however, was declared as compatible
-                    with version 3 of the GPL.
+                    Free Software Foundation (FSF) claimed that the Apache Licence
+                    is incompatible with it. The Apache License, however, was
+                    declared as compatible with version 3 of the GPL.
                 </para>
             </listitem>
+
             <listitem>
                 <para>
                     <link xlink:href="http://en.wikipedia.org/wiki/ISC_license">The
@@ -433,7 +439,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     2.0 of the Artistic License</link>, which was formulated by
                     <link xlink:href="https://www.perlfoundation.org/">The Perl
                     Foundation</link>, is used by the Parrot Virtual
-                    Machine, by some <link xlink:href="https://en.wikipedia.org/wiki/Raku_(programming_language)">Perl 6/Raku</link> implementations, and by other
+                    Machine, by some <link
+                    xlink:href="https://en.wikipedia.org/wiki/Raku_(programming_language)">Perl
+                    6/Raku</link> implementations, and by other
                     projects. The original Artistic License has problematic
                     phrasing, and is not recommended for general use, unless
                     possibly when dually licensed with a different licence (as
@@ -525,7 +533,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <para>
                     <emphasis role="bold">GPL with
                         an Exemption Clause</emphasis> - the GPL
-                    is a <link linkend="strong-copyleft-licences">strong
+                    is a <link xlink:href="#strong-copyleft-licences">strong
                         copy-left licence</link>, but sometimes an additional
                     clause is added that allows it to be linked against code
                     of non-GPL-compatible licences (including non-open-source
@@ -540,7 +548,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </orderedlist>
 
     </section>
-
 
     <section xml:id="strong-copyleft-licences">
         <info>
@@ -560,7 +567,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
             <orderedlist>
+
                 <listitem>
+
                     <para>
                         <link xlink:href="http://en.wikipedia.org/wiki/GNU_General_Public_License">the
                             GNU General Public License (or GPL for short)</link>,
@@ -571,6 +580,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         sure that code incorporating its code would be under
                         compatible, open-source licences.
                     </para>
+
                     <para>
                         Note that there is a difference between the GPL version
                         2, and the GPL version 3 and that they are mutually
@@ -579,9 +589,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         at your option any later version” which avoids this
                         problem. However, many projects including
                         <link xlink:href="http://en.wikipedia.org/wiki/Linux_kernel">the
-                            Linux kernel</link> are GPL version 2 only.
+                            Linux kernel</link> are licensed only under version 2
+                            of the GPL (and not a later version).
                     </para>
+
                 </listitem>
+
                 <listitem>
 
                     <para>
@@ -613,7 +626,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         larger work without the need to release the source.
                         This is a valid business model used by originators of
                         GPL-licensed software and other strong copyleft
-                        licences. See <link xlink:href="https://www.gnu.org/philosophy/selling-exceptions.html">Richard Stallman's "Selling Exceptions to the GNU GPL" essay</link>.
+                        licences. See <link
+                        xlink:href="https://www.gnu.org/philosophy/selling-exceptions.html">Richard
+                        Stallman's "Selling Exceptions to the GNU GPL"
+                        essay</link>.
                     </para>
 
                 </listitem>
@@ -744,18 +760,19 @@ But this is beside the point of whether they are free or not.
 </para>
 
 <para>
-    Another curious licence is the <link
-        xlink:href="http://en.wikipedia.org/wiki/Affero_General_Public_License">Affero GPL</link> -
+Another curious licence is the <link
+xlink:href="http://en.wikipedia.org/wiki/Affero_General_Public_License">Affero GPL</link> -
 - which aims to close the “Application Service Provider Loophole”. What it
 means is that if I install an AGPLed program on a public web-server and modify
 it then I must make my modifications public. However, <link
-    linkend="what-is-a-free-software-licence">the Free Software
-    Definition</link> , says that one must have “The freedom to study how the
+xlink:href="#what-is-a-free-software-licence">the Free Software
+Definition</link> , says that one must have “The freedom to study how the
 program works, and adapt it to his needs.”. As a
 result, I personally don’t consider the AGPL as free (because I may wish to
 run it on my publicly accessible web-server and modify it), but the FSF
 thinks otherwise. We have enough problems with the suitability of the GPL for
-embedded systems, that we don’t need to kill the prospering web-apps market too.
+embedded systems, that we don’t need to undermine the prospering web-apps
+market too.
 </para>
 </section>
 
@@ -773,6 +790,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </para>
 
     <orderedlist>
+
         <listitem>
             <para>
                 <link xlink:href="http://en.wikipedia.org/wiki/Ken_Coar">Ken Coar</link>,
@@ -803,7 +821,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                      them from being included as part of a package that is not
                      itself completely source-available.
                  </para>
-
             </blockquote>
         </listitem>
 
@@ -893,15 +910,18 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </para>
 
 </section>
+
 <section xml:id="which-licence-to-choose">
     <info>
     <title>Which Licence To Choose</title>
     </info>
+
     <para>
         Now that we covered the controversy of whether some licences are
         open-source/free software or not, let’s move on to which licence you
         should choose. I’ll start with some bad ideas of what not to do.
     </para>
+
     <section xml:id="which-licence-non-open-source">
     <info>
         <title>Bad Idea No. 1: Choose a non-Open-Source Licence</title>
@@ -961,7 +981,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
         <para>
             Using your own custom licence deprives you of the benefit of using
-            a well-reviewed, well-understood and debugged licence. This is
+            a well-reviewed, well-understood and well-debugged licence. This is
             similar to writing your own program from scratch instead of using
             an existing, well-tested software solution that already provides
             that functionality. (Thanks to Omer Zak for this analogy.)
@@ -1013,6 +1033,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </section>
 
     <section xml:id="which-licence-public-domain">
+
     <info>
         <title>Bad Idea No. 5: Under the Public Domain</title>
     </info>
@@ -1029,7 +1050,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
         <para>
             If you’re interested in making your software
-            as-close-to-PD-as-possible, you should choose the <link
+            as-close-to-Public-Domain-as-possible, you should choose the <link
                 xlink:href="http://en.wikipedia.org/wiki/MIT_License">MIT/Expat
                 License</link> or a similar licence such as
             <link xlink:href="http://en.wikipedia.org/wiki/ISC_license">the
@@ -1051,7 +1072,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             <link xlink:href="http://discuss.joelonsoftware.com/default.asp?joel.3.642822.36">the LGPL is
             reportedly problematic</link>
         </para>
-
 
         <para>
             The GPL and LGPL are of more political nature than other similar
@@ -1078,7 +1098,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             LGPLv2 or the GPLv3 would likely prove to be more problematic.
             I find it harder to trust lengthy documents that I am unable to
             understand. I had no problem understanding the Sleepycat licence,
-            the Artistic 2.0 licence, or the MIT X11 and BSD licences,
+            the Artistic 2.0 licence, or the Expat and BSD licences,
             so I can better recommend them instead.
         </para>
 
@@ -1124,7 +1144,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
         <blockquote>
             <para>
-
                 Once before, someone had contributed a patch to add boolean
                 operations, but that patch relied on a polygon clipping library
                 provided under an incompatible license. There’s little more
@@ -1133,7 +1152,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
                 feature for us, we regretfully postponed development of it into
                 the distant future on our roadmap and proceeded with other
                 work.
-
             </para>
         </blockquote>
 
@@ -1157,6 +1175,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 </section>
 
 <section xml:id="why-I-prefer-the-mit-x11-licence">
+
     <info>
     <title>Why I Prefer the MIT/Expat License</title>
     </info>
@@ -1169,7 +1188,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </para>
 
     <itemizedlist>
-
         <listitem>
             <para>
                 The MIT/Expat License is short, simple, and easy to understand.
@@ -1209,15 +1227,16 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             </para>
         </listitem>
     </itemizedlist>
+
 </section>
 
 <section xml:id="strong-copyleft-and-threats-to-foss">
+
     <info>
     <title>Strong Copyleft and Preventing Threats to FOSS</title>
     </info>
 
     <para>
-
         When I <link
             xlink:href="http://tech.groups.yahoo.com/group/hackers-il/message/5009">posted
             an early draft of this essay</link> to the <link
@@ -1227,7 +1246,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             comment</link> about the fact that GPL (or other strong copyleft
         licences) prevent threats to free and open source software. I’d like to
         reply to it here.
-
     </para>
 
     <para>
@@ -1236,7 +1254,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
 
     <blockquote>
         <para>
-
             In the second half of the 90s, <link
                 xlink:href="http://en.wikipedia.org/wiki/X_Window_System">X-Windows</link>
             was quite popular - a
@@ -1251,7 +1268,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             had corporate or university funds - they weren’t home users) bit
             the bullet and paid. It took literally years before a free X server
             for Windows became available.
-
         </para>
     </blockquote>
 
@@ -1281,6 +1297,7 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
     </para>
 
     <blockquote>
+
         <blockquote>
         <para>
             For example, someone integrated my <link xlink:href="http://fc-solve.shlomifish.org/">Freecell Solver library</link> in a
@@ -1294,7 +1311,6 @@ embedded systems, that we don’t need to kill the prospering web-apps market to
             there are plenty of Freecell implementations around. I on my part
             am pretty happy with the open-source PySolFC.
         </para>
-
         </blockquote>
 
 <para>
@@ -1342,9 +1358,9 @@ better in this scenario.
 
     <listitem>
         <para>
-            Write a command line executable that uses the library.  Then,
+            Write a command line executable that uses the library. Then,
             invoke the executable, and parse and process its output. This
-            strategy was taken by the developers of the open-source <link
+            approach was taken by the developers of the open-source <link
             xlink:href="http://pysolfc.sourceforge.net/">PySolFC</link> out of
             implementation convenience using my existing “fc-solve” executable.
         </para>
@@ -1401,15 +1417,14 @@ my friends and I shared tips and programs between ourselves.
 </para>
 
 <para>
-I took a long break from programming, and then started programming
-BASIC again - this time
-<link xlink:href="http://en.wikipedia.org/wiki/QBasic">QBasic</link>.
-Then I got my father to buy a C compiler and he bought me Turbo C++,
-which I used for somewhat more “serious” stuff than BASIC (though I
-still used QBasic). Back then I wrote two libraries-of-sorts -
-called CCalc (for various mathematical routines) and CSee (for
-graphics) which I intended to distribute as shareware. I don’t
-recall if I planned to include the source.
+I took a long break from programming, and then started programming BASIC again
+- this time <link
+xlink:href="http://en.wikipedia.org/wiki/QBasic">QBasic</link>.  Then I got my
+father to buy a C compiler and he bought me Borland Turbo C++, which I used for
+somewhat more “serious” stuff than BASIC (though I still used QBasic). Back
+then I wrote two libraries-of-sorts - called CCalc (for various mathematical
+routines) and CSee (for graphics) which I intended to distribute as shareware.
+I don’t recall if I planned to include the source.
 </para>
 
 <para>
@@ -1426,10 +1441,10 @@ public-domain was not worth it.
 
 <para>
 After I started getting into the world of UNIX, Linux, GNU, and
-open-source I realised there was a lot of software out there
+open-source, I realised there was a lot of software out there
 distributed with the source, which I could download and compile. I
 used to think of prep.ai.mit.edu (the old primary FTP host for
-gnu.org) as a cool collection of source code, which I could
+gnu.org’s software) as a cool collection of source code, which I could
 download, read the INSTALL file, build and install (sometimes after
 fixing the source). I wasn’t interested in the implications of its
 open source nature or the GPL licence. I also downloaded other
@@ -1455,13 +1470,13 @@ with since have exhibited many misunderstandings of the GPL.
 In any case, I had initiated some FOSS projects under the public-domain which
 didn’t amount to a lot. I also wrote
 <link xlink:href="http://www.shlomifish.org/grad-fu/">a patch for
-GIMP</link> which I made available, but has since then taken some other
-iterations and incarnations to be incorporated into the
-mainline GIMP source code. And then I released
+GIMP</link>, which I have made available, but which has since then required
+some other iterations and incarnations to be incorporated into the mainline
+GIMP source code. And then I released
 <link xlink:href="http://fc-solve.shlomifish.org/">Freecell
-Solver</link> (originally under the Public Domain - now MIT/Expat)
-and did a lot of extensive work on it, and then started some other
-moderately successful MIT/Expat projects, or contributed to or
+Solver</link> (originally licensed under the Public Domain - now under the
+MIT/Expat licence) and did a lot of extensive work on it. After that, I started
+some other moderately successful MIT/Expat projects, or contributed to or
 adopted FOSS projects under various licences.
 </para>
 
@@ -1469,7 +1484,8 @@ adopted FOSS projects under various licences.
 So why am I still sticking with the MIT/Expat licence? The main
 reason I think is that as an open-source programmer, I’m not
 interested in worrying about how people abuse my code. I don’t like
-Apple, and am not fond of many Microsoft products. But I’m not
+<link xlink:href="https://en.wikipedia.org/wiki/Apple_Inc.">Apple Inc.</link>,
+and am not fond of many Microsoft products. But I’m not
 interested to prevent Apple or Microsoft or any other developer of
 commercial and/or proprietary software for Windows or Mac OS X or
 the iPhone or whatever from using my code in their projects. In
@@ -1489,7 +1505,7 @@ corporation in history has been as abusive as some past and present
 governments that come to mind. But preventing internal use or
 “defence use” or government use or whatever will make it non-FOSS,
 (and non-GPL-compatible), not to mention that adding random
-restrictions (“cannot be used by Neonazis”, “cannot be used by
+restrictions (e.g: “cannot be used by Neonazis”, “cannot be used by
 terrorists”, “cannot be used by ‘Zionists’”, etc.) will fragment the
 software licensing world as a whole, and I would prefer not to open
 that Pandora Box.
@@ -1519,9 +1535,9 @@ To sum it up here, I don’t see why contributing to one’s neighbour
 (or the public at large), willingly and on one’s free time (which
 may be called “donation”, “philanthropy” or even “altruism”) and for
 a non-harmful cause can be considered as being a “sucker”. Everybody
-is able to use GPLed software of various originators too
+is able to use GPLed software of various originators
 free-of-charge or put it into good use in many legal and legitimate
-ways and yet you don’t hear that often that people who develop GPLed
+ways, too. Yet you don’t hear that often that people who develop GPLed
 software are “suckers”.
 </para>
 
@@ -1546,6 +1562,7 @@ licence. However, this is:
 </para>
 
 <orderedlist spacing="compact">
+
 <listitem>
 <para>
 A
@@ -1558,12 +1575,12 @@ or the only reason.
 
 <listitem>
 <para>
-In accordance to #1 - may be attributed to other factors such as
-Linus Torvalds’ leadership skills, the kernel’s adoption of the
-Bazaar-style of development, the willingness of Linux
-distributions to use the GNU project’s software by default as
-run-time, <link xlink:href="https://libquotes.com/linus-torvalds/quote/lbi7o4k">the cooler name</link>, the lack of initial legal limbo that
-the BSDs had, etc. etc.
+In accordance to #1 - may be attributed to other factors such as Linus
+Torvalds’ leadership skills, the kernel’s adoption of the Bazaar-style of
+development, the willingness of Linux distributions to use the GNU project’s
+software by default as run-time, <link
+xlink:href="https://libquotes.com/linus-torvalds/quote/lbi7o4k">the cooler
+name</link>, the lack of initial legal limbo that the BSDs had, etc. etc.
 </para>
 </listitem>
 
@@ -1626,4 +1643,4 @@ who pointed several factual mistakes in an earlier revision of this essay.
 
 </acknowledgements>
 
-</article>    <!-- End of the article -->
+</article>

@@ -499,8 +499,8 @@ sub generic_get_params
                 title       => "A site map showing all of the main pages.",
                 subs        => [
                     {
-                        skip  => 1,
-                        text  => "עמודים בעברית",
+                        # skip  => 1,
+                        text  => "עמודים בעברית (Hebrew Pages)",
                         title =>
                             "מפת העמודים העבריים באתר",
                         url => "site-map/hebrew/",

@@ -278,14 +278,6 @@ This screenplay is surrealistic realism and takes place in April 2013. It is
 far-fetched, but could actually happen.
 </p>
 EOF
-        entry_extra_html => <<'EOF',
-<p>
-I see it as a reflection and a modernisation of Ayn Rand’s novel
-<a href="https://en.wikipedia.org/wiki/Atlas_Shrugged"><i>Atlas
-Shrugged</i></a>
-</p>
-
-EOF
     },
     {
         id      => 'buffy_a_few_good_slayers',
@@ -308,7 +300,7 @@ The Demonic underworld is held under tight control in a forked version of the
 the <a href="http://buffy.wikia.com/wiki/Scooby_Gang">Scooby Gang</a> all
 ended up happier and more powerful, and men and women have equal opportunities
 when it comes to fighting Demons. A new class of tenth grade (sophomore)
-students start the three year demon fighting program in the scholastic year of
+students start the three year demon-fighting program in the scholastic year of
 2014/2015 in Sunnydale High School, while the older Scooby Gang, who are their
 teachers and mentors, have to deal with the usual set of problems that come
 with being teachers, parents, spouses and adults.
@@ -375,10 +367,9 @@ who provide him with many questions, including the million dollar question,
 <p class="who_is_qoheleth abstract">
 This is an illustrated screenplay inspired by the
 <a href="$(ROOT)/philosophy/SummerNSA/">#SummerNSA effort</a>
-and set in a time of great confusion — not unlike our own, while containing
+and set in a time of great confusion — not unlike our own — while containing
 some <a href="https://en.wikipedia.org/wiki/Anachronism">anachronisms</a>.
 </p>
-
 EOF
     },
     {
@@ -525,7 +516,7 @@ are the known extant members.
 </ul>
 
 <p>
-In practice though, there is <a href="https://en.wikipedia.org/wiki/Damocles">the Sword of Damocles</a>:
+In practice, though, there is <a href="https://en.wikipedia.org/wiki/Damocles">the Sword of Damocles</a>:
 </p>
 
 <ul>
@@ -539,7 +530,7 @@ choice she makes.
 
 <li>
 <p>
-A poorly executed takeover attempt by a "real life" celebrity
+A poorly executed takeover attempt by a “real life” celebrity
 (<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>)
 thought to be flawless.
 </p>
@@ -619,7 +610,7 @@ it voids all the excitement.
 <li>
 <p>
 An annual <a href="\$(ROOT)/humour/The-10th-Muse/The-10th-Muse--Trojan-War-Reenactment.html">reenactment of The Trojan War</a>, with <a href="https://en.wikipedia.org/wiki/Achilles">Achilles</a>
-being killed using a <a href="https://en.wikipedia.org/wiki/Bazooka">bazooka</a>
+getting killed using a <a href="https://en.wikipedia.org/wiki/Bazooka">bazooka</a>,
 and the Trojan horse being a Trojan pony shaped
 like <a href="https://mlp.fandom.com/wiki/Princess_Celestia">Princess Celestia</a>.
 </p>
@@ -689,7 +680,6 @@ Everything — Rachel’s week proved to be one of the most hectic in her life.
 This story is still incomplete, and only a relatively small part of it has
 been written.
 </p>
-
 EOF
     },
     {

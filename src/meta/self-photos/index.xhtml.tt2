@@ -18,7 +18,7 @@
 
 <p>
 [% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
-<a href="[% img _ link_img_ext %]">[% tag %]</a>
+<a href="[% full_image_link || (img _ link_img_ext) %]">[% tag %]</a>
 </p>
 
 [% content %]
@@ -44,6 +44,15 @@
 <p>
 <a href="https://www.flickr.com/photos/shlomif/albums/72157646708777940">From a trip to England</a>
 for <a href="https://nineworlds.co.uk/">Nine Worlds Convention</a>.
+</p>
+
+[% END %]
+
+
+[% WRAPPER photo alt = "By the sea" full_image_link = "https://www.flickr.com/photos/shlomif/8541049401/" id = "near-the-sea-2013-03-09" img = "${base_path}meta/self-photos/images/shlomif-near-the-sea-2013-03-09" img_ext = "-800h.webp" %]
+
+<p>
+<a href="https://www.flickr.com/photos/shlomif/8541049401/">Larger version available on Flickr.</a>
 </p>
 
 [% END %]

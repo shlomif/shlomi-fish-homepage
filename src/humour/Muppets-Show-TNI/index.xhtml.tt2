@@ -12,10 +12,10 @@
 [% SET screenplay_html_prefix="" %]
 [% SET epub_prefix="Muppets-Show--" %]
 <ul>
-[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter on Sesame Street: Harry and Hermione on a mission to vanquish “He who must not be named Two” a.k.a The Amazing Mumford",  %]
+[% PROCESS story_episode_li base = "Harry-Potter", story_title = "Harry Potter on Sesame Street: Harry and Hermione are on a mission to vanquish “He who must not be named Two” a.k.a “The Amazing Mumford”",  %]
 [% PROCESS story_episode_li base = "Summer-Glau-and-Chuck-Norris", story_title = "Summer Glau and Chuck Norris as Grammar Nazis",  %]
-[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "Jennifer Lawrence (Incomplete Episode)",  %]
-[% PROCESS story_episode_li base = "Tiffany-Alvord", story_title = "Tiffany Alvord",  %]
+[% PROCESS story_episode_li base = "Jennifer-Lawrence", story_title = "With Jennifer Lawrence as a guest star (Incomplete Episode)",  %]
+[% PROCESS story_episode_li base = "Tiffany-Alvord", story_title = "With Tiffany Alvord as a guest star",  %]
 </ul>
 
 [% END %]

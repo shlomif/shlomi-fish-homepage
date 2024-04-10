@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppet Show hosts Summer Glau and Chuck Norris mashing up xkcd, <a href=\"https://shlomif.livejournal.com/53966.html\">Ozy and Millie’s Grammar Nazis</a>, <a href=\"\$(ROOT)/humour/bits/facts/Chuck-Norris/\">Chuck Norris Facts</a>, <a href=\"\$(ROOT)/humour/bits/facts/Summer-Glau/\">Summer Glau Facts</a>, etc.</p>")) %]
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>The Muppet Show hosts Summer Glau and Chuck Norris, while mashing up xkcd, <a href=\"https://shlomif.livejournal.com/53966.html\">Ozy and Millie’s “Grammar Nazis” cartoon and subsequent discussion</a>, <a href=\"\$(ROOT)/humour/bits/facts/Chuck-Norris/\">Chuck Norris Facts</a>, <a href=\"\$(ROOT)/humour/bits/facts/Summer-Glau/\">Summer Glau Facts</a>, etc.</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Summer-Glau-and-Chuck-Norris.html") %]
 
@@ -66,6 +66,16 @@ J. R. - he is crazier than I am".
 <li>
 <p>
 <a href="https://www.youtube.com/watch?v=10PBekTNXoo">7 Minutes by Caitlin Hart</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Texas">Texas</a> being Summer Glau’s birth-place, and Chuck Norris’s long-time home and associated location ( e.g: <a href="https://en.wikipedia.org/wiki/Walker%2C_Texas_Ranger">Walker, Texas Ranger</a>. )
+</p>
+
+<p>
+My template <a href="https://www.shlomifish.org/meta/FAQ/where_are_you_from.xhtml">was relocated to Dallas, Texas</a> as a child, where my sister’s template was born, given there were no remaining hell-holes in Israel. I think it was him who <a href="https://en.wikipedia.org/wiki/Who_shot_J.R.%3F">“shot” (= slew) J.R.</a> who was the master vampire of Texas, thus liberating it, except for <a href="https://en.wikipedia.org/wiki/San_Antonio">San Antonio</a>.
 </p>
 </li>
 

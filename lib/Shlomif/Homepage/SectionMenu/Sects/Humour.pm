@@ -220,6 +220,8 @@ my $_humour_tree_contents = {
                                     text => "Harry Potter",
                                     url  =>
 "humour/Muppets-Show-TNI/Harry-Potter.html",
+                                    title =>
+"Harry, and Hermione, are battling “He who must not be named Two”, a.k.a “The Amazing Mumford”",
                                 },
                                 {
                                     text => "Summer Glau and Chuck Norris",

@@ -48,11 +48,12 @@ for <a href="https://nineworlds.co.uk/">Nine Worlds Convention</a>.
 
 [% END %]
 
+[% SET sea_photo_link = "https://www.flickr.com/photos/shlomif/8541049401/" %]
 
-[% WRAPPER photo alt = "By the sea" full_image_link = "https://www.flickr.com/photos/shlomif/8541049401/" id = "near-the-sea-2013-03-09" img = "${base_path}meta/self-photos/images/shlomif-near-the-sea-2013-03-09" img_ext = "-800h.webp" %]
+[% WRAPPER photo alt = "Photo of me close to the sea (near Shefayim) on 9 March 2013" full_image_link = sea_photo_link id = "near-the-sea-2013-03-09" img = "${base_path}meta/self-photos/images/shlomif-near-the-sea-2013-03-09" img_ext = "-800h.webp" %]
 
 <p>
-<a href="https://www.flickr.com/photos/shlomif/8541049401/">Larger version available on Flickr.</a>
+<a href="[% sea_photo_link %]">Larger version available on Flickr.</a>
 </p>
 
 [% END %]

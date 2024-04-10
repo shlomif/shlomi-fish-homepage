@@ -893,7 +893,7 @@ my %table_blocks = (
             tr_s       => [
                 _master_tr(
                     title =>
-q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i></a> Fanfiction},
+q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy the Vampire Slayer</i></a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s(
@@ -911,7 +911,7 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
             tr_s       => [
                 _master_tr(
                     title =>
-                        q{Card Games ( e.g: Freecell ) - referencing works},
+q{Card Games ( e.g: <a href="https://fc-solve.shlomifish.org/faq.html">Freecell</a> ) - referencing works},
                 ),
 
                 # do { Carp::confess("freecell TODO"); },
@@ -928,7 +928,8 @@ q{<a href="https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"><i>Buffy</i><
             text_title => "Chuck Norris Fanfiction and Essays",
             tr_s       => [
                 _master_tr(
-                    title => q{Chuck Norris Fanfiction and Essays},
+                    title =>
+q{<a href="https://chucknorris.com/">Chuck Norris</a> Fanfiction and Essays},
                 ),
                 $Factoids_TR,
                 _get_tr('chuck_norris_facts'),
@@ -1050,7 +1051,7 @@ q{<a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>-referenc
     'xkcd' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'xkcd_nav_block',
-            text_title => "Summer Glau/xkcd Fanfiction",
+            text_title => "Summer Glau / xkcd Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -1091,7 +1092,7 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
         {
             id         => 'self_ref_nav_block',
             text_title =>
-                "Self-Reference/Gödel, Escher, Bach/Last Action Hero",
+                "Self-Reference / Gödel, Escher, Bach / Last Action Hero",
             tr_s => [
                 _master_tr(
                     title =>
@@ -1112,7 +1113,8 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
             text_title => "Software Resources",
             tr_s       => [
                 _master_tr(
-                    title => "Software Resources",
+                    title =>
+"Software Resources ( e.g.: curated lists, directories )",
                 ),
                 _subdiv_tr( title => q{Directories}, ),
                 _get_tr('software_dirs'),
@@ -1206,7 +1208,8 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
             text_title => "Muppets Fanfiction",
             tr_s       => [
                 _master_tr(
-                    title => q{Muppets Fanfiction},
+                    title =>
+q{<a href="https://muppet.fandom.com/wiki/Muppet_Wiki">Muppets</a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s( qw( muppets_all the_10th_muse__mlpfim ), ),

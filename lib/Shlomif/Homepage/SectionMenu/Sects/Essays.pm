@@ -141,7 +141,7 @@ my $_section_navmenu_tree_contents = {
                     subs => [
                         {
                             text =>
-"Why the so called real world makes little sense",
+"Reasons why the outside world, as I perceive it, does not make sense, is contradictory, illogical, or is difficult-to-believe-can-be-real",
                             url =>
 "philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/",
                         },

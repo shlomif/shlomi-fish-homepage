@@ -13410,5 +13410,289 @@ He replied: “There is no privacy here.”.
         </irc>
     </fortune>
 
+    <fortune id="sharp-web-webdev-advice-openness-meta-geeky-philosophy">
+        <meta>
+            <title>##web - Tech (web-development, etc.) advice, "open"/"share"/"steal", and geeky meta-Philosophy. The not-so-simple (but fun) life of a werewolf vampire still in a hell.</title>
+        </meta>
+        <irc>
+            <body>
+
+<saying who="bobdobbs">Can someone help me to figure out how to create a local mirror of this site?</saying>
+<saying who="bobdobbs">https://www.projectvillageaotearoa.com/</saying>
+<saying who="Natasha18">&gt;&gt; Project Village | transgender family support</saying>
+<saying who="bobdobbs">It&#39;s a wix site. It&#39;s pretty light. And it seems to rely pretty heavily on js.</saying>
+<saying who="bobdobbs">If I mirror using wget, some of the functionality is broken. Like, the navigation doesn&#39;t appear on my snarfed copy</saying>
+<saying who="bobdobbs">Security Error: Content at http://localhost:8000/ may not load data from https://www.projectvillageaotearoa.com/_partials/wix-thunderbolt/dist/clientWorker.8d461475.bundle.min.js.&quot;</saying>
+<saying who="Natasha18">&gt;&gt; Welcome to nginx!</saying>
+<saying who="bobdobbs">That&#39;s the error I get when I try to mirror the site. I can&#39;t seem to beat wget into mirroring the dependancies</saying>
+<saying who="bobdobbs">hmmm... maybe the urls for the deps are hardcoded into the js?</saying>
+<saying who="Guest99">Hello, please would someone like to participate in the development of the game portal?</saying>
+<saying who="rindolf">Guest99: hi</saying>
+<saying who="rindolf">Guest99: https://www.shlomifish.org/philosophy/computers/open-source/how-to-start-contributing/</saying>
+<saying who="Natasha18">&gt;&gt; How Can I Start Contributing to Free and Open Source Software (FOSS) - Shlomi Fish’s Homesite</saying>
+<saying who="rindolf">bobdobbs: wix for the win! ;]</saying>
+<saying who="bobdobbs">rindolf: lolololol</saying>
+<saying who="rindolf">it will only take weeks</saying>
+<me_is who="bobdobbs">sobs</me_is>
+<saying who="Guest99">Natasha18: Its not about Game Deveelopment. It is game portal (just look: https://hrani.eu) with more than 45 000 games. It is PHP an XML, HTMl, CSS based solution. Just look and give me pleease feedback.</saying>
+<saying who="rindolf">Guest99: where is the source?</saying>
+<saying who="Guest99">on my server :) it is my solution</saying>
+<saying who="Guest99">its was written by me</saying>
+<saying who="rindolf">Guest99: are you using git-scm?</saying>
+<saying who="Guest99">i use gitlab</saying>
+<saying who="rindolf">Guest99: ok. please give a public url to the code repo</saying>
+<saying who="Guest99">You steal  my code?</saying>
+<saying who="rindolf">Guest99: you got me: https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/#open_free_share_steal ;]</saying>
+<saying who="Natasha18">&gt;&gt; Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry - Shlomi Fish’s Homesite</saying>
+<saying who="rindolf">Guest99: I want to steal your code, and auction it on ebay for 1,000 BitDays</saying>
+<saying who="rindolf">cryptotime</saying>
+<saying who="rindolf">and i&#39;ll use them to fund the development of my NoSQL /dev/null project: https://shlomifishswiki.branchable.com/slash-dev-null_is_WebScale/</saying>
+<saying who="Natasha18">&gt;&gt; slash-dev-null is WebScale</saying>
+<saying who="rindolf">“Now for what I’m going to do if I’m elected. I’m going to erect a gigantic statue of Tux the Penguin, this guy [picture showing on the screen], and also one for Beastie the BSD Daemon, [picture showing] for good measure. I’m going to fight against abusive behaviour toward nerds and geeks, for computer literacy, and… for world peace. What the heck!”</saying>
+<saying who="Guest99">Are You OK?</saying>
+<saying who="rindolf">Guest99: i&#39;m just joking. ;)</saying>
+<saying who="rindolf">Guest99: if your code or data are worthwhile, then you;ll share them far and wide</saying>
+<saying who="rindolf">Guest99: https://explainxkcd.com/wiki/index.php/538:_Security</saying>
+<saying who="noord">did I say that? I hate frontend</saying>
+<saying who="rindolf">noord: did you say *what*?</saying>
+<saying who="noord">`i hate frontend`</saying>
+<saying who="rindolf">noord: ah...</saying>
+<saying who="noord">good old days, copy and paste html, just works</saying>
+<saying who="Guest99">I&#39;m sorry, we don&#39;t know each other. I use Ubuntu daily. And all the benefits of open source.</saying>
+<saying who="noord">now everything should be aligned even planets to run frontend demo</saying>
+<saying who="rindolf">noord: frontend is hard. my strategy is to avoid react/vue/angular/etc., keep the JS/TypeScript simple [and optional if possible] and stick to jQuery/jQuery-UI/vanilla-js</saying>
+<saying who="rindolf">but then i&#39;m an independent blogger/etc. [but i have many people on my &quot;watchers&quot; and angels teams]</saying>
+<saying who="rindolf">Guest99: i could be wrong.</saying>
+<saying who="noord">I am advocate of postback style web, but some features of bootstrap requires jquery/popper bundles etc</saying>
+<saying who="noord">I wasted 2 hours to implement a simple two column website layout that works on generic laptop and mobile phone</saying>
+<saying who="rindolf">quite a few people on IRC told me that pages of my site load quickly: https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; Shlomi Fish’s Frequently Asked Questions (FAQ) List - This site loads so quickly. What is your secret?</saying>
+<saying who="rindolf">Guest99: and my opinions may be rendered &quot;wrong&quot;er eventually: https://en.wikipedia.org/wiki/Dialectic#Hegelian_dialectic</saying>
+<saying who="Guest99">rindolf: Add to list compress as WebP format, its modern way to compress image</saying>
+<saying who="rindolf">Guest99: it is there</saying>
+<saying who="Guest99">I am sorry, i see</saying>
+<saying who="Guest99">noord: Sometimes optimizing for multiple devices is a big problem. I use css MEDIA QUERIES like &quot;@media only screen and (max-width: 600px)</saying>
+<saying who="rindolf">Guest99: no worries. thanks for letting me know.</saying>
+<saying who="Guest99">rindolf: maybe more faster is webpage with technique lazy loading</saying>
+<saying who="rindolf">Guest99: can it be implemented with browser-side scripting disabled/blocked/blacklisted/etc.?</saying>
+<saying who="rindolf">Gawd, the markdown processor that branchable.com uses is atrociously poor-featured, buggy, and finicky. E.g: https://shlomifishswiki.branchable.com/Never_Try_to_Please_Everyone/ . I hate markdowns in general: too fragmented.</saying>
+<saying who="Ras">shalom</saying>
+<saying who="Ras">how r u doing</saying>
+<saying who="rindolf">Ras: oovrakhah</saying>
+<saying who="rindolf">Ras: blogging/writing [education/entertainment/geeky-philosophy]; previously I spent some days on the web version of fc-sovle</saying>
+<saying who="rindolf">fc-solve*</saying>
+<saying who="rindolf">perlbot: freecell solver</saying>
+<saying who="perlbot">rindolf: No factoid found. Did you mean one of these: [freecell] [frijole] [fc-solve] [free speech] [forget well, it] [fraktur] [frogbot] [file::slurp] [frozen-bubble] [fork]</saying>
+<saying who="rindolf">perlbot: fc-solve</saying>
+<saying who="perlbot">rindolf: Freecell Solver / fc-solve / FCS - http://fc-solve.shlomifish.org/ - rindolf&#39;s project which he keeps mentioning</saying>
+<saying who="Natasha18">&gt;&gt; Freecell Solver</saying>
+<saying who="Ras">ahahahaha</saying>
+<saying who="Ras">keeps mentioning</saying>
+<saying who="Ras">nice one</saying>
+<saying who="Ras">will check it out</saying>
+<saying who="Ras">i wanna make a speech and speaker jammer so i can denoise NYC</saying>
+<saying who="rindolf">Ras: I&#39;m trying to bring the resurrection-of-the-dead, the latter days (&quot;rest-of-days&quot;?), world peace/shalom (= &quot;completeness&quot;; there will still be non-malevolent wars/battles/competitions/etc.), and… me [or whoever wants to get laid] doing hot models ^W youtubers. ;)</saying>
+<saying who="rindolf">[[I&#39;ve heard a Jew and a Muslim argue in a Damascus café with less passion than the Emacs wars.</saying>
+<saying who="rindolf">— Ronald Florence]]</saying>
+<saying who="rindolf">Ras: thanks, it has a FAQ</saying>
+<saying who="rindolf">&quot;Conflict&quot; - https://www.youtube.com/watch?v=Gl3e-OUnavQ</saying>
+<saying who="Natasha18">&gt;&gt; Sesame Street: Robin Williams: Conflict</saying>
+<saying who="Guest99">Ras: HI</saying>
+<saying who="Guest99">rindolf: What nerd and little philosopher like you uses what kind of working operating system and what kind of hardware?</saying>
+<saying who="rindolf">Client: HexChat 2.16.1 • OS: Fedora release 39 (Thirty Nine) • CPU: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz (1.92GHz) • Memory: Physical: 7.5 GiB Total (4.5 GiB Free) Swap: 7.5 GiB Total (7.3 GiB Free) • Storage: 772.6 GB / 1.5 TB (699.3 GB Free) • VGA: Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller @ Intel Corporation 2nd Generation Core Processor Family</saying>
+<saying who="rindolf"> DRAM Controller • Uptime: 4d 23h 38m 32s</saying>
+<saying who="rindolf">Guest99: ^^^</saying>
+<saying who="rindolf">that&#39;s my main system at home</saying>
+<saying who="rindolf">i have others</saying>
+<saying who="Guest99">I use Ubuntu and same hardware as you :) its cool system for programming ang blogging and other</saying>
+<saying who="rindolf">and i think the hostgator.com hosting of shlomifish-dot-org is, behind the old-RHEL-facade, massively mirrored and duplicated across the network, and even carved in marble</saying>
+<saying who="Guest99">rindolf: I use Ubuntu on server and Contabo for cheap price , i use admin as Plesk app</saying>
+<saying who="rindolf">Guest99: yes. i dislike the ms-windows desktop/developer user-experience, and i&#39;ve been traditionally anti-apple.com/macos and as a vampire, it&#39;s hard for me to justify shelling the money for a mac</saying>
+<saying who="Guest99">and even carved in marble :D LOL</saying>
+<saying who="rindolf">Guest99: nice, hostgator doesnt cost too much, and my sites there are responsive</saying>
+<saying who="Guest99">My best friend use Mac and still we are friends</saying>
+<saying who="Guest99">rindolf: i need for https://hrani.eu about 500 gb Storage</saying>
+<saying who="Natasha18">&gt;&gt; 45311+ online her zdarma - HRANI.eu</saying>
+<saying who="rindolf">[[    Aesop originally wanted to write his fable as “The Hare and Windows Update” instead of “The Hare and the Tortoise” but could not figure out how the hare will ever lose to Windows Update, even despite him not taking the race seriously.]]</saying>
+<saying who="rindolf">Guest99: one of my friends has stubbornly decided to use x86-64 VMS as a desktop operating system.</saying>
+<saying who="Guest99">I like this fable. these realities are difficult for me to understand in English but I think I understand, I am not a family speaker,</saying>
+<saying who="rindolf">Guest99: I don&#39;t cut relationships due to different preferences. In my Queen Padmé Tales fics, even Darth Vader and https://spaceballs.fandom.com/wiki/Dark_Helmet are good guys</saying>
+<saying who="Natasha18">&gt;&gt; Dark Helmet | Spaceballs: The Wiki | Fandom</saying>
+<saying who="Guest99">each operating system has pluses and minuses</saying>
+<saying who="Guest99">You are very interesting man :) good</saying>
+<saying who="rindolf">Guest99: https://www.shlomifish.org/meta/FAQ/why_is_your_uptime_so_low.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; Shlomi Fish’s Frequently Asked Questions (FAQ) List - Why is your uptime so low?</saying>
+<saying who="Guest99">Rindoff: Are you real human? Or your virtual copy in 0 and 1</saying>
+<saying who="Guest99">rindolf: the joke with uptime is good :)</saying>
+<saying who="rindolf">Guest99:As far as I know, I am a flesh-and-blood human. See Descartes&#39; &quot;Evil Demon&quot; concept though. https://en.wikipedia.org/wiki/Evil_demon</saying>
+<saying who="Guest99">rindolf: what about concept about virtual reality propagate by Musk?Sorry for my English</saying>
+<saying who="henk">what’s the joke about the uptime?</saying>
+<saying who="rindolf">Guest99: https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/#_the_epistemological_demons - &quot;The Matrix&quot; films, &quot;The Truman Show&quot;, etc.</saying>
+<saying who="Guest99">henk:  https://www.shlomifish.org/meta/FAQ/why_is_your_uptime_so_low.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; Shlomi Fish’s Frequently Asked Questions (FAQ) List - Why is your uptime so low?</saying>
+<saying who="Guest99">rindolf: Is there a question you don&#39;t know the answer to?</saying>
+<saying who="rindolf">Guest99: yes. i don&#39;t know if https://en.wikipedia.org/wiki/Goldbach%27s_conjecture is true or not</saying>
+<saying who="Natasha18">&gt;&gt; Goldbach&#39;s conjecture - Wikipedia</saying>
+<saying who="rindolf">or if https://en.wikipedia.org/wiki/Collatz_conjecture or if P = NP</saying>
+<saying who="Guest99">rindolf: What pls your education?</saying>
+<saying who="Guest99">rindolf: You are super clever. Why waste your time talking when you could be solving the unsolvable?</saying>
+<saying who="rindolf">Guest99: in this hell, I was led to believe that I only have a B.Sc. in Electrical Engineering (&quot;proper&quot;) from the Technion.</saying>
+<saying who="Guest99">rindols: You have knowlange as Doctor of Information technology</saying>
+<saying who="rindolf">I learned much more from the Internet, television, books, etc. though: https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/learning_more_from_inet_forums.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; The Case for Commercial Fan-Fiction - Education = Entertainment = Conception of Values</saying>
+<saying who="rindolf">Guest99: talking on forums is fun, educational, and inspiring.</saying>
+<saying who="myappie">the misses: https://imgur.com/a/Qwhlhno</saying>
+<saying who="Guest99">Is it simple to cout earning in Google AdSence for simple page. Do I need API or what....</saying>
+<saying who="rindolf">Guest99: google AdSense&#39;s API being simple? &quot;surely, you&#39;re joking, Mr. Feynman!&quot; Well, it&#39;s been a while since I voluntarily placed AdSense on my sites, and I didnt study the APIs. Most of my non-hell income is from donations</saying>
+<saying who="rindolf">https://www.shlomifish.org/philosophy/computers/web/models-for-commerce/</saying>
+<saying who="Natasha18">&gt;&gt; “Alternative” Profitable Models for Web-based Commerce - Shlomi Fish’s Homesite</saying>
+<saying who="Guest99">rindoif: know it is hell income. Last payout and stop this Adverisement hell like shit</saying>
+<saying who="rindolf">When and if I stop being a vampire (and Christina Grimmie, Jim Henson, Avicii, etc. are alive, healthy, conscious, kicking, and kicking ass), I&#39;ll consider putting text webads at the bottom of my pages, for giving publicity to other sites and organisations. It&#39;s not going to be for the money, and I approve of donating 100% of the profits to charities, and web visitors will be able to block the ads/etc,.</saying>
+<saying who="Guest99">Hi all again after restart Linux</saying>
+<saying who="henk">Guest99: yeah, but what’s funny about it?</saying>
+<saying who="Guest99">henk: I wasn&#39;t writing a joke.</saying>
+<saying who="Guest99">Does somebody know how to in this rss feed https://archive.org/services/collection-rss.php?collection=classicpcgames give next page?</saying>
+<saying who="Natasha18">&gt;&gt; Internet Archive - Collection: classicpcgames</saying>
+<saying who="henk">Guest99: well, you said »rindolf: the joke with uptime is good :)« and I’m wondering what the joke was because I missed it …</saying>
+<saying who="Guest99">henk: i send you link with the joke about uptime</saying>
+<saying who="Guest99">henk: don&#39;t be mad at me</saying>
+<saying who="henk">Guest99: I’m not mad at all (: I’m just trying to understand what the joke is. because in that link I see nothing funny or anything that could be considered a joke. I’m just wondering what I am missing.</saying>
+<saying who="Guest99">henk: the computer un 1 yeas nonstop with Linux distro.</saying>
+<saying who="Guest99">henk: run</saying>
+<saying who="Guest99">henk: year</saying>
+<saying who="spinningCat"> i guess i should learn go and i should publish small go project on github</saying>
+<saying who="Guest99">spinningCat: Why GO programming language?</saying>
+<saying who="henk">Guest99: yeah, that’s quite normal for servers. I’m not saying it’s good! but it’s not rare to see servers on linux or BSD that have not been rebooted for a year, or 5 or sometimes even 10.</saying>
+<saying who="Guest99">henk: i dont know why i can tell in English, it amused me in a good way</saying>
+<saying who="henk">Guest99: ah ok (: were you not aware that this is common for servers?</saying>
+<saying who="Guest99">henk: As Formerly user of Win, Yes</saying>
+<saying who="Guest99">henk: i am on linux only for 5 years, i love him</saying>
+<saying who="Siphano">Guest99: what distro ?</saying>
+<saying who="henk">ah yeah. back when I was using windows, max uptime for win98 used to be around 24h :D with win2k it was a bit better: around a week. my main linux server currently is on 142 days. but I have seen machines with &gt;1000 days uptime and have heard trustworthy sources report machines with &gt;2000 days.</saying>
+<saying who="Guest99">Siphano: thank you ro question: I use Ubuntu</saying>
+<saying who="Guest99">henk: machines with &gt;2000 days. IS BEST</saying>
+<saying who="henk">no, it’s actually quite bad. any uptime &gt;100 days most probably means that the system is running a vulnerable kernel. and also very likely that the services running on it have also not been restarted to use updated libraries, if they have even been installed and is thus likely very vulnerable.</saying>
+<saying who="Siphano">Guest99: It just works</saying>
+<saying who="Guest99">henk: i undestand what you mean</saying>
+<saying who="Guest99">Siphano: Yes It is work for me better than windows</saying>
+<saying who="rindolf">i&#39;m back. only time can tell if it&#39;s a good thing. ;]</saying>
+<saying who="rindolf">henk: [[    Today I&#39;d like to share a story told by a friend. At his workplace, they had a computer running Gentoo Linux which wasn&#39;t rebooted for a while and accumulated a large uptime. Then one day they had to reboot it for some reason. This friend gave me one guess to guess what happened then. I guessed that &quot;it didn&#39;t work&quot;. I was right.]]</saying>
+<saying who="henk">rindolf: yes, I’ve read the post. but this is not funny or a joke, is it?</saying>
+<saying who="rindolf">henk: i don&#39;t know. i find it quite amusing in a https://en.wikipedia.org/wiki/Schadenfreude way</saying>
+<saying who="henk">ah ok</saying>
+<saying who="Guest99">rindolf: welcome in hell</saying>
+<saying who="rindolf">Guest99: heh[ll]</saying>
+<saying who="Guest99">rindolf: please with beuatifull mind, do you look at my project: https://hani.eu and say me minuses of the web, and what to Subjectively edit :) i donate 4 USD to Wiki for your answer</saying>
+<saying who="rindolf">Guest99: &quot;I don&#39;t wake up for 4 USD&quot; ( https://www.shlomifish.org/humour/fortunes/show.cgi?id=we-dont-wake-up-for-less-than-10000-a-day ) ;) but i guess i can take a brief look</saying>
+<saying who="rindolf">Guest99: [[</saying>
+<saying who="rindolf">Secure Connection Failed</saying>
+<saying who="rindolf">An error occurred during a connection to hani.eu. PR_CONNECT_RESET_ERROR</saying>
+<saying who="rindolf">Error code: PR_CONNECT_RESET_ERROR</saying>
+<saying who="rindolf">    The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.</saying>
+<saying who="rindolf">    Please contact the website owners to inform them of this problem.]]</saying>
+<saying who="rindolf">saved by the SSL. ;)</saying>
+<saying who="Guest99">rindolf: look at this as normal user</saying>
+<saying who="rindolf">Guest99: &quot;normal&quot; user?</saying>
+<saying who="rindolf">normal in which aspect, and as opposed to what?</saying>
+<saying who="Guest99">rindolf: yes regular</saying>
+<saying who="Guest99">rindolf: Forget for your IT bacground :) so sorry , for me is very interesting</saying>
+<saying who="rindolf">Guest99: https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/selling-for-stupider-ppl.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; Putting Cards on the Table (2019-*) - Selling for people stupider than you</saying>
+<saying who="rindolf">Guest99: i just clicked your https URL and firefox displayed that &quot;their TLS sucks&quot; error</saying>
+<saying who="Guest99">why you answer by Selling for people stupider than you</saying>
+<saying who="Guest99">?</saying>
+<saying who="rindolf">Guest99: i don&#39;t</saying>
+<saying who="Guest99">rindolf: I LOVE YOU. Ae you merry me?</saying>
+<saying who="rindolf">Guest99: I target intelligent, smart, openminded, geeky, hackers. not &quot;normal&quot;/&quot;average&quot; riff-raff [whom I think are not real]</saying>
+<saying who="Guest99">henks: please do you review me site as normal person?</saying>
+<saying who="Guest99">rindolf: i am so sorry, you cant be normal, regular, you are just rindolf :) I still love you</saying>
+<me_is who="armdale">(~armdale@156.34.16.100) has joined</me_is>
+<saying who="henk">Guest99: which site?</saying>
+<saying who="Guest99">henk: https://hrani.eu</saying>
+<saying who="Natasha18">&gt;&gt; 45311+ online her zdarma - HRANI.eu</saying>
+<saying who="henk">I doubt hani.eu is correct, as ssl does not work (what rindolf said) and without ssl it says &quot;This domain is for sale!&quot;</saying>
+<saying who="rindolf">Guest99: currently I&#39;m prioritising bringing the resurrection-of-the-dead and universal salvation. After [and if] I&#39;ve done that, I&#39;d like to see if https://en.wikipedia.org/wiki/Tiffany_Alvord is interested in dating me. She&#39;s my current celebrity crush. I&#39;ll likely officially marry her if we&#39;re still together after 2-3 years or so.</saying>
+<saying who="henk">and no, I’m not a normal person either, so I can’t really do that</saying>
+<saying who="Guest99">rindolf: i dont love you. its good?</saying>
+<saying who="rindolf">In ancient and modern Hebrew the word for &quot;a wife&quot; also means &quot;a woman&quot;. King Shlomo [= Solomon] had ~ 700 &quot;wives&quot;: women whom he just kissed [he thought it was harmless, but given many were vampirellas, it was part of the facade for begetting a new vampire couple]</saying>
+<saying who="Guest99">henk: i still understand. Sorry for bad question</saying>
+<saying who="rindolf">Guest99: https://www.youtube.com/watch?v=XoFJbeBXuCc</saying>
+<saying who="Natasha18">&gt;&gt; Shania Twain - (If You&#39;re Not In It For Love) I&#39;m Outta Here! (Official Music Video)</saying>
+<saying who="Guest99">i play dizzy as small kind, but i now understand what is ind i am simple dizzy from all answer.</saying>
+<saying who="Guest99">rindolf: seriously what is next page of this v</saying>
+<saying who="Guest99">https://archive.org/services/collection-rss.php?collection=classicpcgames</saying>
+<saying who="Natasha18">&gt;&gt; Internet Archive - Collection: classicpcgames</saying>
+<me_is who="mage">(~julien@orval.bbpf.belspo.be) has joined</me_is>
+<saying who="mage">hello</saying>
+<saying who="mage">is there a way to simulate different breakpoints without having to use an iframe?</saying>
+<saying who="mage">setting width on the parent container doesn&#39;t work</saying>
+<saying who="rindolf">mage: debugger breakpoints?</saying>
+<saying who="mage">yeah, but without using the debugger</saying>
+<saying who="mage">I&#39;m building a WYSIWYG editor and I&#39;d like to offer the $user to change the breakpoint</saying>
+<saying who="mage">is using an iframe the only solution?</saying>
+<saying who="rindolf">mage: hi. I feel that WYSIWYG editors (and WYSIWYG wordprocessors ) are built-by smart people for people-whom-they-consider-as-dumber: https://www.shlomifish.org/philosophy/computers/web/choice-of-docs-formats/#word-processors</saying>
+<saying who="Natasha18">&gt;&gt; Choice of Document Formats - Shlomi Fish’s Homesite</saying>
+<saying who="mage">I&#39;m building a WYSIWYG editor based on tiptap and tailwindcss</saying>
+<saying who="mage">and vue</saying>
+<saying who="Guest87">rindolf: If you havent got basic kniwlange of HTML you can use  WYSIWYG editors . But sorry i dont see question.</saying>
+<saying who="Guest87">mage: is this project public</saying>
+<saying who="mage">Guest87: not yet, it&#39;s a WIP</saying>
+<saying who="Guest87">mage: What is WIP, please?</saying>
+<saying who="mage">work in progress</saying>
+<saying who="Guest87">mage: So sorry, i tried to do something similar, but code editor based on CodeMirror and DHTMLX :) God work</saying>
+<saying who="mage">TipTap and Prosemirror are awesome but .. it&#39;s hard</saying>
+<saying who="rindolf">Guest87: if &quot;$X&quot; doesn&#39;t know HTML, then he is wilfully ignorant, maybe cannot be educable, and will require a lot of hand-holding: https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/selling-for-stupider-ppl.xhtml</saying>
+<saying who="Natasha18">&gt;&gt; Putting Cards on the Table (2019-*) - Selling for people stupider than you</saying>
+<saying who="mage">Guest87: https://github.com/silenius/amnesia_admin/tree/dev/src/components/editor/tiptap this is my WIP</saying>
+<saying who="Natasha18">&gt;&gt; amnesia_admin/src/components/editor/tiptap at dev · silenius/amnesia_admin · GitHub</saying>
+<saying who="rindolf">also see https://www.shlomifish.org/philosophy/computers/the-broken-window-fallacy/</saying>
+<saying who="Natasha18">&gt;&gt; The “Broken Window” Fallacy - Shlomi Fish’s Homesite</saying>
+<saying who="Guest87">rindolf: Everybody start own bussines other. I thing this is English shit sentence....Sorry for grammer</saying>
+<me_is who="rindolf">is afk</me_is>
+<saying who="rindolf">Guest87: do you mean every business provides services for other people?</saying>
+<saying who="Guest87">I was guest99 here.... seriously WYSIWYG editor is good for 99 percet of this planet....I dont say that every business provide services fo other people. For example ZOO provide services for animals....it is business too</saying>
+<saying who="rindolf">Guest87: https://www.shlomifish.org/philosophy/computers/the-broken-window-fallacy/ ; let&#39;s say that people = {every conscious and intelligent organism (whether human, animal, or other) in the universe}</saying>
+<saying who="Natasha18">&gt;&gt; The “Broken Window” Fallacy - Shlomi Fish’s Homesite</saying>
+<saying who="Guest87">rindolf: You speak about windows? Why? MAGE: is making WYSIWYG editor.</saying>
+<saying who="Guest87">rindolf: independent on platform. I think responsive aka browser software....</saying>
+<saying who="Guest87">mage: What do you ask please for beginning?</saying>
+<saying who="Guest87">Someone please give me feedback on a project I&#39;ve been doing for almost a year? https://hrani.eu</saying>
+<saying who="Natasha18">&gt;&gt; 45311+ online her zdarma - HRANI.eu</saying>
+<saying who="Guest87">Everybody want to be happy. Peace :)</saying>
+<saying who="rindolf">Guest87: i am talking about the general principle. catering to the whims of willfully-ignorant people, who use old-and-deprecated tech, is an uphill battle and like cutting https://en.wikipedia.org/wiki/Lernaean_Hydra heads results in more-and-more-work-and-frustration</saying>
+<saying who="Guest87">rindolf: I think I make via my website too many frusration :( https://hrani.eu its bad layout, no graphic, bad code, simplest PHP code,</saying>
+<saying who="Natasha18">&gt;&gt; 45311+ online her zdarma - HRANI.eu</saying>
+<saying who="Guest87">I want to be better - teach me pls be better....my guru...seriously</saying>
+<saying who="rindolf">Guest87: maybe read https://github.com/shlomif/testing-static-sites</saying>
+<saying who="Natasha18">&gt;&gt; GitHub - shlomif/testing-static-sites: Ideas for automated tests of static web sites</saying>
+<saying who="rindolf">Guest87: and https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt</saying>
+<saying who="Natasha18">&gt;&gt; Freenode-programming-channel-FAQ/FAQ_with_ToC__generated.md at master · shlomif/Freenode-programming-channel-FAQ · GitHub</saying>
+<saying who="Guest87">natural selection i thing is principles as developers. Better will be first in search result. Worst is in 5th page</saying>
+<saying who="Guest87">*result</saying>
+<saying who="Guest87">rindolf: Thank you I will read . But is it same testing PHP dynaic webpage as you mention static webpage?</saying>
+<saying who="Guest98">Rindolf: Please share me last two link with me,, a lot of thanks. I think share is the best way to teach each other.</saying>
+<saying who="rindolf">Guest87: maybe read https://github.com/shlomif/testing-static-sites</saying>
+<saying who="Natasha18">&gt;&gt; GitHub - shlomif/testing-static-sites: Ideas for automated tests of static web sites</saying>
+<saying who="rindolf">Guest87: and https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt</saying>
+<saying who="Natasha18">&gt;&gt; Freenode-programming-channel-FAQ/FAQ_with_ToC__generated.md at master · shlomif/Freenode-programming-channel-FAQ · GitHub</saying>
+<saying who="Guest98">Rindolf: I won&#39;t bother you. In the meantime, thank you for your time.</saying>
+<saying who="rindolf">Guest98: you&#39;re welcome</saying>
+<me_is who="Guest98">has quit (Ping timeout: 250 seconds)</me_is>
+<me_is who="Nomikos">is home again</me_is>
+<saying who="Nomikos">hello all</saying>
+<saying who="spinningCat">go grabbed my attentşon for a reason</saying>
+<saying who="spinningCat">seems it is easy to write api with go like nodejs</saying>
+<saying who="spinningCat">i should check performance benchmark</saying>
+<saying who="rindolf">Nomikos: welcome aboard</saying>
+<saying who="rindolf">Nomikos: i am a citizen of the multiverse (&quot;Fantastecha™&quot; I think).</saying>
+
+            </body>
+            <info>
+                <channel>##web</channel>
+                <network>Freenode</network>
+            </info>
+        </irc>
+    </fortune>
+
 </list>
 </collection>

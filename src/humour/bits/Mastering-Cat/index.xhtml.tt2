@@ -1,5 +1,5 @@
 [%- SET title = "Interview with the author of “Mastering cat”" -%]
-[%- SET desc = "Shlomif Ish is about to publish the O’Reilly book “Mastering cat” which details everything you wanted to know about the misunderstood UNIX command. “Mastering ‘cat’ is almost as difficult as herding cats.”" -%]
+[%- SET desc = "Shlomi Fish is about to publish the O’Reilly book “Mastering cat” which details everything you wanted to know about the misunderstood UNIX command. “Mastering ‘cat’ is almost as difficult as herding cats.”" -%]
 
 
 [%- WRAPPER wrap_html -%]
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-Shlomif Ish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>,
+Shlomi Fish, acclaimed author of <i>Mastering mv</i> and <i>Mastering rm</i>,
 has taken the time to sit down with us for an interview on his latest
 book, <i>Mastering cat</i>. In this 344 pages-long book, Ish details
 everything you wanted to know about the UNIX <code>cat</code> command. We
@@ -24,11 +24,11 @@ book’s motivation, content, and philosophy.
 </p>
 
 <p>
-<b>O’Reilly Net</b>: Hi Shlomif!
+<b>O’Reilly Net</b>: Hi Shlomi Fish!
 </p>
 
 <p>
-<b>Shlomif Ish</b>: Hi!
+<b>Shlomi Fish</b>: Hi!
 </p>
 
 <p>
@@ -36,7 +36,7 @@ book’s motivation, content, and philosophy.
 </p>
 
 <p>
-<b>Shlomif Ish</b>: Well, I realised people use <code>cat</code> so often
+<b>Shlomi Fish</b>: Well, I realised people use <code>cat</code> so often
 that they don’t take the time to fully investigate it and learn it.
 For example, many people I worked with believed that <code>cat</code> can
 only be used to output one file at a time. So to output several files
@@ -67,7 +67,7 @@ easy? Does it really necessitate its own book?
 </p>
 
 <p>
-<b>Shlomif Ish</b>: Hell no! Mastering <code>cat</code> is not easy at all.
+<b>Shlomi Fish</b>: Hell no! Mastering <code>cat</code> is not easy at all.
 In fact, mastering <code>cat</code> is almost as difficult as <a href="https://www.youtube.com/watch?v=m_MaJDK3VNE">herding cats</a>.
 </p>
 
@@ -101,7 +101,7 @@ UNIX pipeline concepts in the book.
 </p>
 
 <p>
-<b>Shlomif Ish</b>: Well, I cover many things there. Among them are:
+<b>Shlomi Fish</b>: Well, I cover many things there. Among them are:
 </p>
 
 <ol>
@@ -147,7 +147,7 @@ values of popularity). What can we expect from you next?
 </p>
 
 <p>
-<b>Shlomif Ish</b>: Well, I hope many people will buy the book, or
+<b>Shlomi Fish</b>: Well, I hope many people will buy the book, or
 read it online so they’ll be educated about <code>cat</code>. If you like
 <i>Mastering cat</i>, look forward to my next book - <i>Mastering echo</i>. I
 expect it to be published next fall.
@@ -175,7 +175,8 @@ was incorporated into the final version.
 
 <li>
 <a href="http://linux.slashdot.org/article.pl?sid=09/04/01/1211240">On
-Slashdot.org</a> - with many comments.
+Slashdot.org</a> - with many comments. <b>Recent note:</b> Some people
+noted POSIX <a href="https://en.wikipedia.org/wiki/True_and_false_(commands)">"true" and "false"</a> (and "sync") which are even more minimalistic.
 </li>
 
 <li>

@@ -1,3 +1,5 @@
+https://www.shlomifish.org/humour/Terminator/Liberation/ongoing-text.html
+https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/
 #include <stdio.h>
 #include <stdlib.h>
 

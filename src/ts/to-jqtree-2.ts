@@ -2,8 +2,30 @@
 function shlomif_load_nav(page_path: string): void {
     $(() => {
         const footer = $("body > footer");
+        const prev_page = $('#navbar .nav_links a[accesskey="p"]');
+        const next_page = $('#navbar .nav_links a[accesskey="n"]');
+        let markup: string = "";
+        markup += "<p>";
+        if (prev_page) {
+            markup +=
+                '<a class="bottom_nav previous" href="' +
+                prev_page.attr("href") +
+                '">' +
+                "Previous Page" +
+                "</a>";
+        }
+        if (next_page) {
+            markup +=
+                '<a class="bottom_nav next" href="' +
+                next_page.attr("href") +
+                '">' +
+                "Next Page" +
+                "</a>";
+        }
+        markup += "</p>";
         footer.prepend(
-            '<p><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
+            markup +
+                '<p><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
                 page_path +
                 (page_path === "" || /\/$/.test(page_path) ? "" : ".tt2") +
                 '">Page source</a></p>',

@@ -57,11 +57,6 @@ in a car accident.
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE karma_block %]
-[% PROCESS karma_block %]
-[% END %]
-
 [% default_toc %]
 
 <div class="faq fancy_sects lim_width wrap-me">

@@ -9,7 +9,7 @@ function shlomif_load_nav(page_path: string): void {
         if (prev_page) {
             markup +=
                 '<a class="bottom_nav previous" href="' +
-                prev_page.attr("href") +
+                escape_html(prev_page.attr("href")) +
                 '">' +
                 "Previous Page" +
                 "</a>";
@@ -17,7 +17,7 @@ function shlomif_load_nav(page_path: string): void {
         if (next_page) {
             markup +=
                 '<a class="bottom_nav next" href="' +
-                next_page.attr("href") +
+                escape_html(next_page.attr("href")) +
                 '">' +
                 "Next Page" +
                 "</a>";

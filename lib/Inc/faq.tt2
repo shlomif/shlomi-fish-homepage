@@ -30,11 +30,6 @@
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE shlomif_faqs_links %]
-[% PROCESS shlomif_faqs_links %]
-[% END %]
-
 [% BLOCK why_fan_fic__block %]
 
 <p>
@@ -176,11 +171,6 @@ Fish (= me): "Hackers make the best warriors"</a> )
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE fanfic__older_sources_than_1900 %]
-[% PROCESS fanfic__older_sources_than_1900 %]
-[% END %]
-
 [% SET GitHub = '<a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>' %]
 
 [% BLOCK fanfic__ride_princess_celestia_next %]
@@ -199,11 +189,6 @@ entertaining than <a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings">
 was even shortly after LotR was written.
 </p>
 
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE fanfic__ride_princess_celestia_next %]
-[% PROCESS fanfic__ride_princess_celestia_next %]
 [% END %]
 
 [% BLOCK avoiding_non_helpful_criticism %]
@@ -256,11 +241,6 @@ One tip I can offer for dealing with critics who only provide vague
 criticism is to ask them to point out <b>one</b> specific issue.
 </p>
 
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE avoiding_non_helpful_criticism %]
-[% PROCESS avoiding_non_helpful_criticism %]
 [% END %]
 
 [% BLOCK communicative_criticism__block %]
@@ -329,11 +309,6 @@ I also recall being given a list of reasons by a web ad service for why my
 site was unacceptable, and they were far too vague.
 </p>
 
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE communicative_criticism__block %]
-[% PROCESS communicative_criticism__block %]
 [% END %]
 
 [% BLOCK my_sites__raw %]
@@ -407,11 +382,6 @@ Some FAQs I co-maintain:
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE my_sites__raw %]
-[% PROCESS my_sites__raw %]
-[% END %]
-
 [% BLOCK my_sites %]
 
 [% WRAPPER h2_section id = "my-sites" title = "A List of Sites I Maintain" %]
@@ -420,11 +390,6 @@ Some FAQs I co-maintain:
 
 [% END %]
 
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE my_sites %]
-[% PROCESS my_sites %]
 [% END %]
 
 [% BLOCK faq__broken_links %]
@@ -445,11 +410,6 @@ Please don't waste my time E-mailing me about them.
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE faq__broken_links %]
-[% PROCESS faq__broken_links %]
-[% END %]
-
 [% BLOCK piracy_vs_obscurity %]
 
 <p>
@@ -459,9 +419,4 @@ Around ~2000 <a href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=gre
 artists is not piracy — it’s obscurity.</q>.
 </p>
 
-[% END %]
-
-[% IF 0 %]
-[% INCLUDE piracy_vs_obscurity %]
-[% PROCESS piracy_vs_obscurity %]
 [% END %]

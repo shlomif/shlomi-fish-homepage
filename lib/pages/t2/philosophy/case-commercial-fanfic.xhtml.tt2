@@ -13,11 +13,6 @@
 href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#the_pygmalion_effect_and_the_golem_effect">Pygmalion effect vs.
 the Golem effect</a>
 [% END %]
-
-[% IF 0 %]
-[% INCLUDE pygm %]
-[% PROCESS pygm %]
-[% END %]
 [% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
 [% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
 [% SET GitHub = '<a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>' %]

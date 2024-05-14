@@ -4,6 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/shlomif_head_photo_tag.tt2" %]
+[% PROCESS "Inc/shlomif_love_romance_sex.tt2" %]
 
 [% INCLUDE picture_tag alt = "Picture of Shlomi Fish", class = "eng", title = "Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr",  %]
 
@@ -53,15 +54,11 @@ and is always on the path for self-growth and optimism
 </p>
 </li>
 
-<li>
-<p>
-A non-smoker.
-</p>
-</li>
+[% INCLUDE non_smoker_SO %]
 
 <li>
 <p>
-Speaks English and/or Israeli Hebrew.
+Speaks English and preferably Israeli Hebrew too.
 </p>
 </li>
 
@@ -133,7 +130,6 @@ or sex life - they just share them. And finally, we both are allowed to
 flirt with other people.
 </p>
 </li>
-
 
 </ul>
 

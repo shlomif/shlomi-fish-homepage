@@ -26,7 +26,7 @@ class MyTests(unittest.TestCase):
         root = etree.XML(xml)
         self.assertEqual(len(root.xpath(
             ".//ncx:navMap/ncx:navPoint/ncx:navLabel/" +
-            "ncx:text[text()='Introducing Josefus']",
+            "ncx:text[text()='Introducing Josephus']",
             namespaces=ns,
             )),
             1

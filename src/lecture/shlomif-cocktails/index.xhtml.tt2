@@ -1,0 +1,18 @@
+[%- SET title = "Shlomi Fish’s improvised, non-Alcoholic, cocktails" -%]
+
+[%- WRAPPER wrap_html -%]
+[% PROCESS "Inc/lectures.tt2" %]
+
+<div class="fancy_sects">
+
+[% default_toc %]
+
+<p>
+TODO .
+</p>
+
+[% path_slurp("docbook/5/rendered/shlomif-cocktails.xhtml") %]
+
+</div>
+
+[% END %]

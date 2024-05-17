@@ -241,6 +241,12 @@ my $_section_navmenu_tree_contents = {
                 },
             ],
         },
+        {
+            text  => "Non-alcoholic cocktails",
+            title =>
+                "Improvised, pseudo-“original”, non-Alcoholic, cocktails",
+            url => "lecture/shlomif-cocktails/",
+        },
     ],
 };
 

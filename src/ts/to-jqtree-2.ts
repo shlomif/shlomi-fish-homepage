@@ -1,7 +1,6 @@
 "use strict";
 function shlomif_load_nav(page_path: string): void {
-    $(() => {
-        const footer = $("body > footer");
+    const _calc_markup = () => {
         const prev_page = $('#navbar .nav_links a[accesskey="p"]');
         const next_page = $('#navbar .nav_links a[accesskey="n"]');
         let markup: string = "";
@@ -23,6 +22,12 @@ function shlomif_load_nav(page_path: string): void {
                 "</a>";
         }
         markup += "</p>";
+        return markup;
+    };
+
+    $(() => {
+        const footer = $("body > footer");
+        const markup: string = _calc_markup();
         footer.prepend(
             markup +
                 '<p><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +

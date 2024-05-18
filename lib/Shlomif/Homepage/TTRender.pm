@@ -347,6 +347,7 @@ sub render
         $vars->{$name} = _generate_include( $input_tt2_page_path, $inc );
         return;
     };
+    $set->( 'footer_nav_buttons',            'footer_nav_buttons' );
     $set->( 'leading_path_string',           "breadcrumbs-trail" );
     $set->( 'html_head_nav_links',           "html_head_nav_links" );
     $set->( 'shlomif_main_expanded_nav_bar', "shlomif_main_expanded_nav_bar" );

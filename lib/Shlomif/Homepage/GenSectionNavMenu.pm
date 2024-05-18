@@ -6,6 +6,7 @@ use warnings;
 use Moo;
 
 use File::Update                           qw/ write_on_change /;
+use HTML::Widgets::NavMenu::EscapeHtml     qw/ escape_html /;
 use HTML::Widgets::NavMenu::JQueryTreeView ();
 use MyNavData                              ();
 use MyNavData::Hosts                       ();
@@ -88,17 +89,31 @@ sub process_batch
 
         my $shlomif_nav_links_renderer = $nav_results->{nav_links_renderer};
 
-        if (0)
-        {
-            my $nav_links_obj = $rendered_results->{nav_links_obj};
-            $nav_links_obj ||= $rendered_results2->{nav_links_obj};
-        }
+        my $nav_links_obj = $shlomif_nav_links_renderer->{nav_links_obj};
 
         my $out = sub {
             my ( $id, $ref ) = @_;
 
             return write_on_change( $urlp->child($id), $ref );
         };
+
+        my $markup = "<p>";
+        if ( my $url = $nav_links_obj->{'prev'} )
+        {
+            $markup .=
+                  '<a class="bottom_nav previous" href="'
+                . escape_html( $url->direct_url() ) . '">'
+                . "Previous Page" . "</a>";
+        }
+        if ( my $url = $nav_links_obj->{'next'} )
+        {
+            $markup .=
+                  '<a class="bottom_nav next" href="'
+                . escape_html( $url->direct_url() ) . '">'
+                . "Next Page" . "</a>";
+        }
+        $markup .= "</p>";
+        $out->( 'footer_nav_buttons', \$markup, );
 
         $out->( 'sect-navmenu', \( $section_nav_menu->get_html ), );
         if ( $url =~ m#/Queen-Padme.*cast\.html\z# )

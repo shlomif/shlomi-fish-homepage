@@ -648,6 +648,30 @@ EOF
         entry_extra_html => <<'EOF',
 EOF
     },
+    {
+        id         => 'He-Damsel-in-Distress-and-a-Distressing-Damsel',
+        tagline    => "TODO",
+        logo_alt   => "TODO",
+        logo_class => "selina",
+        logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "He-Damsel-in-Distress-and-a-Distressing-Damsel",
+        entry_text => "He-Damsel-in-Distress and a Distressing Damsel",
+        start_date => DateTime->new( day => 18, month => 5, year => 2024, ),
+        href       => "humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/",
+        abstract   => <<"EOF",
+<p class="abstract">
+In a parallel universe, Tiffany Alvord’s territorial jealousy of Shlomi Fish (= me),
+aims to have a far-reaching effect on the multiverse’s integrity. But luckily
+the Foundation For Fantastecha™n Functional Fidelity (= “FFFFF” or “quintuple-F”)
+has intervened.
+</p>
+
+$FAN_FIC_PARA
+EOF
+        entry_extra_html => <<'EOF',
+EOF
+    },
 );
 
 my @inactive_Stories = _to_story_objects(

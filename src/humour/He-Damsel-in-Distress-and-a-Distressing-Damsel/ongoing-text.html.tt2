@@ -1,0 +1,10 @@
+[%- SET title = "He-Damsel-in-Distress and a Distressing Damsel - Ongoing Text" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[%- long_stories.calc_common_top_elems(id => 'He-Damsel-in-Distress-and-a-Distressing-Damsel') -%]
+
+[%- path_slurp("screenplay-xml/rendered-html/He-Damsel-in-Distress-and-a-Distressing-Damsel.html") -%]
+
+[%- END -%]

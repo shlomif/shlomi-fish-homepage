@@ -378,6 +378,20 @@ my $_humour_tree_contents = {
                                 },
                             ],
                         },
+                        {
+                            text =>
+"He-Damsel-in-Distress and a Distressing Damsel",
+                            subs => [
+                                {
+                                    text  => "Ongoing Text",
+                                    title => "Ongoing Text of the Screenplay",
+                                    url   =>
+"humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/ongoing-text.html",
+                                },
+                            ],
+                            url =>
+"humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/",
+                        },
                     ],
                 },
                 {

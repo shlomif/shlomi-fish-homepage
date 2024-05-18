@@ -230,6 +230,7 @@ $(POST_DEST)/humour/All-in-an-Atypical-Day-Work/All-in-an-Atypical-Day-Work.epub
 $(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(POST_DEST)/humour/Cookie-Monster--The-Slayer/Cookie-Monster--The-Slayer.epub \
+$(POST_DEST)/humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/He-Damsel-in-Distress-and-a-Distressing-Damsel.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \

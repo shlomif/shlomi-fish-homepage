@@ -98,11 +98,13 @@ hhgg_convert: $(HHGG_CONVERT_SCRIPT_DEST)
 $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng.txt : $(HHGG_CONVERT_SCRIPT_SRC) $(SRC_SRC_DIR)/humour/by-others/hitchhiker-guide-to-star-trek-tng.txt
 	$(PERL) $<
 
+MY_TT_PROCESSOR = $(PERL) bin/my-tt-processor.pl -o $@ $<
+
 $(ALL-IN-AN-ATYPICAL-DAY-WORK__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/All-in-an-Atypical-Day-Work.screenplay-text.txt.tt2
-	$(PERL) bin/my-tt-processor.pl -o $@ $<
+	$(call MY_TT_PROCESSOR)
 
 $(HE-DAMSEL-IN-DISTRESS-AND-A-DISTRESSING-DAMSEL__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/He-Damsel-in-Distress-and-a-Distressing-Damsel.screenplay-text.txt.tt2
-	$(PERL) bin/my-tt-processor.pl -o $@ $<
+	$(call MY_TT_PROCESSOR)
 
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 

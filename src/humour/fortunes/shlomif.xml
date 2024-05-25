@@ -2086,36 +2086,74 @@ means.
         <meta>
             <title>Why Shlomi Fish Dislikes Lisp</title>
         </meta>
-        <raw>
+        <quote>
             <body>
-                <text><![CDATA[> This reminds me of Paul Graham’s articles, in which he claims that LISP
-> programmers are better. But why is it so (whether or not you agree to
-> the conclusion)? There are at least two opposite reasons: 1. Because
-> programmers that learned LISP become better 2. Because good programmers
-> prefer LISP when they come to know it.
 
+
+<blockquote>
+
+<p>
+This reminds me of Paul Graham’s articles, in which he claims that LISP
+programmers are better. But why is it so (whether or not you agree to the
+conclusion)? There are at least two opposite reasons: 1. Because programmers
+that learned LISP become better 2. Because good programmers prefer LISP when
+they come to know it.
+</p>
+
+</blockquote>
+
+<p>
 No. 1 is true, naturally. No. 2 is not true - I know LISP but I prefer Perl.
 Other like Python, etc. The reasons I don’t prefer LISP are:
+</p>
 
-1. The standards of Common LISP and Scheme don’t define anything practical.
-2. LISP is at the moment incredibly verbose.
-3. As Larry Wall noted, all LISP code comes in parenthesis and so it all looks
+<ol>
+
+<li>
+<p>
+The standards of Common LISP and Scheme don’t define anything practical.
+</p>
+</li>
+
+<li>
+<p>
+LISP is at the moment incredibly verbose.
+</p>
+</li>
+
+<li>
+<p>
+As Larry Wall noted, all LISP code comes in parenthesis and so it all looks
 the same. (Perl is the exact opposite in this regard).
-4. I cannot make heads nor tails of serious LISP code. Many LISPers create so
+</p>
+</li>
+
+<li>
+<p>
+I cannot make heads nor tails of serious LISP code. Many LISPers create so
 many macros and use them along with regular LISP code, so you keep having to
 refer to the previous definitions, and make a lot of research to get you
 started.
+</p>
+</li>
 
+</ol>
+
+
+<p>
 SICP Scheme is easy and fun. But serious LISP code can take too much time to
 understand. OTOH, recently I had little problem reading the source code of
 other Perl programmers, and extending it or fixing bugs. (likewise for
-Python).]]></text>
+Python).
+</p>
+
             </body>
+
             <info>
                 <author>Shlomi Fish</author>
                 <work href="http://www.mail-archive.com/linux-il%40cs.huji.ac.il/msg39629.html">Post to Linux-IL</work>
             </info>
-        </raw>
+        </quote>
     </fortune>
     <fortune id="we-dont-know-his-cellphone">
         <meta>

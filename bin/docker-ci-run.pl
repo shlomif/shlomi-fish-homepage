@@ -50,7 +50,7 @@ use File::Basename qw/ basename /;
 my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
 my $EN      = "export $NOSYNC";
 my $configs = {
-    'debian:sid' => Docker::CLI::Wrapper::Container::Config->new(
+    'debian:12' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_debian",
             install_langpack            => "false",

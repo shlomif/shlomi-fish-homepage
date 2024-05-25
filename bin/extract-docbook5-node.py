@@ -30,8 +30,9 @@ ns = {
 with open(in_fn, "rb") as fh:
     xml = fh.read()
 root = etree.XML(xml)
-node = root.xpath(xpath, namespaces=ns, )[0]
-attr = '{xlink}href'.format(xlink=("{" + ns['xlink'] + "}"))
-for link in node.xpath(".//*[starts-with(@xlink:href, '#')]", namespaces=ns, ):
-    link.set(attr, baseurl + link.get(attr))
-print(etree.tostring(node).decode('utf-8'), end='')
+for node in root.xpath(xpath, namespaces=ns, ):
+    attr = '{xlink}href'.format(xlink=("{" + ns['xlink'] + "}"))
+    for link in node.xpath(".//*[starts-with(@xlink:href, '#')]",
+                           namespaces=ns, ):
+        link.set(attr, baseurl + link.get(attr))
+    print(etree.tostring(node).decode('utf-8'), end='')

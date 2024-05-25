@@ -150,3 +150,12 @@ img.bizcard {
     border-radius: 0.35em;
     max-width: 80%;
 }
+
+table.fav_color {
+    td.fav_color {
+        $lime: #c0ff00;
+        background: $lime;
+        border: 3px solid black;
+        padding: 3em;
+    }
+}

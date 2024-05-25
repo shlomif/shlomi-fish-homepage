@@ -1,8 +1,9 @@
+[% SET h_offset_size = 0 %]
 [%- BLOCK h_section -%]
 [% SET section_element = (section_element || "section") %]
 [%# THROW "dr section_element = ${section_element}" %]
-<[% section_element %] class="[% h_class %][% IF sect_class %] [% sect_class %][% END %]">
-[% UNLESS xhtml1 %]<header>[% END %]<[% h_tag %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_tag %]>[% extra_h_header_contents || "" %][% UNLESS xhtml1 %]</header>[% END %]
+<[% section_element %] class="[% h_offset(h_offset_size, h_class) %][% IF sect_class %] [% sect_class %][% END %]">
+[% UNLESS xhtml1 %]<header>[% END %]<[% h_offset(h_offset_size, h_tag) %] id="[% id %]">[% IF href %]<a href="[% href %]">[% END %][% title %][% IF href %]</a>[% END %]</[% h_offset(h_offset_size, h_tag) %]>[% extra_h_header_contents || "" %][% UNLESS xhtml1 %]</header>[% END %]
 [% content %]
 </[% section_element %]>
 [%- END -%]

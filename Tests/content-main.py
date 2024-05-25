@@ -313,6 +313,18 @@ class MyTests(html_unit_test.TestCase):
             ".//head/link[@rel='next' and contains(@href, 'humour')]",
         )
 
+    def test_philosophy_general_essays_block(self):
+        input_fn = 'dest/post-incs/t2/philosophy/index.xhtml'
+        doc = self.doc(input_fn)
+        doc.has_one(".//section[./header/h3[@id='general-essays']]" +
+                    "[.//article[./header/h5[@id='put_cards_2013'" +
+                    " and " +
+                    "(./a/text()" +
+                    "='Putting all the Cards on the Table (2013)'" +
+                    ")" +
+                    "]]]")
+        return
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

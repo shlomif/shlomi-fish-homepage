@@ -198,6 +198,17 @@ sub h_inc_path_slurp
     return path_slurp(shift) =~ s#<(/?)h([0-9]+)#"<". $1 ."h". ( $2 + 1 )#egr;
 }
 
+sub h_offset
+{
+    my ( $h_offset_size, $tag ) = @_;
+
+    if ( $tag !~ s#\A h ([0-9]) \z#"h" . ( $1 + $h_offset_size )#emsx )
+    {
+        die "wrong format for tag - '$tag'";
+    }
+    return $tag;
+}
+
 sub _shlomif_include_colorized_file
 {
     my $args = shift;
@@ -282,6 +293,7 @@ qq#\\tan{\\left[\\arcsin{\\left(\\frac{1}{2 \\sin{36°}}\\right)}\\right]}#,
             retrieved_slurp   => \&retrieved_slurp,
             h_dec_path_slurp  => \&h_dec_path_slurp,
             h_inc_path_slurp  => \&h_inc_path_slurp,
+            h_offset          => \&h_offset,
             path_slurp        => \&path_slurp,
             xml_fiction_slurp => $xml_fiction_slurp,
             shlomif_include_colorized_file => \&_shlomif_include_colorized_file,

@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/general_philosophy.tt2" %]
+
 [% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
@@ -34,6 +36,10 @@ technical (computer or Electronics) books and other non-fiction books.
 <p>
 General essays, about philosophy proper or about leading a better life.
 </p>
+
+[% SET h_offset_size = h_offset_size + 1 %]
+[% INCLUDE general_philosophy_block %]
+[% SET h_offset_size = h_offset_size - 1 %]
 
 [% END %]
 

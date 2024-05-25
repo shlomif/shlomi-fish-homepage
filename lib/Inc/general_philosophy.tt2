@@ -1,0 +1,93 @@
+[% BLOCK general_philosophy_block %]
+
+[% WRAPPER h3_section id = "summaries_of_my_philosophy" title = "Summaries of my personal philosophy (“Rindolfism”)" %]
+
+[% SET section_element = "article" %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/the-eternal-jew/" id = "the_eternal_jew" title = "The Eternal Jew" %]
+
+<p>
+An article that nicely summarizes the principals of my view on self and of
+life. Do you think highly of yourself? Do you think highly of yourself enough?
+Do you think you can influence the world? It’s all there.
+</p>
+
+[% END %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/philosophy/putting-all-cards-on-the-table-2013/" id = "put_cards_2013" title = "Putting all the Cards on the Table (2013)" %]
+
+<p>
+What is the problem with
+<a href="[% base_path %]philosophy/computers/education/opinion-on-the-technion/">the
+Technion</a> and why is it graver in M.I.T., and
+why you should watch the film
+<a href="http://en.wikipedia.org/wiki/Silver_Linings_Playbook"><i>Silver
+Linings Playbook</i></a> to realise why it's
+not a problem? Why was the David who fought Goliath a hacker, and what is the
+difference between a tragic hero and an action hero? What was the second major
+battle that Chuck Norris lost? What are the machines that can give us
+questions (and lots of them)? Why not exerting a mental effort will make
+matters go from bad to worse? Who was the Alpha Female of
+<a href="http://en.wikipedia.org/wiki/Web_1.0">Web 1.0</a>? And
+what were my two greatest mistakes, which you should not duplicate?
+</p>
+
+<p>
+I got tired of truly intellectual people like me speaking in riddles
+all the time and kinda lying to themselves and to others in their artworks,
+and hiding a lot of what they know, so I decided to put all the cards I have
+now on the table in a big tour-de-force. It's not finished yet, but still
+usable, and there's more to come. Not a perfect essay, and not for everyone,
+but imperfect and sweet.
+</p>
+
+[% END %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/philosophy/putting-cards-on-the-table-2019-2020/" id = "put_cards_2019_2020" title = "Putting Cards on the Table (2019-*)" %]
+
+<p>
+A work-in-progress update to <a href="#put_cards_2013">the previous attempt</a>
+to codify <a href="[% base_path %]me/rindolf/#rindolfism">Rindolfism</a>.
+</p>
+
+[% END %]
+
+[% SET section_element = "section" %]
+
+[% END %]
+
+[% WRAPPER h3_section id = "other-essays" title = "Other essays" %]
+
+[% SET section_element = "article" %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/philosophy/guide-to-neo-tech/" id = "guide_to_neo_tech" title = "Guide to Neo-Tech" %]
+
+<p>
+A guide to the online Neo-Tech resources.
+</p>
+
+[% END %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/philosophy/advice-for-the-young/" id = "advice_for_the_young" title = "Advice for the Young" %]
+
+<p>
+Some advice for people, especially young ones. Mostly intended for those
+who are interested in computing, but some of it is also pertinent to others.
+</p>
+
+[% END %]
+
+[% WRAPPER h4_section href = "${base_path}philosophy/philosophy/closed-books-are-so-19th-century/" id = "closed_books" title = "Why Closed Books are So 19th Century" %]
+
+<p>
+An Essay explaining why authors of books should make sure they are available
+online free-of-charge.
+</p>
+
+[% END %]
+
+[% SET section_element = "section" %]
+
+[% END %]
+
+[% END %]

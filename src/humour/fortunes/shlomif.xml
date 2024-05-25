@@ -1703,38 +1703,76 @@ for most of that.
         <meta>
             <title>More Advanced than CVS</title>
         </meta>
-        <raw>
+        <quote>
             <body>
-                <text><![CDATA[On Sunday 01 April 2007, chromatic wrote:
-> On Saturday 31 March 2007 15:26, Yuval Kogman wrote:
-> > uses_version_control sounds more like lacks_manifest_skip_file which
-> > should deduct kwalitee IMHO.
->
-> Maybe so, but how else can CPANTS detect that you use the world’s most
-> advanced version control system: CVS?
->
 
+<p>
+On Sunday 01 April 2007, chromatic wrote:
+</p>
+
+<blockquote>
+
+<p>
+On Saturday 31 March 2007 15:26, Yuval Kogman wrote:
+</p>
+
+<blockquote>
+
+<p>
+uses_version_control sounds more like lacks_manifest_skip_file which
+should deduct kwalitee IMHO.
+</p>
+
+</blockquote>
+
+<p>
+Maybe so, but how else can CPANTS detect that you use the world’s most
+advanced version control system: CVS?
+</p>
+
+</blockquote>
+
+<p>
 Are you kidding?
+</p>
 
+<p>
 CVS is not advanced as:
+</p>
 
-1. Microsoft Visual SourceSafe - the only sane choice for good data integrity
+<ol>
+
+<li>
+<p>
+Microsoft Visual SourceSafe - the only sane choice for good data integrity
 and portability.
+</p>
+</li>
 
-2. tarballs/zip-files and patches. This one excels in convenience, and
+<li>
+<p>
+tarballs/zip-files and patches. This one excels in convenience, and
 robustness.
+</p>
+</li>
+</ol>
 
+<p>
 CVS is a very advanced version control system, however. I do wish that
 Subversion (which is a VCS that I have to use against my will) was as good as
 it is.
+</p>
 
-    -- Shlomi Fish answering to chromatic on 01-April-2007]]></text>
+<p>
+( Shlomi Fish answering to chromatic on 01-April-2007 )
+</p>
+
             </body>
             <info>
                 <author>Shlomi Fish</author>
                 <work href="http://www.nntp.perl.org/group/perl.qa/2007/03/msg8491.html">"Re: New CPANTS metrics"</work>
             </info>
-        </raw>
+        </quote>
     </fortune>
     <fortune id="larry-wall-facts">
         <meta>

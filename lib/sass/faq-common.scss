@@ -157,5 +157,10 @@ table.fav_color {
         background: $lime;
         border: 3px solid black;
         padding: 3em;
+
+        &:hover {
+            border-color: red;
+            border-radius: 10px;
+        }
     }
 }

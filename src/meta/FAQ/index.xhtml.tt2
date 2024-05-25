@@ -4822,13 +4822,54 @@ would prefer not to use a GUI editor.
 </p>
 
 <p>
-The reason I am using gvim instead of vim, is because many terminal emulators
-on Linux (including Konsole which is my preferred one) mess up with the
-Hebrew/Latin bidirectionality too much (enough to confuse vim), because the
-syntax highlighting looks nicer there, because the mouse support is better,
-because I like and use the menubar, because Unicode characters are often
-displayed better, and because it does not start much slower than Vim. If the
-console-based Vim works for you, feel free to use it.
+The reasons I am using gvim instead of vim, are:
+</p>
+
+<ol>
+
+<li>
+<p>
+Because many terminal emulators on Linux (including Konsole which is my
+preferred one) mess up with the Hebrew/Latin bidirectionality too much (enough
+to confuse vim).
+</p>
+</li>
+
+<li>
+<p>
+Because the syntax highlighting looks nicer there.
+</p>
+</li>
+
+<li>
+<p>
+Because the mouse support is better.
+</p>
+</li>
+
+<li>
+<p>
+Because I like and use the menubar.
+</p>
+</li>
+
+<li>
+<p>
+Because Unicode characters are often
+displayed better.
+</p>
+</li>
+
+<li>
+<p>
+Because it does not start much slower than Vim.
+</p>
+</li>
+
+</ol>
+
+<p>
+If the console-based Vim works for you - feel free to use it.
 </p>
 
 <p>

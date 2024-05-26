@@ -364,33 +364,52 @@ driver, and invoking Guile from it.
         </info>
       </quote>
     </fortune>
+
     <fortune id="linux-il-tls">
       <meta>
         <title>Linux-IL: TLS</title>
       </meta>
-      <raw>
+      <quote>
         <body>
-          <text><![CDATA[On Tue, Dec 16, 2003, Shaul Karl wrote about "Re: Various performance
+<p>
+On Tue, Dec 16, 2003, Shaul Karl wrote about "Re: Various performance
 problems":
-> On Tue, Dec 16, 2003 at 11:42:49AM +0200, Nadav Har’El wrote:
-> >
-> >       I'm guessing that TLS (thread local storage, NOT transport layer
-> > security)
->
->
->   Is there any work to remove this name clash?
+</p>
 
-Yes, the Thread-Local-Storage people were annoyed by this clash, and
-decided to change their name. The new name they came up was "Storing
-Stuff Locally", or SSL for short.
-]]></text>
+<blockquote>
+
+<p>
+On Tue, Dec 16, 2003 at 11:42:49AM +0200, Nadav Har’El wrote:
+</p>
+
+<blockquote>
+
+<p>
+I'm guessing that TLS (thread local storage, NOT transport layer
+security)
+
+</p>
+
+</blockquote>
+
+<p>
+Is there any work to remove this name clash?
+</p>
+
+</blockquote>
+
+<p>
+Yes, the Thread-Local-Storage people were annoyed by this clash, and decided to change their name. The new name they came up was “Storing Stuff Locally”, or SSL for short.
+</p>
+
         </body>
         <info>
             <author>Nadav Har’El</author>
             <work href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg31801.html">Post to Linux-IL</work>
         </info>
-      </raw>
+      </quote>
     </fortune>
+
     <fortune id="tinic-question-of-existence">
       <meta>
         <title>TINIC: Question of Existence</title>

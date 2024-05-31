@@ -26,3 +26,5 @@ Parallel::Map::Segmented->new()->run(
         ),
     }
 );
+
+$gen->end_();

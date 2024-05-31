@@ -3,6 +3,7 @@ package Shlomif::Homepage::GenSectionNavMenu;
 use strict;
 use warnings;
 
+use DBI ();
 use Moo;
 
 use File::Update                           qw/ write_on_change /;
@@ -38,6 +39,22 @@ my $nav_links_template = <<'EOF';
 [% END %]
 [% END %]
 EOF
+
+my $full_db_path = "node_modules/sects.sqlite3";
+
+my $dbh = DBI->connect( "dbi:SQLite:dbname=$full_db_path",
+    "", "", { RaiseError => 1 } );
+
+$dbh->begin_work;
+
+$dbh->do(
+"CREATE TABLE t (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(60), url VARCHAR(255), data TEXT)"
+);
+
+$dbh->do("CREATE UNIQUE INDEX t_idx ON t ( str_id, url )");
+
+my $insert_sth =
+    $dbh->prepare("INSERT INTO t (str_id, url, data) VALUES(?, ?, ?)");
 
 sub process_batch
 {
@@ -93,6 +110,8 @@ sub process_batch
 
         my $out = sub {
             my ( $id, $ref ) = @_;
+
+            $insert_sth->execute( $id, $proto_url, $$ref );
 
             return write_on_change( $urlp->child($id), $ref );
         };
@@ -209,6 +228,16 @@ sub process_batch
             $out->( 'shlomif_hebrew_expanded_nav_bar', \($html), );
         }
     }
+    return;
+}
+
+sub end_
+{
+    $dbh->commit;
+
+    $insert_sth->finish;
+
+    $dbh->disconnect;
     return;
 }
 

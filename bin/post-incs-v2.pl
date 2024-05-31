@@ -3,8 +3,10 @@
 use strict;
 use warnings;
 
-use App::Gezer ();
-App::Gezer->new->run( { ARGV => \@ARGV } );
+use lib "./lib";
+
+use App::TempGezer ();
+App::TempGezer->new->run( { ARGV => \@ARGV } );
 __END__
 
 =head1 COPYRIGHT & LICENSE

@@ -7,9 +7,8 @@
 <div class="lim_width wrap-me side_toc fancy_sects">
 
 [% default_toc %]
-<section class="h2">
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 This is the text of first revision of the my essay “The Perfect IT Workplace”.
@@ -21,30 +20,33 @@ I’m OK with it publicised as is and would just work on the second revision
 now which will be better publicised.
 </p>
 
-</section>
+[%- END -%]
 
-<section class="h2">
-
-<h2 id="itself">The Article Itself</h2>
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
 
 [% path_slurp("docbook/5/rendered/perfect-it-workplace.xhtml") %]
 
-</section>
+[%- END -%]
 
-<section class="h2">
-
-<h2 id="other_formats">Other Formats</h2>
+[% WRAPPER h2_section id = "other_formats" title = "Other Formats" %]
 
 <ul>
+
 <li>
+<p>
 <a href="perfect-it-workplace.pdf">Acrobat Reader (PDF) Format</a>.
+</p>
 </li>
+
 <li>
+<p>
 <a href="perfect-it-workplace.xml">Original DocBook/XML</a>.
+</p>
 </li>
+
 </ul>
 
-</section>
+[%- END -%]
 
 </div>
 

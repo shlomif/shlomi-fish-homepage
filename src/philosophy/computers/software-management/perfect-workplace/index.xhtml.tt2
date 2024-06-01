@@ -1,26 +1,36 @@
 [%- SET title = "The Perfect Info-Tech Workplace" -%]
-[%- SET desc = "The Perfect Info-Tech Workplace" -%]
+[%- SET desc = "What are some of the software-management methods that we think are best practices." -%]
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="revisions">Revisions</h2>
+[% WRAPPER h2_section id = "revisions" title = "Revisions" %]
 
-<h3 id="rev1"><a href="perfect-it-workplace.xhtml">Revision 1</a></h3>
+[% WRAPPER h3_section href = "perfect-it-workplace.xhtml" id = "rev1" title = "Revision 1" %]
 
 <p>
 As published on Reddit by an associate.
 </p>
 
-<h2 id="coverage">Coverage</h2>
+[%- END -%]
 
-<h3 id="coverage-r1">1st Edition</h3>
+[%- END -%]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% WRAPPER h3_section id = "coverage-r1" title = "1st Edition" %]
 
 <ul>
 
 <li>
+<p>
 <a href="http://www.reddit.com/info/6p9q4/comments/">Reddit.com</a>
+</p>
 </li>
 
 </ul>
+
+[%- END -%]
+
+[%- END -%]
 
 [% END %]

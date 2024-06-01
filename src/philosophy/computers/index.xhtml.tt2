@@ -84,7 +84,7 @@ language</a>.
 
 [% WRAPPER h2_section id = "software-overviews" title = "Software Categories' Overviews" %]
 
-[% WRAPPER h3_section id = "new-breed-of-VCSes" href = "${base_path}philosophy/computers/software/New-Breed-of-Version-Control-Systems/" title = "“The New Breed of Version Control Systems”" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/software/New-Breed-of-Version-Control-Systems/" id = "new-breed-of-VCSes" title = "“The New Breed of Version Control Systems”" %]
 
 <p>
 An old overview of pre-git VCS alternatives.
@@ -96,7 +96,7 @@ An old overview of pre-git VCS alternatives.
 
 [% WRAPPER h2_section id = "misc" title = "Miscellaneous Articles" %]
 
-[% WRAPPER h3_section id = "when-c-is-best" href = "${base_path}philosophy/computers/when-c-is-best/" title = "When C is the Best? (Tool for the Job)" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/when-c-is-best/" id = "when-c-is-best" title = "When C is the Best? (Tool for the Job)" %]
 
 <p>
 An essay that explains the times when the C programming language is the best
@@ -105,7 +105,7 @@ language to use to write an application in, and why it’s still used very often
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "your-prog-lang-must-suck" href = "${base_path}philosophy/computers/your-programming-language-must-suck/" title = "Your Programming Language Must Suck" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/your-programming-language-must-suck/" id = "your-prog-lang-must-suck" title = "Your Programming Language Must Suck" %]
 
 <p>
 An essay illustrating the trade-off choices in programming languages' design, and why there will always be some users

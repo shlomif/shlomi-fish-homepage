@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 The traditional <a href="http://en.wikipedia.org/wiki/Unix">Unix</a> help
@@ -19,7 +19,9 @@ create one <strong>fully-featured and integrated</strong> system for
 <strong>offline and online technical documentation</strong>.
 </p>
 
-<h2 id="how_it_works">How Unixdoc Works</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "how_it_works" title = "How Unixdoc Works" %]
 
 <p>
 The following figure shows the Unixdoc workflow:
@@ -38,21 +40,31 @@ Essentially it receives inputs in most popular formats:
 
 <ol>
 <li>
+<p>
 Man page (formatted using nroff macros)
+</p>
 </li>
 <li>
+<p>
 <a href="http://perldoc.perl.org/perlpod.html">perl
 POD</a>
+</p>
 </li>
 <li>
+<p>
 The WikiWiki formats of <a href="http://www.mediawiki.org/">MediaWiki</a>
 and other popular wikis.
+</p>
 </li>
 <li>
+<p>
 HTML and XHTML.
+</p>
 </li>
 <li>
+<p>
 Etc.
+</p>
 </li>
 </ol>
 
@@ -67,22 +79,32 @@ That’s not all. Other functions that Unixdoc will provide are:
 
 <ol>
 <li>
+<p>
 Hyperlinking.
+</p>
 </li>
 <li>
+<p>
 Applying visual and logical style to the document.
+</p>
 </li>
 <li>
+<p>
 Annotating using keywords.
+</p>
 </li>
 <li>
+<p>
 Searching using keywords, phrases, words in the internal hyperlinks that point
 to the document (a la <a href="http://en.wikipedia.org/wiki/PageRank">Google’s
 PageRank algorithm</a> ).
+</p>
 </li>
 <li>
+<p>
 Including and embedding rich media such as images, videos, sounds,
 mathematical equations and line drawings.
+</p>
 </li>
 </ol>
 
@@ -93,5 +115,7 @@ in his book <a href="http://www.catb.org/esr/writings/taoup/"><i>The Art of Unix
 Programming</i></a>. He gives DocBook/XML as the possible solution, and this
 may actually be a good final format for Unixdoc.
 </p>
+
+[%- END -%]
 
 [% END %]

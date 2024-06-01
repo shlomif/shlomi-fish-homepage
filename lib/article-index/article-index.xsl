@@ -21,10 +21,13 @@
 
 <xsl:template match="contents">
 </xsl:template>
+
 <xsl:template match="contents" mode="toc">
+    <nav>
     <ol>
         <xsl:apply-templates select="section" mode="toc"/>
     </ol>
+    </nav>
     <xsl:apply-templates select="section"/>
 </xsl:template>
 
@@ -92,7 +95,9 @@
         <xsl:apply-templates/>
     </p>
 </xsl:template>
+
 <xsl:template match="a">
     <a href="{@href}"><xsl:apply-templates/></a>
 </xsl:template>
+
 </xsl:stylesheet>

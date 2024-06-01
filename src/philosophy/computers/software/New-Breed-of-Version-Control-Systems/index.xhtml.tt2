@@ -5,7 +5,9 @@
 
 [% WRAPPER note %]
 
+<header>
 <h2 id="note">Note (26-May-2020)</h2>
+</header>
 
 <p>
 This feature was originally published on OnLAMP.com (which was
@@ -64,7 +66,7 @@ article will provide an overview of them.
 
 [%- END -%]
 
-<h2>Common Features Found in Versions Control Systems</h2>
+[% WRAPPER h2_section id = "common-VCS-features" title = "Common Features Found in Versions Control Systems" %]
 
 <p>
 Version control systems come in all shapes and size, but there are
@@ -105,7 +107,9 @@ be cut in two. Worse, it is possible that changes done to the older
 files organization, cannot be effectively committed to the newer one.
 </p>
 
-<h2>CVS</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "cvs" title = "CVS" %]
 
 <p>
 <a href="http://www.cvshome.org/">CVS</a> stands for Concurrent
@@ -136,7 +140,9 @@ many online tutorials. There are many
 available for it.
 </p>
 
-<h2>Subversion</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "subversion" title = "Subversion" %]
 
 <p>
 <a href="http://subversion.tigris.org/">Subversion</a> is a project
@@ -178,7 +184,9 @@ for reference. There are also a lot of add-ons for it, but they
 are still less mature than the CVS ones.
 </p>
 
-<h2>Arch</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "gnu-arch" title = "Arch" %]
 
 <p>
 <a href="http://gnuarch.org/">GNU Arch</a> is a VCS
@@ -214,7 +222,9 @@ Arch is documented with a very basic online help system,
 and a <a href="http://arch.quackerhead.com/~lord/tutorial-tla/arch.html">tutorial</a>.
 </p>
 
-<h2>OpenCM</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "opencm" title = "OpenCM" %]
 
 <p>
 <a href="http://www.opencm.org/">OpenCM</a> is a version control system
@@ -239,7 +249,9 @@ OpenCM runs on UNIXes and on Windows under the cygwin
 emulation. It features a CVS-like command set and is well documented.
 </p>
 
-<h2>Aegis</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "aegis" title = "Aegis" %]
 
 <p>
 <a href="http://aegis.sourceforge.net/">Aegis</a> is a source
@@ -285,7 +297,9 @@ and find exactly what you want. Still, the documentation is of
 high quality.
 </p>
 
-<h2>Monotone</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "monotone" title = "Monotone" %]
 
 <p>
 <a href="http://www.venge.net/monotone/">The Monotone Version Control
@@ -330,7 +344,9 @@ All in all, Monotone holds a lot of promise, and is well-worth taking
 a look.
 </p>
 
-<h2>BitKeeper</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "bitkeeper" title = "BitKeeper" %]
 
 <p>
 <a href="http://www.bitkeeper.com/">BitKeeper</a> is not an open
@@ -365,13 +381,16 @@ working on a non-public project and can afford to pay for BitKeeper,
 it is naturally an option.
 </p>
 
-<h2>Conclusion</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "conclusion" title = "Conclusion" %]
 
 <p>
 You probably should not use CVS, as there are several systems
 out there that are better. This is unless you cannot get hosting for
-something else. (but note that <a href="http://savannah.gnu.org/">
-GNU Savannah</a> provides hosting for Arch, and working with it
+something else. (but note that
+<a href="http://savannah.gnu.org/">GNU Savannah</a> provides hosting for Arch,
+and working with it
 with SourceForge has been documented). You should also not
 use the gratis version of BitKeeper due to its restrictions.
 </p>
@@ -391,7 +410,9 @@ differently.
 And you certainly have a lot of choice.
 </p>
 
-<h2>More Information</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "more-info" title = "More Information" %]
 
 <p>
 An <a href="https://better-scm.shlomifish.org/comparison/">item-by-item
@@ -410,6 +431,8 @@ configuration management tools can be found in the
 FAQs page</a>.
 </p>
 
-[% INCLUDE cc_by_licence_section year="2004" %]
+[% END %]
+
+[% INCLUDE cc_by_licence_section year = "2004" %]
 
 [% END %]

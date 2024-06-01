@@ -5,13 +5,16 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="side_toc">
+
 [% default_toc %]
 
-<h2 id="content">Content</h2>
+[% WRAPPER h2_section id = "content" title = "Content" %]
 
 [% path_slurp("pages/t2/philosophy/how-to-get-help-online.xhtml.processed-stripped") %]
 
-<h2 id="coverage">Coverage</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 
@@ -23,7 +26,9 @@
 
 </ul>
 
-<h2 id="thanks">Thanks and Acknowledgements</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks and Acknowledgements" %]
 
 <ul>
 
@@ -67,6 +72,8 @@ over the article, and pointing out some potential spelling and grammar errors.
 </li>
 
 </ul>
+
+[%- END -%]
 
 </div>
 

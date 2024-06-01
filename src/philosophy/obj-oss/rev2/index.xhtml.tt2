@@ -1,26 +1,33 @@
 [%- SET title = "Objectivism and Open Source - Revision 2 - Text" -%]
 [%- SET desc = "Objectivism and Open Source - Revision 2 - Text" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
 
 [% default_toc %]
 
-<h2 id="itself">The Article Itself</h2>
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
 
-<h3 id="itself3">Article</h3>
+[% WRAPPER h3_section id = "itself3" title = "Article" %]
 
 [% path_slurp("docbook/5/rendered/objectivism-and-open-source.xhtml") %]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "objectivism-and-open-source",  %]
+[%- END -%]
 
-<h2 id="coverage">Coverage</h2>
+[% PROCESS docbook_formats_w_base base = "objectivism-and-open-source" h2_id = "formats" h2_text = "Formats" %]
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <p>
 <b>TODO:</b> fill in.
 </p>
+
+[%- END -%]
+
+[%- END -%]
 
 </div>
 

@@ -15,7 +15,7 @@ These are essays I wrote about psychology.
 
 [% SET section_element = "article" %]
 
-[% WRAPPER h3_section id="hypomanias" href="hypomanias/" title="Dealing with Hypomanias" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/psychology/hypomanias/" id = "hypomanias" title = "Dealing with Hypomanias" %]
 
 <p>
 How I deal with the bad psychological conditions of hypomanias which are states
@@ -26,7 +26,7 @@ anxieties, hypomanias and even had a few manias.
 
 [% END %]
 
-[% WRAPPER h3_section id="elephant" href="elephant-in-the-circus/" title="The Elephant in the Circus" %]
+[% WRAPPER h3_section id="elephant" href="${base_path}philosophy/psychology/elephant-in-the-circus/" title="The Elephant in the Circus" %]
 
 <p>
 A small parable which became an Internet Meme, which I’ve transcribed here
@@ -35,7 +35,7 @@ for posterity.
 
 [% END %]
 
-[% WRAPPER h3_section id="medicating-bipolar" href="why-openly-bipolar-people-should-not-be-medicated/" title="Why Openly Bipolar People Should Not Be Medicated" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/" id = "medicating-bipolar" title = "Why Openly Bipolar People Should Not Be Medicated" %]
 
 <p>
 Parallel with Alan Turing’s medicated treatment for his homosexuality, the sad
@@ -45,7 +45,7 @@ more.
 
 [% END %]
 
-[% WRAPPER h3_section id="changing-the-seldon-plan" href="changing-the-seldon-plan/" title="Changing the Seldon Plan" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/psychology/changing-the-seldon-plan/" id = "changing-the-seldon-plan" title = "Changing the Seldon Plan" %]
 
 <p>
 Why one should dedicate time to implement
@@ -54,7 +54,7 @@ suggestions for refactoring, fixing, and modernising one's work.
 
 [% END %]
 
-[% WRAPPER h3_section id="crossover-hypothesis-about-the-origin-of-consciousness" href="crossover-hypothesis-about-the-origin-of-consciousness/" title="Crossover hypothesis about the origin of human consciousness" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness/" id = "crossover-hypothesis-about-the-origin-of-consciousness" title = "Crossover hypothesis about the origin of human consciousness" %]
 
 [% END %]
 

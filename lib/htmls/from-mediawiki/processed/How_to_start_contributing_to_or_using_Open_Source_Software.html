@@ -16,18 +16,16 @@ This introduction will explain what open-source software is in a series of answe
 </header>
 
 <p>
-While many of the devices and tools we encounter in every day life (e.g: hammers, refrigerators, CD players, pencils, microwave ovens) serve a limited amount of purposes, a computer is a multi-function device, which one needs to instruct what to do. This is done by programming it and the end result is called <b>software</b> which is composed of individual programs and applications.
+While many of the devices and tools we encounter in every day life (e.g: hammers, refrigerators, CD players, pencils, microwave ovens) serve a limited amount of purposes, a computer is a multi-function device, which one needs to instruct what to do. This is done by programming it and the end result is called <b>software</b>, which is composed of individual programs and applications.
 
 </p>
 
 <p>
 If we take your home computer (a stationary machine, a laptop, a netbook, etc.) as an example, then you can use it to run a web browser, a word processor, a spreadsheet program, some games, and other programs - often at the same time. You can also download for free, purchase or even experience directly through the Internet (say on web-sites containing online games) other programs that you can also run on the computer. Sometimes you can run several alternative programs.
-
 </p>
 
 <p>
-Software naturally does not come out of thin air: it has to be programmed by programmers. Some software is distributed in the native computer’s processor machine code and is run directly on it. Some software is distributed directly in modifiable source code (in case the computer already has a different program that can run it directly from there). Some programs take an intermediate approach of implementing a machine-independent bytecode sometimes called a “P-code” which is generated from the source code and then executed. In any case, the source code of the program always exists (or at least existed) somewhere, and is used to prepare it for use and distribution.
-
+Software naturally does not come out of thin air: it has to be programmed by programmers. Some software is distributed in the native computer’s processor machine code and is run directly on it. Some software is distributed directly in modifiable source code (in case the computer already has a different program that can run it directly from there). Some programs take an intermediate approach of implementing a machine-independent bytecode sometimes called a “P-code” which is generated from the source code and then executed. In any case, the source code of the program always exists (or at least existed) somewhere, and is used to prepare it for use and distribution. ( References: <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-do-you-think-about-interpreted-vs-compiled-languages">“Interpreted vs. Compiled”</a> . )
 </p>
 
 </section>
@@ -40,17 +38,14 @@ Software naturally does not come out of thin air: it has to be programmed by pro
 
 <p>
 Shrinkwrap software is software that its programmers have written for other people to use “in the wild”. It can be sold in shops, bought through the Internet, downloaded free of charge, or whatever, but it is still expected to be of general use to a substantial number of people who would like to use it. You can find a lot of programs like that on Software development hubs (“Forges”) such as <a href="http://sourceforge.net/">SourceForge</a>, on software directories such as <a href="http://freecode.com/">Freecode</a>, and on many other sites.
-
 </p>
 
 <p>
 It may seem surprising to some people, but the vast majority of the source code in the world <b>is not</b> intended for shrinkwrap software. A lot of the code out there is used in-house: by banks, governments, companies and individuals and a lot of it is intended to power various embedded devices. Let’s suppose you’ve opened a spreadsheet and wrote a simple formula (such as “=$A1+B$2”). This little formula is code, and unless you’re going to share your spreadsheet with the world (which most people won’t for various reasons) it will remain in-house code. A UNIX command-line user may write many small programs at the command line prompt every day, (such as “grep -F hello *“ to search for files containing the word “hello”) and not only are these programs not going to be released to the public, they are likely going to end up being thrown away after they became functional, ran and yielded the correct results. It is likely that the amount of in-house or throwaway code written in programmable tools like the spreadsheet program, or the UNIX command-line, multiplies the amount of code in the original tool pretty quickly.
-
 </p>
 
 <p>
 <b>Open source software</b> is one type of shrinkwrap software, which, like we said, is intended to be used in the wild by other people, which may actually be sold commercially or otherwise give some commercial benefits to its developers, and as such be considered “commercial software”.  Other types include commercial software that is not open-source (sometimes called “proprietary software”) which needs to be bought for money, non-open-source software which does not cost money (often called <b>“freeware”</b>), and <b>shareware</b> which can be downloaded free-of-charge but requires money for enhanced use, such as using beyond a trial period, getting rid of a nag screen, or enabling extended features.
-
 </p>
 
 <p>
@@ -67,12 +62,10 @@ Now let’s see what makes open source software different.
 
 <p>
 For the sake of the explanation, you’ll also hear people refer to open source software as <b>free software</b> (where “free” means “libre” and not “gratis”), “free and open source software” (or “FOSS” for short) or even “FLOSS - free, libre, and open source software”. All these names refer to the same phenomenon with some different semantic and ideological associations.
-
 </p>
 
 <p>
 The <a href="http://www.gnu.org/philosophy/free-sw.html">“Free Software Definitions”</a> is possibly the most succinct definition of how open source software needs to be licensed in order to be considered open source:
-
 </p>
 
 <ul>
@@ -108,7 +101,7 @@ Basically, a piece of open source software, that ships, has its original human-r
 </p>
 
 <p>
-Nevertheless, this definition still gives some room to maneuver for licensing. Sometimes, downloaded copies of FOSS can be converted into a different licence by any third party (these are called “permissive licences” or “BSD-style licences”), but often code that includes the FOSS code or even just calls subroutines from it needs to be licensed under a similar, free licence. The latter is referred to as “copyleft” and is the foundation of such licences as the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License (GPL)</a> or the <a href="http://en.wikipedia.org/wiki/LGPL">GNU Lesser General Public License (LGPL)</a>, and many similar licenses.
+Nevertheless, this definition still gives some room to maneuver for licensing. Sometimes, downloaded copies of FOSS can be converted into a different licence by any third party (these are called “permissive licences” or “BSD-style licences”), but often code that includes the FOSS code or even just calls subroutines from it needs to be licensed under a similar, free licence. The latter is referred to as <a href="https://en.wikipedia.org/wiki/Copyleft">“copyleft”</a> and is the foundation of such licences as the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License (GPL)</a> or the <a href="http://en.wikipedia.org/wiki/LGPL">GNU Lesser General Public License (LGPL)</a>, and many similar licenses.
 </p>
 
 <p>

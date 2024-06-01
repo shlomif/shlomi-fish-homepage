@@ -2,7 +2,6 @@
 [%- SET desc = "Mathematical Analysis of the Toggle Squares Game" -%]
 [%- SET more_keywords = "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -30,33 +29,31 @@ efficiency of the algorithms.
 </p>
 
 <h2>Table of Contents</h2>
+
+[% default_toc %]
+
 <ul>
 <li>
 <a href="#One_Dimensional_Board">Analysis of a 1-D Toggle-board</a><br/>
 <ul>
 <li>
-<a href="#lemma1">Lemma 1: 1D is always solvable if vector 100..00 can be
-formed.</a>
+<a href="#lemma1">Lemma 1: 1D is always solvable if the vector 100..00 can be formed.</a>
 </li>
 <li>
-<a href="#lemma2">Lemma 2: 1D is always solvable only for N=3k and
-3k+1</a>
+<a href="#lemma2">Lemma 2: 1D is always solvable only for N=3k and 3k+1</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#Two-Dimensional-Board">Main (2-D) Theorems</a><br/>
+<a href="#Two-Dimensional-Board">Analysis of 2-D Boards</a><br/>
 <ul>
-<li><a href="#theorem1">Theorem 1:
-(3k+2)^2 boards are not solvable for every state.</a>
+<li><a href="#theorem1">Theorem 1: (3k+2)^2 boards are not solvable for every state.</a>
 </li>
 <li>
-<a href="#theorem2">Theorem 2: 3k and 3k+1 2-D boards are solvable
-for every state.</a>
+<a href="#theorem2">Theorem 2: 3k and 3k+1 2-D boards are solvable for every state.</a>
 </li>
 <li>
-<a href="#theorem3">Theorem 3: Solvable 3k+2 boards can be solved
-by the one way algorithm.</a>
+<a href="#theorem3">Theorem 3: Solvable 3k+2 boards can be solved by the one way algorithm.</a>
 </li>
 <li>
 <a href="#theorem4">Theorem 4: Solving 3k boards.</a>
@@ -75,7 +72,7 @@ boards</a>
 </li>
 </ul>
 
-[% WRAPPER h2_section id="One_Dimensional_Board" title="Analysis of a 1-D Toggle-board"%]
+[% WRAPPER h2_section id = "One_Dimensional_Board" title = "Analysis of a 1-D Toggle-board" %]
 
 <pre>
 First, I’ll prove some analogous statements about a one-dimensional
@@ -93,7 +90,7 @@ space (or vector field) {0,1}^n where the operations in the set {0,1} are
 XOR for ‘+’ and AND for ‘*’.
 </pre>
 
-[% WRAPPER h3_section id="lemma1" title="Lemma 1"%]
+[% WRAPPER h3_section id = "lemma1" title = "Lemma 1: 1D is always solvable if the vector 100..00 can be formed." %]
 
 <p>
 A 1-D toggle field is solvable for every state if (and only if)
@@ -117,7 +114,7 @@ is solvable. (i.e contained in Sp{Presses} )
 
 [% END %]
 
-[% WRAPPER h3_section id="lemma2" title="Lemma 2"%]
+[% WRAPPER h3_section id = "lemma2" title = "Lemma 2: 1D is always solvable only for N = 3k and 3k+1" %]
 
 <p>
 A 1-D toggle field of size N is solvable for every state if N = 3k
@@ -205,13 +202,13 @@ included in it, and is solvable.
 
 [% END %]
 
-[% WRAPPER h2_section id="Two-Dimensional-Board" title="Analysis of 2-D Boards"%]
+[% WRAPPER h2_section id = "Two-Dimensional-Board" title = "Analysis of 2-D Boards" %]
 
 <p>
 Now for the actual proofs:
 </p>
 
-[% WRAPPER h3_section id="theorem1" title="Theorem 1"%]
+[% WRAPPER h3_section id = "theorem1" title = "Theorem 1: (3k+2)^2 boards are not solvable for every state." %]
 
 <p>
 2-D (3k+2) * (3k+2) boards are not solvable for every state.
@@ -237,7 +234,7 @@ state.
 
 [% END %]
 
-[% WRAPPER h3_section id="theorem2" title="Theorem 2"%]
+[% WRAPPER h3_section id = "theorem2" title = "Theorem 2: 3k and 3k+1 2-D boards are solvable for every state." %]
 
 <p>
 2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solvable for
@@ -318,7 +315,7 @@ Diagram:
 
 [% END %]
 
-[% WRAPPER h3_section id="theorem3" title="Theorem 3"%]
+[% WRAPPER h3_section id = "theorem3" title = "Theorem 3: Solvable 3k+2 boards can be solved by the one way algorithm." %]
 
 <p>
 Solvable states of 3k+2 boards can be solved by the one-way
@@ -344,7 +341,7 @@ will also be cleared.
 
 [% END %]
 
-[% WRAPPER h3_section id="theorem4" title="Theorem 4:"%]
+[% WRAPPER h3_section id = "theorem4" title = "Theorem 4: Solving 3k boards." %]
 
 <p>
 A 2-D board of size (3k) * (3k) can be solved by using the two-way
@@ -423,7 +420,7 @@ afterwards cleared.
 
 [% END %]
 
-[% WRAPPER h3_section id="theorem5" title="Theorem 5:"%]
+[% WRAPPER h3_section id = "theorem5" title = "Theorem 5: Solving 3k+1 boards." %]
 
 <p>
 A 2-D board of size (3k+1)*(3k+1) can be cleared by an
@@ -472,7 +469,7 @@ press those cells and it will be be moved to
 
 [% END %]
 
-[% WRAPPER h2_section id="dim_press_span" title="The Dimension of the Presses Span in 3k+2 boards"%]
+[% WRAPPER h2_section id = "dim_press_span" title = "The Dimension of the Presses Span in 3k+2 boards" %]
 
 <pre>
 (3k+2)*(3k+2) boards are not solvable for every state. The solvable
@@ -524,7 +521,7 @@ span the space of the solvable states of (3k+2) boards.
 
 [% END %]
 
-[% WRAPPER h2_section id="efficiency" title="A Note about Efficiency"%]
+[% WRAPPER h2_section id = "efficiency" title = "A Note about Efficiency" %]
 
 <pre>
 I believe the previous section showed that the 1w-1w algorithm for

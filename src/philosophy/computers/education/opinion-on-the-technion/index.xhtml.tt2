@@ -6,7 +6,7 @@ other Universities) after Graduating from There." -%]
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="about">About this Document</h2>
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
 <p>
 This is a reworked version of
@@ -18,7 +18,9 @@ institutes.
 
 [% default_toc %]
 
-<h2 id="meta">Document Information</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -48,13 +50,17 @@ Last Updated:
 </dd>
 </dl>
 
-<h3 id="licence">Licence</h3>
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2007", ) %]
 
-<h2 id="itself">The Article Itself</h2>
+[%- END -%]
 
-<h3 id="intro">Introduction</h3>
+[%- END -%]
+
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
+
+[% WRAPPER h3_section id = "intro" title = "Introduction" %]
 
 <p>
 We’ve discussed the Technion before on Hackers-IL and I don’t see why we
@@ -66,7 +72,9 @@ how much it applies to other universities.
 I’ll divide this opinion into pieces:
 </p>
 
-<h3 id="quality_of_material">1. Quality of the material covered</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "quality_of_material" title = "1. Quality of the material covered" %]
 
 <p>
 The quality of the material is very good, in my opinion. It is quite up to date and relevant to
@@ -82,7 +90,9 @@ technologies, which is a good thing, in my opinion, because a university’s
 purpose is to teach just that. The latter is best taught by experiencing.
 </p>
 
-<h3 id="the_faculty">2. The Faculty</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "the_faculty" title = "2. The Faculty" %]
 
 <p>
 The lecturers seem to know what they are teaching well. Whether they are
@@ -116,7 +126,9 @@ students. I also suppose it’s impossible to know everything there is to
 know about Electrical Engineering and Computer Science.
 </p>
 
-<h3 id="workload">3. The Workload</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "workload" title = "3. The Workload" %]
 
 <p>
 The workload was very high most of the time. In some courses, my partners
@@ -140,7 +152,7 @@ Generally, I think that there should be a decent amount of workload as it
 forces one to know the material better.
 </p>
 
-<h4 id="why_pair_wise">Why work pair-wise?</h4>
+[% WRAPPER h4_section id = "why_pair_wise" title = "Why work pair-wise?" %]
 
 <p>
 <a href="http://nadav.harel.org.il/homepage/musing/educooperation">Nadav
@@ -236,7 +248,11 @@ criticism. (There’s a documented teamwork “pattern” for this too.)
 </li>
 </ol>
 
-<h3 id="the_tests">4. The Tests</h3>
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h3_section id = "the_tests" title = "4. The Tests" %]
 
 <p>
 By all means, tests should be easy in
@@ -279,7 +295,9 @@ prepare a trace of the TCP protocol by hand (without having covered this
 material in home assignments).
 </p>
 
-<h3 id="students_body">5. The Students’ Body</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "students_body" title = "5. The Students’ Body" %]
 
 <p>
 I was very impressed with the quality of my fellow students (at least
@@ -298,7 +316,9 @@ Still, even the inferior ones were honest and hard-working and so I won’t
 dare label them as “bad” in any way.
 </p>
 
-<h3 id="conclusion">6. Conclusion</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "conclusion" title = "6. Conclusion" %]
 
 <p>
 I’m not sure if studying in the Technion was a wise decision on my part.
@@ -338,7 +358,9 @@ Right now, my general impression of the Technion is more or less positive.
 But I’m still not sure it was worth my time.
 </p>
 
-<h3 id="workplaces_and_the_diploma">7. How Workplaces Treat the Diploma</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "workplaces_and_the_diploma" title = "7. How Workplaces Treat the Diploma" %]
 
 <p>
 Here I have a lot to complain. It is unfortunate that some workplaces
@@ -403,7 +425,9 @@ less picky in such superficial candidate parameters as grades’ average,
 and are looking for actual coding abilities and competency.
 </p>
 
-<h3 id="whether_to_study">8. Should I study or not? And what?</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "whether_to_study" title = "8. Should I study or not? And what?" %]
 
 <p>
 I don’t regret studying Electrical Engineering instead of Computer Science.
@@ -484,7 +508,11 @@ my “Advice for the Young”</a> essay, and also see
 other links there</a>.
 </p>
 
-<h2 id="thanks">Thanks</h2>
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
 
 <p>
 Thanks to Nadav Har’El, Adir Abraham, Omer Zak, Elizabeth Sterling, guy
@@ -493,5 +521,7 @@ keren, Ido Kanner and other people from
 <a href="http://www.perl.org.il/">the Israeli Perl Mongers</a> for
 commenting on early drafts of this article.
 </p>
+
+[%- END -%]
 
 [% END %]

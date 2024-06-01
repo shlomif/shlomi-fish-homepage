@@ -64,7 +64,7 @@ REALWORLDSENSE_SRC := $(SUB_REPOS_BASE_DIR)/shlomif-tech-diary/why-the-so-called
 EXTRACT_XML_PY_SCRIPT := bin/extract-docbook5-node.py
 
 $(SAMSMITHXML): $(SAMSMITHXML_SRC) $(EXTRACT_XML_PY_SCRIPT)
-	$(PYTHON) $(EXTRACT_XML_PY_SCRIPT) $< '//*[@xml:id="history-lesson-about-the-muppeteers"]' 'https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/' > $@
+	$(PYTHON) $(EXTRACT_XML_PY_SCRIPT) --input $< --xpath '//*[@xml:id="history-lesson-about-the-muppeteers"]' --baseurl 'https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/' > $@
 
 COSMOLOGY_XML := $(DOCBOOK5_SOURCES_DIR)/multiverse-cosmology-v0.4.x.xml
 REALWORLDSENSE_XML := $(DOCBOOK5_SOURCES_DIR)/why-the-so-called-real-world-makes-little-sense.xml

@@ -11,13 +11,34 @@ Extract nodes from XML documents while preserving namespaces
 (as opposed to xmllint).
 """
 
+import argparse
 from lxml import etree
 from lxml.html import XHTML_NAMESPACE
-import sys
 
-in_fn = sys.argv.pop(1)
-xpath = sys.argv.pop(1)
-baseurl = sys.argv.pop(1)
+parser = argparse.ArgumentParser(
+    description='xpath extractor')
+parser.add_argument(
+    '--input',
+    required=True,
+    type=str,
+    help='the input filename')
+parser.add_argument(
+    '--xpath',
+    required=True,
+    type=str,
+    help='the xpath query')
+parser.add_argument(
+    '--baseurl',
+    required=True,
+    type=str,
+    help='the base url')
+args = parser.parse_args()
+in_fn = args.input
+xpath = args.xpath
+baseurl = args.baseurl
+# in_fn = sys.argv.pop(1)
+# xpath = sys.argv.pop(1)
+# baseurl = sys.argv.pop(1)
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 dbns = "http://docbook.org/ns/docbook"
 ns = {

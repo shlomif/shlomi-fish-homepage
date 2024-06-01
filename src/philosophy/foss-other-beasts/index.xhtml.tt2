@@ -39,4 +39,10 @@ of the first revision of this essay.
 
 [%- END -%]
 
+[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
+
+[% path_slurp("docbook/5/rendered/foss-and-other-beasts-v3.xhtml") %]
+
+[%- END -%]
+
 [% END %]

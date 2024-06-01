@@ -6,7 +6,7 @@
 
 [% default_toc %]
 
-<h2 id="meta">Document Information</h2>
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -28,6 +28,8 @@ Last Updated:
 12-September-2018
 </dd>
 </dl>
+
+[%- END -%]
 
 [% WRAPPER h2_section id = "xt_basic_dos" title = "XTs, BASICs and DOS" %]
 

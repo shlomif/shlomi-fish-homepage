@@ -3,9 +3,15 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/netiquette.tt2" %]
+
 [% WRAPPER h2_section id = "sections" title = "Sections" %]
 
 [% WRAPPER h3_section href = "${base_path}philosophy/computers/netiquette/email/" id = "email_netiquette" title = "Email Netiquette" %]
+
+[% SET h_offset_size = h_offset_size + 1 %]
+[% INCLUDE email_netiquette_block %]
+[% SET h_offset_size = h_offset_size - 1 %]
 
 [% END %]
 

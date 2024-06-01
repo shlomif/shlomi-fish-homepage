@@ -4,9 +4,10 @@
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
+
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER intro %]
 
 <p>
 Being a software developer, that is also very interested in computers and like
@@ -20,13 +21,11 @@ Some of these essays will require some technical knowledge, but most of them
 can be read by anyone with a pseudo-technical background.
 </p>
 
-<section class="h2">
+[%- END -%]
 
-<h2 id="articles-and-essays">The Articles and Essays</h2>
+[% WRAPPER h2_section id = "articles-and-essays" title = "The Articles and Essays" %]
 
-<section class="h3">
-
-<h3 id="open-source"><a href="open-source/">Articles about Open Source Software</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/" id = "open-source" title = "Articles about Open Source Software" %]
 
 <p>
 These are essays about <a href="http://en.wikipedia.org/wiki/Open_source">Free
@@ -34,46 +33,35 @@ and Open Source Software</a>, which is software that is available along
 with the original source code, and can be freely distributed and modified.
 </p>
 
-</section>
+[% END %]
 
-<section class="h3">
-
-<h3 id="web"><a href="web/">Articles about the World-Wide Web (WWW)</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/" id = "web" title = "Articles about the World-Wide Web (WWW)" %]
 
 <p>
 Articles about the Web, or the Internet in general.
 </p>
 
-</section>
+[% END %]
 
-<section class="h3">
-
-<h3 id="software-management"><a href="software-management/">Articles about
-Software Management</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/software-management/" id = "software-management" title = "Articles about Software Management" %]
 
 <p>
 Software management: leading a team, designing software, working on software,
 hiring employees, growing a user base, software engineering, etc.
 </p>
 
-</section>
+[% END %]
 
-<section class="h3">
-
-<h3 id="how-to-get-help-online"><a href="how-to-get-help-online/">“How to
-Get Help Online?”</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/how-to-get-help-online/" id = "how-to-get-help-online" title = "“How to Get Help Online?”" %]
 
 <p>
 A guide that points to the Internet resources that one should consult
 for getting help online.
 </p>
 
-</section>
+[% END %]
 
-<section class="h3">
-
-<h3 id="high-quality-soft"><a href="high-quality-software/">“What Makes
-Software High-Quality?”</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/high-quality-software/" id = "high-quality-soft" title = "“What Makes Software High-Quality?”" %]
 
 <p>
 An overview of the parameters that make software high-quality, with a focus
@@ -81,22 +69,20 @@ on open-source software, and the various methods that can be used to
 maintain good quality and increase it.
 </p>
 
-</section>
+[% END %]
 
-<section class="h3">
-
-<h3 id="perl"><a href="perl/">Articles about Perl</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/perl/" id = "perl" title = "Articles about Perl" %]
 
 <p>
 Articles about <a href="http://perl-begin.org/">the Perl programming
 language</a>.
 </p>
 
-</section>
+[% END %]
 
-</section>
+[%- END -%]
 
-[% WRAPPER h2_section id = "software-overviews"  title = "Software Categories' Overviews"  %]
+[% WRAPPER h2_section id = "software-overviews" title = "Software Categories' Overviews" %]
 
 [% WRAPPER h3_section id = "new-breed-of-VCSes" href = "${base_path}/philosophy/computers/software/New-Breed-of-Version-Control-Systems/" title = "“The New Breed of Version Control Systems”" %]
 
@@ -108,11 +94,9 @@ An old overview of pre-git VCS alternatives.
 
 [% END %]
 
-<section class="h2">
+[% WRAPPER h2_section id = "misc" title = "Miscellaneous Articles" %]
 
-<h2 id="misc">Miscellaneous Articles</h2>
-
-[% WRAPPER h3_section id = "when-c-is-best"  href = "${base_path}philosophy/computers/when-c-is-best/"  title = "When C is the Best? (Tool for the Job)"  %]
+[% WRAPPER h3_section id = "when-c-is-best" href = "${base_path}philosophy/computers/when-c-is-best/" title = "When C is the Best? (Tool for the Job)" %]
 
 <p>
 An essay that explains the times when the C programming language is the best
@@ -121,7 +105,7 @@ language to use to write an application in, and why it’s still used very often
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "your-prog-lang-must-suck"  href = "${base_path}philosophy/computers/your-programming-language-must-suck/"  title = "Your Programming Language Must Suck"  %]
+[% WRAPPER h3_section id = "your-prog-lang-must-suck" href = "${base_path}philosophy/computers/your-programming-language-must-suck/" title = "Your Programming Language Must Suck" %]
 
 <p>
 An essay illustrating the trade-off choices in programming languages' design, and why there will always be some users
@@ -138,19 +122,16 @@ Why ongoing and unnecessary problems are likely a net economical and psychologic
 
 [%- END -%]
 
-</section>
+[% END %]
 
-<section class="h2">
-
-<h2 id="memoirs"><a href="[% base_path %]prog-evolution/">My Memoirs as a
-Programmer</a></h2>
+[% WRAPPER h2_section href = "${base_path}prog-evolution/" id = "memoirs" title = "My Memoirs as a Programmer" %]
 
 <p>
 My memoirs from the years I worked in various places as a programmer, from
 the times before I kept <a href="[% base_path %]me/blogs/">a blog</a>.
 </p>
 
-</section>
+[% END %]
 
 </div>
 

@@ -15,7 +15,7 @@ These are essays that deal with art, culture, and entertainment.
 
 [% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
-[% WRAPPER h3_section id = "my-rpf" title = "Why I will continue to write my real person fan fiction (2019)" href = "my-real-person-fan-fiction/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/culture/my-real-person-fan-fiction/" id = "my-rpf" title = "Why I will continue to write my real person fan fiction (2019)" %]
 
 <p>
 I was chatting on an <a href="https://en.wikipedia.org/wiki/Xkcd">xkcd channel</a> when
@@ -33,17 +33,17 @@ So what happened all-of-a-sudden?
 
 [% END %]
 
-[% WRAPPER h3_section id = "commercial-fan-fic" title = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry ( 2021 )" href = "case-for-commercial-fan-fiction/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/culture/case-for-commercial-fan-fiction/" id = "commercial-fan-fic" title = "Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry ( 2021 )" %]
 
 [% END %]
 
-[% WRAPPER h3_section id = "multiverse-cosmology" title = "Multiverse cosmology" href = "multiverse-cosmology/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/culture/multiverse-cosmology/" id = "multiverse-cosmology" title = "Multiverse cosmology" %]
 
-[% WRAPPER h4_section href = "multiverse-cosmology/#see-also" id = "multiverse-cosmology--see-also" title = "Multiverse cosmology's see-also links" %]
+[% WRAPPER h4_section href = "${base_path}philosophy/culture/multiverse-cosmology/#see-also" id = "multiverse-cosmology--see-also" title = "Multiverse cosmology's see-also links" %]
 
 [% END %]
 
-[% WRAPPER h4_section href = "multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/" id = "why-the-so-called-real-world-makes-little-sense" title = "Reasons why the outside world, as I perceive it, does not make sense, is contradictory, illogical, or is difficult-to-believe-can-be-real" %]
+[% WRAPPER h4_section href = "${base_path}philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/" id = "why-the-so-called-real-world-makes-little-sense" title = "Reasons why the outside world, as I perceive it, does not make sense, is contradictory, illogical, or is difficult-to-believe-can-be-real" %]
 
 <p>
 More disorganised, and somewhat outdated, but still pertinent.

@@ -1,6 +1,6 @@
 [% default_toc %]
 
-[% WRAPPER h2_section id = "doc_info"  title = "Document Information"  %]
+[% WRAPPER h2_section id = "doc_info" title = "Document Information" %]
 
 <p>
 <b>By:</b> <a href="http://www.shlomifish.org/">Shlomi Fish</a>
@@ -19,17 +19,11 @@ table of contents)
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "license"  title = "Licence"  %]
-
-[% license_obj.by_british_blurb( "year" => "2003", ) %]
-
-[%- END -%]
-
-[% WRAPPER h2_section id = "my_perl_history"  title = "My Perl History"  %]
+[% WRAPPER h2_section id = "my_perl_history" title = "My Perl History" %]
 
 <p>
 When I first learned the <a href="http://www.perl.org/">Perl
-    programming language</a>, I was working right after high-school as a
+programming language</a>, I was working right after high-school as a
 C/C++ Windows systems programmer in a small startup. The job was very
 interesting, but the pay was very low and so I was looking for a better
 job. My friend introduced me to a Ran Eilam who was about to finish
@@ -111,13 +105,13 @@ automatically install things) so I don’t re-invent too many wheels as before.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "why_i_like_perl"  title = "Why I like Perl so much"  %]
+[% WRAPPER h2_section id = "why_i_like_perl" title = "Why I like Perl so much" %]
 
 <p>
 I like the fact that Perl is orthogonal and does not force the poor programmer
 who wishes to learn it to learn too many paradigms. In Java, for example, the
 “Hello World” involves initializing a class and several methods, only to call
-the uncivil “<code>System.out.println("Hello World");</code>”.  In Perl, it is
+the uncivil “<code>System.out.println("Hello World");</code>”. In Perl, it is
 simply
 </p>
 
@@ -279,12 +273,12 @@ incidentally for machines to execute.”
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "recent_history"  title = "Recent History"  %]
+[% WRAPPER h2_section id = "recent_history" title = "Recent History" %]
 
 <p>
 A couple of years ago, life was brought into the dormant Israeli
 Perl community. A <a href="http://www.perl.org.il/">web-site was being
-    maintained</a>, monthly
+maintained</a>, monthly
 meetings are now the norm, and there’s also an active mailing list. We
 even had a perl conference
 (<a href="http://www.perl.org.il/YAPC/2003/">YAPC::Israel::2003</a>) and
@@ -314,7 +308,7 @@ I still did not spend the time I learned in the Technion doing nothing. I did
 my best to learn as much as possible about UNIX and Perl (which I think is
 the language that encompasses its spirit in the best way). I recently read
 <a href="http://www.oreilly.com/catalog/pperl3/">the third edition of the
-    Camel Book</a> which I borrowed from the Perl Mongers Library. I learned
+Camel Book</a> which I borrowed from the Perl Mongers Library. I learned
 so many new things as I have read it (even though beforehand, I was by no
 means a Perl newcomer), that I had to buy it. (which I did)
 </p>
@@ -341,17 +335,19 @@ technologies, and their quality speaks for itself.
 <p>
 Eric Raymond <a href="http://www.faqs.org/docs/artu/ch14s05.html">claims</a>
 in <a href="http://www.faqs.org/docs/artu/"><i>The Art of
-    UNIX Programming</i></a> this:
+UNIX Programming</i></a> this:
 </p>
 
 <blockquote>
-    <p>
-    Python has risen in popularity as rapidly as Tcl has fallen. Though the
-    Perl community is still twice the size of Python’s, a visible tendency of
-    the brightest Perl hackers to migrate to Python has been rather ominous
-    for the former language, especially as there is no migration at all in
-    the opposite direction.
-    </p>
+
+<p>
+Python has risen in popularity as rapidly as Tcl has fallen. Though the
+Perl community is still twice the size of Python’s, a visible tendency of
+the brightest Perl hackers to migrate to Python has been rather ominous
+for the former language, especially as there is no migration at all in
+the opposite direction.
+</p>
+
 </blockquote>
 
 <p>
@@ -390,5 +386,11 @@ to make a generalization between the two divisions - there isn’t any.)
 So, keep the Shift key and the “4” key on your keyboards in working order,
 because you’ll need to use them a lot in your future.
 </p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "license" title = "Licence" %]
+
+[% license_obj.by_british_blurb( "year" => "2003", ) %]
 
 [%- END -%]

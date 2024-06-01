@@ -2,10 +2,9 @@
 [%- SET desc = "I explain what I think about the DeCSS fiasco" -%]
 [%- SET more_keywords = "DeCSS, linux, DVD, DMCA, DRM, free speech, copyrights, censorship" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER note  %]
+[% WRAPPER note %]
 
 <header>
 <h2>Note</h2>
@@ -26,12 +25,12 @@ DeCSS Gallery</a>.
 
 [% END %]
 
-[% WRAPPER h2_section id = "comments" title = "Comments"  %]
+[% WRAPPER h2_section id = "comments" title = "Comments" %]
 
 <p>
 Well, to show my empathy with the DeCSS side of the MPAA vs. DeCSS hackers
 fiasco that is going on, I decided to set up this page which will explain my
-take on this subject.  No, I am not an anarchist or a nihilist or anything like
+take on this subject. No, I am not an anarchist or a nihilist or anything like
 that. I am a <a href="http://www.neo-tech.com/">Neo-Tech</a> Objectivist.
 Still, I believe that objective ethics is not on the side of the MPAA in this
 regard. And following are my reasons:
@@ -120,33 +119,52 @@ it’s a shame they don’t.
 
 [% END %]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="http://decss.robinlionheart.com/">A DeCSS mirror</a>.
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.google.com/search?q=decss">Google search for DeCSS.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.cs.cmu.edu/~dst/DeCSS/Gallery/">DeCSS Gallery - lots of
+“legal” forms to distribute the DeCSS source code.</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://decss.zoy.org/">42 Ways to distribute the DeCSS code</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="http://www.2600.com/news/1227-help.html">2600’s list of DeCSS
+mirrors</a><br/>
+</p>
 
 <ul>
 <li>
-<a href="http://decss.robinlionheart.com/">A DeCSS mirror</a>.
-</li>
-<li>
-<a href="http://www.google.com/search?q=decss">Google search for DeCSS.</a>
-</li>
-<li>
-<a href="http://www.cs.cmu.edu/~dst/DeCSS/Gallery/">DeCSS Gallery - lots of
-“legal” forms to distribute the DeCSS source code.</a>
-</li>
-<li>
-<a href="http://decss.zoy.org/">42 Ways to distribute the DeCSS code</a>
-</li>
-<li>
-<a href="http://www.2600.com/news/1227-help.html">2600’s list of DeCSS
-mirrors</a><br/>
-<ul>
-<li>
+<p>
 <a href="http://www.greasespot.net/">Greasemonkey</a> - an extension for
 Firefox. Its linkify script allows one to convert the texts of the links on
 that page to clickable hyperlinks.
+</p>
 </li>
 </ul>
 </li>
+
 </ul>
 
 [% END %]

@@ -5,7 +5,7 @@
 
 [% WRAPPER h2_section id = "the_articles" title = "The Articles" %]
 
-[% WRAPPER h3_section href = "start-new-thread.html" id = "reply_to_start_new_thread" title = "How to Start a New Thread" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/netiquette/email/start-new-thread.html" id = "reply_to_start_new_thread" title = "How to Start a New Thread" %]
 
 <p>
 Why you should not reply to an existing message in order to start a new thread.
@@ -13,7 +13,7 @@ Why you should not reply to an existing message in order to start a new thread.
 
 [% END %]
 
-[% WRAPPER h3_section href = "reply-to-list.html" id = "reply_to_list" title = "Reply to List" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/netiquette/email/reply-to-list.html" id = "reply_to_list" title = "Reply to List" %]
 
 <p>
 Why you should reply to the list if the original message was a mailing list

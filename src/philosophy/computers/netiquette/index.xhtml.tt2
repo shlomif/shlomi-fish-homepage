@@ -5,7 +5,7 @@
 
 [% WRAPPER h2_section id = "sections" title = "Sections" %]
 
-[% WRAPPER h3_section href = "email/" id = "email_netiquette" title = "Email Netiquette" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/netiquette/email/" id = "email_netiquette" title = "Email Netiquette" %]
 
 [% END %]
 

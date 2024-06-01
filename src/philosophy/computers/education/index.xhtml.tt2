@@ -8,8 +8,7 @@ These are essays about Education and Pedagogy as related to Computers,
 Computer Science and Programming.
 </p>
 
-<h3 id="technion"><a href="opinion-on-the-technion/">My Opinion on Electrical
-Engineering Studies in the Technion</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/education/opinion-on-the-technion/" id = "technion" title = "My Opinion on Electrical Engineering Studies in the Technion" %]
 
 <blockquote>
 
@@ -30,8 +29,9 @@ purpose is to teach just that. The latter is best taught by experiencing.
 
 </blockquote>
 
-<h3 id="intro-lang"><a href="[% base_path %]philosophy/computers/education/introductory-language/">Thoughts
-about the Best Introductory Programming Language</a></h3>
+[%- END -%]
+
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/education/introductory-language/" id = "intro-lang" title = "Thoughts about the Best Introductory Programming Language" %]
 
 <p>
 Thoughts about what is the best introductory programming language in this
@@ -39,5 +39,7 @@ day and age. Includes a critique of some other opinions, some useful relations
 (Language A should come before Language B), a conclusion and other useful
 food for thought.
 </p>
+
+[%- END -%]
 
 [% END %]

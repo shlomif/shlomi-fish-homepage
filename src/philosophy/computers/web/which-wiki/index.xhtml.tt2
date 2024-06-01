@@ -1,10 +1,9 @@
 [%- SET title = "Which Open Source Wiki Works for you?" -%]
 [%- SET desc = "An article I wrote to ONLamp.com about how various popular Open Source wiki implementations fare. A wiki is a world-editable web-site, and wikis have become increasingly popular lately." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="http://www.onlamp.com/pub/a/onlamp/2004/11/04/which_wiki.html">The article itself and some discussion on ONLamp.com</a></h2>
+[% WRAPPER h2_section href = "http://www.onlamp.com/pub/a/onlamp/2004/11/04/which_wiki.html" id = "text" title = "The article itself and some discussion on ONLamp.com" %]
 
 <p>
 This is an article I wrote to <a href="http://www.onlamp.com/">ONLamp.com</a>
@@ -12,7 +11,9 @@ about how various popular Open Source wiki implementations fare. A wiki is a
 world-editable web-site, and wikis have become increasingly popular lately.
 </p>
 
-<h2>Licence</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "license" title = "Licence" %]
 
 <p>
 The licence of the article is
@@ -23,22 +24,32 @@ the same licence). This is after the copyright policy of
 cleared by me.
 </p>
 
-<h2>Links</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 <li>
+<p>
 <a href="http://software.newsforge.com/software/05/06/21/1641223.shtml?tid=74&amp;tid=48">Newsforge.com
 Feature about Preventing Wiki Spam</a> - fails to mention
 the importance of the RSS feed.
+</p>
 </li>
 </ul>
 
-<h2>Updates</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "updates" title = "Updates" %]
 
 <ol>
 <li>
+<p>
 <a href="update-2006-07/">July 2006 Update</a>.
+</p>
 </li>
 </ol>
+
+[%- END -%]
 
 [% END %]

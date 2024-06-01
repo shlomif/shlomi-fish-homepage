@@ -1,10 +1,9 @@
 [%- SET title = "July 2006 Update to “Which Wiki”" -%]
 [%- SET desc = "July 2006 Update to “Which Wiki”" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2 id="about">About this Document</h2>
+[% WRAPPER h2_section id = "about" title = "About this Document" %]
 
 <p>
 Since I wrote the <a href="../">previous article</a>, I learned a lot more
@@ -14,7 +13,9 @@ I’d like to detail some ways of fighting it. Without further ado: here it is.
 
 [% default_toc %]
 
-<h2 id="meta">Document Information</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "meta" title = "Document Information" %]
 
 <dl class="meta">
 <dt>
@@ -37,15 +38,20 @@ Last Updated:
 </dd>
 </dl>
 
-<h3 id="licence">Licence</h3>
+[% WRAPPER h3_section id = "licence" title = "Licence" %]
 
 [% license_obj.by_british_blurb( "year" => "2006", ) %]
 
-<h2 id="body">The Article Itself</h2>
+[%- END -%]
 
-<h3 id="implementations">Updates for the Implementations</h3>
+[%- END -%]
 
-<h4 id="usemodwiki">UseModWiki</h4>
+[% WRAPPER h2_section id = "body" title = "The Article Itself" %]
+
+[% WRAPPER h3_section id = "implementations" title = "Updates for the Implementations" %]
+
+[% WRAPPER h4_section id = "usemodwiki" title = "UseModWiki" %]
+
 <p>
 One should note that UseModWiki has been unmaintained for a long time. However,
 it has been forked into <a href="http://www.oddmuse.org/">Oddmuse</a>, which
@@ -54,7 +60,10 @@ all reports, it should be better that UseModWiki. One should note that the
 MediaWiki syntax is backwards compatible with the UseModWiki one.
 </p>
 
-<h4 id="pmwiki">PmWiki</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "pmwiki" title = "PmWiki" %]
+
 <p>
 As I discovered after the <a href="http://perl-begin.org/">Perl-Begin</a>
 PmWiki was spammed was that even the navigation, etc. parts of its layout
@@ -66,7 +75,9 @@ Perl script</a> to revert the old format of PmWiki to a previous state, in
 case of excessive spamming.
 </p>
 
-<h4 id="mediawiki">MediaWiki</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "mediawiki" title = "MediaWiki" %]
 
 <p>
 I was told that in order to facilitate maintaining several instances of
@@ -76,7 +87,9 @@ sort to the host and URL. I was able to achieve it pretty easily on the
 iglu.org.il host, and upgrading the MediaWiki is thus much easier.
 </p>
 
-<h4 id="twiki">TWiki</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "twiki" title = "TWiki" %]
 
 <p>
 <a href="http://twiki.org/">TWiki</a> had a 4.0.0 release (breaking the
@@ -86,7 +99,9 @@ TWiki code quality is reportedly very bad, but that can be improved with some
 concentrated amount of refactoring.
 </p>
 
-<h4 id="moinmoin">MoinMoin</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "moinmoin" title = "MoinMoin" %]
 
 <p>
 As some people noted to me, it is possible that I misrepresented MoinMoin
@@ -101,7 +116,11 @@ One problem I see with MoinMoin is that it looks cheesy (at least to me). I
 believe the MoinMoin hackers should work on a better look for it.
 </p>
 
-<h3 id="fighting_wiki_spam">Fighting Wiki Spam</h3>
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h3_section id = "fighting_wiki_spam" title = "Fighting Wiki Spam" %]
 
 <p>
 <a href="http://software.newsforge.com/software/05/06/21/1641223.shtml?tid=74&amp;tid=48">An
@@ -173,8 +192,9 @@ annoying.
 </li>
 </ol>
 
-<h3 id="docbook_and_html_to_wikis">DocBook and HTML to Wiki Format and Back
-Again</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "docbook_and_html_to_wikis" title = "DocBook and HTML to Wiki Format and Back Again" %]
 
 <p>
 The CPAN Module [% cpan.self_dist( "d" => "HTML-WikiConverter", ) %] allows
@@ -192,4 +212,8 @@ Summer of Code project</a> for working on a MoinMoin to-and-from DocBook/XML
 conversion.
 </p>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]
+
+[%- END -%]

@@ -1,7 +1,6 @@
 [%- SET title = "Open Source, Free Software and Other Beasts" -%]
 [%- SET desc = "What is Open Source? What is Free Software? Why is it important? Read the essay to find out." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -9,24 +8,35 @@ What is Open Source? What is Free Software? Why is it important? Read the
 essay I wrote about it to find out.
 </p>
 
-[% PROCESS docbook_formats_w_base h2_id = "v3_formats", h2_text = "Third Version (Latest)", base = "version-3/foss-and-other-beasts-v3"  %]
+[% PROCESS docbook_formats_w_base h2_id = "v3_formats", h2_text = "Third Version (Latest)", base = "version-3/foss-and-other-beasts-v3" %]
 
-<h2>Second Revision</h2>
+[% WRAPPER h2_section id = "revision-2" title = "Second Revision" %]
 
 <ul>
+
 <li>
+<p>
 <a href="revision-2/foss-and-other-beasts/">HTML - Read Online</a>
+</p>
 </li>
+
 <li>
+<p>
 <a href="revision-2/">DocBook/XML sources and other file formats</a>
+</p>
 </li>
+
 </ul>
 
-<h2>First Revision</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "revision-1" title = "First Revision" %]
 
 <p>
 <a href="http://fc-solve.shlomifish.org/oss-fs/docbook/">Various formats</a>
 of the first revision of this essay.
 </p>
+
+[%- END -%]
 
 [% END %]

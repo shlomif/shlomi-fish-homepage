@@ -18,7 +18,7 @@ Left-winged and Right-winged people.
 
 [% SET section_element = "article" %]
 
-[% WRAPPER h3_section id = "SummerNSA" title = "The #SummerNSA Effort" href = "${base_path}philosophy/SummerNSA/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/SummerNSA/" id = "SummerNSA" title = "The #SummerNSA Effort" %]
 
 <p>
 An effort to make the NSA more benevolent and transparent, to successfully
@@ -28,7 +28,7 @@ of the screenplay “Summerschool at the NSA”, and several other causes.
 
 [% END %]
 
-[% WRAPPER h3_section id = "objectivism-and-FOSS" title = "Objectivism and Open Source" href = "${base_path}philosophy/obj-oss/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/obj-oss/" id = "objectivism-and-FOSS" title = "Objectivism and Open Source" %]
 
 <p>
 An essay, intended for people who adhere to Ayn Rand’s Objectivism philosophy,
@@ -37,7 +37,7 @@ that explains why the Open Source paradigm is compatible with it.
 
 [% END %]
 
-[% WRAPPER h3_section id = "israel-pales" title = "A Solution to the Israeli-Palestinian Conflict" href = "${base_path}philosophy/israel-pales/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/israel-pales/" id = "israel-pales" title = "A Solution to the Israeli-Palestinian Conflict" %]
 
 <p>
 This is a proposed and innovative solution to the Israeli-Palestinian Conflict.
@@ -45,7 +45,7 @@ This is a proposed and innovative solution to the Israeli-Palestinian Conflict.
 
 [% END %]
 
-[% WRAPPER h3_section id = "case-for-file-swapping" title = "The Case for File Swapping" href = "${base_path}philosophy/case-for-file-swapping/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/case-for-file-swapping/" id = "case-for-file-swapping" title = "The Case for File Swapping" %]
 
 <p>
 Brings arguments for Internet file-swapping - why it is ethical and should be
@@ -54,7 +54,7 @@ legal, and explains why media companies are not harmed by it.
 
 [% END %]
 
-[% WRAPPER h3_section id = "scientology" title = "Why I Concluded that Scientology was Bad" href = "${base_path}philosophy/politics/why-scientology-is-bad/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/politics/why-scientology-is-bad/" id = "scientology" title = "Why I Concluded that Scientology was Bad" %]
 
 <p>
 How I concluded based on very limited data that the Church of Scientology was
@@ -63,14 +63,14 @@ bad and harmful.
 
 [% END %]
 
-[% WRAPPER h3_section id = "drug-legalisation" title = "The Case for Drug Legalisation" href = "${base_path}philosophy/politics/drug-legalisation/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/politics/drug-legalisation/" id = "drug-legalisation" title = "The Case for Drug Legalisation" %]
 
 <p>
 Why the so-called “War on Drugs” is the real drug problem, and why a
 legalisation of the currently illegal narcotics is the right solution.
 </p>
 
-[% WRAPPER h4_section id = "drug-legalisation--hebrew" title = "Hebrew Translation" href = "${base_path}philosophy/politics/drug-legalisation/hebrew.html" %]
+[% WRAPPER h4_section href = "${base_path}philosophy/politics/drug-legalisation/hebrew.html" id = "drug-legalisation--hebrew" title = "Hebrew Translation" %]
 
 <p>
 Hebrew translation of the article, under the same licence.
@@ -80,7 +80,7 @@ Hebrew translation of the article, under the same licence.
 
 [% END %]
 
-[% WRAPPER h3_section id = "define-zionism" title = "Define “Zionism”!" href = "${base_path}philosophy/politics/define-zionism/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/politics/define-zionism/" id = "define-zionism" title = "Define “Zionism”!" %]
 
 <p>
 An article that tries to find out whether “Zionism” and related terms are
@@ -89,7 +89,7 @@ well-understood and explains where I stand on these issues.
 
 [% END %]
 
-[% WRAPPER h3_section id = "dispelling-myths-about-israel" title = "Dispelling Some Myths about Israel" href = "${base_path}philosophy/politics/dispelling-myths-about-israel/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/politics/dispelling-myths-about-israel/" id = "dispelling-myths-about-israel" title = "Dispelling Some Myths about Israel" %]
 
 <p>
 An article that dispels some common myths about Israel.

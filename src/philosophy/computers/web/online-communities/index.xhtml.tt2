@@ -1,11 +1,13 @@
 [%- SET title = "Reflections on Online Communities" -%]
 [%- SET desc = "Reflections on how to manage an online community." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER note  %]
+
+<header>
 <h2 id="note">Note</h2>
+</header>
 
 <p>
 <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">On
@@ -16,21 +18,27 @@ quoting policy</a>. However, I believe that:
 
 <ol>
 <li>
+<p>
 Both Joel and the Law Professor he is quoting are wrong on ethical grounds.
 See my essay <a href="[% base_path %]philosophy/case-for-file-swapping/">“The Case
 for File Swapping”</a> for some things that are wrong with the current
 copyright law, and links to more.
+</p>
 </li>
 
 <li>
+<p>
 This article in part may be considered a critique of Joel’s article. As such,
 one can say that “fair use” law allows me to quote substantial parts of it.
+</p>
 </li>
 
 <li>
+<p>
 I’d rather build on an existing effort, than write my own incoherent article
 from scratch. Joel should take it as a compliment because “Copying is the
 sincerest form of flattery”.
+</p>
 </li>
 </ol>
 
@@ -45,7 +53,7 @@ I need to respect them, even if they exist.
 
 [% default_toc %]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This essay gives my thoughts about Joel on Software’s
@@ -56,7 +64,9 @@ on Software subscribers by E-mail, while the public web version had less
 content. I will respond only to the public web version.
 </p>
 
-<h2 id="dates">Dates</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "dates" title = "Dates" %]
 
 <dl>
 <dt>Published:</dt>
@@ -65,7 +75,9 @@ content. I will respond only to the public web version.
 <dd>18-April-2007</dd>
 </dl>
 
-<h2 id="text">The Essay Itself</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "text" title = "The Essay Itself" %]
 
 <p>
 Joel Spolsky wrote
@@ -79,7 +91,7 @@ In this text, I’d like to comment on some of the claims that Spolsky made
 in the essay. First you’ll have to make sure that you’ve read it.
 </p>
 
-<h3 id="existing_online_forums">Comments on the Review of the Existing Online Forums</h3>
+[% WRAPPER h3_section id = "existing_online_forums" title = "Comments on the Review of the Existing Online Forums" %]
 
 <blockquote>
 <p>
@@ -107,7 +119,9 @@ services, and its general atmosphere, make talking there an absolute joy. I
 have had very few problems there.
 </p>
 
-<h3 id="email">E-mail</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "email" title = "E-mail" %]
 
 <blockquote>
 <p>
@@ -148,7 +162,9 @@ because they don’t provide RSS feeds or have an email feature, and I believe
 most people do too.
 </p>
 
-<h3 id="branching">Branching</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "branching" title = "Branching" %]
 
 <blockquote>
 <p>
@@ -165,8 +181,9 @@ way, replies to posts are answered as branched posts, instead of as replies
 to the topic that come after many other replies.
 </p>
 
-<h3 id="most_recent_reply_first">Promote
-Topics with the Most Recent Replies</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "most_recent_reply_first" title = "Promote Topics with the Most Recent Replies" %]
 
 <blockquote>
 <p>
@@ -203,7 +220,9 @@ to the top, are incredibly annoying, and I usually stop frequenting them after
 a short while. Usually, my conversations there disappear to oblivion.
 </p>
 
-<h3 id="confirmation">About Posts Confirmation</h3>
+[%- END -%]
+
+[% WRAPPER h3_section id = "confirmation" title = "About Posts Confirmation" %]
 
 <blockquote>
 <p>
@@ -243,9 +262,11 @@ or that they have dangling characters, and to review the post. A good posting
 mechanism should have an optional preview feature.
 </p>
 
-<h3 id="other_comments">Other Comments</h3>
+[%- END -%]
 
-<h4 id="markup">Markup</h4>
+[% WRAPPER h3_section id = "other_comments" title = "Other Comments" %]
+
+[% WRAPPER h4_section id = "markup" title = "Markup" %]
 
 <p>
 The Joel on Software forum has absolutely no markup except for URLs being
@@ -256,19 +277,27 @@ of the following idiosyncrasies:
 
 <ul>
 <li>
+<p>
 Link the following words to a URL. (at least not without giving any option of
 the “&lt;a” tag).
+</p>
 </li>
 <li>
+<p>
 Line breaks (<code>\n</code> characters) cause a new line to start at the post.
 (very annoying!)
+</p>
 </li>
 <li>
+<p>
 A very limited HTML syntax. Support as broad as syntax as possible optionally
 converting tags to more sane tags, but don’t force the user not to input them.
+</p>
 </li>
 <li>
+<p>
 Weird tags like square brackets instead of angles.
+</p>
 </li>
 </ul>
 
@@ -278,7 +307,9 @@ times, people post markup from web pages they created with HTML, and they’ll b
 annoyed if they can’t post it as is.
 </p>
 
-<h4 id="operation">Forum Operation</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "operation" title = "Forum Operation" %]
 
 <p>
 Make sure the forum works, that each topic has a permanent page, and that
@@ -288,7 +319,9 @@ idiosyncrasies. It is a good idea to use a stock forum like PHP-BB, YaBB, etc.
 that are well tested and extensively used.
 </p>
 
-<h4 id="horizontal_scrollbar">Avoid a Horizontal Scroll Bar</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "horizontal_scrollbar" title = "Avoid a Horizontal Scroll Bar" %]
 
 <p>
 Avoid horizontal scroll bars. Trim long URLs in your posts, and make sure that
@@ -296,7 +329,9 @@ people don’t overflow with large codes in “<code>&lt;pre&gt;…&lt;/pre&gt;<
 sections.
 </p>
 
-<h4 id="spam_measurements">Spam Measurements</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "spam_measurements" title = "Spam Measurements" %]
 
 <p>
 Make sure your forum has measurements against spam. Bayesian filtering or a
@@ -305,7 +340,9 @@ different spam filter is a good idea. A must is the
 attribute</a> which will render comment spam useless.
 </p>
 
-<h4 id="cryptic">Don’t be Cryptic</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "cryptic" title = "Don’t be Cryptic" %]
 
 <p>
 Once a comment I posted to a Movable Type-powered weblog was rejected,
@@ -322,7 +359,9 @@ So don’t be cryptic - if something is wrong let the user know exactly what
 that is.
 </p>
 
-<h4 id="permanent_urls">Permanent URLs</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "permanent_urls" title = "Permanent URLs" %]
 
 <p>
 One thing I dislike about the <i>Joel on Software</i> forum is that the URLs
@@ -337,7 +376,9 @@ A better solution would be to display the number of comments added since the
 discussion was last visited by that specific reader.
 </p>
 
-<h4 id="acceptance">Acceptance of Posts</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "acceptance" title = "Acceptance of Posts" %]
 
 <p>
 Accepting good posts is a must for a forum. Furthermore, giving the poster
@@ -381,16 +422,20 @@ of the users because they felt that:
 
 <ol>
 <li>
+<p>
 The paragraph in which I described myself
 was too long (while being intended for the regular article, and still being a
 small amount of the article) - a
 <a href="http://en.wikipedia.org/wiki/Style_over_substance_fallacy">Style
 over substance fallacy</a>.
+</p>
 </li>
 <li>
+<p>
 That I was not eligible to post such an article because I had not been very
 active in the site before - an
 <a href="http://en.wikipedia.org/wiki/Ad-hominem">Ad-hominem fallacy</a>.
+</p>
 </li>
 </ol>
 
@@ -400,14 +445,20 @@ grounds that it was low-quality. I completely gave up on kuro5hin from then
 on.
 </p>
 
-<h4 id="the_people">The People</h4>
+[%- END -%]
+
+[% WRAPPER h4_section id = "the_people" title = "The People" %]
 
 <p>
 Which brings us to another important part: the people who are present and
 make up the community.
 </p>
 
-<h3 id="finale">Finale</h3>
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h3_section id = "finale" title = "Finale" %]
 
 <p>
 During my time, I had and still have to deal with a lot of idiosyncratic
@@ -415,13 +466,21 @@ forums. I hope what Spolsky wrote and what I wrote here will help people
 build nicer, better and less dysfunctional online forums.
 </p>
 
-<h2 id="coverage">Coverage</h2>
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 <li>
+<p>
 <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.248655.0">The
 Joel on Software forum</a>.
+</p>
 </li>
 </ul>
+
+[%- END -%]
 
 [% END %]

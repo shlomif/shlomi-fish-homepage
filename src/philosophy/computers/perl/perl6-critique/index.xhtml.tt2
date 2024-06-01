@@ -1,7 +1,6 @@
 [%- SET title = "Critique of Where Perl 6 is Heading" -%]
 [%- SET desc = "An essay I had written about the problems I had seen in the design of Perl 6." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -12,22 +11,32 @@ Essay</b></a> can be read on Freecode, with some discussion.
 by Michael G. Schwern</a> is a worthwhile read, as well.
 </p>
 
-<h2>Coverage</h2>
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
 <ul>
 <li>
+<p>
 <a href="http://www.osnews.com/comment.php?news_id=8569">OSNews.com</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.nntp.per.org/group/perl.advocacy/2153">perl-advocacy</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.perlmonks.org/index.pl?node_id=399745">Perlmonks</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://linmagazine.co.il/node/view/4478">Linmagazine.co.il</a>
 (in Hebrew)
+</p>
 </li>
 </ul>
+
+[%- END -%]
 
 [% END %]

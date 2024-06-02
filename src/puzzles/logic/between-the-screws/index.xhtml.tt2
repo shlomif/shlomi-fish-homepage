@@ -5,7 +5,6 @@
 media="screen" title="Normal" />
 [% END %]
 
-
 [%- WRAPPER wrap_html -%]
 
 <h2>Introduction</h2>
@@ -38,30 +37,44 @@ screw.
 
 <ol>
 <li>
+<p>
 The screw that the gnome used the last was longer than the screw that needed
 the blue screwdriver, but was less than twice its length. (Albeit there is
 a screw that is twice as long than the one needing the blue screwdriver.)
+</p>
 </li>
 <li>
+<p>
 The diamond-shaped screw was screwed after the screw with the blue screwdriver,
 but before the 6cm-long screw.
+</p>
 </li>
 <li>
+<p>
 Only once was a shorter screw used right after a longer one.
+</p>
 </li>
 <li>
+<p>
 The screw needing the red screwdriver, which isn’t the hexagonal one, was the
 last. The diamond-shaped screw did not come immediately before it.
+</p>
 </li>
 <li>
+<p>
 The triangular screw came before the 2cm-long screw.
+</p>
 </li>
 <li>
+<p>
 The screw needing the purple screwdriver is 8 cm long, did not
 follow the 2cm long screw.
+</p>
 </li>
 <li>
+<p>
 The 4cm long screw was not the square-shaped one.
+</p>
 </li>
 </ol>
 
@@ -115,9 +128,15 @@ From the puzzle the following data can be directly gathered:
 </p>
 
 <ul>
-<li><b>Screw lengths:</b> 2cm, 4cm, 6cm and 8cm.</li>
-<li><b>Screwdriver colours:</b> green, blue, red and purple.</li>
-<li><b>Screw shapes:</b> square, diamond, hexagonal, and triangular.</li>
+<li>
+<p><b>Screw lengths:</b> 2cm, 4cm, 6cm and 8cm.</p>
+</li>
+<li>
+<p><b>Screwdriver colours:</b> green, blue, red and purple.</p>
+</li>
+<li>
+<p><b>Screw shapes:</b> square, diamond, hexagonal, and triangular.</p>
+</li>
 </ul>
 
 <p>
@@ -133,9 +152,15 @@ for the 4cm screw. So far we have:
 </p>
 
 <ul>
-<li>1st or 2nd - 4cm - Blue</li>
-<li>2nd or 3rd - Diamond</li>
-<li>4th - 6cm</li>
+<li>
+<p>1st or 2nd - 4cm - Blue</p>
+</li>
+<li>
+<p>2nd or 3rd - Diamond</p>
+</li>
+<li>
+<p>4th - 6cm</p>
+</li>
 </ul>
 
 <p>
@@ -152,9 +177,15 @@ what we have so far is this:
 </p>
 
 <ul>
-<li>1st - 4cm - Blue</li>
-<li>2nd - Diamond</li>
-<li>4th - 6cm - Red - Not Hexagonal</li>
+<li>
+<p>1st - 4cm - Blue</p>
+</li>
+<li>
+<p>2nd - Diamond</p>
+</li>
+<li>
+<p>4th - 6cm - Red - Not Hexagonal</p>
+</li>
 </ul>
 
 <p>
@@ -164,10 +195,18 @@ screws have followed two longer ones. So we have:
 </p>
 
 <ul>
-<li>1st - 4cm - Blue</li>
-<li>2nd - 8cm - Diamond</li>
-<li>3rd - 2cm</li>
-<li>4th - 6cm - Red - Not Hexagonal</li>
+<li>
+<p>1st - 4cm - Blue</p>
+</li>
+<li>
+<p>2nd - 8cm - Diamond</p>
+</li>
+<li>
+<p>3rd - 2cm</p>
+</li>
+<li>
+<p>4th - 6cm - Red - Not Hexagonal</p>
+</li>
 </ul>
 
 <p>
@@ -178,10 +217,18 @@ square screw. Thus, we have:
 </p>
 
 <ul>
-<li>1st - 4cm - Blue - Triangle</li>
-<li>2nd - 8cm - Diamond</li>
-<li>3rd - 2cm - Hexagonal</li>
-<li>4th - 6cm - Red - Square</li>
+<li>
+<p>1st - 4cm - Blue - Triangle</p>
+</li>
+<li>
+<p>2nd - 8cm - Diamond</p>
+</li>
+<li>
+<p>3rd - 2cm - Hexagonal</p>
+</li>
+<li>
+<p>4th - 6cm - Red - Square</p>
+</li>
 </ul>
 
 <p>

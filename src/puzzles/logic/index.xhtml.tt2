@@ -5,20 +5,31 @@
 [%- WRAPPER wrap_html -%]
 
 <ol>
+
 <li>
-<a href="between-the-screws/">Between the Screws</a> - Nom the gnome builds
-an aeroplane using four different screws. What are they?
+<p>
+<a href="[% "${base_path}puzzles/logic/between-the-screws/" %]">Between the
+Screws</a>
+- Nom the gnome builds an aeroplane using four different screws. What are they?
+</p>
 </li>
+
 <li>
-<a href="ravensborgs-guild/">Ravensborg’s Guild</a> - find out what is the
-profession of the five members of Ravensborg’s Guild and who is the leader,
-based on their statements.
+<p>
+<a href="[% "${base_path}puzzles/logic/ravensborgs-guild/" %]">Ravensborg’s
+Guild</a> - find out what is the profession of the five members of Ravensborg’s
+Guild and who is the leader, based on their statements.
+</p>
 </li>
+
 <li>
-<a href="tip-of-the-sword/">On the Tip of the Sword</a> - Five different
-swords collected by an adventurer, arranged in a horizontal row. Which is
-which?
+<p>
+<a href="[% "${base_path}puzzles/logic/tip-of-the-sword/" %]">On the Tip of the
+Sword</a> - Five different swords collected by an adventurer, arranged in a
+horizontal row. Which is which?
+</p>
 </li>
+
 </ol>
 
 [% END %]

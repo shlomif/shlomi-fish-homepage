@@ -41,19 +41,19 @@ required:
         - desc: You can try putting the JSON string «{"amazon_sak":"invalid"}» there.
           path: ~/.shlomifish-amazon-sak.json
         - desc: See https://www.1001fonts.com/blue-highway-font.html
-          path: ~/.fonts/Bluehigb.ttf
+          path: ~/.local/share/fonts/Bluehigb.ttf
         - desc: See https://www.1001fonts.com/blue-highway-font.html
-          path: ~/.fonts/Bluehigc.ttf
+          path: ~/.local/share/fonts/Bluehigc.ttf
         - desc: See https://www.1001fonts.com/blue-highway-font.html
-          path: ~/.fonts/Bluehigh.ttf
+          path: ~/.local/share/fonts/Bluehigh.ttf
         - desc: See https://www.dafont.com/bundy-yellow.font
-          path: ~/.fonts/BndyYlwHS.ttf
+          path: ~/.local/share/fonts/BndyYlwHS.ttf
         - desc: See https://www.dafont.com/bundy-yellow.font
-          path: ~/.fonts/BndyYlwSolid.ttf
+          path: ~/.local/share/fonts/BndyYlwSolid.ttf
         - desc: Linux Libertine TTF Font. See https://github.com/shlomif/shlomi-fish-sites--fonts
-          path: ~/.fonts/LinLibertine_Rah.ttf
+          path: ~/.local/share/fonts/LinLibertine_Rah.ttf
         - desc: See https://www.dafont.com/continuum.font
-          path: ~/.fonts/contb.ttf
+          path: ~/.local/share/fonts/contb.ttf
     meta_data:
         keys:
             desc: This task package installs some of the packages that Shlomi Fish needs.

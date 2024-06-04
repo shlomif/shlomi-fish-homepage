@@ -150,6 +150,9 @@ sub _gen__queen_padme_tales__tr
     );
 }
 
+my $SHLOMIF_HOMEPAGE_GIT =
+    _github( url => 'https://github.com/shlomif/shlomi-fish-homepage', );
+
 sub _gen__the_10th_muse__tr
 {
     my $self  = shift;
@@ -174,9 +177,7 @@ sub _gen__the_10th_muse__tr
                     ),
                 )
             ),
-            _github(
-                url => 'https://github.com/shlomif/Queen-Padme-Tales',
-            ),
+            $SHLOMIF_HOMEPAGE_GIT,
         ],
     );
 }
@@ -192,9 +193,6 @@ sub _gen__who_will_ride_princess_celestia__tr
         items => [
             _fp( path => "humour/bits/Who-will-ride-Princess-Celestia/", ),
             ( grep { $_->path() =~ $regex } () ),
-            _github(
-                url => 'https://github.com/shlomif/shlomi-fish-homepage',
-            ),
         ],
     );
 }
@@ -214,9 +212,7 @@ sub _gen__start_with_happily_after__tr
 "humour/bits/One-does-not-simply-start-a-story-with-And-they-all-lived-happily-ever-after/",
             ),
             ( grep { $_->path() =~ $regex } () ),
-            _github(
-                url => 'https://github.com/shlomif/shlomi-fish-homepage',
-            ),
+            $SHLOMIF_HOMEPAGE_GIT,
         ],
     );
 }

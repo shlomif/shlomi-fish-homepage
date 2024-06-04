@@ -17,7 +17,7 @@ m()
 
 (
     set -e
-    cd .. && git clone https://github.com/shlomif/shlomi-fish-sites--fonts.git fffFFF && cd fffFFF && perl install.pl && cd .. && rm -fr fffFFF
+    cd .. && git clone https://github.com/shlomif/shlomi-fish-sites--fonts.git fffFFF && cd fffFFF && perl install.pl --local && cd .. && rm -fr fffFFF
 ) || exit -1
 
 # For inkscape: job no. 1

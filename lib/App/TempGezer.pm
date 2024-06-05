@@ -169,7 +169,7 @@ s#^\({5}include[= ](['"])cache/combined/t2/([^'"]+)/([^/\)\'\"]+)\1\){5}\n#$sth-
                     $text =~
 s#\({5}chomp_inc[= ](['"])cache/combined/t2/([^'"]+)/([^/\)\'\"]+)\1\){5}#$sth->execute($3, $2); my $l = $sth->fetchrow_arrayref()->[0]; chomp$l; $l#egms;
                     $text =~
-s#^\({5}include[= ]"([^"]+?\.htmlish)"\){5}#path("lib/$1")->slurp_utf8()#egms;
+s#^\({5}include[= ]"([^"]+?)"\){5}#path("lib/$1")->slurp_utf8()#egms;
                 }
 
                 $text =~ s# +$##gms;

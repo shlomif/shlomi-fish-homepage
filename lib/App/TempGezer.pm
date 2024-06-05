@@ -31,8 +31,16 @@ my $ALTERNATIVES_TEXT = list2re @NEEDLES;
 
 my $full_db_path = "node_modules/sects.sqlite3";
 
-my $dbh = DBI->connect( "dbi:SQLite:dbname=$full_db_path",
-    "", "", { RaiseError => 1 } );
+use DBD::SQLite::Constants ':dbd_sqlite_string_mode';
+
+my $dbh = DBI->connect(
+    "dbi:SQLite:dbname=$full_db_path",
+    "", "",
+    {
+        RaiseError         => 1,
+        sqlite_string_mode => DBD_SQLITE_STRING_MODE_UNICODE_STRICT,
+    },
+);
 
 $dbh->begin_work;
 
@@ -154,10 +162,14 @@ sub run
 
                 if ($INCS)
                 {
+                    # For debug
+                    # say "2] = $2 ; 1] = $1 ; 3] = $3" ;
                     $text =~
-s#^\({5}include[= ](['"])cache/combined/([^'"]+)/([^/\)\'\"]+)\1\){5}\n#$sth->fetchrow_arrayref($2, $1)->[0]#egms;
+s#^\({5}include[= ](['"])cache/combined/t2/([^'"]+)/([^/\)\'\"]+)\1\){5}\n#$sth->execute($3, $2); $sth->fetchrow_arrayref()->[0]#egms;
                     $text =~
-s#\({5}chomp_inc[= ](['"])cache/combined/([^'"]+)/([^/\)\'\"]+)\1\){5}#my $l = $sth->fetchrow_arrayref($2, $1)->[0]; chomp$l; $l#egms;
+s#\({5}chomp_inc[= ](['"])cache/combined/t2/([^'"]+)/([^/\)\'\"]+)\1\){5}#$sth->execute($3, $2); my $l = $sth->fetchrow_arrayref()->[0]; chomp$l; $l#egms;
+                    $text =~
+s#^\({5}include[= ]"([^"]+?\.htmlish)"\){5}#path("lib/$1")->slurp_utf8()#egms;
                 }
 
                 $text =~ s# +$##gms;

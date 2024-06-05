@@ -48,13 +48,12 @@ my $dbh = DBI->connect( "dbi:SQLite:dbname=$full_db_path",
 $dbh->begin_work;
 
 $dbh->do(
-"CREATE TABLE t (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(60), url VARCHAR(255), data TEXT)"
+"CREATE TABLE t (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), data TEXT)"
 );
 
-$dbh->do("CREATE UNIQUE INDEX t_idx ON t ( str_id, url )");
+$dbh->do("CREATE UNIQUE INDEX t_idx ON t ( str_id )");
 
-my $insert_sth =
-    $dbh->prepare("INSERT INTO t (str_id, url, data) VALUES(?, ?, ?)");
+my $insert_sth = $dbh->prepare("INSERT INTO t (str_id, data) VALUES(?, ?)");
 
 sub process_batch
 {
@@ -111,7 +110,7 @@ sub process_batch
         my $out = sub {
             my ( $id, $ref ) = @_;
 
-            $insert_sth->execute( $id, $proto_url, $$ref );
+            $insert_sth->execute( "C/$proto_url/$id", $$ref );
 
             return write_on_change( $urlp->child($id), $ref );
         };

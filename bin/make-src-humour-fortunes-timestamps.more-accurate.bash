@@ -70,10 +70,16 @@ IDS:
             warn "$k $s $d $fn";
             next IDS;
         }
+        my $dobj = DateTime->from_epoch( epoch => $d, );
+        my $dfmt =$_date_formatter->format_datetime(
+                $dobj,
+            );
+        if ($dobj->year() == 2014 and $dobj->month() == 10 and $dobj->day() == 21)
+        {
+            next IDS;
+        }
         $scripts_hash->{$fn}->{$k} = {
-            q#date# => $_date_formatter->format_datetime(
-                DateTime->from_epoch( epoch => $d, )
-            ),
+            q#date# => $dfmt,
         };
     }
     YAML::XS::DumpFile( $yamlfn, $persistent_data, );

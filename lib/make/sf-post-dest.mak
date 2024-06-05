@@ -1,12 +1,6 @@
 SRC_CACHE_PREFIX := lib/cache/combined/t2
 
-$(SRC_DOCS_DEST): $(PRE_DEST)/%: \
-	$(SRC_CACHE_PREFIX)/%/breadcrumbs-trail \
-	$(SRC_CACHE_PREFIX)/%/html_head_nav_links \
-	$(SRC_CACHE_PREFIX)/%/main_nav_menu_html \
-	$(SRC_CACHE_PREFIX)/%/sect-navmenu \
-	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey= \
-	$(SRC_CACHE_PREFIX)/%/shlomif_nav_links_renderer-with_accesskey=1 \
+$(SRC_DOCS_DEST): $(PRE_DEST)/%: node_modules/sects.sqlite3
 
 all_deps: $(SRC_CLEAN_STAMP)
 

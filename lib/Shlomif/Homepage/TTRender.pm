@@ -319,13 +319,13 @@ my $template = Template->new(
 );
 
 my $DEST       = path( '.', "dest", "pre-incs", $LATEMP_SERVER, ) . '';
-my $INC_PREF   = qq#\n(((((include "cache/combined/$LATEMP_SERVER#;
+my $INC_PREF   = qq#\n(((((include "C/#;
 my $INC_SUFFIX = qq#")))))\n#;
 
 sub _generate_include
 {
     my ( $input_tt2_page_path, $id ) = @_;
-    return sprintf( "%s/%s/%s%s",
+    return sprintf( "%s%s/%s%s",
         $INC_PREF, $input_tt2_page_path, $id, $INC_SUFFIX );
 }
 

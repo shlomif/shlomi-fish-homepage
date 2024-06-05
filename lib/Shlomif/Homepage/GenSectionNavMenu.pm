@@ -18,7 +18,6 @@ use Path::Tiny                             qw/ path /;
 my $hosts         = MyNavData::Hosts::get_hosts();
 my $host          = 't2';
 my $host_base_url = $hosts->{$host}->{base_url};
-my $hostp         = "lib/cache/combined/$host";
 
 my @nav_bar_params = (
     coords_stop    => 1,
@@ -64,10 +63,6 @@ sub process_batch
 
         my $filename = "/$url";
 
-        # urlpath.
-        my $urlp = path("$hostp/$proto_url");
-        $urlp->mkpath;
-
         # print "start filename=$filename\n";
 
         my $nav_bar =
@@ -112,7 +107,7 @@ sub process_batch
 
             $insert_sth->execute( "C/$proto_url/$id", $$ref );
 
-            return write_on_change( $urlp->child($id), $ref );
+            return;
         };
 
         my $markup = "<p>";

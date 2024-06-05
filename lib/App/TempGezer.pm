@@ -42,7 +42,7 @@ my $dbh = DBI->connect(
     },
 );
 
-$dbh->begin_work;
+$dbh->begin_work();
 
 my $sth = $dbh->prepare("SELECT data FROM t WHERE str_id = ?");
 

@@ -1,8 +1,9 @@
 [%- SET title = "My Weblogs" -%]
 [%- SET desc = "List of Weblogs/Blogs by Shlomi Fish." -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% PROCESS "Inc/faq.tt2" %]
 
 <div class="side_toc">
 
@@ -223,6 +224,8 @@ including off-topic posts by Israeli open source enthusiasts.
 </ul>
 
 [% END %]
+
+[% INCLUDE my_sites %]
 
 </div>
 

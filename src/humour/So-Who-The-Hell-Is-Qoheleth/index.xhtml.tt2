@@ -1,19 +1,19 @@
 [%- SET title = "“So, who the Hell is Qoheleth?” - An Illustrated Screenplay" -%]
 [%- SET desc = "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'who_is_qoheleth') %]
 
-[% WRAPPER screenplay_read_online  %]
+[% WRAPPER screenplay_read_online %]
+
 <ul>
 
-[% PROCESS story_ongoing_episode_li base = "So-Who-the-Hell-is-Qoheleth",  %]
+[% PROCESS story_ongoing_episode_li base = "So-Who-the-Hell-is-Qoheleth" %]
 
 <li>
 <p>
-[% PROCESS screenplay_github_repo     url = "https://github.com/shlomif/So-Who-the-Hell-Is-Qoheleth",  %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/So-Who-the-Hell-Is-Qoheleth" %]
 </p>
 </li>
 
@@ -25,11 +25,12 @@ format</a>
 </li>
 
 </ul>
+
 [%- END -%]
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="licensing" title="Licensing"%]
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
 All the text in <i>[% QOH_TITLE %]</i> is original, and as
@@ -43,7 +44,7 @@ the situation is more complicated than that.
 
 [% END %]
 
-[% WRAPPER h2_section id="links" title="Links"%]
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <p>
 TBD.
@@ -53,7 +54,7 @@ TBD.
 
 [% WRAPPER credits_sect %]
 
-[% WRAPPER h3_section id="sky_image_credits" title="Sky Image Credits"%]
+[% WRAPPER h3_section id = "sky_image_credits" title = "Sky Image Credits" %]
 
 <p>
 <a href="http://www.flickr.com/photos/nicholas_t/2368207024">Sky image</a>
@@ -66,7 +67,7 @@ used in the logo taken from Flickr by
 
 [% END %]
 
-[% WRAPPER h2_section id="sources_of_inspiration" title="Sources of Inspiration"%]
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 <ul>
 
@@ -79,11 +80,51 @@ captioned image: “Nothing Sexier”</a>.
 
 </ul>
 
-[% PROCESS links_to_judaism_and_israel  %]
+[% PROCESS links_to_judaism_and_israel %]
 
 [% END %]
 
-[% WRAPPER h2_section id="coverage" title="Coverage"%]
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+<ul>
+
+<li>
+<blockquote cite="">
+
+<p>
+The scroll of Qoheleth, ( <a href="https://en.wikipedia.org/wiki/Ecclesiastes">https://en.wikipedia.org/wiki/Ecclesiastes</a> ) , is short, written in accessible Hebrew, and contains many gems. However:
+</p>
+
+<ol>
+<li>
+<p>
+Its lack of a coherent plot, makes many of its messages non-memorable.
+</p>
+</li>
+
+<li>
+<p>
+It has an air of repetitivity.
+</p>
+</li>
+</ol>
+
+<p>
+<a href="https://www.joelonsoftware.com/2005/06/20/introduction-to-best-software-writing-i/">Joel on Software about teaching by telling stories.</a>
+</p>
+
+<p>
+I still recommend to read it.
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1671878003360665603">Tweet</a> )
+</p>
+
+</li>
+</ul>
 
 [% END %]
 
@@ -101,7 +142,7 @@ captioned image: “Nothing Sexier”</a>.
 
 [% END %]
 
-[% WRAPPER h2_section id="thanks" title="Thanks and Acknowledgements"%]
+[% WRAPPER h2_section id = "thanks" title = "Thanks and Acknowledgements" %]
 
 <p>
 <b>TODO: FILL IN.</b>

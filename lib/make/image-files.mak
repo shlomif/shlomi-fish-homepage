@@ -172,7 +172,7 @@ SRC_SVGS__MIN := $(SRC_SVGS__BASE:%.svg=%.min.svg)
 SRC_SVGS__svgz := $(SRC_SVGS__BASE:%.svg=%.svgz)
 
 $(SRC_SVGS__MIN): %.min.svg: %.svg
-	minify --svg-precision 5 -o $@ $<
+	minify -q --svg-precision 5 -o $@ $<
 
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@

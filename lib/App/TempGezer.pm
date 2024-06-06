@@ -113,6 +113,8 @@ sub _call_minifier
     return;
 }
 
+my %incs;
+
 sub run
 {
     my ( $self, $args ) = @_;
@@ -139,6 +141,7 @@ sub run
     {
         die qq#--mode should be "minify"!#;
     }
+    %incs = ();
     $self->_minifier_conf_fn($conf);
     my $temp_dir = Path::Tiny->tempdir;
     $self->_temp_dir($temp_dir);
@@ -165,11 +168,14 @@ sub run
                     # For debug
                     # say "2] = $2 ; 1] = $1 ; 3] = $3" ;
                     $text =~
-s#^\({5}include[= ](['"])(C/[^'"]+)\1\){5}\n#$sth->execute($2); $sth->fetchrow_arrayref()->[0]#egms;
+s#^\({5}include "(C/[^"]+)"\){5}\n#$sth->execute($1); $sth->fetchrow_arrayref()->[0]#egms;
+                    if (0)
+                    {
+                        $text =~
+s#\({5}chomp_inc[= ]"(C/[^'"]+)"\){5}#$sth->execute($1); my $l = $sth->fetchrow_arrayref()->[0]; chomp$l; $l#egms;
+                    }
                     $text =~
-s#\({5}chomp_inc[= ](['"])(C/[^'"]+)\1\){5}#$sth->execute($2); my $l = $sth->fetchrow_arrayref()->[0]; chomp$l; $l#egms;
-                    $text =~
-s#^\({5}include[= ]"([^"]+?)"\){5}#path("lib/$1")->slurp_utf8()#egms;
+s#^\({5}include "([^"]+?)"\){5}#my $fn = $1; $incs{$fn} //= path("lib/$fn")->slurp_utf8()#egms;
                 }
 
                 $text =~ s# +$##gms;

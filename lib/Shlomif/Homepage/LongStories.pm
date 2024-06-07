@@ -661,10 +661,10 @@ EOF
         href       => "humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/",
         abstract   => <<"EOF",
 <p class="abstract">
-In a parallel universe, Tiffany Alvord’s territorial jealousy of Shlomi Fish (= me),
-aims to have a far-reaching effect on the multiverse’s integrity. But luckily
-the Foundation For Fantastecha™n Functional Fidelity (= “FFFFF” or “quintuple-F”)
-has intervened.
+In a parallel universe, Tiffany Alvord’s territorial jealousy of Shlomi Fish (=
+me), seemed bound to have a far-reaching effect on the multiverse’s integrity.
+But luckily the Foundation For Fantastecha™n Functional Fidelity (= “FFFFF” or
+“quintuple-F”) has intervened.
 </p>
 
 $FAN_FIC_PARA

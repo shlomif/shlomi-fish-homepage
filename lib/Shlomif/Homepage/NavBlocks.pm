@@ -851,6 +851,23 @@ my %tr_s = (
             ),
         ],
     ),
+    'he_damsel_in_distress' => _tr(
+        title => "He-Damsel-in-Distress and a Distressing Damsel",
+        items => [
+            _fp(
+                path =>
+                    "humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/",
+            ),
+            _ontext(
+                path =>
+"humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/ongoing-text.html",
+            ),
+            _github(
+                url =>
+"https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/",
+            ),
+        ],
+    ),
 );
 
 sub _get_tr
@@ -1096,7 +1113,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton atypical_day ),
+                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton atypical_day he_damsel_in_distress ),
                 ),
                 $Bits_TR,
                 _tr_s( qw( the_princess_programmer ), ),
@@ -1189,7 +1206,7 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord ),
+                    qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord he_damsel_in_distress ),
                 ),
                 $Essays_TR,
                 _get_tr(

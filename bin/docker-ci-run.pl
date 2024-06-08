@@ -495,7 +495,11 @@ TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
     $obj->exe_bash_code( { code => $script, } );
 
-    # $obj->clean_up();
+    # Shutting down is important as otherwise the VM continues to run
+    # in the background, and consume CPU and RAM, and slow down the subsequent
+    # runs.
+    $obj->clean_up();
+
     return;
 }
 

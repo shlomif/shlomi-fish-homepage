@@ -8,15 +8,15 @@
 
 [% long_stories.calc_common_top_elems(id => 'the_10th_muse') %]
 
-[% WRAPPER h2_section id = "read_online"  title = "Read Online"  %]
+[% WRAPPER h2_section id = "read_online" title = "Read Online" %]
 
-[% SET epub_prefix= base_path _ "humour/The-10th-Muse/" %]
+[% SET epub_prefix = base_path _ "humour/The-10th-Muse/" %]
 
 <ul>
 
-[% PROCESS story_episode_li base = "The-10th-Muse--Athena-Gets-Laid", story_title = "Athena Gets Laid", %]
+[% PROCESS story_episode_li base = "The-10th-Muse--Athena-Gets-Laid" story_title = "Athena Gets Laid" %]
 
-[% PROCESS story_episode_li base = "The-10th-Muse--Trojan-War-Reenactment", story_title = "Reenactment of the Trojan War", %]
+[% PROCESS story_episode_li base = "The-10th-Muse--Trojan-War-Reenactment" story_title = "Reenactment of the Trojan War" %]
 
 </ul>
 
@@ -24,23 +24,23 @@
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="sources" title="Sources"%]
+[% WRAPPER h2_section id = "sources" title = "Sources" %]
 
 <ul>
 
 <li>
-[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/shlomi-fish-homepage", %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/shlomi-fish-homepage" %]
 </li>
 
 </ul>
 
 [% END %]
 
-[% WRAPPER h2_section id = "sources_of_inspiration"  title = "Sources of Inspiration"  %]
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
 
 [% END %]
 
-[% WRAPPER h2_section id="licensing" title="Licensing"%]
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
 
 <p>
 This work uses some characters and concepts from real life, from other
@@ -58,7 +58,7 @@ the situation is more complicated than that.
 
 [% END %]
 
-[% WRAPPER h2_section id="q_and_a" title="Questions and Answers" %]
+[% WRAPPER h2_section id = "q_and_a" title = "Questions and Answers" %]
 
 [% END %]
 

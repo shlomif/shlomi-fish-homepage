@@ -4009,7 +4009,16 @@ I use webpack to remaster jQuery-UI’s distribution, and reduce its size.
 </ol>
 
 <p>
-Some factors may play against the site's responsiveness. For example:
+Are all these techniques useful on each-and-every WWW request? Probably not.
+Someone told me many pages of my site do not have too many images, whether
+.webp or otherwise. ( <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gamedev--small-matter-of-filicide">Reference</a> . ) But I still prefer to
+leave no stone unturned and not rest-on-my-laurels. ( <a href="https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations">Reference: “Factor Optimisations”</a> )
+</p>
+
+<hr />
+
+<p>
+Some constraints may play against the site's responsiveness. For example:
 </p>
 
 <ol>
@@ -4022,7 +4031,7 @@ Use of XHTML instead of HTML.
 
 <li>
 <p>
-Use of valid markup.
+Use of <a href="[% base_path %]philosophy/computers/web/validate-your-html/">valid markup</a>.
 </p>
 </li>
 

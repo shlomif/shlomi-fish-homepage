@@ -6,7 +6,7 @@
 
 [% default_toc %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 This is a small, hand-maintained, list of various computer graphics-related
@@ -18,7 +18,7 @@ Windows.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "image-browsers"  title = "Image Browsers"  %]
+[% WRAPPER h2_section id = "image-browsers" title = "Image Browsers" %]
 
 <ul>
 
@@ -113,7 +113,7 @@ and cross-platform image viewer and manipulator.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "raster-editors"  title = "Raster/Bitmap Editors"  %]
+[% WRAPPER h2_section id = "raster-editors" title = "Raster/Bitmap Editors" %]
 
 <ul>
 
@@ -242,7 +242,7 @@ for editing using the web browser (including on mobile devices).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "two-d-vector-editors"  title = "(2-D) Vector Editors"  %]
+[% WRAPPER h2_section id = "two-d-vector-editors" title = "(2-D) Vector Editors" %]
 
 <ul>
 
@@ -312,7 +312,7 @@ Mac OS X.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "diagramming"  title = "Diagramming Software"  %]
+[% WRAPPER h2_section id = "diagramming" title = "Diagramming Software" %]
 
 <ul>
 
@@ -344,7 +344,7 @@ Microsoft. It is feature-rich and powerful.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "three-d-editors"  title = "3-D Editors"  %]
+[% WRAPPER h2_section id = "three-d-editors" title = "3-D Editors" %]
 
 <ul>
 
@@ -373,7 +373,7 @@ of Windows, Mac OS X and Linux).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "two-d-animation"  title = "Two Dimensional (2-D) Animation Software"  %]
+[% WRAPPER h2_section id = "two-d-animation" title = "Two Dimensional (2-D) Animation Software" %]
 
 <ul>
 
@@ -402,7 +402,7 @@ and web-based editor for animated sprites and pixel art.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "screenshotting"  title = "Screenshotting Programs"  %]
+[% WRAPPER h2_section id = "screenshotting" title = "Screenshotting Programs" %]
 
 <ul>
 
@@ -417,7 +417,7 @@ and powerful screenshotting program for Linux.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "screencasting"  title = "Screen Recording (Screencasting) Programs"  %]
+[% WRAPPER h2_section id = "screencasting" title = "Screen Recording (Screencasting) Programs" %]
 
 <ul>
 
@@ -454,7 +454,7 @@ Recorders for Linux in 2019”</a> - a list on "It's FOSS".
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "APIs"  title = "Graphics APIs"  %]
+[% WRAPPER h2_section id = "APIs" title = "Graphics APIs" %]
 
 <ul>
 
@@ -519,7 +519,7 @@ Multimedia Applications</a>.
 
 [% END %]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -548,6 +548,8 @@ of awesome free &amp; open source software &amp; libraries for photography”</a
 </p>
 </li>
 
+[% INCLUDE "Inc/adobe_alternatives_lists_on_github.tt2" %]
+
 </ul>
 
 [%- END -%]
@@ -574,6 +576,6 @@ Logo</a> taken from the English Wikipedia under the GPL.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2015",  %]
+[% PROCESS cc_by_licence_section "year" => "2015" %]
 
 [% END %]

@@ -1,12 +1,11 @@
 [%- SET title = "List of Multimedia Applications" -%]
 [%- SET desc = "List of Multimedia Applications: all-in-one media players, dedicated music players, video downloaders, waveform editors, etc." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 This is a small, hand-maintained, list of various multimedia-related
@@ -15,7 +14,7 @@ applications.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "media-players"  title = "All-in-one Media Players"  %]
+[% WRAPPER h2_section id = "media-players" title = "All-in-one Media Players" %]
 
 <ul>
 
@@ -77,7 +76,7 @@ Comparison of Video Player Software</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "dedicated-music-players"  title = "Dedicated Music Players"  %]
+[% WRAPPER h2_section id = "dedicated-music-players" title = "Dedicated Music Players" %]
 
 <ul>
 
@@ -153,7 +152,7 @@ Comparison of Audio Player Software</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "video-downloaders"  title = "Video Downloaders"  %]
+[% WRAPPER h2_section id = "video-downloaders" title = "Video Downloaders" %]
 
 <ul>
 
@@ -179,7 +178,7 @@ DownloadHelper</a> - an extension for Firefox that downloads videos from
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "waveform-editors"  title = "Waveform Editors"  %]
+[% WRAPPER h2_section id = "waveform-editors" title = "Waveform Editors" %]
 
 <ul>
 
@@ -210,7 +209,7 @@ OS X.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "video-editors"  title = "Video Editors"  %]
+[% WRAPPER h2_section id = "video-editors" title = "Video Editors" %]
 
 <ul>
 
@@ -249,7 +248,7 @@ and Microsoft Windows.
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -259,10 +258,13 @@ and Microsoft Windows.
 - a comprehensive directory.
 </p>
 </li>
+
+[% INCLUDE "Inc/adobe_alternatives_lists_on_github.tt2" %]
+
 </ul>
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2012",  %]
+[% PROCESS cc_by_licence_section "year" => "2012" %]
 
 [% END %]

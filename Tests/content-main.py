@@ -25,6 +25,18 @@ class MyTests(html_unit_test.TestCase):
             ".//section[header/h3[@id='hacking-heroism']]"
         )
 
+    def test_docbook5_youtube_video(self):
+        input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \
+            'putting-cards-on-the-table-2019-2020/index.xhtml'
+        doc = self.doc(input_fn)
+        query = doc.xpath(".//iframe")
+        found = False
+        for node in query.xpath_results:
+            if node.get('src') == "https://www.youtube.com/embed/srwxJUXPHvE":
+                found = True
+                break
+        self.assertTrue(found, "Found a youtube song in an iframe")
+
     def test_share_this_url(self):
         input_fn = './dest/post-incs/t2/humour/bits/' + \
             'Atom-Text-Editor-edits-2_000_001-bytes/index.xhtml'

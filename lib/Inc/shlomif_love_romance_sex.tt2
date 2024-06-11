@@ -1,3 +1,13 @@
+[% BLOCK non_smoker_SO %]
+
+<li>
+<p>
+A non-smoker.
+</p>
+</li>
+
+[% END %]
+
 [% BLOCK shlomi_fish_type_of_girls %]
 
 <li>
@@ -59,18 +69,10 @@ Wesley Snipes in <a href=
 </p>
 </li>
 
+[% INCLUDE non_smoker_SO %]
+
 <li>
 <p>Attractive enough and groomed enough.</p>
-</li>
-
-[% END %]
-
-[% BLOCK non_smoker_SO %]
-
-<li>
-<p>
-A non-smoker.
-</p>
 </li>
 
 [% END %]

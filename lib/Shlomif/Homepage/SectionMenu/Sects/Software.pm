@@ -293,7 +293,7 @@ my $_section_navmenu_tree_contents = {
             url  => "open-source/resources/",
             subs => [
                 {
-                    text => "Curated Lists",
+                    text => "Curated Lists and Directories",
                     url  => "open-source/resources/sw-lists/",
                     subs => [
 

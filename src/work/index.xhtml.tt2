@@ -7,7 +7,7 @@
 These are pages related to my work and income.
 </p>
 
-<h2>Hire me</h2>
+[% WRAPPER h2_section id = "hire-me" title = "Hire me" %]
 
 <p>
 I am <a href="hire-me/">available for hire</a>. Either as a private tutor,
@@ -15,19 +15,28 @@ a consultant or contractor, or a long-term employee. I can also build,
 maintain or revamp web-sites.
 </p>
 
-<h2><a href="private-lessons/">I’m Giving Private Lessons</a></h2>
+[% END %]
 
-<h2><a href="academic/Thermo/Material-Summary/">Summary of the Thermo
-Course</a></h2>
+[% WRAPPER h2_section href = "private-lessons/" id = "private-lessons" title = "I’m Giving Private Lessons" %]
 
-<h2>Studies-Related</h2>
+[% END %]
+
+[% WRAPPER h2_section href = "academic/Thermo/Material-Summary/" id = "thermo-dynamics-course-material" title = "Summary of the Thermo Course" %]
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "studies-related" title = "Studies-Related" %]
 
 <div class="sub_section">
+
 <h3><a href="http://webee.technion.ac.il/labs/comnet/projects/winter02/cn01w02/">My IP-Noise Project</a></h3>
 
 <h3><a href="http://webee.technion.ac.il/labs/comnet/projects/spring02/cn01s02/">My Seminars Management Project</a></h3>
 
-<h3><a href="../guide2ee/">Guide to the EE Faculty’s Resources</a></h3>
+<h3><a href="../guide2ee/">Guide to the Technion’s Electrical Engineering Department’s Resources [out-dated]</a></h3>
+
 </div>
+
+[%- END -%]
 
 [% END %]

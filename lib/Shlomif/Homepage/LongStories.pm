@@ -478,13 +478,13 @@ were killed in a starship crash when she was 1 years old, she was adopted by her
 the Duchess Elizabeth Amidala (<a href="https://en.wikipedia.org/wiki/Natalie_Portman_filmography">Natalie
 Portman</a>), and her aunt's husband,
 <a href="https://en.wikipedia.org/wiki/Darth_Vader">Darth Vader</a>, who
-volunteered to act as King in effect until Padmé's coming of age. As a result,
+volunteered to act as King-in-effect until Padmé's coming-of-age. As a result,
 Padmé had a happy childhood until she turned 18 at 2010 and was ready to become
 the bona fide monarch of Naboo.
 </p>
 
 <p>
-Padmé already learned enough about managing a planet country by volunteering
+Padmé already learned a lot about managing a planet country by volunteering
 to help Vader, and he encouraged her to do so. On the surface, she is happy:
 </p>
 

@@ -1,11 +1,6 @@
 # Quicktask v1.2
 
 CURRENT TASKS:
-    - The Table-of-Contents on putting-cards-2019 is incomplete .
-        * Ends at "Time…Money"
-        * https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/
-        * Write tests.
-      @ Added [Wed 2024-06-12]
 
 LONG TERM:
     - Extract a section macro for https://archiveofourown.org/ .
@@ -572,5 +567,14 @@ COMPLETED TASKS:
         * Instead of the implicitly packaged tarball.
         @ DONE [Sun 2024-03-31]
       @ Added [Wed 2020-06-24]
+    - The Table-of-Contents on putting-cards-2019 is incomplete .
+        * Ends at "Time…Money"
+        * https://www.shlomifish.org/philosophy/philosophy/putting-cards-on-the-table-2019-2020/
+        * Write tests.
+        * Fixed by
+        https://github.com/shlomif/shlomi-fish-homepage/commit/f765b81d58e6c74ecd3da4add8444f08be1e4bff
+        “<iframe />” → “<iframe></iframe>”
+        @ DONE [Sat 2024-06-15]
+      @ Added [Wed 2024-06-12]
 
 # vim:ft=quicktask:sw=4:ts=4

@@ -24,6 +24,12 @@ class MyTests(html_unit_test.TestCase):
         doc.has_one(
             ".//section[header/h3[@id='hacking-heroism']]"
         )
+        doc.has_one(
+            ".//nav[@class='page_toc']//ul/li[a[@href='#hakuna-matata']]"
+            "[preceding-sibling::li"
+            "[a[@href='#time-is-much-more-important-than-money']]"
+            "]"
+        )
 
     def test_docbook5_youtube_video(self):
         input_fn = 'dest/post-incs/t2/philosophy/philosophy/' + \

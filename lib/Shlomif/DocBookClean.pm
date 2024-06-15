@@ -42,6 +42,17 @@ q#//xhtml:div[@class='titlepage']/descendant::*[starts-with(local-name(), 'h')]#
     return $ret;
 }
 
+sub _convert_standalone_iframe_tags_to_open_plus_close_tags_for_HTML_conformance
+{
+    my ( $str_ref, ) = @_;
+
+    # Closing tag:
+    $$str_ref =~
+        s#(<iframe)((?:\s*[a-zA-Z0-9]+="[^"]+")*)\s*/>#${1}${2}></iframe>#gms;
+
+    return;
+}
+
 sub cleanup_docbook
 {
     my ( $str_ref, $fn ) = @_;
@@ -60,6 +71,10 @@ sub cleanup_docbook
     $$str_ref =~ s{ align="left"}{}g;
     $$str_ref =~ s{ align="right"}{}g;
     $$str_ref =~ s{ valign="top"}{}g;
+
+    # Closing tag:
+    _convert_standalone_iframe_tags_to_open_plus_close_tags_for_HTML_conformance(
+        $str_ref);
 
     return;
 }

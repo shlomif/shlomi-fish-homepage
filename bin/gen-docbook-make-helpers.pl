@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 use utf8;
 
-use Path::Tiny qw/ cwd path /;
+use Path::Tiny            qw/ cwd path /;
 use Parallel::ForkManager ();
 use lib './lib';
 use HTML::Latemp::GenWmlHSects           ();
@@ -30,6 +30,13 @@ sub _github_clone
     my $gh_username = $args->{'username'};
     my $repo        = $args->{'repo'};
     my $into_dir    = $args->{'into_dir'};
+    my $branch      = $args->{'branch'};
+
+    my @branch_args;
+    if ( defined $branch )
+    {
+        push @branch_args, ( "-b", $branch, );
+    }
 
     my $url;
 
@@ -48,7 +55,7 @@ sub _github_clone
     my @prefix =
         (
         ( $type eq 'bitbucket_hg' ) ? ( 'hg', 'clone' ) : ( 'git', 'clone' ) );
-    my @cmd = ( @prefix, $url, $clone_into );
+    my @cmd = ( @prefix, @branch_args, $url, $clone_into );
 
     if ( !-e $clone_into )
     {
@@ -149,7 +156,6 @@ foreach my $repo (
     'captioned-image--emma-watson-doesnt-need-a-wand',
     'how-to-share-code-online',
     'my-real-person-fan-fiction',
-    'putting-cards-2019-2020',
     'shlomif-tech-diary',
     'validate-your-html',
     'why-openly-bipolar-people-should-not-be-medicated',
@@ -158,14 +164,21 @@ foreach my $repo (
     _git_task( 'lib/repos', $repo );
 }
 
+_github_clone(
+    {
+        username => 'shlomif',
+        repo     => 'putting-cards-2019-2020',
+        into_dir => "lib/repos",
+        branch   => "last-updated-news-2019",
+    }
+);
 Shlomif::Homepage::GenScreenplaysMak->new->generate(
     { git_task => \&_git_task } );
 
 Shlomif::Homepage::GenFictionsMak->new->generate( { git_task => \&_git_task } );
 
 HTML::Latemp::DocBook::GenMake->new(
-    { dest_var => '$(T2_DEST)', post_dest_var => '$(T2_POST_DEST)' } )
-    ->generate;
+    { dest_var => '$(T2_DEST)', post_dest_var => '$(T2_DEST)' } )->generate;
 Shlomif::Homepage::GenQuadPresMak->new->generate;
 HTML::Latemp::GenWmlHSects->new->run;
 

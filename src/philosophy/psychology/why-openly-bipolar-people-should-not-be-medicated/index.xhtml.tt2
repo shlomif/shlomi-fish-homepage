@@ -5,7 +5,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% print_markdown(fn=>'lib/repos/why-openly-bipolar-people-should-not-be-medicated/README.md') %]
+[% slurp("dest/pre-incs/t2/philosophy/psychology/openly-bipolar.html") %]
 
 <h2 id="credits">Credits</h2>
 

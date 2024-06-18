@@ -7,7 +7,7 @@
 
 <div class="markdown">
 
-[% print_markdown(fn=>'lib/repos/my-real-person-fan-fiction/README.md') %]
+[% slurp("dest/pre-incs/t2/philosophy/culture/my-rpf.html") %]
 
 </div>
 

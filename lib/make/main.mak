@@ -554,6 +554,22 @@ $(HACKING_DOC): $(T2_SRC_DIR)/open-source/resources/how-to-contribute-to-my-proj
 	asciidoctor --backend=xhtml5 -o $@ $<
 	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
 
+MY_RPF_DEST = $(T2_DEST)/philosophy/culture/my-rpf.html
+
+$(MY_RPF_DEST): lib/repos/my-real-person-fan-fiction/README.asciidoc
+	asciidoctor --backend=xhtml5 -o $@ $<
+	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
+
+all_deps: $(MY_RPF_DEST)
+
+WHY_OPENLY_BIPOLAR = $(T2_DEST)/philosophy/psychology/openly-bipolar.html
+
+$(WHY_OPENLY_BIPOLAR): lib/repos/my-real-person-fan-fiction/README.asciidoc
+	asciidoctor --backend=xhtml5 -o $@ $<
+	$(PERL) ./bin/clean-up-asciidoctor-xhtml5.pl $@
+
+all_deps: $(WHY_OPENLY_BIPOLAR)
+
 all_deps: lib/htmls/The-Enemy-rev5.html-part
 
 lib/htmls/The-Enemy-rev5.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-Hebrew-rev5.xhtml.gz ./bin/extract-xhtml.pl
@@ -753,7 +769,7 @@ css_targets: $(T2_CSS_TARGETS)
 
 SASS_STYLE = compressed
 # SASS_STYLE = expanded
-SASS_CMD = sass --style $(SASS_STYLE)
+SASS_CMD = pysassc --style $(SASS_STYLE)
 
 FORT_SASS_DEPS = lib/sass/fortunes.scss
 COMMON_SASS_DEPS = lib/sass/common-body.scss lib/sass/common-style.scss lib/sass/defs.scss
@@ -1138,7 +1154,8 @@ T2_SVGS__MIN := $(T2_SVGS__BASE:%.svg=%.min.svg)
 T2_SVGS__svgz := $(T2_SVGS__BASE:%.svg=%.svgz)
 
 $(T2_SVGS__MIN): %.min.svg: %.svg
-	minify --svg-decimals 3 -o $@ $<
+	mkdir -p "$$(dirname "$@")"
+	minify --svg-precision 3 -o $@ $<
 
 $(T2_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@

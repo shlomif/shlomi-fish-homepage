@@ -723,8 +723,10 @@ lc_pres_targets: $(LC_PRES_DEST_HTMLS)
 
 # Uses text-vimcolor from http://search.cpan.org/dist/Text-VimColor/
 $(LC_PRES_DEST_HTMLS): $(T2_DEST)/%.scm.html: $(T2_SRC_DIR)/%.scm
+	mkdir -p "$$(dirname "$@")"
 	text-vimcolor --format html --full-page $< --output $@
 	$(PERL) bin/fix-vimcolor.pl $@
+	touch "$@"
 
 SPORK_LECTURES_BASENAMES = \
 	Perl/Graham-Function \
@@ -974,7 +976,7 @@ LC_LECTURE_ARC = $(LC_LECTURE_ARC_DIR)/$(LC_LECTURE_ARC_BASE)
 all: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_LECTURE_ARC_DIR)/Lambda-Calculus/slides/funcs.scm.html
-	(cd $(LC_LECTURE_ARC_DIR) && touch -d 2019-03-31T10:00:00Z Lambda-Calculus/slides/* && tar -cavf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
+	(cd $(LC_LECTURE_ARC_DIR) && tar -cavf $(LC_LECTURE_ARC_BASE) Lambda-Calculus/slides/*)
 
 lib/Shlomif/Homepage/SectionMenu/Sects/Humour.pm : $(FORTUNES_LIST__DEPS) $(FACTOIDS_NAV_JSON)
 	touch $@
@@ -1031,7 +1033,7 @@ $(DnD_lances_cartoon_DEST): t2/art/d-and-d-cartoon--comparing-lances/d-and-d-car
 lib/docbook/5/xml/putting-cards-on-the-table-2019-2020.xml: lib/repos/putting-cards-2019-2020/shlomif-putting-cards-on-the-table-2019-2020.docbook5.xml
 	$(call COPY)
 
-$(Slp_pinned_it_DEST): lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me--400w.webp
+$(Slp_pinned_it_DEST): lib/repos/Captioned-Image-SLP-Pinned-It-On-Me/SLP-excerpt-pinned-it-on-me.webp
 	$(call COPY)
 
 $(Truly_you_have_DEST): lib/repos/Captioned-Image-Truly-You-Have/Truly-You-Have.svg.webp

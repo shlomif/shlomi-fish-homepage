@@ -522,7 +522,7 @@ $(T2_FORTUNES_ALL__TEMP__HTML): $(T2_FORTUNES_ALL_WML) $(DOCS_COMMON_DEPS) $(FOR
 
 $(DEST_HUMOUR)/fortunes/index.xhtml: $(FORTUNES_LIST__DEPS)
 
-FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.jpg
+FORTS_EPUB_COVER = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.png
 FORTS_EPUB_SVG   = $(FORTUNES_XHTMLS_DIR)/shlomif-fortunes.svg
 
 FORTS_EPUB_BASENAME = fortunes-shlomif.epub
@@ -623,7 +623,7 @@ ART_SLOGANS_PATHS = $(addprefix $(T2_POST_DEST)/art/slogans/,$(ART_SLOGANS_DOCS)
 ART_SLOGANS_PNGS = $(addsuffix .png,$(ART_SLOGANS_PATHS))
 ART_SLOGANS_THUMBS = $(addsuffix .thumb.png,$(ART_SLOGANS_PATHS))
 
-OPTIPNG = optipng -o7 -quiet
+OPTIPNG = optipng -quiet
 
 define EXPORT_INKSCAPE_PNG
 	inkscape --export-width=200 --export-png="$@" $<

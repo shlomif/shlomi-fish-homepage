@@ -10,8 +10,8 @@ use Shlomif::Homepage::FortuneCollections::Record;
 use Carp;
 use List::Util qw(max);
 use YAML::XS (qw(LoadFile));
-use JSON::MaybeXS ();
-use Path::Tiny qw/ path /;
+use JSON::MaybeXS    ();
+use Path::Tiny       qw/ path /;
 use Text::WrapAsUtf8 qw/ print_utf8 /;
 
 sub _init_fortune
@@ -379,7 +379,7 @@ sub write_epub_json
                         sort => "Fish, Shlomi",
                     }
                 ],
-                cover      => "shlomif-fortunes.jpg",
+                cover      => "shlomif-fortunes.png",
                 rights     => "CC-by-sa",
                 publisher  => 'http://www.shlomifish.org/',
                 language   => 'en',

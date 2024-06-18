@@ -445,7 +445,7 @@ tidy: all
 # This copies all the .pdf's at once - not ideal, but still
 # working.
 
-$(DOCBOOK4_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
+$(DOCBOOK5_INSTALLED_CSS_DIRS) : lib/sgml/docbook-css/docbook-css-0.4/
 	mkdir -p $@
 	rsync -r $< $@
 
@@ -569,7 +569,7 @@ all_deps: lib/htmls/The-Enemy-English-rev6.html-part
 lib/htmls/The-Enemy-English-rev6.html-part: $(T2_SRC_DIR)/humour/TheEnemy/The-Enemy-English-rev6.xhtml.gz ./bin/extract-xhtml.pl
 	gunzip < $< | $(PERL) ./bin/extract-xhtml.pl -o $@ -
 
-DOCBOOK4_HHFG_IMAGES_RAW = \
+DOCBOOK5_HHFG_IMAGES_RAW = \
 	background-image.png \
 	background-shlomif.png \
 	bottom-shlomif.png \
@@ -579,15 +579,15 @@ DOCBOOK4_HHFG_IMAGES_RAW = \
 	style.css \
 	top-shlomif.png
 
-DOCBOOK4_HHFG_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
-DOCBOOK4_HHFG_IMAGES_DEST = $(addprefix $(DOCBOOK4_HHFG_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+DOCBOOK5_HHFG_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide
+DOCBOOK5_HHFG_IMAGES_DEST = $(addprefix $(DOCBOOK5_HHFG_DEST_DIR)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
 
 HHFG_V2_IMAGES_DEST_DIR_FROM_VCS = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2--english
 HHFG_V2_IMAGES_DEST_DIR = $(DEST_HUMOUR)/human-hacking/human-hacking-field-guide-v2
-HHFG_V2_IMAGES_DEST = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
-HHFG_V2_IMAGES_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/,$(DOCBOOK4_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_DEST = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
+HHFG_V2_IMAGES_DEST_FROM_VCS = $(addprefix $(HHFG_V2_IMAGES_DEST_DIR_FROM_VCS)/,$(DOCBOOK5_HHFG_IMAGES_RAW))
 
-docbook_hhfg_images: $(DOCBOOK4_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS) $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css
+docbook_hhfg_images: $(DOCBOOK5_HHFG_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST) $(HHFG_V2_IMAGES_DEST_FROM_VCS) $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css
 
 $(HHFG_V2_IMAGES_DEST_DIR)/docbook.css: lib/docbook/5/indiv-nodes/human-hacking-field-guide-v2--english/docbook.css
 	mkdir -p "$$(dirname "$@")"

@@ -168,12 +168,12 @@ UPLOAD = (cd $(T2_POST_DEST) && $(RSYNC) $(RSYNC_EXCLUDES) -a . $1 )
 upload_deps: all
 
 upload_local: upload_deps
-	$(call UPLOAD,$${HOMEPAGE_SSH_PATH})
+	$(call UPLOAD,/home/fedora-var-www/html/shlomif/website-2019/)
 
 upload: upload_local upload_remote_only
 
 upload_remote_only: upload_deps
-	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
+	# $(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})
 
 upload_remote_only_without_deps:
 	$(call UPLOAD,$${__HOMEPAGE_REMOTE_PATH})

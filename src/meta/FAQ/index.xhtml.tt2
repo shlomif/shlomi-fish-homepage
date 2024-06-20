@@ -2447,6 +2447,16 @@ in its original English version, which has over 1,000 pages.
 
 [% END %]
 
+[% WRAPPER h3_section id = "you_linked_to_an_old_resource" title = "You gave a link to an old resource (such as a web-page). How is it still relevant?" %]
+
+<p>
+I think most of the messages conveyed by the resources in my links, are still
+applicable to the present (during which I gave the link). I usually try to skim
+the contents in the linked pages to check that. Also see <a href="[% base_path %]humour/fortunes/show.cgi?id=two-kinds-of-fools">“two kinds of fools”</a>.
+</p>
+
+[% END %]
+
 [% END %]
 
 [% WRAPPER h2_section id = "israel" title = "Questions Related to Me and to Israel" %]

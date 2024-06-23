@@ -213,6 +213,21 @@ path("${DIR}generated/include.mak")->spew_utf8(
     } qw( common src )
 );
 
+sub _ascertain_xhtml_dtds_on_fedora
+{
+    if ( -e "/etc/fedora-release" )
+    {
+        my $pivot = path("/usr/share/xml/xhtml/1.0/xhtml1-strict.dtd");
+        if ( not -e $pivot )
+        {
+            die
+qq#"xhtml1-dtds" / etc. should be installed on Fedora; $pivot is not present.#;
+        }
+    }
+}
+
+_ascertain_xhtml_dtds_on_fedora();
+
 path('Makefile')->spew_utf8("include ${DIR}main.mak\n");
 
 exit if delete $ENV{LATEMP_STOP_GEN};

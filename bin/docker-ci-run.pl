@@ -145,6 +145,7 @@ EOF
                     gdbm-devel
                     gmp-devel
                     hspell-devel
+                    html401-dtds
                     libdb-devel
                     libxml2-devel
                     libxslt
@@ -168,6 +169,7 @@ EOF
                     vim
                     virtualenv
                     which
+                    xhtml1-dtds
                     xz
                     /,
             ],

@@ -1,10 +1,9 @@
 [%- SET title = "Favourite Free and Open Source Software (FOSS) of Mine" -%]
 [%- SET desc = "Shlomi Fish’s Favourite Free and Open Source Software (FOSS) of Mine" -%]
 
+[% main_class.addClass("lim_width") %]
 
 [%- WRAPPER wrap_html -%]
-
-<div class="lim_width">
 
 <p>
 This page documents my favourite pieces of
@@ -42,8 +41,7 @@ While not as hyped as other distributions are, Mageia is very decent, and
 is suitable for both beginner and advanced users.
 </p>
 
-<h3 id="user_mode_linux"><a href="http://user-mode-linux.sourceforge.net/">User-mode
-Linux</a></h3>
+<h3 id="user_mode_linux"><a href="http://user-mode-linux.sourceforge.net/">User-mode Linux</a></h3>
 
 <p>
 User-mode Linux is a port of the Linux kernel to run as a process on top of a
@@ -312,8 +310,7 @@ one to run many UNIX programs and libraries on top of Windows. Make using
 Windows much more bearable.
 </p>
 
-<h3 id="windows-console"><a href="http://sourceforge.net/projects/console">Improved
-Windows Console</a></h3>
+<h3 id="windows-console"><a href="http://sourceforge.net/projects/console">Improved Windows Console</a></h3>
 
 <p>
 The so-called “Console” is a great replacement for the dysfunctional
@@ -329,8 +326,7 @@ And naturally, it’s also free and open-source.
 
 <h2 id="multimedia">Multimedia</h2>
 
-<h3 id="gimp"><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation
-Program</a></h3>
+<h3 id="gimp"><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation Program</a></h3>
 
 <p>
 A powerful image-processing application.
@@ -516,8 +512,7 @@ conversations. Very useful for debugging networking protocols and
 for other purposes.
 </p>
 
-<h3 id="clamav"><a href="http://www.clamav.net/">Clam AntiVirus
-(ClamAV)</a></h3>
+<h3 id="clamav"><a href="http://www.clamav.net/">Clam AntiVirus (ClamAV)</a></h3>
 
 <p>
 ClamAV is an open source anti-virus that can help filter out email messages
@@ -639,6 +634,5 @@ Awesome (But Lesser-Known) Open-Source Applications for Windows”</a> - on
 </li>
 
 </ul>
-</div>
 
 [% END %]

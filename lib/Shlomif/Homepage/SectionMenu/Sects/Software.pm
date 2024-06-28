@@ -191,6 +191,12 @@ my $_section_navmenu_tree_contents = {
 "A wrapper to the Docker (or podman) command-line interfaces",
                 },
                 {
+                    text  => "pydistman",
+                    url   => "open-source/projects/pydistman/",
+                    title =>
+"“Maximum Overkill Don’t-Repeat-Yourself” PyPI distribution manager, inspired by CPAN’s Dist-Zilla",
+                },
+                {
                     text  => "KSokoban Maintenance",
                     url   => "open-source/projects/ksokoban/",
                     title =>

@@ -1,0 +1,38 @@
+[%- SET title = "pydistman - Python Distribution Manager" -%]
+[%- SET desc = "Python Dist Manager. “Maximum Overkill DRY” PyPI distribution manager (WiP). Similar in philosophy to perl5’s Dist-Zilla." -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER about_sect %]
+
+<p>
+A work-in-progress manager for PyPI-like python distributions which aims to
+be a "maximum overkill" don't-repeat yourself manager with a user
+experience similar to Dist Zilla ( http://dzil.org/ ).
+</p>
+
+<p>
+Currently it is functional, but a far cry from our vision.
+</p>
+
+[%- END -%]
+
+[% WRAPPER links_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://github.com/shlomif/pydistman">GitHub repository</a>
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
+
+[%- END -%]
+
+[% END %]

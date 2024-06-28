@@ -220,10 +220,19 @@ A download accelerator with a key improvement.
 
 [% END %]
 
-[% WRAPPER h3_section id="Docker-CLI-Wrapper" href="Docker-CLI-Wrapper/" title="Docker-CLI-Wrapper" %]
+[% WRAPPER h3_section id = "Docker-CLI-Wrapper" href = "${base_path}/open-source/projects/Docker-CLI-Wrapper/" title = "Docker-CLI-Wrapper" %]
 
 <p>
 <b>TODO</b>
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id = "pydistman" href = "${base_path}/open-source/projects/pydistman/" title = "pydistman" %]
+
+<p>
+“Maximum Overkill Don’t-Repeat-Yourself” PyPI distribution manager, inspired by
+CPAN’s Dist-Zilla.
 </p>
 
 [% END %]

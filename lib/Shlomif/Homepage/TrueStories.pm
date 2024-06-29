@@ -185,6 +185,15 @@ EOF
             id   => "twelfth-grade-mathematics-competition",
             text => "12th Grade Mathematics Competition",
         },
+        {
+            html => <<"EOF",
+<p>
+Playing Ball with my Cousin’s Son at a Family Event.
+</p>
+EOF
+            id   => "playing-ball-with-my-cousin-son",
+            text => "Playing Ball with my Cousin’s Son at a Family Event",
+        },
     )
 ];
 

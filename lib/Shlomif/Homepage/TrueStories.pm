@@ -167,7 +167,8 @@ EOF
         {
             html => <<"EOF",
 <p>
-TODO.
+Why I decided to not care too much about people caring about “faults”
+I do not find important.
 </p>
 EOF
             id   => "does-he-keep-kashruth",

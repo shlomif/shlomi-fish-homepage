@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 When I told some people on
@@ -16,16 +16,16 @@ idea. So here goes.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "what_is"  title = "What is “Fortunes Mania”"  %]
+[% WRAPPER h2_section id = "what_is" title = "What is “Fortunes Mania”" %]
 
 <p>
 In a nutshell, Fortunes Mania is a community sharing sites for quotations,
-(or “fortune cookies” or “fortunes” as they are called in UNIX speak. People
+(or “fortune cookies” or “fortunes” as they are called in UNIX speak). People
 can create feeds of quotes, syndicate and aggregate them, tag and categorise
 them, rate and comment on them, etc.
 </p>
 
-[% WRAPPER h3_section id = "existing_efforts"  title = "Existing Efforts (and why they are inadequate.)"  %]
+[% WRAPPER h3_section id = "existing_efforts" title = "Existing Efforts (and why they are inadequate.)" %]
 
 <p>
 There are <a href="http://www.google.com/Top/Reference/Quotations/">many
@@ -43,7 +43,7 @@ few are categorised into the topics’ pages.
 <a href="http://www.bash.org/">The Quote Database</a> is a collection of
 user-submitted [% IRC %] conversations. The problem with it is that the quotes
 still have to be accepted by the editors, and reportedly they have a large
-backlog. The quotes are not categorised in any way, and they are all plain
+backlog. The quotes are also not categorised in any way, and they are all plain
 text.
 </p>
 
@@ -51,7 +51,7 @@ text.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "features"  title = "Features of the Site"  %]
+[% WRAPPER h2_section id = "features" title = "Features of the Site" %]
 
 <p>
 The site will allow users to register an account, and start publishing
@@ -87,7 +87,7 @@ formats on demand. I also believe this format needs to have structured markup.
 [% WRAPPER h3_section id = "interfaces"  title = "Interfaces"  %]
 
 <p>
-Beside the web-interface (possibly facilitated by AJAX), it will probably be
+Beside the web-interface (possibly made more user-friendly by <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a>), it will probably be
 a good idea to supply some more convenient clients for different platforms:
 command line, GUI, Mozilla XUL, etc.
 </p>

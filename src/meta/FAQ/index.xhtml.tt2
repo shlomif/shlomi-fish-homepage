@@ -3807,6 +3807,22 @@ While I agree that you should be critical of yours and other older works, often 
 
 [% END %]
 
+[% WRAPPER h4_section id = "i_dont_press_links" title = "I don’t follow links / URLs" %]
+
+<p>
+Then what do you intend to do with URLs? Compress them under several million tonnes of rock for a few eons? 😉
+</p>
+
+<p>
+If you are worried about security, you can try using <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a>, <a href="https://en.wikipedia.org/wiki/Wget">wget</a>, <a href="https://en.wikipedia.org/wiki/CURL">curl</a> or similar. You should be able to read a lot of the ASCII-subset-of-UTF-8 content using a text editor or a hex-editor.
+</p>
+
+<p>
+Given Google Chromium Browser’s compressed sources were <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-programming-big-JPEGs">531 megabytes in 2016</a> and over 4,000 megabytes in 2024, and they contained many bugs and security vulnerabilities, I think downloading raw XTHML5 sources from <a href="#how_site_is_generated">static-sites like shlomifish.org</a> is unlikely to be the weakest link.
+</p>
+
+[% END %]
+
 [% WRAPPER h4_section id = "why_the_links_to_start_with" title = "Why the links to start with?" %]
 
 <p>

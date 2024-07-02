@@ -302,7 +302,25 @@ Objects/structs/records / <a href="https://en.wikipedia.org/wiki/Associative_arr
 </p>
 </li>
 </ol>
+
 [%- END -%]
+
+[% WRAPPER h3_section id = "more-expressive-cmake-script-lang" title = "A more expressive scripting language for CMake (and its data-model)" %]
+
+<p>
+I like <a href="https://cmake.org/">CMake</a> and find its scripting
+language usable for the kind of tasks for which I need to use it. However,
+a more expressive language with capabilities closer to Python 3 or Perl 5
+will still likely improve the user-experience.
+</p>
+
+<p>
+Note that <a href="https://github.com/vdamewood">Vincent Damewood</a> expressed
+interest in implementing such a language in the future too, so you may wish
+to keep him in the loop.
+</p>
+
+[% END %]
 
 [%- END -%]
 

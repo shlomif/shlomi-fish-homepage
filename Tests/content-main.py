@@ -181,7 +181,7 @@ class MyTests(html_unit_test.TestCase):
                 "trailing slash for directory link"
             )
             self.assertFalse(
-                a_el[0].text.endswith("[Satire]"),
+                a_el[0].text.endswith("atire]"),
                 "[Satire] title",
             )
 

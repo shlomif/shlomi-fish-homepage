@@ -181,7 +181,7 @@ NON_RAW_TEMPLATE = \
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>{{title}}</title>
+<title>{{title}} [possible satire]</title>
 <link rel="stylesheet" href="{{base_dir}}/fort_total.css" media="screen" />
 <meta charset="utf-8" />
 <meta name="description" content="{{description}}" />
@@ -202,7 +202,7 @@ NON_RAW_TEMPLATE = \
 <ul id="publish_time">
 <li>Published at <time datetime="{{date}}">{{human_date}}</time></li>
 </ul>
-<h1>{{title}}</h1>
+<h1>{{title}} [possible satire]</h1>
 <div class="fortunes_list">
 <div class="fortune">
 {{!html_text}}
@@ -217,7 +217,7 @@ RAW_TEMPLATE = \
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>{{title}}</title>
+<title>{{title}} [possible satire]</title>
 <meta charset="utf-8" />
 <meta name="description" content="{{description}}" />
 </head>

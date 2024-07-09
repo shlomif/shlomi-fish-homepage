@@ -79,6 +79,9 @@ class MyTests(html_unit_test.TestCase):
         doc.has_one(
             "descendant::time[contains(text(), '27-August-2020')]"
         )
+        doc.has_one(
+            "descendant::title[contains(text(), '[possible satire]')]"
+        )
 
     def test_raw_mode(self):
         app = TestApp(fortunes_show.app)

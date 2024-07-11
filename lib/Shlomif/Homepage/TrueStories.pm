@@ -194,6 +194,15 @@ EOF
             id   => "playing-ball-with-my-cousin-son",
             text => "Playing Ball with my Cousin’s Son at a Family Event",
         },
+        {
+            html => <<"EOF",
+<p>
+“A Shameful Profession”.
+</p>
+EOF
+            id   => "shameful-profession",
+            text => "“A Shameful Profession”",
+        },
     )
 ];
 

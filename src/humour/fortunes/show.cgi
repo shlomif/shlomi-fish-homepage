@@ -11,9 +11,6 @@ use strict;
 use warnings;
 use 5.008;
 
-# use autodie;
-
-use Carp qw/ confess /;
 use lib "./lib";
 use CGI::Minimal ();
 my $id_re = qr#[A-Za-z][A-Za-z0-9_\-]*#ms;

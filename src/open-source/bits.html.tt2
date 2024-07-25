@@ -5,10 +5,6 @@
 
 [% default_toc %]
 
-[% BLOCK bit_link %]bits-and-bobs/[% href %][% END %]
-
-[% BLOCK repo_bit_link %]https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/[% href %][% END %]
-
 <h2 id="gnupg_sign_verify">GnuPG Insta-Party Signature List Verification Script</h2>
 
 <p>
@@ -20,7 +16,7 @@ the same as those in the file.
 </p>
 
 <p>
-To resolve it, I wrote <a href="[% INCLUDE repo_bit_link href = "gpg-verify.pl" , %]">a script</a>
+To resolve it, I wrote <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/gpg-verify.pl">a script</a>
 that checks the signatures in the file and verifies that they are the same
 as those reported by GPG in the key-ring. You can freely use it under
 the terms of the MIT/Expat license.
@@ -36,11 +32,11 @@ times.
 <h2 id="twiki_install">TWiki Installation Scripts</h2>
 
 <p>
-This is <a href="[% INCLUDE bit_link href = "shlomif-twiki-installation-automation-2004-09-10.tar.gz" , %]">a collection of bash scripts I wrote</a> to automate the installation
+This is <a href="bits-and-bobs/shlomif-twiki-installation-automation-2004-09-10.tar.gz">a collection of bash scripts I wrote</a> to automate the installation
 of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation.
 </p>
 
-<h2 id="open_inventor_bsd_daemon"><a href="[% INCLUDE bit_link href = "open-inventor-bsd-daemon/" , %]">Open Inventor
+<h2 id="open_inventor_bsd_daemon"><a href="bits-and-bobs/open-inventor-bsd-daemon/">Open Inventor
 3-D BSD Daemon</a></h2>
 
 <p>
@@ -48,7 +44,7 @@ An OpenInventor-based three-dimensional model of Beastie the BSD Daemon,
 created as a Technion project in the Computer Graphics course.
 </p>
 
-<h2 id="gringotts"><a href="[% INCLUDE bit_link href = "gringotts-patch/" , %]">Patch for Gringotts</a></h2>
+<h2 id="gringotts"><a href="bits-and-bobs/gringotts-patch/">Patch for Gringotts</a></h2>
 
 <p>
 This is a patch for
@@ -56,7 +52,7 @@ This is a patch for
 allows it to compile with the latest Gtk+, and fixes some other annoyances.
 </p>
 
-<h2 id="xchat_xmms_nowplay"><a href="[% INCLUDE bit_link href = "nowplay-xchat-pl.txt" , %]">X-Chat /nowplay command using XMMS</a></h2>
+<h2 id="xchat_xmms_nowplay"><a href="bits-and-bobs/nowplay-xchat-pl.txt">X-Chat /nowplay command using XMMS</a></h2>
 
 <p>
 What this little Perl script does is register an
@@ -73,7 +69,7 @@ You need to install the [% WRAPPER cpan_dist d = "Xmms-Perl" -%]Xmms-Perl distri
 under your <code>$HOME/.xchat2</code> directory.
 </p>
 
-<h2 id="old_pmwiki_revert"><a href="[% INCLUDE bit_link href = "pmwiki-revert-pl.txt" , %]">Revert
+<h2 id="old_pmwiki_revert"><a href="bits-and-bobs/pmwiki-revert-pl.txt">Revert
 an (old-versioned) PMWiki Wiki to a previous state</a></h2>
 
 <p>
@@ -83,20 +79,20 @@ that the format of the PMWiki pages has changed since the version for which
 this script was intended.
 </p>
 
-<h2 id="greasemonkey"><a href="[% INCLUDE bit_link href = "greasemonkey/grease.html" , %]">Greasemonkey
+<h2 id="greasemonkey"><a href="bits-and-bobs/greasemonkey/grease.html">Greasemonkey
 Scripts</a></h2>
 
 <p>
 Scripts for <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a>.
 </p>
 
-<h2 id="linkvisitor"><a href="[% INCLUDE bit_link href = "linkvisitor-1.2.2.xpi" , %]">LinkVisitor for Mozilla Firefox 2.0.x and Below</a></h2>
+<h2 id="linkvisitor"><a href="bits-and-bobs/linkvisitor-1.2.2.xpi">LinkVisitor for Mozilla Firefox 2.0.x and Below</a></h2>
 
 <p>
 Click on the Link to download or install the
 <a href="http://linkvisitor.mozdev.org/">LinkVisitor extension</a> for Firefox
 2.0.x and below. Here’s
-<a href="[% INCLUDE bit_link href = "linkvisitor-firefox-2.0-patch.diff" , %]">the patch</a>
+<a href="bits-and-bobs/linkvisitor-firefox-2.0-patch.diff">the patch</a>
 against the CVS source.
 </p>
 
@@ -104,7 +100,7 @@ against the CVS source.
 <b>Update</b>: the package was modified to work on Firefox 2.0.x.
 </p>
 
-<h2 id="kaddressbook_dist_lists"><a href="[% INCLUDE bit_link href = "convert-kabc-dist-lists-pl.txt" , %]">Forward Port the KAddressBook Distribution Lists to Version 3.5.4</a></h2>
+<h2 id="kaddressbook_dist_lists"><a href="bits-and-bobs/convert-kabc-dist-lists-pl.txt">Forward Port the KAddressBook Distribution Lists to Version 3.5.4</a></h2>
 
 <p>
 The format used for the distribution lists has changed from earlier versions
@@ -143,7 +139,7 @@ which sound louder or softer than the rest.
 </li>
 </ul>
 
-<h2 id="qclam"><a href="[% INCLUDE bit_link href = "qclam/" , %]">QClam-Shlomif</a></h2>
+<h2 id="qclam"><a href="bits-and-bobs/qclam/">QClam-Shlomif</a></h2>
 
 <p>
 <a href="http://sageshome.net/oss/qclam.php">QClam</a> is a small utility
@@ -151,7 +147,7 @@ to interface ClamAV scanning from within dot-qmail files. This is a version of
 it that was improved by me to some extent.
 </p>
 
-<h2 id="fluttering_flag"><a href="[% INCLUDE bit_link href = "sdl-flag-0.2.0.c" , %]">SDL
+<h2 id="fluttering_flag"><a href="bits-and-bobs/sdl-flag-0.2.0.c">SDL
 Fluttering Flag</a></h2>
 
 <p>
@@ -172,11 +168,11 @@ story of how I originally recreated the fluttering flag effect.
 </p>
 
 <p>
-There is also <a href="[% INCLUDE repo_bit_link href = "sdl-flag-0.2.0.pl" , %]">perl version</a>
+There is also <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/sdl-flag-0.2.0.pl">perl version</a>
 which is slower.
 </p>
 
-<h2 id="slidy_shlomif"><a href="[% INCLUDE bit_link href = "slidy-shlomif-0.2.0.js" , %]">JavaScript
+<h2 id="slidy_shlomif"><a href="bits-and-bobs/slidy-shlomif-0.2.0.js">JavaScript
 Presentation Helper</a></h2>
 
 <p>
@@ -200,7 +196,7 @@ This file is distributed under the same terms as the original file, and I
 disclaim any explicit or implicit ownership.
 </p>
 
-<h2 id="square_waves_decomposition"><a href="[% INCLUDE bit_link href = "square-waves-decomposition/" , %]">Square Waves Decomposition of a Sine Wave</a></h2>
+<h2 id="square_waves_decomposition"><a href="bits-and-bobs/square-waves-decomposition/">Square Waves Decomposition of a Sine Wave</a></h2>
 
 <p>
 This is a program I wrote, after someone asked if it’s possible to decompose a
@@ -219,7 +215,7 @@ under a certain sub-directory). (Licensed under the MIT/Expat License).
 </p>
 
 <h2 id="set_xfce_workspaces"><a
-href="[% INCLUDE repo_bit_link href = "xfce-set-virtual-workspaces.rb" , %]">Set the
+href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/xfce-set-virtual-workspaces.rb">Set the
 Xfce Virtual Workspaces Number and Names</a></h2>
 
 <p>
@@ -238,7 +234,7 @@ under the MIT/Expat License.
 </p>
 
 <h2 id="quad-pres-in-haskell"><a
-href="[% INCLUDE bit_link href = "HaQuadPres-08-03-2001.tar.xz" , %]">Port of the Quad-Pres
+href="bits-and-bobs/HaQuadPres-08-03-2001.tar.xz">Port of the Quad-Pres
 presentation generator to Haskell</a></h2>
 
 <p>

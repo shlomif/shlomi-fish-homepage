@@ -92,7 +92,7 @@ class MyTests(html_unit_test.TestCase):
             'type': 'text',
             'fn': 'test_raw_mode',
             'text': resp.text.encode('utf8'),
-        })
+        }, filetype='html')
         doc.has_one(
             "//html/body/div[@class='fortune']/blockquote/" +
             "p[contains(text(), 'recorded')]"

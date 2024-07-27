@@ -43,6 +43,15 @@ sub run
             {
                 confess "no closing tag !";
             }
+            my $href;
+            my $linktext;
+            if ( $l =~ s@\A<a href="\A([^\"]+)">([^\<]+)</a>\z@@ms )
+            {
+                ( $href, $linktext ) = ( $1, $2 );
+                $out .=
+qq#[% h${level}_section href = "${href}" id = "${id}" title = ${linktext}]\n#;
+            }
+            die;
         }
         elsif ( my ($tag) = $line =~ m@(</h[0-9]+)@ms )
         {

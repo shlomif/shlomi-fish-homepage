@@ -1,23 +1,21 @@
 [%- SET title = "Greasemonkey Scripts" -%]
 [%- SET desc = "Greasemonkey Scripts by Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "ddg-highlight"  title = "DuckDuckGo Active Item: More visible red border"  href = "duckduckgo-better-highlight-active-result.user.js"  %]
+[% WRAPPER h2_section href = "duckduckgo-better-highlight-active-result.user.js" id = "ddg-highlight" title = "DuckDuckGo Active Item: More visible red border" %]
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "validate-key"  title = "Use the “v” keyboard key to validate an HTML page"  href = "validate-key.user.js"  %]
+[% WRAPPER h2_section href = "validate-key.user.js" id = "validate-key" title = "Use the “v” keyboard key to validate an HTML page" %]
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "check-mageia-org--nobody"  title = "Set empty check.mageia.org maintainers to “nobody”"  href = "check.mageia.org--set-empty-maint-to-nobody.user.js"  %]
+[% WRAPPER h2_section href = "check.mageia.org--set-empty-maint-to-nobody.user.js" id = "check-mageia-org--nobody" title = "Set empty check.mageia.org maintainers to “nobody”" %]
 
 [%- END -%]
 
-<h2 id="no-accesskey"><a href="no-accesskey.user.js">Eliminate
-Access Keys</a></h2>
+[% WRAPPER h2_section href = "no-accesskey.user.js" id = "no-accesskey" title = "Eliminate Access Keys" %]
 
 <p>
 What this script does is remove access keys from all the elements of the
@@ -33,7 +31,9 @@ bug in Mozilla</a> it cannot cancel accesskeys assigned to &lt;input /&gt;
 boxes. It would be able to do so once the bug is fixed.
 </p>
 
-<h2 id="self-links-for-headers"><a href="self-links-for-headers-with-ids.user.js">Self links for Headers with id="" attributes</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "self-links-for-headers-with-ids.user.js" id = "self-links-for-headers" title = "Self links for Headers with id=\"\" attributes" %]
 
 <p>
 It is a good practice to provide id="" attributes (which can serve as anchors)
@@ -42,8 +42,9 @@ does is create self-links after the headers so one can use them to either jump
 to the page, or link directly to the portion in the page.
 </p>
 
-<h2 id="svn-links-to-repos"><a href="svn-links-to-repos.user.js">Subversion
-Links to the Repository</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "svn-links-to-repos.user.js" id = "svn-links-to-repos" title = "Subversion Links to the Repository" %]
 
 <p>
 This script creates links from the ViewVC browser back to the Subversion
@@ -56,8 +57,9 @@ ViewVC and <a href="http://sourceforge.net/">SourceForge</a> ones,
 but support for more can be added.
 </p>
 
-<h2 id="eliminate-from-rss"><a href="get-rid-of-from-rss.user.js">Get Rid
-of “from=rss” in the URL</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "get-rid-of-from-rss.user.js" id = "eliminate-from-rss" title = "Get Rid of “from=rss” in the URL" %]
 
 <p>
 I am always annoyed that when I follow links in the RSS feeds of
@@ -71,9 +73,9 @@ So what this incredibly silly script does is redirect to a new page without
 this suffix.
 </p>
 
-<h2 id="qa-mandriva-fix-anchor"><a
-href="qa.mandriva.com-fix-reply-to-anchor.user.js">Fix the qa.mandriva.com
-reply-to-comment anchor</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "qa.mandriva.com-fix-reply-to-anchor.user.js" id = "qa-mandriva-fix-anchor" title = "Fix the qa.mandriva.com reply-to-comment anchor" %]
 
 <p>
 The Mandriva Bugzilla
@@ -82,8 +84,9 @@ comment instead of the reply-to-box. This greasemonkey script fixed this
 problem.
 </p>
 
-<h2 id="freshmeat-expand-desc"><a
-href="freshmeat-expand-descriptions.user.js">Expand the Freecode Descriptions</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "freshmeat-expand-descriptions.user.js" id = "freshmeat-expand-desc" title = "Expand the Freecode Descriptions" %]
 
 <p>
 This script is meant to expand the descriptions of
@@ -95,8 +98,9 @@ actually works, because the latter does not work due to what appears to be
 bad timing in the JS application.
 </p>
 
-<h2 id="o-and-m-title"><a href="ozy-millie-title.user.js">Ozy and Millie
-Title Generator</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "ozy-millie-title.user.js" id = "o-and-m-title" title = "Ozy and Millie Title Generator" %]
 
 <p>
 This script is intended for a specialised purpose, and doesn’t add to the
@@ -113,9 +117,9 @@ This script is useful for people doing transcription of Ozy and Millie,
 but otherwise should not be used.
 </p>
 
-<h2 id="o-and-m-mediawiki-edit-transcripts"><a
-href="mediawiki-edit-ozy-and-millie-transcripts.user.js">Ozy
-and Millie MediaWiki Transcribing Aid</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "mediawiki-edit-ozy-and-millie-transcripts.user.js" id = "o-and-m-mediawiki-edit-transcripts" title = "Ozy and Millie MediaWiki Transcribing Aid" %]
 
 <p>
 I’m using MediaWiki to prepare a transcript for the <i>Ozy and Millie</i>
@@ -133,5 +137,7 @@ So, for example “*Oz” Becomes “* '''Ozy''': ”, and “**Ms” becomes
 Since this script is also intended for a specialised purpose, I haven’t
 uploaded it to userscripts.org either.
 </p>
+
+[% END %]
 
 [% END %]

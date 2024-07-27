@@ -32,10 +32,21 @@ sub run
             {
                 confess "Out of range level $level !";
             }
+            my $l = $line . "";
+            my ($id);
+            if ( not( $l =~ s@\A<h\Q$level\E id="([a-zA-Z0-9-_]+)">@@ms ) )
+            {
+                confess "no id=\"\" attribute !";
+            }
+            $id = $1;
         }
         elsif ( my ($tag) = $line =~ m@(</h[0-9]+)@ms )
         {
             confess "Out of place end tag “$tag” !";
+        }
+        else
+        {
+            $out .= $line;
         }
     }
 

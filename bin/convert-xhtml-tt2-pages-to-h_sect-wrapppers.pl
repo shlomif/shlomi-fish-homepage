@@ -45,13 +45,23 @@ sub run
             }
             my $href;
             my $linktext;
-            if ( $l =~ s@\A<a href="\A([^\"]+)">([^\<]+)</a>\z@@ms )
+            my $ol;
+            if ( $l =~ s@\A<a href="([^\"]+)">([^\<]+)</a>\z@@ms )
             {
                 ( $href, $linktext ) = ( $1, $2 );
-                $out .=
-qq#[% h${level}_section href = "${href}" id = "${id}" title = ${linktext}]\n#;
+                $ol =
+qq#[% h${level}_section href = "${href}" id = "${id}" title = "${linktext}" %]\n#;
             }
-            die;
+            elsif ( $l =~ s@\A([^\<\>]+)\z@@ms )
+            {
+                ($linktext) = ( $1, );
+                $ol =
+qq#[% h${level}_section id = "${id}" title = "${linktext}" %]\n#;
+            }
+            else
+            {
+                confess "wrong/intermediate lne formt ' $line '";
+            }
         }
         elsif ( my ($tag) = $line =~ m@(</h[0-9]+)@ms )
         {

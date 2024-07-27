@@ -5,7 +5,7 @@
 
 [% default_toc %]
 
-<h2 id="gnupg_sign_verify">GnuPG Insta-Party Signature List Verification Script</h2>
+[% WRAPPER h2_section id = "gnupg_sign_verify" title = "GnuPG Insta-Party Signature List Verification Script" %]
 
 <p>
 Some key-signing parties are conducted in a way that the
@@ -29,21 +29,27 @@ time, where I signed each key individually, using my password like a zillion
 times.
 </p>
 
-<h2 id="twiki_install">TWiki Installation Scripts</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "twiki_install" title = "TWiki Installation Scripts" %]
 
 <p>
 This is <a href="bits-and-bobs/shlomif-twiki-installation-automation-2004-09-10.tar.gz">a collection of bash scripts I wrote</a> to automate the installation
 of <a href="http://twiki.org/">TWiki</a> - a popular Wiki implementation.
 </p>
 
-<h2 id="open_inventor_bsd_daemon"><a href="bits-and-bobs/open-inventor-bsd-daemon/">Open Inventor 3-D BSD Daemon</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/open-inventor-bsd-daemon/" id = "open_inventor_bsd_daemon" title = "Open Inventor 3-D BSD Daemon" %]
 
 <p>
 An OpenInventor-based three-dimensional model of Beastie the BSD Daemon,
 created as a Technion project in the Computer Graphics course.
 </p>
 
-<h2 id="gringotts"><a href="bits-and-bobs/gringotts-patch/">Patch for Gringotts</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/gringotts-patch/" id = "gringotts" title = "Patch for Gringotts" %]
 
 <p>
 This is a patch for
@@ -51,7 +57,9 @@ This is a patch for
 allows it to compile with the latest Gtk+, and fixes some other annoyances.
 </p>
 
-<h2 id="xchat_xmms_nowplay"><a href="bits-and-bobs/nowplay-xchat-pl.txt">X-Chat /nowplay command using XMMS</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/nowplay-xchat-pl.txt" id = "xchat_xmms_nowplay" title = "X-Chat /nowplay command using XMMS" %]
 
 <p>
 What this little Perl script does is register an
@@ -68,7 +76,9 @@ You need to install the [% WRAPPER cpan_dist d = "Xmms-Perl" -%]Xmms-Perl distri
 under your <code>$HOME/.xchat2</code> directory.
 </p>
 
-<h2 id="old_pmwiki_revert"><a href="bits-and-bobs/pmwiki-revert-pl.txt">Revert an (old-versioned) PMWiki Wiki to a previous state</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/pmwiki-revert-pl.txt" id = "old_pmwiki_revert" title = "Revert an (old-versioned) PMWiki Wiki to a previous state" %]
 
 <p>
 This is a Perl script I wrote to revert a PMWiki Wiki to a previous state after
@@ -77,13 +87,17 @@ that the format of the PMWiki pages has changed since the version for which
 this script was intended.
 </p>
 
-<h2 id="greasemonkey"><a href="bits-and-bobs/greasemonkey/grease.html">Greasemonkey Scripts</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/greasemonkey/grease.html" id = "greasemonkey" title = "Greasemonkey Scripts" %]
 
 <p>
 Scripts for <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a>.
 </p>
 
-<h2 id="linkvisitor"><a href="bits-and-bobs/linkvisitor-1.2.2.xpi">LinkVisitor for Mozilla Firefox 2.0.x and Below</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/linkvisitor-1.2.2.xpi" id = "linkvisitor" title = "LinkVisitor for Mozilla Firefox 2.0.x and Below" %]
 
 <p>
 Click on the Link to download or install the
@@ -97,7 +111,9 @@ against the CVS source.
 <b>Update</b>: the package was modified to work on Firefox 2.0.x.
 </p>
 
-<h2 id="kaddressbook_dist_lists"><a href="bits-and-bobs/convert-kabc-dist-lists-pl.txt">Forward Port the KAddressBook Distribution Lists to Version 3.5.4</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/convert-kabc-dist-lists-pl.txt" id = "kaddressbook_dist_lists" title = "Forward Port the KAddressBook Distribution Lists to Version 3.5.4" %]
 
 <p>
 The format used for the distribution lists has changed from earlier versions
@@ -109,7 +125,9 @@ lists that have raw emails inside the distribution lists’ directives. This
 script is available under the MIT/Expat licence, with absolutely no warranty.
 </p>
 
-<h2 id="amarok">Amarok Scripts</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "amarok" title = "Amarok Scripts" %]
 
 <p>
 <a href="http://amarok.kde.org/">Amarok</a> is a powerful and easy to use
@@ -136,7 +154,9 @@ which sound louder or softer than the rest.
 </li>
 </ul>
 
-<h2 id="qclam"><a href="bits-and-bobs/qclam/">QClam-Shlomif</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/qclam/" id = "qclam" title = "QClam-Shlomif" %]
 
 <p>
 <a href="http://sageshome.net/oss/qclam.php">QClam</a> is a small utility
@@ -144,7 +164,9 @@ to interface ClamAV scanning from within dot-qmail files. This is a version of
 it that was improved by me to some extent.
 </p>
 
-<h2 id="fluttering_flag"><a href="bits-and-bobs/sdl-flag-0.2.0.c">SDL Fluttering Flag</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/sdl-flag-0.2.0.c" id = "fluttering_flag" title = "SDL Fluttering Flag" %]
 
 <p>
 <b>Note:</b> there is now a <a href="https://github.com/shlomif/sdl2-pointerless/blob/shlomif-flag-demo/src/main.c">port to SDL 2.x</a> (note the git branch).
@@ -168,7 +190,9 @@ There is also <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/mast
 which is slower.
 </p>
 
-<h2 id="slidy_shlomif"><a href="bits-and-bobs/slidy-shlomif-0.2.0.js">JavaScript Presentation Helper</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/slidy-shlomif-0.2.0.js" id = "slidy_shlomif" title = "JavaScript Presentation Helper" %]
 
 <p>
 This is a JavaScript script based on
@@ -191,14 +215,18 @@ This file is distributed under the same terms as the original file, and I
 disclaim any explicit or implicit ownership.
 </p>
 
-<h2 id="square_waves_decomposition"><a href="bits-and-bobs/square-waves-decomposition/">Square Waves Decomposition of a Sine Wave</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/square-waves-decomposition/" id = "square_waves_decomposition" title = "Square Waves Decomposition of a Sine Wave" %]
 
 <p>
 This is a program I wrote, after someone asked if it’s possible to decompose a
 sine wave using square waves.
 </p>
 
-<h2 id="du-output-analyser"><a href="https://metacpan.org/pod/distribution/App-Du-Analyze/bin/analyze-du">du Output Analyser</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "https://metacpan.org/pod/distribution/App-Du-Analyze/bin/analyze-du" id = "du-output-analyser" title = "du Output Analyser" %]
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Du_(Unix)">du</a> is a UNIX command
@@ -208,7 +236,9 @@ to analyse the file by filtering the sub-directories of a certain depth (and
 under a certain sub-directory). (Licensed under the MIT/Expat License).
 </p>
 
-<h2 id="set_xfce_workspaces"><a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/xfce-set-virtual-workspaces.rb">Set the Xfce Virtual Workspaces Number and Names</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/xfce-set-virtual-workspaces.rb" id = "set_xfce_workspaces" title = "Set the Xfce Virtual Workspaces Number and Names" %]
 
 <p>
 This command line Ruby script sets the names (and number) of the
@@ -225,12 +255,16 @@ discussion on the Xfce mailing list</a> for more information.) Licensed
 under the MIT/Expat License.
 </p>
 
-<h2 id="quad-pres-in-haskell"><a href="bits-and-bobs/HaQuadPres-08-03-2001.tar.xz">Port of the Quad-Pres presentation generator to Haskell</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "bits-and-bobs/HaQuadPres-08-03-2001.tar.xz" id = "quad-pres-in-haskell" title = "Port of the Quad-Pres presentation generator to Haskell" %]
 
 <p>
 This is a port I've done of
 <a href="[% base_path %]open-source/projects/quad-pres/">Quad-Pres</a>, which
 I originated as well, to the Haskell programming language.
 </p>
+
+[% END %]
 
 [% END %]

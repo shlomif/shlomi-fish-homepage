@@ -23,6 +23,7 @@ sub run
 
     my $in_fh = \*ARGV;
     my $out   = "";
+    my $prev_level;
 
     while ( my $line = <$in_fh> )
     {
@@ -50,18 +51,27 @@ sub run
             {
                 ( $href, $linktext ) = ( $1, $2 );
                 $ol =
-qq#[% h${level}_section href = "${href}" id = "${id}" title = "${linktext}" %]\n#;
+qq#[% WRAPPER h${level}_section href = "${href}" id = "${id}" title = "${linktext}" %]\n#;
             }
             elsif ( $l =~ s@\A([^\<\>]+)\z@@ms )
             {
                 ($linktext) = ( $1, );
                 $ol =
-qq#[% h${level}_section id = "${id}" title = "${linktext}" %]\n#;
+qq#[% WRAPPER h${level}_section id = "${id}" title = "${linktext}" %]\n#;
             }
             else
             {
                 confess "wrong/intermediate lne formt ' $line '";
             }
+            if ( defined($prev_level) )
+            {
+                foreach my $lev ( reverse( $level .. $prev_level ) )
+                {
+                    $out .= qq#\n\n[% END %]\n\n#;
+                }
+            }
+            $out .= $ol;
+            $prev_level = $level;
         }
         elsif ( my ($tag) = $line =~ m@(</h[0-9]+)@ms )
         {
@@ -72,6 +82,13 @@ qq#[% h${level}_section id = "${id}" title = "${linktext}" %]\n#;
             $out .= $line;
         }
     }
+    my $oprev = '';
+    foreach my $lev ( reverse( 2 .. $prev_level ) )
+    {
+        $oprev .= qq#\n\n[% END %]\n\n#;
+    }
+    $out =~ s@(^\[\%\-? *END *\-?\%\]\n*)\z@$oprev . $1@ems;
+    $out =~ s#\n\n+#\n\n#gms;
 
     print $out;
     return;

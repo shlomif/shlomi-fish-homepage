@@ -39,6 +39,10 @@ sub run
                 confess "no id=\"\" attribute !";
             }
             $id = $1;
+            if ( not( $l =~ s@</h\Q$level\E>\n\z@@ms ) )
+            {
+                confess "no closing tag !";
+            }
         }
         elsif ( my ($tag) = $line =~ m@(</h[0-9]+)@ms )
         {

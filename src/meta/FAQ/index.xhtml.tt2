@@ -5633,6 +5633,25 @@ link</a> for more information.
 
 [%- END -%]
 
+[% WRAPPER h4_section id = "why_github" title = "Why are you using GitHub? What can I do about it if I don’t?" %]
+
+<p>
+I like the overall GitHub user-interface and user-experience (“UI / UX”). When
+I used Bitbucket more, some people told me they prefer GitHub, and one of them
+also took the liberty to set-up a GitHub organisation with clones of the
+repositories and sub-repositories of a certain project. <a
+href="https://shlomifishswiki.branchable.com/Never_Try_to_Please_Everyone/">I
+can never please everyone</a>.
+</p>
+
+<p>
+If you cannot submit GitHub pull-requests or file GitHub issues, then <a
+href="[% base_path %]me/contact-me/">contact me</a> and send patches or text
+bug-reports and enhancement requests.
+</p>
+
+[% END %]
+
 [% WRAPPER h4_section id = "thought_you_were_a_Perl_guy" title = "Why are you working on this non-Perl 5/6 project? I thought you were a Perl guy!" %]
 
 <p>

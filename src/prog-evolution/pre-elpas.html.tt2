@@ -39,9 +39,10 @@ The first time I programmed was for an
 bought,
 and for the
 <a href="http://en.wikipedia.org/wiki/BASIC_programming_language">BASIC</a>
+runtime
 that came hard-coded in the ROM and loaded in case you
 did not insert a floppy disk in the drive. I was in my 4th grade and my two
-best friend got jealous of the computer and their parents promptly bought
+best friends got jealous of the computer and their parents promptly bought
 ones for them too. Together, we bought a set of booklets about teaching
 BASIC in DOS called “Mahsheveth” (or “מחשבת” in Hebrew) and helped each other
 learn the language.
@@ -69,8 +70,8 @@ a Technion student). Thus, the later transition to C/C++ was quite natural.
 <p>
 The first programs I wrote were nearly identical to the ones that appeared in
 the answers section. The latter ones deviated very much, which made me a bit
-distressed that we made things differently. Back then, I did not hear of
-the <a href="http://www.greythumb.org/blog/index.php?/archives/7-T.M.T.O.W.T.D.I..html">“There’s more than one way to do it”</a> idiom. Eventually, I
+unhappy that we did things differently. Back then, I did not hear of
+the <a href="https://en.wikipedia.org/wiki/There's_more_than_one_way_to_do_it">“There’s more than one way to do it”</a> idiom. Eventually, I
 realised that everyone did things a little differently and that I should be
 content with it.
 </p>
@@ -100,23 +101,22 @@ Awk? Perl? Tcl? SmallTalk? Matlab? We’ve never heard of them at all.
 
 <p>
 So I instructed my father to buy me a C compiler package in one of his trips
-abroad and he bought me Borland’s Turbo C++. I learned C and C++ through its
-manual. One of the thing I did not understand was pointers, until I went to a
-hiking trip during which an army programmer explained to me that they were
-simply addresses in memory which I can put or take values from, and a bit about
-pointer arithmetics. This gave me a large momentum. I also learned about
-classes and objects and templates which although a simple concept fascinated
-me.
+abroad and he bought me Borland’s Turbo C++. I learned C and C++ using its
+manual. One of the concepts I did not understand was pointers, until I went to
+a hiking trip during which an army programmer explained to me that they simply
+were addresses in memory which I can put or take values from, and a bit about
+pointer arithmetics. This gave me a large momentum in understanding what they
+were all about. I also learned about classes and objects and templates which,
+although simple concepts, fascinated me.
 </p>
 
 <p>
 I took my liberty to write a module of components which I dubbed
-<code>CSEE.c</code>, for
-doing various graphical things. My friend was at first surprised at that (it
-was not a standalone program), but later on told me people distributed and sold
-such libraries and software development kits all the time. It included some
-nifty (in my opinion) user-land routines, but I doubt it will run on anything
-aside from an old Borland DOS Compiler.
+<code>CSEE.c</code>, for doing various graphical things. My friend was at first
+surprised at the fact that it was not a standalone program, but later on told
+me people distributed and sold such libraries and software development kits all
+the time. It included some nifty (in my opinion) user-land routines, but I
+doubt it will run on anything aside from an old Borland DOS Compiler.
 </p>
 
 <p>
@@ -159,7 +159,7 @@ and got faster animations, but even the QBASIC one was also quite fast.
 
 <p>
 I studied Physics in a laboratory building called “Hemda”, and we had DOS
-machines for students to use. Once when I had a spare time, I reproduced the
+machines for students to use. Once, when I had some spare time, I reproduced the
 fluttering flag demo. The librarian (with whom I became a very good friend) was
 very impressed, and requested that I kept the program there.
 </p>
@@ -196,7 +196,7 @@ which is much nicer than exponential.
 
 <p>
 When my father bought Excel 4.0 for Windows 3.1, I realized it came with a nice
-scripting language called Visual Basic for Applications. It enabled me to write
+scripting language called <a href="https://en.wikipedia.org/wiki/Visual_Basic_for_Applications">Visual Basic for Applications (“VBA”)</a>. It enabled me to write
 a factorial function, access the contents of cell, and script every aspect of
 the application. I liked it very much.
 </p>
@@ -238,7 +238,9 @@ enjoyed it.
 
 <p>
 Then my friend decided he was too busy for it and we should split the work
-and each translate separately (a big Extreme Programming No-no). It took me
+and each translate separately (which Extreme Programming recommends against in
+advocating
+<a href="https://en.wikipedia.org/wiki/Pair_programming">Pair programming</a>). It took me
 a long time to do my translation and my father corrected my mistakes. Still,
 it was not of a very good quality and I did not spend a lot of time focusing
 on a perfectly correct translation. There were also many technical terms.
@@ -249,7 +251,7 @@ I got my money eventually but my employer said he was willing to pay only
 because I was under age (that was my 9th grade). My friend claimed to have
 spent 4 times as much as I did and produced better results. Both my friend
 and I got 100 NIS which at that point was $50. With all the time I spent,
-I think it barely covered the computer’s electricity consumption. As a
+I think it barely covered the computer’s electricity consumption bill. As a
 developer, I later on was able to earn much more for my time.
 </p>
 
@@ -267,8 +269,8 @@ us, and we’ll credit you for it”. Having a lot of time I agreed.
 <p>
 Using Turbo C++, I started writing a crude, 16-bit code to convert Gregorian
 dates to Jewish dates. The Jewish calendar is not simple at all, as it
-has quite a lot of religious caveats. Nevertheless, the code was eventually
-working. I use some C++ features, but my friend later insisted on his program
+has quite a lot of religious gotchas. Nevertheless, the code was eventually
+working. I used some C++ features, but my friend later insisted on the code
 being pure C and said I should convert them all to C. A beautiful class I
 wrote and some operator overloading of it had to be sacrificed for this
 sake.

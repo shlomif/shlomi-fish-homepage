@@ -25,8 +25,7 @@ the terms of the MIT/Expat license.
 <p>
 Using it I signed the keys, by first running it, and then using kgpg (part
 of kdeutils) to sign all the keys at once. Truly an improvement over the
-time, where I signed each key individually, using my password like a zillion
-times.
+time, where I signed each key individually, entering my password many times.
 </p>
 
 [% END %]
@@ -186,7 +185,7 @@ story of how I originally recreated the fluttering flag effect.
 </p>
 
 <p>
-There is also <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/sdl-flag-0.2.0.pl">a perl version</a>.
+There is also <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/sdl-flag-0.2.0.pl">a Perl version</a>.
 It is slower.
 </p>
 
@@ -197,7 +196,7 @@ It is slower.
 <p>
 This is a JavaScript script based on
 <a href="http://www.w3.org/Talks/Tools/Slidy/">HTML Slidy</a>, but heavily
-reduced and evolved. It supplies use of the left and right arrow keys for
+reduced and evolved. It allow one to use the left and right arrow keys for
 moving between slides (<code>&lt;li&gt;</code> elements
 somewhere inside an element with a class named “<code>point</code>”). It also
 provides the “n” and “p” keys to follow the links with the appropriate
@@ -241,9 +240,9 @@ under a certain sub-directory). (Licensed under the MIT/Expat License).
 [% WRAPPER h2_section href = "https://github.com/shlomif/shlomi-fish-homepage/blob/master/t2/open-source/bits-and-bobs/xfce-set-virtual-workspaces.rb" id = "set_xfce_workspaces" title = "Set the Xfce Virtual Workspaces Number and Names" %]
 
 <p>
-This command line Ruby script sets the names (and number) of the
-Xfce desktop’s <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual
-workspaces (also known as virtual desktop</a>. You can simply pass the names
+This command-line Ruby script sets the names (and number) of the
+Xfce desktop environment’s <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual
+workspaces (also known as “virtual desktops”)</a>. You can simply pass the names
 as arguments in the command line (possibly inside quotes).
 </p>
 

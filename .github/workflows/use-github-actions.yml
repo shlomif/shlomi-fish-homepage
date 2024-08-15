@@ -16,8 +16,8 @@ jobs:
                 libhunspell-dev libncurses-dev libpcre3-dev libperl-dev libtidy-dev
                 libxml2-dev libxslt1-dev lynx mercurial myspell-he nodejs npm optipng
                 perl pysassc python3 python3-numpy python3-pip python3-setuptools
-                rsync ruby ruby-dev silversearcher-ag strip-nondeterminism tidy valgrind
-                vim wml xsltproc xvfb xz-utils zip
+                rsync ruby ruby-dev ruby-nokogiri silversearcher-ag strip-nondeterminism
+                tidy valgrind vim wml xsltproc xvfb xz-utils zip
         -   run: . bin/CI-testing/common-env-shim.sh ; . .ci-github-actions.bash --cmd
                 before_install
         -   run: . bin/CI-testing/common-env-shim.sh ; git clone https://github.com/vim/vim

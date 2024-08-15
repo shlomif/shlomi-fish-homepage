@@ -100,7 +100,7 @@ def generate(output_path, is_act):
         [
             "golang", "libxslt1-dev", "nodejs", "npm",
             "python3-numpy",
-            "rsync", "ruby", "ruby-dev", "vim",
+            "rsync", "ruby", "ruby-dev", "ruby-nokogiri", "vim",
         ]
     )
     # print(pkgs)

@@ -144,6 +144,7 @@ SRC_jpgs__BASE += $(filter $(POST_DEST)/humour/images/strong-woman-meme-summer-g
 SRC_jpgs__BASE += $(filter $(POST_DEST)/images/vague.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(filter $(POST_DEST)/meta/FAQ/images/%.jpg,$(SRC_IMAGES_DEST))
 SRC_jpgs__BASE += $(POST_DEST)/images/TN-Rivendell.jpg
+SRC_jpgs__BASE += $(POST_DEST)/images/shlomif-sglau-nsa-shirt-250w.jpg
 SRC_jpgs__webps := $(SRC_jpgs__BASE:%.jpg=%.webp)
 $(SRC_jpgs__webps): %.webp: %.jpg
 	$(call simple_gm)

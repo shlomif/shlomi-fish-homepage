@@ -203,6 +203,15 @@ EOF
             id   => "shameful-profession",
             text => "“A Shameful Profession”",
         },
+        {
+            html => <<"EOF",
+<p>
+Hand-calculators-use memoir.
+</p>
+EOF
+            id   => "calculators-use",
+            text => "Hand-calculators-use memoir",
+        },
     )
 ];
 

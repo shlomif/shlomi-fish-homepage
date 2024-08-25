@@ -13,7 +13,7 @@
     - Follow-up on [“Optimizing Code for Speed” Wikibook](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed)
     - Follow-up on <http://perl-begin.org/tutorials/bad-elements/>
     - Follow-up on <http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/>
-    - Follow-up on <https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ.mdwn#what-are-some-best-practices-in-programming-that-i-should-adopt>
+    - Follow-up on <https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt>
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
     - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, CI, etc.
         - Cost of code complexity and readability

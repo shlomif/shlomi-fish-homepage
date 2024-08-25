@@ -3,6 +3,16 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/faq.tt2" %]
+
 [%- article_index__body() -%]
+
+<hr />
+
+<p>
+Some related FAQs I co-maintain:
+</p>
+
+[% INCLUDE shlomif_faqs_links %]
 
 [%- END -%]

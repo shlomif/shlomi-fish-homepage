@@ -3700,7 +3700,7 @@ this is assuming I agree with the criticism.
 [% WRAPPER h3_section id = "link_here_to_drive_traffic" title = "Do you link to your site to drive in traffic?" %]
 
 <p>
-Many people whom I gave links to the various resources on my site, accused me
+Many people to whom I gave links to the various resources on my site, accused me
 of linking to them in order to drive in traffic for my site. First of all,
 I should note that it sounds like what I call a
 <a href="https://en.wikipedia.org/wiki/Conspiracy_theory">“conspiracy
@@ -3711,7 +3711,7 @@ explanation instead of assuming purity of intents.
 
 <p>
 That put aside - what will driving traffic to my site, buy me exactly? I don't
-get paid for each visitor or "unique hit" or whatever, and the
+get paid for each visitor or "unique hit" or whatever. Moreover, the
 <a href="http://en.wikipedia.org/wiki/Project_Wonderful">Project Wonderful</a>
 ads that used to be on my site were not pay-per-click, but rather pay-per-time
 (and now are no longer present after Project Wonderful announced that they will
@@ -3732,8 +3732,9 @@ I tend to link to my sites/blogs/domain a lot due to a combination of <a href="h
 and slow typing due to hand paralysis.
 A lot of people think of blindness or deafness as the only disabilities, but there are many more, including
 <a href="[% base_path %]philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/">bipolar disorder</a>,
-Schizophrenia, and even lacking or non-native knowledge of English and other languages. Some Haredi Jews locally block YouTube,
-due to a Jewish Law prohibition on men hearing female vocalists.
+Schizophrenia, and even lacking or non-native knowledge of English and other
+languages. Some Haredi Jews locally block YouTube, due to a Jewish Law
+prohibition on men hearing female vocalists.
 </p>
 
 <p>
@@ -3879,7 +3880,7 @@ In modern web developer jargon, one can say I use a <a href="https://github.com/
 </p>
 
 <p>
-While I am not ashamed of the site’s sources, they have undergone through a long
+While I am not ashamed of the site’s sources, they have gone through a long
 <a href="#site_history">history</a> and
 <a href="https://leejo.github.io/2016/02/22/all_software_is_legacy/">legacy</a>.
 I remain a big fan of static site generation, but there are probably
@@ -3887,8 +3888,8 @@ some better approaches out there for that. Furthermore, often it is simpler to j
 write something of your own using a <a href="[% base_path %]open-source/resources/text-processing-tools/">good preprocessor or a template system</a>,
 a good <a href="[% base_path %]open-source/resources/software-tools/">build system</a>
 and some code glue. However, for me, converting to something else would be too
-time-consuming, and I've already found some faults in some existing popular
-static site generators that I tried.
+time-consuming, and I've already found some faults in some existing
+popular-and-open-source static site generators that I tried.
 </p>
 
 <p>
@@ -3955,7 +3956,7 @@ I believe the [% CGI %] scripts are:
 I picked it as an implementation language-agnostic extension, to make
 the web-server's configuration easier. I don't know whether they are
 being run as [% CGI %] or a different technology in practice. I also
-do not care too much, as long as they run fast enough, which seems to
+do not care too much, as long as they run quickly enough, which seems to
 usually be the case so far.
 </p>
 
@@ -4052,7 +4053,7 @@ be smaller than PNG and JPEG ones, and look better and crispier than JPEG.
 
 <li>
 <p>
-I sometimes remove various embellishments of the site, that while seemed a good
+I sometimes remove various embellishments of the site, that, while seemed a good
 idea or were one in the past, are no longer needed.
 </p>
 </li>
@@ -4134,19 +4135,19 @@ Also see:
 <li>
 <p>
 <a href="https://twitter.com/xbs/status/626781529054834688">Tweet about
-the average web page size</a>
+the average web page size</a>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://www.wired.com/2016/04/average-webpage-now-size-original-doom/">Wired feature about the average web page size</a>
+<a href="https://www.wired.com/2016/04/average-webpage-now-size-original-doom/">Wired feature about the average web page size</a>: <q>The Average Webpage Is Now the Size of the Original Doom | WIRED</q>.
 </p>
 </li>
 
 <li>
 <p>
-<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/notes/quality-software--followup-2018.md">Reflections on software quality</a>
+<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/notes/quality-software--followup-2018.md">Reflections on software quality</a>.
 </p>
 </li>
 
@@ -4183,7 +4184,7 @@ It may harm <a href="#site_loads_quickly">its load time</a>.
 
 <li>
 <p>
-May provide users who look at it the illusion that it is the ultimate,
+It may provide users who look at it the illusion that it is the ultimate,
 editable/patch-able <a href="https://en.wikipedia.org/wiki/Source_code">source
 code</a>. I already received one patch written directly against the generated
 page of one of my sites, which was not immediately usable for me.

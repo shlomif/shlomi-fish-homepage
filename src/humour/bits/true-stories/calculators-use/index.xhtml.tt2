@@ -15,7 +15,12 @@ One time, a classmate and I solved the same exercise, and reached somewhat,
 but clearly, different results. As it turned -out, my friend keyed in some of the
 intermediate results from the upper part of the page, where he wrote them rounded
 to 2-or-3-or-so precision digits. I, on the other hand, stored these intermediates
-in my calculator’s memory-registers, and recalled them during the next steps.
+in my calculator’s memory-registers, and recalled them during the next steps (while
+writing rounded ones on the page to comply with the exercise).
+</p>
+
+<p>
+My results were likely more accurate, but <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#i-am-facing-a-number-of-problems-while-using-floating-point-data-types-eg-float-or-double-is-there-a-explanation-for-this">floating-point calculations have their quirks</a>. Newer hand-calculators have recallable-and-editable history, and there are also full-fledged programming languages (such as Python, or Perl, or Scheme), and <a href="[% base_path %]open-source/resources/numerical-software/#CASes">Computer Algebra Systems (CASes)</a>, which allow assigning to an arbitrary number of variables and recalling their values.
 </p>
 
 [% END %]

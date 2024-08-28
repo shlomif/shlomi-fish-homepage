@@ -37,21 +37,31 @@ efficiency of the algorithms.
 
 [% WRAPPER h2_section id = "One_Dimensional_Board" title = "Analysis of a 1-D Toggle-board" %]
 
-<pre>
+<p>
 First, I’ll prove some analogous statements about a one-dimensional
 toggle-squares board, i.e: conjectures that apply to the set of rows of size
 1*n and in which the presses are:
+</p>
+
+<pre>
 110000 ,
 111000 ,
 011100 ,
 001110 ,
 000111 ,
-000011 (n=6 was given as an example).
+000011
+</pre>
 
+<p>
+(n=6 was given as an example).
+</p>
+
+<p>
 Mathematically, it can be treated as vectors that belong to the linear
 space (or vector field) {0,1}^n where the operations in the set {0,1} are
-XOR for ‘+’ and AND for ‘*’.
-</pre>
+<a href="https://en.wikipedia.org/wiki/Exclusive_or">XOR</a> for ‘+’ and
+<a href="https://en.wikipedia.org/wiki/Logical_conjunction">AND</a> for ‘*’.
+</p>
 
 [% WRAPPER h3_section id = "lemma1" title = "Lemma 1: 1D is always solvable if the vector 100..00 can be formed." %]
 

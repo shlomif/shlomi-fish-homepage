@@ -71,8 +71,11 @@ the vector 100...000 can be formed as combination of the
 presses.
 </p>
 
+<p>
+<b>Proof:</b>
+</p>
+
 <pre>
-Proof:
 If 1000000 can be solved then along with the press 110000...00 than
 010000000 can be solved too. Furthermore:
 100000...00   + (xor)
@@ -80,10 +83,13 @@ If 1000000 can be solved then along with the press 110000...00 than
 111000...00 =
 -------------
 001000...00
+</pre>
+
+<p>
 and from here it can be proved inductively that the vectors with all 0s
 and one 1, are solvable. Since this is a basis of {1,0}^N then every state
 is solvable. (i.e contained in Sp{Presses} )
-</pre>
+</p>
 
 [% END %]
 

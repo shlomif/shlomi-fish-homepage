@@ -101,9 +101,14 @@ or N = 3k+1 and isn’t if N = 3k+2 for some non-negative integer
 k.
 </p>
 
-<pre>
-Proof:
+<p>
+<b>Proof:</b>
+</p>
+
+<p>
 One way to show it is by inspecting the matrixes of the presses set:
+</p>
+<pre>
 1
 ,
 11
@@ -117,18 +122,26 @@ One way to show it is by inspecting the matrixes of the presses set:
 1110
 0111
 0011
+</pre>
 
+<p>
 and calculate their determinants (according to the boolean operations).
 After calculating the determinants of the first three by hand: 1, 0 and 1
 respectively, we can show that the determinant of every matrix where N &gt; 3 is:
+</p>
 
+<p>
 based on the first row: det (Presses Matrix (N-1)) XOR - det(Matrix that
 contains 1 at the top-left cell and below a Presses Matrix of size N-2) =
 det (PM(N-1)) XOR det(1 * PM(N-2)) = det(PM(N-1)) XOR det(PM(N-2)).
+</p>
 
+<p>
 Hence, it’s a XOR of the determinants of the two previous matrixes. (A
-boolean Fibonacci series :-) )
+boolean Fibonacci series 😊 )
+</p>
 
+<pre>
 Recursively, we get a repeating sequence of
 N    | 1 2 3 4 5 6 7 8 9 ...
 det  | 1 0 1 1 0 1 1 0 1 ...

@@ -5834,7 +5834,7 @@ for some stories and screenplays, and for some essays. I am not a purist of the
 It is true that Perl 5 seems to have somewhat fallen out of favour, but as much as I like Python
 (and I do), I still also like Perl. One cannot rewrite their entire codebase in [insert hyped
 language/stack/framework/technology of the present] every 6 months or so. Back
-when I was interested in learning <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>,
+when I was interested in learning <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">the Ruby programming language</a>,
 some of its enthusiasts implied I should use <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">Rails</a>
 for my sites. And guess what? The Rails and Ruby craze and hype are gone, and
 <a href="[% base_path %]humour/fortunes/show.cgi?id=compiling-a-C-program-from-20-years-ago">Rails has its share of issues</a>,
@@ -5893,6 +5893,15 @@ Avoiding being an early adopter has advantages.
 
 <p>
 ( <a href="https://twitter.com/shlomif/status/1658766516471447552">Tweet</a> )
+</p>
+
+<p>
+<strong>Note:</strong> please do not interpret this FAQ answer as a challenge
+to tell me how to convert my site to be a Ruby-on-Rails app or whatever. Ruby
+is post-hip / post-hype, seems to have become unpopular, and I don't like it,
+while I still like Perl 5 and Python 3. Any merge-request that introduces new
+Ruby code will likely be rejected (with a possible exception for ruby gems
+which provide functionality which is not found elsewhere).
 </p>
 
 [%- END -%]

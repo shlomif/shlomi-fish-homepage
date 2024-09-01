@@ -141,13 +141,20 @@ Hence, it’s a XOR of the determinants of the two previous matrixes. (A
 boolean Fibonacci series 😊 )
 </p>
 
-<pre>
+<p>
 Recursively, we get a repeating sequence of
+</p>
+
+<pre>
 N    | 1 2 3 4 5 6 7 8 9 ...
 det  | 1 0 1 1 0 1 1 0 1 ...
+</pre>
 
+<p>
 Matrixes with a zero determinant cannot form every vector, and vice versa.
+</p>
 
+<pre>
 It can also be proved (at least for the solvable cases) using Lemma 1.
 For N=3k 1000....000 can be formed by:
 1110000...0000         XOR

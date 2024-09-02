@@ -154,9 +154,15 @@ det  | 1 0 1 1 0 1 1 0 1 ...
 Matrixes with a zero determinant cannot form every vector, and vice versa.
 </p>
 
-<pre>
+<p>
 It can also be proved (at least for the solvable cases) using Lemma 1.
-For N=3k 1000....000 can be formed by:
+</p>
+
+<p>
+For N = 3k <code>1000...000</code> can be formed by:
+</p>
+
+<pre>
 1110000...0000         XOR
 0001110...0000         XOR
 .

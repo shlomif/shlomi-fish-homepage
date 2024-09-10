@@ -230,23 +230,31 @@ Now for the actual proofs:
 2-D (3k+2) * (3k+2) boards are not solvable for every state.
 </p>
 
-<pre>
-Proof:
+<p>
+<b>Proof:</b>
+</p>
+
+<p>
 If we take a look at the topmost row - it is affected only by the presses
 on the two topmost rows. The effective portions of all the presses on that
 row is the set:
+</p>
+
+<pre>
 11000..00
 11100..00
 .
 .
 00000.111
 00000.011
+</pre>
 
+<p>
 and Lemma 2 proved that for N=3k+2 it has unsolvable states. If some
 formations of the first row cannot be solved by any combination of the
 presses on the block, much less the entire board can be solved for every
 state.
-</pre>
+</p>
 
 [% END %]
 
@@ -257,11 +265,17 @@ state.
 every state.
 </p>
 
-<pre>
-Proof:
+<p>
+<b>Proof:</b>
+</p>
+
+<p>
 If we restrict ourselves to the presses on cells of one column, then we get
 an array of rectangular vectors with a fixed horizontal position and width
 and some y-dimensions that resemble the 1-D toggle-squares vector set. e.g:
+</p>
+
+<pre>
 110000
 110000
 000000

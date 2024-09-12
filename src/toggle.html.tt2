@@ -393,29 +393,44 @@ A 2-D board of size (3k) * (3k) can be solved by using the two-way
 - two-way algorithm.
 </p>
 
-<pre>
-
+<p>
 The two way algorithm is described as follows:
+</p>
+
+<blockquote cite="">
+
+<p>
 Scan the rows from top to bottom. For every row, scan the cells from right
 to left, and for every filled cell click the cell to the bottom-left of it.
 Then scan the cells in that row, from right to left and for every filled
 cell click the cell to the bottom-right of it.
 After you reached the bottom, do the same thing from bottom to top, but with
 pressing the cell to the top-right or top-left instead.
+</p>
 
-Proof:
+</blockquote>
+
+<p>
+<b>Proof:</b>
+</p>
+
+<p>
 One can show that the two-way algorithm works for N=3k in a one-dimensional
 board. Even if there is a state of 100...000000000 ,  by pressing to the
 right of the filled squares one eventually gets to a 000...000000011 state
 which is soon cleared to 000...000000000.
+</p>
 
+<p>
 This provides us with a method to clear rows by pressing cells in the row
 beneath them, and we can use it to clear all rows except the bottom one.
 Now, let’s take a look at a situation in which there is a partially filled
 row, and above it, at least two empty ones. I will prove that clearing it
 by pressing the cells in the row above it, will make the two rows above it
 a duplicate of its original state. For example if the status was:
+</p>
 
+<pre>
 000000
 000000       &lt;- I am pressing this row
 011010

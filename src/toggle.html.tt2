@@ -362,22 +362,27 @@ Solvable states of 3k+2 boards can be solved by the one-way
 algorithm.
 </p>
 
-<pre>
+<p>
 The one way algorithm is described as follows:
 Scan every row from top to bottom. For every row, scan every cell from right
 to left, and for every filled cell, click the cell to the bottom-left of it.
+</p>
 
-Proof:
+<p>
+<b>Proof:</b>
+</p>
+
+<p>
 Every row can be cleared by pressing a cell to the left or the bottom-left
 of every filled cell, because that way one consistently regress the
 right-most filled cell. Moreover, it’s impossible that only the left-most
-cell will be filled in a solved state (Lemma 1).
+cell will be filled in a solved state (<a href="#lemma1">Lemma 1</a>).
 By going down, we ensure that no new cells will be filled instead of the
 new one, and we can clear that way the first N-1 rows. After the iteration
 when the first N-1 rows are cleared, the last row cannot be partially
 filled because it’s a column-wise contradiction of Lemma 1. Therefore, it
 will also be cleared.
-</pre>
+</p>
 
 [% END %]
 

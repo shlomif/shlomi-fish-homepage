@@ -577,21 +577,27 @@ press those cells and it will be be moved to
 
 [% WRAPPER h2_section id = "dim_press_span" title = "The Dimension of the Presses Span in 3k+2 boards" %]
 
-<pre>
+<p>
 (3k+2)*(3k+2) boards are not solvable for every state. The solvable
 states form a vector field which is formed by the spanning all the
 presses. Since, in this case it does not include all the states, I
 wondered if we can calculate its dimension or characterize it somehow.
 I think I know the answer.
+</p>
 
+<p>
 First in 1-D: the presses of {0,1}*(3k+2) span a field of size 3k+1
 because it takes only one extra vector - 100...000, so they will form
 every possible state (Lemma 1).
+</p>
 
+<p>
 Since the 1-D clearing mechanism for 3k+2 uses only the leftmost 3k+1
 cells to clear every solvable state (part of Theorem 3), then
 their presses are a valid basis for this linear space.
+</p>
 
+<p>
 The one-way - one-way clearing algorithm which was proved in Theorem 3,
 uses only a (3k+1)*(3k+1) square of presses to solve the entire board.
 Ergo, the dimension is (3k+1)^2 or less. I believe it _is_ (3k+1)^2 and
@@ -599,16 +605,22 @@ I think I can prove it by showing that the presses of a corner
 (3k+1)*(3k+1) are linearly independent. In the boolean field the
 meaning is that any number of them other than zero XORed together will
 not generate the clear state.
+</p>
 
+<p>
 I’ll demonstrate on a 5*5 board:
+</p>
 
+<pre>
     |  |
   - 00000
     00000
     00000
   - 00000
     00000
+</pre>
 
+<p>
 The ‘-’s and ‘|’s mark the relevant presses. Let’s assume that a
 certain number of presses in the square can form the clear state. If
 so, then Pr(4,4) cannot be one of them because it is the only press
@@ -617,33 +629,39 @@ included either, because, once Pr(4,4) is eliminated they are the only
 ones that can affect (4,5) and (5,4) respectively. And so forth,
 proving that that all the presses of cells (1,4)-(4,4) and (4,1)-(4,4)
 cannot be part of the zero sum.
+</p>
 
+<p>
 The same can be deduced for the next layer starting from Pr(3,3), which
 is the only vector left that can affect square (4,4). And so-on for the
 other layers, proving that they are a linearly independent set of
 vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
 span the space of the solvable states of (3k+2) boards.
-</pre>
+</p>
 
 [% END %]
 
 [% WRAPPER h2_section id = "efficiency" title = "A Note about Efficiency" %]
 
-<pre>
+<p>
 I believe the previous section showed that the 1w-1w algorithm for
 clearing (3k+2) boards is as efficient as it could be, i.e. requires
 the minimal number of presses.
+</p>
 
+<p>
 As for boards of other sizes: the 2w-2w algorithm is not the most
 efficient one in relevance to the number of presses it takes to solve
 the board. I noticed that when I solved a couple of boards and realized
 that the number of moves it took me with it was greater than the number
 which was returned from my matrix-canonization program.
+</p>
 
+<p>
 However, I believe it is agreeable that it is the simplest algorithm
 (yet) regarding “CPU” requirement and growing complexity, and has the
 advantage that it can be utilized without the aid of a computer.
-</pre>
+</p>
 
 [% END %]
 

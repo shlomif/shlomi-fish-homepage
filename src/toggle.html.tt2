@@ -298,9 +298,15 @@ and some y-dimensions that resemble the 1-D toggle-squares vector set. e.g:
 000000  ,
 .
 .
-According to Lemma 2, with 1-D presses sets with size 3k and 3k+1 every
+</pre>
+
+<p>
+According to <a href="#lemma2">Lemma 2</a>, with 1-D presses sets with size 3k and 3k+1 every
 vector can be formed. Thus we can achieve the following rectangles, with
 the presses of one column:
+</p>
+
+<pre>
 110000
 000000
 000000
@@ -330,13 +336,17 @@ the presses of one column:
 000000
 000000
 110000
+</pre>
 
+<p>
 and the same for every other column. Now, if we look on any row of cells,
 we will see that the “sticks” that were generated from the various columns
-in that row are also the 1-D TogSqrs sequence. Because N=3k,3k+1 again,
+in that row are also the 1-D Toggle-Squares sequence. Because N=3k,3k+1 again,
 every row is solvable for all states, and therefore, the entire board is
 solvable for all states.
+</p>
 
+<pre>
 Diagram:
 110000 , 111000 , 011100 , 001110 , 000111 , 000011
 000000   .        .        .        .        .

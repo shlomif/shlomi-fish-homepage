@@ -506,42 +506,70 @@ down-(edge)-up iteration of left-(edge)-right row clearing
 scheme.
 </p>
 
-<pre>
-
+<p>
 This algorithm is similar to the two-way algorithm, except that if a at the
 end of the left iteration, there is a single filled cell, one has to press
 on its lower or upper cell, before moving on. Likewise, if at the end of the
 down scanning, you have filled cells in bottom row, you have to clear them
 by pressing cells of the bottom row.
+</p>
 
-Proof:
-Very similar to Theorem 4 except those notes:
+<p>
+<b>Proof:</b>
+</p>
 
-1. In N=3k+1 the two-way method as is, will ping the possible remaining
+<p>
+Very similar to <a href="#theorem4">Theorem 4</a>, except for those notes:
+</p>
+
+<ol>
+
+<li>
+<p>
+In N=3k+1 the two-way method as is, will bounce the possible remaining
 1 back and forth between the two edges. Therefore if there is a state
 of 1000...0 than one should use the leftmost press to change it into
 0100...000. Then, by repetitive pressing to the right of the leftmost
 filled square, one gets to the 0...11 state, which is afterwards
 cleared.
+</p>
 
+<p>
 To clear the rows in a 3k+1 board one should use this method.
+</p>
+</li>
 
-2. The bottom row (if still partially filled) should be moved to the
+<li>
+<p>
+The bottom row (if still partially filled) should be moved to the
 row above it, by clearing it by presses of cells of the bottom row.
 Then it can be transposed in the same manner described in Theorem 4 to
 the the two topmost rows and then cleared.
+</p>
 
+<p>
 For example, if the status is
+</p>
+
+<pre>
 0000000
 0000000
 0110110
   | |
-press those cells and it will be be moved to
+</pre>
 
+<p>
+press those cells and it will be be moved to
+</p>
+
+<pre>
 0000000
 0110110
 0000000
 </pre>
+</li>
+
+</ol>
 
 [% END %]
 

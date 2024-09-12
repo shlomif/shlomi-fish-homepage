@@ -440,43 +440,61 @@ then it will turn into
 011010
 011010
 000000
+</pre>
 
+<p>
 The proof is quite simple. If we take a look at one of a cells above an
 initially filled cell, then the cells that affect it and the bottom cell
 were pressed an uneven number of times, during the clearing process. (or else
 the state of the bottom cell would have remained filled).
+</p>
 
+<p>
 Thus, it will also change its state and become filled. Likewise, a cell above
 an unfilled cell in the bottom row, was switched an even number of times and
 will be unchanged at the end.
+</p>
 
+<p>
 With the same deduction it can be shown that two duplicate rows once cleared
 will fill the row above them in the same formation (provided it was initially
 blank). E.g:
+</p>
 
+<pre>
 000000
 110011
 110011
+</pre>
 
+<p>
 will become
+</p>
 
+<pre>
 110011
 000000
 000000
+</pre>
 
+<p>
 Since N is equal to 3k, then after the bottom-to-top iteration we will end up
 with the two topmost rows filled in the same formation. Then, the topmost
 row will be cleared along with the lower one.
+</p>
 
+<p>
+Now, for the remaining moduli:
+</p>
 
-Now, for the remaining modules:
-In a 1-D board where N=3k+1 the two-way method as is, will ping the
-possible remaining 1 back and forth between the two edges. Therefore if
+<p>
+In a 1-D board where N=3k+1 the two-way method as is, will bounce the
+possible remaining “1”, back-and-forth between the two edges. Therefore if
 there is a state of 1000...0 than one should use the leftmost press to
 change it into 0100...000. Then, by repetitive pressing to the right
 of the leftmost filled square, one gets to the 0...11 state, which is
 afterwards cleared.
-</pre>
+</p>
 
 [% END %]
 

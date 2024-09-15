@@ -10,9 +10,9 @@
 Dr. Ken Housley,
 </p>
 
-<p>Most of this page is in ASCII, because I sent it to myself from
-home as an email message and some diagrams are less complicated to
-write in ASCII than in HTML. However, I will try to emphasize some
+<p>Most of this page is in monospaced ASCII, because I sent it to myself from
+home as an email message, and some diagrams are less complicated to
+write in (fixed-width) ASCII than in HTML. However, I will try to emphasize some
 stuff in the text with HTML formatting.</p>
 
 <p>I hope everything is clear to you. If you want clarification on
@@ -75,9 +75,12 @@ presses.
 <b>Proof:</b>
 </p>
 
+<p>
+If 1000000 can be solved, then along with the press
+<code>110000...00</code>, then 010000000 can be solved too. Furthermore:
+</p>
+
 <pre>
-If 1000000 can be solved then along with the press 110000...00 than
-010000000 can be solved too. Furthermore:
 100000...00   + (xor)
 010000...00   +
 111000...00 =
@@ -86,8 +89,8 @@ If 1000000 can be solved then along with the press 110000...00 than
 </pre>
 
 <p>
-and from here it can be proved inductively that the vectors with all 0s
-except one “1”, are solvable. Since this is a basis of {0,1}^N then every state
+and from here it can be proved inductively that the vectors with all cells of
+“0”s except one “1”, are solvable. Since this is a basis of {0,1}^N then every state
 is solvable. (i.e contained in Sp{Presses} )
 </p>
 

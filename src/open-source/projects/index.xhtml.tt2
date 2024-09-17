@@ -140,6 +140,17 @@ in Unix shell and had a maintenance lull at the time.
 
 [% END %]
 
+[% WRAPPER h3_section href = "${base_path}open-source/projects/fortune-mod/" id = "fortune-mod" title = "fortune-mod: display random quotations" %]
+
+<p>
+One of the versions of the
+<a href="https://en.wikipedia.org/wiki/Fortune_%28Unix%29">UNIX “fortune” program</a>
+that displays a random quotation from a database of quotations. It was adapted
+to run on Linux and other systems and is now co-maintained by me.
+</p>
+
+[% END %]
+
 [% END %]
 
 [% WRAPPER h2_section id="system-tools" title="System Tools"%]

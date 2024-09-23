@@ -14,8 +14,8 @@ Why ongoing and unnecessary problems are likely a net economical and psychologic
 [% WRAPPER h2_section id = "text" title = "The text" %]
 
 <p>
-This is the first in a series of essays about common fallacy patterns in the
-computer world. The first is what I call the <a href="http://en.wikipedia.org/wiki/Parable_of_the_broken_window">Broken Window Fallacy</a> of computers. As
+This is an essay about a common fallacy pattern in the
+software development world, which I call the <a href="http://en.wikipedia.org/wiki/Parable_of_the_broken_window">Broken Window Fallacy</a> of computers. As
 you may know, in the broken window fallacy, one says that if something is
 damaged then it generates more revenue to the economy, because one will have
 to fix the damage. However, as is demonstrated in the article, it might as
@@ -36,27 +36,27 @@ very uphill battle), and they have more work as web developers.
 <p>
 In a podcast Interview with him,
 <a href="http://www.joelonsoftware.com/AboutMe.html">Joel Spolsky</a> said
-that Open Source Software will reduce the demand for programmers, because they
+that <a href="[% base_path %]philosophy/foss-other-beasts/">Open Source Software</a> will reduce the demand for programmers, because they
 make some tasks easier. And so programmers are happier, but they have to
-work less. He missed the point that a lot of proprietary software also does
+work less. He missed the point that a lot of <a href="https://en.wikipedia.org/wiki/Proprietary_software_license">proprietary software</a> also does
 that, because it costs a fraction of the cost it would take to develop all
-this functionality from scratch. But that's not the main thing that is wrong
+its functionality from scratch. But that's not the main thing that is wrong
 in this argument.
 </p>
 
 <p>
 The problem is that tech workers can never run out of things to do. In the
-time they have to adapt their web-sites for MSIE, they can better spend on
-things like having better functionality, more web-sites, and more pages. The time
+time they have to adapt their web-sites for Microsoft Internet Explorer, they can better spend on
+tasks like having better functionality, more web-sites, and more pages. The time
 people spend making sure their Windows systems are free of malware, is better
 spent happpily using Linux and getting some actual, productive, work done.
 </p>
 
 <p>
-So Windows and MSIE are a huge strain on society. I can never run out of
+So Windows and Internet Explorer are huge strains on society. I can never run out of
 things to do. At the moment, I have an idea for a commercial site, several
 essays I'm working on, tons of ideas for other essays, open source software
-to write, and lots of external open-source projects that would love to have
+to write, and lots of third-party open-source projects that would love to have
 me as a contributor. Trying to adapt my sites to broken proprietary software
 only slows me down. It also slows you down if you're a developer.
 </p>
@@ -66,11 +66,11 @@ Also note that I believe the happiness that programmers feel also counts. As <a 
 </p>
 
 <p>
-In a previous workplace, I had to do a lot of work getting our card to behave under VMware ESX, and there were many weird problems. This is while Xen and XenEnterprise mostly worked out of the box. As a result, I hated the ESX guts. I had enough to do without having to deal with it.
+A previous workplace for which I worked, developed a high-speed networking card. I was part of the team that maintained the drivers for Linux and FreeBSD, which were open-source. I had to do a lot of work getting our card to behave under <a href="https://en.wikipedia.org/wiki/VMware_ESXi">VMware ESX</a>, which at that time used an old version of the Linux kernel (v2.4.x) and there were many weird problems. This is while <a href="https://en.wikipedia.org/wiki/Xen">Xen</a> and XenEnterprise mostly worked out of the box. As a result, I passionately hated VMware ESX. I had enough to do without having to deal with it.
 </p>
 
 <p>
-I don't mean to defame ESX here. It may be a fine system for hosting several virtual machines for the data center. But writing kernel drivers for it was painful.
+I don't intend to defame ESX here. It may be a fine system for hosting several virtual machines for the data center. But writing kernel drivers for it was painful.
 </p>
 
 <hr />

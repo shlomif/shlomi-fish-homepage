@@ -54,6 +54,21 @@ q#philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/#,
     q#philosophy/case-for-file-swapping/case-for-file-swapping/#,
     q#philosophy/case-for-file-swapping/revision-2/#,
 );
+
+my $LAX_MODE = (
+    ( ( $ENV{SKIP_SPELL_CHECK} // '' ) =~ m#(?:\A|,)en\:lax(?:,|\z)#ms )
+    ? 1
+    : 0
+);
+if ($LAX_MODE)
+{
+    push @prunes,
+        (
+        q#humour/fortunes/sharp-perl.html#,
+        q#lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid/#,
+        );
+}
+
 my $PRUNE_RE_S = qq#\\A#
     . quotemeta($POST_DEST) . q#/(?:#
     . ( join "|", ( map { "(?:$_)" } @prunes ) ) . ")";

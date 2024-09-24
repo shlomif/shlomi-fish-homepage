@@ -45,7 +45,7 @@ foreach
                 ],
                 cover  => "images/$gfx",
                 rights =>
-"Creative Commons Attribution Noncommercial ShareAlike Unported (CC-by-nc-sa-4.0)",
+"Creative Commons Attribution Noncommercial ShareAlike Unported (CC-by-nc-sa 4.0)",
                 publisher  => 'http://www.shlomifish.org/',
                 language   => 'en-GB',
                 subjects   => [ 'FICTION/Humorous', 'FICTION/Mashups', ],

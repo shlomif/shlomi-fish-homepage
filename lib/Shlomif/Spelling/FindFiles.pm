@@ -32,6 +32,7 @@ q#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchh
     q#lecture/Lambda-Calculus/slides/shriram\.scm#,
     q#lecture/HTML-Tutorial/v1/xhtml1/hebrew#,
     q#js/MathJax/(?:test|docs)/#,
+    q#lecture/shlomif-cocktails/shlomif-cocktails/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/case-for-file-swapping/revision-3/case-for-file-swapping-rev3/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version\.xhtml#,
 q#philosophy/culture/multiverse-cosmology/multiverse-cosmology-v0.4.x/[a-zA-Z_\-0-9\.]*?\.xhtml#,

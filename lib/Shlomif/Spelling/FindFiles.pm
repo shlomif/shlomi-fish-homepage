@@ -56,6 +56,7 @@ q#philosophy/psychology/hypomanias/dealing-with-hypomanias/[a-zA-Z_\-0-9\.]*?\.x
     q#js/jquery-ui#,
     q#Iglu/shlomif/gamla#,
     q#open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror#,
+q#open-source/projects/Park-Lisp/park-lisp-informal-spec/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#open-source/resources/how-to-contribute-to-my-projects/HACKING.html\z#,
     q#open-source/resources/tech-tips/#,
     q#philosophy/culture/my-real-person-fan-fiction/index.xhtml\z#,

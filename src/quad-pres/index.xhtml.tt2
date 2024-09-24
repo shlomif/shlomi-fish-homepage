@@ -28,7 +28,7 @@ Organizes the lecture into a hierarchy of sections and subections.
 Generates tables of contents, and navigation links.
 </li>
 <li>
-Links to a common <a href="http://www.w3.org/Style/CSS/">CSS</a> StyleSheet.
+Links to a common <a href="http://www.w3.org/Style/CSS/">CSS</a> stylesheet.
 </li>
 <li>
 A common HTML header and footer.
@@ -79,7 +79,7 @@ are the final forms of the sample lectures</a>.
 
 <p>
 A new stable version - 0.18.0 - was released today. This version fixes
-fixes the RPM .spec to use the .tar.xz file, and removes carriage returns
+the RPM .spec to use the .tar.xz file, and removes carriage returns
 and trailing whitespace.
 </p>
 
@@ -118,7 +118,7 @@ Added the Template-Toolkit configurable configuration directives.
 Added the $translate_control_text subroutine.
 </li>
 <li>
-Fixed some unicode problems.
+Fixed some Unicode problems.
 </li>
 <li>
 Some other bug-fixes.
@@ -156,7 +156,8 @@ some features of the program are not broken.
 <p>
 Quad-Pres version 0.8.0 was released. As opposed to previous versions, this
 version is now installed in a central place in the system, so there
-is no duplicacy in the lectures. It also generates a script in the lecture's
+are less redundancy and duplicate code in the lectures' sources.
+It also generates a script in the lecture's
 source directory that can serve the lecture dynamically to a web page.
 </p>
 

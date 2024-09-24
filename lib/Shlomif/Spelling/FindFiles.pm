@@ -48,6 +48,8 @@ q#philosophy/computers/software-management/perfect-workplace/v2/perfect-it-workp
 q#philosophy/computers/web/validate-your-html/validate-your-html/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#philosophy/fan-pages/samantha-smith/samsmith/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3/[a-zA-Z_\-0-9\.]*?\.xhtml#,
+    q#philosophy/obj-oss/objectivism-and-open-source/[a-zA-Z_\-0-9\.]*?\.xhtml#,
+q#philosophy/obj-oss/rev2/objectivism-and-open-source/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/psychology/hypomanias/dealing-with-hypomanias/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#philosophy/computers/open-source/linus-torvalds-bus-factor/index#,

@@ -32,6 +32,7 @@ q#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchh
     q#lecture/Lambda-Calculus/slides/shriram\.scm#,
     q#lecture/HTML-Tutorial/v1/xhtml1/hebrew#,
     q#js/MathJax/(?:test|docs)/#,
+q#philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2/[a-zA-Z_\-0-9\.]*?.xhtml#,
 q#philosophy/computers/high-quality-software/what-makes-software-high-quality#,
     q#philosophy/computers/open-source/linus-torvalds-bus-factor/index#,
     q#js/jquery-ui#,
@@ -64,8 +65,11 @@ if ($LAX_MODE)
 {
     push @prunes,
         (
-        q#humour/fortunes/sharp-perl.html#,
+        q#humour/fortunes/sharp-perl\.html#,
+        q#humour/fortunes/shlomif\.html#,
         q#lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid/#,
+q#open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/[a-zA-Z0-9\-_]*\.xhtml#,
+q#philosophy/computers/high-quality-software/reflections-on-software-quality-trends/#,
         );
 }
 

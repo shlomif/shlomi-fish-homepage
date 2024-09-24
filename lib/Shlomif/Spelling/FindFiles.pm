@@ -89,6 +89,7 @@ if ($LAX_MODE)
         q#lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid/#,
 q#open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/[a-zA-Z0-9\-_]*\.xhtml#,
 q#philosophy/computers/high-quality-software/reflections-on-software-quality-trends/#,
+        q#philosophy/fan-pages/samantha-smith/index\.xhtml#,
         );
 }
 

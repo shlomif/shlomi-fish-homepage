@@ -46,7 +46,10 @@ q#philosophy/computers/software-management/end-of-it-slavery/end-of-it-slavery/[
 q#philosophy/computers/software-management/perfect-workplace/perfect-it-workplace/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/computers/software-management/perfect-workplace/v2/perfect-it-workplace-v2/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/computers/web/validate-your-html/validate-your-html/[a-zA-Z_\-0-9\.]*?\.xhtml#,
+    q#philosophy/fan-pages/samantha-smith/samsmith/[a-zA-Z_\-0-9\.]*?\.xhtml#,
+q#philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers/[a-zA-Z_\-0-9\.]*?\.xhtml#,
+q#philosophy/psychology/hypomanias/dealing-with-hypomanias/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#philosophy/computers/open-source/linus-torvalds-bus-factor/index#,
     q#js/jquery-ui#,
     q#Iglu/shlomif/gamla#,
@@ -79,6 +82,7 @@ if ($LAX_MODE)
     push @prunes,
         (
         q#humour/fortunes/sharp-perl\.html#,
+        q#humour/fortunes/sharp-programming\.html#,
         q#humour/fortunes/shlomif\.html#,
         q#lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid/#,
 q#open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/[a-zA-Z0-9\-_]*\.xhtml#,

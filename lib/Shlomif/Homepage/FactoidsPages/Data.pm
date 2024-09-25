@@ -842,7 +842,7 @@ Log.
 <li>
 
 <p>
-<a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/#starved_of_employees">"Businesses Being Starved of Competent Employees"</a>:
+<a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/#starved_of_employees">“Businesses Being Starved of Competent Employees”</a>:
 </p>
 
 <blockquote cite="">

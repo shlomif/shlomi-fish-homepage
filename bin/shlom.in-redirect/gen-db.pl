@@ -176,7 +176,7 @@ my @urls = (
         url =>
 "https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hacking_and_amateur__vs__conformism_and_professional.xhtml",
         desc =>
-qq{Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geek/hacker imperatives for revitalising the film industry (Full Version) - Hacking and Amateur/Geekdom vs. Conformism and Professionalism},
+qq{Commercial Real Person Fan Fiction (RPFs), crossovers, and parodies, as 2021 geeky/hackery imperatives for revitalising the film industry - Hacking and Amateur/Geekdom vs. Conformism and Professionalism},
     },
 );
 

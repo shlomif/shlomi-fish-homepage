@@ -15,7 +15,7 @@ text editors and IDEs</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "general_preprocessors"  title = "General-Purpose Preprocessors"  %]
+[% WRAPPER h2_section id = "general_preprocessors" title = "General-Purpose Preprocessors" %]
 
 <ul>
 
@@ -64,7 +64,7 @@ that it appears to be the most popular preprocessor.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "general_template_systems"  title = "General-Purpose Template Systems"  %]
+[% WRAPPER h2_section id = "general_template_systems" title = "General-Purpose Template Systems" %]
 
 <ul>
 
@@ -132,7 +132,7 @@ again (as of May 2020). Supports Python 3.x and 2.7.x.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "parser_generators"  title = "Parser Generators"  %]
+[% WRAPPER h2_section id = "parser_generators" title = "Parser Generators" %]
 
 <ul>
 
@@ -216,7 +216,7 @@ the SQLite project. Open source (public domain).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "regex_libs"  title = "Regular Expression Libraries"  %]
+[% WRAPPER h2_section id = "regex_libs" title = "Regular Expression Libraries" %]
 
 <ul>
 
@@ -231,7 +231,7 @@ comparison of regular expression engines</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "diff_and_patch"  title = "Diffing and Patching Tools"  %]
+[% WRAPPER h2_section id = "diff_and_patch" title = "Diffing and Patching Tools" %]
 
 <ul>
 
@@ -289,9 +289,9 @@ to GNU diff for comparing files on a word-per-word basis.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "specialised_processors"  title = "Specialised Processors"  %]
+[% WRAPPER h2_section id = "specialised_processors" title = "Specialised Processors" %]
 
-[% WRAPPER h3_section id = "xml_processors"  title = "XML Processors"  %]
+[% WRAPPER h3_section id = "xml_processors" title = "XML Processors" %]
 
 <ul>
 
@@ -325,14 +325,14 @@ transformation languages</a> - a Wikipedia page containing more alternatives.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "unix_text_processing_tools"  title = "Standard UNIX Text Processing Tools"  %]
+[% WRAPPER h2_section id = "unix_text_processing_tools" title = "Standard UNIX Text Processing Tools" %]
 
 <ul>
 
 <li>
 <p>
 <a href="http://en.wikipedia.org/wiki/Echo_%28command%29">echo</a> - output
-strings (with some possible transformations).
+strings (possibly with some configurable transformations).
 </p>
 
 <ul>
@@ -458,7 +458,7 @@ idiosyncrasies).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "prog_langs_with_text_proc_support"  title = "Some General-Purpose Programming Languages with Good Text Processing Support"  %]
+[% WRAPPER h2_section id = "prog_langs_with_text_proc_support" title = "Some General-Purpose Programming Languages with Good Text Processing Support" %]
 
 <ul>
 <li>
@@ -498,7 +498,7 @@ with many powerful features. Also see <a href="http://perl6maven.com/">Perl
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -531,17 +531,23 @@ update).
 
 <ul>
 <li>
+<p>
 <a href="http://www.wikimatrix.org/">WikiMatrix</a> - compare all the wiki engines.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://en.wikipedia.org/wiki/Comparison_of_wiki_software">Wikipedia
 comparison of wiki software</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://ikiwiki.info/">ikiwiki</a> - an open-source wiki engine that
 stores pages and history in a version control system.
+</p>
 </li>
 </ul>
 </li>
@@ -571,7 +577,7 @@ Explained</a> + <a href="https://nostarch.com/perloneliners">book</a>.
 
 </ul>
 
-[% WRAPPER h3_section id = "fun-links"  title = "Fun Links"  %]
+[% WRAPPER h3_section id = "fun-links" title = "Fun Links" %]
 
 <ul>
 
@@ -608,6 +614,6 @@ cartoon.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2012",  %]
+[% PROCESS cc_by_licence_section "year" => "2012" %]
 
 [% END %]

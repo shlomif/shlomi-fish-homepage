@@ -193,7 +193,7 @@ An easy way to do that is to do:
 git clone https://github.com/w3c/markup-validator.git
 </programlisting>
 <para>
-And set <literal>XML_CATALOG_FILES</literal> to
+And set the <literal>XML_CATALOG_FILES</literal> enviroment variable to
 <quote>/etc/xml/catalog
 $(pwd)/markup-validator/htdocs/sgml-lib/catalog.xml</quote>
 </para>
@@ -206,6 +206,14 @@ installed:
 <programlisting language="bash">
 git clone https://github.com/shlomif/shlomi-fish-homepage.git trunk
 cd trunk
+if test "${WANT_TO_TEST_SPELLING)" = "1"
+then
+    # May require having Fedora 40 - compatible hunspell wordlists
+    export SKIP_SPELL_CHECK=",en:lax,"
+    # export SKIP_SPELL_CHECK=""
+else
+    export SKIP_SPELL_CHECK=",en,"
+fi
 ./gen-helpers
 gmake
 gmake docbook_extended

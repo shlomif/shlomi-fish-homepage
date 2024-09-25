@@ -51,12 +51,6 @@ FICTION_XMLS := $(patsubst %,$(FICTION_XML_XML_DIR)/%.xml,$(FICTION_DOCS_ADDITIO
 
 non_latemp_targets: splay
 
-include lib/make/generated/sf-homepage-quadpres-generated.mak
-
-$(PRES_WEBSITE_META_LECTURE_STAMP): $(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf
-$(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf: $(PRES_WEBSITE_META_LECTURE_DEPS) $(PRES_WEBSITE_META_LECTURE_BASE)/src/index.html.wml $(PRES_WEBSITE_META_LECTURE_SRC_FILES)
-	$(call PRES_WEB_PUBLISHING_WITH_LAMP_render)
-
 screenplay_docs = $(patsubst %,$(1)/%.$(2),$(SCREENPLAY_DOCS))
 
 SCREENPLAY_RENDERED_HTMLS := $(call screenplay_docs,$(SCREENPLAY_XML_RENDERED_HTML_DIR),html)
@@ -112,3 +106,4 @@ $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \
 	$(FICTION_XML_TXT_DIR)/fiction-text-example-for-X-G-Fiction-demo.txt \
 	$(SCREENPLAY_XML_RENDERED_HTML_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.html \
 	$(SCREENPLAY_XML_TXT_DIR)/humanity-excerpt-for-X-G-Screenplay-demo.txt \
+

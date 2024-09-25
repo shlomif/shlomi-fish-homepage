@@ -91,3 +91,9 @@ non_latemp_targets: $(LC_LECTURE_ARC)
 
 $(LC_LECTURE_ARC): $(LC_PRES_DEST_HTMLS__PIVOT)
 	(filelist() { find Lambda-Calculus/slides -type f -print | (LC_ALL=C sort) ; } ; cd $(LC_LECTURE_ARC_DIR) && touch -d 2021-01-29T08:53:00Z $$(filelist) && tar $(QUADPRES__TAR_OPTIONS) "--mode=go=rX,u+rw,a-s" -caf $(LC_LECTURE_ARC_BASE) $$(filelist))
+
+include lib/make/generated/sf-homepage-quadpres-generated.mak
+
+$(PRES_WEBSITE_META_LECTURE_STAMP): $(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf
+$(PRES_WEBSITE_META_LECTURE_DEST)/examples/common_look/dest/my-document.pdf: $(PRES_WEBSITE_META_LECTURE_DEPS) $(PRES_WEBSITE_META_LECTURE_BASE)/src/index.html.wml $(PRES_WEBSITE_META_LECTURE_SRC_FILES)
+	$(call PRES_WEB_PUBLISHING_WITH_LAMP_render)

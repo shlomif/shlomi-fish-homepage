@@ -11,6 +11,13 @@ use HTML::Latemp::Local::Paths ();
 
 my $POST_DEST = HTML::Latemp::Local::Paths->new->t2_post_dest;
 
+sub _individual_pages
+{
+    my ($args) = @_;
+    my $paths = $args->{paths} or die "no paths";
+    return [ map { $_ . qq#/[a-zA-Z_\\-0-9\\.]*?\\.xhtml# } @$paths ];
+}
+
 # q#philosophy/culture/my-real-person-fan-fiction/take2/index.xhtml\z#,
 my @prunes = (
     q#MANIFEST\.html\z#,
@@ -32,32 +39,12 @@ q#(?:humour/by-others/(?:English-is-a-Crazy-Language|darien|funroll-loops|hitchh
     q#lecture/Lambda-Calculus/slides/shriram\.scm#,
     q#lecture/HTML-Tutorial/v1/xhtml1/hebrew#,
     q#js/MathJax/(?:test|docs)/#,
-    q#lecture/shlomif-cocktails/shlomif-cocktails/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/case-for-file-swapping/revision-3/case-for-file-swapping-rev3/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/culture/case-for-commercial-fan-fiction/screenplays-shortage-reduced-version\.xhtml#,
-q#philosophy/culture/multiverse-cosmology/multiverse-cosmology-v0.4.x/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/why-the-so-called-real-world-makes-little-sense/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/education/introductory-language/introductory-language/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2/[a-zA-Z_\-0-9\.]*?\.xhtml#,
 q#philosophy/computers/high-quality-software/what-makes-software-high-quality#,
-q#philosophy/computers/how-to-share-code-for-getting-help/how-to-share-code-online/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/open-source/foss-licences-wars/foss-licences-wars/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/open-source/foss-licences-wars/rev2/foss-licences-wars-rev2/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/software-management/end-of-it-slavery/end-of-it-slavery/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/software-management/perfect-workplace/perfect-it-workplace/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/software-management/perfect-workplace/v2/perfect-it-workplace-v2/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/computers/web/validate-your-html/validate-your-html/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-    q#philosophy/fan-pages/samantha-smith/samsmith/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-    q#philosophy/obj-oss/objectivism-and-open-source/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/obj-oss/rev2/objectivism-and-open-source/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers/[a-zA-Z_\-0-9\.]*?\.xhtml#,
-q#philosophy/psychology/hypomanias/dealing-with-hypomanias/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#philosophy/computers/open-source/linus-torvalds-bus-factor/index#,
     q#js/jquery-ui#,
     q#Iglu/shlomif/gamla#,
     q#open-source/anti/TIOBE/Berke-Durak--anti-TIOBE--Mirror#,
-q#open-source/projects/Park-Lisp/park-lisp-informal-spec/[a-zA-Z_\-0-9\.]*?\.xhtml#,
     q#open-source/resources/how-to-contribute-to-my-projects/HACKING.html\z#,
     q#open-source/resources/tech-tips/#,
     q#philosophy/culture/my-real-person-fan-fiction/index.xhtml\z#,
@@ -74,6 +61,36 @@ q#philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/#,
     q#philosophy/by-others/sscce/#,
     q#philosophy/case-for-file-swapping/case-for-file-swapping/#,
     q#philosophy/case-for-file-swapping/revision-2/#,
+    (
+        @{
+            _individual_pages(
+                {
+                    paths => [
+                        q#lecture/shlomif-cocktails/shlomif-cocktails#,
+q#open-source/projects/Park-Lisp/park-lisp-informal-spec#,
+q#philosophy/case-for-file-swapping/revision-3/case-for-file-swapping-rev3#,
+q#philosophy/computers/education/introductory-language/introductory-language#,
+q#philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2#,
+q#philosophy/computers/how-to-share-code-for-getting-help/how-to-share-code-online#,
+q#philosophy/computers/open-source/foss-licences-wars/foss-licences-wars#,
+q#philosophy/computers/open-source/foss-licences-wars/rev2/foss-licences-wars-rev2#,
+q#philosophy/computers/software-management/end-of-it-slavery/end-of-it-slavery#,
+q#philosophy/computers/software-management/perfect-workplace/perfect-it-workplace#,
+q#philosophy/computers/software-management/perfect-workplace/v2/perfect-it-workplace-v2#,
+q#philosophy/computers/web/validate-your-html/validate-your-html#,
+q#philosophy/culture/multiverse-cosmology/multiverse-cosmology-v0.4.x#,
+q#philosophy/culture/multiverse-cosmology/why-the-so-called-real-world-makes-little-sense/why-the-so-called-real-world-makes-little-sense#,
+                        q#philosophy/fan-pages/samantha-smith/samsmith#,
+q#philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3#,
+                        q#philosophy/obj-oss/objectivism-and-open-source#,
+                        q#philosophy/obj-oss/rev2/objectivism-and-open-source#,
+q#philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers#,
+q#philosophy/psychology/hypomanias/dealing-with-hypomanias#
+                    ],
+                }
+            )
+        },
+    ),
 );
 
 my $LAX_MODE = (

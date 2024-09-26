@@ -10,6 +10,9 @@
 [% desc %]
 </p>
 
+<img alt="Lychee fruit" src="[% "${base_path}philosophy/computers/software-management/getting-your-job-ad-replied-to/images/2514552758_52dc56ebcc_o-lychee-by-katesheets.webp" %]"
+style="float: right; margin: 2em; max-width: 30vw;" />
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "text" title = "The text" %]
@@ -304,5 +307,22 @@ on my tech blog.
 [%- END -%]
 
 [% PROCESS cc_by_sa_licence_section year = "2012" %]
+
+[% WRAPPER credits_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://flickr.com/photos/katesheets/2514552758/">Photo of a lychee
+fruit (titled “Lychee!”) by “katesheets” on Flickr</a> under CC-by. We use the
+original-sized photo, after <code>gm convert</code>-ed to .webp (for bandwidth
+reduction).
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
 
 [% END %]

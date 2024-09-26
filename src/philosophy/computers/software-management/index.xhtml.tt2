@@ -12,26 +12,22 @@ managing employees, software engineering, etc.
 
 <h2 id="articles-list">The Articles List</h2>
 
-<article>
+[% SET section_element = "article" %]
 
-<h3 id="end-of-it-slavery"><a href="end-of-it-slavery/">The End
-of IT Slavery</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/software-management/end-of-it-slavery/" id = "end-of-it-slavery" title = "The End of IT Slavery" %]
 
 <p>
-If you’re an employer in 2007 who wishes to attract and keep great developers,
+if you’re an employer in 2007 who wishes to attract and keep great developers,
 you’d better get one thing straight: give them exceptional treatment and
 conditions.
 </p>
 
-</article>
+[% END %]
 
-<article>
-
-<h3 id="perfect-it-workplace"><a href="perfect-workplace/">The Perfect
-Info-Tech Workplace</a></h3>
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/software-management/perfect-workplace/" id = "perfect-it-workplace" title = "The Perfect Info-Tech Workplace" %]
 
 <p>
-A subsequent article, with many lessons learned from the
+a subsequent article, with many lessons learned from the
 “End of IT Slavery”, which retrospectively seemed too cynical and
 demanding. In this article, I try to explain, based on the many resources
 I’ve read and my own experience, how an employer should structure their
@@ -39,9 +35,7 @@ work-place to attract great programmers, keep them and allow them
 to flourish.
 </p>
 
-</article>
-
-[% SET section_element = "article" %]
+[% END %]
 
 [% WRAPPER h3_section href = "${base_path}philosophy/computers/software-management/getting-your-job-ad-replied-to/" id = "getting-your-job-ad-replied-to" title = "Getting Your Job Ad Replied To" %]
 

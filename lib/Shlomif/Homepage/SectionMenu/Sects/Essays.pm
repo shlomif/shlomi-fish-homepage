@@ -365,6 +365,11 @@ my $_section_navmenu_tree_contents = {
                                 },
                             ],
                         },
+                        {
+                            text => "Getting Your Job Ad Replied To",
+                            url  =>
+"philosophy/computers/software-management/getting-your-job-ad-replied-to/",
+                        },
                     ],
                 },
                 {

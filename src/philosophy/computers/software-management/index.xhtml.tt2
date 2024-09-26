@@ -41,6 +41,14 @@ to flourish.
 
 </article>
 
+[% SET section_element = "article" %]
+
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/software-management/getting-your-job-ad-replied-to/" id = "getting-your-job-ad-replied-to" title = "Getting Your Job Ad Replied To" %]
+
+[% END %]
+
+[% SET section_element = "section" %]
+
 </section>
 
 [% END %]

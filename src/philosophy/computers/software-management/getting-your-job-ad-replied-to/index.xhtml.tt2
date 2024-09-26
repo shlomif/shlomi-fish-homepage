@@ -1,0 +1,308 @@
+[%- SET title = "Getting Your Job Ad Replied To" -%]
+[%- SET desc = "Guidelines and recommendations to make job adverts more popular, and more effective" -%]
+[%- SET more_keywords = "adverts, employers, employment, essay, job, jobs, joel spolsky, joel on software, languages, programming" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER intro %]
+
+<p>
+[% desc %]
+</p>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "text" title = "The text" %]
+
+<p>
+Joel Spolsky had previously published an essay titled
+<a href="http://www.joelonsoftware.com/articles/ResumeRead.html">“Getting
+Your Résumé Read”</a> on his <i>Joel on Software</i> site, which gives very good
+advice for job candidates
+who want to apply for work. Today, I am going to cover the opposite direction:
+give some advice for employers who publish job ads in hopes of finding
+employees. I have seen my share of bad practises among the many job ads
+I have read, and can tell which ones make me more willing to apply.
+</p>
+
+<p>
+Before I start, I am going to share a small item, which I originally planned
+to publish as is, and later decided to expand into this post, and which I have
+titled “The Worst Job Offer Ever”. After I wrote it, I thought that posting
+something like that online will make no one want to hire me ever again,
+so don’t take it too seriously. I am not singling any particular “wanted”
+adverts (but note that I read a very bad ad that came fairly close, after
+I wrote the feature).
+</p>
+
+<blockquote>
+<pre>
+From: lamejob@gmail.com
+To: programmersforum@yahoogroups.com
+Subject: BEST JOB!!!
+
+A promising startup with a young, dynamic, environment is looking for a
+talented software developer with the following skills:
+
+* Team-player.
+* Independent.
+* Detail-oriented.
+* Considers the big picture.
+* Ability to work under pressure.
+* Willing to work for stock options.
+* B.Sc./B.A. in Computer Science/Software Engineering or equivalent from a
+prestigious university with an average of 93.1415% or above.
+** M.Sc. an advantage.
+* 10 years of experience in JAVA.
+* 25 years of experience in php/Mysql.
+* 1-3 years of experience in PERL, PYTHON, ror - an advantage.
+* 10 years of OOP/OOD experience in C++ and COBOL - a must.
+* windows/unix/LINUX sys admin experience (3-5 years).
+
+Please send your CVs in MS Word format to lamejob-jobs@gmail.com .
+--
+Sent from my iPhone.
+</pre>
+</blockquote>
+
+<p>
+I hope you agree that it is pretty bad. Now for the rest of the advice:
+</p>
+
+<ol>
+
+<li>
+<p>
+The first thing you should do is to <b>spell the requirements precisely</b>.
+What does the candidate <b>must</b> know for the job? Please consider avoiding
+giving a number of years of experience because this is annoying.
+</p>
+
+<ul>
+<li>
+
+<blockquote cite="">
+
+<p>
+I saw a job post the other day. 👔
+</p>
+
+<p>
+It required 4+ years of experience in FastAPI. 🤦
+</p>
+
+<p>
+I couldn't apply as I only have 1.5+ years of experience since I created that thing. 😅
+</p>
+
+<p>
+Maybe it's time to re-evaluate that "years of experience = skill level". ♻
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/tiangolo/status/1281946592459853830">Tweet by @tiangolo</a>,
+who was happily employed at the time. )
+</p>
+
+</li>
+
+<li>
+<p>
+I also recall being told of job ads requiring <q>3 years of experience in <a href="https://en.wikipedia.org/wiki/Windows_2000">Windows 2000</a></q>
+in 2001, or something along these lines.
+</p>
+</li>
+
+</ul>
+</li>
+
+
+<li>
+<p>
+You should also <b>give a precise description</b> of the job: something
+like “Django expert”, “Perl expert”, “UNIX Systems Administrator”,
+“PHP expert” etc. That way people who do not match this description will
+know better than to apply.
+</p>
+</li>
+
+<li>
+<p>
+You should also use <b>proper spelling</b>, grammar, and syntax. Perl is not
+spelled
+<a href="http://perl-begin.org/learn/Perl-perl-but-not-PERL/">“PERL”</a>,
+Python is not spelled “PYTHON”, and it's MySQL - not “MYSQL”, “Mysql” or
+“mySQL”. It's also “PHP” - not “Php” or “php”.
+</p>
+</li>
+
+[% IF 0 %]
+
+<li>
+<p>
+If you have a successful business or planning on having one, then you should
+get your own
+<a href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS domain</a>
+such as <code>mycompany.com</code>, set up E-mail hosting for it, and send the job
+posts from there. Sending
+from a Webmail provider such as “@gmail.com”, “@hotmail.com” or “@yahoo.com”
+will make a bad impression, and indicate lack of professionalism.
+</p>
+</li>
+
+[% END %]
+
+<li>
+<p>
+You should also <b>use a standard desktop, or a comfortable laptop
+computer</b> to type
+and phrase the message - not a mobile device which results in more error-prone
+and less
+<a href="http://en.wikipedia.org/wiki/Etiquette_%28technology%29">Netiquette</a>
+-conforming messages. Make sure that your E-mail lacks any of the branding
+or advertising signatures such as “Sent from my iPhone”.
+</p>
+</li>
+
+
+<li>
+<p>
+<b>Specify the formats</b> in which it is possible to send the résumé, for
+example Microsoft Word, OpenDocument Text, XHTML, or PDF. See
+my <a href="[% base_path %]philosophy/computers/web/choice-of-docs-formats/">“Choice of Document Formats” page</a>
+for an overview and some recommendations.  This way the candidates will know
+which formats they should send and you will have less problems reading their
+E-mails. That is one thing the worst job advert I gave did right, but naturally
+many people will appreciate the ability to send in different formats to the
+proprietary Microsoft Word format.
+</p>
+
+<p>
+Also specify whether it would be possible to send a link to an online version
+of the résumé for easy viewing using your favourite browser, and avoid the
+hassles of opening attachments and their myriad formats.
+</p>
+</li>
+
+[% IF 0 %]
+<li>
+<p>
+Please don't require an “ability to work under pressure”. Most developers are
+naturally going to perform worse under pressure, and you should make sure
+you avoid pressuring them as much as possible. In order to attract developers,
+it is a good idea to advertise
+that your company normally operates on no more than 40 hours of work in
+a week — see what Evan Robinson has written about it in
+<a href="http://www.igda.org/why-crunch-modes-doesnt-work-six-lessons">“Why
+Crunch Modes Doesn’t Work: Six Lessons”</a>.
+</p>
+
+<p>
+If you do have a pressured environment (which is unfortunate but a fact
+of life), say “We have a pressured environment.” instead.
+</p>
+
+</li>
+
+[% END %]
+
+<li>
+<p>
+Another good idea is to encourage candidates to show off their <b>open-source
+projects</b> and web-presence (home sites, blogs, etc.). However, “show me
+your <a href="http://en.wikipedia.org/wiki/GitHub">GitHub</a> page” may
+work for some people, but may leave a bad taste in the mouth, and will
+offend some other people, because some people prefer some of its alternatives.
+</p>
+</li>
+
+<li>
+<p>
+You should spell <b>the location</b> of your offices (at least roughly) and
+specify how much one can
+<a href="http://en.wikipedia.org/wiki/Telecommuting">telecommute</a>, if at
+all.
+</p>
+</li>
+
+<li>
+<p>
+Whatever you do, please don’t post the job ad to the same forum more than
+once every few months. Posting the exact same position several times will
+make people annoyed and they may complain, filter your messages, or request
+that you get banned from posting on the forum.
+</p>
+</li>
+
+<li>
+<p>
+It is a good idea to mention some of the <b>software management practices</b>
+your
+company employs, such as using version control, writing automated tests,
+performing code reviews, refactoring, or pair programming.
+( See <a href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt">“What are some best practices in programming that I should adopt?”</a>. )
+</p>
+</li>
+
+<li>
+<p>
+Finally, as Joel mentions in the original essay, you should make your ad
+<b>stand out</b>. One <a href="https://groups.google.com/group/israelrb/msg/29e6f84804a877f7?dmode=source&amp;output=gplain&amp;noredirect">good
+example</a> was once posted to the Israeli Ruby developers mailing list:
+</p>
+
+<blockquote>
+<pre>
+Subject: Developers Developers Developers
+
+Looking for developers who:
+
+* want a full time, salaried position
+* want to work in a fun, young workplace
+* want to work in an environment that allows them to use (just about)
+whatever tools they wish to get the job done
+* know and love ruby
+* ideally have experience with php and python
+* want to work on large scale rails/merb projects that have nothing to
+do with "the social web"
+* want to drown a puppy every time they hear phrases like "the social
+web"
+</pre>
+</blockquote>
+
+<p>
+This job ad (and especially the two last items) makes a stance, and makes
+the readers feel empathic towards it.
+</p>
+</li>
+
+<li>
+<p>
+Good luck!
+</p>
+</li>
+
+</ol>
+
+[%- END -%]
+
+[% WRAPPER links_sect %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://shlomif-tech.livejournal.com/63020.html">Original version</a> - as a post
+on my tech blog.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% PROCESS cc_by_sa_licence_section year = "2012" %]
+
+[% END %]

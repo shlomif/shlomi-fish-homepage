@@ -1,0 +1,41 @@
+[%- SET title = "Reflections on (circa 2020) software quality trends" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<div class="lim_width wrap-me side_toc fancy_sects">
+[% default_toc %]
+
+<h2 id="itself">The Article Itself</h2>
+
+[% path_slurp("docbook/5/rendered/reflections-on-software-quality-trends.xhtml") %]
+
+</section>
+
+<section class="h2">
+
+<h2 id="other_formats">Other Formats</h2>
+
+<ul>
+<li>
+<p>
+<a href="reflections-on-software-quality-trends.pdf">Acrobat Reader (PDF) Format</a>.
+</p>
+</li>
+<li>
+<p>
+<a href="reflections-on-software-quality-trends.xml">Original DocBook/XML</a>.
+</p>
+</li>
+</ul>
+
+</section>
+
+<section class="h2">
+
+<h2 id="coverage">Coverage</h2>
+
+</section>
+
+</div>
+
+[% END %]

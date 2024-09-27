@@ -383,6 +383,12 @@ my $_section_navmenu_tree_contents = {
                             title =>
 "“What Makes Software High Quality?” - Revision 2",
                         },
+                        {
+                            text =>
+"Reflections on (circa 2020) software quality trends",
+                            url =>
+"philosophy/computers/high-quality-software/reflections-on-software-quality-trends/",
+                        },
                     ],
                 },
                 {

@@ -70,6 +70,7 @@ q#philosophy/philosophy/putting-all-cards-on-the-table-2013/indiv-sections/#,
 q#open-source/projects/Park-Lisp/park-lisp-informal-spec#,
 q#philosophy/case-for-file-swapping/revision-3/case-for-file-swapping-rev3#,
 q#philosophy/computers/education/introductory-language/introductory-language#,
+q#philosophy/computers/high-quality-software/reflections-on-software-quality-trends/reflections-on-software-quality-trends#,
 q#philosophy/computers/high-quality-software/rev2/what-makes-software-high-quality-rev2#,
 q#philosophy/computers/how-to-share-code-for-getting-help/how-to-share-code-online#,
 q#philosophy/computers/open-source/foss-licences-wars/foss-licences-wars#,
@@ -87,6 +88,7 @@ q#philosophy/foss-other-beasts/version-3/foss-and-other-beasts-v3#,
 q#philosophy/perl-newcomers/v1/usability-of-perl-world-for-newcomers#,
 q#philosophy/psychology/hypomanias/dealing-with-hypomanias#
                     ],
+
                 }
             )
         },
@@ -107,7 +109,6 @@ if ($LAX_MODE)
         q#humour/fortunes/shlomif\.html#,
         q#lecture/C-and-CPP/bad-elements/c-and-cpp-elements-to-avoid/#,
 q#open-source/projects/Spark/mission/Spark-Pre-Birth-of-a-Modern-Lisp/[a-zA-Z0-9\-_]*\.xhtml#,
-q#philosophy/computers/high-quality-software/reflections-on-software-quality-trends/#,
         q#philosophy/fan-pages/samantha-smith/index\.xhtml#,
         );
 }

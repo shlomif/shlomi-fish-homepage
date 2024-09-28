@@ -56,9 +56,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 </info>
 
 <para>
-<emphasis role="strong">Note:</emphasis> there is a similar essay on
-<link xlink:href="https://tonsky.me/blog/disenchantment/">software
-disenchantment</link> and probably many other similar ones.
+<emphasis role="strong">Note:</emphasis> there is
+<link xlink:href="https://tonsky.me/blog/disenchantment/">a similar essay, by Niki
+Tonsky, titled “Software Disenchantment</link> and probably many other similar ones.
 </para>
 
 <itemizedlist spacing="compact">
@@ -70,7 +70,7 @@ Essay: reflections on how software quality has improved/worsened.
 <listitem>
 <para>
 Follow-up on
-<link xlink:href="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/">http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/</link>
+<link xlink:href="http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/">”What Makes Software High-Quality” (  /philosophy/computers/high-quality-software/rev2/ )</link>
 </para>
 </listitem>
 <listitem>
@@ -94,7 +94,7 @@ Follow-up on
 <listitem>
 <para>
 Follow-up on
-<link xlink:href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt">https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt</link>
+<link xlink:href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt">“What are some best practices in software development that I should adopt?”</link>
 </para>
 </listitem>
 <listitem>
@@ -110,7 +110,7 @@ Freecell Solver speedups (
     <link xlink:href="https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks">https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks</link>
 ), new features (
 <link xlink:href="http://fc-solve.shlomifish.org/features.html">http://fc-solve.shlomifish.org/features.html</link>
-), tests suite, CI, etc.
+), tests suite, Continuous Integration (CI), etc.
 </para>
 <itemizedlist spacing="compact">
 <listitem>
@@ -123,7 +123,7 @@ Cost of code complexity and readability
 <listitem>
 <para>
 Learned about
-<link xlink:href="https://en.wikipedia.org/wiki/Continuous_integration">CI</link>
+<link xlink:href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</link>
 from
 <link xlink:href="https://perlhacks.com/2012/03/you-must-hate-version-control-systems/">https://perlhacks.com/2012/03/you-must-hate-version-control-systems/</link>
 </para>
@@ -141,12 +141,12 @@ Electron-based apps:
 <itemizedlist spacing="compact">
 <listitem>
 <para>
-<link xlink:href="http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/">http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/</link>
+<link xlink:href="http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/">“The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File [satire]”</link>
 </para>
 </listitem>
 <listitem>
 <para>
-<link xlink:href="https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/">https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/</link>
+<link xlink:href="https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/">Benchmarks showing Electron apps are super slow and eat memory like there is no tomorrow : r/programming</link>
 </para>
 </listitem>
 </itemizedlist>
@@ -180,7 +180,7 @@ Windows Update — slow:
 <itemizedlist spacing="compact">
 <listitem>
 <para>
-<link xlink:href="http://www.shlomifish.org/humour/bits/facts/Windows-Update/">http://www.shlomifish.org/humour/bits/facts/Windows-Update/</link>
+<link xlink:href="http://www.shlomifish.org/humour/bits/facts/Windows-Update/">Windows Update Factoids</link>
 </para>
 </listitem>
 <listitem>
@@ -219,6 +219,12 @@ hopefully
 improve</link>
 </para>
 </listitem>
+<listitem>
+<para>
+It did seem to improve, at least on my Fedora x86-64 systems. dnf version 5 may be even
+more fast than its predecessors.
+</para>
+</listitem>
 </itemizedlist>
 </listitem>
 <listitem>
@@ -230,6 +236,11 @@ Mostly Positive:
 <listitem>
 <para>
 Easy to use interface
+</para>
+</listitem>
+<listitem>
+<para>
+As a general rule,: stable, fast, and predictable.
 </para>
 </listitem>
 <listitem>
@@ -280,7 +291,7 @@ instead of on virtual workspaces.
 </listitem>
 <listitem>
 <para>
-<link xlink:href="http://www.trinitydesktop.org/">http://www.trinitydesktop.org/</link>
+<link xlink:href="http://www.trinitydesktop.org/">http://www.trinitydesktop.org/ (Trinity Desktop Environment)</link> - fork of KDE 3, continuing its spirit.
 </para>
 </listitem>
 </itemizedlist>
@@ -288,7 +299,7 @@ instead of on virtual workspaces.
 <listitem>
 <para>
 Mostly Positive:
-<link xlink:href="https://en.wikipedia.org/wiki/CMake">cmake</link>
+<link xlink:href="https://en.wikipedia.org/wiki/CMake">CMake</link>
 </para>
 <itemizedlist spacing="compact">
 <listitem>
@@ -304,7 +315,7 @@ Autotools
 </listitem>
 <listitem>
 <para>
-<link xlink:href="https://en.wikipedia.org/wiki/Meson_(software)">https://en.wikipedia.org/wiki/Meson_(software)</link>
+<link xlink:href="https://en.wikipedia.org/wiki/Meson_(software)">Meson (build-tool)</link>
 </para>
 </listitem>
 </itemizedlist>

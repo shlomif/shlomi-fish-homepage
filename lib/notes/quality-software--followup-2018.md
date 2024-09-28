@@ -6,36 +6,38 @@
 
 # Main
 
-**Note:** there is a similar essay on [software disenchantment](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
+**Note:** there is [a similar essay, by Niki Tonsky, titled “Software Disenchantment](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
 
 - Essay: reflections on how software quality has improved/worsened.
-    - Follow-up on <http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/>
+    - Follow-up on [”What Makes Software High-Quality” ( /philosophy/computers/high-quality-software/rev2/ )](http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/)
     - Follow-up on [“Optimizing Code for Speed” Wikibook](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed)
     - Follow-up on <http://perl-begin.org/tutorials/bad-elements/>
     - Follow-up on <http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/>
-    - Follow-up on <https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt>
+    - Follow-up on [“What are some best practices in software development that I should adopt?”](https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt)
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
-    - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, CI, etc.
+    - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, Continuous Integration (CI), etc.
         - Cost of code complexity and readability
-    - Learned about [CI](https://en.wikipedia.org/wiki/Continuous_integration) from <https://perlhacks.com/2012/03/you-must-hate-version-control-systems/>
+    - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from <https://perlhacks.com/2012/03/you-must-hate-version-control-systems/>
     - Since the essays were written, some apps improved while others got worse.
     - Electron-based apps:
-        - <http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/>
-        - <https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/>
+        - [“The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File \[satire\]”](http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/)
+        - [Benchmarks showing Electron apps are super slow and eat memory like there is no tomorrow : r/programming](https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/)
     - Software becoming slower and more resource hungry:
         - <https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b>
         - <https://twitter.com/TheoVanGrind/status/888850519564984322>
         - <https://twitter.com/xbs/status/626781529054834688>
     - Windows Update — slow:
-        - <http://www.shlomifish.org/humour/bits/facts/Windows-Update/>
+        - [Windows Update Factoids](http://www.shlomifish.org/humour/bits/facts/Windows-Update/)
         - Reportedly still breaks the system sometimes
         - Gets invoked at inconvenient times
             - Like at computer shutdown
     - Red Hat’s dnf
         - kinda slow
         - hopefully [will improve](https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/)
+        - It did seem to improve, at least on my Fedora x86-64 systems. dnf version 5 may be even more fast than its predecessors.
     - Mostly Positive: [VLC](https://www.videolan.org/vlc/)
         - Easy to use interface
+        - As a general rule,: stable, fast, and predictable.
         - Popular among many Windows and macOS users.
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
@@ -43,11 +45,11 @@
     - KDE/Plasma’s update from 3 to 4 was poorly done, and so was 4→5.
         - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called [“Activities”](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
         - <https://bugs.kde.org/show_bug.cgi?id=343246>
-        - <http://www.trinitydesktop.org/>
-    - Mostly Positive: [cmake](https://en.wikipedia.org/wiki/CMake)
+        - [http://www.trinitydesktop.org/ (Trinity Desktop Environment)](http://www.trinitydesktop.org/) - fork of KDE 3, continuing its spirit.
+    - Mostly Positive: [CMake](https://en.wikipedia.org/wiki/CMake)
         - Not perfect but less errorprone and faster than GNU Autotools
         - <http://www.shlomifish.org/open-source/anti/autohell/>
-        - <https://en.wikipedia.org/wiki/Meson_(software)>
+        - [Meson (build-tool)](https://en.wikipedia.org/wiki/Meson_(software))
     - Reflections on “Simple” in the context of software:
         - <https://shlomif-tech.livejournal.com/64318.html>
         - Simple may imply lacking features or being hard to use.

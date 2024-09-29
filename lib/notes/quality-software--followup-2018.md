@@ -6,12 +6,12 @@
 
 # Main
 
-**Note:** there is [a similar essay, by Niki Tonsky, titled “Software Disenchantment](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
+**Note:** there is [a similar essay, by Niki Tonsky, titled “Software Disenchantment”](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
 
 - Essay: reflections on how software quality has improved/worsened.
     - Follow-up on [”What Makes Software High-Quality” ( /philosophy/computers/high-quality-software/rev2/ )](http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/)
     - Follow-up on [“Optimizing Code for Speed” Wikibook](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed)
-    - Follow-up on <http://perl-begin.org/tutorials/bad-elements/>
+    - Follow-up on [“Perl bad elements (bad practices) to avoid.”](http://perl-begin.org/tutorials/bad-elements/)
     - Follow-up on <http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/>
     - Follow-up on [“What are some best practices in software development that I should adopt?”](https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt)
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
@@ -52,15 +52,15 @@
         - [Meson (build-tool)](https://en.wikipedia.org/wiki/Meson_(software))
     - Reflections on “Simple” in the context of software:
         - <https://shlomif-tech.livejournal.com/64318.html>
-        - Simple may imply lacking features or being hard to use.
+        - “Simple” may imply lacking features or being hard to use.
 
 ## Comment I wrote
 
 On <https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b> :
 
-Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://github.com/shlomif/shlomi-fish-homepage/blob/4d2c897b486f0c7cfc0b7fe29f3f49b61fb8054a/lib/notes/quality-software--followup-2018.md) ).
-
-Regarding the “it’s good there is more work for me”, this is the [broken window fallacy](https://shlomif-tech.livejournal.com/741.html) — and it is also echoed in the [“How to become a hacker (not ‘cracker’) howto”](http://www.catb.org/esr/faqs/hacker-howto.html). You likely have better things to do than to fix others’ past failures.
+> Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://github.com/shlomif/shlomi-fish-homepage/blob/4d2c897b486f0c7cfc0b7fe29f3f49b61fb8054a/lib/notes/quality-software--followup-2018.md) ).
+>
+> Regarding the “it’s good there is more work for me”, this is the [broken window fallacy](https://shlomif-tech.livejournal.com/741.html) — and it is also echoed in the [“How to become a hacker (not ‘cracker’) howto”](http://www.catb.org/esr/faqs/hacker-howto.html). You likely have better things to do than to fix others’ past failures.
 
 # Licence
 

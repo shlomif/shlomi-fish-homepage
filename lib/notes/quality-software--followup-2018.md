@@ -42,7 +42,7 @@
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
-    - KDE/Plasma’s update from 3 to 4 was poorly done, and so was 4→5.
+    - [KDE’s desktop environment (“Plasma”)](https://en.wikipedia.org/wiki/KDE) ’s update from 3 to 4 was poorly executed (there were many bugs and quirks), and so was the transition from 4 to 5.
         - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called [“Activities”](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
         - <https://bugs.kde.org/show_bug.cgi?id=343246>
         - [http://www.trinitydesktop.org/ (Trinity Desktop Environment)](http://www.trinitydesktop.org/) - fork of KDE 3, continuing its spirit.

@@ -2,11 +2,11 @@
 
 # Introduction
 
-**TODO:**
+**Note:** there is [a similar essay, by Niki Tonsky, titled “Software Disenchantment”](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
+
+Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](https://www.shlomifish.org/open-source/resources/software-quality-enhancement/) as an attempt to help in combatting this trend.
 
 # Main
-
-**Note:** there is [a similar essay, by Niki Tonsky, titled “Software Disenchantment”](https://tonsky.me/blog/disenchantment/) and probably many other similar ones.
 
 - Essay: reflections on how software quality has improved/worsened.
     - Follow-up on [”What Makes Software High-Quality” ( /philosophy/computers/high-quality-software/rev2/ )](http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/)

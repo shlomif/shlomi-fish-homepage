@@ -58,7 +58,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
 
 On <https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b> :
 
-> Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://github.com/shlomif/shlomi-fish-homepage/blob/4d2c897b486f0c7cfc0b7fe29f3f49b61fb8054a/lib/notes/quality-software--followup-2018.md) ).
+> Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://www.shlomifish.org/philosophy/computers/high-quality-software/reflections-on-software-quality-trends/) ).
 >
 > Regarding the “it’s good there is more work for me”, this is the [broken window fallacy](https://shlomif-tech.livejournal.com/741.html) — and it is also echoed in the [“How to become a hacker (not ‘cracker’) howto”](http://www.catb.org/esr/faqs/hacker-howto.html). You likely have better things to do than to fix others’ past failures.
 

@@ -40,7 +40,7 @@ or a commercial licence.
 <li>
 <p>
 <a href="https://doc.qt.io/qt-5/qtcore-index.html">QtCore</a> -
-part of <a href="#lib_qt">Qt</a> that provides data structures and system
+a part of <a href="#lib_qt">Qt</a> that provides data structures and system
 services (and not GUI). [% INCLUDE licence_qt %]
 [% IF with_logo %][% INCLUDE qt_logo %][% END %]
 </p>
@@ -50,13 +50,13 @@ services (and not GUI). [% INCLUDE licence_qt %]
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="data_structures" title="Data Structures"%]
+[% WRAPPER h2_section id = "data_structures" title = "Data Structures" %]
 
 <ul>
 <li>
 <p>
 <a href="http://www.gtk.org/">GLib</a> - a C library that provides
-many useful classes. It is complete, but sometimes common useful programming
+many useful classes. It is comprehensive, but sometimes common useful programming
 practices (such as supplying a callback context argument) are ignored. It
 also tends to have non-optimised code. LGPLed.
 </p>
@@ -65,7 +65,7 @@ also tends to have non-optimised code. LGPLed.
 <li>
 <p>
 <a href="http://www.kylheku.com/~kaz/kazlib.html">Kazlib</a> - Provides
-a Red-Black tree, a hash table and a linked list manager. An Open-Source
+a Red-Black tree, a hash table, and a linked list manager. An Open-Source
 License.
 </p>
 </li>
@@ -101,13 +101,13 @@ functions. LGPLed.
 </p>
 </li>
 
-[% INCLUDE lib_qt_core with_logo="1" %]
+[% INCLUDE lib_qt_core with_logo = "1" %]
 
 </ul>
 
 [% END %]
 
-[% WRAPPER h2_section id="system_services" title="System-Services Abstractions"%]
+[% WRAPPER h2_section id = "system_services" title = "System-Services Abstractions" %]
 
 <ul>
 <li>
@@ -119,7 +119,7 @@ functions. LGPLed.
 <li>
 <p>
 <a href="http://apr.apache.org/">The Apache Portable Run-Time (APR)</a> -
-contains portable abstractions for many things, from memory allocation to
+contains portable abstractions for many purposes, from memory allocation to
 threads. Open-source, Apache Group License.
 </p>
 </li>

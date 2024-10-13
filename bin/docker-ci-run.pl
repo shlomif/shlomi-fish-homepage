@@ -154,6 +154,7 @@ EOF
                     pcre-devel
                     perl-DBD-SQLite
                     perl-Inline-Python
+                    perl-LWP-Protocol-https
                     perl-XML-Parser
                     perl-generators
                     primesieve-devel
@@ -202,6 +203,14 @@ sub run_config
 
     my $obj = Docker::CLI::Wrapper::Container->new(
         { container => $container, sys => $sys, }, );
+
+    if ( -f "/etc/fedora-release" )
+    {
+        @{ $obj->docker_cmd_line_prefix } = (
+            @{ $obj->docker_cmd_line_prefix },
+            "--cgroup-manager", "cgroupfs",
+        );
+    }
 
     my @deps = (
         sort { $a cmp $b } (

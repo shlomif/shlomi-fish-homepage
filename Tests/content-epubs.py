@@ -32,6 +32,23 @@ class MyTests(unittest.TestCase):
             1
         )
 
+    def test_queen_padme_tales(self):
+        zip_obj = ZipFile(
+            (
+                'dest/post-incs/t2/humour/Queen-Padme-Tales/'
+                'Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.epub'
+            ), 'r')
+
+        with zip_obj.open("OEBPS/toc.ncx") as fh:
+            xml = fh.read()
+        root = etree.XML(xml)
+        self.assertEqual(len(root.xpath(
+            ".//ncx:docTitle/ncx:text[contains(text(), 'Queen Padmé Tales')]",
+            namespaces=ns,
+            )),
+            1
+        )
+
 
 if __name__ == '__main__':
     from pycotap import TAPTestRunner

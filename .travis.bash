@@ -45,15 +45,19 @@ then
     fi
     eval "$(GIMME_GO_VERSION=1.16 gimme)"
     (
+        _minify_fallback()
+        {
+            ln -s /bin/true /usr/bin/minify
+        }
         mkdir -p $HOME/src
         cd $HOME/src
         git clone https://github.com/tdewolff/minify.git
         (
             cd minify
-            make SHELL=/bin/bash install
+            make SHELL=/bin/bash install || _minify_fallback
         )
         rm -fr minify
-    ) || ( ln -s /bin/true /usr/bin/minify )
+    )
     which minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
     PERL_CPANM_OPT+=" --quiet "

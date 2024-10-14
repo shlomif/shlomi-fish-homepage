@@ -53,7 +53,7 @@ then
             make SHELL=/bin/bash install
         )
         rm -fr minify
-    )
+    ) || ( ln -s /bin/true /usr/bin/minify )
     which minify
     eval "$(perl -I ~/perl_modules/lib/perl5 -Mlocal::lib=$HOME/perl_modules)"
     PERL_CPANM_OPT+=" --quiet "

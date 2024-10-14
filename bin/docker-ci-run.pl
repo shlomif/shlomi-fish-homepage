@@ -471,9 +471,10 @@ then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
 if true
-    # do nothing
-    true
+then
+    ln -sf /bin/true /usr/bin/minify
 elif false
+then
 if true
 then
     a="`pwd`"

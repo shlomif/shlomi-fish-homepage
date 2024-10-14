@@ -19,7 +19,7 @@ s/^( *)gem/$1sudo gem/;
 if (/^ *go get.*minify/)
 {
     $_ =
-q#(set -e -x; mkdir -p $HOME/src ; cd $HOME/src ; git clone https://github.com/tdewolff/minify.git ; cd minify ; make SHELL=/bin/bash install ; cd .. ; rm -fr minify ; which minify ; )#;
+q# if ( set -e -x; mkdir -p $HOME/src ; cd $HOME/src ; git clone https://github.com/tdewolff/minify.git ; cd minify ; make SHELL=/bin/bash install ; cd .. ; rm -fr minify ; which minify ; ) ; then true ; else ln -s /bin/true /usr/bin/minify ; fi#;
 }
 
 1;

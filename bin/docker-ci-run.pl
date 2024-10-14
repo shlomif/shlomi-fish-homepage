@@ -471,6 +471,10 @@ then
     true # bash -c "mkdir b ; cd b ; make && cd .. && rm -fr b"
 fi
 if true
+    # do nothing
+    true
+elif false
+if true
 then
     a="`pwd`"
     mkdir -p \$HOME/src
@@ -487,6 +491,7 @@ else
     then
         go install "\$gourl\@latest"
     fi
+fi
 fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"

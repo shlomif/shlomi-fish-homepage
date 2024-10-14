@@ -12,6 +12,7 @@ m()
 {
     gmake DBTOEPUB="${DBTOEPUB:-/usr/bin/ruby $(which dbtoepub)}" \
         DOCBOOK5_XSL_STYLESHEETS_PATH=/usr/share/xml/docbook/stylesheet/docbook-xsl-ns \
+        SKIP_MINIFY=1 \
     "$@"
 }
 

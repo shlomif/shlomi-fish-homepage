@@ -172,8 +172,17 @@ SRC_SVGS__BASE := $(filter %.svg,$(SRC_IMAGES_DEST))
 SRC_SVGS__MIN := $(SRC_SVGS__BASE:%.svg=%.min.svg)
 SRC_SVGS__svgz := $(SRC_SVGS__BASE:%.svg=%.svgz)
 
+ifeq ("$(SKIP_MINIFY)", "1")
+
+$(SRC_SVGS__MIN): %.min.svg: %.svg
+	cat $< > $@
+
+else
+
 $(SRC_SVGS__MIN): %.min.svg: %.svg
 	minify -q --svg-precision 5 -o $@ $<
+
+endif
 
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@

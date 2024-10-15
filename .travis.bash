@@ -47,7 +47,7 @@ then
     (
         _minify_fallback()
         {
-            ln -s /bin/true /usr/bin/minify
+            sudo ln -s /bin/true /usr/bin/minify
         }
         mkdir -p $HOME/src
         cd $HOME/src

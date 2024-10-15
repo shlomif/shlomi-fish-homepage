@@ -530,15 +530,15 @@ choice she makes.
 
 <li>
 <p>
-A poorly executed takeover attempt by a “real life” celebrity
-(<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma Watson</a>)
-thought to be flawless.
+A poorly-executed takeover attempt of the Naboo crown, by a “real life”
+celebrity (<a href="[% base_path %]humour/bits/facts/Emma-Watson/">Emma
+Watson</a>) thought to be flawless.
 </p>
 </li>
 
 <li>
 <p>
-Her boyfriend being so busy with his studies that he becomes awfully laconic
+Her boyfriend being so busy with his studies, that he becomes awfully laconic
 even in his emails.
 </p>
 </li>

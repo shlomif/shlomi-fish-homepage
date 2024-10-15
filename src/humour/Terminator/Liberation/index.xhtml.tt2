@@ -6,15 +6,15 @@
 
 [% long_stories.calc_common_top_elems(id => 'terminator_liberation') %]
 
-[% WRAPPER screenplay_read_online  %]
+[% WRAPPER screenplay_read_online %]
 
 <ul>
 
-[% PROCESS story_ongoing_episode_li base = "Terminator--Liberation",  %]
+[% PROCESS story_ongoing_episode_li base = "Terminator--Liberation", %]
 
 <li>
 <p>
-[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Terminator-Liberation",  %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Terminator-Liberation", %]
 </p>
 </li>
 
@@ -86,6 +86,26 @@ the situation is more complicated than that.
 </p>
 </li>
 
+<li>
+
+<p>
+For preparing the logo:
+</p>
+
+<ol>
+<li>
+<p>
+Heart exclamation mark emoji taken from the
+<a href="https://github.com/googlefonts/noto-emoji">Google noto-emoji font</a>.
+</p>
+
+<p>
+<a href="https://freesvg.org/1549920417">Tank Line Art By Septianbkp</a>.
+</p>
+</li>
+</ol>
+</li>
+
 </ul>
 
 [% END %]
@@ -148,7 +168,7 @@ and similar fighting games.
 
 </ul>
 
-[% PROCESS links_to_judaism_and_israel  %]
+[% PROCESS links_to_judaism_and_israel %]
 
 [% END %]
 
@@ -167,30 +187,6 @@ and similar fighting games.
 </li>
 
 </ul>
-
-[% END %]
-
-[% WRAPPER h2_section id="thanks" title="Thanks and Acknowledgements"%]
-
-<p>
-<b>TODO: FILL IN.</b>
-</p>
-
-<ol>
-
-<li>
-<p>
-Heart exclamation mark emoji taken from the
-<a href="https://github.com/googlefonts/noto-emoji">Google noto-emoji font</a>.
-</p>
-
-<p>
-<a href="https://freesvg.org/1549920417">Tank Line Art By Septianbkp</a>.
-</p>
-
-</li>
-
-</ol>
 
 [% END %]
 

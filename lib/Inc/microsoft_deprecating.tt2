@@ -28,4 +28,8 @@ the team is starved of competent, and enthusiastic workers. Even if Microsoft
 still sells Windows copies, they are being starved of employees.
 </p>
 
+<p>
+Another note about Microsoft Windows is that I suspect, that in their “Professional”/“Server” sub-line of Windows (such as <a href="https://en.wikipedia.org/wiki/Windows_Server_2003">Windows Server 2003</a> , <a href="https://en.wikipedia.org/wiki/Windows_Server_2008">Windows Server 2008</a>), Microsoft has disabled, either in runtime, or in compile-time ( <a href="https://stackoverflow.com/questions/33117233/what-is-the-purpose-of-using-ifdef-and-if-in-c">#ifdef</a>/etc. ) compatibility code. As a result, misbehaving legacy applications will not run there, while properly-coded-or-fixed ones will run faster and with fewer quirks.
+</p>
+
 [% END %]

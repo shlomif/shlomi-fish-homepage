@@ -271,6 +271,14 @@ One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https:/
 and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 </p>
 
+[% WRAPPER h4_section id = "typst" title = "typst" %]
+
+<p>
+<a href="https://github.com/typst/typst">typst</a> is a <q>A new markup-based typesetting system that is powerful and easy to learn.</q> It is also FOSS (Apache-2.0), and received over 30,000 GitHub stars. However, I have no first-hand experience with it.
+</p>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h3_section id = "word-processors" title = "Note about Word Processors" %]

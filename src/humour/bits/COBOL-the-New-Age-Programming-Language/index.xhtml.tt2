@@ -2,7 +2,6 @@
 [%- SET desc = "COBOL - The New Age Programming Language: parody page about COBOL and advocacy pages for new programming languages." -%]
 [%- SET more_keywords = "COBOL, parody, funny, humour, humor" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER note  %]
@@ -21,6 +20,7 @@ in case it will make you chuckle.
 [% WRAPPER h2_section id = "content" title = "The Content" %]
 
 <img src="astronaut.png" alt="NASA Astronaut"/><br/>
+
 <p>
 NASA Uses COBOL.
 </p>
@@ -30,9 +30,19 @@ And so do:
 </p>
 
 <ul>
-<li>Your bank.</li>
-<li>Your insurance company.</li>
-<li>Your government.</li>
+
+<li>
+<p>Your bank.</p>
+</li>
+
+<li>
+<p>Your insurance company.</p>
+</li>
+
+<li>
+<p>Your government.</p>
+</li>
+
 </ul>
 
 <p>
@@ -155,28 +165,40 @@ COBOL does not have all the computer sciencey baggage that other languages have:
 <ul>
 
 <li>
+<p>
 COBOL does not support object-oriented programming.
+</p>
 </li>
 
 <li>
+<p>
 COBOL does not support <a href="http://www.joelonsoftware.com/items/2006/08/01.html">closures</a>.
+</p>
 </li>
 
 <li>
+<p>
 COBOL is not a dynamic language.
+</p>
 </li>
 
 <li>
+<p>
 COBOL supports functional programming roughly as much as C++ supports
 object-oriented programming.
+</p>
 </li>
 
 <li>
+<p>
 COBOL does not support procedural recursion.
+</p>
 </li>
 
 <li>
+<p>
 COBOL does not have a built-in support for regular expressions.
+</p>
 </li>
 
 </ul>

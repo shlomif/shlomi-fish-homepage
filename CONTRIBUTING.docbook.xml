@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+<info>
+<title>shlomifish.org Contributing guidelines [by Shlomi Fish]</title>
+<date>2024-10-17</date>
+<authorgroup>
+<author>
+<personname>
+<firstname>Shlomi</firstname>
+<surname>Fish</surname>
+</personname>
+<affiliation>
+<address>
+<email>shlomif@shlomifish.org</email>
+<uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+</address>
+</affiliation>
+</author>
+</authorgroup>
+<copyright>
+<year>2022</year>
+<holder>Shlomi Fish</holder>
+</copyright>
+<legalnotice xml:id="main_legal_notice">
+<info>
+<title>CC-by dedication</title>
+</info>
+<para>
+<!--Creative Commons License-->
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution Non-commercial ShareAlike 4.0 License (CC-by-nc-sa)</link> (or at your option a greater version of it).
+</para>
+</legalnotice>
+</info>
+
+<section xml:id="docker">
+
+<info>
+<title>Docker script</title>
+</info>
+
+<programlisting>
+perl bin/docker-ci-run.pl --cleanrun 2&gt;&amp;1 | tee "${HOME}/shlomif-homepage.build.out.txt"
+</programlisting>
+
+</section>
+
+<section xml:id="directories-structure">
+
+<info>
+<title>Project Directory Structure</title>
+</info>
+
+</section>
+
+</article>

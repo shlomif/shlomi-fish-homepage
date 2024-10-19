@@ -1,0 +1,47 @@
+[%- SET title = "Shlomiverse: Tales About Commerce" -%]
+[%- # SET desc = "" -%]
+[%- SET more_keywords = "joke,raku,DuckDuckGo,parody,crossover,fairy tale,web,internet" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
+
+[% END %]
+
+[% WRAPPER see_also %]
+
+<ul>
+
+<li>
+<p>
+<b>TODO: add more</b>
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
+
+<p>
+This document is Copyright by <a href="http://www.shlomifish.org/">Shlomi
+Fish</a>, 2024, and is available
+under the
+terms of <a
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">the Creative Commons
+Attribution-Noncommercial-ShareAlike License 4.0 Unported</a> (or at your option any
+later version).
+</p>
+
+<p>
+For securing additional rights, please contact
+<a href="http://www.shlomifish.org/me/contact-me/">Shlomi Fish</a>,
+and see <a href="http://www.shlomifish.org/meta/copyrights/">the
+explicit requirements</a> that are being spelt from abiding by that licence.
+</p>
+
+[% END %]
+
+[% END %]

@@ -14,6 +14,7 @@ use Shlomif::Homepage::GenScreenplaysMak::ImageLister ();
 my $image_lister = Shlomif::Homepage::GenScreenplaysMak::ImageLister->new( {} );
 
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
+my $SOURCE_PIVOT_BN     = "All-in-an-Atypical-Day-Work";
 
 sub _calc_screenplay_doc_makefile_lines
 {
@@ -53,10 +54,23 @@ sub _calc_screenplay_doc_makefile_lines
 
     if ( not $should_clone )
     {
+        my $src_fn =
+"lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl";
+        my $src_obj = path($src_fn);
+        if ( not -e $src_obj )
+        {
+            my $pivot_fn =
+                path(
+"lib/screenplay-xml/txt/scripts/$SOURCE_PIVOT_BN-prepare-epub.pl"
+                );
+            my $pivot_body = $pivot_fn->slurp_utf8();
+
+            $src_obj->spew_utf8(
+                qq%die "PLEASE EDIT ME!!!";\n\n% . $pivot_body );
+            system( "git", "add", $src_obj, );
+        }
         push @ret,
-            (
-"\n\$($src_prepare_epub_var): lib/screenplay-xml/txt/scripts/${base_github_repo}-prepare-epub.pl\n"
-                . "\t"
+            (     "\n\$($src_prepare_epub_var): ${src_fn}\n" . "\t"
                 . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" );
@@ -85,6 +99,16 @@ sub _calc_screenplay_doc_makefile_lines
                 path(
                 "$screenplay_vcs_base_dir/$base_github_repo/$subdir/screenplay"
                 );
+            if (0)
+            {
+                $fn_dir->mkpath();
+                my $placeholder = $fn_dir->child("PLACEHOLDER");
+                if ( not -e $placeholder )
+                {
+                    $placeholder->spew_raw("");
+                    system( "git", "add", $placeholder );
+                }
+            }
             my $fn = $fn_dir->child("${doc_base}.screenplay-text.txt");
             if ( not $should_clone )
             {
@@ -95,6 +119,33 @@ sub _calc_screenplay_doc_makefile_lines
                     my $tt_out_fh = path(
 "lib/screenplay-xml/tt2-txt/${doc_base}.screenplay-text.txt.tt2"
                     );
+                    if ( not -e $tt_out_fh )
+                    {
+                        my $source = path(
+"lib/screenplay-xml/tt2-txt/$SOURCE_PIVOT_BN.screenplay-text.txt.tt2"
+                        );
+                        STDERR->print(
+"File '$tt_out_fh' did not exist. Populating from $source\n"
+                        );
+                        $source->copy($tt_out_fh);
+                        system( "git", "add", $tt_out_fh, );
+                    }
+                    my $img_bn     = "evilphish-svg--facing-right.min.svg.png";
+                    my $img_out_fh = path(
+"lib/screenplay-xml/from-vcs/${doc_base}/${doc_base}/graphics"
+                            . "/$img_bn" );
+                    if ( not -e $img_out_fh )
+                    {
+                        my $source = path(
+"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics"
+                                . "/$img_bn" );
+                        $img_out_fh->parent()->mkpath();
+                        STDERR->print(
+"File '$img_out_fh' did not exist. Populating from $source\n"
+                        );
+                        $source->copy($img_out_fh);
+                        system( "git", "add", $img_out_fh, );
+                    }
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {
@@ -231,6 +282,7 @@ $(POST_DEST)/humour/Blue-Rabbit-Log/Blue-Rabbit-Log-part-1.epub \
 $(POST_DEST)/humour/Buffy/A-Few-Good-Slayers/Buffy--a-Few-Good-Slayers.epub \
 $(POST_DEST)/humour/Cookie-Monster--The-Slayer/Cookie-Monster--The-Slayer.epub \
 $(POST_DEST)/humour/He-Damsel-in-Distress-and-a-Distressing-Damsel/He-Damsel-in-Distress-and-a-Distressing-Damsel.epub \
+$(POST_DEST)/humour/How-to-Play-Strip-Dungeons-and-Dragons/How-to-Play-Strip-Dungeons-and-Dragons.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Harry-Potter.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Jennifer-Lawrence.epub \
 $(POST_DEST)/humour/Muppets-Show-TNI/Muppets-Show--Summer-Glau-and-Chuck-Norris.epub   \

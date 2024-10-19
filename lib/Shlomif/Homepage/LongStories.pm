@@ -649,6 +649,27 @@ EOF
 EOF
     },
     {
+        id         => 'How-to-Play-Strip-Dungeons-and-Dragons',
+        tagline    => "“Are you a god?”",
+        logo_alt   => "Evil Reindeer",
+        logo_class => "selina",
+        logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
+        logo_svg   => '//$SKIP',
+        entry_id   => "How-to-Play-Strip-Dungeons-and-Dragons",
+        entry_text => "How to Play Strip Dungeons-and-Dragons",
+        start_date => DateTime->new( day => 19, month => 10, year => 2024, ),
+        href       => "humour/How-to-Play-Strip-Dungeons-and-Dragons/",
+        abstract   => <<"EOF",
+<p class="abstract">
+How to Play Strip Dungeons-and-Dragons
+</p>
+
+$FAN_FIC_PARA
+EOF
+        entry_extra_html => <<'EOF',
+EOF
+    },
+    {
         id         => 'He-Damsel-in-Distress-and-a-Distressing-Damsel',
         tagline    => "TODO",
         logo_alt   => "TODO",

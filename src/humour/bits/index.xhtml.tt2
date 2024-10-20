@@ -314,6 +314,14 @@ A post-post-Modern fairy tale.
 
 [% END %]
 
+[% WRAPPER h3_section href = "${base_path}humour/bits/Shlomiverse-Tales-About-Commerce/" id = "Shlomiverse-Tales-About-Commerce" title = "Shlomiverse: Tales About Commerce" %]
+
+<p>
+<b>TODO</b>.
+</p>
+
+[% END %]
+
 [% PROCESS "Inc/true_stories.tt2" %]
 
 [% WRAPPER h3_section id = "true-stories" title = "True Stories" %]

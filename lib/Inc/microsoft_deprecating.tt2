@@ -32,4 +32,15 @@ still sells Windows copies, they are being starved of employees.
 Another note about Microsoft Windows is that I suspect, that in their “Professional”/“Server” sub-line of Windows (such as <a href="https://en.wikipedia.org/wiki/Windows_Server_2003">Windows Server 2003</a> , <a href="https://en.wikipedia.org/wiki/Windows_Server_2008">Windows Server 2008</a>, or <a href="https://en.wikipedia.org/wiki/Windows_Server_2019">Windows Server 2019</a>), Microsoft has disabled, either in runtime, or in compile-time ( <a href="https://stackoverflow.com/questions/33117233/what-is-the-purpose-of-using-ifdef-and-if-in-c">#ifdef</a>/etc. ) compatibility code. As a result, misbehaving legacy applications will not run there, while properly-coded-or-fixed ones will run faster and with fewer quirks.
 </p>
 
+<p>
+<b>Note:</b>
+Microsoft has many other products and services, many of them are [% FOSS
+%] and/or provide important services or infrastructure for open source,
+[% opencontent %], or otherwise geeky, hackery or important projects. So I do not wish to
+completely demonise them. In fact, I make use of some of the Microsoft-owned [% GitHub %] infrastructure for many
+projects of mine, including my home-site, and it seems the user experience of
+GitHub improved since the acquisition by Microsoft, and I am also
+a fan of <a href="https://en.wikipedia.org/wiki/TypeScript">TypeScript</a>.
+</p>
+
 [% END %]

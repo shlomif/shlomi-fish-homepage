@@ -13,6 +13,7 @@ use YAML::XS        ();
 use HTML::Acronyms                         ();
 use HTML::Latemp::AddToc                   ();
 use Module::Format::AsHTML                 ();
+use QuadPres::VimIface                     ();
 use Set::CSS v0.2.0                        ();
 use Shlomif::Homepage::ArticleIndex        ();
 use Shlomif::Homepage::FortuneCollections  ();
@@ -28,7 +29,6 @@ use Shlomif::Homepage::TrueStories ();
 use Shlomif::MD                    ();
 use Shlomif::XmlFictionSlurp       ();
 use Template                       ();
-use VimIface                       ();
 
 use Shlomif::Homepage::SectionMenu::IsHumour (
     qw/ get_is_humour_re humour_should_mutate_title /);
@@ -214,7 +214,7 @@ sub _shlomif_include_colorized_file
     my $args = shift;
 
     return decode_utf8(
-        VimIface::get_syntax_highlighted_html_from_file(
+        QuadPres::VimIface::get_syntax_highlighted_html_from_file(
             +{ 'filename' => $args->{fn}, }
         )
     );

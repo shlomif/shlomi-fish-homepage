@@ -41,7 +41,7 @@ Written by <a href="http://www.shlomifish.org/">Shlomi Fish</a>
 </define-tag>
 
 <:{
-require VimIface;
+require QuadPres::VimIface;
 }:>
 <define-tag quadpres_code_block endtag="required" whitespace="delete">
 <div class="code_block">
@@ -55,7 +55,7 @@ require VimIface;
 <preserve filename />
 <set-var %attributes />
 <:{
-print VimIface::get_syntax_highlighted_html_from_file({'filename' => "<get-var filename />"}) =~ s/([\{\}])/sprintf("&#x%%02X;", ord($1))/egr;
+print QuadPres::VimIface::get_syntax_highlighted_html_from_file({'filename' => "<get-var filename />"}) =~ s/([\{\}])/sprintf("&#x%%02X;", ord($1))/egr;
 }:>
 <restore filename />
 </define-tag>

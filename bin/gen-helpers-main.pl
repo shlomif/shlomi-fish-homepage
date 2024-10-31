@@ -10,8 +10,6 @@ use Path::Tiny         qw/ path /;
 use lib './lib';
 use Shlomif::MySystem qw/ my_exec_perl my_system /;
 
-path("lib/VimIface.pm")->copy("lib/presentations/qp/common/VimIface.pm");
-
 sub _run_inkscape
 {
     my $inkscape_wrap = path("./bin/inkscape-wrapper");

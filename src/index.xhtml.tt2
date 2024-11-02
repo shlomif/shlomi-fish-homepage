@@ -106,8 +106,8 @@ http://blog.woobling.org/2009/05/your-openid-sucks.html
 Hi all, and welcome to the personal website of
 <a href="personal.html"><b>Shlomi Fish</b></a>. I
 am an Israeli writer of stories, articles, essays, and
-presentations and a professional software developer (which I find is
-a necessary means to the end of writing, blogging and online and offline
+presentations, and a professional software developer (which I find is
+a necessary means to the end of writing, blogging, and online and offline
 entertainment).
 </p>
 
@@ -146,7 +146,7 @@ for what is new on the site, which is updated periodically.
 Here are some of the resources you can find here:
 </p>
 
-[% WRAPPER h3_section id = "humour" href = "humour/" title = "Humour" %]
+[% WRAPPER h3_section href = "humour/" id = "humour" title = "Humour" %]
 
 <p>
 You can read many <a href="[% base_path %]humour/bits/">shorter bits</a>
@@ -166,7 +166,7 @@ stories (novellas) and screenplays</a>, which I have written.
 
 [% END %]
 
-[% WRAPPER h3_section id = "philosophy" href = "philosophy/" title = "Articles and Essays" %]
+[% WRAPPER h3_section href = "philosophy/" id = "philosophy" title = "Articles and Essays" %]
 
 <p>
 You can read various essays and articles I wrote about politics, software
@@ -190,7 +190,7 @@ fodder for my essays and articles.
 
 [% END %]
 
-[% WRAPPER h3_section id = "open-source" href = "open-source/" title = "Open Source Software" %]
+[% WRAPPER h3_section href = "open-source/" id = "open-source" title = "Open Source Software" %]
 
 <p>
 Links to software I wrote, and some resources with links to other software.
@@ -199,7 +199,7 @@ Knock yourself out!
 
 [% END %]
 
-[% WRAPPER h3_section id = "presentations" href = "lecture/" title = "Presentations" %]
+[% WRAPPER h3_section href = "lecture/" id = "presentations" title = "Presentations" %]
 
 <p>
 You can find several technical presentations I have written or maintain
@@ -208,7 +208,7 @@ here. Some of them may qualify as technical tutorials.
 
 [% END %]
 
-[% WRAPPER h3_section id = "puzzles" href = "puzzles/" title = "Puzzles and Riddles" %]
+[% WRAPPER h3_section href = "puzzles/" id = "puzzles" title = "Puzzles and Riddles" %]
 
 <p>
 Some pages with <a href="MathVentures/">Mathematical problems</a>,
@@ -217,7 +217,7 @@ with <a href="puzzles/logic/">Logic puzzles</a> and with other riddles.
 
 [% END %]
 
-[% WRAPPER h3_section id = "computer_art" href = "art/" title = "Computer Art" %]
+[% WRAPPER h3_section href = "art/" id = "computer_art" title = "Computer Art" %]
 
 <p>
 You can find my lame attempts for art which I prepared, in
@@ -227,7 +227,7 @@ and one piece of music.
 
 [% END %]
 
-[% WRAPPER h3_section id = "links" href = "links.html" title = "Links" %]
+[% WRAPPER h3_section href = "links.html" id = "links" title = "Links" %]
 
 <p>
 There are many links on the site, but I also concentrated many of them in

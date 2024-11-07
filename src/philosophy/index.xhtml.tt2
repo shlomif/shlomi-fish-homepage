@@ -4,6 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/general_philosophy.tt2" %]
+[% PROCESS "lib/Inc/essays_psychology.tt2" %]
 
 [% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
@@ -48,6 +49,8 @@ General essays, about philosophy proper or about leading a better life.
 <p>
 Writings about Psychology.
 </p>
+
+[% INCLUDE psychology_essays_block %]
 
 [% END %]
 

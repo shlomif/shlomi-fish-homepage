@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "lib/Inc/essays_psychology.tt2" %]
+
 [%- WRAPPER intro -%]
 
 <p>
@@ -13,52 +15,7 @@ These are essays I wrote about psychology.
 
 [% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
-[% SET section_element = "article" %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/psychology/hypomanias/" id = "hypomanias" title = "Dealing with Hypomanias" %]
-
-<p>
-How I deal with the bad psychological conditions of hypomanias which are states
-of unusually high moods, that are bad moods in disguise. I’m speaking from
-my experience as someone who experienced clinical depressions, clinical
-anxieties, hypomanias and even had a few manias.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section id="elephant" href="${base_path}philosophy/psychology/elephant-in-the-circus/" title="The Elephant in the Circus" %]
-
-<p>
-A small parable which became an Internet Meme, which I’ve transcribed here
-for posterity.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/psychology/why-openly-bipolar-people-should-not-be-medicated/" id = "medicating-bipolar" title = "Why Openly Bipolar People Should Not Be Medicated" %]
-
-<p>
-Parallel with Alan Turing’s medicated treatment for his homosexuality, the sad
-story of my treatment, Taylor Swift as a woman who exhibits hypomanias, and
-more.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/psychology/changing-the-seldon-plan/" id = "changing-the-seldon-plan" title = "Changing the Seldon Plan" %]
-
-<p>
-Why one should dedicate time to implement
-suggestions for refactoring, fixing, and modernising one's work.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/psychology/crossover-hypothesis-about-the-origin-of-consciousness/" id = "crossover-hypothesis-about-the-origin-of-consciousness" title = "Crossover hypothesis about the origin of human consciousness" %]
-
-[% END %]
-
-[% SET section_element = "section" %]
+[% INCLUDE psychology_essays_block %]
 
 [% END %]
 

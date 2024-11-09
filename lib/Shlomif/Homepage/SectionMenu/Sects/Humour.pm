@@ -379,6 +379,18 @@ my $_humour_tree_contents = {
                             ],
                         },
                         {
+                            text => "How to Play Strip Dungeons-and-Dragons",
+                            url  =>
+"humour/How-to-Play-Strip-Dungeons-and-Dragons/",
+                            subs => [
+                                {
+                                    text => "Ongoing Text",
+                                    url  =>
+"humour/How-to-Play-Strip-Dungeons-and-Dragons/ongoing-text.html",
+                                },
+                            ],
+                        },
+                        {
                             text =>
 "He-Damsel-in-Distress and a Distressing Damsel",
                             subs => [

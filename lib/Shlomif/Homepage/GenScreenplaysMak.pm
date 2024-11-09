@@ -130,6 +130,22 @@ sub _calc_screenplay_doc_makefile_lines
                         $source->copy($tt_out_fh);
                         system( "git", "add", $tt_out_fh, );
                     }
+                    my $img_bn     = "evilphish-svg--facing-right.min.svg.png";
+                    my $img_out_fh = path(
+"lib/screenplay-xml/from-vcs/${doc_base}/${doc_base}/graphics"
+                            . "/$img_bn" );
+                    if ( not -e $img_out_fh )
+                    {
+                        my $source = path(
+"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics"
+                                . "/$img_bn" );
+                        $img_out_fh->parent()->mkpath();
+                        STDERR->print(
+"File '$img_out_fh' did not exist. Populating from $source\n"
+                        );
+                        $source->copy($img_out_fh);
+                        system( "git", "add", $img_out_fh, );
+                    }
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {

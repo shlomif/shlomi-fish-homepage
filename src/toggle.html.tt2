@@ -2,6 +2,8 @@
 [%- SET desc = "Mathematical Analysis of the Toggle Squares Game" -%]
 [%- SET more_keywords = "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" -%]
 
+[% main_class.addClass("math_pre") %]
+
 [%- WRAPPER wrap_html -%]
 
 [%- WRAPPER intro -%]

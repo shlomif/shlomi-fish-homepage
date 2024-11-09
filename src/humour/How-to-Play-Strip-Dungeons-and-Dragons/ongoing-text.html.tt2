@@ -1,0 +1,10 @@
+[%- SET title = "How to Play Strip Dungeons-and-Dragons - Ongoing Text" -%]
+[%- SET apply_screenplay_style = 1 -%]
+
+[%- WRAPPER wrap_html -%]
+
+[%- long_stories.calc_common_top_elems(id => 'How-to-Play-Strip-Dungeons-and-Dragons') -%]
+
+[%- path_slurp("screenplay-xml/rendered-html/How-to-Play-Strip-Dungeons-and-Dragons.html") -%]
+
+[%- END -%]

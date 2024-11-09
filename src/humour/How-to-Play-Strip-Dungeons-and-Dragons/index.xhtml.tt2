@@ -1,0 +1,119 @@
+[%- SET title = "How to Play Strip Dungeons-and-Dragons" -%]
+
+[%- PROCESS "stories/selina-common.tt2" -%]
+[%- PROCESS "Inc/jqui_tabs.tt2" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'How-to-Play-Strip-Dungeons-and-Dragons') %]
+
+[% WRAPPER screenplay_read_online %]
+
+<ul>
+
+[% PROCESS story_ongoing_episode_li base = "How-to-Play-Strip-Dungeons-and-Dragons" %]
+
+<li>
+<p>
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/shlomi-fish-homepage/blob/master/lib/screenplay-xml/tt2-txt/How-to-Play-Strip-Dungeons-and-Dragons.screenplay-text.txt.tt2", %]
+</p>
+</li>
+
+[% IF 0 %]
+
+<li>
+<p>
+<a href="cast.html">The Cast</a> - who I think should play the characters.
+</p>
+</li>
+
+[% END %]
+
+</ul>
+
+[%- END -%]
+
+[% default_toc %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[%- END -%]
+
+[% WRAPPER credits_sect %]
+
+[% WRAPPER h3_section id = "image_credits" title = "Image Credits" %]
+
+[% PROCESS "Inc/rindolfism.tt2" %]
+
+<ul>
+
+[% INCLUDE rindolf__evil_reindeer_image_credit %]
+
+</ul>
+
+[%- END -%]
+
+[% WRAPPER h3_section id = "ebookmaker" href = "http://github.com/setanta/ebookmaker" title = "ebookmaker" %]
+
+<p>
+<b>Update:</b> I have now written <a href="https://pypi.org/project/rebookmaker/">rebookmaker</a>
+which is a mostly compatible reimplementation of ebookmaker, and which is under
+the <a href="https://en.wikipedia.org/wiki/MIT_License">MIT / Expat licence</a>
+since ebookmaker lacks an explicit licence, and am using it instead of ebookmaker.
+<a href="https://github.com/shlomif/screenplays-common">Git repository</a>.
+</p>
+
+<p>
+Ebookmaker is a Python 3 script that allows one to generate an EPUB and was
+used for preparing <a href="#ebook">the Selina Mandrake E-book</a>. While
+not perfect, it proved extremely useful and
+<a href="http://github.com/setanta">the author</a> (= Marcelo Lira
+a.k.a “setanta”) also promptly
+merged <a href="https://github.com/setanta/ebookmaker/pull/1">a
+pull request</a> I sent him. Thanks, Marcelo, for your great work!
+</p>
+
+[%- END -%]
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "sources_of_inspiration" title = "Sources of Inspiration" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.shlomifish.org/me/rindolf/#rindolf_the_evil_reindeer">IRC (Freenode/etc.) conversations</a> - with me using "rindolf" as my nickname.
+</p>
+</li>
+
+</ul>
+
+[%- END -%]
+
+[% WRAPPER h2_section id = "licensing" title = "Licensing" %]
+
+<p>
+The text is mostly original, and as far as I am concerned, can be used under
+the terms of
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">the
+Creative Commons Attribution-Noncommercial-ShareAlike licence Unported (CC-by-nc-sa),
+either version 4.0, or at your option, any later version</a>, but like I said, the
+situation is more complicated than that.
+</p>
+
+[%- END -%]
+
+[% WRAPPER links_sect %]
+
+[%- END -%]
+
+[% WRAPPER see_also %]
+
+<ul>
+
+</ul>
+
+[%- END -%]
+
+[% END %]

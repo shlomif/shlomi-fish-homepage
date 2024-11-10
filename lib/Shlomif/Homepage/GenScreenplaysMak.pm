@@ -18,7 +18,7 @@ my $SOURCE_PIVOT_BN     = "All-in-an-Atypical-Day-Work";
 
 sub _vcs_add
 {
-    my $paths;
+    my ($paths) = @_;
 
     system( "git", "add", @$paths, );
 

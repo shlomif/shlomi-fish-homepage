@@ -16,6 +16,15 @@ my $image_lister = Shlomif::Homepage::GenScreenplaysMak::ImageLister->new( {} );
 my $graphics_dir_bn_var = 'SCREENPLAYS__GRAPHICS_DIR_BN_VAR';
 my $SOURCE_PIVOT_BN     = "All-in-an-Atypical-Day-Work";
 
+sub _vcs_add
+{
+    my $paths;
+
+    system( "git", "add", @$paths, );
+
+    return;
+}
+
 sub _calc_screenplay_doc_makefile_lines
 {
     my ( $dest_records, $dest_dir_vars, $images_copy_ref, $addprefixes,
@@ -67,7 +76,7 @@ sub _calc_screenplay_doc_makefile_lines
 
             $src_obj->spew_utf8(
                 qq%die "PLEASE EDIT ME!!!";\n\n% . $pivot_body );
-            system( "git", "add", $src_obj, );
+            _vcs_add( [ $src_obj, ], );
         }
         push @ret,
             (     "\n\$($src_prepare_epub_var): ${src_fn}\n" . "\t"
@@ -106,7 +115,7 @@ sub _calc_screenplay_doc_makefile_lines
                 if ( not -e $placeholder )
                 {
                     $placeholder->spew_raw("");
-                    system( "git", "add", $placeholder );
+                    _vcs_add( [ $placeholder, ], );
                 }
             }
             my $fn = $fn_dir->child("${doc_base}.screenplay-text.txt");
@@ -128,7 +137,7 @@ sub _calc_screenplay_doc_makefile_lines
 "File '$tt_out_fh' did not exist. Populating from $source\n"
                         );
                         $source->copy($tt_out_fh);
-                        system( "git", "add", $tt_out_fh, );
+                        _vcs_add( [ $tt_out_fh, ], );
                     }
                     my $img_bn     = "evilphish-svg--facing-right.min.svg.png";
                     my $img_out_fh = path(
@@ -144,7 +153,7 @@ sub _calc_screenplay_doc_makefile_lines
 "File '$img_out_fh' did not exist. Populating from $source\n"
                         );
                         $source->copy($img_out_fh);
-                        system( "git", "add", $img_out_fh, );
+                        _vcs_add( [ $img_out_fh, ], );
                     }
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )

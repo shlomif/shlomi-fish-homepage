@@ -141,8 +141,8 @@ sub _calc_screenplay_doc_makefile_lines
                     }
                     my $img_bn     = "evilphish-svg--facing-right.min.svg.png";
                     my $img_out_fh = path(
-"lib/screenplay-xml/from-vcs/${doc_base}/${doc_base}/graphics"
-                            . "/$img_bn" );
+"lib/screenplay-xml/from-vcs/$doc_base/$doc_base/graphics/$img_bn"
+                    );
                     if ( not -e $img_out_fh )
                     {
                         my $source = path(

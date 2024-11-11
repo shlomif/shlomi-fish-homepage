@@ -661,7 +661,11 @@ EOF
         href       => "humour/How-to-Play-Strip-Dungeons-and-Dragons/",
         abstract   => <<"EOF",
 <p class="abstract">
-How to Play Strip Dungeons-and-Dragons
+<a href="\$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a>,
+<a href="https://en.wikipedia.org/wiki/Mr._T">Mr. T</a>,
+<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>,
+and Shlomi Fish (= me), are trying to play a strip version of the
+tabletop role-playing game.
 </p>
 
 $FAN_FIC_PARA

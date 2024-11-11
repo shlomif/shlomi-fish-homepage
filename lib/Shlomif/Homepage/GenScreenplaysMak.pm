@@ -27,8 +27,8 @@ sub _vcs_add
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $dest_records, $dest_dir_vars, $images_copy_ref, $addprefixes,
-        $_epub_map, $screenplay_vcs_base_dir, $record )
+    my ( $dest_records, $dest_dir_vars, $images_copy_ref, $tt_proc_targets,
+        $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $record )
         = @_;
 
     my $base             = $record->{base};
@@ -100,6 +100,12 @@ sub _calc_screenplay_doc_makefile_lines
             return "${base}_${suf}_" . shift;
         };
 
+        my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
+        my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
+        my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
+        my $dest_varname   = $gen_name->("TXT_FROM_VCS");
+        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
+
         {
             my $xml_out_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
             my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
@@ -123,38 +129,43 @@ sub _calc_screenplay_doc_makefile_lines
             {
                 $fn_dir->mkpath;
 
-                if ( $doc->{tt2} and ( not -f $fn ) )
+                if ( $doc->{tt2} )
                 {
                     my $tt_out_fh = path(
 "lib/screenplay-xml/tt2-txt/${doc_base}.screenplay-text.txt.tt2"
                     );
-                    if ( not -e $tt_out_fh )
+                    if ( not -f $fn )
                     {
-                        my $source = path(
+                        if ( not -e $tt_out_fh )
+                        {
+                            my $source = path(
 "lib/screenplay-xml/tt2-txt/$SOURCE_PIVOT_BN.screenplay-text.txt.tt2"
-                        );
-                        STDERR->print(
+                            );
+                            STDERR->print(
 "File '$tt_out_fh' did not exist. Populating from $source\n"
-                        );
-                        $source->copy($tt_out_fh);
-                        _vcs_add( [ $tt_out_fh, ], );
-                    }
-                    my $img_bn     = "evilphish-svg--facing-right.min.svg.png";
-                    my $img_out_fh = path(
+                            );
+                            $source->copy($tt_out_fh);
+                            _vcs_add( [ $tt_out_fh, ], );
+                        }
+                        my $img_bn = "evilphish-svg--facing-right.min.svg.png";
+                        my $img_out_fh = path(
 "lib/screenplay-xml/from-vcs/$doc_base/$doc_base/graphics/$img_bn"
-                    );
-                    if ( not -e $img_out_fh )
-                    {
-                        my $source = path(
-"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics"
-                                . "/$img_bn" );
-                        $img_out_fh->parent()->mkpath();
-                        STDERR->print(
-"File '$img_out_fh' did not exist. Populating from $source\n"
                         );
-                        $source->copy($img_out_fh);
-                        _vcs_add( [ $img_out_fh, ], );
+                        if ( not -e $img_out_fh )
+                        {
+                            my $source = path(
+"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics"
+                                    . "/$img_bn" );
+                            $img_out_fh->parent()->mkpath();
+                            STDERR->print(
+"File '$img_out_fh' did not exist. Populating from $source\n"
+                            );
+                            $source->copy($img_out_fh);
+                            _vcs_add( [ $img_out_fh, ], );
+                        }
                     }
+                    push @$tt_proc_targets,
+qq[\$($src_varname) : \$(SCREENPLAY_XML_TT2_TXT_DIR)/${doc_base}.screenplay-text.txt.tt2\n\t\$(call MY_TT_PROCESSOR)];
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {
@@ -204,11 +215,6 @@ sub _calc_screenplay_doc_makefile_lines
                 ];
             };
         }
-        my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
-        my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
-        my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
-        my $dest_varname   = $gen_name->("TXT_FROM_VCS");
-        my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
 
         push @epubs, $epub_dest_varname;
         my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
@@ -331,12 +337,14 @@ EOF
     my $images_copy   = '';
 
     my @records;
+    my $tt_proc_targets = [];
     foreach my $record ( sort { $a->{base} cmp $b->{base} }
         @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } )
     {
         _calc_screenplay_doc_makefile_lines(
             ( \@records ),
             $dest_dir_vars, ( \$images_copy ),
+            $tt_proc_targets,
             $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $record,
         );
     }
@@ -389,6 +397,7 @@ EOF
             join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),
             "\n"
         ),
+        ( "\n", ( join( "\n\n", @{$tt_proc_targets} ) ), "\n", ),
     );
 
     my $DIR = "lib/make/";

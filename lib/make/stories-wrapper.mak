@@ -100,6 +100,9 @@ $(ALL-IN-AN-ATYPICAL-DAY-WORK__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT
 $(HE-DAMSEL-IN-DISTRESS-AND-A-DISTRESSING-DAMSEL__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/He-Damsel-in-Distress-and-a-Distressing-Damsel.screenplay-text.txt.tt2
 	$(call MY_TT_PROCESSOR)
 
+$(HOW-TO-PLAY-STRIP-DUNGEONS-AND-DRAGONS__SCREENPLAY_XML_SOURCE) : $(SCREENPLAY_XML_TT2_TXT_DIR)/How-to-Play-Strip-Dungeons-and-Dragons.screenplay-text.txt.tt2
+	$(call MY_TT_PROCESSOR)
+
 screenplay_epub_dests: $(SCREENPLAY_XML__EPUBS_DESTS)
 
 $(PRE_DEST)/open-source/projects/XML-Grammar/Fiction/index.xhtml: \

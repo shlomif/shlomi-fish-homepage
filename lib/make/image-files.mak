@@ -1,5 +1,5 @@
 RINDOLF_IMAGES_POST_DEST := $(POST_DEST)/me/rindolf/images
-GRIMMIE_IMAGES_POST_DEST := $(POST_DEST)/art/recommendations/music/online-artists/fan-pages/chris-grimmie/images
+GRIMMIE_IMAGES_POST_DEST := $(POST_DEST)/philosophy/fan-pages/christina-grimmie//images
 
 RPG_DICE_SET_SRC := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc.webp
 RPG_DICE_SET_DEST := $(RINDOLF_IMAGES_POST_DEST)/rpg-dice-set--on-nuc--thumb.webp

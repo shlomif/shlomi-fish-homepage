@@ -670,6 +670,10 @@ my $_section_navmenu_tree_contents = {
             url  => "philosophy/fan-pages/",
             subs => [
                 {
+                    text => "Christina Grimmie",
+                    url  => "philosophy/fan-pages/christina-grimmie/",
+                },
+                {
                     text => "Samantha Smith",
                     url  => "philosophy/fan-pages/samantha-smith/",
                 },

@@ -3,14 +3,12 @@
 
 [%- WRAPPER wrap_html -%]
 
-<ul>
+[% WRAPPER h2_section id = "list" title = "The List" %]
 
-<li>
-<p>
-<a href="chris-grimmie/">Christina Grimmie</a>
-</p>
-</li>
+[% WRAPPER h3_section href = "${base_path}philosophy/fan-pages/christina-grimmie/" id = "christina-grimmie" title = "Christina Grimmie" %]
 
-</ul>
+[% END %]
+
+[% END %]
 
 [% END %]

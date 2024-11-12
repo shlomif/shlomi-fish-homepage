@@ -35,7 +35,7 @@ sub run
             }
             my $l = $line . "";
             my ($id);
-            if ( not( $l =~ s@\A<h\Q$level\E id="([a-zA-Z0-9-_]+)">@@ms ) )
+            if ( not( $l =~ s@\A<h\Q$level\E id="([a-zA-Z0-9\-_\.]+)">@@ms ) )
             {
                 confess "no id=\"\" attribute !";
             }

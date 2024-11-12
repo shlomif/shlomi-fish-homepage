@@ -146,6 +146,14 @@ offline.
 
 [% END %]
 
+[% WRAPPER h2_section href = "${base_path}philosophy/fan-pages/" id = "fan-pages" title = "Fan Pages" %]
+
+<p>
+Fan pages for people I like.
+</p>
+
+[% END %]
+
 [% WRAPPER h2_section id = "solving" title = "Solving" href = "solving/" %]
 
 <p>

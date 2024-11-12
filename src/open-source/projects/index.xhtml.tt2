@@ -231,10 +231,10 @@ A download accelerator with a key improvement.
 
 [% END %]
 
-[% WRAPPER h3_section id = "Docker-CLI-Wrapper" href = "${base_path}/open-source/projects/Docker-CLI-Wrapper/" title = "Docker-CLI-Wrapper" %]
+[% WRAPPER h3_section href = "${base_path}/open-source/projects/Docker-CLI-Wrapper/" id = "Docker-CLI-Wrapper" title = "Docker-CLI-Wrapper" %]
 
 <p>
-<b>TODO</b>
+This is a wrapper to the Docker (or podman) command-line interfaces.
 </p>
 
 [% END %]

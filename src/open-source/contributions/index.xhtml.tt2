@@ -1,7 +1,6 @@
 [%- SET title = "Contributions Made to External Open-Source Projects" -%]
 [%- SET desc = "Contributions Made to External Open-Source Projects" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,7 +9,7 @@
 
 [% default_toc %]
 
-<h2 id="gimp"><a href="http://www.gimp.org/">GIMP - The GNU Image Manipulation Program</a></h2>
+[% WRAPPER h2_section href = "http://www.gimp.org/" id = "gimp" title = "GIMP - The GNU Image Manipulation Program" %]
 
 <p>
 I wrote the so-called gradient-fu patch, which adds Procedural Database (or
@@ -26,7 +25,9 @@ gimpressionist code, and am now its maintainer. This was followed by a small
 amount of bug squashing and cleanups.
 </p>
 
-<h2 id="subversion"><a href="https://subversion.apache.org/">Subversion - A Compelling Version Control System</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "https://subversion.apache.org/" id = "subversion" title = "Subversion - A Compelling Version Control System" %]
 
 <p>
 I started out by bug-squashing some bugs I found in the
@@ -47,7 +48,9 @@ lot of help from different people. Eventually, a reworked version of the
 Patch, was applied by Peter N. Lundblad.
 </p>
 
-<h2 id="perl5"><a href="http://www.perl.org/">Perl 5 Core</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://www.perl.org/" id = "perl5" title = "Perl 5 Core" %]
 
 <p>
 I contributed some patches to
@@ -58,7 +61,9 @@ improved the default perl debugger (what gets invoked with
 and by refactoring and clean ups.
 </p>
 
-<h2 id="kde"><a href="http://www.kde.org/">KDE</a> - a desktop environment and a software platform</h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://www.kde.org/" id = "kde" title = "KDE - a desktop environment and a software platform" %]
 
 <p>
 I've been an active reporter of bugs for KDE, and also have been
@@ -69,14 +74,18 @@ helping in triaging and reproducing some bugs, and contributed some fixes.
 For more information, consult a <a href="https://bugs.kde.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailreporter1=1&amp;emailcc1=1&amp;emaillongdesc1=1&amp;emailtype1=exact&amp;email1=shlomif%40shlomifish.org&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailcc2=1&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">KDE bug tracker search on my name</a>.
 </p>
 
-<h3 id="kpatience"><a href="https://kde.org/applications/games/org.kde.kpat">KPatience - A Patience/Solitaire Suite</a></h3>
+[% WRAPPER h3_section href = "https://kde.org/applications/games/org.kde.kpat" id = "kpatience" title = "KPatience - A Patience/Solitaire Suite" %]
 
 <p>
 In particular, I worked on KPatience's solvers, and also helped fixing some other bugs,
 and reviewed patches.
 </p>
 
-<h2 id="mandriva"><a href="http://en.wikipedia.org/wiki/Mandriva_Linux">Mandriva</a> → <a href="http://www.mageia.org/">Mageia</a> - Linux distributions.</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section href = "http://www.mageia.org/" id = "mandriva" title = "Mandriva → Mageia - Linux distributions." %]
 
 <p>
 Mandriva is an open-source, desktop-oriented, distribution of the Linux
@@ -100,7 +109,9 @@ the Mandriva bugzilla. I know my way around building
 packages for Mageia, and was an active Mageia contributor and helper.
 </p>
 
-<h2 id="syscalltrack"><a href="http://syscalltrack.sourceforge.net/">Syscalltrack - A Framework for Tracking System Calls</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://syscalltrack.sourceforge.net/" id = "syscalltrack" title = "Syscalltrack - A Framework for Tracking System Calls" %]
 
 <p>
 I contributed many cleanups and refactorings to a Perl 5 script that generated
@@ -112,7 +123,9 @@ all the other contributors got a T-shirt with the Syscalltrack logo.
 Later on, I did some work on the project’s web-site.
 </p>
 
-<h2 id="www-form"><a href="http://web-cpan.shlomifish.org/modules/WWW-Form/">WWW::Form - a Perl Module for Web Forms Management</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://web-cpan.shlomifish.org/modules/WWW-Form/" id = "www-form" title = "WWW::Form - a Perl Module for Web Forms Management" %]
 
 <p>
 I encountered WWW::Form because I looked for an easy way to handle Web forms
@@ -129,7 +142,9 @@ was extended, improved, and a rudimentary test suite was written for it.
 Ben and I have since been chatting using Instant Messaging.
 </p>
 
-<h2 id="freecell-pro"><a href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell Pro</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://www.rrhistorical.com/rrdata/Fcpro65/" id = "freecell-pro" title = "Freecell Pro" %]
 
 <p>
 Freecell Pro is a feature-ful implementation of the solitaire card game
@@ -150,7 +165,9 @@ successfully. Adrian and I became friends, and we have been talking by
 E-mail since then.
 </p>
 
-<h2 id="error.pm">[%- WRAPPER cpan_dist d = "Error" -%]The Error.pm CPAN distribution[%- END -%]</h2>
+[% END %]
+
+[% WRAPPER h2_section href = "https://metacpan.org/dist/Error" id = "error.pm" title = "The Error.pm CPAN distribution" %]
 
 <p>
 After a long time of neglect by its contemporary maintainer, I adopted this
@@ -175,7 +192,9 @@ Error.pm”</a> - the blog entry that started it all.
 </li>
 </ul>
 
-<h2 id="xml-rss">[%- WRAPPER cpan_dist d = "XML-RSS" -%]XML::RSS - a CPAN Module for Processing RSS[%- END -%]</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "xml-rss" title = "XML::RSS - a CPAN Module for Processing RSS" %]
 
 <p>
 After running into an XML::RSS bug, I submitted a patch for it, which was
@@ -203,7 +222,9 @@ final report of the grant</a> provides a summary and some links for what
 has been accomplished before and during the grant.
 </p>
 
-<h2 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://sageshome.net/oss/qclam.php" id = "qclam" title = "QClam" %]
 
 <p>
 QClam is a simple program to use ClamAV in dot-qmail files. I performed some
@@ -212,14 +233,18 @@ C++ to C, so it will have less dependencies. My changes were incorporated into
 version 0.6.
 </p>
 
-<h2 id="loggedfs"><a href="http://loggedfs.sourceforge.net/">LoggedFS - Filesystem Monitoring with Fuse</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "http://loggedfs.sourceforge.net/" id = "loggedfs" title = "LoggedFS - Filesystem Monitoring with Fuse" %]
 <p>
 I fixed some incompatibilities that made loggedfs unusable to wrap
 the KDE configuration directory, and ported it to the new version of FUSE. My
 changes were incorporated into version 0.4 of LoggedFS.
 </p>
 
-<h2 id="file-find-object"><a href="[% base_path %]open-source/projects/File-Find-Object/">File-Find-Object</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "${base_path}open-source/projects/File-Find-Object/" id = "file-find-object" title = "File-Find-Object" %]
 
 <p>
 File-Find-Object is a CPAN module, originally created by
@@ -237,7 +262,9 @@ a convenient, declarative interface to File-Find-Object, while overcoming the
 philosophical limitations of File::Find.
 </p>
 
-<h2 id="fedora"><a href="https://fedoraproject.org/">Fedora Linux</a></h2>
+[% END %]
+
+[% WRAPPER h2_section href = "https://fedoraproject.org/" id = "fedora" title = "Fedora Linux" %]
 
 <p>
 As of November 2024, Fedora is my preferred desktop Linux distribution.
@@ -248,5 +275,7 @@ FAQ answer</a> for the reasons.
 <p>
 I have been co-maintaining some Fedora packages, as well as doing quality-assurance work, and trying to help on freenode.
 </p>
+
+[% END %]
 
 [% END %]

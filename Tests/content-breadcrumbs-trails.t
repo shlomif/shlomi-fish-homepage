@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 9;
+use Test::More tests => 10;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -146,6 +146,20 @@ _test(
         blurb    => 'SummerNSA call4action is below #SummerNSA',
         expected => <<'EOF',
 <a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Various Essays and Articles about Technology and Philosophy in General">Essays</a> → <a href="../../politics/" title="Essays about Politics and Philosophical Politics">Political Essays</a> → <a href="../../SummerNSA/" title="The #SummerNSA / “Summerschool at the NSA” effort">#SummerNSA</a> → <a href="./">Sep 2014 Call for Action</a>
+EOF
+    }
+);
+
+# TEST
+_starts_with(
+    {
+        path =>
+"lib/cache/combined/t2/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml/sect-navmenu",
+        blurb    => 'putting-all-cards-on-the-table-2013 has a section navmenu',
+        expected => <<'EOF',
+<p class="invisible"><a href="#aft_sub_menu">Skip the sub-menu.</a></p>
+<div class="sub_menu">
+<h2>Essays Section Menu</h2>
 EOF
     }
 );

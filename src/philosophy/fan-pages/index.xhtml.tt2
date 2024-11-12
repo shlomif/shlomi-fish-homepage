@@ -15,6 +15,10 @@ These are fan pages.
 
 [% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
+[% WRAPPER h3_section href = "${base_path}philosophy/fan-pages/christina-grimmie/" id = "christina-grimmie" title = "Christina Grimmie" %]
+
+[% END %]
+
 [% WRAPPER h3_section id = "samantha-smith" title = "Samantha Smith" href = "samantha-smith/" %]
 
 [% END %]

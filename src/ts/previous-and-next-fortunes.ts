@@ -15,13 +15,24 @@ function fortunes_addlinks(): void {
 
     for (let i = 0; i < fortunes.length; i++) {
         let html: string = "";
+        const addlink = (idx, cls, label) => {
+            const previd = getid(idx);
+            return (
+                ' <a class="' +
+                cls +
+                '" href="#' +
+                previd +
+                '">' +
+                label +
+                "</a>"
+            );
+        };
+
         if (i > 0) {
-            const previd = getid(i - 1);
-            html += ' <a href="#' + previd + '">[ Prev ]</a>';
+            html += addlink(i - 1, "previous", "Previous");
         }
         if (i < fortunes.length - 1) {
-            const nextid = getid(i + 1);
-            html += ' <a href="#' + nextid + '">[ Next ]</a>';
+            html += addlink(i + 1, "next", "Next");
         }
         fort(i).find("> .head > h3").append(html);
     }

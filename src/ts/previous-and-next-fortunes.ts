@@ -6,14 +6,17 @@
 
 function fortunes_addlinks(): void {
     const fortunes = $(".fortunes_list > div.fortune");
+    const fort = (idx) => {
+        return $(fortunes[idx]);
+    };
     const getid = (idx) => {
-        return $(fortunes[idx]).find("> .head > h3").attr("id");
+        return fort(idx).find("> .head > h3").attr("id");
     };
     for (let i = 0; i < fortunes.length; i++) {
         if (i < fortunes.length - 1) {
             const thisid = getid(i);
             const nextid = getid(i + 1);
-            $(fortunes[i])
+            fort(i)
                 .find("> .head")
                 // .after('<a href="#' + nextid + '">[ Next ]</a>');
                 .append('<a href="#' + nextid + '">[ Next ]</a>');

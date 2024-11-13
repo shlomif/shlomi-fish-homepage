@@ -25,6 +25,21 @@ sub _vcs_add
     return;
 }
 
+sub _copy_draft
+{
+    my $source    = path(shift);
+    my $tt_out_fh = path(shift);
+    if ( not -e $tt_out_fh )
+    {
+        STDERR->print(
+            "File '$tt_out_fh' did not exist. Populating from $source\n");
+        $tt_out_fh->parent()->mkpath();
+        $source->copy($tt_out_fh);
+        _vcs_add( [ $tt_out_fh, ], );
+    }
+    return;
+}
+
 sub _calc_screenplay_doc_makefile_lines
 {
     my ( $dest_records, $dest_dir_vars, $images_copy_ref, $tt_proc_targets,
@@ -136,33 +151,18 @@ sub _calc_screenplay_doc_makefile_lines
                     );
                     if ( not -f $fn )
                     {
-                        if ( not -e $tt_out_fh )
-                        {
-                            my $source = path(
-"lib/screenplay-xml/tt2-txt/$SOURCE_PIVOT_BN.screenplay-text.txt.tt2"
-                            );
-                            STDERR->print(
-"File '$tt_out_fh' did not exist. Populating from $source\n"
-                            );
-                            $source->copy($tt_out_fh);
-                            _vcs_add( [ $tt_out_fh, ], );
-                        }
+                        _copy_draft(
+"lib/screenplay-xml/tt2-txt/$SOURCE_PIVOT_BN.screenplay-text.txt.tt2",
+                            $tt_out_fh,
+                        );
                         my $img_bn = "evilphish-svg--facing-right.min.svg.png";
                         my $img_out_fh = path(
 "lib/screenplay-xml/from-vcs/$doc_base/$doc_base/graphics/$img_bn"
                         );
-                        if ( not -e $img_out_fh )
-                        {
-                            my $source = path(
-"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics"
-                                    . "/$img_bn" );
-                            $img_out_fh->parent()->mkpath();
-                            STDERR->print(
-"File '$img_out_fh' did not exist. Populating from $source\n"
-                            );
-                            $source->copy($img_out_fh);
-                            _vcs_add( [ $img_out_fh, ], );
-                        }
+                        _copy_draft(
+"lib/screenplay-xml/from-vcs/$SOURCE_PIVOT_BN/$SOURCE_PIVOT_BN/graphics/$img_bn",
+                            $img_out_fh,
+                        );
                     }
                     push @$tt_proc_targets,
 qq[\$($src_varname) : \$(SCREENPLAY_XML_TT2_TXT_DIR)/${doc_base}.screenplay-text.txt.tt2\n\t\$(call MY_TT_PROCESSOR)];

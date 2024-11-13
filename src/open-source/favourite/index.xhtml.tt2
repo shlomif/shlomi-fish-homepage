@@ -13,7 +13,7 @@ out, and see if they are useful to you as well.
 
 [% default_toc %]
 
-<h2 id="linux"><a href="http://www.linux.org/">Linux</a></h2>
+[% WRAPPER h2_section href = "http://www.linux.org/" id = "linux" title = "Linux" %]
 
 <img src="[% base_path %]art/images/linux1-scaled.png" alt="Linux slogan" class="rfloaty" />
 
@@ -22,7 +22,7 @@ Linux is a UNIX clone for many platforms including regular PCs. It is fast,
 stable, powerful and very cool.
 </p>
 
-<h3 id="mageia" style="clear:right"><a href="http://www.mageia.org/">Mageia</a></h3>
+[% WRAPPER h3_section href = "http://www.mageia.org/" id = "mageia" title = "Mageia" %]
 
 <img src="images/mageia-2013-dark.png" alt="Mageia [Linux] Logo" class="rfloaty" />
 
@@ -41,7 +41,9 @@ While not as hyped as other distributions are, Mageia is very decent, and
 is suitable for both beginner and advanced users.
 </p>
 
-<h3 id="user_mode_linux"><a href="http://user-mode-linux.sourceforge.net/">User-mode Linux</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://user-mode-linux.sourceforge.net/" id = "user_mode_linux" title = "User-mode Linux" %]
 
 <p>
 User-mode Linux is a port of the Linux kernel to run as a process on top of a
@@ -51,7 +53,9 @@ There’s <a href="http://umlwin32.sourceforge.net/">a port to Windows 32-bit</a
 available as well.
 </p>
 
-<h3 id="virtualbox"><a href="http://www.virtualbox.org/">VirtualBox</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.virtualbox.org/" id = "virtualbox" title = "VirtualBox" %]
 
 <p>
 A great cross-platform x86 virtual machine emulator that allows one to run
@@ -59,22 +63,28 @@ virtual machines of operating systems, with graphics, networking and
 everything else. A complete life-saver, and it’s free and open-source.
 </p>
 
-<h2 id="desktop_apps">Desktop Applications</h2>
+[% END %]
 
-<h3 id="kde"><a href="http://www.kde.org/">KDE - The K Desktop Environment</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "desktop_apps" title = "Desktop Applications" %]
+
+[% WRAPPER h3_section href = "http://www.kde.org/" id = "kde" title = "KDE - The K Desktop Environment" %]
 
 <p>
 KDE is an attractive and powerful desktop environment for UNIXes.
 </p>
 
-<h3 id="firefox"><a href="http://www.mozilla.com/firefox/">Firefox</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.mozilla.com/firefox/" id = "firefox" title = "Firefox" %]
 
 <p>
 Firefox is a cross-platform web-browser which is standards-compliant and
 has many powerful features.
 </p>
 
-<h4 id="firefox_plugins">Plug-ins for Firefox</h4>
+[% WRAPPER h4_section id = "firefox_plugins" title = "Plug-ins for Firefox" %]
 
 <ul>
 <li>
@@ -136,39 +146,53 @@ sources.
 </li>
 </ul>
 
-<h3 id="konqueror"><a href="http://www.konqueror.org/">Konqueror</a></h3>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.konqueror.org/" id = "konqueror" title = "Konqueror" %]
 
 <p>
 Konqueror is a nice web-browser and file manager for the KDE environment.
 </p>
 
-<h3 id="xchat"><a href="http://www.xchat.org/">XChat</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.xchat.org/" id = "xchat" title = "XChat" %]
 
 <p>
 A nice [% IRC %] client for X-Windows and Microsoft Windows. <a href="http://hexchat.org/">HexChat</a>
 is a more actively maintained fork, which I now prefer.
 </p>
 
-<h3 id="icewm"><a href="https://github.com/ice-wm/icewm">IceWM</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://github.com/ice-wm/icewm" id = "icewm" title = "IceWM" %]
 
 <p>
 IceWM is a lightweight but functional window manager for X-Windows. Maintenance
 of it resumed recently (February 2020).
 </p>
 
-<h3 id="jwm"><a href="https://joewing.net/projects/jwm/">JWM</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://joewing.net/projects/jwm/" id = "jwm" title = "JWM" %]
 
 <p>
 JWM (Joe's Window Manager) is a lightweight window manager for X-Windows.
 </p>
 
-<h3 id="xfce"><a href="http://www.xfce.org/">Xfce</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.xfce.org/" id = "xfce" title = "Xfce" %]
 
 <p>
 A lightweight desktop environment for X.
 </p>
 
-<h3 id="pidgin"><a href="http://www.pidgin.im/">Pidgin</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.pidgin.im/" id = "pidgin" title = "Pidgin" %]
 
 <p>
 A nice and convenient multi-protocol instant messaging client for
@@ -177,9 +201,13 @@ Linux and other platforms. For a while I’ve preferred to use
 but it was too slow and buggy, so I returned to Pidgin.
 </p>
 
-<h2 id="development">Development</h2>
+[% END %]
 
-<h3 id="perl"><a href="http://www.perl.org/">Perl</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "development" title = "Development" %]
+
+[% WRAPPER h3_section href = "http://www.perl.org/" id = "perl" title = "Perl" %]
 
 <p>
 My favourite language by far. Perl is a high-level language with many
@@ -188,20 +216,26 @@ and comprehensive culture around it, and is good for use in many diverse
 areas.
 </p>
 
-<h3 id="gcc"><a href="http://gcc.gnu.org/">GCC - the GNU Compiler Collection</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://gcc.gnu.org/" id = "gcc" title = "GCC - the GNU Compiler Collection" %]
 
 <p>
 A powerful, portable and reliable C/C++/other languages compiler. A must
 for any programmer on a UNIX system.
 </p>
 
-<h3 id="vim"><a href="http://www.vim.org/">Vim - VI Improved</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.vim.org/" id = "vim" title = "Vim - VI Improved" %]
 
 <p>
 A powerful, portable editor which is very lightweight and nice.
 </p>
 
-<h3 id="subversion"><a href="https://subversion.apache.org/">Apache Subversion</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://subversion.apache.org/" id = "subversion" title = "Apache Subversion" %]
 
 <p>
 This is a version-control system with style. Runs on UNIXes and Windows.
@@ -210,7 +244,9 @@ trends</a> it is recommended to use <a href="https://en.wikipedia.org/wiki/Git">
 instead.
 </p>
 
-<h3 id="gdb"><a href="http://www.gnu.org/software/gdb/">GDB</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.gnu.org/software/gdb/" id = "gdb" title = "GDB" %]
 
 <p>
 A powerful, cross-platform, scriptable, and open-source command-line
@@ -218,21 +254,27 @@ debugger for binary programs (C, C++, Assembly, etc.). Made debugging and
 fixing many hard-to-catch bugs in my C/C++ programs much easier.
 </p>
 
-<h3 id="llvm"><a href="http://llvm.org/">LLVM</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://llvm.org/" id = "llvm" title = "LLVM" %]
 
 <p>
 A compilation and toolchain project that provides a bitcode, a C compiler
 ("Clang") and other tools.
 </p>
 
-<h3 id="emscripten"><a href="http://kripken.github.io/emscripten-site/">Emscripten</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://kripken.github.io/emscripten-site/" id = "emscripten" title = "Emscripten" %]
 
 <p>
 Emscripten compiles C, C++, and other languages with an LLVM frontend, to
 JavaScript so they can be deployed inside web pages.
 </p>
 
-<h3 id="ack"><a href="http://betterthangrep.com/">Ack - “Better than Grep”</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://betterthangrep.com/" id = "ack" title = "Ack - “Better than Grep”" %]
 
 <p>
 A nifty command-line utility for quickly searching source trees
@@ -246,7 +288,9 @@ or <a href="https://github.com/ggreer/the_silver_searcher">the Silver Searcher</
 which may be faster.
 </p>
 
-<h3 id="cmake"><a href="http://www.cmake.org/">CMake</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.cmake.org/" id = "cmake" title = "CMake" %]
 
 <p>
 A very good build-system for cross-platform builds, that generates makefiles
@@ -256,7 +300,9 @@ Mac OS X and many flavours of UNIX. Also see
 (= the GNU Autotools)</a> and why you should use CMake instead.
 </p>
 
-<h3 id="valgrind"><a href="https://valgrind.org/">Valgrind</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://valgrind.org/" id = "valgrind" title = "Valgrind" %]
 
 <p>
 A sophisticated memory debugger for x86-linux and other platforms. Helped
@@ -264,37 +310,46 @@ diagnose a few hard-to-catch bugs in my projects and is now also used as
 part of the automated tests' suites.
 </p>
 
-<h3 id="american_fuzzy"><a href="http://lcamtuf.coredump.cx/afl/">American Fuzzy Lop</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://lcamtuf.coredump.cx/afl/" id = "american_fuzzy" title = "American Fuzzy Lop" %]
 
 <p>
 A fuzzer.
 </p>
 
+[% END %]
 
-<h3 id="web_devel">Web Development</h3>
+[% WRAPPER h3_section id = "web_devel" title = "Web Development" %]
 
-<h4 id="apache"><a href="http://httpd.apache.org/">The Apache Web-server</a></h4>
+[% WRAPPER h4_section href = "http://httpd.apache.org/" id = "apache" title = "The Apache Web-server" %]
 
 <p>
 A powerful, secure and reliable web-server for many platforms including UNIX
 and Win32.
 </p>
 
-<h4 id="mod_perl"><a href="http://perl.apache.org/">mod_perl</a></h4>
+[% END %]
+
+[% WRAPPER h4_section href = "http://perl.apache.org/" id = "mod_perl" title = "mod_perl" %]
 
 <p>
 A Perl subsystem for Apache, that greatly accelerates it and provides other
 capabilities.
 </p>
 
-<h4 id="website_meta_lang"><a href="https://github.com/thewml/website-meta-language">Website Meta Language</a></h4>
+[% END %]
+
+[% WRAPPER h4_section href = "https://github.com/thewml/website-meta-language" id = "website_meta_lang" title = "Website Meta Language" %]
 
 <p>
 A static site generator which is powerful, but slow and quite quirky. I'd recommend
 against using it, but I have some legacy code in it.
 </p>
 
-<h4 id="libwww_perl"><a href="http://www.linpro.no/lwp/">Libwww-perl (LWP)</a></h4>
+[% END %]
+
+[% WRAPPER h4_section href = "http://www.linpro.no/lwp/" id = "libwww_perl" title = "Libwww-perl (LWP)" %]
 
 <p>
 LWP is a very powerful Perl framework for retrieving documents from the
@@ -302,7 +357,11 @@ World Wide Web. It’s a must if you want to automate web processes in
 Perl.
 </p>
 
-<h3 id="cygwin"><a href="http://www.cygwin.com/">cygwin</a></h3>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.cygwin.com/" id = "cygwin" title = "cygwin" %]
 
 <p>
 cygwin is an open-source Linux-like environment for Windows, that enables
@@ -310,7 +369,9 @@ one to run many UNIX programs and libraries on top of Windows. Make using
 Windows much more bearable.
 </p>
 
-<h3 id="windows-console"><a href="http://sourceforge.net/projects/console">Improved Windows Console</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://sourceforge.net/projects/console" id = "windows-console" title = "Improved Windows Console" %]
 
 <p>
 The so-called “Console” is a great replacement for the dysfunctional
@@ -324,49 +385,65 @@ command-line on windows.
 And naturally, it’s also free and open-source.
 </p>
 
-<h2 id="multimedia">Multimedia</h2>
+[% END %]
 
-<h3 id="gimp"><a href="http://www.gimp.org/">The GIMP - The GNU Image Manipulation Program</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "multimedia" title = "Multimedia" %]
+
+[% WRAPPER h3_section href = "http://www.gimp.org/" id = "gimp" title = "The GIMP - The GNU Image Manipulation Program" %]
 
 <p>
 A powerful image-processing application.
 </p>
 
-<h3 id="vlc"><a href="http://www.videolan.org/vlc/">VLC</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.videolan.org/vlc/" id = "vlc" title = "VLC" %]
 
 <p>
 A usable, attractive, and cross-platform, media player which sports a
 convenient GUI.
 </p>
 
-<h3 id="mpv"><a href="https://mpv.io/">mpv</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://mpv.io/" id = "mpv" title = "mpv" %]
 
 <p>
 A capable multimedia player that can play almost any video or audio format
 under the sun. An improved fork of mplayer.
 </p>
 
-<h3 id="mikmod"><a href="http://mikmod.sourceforge.net/">MikMod</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://mikmod.sourceforge.net/" id = "mikmod" title = "MikMod" %]
 
 <p>
 A great player for many popular variants of MOD files with excellent quality,
 wonderful portability, and very good performance.
 </p>
 
-<h3 id="xmp_mod_player"><a href="http://xmp.sourceforge.net/">Extended Module Player (XMP) and libxmp</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://xmp.sourceforge.net/" id = "xmp_mod_player" title = "Extended Module Player (XMP) and libxmp" %]
 
 <p>
 A fast and portable module player that supports many formats, with a
 <a href="http://www.wothke.ch/webxmp/">JavaScript/HTML5 version</a>.
 </p>
 
-<h3 id="inkscape"><a href="http://www.inkscape.org/">Inkscape</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.inkscape.org/" id = "inkscape" title = "Inkscape" %]
 
 <p>
 A very nice cross-platform vector graphics program.
 </p>
 
-<h3 id="youtube-dl"><a href="https://rg3.github.io/youtube-dl/">youtube-dl</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://rg3.github.io/youtube-dl/" id = "youtube-dl" title = "youtube-dl" %]
 
 <p>
 I often get referred to or find videos on
@@ -378,7 +455,9 @@ conveniently play them using such media players as
 on my hard disk for posterity. Highly recommended.
 </p>
 
-<h3 id="amarok"><a href="http://amarok.kde.org/">Amarok</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://amarok.kde.org/" id = "amarok" title = "Amarok" %]
 
 <p>
 Amarok is a superb music player for <a href="#kde">the KDE desktop
@@ -388,7 +467,9 @@ nice features, and very good customisability. Also see
 my blog</a>.
 </p>
 
-<h3 id="kflickr"><a href="http://kflickr.sourceforge.net/">Kflickr</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://kflickr.sourceforge.net/" id = "kflickr" title = "Kflickr" %]
 
 <p>
 A wonderful program for KDE for uploading photos to
@@ -396,107 +477,143 @@ A wonderful program for KDE for uploading photos to
 flawlessly.
 </p>
 
-<h3 id="optipng"><a href="http://optipng.sourceforge.net/">optipng</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://optipng.sourceforge.net/" id = "optipng" title = "optipng" %]
 
 <p>
 Compresses PNGs (= “portable network graphics”) to a smaller size without
 losing information.
 </p>
 
-<h2 id="office">Office</h2>
+[% END %]
 
-<h3 id="latex"><a href="http://www.latex-project.org/">LaTeX</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "office" title = "Office" %]
+
+[% WRAPPER h3_section href = "http://www.latex-project.org/" id = "latex" title = "LaTeX" %]
 
 <p>
 A high-quality type-setting system.
 </p>
 
-<h3 id="docbook"><a href="http://www.docbook.org/">DocBook</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.docbook.org/" id = "docbook" title = "DocBook" %]
 
 <p>
 A document preparation system that can create HTML, PDF, Word RTF - all
 from the same source.
 </p>
 
-<h3 id="openoffice"><a href="https://www.libreoffice.org/">LibreOffice</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://www.libreoffice.org/" id = "openoffice" title = "LibreOffice" %]
 
 <p>
 A feature-rich cross-platform office suite.
 </p>
 
-<h3 id="gnumeric"><a href="http://www.gnumeric.org/">Gnumeric</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.gnumeric.org/" id = "gnumeric" title = "Gnumeric" %]
 
 <p>
 A free, fast, and accurate spreadsheet program.
 </p>
 
-<h2 id="games">Games</h2>
+[% END %]
 
-<h3 id="pysol"><a href="http://pysolfc.sourceforge.net/">PySol Fan Club Edition (PySolFC)</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "games" title = "Games" %]
+
+[% WRAPPER h3_section href = "http://pysolfc.sourceforge.net/" id = "pysol" title = "PySol Fan Club Edition (PySolFC)" %]
 
 <p>
 A comprehensive, and feature-rich collection of Solitaire games. It’s
 written in Python and so is cross-platform.
 </p>
 
-<h3 id="hex-a-hop"><a href="http://libregamewiki.org/Hex-a-hop">Hex-a-hop</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://libregamewiki.org/Hex-a-hop" id = "hex-a-hop" title = "Hex-a-hop" %]
 
 <p>
 An open-source puzzle game based on hexagonal tiles. Great graphics and
 great playability.
 </p>
 
-<h2 id="networking">Networking</h2>
+[% END %]
 
-<h3 id="kmail"><a href="http://kmail.kde.org/">KMail</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "networking" title = "Networking" %]
+
+[% WRAPPER h3_section href = "http://kmail.kde.org/" id = "kmail" title = "KMail" %]
 
 <p>
 A powerful and easy-to-use mail client for the KDE environment. Has excellent
 internationalization.
 </p>
 
-<h3 id="claws-mail"><a href="https://www.claws-mail.org/">claws-mail</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "https://www.claws-mail.org/" id = "claws-mail" title = "claws-mail" %]
 
 <p>
 I switched to using it after KMail became unusable after version 2.x.
 </p>
 
-<h3 id="spamassassin"><a href="http://spamassassin.org/">SpamAssassin</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://spamassassin.org/" id = "spamassassin" title = "SpamAssassin" %]
 
 <p>
 A very nice Junk E-mail filtering mechanism that makes reading the inbox
 much more enjoyable.
 </p>
 
-<h3 id="wget"><a href="http://www.gnu.org/software/wget/wget.html">wget</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.gnu.org/software/wget/wget.html" id = "wget" title = "wget" %]
 
 <p>
 A command-line utility for fetching URLs and documents from the Internet
 through various protocols. Very powerful and feature-rich.
 </p>
 
-<h3 id="curl"><a href="http://curl.haxx.se/">cURL</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://curl.haxx.se/" id = "curl" title = "cURL" %]
 
 <p>
 Another command-line URL fetcher which has proven useful. Also a library
 for use within your C programs.
 </p>
 
-<h3 id="perl_mail_box"><a href="http://perl.overmeer.net/mailbox/">Mail::Box</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://perl.overmeer.net/mailbox/" id = "perl_mail_box" title = "Mail::Box" %]
 
 <p>
 A set of Perl modules that enables one to manage the E-mail folders, prune
 old messages, etc. Very very nice, but kinda slow.
 </p>
 
-<h3 id="procmail"><a href="http://www.procmail.org/">procmail</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.procmail.org/" id = "procmail" title = "procmail" %]
 
 <p>
 A useful UNIX utility that can be used to sort and process incoming E-mail
 messages.
 </p>
 
-<h3 id="rsync"><a href="http://samba.org/rsync/">rsync</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://samba.org/rsync/" id = "rsync" title = "rsync" %]
 
 <p>
 A feature-rich tool for incremental remote transfer of files.
@@ -504,7 +621,9 @@ Also see <a href="http://zsync.moria.org.uk/">zsync</a> which
 is similar but based on HTTP-1.1.
 </p>
 
-<h3 id="wireshark"><a href="http://www.wireshark.org/">Wireshark</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.wireshark.org/" id = "wireshark" title = "Wireshark" %]
 
 <p>
 A graphical tool for recording, analysing and displaying network
@@ -512,14 +631,18 @@ conversations. Very useful for debugging networking protocols and
 for other purposes.
 </p>
 
-<h3 id="clamav"><a href="http://www.clamav.net/">Clam AntiVirus (ClamAV)</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.clamav.net/" id = "clamav" title = "Clam AntiVirus (ClamAV)" %]
 
 <p>
 ClamAV is an open source anti-virus that can help filter out email messages
 containing viruses that are sent to you. It is regularly updated.
 </p>
 
-<h3 id="qclam"><a href="http://sageshome.net/oss/qclam.php">QClam</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://sageshome.net/oss/qclam.php" id = "qclam" title = "QClam" %]
 
 <p>
 If you’re <a href="[% base_path %]open-source/anti/qmail/">unfortunate enough
@@ -529,7 +652,9 @@ right solution for you. QClam is a program that feeds the message to ClamAV,
 and reports the verdict in a way that dot-qmail files can understand.
 </p>
 
-<h3 id="openssh"><a href="http://www.openssh.com/">OpenSSH</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.openssh.com/" id = "openssh" title = "OpenSSH" %]
 
 <p>
 OpenSSH, which is a free implementation of the SSH protocol, allows one to
@@ -538,7 +663,9 @@ over the network. It allows one to login and execute remote commands, and
 transfer files from one host to another.
 </p>
 
-<h3 id="vnc"><a href="http://www.tightvnc.com/">TightVNC</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.tightvnc.com/" id = "vnc" title = "TightVNC" %]
 
 <p>
 VNC is a cross-platform remote desktop utility that enables viewing a desktop
@@ -547,37 +674,51 @@ easy to set up. TightVNC is a popular open-source implementation of it. Also
 of interest is <a href="http://www.uvnc.com/index.html">UltraVNC</a>.
 </p>
 
-<h3 id="rdesktop"><a href="http://www.rdesktop.org/">rdesktop</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.rdesktop.org/" id = "rdesktop" title = "rdesktop" %]
 
 <p>
 A Windows’ remote desktop protocol client for UNIXes that enables one to work
 on a remote Windows computer from them.
 </p>
 
-<h2 id="system">System</h2>
+[% END %]
 
-<h3 id="tmux"><a href="http://tmux.sourceforge.net/">tmux</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "system" title = "System" %]
+
+[% WRAPPER h3_section href = "http://tmux.sourceforge.net/" id = "tmux" title = "tmux" %]
 
 <p>
 A terminal multiplexer for UNIX. I use it to run shell processes in the
 background where they won’t be interrupted, but it allows for much more.
 </p>
 
-<h3 id="htop"><a href="http://htop.sourceforge.net/">htop</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://htop.sourceforge.net/" id = "htop" title = "htop" %]
 
 <p>
 An improved top-like process viewer for Linux with better usability.
 </p>
 
-<h3 id="gnu_parallel"><a href="http://www.gnu.org/software/parallel/">GNU Parallel</a></h3>
+[% END %]
+
+[% WRAPPER h3_section href = "http://www.gnu.org/software/parallel/" id = "gnu_parallel" title = "GNU Parallel" %]
 
 <p>
 Easy command-line parallelisation.
 </p>
 
-<h2 id="security">Security</h2>
+[% END %]
 
-<h3 id="gringotts"><a href="http://gringotts.shlomifish.org/">Gringotts</a></h3>
+[% END %]
+
+[% WRAPPER h2_section id = "security" title = "Security" %]
+
+[% WRAPPER h3_section href = "http://gringotts.shlomifish.org/" id = "gringotts" title = "Gringotts" %]
 
 <p>
 Gringotts allows one to keep password and other sensitive information
@@ -585,7 +726,11 @@ encrypted. It has a Gtk+ interface. Note: while it was originated by Germano
 Rizzo, I am Gringotts’ current maintainer.
 </p>
 
-<h2 id="other_lists">Other Lists</h2>
+[% END %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "other_lists" title = "Other Lists" %]
 
 <p>
 Here are some other high-quality lists of open-source software on the Web:
@@ -634,5 +779,7 @@ Awesome (But Lesser-Known) Open-Source Applications for Windows”</a> - on
 </li>
 
 </ul>
+
+[% END %]
 
 [% END %]

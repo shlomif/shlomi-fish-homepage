@@ -12,21 +12,18 @@ function fortunes_addlinks(): void {
     const getid = (idx) => {
         return fort(idx).find("> .head > h3").attr("id");
     };
+
     for (let i = 0; i < fortunes.length; i++) {
+        let html: string = "";
         if (i > 0) {
             const previd = getid(i - 1);
-            fort(i)
-                .find("> .head")
-                // .after('<a href="#' + nextid + '">[ Next ]</a>');
-                .append('<a href="#' + previd + '">[ Prev ]</a>');
+            html += ' <a href="#' + previd + '">[ Prev ]</a>';
         }
         if (i < fortunes.length - 1) {
             const nextid = getid(i + 1);
-            fort(i)
-                .find("> .head")
-                // .after('<a href="#' + nextid + '">[ Next ]</a>');
-                .append('<a href="#' + nextid + '">[ Next ]</a>');
+            html += ' <a href="#' + nextid + '">[ Next ]</a>';
         }
+        fort(i).find("> .head > h3").append(html);
     }
     return;
 }

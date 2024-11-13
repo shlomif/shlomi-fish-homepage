@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET sw_quality_trends = "${base_path}philosophy/computers/high-quality-software/reflections-on-software-quality-trends/" %]
+
 [% default_toc %]
 
 <div class="software_build">
@@ -11,7 +13,7 @@
 
 <p>
 Quite a few people, including me, have been lamenting the
-<a href="[% base_path %]philosophy/computers/high-quality-software/reflections-on-software-quality-trends/">poor
+<a href="[% sw_quality_trends %]">poor
 quality</a> of a lot of modern software applications. In order to do something constructive
 to combat this, I decided to collect links to tools and other resources that can help
 to enhance the quality of software.
@@ -256,6 +258,12 @@ best practices in the software industry.
 [% WRAPPER see_also %]
 
 <ul>
+
+<li>
+<p>
+<a href="[% sw_quality_trends %]">“Reflections on (circa 2020) software quality trends”</a>
+</p>
+</li>
 
 <li>
 <p>

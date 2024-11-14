@@ -5549,11 +5549,34 @@ and most of my YAML files are under my control anyway.
 [% WRAPPER h3_section id = "why_jquery" title = "Why are you still using jQuery?" %]
 
 <ol>
+
 <li>
 <p>
 <a href="https://www.arp242.net/jquery.html">Why I’m still using jQuery in 2019?</a> - by Martin Tournoij.
 </p>
 </li>
+
+<li>
+<p>
+In my impression, the browser-side JavaScript frameworks are often more trouble
+than they are worth:
+</p>
+
+<ul>
+<li>
+<p>
+<a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">“How it feels to learn JavaScript in 2016 | HackerNoon”</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=Wm2h0cbvsw8">“We're Gonna Build a Framework”</a> - by Dylan Beattie
+</p>
+</li>
+</ul>
+</li>
+
 </ol>
 
 [% END %]

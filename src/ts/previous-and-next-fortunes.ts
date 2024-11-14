@@ -7,7 +7,7 @@
 function fortunes_addlinks(): void {
     const fortunes = $(".fortunes_list > div.fortune");
     const fort = (idx) => {
-        return $(fortunes[idx]);
+        return fortunes.slice(idx, idx + 1);
     };
     const getid = (idx) => {
         return fort(idx).find("> .head > h3").attr("id");

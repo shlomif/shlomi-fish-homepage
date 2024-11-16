@@ -3971,6 +3971,26 @@ filesystem. Moreover, these files contain substantial amounts of repetitive
 markup and code.
 </p>
 
+[% WRAPPER h4_section id = "why_ssg" title = "Why are your sites static (and generated) rather than use server-side scripting (e.g.: PHP)?" %]
+
+<ol>
+
+<li>
+<p>
+Static sites require less maintenance than sites with <a href="https://en.wikipedia.org/wiki/Server-side_scripting">Server-side scripting</a> given the latter are potentially more prone to security exploits.
+</p>
+</li>
+
+<li>
+<p>
+<a href="#site_loads_quickly">Static sites likely load and run faster</a>
+</p>
+</li>
+
+</ol>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h3_section id = "is_site_written_in_perl" title = "Is this site written in Perl?" %]

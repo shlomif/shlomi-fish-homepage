@@ -12,6 +12,10 @@ function fortunes_addlinks(): void {
     const getid = (idx) => {
         return fort(idx).find("> .head > h3").attr("id");
     };
+    const container_class: string = "fortunes_addlinks";
+    const getcontainer = (idx) => {
+        return fort(idx).find("> .head > h3 > span." + container_class);
+    };
     const addlink = (idx, cls, label) => {
         const link_end_id = getid(idx);
         const ret =
@@ -34,7 +38,14 @@ function fortunes_addlinks(): void {
         if (i < fortunes.length - 1) {
             html += addlink(i + 1, "next", "Next");
         }
-        fort(i).find("> .head > h3").append(html);
+        let container = getcontainer(i);
+        if (!container.length) {
+            fort(i)
+                .find("> .head > h3")
+                .append('<span class="' + container_class + '"></span>');
+            container = getcontainer(i);
+        }
+        container.html(html);
     }
     return;
 }

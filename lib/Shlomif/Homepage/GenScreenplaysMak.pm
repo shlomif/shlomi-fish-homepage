@@ -27,15 +27,14 @@ sub _vcs_add
 
 sub _copy_draft
 {
-    my $source    = path(shift);
-    my $tt_out_fh = path(shift);
-    if ( not -e $tt_out_fh )
+    my $source = path(shift);
+    my $dest   = path(shift);
+    if ( not -e $dest )
     {
-        STDERR->print(
-            "File '$tt_out_fh' did not exist. Populating from $source\n");
-        $tt_out_fh->parent()->mkpath();
-        $source->copy($tt_out_fh);
-        _vcs_add( [ $tt_out_fh, ], );
+        STDERR->print("File '$dest' did not exist. Populating from $source\n");
+        $dest->parent()->mkpath();
+        $source->copy($dest);
+        _vcs_add( [ $dest, ], );
     }
     return;
 }

@@ -33,4 +33,52 @@ As published on Reddit by an associate.
 
 [%- END -%]
 
+<p class="skip_to_main">
+<a href="#itself"><b>Skip to the main content</b></a>
+</p>
+
+<h2 id="main_intro">Introduction</h2>
+
+<p>
+<b>TODO :</b> FILL IN.
+</p>
+
+[% default_toc %]
+
+<section class="article">
+
+<header>
+<h2 id="itself">The Article Itself - 2nd Revision</h2>
+</header>
+
+[% path_slurp("docbook/5/rendered/perfect-it-workplace-v2.xhtml") %]
+
+</section>
+
+<section class="article">
+
+<header>
+<h2 id="other_formats">Other Formats</h2>
+</header>
+
+<ul>
+<li>
+<p>
+<a href="perfect-it-workplace-v2.pdf">Acrobat Reader (PDF) Format</a> (You are allowed to print it, but please don’t.)
+</p>
+</li>
+<li>
+<p>
+<a href="perfect-it-workplace-v2.xml">Original DocBook/XML</a>.
+</p>
+</li>
+<li>
+<p>
+<a href="perfect-it-workplace-v2.rtf">Word RTF</a>.
+</p>
+</li>
+</ul>
+
+</section>
+
 [% END %]

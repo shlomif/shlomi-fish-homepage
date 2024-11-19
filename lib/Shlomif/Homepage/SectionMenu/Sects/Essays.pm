@@ -362,6 +362,7 @@ my $_section_navmenu_tree_contents = {
                                     text => "Revision 1",
                                     url  =>
 "philosophy/computers/software-management/perfect-workplace/perfect-it-workplace.xhtml",
+                                    skip => 1,
                                 },
                             ],
                         },

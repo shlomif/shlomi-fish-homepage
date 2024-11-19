@@ -12,7 +12,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
     - Follow-up on [”What Makes Software High-Quality” ( /philosophy/computers/high-quality-software/rev2/ )](http://www.shlomifish.org/philosophy/computers/high-quality-software/rev2/)
     - Follow-up on [“Optimizing Code for Speed” Wikibook](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed)
     - Follow-up on [“Perl bad elements (bad practices) to avoid.”](http://perl-begin.org/tutorials/bad-elements/)
-    - Follow-up on <http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/>
+        - Follow-up on [C-and-C++ bad-elements](http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/)
     - Follow-up on [“What are some best practices in software development that I should adopt?”](https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt)
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
     - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, Continuous Integration (CI), etc.
@@ -34,11 +34,11 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
     - Red Hat’s dnf
         - kinda slow
         - hopefully [will improve](https://rpm-software-management.github.io/announcement/2018/03/22/dnf-3-announcement/)
-        - It did seem to improve, at least on my Fedora x86-64 systems. dnf version 5 may be even more fast than its predecessors.
+        - It did seem to improve, at least on my Fedora x86-64 systems. dnf version 5 may be even faster than its predecessors.
     - Mostly Positive: [VLC](https://www.videolan.org/vlc/)
         - Easy to use interface
         - As a general rule,: stable, fast, and predictable.
-        - Popular among many Windows and macOS users.
+        - Also popular among many Windows and macOS users.
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
@@ -46,6 +46,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called [“Activities”](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
         - <https://bugs.kde.org/show_bug.cgi?id=343246>
         - [http://www.trinitydesktop.org/ (Trinity Desktop Environment)](http://www.trinitydesktop.org/) - fork of KDE 3, continuing its spirit.
+        - I mostly use Xfce, which is functional and fast. Like other desktop environments, one can run KDE applications on it.
     - Mostly Positive: [CMake](https://en.wikipedia.org/wiki/CMake)
         - Not perfect but less errorprone and faster than GNU Autotools
         - <http://www.shlomifish.org/open-source/anti/autohell/>

@@ -290,6 +290,28 @@ effort to port and package open source software for macOS .
 </li>
 </ul>
 
+[% WRAPPER h3_section id = "self-contained-package" title = "Self-contained Packagers" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>,
+<a href="https://en.wikipedia.org/wiki/Flatpak">Flatpak</a>
+</p>
+</li>
+
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a> - also
+useful for continuous-integration ( “CI” ).
+</p>
+</li>
+
+</ul>
+
+[% END %]
+
 [%- END -%]
 
 [% WRAPPER h2_section id = "scm"  title = "Version Control Systems"  %]

@@ -743,7 +743,7 @@
                         <link xlink:href="http://www.ericsink.com/entries/ethics.html">an update</link>.)
                     </para>
                 </footnote>
-                Google allows its employees work on non-work-related-tasks
+                Google allows its employees to work on non-work-related-tasks
                 20% of the time (while Google still owns the intellectual
                 rights to their creations). I would go a step further by
                 saying you simply should allow your employees to do as
@@ -1653,7 +1653,7 @@ function create_employee(params)
 
         <section xml:id="essential-software--build-and-config">
             <info>
-                <title>Building, Configuration and Packaging</title>
+                <title>Building, Configuration, and Packaging</title>
             </info>
 
             <para>
@@ -1782,12 +1782,12 @@ function create_employee(params)
                     Often, however, the really good solutions will be an
                     overkill. Most experts I’ve talked with agreed that
                     the <link xlink:href="http://www.oracle.com/database/index.html">
-                        Oracle Database</link> is the most powerful on the
-                    market and “years ahead of anything else out there”.
-                    However, most run-of-the-mill web applications won’t
-                    make use of even a small percentage of its advanced
-                    features, enough to justify using it instead of, say,
-                    the open-source and gratis
+                        Oracle Database</link> is the most powerful SQL
+                        database on the market and “years ahead of anything
+                        else out there”. However, most run-of-the-mill web
+                        applications won’t make use of even a small percentage
+                        of its advanced features, enough to justify using it
+                        instead of, say, the open-source and gratis
                     <link xlink:href="http://www.postgresql.org/">PostgreSQL</link>.
                 </para>
                 <para>
@@ -1856,11 +1856,11 @@ function create_employee(params)
 
             <section xml:id="tech-maturity-and-mindshare">
                 <info>
-                    <title>Maturity, Mindshare and Distance from the
+                    <title>Maturity, Mindshare, and Distance from the
                         Mainstream</title>
                 </info>
                 <para>
-                    Maturity, Mind-share and distance from the Mainstream are
+                    Maturity, Mind-share, and distance from the Mainstream are
                     three factors that, like it or not, also affect the
                     choice of language. Immature technologies tend to have
                     many non-discoverable, or well-publicised quirks and
@@ -1988,7 +1988,7 @@ function create_employee(params)
         </para>
 
         <para>
-            A somewhat better, but still bad incident was with the <link
+            I had a somewhat better, but still bad, experience with the <link
                 xlink:href="http://sharethis.com/">ShareThis.com button</link>
             that I installed in my site. After they started using Google
             Analytics in their re-usable widget (which I didn’t want), I wrote a

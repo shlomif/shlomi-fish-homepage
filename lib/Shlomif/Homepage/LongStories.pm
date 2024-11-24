@@ -674,8 +674,9 @@ EOF
 EOF
     },
     {
-        id         => 'He-Damsel-in-Distress-and-a-Distressing-Damsel',
-        tagline    => "TODO",
+        id      => 'He-Damsel-in-Distress-and-a-Distressing-Damsel',
+        tagline =>
+"“If I cannot have 100% of his time, soul, mind, love, and knowledge…”",
         logo_alt   => "TODO",
         logo_class => "selina",
         logo_src   => "me/rindolf/images/evil-reindeer-200w.png",

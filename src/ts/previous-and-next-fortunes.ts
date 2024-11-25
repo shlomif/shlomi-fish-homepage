@@ -4,7 +4,7 @@
 //
 // Thanks!
 
-function fortunes_addlinks(): void {
+function fortunes_addlinks({ clearMarkup }: { clearMarkup: boolean }): void {
     const fortunes = $(".fortunes_list > div.fortune");
     const fort = (idx) => {
         return fortunes.slice(idx, idx + 1);
@@ -45,7 +45,11 @@ function fortunes_addlinks(): void {
                 .append('<span class="' + container_class + '"></span>');
             container = getcontainer(i);
         }
-        container.html(html);
+        container.html(clearMarkup ? "" : html);
     }
     return;
 }
+
+$(() => {
+    fortunes_addlinks({ clearMarkup: false });
+});

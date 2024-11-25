@@ -111,7 +111,7 @@ sub get_fortune_all_in_one_page_html_tt2
 [%- SET desc = "$title" -%]
 $BODY_PARAMS
 
-@{[$self->_get_common_tt2]}
+@{[$self->_get_common_tt2({single_page => 0, })]}
 
 [%- WRAPPER wrap_html -%]
 
@@ -180,13 +180,27 @@ sub write_fortune_all_in_one_page_to_file
 
 sub _get_common_tt2
 {
-    my $self = shift;
+    my $self        = shift;
+    my $args        = shift;
+    my $single_page = $args->{'single_page'};
 
-    return <<"EOF";
+    my $ret = <<"EOF";
 [% BLOCK page_extra_head_elements %]
 <link rel="stylesheet" href="[% base_path %]fortunes.css" media="screen"/>
+EOF
+
+    if ($single_page)
+    {
+        $ret .= <<"EOF";
+<script src="[% base_path %]js/previous-and-next-fortunes.js"></script>
+EOF
+    }
+
+    $ret .= <<"EOF";
 [% END %]
 EOF
+
+    return $ret;
 }
 
 sub get_single_fortune_page_html_tt2
@@ -205,7 +219,7 @@ sub get_single_fortune_page_html_tt2
 [%- SET title = "@{[$r->page_title()]}" -%]
 [%- SET desc = "@{[$r->meta_desc()]}" -%]
 $body_params
-@{[$self->_get_common_tt2]}
+@{[$self->_get_common_tt2({single_page => 1, })]}
 
 [%- WRAPPER wrap_html -%]
 

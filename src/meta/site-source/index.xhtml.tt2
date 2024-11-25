@@ -21,6 +21,10 @@ which gives a recipe for a consistent and reproducible build on Ubuntu Linux
 systems.
 </p>
 
+<p>
+Similarly, <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/bin/docker-ci-run.pl">bin/docker-ci-run.pl</a> runs the build-process and tests suite inside Docker containers.
+</p>
+
 [% END %]
 
 [% WRAPPER h2_section id = "techs_used" title = "Technologies that are Used" %]

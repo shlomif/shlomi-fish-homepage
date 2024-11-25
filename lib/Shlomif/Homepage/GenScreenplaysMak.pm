@@ -105,6 +105,7 @@ sub _calc_screenplay_doc_makefile_lines
     my @copy_screenplay_mak__targets;
 
     my @files_vars = ($files_var);
+    my @screenplay_xml_fns;
     foreach my $doc ( sort { $a->{base} cmp $b->{base} } @$docs )
     {
         my $doc_base = $doc->{base};
@@ -123,6 +124,8 @@ sub _calc_screenplay_doc_makefile_lines
         {
             my $xml_out_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
             my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
+
+            push @screenplay_xml_fns, $xml_out_fh;
 
             my $fn_dir =
                 path(
@@ -248,6 +251,16 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
             push @copy_screenplay_mak__targets, $target_var_deref;
         }
     }
+
+    if ( @screenplay_xml_fns > 1 )
+    {
+        # Carp::confess("@screenplay_xml_fns");
+        my $doc_base = $base . "-CONCATENATED";
+        my $dest_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
+        push @ret,
+"${dest_fh}: @screenplay_xml_fns\n\t\$(PERL) bin/concat-screenplay-xmls.pl --output \$\@ -- @screenplay_xml_fns\n\n";
+    }
+
     $$images_copy_ref .=
           "\$($dest_dir_var): " . "\$("
         . $dest_prefix_dir_var . ")/%: " . "\$("

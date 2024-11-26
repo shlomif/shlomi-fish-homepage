@@ -41,9 +41,13 @@ sub _copy_draft
 
 sub _calc_screenplay_doc_makefile_lines
 {
-    my ( $dest_records, $dest_dir_vars, $images_copy_ref, $tt_proc_targets,
-        $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $record )
-        = @_;
+    my (
+        $dest_records,                   $dest_dir_vars,
+        $images_copy_ref,                $tt_proc_targets,
+        $concat_screenplay_xmls_targets, $addprefixes,
+        $_epub_map,                      $screenplay_vcs_base_dir,
+        $record
+    ) = @_;
 
     my $base             = $record->{base};
     my $github_repo      = $record->{github_repo};
@@ -259,6 +263,7 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         my $dest_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
         push @ret,
 "${dest_fh}: @screenplay_xml_fns\n\t\$(PERL) bin/concat-screenplay-xmls.pl --output \$\@ -- @screenplay_xml_fns\n\n";
+        push @{$concat_screenplay_xmls_targets}, $dest_fh;
     }
 
     $$images_copy_ref .=
@@ -349,16 +354,23 @@ EOF
     my $images_copy   = '';
 
     my @records;
-    my $tt_proc_targets = [];
+    my $tt_proc_targets                = [];
+    my $concat_screenplay_xmls_targets = [];
     foreach my $record ( sort { $a->{base} cmp $b->{base} }
         @{ YAML::XS::LoadFile("./lib/screenplay-xml/list.yaml") } )
     {
         _calc_screenplay_doc_makefile_lines(
-            ( \@records ),
-            $dest_dir_vars, ( \$images_copy ),
-            $tt_proc_targets,
-            $addprefixes, $_epub_map, $screenplay_vcs_base_dir, $record,
+            ( \@records ),                   $dest_dir_vars,
+            ( \$images_copy ),               $tt_proc_targets,
+            $concat_screenplay_xmls_targets, $addprefixes,
+            $_epub_map,                      $screenplay_vcs_base_dir,
+            $record,
         );
+    }
+    if ( not @$concat_screenplay_xmls_targets )
+    {
+        Carp::confess(
+            "concat_screenplay_xmls_targets @$concat_screenplay_xmls_targets");
     }
     path("lib/make/generated/screenplays-copy-operations.mak")->spew_utf8(
         ( map { $_->{copy_screenplay_mak} } @records ),
@@ -404,6 +416,8 @@ EOF
         "\n",
 "$epub_dests_varname := \\\n$epub_dests\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n",
         ( map { $clean_ns->($_) } @_htmls_files ),
+        "\n\nscreenplays_concats: \\\n",
+        ( map { "\t$_ \\\n" } @$concat_screenplay_xmls_targets ),
         (
             "\nALL_SCREENPLAYS__SCREENPLAY_IMAGES__POST_DESTS = ",
             join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),

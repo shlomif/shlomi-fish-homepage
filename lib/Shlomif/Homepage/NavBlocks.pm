@@ -72,7 +72,7 @@ my @muppets_pages = (
         path       => "humour/Muppets-Show-TNI/Harry-Potter.html",
     ),
     _l(
-        inner_html => "Grammar Nazis",
+        inner_html => "Chuck Norris and Summer Glau as Grammar Nazis",
         path => "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
     ),
     _l(
@@ -555,7 +555,7 @@ my %tr_s = (
         }
         ),
     'selina_mandrake' => _tr(
-        title => "Selina Mandrake - The Slayer",
+        title => "Selina Mandrake - The Slayer (Buffy parody)",
         items => [
             _fp( path => "humour/Selina-Mandrake/", ),
             _ontext( path => "humour/Selina-Mandrake/ongoing-text.html", ),

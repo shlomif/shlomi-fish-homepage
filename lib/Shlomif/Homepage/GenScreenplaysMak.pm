@@ -106,7 +106,7 @@ sub _calc_screenplay_doc_makefile_lines
 
     my @files_vars = ($files_var);
     my @screenplay_xml_fns;
-    foreach my $doc ( sort { $a->{base} cmp $b->{base} } @$docs )
+    foreach my $doc (@$docs)
     {
         my $doc_base = $doc->{base};
         my $suf      = $doc->{suffix};

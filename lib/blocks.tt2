@@ -181,6 +181,16 @@ License</a>, a permissive software licence.
 
 <ul>
 
+[% IF ongoing_text_href %]
+
+<li>
+<p>
+<a href="[% ongoing_text_href %]"> <b>Ongoing text</b> (All-on-one-page)</a>
+</p>
+</li>
+
+[% END %]
+
 <li>
 <p>
 <a href="[% indiv_href %]">Read Online</a> - one

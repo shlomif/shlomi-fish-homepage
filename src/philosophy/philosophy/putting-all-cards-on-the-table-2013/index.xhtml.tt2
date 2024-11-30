@@ -7,7 +7,7 @@
 
 [% default_toc %]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "DocBook5/putting-all-cards-on-the-table-2013",  %]
+[% PROCESS docbook_formats_w_base base = "DocBook5/putting-all-cards-on-the-table-2013", h2_id = "formats", h2_text = "Formats", ongoing_text_href = "#intro" %]
 
 [% WRAPPER h2_section id = "content" title = "Content" %]
 

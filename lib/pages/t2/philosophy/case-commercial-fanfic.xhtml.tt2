@@ -13,24 +13,8 @@
 href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/#the_pygmalion_effect_and_the_golem_effect">Pygmalion effect vs.
 the Golem effect</a>
 [% END %]
-[% SET ARR = '<a href="https://en.wikipedia.org/wiki/All_rights_reserved">"All rights reserved"</a>' %]
-[% SET FOSS = '<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free and Open Source Software (FOSS)</a>' %]
-[% SET GitHub = '<a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>' %]
-[% SET LAH = '<a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>' %]
-[% SET MDD = ' <a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">Clinical Depression</a>' %]
-[% SET MOTAS = '<a href="https://en.wiktionary.org/wiki/MOTAS">Members of the appropriate sex</a>' %]
-[% SET RPF = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction ( RPF )</a>' %]
-[% SET RPFs = '<a href="https://en.wikipedia.org/wiki/Real_person_fiction">Real Person Fiction Works ( RPFs )</a>' %]
-[% SET SMG = '<a href="https://en.wikipedia.org/wiki/Sarah_Michelle_Gellar">Sarah Michelle Gellar</a>' %]
-[% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
-[% SET hhfg = '<a href="https://www.shlomifish.org/humour/human-hacking/conclusions/">"The Human Hacking Field Guide"</a>' %]
-[% SET opencontent = '<a href="https://en.wikipedia.org/wiki/Free_content">open/free content</a>' %]
 
-
-[% SET karma = '<a href="https://en.wikipedia.org/wiki/Karma#Comparable_concepts">karma / "what goes around comes around"</a>' %]
-[% SET proprietary = '<a href="https://en.wikipedia.org/wiki/Proprietary_software">"proprietary"</a> (= restricted, ' _ ARR _ ', "copyrighted")' %]
-[% SET the_web = '<a href="https://en.wikipedia.org/wiki/World_Wide_Web">the Web (WWW)</a>' %]
-[% SET WWW = the_web %]
+[% PROCESS "Inc/acronyms_microsoft.tt2" %]
 
 [% BLOCK cookie_monster__share_it_maybe__video %]
 

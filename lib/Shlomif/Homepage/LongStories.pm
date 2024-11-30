@@ -651,9 +651,9 @@ EOF
     {
         id         => 'How-to-Play-Strip-Dungeons-and-Dragons',
         tagline    => "“Are you a god?”",
-        logo_alt   => "Evil Reindeer",
+        logo_alt   => "A set of role-playing games dice",
         logo_class => "selina",
-        logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
+        logo_src   => "me/rindolf/images/rpg-dice-set--on-nuc--thumb.webp",
         logo_svg   => '//$SKIP',
         entry_id   => "How-to-Play-Strip-Dungeons-and-Dragons",
         entry_text => "How to Play Strip Dungeons-and-Dragons",

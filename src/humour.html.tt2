@@ -1,4 +1,5 @@
 [% SET lang = "eng" %]
 [%- SET more_keywords = "aphorisms, quips, maxims, funny, image macros, memes, captioned images, geek humour, computer humour" -%]
+[% SET captioned_images_only = "" %]
 
 [% INCLUDE "pages/t2/humour.tt2" %]

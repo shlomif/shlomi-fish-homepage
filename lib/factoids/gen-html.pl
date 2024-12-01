@@ -159,7 +159,7 @@ my $PAGE_TEMPLATE = <<'END_OF_TEMPLATE';
 [%- PROCESS "factoids/common-out/tags.tt2" -%]
 [%- PROCESS "stories/stories-list.tt2" -%]
 
-[%- INCLUDE facts__section__{{ p.short_id() }} -%]
+[%- INCLUDE facts__section__{{ p.short_id() }} nowrap = "" -%]
 [%- INCLUDE facts__header_tabs id_base="{{ p.id_base() }}" h="{{ p.tabs_title() }}" -%]
 
 [%- WRAPPER h2_section id="license" title="Copyright and Licence"-%]

@@ -1,3 +1,5 @@
+[%- SET enable_cliche_quote = '' -%]
+
 [% IF scope == "screenplay_shortage" %]
 [% SET screenplay_shortage__remix = "1" %]
 [% ELSIF scope == "full" %]
@@ -90,7 +92,7 @@ There is now a <a href="https://www.shlomifish.org/philosophy/culture/case-for-c
 
 [% WRAPPER h2_section id = "summary" title = "Summary" %]
 
-[% IF _enable_cliche_quote %]
+[% IF enable_cliche_quote %]
 
 <blockquote class="removedfancy">
 

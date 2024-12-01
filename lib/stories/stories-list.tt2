@@ -1,3 +1,6 @@
+[% SET epub_prefix = "" %]
+[% SET use_screenplay_html_prefix = '' %]
+
 [%- BLOCK tagline -%]
 <h2 id="tagline">[% text %]</h2>
 [%- END -%]

@@ -3,6 +3,7 @@ This header contains macros related to XML-Grammar-Fiction ,
 XML-Grammar-Screenplay , Fiction-Text , Fiction-XML, Screenplay-Text
 and Screenplay-XML .
 -%]
+[% SET screenplay_desc = '' %]
 
 [%- BLOCK link_to_fiction_text -%]
 <a href="[% basename %].txt">[% screenplay_desc %]Source in text format</a>

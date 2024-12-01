@@ -1,3 +1,8 @@
+[% SET img_class = "" %]
+[% SET img_style = "" %]
+[% SET isa_captioned_image = "" %]
+[% SET joke_wrapper_class = "" %]
+
 [% BLOCK joke %]
 [% content %]
 [% END %]

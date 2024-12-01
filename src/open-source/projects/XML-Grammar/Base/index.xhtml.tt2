@@ -1,14 +1,14 @@
-[%- SET cpan_dist = "XML-GrammarBase" -%]
-[%- SET title = "$cpan_dist - wrappers for writing your own XML grammar modules" -%]
-[%- SET desc = "$cpan_dist - wrappers for writing your own XML grammar modules" -%]
+[%- SET page_cpan_dist = "XML-GrammarBase" -%]
+[%- SET title = "${page_cpan_dist} - wrappers for writing your own XML grammar modules" -%]
+[%- SET desc = "${page_cpan_dist} - wrappers for writing your own XML grammar modules" -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-[%- WRAPPER wrap_html -%]
+[%- WRAPPER wrap_html page_cpan_dist = page_cpan_dist -%]
 
 [%- WRAPPER about_sect -%]
 
 <p>
-[% cpan_dist %] provides some roles (known as traits in other languages)
+[% page_cpan_dist %] provides some roles (known as traits in other languages)
 and classes (with tests) for validating and processing XML grammars, so far
 using RELAX NG and XSLT, but in the future other technologies in the
 XML ecosystem (such as DTDs or XML Schemas). It uses
@@ -17,7 +17,7 @@ goodness.
 </p>
 
 <p>
-[% cpan_dist %] is part of the <a href="../">Web-CPAN XML-Grammar
+[% page_cpan_dist %] is part of the <a href="../">Web-CPAN XML-Grammar
 project</a> that provides several specialised processors for XML grammars
 for various tasks.
 </p>
@@ -26,17 +26,17 @@ for various tasks.
 
 [% WRAPPER h2_section id = "links" title = "Project Links" %]
 
-[% WRAPPER h3_section id = "links-xml-grammarbase" title = "For ${cpan_dist}" %]
+[% WRAPPER h3_section id = "links-xml-grammarbase" title = "For ${page_cpan_dist}" %]
 
-[% WRAPPER github_cpan_dist_links     dist=cpan_dist
-    freecode_url="http://freecode.com/projects/xml-grammarbase/"
-    github_url="https://github.com/shlomif/perl-XML-GrammarBase" %]
+[% WRAPPER github_cpan_dist_links     dist = page_cpan_dist
+    freecode_url = "http://freecode.com/projects/xml-grammarbase/"
+    github_url = "https://github.com/shlomif/perl-XML-GrammarBase" %]
 [%- END -%]
 
 [% END %]
 
 [% END %]
 
-[% PROCESS x11_licence name=cpan_dist %]
+[% PROCESS x11_licence name = page_cpan_dist %]
 
 [% END %]

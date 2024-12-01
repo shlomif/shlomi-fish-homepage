@@ -1,5 +1,5 @@
 [%- BLOCK mailto_link_to_self -%]
-<a href="mailto:[% email %]">[% prefix || "" %][% email %][% suffix || "" %]</a>
+<a href="mailto:[% email %]">[%- TRY -%][%- prefix -%][%- CATCH var.undef -%][%- END -%][% email %][%- TRY -%][%- suffix -%][%- CATCH var.undef -%][%- END -%]</a>
 [%- END -%]
 
 [%- BLOCK main_email_mailto -%]

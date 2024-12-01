@@ -1,3 +1,5 @@
+[% SET is_detailed = '' %]
+
 [% BLOCK detailed %]
 [% IF is_detailed %][% content %][% END %]
 [% END %]

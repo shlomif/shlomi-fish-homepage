@@ -12,9 +12,8 @@ that aims to explain why the two are compatible.
 
 [% BLOCK shlomif_docbook_doc_text %]
 
-[% IF NOT level %][% SET level=2 %][% END %]
-
-[% IF dir %][% SET dir = dir _ "/" %][% END %]
+[% SET dir = "" %]
+[% SET level = 2 %]
 
 <h[% level %] id="[% doc %]-formats">Formats</h[% level %]>
 

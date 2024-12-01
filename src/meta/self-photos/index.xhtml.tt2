@@ -4,6 +4,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% SET full_image_link = '' %]
+[% SET link_img_ext = '' %]
+[% SET img_ext = '' %]
+
 <div class="self_photos">
 
 [% BLOCK photo %]

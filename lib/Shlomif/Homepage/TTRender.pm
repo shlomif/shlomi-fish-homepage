@@ -24,11 +24,12 @@ use Shlomif::Homepage::NavBlocks::Renderer ();
 use Shlomif::Homepage::News                ();
 use Shlomif::Homepage::P4N_Lect5_HebNotes  ();
 use Shlomif::Homepage::RelUrl (qw/ _set_url _url_obj /);
-use Shlomif::Homepage::TocDiv      ();
-use Shlomif::Homepage::TrueStories ();
-use Shlomif::MD                    ();
-use Shlomif::XmlFictionSlurp       ();
-use Template                       ();
+use Shlomif::Homepage::TocDiv           ();
+use Shlomif::Homepage::TrueStories      ();
+use Shlomif::Homepage::TTRender::SetCSS ();
+use Shlomif::MD                         ();
+use Shlomif::XmlFictionSlurp            ();
+use Template                            ();
 
 use Shlomif::Homepage::SectionMenu::IsHumour (
     qw/ get_is_humour_re humour_should_mutate_title /);
@@ -311,6 +312,7 @@ my $template = Template->new(
         PRE_PROCESS  => ["lib/blocks.tt2"],
         POST_CHOMP   => 1,
         RELATIVE     => 1,
+        STRICT       => 1,
         ENCODING     => 'utf8',
         BLOCKS       => +{
             render_compact_nav_blocks => \&render_compact_nav_blocks,
@@ -356,7 +358,9 @@ sub render
     );
     my $NOT_FRONT_PAGE = scalar( length($raw_fn_path) > 1 );
     $vars->{main_class} =
-        Set::CSS->new( "main", ( $NOT_FRONT_PAGE ? ( "fancy_sects", ) : () ), );
+        Shlomif::Homepage::TTRender::SetCSS->new( "main",
+        ( $NOT_FRONT_PAGE ? ( "fancy_sects", ) : () ),
+        );
     my $set = sub {
         my ( $name, $inc ) = @_;
         $vars->{$name} = _generate_include( $input_tt2_page_path, $inc );

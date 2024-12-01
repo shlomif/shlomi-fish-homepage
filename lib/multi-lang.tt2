@@ -1,4 +1,5 @@
-[% SET multi_shlomif_lang = (shlomif_lang ? shlomif_lang : "en") %]
+[% SET multi_shlomif_lang = "en" %]
+[%- TRY -%][%- SET l = shlomif_lang -%][%- SET multi_shlomif_lang = l -%][%- CATCH var.undef -%][%- END -%]
 
 [% BLOCK he %]
 [% IF multi_shlomif_lang == "he"%][%content%][% END %]

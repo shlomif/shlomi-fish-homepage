@@ -7,6 +7,11 @@ then
     shift
     args+=" $ocs"
 fi
+if ! gmake docbook_extended
+then
+    "gmake docbook_extended failed"
+    exit 1
+fi
 perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" $args \
     --before-insert-skip='//.+?//' \
     --before-insert-skip='/Files/files/video/[^/]+\.webm\z' \

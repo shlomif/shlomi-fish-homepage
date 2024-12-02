@@ -62,6 +62,14 @@ ones written in Python and which have a <code>.py</code> extension, or written i
 which have a <code>.t</code> extension.
 </para>
 
+<para>
+<code>bash -x bin/link-checker-for-shlomifish.org.bash</code> runs an
+internal-hyperlinks checker. It is not run implicitly because it takes
+a lot of time and resources.
+<code>bash -x bin/link-checker-for-shlomifish.org.bash --only-check-site-flow</code>
+is also available.
+</para>
+
 </section>
 
 </article>

@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 #
-# mirror.bash
+# bin/mirror-using-wget.bash
 # Copyright (C) 2024 Shlomi Fish < https://www.shlomifish.org/ >
 #
 # Distributed under the terms of the MIT license.

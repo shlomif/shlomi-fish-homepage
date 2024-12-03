@@ -119,8 +119,9 @@ sub _calc_screenplay_doc_makefile_lines
             return "${base}_${suf}_" . shift;
         };
 
-        my $src_varname    = $gen_name->("SCREENPLAY_XML_SOURCE");
-        my $src_xhtmlname  = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
+        my $doc_base_varname = $gen_name->("SCREENPLAY_XML_BASENAME");
+        my $src_varname      = $gen_name->("SCREENPLAY_XML_SOURCE");
+        my $src_xhtmlname    = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE");
         my $dest_xhtmlname = $gen_name->("SCREENPLAY_XHTML_INTERMEDIATE_DEST");
         my $dest_varname   = $gen_name->("TXT_FROM_VCS");
         my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
@@ -171,7 +172,7 @@ sub _calc_screenplay_doc_makefile_lines
                         );
                     }
                     push @$tt_proc_targets,
-qq[\$($src_varname) : \$(SCREENPLAY_XML_TT2_TXT_DIR)/${doc_base}.screenplay-text.txt.tt2\n\t\$(call MY_TT_PROCESSOR)];
+qq[\$($src_varname) : \$(SCREENPLAY_XML_TT2_TXT_DIR)/\$($doc_base_varname).screenplay-text.txt.tt2\n\t\$(call MY_TT_PROCESSOR)];
                     system("$^X bin/my-tt-processor.pl -o '$fn' '$tt_out_fh'");
                     if ( not -f $fn )
                     {
@@ -226,11 +227,11 @@ qq[\$($src_varname) : \$(SCREENPLAY_XML_TT2_TXT_DIR)/${doc_base}.screenplay-text
         my $epub_dest_path = $_epub_map->{ $doc_base . '.epub' }
             // ( die "epub_dest_path returned undef for doc_base=$doc_base ." );
 
-        push @ret,
-"$src_varname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.txt\n",
-"$src_xhtmlname := \$($src_vcs_dir_var)/${doc_base}.screenplay-text.xhtml\n",
-            "$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/${doc_base}.html\n",
-            "$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/${doc_base}.txt\n",
+        push @ret, "$doc_base_varname = $doc_base\n",
+"$src_varname := \$($src_vcs_dir_var)/\$($doc_base_varname).screenplay-text.txt\n",
+"$src_xhtmlname := \$($src_vcs_dir_var)/\$($doc_base_varname).screenplay-text.xhtml\n",
+"$dest_xhtmlname := \$(SCREENPLAY_XML_HTML_DIR)/\$($doc_base_varname).html\n",
+"$dest_varname := \$(SCREENPLAY_XML_TXT_DIR)/\$($doc_base_varname).txt\n",
             "$epub_dest_varname := $epub_dest_path\n",
             (     "\$($dest_varname): \$($src_varname)\n" . "\t"
                 . q/$(call COPY)/
@@ -251,7 +252,7 @@ EOF
                 "POST_DEST_TXT__${base}__${doc_base}" =~ s/-/_/gr;
             my $target_var_deref = "\$($target_varname)";
             $copy_screenplay_mak .=
-qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DIR)/$doc_base.txt\n\t\$(call COPY)\n\n^;
+qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DIR)/\$($doc_base_varname).txt\n\t\$(call COPY)\n\n^;
             push @copy_screenplay_mak__targets, $target_var_deref;
         }
     }
@@ -259,11 +260,14 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
     if ( @screenplay_xml_fns > 1 )
     {
         # Carp::confess("@screenplay_xml_fns");
-        my $doc_base = $base . "-CONCATENATED";
-        my $dest_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
-        push @ret,
-"${dest_fh}: @screenplay_xml_fns\n\t\$(PERL) bin/concat-screenplay-xmls.pl --output \$\@ -- @screenplay_xml_fns\n\n";
-        push @{$concat_screenplay_xmls_targets}, $dest_fh;
+        my $doc_base         = $base . "-CONCATENATED";
+        my $doc_base_varname = $base . "_CONCATENATED_BASENAME";
+        my $dest         = "lib/screenplay-xml/xml/\$($doc_base_varname).xml";
+        my $dest_varname = $base . "_CONCATENATED_DEST_SCREENPLAY_XML";
+        push @ret, "$doc_base_varname = $doc_base\n",
+            "$dest_varname = $dest\n\n",
+"\$($dest_varname): @screenplay_xml_fns\n\t\$(PERL) bin/concat-screenplay-xmls.pl --output \$\@ -- @screenplay_xml_fns\n\n";
+        push @{$concat_screenplay_xmls_targets}, "\$($dest_varname)";
     }
 
     $$images_copy_ref .=

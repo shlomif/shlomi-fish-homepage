@@ -96,6 +96,10 @@
 
             > .head {
                 @include elem;
+
+                > h3 {
+                    padding-left: 0.5em;
+                }
             }
 
             > .irc-body {

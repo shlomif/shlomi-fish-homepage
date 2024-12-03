@@ -96,8 +96,12 @@ sub _calc_screenplay_doc_makefile_lines
                 qq%die "PLEASE EDIT ME!!!";\n\n% . $pivot_body );
             _vcs_add( [ $src_obj, ], );
         }
+        my $make_expr = $src_fn;
+        $make_expr =~
+s#\Alib/screenplay-xml/txt/scripts/#\$(SCREENPLAY_XML_TXT_SCRIPTS_DIR)/#ms
+            or Carp::confess("no match");
         push @ret,
-            (     "\n\$($src_prepare_epub_var): ${src_fn}\n" . "\t"
+            (     "\n\$($src_prepare_epub_var): ${make_expr}\n" . "\t"
                 . qq#\$(MKDIR) \$($src_vcs_dir_var)/scripts# . "\n" . "\t"
                 . q/$(call COPY)/
                 . "\n\n" );

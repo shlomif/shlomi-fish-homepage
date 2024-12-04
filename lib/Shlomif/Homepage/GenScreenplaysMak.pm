@@ -72,7 +72,7 @@ sub _calc_screenplay_doc_makefile_lines
 
     ++$dest_dir_vars->{$dest_dir_var};
     my @ret = (
-        "$vcs_dir_var := $screenplay_vcs_base_dir/$base_github_repo/$subdir\n",
+"$vcs_dir_var := \$(SCREENPLAY_XML_FROM_VCS_DIR)/$base_github_repo/$subdir\n",
         "$graphics_dir_var := \$($vcs_dir_var)/\$($graphics_dir_bn_var)\n",
 "$dest_prefix_dir_var := \$(POST_DEST_HUMOUR)/@{[ $suburl // '']}/images\n",
         "$src_vcs_dir_var := \$($vcs_dir_var)/screenplay\n",

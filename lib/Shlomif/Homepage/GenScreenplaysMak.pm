@@ -131,10 +131,15 @@ s#\Alib/screenplay-xml/txt/scripts/#\$(SCREENPLAY_XML_TXT_SCRIPTS_DIR)/#ms
         my $epub_dest_varname = $gen_name->("EPUB_FROM_VCS");
 
         {
-            my $xml_out_fh  = path("lib/screenplay-xml/xml/${doc_base}.xml");
+            my $xml_out_fn  = "lib/screenplay-xml/xml/${doc_base}.xml";
+            my $xml_out_fh  = path($xml_out_fn);
             my $text_out_fh = path("lib/screenplay-xml/txt/${doc_base}.txt");
 
-            push @screenplay_xml_fns, $xml_out_fh;
+            my $make_expr = $xml_out_fn;
+            $make_expr =~
+                s#\Alib/screenplay-xml/xml/#\$(SCREENPLAY_XML_XML_DIR)/#ms
+                or Carp::confess("no match");
+            push @screenplay_xml_fns, $make_expr;
 
             my $fn_dir =
                 path(

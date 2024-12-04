@@ -16,6 +16,10 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
     - Follow-up on [“What are some best practices in software development that I should adopt?”](https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt)
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
     - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, Continuous Integration (CI), etc.
+        - Freecell Solver's MS 32,000 benchmark went below 3 seconds - [Git commit](https://github.com/shlomif/fc-solve/commit/5ca2b0d58acc37e21e5393aa7e534187dc722f29). This is largely thanks to the new [xxHash](http://cyan4973.github.io/xxHash/) . I recall that when we went below 6 seconds or so, someone told me we'll never go below 5 seconds… \#Optimization \#opensource
+
+      [@shlomif Tweet](https://twitter.com/shlomif/status/1132302032310870016)
+
         - Cost of code complexity and readability
     - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from <https://perlhacks.com/2012/03/you-must-hate-version-control-systems/>
     - Since the essays were written, some apps improved while others got worse.

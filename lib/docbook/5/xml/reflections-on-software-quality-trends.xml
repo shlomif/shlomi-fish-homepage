@@ -116,6 +116,16 @@ Freecell Solver speedups (
 </para>
 <itemizedlist spacing="compact">
 <listitem>
+<blockquote>
+<para>
+Freecell Solver's MS 32,000 benchmark went below 3 seconds - <link xlink:href="https://github.com/shlomif/fc-solve/commit/5ca2b0d58acc37e21e5393aa7e534187dc722f29">Git commit</link>. This is largely thanks to the new <link xlink:href="http://cyan4973.github.io/xxHash/">xxHash</link> . I recall that when we went below 6 seconds or so, someone told me we'll never go below 5 seconds… #Optimization #opensource
+</para>
+</blockquote>
+<para>
+<link xlink:href="https://twitter.com/shlomif/status/1132302032310870016">@shlomif Tweet</link>
+</para>
+</listitem>
+<listitem>
 <para>
 Cost of code complexity and readability
 </para>

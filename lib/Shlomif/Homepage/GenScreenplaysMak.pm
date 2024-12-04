@@ -271,7 +271,7 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         # Carp::confess("@screenplay_xml_fns");
         my $doc_base         = $base . "-CONCATENATED";
         my $doc_base_varname = $base . "_CONCATENATED_BASENAME";
-        my $dest         = "lib/screenplay-xml/xml/\$($doc_base_varname).xml";
+        my $dest = "\$(SCREENPLAY_XML_XML_DIR)/\$($doc_base_varname).xml";
         my $dest_varname = $base . "_CONCATENATED_DEST_SCREENPLAY_XML";
         push @ret, "$doc_base_varname = $doc_base\n",
             "$dest_varname = $dest\n\n",

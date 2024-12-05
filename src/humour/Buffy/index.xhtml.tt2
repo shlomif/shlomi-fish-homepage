@@ -7,17 +7,23 @@
 This page contains a list of Buffy fan‐fiction by Shlomi Fish.
 </p>
 
-[% WRAPPER h2_section id = "stories"  title = "The Stories"  %]
+[% WRAPPER h2_section id = "stories" title = "The Stories" %]
 
-[% WRAPPER h3_section id = "selina_mandrake"  href = "${base_path}humour/Selina-Mandrake/"  title="<i>Selina Mandrake — The Slayer</i>" %]
+[% WRAPPER h3_section href = "${base_path}humour/Selina-Mandrake/" id = "selina_mandrake" title = "<i>Selina Mandrake — The Slayer</i>" %]
 
 [% long_stories.calc_abstract(id => 'selina_mandrake') %]
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "a_few_good_slayers"  href = "A-Few-Good-Slayers/"  title="<i>Buffy: a Few Good Slayers</i>" %]
+[% WRAPPER h3_section href = "A-Few-Good-Slayers/" id = "a_few_good_slayers" title = "<i>Buffy: a Few Good Slayers</i>" %]
 
 [% long_stories.calc_abstract(id => 'buffy_a_few_good_slayers') %]
+
+[%- END -%]
+
+[% WRAPPER h3_section href = "${base_path}humour/human-hacking/" id = "human_hacking_field_guide" title = "<i>The Human Hacking Field Guide</i>" %]
+
+[% long_stories.calc_abstract(id => 'hhfg') %]
 
 [%- END -%]
 

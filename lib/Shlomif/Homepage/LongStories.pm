@@ -664,7 +664,7 @@ EOF
 <a href="\$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a>,
 <a href="https://en.wikipedia.org/wiki/Mr._T">Mr. T</a>,
 <a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord</a>,
-and Shlomi Fish (= me), are trying to play a strip version of the
+and Shlomi Fish (= me), are trying to play a striptease version of the
 tabletop role-playing game.
 </p>
 

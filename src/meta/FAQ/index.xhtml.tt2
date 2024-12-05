@@ -11,6 +11,7 @@
 [% SET childhood_mem = "Possibly worse, I lost many of my earliest childhood memories, as I thought about them and remembered them in English." %]
 [% SET SMG = 'Sarah Michelle Gellar' %]
 [% SET Sesame_Street = '<a href="https://en.wikipedia.org/wiki/Sesame_Street"><i>Sesame Street</i></a>' %]
+[% SET mirroring_script = '<a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/bin/mirror-using-wget.bash">mirror-using-wget.bash script</a> (which depends GNU Bash and version 2 of wget)' %]
 
 [% SET self_photo_url = base_path _ 'images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.webp' %]
 <img alt="photo of Shlomi Fish in December 2020" class="highlight" src="[% self_photo_url %]" style="float:right;" />
@@ -3704,7 +3705,7 @@ afford to actively maintain.
 
 <li>
 <p>
-You can mirror the site using <a href="https://github.com/shlomif/shlomi-fish-homepage/blob/master/bin/mirror-using-wget.bash">mirror-using-wget.bash script</a> if you care about "privacy".
+You can mirror the site using [% mirroring_script %] if you care about "privacy".
 </p>
 </li>
 
@@ -4412,6 +4413,14 @@ be reviewed.
 
 <p>
 I admit it is an issue, but given I am a bottom-up learner, who also has somewhat selective memory, I'd rather become familiar with more tags incrementally. In the meantime, I suspect neither Web-search engines, nor most human visitors, care about that or penalise that.
+</p>
+
+[% END %]
+
+[% WRAPPER h3_section id = "how_to_mirror" title = "How can I mirror this site?" %]
+
+<p>
+See [% mirroring_script %].
 </p>
 
 [% END %]

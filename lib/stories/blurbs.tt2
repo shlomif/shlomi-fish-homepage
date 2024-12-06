@@ -1,24 +1,5 @@
 [%- BLOCK humanity_licensing -%]
 
-[%- WRAPPER h2_section id = "licence" title = "Licence" -%]
-
-<p>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img
-alt="Creative Commons License" class="cc" style="border-width:0"
-src="[% base_path %]images/CC-by-sa-88x31.png"/></a><br/><span
->Humanity - The Movie</span> by <a
-href="http://www.shlomifish.org/">Shlomi Fish</a> is
-licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
-Attribution-Share Alike 3.0 Unported Licence</a> (or at your option any
-later version of the same licence).<br/>Based on a work at <a
-href="http://www.shlomifish.org/humour/humanity/"
->www.shlomifish.org</a>.<br/>Permissions beyond the scope of
-this license may be available at <a
-href="http://www.shlomifish.org/me/contact-me/"
->http://www.shlomifish.org/me/contact-me/</a>.
-</p>
-
-[%- END -%]
+[%- INCLUDE cc_by_sa_licence_section version = "3.0" year = 2000 -%]
 
 [%- END -%]

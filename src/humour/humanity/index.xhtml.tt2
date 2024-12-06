@@ -5,21 +5,21 @@
 
 [% long_stories.calc_common_top_elems(id => 'humanity') %]
 
-[% WRAPPER screenplay_read_online  %]
+[% WRAPPER screenplay_read_online %]
 
 <ul>
 
-[% PROCESS story_ongoing_episode_li base = "Humanity-Movie",  %]
+[% PROCESS story_ongoing_episode_li base = "Humanity-Movie" %]
 
 <li>
 <p>
-[% PROCESS screenplay_github_repo     url = "https://github.com/shlomif/Humanity-the-Movie",  %]
+[% PROCESS screenplay_github_repo url = "https://github.com/shlomif/Humanity-the-Movie" %]
 </p>
 </li>
 
 <li>
 <p>
-[% PROCESS link_to_screenplay basename = "Humanity-Movie",  %]
+[% PROCESS link_to_screenplay basename = "Humanity-Movie" %]
 </p>
 </li>
 
@@ -27,7 +27,7 @@
 
 [%- END -%]
 
-[% WRAPPER h3_section id="hebrew_translation" title="Hebrew Translation"%]
+[% WRAPPER h3_section id = "hebrew_translation" title = "Hebrew Translation" %]
 
 <ul>
 
@@ -36,14 +36,14 @@
 </li>
 
 <li>
-[% PROCESS link_to_screenplay basename = "Humanity-Movie-hebrew",  %]
+[% PROCESS link_to_screenplay basename = "Humanity-Movie-hebrew" %]
 </li>
 
 </ul>
 
 [% END %]
 
-[% WRAPPER h3_section id="songs_recordings" title="Songs’ Recording"%]
+[% WRAPPER h3_section id = "songs_recordings" title = "Songs’ Recording" %]
 
 <ul>
 
@@ -55,9 +55,9 @@
 
 [% END %]
 
-[% PROCESS humanity_licensing  %]
+[% PROCESS humanity_licensing %]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 <li>
@@ -68,7 +68,7 @@ Berlios.de)</a>
 
 [% END %]
 
-[% WRAPPER about_sect  %]
+[% WRAPPER about_sect %]
 
 <p>
 The original <a href="http://humanity.shlomifish.org/">Humanity project</a>, back in 2000 was my opening shot of the <a

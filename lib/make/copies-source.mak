@@ -20,6 +20,7 @@ $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-english.xml: $(DOCBOOK5_XML_DIR)/The-P
 $(POST_DEST_POPE)/The-Pope-Died-on-Sunday-hebrew.xml: $(DOCBOOK5_XML_DIR)/The-Pope-Died-on-Sunday-hebrew.xml
 $(POST_DEST_SPLAY_HHGG_STTNG): $(SCREENPLAY_XML_TXT_DIR)/hitchhikers-guide-to-star-trek-tng-hand-tweaked.txt
 $(POST_DEST__C_BAD_ELEMS): $(C_BAD_ELEMS_SRC)
+$(POST_DEST__MIRROR_BASH): bin/mirror-using-wget.bash
 $(PRE_DEST_FORTUNES_many_files) $(FORTUNES_TEXTS__PRE_DEST) $(FORTUNES_DATS__PRE_DEST): $(PRE_DEST)/%: $(SRC_SRC_DIR)/%
 $(PUT_CARDS_2013_DEST): $(PUT_CARDS_2013_XHTML)
 $(SCRIPTS_WITH_OFFENDING_EXTENSIONS_TARGETS): $(POST_DEST)/%-pl.txt: $(SRC_SRC_DIR)/%.pl

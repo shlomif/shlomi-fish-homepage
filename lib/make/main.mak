@@ -126,6 +126,7 @@ POST_DEST_FIERY_Q_PNG := $(POST_DEST_HUMOUR)/Star-Trek/We-the-Living-Dead/images
 CATB_HEB_BN := catb-heb.xhtml
 CATB_COPY := $(PRE_DEST)/$(CATB_HEB_BN)
 CATB_COPY_POST := $(POST_DEST)/$(CATB_HEB_BN)
+POST_DEST__MIRROR_BASH := $(POST_DEST)/meta/mirror-using-wget-dot-bash.txt
 
 include lib/make/image-files.mak
 include lib/make/generated/copies-generated-include.mak
@@ -138,6 +139,7 @@ $(POST_DEST_MANIFEST_HTML_PATH): $(LATEMP_ROOT_SOURCE_DIR)/bin/gen-manifest.pl $
 	$(PERL) $<
 
 non_latemp_targets: $(CATB_COPY_POST)
+non_latemp_targets: $(POST_DEST__MIRROR_BASH)
 
 include lib/make/generated/asciidocs2db5-include.mak
 include lib/make/json_resume.mak

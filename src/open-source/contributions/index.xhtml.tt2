@@ -264,6 +264,14 @@ philosophical limitations of File::Find.
 
 [% END %]
 
+[% WRAPPER h2_section id = "jwm" title = "JWM" %]
+
+<p>
+I contributed <a href="https://github.com/joewing/jwm/pull/530">a pull request to prevent making background JPEG images blurry</a>.
+</p>
+
+[% END %]
+
 [% WRAPPER h2_section href = "https://fedoraproject.org/" id = "fedora" title = "Fedora Linux" %]
 
 <p>

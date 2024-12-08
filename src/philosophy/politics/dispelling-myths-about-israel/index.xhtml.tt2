@@ -5,7 +5,7 @@
 
 [% default_toc %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 There are many myths and misperceptions about Israel, that many people
@@ -14,20 +14,24 @@ There are many myths and misperceptions about Israel, that many people
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "doc_info"  title = "Document Information"  %]
+[% WRAPPER h2_section id = "doc_info" title = "Document Information" %]
 
 <ul>
 <li>
+<p>
 <b>Publication Date:</b> 16-May-2007
+</p>
 </li>
 <li>
+<p>
 <b>Last Updated:</b> 29-September-2018
+</p>
 </li>
 </ul>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "not_all_desert"  title = "Israel is not all Desert"  %]
+[% WRAPPER h2_section id = "not_all_desert" title = "Israel is not all Desert" %]
 
 <p>
 While the southern part of Israel (<a href="http://en.wikipedia.org/wiki/Negev">the Negev</a>) is a desert, most of the northern part has growth, and supports
@@ -41,7 +45,7 @@ Most Israelis live in the northern part of Israel, which is quite lively.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "civilised"  title = "Israel is Civilised"  %]
+[% WRAPPER h2_section id = "civilised" title = "Israel is Civilised" %]
 
 <p>
 Israel is a civilised country. It has stone buildings, roads, cars, trains,
@@ -51,7 +55,7 @@ Internet connectivity, and an abundant food supply.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "not_all_jews_are_haredi"  title = "Not all Israeli Jews are Orthodox (Haredi)"  %]
+[% WRAPPER h2_section id = "not_all_jews_are_haredi" title = "Not all Israeli Jews are Orthodox (Haredi)" %]
 
 <p>
 Most Israeli Jews are not Haredi Jews who dress almost completely in black.
@@ -65,7 +69,7 @@ dresses that women wear.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "more_serious_problems_than_terrorism"  title = "Israel has More Serious Problems than Terrorism"  %]
+[% WRAPPER h2_section id = "more_serious_problems_than_terrorism" title = "Israel has More Serious Problems than Terrorism" %]
 
 <p>
 While most of the Israeli-related news is about terrorist acts (or acts
@@ -77,39 +81,48 @@ problems in Israel than terrorism:
 <ol>
 
 <li>
+<p>
 More Israelis were killed in road accidents, than all those killed in
 terrorism and wars.
+</p>
 </li>
 
 <li>
+<p>
 It has very high taxation (sometimes over 60% of the wage), many irrational
 welfare laws, and a very poor middle class.
+</p>
 </li>
 
 <li>
+<p>
 There are many irrational regulations.
+</p>
 </li>
 
 <li>
+<p>
 There is a lot of theft, and other crimes.
+</p>
 </li>
 
 </ol>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "most_jews_dont_carry_a_gun"  title = "Most Jews don’t Carry a Gun"  %]
+[% WRAPPER h2_section id = "most_jews_dont_carry_a_gun" title = "Most Jews don’t Carry a Gun" %]
 
 <p>
-Some Israeli soldiers (males and females) are required to carry a gun with them
-during their service, but most don't. Moreover, Israelis who are not serving, are not required
-to do that, and most of them do not make use of their gun-bearing rights
-to carry a gun daily.
+Some Israeli soldiers (both males and females) are required to carry a gun
+with them during their service, but most don't. Moreover, Israelis who are not
+serving, are not required to do that, and most of them do not make use of
+gun-bearing privileges to carry a gun daily (assuming they have a good reason
+to apply for a gun licence).
 </p>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "high_life_expectancy"  title = "Israel has a High Life Expectancy"  %]
+[% WRAPPER h2_section id = "high_life_expectancy" title = "Israel has a High Life Expectancy" %]
 
 <p>
 Despite everything, according to
@@ -118,7 +131,7 @@ Israel has the 21st highest life expectancy in the world.</a>
 </p>
 [%- END -%]
 
-[% WRAPPER licence_sect  %]
+[% WRAPPER licence_sect %]
 
 [% license_obj.by_british_blurb( "year" => "2007", ) %]
 

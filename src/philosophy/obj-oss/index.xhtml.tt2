@@ -18,15 +18,29 @@ that aims to explain why the two are compatible.
 <h[% level %] id="[% doc %]-formats">Formats</h[% level %]>
 
 <ul>
-<li><a href="[% dir %][% doc %]/">HTML (read online)</a></li>
-<li><a href="[% dir %][% doc %].pdf">Acrobat Reader (PDF)</a></li>
-<li><a href="[% dir %][% doc %].rtf">MS Word RTF</a></li>
+
+<li>
+<p><a href="[% dir %][% doc %]/">HTML (read online)</a></p>
+</li>
+
+<li>
+<p><a href="[% dir %][% doc %].pdf">Acrobat Reader (PDF)</a></p>
+</li>
+
+<li>
+<p><a href="[% dir %][% doc %].rtf">MS Word RTF</a></p>
+</li>
+
 </ul>
 
 <h[% level %] id="[% doc %]-sources">DocBook/XML Sources</h[% level %]>
 
 <ul>
-<li><a href="[% dir %][% doc %].xml">XML Source</a></li>
+
+<li>
+<p><a href="[% dir %][% doc %].xml">XML Source</a></p>
+</li>
+
 </ul>
 
 [% END %]

@@ -1,7 +1,6 @@
 [%- SET title = "Two Gates and Two Angels - with a Twist" -%]
 [%- SET desc = "The two gates and two angels riddle - with a twist" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -90,7 +89,7 @@ with “T” if the angel is a truth-teller or “F” if he’s a liar. So the
 logical evaluation of the question I constructed looks like so:
 </p>
 
-<img src="two-angels.min.svg" alt="Two Angels Logic Diagram" class="svg_center math_angels"/>
+<img alt="Two Angels Logic Diagram" class="svg_center math_angels" src="two-angels.min.svg"/>
 
 <p>
 (Here’s the <a href="two-angels.svg">original Inkscape SVG image</a>).
@@ -101,8 +100,9 @@ As you can see, the angel values “L” (Left) and “R” right are XNORed exa
 twice in the way to the solution. Since XNOR is <a
 href="http://en.wikipedia.org/wiki/Commutative">Commutative</a> and
 <a href="http://en.wikipedia.org/wiki/Distributivity">Distributive</a>, we
-get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Since for every boolean
-“X XNOR X” is true, we get “Truth XNOR T XNOR T” which is the “Truth”.
+get “Truth XNOR (L XNOR L) XNOR (R XNOR R)”. Now, for every boolean
+“X”, “X XNOR X” is true. Thus, we get “Truth XNOR T XNOR T” which is the
+“Truth”.
 </p>
 
 <p>

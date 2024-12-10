@@ -125,7 +125,8 @@ h1 {
     }
 
     > .fortune {
-        > blockquote {
+        > blockquote,
+        > table.irc-conversation {
             margin-bottom: 3em;
         }
     }

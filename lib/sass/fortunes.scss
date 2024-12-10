@@ -46,6 +46,7 @@
     .info {
         border-collapse: collapse;
         margin: 0.7em;
+        margin-top: 3em;
 
         td {
             border: black thin solid;
@@ -177,6 +178,21 @@
 
                         @include fortune_radius_hover;
                     }
+                }
+            }
+        }
+    }
+}
+
+// Shelved for now given display: table-row limitations
+@if false {
+    .fortunes_list {
+        .fortune {
+            &,
+            & > .irc-body {
+                > blockquote,
+                > table.irc-conversation {
+                    margin-bottom: 3em;
                 }
             }
         }

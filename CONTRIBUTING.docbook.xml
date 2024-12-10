@@ -63,6 +63,11 @@ which have a <code>.t</code> extension.
 </para>
 
 <para>
+The <filename class="directory">Tests/lib</filename> directory contains Perl
+and Python modules that are only used by the automated test scripts.
+</para>
+
+<para>
 <code>bash -x bin/link-checker-for-shlomifish.org.bash</code> runs an
 internal-hyperlinks checker. It is not run implicitly because it takes
 a lot of time and resources.

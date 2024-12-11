@@ -488,7 +488,7 @@ personal, dynamic, philosophy.
 
 [% WRAPPER h3_section id = "mental_condition" title = ((shlomif_lang == "en") ? "My Mental Condition" : "מצבי הנפשי") %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <p>
 I had periods of <a href="http://en.wikipedia.org/wiki/Depression_%28mood%29">clinical
@@ -577,8 +577,11 @@ href="[% base_path %]meta/FAQ/#revealing_incriminating_details">התשובה ה�
 
 [% END %]
 
-[% WRAPPER en  %]
 <hr/>
+
+[% WRAPPER h2_section id = "enjoy-this-website" title = ((shlomif_lang == "en") ? "Enjoy this website!" : "אני מקווה שתהנו מהאתר שלי!") %]
+
+[% WRAPPER en %]
 
 <p>
 I hope you enjoy my web-site!
@@ -587,11 +590,10 @@ I hope you enjoy my web-site!
 <p class="indent">
 <i>Shlomi Fish</i>
 </p>
+
 [%- END -%]
 
-
-[% WRAPPER he  %]
-<hr/>
+[% WRAPPER he %]
 
 <p>
 אני מקווה שתהנו מהאתר שלי!
@@ -600,6 +602,9 @@ I hope you enjoy my web-site!
 <p class="heb_indent">
 <b>שלומי פיש</b>
 </p>
+
+[% END %]
+
 [%- END -%]
 
 </div>

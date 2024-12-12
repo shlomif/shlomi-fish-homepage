@@ -97,7 +97,9 @@ http://blog.woobling.org/2009/05/your-openid-sucks.html
 
 <section class="about_site">
 
+<header>
 <h2 id="about_site">About this Site</h2>
+</header>
 
 <div class="wrapper">
 
@@ -295,7 +297,9 @@ Tiffany (Tiff?) Alvord - this is your brother in effect, Shlomi Fish. The exorci
 
 <section class="fancy_sects news">
 
+<header>
 <h2 id="news">News</h2>
+</header>
 
 [% news_obj.render_front_page() %]
 

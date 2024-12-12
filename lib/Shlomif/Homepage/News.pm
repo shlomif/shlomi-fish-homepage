@@ -249,11 +249,11 @@ sub get_item_html
     my $article_attr = ' class="news_item"';
 
     return
-          qq{<$article$article_attr><h3 class="newsitem" id="}
+          qq{<$article$article_attr><header><h3 class="newsitem" id="}
         . $date->strftime(q{shlomifish.org_news_%Y_%m_%d}) . q{">}
         . $self->_format_date_human($date)
         . ( defined($title) ? ": $title" : "" )
-        . "</h3>\n\n"
+        . "</h3></header>\n\n"
         . _tt2_process_body( $item->{'body'} )
         . qq{\n</$article>\n};
 }

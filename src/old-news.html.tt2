@@ -4,7 +4,11 @@
 
 [% news_obj.render_old_news() %]
 
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">30-Oct-2004</h3>
+</header>
 
 <p class="newsitem">
 Added the <a href="[% base_path %]open-source/bits.html">Open-Source Bits and
@@ -13,7 +17,13 @@ Bobs page</a>. Added the
 for the Thermodynamics course I took in the Technion</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">12-Oct-2004</h3>
+</header>
 
 <p class="newsitem">
 The site has a new URL, which should cause less name-service resolution
@@ -22,7 +32,13 @@ problems. The new domain is
 old domain will redirect to the new one.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">23-Sep-2004</h3>
+</header>
 
 <p class="newsitem">
 The site has seen a major revamp in the last couple of days. Here is a list
@@ -55,7 +71,13 @@ high-school subjects and computer-related topics.
 </li>
 </ol>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">10-Aug-2004</h3>
+</header>
 
 <p class="newsitem">
 My <a href="http://www.advogato.org/person/shlomif/">Advogato Diary</a>
@@ -64,7 +86,13 @@ I also conducted <a href="open-source/interviews/sussman.html">an
 interview with Ben Collins-Sussman</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">17-Feb-2004</h3>
+</header>
 
 <p class="newsitem">
 The URL of my homepage has changed. The new URL is <a href="http://shlomi.il.eu.org/">http://shlomif.il.eu.org/</a>. The old URLs will work for the near
@@ -72,14 +100,26 @@ future, but not permanently. <a href="shlomif.il.eu.org-questions.html">Read
 more about it</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">26-Jun-2003</h3>
+</header>
 
 <p class="newsitem">
 Added my favourite online comic strips to the <a href="links.html">links
 section</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">19-Jun-2003</h3>
+</header>
 
 <p class="newsitem">
 Added the <a href="open-source/favourite/">favourite open source
@@ -88,35 +128,65 @@ software list</a>. Added the
 Database Access lecture</a> to the <a href="[% PROCESS rellink url = "lecture/", host = "vipe",  %]">lectures collection</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">26-Oct-2002</h3>
+</header>
 
 <p class="newsitem">
 Added the <a href="open-source/resources/software-tools/">software
 tools directory</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">7-Aug-2002</h3>
+</header>
 
 <p class="newsitem">
 Added <a href="humour/ways_to_do_it.html">Ways to do it according
 to the Programming Languages of the World</a> to the Humour section. Enjoy!
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">18-May-2002</h3>
+</header>
 
 <p class="newsitem">
 I have placed the fortune files I am maintaining online
 <a href="humour/fortunes/">here</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">26-Jun-2003</h3>
+</header>
 
 <p class="newsitem">
 Added my favourite online comic strips to the <a href="links.html">links
 section</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">19-Jun-2003</h3>
+</header>
 
 <p class="newsitem">
 Added the <a href="open-source/favourite/">favourite open source
@@ -125,28 +195,52 @@ software list</a>. Added the
 Database Access lecture</a> to the <a href="[% PROCESS rellink url = "lecture/", host = "vipe",  %]">lectures collection</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">26-Oct-2002</h3>
+</header>
 
 <p class="newsitem">
 Added the <a href="open-source/resources/software-tools/">software
 tools directory</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">7-Aug-2002</h3>
+</header>
 
 <p class="newsitem">
 Added <a href="humour/ways_to_do_it.html">Ways to do it according
 to the Programming Languages of the World</a> to the Humour section. Enjoy!
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">18-May-2002</h3>
+</header>
 
 <p class="newsitem">
 I have placed the fortune files I am maintaining online
 <a href="humour/fortunes/">here</a>.
 </p>
 
+</article>
+
+<article class="news_item">
+
+<header>
 <h3 class="newsitem">15-May-2002</h3>
+</header>
 
 <p class="newsitem">
 I set up a
@@ -154,5 +248,7 @@ I set up a
 discussing my stories on Yahoo-Groups. Feel free to join it or post messages
 there. (one does not need to be a subscriber to post).
 </p>
+
+</article>
 
 [% END %]

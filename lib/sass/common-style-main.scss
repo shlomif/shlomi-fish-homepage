@@ -831,8 +831,12 @@ div.abstract {
 
         border-collapse: collapse;
         border: 3px black solid;
-        margin-top: 2em;
         margin-left: 1em;
+        margin-top: 2em;
+
+        &:last-child {
+            margin-bottom: 2em;
+        }
     }
 }
 

@@ -9,4 +9,17 @@
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Harry-Potter.html") %]
 
+[% WRAPPER h2_section id = "see_also" title = "See Also:" %]
+
+<ul>
+
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=C6ju2-IjWhs">Sesame Street: Furry Potter and The Goblet of Cookies (Harry Potter Parody)</a> - another Muppets / Harry Potter crossover.
+</p>
+</li>
+</ul>
+
+[% END %]
+
 [% END %]

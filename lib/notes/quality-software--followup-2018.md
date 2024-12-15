@@ -15,19 +15,19 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - Follow-up on [C-and-C++ bad-elements](http://www.shlomifish.org/lecture/C-and-CPP/bad-elements/)
     - Follow-up on [“What are some best practices in software development that I should adopt?”](https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt)
     - Follow-up on [FAQ - “This site loads so quickly. What is your secret?”](https://www.shlomifish.org/meta/FAQ/site_loads_quickly.xhtml)
-    - Freecell Solver speedups ( <https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks> ), new features ( <http://fc-solve.shlomifish.org/features.html> ), tests suite, Continuous Integration (CI), etc.
+    - Freecell Solver speedups ( [fc-solve benchmarks](https://github.com/shlomif/fc-solve/tree/master/fc-solve/benchmarks) ), new features ( [fc-solve features' list](http://fc-solve.shlomifish.org/features.html) ), tests suite, Continuous Integration (CI), etc.
         - Freecell Solver's MS 32,000 benchmark went below 3 seconds - [Git commit](https://github.com/shlomif/fc-solve/commit/5ca2b0d58acc37e21e5393aa7e534187dc722f29). This is largely thanks to the new [xxHash](http://cyan4973.github.io/xxHash/) . I recall that when we went below 6 seconds or so, someone told me we'll never go below 5 seconds… \#Optimization \#opensource
 
       [@shlomif Tweet](https://twitter.com/shlomif/status/1132302032310870016)
 
         - Cost of code complexity and readability
-    - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from <https://perlhacks.com/2012/03/you-must-hate-version-control-systems/>
+    - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from [“You Must Hate Version Control Systems” on Perl Hacks](https://perlhacks.com/2012/03/you-must-hate-version-control-systems/)
     - Since the essays were written, some apps improved while others got worse.
     - Electron-based apps:
         - [“The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File \[satire\]”](http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/)
         - [Benchmarks showing Electron apps are super slow and eat memory like there is no tomorrow : r/programming](https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/)
     - Software becoming slower and more resource hungry:
-        - <https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b>
+        - [Premature optimization is the root of all evil is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b)
         - <https://twitter.com/TheoVanGrind/status/888850519564984322>
         - <https://twitter.com/xbs/status/626781529054834688>
     - Windows Update — slow:
@@ -48,20 +48,20 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - Fast
     - [KDE’s desktop environment (“Plasma”)](https://en.wikipedia.org/wiki/KDE) ’s update from 3 to 4 was poorly executed (there were many bugs and quirks), and so was the transition from 4 to 5.
         - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called [“Activities”](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
-        - <https://bugs.kde.org/show_bug.cgi?id=343246>
+        - [KDE bug No. 343246](https://bugs.kde.org/show_bug.cgi?id=343246)
         - [http://www.trinitydesktop.org/ (Trinity Desktop Environment)](http://www.trinitydesktop.org/) - fork of KDE 3, continuing its spirit.
         - I mostly use Xfce, which is functional and fast. Like other desktop environments, one can run KDE applications on it.
     - Mostly Positive: [CMake](https://en.wikipedia.org/wiki/CMake)
         - Not perfect but less errorprone and faster than GNU Autotools
-        - <http://www.shlomifish.org/open-source/anti/autohell/>
+        - [Escape from GNU autohell](http://www.shlomifish.org/open-source/anti/autohell/)
         - [Meson (build-tool)](https://en.wikipedia.org/wiki/Meson_(software))
     - Reflections on “Simple” in the context of software:
-        - <https://shlomif-tech.livejournal.com/64318.html>
+        - [Blog post](https://shlomif-tech.livejournal.com/64318.html)
         - “Simple” may imply lacking features or being hard to use.
 
 ## Comment I wrote
 
-On <https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b> :
+On [Premature optimization is the root of all evil is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b) :
 
 > Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://www.shlomifish.org/philosophy/computers/high-quality-software/reflections-on-software-quality-trends/) ).
 >

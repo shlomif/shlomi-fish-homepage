@@ -678,8 +678,8 @@ EOF
         tagline =>
 "“If I cannot have 100% of his time, soul, mind, love, and knowledge…”",
         logo_alt   => "TODO",
-        logo_class => "selina",
-        logo_src   => "me/rindolf/images/evil-reindeer-200w.png",
+        logo_class => "hedamsel",
+        logo_src   => "humour/images/captioned-image--moral-gps-600.webp",
         logo_svg   => '//$SKIP',
         entry_id   => "He-Damsel-in-Distress-and-a-Distressing-Damsel",
         entry_text => "He-Damsel-in-Distress and a Distressing Damsel",

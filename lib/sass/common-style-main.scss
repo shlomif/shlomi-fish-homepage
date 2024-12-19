@@ -673,6 +673,10 @@ section {
     margin-bottom: 50px;
 }
 
+.story_logo.hedamsel {
+    max-width: 30%;
+}
+
 .aphorisms article {
     @include highlight_div_frame;
 }

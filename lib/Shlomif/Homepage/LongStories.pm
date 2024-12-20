@@ -688,7 +688,7 @@ EOF
         abstract   => <<"EOF",
 <p class="abstract">
 In a parallel universe,
-<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord’s</a>,
+<a href="https://en.wikipedia.org/wiki/Tiffany_Alvord">Tiffany Alvord’s</a>
 territorial jealousy of Shlomi Fish (=
 me), seemed bound to have a far-reaching effect on the multiverse’s integrity.
 But luckily the Foundation For Fantastecha™n Functional Fidelity (= “FFFFF” or

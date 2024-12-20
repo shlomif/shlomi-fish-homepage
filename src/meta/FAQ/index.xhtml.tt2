@@ -3791,11 +3791,7 @@ explanation instead of assuming purity of intents.
 
 <p>
 That put aside - what will driving traffic to my site, buy me exactly? I don't
-get paid for each visitor or "unique hit" or whatever. Moreover, the
-<a href="http://en.wikipedia.org/wiki/Project_Wonderful">Project Wonderful</a>
-ads that used to be on my site were not pay-per-click, but rather pay-per-time
-(and now are no longer present after Project Wonderful announced that they will
-stop operating). While I admit I’d like my site to be as popular as possible,
+get paid for each visitor or "unique hit" or whatever. While I admit I’d like my site to be as popular as possible,
 the real reason why I link to pages there is because they are relevant to the
 discussion at hand. If you’re too envious of me linking to my site, then please
 stop and get your own site which you can start populating with interesting
@@ -3803,6 +3799,19 @@ content to your heart’s content. Moreover, you can use my site as a
 starting-point by <a href="[% base_path %]meta/site-source/">forking its public
 version-control repository</a>.
 </p>
+
+<p>
+Moreover, as of 2024-12-20 , the site has no ads.
+</p>
+
+[% IF 0 %]
+<p>
+<a href="http://en.wikipedia.org/wiki/Project_Wonderful">Project Wonderful</a>
+ads that used to be on my site were not pay-per-click, but rather pay-per-time
+(and now are no longer present after Project Wonderful announced that they will
+stop operating).
+</p>
+[% END %]
 
 [% WRAPPER h4_section id = "advertise_your_site" title = "Why do you advertise/“spam”/“self-promote” pages from your sites?" %]
 

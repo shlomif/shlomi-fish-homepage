@@ -104,7 +104,7 @@ EOF
         {
             html => <<"EOF",
 <p>
-Showing the rented apartment to a hot girl.
+<q>I will await her.</q>
 </p>
 EOF
             id   => "showing-the-apartment-to-a-hot-girl",
@@ -113,7 +113,7 @@ EOF
         {
             html => <<"EOF",
 <p>
-Preventing a football goal.
+<q>Never give up.</q>
 </p>
 EOF
             id   => "preventing-a-football-goal",

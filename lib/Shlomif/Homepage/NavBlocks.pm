@@ -1225,7 +1225,9 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
 q{<a href="https://muppet.fandom.com/wiki/Muppet_Wiki">Muppets</a> Fanfiction},
                 ),
                 $Screenplays_TR,
-                _tr_s( qw( muppets_all the_10th_muse__mlpfim ), ),
+                _tr_s(
+                    qw( muppets_all the_10th_muse__mlpfim he_damsel_in_distress ),
+                ),
                 $Essays_TR,
                 _get_tr(
 'commercial_fanfic_initiative__mission_stmt__w_explicit_title'

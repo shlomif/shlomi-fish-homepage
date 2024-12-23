@@ -85,7 +85,7 @@ name for an array in which all elements are placed one after the other.
 
 <p>
 I started doing it and made some progress. However, then I was told that
-they’d rather I didn’t use some kind of proprietary vector based lookup, but
+they’d rather I didn’t use some kind of in-house vector based lookup, but
 a “standard database” such as Informix, Oracle, etc. We didn’t have one like
 that so they told me to start with Microsoft Access.
 </p>
@@ -139,24 +139,30 @@ and that there are faster <a href="[% base_path %]open-source/resources/database
 [% WRAPPER h2_section id = "back_to_basic" title = "Back to Basics" %]
 
 <p>
-So I started finishing the vector-based database, which was I had started
-to write in the first place. A few notes:
+So I started to continue the work on the in-memory, vector-based database,
+which was what I had started to write in the first place. A few notes:
 </p>
 
 <ol>
 <li>
+<p>
 I implemented everything using C arrays of C structs, a different
 one for each table. As a result there was a lot of duplicate code there.
+</p>
 </li>
 <li>
+<p>
 Retrospectively, I understand that I could have implemented it with
 faster insertions using a <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">balanced binary tree</a>.
+</p>
 </li>
 <li>
+<p>
 I ended up implementing my own binary search function using trial and error,
 which I eventually used for inserting a new record into the struct, instead
 of Quick-Sorting it. That way an insertion was O(N) instead of O(N*log(N))
 to O(N**2).
+</p>
 </li>
 </ol>
 

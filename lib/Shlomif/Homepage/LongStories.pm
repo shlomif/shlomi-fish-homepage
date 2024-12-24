@@ -182,7 +182,7 @@ EOF
         logo_src   => "humour/Star-Trek/We-the-Living-Dead/images/fiery-Q.png",
         logo_svg   => '//$SKIP',
         entry_id   => "we-the-living-dead",
-        entry_text => "Star Trek: We the Living Dead",
+        entry_text => "Star Trek: “We the Living Dead”",
         start_date => DateTime->new( year => 2007, ),
         href       => "humour/Star-Trek/We-the-Living-Dead/",
         abstract   => <<'EOF',

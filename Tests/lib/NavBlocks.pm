@@ -203,7 +203,7 @@ my %tr_s = (
         ],
     ),
     'star_trek_wtld' => _tr(
-        title => "Star Trek: We, the Living Dead",
+        title => "Star Trek: “We, the Living Dead”",
         items => [
             _fp( path => "humour/Star-Trek/We-the-Living-Dead/", ),
             _ontext(

@@ -135,7 +135,7 @@ my $_humour_tree_contents = {
                             ],
                         },
                         {
-                            text => "Star Trek: We the Living Dead",
+                            text => "Star Trek: “We the Living Dead”",
                             url  => "humour/Star-Trek/We-the-Living-Dead/",
                             subs => [
                                 {

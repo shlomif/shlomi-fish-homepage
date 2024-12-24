@@ -288,7 +288,7 @@ foreach my $ext ( '', 'index.xhtml', )
 </tr>
 
 <tr>
-<td><b>Star Trek: We, the Living Dead</b></td>
+<td><b>Star Trek: “We, the Living Dead”</b></td>
 <td>
 <ul>
 <li><p><a href="../Star-Trek/We-the-Living-Dead/">Front Page</a></p></li>

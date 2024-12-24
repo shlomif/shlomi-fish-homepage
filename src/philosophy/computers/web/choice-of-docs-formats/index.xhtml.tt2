@@ -158,7 +158,7 @@ text-with-brief-style-specifiers can be found in
 <a href="http://zgp.org/pipermail/linux-elitists/2005-August/thread.html#11265">this
 Linux-elitists thread called “mini-markup language?”</a>. Prominent examples
 include <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> which can
-be converted to HTML, XHTML and DocBook/XML using <a href="https://asciidoctor.org/">Asciidoctor</a>, and
+be converted to HTML, XHTML and DocBook/XML 5 using <a href="https://asciidoctor.org/">Asciidoctor</a>, and
 the many <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> dialects,
 which can only be converted to XHTML (and suffer from <a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">fragmentation
 and incompatibilities</a>).
@@ -202,6 +202,13 @@ for use as a good generic markup.
 There are too many <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> dialects (e.g: GitHub's, reddit's, Stack Exchange's) each one with its
 <a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">own army and navy (= fragmentation and incompatibilities</a>).
 Moreover, they can only be converted to XHTML.
+</p>
+
+<p>
+Moreover, I recently grew disenchanted with the power and predictability of
+"lightweight markup languages" in general. Even elementary things like nesting
+&lt;ul&gt; , &lt;ol&gt; , &lt;p&gt; elements, or &lt;a&gt; elements inside
+&lt;blockquote&gt; tend to be unpredictable and buggy and quirky.
 </p>
 
 [% END %]

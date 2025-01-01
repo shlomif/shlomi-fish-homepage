@@ -6054,6 +6054,84 @@ I Hate Advocacy</a> - by Mark-Jason Dominus.
 
 [%- END -%]
 
+[% WRAPPER h4_section id = "why_perl" title = "Why are you still using Perl? Can't you rewrite all your Perl code in Python / JavaScript / TypeScript / Erlang / Intercal / etc.?" %]
+
+<p>
+It is true that Perl 5 seems to have somewhat fallen out of favour, but as much as I like Python
+(and I do), I still also like Perl. One cannot rewrite their entire codebase in [insert hyped
+language/stack/framework/technology of the present] every 6 months or so. Back
+when I was interested in learning <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">the Ruby programming language</a>,
+some of its enthusiasts implied I should use <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">Rails</a>
+for my sites. And guess what? The Rails and Ruby craze and hype are gone, and
+<a href="[% base_path %]humour/fortunes/show.cgi?id=compiling-a-C-program-from-20-years-ago">Rails has its share of issues</a>,
+and I'm glad my site was not converted to be a Rails application.
+It can also happen to <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gamedev--everything-is-dead">node.js, Python</a>, PHP, or WordPress.
+</p>
+
+<p>
+Currently, <a href="https://dev.perl.org/perl5/">perl5</a> is quite actively developed
+with annual major releases, and with as little <a href="http://blogs.perl.org/users/aristotle/2013/06/decade-scale.html">backward compatibility broken</a> as possible. The
+<a href="https://en.wikipedia.org/wiki/CPAN">CPAN</a> ecosystem is not quite as
+active as <a href="https://en.wikipedia.org/wiki/Python_Package_Index">PyPI</a>
+or <a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a>, but still proves
+useful often, and also avoids breaking backward compatibility as much as possible.
+Moreover, I can often make use of modules and libraries in other languages using
+<a href="https://metacpan.org/pod/distribution/Inline/lib/Inline.pod">the Inline::* family</a>
+of CPAN modules
+and other <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFIs</a>.
+</p>
+
+<p>
+Note that I also write some new code in Python, Julia, bash, C, C++, and other languages.
+</p>
+
+<blockquote cite="https://twitter.com/shlomif/status/1490175665597030405">
+
+<p>
+Shlomi Fish on Twitter: "From #IRC : One thing we appreciate about #perl #CPAN,
+is that there is often a "category killer", which while not always perfect, is
+used. On PyPI and npm, many use cases have many alternatives (re
+<a href="https://t.co/xCbM7jfC2t">https://t.co/xCbM7jfC2t</a> ;
+<a href="https://t.co/Nx8Uu3JvAw">https://t.co/Nx8Uu3JvAw</a>) without a clear winner."
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1490175665597030405">Tweet</a> )
+</p>
+
+<blockquote cite="https://twitter.com/shlomif/status/1658766516471447552">
+
+<p>
+Shlomi Fish on Twitter: via @nixsanctuary : <a href="https://blog.visionarycto.com/p/my-20-year-career-is-technical-debt">“My 20 Year Career is Technical Debt or Deprecated”</a>.
+</p>
+
+<p>
+I can emphatise, but as opposed to him, large amounts of my FOSS / Creative Commons / etc. code+content are still functional (after many transitions) .
+</p>
+
+<p>
+Avoiding being an early adopter has advantages.
+</p>
+
+</blockquote>
+
+<p>
+( <a href="https://twitter.com/shlomif/status/1658766516471447552">Tweet</a> )
+</p>
+
+<p>
+<strong>Note:</strong> please do not interpret this FAQ answer as a challenge
+to tell me how to convert my site to be a Ruby-on-Rails app or whatever. Ruby
+is post-hip / post-hype, seems to have become unpopular, and I don't like it,
+while I still like Perl 5 and Python 3. Any merge-request that introduces new
+Ruby code will likely be rejected (with a possible exception for ruby gems
+which provide functionality which is not found elsewhere).
+</p>
+
+[%- END -%]
+
 [% WRAPPER h4_section id = "publishing_proj_euler" title = "Why did you publicly share your solutions to Project Euler problems despite their request to avoid doing that?" %]
 
 <p>
@@ -6180,84 +6258,6 @@ Another factor that makes my repositories more numerous is the fact that I use i
 repositories for some <a href="https://en.wikipedia.org/wiki/Image_macro">image macros</a>,
 for some stories and screenplays, and for some essays. I am not a purist of the
 <a href="https://en.wikipedia.org/wiki/Monorepo">"monorepo"</a> strategy.
-</p>
-
-[%- END -%]
-
-[% WRAPPER h4_section id = "why_perl" title = "Why are you still using Perl? Can't you rewrite all your Perl code in Python / JavaScript / TypeScript / Erlang / Intercal / etc.?" %]
-
-<p>
-It is true that Perl 5 seems to have somewhat fallen out of favour, but as much as I like Python
-(and I do), I still also like Perl. One cannot rewrite their entire codebase in [insert hyped
-language/stack/framework/technology of the present] every 6 months or so. Back
-when I was interested in learning <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">the Ruby programming language</a>,
-some of its enthusiasts implied I should use <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">Rails</a>
-for my sites. And guess what? The Rails and Ruby craze and hype are gone, and
-<a href="[% base_path %]humour/fortunes/show.cgi?id=compiling-a-C-program-from-20-years-ago">Rails has its share of issues</a>,
-and I'm glad my site was not converted to be a Rails application.
-It can also happen to <a href="[% base_path %]humour/fortunes/show.cgi?id=sharp-gamedev--everything-is-dead">node.js, Python</a>, PHP, or WordPress.
-</p>
-
-<p>
-Currently, <a href="https://dev.perl.org/perl5/">perl5</a> is quite actively developed
-with annual major releases, and with as little <a href="http://blogs.perl.org/users/aristotle/2013/06/decade-scale.html">backward compatibility broken</a> as possible. The
-<a href="https://en.wikipedia.org/wiki/CPAN">CPAN</a> ecosystem is not quite as
-active as <a href="https://en.wikipedia.org/wiki/Python_Package_Index">PyPI</a>
-or <a href="https://en.wikipedia.org/wiki/Npm_(software)">npm</a>, but still proves
-useful often, and also avoids breaking backward compatibility as much as possible.
-Moreover, I can often make use of modules and libraries in other languages using
-<a href="https://metacpan.org/pod/distribution/Inline/lib/Inline.pod">the Inline::* family</a>
-of CPAN modules
-and other <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFIs</a>.
-</p>
-
-<p>
-Note that I also write some new code in Python, Julia, bash, C, C++, and other languages.
-</p>
-
-<blockquote cite="https://twitter.com/shlomif/status/1490175665597030405">
-
-<p>
-Shlomi Fish on Twitter: "From #IRC : One thing we appreciate about #perl #CPAN,
-is that there is often a "category killer", which while not always perfect, is
-used. On PyPI and npm, many use cases have many alternatives (re
-<a href="https://t.co/xCbM7jfC2t">https://t.co/xCbM7jfC2t</a> ;
-<a href="https://t.co/Nx8Uu3JvAw">https://t.co/Nx8Uu3JvAw</a>) without a clear winner."
-</p>
-
-</blockquote>
-
-<p>
-( <a href="https://twitter.com/shlomif/status/1490175665597030405">Tweet</a> )
-</p>
-
-<blockquote cite="https://twitter.com/shlomif/status/1658766516471447552">
-
-<p>
-Shlomi Fish on Twitter: via @nixsanctuary : <a href="https://blog.visionarycto.com/p/my-20-year-career-is-technical-debt">“My 20 Year Career is Technical Debt or Deprecated”</a>.
-</p>
-
-<p>
-I can emphatise, but as opposed to him, large amounts of my FOSS / Creative Commons / etc. code+content are still functional (after many transitions) .
-</p>
-
-<p>
-Avoiding being an early adopter has advantages.
-</p>
-
-</blockquote>
-
-<p>
-( <a href="https://twitter.com/shlomif/status/1658766516471447552">Tweet</a> )
-</p>
-
-<p>
-<strong>Note:</strong> please do not interpret this FAQ answer as a challenge
-to tell me how to convert my site to be a Ruby-on-Rails app or whatever. Ruby
-is post-hip / post-hype, seems to have become unpopular, and I don't like it,
-while I still like Perl 5 and Python 3. Any merge-request that introduces new
-Ruby code will likely be rejected (with a possible exception for ruby gems
-which provide functionality which is not found elsewhere).
 </p>
 
 [%- END -%]

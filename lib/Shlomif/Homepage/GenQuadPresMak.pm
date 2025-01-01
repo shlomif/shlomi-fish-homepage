@@ -5,15 +5,16 @@ use warnings;
 
 use Moo;
 
-use Path::Tiny                       qw/ path /;
-use File::Update                     qw/ write_on_change /;
-use Template                         ();
-use Text::VimColor 0.29              ();
+use File::Update        qw/ write_on_change /;
+use Path::Tiny          qw/ path /;
+use Template            ();
+use Text::VimColor 0.29 ();
+
 use Shlomif::Homepage::Presentations ();
 
 my $gen_quadpres_fn = "lib/make/generated/sf-homepage-quadpres-generated.mak";
 
-my $BASENAMES = <<'EOF';
+my $WMLECT_EXAMPLES_FNS = <<'EOF';
 APIs/grid/index.html.wml
 APIs/toc/index.html.wml
 bolding/template.wml
@@ -37,11 +38,11 @@ sub generate
 {
     my ( $self, $args ) = @_;
 
-    foreach my $fn ( split /\n/, $BASENAMES )
+    foreach my $fn ( split /\n/, $WMLECT_EXAMPLES_FNS )
     {
         my $ffn  = "lib/presentations/qp/Website-Meta-Lecture/src/examples/$fn";
         my $dest = path("$ffn.html");
-        if ( !$dest->exists() )
+        if ( not $dest->exists() )
         {
             my $syntax = Text::VimColor->new(
                 file           => $ffn,
@@ -76,6 +77,3 @@ EOF
 }
 
 1;
-
-# __END__
-# # Below is stub documentation for your module. You'd better edit it!

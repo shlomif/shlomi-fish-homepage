@@ -45,7 +45,7 @@ use Moo;
             or die "$!";
 
         my $serve_fn = "$dir/serve.pl";
-        write_on_change( scalar( path($serve_fn) ), \<<"EOF");
+        write_on_change( scalar( path($serve_fn) ), \<<"EOF" );
 #!/usr/bin/env perl
 
 use strict;
@@ -61,7 +61,7 @@ EOF
         path($dot_q)->mkpath;
         path("$dot_q/is_root")->spew_utf8('');
 
-        write_on_change( scalar( path("$dir/Contents.pm") ), \<<'EOF');
+        write_on_change( scalar( path("$dir/Contents.pm") ), \<<'EOF' );
 package Contents;
 
 use strict;

@@ -28,7 +28,7 @@ my $POST_DEST = $obj->t2_post_dest();
     my $content =
         path(
 "$POST_DEST/philosophy/philosophy/putting-all-cards-on-the-table-2013/index.xhtml"
-    )->slurp_utf8;
+        )->slurp_utf8;
 
     # TEST
     ok(
@@ -255,7 +255,7 @@ qr{https?\Q://www.shlomifish.org/humour/bits/facts/\EChuck[^\-]Norris/}ms,
     my $content =
         path(
 "$POST_DEST/humour/bits/Emma-Watson-applying-for-a-software-dev-job/index.xhtml"
-    )->slurp_utf8;
+        )->slurp_utf8;
 
     my $needle =
 q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
@@ -330,7 +330,7 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
     my $content =
         path(
 "$POST_DEST/humour/Queen-Padme-Tales/Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors.html"
-    )->slurp_utf8;
+        )->slurp_utf8;
 
     # TEST
     like( $content, qr{<div class="screenplay"}, 'Contains a screenplay div.' );
@@ -343,7 +343,7 @@ q#<a href="https://en.wikipedia.org/wiki/Harry_Potter_%28film_series%29">#;
     my $content =
         path(
 "$POST_DEST/humour/The-10th-Muse/The-10th-Muse--Athena-Gets-Laid.screenplay-text.txt"
-    )->slurp_utf8;
+        )->slurp_utf8;
 
     # TEST
     like( $content, qr{\@Athena}, 'Contains username.' );

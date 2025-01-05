@@ -56,7 +56,8 @@ if (0)
         my $new_text = qq#Redirect permanent /${dn}${IDXH} /${dn}\n#;
         if ($is_subdir)
         {
-            path($dir_src)->child( ( split m#/#, $dn ), ".htaccess" )
+            path($dir_src)
+                ->child( ( split m#/#, $dn ), ".htaccess" )
                 ->append_utf8($new_text);
         }
         $out_text .= $new_text;

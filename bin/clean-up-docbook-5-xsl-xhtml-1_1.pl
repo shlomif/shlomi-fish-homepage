@@ -27,7 +27,7 @@ my $filename = shift(@ARGV)
     $s =~ s{\A.*?<body[^>]*>}{}ms;
     $s =~ s{</body>.*\z}{}ms;
 
-    my %to_process = ( map { $_ => 1 } split /\n+/, <<'EOF');
+    my %to_process = ( map { $_ => 1 } split /\n+/, <<'EOF' );
 A-hashtag-SummerNSA-s-Reading
 SummerNSA-2014-09-call-for-action
 case-for-drug-legalisation--hebrew-v3

@@ -25,7 +25,7 @@ sub title_html
             path => sprintf( "meta/nav-blocks/blocks/#%s", $args->{table}->id ),
             no_wrap => 1,
         }
-    )->render($args);
+        )->render($args);
 }
 
 1;

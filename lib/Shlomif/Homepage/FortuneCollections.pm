@@ -57,7 +57,7 @@ sub calc_single_fortune_record_toc_entry
     my $id   = $r->id;
     my $desc = $r->desc;
 
-    return ( <<"EOF" );
+    return (<<"EOF");
 <li>
 <p>
 <a href="$id.html"><b>$id</b></a>
@@ -126,7 +126,7 @@ EOF
         my $id    = $r->id();
         my $title = $r->title();
 
-        $ret .= <<"FOO_EOF" ;
+        $ret .= <<"FOO_EOF";
 <li><a href="#$id">$title</a><br/>
 (((((include "fortunes/xhtmls/$id.toc-xhtml")))))
 </li>

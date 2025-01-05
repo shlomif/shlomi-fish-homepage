@@ -42,7 +42,7 @@ foreach my $ad ( path("Ads-for-Homepage")->children(qr/\.html\z/) )
 
     my $text = $1;
 
-    path("t2/$path")->append_utf8( <<"END_OF_HTML" );
+    path("t2/$path")->append_utf8(<<"END_OF_HTML");
 
 
 ;;; Ad added at 2007-Oct-20 / 2007-10-20

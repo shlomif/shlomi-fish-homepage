@@ -141,7 +141,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         Programming Languages</title>
     </info>
 
-    <section xml:id="linda_mciver_approach"><info><title>Linda McIver’s Thesis Approach</title></info>
+    <section xml:id="linda_mciver_approach">
+
+    <info><title>Linda McIver’s Thesis Approach</title></info>
 
         <para>
             <link xlink:href="http://www.csse.monash.edu.au/~lindap/">Linda
@@ -759,8 +761,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </section>
 </section>
 
-<section xml:id="verdict"><info><title>My Verdict</title></info>
+<section xml:id="verdict">
 
+<info><title>My Verdict</title></info>
 
     <para>
         According to these constraints one can conclude that one should
@@ -1009,11 +1012,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         <info><title>Final Verdict</title></info>
 
         <para>
-            All things considered, I’d say that Perl is the best choice now,
-            as Python is too strict and unexpressive, and Ruby is documented
-            in an extremely inadequate way. Again, any of the three languages
-            would be a fine choice, and all of them should be learned by
-            any programmer who is worth his weight in salt.
+            All things considered, I’d say that Python is the best choice now,
+            as Perl’s scope is larger, and is less consistent, and Ruby is also
+            less consistent, and fell out of favour from the software
+            developers’ community. Again, any of the three languages would be a
+            fine choice, and all of them should be learned by any programmer
+            who is worth his weight in salt.
         </para>
         <para>
             Note that other than the main players in the dynamic language
@@ -1040,9 +1044,14 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
                 </footnote>.
         </para>
+
     </section>
+
 </section>
-<section xml:id="types_of_teaching"><info><title>Some Types of Teaching</title></info>
+
+<section xml:id="types_of_teaching">
+
+<info><title>Some Types of Teaching</title></info>
 
     <para>
         There are several different types of teaching programming to laymen.
@@ -1092,9 +1101,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         probably doesn’t. However, it influences the way the language should
         be taught and which parts of it should be taught first.
     </para>
-</section>
-<section xml:id="conclusion"><info><title>Conclusion</title></info>
 
+</section>
+
+<section xml:id="conclusion">
+
+<info><title>Conclusion</title></info>
 
     <para> I talked with a few people on the IRC about it and some of them told
         me something along the lines of “What makes you think that you know
@@ -1158,8 +1170,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
     <para>
         So my opinion still remains: Perl, Python or Ruby are the best
-        languages for introducing non-programmers to programming, while Perl
-        is the best, and Python is probably still the worst of the three.
+        languages for introducing non-programmers to programming, while Python
+        is the best, and Ruby is probably still the worst of the three.
         However, note that any decent programming training will introduce his
         developers to more than one language, and a prospective programmer
         should not worry if he started out with a language that I consider
@@ -1167,13 +1179,20 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         attitude (“I know that I do not know”), one can become a better and
         better programmer regardless of his initial background.
     </para>
+
 </section>
-<section xml:id="other_good_food_for_thought"><info><title>Other Good Food for Thought about Teaching</title></info>
+
+<section xml:id="other_good_food_for_thought">
+
+<info><title>Other Good Food for Thought about Teaching</title></info>
 
     <para>
         This section will bring other good for thought about teaching.
     </para>
-    <section xml:id="live_learn"><info><title>“Live as if you were to die tomorrow. Learn as if you were to
+
+    <section xml:id="live_learn">
+
+    <info><title>“Live as if you were to die tomorrow. Learn as if you were to
             live forever.”</title></info>
 
         <para>
@@ -1200,14 +1219,18 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             different ways.
         </para>
     </section>
-    <section xml:id="three_levels_of_learning"><info><title>Three Levels of Learning</title></info>
+
+    <section xml:id="three_levels_of_learning">
+
+    <info><title>Three Levels of Learning</title></info>
 
         <para>
-            Rabbi Hanina used to say “I learned a lot from my teachers, and
+            Rabbi Hanina used to say <quote>I learned a lot from my teachers, and
             from my friends more than my teachers, and from my pupils the
-            most.” I believe this means that there are in fact
+            most.</quote> I believe this means that there are in fact
             three levels of learning:
         </para>
+
         <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
@@ -1235,6 +1258,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </listitem>
         </orderedlist>
+
         <para>
             Perhaps there’s a fourth level -
             <emphasis role="bold">Science</emphasis> in which the knowledge
@@ -1243,7 +1267,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             production) and better yet teach it to someone else.
         </para>
         <para>
-            The old adage “He who can - does. He who cannot - teaches.” which
+            The old adage <quote>He who can - does. He who cannot - teaches.</quote> which
             was
             <link xlink:href="http://en.wikiquote.org/wiki/George_Bernard_Shaw">said
                 by George Bernard Shaw</link> is amusing, but simply not
@@ -1251,8 +1275,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             difficult than being a great doer, and is much more enlightening.
             <footnote xml:id="those_who_can_footnote" label="those_who_can">
                 <para>
-                What is true, in my opinion. is that “Those who can - do.
-                Those who can’t - complain.” However, often people who can
+                What is true, in my opinion. is that <quote>Those who can - do.
+                Those who can’t - complain.</quote> However, often people who can
                 and do, still complain. I recall this quote being
                 attributed to
                 <link xlink:href="http://en.wikipedia.org/wiki/Linus_Torvalds">Linus
@@ -1262,8 +1286,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </footnote>
         </para>
+
     </section>
-    <section xml:id="learn_many_languages"><info><title>Learn as Many Languages as Possible</title></info>
+
+    <section xml:id="learn_many_languages">
+
+    <info><title>Learn as Many Languages as Possible</title></info>
 
         <para>
             Learning one computer language is not enough. Knowledge of only
@@ -1288,8 +1316,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 enlightening</link>, and I recommend programmers to learn
             at least all of them.
         </para>
+
     </section>
-    <section xml:id="learning_to_read_and_enhance"><info><title>Learning How to Read Code and Enhance Existing Code</title></info>
+
+    <section xml:id="learning_to_read_and_enhance">
+
+    <info><title>Learning How to Read Code and Enhance Existing Code</title></info>
 
         <para>
             At present, universities and other spend most time teaching
@@ -1348,8 +1380,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             it up.
         </para>
     </section>
+
 </section>
-<section xml:id="thanks"><info><title>Thanks</title></info>
+
+<section xml:id="thanks">
+
+<info><title>Thanks</title></info>
 
     <para>
         Thanks to Pete_I on Freenode,
@@ -1358,5 +1394,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         Jonathan Scott Duff, Sagiv Barhoom and others for reviewing
         early drafts of this essay and giving some editorial assistance.
     </para>
+
 </section>
+
 </article>

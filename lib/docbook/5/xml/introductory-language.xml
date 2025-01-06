@@ -95,7 +95,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </revhistory>
     </info>
 
-<section xml:id="introduction"><info><title>Introduction</title></info>
+<section xml:id="introduction">
+
+<info><title>Introduction</title></info>
 
     <para>
         The purpose of this essay is to contemplate what is the best
@@ -129,9 +131,15 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         learned. By all means, you can still learn things on your own
         otherwise.
     </para>
+
 </section>
-<section xml:id="various_approaches"><info><title>The Various (Wrong) Approaches to Introductory
-        Programming Languages</title></info>
+
+<section xml:id="various_approaches">
+
+    <info>
+    <title>The Various (Wrong) Approaches to Introductory
+        Programming Languages</title>
+    </info>
 
     <section xml:id="linda_mciver_approach"><info><title>Linda McIver’s Thesis Approach</title></info>
 
@@ -153,7 +161,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
         <para>
             Now, if I had to summarise this language in one word it would be
-            this: sexless. It’s incredibly limited, not flexible, and not fun.
+            this: “sexless”. It’s incredibly limited, not flexible, and not fun.
             It has no pointers or references and instead relies on nested
             structures and arrays. There are two basic data types - a number
             and a string. The language does not have functions
@@ -173,9 +181,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
         <para>
-            This is a language that I won’t enjoy programming in. And I
-            don’t believe a professor who doesn’t enjoy programming in a
-            certain language can effectively convey it to his students, while
+            This is a language that I won’t enjoy programming in. And I believe
+            a professor who doesn’t enjoy programming in a certain language,
+            will not be able to effectively convey it to his students, while
             lacking the enthusiasm and love for the tool he chose.
         </para>
 
@@ -188,9 +196,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             lacks any sex-appeal is not going to make it better, but much
             worse as both the professors and programmers will detest it.
         </para>
+
     </section>
-    <section xml:id="sicp_approach"><info><title>The “Structure and Interpretation of Computer Programs”
-            Approach</title></info>
+
+    <section xml:id="sicp_approach">
+
+    <info><title>The “Structure and Interpretation of Computer Programs” Approach</title></info>
 
 
         <para>
@@ -247,8 +258,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             I continued to use BASIC on DOS and Windows, until I learned the
             much-superior Perl, which I’m using today.
         </para>
+
     </section>
-    <section xml:id="back_to_basics_approach"><info><title>The “Teach in C” Approach</title></info>
+
+    <section xml:id="back_to_basics_approach">
+
+        <info><title>The “Teach in C” Approach</title></info>
 
 
         <para>
@@ -279,9 +294,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             All this work to do something that in high level, garbage
             collected, languages is as simple as
             <literal>$result = $object1 OP $object2;</literal>. From my
-            experience with Technion students, they are often get so bogged up
+            experience with Technion students, they often get so bogged up
             in the technicalities of working with C instead of getting quick,
-            dirty and useful code running.
+            dirty, and useful, code running.
         </para>
 
         <para>
@@ -313,8 +328,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             complexity). Learning how to write quick and dirty code is a
             mental leap that is large enough as it is.
         </para>
+
     </section>
-    <section xml:id="programming_languages_make_you_write_good_code"><info><title>The “First Programming Language Should Make Sure You
+
+    <section xml:id="programming_languages_make_you_write_good_code">
+
+        <info><title>The “First Programming Language Should Make Sure You
             Write Good Code” Fallacy</title></info>
 
         <para>
@@ -325,9 +344,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             themselves. And indeed many people believe that programmers should
             start learning from such a language.
         </para>
+
         <para>
             What’s wrong with this approach? Several things:
         </para>
+
         <itemizedlist>
             <listitem>
                 <para>
@@ -354,7 +375,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                         <link xlink:href="http://en.wikipedia.org/wiki/S-expression">S-expressions</link>
                         and that they are lacking some functions that were
                         added to Haskell, O’Caml and SML.
-                        <link xlink:href="http://dev.perl.org/perl6/">Perl
+                        <link xlink:href="http://dev.perl.org/perl6/">Raku / Perl
                             6</link> aims to combine more idioms from
                         Haskell and Lisp than Perl 5 already has, yielding
                         a language that’s generally even more succinct.
@@ -386,8 +407,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </listitem>
         </itemizedlist>
+
     </section>
-    <section xml:id="have_decent_ide"><info><title>The “It Should Have a Decent IDE” Fallacy</title></info>
+
+    <section xml:id="have_decent_ide">
+
+    <info><title>The “It Should Have a Decent IDE” Fallacy</title></info>
 
         <para>
             Many education institutions reject many languages as introductory
@@ -414,10 +439,21 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             or punched cards). Plus, it is hard for a programmer
             to avoid typing code entirely.
         </para>
-    </section>
-</section>
-<section xml:id="relations"><info><title>Some useful relations</title></info>
+        <para>
+        Also see the fact that <link
+        xlink:href="https://www.shlomifish.org/humour/fortunes/show.cgi?id=sharp-typescript-discussion-about-programming-languages-and-tools">Perl
+        5 used to lack good development tools and yet was not and is not tedious
+        to write</link>. This is whereas Lambda Calculus is still relatively
+        tedious and time-consuming to write.
+        </para>
 
+    </section>
+
+</section>
+
+<section xml:id="relations">
+
+<info><title>Some useful relations</title></info>
 
     <para>
         This section will introduce some useful relations ( “Language A
@@ -426,7 +462,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         easily reach a final verdict.
     </para>
 
-    <section xml:id="high_level_before_C"><info><title>A High Level Language Should Come Before C</title></info>
+    <section xml:id="high_level_before_C">
+
+    <info><title>A High Level Language Should Come Before C</title></info>
 
         <para>
         C should not be taught as a first programming language from the
@@ -436,8 +474,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         to a lesser extent Java and .NET are much better than C as
         introductory languages.
         </para>
+
     </section>
-    <section xml:id="perl_or_python_before_php"><info><title>Perl/Python/etc. should Come before PHP</title></info>
+
+    <section xml:id="perl_or_python_before_php">
+
+    <info><title>Perl/Python/etc. should Come before PHP</title></info>
 
         <para>
         Some people believe that PHP is a suitable introductory language.
@@ -448,15 +490,19 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         are not well-aware of its pitfalls.
         </para>
         <para>
-        PHP is a fine language for the web and for other uses,
+        PHP may be a useful language for the web and for other uses,
         especially because its implementation makes deployment of some
         large-scale web applications easier. However, the other languages in
         the so-called “dynamic”, “agile”, or “scripting” class of languages
         are not harder to learn, and less problematic. So they should be
         taught first instead.
         </para>
+
     </section>
-    <section xml:id="perl_or_python_before_shell"><info><title>Perl/Python/etc. should Come before Shell</title></info>
+
+    <section xml:id="perl_or_python_before_shell">
+
+    <info><title>Perl/Python/etc. should Come before Shell</title></info>
 
         <para>
         Some people believe that the first language a UNIX user should learn
@@ -475,8 +521,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         afterthought. For these reasons, shell is not recommended to learn
         before a dynamic language.
         </para>
+
     </section>
-    <section xml:id="C_before_assembly"><info><title>C should Precede Assembly</title></info>
+
+    <section xml:id="C_before_assembly">
+
+    <info><title>C should Precede Assembly</title></info>
 
         <para>
             It is <link xlink:href="http://www.onlamp.com/pub/a/onlamp/2004/05/06/writegreatcode.html">certainly
@@ -500,23 +550,27 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             processor pipeline. He then told me that C programmers who learn
             Assembly make better Assembly programmers.
         </para>
+
     </section>
-    <section xml:id="first_lang_should_be_practical"><info><title>The First Language should be Practical</title></info>
+
+    <section xml:id="first_lang_should_be_practical">
+
+    <info><title>The First Language should be Practical</title></info>
 
         <para>
             A good first programming language should be practical and should
             grow up with you. I can tell from my experiences with the various
-            BASICs, which were the first languages I learnt, that BASIC was
-            fun because it was useful. Using BASIC on the old Intel-based
-            computers, one could
-            write games, graphical demos, text processing and command
-            execution scripts, and even serious applications. While BASIC is
-            in today’s standards a very limited language that should no longer
-            be taught as a first language, I still fondly remember it as being
-            a lot of fun. I even continued using BASIC after I learned C
-            and what was then C++, because it was quicker and more convenient.
-            (I no longer do, because I now feel that Perl is superior to BASIC
-            in every way, and that’s what I’m using now.)
+            BASICs, which were the first languages I learnt, that BASIC was fun
+            because it was useful. Using BASIC on the old Intel-based
+            computers, one could write games, graphical demos, text processing
+            and command execution scripts, and even serious applications. While
+            BASIC is in today’s standards a very limited language that should
+            no longer be taught as a first language, I still fondly remember it
+            as being a lot of fun. I even continued using BASIC after I learned
+            C and what was then C++, because it was quicker and more
+            convenient. (I no longer do, because I now feel that Perl and
+            Python are superior to BASIC in every way, and they are what I’m
+            using now.)
         </para>
         <para>
             On the other hand, Scheme as in SICP is an awful choice for an
@@ -545,8 +599,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             motivation to experiment on their own, and to remember it for
             long.
         </para>
+
     </section>
-    <section xml:id="localised_languages"><info><title>Localised Programming Languages should be Avoided</title></info>
+
+    <section xml:id="localised_languages">
+
+    <info><title>Localised Programming Languages should be Avoided</title></info>
 
         <para>
             The Wikipedia has an (incomplete) <link xlink:href="http://en.wikipedia.org/wiki/Category:Non-English-based_programming_languages">list of non-English
@@ -624,8 +682,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </footnote>
         </para>
+
     </section>
-    <section xml:id="java_should_be_taught_after_perl"><info><title>Java Should be Taught After Perl</title></info>
+
+    <section xml:id="java_should_be_taught_after_perl">
+
+    <info><title>Java Should be Taught After Perl</title></info>
 
         <para>
             Joel Spolsky wrote an essay titled
@@ -657,7 +719,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             operators  for converting between data structures, you have a
             hideously long casting lines.
         </para>
-
         <para>
             Java was supposed to be kept simple, and many important concepts
             like closures, multiple-inheritance, defining methods at runtime (a
@@ -670,7 +731,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             normally find writing code in Perl, Python and friends more
             natural.
         </para>
-
         <para>
             Paul Graham’s essay
             <link xlink:href="http://www.paulgraham.com/javacover.html">Java’s
@@ -683,7 +743,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             understood what the essence of references in Perl 5 was, only
             after learning Java, I still felt that Java was too over-rated.
         </para>
-
         <para>
             Perhaps I’m getting too carried away in criticising Java. My point
             is that, as Joel Spolsky indicated in his “JavaSchools” essay,
@@ -731,10 +790,13 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         versed in Python or Ruby, may wish to teach them instead.)
     </para>
 
-    <section xml:id="perl_python_or_ruby"><info><title>Perl, Python or Ruby</title></info>
+    <section xml:id="perl_python_or_ruby">
 
-        <section xml:id="perl"><info><title>Perl</title></info>
+    <info><title>Perl, Python, or Ruby</title></info>
 
+        <section xml:id="perl">
+
+        <info><title>Perl</title></info>
 
             <para>
                 The core Perl language is huge. That may be a good or a bad
@@ -759,11 +821,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <footnote xml:id="esperanto_footnote" label="Esperanto">
                     <para>
                         Several people contacted me saying I have
-                        misrepresented
-                        Esperanto here. I should note that I’m quoting
-                        someone else, and I admit that I don’t know Esperanto
-                        well enough to be sure if it indeed suffers from
-                        many problems attributed to artificial languages.
+                        misrepresented Esperanto here. I should note that I’m
+                        quoting someone else, and I admit that I don’t know
+                        Esperanto well enough to be sure if it indeed suffers
+                        from many problems attributed to artificial languages.
                     </para>
                     <para>
                         The point is not to dismiss Esperanto, but rather to
@@ -809,13 +870,15 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             riddles, many specialised mailing lists, Local
             Perl Mongers groups, and conferences.
         </para>
+
         </section>
 
-        <section xml:id="python"><info><title>Python</title></info>
+        <section xml:id="python">
 
+        <info><title>Python</title></info>
 
             <para>
-                Python has a small core language and it tries to be elegant.
+                Python has a relatively small core language and it tries to be elegant.
                 It has an excellent online documentation, and many introductory
                 books for it are available online. The online Python community
                 has too much elitism, and tends to deprecate Perl a lot, for
@@ -845,7 +908,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <para>
                 If PHP is the new Visual Basic, and Java is the new COBOL,
                 then Python is the new Pascal. (Although, all these languages
-                are better than their previous ones). In a way teaching Python
+                are better than their previous ones). In a way, teaching Python
                 as a first language, like teaching Pascal, makes a programmer
                 used to limited paradigms and one strict way of doing things.
                 (like teaching Esperanto instead of English). As a result,
@@ -863,8 +926,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             </para>
 
         </section>
-        <section xml:id="ruby"><info><title>Ruby</title></info>
 
+        <section xml:id="ruby">
+
+        <info><title>Ruby</title></info>
 
             <para>
                 Before I discuss Ruby a word of warning: I don’t know it very
@@ -877,7 +942,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 Ruby was written after its creator was unhappy to some extent
                 with both Perl (possibly 4 at the time) and Python, and so he
                 created a language that tried to combine the best elements of
-                Smalltalk, Perl and Python. Ruby aims to be
+                Smalltalk, Perl, and Python. Ruby aims to be
                 elegant and consistent, yet still very expressive and shares
                 Perl’s “There’s more than one way to do it” philosophy.
             </para>
@@ -888,6 +953,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 than Perl or Python. Some of these problems will be addressed
                 in Ruby 2.x.
             </para>
+
             <para>
                 The worst problem with Ruby, however, is the lack of good
                 documentation. Ruby has
@@ -898,6 +964,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 beginners and will be too slow paced for people with extensive
                 experience in similar languages.
             </para>
+
             <para>
                 All the other books from the Pragmatic Programmer series
                 are not available online (including the new editions of the
@@ -906,6 +973,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 networks, but I wouldn’t encourage professors to tell their
                 students to do that.
             </para>
+
             <para>
                 I recall trying to find out how to tag methods in Ruby,
                 in a similar way to Perl’s method or variable attributes.
@@ -916,15 +984,29 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 unconventional, but useful, tricks in Ruby were completely
                 undocumented.
             </para>
+
             <para>
                 As such, one may still encounter problems teaching Ruby as
                 an introductory language. If these problems are remedied
                 by the Ruby community, with some amount of work and effort,
                 then this may be better.
             </para>
+
+            <para>
+                Another note is that as of January 2025, Ruby seems to have
+                become unpopular, and largely unloved (and “post-hip“ /
+                ”post-hype”). I also grew to dislike it, and prefer writing
+                most new code in Python 3, Perl, and other programming
+                languages.
+            </para>
+
         </section>
+
     </section>
-    <section xml:id="final_verdict"><info><title>Final Verdict</title></info>
+
+    <section xml:id="final_verdict">
+
+        <info><title>Final Verdict</title></info>
 
         <para>
             All things considered, I’d say that Perl is the best choice now,

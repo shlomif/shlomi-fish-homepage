@@ -32,7 +32,9 @@ What I did was the following:
 
 <ol>
 <li>
+<p>
 Create a 800*600 image in the GIMP.
+</p>
 </li>
 <li>
 <p>Create a suitable gradient using the GIMP’s gradient editor</p>
@@ -44,30 +46,42 @@ gradient file for download</a>.
 </p>
 </li>
 <li>
+<p>
 Select a large rectangular frame in the middle.
+</p>
 </li>
 <li>
+<p>
 Invoke the GIMP round corners script.
 (“&lt;Image&gt; → Select → Round”)
+</p>
 </li>
 <li>
+<p>
 Fill the rounded frame with the colour black.
+</p>
 </li>
 <li>
+<p>
 Apply the “Gaussian Blur” effect with a large radius (identical in X and in Y)
 to the Image. This gives a nice rounded-rectangle black-to-white gradient.
+</p>
 </li>
 <li>
+<p>
 Invoke the GIMP Gradient Map
 (“&lt;Image&gt; → Filters → Colors → Map → Gradient Map”).
 This gives <a href="final-image.png">the final image</a>.
+</p>
 </li>
 <li>
+<p>
 Afterwards, all that is left to do is to slice and dice the image
 appropriately. A horizontal strip from the middle which was a few pixels high
 was ideal as a background for most of the page. Then, I took the upper and
 lower parts (until the width of the inner frame stabilizes), and created
 separate images out of them.
+</p>
 </li>
 </ol>
 

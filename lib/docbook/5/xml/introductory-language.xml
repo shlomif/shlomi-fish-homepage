@@ -578,7 +578,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             On the other hand, Scheme as in SICP is an awful choice for an
             introductory programming language, because it feels very
             impractical. Writing quick and dirty code to do a lot of things
-            in Scheme is very verbose, and plus, the core standard lacks many
+            in Scheme is very verbose. Moreover, the core standard lacks many
             primitives for common
             <link xlink:href="http://en.wikipedia.org/wiki/POSIX">POSIX</link>
             operations (like random file I/O, directories, sockets, etc.)
@@ -788,9 +788,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
 
     <para>
-        (If I need to teach programming, I’ll start with Perl because I know
-        it very well, and like it a lot. However, programmers who are well
-        versed in Python or Ruby, may wish to teach them instead.)
+        (If I need to teach programming, I’ll start with Python 3 because I
+        know it fairly well, like it, and think it is relatively easy and
+        useful. However, programmers who are well versed in Perl or Ruby, may
+        wish to teach them instead.)
     </para>
 
     <section xml:id="perl_python_or_ruby">
@@ -1118,7 +1119,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         <listitem>
             <para>
                 Everybody thinks that the Earth is flat (or
-                the Sun revolves around it) so it must be true
+                that the sun revolves around it) so it must be true
             </para>
         </listitem>
         <listitem>
@@ -1171,13 +1172,13 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <para>
         So my opinion still remains: Perl, Python or Ruby are the best
         languages for introducing non-programmers to programming, while Python
-        is the best, and Ruby is probably still the worst of the three.
-        However, note that any decent programming training will introduce his
-        developers to more than one language, and a prospective programmer
-        should not worry if he started out with a language that I consider
-        sub-optimal. With good ambition and motivation and with the right
-        attitude (“I know that I do not know”), one can become a better and
-        better programmer regardless of his initial background.
+        is the best, and Ruby is probably the worst of the three. However,
+        note that any decent programming training will introduce its developers
+        to more than one language, and a prospective programmer should not
+        worry if he started out with a language that I consider sub-optimal.
+        With good ambition and motivation and with the right attitude (“I know
+        that I do not know”), one can become a better and better programmer
+        regardless of his initial background.
     </para>
 
 </section>

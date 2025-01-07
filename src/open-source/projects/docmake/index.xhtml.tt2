@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER about_sect  %]
+[% WRAPPER about_sect %]
 
 <p>
 Docmake is a command line tool to translate
@@ -16,16 +16,16 @@ written in Unix shell and had a maintenance lull at the time.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
+[% WRAPPER h2_section id = "links" title = "Project Links" %]
 
-[% WRAPPER github_cpan_dist_links     dist = "App-XML-DocBook-Builder"
+[% WRAPPER github_cpan_dist_links dist = "App-XML-DocBook-Builder"
     github_url = "http://github.com/shlomif/docmake"
-    freecode_url = "http://freecode.com/projects/docmake/"  %]
+    freecode_url = "http://freecode.com/projects/docmake/" %]
 
 [%- END -%]
 
 [%- END -%]
 
-[% PROCESS x11_licence name = "Docmake",  %]
+[% PROCESS x11_licence name = "Docmake" %]
 
 [% END %]

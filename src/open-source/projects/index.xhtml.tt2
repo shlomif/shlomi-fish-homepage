@@ -6,15 +6,15 @@
 
 [% default_toc %]
 
-[% WRAPPER h2_section id="forges_home_pages" title="My home pages on Various Software Development Hubs (Forges)"%]
+[% WRAPPER h2_section id = "forges_home_pages" title = "My home pages on Various Software Development Hubs (Forges)"%]
 
-[% PROCESS home_pages_on_forges  %]
+[% PROCESS home_pages_on_forges %]
 
 [% END %]
 
-[% WRAPPER h2_section id="games-related" title="Games Related"%]
+[% WRAPPER h2_section id = "games-related" title = "Games Related"%]
 
-[% WRAPPER h3_section id = "freecell-solver" href = "${base_path}open-source/projects/freecell-solver/" title = "Freecell Solver" %]
+[% WRAPPER h3_section href = "${base_path}open-source/projects/freecell-solver/" id = "freecell-solver" title = "Freecell Solver" %]
 
 <p>
 A program and a library written in C, that automatically solves games of
@@ -23,7 +23,7 @@ Freecell and similar Solitaire variants.
 
 [% END %]
 
-[% WRAPPER h3_section id = "pysol" href = "${base_path}open-source/projects/pysol/" title = "PySol Fan Club Edition" %]
+[% WRAPPER h3_section href = "${base_path}open-source/projects/pysol/" id = "pysol" title = "PySol Fan Club Edition" %]
 
 <p>
 An open source and feature-rich collection of Solitaire games.
@@ -31,7 +31,7 @@ An open source and feature-rich collection of Solitaire games.
 
 [% END %]
 
-[% WRAPPER h3_section id="japanese-puzzle-games" href="japanese-puzzle-games/" title="Solvers and Generators for Japanese Puzzle Games" %]
+[% WRAPPER h3_section id = "japanese-puzzle-games" href = "japanese-puzzle-games/" title = "Solvers and Generators for Japanese Puzzle Games" %]
 
 <p>
 Japanese puzzle games such as
@@ -44,7 +44,7 @@ them are in a usable condition.
 
 [% END %]
 
-[% WRAPPER h3_section id="black-hole-solitaire-solver" href="black-hole-solitaire-solver/" title="“Black Hole” Solitaire Solver" %]
+[% WRAPPER h3_section href = "black-hole-solitaire-solver/" id = "black-hole-solitaire-solver" title = "“Black Hole” Solitaire Solver" %]
 
 <p>
 Solvers for

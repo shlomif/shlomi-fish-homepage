@@ -28,7 +28,7 @@ for various tasks.
 
 [% WRAPPER h3_section id = "links-xml-grammarbase" title = "For ${page_cpan_dist}" %]
 
-[% WRAPPER github_cpan_dist_links     dist = page_cpan_dist
+[% WRAPPER github_cpan_dist_links dist = page_cpan_dist
     freecode_url = "http://freecode.com/projects/xml-grammarbase/"
     github_url = "https://github.com/shlomif/perl-XML-GrammarBase" %]
 [%- END -%]

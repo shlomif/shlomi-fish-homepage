@@ -8,7 +8,7 @@
 
 [% main_class.addClass("lim_width", "wrap-me", ) %]
 
-[% WRAPPER about_sect  %]
+[% WRAPPER about_sect %]
 
 <p>
 [% cpan_dist %] provides <b>Fiction-Text</b>, a lightweight
@@ -37,24 +37,24 @@ for various tasks.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "links"  title = "Project Links"  %]
+[% WRAPPER h2_section id = "links" title = "Project Links" %]
 
-[% WRAPPER h3_section id = "links-xml-grammar-fiction"  title="For ${cpan_dist}" %]
+[% WRAPPER h3_section id = "links-xml-grammar-fiction" title = "For ${cpan_dist}" %]
 
-[% WRAPPER github_cpan_dist_links     dist="${cpan_dist}"
-    freecode_url="http://freecode.com/projects/xml-grammar-fiction/"
-    github_url="https://github.com/shlomif/fiction-xml" %]
+[% WRAPPER github_cpan_dist_links dist = "${cpan_dist}"
+    freecode_url = "http://freecode.com/projects/xml-grammar-fiction/"
+    github_url = "https://github.com/shlomif/fiction-xml" %]
 [%- END -%]
 
 [%- END -%]
 
 [%- END -%]
 
-[% PROCESS x11_licence name="${cpan_dist}" %]
+[% PROCESS x11_licence name = "${cpan_dist}" %]
 
-[% WRAPPER h2_section id = "examples"  title = "Examples"  %]
+[% WRAPPER h2_section id = "examples" title = "Examples" %]
 
-[% WRAPPER h3_section id = "fiction_examples"  title = "Fiction-Text Examples"  %]
+[% WRAPPER h3_section id = "fiction_examples" title = "Fiction-Text Examples" %]
 
 [% BLOCK url_to_data_examples %]
 https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fiction/t/[% base %]/data/proto-text
@@ -64,7 +64,7 @@ https://github.com/shlomif/Fiction-XML/tree/master/perl/modules/XML-Grammar-Fict
 
 <li>
 <p>
-<a href="[% INCLUDE url_to_data_examples base="fiction" %]"><b>Distributed Examples</b></a>- there are some short examples under
+<a href="[% INCLUDE url_to_data_examples base = "fiction" %]"><b>Distributed Examples</b></a>- there are some short examples under
 <code>t/fiction/data/</code> in the distribution (mostly in English).
 </p>
 </li>
@@ -96,13 +96,13 @@ Fiction-Text.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "screenplay_examples"  title = "Screenplay-Text Examples"  %]
+[% WRAPPER h3_section id = "screenplay_examples" title = "Screenplay-Text Examples" %]
 
 <ul>
 
 <li>
 <p>
-<a href="[% INCLUDE url_to_data_examples base="screenplay" %]"><b>Distributed
+<a href="[% INCLUDE url_to_data_examples base = "screenplay" %]"><b>Distributed
 Examples</b></a>- there are some short and silly examples
 in the <code>t/screenplay/data</code> directory in the distribution.
 </p>
@@ -205,11 +205,11 @@ crossover.).
 
 [%- END -%]
 
-[% WRAPPER news_sect  %]
+[% WRAPPER news_sect %]
 
 [% IF 0 %]
 
-[% WRAPPER h3_section id = "news-2011-05-22"  title="2011-05-22: ${cpan_dist} version 0.5.1 is out"%]
+[% WRAPPER h3_section id = "news-2011-05-22" title = "2011-05-22: ${cpan_dist} version 0.5.1 is out" %]
 
 <p>
 There are many improvements in this release. Since the last news item here,
@@ -256,7 +256,7 @@ Add support for numeric entities such as <code>&amp;#91;</code>.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news-2011-04-05"  title="2011-04-05: ${cpan_dist} version 0.1.5 is out"%]
+[% WRAPPER h3_section id = "news-2011-04-05" title = "2011-04-05: ${cpan_dist} version 0.1.5 is out" %]
 
 <p>
 This release has many small bug-fixes and improvements:
@@ -292,7 +292,7 @@ Everyone are recommended to upgrade.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news-2009-11-25"  title="2009-11-25: ${cpan_dist} version 0.0.2 was released"%]
+[% WRAPPER h3_section id = "news-2009-11-25" title = "2009-11-25: ${cpan_dist} version 0.0.2 was released" %]
 
 <p>
 [% cpan_dist %] was released today, and should be available on CPAN
@@ -304,7 +304,7 @@ improvements, and there may have been a few accidental fixes.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news-2009-11-05"  title="2009-11-05: ${cpan_dist} version 0.0.1 was released"%]
+[% WRAPPER h3_section id = "news-2009-11-05" title = "2009-11-05: ${cpan_dist} version 0.0.1 was released" %]
 
 <p>
 The first version of [% cpan_dist %] (v0.0.1) was unleashed onto the
@@ -325,9 +325,9 @@ to you for this NaNoWriMo or future ones.
 [% END %]
 [%- END -%]
 
-[% WRAPPER h2_section id = "coverage"  title="Coverage of ${cpan_dist}" %]
+[% WRAPPER h2_section id = "coverage" title = "Coverage of ${cpan_dist}" %]
 
-[% WRAPPER h3_section id = "coverage-shlomif"  title = "Coverage in Shlomi Fish’s Blogs"  %]
+[% WRAPPER h3_section id = "coverage-shlomif" title = "Coverage in Shlomi Fish’s Blogs" %]
 
 <ul>
 
@@ -384,9 +384,9 @@ to you for this NaNoWriMo or future ones.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "demos"  title = "Demos"  %]
+[% WRAPPER h2_section id = "demos" title = "Demos" %]
 
-[% WRAPPER h3_section id = "demo-fiction1"  title = "Fiction Demo 1"  %]
+[% WRAPPER h3_section id = "demo-fiction1" title = "Fiction Demo 1" %]
 
 <p>
 If we have this sample Fiction-Text document:
@@ -402,14 +402,14 @@ Then after converting it to XML and then to XHTML we get this:
 
 <div class="fiction_xml">
 [% xml_fiction_slurp.my_calc(
-        fn => 'lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
-        index_id => 'fiction_text_index',
-    ) %]
+    fn => 'lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
+    index_id => 'fiction_text_index',
+) %]
 </div>
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "demo-screenplay1"  title = "Screenplay Demo 1"  %]
+[% WRAPPER h3_section id = "demo-screenplay1" title = "Screenplay Demo 1" %]
 
 [% WRAPPER h4_section id = "demo-screenplay1-source" title = "Source" %]
 
@@ -475,7 +475,7 @@ Screenplay-Text should support Unicode, UTF-8 and internationalisation well.
 
 [% END %]
 
-[% WRAPPER h2_section id = "similar"  title = "Similar Projects"  %]
+[% WRAPPER h2_section id = "similar" title = "Similar Projects" %]
 
 <ul>
 

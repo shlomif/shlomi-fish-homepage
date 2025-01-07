@@ -1,15 +1,13 @@
 [%- SET title = "Thoughts about the Best Introductory Language" -%]
 [%- SET desc = "Thoughts about the Best Introductory Language" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc">
+
 [% default_toc %]
 
-<section class="h2">
-
-<h2 id="main_intro">Introduction</h2>
+[% WRAPPER h2_section id = "main_intro" title = "Introduction" %]
 
 <p>
 What makes programming languages suitable or unsuitable as introductory
@@ -24,23 +22,20 @@ best, and afterwards gives several useful relations for which languages
 should come first. Finally it gives a final verdict, defends it and then
 gives some other good food for thought.
 </p>
-</section>
 
-<section class="h2">
+[% END %]
 
-<h2 id="itself">The Article Itself - 2nd Revision</h2>
+[% WRAPPER h2_section id = "itself" title = "The Article Itself - 2nd Revision" %]
 
 [% path_slurp("docbook/5/rendered/introductory-language.xhtml") %]
 
-</section>
+[% END %]
 
-[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "introductory-language",  %]
+[% PROCESS docbook_formats_w_base base = "introductory-language" h2_id = "other_formats" h2_text = "Other Formats" %]
 
-<section class="h2">
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
 
-<h2 id="coverage">Coverage</h2>
-
-<h3 id="coverage-1st">1st Edition</h3>
+[% WRAPPER h3_section id = "coverage-1st" title = "1st Edition" %]
 
 <ul>
 
@@ -85,7 +80,9 @@ Security Tech Forum</a>
 </li>
 </ul>
 
-<h3 id="coverage-2nd">2nd Edition</h3>
+[% END %]
+
+[% WRAPPER h3_section id = "coverage-2nd" title = "2nd Edition" %]
 
 <ul>
 
@@ -98,6 +95,8 @@ the Ultimate Forums</a>
 
 </ul>
 
-</section>
+[% END %]
+
+[% END %]
 
 [% END %]

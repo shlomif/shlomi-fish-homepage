@@ -6,8 +6,8 @@
 use strict;
 use warnings;
 
-use SVG;
-use Math::Trig;
+use SVG        ();
+use Math::Trig qw/ atan2 rad2deg /;
 
 my $max_depth  = 50;
 my $proportion = 0.1;
@@ -26,17 +26,20 @@ my $size_ratio = sqrt( $proportion**2 + ( 1 - $proportion )**2 );
 my $svg = SVG->new( width => $width, height => $height, );
 foreach my $depth ( 0 .. ( $max_depth - 1 ) )
 {
+    my $transform =
+          "translate($half_width,$half_height) rotate("
+        . ( $angle * $depth )
+        . ") scale("
+        . join( ",", ( $size_ratio**$depth ) x 2 ) . ")";
+
     my $tag = $svg->rectangle(
         x         => -$half_width,
         y         => -$half_height,
         width     => $width,
         height    => $height,
         id        => "rect_$depth",
-        transform => "translate($half_width,$half_height) rotate("
-            . ( $angle * $depth )
-            . ") scale("
-            . join( ",", ( $size_ratio**$depth ) x 2 ) . ")",
-        style => {
+        transform => $transform,
+        style     => {
             'fill-opacity' => 0,
             stroke         => "black",
             'stroke-width' => "1",

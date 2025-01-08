@@ -9,7 +9,7 @@
 
 [% default_toc %]
 
-[% WRAPPER intro  %]
+[% WRAPPER intro %]
 
 <p>
 This is a small, hand-maintained, list of text editors and IDEs (Integrated
@@ -18,9 +18,9 @@ Development Environments), useful for programmers and other developers.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "open-source"  title = "Open Source Text Editors and IDEs"  %]
+[% WRAPPER h2_section id = "open-source" title = "Open Source Text Editors and IDEs" %]
 
-[% WRAPPER h3_section id = "cross-platform-open-editors"  title = "Cross-Platform Open Source Editors"  %]
+[% WRAPPER h3_section id = "cross-platform-open-editors" title = "Cross-Platform Open Source Editors" %]
 
 <ul>
 
@@ -81,7 +81,7 @@ editor. (Open-source, GPLed)
 <li>
 <p>
 <a href="http://www.jedit.org/">jEdit</a> - a cross-platform programmer’s text
-editor written in Java, with many plugins. (Open-source,  GPL 2.0).
+editor written in Java, with many plugins. (Open-source, GPL 2.0).
 </p>
 </li>
 
@@ -180,7 +180,7 @@ its philosophy.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "cross-platform-open-IDEs"  title = "Cross-Platform Open Source IDEs"  %]
+[% WRAPPER h3_section id = "cross-platform-open-IDEs" title = "Cross-Platform Open Source IDEs" %]
 
 <ul>
 
@@ -282,7 +282,7 @@ and a music and video player. (MIT licence).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "platform-specific-open-editors"  title = "Platform-specific Open Source Editors"  %]
+[% WRAPPER h3_section id = "platform-specific-open-editors" title = "Platform-specific Open Source Editors" %]
 
 <ul>
 
@@ -327,7 +327,7 @@ systems.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-GUI-designers"  title = "Open Source GUI Designers"  %]
+[% WRAPPER h3_section id = "open-GUI-designers" title = "Open Source GUI Designers" %]
 
 <ul>
 
@@ -349,7 +349,7 @@ wxWidgets. (MIT/Expat-licensed).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-hex-editors"  title = "Open Source Hex Editors"  %]
+[% WRAPPER h3_section id = "open-hex-editors" title = "Open Source Hex Editors" %]
 
 <ul>
 
@@ -406,7 +406,7 @@ the binary, and can be used in conjunction with a text editor such as Vim.
 
 <li>
 <p>
-<a href="#emacs">GNU Emacs</a> has an hexedit mode.
+<a href="#emacs">GNU Emacs</a> has a hexedit mode.
 </p>
 </li>
 
@@ -414,7 +414,7 @@ the binary, and can be used in conjunction with a text editor such as Vim.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-debugger-GUIs"  title = "Open Source Debugger GUIs"  %]
+[% WRAPPER h3_section id = "open-debugger-GUIs" title = "Open Source Debugger GUIs" %]
 
 <ul>
 
@@ -461,9 +461,9 @@ open source (GPL) GUI for gdb.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "non-foss"  title = "Non-Open-Source Text Editors and IDEs"  %]
+[% WRAPPER h2_section id = "non-foss" title = "Non-Open-Source Text Editors and IDEs" %]
 
-[% WRAPPER h3_section id = "non-foss-editors"  title = "Non Open-source (and probably platform-specific) Editors"  %]
+[% WRAPPER h3_section id = "non-foss-editors" title = "Non Open-source (and probably platform-specific) Editors" %]
 
 <ul>
 
@@ -508,7 +508,7 @@ editor for Windows, x86 Linux and Mac OS X.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "non-foss-IDEs"  title = "Non Open-source (and probably platform-specific) IDEs"  %]
+[% WRAPPER h3_section id = "non-foss-IDEs" title = "Non Open-source (and probably platform-specific) IDEs" %]
 
 <ul>
 
@@ -601,7 +601,7 @@ Software Build and Management Tools</a>
 
 [% END %]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -642,7 +642,7 @@ mentions many alternatives and discusses their merits.
 
 </ul>
 
-[% WRAPPER h3_section id = "fun-links"  title = "Fun Links"  %]
+[% WRAPPER h3_section id = "fun-links" title = "Fun Links" %]
 
 <ul>
 
@@ -764,7 +764,7 @@ owned by the Eclipse Foundation, under “Fair Use”.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2011",  %]
+[% PROCESS cc_by_licence_section "year" => "2011" %]
 
 </div>
 

@@ -107,16 +107,20 @@ to donate less, and other well-off people may opt to follow suit as well.
 <ul>
 
 <li>
+<p>
 <a href="[% github_url %]">GitHub Repository</a> - contains version
 control and other resources.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://metacpan.org/release/[% dist %]">[% dist
 %] on MetaCPAN</a> - download, documentation, browsing and information.
+</p>
 </li>
 
-[% IF freecode_url %]<li><a href="[% freecode_url %]">Freecode Record</a></li>[% END %]
+[% IF freecode_url %]<li><p><a href="[% freecode_url %]">Freecode Record</a></p></li>[% END %]
 
 [% content %]
 

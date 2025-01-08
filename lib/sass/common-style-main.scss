@@ -523,7 +523,8 @@ table.visible,
     @include rounded_corners(5px);
 
     &:hover {
-        border-color: grey;
+        border-color: #006000;
+        background-color: #fff5e8;
     }
 
     img {

@@ -2,7 +2,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2 id="intro">Introduction</h2>
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 This is a patch to <a href="http://www.kernel.org/">the Linux kernel</a>
@@ -11,7 +11,9 @@ of the kernel developers, it was done in a modular way by enhancing the
 kernel C configuration API.
 </p>
 
-<h2 id="download">Download</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
 <ul>
 
@@ -58,7 +60,9 @@ probably later ones up to and including 2.6.27.
 
 </ul>
 
-<h2 id="licence">Licence</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 <p>
 I hereby disclaim any explicit or implicit claims to copyrights of the
@@ -66,7 +70,9 @@ GPLed code that I modified. I added some new files and they are under
 the Expat Licence.
 </p>
 
-<h2 id="links">Links</h2>
+[% END %]
+
+[% WRAPPER h2_section id = "links" title = "Links" %]
 
 <ul>
 <li>
@@ -74,5 +80,7 @@ the Expat Licence.
 Record on Freecode</a></p>
 </li>
 </ul>
+
+[% END %]
 
 [% END %]

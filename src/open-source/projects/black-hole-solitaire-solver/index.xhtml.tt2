@@ -30,21 +30,27 @@ the cards to move.
 <ul>
 
 <li>
+<p>
 <a href="https://fc-solve.shlomifish.org/downloads/fc-solve/[% arc %]">[% arc %]</a> - requires <a href="http://www.cmake.org/">CMake</a> to be built.
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://metacpan.org/release/Games-Solitaire-BlackHole-Solver">The Games-Solitaire-BlackHole-Solver CPAN Distribution</a> - an older version of the
 solver written as a proof-of-concept, which produces identical results, but
 is much slower and consumes more memory. It is still maintained and enhanced
 for <a href="https://en.wikipedia.org/wiki/Software_prototyping">prototyping</a> ideas and
 new features.
+</p>
 </li>
 
 <li>
+<p>
 <a href="[% sqlite_dump_url %]">[% sqlite_dump_arc %]</a> - results
 from running the solver on the first 1 million PySolFC deals - inside the dump
 of an <a href="http://www.sqlite.org/">SQLite</a> database.
+</p>
 </li>
 
 </ul>
@@ -73,19 +79,27 @@ the solver on the boards. Its columns are:
 </p>
 <ol>
 <li>
+<p>
 <b>idx</b> - the index of the PySolFC deal.
+</p>
 </li>
 <li>
+<p>
 <b>status</b> - a character representing the verdict - ‘U’ for unsolved,
 ‘S’ for solved.
+</p>
 </li>
 <li>
+<p>
 <b>num_checked</b> - the number of iterations that were checked (“num_times”).
 If the game was unsolved, then it will be equal to num_generated (see below).
+</p>
 </li>
 <li>
+<p>
 <b>num_generated</b> - the number of states generated (and not necessarily
 checked). May only be different if the deal was solved.
+</p>
 </li>
 </ol>
 
@@ -101,10 +115,13 @@ solved boards. Its columns are:
 <ol>
 
 <li>
+<p>
 <b>idx</b> - the index of the deal (that must be ‘S’ on “bhs_runs”).
+</p>
 </li>
 
 <li>
+<p>
 <b>solution</b> - this is the compacted solution. The 0,2,4 etc. characters are
 the indices of the stacks moved in the range 1-17. The 1,3,5 etc. characters are
 the corresponding moved cards after calculating
@@ -112,6 +129,7 @@ the corresponding moved cards after calculating
 are ordered <code>H,C,D,S</code>. It will total 51*2 characters. Here’s
 <a href="https://github.com/shlomif/black-hole-solitaire/blob/master/black-hole-solitaire/range-solving/populate-summary-database.pl">the script
 that was used to generate them from the more verbose solution files</a>.
+</p>
 </li>
 
 </ol>
@@ -138,14 +156,18 @@ that was used to generate them from the more verbose solution files</a>.
 <ul>
 
 <li>
+<p>
 <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> and
 <a href="http://fc-solve.shlomifish.org/links.html#other_solvers">other Solitaire
 solvers</a>.
+</p>
 </li>
 
 <li>
+<p>
 <a href="https://metacpan.org/pod/Games::Solitaire::Verify::Golf">Games::Solitaire::Verify::Golf</a> -
 validate solutions as correct.
+</p>
 </li>
 
 </ul>
@@ -299,7 +321,9 @@ a Row Solitaire and have drawn some conclusions:
 <ul>
 
 <li>
+<p>
 <a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/1229">Statistics from the First 1,000,000 PySolFC All in A Row Deals</a>
+</p>
 </li>
 
 </ul>
@@ -319,11 +343,15 @@ Hole Solitaire and have drawn some conclusions:
 <ul>
 
 <li>
+<p>
 <a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/1068">Solving Statistics for the First 1 Million PySolFC Black Hole Solitaire Deals</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://tech.groups.yahoo.com/group/fc-solve-discuss/message/1071">Follow-up with number of unsolved deals with positions span below a certain threshold</a>
+</p>
 </li>
 
 </ul>

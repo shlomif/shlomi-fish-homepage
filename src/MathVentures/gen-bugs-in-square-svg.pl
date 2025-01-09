@@ -53,10 +53,13 @@ foreach my $depth ( 0 .. ( $max_depth - 1 ) )
 
 my $text = $svg->xmlify( -namespace => "svg" );
 
-# Workaround for Mozilla.
-$text =~ s{<svg:svg}{<svg};
-$text =~ s{</svg:svg>}{</svg>};
-$text =~ s{(xmlns="([^"]+)")}{$1 xmlns:svg="$2"};
+if (0)
+{
+    # Workaround for Mozilla.
+    $text =~ s{<svg:svg}{<svg};
+    $text =~ s{</svg:svg>}{</svg>};
+    $text =~ s{(xmlns="([^"]+)")}{$1 xmlns:svg="$2"};
+}
 print $text;
 
 =head1 COPYRIGHT & LICENSE

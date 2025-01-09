@@ -86,8 +86,8 @@ which is a full-fledge programming language with just two primitives.
 [% WRAPPER h3_section href = "Perl/Haskell/" id = "haskell-for-perlers" title = "Haskell for Perl Programmers" %]
 
 <p>
-A Haskell for Perl Programmers introduction. (part of the Israeli Perl
-Mongers, Foreign Language Introductions). Perl-specific knowledge is not
+A Haskell for Perl Programmers introduction. (Part of the Israeli Perl
+Mongers’ foreign languages’ introductions.) Perl-specific knowledge is not
 required and can be substituted by knowledge of a similar programming
 language.
 </p>
@@ -118,7 +118,7 @@ server for UNIX systems.
 <a href="Sys-Call-Track/Lex-Yacc/">Lex and Yacc Mini-Demo</a>
 </dt>
 <dd>
-A tool about these two tools for helping to write compilers and interpreters.
+A talk about these two tools for helping to write compilers and interpreters.
 </dd>
 <dt>
 <a href="Autotools/">The GNU Autotools (Autoconf, Automake and Libtool)</a>
@@ -135,7 +135,7 @@ Website Meta Language</a>
 A tool for generating sophisticated static HTML web-sites.
 </dd>
 <dt>
-<a href="[% PROCESS rellink url = "lecture/Vim/beginners/", host = "t2", %]">The Vim
+<a href="[% "${base_path}lecture/Vim/beginners/" %]">The Vim
 Editor for Beginners</a>
 </dt>
 <dd>
@@ -184,7 +184,7 @@ Aims to introduce the Linux operating system to beginners.
 
 [% WRAPPER h3_section id = "freecell-solver" title = "Freecell Solver" %]
 
-[% WRAPPER h4_section id = "fcs-evolution" href = base_path _"lecture/Freecell-Solver/" title = "Freecell Solver - Evolution of a C Program" %]
+[% WRAPPER h4_section href = base_path _"lecture/Freecell-Solver/" id = "fcs-evolution" title = "Freecell Solver - Evolution of a C Program" %]
 
 <p>
 The history of my pet project, Freecell Solver.
@@ -192,7 +192,7 @@ The history of my pet project, Freecell Solver.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "fcs-the-next-pres" href = base_path _"lecture/Freecell-Solver/The-Next-Pres/" title = "Freecell Solver - The Next Presentation" %]
+[% WRAPPER h4_section href = base_path _"lecture/Freecell-Solver/The-Next-Pres/" id = "fcs-the-next-pres" title = "Freecell Solver - The Next Presentation" %]
 
 <p>
 More recent history and development of the project.
@@ -200,7 +200,7 @@ More recent history and development of the project.
 
 [%- END -%]
 
-[% WRAPPER h4_section id = "fcs-project-intro" href = base_path _ "lecture/Freecell-Solver/project-intro/" title = "Freecell Solver: Project Introduction" %]
+[% WRAPPER h4_section href = base_path _ "lecture/Freecell-Solver/project-intro/" id = "fcs-project-intro" title = "Freecell Solver: Project Introduction" %]
 
 <p>
 An introduction of the project for people who are interested to contribute.
@@ -210,11 +210,11 @@ An introduction of the project for people who are interested to contribute.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "lm-solve" href = base_path _ "lecture/LM-Solve/" title = "LM-Solve" %]
+[% WRAPPER h3_section href = base_path _ "lecture/LM-Solve/" id = "lm-solve" title = "LM-Solve" %]
 
 <p>
 A presentation about <a href="[% base_path %]lm-solve/">LM-Solve</a>, a Logic Mazes
-Solver. Covers history, technologies, architecture and exotic bugs.
+solver. Covers history, technologies, architecture and exotic bugs.
 </p>
 
 [%- END -%]

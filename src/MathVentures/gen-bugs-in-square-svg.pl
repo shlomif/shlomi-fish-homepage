@@ -7,7 +7,7 @@ use strict;
 use warnings;
 
 use SVG        ();
-use Math::Trig qw/ atan2 rad2deg /;
+use Math::Trig qw/ rad2deg /;
 
 my $max_depth  = 50;
 my $proportion = 0.1;
@@ -23,14 +23,18 @@ my $half_height = $height * 0.5;
 my $angle      = rad2deg( atan2( $proportion, 1 - $proportion ) );
 my $size_ratio = sqrt( $proportion**2 + ( 1 - $proportion )**2 );
 
-my $svg = SVG->new( width => $width, height => $height, );
+my $svg   = SVG->new( width => $width, height => $height, );
+my $FIELD = "%f";
+
+my $TRANSFORM_FORMAT = "translate(%%,%%) rotate(%%) scale(%%,%%)";
+$TRANSFORM_FORMAT =~ s/\%\%/${FIELD}/g;
 foreach my $depth ( 0 .. ( $max_depth - 1 ) )
 {
-    my $transform =
-          "translate($half_width,$half_height) rotate("
-        . ( $angle * $depth )
-        . ") scale("
-        . join( ",", ( $size_ratio**$depth ) x 2 ) . ")";
+    my $transform = sprintf( $TRANSFORM_FORMAT,
+        $half_width, $half_height,
+        ( $angle * $depth ),
+        ( ( $size_ratio**$depth ) x 2 ),
+    );
 
     my $tag = $svg->rectangle(
         x         => -$half_width,

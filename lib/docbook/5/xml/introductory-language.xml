@@ -451,6 +451,50 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     </section>
 
+<section xml:id="simultaneous-teaching-of-several-introductory-langs">
+
+<info>
+<title>Teaching several languages simultaneously in an introductory course</title>
+</info>
+
+<para>
+Teaching two-or-more <emphasis role="bold">main</emphasis> languages at the same time
+(in what is an
+introductory course) should be avoided. Learning one
+language is often hard enough, and with more than one, the students may become
+extremely confused. In response to an earlier version of this essay, a friend
+suggested that one should teach three introductory languages, and if
+I were remember correctly, they were:
+<emphasis role="strong">1)</emphasis> something like C,
+<emphasis role="strong">2)</emphasis> a convenient dynamic language
+such as Perl or Python, and <emphasis role="strong">3)</emphasis> a
+very &quot;mind expanding&quot; language like Lisp or Haskell. I
+noted the same thing back then, that it would confuse the heck out
+of the students, and here the motivation is even more flimsy.
+</para>
+
+<para>
+As someone who has been chatting on programming-related IRC
+(Internet Relay Chat) for a while, I have witnessed my share of
+people coming up with unreasonable constraints due to the tasks
+being parts of homework assignments. However, some days ago, someone
+on
+<link xlink:href="http://perl-begin.org/FAQs/freenode-perl/">Freenode's
+#perl</link> came and ask for help in parsing a semicolon that does
+not occur inside shell quotes (e.g:
+<literal>echo &quot;Semicolon in string - ; foobar&quot; ; ls -l ; </literal>)
+using regular expressions. I suggested him to use a parser
+generator, and then said that his teacher has forbidden him from
+using it or any other external CPAN module and that he could only
+use regular expressions, in order to, get this: write some Perl code
+that will convert Bash to Python. Yes! His teacher expects them to
+learn those three languages at once. And apparently without making a
+judicious use of the third-party and open-source APIs that would be
+right for the job.
+</para>
+
+</section>
+
 </section>
 
 <section xml:id="relations">

@@ -981,7 +981,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza ),
+                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza who_will_ride_princess_celestia ),
                 ),
                 $Factoids_TR,
                 _get_tr('Emma_Watson_facts'),

@@ -25,6 +25,7 @@ Reddit discussion</a> of this captioned image.
 [% WRAPPER github_captioned_image_joke id = "standup_philosopher"  header = "Stand-up Philosopher"  repo_href = "https://github.com/shlomif/Captioned-Image-Standup-Philosopher"  src = base_path _ "humour/images/Standup-Philosopher.svg.webp"  alt = "Occupation? Stand-up Philosopher! Oh, a bullshit artist" %]
 
 [% WRAPPER quote  %]
+
 <ul>
 <li>
 <b>Bea:</b> Occupation?
@@ -36,6 +37,7 @@ Reddit discussion</a> of this captioned image.
 <b>Bea:</b> Oh! A bullshit artist!
 </li>
 </ul>
+
 [%- END -%]
 
 <p>
@@ -79,7 +81,7 @@ See also:
 
 <li>
 <p>
-<a href="https://www.shlomifish.org/philosophy/ideas/#stand_up_philosophy">Stand-up Philosophy/Comedy (Not just “stand-up comedy”)</a> - avoiding the false dichotomy.
+<a href="[% base_path %]philosophy/ideas/#stand_up_philosophy">Stand-up Philosophy/Comedy (Not just “stand-up comedy”)</a> - avoiding the false dichotomy, and accepting mixing and matching humorous philosophy and more serious one. Including at the same sessions.
 </p>
 </li>
 

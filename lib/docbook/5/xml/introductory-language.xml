@@ -478,20 +478,16 @@ in the scope of the introductory course.
 </para>
 
 <para>
-As someone who has been chatting on programming-related IRC
-(Internet Relay Chat) for a while, I have witnessed my share of
-people coming up with unreasonable constraints due to the tasks
-being parts of homework assignments. However, some days ago, someone
-on
+Someone on the
 <link xlink:href="http://perl-begin.org/FAQs/freenode-perl/">Freenode's
-#perl</link> came and ask for help in parsing a semicolon that does
+#perl chat-room</link> came and ask for help in parsing a semicolon that does
 not occur inside shell quotes (e.g:
 <literal>echo &quot;Semicolon in string - ; foobar&quot; ; ls -l ; </literal>)
 using regular expressions. I suggested him to use a parser
-generator, and then said that his teacher has forbidden him from
+generator, and then he said that his teacher has forbidden him from
 using it or any other external CPAN module and that he could only
 use regular expressions, in order to, get this: write some Perl code
-that will convert Bash to Python. Yes! His teacher expects them to
+that will convert Bash to Python. His teacher expected them to
 learn those three languages at once. And apparently without making a
 judicious use of the third-party and open-source APIs that would be
 right for the job.

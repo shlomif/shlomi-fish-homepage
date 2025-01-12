@@ -24,7 +24,7 @@
       <legalnotice xml:id="main_legal_notice">
             <para>
 <!--Creative Commons License-->
-This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</link> (or at your option a greater version of it).
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution (CC-by) 2.5 License</link> (or at your option any greater version of it).
         <!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Work rdf:about="">
             <license rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
@@ -107,9 +107,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <para>
         First, I will mention several approaches taken by other people who
         discussed this issue before, and try to explain why I disagree with
-        them. Then I will propose and explain some relations (“Language A
+        them. Then I will present and rationalise some relations (“Language A
         should be learned before Language B”) that are good to follow. After
-        that, I will propose my verdict, and discuss some orthogonal
+        that, I will propose my verdict, and discuss some suitable
         alternatives. Finally, I will discuss some different types of
         teaching and how each should be conducted differently.
     </para>
@@ -127,7 +127,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     </para>
     <para>
         One note that is in order is that you shouldn’t feel bad about
-        having followed a different ordered in the programming languages you’ve
+        having followed a different order in the programming languages you’ve
         learned. By all means, you can still learn things on your own
         otherwise.
     </para>
@@ -193,7 +193,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             McIver’s approach is flawed in the sense that she is trying too
             hard to save the students from all possible problems they may
             encounter in trying to understand their introductory language.
-            However, programming is hard to learn, and learning the first
+            However, programming is often hard to learn, and learning the first
             language is always difficult. Creating a “flawless” language that
             lacks any sex-appeal is not going to make it better, but much
             worse as both the professors and programmers will detest it.
@@ -204,7 +204,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <section xml:id="sicp_approach">
 
     <info><title>The “Structure and Interpretation of Computer Programs” Approach</title></info>
-
 
         <para>
             <link xlink:href="http://mitpress.mit.edu/sicp/">“Structure and
@@ -248,8 +247,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <link xlink:href="http://community.schemewiki.org/?scheme-faq-standards#implementations">the
                 dazzling number of different Scheme implementations</link> all
             extend the language in several ways, but all have their own idea
-            of how to do it. Compare it to Perl, Python and friends which have
-            one main C-based implementation, or to C where the standard
+            of how to do it. This is while Perl, Python and friends which have
+            one main C-and-POSIX-hosted implementation, or to C where the standard
             library is actually quite useful.
         </para>
 
@@ -257,8 +256,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             I believe an introductory language has to grow with you. When I
             studied BASIC, I was able to use it for programming games,
             graphical demonstrations and animations, scripts, and other uses.
-            I continued to use BASIC on DOS and Windows, until I learned the
-            much-superior Perl, which I’m using today.
+            I continued to use BASIC on DOS and Windows, until I learned
+            Perl, which I’m using instead today.
         </para>
 
     </section>
@@ -266,7 +265,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <section xml:id="back_to_basics_approach">
 
         <info><title>The “Teach in C” Approach</title></info>
-
 
         <para>
             In his <link xlink:href="http://www.joelonsoftware.com/articles/fog0000000319.html">“Back to Basics” essay</link>,
@@ -468,7 +466,7 @@ like C, <emphasis role="strong">2)</emphasis> a convenient dynamic language
 such as Perl or Python, and <emphasis role="strong">3)</emphasis> a very
 &quot;mind expanding&quot; language like Lisp or Haskell. I noted that many of
 the students will likely be too confused given these languages are very
-different - syntactically, semantically, and often in their philosophy.
+different - syntactically, semantically, and often in their design philosophy.
 </para>
 
 <para>
@@ -480,7 +478,7 @@ in the scope of the introductory course.
 <para>
 Someone on the
 <link xlink:href="http://perl-begin.org/FAQs/freenode-perl/">Freenode's
-#perl chat-room</link> came and ask for help in parsing a semicolon that does
+#perl chat-room</link> came and asked for help in parsing a semicolon that does
 not occur inside shell quotes (e.g:
 <literal>echo &quot;Semicolon in string - ; foobar&quot; ; ls -l ; </literal>)
 using regular expressions. I suggested him to use a parser
@@ -504,7 +502,7 @@ right for the job.
     <para>
         This section will introduce some useful relations ( “Language A
         should be taught before Language B”) to consider in teaching
-        programming, and explain them. By using these relations one can more
+        programming, and rationalize them. By using these relations one can more
         easily reach a final verdict.
     </para>
 
@@ -515,9 +513,9 @@ right for the job.
         <para>
         C should not be taught as a first programming language from the
         reasons I have mentioned above. By all means, one should use a more
-        high level languages which supports Managed programming, and other
+        high level language which supports Managed programming, and other
         nice high level constructs. Languages like Perl, Python, Ruby and
-        to a lesser extent Java and .NET are much better than C as
+        to a lesser extent Java and C#/.NET are much better than C as
         introductory languages.
         </para>
 
@@ -535,6 +533,7 @@ right for the job.
         tend to write very bad (and sometimes very dangerous) code in it, and
         are not well-aware of its pitfalls.
         </para>
+
         <para>
         PHP may be a useful language for the web and for other uses,
         especially because its implementation makes deployment of some
@@ -560,6 +559,7 @@ right for the job.
         and causes native shell programmers to be less capable of adapting
         to a different language, as well as writing sub-optimal code in shell.
         </para>
+
         <para>
         The second is that in traditional shell, some operations are not as
         efficient as they should be. While more modern variants have
@@ -615,7 +615,7 @@ right for the job.
             as being a lot of fun. I even continued using BASIC after I learned
             C and what was then C++, because it was quicker and more
             convenient. (I no longer do, because I now feel that Perl and
-            Python are superior to BASIC in every way, and they are what I’m
+            Python are superior to BASIC, and they are what I’m
             using now.)
         </para>
         <para>
@@ -634,7 +634,7 @@ right for the job.
             Different people I talked to, agreed with me that
             “You cannot do anything with Scheme”. Compare it to languages such
             as C and C++,
-            Perl/Python/Tcl/Ruby/PHP, Java/.NET, etc. that feel very
+            Perl/Python/Tcl/Ruby/PHP, Java/C#, etc. that feel very
             practical, and you’ll see why hardly any industrial-strength
             code is written in Scheme.
         </para>
@@ -752,7 +752,7 @@ right for the job.
             screen.”.
         </para>
         <para>
-            Moreover, Java code tend to be very monotonous. Almost all
+            Moreover, Java code tends to be very monotonous. Almost all
             Java code looks the same, and feels boring.
         </para>
         <para>
@@ -762,7 +762,7 @@ right for the job.
             Java. Everything has to be a noun, with no verbs or even
             the many keywords which Perl 5 is infamous for but which
             Perl programmers love. And instead of having some Perl 5-like
-            operators  for converting between data structures, you have a
+            operators for converting between data structures, you have a
             hideously long casting lines.
         </para>
         <para>
@@ -812,7 +812,7 @@ right for the job.
     <para>
         According to these constraints one can conclude that one should
         start learning how to program from a high-level, dynamic and
-        practical language such as Perl, Python or Ruby.
+        practical language such as Perl, Python, or Ruby.
     </para>
 
     <para>

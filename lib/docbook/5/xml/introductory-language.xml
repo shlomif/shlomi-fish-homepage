@@ -810,7 +810,7 @@ right for the job.
 <info><title>My Verdict</title></info>
 
     <para>
-        According to these constraints one can conclude that one should
+        According to these constraints, I recommend that one should
         start learning how to program from a high-level, dynamic and
         practical language such as Perl, Python, or Ruby.
     </para>
@@ -850,13 +850,13 @@ right for the job.
                 The core Perl language is huge. That may be a good or a bad
                 thing for teaching programming in. The Perl language can be
                 usable by learning only a small subset of the language.
-                However, as budding Perl programmers learn more they tend to
-                diverge in the what they know, and use different subsets,
-                which makes understanding code of peers with
-                different background (much less experts) more
-                problematic. This problem is naturally not limited to Perl 5,
-                and given good, searchable documentation can be made less
-                substantial, but is still a pedagogical hurdle.
+                However, as budding Perl programmers learn more, they tend to
+                diverge in the what they know, and use different subsets, which
+                makes understanding code of peers with different background
+                more problematic. (Or that of more experienced developers even
+                more so.) This problem is naturally not limited to Perl 5, and
+                given good, searchable documentation can be made less
+                pronounced, but is still a pedagogical hurdle.
             </para>
 
             <para>
@@ -889,7 +889,7 @@ right for the job.
                 documentation for beginners, and
                 <link xlink:href="http://www.shlomifish.org/philosophy/perl-newcomers/">other
                     problems with the treatment of newcomers</link>, but
-                this has improved lately.
+                these issues have improved lately.
             </para>
             <para>
                 Perl has a rich (and so far unmatched) collection of
@@ -898,13 +898,13 @@ right for the job.
                     the Comprehensive Perl Archive Network</link>. Uploads
                 to CPAN are not moderated (on purpose) and therefore it
                 is sometimes hard to find a suitable CPAN module out of the
-                many bad or unsuitable ones (if there actually is one
+                many low-quality or unsuitable ones (if there actually is one
                 available). <footnote xml:id="rethinking_cpan" label="rethinking-cpan">
                     <para>
                         As of April, 2008, there is <link xlink:href="http://perlbuzz.com/2008/04/rethinking-the-interface-to-cpan.html">an effort
                             under-way to revamp
                             the CPAN experience</link>. The author of these
-                        lines is heavily involved with it, so he may be a bit
+                        lines is involved with it, so he may be a bit
                         biased. Plus, the effort is still in its infancy.
                 </para>
             </footnote>
@@ -912,7 +912,7 @@ right for the job.
         </para>
         <para>
             Perl has a rich and active culture surrounding it, including
-            many diversions as obfuscated code,
+            many diversions as
             <link xlink:href="http://perlgolf.sourceforge.net/">golf
                 challenges</link>,
             riddles, many specialised mailing lists, Local
@@ -926,13 +926,14 @@ right for the job.
         <info><title>Python</title></info>
 
             <para>
-                Python has a relatively small core language and it tries to be elegant.
-                It has an excellent online documentation, and many introductory
-                books for it are available online. The online Python community
-                has too much elitism, and tends to deprecate Perl a lot, for
-                some reason. I am not blaming anyone in particular, but this
+                Python has a relatively small core language and it tries to be
+                elegant.  It has an excellent online documentation, and many
+                introductory books for it are available online at no cost. The
+                online Python community used to have a lot of elitism, and
+                tended to deprecate Perl and other languages a lot, for some
+                reason. I am not blaming anyone in particular, but this
                 tendency is present to some extent by some of the greatest
-                names in the Python world, and by some Pythoneers I personally
+                names in the Python world, and by some Python fans I personally
                 know.
             </para>
 
@@ -951,17 +952,6 @@ right for the job.
                 commonly acceptable way to write most code. Whether this is
                 a good thing or not for an introductory language is
                 debatable.
-            </para>
-
-            <para>
-                If PHP is the new Visual Basic, and Java is the new COBOL,
-                then Python is the new Pascal. (Although, all these languages
-                are better than their previous ones). In a way, teaching Python
-                as a first language, like teaching Pascal, makes a programmer
-                used to limited paradigms and one strict way of doing things.
-                (like teaching Esperanto instead of English). As a result,
-                trying to learn other diverse languages is becoming more
-                difficult.
             </para>
 
             <para>
@@ -1064,6 +1054,7 @@ right for the job.
             fine choice, and all of them should be learned by any programmer
             who is worth his weight in salt.
         </para>
+
         <para>
             Note that other than the main players in the dynamic language
             arena, there is the new crop of such languages:
@@ -1078,14 +1069,15 @@ right for the job.
             “sex-appeal”
             <footnote xml:id="consistency_in_prog_langs_footnote" label="consistency">
                 <para>
-                Some people
-                assume that the more consistent a language is the better.
-                However, just as most people prefer expressive and inconsistent
-                natural human languages like English, many of them would prefer
-                their programming language to have some inconsistencies,
-                Do-what-I-mean-erries, gotchas, etc. In Perl 5’s case it is well
-                known that these make the language more expressive and <link xlink:href="http://www.paulgraham.com/power.html">succinct</link> in the hands of
-                a competent programmer.
+                Some people assume that the more consistent a language is the
+                better.  However, just as most people prefer expressive and
+                inconsistent natural human languages like English, many of them
+                would prefer their programming language to have some
+                inconsistencies, Do-what-I-mean-erries, gotchas, etc. In Perl
+                5’s case it is well known that these make the language more
+                expressive and <link
+                xlink:href="http://www.paulgraham.com/power.html">succinct</link>
+                in the hands of a competent programmer.
                 </para>
                 </footnote>.
         </para>

@@ -1113,7 +1113,16 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( buffy_few_good terminator_liberation queen_padme_tales  the_10th_muse__wil_wheaton atypical_day he_damsel_in_distress ),
+                    qw(
+                        buffy_few_good
+                        terminator_liberation
+                        queen_padme_tales
+                        the_10th_muse__wil_wheaton
+                        atypical_day
+                        who_will_ride_princess_celestia
+                        start_with_happily_after
+                        he_damsel_in_distress
+                    ),
                 ),
                 $Bits_TR,
                 _tr_s( qw( the_princess_programmer ), ),

@@ -5,6 +5,8 @@
 <div class="lim_width wrap-me side_toc fancy_sects">
 [% default_toc %]
 
+<section class="h2">
+
 <h2 id="itself">The Article Itself</h2>
 
 [% path_slurp("docbook/5/rendered/reflections-on-software-quality-trends.xhtml") %]

@@ -42,7 +42,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
     - Mostly Positive: [VLC](https://www.videolan.org/vlc/)
         - Easy to use interface
         - As a general rule,: stable, fast, and predictable.
-        - Also popular among many Windows and macOS users.
+        - Also popular among many MS Windows and macOS users.
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)
         - Fast
@@ -50,6 +50,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - Seems like most people except for the KDE core developers do not appreciate the emphasis on the so-called [“Activities”](https://askubuntu.com/questions/253990/what-is-a-activity-in-kde-and-what-can-i-do-with-it) instead of on virtual workspaces.
         - [KDE bug No. 343246](https://bugs.kde.org/show_bug.cgi?id=343246)
         - [http://www.trinitydesktop.org/ (Trinity Desktop Environment)](http://www.trinitydesktop.org/) - fork of KDE 3, continuing its spirit.
+            - I installed Trinity on Fedora 41 x86-64, and got it to work. Out-of-the-box, it did some things worse than Xfce, and some things better. I decided that I prefer Xfce for now, but your kilometrage may vary.
         - I mostly use Xfce, which is functional and fast. Like other desktop environments, one can run KDE applications on it.
     - Mostly Positive: [CMake](https://en.wikipedia.org/wiki/CMake)
         - Not perfect but less errorprone and faster than GNU Autotools

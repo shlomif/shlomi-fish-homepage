@@ -1,5 +1,4 @@
 [% SET title = "Shlomi Fish’s Random Ideas" %]
-[% SET desc = "Shlomi Fish’s Random Ideas" %]
 
 [%- WRAPPER wrap_html -%]
 <!--
@@ -12,7 +11,7 @@ TODO:
 
 [% default_toc %]
 
-[% WRAPPER h2_section id = "intro"  title = "Introduction"  %]
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
 
 <p>
 Ideas are the lowest level of value-production and comprise of 1/1111 of the
@@ -31,9 +30,9 @@ on this site.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "non_computer"  title = "Non-computer related"  %]
+[% WRAPPER h2_section id = "non_computer" title = "Non-computer related" %]
 
-[% WRAPPER h3_section id = "private_school_network"  title = "An Affordable Private School Network"  %]
+[% WRAPPER h3_section id = "private_school_network" title = "An Affordable Private School Network" %]
 
 <p>
 Objectivists can tell you only too much about the evils of public education.
@@ -51,7 +50,7 @@ completely eliminated.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "discotheques"  title = "Discotheques Playing Music at a Decent Volume"  %]
+[% WRAPPER h3_section id = "discotheques" title = "Discotheques Playing Music at a Decent Volume" %]
 
 <p>
 I hate going to discotheque because the music is so loud and I don’t like
@@ -62,7 +61,7 @@ loudly can actually make a lot of money from people like me.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "stand_up_philosophy"  title = "Stand-up Philosophy/Comedy (Not just “stand-up comedy”)"  %]
+[% WRAPPER h3_section id = "stand_up_philosophy" title = "Stand-up Philosophy/Comedy (Not just “stand-up comedy”)" %]
 
 <p>
 <a href="http://en.wikipedia.org/wiki/Ludwig_Wittgenstein">Ludwig
@@ -86,12 +85,12 @@ Also see the <a href="[% base_path %]humour/image-macros/#standup_philosopher">�
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "computer"  title = "Computer Related"  %]
+[% WRAPPER h2_section id = "computer" title = "Computer Related" %]
 
-[% WRAPPER h3_section id = "computer_games_with_sensible_budget"  title = "Computer Games with a Sensible Budget"  %]
+[% WRAPPER h3_section id = "computer_games_with_sensible_budget" title = "Computer Games with a Sensible Budget" %]
 
 <p>
-It is well known that to accommodate with today gaming “standards”, computer
+It is well known that to accommodate with today’s gaming “standards”, computer
 games became more and more pricey to produce. However, while having better
 graphics and special effects, they are by no means better. Hell, they are
 all <a href="http://www.logicmazes.com/video.html">pretty much the same</a>.
@@ -106,7 +105,7 @@ the long run. Think about it.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "fortunes_mania"  href = "fortunes-mania/"  title = "Fortunes Mania"  %]
+[% WRAPPER h3_section id = "fortunes_mania" href = "fortunes-mania/" title = "Fortunes Mania" %]
 
 <p>
 An idea for a community site for the collection of quotations.
@@ -114,7 +113,7 @@ An idea for a community site for the collection of quotations.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "tucan"  title = "Tucan - Interfacing High-level Languages"  %]
+[% WRAPPER h3_section id = "tucan" title = "Tucan - Interfacing High-level Languages" %]
 
 <p>
 From a conversation I had with
@@ -131,21 +130,27 @@ Currently there are:
 
 <ol>
 <li>
+<p>
 <a href="http://www.swig.org/">SWIG</a> - enables writing one interface that
 will eventually generate bindings to a C library for any high-level language.
 However, it cannot interface a pure-Perl code into a pure-Perl code.
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.parrotcode.org/">Parrot</a> - a virtual machine for
 dynamic languages. Its main problem is that it requires all such languages
 to implement compilers for its bytecode (along with any bindings they have
 to C).
+</p>
 </li>
 <li>
+<p>
 The <a href="http://www.gimp.org/">GIMP</a> contains a procedural database
 that allows registering functions in any language and calling them from
 any other language. However, this is limited to the GIMP and uses custom
 GIMP datatypes.
+</p>
 </li>
 </ol>
 
@@ -157,7 +162,7 @@ Tucan.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "unixdoc"  title = "Unixdoc" href="unixdoc/" %]
+[% WRAPPER h3_section href = "unixdoc/" id = "unixdoc" title = "Unixdoc" %]
 
 <p>
 An integrated documentation framework for UNIX-like systems.
@@ -165,7 +170,7 @@ An integrated documentation framework for UNIX-like systems.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "qantor-idea"  title = "Qantor"  %]
+[% WRAPPER h3_section id = "qantor-idea" title = "Qantor" %]
 
 <p>
 <b>Qantor</b> (short for "Qantor ain't no TeX/troff - oh really!") - a
@@ -175,7 +180,7 @@ LaTeX (and other typesetting systems).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "eatline-idea"  title = "libeatline"  %]
+[% WRAPPER h3_section id = "eatline-idea" title = "libeatline" %]
 
 <p>
 <b>libeatline</b> - a BSDLed alternative
@@ -212,7 +217,7 @@ Database backend. See (<a href="[% base_path %]open-source/resources/databases-l
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "winapt-idea"  title = "Winapt"  %]
+[% WRAPPER h3_section id = "winapt-idea" title = "Winapt" %]
 
 <p>
 Package management for Microsoft Windows. See <a href="https://chocolatey.org/">Chocolatey</a>.
@@ -220,7 +225,7 @@ Package management for Microsoft Windows. See <a href="https://chocolatey.org/">
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "webmail-idea"  title = "A better web-based email"  %]
+[% WRAPPER h3_section id = "webmail-idea" title = "A better web-based email" %]
 
 <p>
 A <b>better Web-based email</b> system, because even
@@ -235,7 +240,7 @@ services to provide data.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "yonathan"  title = "Yonathan"  %]
+[% WRAPPER h3_section id = "yonathan" title = "Yonathan" %]
 
 <p>
 <b>The Yonathan Job Board</b> - Yonathan will be a new and actually usable
@@ -246,7 +251,7 @@ information.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "spark-lisp"  title = "Spark Lisp"  %]
+[% WRAPPER h3_section id = "spark-lisp" title = "Spark Lisp" %]
 
 <p>
 <a href="http://www.shlomifish.org/open-source/projects/Park-Lisp/"><b>Spark
@@ -257,7 +262,7 @@ Ruby, Smalltalk, and other languages.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "peque"  title = "Peque"  %]
+[% WRAPPER h3_section id = "peque" title = "Peque" %]
 
 <p>
 <b>Peque</b> - short for "Personal Questing Engine" - a vertical engine for
@@ -270,7 +275,7 @@ such games.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "nsbcpp"  title = "nsbcpp - the not so braindead C preprocessor"  %]
+[% WRAPPER h3_section id = "nsbcpp" title = "nsbcpp - the not so braindead C preprocessor" %]
 
 <p>
 An extended version of the <a href="https://en.wikipedia.org/wiki/C_preprocessor">C preprocessor</a> which will provide:

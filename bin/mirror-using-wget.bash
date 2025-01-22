@@ -6,7 +6,9 @@
 # Distributed under the terms of the MIT license.
 #
 
-# wget --mirror --convert-links 'http://localhost/shlomif/homepage-local'
+# On https://github.com/shlomif/shlomif-computer-settings/blob/master/shlomif-settings/apache/httpd/minimal-config/fedora/localhost-homepage-httpd.conf
+# one can find a sample apache httpd ( v 2.4.x ) configuration that can be used
+# to host the mirrored copy (after some tweaks).
 
 set -e -x
 

@@ -4,7 +4,9 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ desc _ "</p>")) %]
+[%- SET abstract_ = "The Muppet Show hosts <a href=\"https://en.wikipedia.org/wiki/Jennifer_Lawrence\">Jennifer Lawrence</a>, star of The Hunger Games and Silver Linings Playbook." -%]
+
+[% long_stories.calc_common_top_elems(id => 'muppets_show_tni', abstract_text => ("<p>" _ abstract_ _ "</p>")) %]
 
 [% path_slurp("screenplay-xml/rendered-html/Muppets-Show--Jennifer-Lawrence.html") %]
 

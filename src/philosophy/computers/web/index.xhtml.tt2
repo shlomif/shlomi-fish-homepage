@@ -9,13 +9,13 @@
 
 [% SET section_element = "article" %]
 
-[% WRAPPER h3_section id = "great-personal-homesite" title = "Create a Great Personal Homesite" href = "create-a-great-personal-homesite/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/create-a-great-personal-homesite/" id = "great-personal-homesite" title = "Create a Great Personal Homesite" %]
 
 <p>
 Why and how to create a great personal homesite.
 </p>
 
-[% WRAPPER h4_section id = "great-personal-homesite-rev2" title = "Revision 2" href = "create-a-great-personal-homesite/rev2.html" %]
+[% WRAPPER h4_section href = "${base_path}philosophy/computers/web/create-a-great-personal-homesite/rev2.html" id = "great-personal-homesite-rev2" title = "Revision 2" %]
 
 <p>
 Revision 2, published in 2009, with many updates, and corrections:
@@ -51,7 +51,7 @@ blogs.
 
 [% END %]
 
-[% WRAPPER h3_section id = "which-wiki" title = "Which Open Source Wiki Works for You?" href = "which-wiki/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/which-wiki/" id = "which-wiki" title = "Which Open Source Wiki Works for You?" %]
 
 <p>
 An overview of some popular open-source wiki engines.
@@ -59,7 +59,7 @@ An overview of some popular open-source wiki engines.
 
 [% END %]
 
-[% WRAPPER h3_section id = "choice-of-docs-formats" title = "Choice of Document Formats" href = "choice-of-docs-formats/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/choice-of-docs-formats/" id = "choice-of-docs-formats" title = "Choice of Document Formats" %]
 
 <p>
 About the choice of various document formats available today for publishing
@@ -68,7 +68,7 @@ on the web.
 
 [% END %]
 
-[% WRAPPER h3_section id = "use-qmail-instead" title = "The “Use qmail instead” syndrome" href = "use-qmail-instead/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/use-qmail-instead/" id = "use-qmail-instead" title = "The “Use qmail instead” syndrome" %]
 
 <p>
 Someone has a problem with technology A and other people tell him to
@@ -77,7 +77,7 @@ use technology B instead. Please don’t do that.
 
 [% END %]
 
-[% WRAPPER h3_section id = "homepage-vs-blog" title = "Homepage vs. Blog" href = "homepage-vs-blog/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/homepage-vs-blog/" id = "homepage-vs-blog" title = "Homepage vs. Blog" %]
 
 <p>
 About the difference between a homepage and a blog and why this site is a
@@ -86,7 +86,7 @@ homepage.
 
 [% END %]
 
-[% WRAPPER h3_section id = "online-communities" title = "Reflections on Online Communities" href = "online-communities/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/online-communities/" id = "online-communities" title = "Reflections on Online Communities" %]
 
 <p>
 Do’s and Don’t’s for online communities - how to structure them and
@@ -95,7 +95,7 @@ grow a community.
 
 [% END %]
 
-[% WRAPPER h3_section id = "models4com" title = "“Alternative” Models for Web-Based Commerce" href = "models-for-commerce/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/models-for-commerce/" id = "models4com" title = "“Alternative” Models for Web-Based Commerce" %]
 
 <p>
 A list of some models for online content-creation commerce that do no involve
@@ -104,7 +104,7 @@ intrusive advertising.
 
 [% END %]
 
-[% WRAPPER h3_section id = "validate-your-html" title = "Validate Your HTML Markup" href = "validate-your-html/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/web/validate-your-html/" id = "validate-your-html" title = "Validate Your HTML Markup" %]
 
 <p>
 To educate the world about the benefits of making sure their markup of

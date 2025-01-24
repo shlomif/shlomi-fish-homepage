@@ -15,7 +15,7 @@ Essays related to Free and Open Source Software.
 
 [% SET section_element = "article" %]
 
-[% WRAPPER h3_section id = "foss-other-beasts" title = "Open Source, Free Software and Other Beasts" href = "${base_path}philosophy/foss-other-beasts/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/foss-other-beasts/" id = "foss-other-beasts" title = "Open Source, Free Software and Other Beasts" %]
 
 <p>
 An article that introduces the Open Source world to people who are not
@@ -24,7 +24,7 @@ very familiar with it.
 
 [% END %]
 
-[% WRAPPER h3_section id = "how-to-start-contributing" title = "How to Start Contributing to Open Source" href = "how-to-start-contributing/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/how-to-start-contributing/" id = "how-to-start-contributing" title = "How to Start Contributing to Open Source" %]
 
 <p>
 An article explaining in brief how to start contributing to open-source
@@ -33,7 +33,7 @@ software. I’ve been asked this question a lot.
 
 [% END %]
 
-[% WRAPPER h3_section id = "gpl-bsd-and-suckerism" title = "The GPL, the BSD Licence and Being a Sucker" href = "gpl-bsd-and-suckerism/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/gpl-bsd-and-suckerism/" id = "gpl-bsd-and-suckerism" title = "The GPL, the BSD Licence and Being a Sucker" %]
 
 <p>
 An essay that explains why contributing to open source software under any
@@ -42,7 +42,7 @@ licence does not cause you to be exploited by others.
 
 [% END %]
 
-[% WRAPPER h3_section id = "linus-bus-factor" title = "The Linus Torvalds Bus Factor" href = "linus-torvalds-bus-factor/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/linus-torvalds-bus-factor/" id = "linus-bus-factor" title = "The Linus Torvalds Bus Factor" %]
 
 <p>
 An essay that explains why it is a good idea to have multiple committers to
@@ -53,7 +53,7 @@ fallacies.
 
 [% END %]
 
-[% WRAPPER h3_section id = "foss-licences-wars" title = "FOSS Licences Wars" href = "foss-licences-wars/rev2/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/foss-licences-wars/rev2/" id = "foss-licences-wars" title = "FOSS Licences Wars" %]
 
 <p>
 This article gives an overview of the various options in picking up a licence
@@ -63,7 +63,7 @@ guidelines choosing one.
 
 [% END %]
 
-[% WRAPPER h3_section id = "trust-non-foss" title = "Why I don’t trust Non-open-source Software" href = "not-trust-non-FOSS/" %]
+[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/not-trust-non-FOSS/" id = "trust-non-foss" title = "Why I don’t trust Non-open-source Software" %]
 
 <p>
 Explaining why I prefer not to use and depend on non-open-source software.

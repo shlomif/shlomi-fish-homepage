@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/foss_essays.tt2" %]
+
 <div class="fancy_sects side_toc">
 
 [% default_toc %]
@@ -32,6 +34,8 @@ These are essays about <a href="http://en.wikipedia.org/wiki/Open_source">Free
 and Open Source Software</a>, which is software that is available along
 with the original source code, and can be freely distributed and modified.
 </p>
+
+[% INCLUDE foss_essays__block %]
 
 [% END %]
 

@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/foss_essays.tt2" %]
+
 [%- WRAPPER intro -%]
 
 <p>
@@ -13,65 +15,7 @@ Essays related to Free and Open Source Software.
 
 [% WRAPPER h2_section id = "articles" title = "The Articles and Essays" %]
 
-[% SET section_element = "article" %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/foss-other-beasts/" id = "foss-other-beasts" title = "Open Source, Free Software and Other Beasts" %]
-
-<p>
-An article that introduces the Open Source world to people who are not
-very familiar with it.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/how-to-start-contributing/" id = "how-to-start-contributing" title = "How to Start Contributing to Open Source" %]
-
-<p>
-An article explaining in brief how to start contributing to open-source
-software. I’ve been asked this question a lot.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/gpl-bsd-and-suckerism/" id = "gpl-bsd-and-suckerism" title = "The GPL, the BSD Licence and Being a Sucker" %]
-
-<p>
-An essay that explains why contributing to open source software under any
-licence does not cause you to be exploited by others.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/linus-torvalds-bus-factor/" id = "linus-bus-factor" title = "The Linus Torvalds Bus Factor" %]
-
-<p>
-An essay that explains why it is a good idea to have multiple committers to
-a central repository in a project, and why overthrowing the project’s
-benevolent dictator is a good idea. It then touches on some logical
-fallacies.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/foss-licences-wars/rev2/" id = "foss-licences-wars" title = "FOSS Licences Wars" %]
-
-<p>
-This article gives an overview of the various options in picking up a licence
-for one’s Free and Open Source Software (FOSS) project, and tries to give some
-guidelines choosing one.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section href = "${base_path}philosophy/computers/open-source/not-trust-non-FOSS/" id = "trust-non-foss" title = "Why I don’t trust Non-open-source Software" %]
-
-<p>
-Explaining why I prefer not to use and depend on non-open-source software.
-</p>
-
-[% END %]
-
-[% SET section_element = "section" %]
+[% INCLUDE foss_essays__block %]
 
 [% END %]
 

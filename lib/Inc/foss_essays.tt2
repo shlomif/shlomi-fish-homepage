@@ -61,8 +61,3 @@ Explaining why I prefer not to use and depend on non-open-source software.
 [% SET section_element = "section" %]
 
 [% END %]
-
-[% IF 0 %]
-[% INCLUDE foss_essays__block %]
-[% PROCESS foss_essays__block %]
-[% END %]

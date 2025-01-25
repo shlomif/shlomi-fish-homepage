@@ -91,3 +91,11 @@ endfunction
 function! ReplaceAcronym()
     s/my_acronym( *"key" *=> *"\([a-zA-Z_]\+\)" *,\? *)/\1/
 endfunction
+
+function! Reorder_H_section_WRAPPERs()
+    map <F2> / href =/<cr>v2f""ad0/ id = /<cr>"aP0
+endfunction
+
+function! Absolutify_Href_hyperlinks_attribute
+    'a,'es!\v(href \= \")!\1${base_path}philosophy/computers/open-source/!
+endfunction

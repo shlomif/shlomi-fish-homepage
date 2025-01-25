@@ -4,6 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/foss_essays.tt2" %]
+[% PROCESS "Inc/web_essays.tt2" %]
 
 <div class="fancy_sects side_toc">
 
@@ -44,6 +45,8 @@ with the original source code, and can be freely distributed and modified.
 <p>
 Articles about the Web, or the Internet in general.
 </p>
+
+[% INCLUDE web_essays__block %]
 
 [% END %]
 

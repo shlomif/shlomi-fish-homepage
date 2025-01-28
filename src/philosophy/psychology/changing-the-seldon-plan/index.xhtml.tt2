@@ -53,7 +53,7 @@ href="http://mail.pm.org/pipermail/chicago-talk/2009-October/005499.html">"I
 do not consider myself capable of rewriting his module and [it] has
 demonstrated robust stability over the years [so] I have
 little reason to."</a>. So essentially, all the comments that we have given
-on it were dismissed due to apparent lack of competency on the part of
+on it were dismissed due to an apparent lack of competency on the part of
 the code's end-user, and that Ancient Perl code will still linger in use.
 The link I gave is not the only place where I saw it - I also saw it in at
 least another place (though I think it was on IRC).
@@ -88,7 +88,7 @@ No problem should ever have to be solved twice.
 
 <p>
 By all means, if we consider all the millions of lines of
-open-source out there as the Seldon Plan which powers all the open-source
+open-source code out there as the Seldon Plan which powers all the open-source
 programs in use, and empowers us and end-users, then we should not
 feel detrimental or afraid to change the code that we use everyday. And
 people should not deploy code that they are not confident enough in changing,
@@ -123,7 +123,7 @@ sees bug. Hacker doesn't want bug. Hacker fixes bug.".
 <blockquote cite="https://shlomif-tech.livejournal.com/37969.html?thread=30033#t30033">
 
 <p>
-…that "if it ain't broke, don't fix it" is also part of the hacker ethics.
+…that “if it ain't broke, don't fix it” is also part of the hacker ethics.
 Modernizing a module for the sole sake of modernizing it - without any
 evidence of actual problems in it - sounds like a bad idea, worthy of Joel's
 famous "Don't throw out the code" admonition. ( References: <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Joel on Software: “Things You Should Never Do, Part I”</a> ; <a href="https://www.joelonsoftware.com/2002/01/23/rub-a-dub-dub/">Joel on Software: “Rub a dub dub”</a> . )
@@ -137,28 +137,33 @@ famous "Don't throw out the code" admonition. ( References: <a href="https://www
 
 <blockquote cite="http://szabgab.com/blog/2009/11/1259431123.html">
 
-<p> I keep hearing and reading this nice proverb <b>if it ain't
-broke, don't fix it</b>. The latest appearance was in response to <a
-href="http://community.livejournal.com/shlomif_tech/37969.html">Shlomi
-Fish</a> suggesting that some Ancient Perl code should be replaced by
-Modern Perl code. </p>
+<p>
+I keep hearing and reading this nice proverb <b>if it ain't broke, don't fix
+it</b>. The latest appearance was in response to <a
+href="http://community.livejournal.com/shlomif_tech/37969.html">Shlomi Fish</a>
+suggesting that some Ancient Perl code should be replaced by Modern Perl code.
+</p>
 
-<p> I am not saying that every piece of code should be rewritten
-every 6 months, but in my understanding that sentence actually
-translates to <b>let's wait till it breaks and then panic</b>. </p>
+<p>
+I am not saying that every piece of code should be rewritten every 6 months,
+but in my understanding that sentence actually translates to <b>let's wait till
+it breaks and then panic</b>.
+</p>
 
-<p> I think people who say that sentence are afraid that the new
-version will break something. Sure, there is always a chance that a
-change introduces an error, but, if we are afraid to touch the code,
-what will happen when later on we encounter a case where it does not
-work? For example, if we need to use it in a new environment. Will we
-have the courage to change the code then? How much will it cost in
-money, time, and lost sleep? </p>
+<p>
+I think people who say that sentence are afraid that the new version will break
+something. Sure, there is always a chance that a change introduces an error,
+but, if we are afraid to touch the code, what will happen when later on we
+encounter a case where it does not work? For example, if we need to use it in a
+new environment. Will we have the courage to change the code then? How much
+will it cost in money, time, and lost sleep?
+</p>
 
-<p> I think we have been trying to teach ourselves that we
-should have really good test coverage of our code and then we
-can easily refactor it and get rid of technical debt. So why
-do we keep hearing that sentence? </p>
+<p>
+I think we have been trying to teach ourselves that we should have really good
+test coverage of our code and then we can easily refactor it and get rid of
+technical debt. So why do we keep hearing that sentence?
+</p>
 
 </blockquote>
 
@@ -177,7 +182,7 @@ First of all, I should note that szabgab responded below and <a href="http://sza
 </p>
 
 <p>
-First of all, I should note that ESR does not mention "If it ain't broke, don't fix it." in his summary of the hacker's ethos ( <a href="[% hacker_ethos_url %]">link</a> ). That put aside, it is my belief that if you can invest enough time, you should make sure your code (in whatever programming language or technology that you are using) will follow the best practices. Naturally, and I didn't mention that, you likely need to juggle some other priorities, and cannot spend 100% of your time refactoring and modernising. However, you should invest time doing that because, like Martin Fowler says in his <a href="http://www.refactoring.com/">"Refactoring" book</a>, refactoring is a practice that programmers have been doing because it allows them to write code faster and save time in the long run. Without refactoring, the code deteriorates into a very ugly mess, that is hard to maintain, harder to salvage and often becomes non-functional and buggy.
+Otherwise, note that ESR does not mention "If it ain't broke, don't fix it." in his summary of the hacker's ethos ( <a href="[% hacker_ethos_url %]">link</a> ). That put aside, it is my belief that if you can invest enough time, you should make sure your code (in whatever programming language or technology that you are using) will follow the best practices. Naturally, and I didn't mention that, you likely need to juggle some other priorities, and cannot spend 100% of your time refactoring and modernising. However, you should invest time doing that because, like Martin Fowler says in his <a href="http://www.refactoring.com/">"Refactoring" book</a>, refactoring is a practice that programmers have been doing because it allows them to write code faster and save time in the long run. Without refactoring, the code deteriorates into a very ugly mess, that is hard to maintain, harder to salvage and often becomes non-functional and buggy.
 </p>
 
 <p>

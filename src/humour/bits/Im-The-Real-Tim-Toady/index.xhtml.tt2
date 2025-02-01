@@ -1,7 +1,6 @@
 [%- SET title = "“I’m the Real Tim Toady”" -%]
 [%- SET desc = "Geek song sang to “Oops… the Real Slim Shady did it again” about the Perl world" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% WRAPPER intro %]
@@ -23,7 +22,7 @@ especially Perl culture.
 
 [% END %]
 
-[% WRAPPER h2_section id="lyrics" title="Lyrics"%]
+[% WRAPPER h2_section id = "lyrics" title = "Lyrics"%]
 
 <p>
 May I have your attention, please?<br />
@@ -50,7 +49,22 @@ Well, more than one way, anyway.
 
 [% END %]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "references" title = "References" %]
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]humour/fortunes/show.cgi?id=reddit-counter-quoting-jamie-zawinski"><q>Now they have two problems</q></a>
+</p>
+</li>
+
+</ul>
+
+
+[% END %]
+
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 [% license_obj.by_sa_british_blurb( "year" => "2012", ) %]
 

@@ -33,12 +33,13 @@ QUADPRES_RUN_he := $(call QUADPRES_RUN_generic,--html-dir rtl)
 [% uc_variable_base %]_DEST := $(PRE_DEST)/[% lecture_record.dest_dir %]
 [% uc_variable_base %]_DEST_all_in_one_html_dir := $(PRE_DEST)/[% lecture_record.all_in_one_html_dir %]
 [% uc_variable_base %]_DEST_INDEX := $([% uc_variable_base %]_DEST)/index.html
+[% uc_variable_base %]_DEST_src_archive := $([% uc_variable_base %]_DEST)/src.tar.gz
 [% uc_variable_base %]_DEST_all_in_one_html_dir_INDEX := $([% uc_variable_base %]_DEST_all_in_one_html_dir)/index.html
 [% uc_variable_base %]_files := [% files.join(" ") %]
 [% uc_variable_base %]_DEST_FILES := $(patsubst %,$([% uc_variable_base %]_DEST)/%,$([% uc_variable_base %]_files))
 [% uc_variable_base %]_SRC_FILES := $(patsubst %,$([% uc_variable_base %]_BASE)/src/%.wml,$([% uc_variable_base %]_files))
 
-[% SET targets = "\$(" _ uc_variable_base _ "_DEST_INDEX) \$(" _ uc_variable_base _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ uc_variable_base _ "_DEST_FILES)" %]
+[% SET targets = "\$(" _ uc_variable_base _ "_DEST_INDEX) \$(" _ uc_variable_base _ "_src_archive) \$(" _ uc_variable_base _ "_DEST_all_in_one_html_dir_INDEX) \$(" _ uc_variable_base _ "_DEST_FILES)" %]
 [% pres_targets_files.push(targets) %]
 [% lecture_main_target %]: [% targets %]
 

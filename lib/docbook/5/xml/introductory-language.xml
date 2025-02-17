@@ -228,8 +228,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             introductory language. The first is that it is too impractical.
             Scheme does not have system primitives that more modern languages
             take for granted like ones for random file and directory I/O,
-            sockets, graphics primitives, Graphical User Interface (GUI),
-            etc. Moreover, the core language is limited and most
+            sockets, graphics primitives, or Graphical User Interfaces (GUIs).
+            Moreover, the core language is limited and most
             practical code tends to become very verbose in it. For example,
             whereas in Perl one would write <literal>$myarray[$i]++</literal>
             to increment an array element by one, in Scheme it would be:

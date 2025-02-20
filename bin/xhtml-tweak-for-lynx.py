@@ -13,19 +13,22 @@ import os
 import re
 
 
+for bef in [True]:
+    for mid in [False]:
+        for aft in [False]:
+            def repl(m):
+                return " " * bef + "/" + " " * mid + ">" + " " * aft
+            repl_str = repl(None)
+
+
 def process_file(fn):
     with open(fn, 'rt') as infh:
         src = infh.read()
 
-    for bef in [True]:
-        for mid in [False]:
-            for aft in [False]:
-                def repl(m):
-                    return " " * bef + "/" + " " * mid + ">" + " " * aft
-                newtxt = re.sub("\\s*/\\s*>\\s*", repl, src)
+    newtxt = re.sub("\\s*/\\s*>\\s*", repl_str, src)
 
-                with open(fn, 'wt') as o:
-                    o.write(newtxt)
+    with open(fn, 'wt') as o:
+        o.write(newtxt)
 
 
 def calc_fn(dirpath):

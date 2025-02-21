@@ -41,6 +41,15 @@ and configurable, text editor.
 
 [% END %]
 
+[% WRAPPER h2_section href = "${base_path}open-source/favourite/" id = "favourite-foss" title = "Favourite Free Software" %]
+
+<p>
+This contains a list of some of my favourite free software packages out
+there.
+</p>
+
+[% END %]
+
 [% WRAPPER h2_section href = "tech-tips/" id = "tech-tips" title = "Collection of Tech Tips" %]
 
 <p>
@@ -72,15 +81,6 @@ Hackers-IL.
 </p>
 
 [% END %]
-
-[% END %]
-
-[% WRAPPER h2_section href = "../favourite/" id = "favourite-foss" title = "Favourite Free Software" %]
-
-<p>
-This contains a list of some of my favourite free software packages out
-there.
-</p>
 
 [% END %]
 

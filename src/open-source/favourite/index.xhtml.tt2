@@ -170,8 +170,14 @@ is a more actively maintained fork, which I now prefer.
 [% WRAPPER h3_section href = "https://github.com/ice-wm/icewm" id = "icewm" title = "IceWM" %]
 
 <p>
-IceWM is a lightweight but functional window manager for X-Windows. Maintenance
-of it resumed recently (February 2020).
+IceWM is a lightweight but functional window manager for X-Windows. As opposed to
+<a href="https://en.wikipedia.org/wiki/FVWM">FVWM</a>, it is reasonably usable
+out of the box, without customisations, at least for someone coming from DOS, Microsoft
+Windows, and KDE (like me). However, customising it to your liking is often possible.
+</p>
+
+<p>
+Maintenance of it resumed recently (February 2020).
 </p>
 
 [% END %]

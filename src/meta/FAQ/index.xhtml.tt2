@@ -3,6 +3,10 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% BLOCK faq__required_lynx_usage_changes %]
+(after specifying the lynx <code>-xhtml_parsing</code> or similar)
+[% END %]
+
 [% PROCESS "Inc/faq.tt2" %]
 
 [% SET Technion = "<a href=\"http://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology\">Technion</a>" %]
@@ -3871,7 +3875,8 @@ sense on interactive, real-time, chats.
 
 <p>
 Also note that the pages on my sites usually do not require registration
-or login, whitelisting client-side JavaScript or <a href="#link_here_to_drive_traffic">web ads</a>, and they are friendly to <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a>, and <a href="https://en.wikipedia.org/wiki/Wget">wget</a>/etc. users.
+or login, whitelisting client-side JavaScript or <a href="#link_here_to_drive_traffic">web ads</a>, and they are friendly to <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a> [% INCLUDE faq__required_lynx_usage_changes %]
+, and <a href="https://en.wikipedia.org/wiki/Wget">wget</a>/etc. users.
 <a href="https://twitter.com/shlomif/status/1409316797069807616">This tweet by me reads:</a>
 </p>
 
@@ -3916,7 +3921,8 @@ Worse: my pure-ASCII URLs consist of 100% <a href="https://en.wikipedia.org/wiki
 
 <p>
 Seriously now: the pages on my sites usually do not require registration
-or login, whitelisting client-side JavaScript or <a href="#link_here_to_drive_traffic">web ads</a>, and they are friendly to <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a>, and <a href="https://en.wikipedia.org/wiki/Wget">wget</a>/etc. users.
+or login, whitelisting client-side JavaScript or <a href="#link_here_to_drive_traffic">web ads</a>, and they are friendly to <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a> [% INCLUDE faq__required_lynx_usage_changes %]
+, and <a href="https://en.wikipedia.org/wiki/Wget">wget</a>/etc. users.
 </p>
 
 [% END %]
@@ -3940,7 +3946,8 @@ Then what do you intend to do with URLs? Compress them under several million ton
 </p>
 
 <p>
-If you are worried about security, you can try using <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a>, <a href="https://en.wikipedia.org/wiki/Wget">wget</a>, <a href="https://en.wikipedia.org/wiki/CURL">curl</a> or similar. You should be able to read a lot of the ASCII-subset-of-UTF-8 content using a text editor or a hex-editor.
+If you are worried about security, you can try using <a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">lynx</a> [% INCLUDE faq__required_lynx_usage_changes %]
+, <a href="https://en.wikipedia.org/wiki/Wget">wget</a>, <a href="https://en.wikipedia.org/wiki/CURL">curl</a> or similar. You should be able to read a lot of the ASCII-subset-of-UTF-8 content using a text editor or a hex-editor.
 </p>
 
 <p>

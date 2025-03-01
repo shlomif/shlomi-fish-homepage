@@ -334,6 +334,7 @@ EOSCRIPTTTTTTT
 set -e -x
 $locale
 $setup_script_cmd
+cd ~/source
 bash -x bin/install-npm-deps.sh
 EOSCRIPTTTTTTT
     $obj->exe_bash_code( { code => $script, } );

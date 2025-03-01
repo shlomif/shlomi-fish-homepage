@@ -64,9 +64,6 @@ my $configs = {
             sys_deps              => [
                 qw/
                     GraphicsMagick
-                    docbook-dtds
-                    docbook-style-xsl
-                    docbook5-style-xsl
                     gd-devel
                     gdbm-devel
                     gmp-devel
@@ -92,7 +89,6 @@ my $configs = {
                     rubygem-rexml
                     rubygem-rspec
                     sgml-common
-                    the_silver_searcher
                     vim
                     virtualenv
                     which
@@ -319,17 +315,6 @@ then
     # localedef --force -i en_US -f UTF-8 en_US.UTF-8
 fi
 $package_manager_install_cmd @deps
-sudo ln -sf /usr/bin/make /usr/bin/gmake
-if false
-then
-    git clone https://github.com/kimwalisch/primesieve
-    cd primesieve
-    cmake .
-    make -j2
-    sudo make install
-    cd ..
-    rm -fr primesieve
-fi
 EOSCRIPTTTTTTT
 
     if ($from_snap)
@@ -349,29 +334,6 @@ EOSCRIPTTTTTTT
 set -e -x
 $locale
 $setup_script_cmd
-pydeps="WebTest appdirs beautifulsoup4 bottle bs4 click cookiecutter cssselect lxml numpy pycotap rebookmaker scour soupsieve vnu_validator weasyprint webtest zenfilter"
-sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
-# cpanm -vvv IO::Async
-cpanm --notest IO::Async
-cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
-cpanm --notest HTML::T5
-# For wml
-cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
-# For quadp
-cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
-sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
-sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
-cd ~/source
-pwd
-ls -l
-ls -l bin/ || true
-perl bin/my-cookiecutter.pl
-deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
-gem install asciidoctor compass compass-blueprint
-PATH="\$HOME/bin:\$PATH"
-( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
-( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
-( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
 bash -x bin/install-npm-deps.sh
 EOSCRIPTTTTTTT
     $obj->exe_bash_code( { code => $script, } );

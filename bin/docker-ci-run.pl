@@ -63,37 +63,7 @@ my $configs = {
             snapshot_names_base   => "shlomif/hpage_fedora",
             sys_deps              => [
                 qw/
-                    GraphicsMagick
-                    gd-devel
-                    gdbm-devel
-                    gmp-devel
-                    hspell-devel
-                    html401-dtds
-                    libdb-devel
-                    libxml2-devel
-                    libxslt
-                    libxslt-devel
-                    ncurses-devel
-                    pcre-devel
-                    perl-DBD-SQLite
-                    perl-Inline-Python
-                    perl-LWP-Protocol-https
-                    perl-XML-Parser
-                    perl-generators
-                    primesieve-devel
-                    python3
-                    python3-devel
-                    python3-libsass
-                    ruby-devel
-                    rubygem-nokogiri
-                    rubygem-rexml
-                    rubygem-rspec
-                    sgml-common
-                    vim
-                    virtualenv
-                    which
-                    xhtml1-dtds
-                    xz
+                    perl
                     /,
             ],
         }
@@ -137,59 +107,25 @@ sub run_config
     my @deps = (
         sort { $a cmp $b } (
             qw/
-                cmake
-                cmake-data
-                cpanminus
-                cppcheck
-                expat
-                fortune-mod
-                hunspell
                 g++
                 gcc
                 git
                 golang
-                inkscape
                 lynx
                 make
                 nodejs
                 npm
-                optipng
-                primesieve
-                pypy3
                 python3
                 python3-cookiecutter
                 python3-pip
                 python3-setuptools
                 python3-virtualenv
                 rsync
-                ruby
-                tidy
                 virtualenv
                 zip
                 /,
             @$sys_deps,
         )
-    );
-    my @cpan_deps = (
-        qw/
-            App::Deps::Verify
-            Carp::Always
-            File::Which
-            IO::All
-            List::MoreUtils
-            Math::BigInt::GMP
-            Math::GMP
-            MooX
-            MooX::late
-            Path::Tiny
-            String::ShellQuote
-            Test::Code::TidyAll
-            Test::Differences
-            Test::File::IsSorted
-            Test::PerlTidy
-            Test::TrailingSpace
-            Tree::AVL
-            /
     );
 
     if (

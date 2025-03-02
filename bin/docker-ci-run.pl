@@ -39,7 +39,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
+    qw/ container install_langpack package_manager_install_cmd setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -56,8 +56,6 @@ my $configs = {
             install_langpack            => "true",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
-            # pip_options                 => "--break-system-packages",
-            pip_options           => "",
             setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
             setup_script_cmd      => "$EN",
             snapshot_names_base   => "shlomif/hpage_fedora",
@@ -84,7 +82,6 @@ sub run_config
     my $container                   = $cfg->container();
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
-    my $pip_options                 = $cfg->pip_options();
     my $setup_package_manager       = $cfg->setup_package_manager();
     my $setup_script_cmd            = $cfg->setup_script_cmd();
     my $sys_deps                    = $cfg->sys_deps();
@@ -104,13 +101,9 @@ sub run_config
     my @deps = (
         sort { $a cmp $b } (
             qw/
-                g++
-                gcc
                 git
-                make
                 nodejs
                 npm
-                python3
                 /,
             @$sys_deps,
         )

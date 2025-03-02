@@ -19,9 +19,6 @@ has [
 
 package main;
 
-use Cwd            qw/ getcwd /;
-use File::Basename qw/ basename /;
-
 my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
 my $EN      = "export $NOSYNC";
 my $configs = {

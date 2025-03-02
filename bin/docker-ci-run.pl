@@ -142,6 +142,7 @@ $locale
 mv /temp-git ~/source
 true || ls -lR /root
 cd ~/source
+sudo dnf -y upgrade --refresh
 $package_manager_install_cmd glibc-langpack-en glibc-locale-source
 $package_manager_install_cmd @deps
 EOSCRIPTTTTTTT

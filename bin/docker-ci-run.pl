@@ -14,7 +14,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd setup_package_manager sys_deps /
+    qw/ container install_langpack package_manager_install_cmd setup_package_manager /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -29,11 +29,6 @@ my $configs = {
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
             setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
-            sys_deps              => [
-                qw/
-                    perl
-                    /,
-            ],
         }
     ),
 };
@@ -52,7 +47,6 @@ sub run_config
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $setup_package_manager       = $cfg->setup_package_manager();
-    my $sys_deps                    = $cfg->sys_deps();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
         { container => $container, sys => $sys, }, );
@@ -71,8 +65,8 @@ sub run_config
                 git
                 nodejs
                 npm
+                perl
                 /,
-            @$sys_deps,
         )
     );
 

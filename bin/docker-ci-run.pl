@@ -14,7 +14,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd setup_package_manager setup_script_cmd sys_deps /
+    qw/ container install_langpack package_manager_install_cmd setup_package_manager sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -29,7 +29,6 @@ my $configs = {
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
             setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
-            setup_script_cmd      => "$EN",
             sys_deps              => [
                 qw/
                     perl
@@ -53,7 +52,6 @@ sub run_config
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $setup_package_manager       = $cfg->setup_package_manager();
-    my $setup_script_cmd            = $cfg->setup_script_cmd();
     my $sys_deps                    = $cfg->sys_deps();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
@@ -149,7 +147,6 @@ EOSCRIPTTTTTTT
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
 $locale
-$setup_script_cmd
 cd ~/source
 bash -x bin/install-npm-deps.sh
 EOSCRIPTTTTTTT

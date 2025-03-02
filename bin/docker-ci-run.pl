@@ -40,15 +40,13 @@ package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
 
-has [qw/ install_langpack package_manager_install_cmd /] =>
-    ( is => 'ro', required => 1 );
+has [qw/ package_manager_install_cmd /] => ( is => 'ro', required => 1 );
 
 package main;
 
 my $configs = {
     'fedora:41' => Docker::CLI::Wrapper::Container::Config->new(
         {
-            install_langpack            => "true",
             package_manager_install_cmd => "sudo dnf -y install",
         }
     ),
@@ -65,7 +63,6 @@ sub run_config
         or die "no $sys config";
 
     my $container                   = "shlomi_fish_homesite_fedora";
-    my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
 
     my $obj = Local->new( { container => $container, sys => $sys, }, );
@@ -145,12 +142,7 @@ $locale
 mv /temp-git ~/source
 true || ls -lR /root
 cd ~/source
-if $install_langpack
-then
-    $package_manager_install_cmd glibc-langpack-en glibc-locale-source
-    # localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
-    # localedef --force -i en_US -f UTF-8 en_US.UTF-8
-fi
+$package_manager_install_cmd glibc-langpack-en glibc-locale-source
 $package_manager_install_cmd @deps
 EOSCRIPTTTTTTT
 

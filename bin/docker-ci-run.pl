@@ -76,7 +76,6 @@ sub run_config
 {
     my ( $self, $args ) = @_;
 
-    my $cleanrun   = $args->{cleanrun};
     my $cleanup    = $args->{cleanup};
     my $force_load = $args->{force_load};
     my $sys        = $args->{sys};
@@ -110,19 +109,10 @@ sub run_config
                 g++
                 gcc
                 git
-                golang
-                lynx
                 make
                 nodejs
                 npm
                 python3
-                python3-cookiecutter
-                python3-pip
-                python3-setuptools
-                python3-virtualenv
-                rsync
-                virtualenv
-                zip
                 /,
             @$sys_deps,
         )
@@ -139,17 +129,6 @@ sub run_config
 
     my $commit    = $snapshot_names_base . "_1";
     my $from_snap = 0;
-    if ($cleanrun)
-    {
-        $obj->clean_up();
-        if ($cleanup)
-        {
-            warn "doing only --cleanup!";
-            return;
-        }
-        $obj->run_docker();
-    }
-    else
     {
         eval {
             my $snap_obj = Docker::CLI::Wrapper::Container->new(
@@ -260,10 +239,6 @@ EOSCRIPTTTTTTT
     else
     {
         $obj->exe_bash_code( { code => $script, } );
-        if ( not $cleanrun )
-        {
-            $obj->commit( { label => $commit, } );
-        }
     }
 
     $script = <<"EOSCRIPTTTTTTT";
@@ -283,21 +258,10 @@ EOSCRIPTTTTTTT
     return;
 }
 
-use Getopt::Long qw/ GetOptions /;
-
 my $output_fn;
 my $force_load;
-my $cleanrun;
 my $cleanup;
 my $regex_filter = '.';
-
-GetOptions(
-    "cleanrun!"      => \$cleanrun,
-    "cleanup!"       => \$cleanup,
-    "force-load!"    => \$force_load,
-    "regex-filter=s" => \$regex_filter,
-    "output|o=s"     => \$output_fn,
-) or die $!;
 
 # enable hires wallclock timing if possible
 use Benchmark ':hireswallclock';
@@ -314,7 +278,6 @@ foreach my $sys (@systems_names)
         sub {
             __PACKAGE__->run_config(
                 {
-                    cleanrun   => $cleanrun,
                     cleanup    => $cleanup,
                     force_load => $force_load,
                     sys        => $sys,

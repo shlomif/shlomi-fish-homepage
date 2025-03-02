@@ -14,7 +14,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
+    qw/ container install_langpack package_manager_install_cmd setup_package_manager setup_script_cmd sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -30,7 +30,6 @@ my $configs = {
 
             setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
             setup_script_cmd      => "$EN",
-            snapshot_names_base   => "shlomif/hpage_fedora",
             sys_deps              => [
                 qw/
                     perl
@@ -56,7 +55,6 @@ sub run_config
     my $setup_package_manager       = $cfg->setup_package_manager();
     my $setup_script_cmd            = $cfg->setup_script_cmd();
     my $sys_deps                    = $cfg->sys_deps();
-    my $snapshot_names_base         = $cfg->snapshot_names_base();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
         { container => $container, sys => $sys, }, );
@@ -89,7 +87,6 @@ sub run_config
         die "Must be run as \"$^X bin/docker-ci-run.pl\"!";
     }
 
-    my $commit = $snapshot_names_base . "_1";
     $obj->clean_up();
     $obj->run_docker();
     my $temp_git_repo_path = "../temp-git";

@@ -90,18 +90,8 @@ sub run_config
     }
 
     my $commit = $snapshot_names_base . "_1";
-    {
-        eval { die; };
-        if ($@)
-        {
-            $obj->clean_up();
-            $obj->run_docker();
-        }
-        else
-        {
-            die;
-        }
-    }
+    $obj->clean_up();
+    $obj->run_docker();
     my $temp_git_repo_path = "../temp-git";
     {
         # else...

@@ -132,10 +132,11 @@ EOF
 
             # pip_options                 => "--break-system-packages",
             pip_options           => "",
-            setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
-            setup_script_cmd      => "$EN",
-            snapshot_names_base   => "shlomif/hpage_fedora",
-            sys_deps              => [
+            setup_package_manager =>
+"sudo dnf -y install nosync ; $EN ; sudo dnf -y upgrade --refresh ; ",
+            setup_script_cmd    => "$EN",
+            snapshot_names_base => "shlomif/hpage_fedora",
+            sys_deps            => [
                 qw/
                     GraphicsMagick
                     docbook-dtds

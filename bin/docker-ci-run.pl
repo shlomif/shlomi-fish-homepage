@@ -9,6 +9,33 @@ use Carp::Always;
 
 use Docker::CLI::Wrapper::Container v0.0.4 ();
 
+package Local;
+
+use parent 'Docker::CLI::Wrapper::Container';
+
+sub exe
+{
+    my ( $self, $args ) = @_;
+
+    my @user;
+    if ( exists $args->{user} )
+    {
+        push @user, ( '--user', $args->{user} );
+    }
+
+    return $self->docker(
+        {
+            cmd => [
+
+                # '--expand-environment=no',
+                'exec',
+                @user, $self->container(),
+                @{ $args->{cmd} }
+            ]
+        }
+    );
+}
+
 package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
@@ -41,8 +68,7 @@ sub run_config
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
 
-    my $obj = Docker::CLI::Wrapper::Container->new(
-        { container => $container, sys => $sys, }, );
+    my $obj = Local->new( { container => $container, sys => $sys, }, );
 
     if ( -f "/etc/fedora-release" )
     {

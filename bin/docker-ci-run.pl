@@ -9,21 +9,6 @@ use Carp::Always;
 
 use Docker::CLI::Wrapper::Container v0.0.4 ();
 
-package Docker::CLI::Wrapper::Container;
-
-sub run_docker_commit
-{
-    my ( $self, $args ) = @_;
-
-    $self->docker(
-        {
-            cmd => [ 'run', "-d", $args->{label}, ],
-        }
-    );
-
-    return;
-}
-
 package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
@@ -111,13 +96,7 @@ sub run_config
     my $from_snap = 0;
     {
         eval {
-            my $snap_obj = Docker::CLI::Wrapper::Container->new(
-
-                # { container => $commit, sys => $sys, },
-                { container => $container, sys => $sys, },
-            );
-            $snap_obj->run_docker_commit( { label => $commit, } );
-            $obj = $snap_obj;
+            die;
         };
         if ($@)
         {

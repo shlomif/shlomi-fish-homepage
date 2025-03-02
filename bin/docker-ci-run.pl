@@ -155,11 +155,6 @@ sub run_config
         }
     }
     my $temp_git_repo_path = "../temp-git";
-    if ($from_snap)
-    {
-        # body...
-    }
-    else
     {
         # else...
         $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );

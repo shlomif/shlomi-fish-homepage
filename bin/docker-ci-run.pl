@@ -19,16 +19,14 @@ has [
 
 package main;
 
-my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
-my $EN      = "export $NOSYNC";
 my $configs = {
     'fedora:41' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             install_langpack            => "true",
-            package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
+            package_manager_install_cmd => "sudo dnf -y install",
 
-            setup_package_manager => "sudo dnf -y install nosync ; $EN ;",
+            setup_package_manager => "sudo dnf -y install nosync ;",
         }
     ),
 };

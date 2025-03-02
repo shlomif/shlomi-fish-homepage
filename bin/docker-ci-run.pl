@@ -258,18 +258,15 @@ EOSCRIPTTTTTTT
     return;
 }
 
-my $output_fn;
 my $force_load;
 my $cleanup;
-my $regex_filter = '.';
 
 # enable hires wallclock timing if possible
 use Benchmark ':hireswallclock';
 
 my %times;
 
-my @systems_names =
-    ( grep { /$regex_filter/ms } sort { $a cmp $b } ( keys %$configs ) );
+my @systems_names = ( sort { $a cmp $b } ( keys %$configs ) );
 SYSTEMS:
 foreach my $sys (@systems_names)
 {

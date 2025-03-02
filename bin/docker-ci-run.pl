@@ -14,19 +14,17 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd setup_package_manager /
-] => ( is => 'ro', required => 1 );
+    qw/ install_langpack package_manager_install_cmd setup_package_manager /]
+    => ( is => 'ro', required => 1 );
 
 package main;
 
 my $configs = {
     'fedora:41' => Docker::CLI::Wrapper::Container::Config->new(
         {
-            container                   => "shlomi_fish_homesite_fedora",
             install_langpack            => "true",
             package_manager_install_cmd => "sudo dnf -y install",
-
-            setup_package_manager => "sudo dnf -y install nosync ;",
+            setup_package_manager       => "sudo dnf -y install nosync ;",
         }
     ),
 };
@@ -41,7 +39,7 @@ sub run_config
     my $cfg = $configs->{$sys}
         or die "no $sys config";
 
-    my $container                   = $cfg->container();
+    my $container                   = "shlomi_fish_homesite_fedora";
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $setup_package_manager       = $cfg->setup_package_manager();

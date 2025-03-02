@@ -11,16 +11,6 @@ use Docker::CLI::Wrapper::Container v0.0.4 ();
 
 package Docker::CLI::Wrapper::Container;
 
-sub commit
-{
-    my ( $self, $args ) = @_;
-
-    $self->docker(
-        { cmd => [ 'commit', $self->container(), $args->{label}, ] } );
-
-    return;
-}
-
 sub run_docker_commit
 {
     my ( $self, $args ) = @_;
@@ -72,9 +62,8 @@ sub run_config
 {
     my ( $self, $args ) = @_;
 
-    my $cleanup    = $args->{cleanup};
-    my $force_load = $args->{force_load};
-    my $sys        = $args->{sys};
+    my $cleanup = $args->{cleanup};
+    my $sys     = $args->{sys};
 
     my $cfg = $configs->{$sys}
         or die "no $sys config";
@@ -132,11 +121,6 @@ sub run_config
         };
         if ($@)
         {
-            if ($force_load)
-            {
-                die qq#could not load sys='$sys'!#;
-            }
-
             $obj->clean_up();
             $obj->run_docker();
         }
@@ -226,7 +210,6 @@ EOSCRIPTTTTTTT
     return;
 }
 
-my $force_load;
 my $cleanup;
 
 # enable hires wallclock timing if possible
@@ -243,9 +226,8 @@ foreach my $sys (@systems_names)
         sub {
             __PACKAGE__->run_config(
                 {
-                    cleanup    => $cleanup,
-                    force_load => $force_load,
-                    sys        => $sys,
+                    cleanup => $cleanup,
+                    sys     => $sys,
                 }
             );
             return;

@@ -92,12 +92,9 @@ sub run_config
         die "Must be run as \"$^X bin/docker-ci-run.pl\"!";
     }
 
-    my $commit    = $snapshot_names_base . "_1";
-    my $from_snap = 0;
+    my $commit = $snapshot_names_base . "_1";
     {
-        eval {
-            die;
-        };
+        eval { die; };
         if ($@)
         {
             $obj->clean_up();
@@ -105,7 +102,7 @@ sub run_config
         }
         else
         {
-            $from_snap = 1;
+            die;
         }
     }
     my $temp_git_repo_path = "../temp-git";
@@ -163,14 +160,7 @@ fi
 $package_manager_install_cmd @deps
 EOSCRIPTTTTTTT
 
-    if ($from_snap)
-    {
-        # body...
-    }
-    else
-    {
-        $obj->exe_bash_code( { code => $script, } );
-    }
+    $obj->exe_bash_code( { code => $script, } );
 
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x

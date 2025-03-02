@@ -13,9 +13,8 @@ package Docker::CLI::Wrapper::Container::Config;
 
 use Moo;
 
-has [
-    qw/ install_langpack package_manager_install_cmd setup_package_manager /]
-    => ( is => 'ro', required => 1 );
+has [qw/ install_langpack package_manager_install_cmd /] =>
+    ( is => 'ro', required => 1 );
 
 package main;
 
@@ -24,7 +23,6 @@ my $configs = {
         {
             install_langpack            => "true",
             package_manager_install_cmd => "sudo dnf -y install",
-            setup_package_manager       => "sudo dnf -y install nosync ;",
         }
     ),
 };
@@ -42,7 +40,6 @@ sub run_config
     my $container                   = "shlomi_fish_homesite_fedora";
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
-    my $setup_package_manager       = $cfg->setup_package_manager();
 
     my $obj = Docker::CLI::Wrapper::Container->new(
         { container => $container, sys => $sys, }, );
@@ -121,7 +118,6 @@ set -e -x
 $locale
 mv /temp-git ~/source
 true || ls -lR /root
-$setup_package_manager
 cd ~/source
 if $install_langpack
 then

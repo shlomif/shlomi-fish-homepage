@@ -86,6 +86,19 @@ as well as images ( <filename>*.png</filename> / etc. ).
 ( <filename>*.scss</filename> ; <link xlink:href="https://sass-lang.com/guide/">SASS/SCSS guide</link>)
 </para>
 
+<para>
+<filename class="directory">lib/Inc/</filename> contains Template Toolkit sources
+( <filename>*.tt2</filename> ) especially the ones that are not PROCESSed by
+default. Note the capital “I” letter.
+</para>
+
+<para>
+<filename class="directory">lib/pages/t2/</filename> contains Template Toolkit sources
+( <filename>*.tt2</filename> ) each of which usually affects only a small number of
+pages, and which serve as a secondary template to them. "t2" is the old name of the main
+part of my site.
+</para>
+
 </section>
 
 <section xml:id="preferred-formats">

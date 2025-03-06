@@ -113,4 +113,18 @@ See <link xlink:href="src/philosophy/computers/web/choice-of-docs-formats/index.
 
 </section>
 
+<section xml:id="adding-fortunes">
+
+<info>
+<title>Adding fortunes</title>
+</info>
+
+<para>
+After adding a new <code>&lt;fortune /&gt;</code> element to the
+<filename>src/humour/fortunes/*.xml</filename> type "gmake fortunes-target"
+to add the id.
+</para>
+
+</section>
+
 </article>

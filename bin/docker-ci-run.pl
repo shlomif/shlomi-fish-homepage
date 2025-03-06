@@ -71,6 +71,7 @@ printf "%s\n%s\n" "en_US.UTF-8 UTF-8" "C.UTF-8 UTF-8" > /etc/locale.gen
 sudo dpkg-reconfigure --frontend=noninteractive locales
 # sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
+sudo eatmydata apt-get -y full-upgrade
 EOF
             setup_script_cmd    => "true",
             snapshot_names_base => "shlomif/hpage_debian",

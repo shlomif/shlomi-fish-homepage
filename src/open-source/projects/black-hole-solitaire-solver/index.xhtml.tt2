@@ -20,9 +20,9 @@ the cards to move.
 
 [% END %]
 
-[% WRAPPER h2_section id = "download"  title = "Download"  %]
+[% WRAPPER h2_section id = "download" title = "Download" %]
 
-[% SET ver = "1.10.1" %]
+[% SET ver = "1.14.0" %]
 [% SET arc = "black-hole-solver-${ver}.tar.xz" %]
 [% SET sqlite_dump_arc = "black_hole_solver.dump.xz" %]
 [% SET sqlite_dump_url = "http://fc-solve.shlomifish.org/downloads/fc-solve/$sqlite_dump_arc" %]
@@ -55,7 +55,7 @@ of an <a href="http://www.sqlite.org/">SQLite</a> database.
 
 </ul>
 
-[% WRAPPER h3_section id = "download-solving-data"  title = "Solving Data"  %]
+[% WRAPPER h3_section id = "download-solving-data" title = "Solving Data" %]
 
 <p>
 We’ve ran the solver on the first 1 million
@@ -142,16 +142,16 @@ that was used to generate them from the more verbose solution files</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "project-links"  title = "Project Links"  %]
+[% WRAPPER h2_section id = "project-links" title = "Project Links" %]
 
-[% WRAPPER github_cpan_dist_links     dist = "Games-Solitaire-BlackHole-Solver"
+[% WRAPPER github_cpan_dist_links dist = "Games-Solitaire-BlackHole-Solver"
     github_url = "http://github.com/shlomif/black-hole-solitaire"
-    freecode_url = "http://freecode.com/projects/black-hole-solitaire-solver"  %]
+    freecode_url = "http://freecode.com/projects/black-hole-solitaire-solver" %]
 [%- END -%]
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "similar-projects"  title = "Similar Projects"  %]
+[% WRAPPER h2_section id = "similar-projects" title = "Similar Projects" %]
 
 <ul>
 
@@ -174,11 +174,11 @@ validate solutions as correct.
 
 [%- END -%]
 
-[% PROCESS x11_licence name = "The Black Hole Solitaire Solver",  %]
+[% PROCESS x11_licence name = "The Black Hole Solitaire Solver" %]
 
-[% WRAPPER news_sect  %]
+[% WRAPPER news_sect %]
 
-[% WRAPPER h3_section id = "news_version_1_10_1"  title = "Version 1.10.1"  %]
+[% WRAPPER h3_section id = "news_version_1_10_1" title = "Version 1.10.1" %]
 
 <p>
 <time datetime="2020-10-29">29 October 2020</time>: Version 1.10.1 was released
@@ -191,7 +191,7 @@ over on <a href="https://politaire.com/">the Polymorphic Solitaire site</a> (Tha
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_1_8_0"  title = "Version 1.8.0"  %]
+[% WRAPPER h3_section id = "news_version_1_8_0" title = "Version 1.8.0" %]
 
 <p>
 Version 1.8.0 was released with some fixes and enhancements, and while
@@ -201,7 +201,7 @@ the C library for Python</a> which is also open source.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_1_4_0"  title = "Version 1.4.0"  %]
+[% WRAPPER h3_section id = "news_version_1_4_0" title = "Version 1.4.0" %]
 
 <p>
 Version 1.4.0 was released with some optimisations and cleanups.
@@ -209,7 +209,7 @@ Version 1.4.0 was released with some optimisations and cleanups.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_1_0_0"  title = "Version 1.0.0"  %]
+[% WRAPPER h3_section id = "news_version_1_0_0" title = "Version 1.0.0" %]
 
 <p>
 Version 1.0.0 was released with some relatively minor changes and cleanups, but
@@ -218,7 +218,7 @@ a new major version digit.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_22_0"  title = "Version 0.22.0"  %]
+[% WRAPPER h3_section id = "news_version_0_22_0" title = "Version 0.22.0" %]
 
 <p>
 Version 0.22.0 was released with hopefully better handling
@@ -228,7 +228,7 @@ allocations</a>, as well as a refactored test suite.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_20_0"  title = "Version 0.20.0"  %]
+[% WRAPPER h3_section id = "news_version_0_20_0" title = "Version 0.20.0" %]
 
 <p>
 Version 0.20.0 was released with recycling instances support and some
@@ -237,7 +237,7 @@ speed improvements.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_18_0"  title = "Version 0.18.0"  %]
+[% WRAPPER h3_section id = "news_version_0_18_0" title = "Version 0.18.0" %]
 
 <p>
 Version 0.18.0 was released with added support for <a href="https://en.wikipedia.org/wiki/Golf_(patience)">three variants of Golf</a>.
@@ -245,7 +245,7 @@ Version 0.18.0 was released with added support for <a href="https://en.wikipedia
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_16_0"  title = "Version 0.16.0"  %]
+[% WRAPPER h3_section id = "news_version_0_16_0" title = "Version 0.16.0" %]
 
 <p>
 Version 0.16.0 was released with a fix for a crash and some code cleanups.
@@ -253,7 +253,7 @@ Version 0.16.0 was released with a fix for a crash and some code cleanups.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_14_0"  title = "Version 0.14.0"  %]
+[% WRAPPER h3_section id = "news_version_0_14_0" title = "Version 0.14.0" %]
 
 <p>
 Version 0.14.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -265,7 +265,7 @@ Git and GitHub and enabling <a href="https://travis-ci.org/shlomif/black-hole-so
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_12_0"  title = "Version 0.12.0"  %]
+[% WRAPPER h3_section id = "news_version_0_12_0" title = "Version 0.12.0" %]
 
 <p>
 Version 0.12.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -275,7 +275,7 @@ from now on), and an ability to be built as an RPM.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_10_0"  title = "Version 0.10.0"  %]
+[% WRAPPER h3_section id = "news_version_0_10_0" title = "Version 0.10.0" %]
 
 <p>
 Version 0.10.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -286,7 +286,7 @@ version 3.0.0 of CMake.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_8_0"  title = "Version 0.8.0"  %]
+[% WRAPPER h3_section id = "news_version_0_8_0" title = "Version 0.8.0" %]
 
 <p>
 Version 0.8.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -296,7 +296,7 @@ this release are the new <code>--version</code> flag, and the
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_6_0"  title = "Version 0.6.0"  %]
+[% WRAPPER h3_section id = "news_version_0_6_0" title = "Version 0.6.0" %]
 
 <p>
 Version 0.6.0 of Black Hole Solitaire Solver was released. The highlights of
@@ -307,7 +307,7 @@ the intermediate board layouts after every move.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_4_0"  title = "Version 0.4.0"  %]
+[% WRAPPER h3_section id = "news_version_0_4_0" title = "Version 0.4.0" %]
 
 <p>
 Version 0.4.0 of Black Hole Solitaire Solver was released. The highlight of
@@ -330,7 +330,7 @@ a Row Solitaire and have drawn some conclusions:
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "news_version_0_2_0"  title = "Version 0.2.0"  %]
+[% WRAPPER h3_section id = "news_version_0_2_0" title = "Version 0.2.0" %]
 
 <p>
 Version 0.2.0 of Black Hole Solitaire Solver was released. The highlight of

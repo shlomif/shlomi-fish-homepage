@@ -212,6 +212,15 @@ EOF
             id   => "calculators-use",
             text => "Hand-calculators-use memoir",
         },
+        {
+            html => <<"EOF",
+<p>
+High school music festival.
+</p>
+EOF
+            id   => "high-school-music-festival",
+            text => "High school music festival",
+        },
     )
 ];
 

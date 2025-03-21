@@ -11,10 +11,6 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section href = "check.mageia.org--set-empty-maint-to-nobody.user.js" id = "check-mageia-org--nobody" title = "Set empty check.mageia.org maintainers to “nobody”" %]
-
-[%- END -%]
-
 [% WRAPPER h2_section href = "no-accesskey.user.js" id = "no-accesskey" title = "Eliminate Access Keys" %]
 
 <p>
@@ -74,6 +70,21 @@ this suffix.
 </p>
 
 [% END %]
+[% WRAPPER h2_section href = "arrow-keys-for-accesskey.user.js" id = "arrow-keys-for-accesskey" title = "Arrow keys for access keys" %]
+
+<p>
+Traverse a website page-by-page using the keyboard’s arrow keys.
+</p>
+
+[% END %]
+
+[% SET removed_user_scripts = '' %]
+
+[% IF removed_user_scripts %]
+
+[% WRAPPER h2_section href = "check.mageia.org--set-empty-maint-to-nobody.user.js" id = "check-mageia-org--nobody" title = "Set empty check.mageia.org maintainers to “nobody”" %]
+
+[%- END -%]
 
 [% WRAPPER h2_section href = "qa.mandriva.com-fix-reply-to-anchor.user.js" id = "qa-mandriva-fix-anchor" title = "Fix the qa.mandriva.com reply-to-comment anchor" %]
 
@@ -96,14 +107,6 @@ default. It was written by inspiration from
 <a href="http://userscripts.org/scripts/show/51522">this script</a>, but
 actually works, because the latter does not work due to what appears to be
 bad timing in the JS application.
-</p>
-
-[% END %]
-
-[% WRAPPER h2_section href = "arrow-keys-for-accesskey.user.js" id = "arrow-keys-for-accesskey" title = "Arrow keys for access keys" %]
-
-<p>
-Traverse a website page-by-page using the keyboard’s arrow keys.
 </p>
 
 [% END %]
@@ -145,6 +148,8 @@ So, for example “*Oz” Becomes “* '''Ozy''': ”, and “**Ms” becomes
 Since this script is also intended for a specialised purpose, I haven’t
 uploaded it to userscripts.org either.
 </p>
+
+[% END %]
 
 [% END %]
 

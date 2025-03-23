@@ -4,7 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% BLOCK faq__required_lynx_usage_changes %]
-(after specifying the lynx <code>-xhtml_parsing</code> or similar)
+(after specifying the lynx <code>-xhtml_parsing</code> flag or similar)
 [% END %]
 
 [% PROCESS "Inc/faq.tt2" %]

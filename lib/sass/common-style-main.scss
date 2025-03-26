@@ -954,7 +954,9 @@ img.rindolf {
 
 .evilphish {
     border: 0;
-    float: right;
+    @if false {
+        float: right;
+    }
     margin: 0.5em;
     max-width: 70%;
 }

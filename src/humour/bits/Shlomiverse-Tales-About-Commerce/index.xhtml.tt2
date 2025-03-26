@@ -72,6 +72,11 @@ least to increase the profits.
 
 [% END %]
 
+[% IF "" %]
+[% WRAPPER h3_section id = "bought-for-paperclip" title = "" %]
+[% END %]
+[% END %]
+
 [% END %]
 
 [% WRAPPER see_also %]

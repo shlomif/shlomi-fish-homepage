@@ -4,6 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/faq.tt2" %]
+[% PROCESS "Inc/nav_meta.tt2" %]
 
 [% WRAPPER h2_section id = "bio"  href = base_path _ "personal.html"  title = "My Bio"  %]
 
@@ -79,6 +80,16 @@ my “Rindolfism” school of philosophy.
 <p>
 A list of frequently asked questions about me and this site.
 </p>
+
+[% WRAPPER h3_section id = "nav_meta_subsite" title = "meta/ sub-site" %]
+
+<ul>
+
+[% INCLUDE nav_meta__inner_list_content %]
+
+</ul>
+
+[% END %]
 
 [%- END -%]
 

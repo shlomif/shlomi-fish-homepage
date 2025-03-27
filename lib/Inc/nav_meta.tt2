@@ -1,0 +1,99 @@
+[% BLOCK nav_meta__inner_list_content %]
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/FAQ/">FAQ - Frequently Asked Questions List:</a>
+A list of frequently asked or answered questions and answers.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/how-to-help/">How to Help:</a>
+Do you like this site? Here are some ways you can help me.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/donate/">Donations:</a>
+PayPal donations information.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/site-source/">Site Source:</a>
+Information on how to get the source for the site.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/nav-blocks/blocks/">Navigation Blocks:</a>
+The topical navigation blocks of the site concentrated in one place.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/copyrights/">Copyright Information:</a>
+The Copyrights terms of the content here.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/privacy-policy/">Privacy Policy:</a>
+How your privacy is protected when browsing the site.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/linking-policy/">Linking Policy:</a>
+When can you link to this site?
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/anti-spam-policy/">Anti-Spam Policy:</a>
+What I do to prevent spam on this site.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/in-the-event-of-my-death/">In the Event of My Death:</a>
+My wishes for the resources that I have created in case of my demise.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/hosting/">Hosting:</a>
+Information about this site’s Hosting Provider.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/self-photos/">Photos of myself [= Shlomi Fish]:</a>
+a collection.
+</p>
+</li>
+
+<li>
+<p>
+<a class="l" href="[% base_path %]meta/old-site-snapshots/">Old Snapshots of the Site:</a>
+www.shlomifish.org, as it stood years ago.
+</p>
+</li>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE nav_meta__inner_list_content %]
+[% PROCESS nav_meta__inner_list_content %]
+[% END %]

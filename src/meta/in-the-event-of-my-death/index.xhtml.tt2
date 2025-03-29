@@ -1,7 +1,6 @@
 [%- SET title = "In the Event of My Death" -%]
 [%- SET desc = "What should be done with the online resources and legacy of Shlomi Fish in the even of his death" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -16,7 +15,9 @@ long enough for them to be mirrored. As of this writing (19 September 2013)
 they consist mostly of static HTML pages with sources available in distributed
 version control systems (DVCSes) repositories online, although the sources may
 not be too easy to build due to requiring some dependencies. In any case, they
-should not be hard to mirror.
+should not be hard to mirror. One can refer to <a href="[% base_path
+%]meta/site-source/">the site's sources page</a> for instructions on how to
+build the site, including in pristine environments, such as Docker containers.
 </p>
 
 <p>

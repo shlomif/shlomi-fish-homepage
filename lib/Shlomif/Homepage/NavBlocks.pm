@@ -902,7 +902,7 @@ my %table_blocks = (
     'buffy' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'buffy_nav_block',
-            text_title => "Buffy",
+            text_title => "Buffy the Vampire Slayer Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -959,7 +959,7 @@ q{<a href="https://chucknorris.com/">Chuck Norris</a> Fanfiction and Essays},
     'friends_tv' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'friends_tv_nav_block',
-            text_title => "Friends (Television Series)",
+            text_title => "Friends (Television Series) Fanfiction",
             tr_s       => [
                 _master_tr(
                     title =>
@@ -1017,7 +1017,7 @@ q{Open Source / <a href="https://perl-begin.org/">Perl</a> / etc. Fanfiction and
     'politics' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'politics_nav_block',
-            text_title => "Politics",
+            text_title => "Political Essays and Fiction",
             tr_s       => [
                 _master_tr( title => q{Political Essays and Fiction}, ),
                 _subdiv_tr( title => q{Middle East Politics}, ),
@@ -1048,7 +1048,7 @@ q{<a href="https://en.wikipedia.org/wiki/Star_Trek"><i>Star Trek</i></a> Fanfict
     'taylor_swift' => Shlomif::Homepage::NavBlocks::TableBlock->new(
         {
             id         => 'taylor_swift_nav_block',
-            text_title => "Taylor Swift",
+            text_title => "Taylor Swift-referencing Fanfiction and Essays",
             tr_s       => [
                 _master_tr(
                     title =>

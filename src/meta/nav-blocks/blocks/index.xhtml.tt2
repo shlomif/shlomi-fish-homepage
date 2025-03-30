@@ -1,16 +1,16 @@
 [%- SET title = "Shlomi Fish’s Personal Website’s Navigation Blocks" -%]
-[%- SET desc = title -%]
 
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
 
-[% USE HTML  %]
-[% WRAPPER nav_blocks  %]
+[% USE HTML %]
+
+[% WRAPPER nav_blocks %]
 
 [% FOREACH rec_id IN nav_blocks_obj.list_nav_blocks() %]
 
-[% WRAPPER h3_section id= (rec_id _ "_sect") title=(HTML.escape(nav_blocks_obj.get_nav_block(rec_id).text_title())) %]
+[% WRAPPER h3_section id = (rec_id _ "_sect") title = (HTML.escape(nav_blocks_obj.get_nav_block(rec_id).text_title())) %]
 
 [% print_nav_blocks( names => [rec_id] ) %]
 

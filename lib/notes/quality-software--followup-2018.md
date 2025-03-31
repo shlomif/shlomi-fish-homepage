@@ -21,7 +21,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
       [@shlomif Tweet](https://twitter.com/shlomif/status/1132302032310870016)
 
         - Cost of code complexity and readability
-    - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from [“You Must Hate Version Control Systems” on Perl Hacks](https://perlhacks.com/2012/03/you-must-hate-version-control-systems/)
+    - Learned about [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) from [the post “You Must Hate Version Control Systems” on Perl Hacks](https://perlhacks.com/2012/03/you-must-hate-version-control-systems/)
     - Since the essays were written, some apps improved while others got worse.
     - Electron-based apps:
         - [“The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File \[satire\]”](http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/)
@@ -41,7 +41,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - It did seem to improve, at least on my Fedora x86-64 systems. dnf version 5 may be even faster than its predecessors.
     - Mostly Positive: [VLC](https://www.videolan.org/vlc/)
         - Easy to use interface
-        - As a general rule,: stable, fast, and predictable.
+        - As a general rule: stable, fast, and predictable.
         - Also popular among many MS Windows and macOS users.
     - Mostly Positive: [Emscripten](https://en.wikipedia.org/wiki/Emscripten) / asm.js / WebAssembly
     - Mostly Positive: [pypy](https://en.wikipedia.org/wiki/PyPy)

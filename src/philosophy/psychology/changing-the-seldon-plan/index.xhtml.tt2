@@ -186,7 +186,7 @@ Otherwise, note that ESR does not mention "If it ain't broke, don't fix it." in 
 </p>
 
 <p>
-The same is also true on modernising Perl 5 code. Modern Perl has evolved from (and is still backwards compatible to) Perl 1 through Perl 5, and many of features that are still maintained will be happily executed by the interpreter, but are no longer advisable. Doing <code>open FH, $filename</code> is unsafe and wrong, and code without <code>use strict;</code> and <code>use warnings;</code> is also prone for many subtle and hard to catch bugs upon modification. There is no good reason to avoid investing the necessary time and remedying these issues, assuming you do have the time.
+The same is also true on modernising Perl 5 code. Modern Perl has evolved from (and is still backwards compatible to) Perl 1 through Perl 5. Many features that are still maintained will be happily executed by the interpreter, but are no longer advisable. Doing <code>open FH, $filename</code> is unsafe and wrong, and code without <code>use strict;</code> and <code>use warnings;</code> is also prone for many subtle and hard to catch bugs upon modification. There is no good reason to avoid investing the necessary time and remedying these issues, assuming you do have the time.
 </p>
 
 <p>

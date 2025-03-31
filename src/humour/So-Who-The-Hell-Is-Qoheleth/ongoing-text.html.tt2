@@ -2,7 +2,6 @@
 [%- SET desc = "An illustrated screenplay about what happened to the author of the scroll of Ecclesiastes/Qoheleth shortly after writing it." -%]
 [%- SET apply_screenplay_style = 1 -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% long_stories.calc_common_top_elems(id => 'who_is_qoheleth') %]

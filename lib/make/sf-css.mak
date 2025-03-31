@@ -1,5 +1,5 @@
 GEN_STYLE_CSS_FILES := \
-cats-photos.css faq-indiv.css fort_total.css fortunes.css fortunes_show.css jqui-override.css print.css screenplay.css slash-humour.css style-404.css style.css
+cats-photos.css faq-indiv.css fort_total.css fortunes.css fortunes_show.css jqui-override.css print.css screenplay.css screenplay-xml-pdfs.css slash-humour.css style-404.css style.css
 
 SRC_CSS_TARGETS := $(addprefix $(POST_DEST)/,$(GEN_STYLE_CSS_FILES))
 

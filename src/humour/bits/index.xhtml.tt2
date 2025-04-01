@@ -324,7 +324,7 @@ A post-post-Modern fairy tale.
 
 [% PROCESS "Inc/true_stories.tt2" %]
 
-[% WRAPPER h3_section id = "true-stories" title = "True Stories" %]
+[% WRAPPER h3_section href = "${base_path}humour/bits/true-stories/" id = "true-stories" title = "True Stories" %]
 
 [% INCLUDE humour_bits__true_stories %]
 

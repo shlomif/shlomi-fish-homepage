@@ -6,3 +6,14 @@ h5,
 h6 {
     text-decoration: underline;
 }
+
+@if false {
+    article,
+    section {
+        $m: 1em;
+        border-left: black 3pt solid;
+        margin-bottom: $m;
+        margin-top: $m;
+        padding-left: 2em;
+    }
+}

@@ -355,7 +355,7 @@ publicly linked to. Please send comments to
 <button id="show_navbar" class="on">Hide NavBar ⬈</button>
 [% IF apply_screenplay_style %][% main_class.addClass("screenplay_style") %][% END %]
 <main[% main_class.as_html() %] id="main">
-[%sect_nav_menu_html%]
+<div class="page">
 [%- IF rtl_layout -%]
 <div class="hebrew" xml:lang="he-IL">
 [%- END -%]
@@ -397,6 +397,8 @@ shlomif_load_nav("[% raw_fn_path %]");
 [% END %]
 [% INCLUDE share_this_button %]
 [% HEBREW_XML_LANG_SCRIPT %]
+</div>
+[%sect_nav_menu_html%]
 </main>
 <[% nav_tag %] class="navbar" id="navbar">
 <div class="center"><a href="[% base_path || "./" %]" title="Shlomi Fish’s Homepage"><img alt="EvilPHish by Illiad" class="site_icon" src="[% base_path %]images/evilphish-flipped.png"/></a></div>

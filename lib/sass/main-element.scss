@@ -1,6 +1,12 @@
 .main,
 main {
+    display: grid;
+    grid-template-columns: 80% 20%;
     padding: 1em;
+
+    div.page {
+        grid-column: 1;
+    }
 
     img {
         margin-right: 1em;

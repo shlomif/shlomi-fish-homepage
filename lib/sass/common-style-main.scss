@@ -144,7 +144,10 @@ section.bordered {
 }
 
 .sub_menu {
-    float: right;
+    @if false {
+        float: right;
+    }
+    grid-column: 2;
     font-size: 80%;
     margin-left: 7pt;
     margin-right: 10pt;

@@ -146,13 +146,13 @@ section.bordered {
 .sub_menu {
     @if false {
         float: right;
+        margin-right: 10pt;
+        min-width: 220px;
         width: 20%;
     }
     grid-column: 2;
     font-size: 80%;
     margin-left: 7pt;
-    margin-right: 10pt;
-    min-width: 220px;
 
     h2 {
         font-size: medium;

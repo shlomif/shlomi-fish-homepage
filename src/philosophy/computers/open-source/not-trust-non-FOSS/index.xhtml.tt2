@@ -38,7 +38,7 @@ several years ago, it was used by many developers of the
 <a href="https://en.wikipedia.org/wiki/Linux_kernel">Linux kernel</a>, and the
 demise of its gratis version was in fact the impetus for the creation of
 Git (and later - Mercurial). Several years ago, some time before Linus Torvalds
-started using it as the version control system of the kernel’s source code,
+started using BitKeeper as the version control system of the kernel’s source code,
 I ran into a limitation of
 <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>,
 a popular, but limited, open-source version control system, which I used back
@@ -79,7 +79,8 @@ and made me lose some of the repositories I hosted on bkbits.net.
 From that moment on, I realised that I cannot really trust non-open-source
 software, because even if I am allowed to continue to use its previous version
 after a licence change, then it may accumulate bugs or stop being runnable
-on my systems, or stop being supported, and I cannot risk it. To quote
+on my systems, or stop being supported, and I would rather not risk such crises
+happening. To quote
 <a href="http://en.wikipedia.org/wiki/Richard_Stallman">Richard
 Stallman</a>: <q>Every non-free [= non-FOSS] program has a lord, a master —
 and if you use the program, he is your master</q>.

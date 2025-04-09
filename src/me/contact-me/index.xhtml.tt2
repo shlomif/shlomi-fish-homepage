@@ -30,16 +30,24 @@ Last updated on 2023-05-09 .)
 
 <li>
 <p>
-The best ways to contact me are likely <a
-href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a> private
-chat or <a href="#XMPP">XMPP</a>.
+File an issue on my
+<a href="https://github.com/shlomif/shlomi-fish-homepage/issues">homepage's issue tracker</a>
+over on GitHub.
 </p>
 </li>
 
 <li>
 <p>
-File an issue on my
-<a href="https://github.com/shlomif/shlomi-fish-homepage/issues">homepage's issue tracker</a>
+[% IRC %]:
+<code>rindolf</code> on <a href="https://libera.chat/">Libera.chat</a>, on <code>#perlcafe</code> and other chat-rooms .
+</p>
+</li>
+
+<li>
+<p>
+You can also try <a
+href="https://www.facebook.com/shlomi.fish">Facebook shlomi.fish</a> private
+chat or <a href="#XMPP">XMPP</a>.
 </p>
 </li>
 
@@ -49,7 +57,7 @@ You can also try emailing
 [% INCLUDE mailto_link_to_self email = "shlomif@gmail.com"
 %][% " " %] as well as
 [% INCLUDE main_email_mailto prefix = "my other E-mail, "
-%].
+%]. Please email <b>both addresses</b>.
 </p>
 </li>
 
@@ -57,14 +65,6 @@ You can also try emailing
 <p>
 <a href="http://en.wikipedia.org/wiki/XMPP">Jabber/XMPP</a>
 ShlomiFish@jabber.org
-</p>
-</li>
-
-<li>
-<p>
-[% IRC %]:
-<code>rindolf</code> on <a href="http://www.freenode.org/">FreeNode</a>
-/ Libera.chat.
 </p>
 </li>
 

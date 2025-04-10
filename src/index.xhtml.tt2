@@ -195,7 +195,11 @@ fodder for my essays and articles.
 [% WRAPPER h3_section href = "open-source/" id = "open-source" title = "Open Source Software" %]
 
 <p>
-Links to software I wrote, and some resources with links to other software.
+Links to software I wrote, and some resource web pages with links to software packages
+by other originators.
+</p>
+
+<p>
 Knock yourself out!
 </p>
 
@@ -235,6 +239,23 @@ and one piece of music.
 There are many links on the site, but I also concentrated many of them in
 one place. Who doesn’t like links?
 </p>
+
+<ul>
+
+<li>
+<p>
+<a href="[% base_path %]recommendations/">Media recommendations</a> - non-fiction
+books, music, and films.
+</p>
+</li>
+
+<li>
+<p>
+<a href="[% base_path %]site-map/">Site map</a> - list of pages.
+</p>
+</li>
+
+</ul>
 
 [% END %]
 

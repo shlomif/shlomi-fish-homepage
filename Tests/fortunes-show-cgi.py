@@ -97,10 +97,6 @@ class MyTests(html_unit_test.TestCase):
             "//html/body/div[@class='fortune']/blockquote/" +
             "p[contains(text(), 'thought that programming')]"
         )
-        doc.has_one(
-            "//html/body/div[@class='fortune']/blockquote/" +
-            "p[contains(text(), 'thought that programming')]"
-        )
         doc.has_none(
             "//table[@class='info']"
         )

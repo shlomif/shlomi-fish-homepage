@@ -23,11 +23,11 @@ by <a href="https://github.com/ztzockt">Marvin</a>
 </p>
 </li>
 
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors (Pilot Episode)", %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees", %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Take-It-Over", story_title = "Let’s Take It Over With", %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--Nighttime-Flight", story_title = "Nighttime Flight", %]
-[% PROCESS story_episode_li base = "Queen-Padme-Tales--The-Fifth-Sith", story_title = "The Fifth Sith", %]
+[% INCLUDE story_episode_li base = "Queen-Padme-Tales--Queen-Amidala-vs-the-Klingon-Warriors", story_title = "Queen Amidala vs. the Klingon Warriors (Pilot Episode)", %]
+[% INCLUDE story_episode_li base = "Queen-Padme-Tales--Planting-Trees", story_title = "Planting Trees", %]
+[% INCLUDE story_episode_li base = "Queen-Padme-Tales--Take-It-Over", story_title = "Let’s Take It Over With", story_episode_description = "a poorly planned and executed take-over attempt by Emma Watson", %]
+[% INCLUDE story_episode_li base = "Queen-Padme-Tales--Nighttime-Flight", story_title = "Nighttime Flight", %]
+[% INCLUDE story_episode_li base = "Queen-Padme-Tales--The-Fifth-Sith", story_title = "The Fifth Sith", %]
 </ul>
 
 [% END %]

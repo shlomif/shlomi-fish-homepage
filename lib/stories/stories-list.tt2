@@ -1,4 +1,5 @@
 [% SET epub_prefix = "" %]
+[% SET story_episode_description = "" %]
 [% SET use_screenplay_html_prefix = '' %]
 
 [%- BLOCK tagline -%]
@@ -63,7 +64,7 @@ requests, and filing bugs/issues in the bug tracker
 [%- BLOCK story_episode_li -%]
 <li>
 <p>
-<a href="[% (use_screenplay_html_prefix ? screenplay_html_prefix : epub_prefix) _ base %].html"><b>[% story_title %]</b></a>
+<a href="[% (use_screenplay_html_prefix ? screenplay_html_prefix : epub_prefix) _ base %].html"><b>[% story_title %]</b></a>[% IF story_episode_description %] - [% story_episode_description %][%- END -%]
 </p>
 <ul>
 [%- PROCESS link_to_epub basename = epub_prefix _ base, -%]

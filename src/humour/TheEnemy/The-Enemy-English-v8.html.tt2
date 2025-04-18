@@ -1,0 +1,31 @@
+[%- SET title = "“The Enemy and How I Helped to Fight it” - Text of the English Translation - Version 8" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'the_enemy') %]
+
+[% WRAPPER h2_section id = "credits" title = "Credits" %]
+
+<p>
+<b>Written and Translated By:</b> Shlomi Fish<br/>
+<b>Editorial Work:</b>
+<a href="http://www.MiriamErezTranslations.co.il/">Miriam Erez Translations</a>
+</p>
+
+[% END %]
+
+[% default_toc %]
+
+[% WRAPPER h2_section id = "the_enemy_main_text" title = "Main Text"%]
+
+<div class="story wrap-me">
+
+[% h_inc_path_slurp("docbook/5/rendered/The-Enemy-English-v8.xhtml") %]
+
+</div>
+
+[% END %]
+
+[% license_obj.by_sa_license_british( "year" => "1997", head_tag => "h2", ) %]
+
+[% END %]

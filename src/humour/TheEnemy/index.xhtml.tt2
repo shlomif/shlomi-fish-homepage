@@ -44,7 +44,7 @@ Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 </p>
 </li>
 
-[% PROCESS story_episode_li base = "The-Enemy-English-v7" story_title = "English HTML" %]
+[% PROCESS story_episode_li base = "The-Enemy-English-v8" story_title = "English HTML" %]
 
 </ul>
 
@@ -58,8 +58,8 @@ Heaven is Paved with Bad Intentions</i></a> but did not get very far).
 
 <li>
 <p>
-<a href="https://github.com/shlomif/the-enemy">The Sources of the Story</a>
-- in Hebrew and English - in a git repository on GitHub.
+<a href="[% base_path %]meta/site-source/">The Sources of the Story</a>
+- in Hebrew and English - in the website’s git repository on GitHub.
 </p>
 </li>
 
@@ -161,7 +161,7 @@ relatively negligible.
 <li>
 <p>
 <b>Tal</b> for saying the very first version of the story (which was
-much shorter than the existing one and ended up being discarded) was not too
+much shorter than the existing one and ended up being shelved) was not too
 good, and for passing some critique on the first chapter of the second version
 which the current version is based on. (Along with his younger brother.)
 </p>
@@ -209,7 +209,21 @@ entry in my weblog</a> about the history and motivation of this story.
 [% WRAPPER h3_section id = "previous-vers" title = "Previous Versions" %]
 
 <details>
+
 <summary>Previous Versions</summary>
+
+<h4 id="previous-v7">Version 7</h4>
+
+<ul>
+
+<li>
+<p>
+<a rel="nofollow" href="The-Enemy-English-v7.html">English</a>
+</p>
+</li>
+
+</ul>
+
 <h4 id="previous-rev6">Revision 6</h4>
 
 <ul>

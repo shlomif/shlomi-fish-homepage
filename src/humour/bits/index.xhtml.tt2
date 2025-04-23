@@ -6,6 +6,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/faq.tt2" %]
+[% PROCESS "Inc/humour_bits.tt2" %]
 
 <p>
 Funny short scale stories I wrote - often just a pageful or two.
@@ -308,9 +309,7 @@ Professor Discord ( MCSE ) about story-telling best practices.
 
 [% WRAPPER h3_section id="The-Princess-Programmer" href="The-Princess-Programmer/" title="The Princess Programmer" %]
 
-<p>
-A post-post-Modern fairy tale.
-</p>
+[% INCLUDE humour_bits__princess_programmer__intro %]
 
 [% END %]
 

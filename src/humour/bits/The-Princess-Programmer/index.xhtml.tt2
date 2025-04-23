@@ -4,6 +4,14 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/humour_bits.tt2" %]
+
+[% WRAPPER h2_section id = "intro" title = "Introduction" %]
+
+[% INCLUDE humour_bits__princess_programmer__intro %]
+
+[% END %]
+
 [% WRAPPER h2_section id = "text" title = "The Text" %]
 
 <p>

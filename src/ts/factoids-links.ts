@@ -5,7 +5,6 @@
 // Thanks!
 
 function factoids_addlinks({ clearMarkup }: { clearMarkup: boolean }): void {
-    return;
     const fortunes = $(".main_facts_list > ul > li.fact");
     const fort = (idx) => {
         return fortunes.slice(idx, idx + 1);

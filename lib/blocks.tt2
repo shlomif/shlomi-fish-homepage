@@ -70,8 +70,8 @@ on Shlomi Fish’s personal website. See <a href="[% text_ORIG_URL_PREFIX %]meta
 <p>
 Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
 and <a href="[% base_path %]me/rindolf/">“Rindolf”</a>),
-[% PROCESS main_email_mailto -%],
-[% PROCESS mailto_link_to_self email = "shlomif@gmail.com" -%].
+[% INCLUDE main_email_mailto -%],
+[% INCLUDE mailto_link_to_self email = "shlomif@gmail.com" -%].
 </p>
 
 [%- END -%]
@@ -150,7 +150,7 @@ control and other resources.
 [%- END -%]
 
 [%- BLOCK eng_qp_lect -%]
-[%- PROCESS qp_lect dir = "slides", -%]
+[%- INCLUDE qp_lect dir = "slides", -%]
 [%- END -%]
 
 [%- PROCESS "h_sections_local.tt2" -%]

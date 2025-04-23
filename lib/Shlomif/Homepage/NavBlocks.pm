@@ -1105,11 +1105,11 @@ q{<a href="https://en.wikipedia.org/wiki/My_Little_Pony:_Friendship_Is_Magic"><i
         {
             id         => 'self_ref_nav_block',
             text_title =>
-                "Self-Reference / Gödel, Escher, Bach / Last Action Hero",
+"Self-Reference / Real vs. Fictional / Gödel, Escher, Bach / Last Action Hero",
             tr_s => [
                 _master_tr(
                     title =>
-q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#self-ref">Self-Reference</a> / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
+q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#self-ref">Self-Reference</a> / Real vs. Fictional / <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"><i>Gödel, Escher, Bach</i></a> / <a href="https://en.wikipedia.org/wiki/Last_Action_Hero"><i>Last Action Hero</i></a>},
                 ),
                 $Screenplays_TR,
                 _tr_s(

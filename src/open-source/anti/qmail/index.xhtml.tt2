@@ -1,6 +1,4 @@
 [%- SET title = "The Anti-qmail Page" -%]
-[%- SET desc = "The Anti-qmail Page" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -27,47 +25,63 @@ to a different MTA. That’s because:
 
 <ol>
 <li>
+<p>
 It’s not open-source, and has a very problematic licence, that does not allow
 binary packages, distributing modified sources (only patches), etc.  As such
 it is not distributed as part of distributions of operating systems, and is
 not regularly kept up-to-date. There are other open-source alternatives that
 work just as well.
+</p>
 </li>
 <li>
+<p>
 It is no longer actively maintained. The last version was released on 1998.
 So qmail has been abandonware for over 7 years at the time of this writing
 (November 2005). Many patches are available for it, but they may not apply
 cleanly one after the other, and are not supported by the author. It even no
 longer compiles cleanly on Linux.
+</p>
 </li>
 <li>
+<p>
 Because the licence effectively permits only the author
 (<a href="https://en.wikipedia.org/wiki/Daniel_J._Bernstein">Daniel J. Bernstein</a>)
 to maintain the software, his consistent, mulishly unpleasant and
 hostile attitude tends to become an obstacle, as it would not be if the
 software were licensed differently.
+</p>
 </li>
 <li>
+<p>
 It has a completely user-unfriendly build system, a long build process, and
 incredibly unreadable code. Bernstein uses a lot of one- or two-letter
 variable names, and cryptic function names.
+</p>
 </li>
 <li>
+<p>
 The ezmlm-idx mailing list manager, whose use with qmail is popular
 has a lot of duplication in its configuration. It hard-codes the various paths
 in many different places. It is also exclusive to qmail. (Note that one can
 use one or more different mailing list managers using qmail).
+</p>
 </li>
 <li>
+<p>
 ezmlm-idx does not easily allow people to be subscribed to mailing lists
 without receiving E-mail, which often prevents them from posting.
+</p>
 </li>
 <li>
+<p>
 Many bugs were discovered in qmail since its last release (including some
 security bugs) and were left unfixed in the vanilla version.
+</p>
 </li>
 <li>
+<p>
 qmail lags behind other MTAs in its feature-set.
+</p>
 </li>
 </ol>
 
@@ -79,18 +93,26 @@ Instead you should use one of the following MTAs:
 
 <ol>
 <li>
+<p>
 <a href="http://www.postfix.org/">Postfix</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.courier-mta.org/">Courier</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.exim.org/">Exim</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://freecode.com/browse/32/">Other SMTP Servers</a>. (Also see
 <a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s comparison of
 common Mail Transport Agents</a>.)
+</p>
 </li>
 </ol>
 
@@ -98,49 +120,69 @@ common Mail Transport Agents</a>.)
 
 <ul>
 <li>
+<p>
 <a href="http://perl.org.il/pipermail/perl/2004-October/005989.html">Discussion
 in the Israeli Perl mailing list</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://web.archive.org/web/20100102052415/http://discuss.joelonsoftware.com:80/default.asp?joel.3.72853.10">Discussion
 in the Joel on Software forum</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://lwn.net/Articles/85493/">Discussion in LWN.Net</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://linuxmafia.com/faq/Mail/mtas.html">Rick Moen’s MTA comparison
 page</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://linuxmafia.com/~rick/faq/warez.html#djb">Rick Moen’s
 FAQ about Daniel J. Bernstein’s Software</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://linmagazine.co.il/node/view/9620">Hebrew blog entry in Aviram
 Jenik’s blog about Dan J. Bernstein not giving the money he promised for a
 remote root exploit that was found in qmail</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://lwn.net/Articles/257004/">Coverage of
 “Ten Years of qmail Security” on LWN.net</a> - contains many instructive comments.
+</p>
 </li>
 <li>
+<p>
 <a href="http://developers.slashdot.org/article.pl?sid=07/11/06/0131227">Slashdot
 discussion of “Qmail at 10 Years”</a>
+</p>
 </li>
 
 <li>
+<p>
 <a
 href="http://mailman.cs.huji.ac.il/pipermail/linux-il/2012-August/009500.html">Post
 to Linux-IL about qmail and mx records</a> - “we flush qmail’s DNS cache daily
 because we found it wasn’t respecting TTL”.
+</p>
 </li>
 
 <li>
+<p>
 <a href="https://lwn.net/Articles/820969/">"A remote code execution vulnerability in qmail [LWN.net]"</a>
 ( 19-May-2020 ) - a vulnerability that was originally published in 2005 and was
 not fixed is exploitable now on 64-bit systems.
+</p>
 </li>
 
 </ul>
@@ -150,12 +192,16 @@ not fixed is exploitable now on 64-bit systems.
 <ul>
 
 <li>
+<p>
 <a href="http://www.mail-archive.com/linux-il@cs.huji.ac.il/msg42279.html">Linux-IL
 mailing list</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="http://zgp.org/pipermail/linux-elitists/2005-November/011333.html">Linux-elitists</a>
+</p>
 </li>
 
 </ul>

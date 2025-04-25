@@ -39,7 +39,7 @@ package Docker::CLI::Wrapper::Container::Config;
 use Moo;
 
 has [
-    qw/ container install_langpack package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
+    qw/ container install_bitvec install_langpack package_manager_install_cmd pip_options setup_package_manager setup_script_cmd snapshot_names_base sys_deps /
 ] => ( is => 'ro', required => 1 );
 
 package main;
@@ -53,6 +53,7 @@ my $configs = {
     'debian:12' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_debian",
+            install_bitvec              => "true",
             install_langpack            => "false",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
@@ -125,9 +126,10 @@ EOF
             ],
         }
     ),
-    'fedora:41' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:42' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
+            install_bitvec              => "false",
             install_langpack            => "true",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
@@ -154,9 +156,11 @@ EOF
                     libxslt-devel
                     ncurses-devel
                     pcre-devel
+                    perl-Bit-Vector
                     perl-DBD-SQLite
                     perl-Inline-Python
                     perl-LWP-Protocol-https
+                    perl-Text-Hunspell
                     perl-XML-Parser
                     perl-generators
                     primesieve-devel
@@ -195,6 +199,7 @@ sub run_config
         or die "no $sys config";
 
     my $container                   = $cfg->container();
+    my $install_bitvec              = $cfg->install_bitvec();
     my $install_langpack            = $cfg->install_langpack();
     my $package_manager_install_cmd = $cfg->package_manager_install_cmd();
     my $pip_options                 = $cfg->pip_options();
@@ -432,7 +437,11 @@ cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
 cpanm --notest HTML::T5
 # For wml
-cpanm --notest Bit::Vector Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
+if test "$install_bitvec" = "true"
+then
+    cpanm --notest Bit::Vector
+fi
+cpanm --notest Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp
 cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
 sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"

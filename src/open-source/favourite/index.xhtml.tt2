@@ -507,6 +507,15 @@ losing information.
 
 [% END %]
 
+[% WRAPPER h3_section href = "http://userbase.kde.org/Gwenview" id = "gwenview" title = "Gwenview" %]
+
+<p>
+<img alt="Gwenview’s Logo" src="[% base_path %]open-source/resources/graphics-programs/Gwenview.svg" style="height:80px;" />
+an open-source image viewer from the KDE project.
+</p>
+
+[% END %]
+
 [% END %]
 
 [% WRAPPER h2_section id = "office" title = "Office" %]

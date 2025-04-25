@@ -24,6 +24,12 @@ stable, powerful and very cool.
 
 [% WRAPPER h3_section href = "http://www.mageia.org/" id = "mageia" title = "Mageia" %]
 
+<p>
+I now use and recommend to use <a href="[% base_path %]meta/FAQ/choice_of_operating_system.xhtml">Fedora instead of Mageia</a>.`
+</p>
+
+[% IF 0 %]
+
 <img src="images/mageia-2013-dark.png" alt="Mageia [Linux] Logo" class="rfloaty" />
 
 <p>
@@ -40,6 +46,8 @@ Intranet servers.
 While not as hyped as other distributions are, Mageia is very decent, and
 is suitable for both beginner and advanced users.
 </p>
+
+[% END %]
 
 [% END %]
 

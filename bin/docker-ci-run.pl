@@ -160,6 +160,7 @@ EOF
                     perl-DBD-SQLite
                     perl-Inline-Python
                     perl-LWP-Protocol-https
+                    perl-Text-Hunspell
                     perl-XML-Parser
                     perl-generators
                     primesieve-devel

@@ -366,8 +366,8 @@ against using it, but I have some legacy code in it.
 [% WRAPPER h4_section href = "http://www.linpro.no/lwp/" id = "libwww_perl" title = "Libwww-perl (LWP)" %]
 
 <p>
-LWP is a very powerful Perl framework for retrieving documents from the
-World Wide Web. It’s a must if you want to automate web processes in
+LWP is a powerful Perl framework for retrieving documents from the
+World Wide Web. It’s useful if you want to automate web processes in
 Perl.
 </p>
 
@@ -452,7 +452,7 @@ A fast and portable module player that supports many formats, with a
 [% WRAPPER h3_section href = "http://www.inkscape.org/" id = "inkscape" title = "Inkscape" %]
 
 <p>
-A very nice cross-platform vector graphics program.
+A cross-platform vector graphics program.
 </p>
 
 [% END %]
@@ -467,6 +467,11 @@ can easily download the video files to my home computer, where I can
 conveniently play them using such media players as
 <a href="#vlc">VLC</a>, and also keep them
 on my hard disk for posterity. Highly recommended.
+</p>
+
+<p>
+<b>Note:</b> <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> is a more
+up-to-date and recommended fork.
 </p>
 
 [% END %]

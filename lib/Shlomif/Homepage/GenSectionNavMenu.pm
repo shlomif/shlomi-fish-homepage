@@ -97,7 +97,7 @@ sub process_batch
             return write_on_change( $urlp->child($id), $ref );
         };
 
-        my $markup = "<p>";
+        my $markup = qq|<p class="bottom_nav">|;
         if ( my $url = $nav_links_obj->{'prev'} )
         {
             $markup .=

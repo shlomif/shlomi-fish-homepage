@@ -13,6 +13,15 @@
     display: none;
 }
 
+img {
+    $prop: 80%;
+    transform: scale($prop, $prop);
+    @if false {
+        height: $prop;
+        width: $prop;
+    }
+}
+
 #footer_donate,
 #show_navbar,
 .banner,

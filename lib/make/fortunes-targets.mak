@@ -117,7 +117,7 @@ $(SRC_FORTUNES_ALL__HTML__POST): $(SRC_CLEAN_STAMP)
 all_deps: $(SRC_FORTUNES_ALL_TT2)
 copy_fortunes: $(PRE_DEST_FORTUNES_many_files) $(POST_DEST_FORTUNES_many_files)
 
-FORTUNES_SHOW_CGI__XHTMLS_PIVOT := dest/post-incs/t2/humour/fortunes/__FORTS-show-cgi-xhtmls/i-thought-using-loops-was-cheating.xhtml
+FORTUNES_SHOW_CGI__XHTMLS_PIVOT := dest/pre-incs/t2/humour/fortunes/__FORTS-show-cgi-xhtmls/i-thought-using-loops-was-cheating.xhtml
 
 all_deps: $(FORTUNES_SHOW_CGI__XHTMLS_PIVOT)
 

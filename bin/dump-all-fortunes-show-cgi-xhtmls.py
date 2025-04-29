@@ -46,7 +46,8 @@ class Main:
         # assert app
         strings_list = _list_all_string_ids()
         containing_dest_dir = "dest/post-incs/t2/humour/fortunes/"
-        dest_dir = containing_dest_dir + "__FORTS-show-cgi-xhtmls"
+        containing_preproc_dest_dir = "dest/pre-incs/t2/humour/fortunes/"
+        dest_dir = containing_preproc_dest_dir + "__FORTS-show-cgi-xhtmls"
         os.makedirs(dest_dir, exist_ok=True, )
         raws_dest_dir = containing_dest_dir + "__FORTS-show-cgi-rawxhtmls"
         os.makedirs(raws_dest_dir, exist_ok=True, )

@@ -445,6 +445,10 @@ my %tr_s = (
                 path       => "humour/bits/Python4-Announcement/",
             ),
             _l(
+                inner_html => "Who will ride Princess Celestia next?",
+                path       => "humour/bits/Who-will-ride-Princess-Celestia/",
+            ),
+            _l(
                 inner_html => "The Princess Programmer",
                 path       => "humour/bits/The-Princess-Programmer/",
             ),
@@ -479,6 +483,10 @@ my %tr_s = (
             _l(
                 inner_html => "Optimising Code for Speed",
                 path       => "philosophy/computers/optimizing-code-for-speed/",
+            ),
+            _l(
+                inner_html => "Changing the Seldon Plan",
+                path       => "philosophy/psychology/changing-the-seldon-plan/",
             ),
         ],
     ),

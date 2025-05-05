@@ -8,6 +8,8 @@
 [% SET link_img_ext = '' %]
 [% SET img_ext = '' %]
 
+[% default_toc %]
+
 <div class="self_photos">
 
 [% BLOCK photo %]
@@ -31,7 +33,7 @@
 
 [% END %]
 
-[% WRAPPER photo alt = "Wearing the #SummerNSA shirt" id = "SummerNSA-shirt-field-2022" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
+[% WRAPPER photo alt = "Wearing the #SummerNSA shirt in the field north of my neighbourhood" id = "SummerNSA-shirt-field-2022" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
 
 [% END %]
 
@@ -62,7 +64,7 @@ for <a href="https://nineworlds.co.uk/">Nine Worlds Convention</a>.
 
 [% END %]
 
-[% WRAPPER photo alt = "Wearing the #SummerNSA shirt" id = "SummerNSA-shirt-kiosk-2014" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-kiosk-2014.webp" img_ext = "-400px.webp" %]
+[% WRAPPER photo alt = "Wearing the #SummerNSA shirt at a kiosk shop" id = "SummerNSA-shirt-kiosk-2014" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-kiosk-2014.webp" img_ext = "-400px.webp" %]
 
 <p>
 <a href="https://www.flickr.com/photos/shlomif/14537790923/in/photostream/">Larger version available on Flickr.</a>

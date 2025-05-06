@@ -70,7 +70,8 @@ Freecell Solver in its CMake-driven form has evolved and expanded since then,
 but as of version 2.40.0 its tar.gz now takes 408,076 bytes, which is less
 than its original Autotools size. Moreover, we can now easily ship it as
 the more compact tar.bz2 (which takes 291,531 bytes) and a tar.xz (which takes
-242,164 bytes) which CMake gives us for free.
+242,164 bytes). Note that Autotools can generate archives in these formats
+too, but they are usually larger than the CMake counterparts.
 </p>
 </li>
 
@@ -92,10 +93,10 @@ Development Environments (such as Microsoft Developer Studio).
 
 <li>
 <p>
+[% IANAL %].
 CMake uses <a href="http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22.29">the
-modified BSD license</a> (which is GPL-compatible and allows virtually any
-use), instead of GNU Autotools’ GNU General Public License (GPL) which is
-much more restrictive.
+modified BSD license</a>, which is GPL-compatible and permissive.
+So it is [% FOSS %], like GNU Autotools
 </p>
 </li>
 

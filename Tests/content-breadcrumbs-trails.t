@@ -41,7 +41,7 @@ TODO:
 "lib/cache/combined/t2/lecture/W2L/Network/index.xhtml/breadcrumbs-trail",
             blurb    => 'w2l-networking-lecture',
             expected => <<'EOF',
-<a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Presentations I Wrote (Mostly Technical)">Lectures</a> → <a href="../" title="Presentations in the Series for Linux Beginners">Welcome to Linux</a> → <a href="./" title="Networking in Linux Explanation and Howto">Networking</a>
+<a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Presentations I Wrote (Mostly Technical)">Lectures</a> → <a href="../" title="Presentations in the Series for Linux Beginners">“Welcome to Linux” presentations</a> → <a href="./" title="Networking in Linux Explanation and Howto">Networking</a>
 EOF
         }
     );

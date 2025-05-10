@@ -57,7 +57,7 @@ my $_section_navmenu_tree_contents = {
                     url  => "lecture/C-and-CPP/bad-elements/",
                 },
                 {
-                    text => "Scheme &amp; Lambda Calculus",
+                    text => "Presentation about Scheme &amp; Lambda Calculus",
                     url  => "lecture/Lambda-Calculus/",
                     subs => [
                         {
@@ -68,7 +68,7 @@ my $_section_navmenu_tree_contents = {
                     ],
                 },
                 {
-                    text  => "Haskell for Perlers",
+                    text  => "Presentation about Haskell for Perlers",
                     url   => "lecture/Perl/Haskell/",
                     title =>
                         "The Haskell Programming Language for Perl Programmers",
@@ -81,22 +81,22 @@ my $_section_navmenu_tree_contents = {
             title => "Various Tools",
             subs  => [
                 {
-                    text  => "GIMP",
+                    text  => "Presentation about GIMP",
                     url   => "lecture/Gimp/",
                     title => "The GNU Image Manipulation Program",
                 },
                 {
-                    text  => "PostgreSQL",
+                    text  => "Presentation about PostgreSQL",
                     url   => "lecture/PostgreSQL/",
                     title => "The PostgreSQL Database Server",
                 },
                 {
-                    text  => "Lex &amp; Yacc",
+                    text  => "Presentation about Lex &amp; Yacc",
                     url   => "lecture/Sys-Call-Track/Lex-Yacc/",
                     title => "Lex and Yacc - for Tokenizing and Parsing",
                 },
                 {
-                    text  => "Autotools",
+                    text  => "Presentation about the GNU Autotools",
                     url   => "lecture/Autotools/",
                     title => "GNU Autoconf/Automake/Libtool",
                 },
@@ -106,7 +106,7 @@ my $_section_navmenu_tree_contents = {
                     title => "Presentation about Website Meta Language",
                 },
                 {
-                    text  => "Vim for Beginners",
+                    text  => "Presentation about Vim for Beginners",
                     url   => "lecture/Vim/beginners/",
                     title => "The Vim (Vi-Improved) Editor for Beginners",
                 },
@@ -120,11 +120,11 @@ my $_section_navmenu_tree_contents = {
                     title => "Tools for Preparing Slides for Presentations",
                     subs  => [
                         {
-                            text => "Quad-Pres",
+                            text => "Presentation about Quad-Pres",
                             url  => "lecture/Quad-Pres/",
                         },
                         {
-                            text => "PerlPoint",
+                            text => "Presentation about PerlPoint",
                             url  => "lecture/Pres-Tools/Perl-Point/",
                         },
                     ],
@@ -132,7 +132,7 @@ my $_section_navmenu_tree_contents = {
             ],
         },
         {
-            text  => "Welcome to Linux",
+            text  => "“Welcome to Linux” presentations",
             url   => "lecture/W2L/",
             title => "Presentations in the Series for Linux Beginners",
             subs  => [
@@ -174,12 +174,12 @@ my $_section_navmenu_tree_contents = {
             ],
         },
         {
-            text  => "Projects",
+            text  => "Presentations about my Software Projects",
             url   => "lecture/cat/projects/",
             title => "Presentations about my Software Projects",
             subs  => [
                 {
-                    text  => "Freecell Solver",
+                    text  => "Freecell Solver - Evolution of a C Program",
                     url   => "lecture/Freecell-Solver/",
                     title => "Freecell Solver - Evolution of a C Program",
                     subs  => [

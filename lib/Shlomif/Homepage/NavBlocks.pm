@@ -859,6 +859,22 @@ my %tr_s = (
             ),
         ],
     ),
+    'strip_dnd' => _tr(
+        title => "How to play Strip Dungeons&amp;Dragons",
+        items => [
+            _fp(
+                path => "humour/How-to-Play-Strip-Dungeons-and-Dragons/",
+            ),
+            _ontext(
+                path =>
+"humour/How-to-Play-Strip-Dungeons-and-Dragons/ongoing-text.html",
+            ),
+            _github(
+                url =>
+"https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/humour/How-to-Play-Strip-Dungeons-and-Dragons",
+            ),
+        ],
+    ),
     'he_damsel_in_distress' => _tr(
         title => "He-Damsel-in-Distress and a Distressing Damsel",
         items => [
@@ -989,7 +1005,7 @@ q{<a href="https://en.wikipedia.org/wiki/Wizarding_World">Harry Potter</a> / <a 
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza who_will_ride_princess_celestia ),
+                    qw( selina_mandrake buffy_few_good muppets_harry_potter terminator_liberation queen_padme_tales__emwatson Emma_Watson_tech_job Emma_Watson_visit_to_Gaza who_will_ride_princess_celestia strip_dnd ),
                 ),
                 $Factoids_TR,
                 _get_tr('Emma_Watson_facts'),
@@ -1129,6 +1145,7 @@ q{<a href="https://www.shlomifish.org/philosophy/culture/multiverse-cosmology/#s
                         atypical_day
                         who_will_ride_princess_celestia
                         start_with_happily_after
+                        strip_dnd
                         he_damsel_in_distress
                     ),
                 ),
@@ -1223,7 +1240,7 @@ q{<a href="http://www.tiffanyalvord.com/">Tiffany Alvord</a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s(
-                    qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord he_damsel_in_distress ),
+                    qw( queen_padme_tales the_10th_muse__wil_wheaton muppets_tiffany_alvord strip_dnd he_damsel_in_distress ),
                 ),
                 $Essays_TR,
                 _get_tr(

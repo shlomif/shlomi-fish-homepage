@@ -19,8 +19,6 @@ sub render_docbook
 {
     my ($args) = @_;
 
-    # my $argv = $args->{argv}
-    # App::Docmake->new( { argv => $argv, } )->run();
     my $dir = path( $args->{htmls_dir} );
 
     foreach my $fn ( $dir->children(qr/\.x?html\z/) )

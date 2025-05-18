@@ -1049,6 +1049,8 @@ For more information, see:
 <br />
 </p>
 
+[% SET xkcd_519_hovertext = "And the ten minutes striking up a conversation with that strange kid in homeroom sometimes matters more than every other part of high school combined." %]
+
 <blockquote>
 
 <p>
@@ -1077,7 +1079,8 @@ One weekend messing with Perl
 </p>
 
 <p>
-<b>Hover text</b>: And the ten minutes striking up a conversation with that strange kid in homeroom sometimes matters more than every other part of high school combined.
+<b>Hover text</b>:
+[% GET xkcd_519_hovertext %]
 </p>
 
 </blockquote>
@@ -1190,7 +1193,8 @@ href="http://shlomifishswiki.branchable.com/Encourage_criticism_and_try_to_get_o
 or mixed), collaborators, etc. (see <a
 href="https://www.shlomifish.org/humour/The-Earth-Angel/The-Earth-Angel--English-Text.html">the
 "Earth Angel" concept</a> or the <a href="https://explainxkcd.com/519/">subtext
-of xkcd: "11th grade"</a>) that they will adopt a similar mindset. Even though
+of xkcd: "11th grade"</a>: <q>[% GET xkcd_519_hovertext %]</q>
+) that they will adopt a similar mindset. Even though
 I am 1977-born (so approaching 44 in 2021) there are some time-consuming things
 I have done in the past which I will not repeat such as <a
 href="https://www.shlomifish.org/philosophy/culture/my-real-person-fan-fiction/#technion_vs_projeuler">studying

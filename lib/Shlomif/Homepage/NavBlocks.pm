@@ -1226,6 +1226,10 @@ q{<a href="https://wilwheaton.net/">Wil Wheaton</a> Fanfiction},
                 ),
                 $Screenplays_TR,
                 _tr_s( qw( selina_mandrake the_10th_muse__wil_wheaton ), ),
+                $Essays_TR,
+                _get_tr(
+'commercial_fanfic_initiative__mission_stmt__w_explicit_title'
+                ),
             ],
         },
     ),

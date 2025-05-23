@@ -31,7 +31,7 @@
     }
 
     section.scene {
-        @include big-screen {
+        @include wide-page {
             // @include mysection($left_hover_color: darkgreen);
             @include mysection($left_hover_color: #0b0);
         }

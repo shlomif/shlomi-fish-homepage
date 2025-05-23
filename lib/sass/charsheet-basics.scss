@@ -1,4 +1,5 @@
 $breakpoint: 992px;
+$mild_breakpoint: 500px;
 
 @mixin small-screen {
     @media (max-width: $breakpoint - 1) {
@@ -8,6 +9,12 @@ $breakpoint: 992px;
 
 @mixin big-screen {
     @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin wide-page {
+    @media (min-width: $mild_breakpoint) {
         @content;
     }
 }

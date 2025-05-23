@@ -59,7 +59,7 @@ a.back_to_faq {
 }
 
 .fancy_sects {
-    @include big-screen {
+    @include wide-page {
         article,
         nav,
         section,

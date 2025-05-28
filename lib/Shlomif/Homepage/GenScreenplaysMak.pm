@@ -266,7 +266,11 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         }
     }
 
-    if ( @screenplay_xml_fns > 1 )
+    if (
+        exists( $record->{override_concat} )
+        ? $record->{override_concat}
+        : ( @screenplay_xml_fns > 1 )
+        )
     {
         # Carp::confess("@screenplay_xml_fns");
         my $doc_base         = $base . "-CONCATENATED";

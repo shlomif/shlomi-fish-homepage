@@ -422,6 +422,9 @@ EOF
             $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
     };
 
+    my $indiv_episodes_screenplay_xmls_list_varname =
+        "SCREENPLAY_INDIVIDUAL_EPISODES_XMLs_LIST";
+
     my $concat_screenplay_xmls_list_varname =
         "SCREENPLAY_concatenated_XMLs_LIST";
 
@@ -441,13 +444,19 @@ EOF
                 ),
             )
         ),
+        "\n\n$indiv_episodes_screenplay_xmls_list_varname := \\\n",
+        (
+            map { "\t$_ \\\n" } (
+                (
+                    map { $_->{base} } ( map { @{ $_->{docs} } } @records ),
+                ),
+            ),
+        ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
         (
             map { "\t$_ \\\n" } (
                 "\$($concat_screenplay_xmls_list_varname)",
-                (
-                    map { $_->{base} } ( map { @{ $_->{docs} } } @records ),
-                ),
+                "\$($indiv_episodes_screenplay_xmls_list_varname)",
             ),
         ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",

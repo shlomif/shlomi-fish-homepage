@@ -27,7 +27,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
         - [“The Atom Text Editor has been Able To Edit a 2,000,001 Bytes-Long File \[satire\]”](http://www.shlomifish.org/humour/bits/Atom-Text-Editor-edits-2_000_001-bytes/)
         - [Benchmarks showing Electron apps are super slow and eat memory like there is no tomorrow : r/programming](https://www.reddit.com/r/programming/comments/73vua5/benchmarks_showing_electron_apps_are_super_slow/)
     - Software becoming slower and more resource hungry:
-        - [Premature optimization is the root of all evil is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b)
+        - [“Premature optimization is the root of all evil” is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b)
         - <https://twitter.com/TheoVanGrind/status/888850519564984322>
         - <https://twitter.com/xbs/status/626781529054834688>
     - Windows Update — slow:
@@ -62,7 +62,7 @@ Moreover, I set-up [a List of Software Quality Enhancement Tools and Links](http
 
 ## Comment I wrote
 
-On [Premature optimization is the root of all evil is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b) :
+On [“Premature optimization is the root of all evil” is the root of evil](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b) :
 
 > Hi! Good article. I should note that based on what I wrote [here](https://en.wikibooks.org/wiki/Optimizing_Code_for_Speed/Factor_Optimizations#Are_%22Small%22_Optimizations_Desirable?) — Prof. Knuth may have been wrong because many small optimisations eventually can add to a significant improvement. Perhaps sometimes an optimisation is not worth it because the program is already fast enough, but I feel that we have accumulated too much junk bloatware recently (see [my notes](https://www.shlomifish.org/philosophy/computers/high-quality-software/reflections-on-software-quality-trends/) ).
 >

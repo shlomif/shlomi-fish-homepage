@@ -276,7 +276,11 @@ qq^$target_varname := ${target}\n\n${target_var_deref}: \$(SCREENPLAY_XML_TXT_DI
         push @ret, "$doc_base_varname = $doc_base\n",
             "$dest_varname = $dest\n\n",
 "\$($dest_varname): @screenplay_xml_fns\n\t\$(PERL) bin/concat-screenplay-xmls.pl --output \$\@ -- @screenplay_xml_fns\n\n";
-        push @{$concat_screenplay_xmls_targets}, "\$($dest_varname)";
+        push @{$concat_screenplay_xmls_targets},
+            {
+            dest_var         => "\$($dest_varname)",
+            doc_base_varname => $doc_base_varname,
+            };
     }
 
     $$images_copy_ref .=
@@ -423,14 +427,28 @@ EOF
         "$graphics_dir_bn_var := graphics\n",
         ( map { @{ $_->{lines} } } @records ),
         "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
-        ( map { "\t$_->{base} \\\n" } map { @{ $_->{docs} } } @records ),
+        (
+            map { "\t$_->{base} \\\n" } (
+                (
+                    map {
+                        my $base = $_->{doc_base_varname};
+                        my $v    = "\$($base)";
+                        +{ base => $v, }
+                    } @$concat_screenplay_xmls_targets
+                ),
+                ( map { @{ $_->{docs} } } @records )
+            )
+        ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),
         "\n",
 "$epub_dests_varname := \\\n$epub_dests\n$raw_htmls__dests__varname := \\\n$_htmls_dests\n",
         ( map { $clean_ns->($_) } @_htmls_files ),
         "\n\nscreenplays_concats: \\\n",
-        ( map { "\t$_ \\\n" } @$concat_screenplay_xmls_targets ),
+        (
+            map { my $v = $_->{dest_var}; "\t$v \\\n" }
+                @$concat_screenplay_xmls_targets
+        ),
         (
             "\nALL_SCREENPLAYS__SCREENPLAY_IMAGES__POST_DESTS = ",
             join( ' ', map { "\$($_)" } sort keys %$dest_dir_vars ),

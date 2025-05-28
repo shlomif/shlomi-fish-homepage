@@ -7,6 +7,7 @@
 #
 
 # On https://github.com/shlomif/shlomif-computer-settings/blob/master/shlomif-settings/apache/httpd/minimal-config/fedora/localhost-homepage-httpd.conf
+# ( Short URL : https://is.gd/bMxmHx )
 # one can find a sample apache httpd ( v 2.4.x ) configuration that can be used
 # to host the mirrored copy (after some tweaks).
 

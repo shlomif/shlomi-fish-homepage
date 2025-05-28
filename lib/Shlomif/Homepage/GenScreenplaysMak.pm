@@ -422,11 +422,14 @@ EOF
             $CLEAN_NAMESPACES_FUNC_NAME, $heb_filt );
     };
 
+    my $concat_screenplay_xmls_list_varname =
+        "SCREENPLAY_concatenated_XMLs_LIST";
+
     path("lib/make/generated/shlomif-screenplays.mak")->spew_utf8(
         ("$CLEAN_NAMESPACES_FUNC_NAME = $CLEAN_NAMESPACES_FUNC__BODY\n\n"),
         "$graphics_dir_bn_var := graphics\n",
         ( map { @{ $_->{lines} } } @records ),
-        "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
+        "\n\n$concat_screenplay_xmls_list_varname := \\\n",
         (
             map { "\t$_->{base} \\\n" } (
                 (
@@ -436,8 +439,16 @@ EOF
                         +{ base => $v, }
                     } @$concat_screenplay_xmls_targets
                 ),
-                ( map { @{ $_->{docs} } } @records )
             )
+        ),
+        "\n\nSCREENPLAY_DOCS_FROM_GEN := \\\n",
+        (
+            map { "\t$_ \\\n" } (
+                "\$($concat_screenplay_xmls_list_varname)",
+                (
+                    map { $_->{base} } ( map { @{ $_->{docs} } } @records ),
+                ),
+            ),
         ),
         "\n\nSCREENPLAY_DOCS__DEST_EPUBS := \\\n",
         ( map { "\t\$($_) \\\n" } map { @{ $_->{epubs} } } @records ),

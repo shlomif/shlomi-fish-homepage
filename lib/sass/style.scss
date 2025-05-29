@@ -140,8 +140,11 @@ body {
 @import "jqtree";
 @include small-screen {
     body.overflow_all {
-        * {
-            overflow: auto;
+        pre,
+        td {
+            * {
+                overflow: auto;
+            }
         }
     }
 }

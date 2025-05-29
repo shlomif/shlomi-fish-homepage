@@ -206,9 +206,9 @@ installed:
 <programlisting language="bash">
 git clone https://github.com/shlomif/shlomi-fish-homepage.git trunk
 cd trunk
-if test "${WANT_TO_TEST_SPELLING)" = "1"
+if test "${WANT_TO_TEST_SPELLING}" = "1"
 then
-    # May require having Fedora 40 - compatible hunspell wordlists
+    # May require having Fedora 42 - compatible hunspell wordlists
     export SKIP_SPELL_CHECK=",en:lax,"
     # export SKIP_SPELL_CHECK=""
 else

@@ -19,7 +19,6 @@ perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::Ap
     --before-insert-skip='/art/by-others/(?:BertycoX/BertycoX-dirs|Yachar/Yachar-dirs)/\z' \
     --before-insert-skip='/humour/fortunes/(?:bbt|friends|joel-on-software|nyh-sigs|osp_rules|paul-graham|sharp-perl|sharp-programming|shlomif|shlomif-factoids|shlomif-fav|subversion|tinic)\z' \
     --before-insert-skip='/humour/fortunes/fortunes_show\.(?:cgi|py)\z' \
-    --before-insert-skip='/humour/fortunes/show-cgi\.txt\z' \
     --before-insert-skip='/humour/fortunes/show\.cgi' \
     --before-insert-skip='/js/MathJax/' \
     --before-insert-skip='/lecture/WebMetaLecture/.*\.(?:wml|css)\z' \
@@ -29,7 +28,11 @@ perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::Ap
     --before-insert-skip='/lm-solve/\z' \
     --before-insert-skip='/me/blogs/agg/[\w\-]*\.xml\z' \
     --before-insert-skip='/open-source/projects/conf/vim/current/\z' \
-    --before-insert-skip='/open-source/projects/yjobs' \
+    --before-insert-skip='/open-source/projects/yjobs-on-mozilla/downloads/\S*\.pl\.gz\z' \
     --before-insert-skip='/philosophy/solving/' \
     --before-insert-skip='\.(?:diff|epub|js|pl|raw\.html|rtf|tar\.xz|txt|zip|xsl|xslt)\z' \
     ;
+
+    # --before-insert-skip='/humour/fortunes/show-cgi\.txt\z' \
+
+    # --before-insert-skip='/open-source/projects/yjobs' \

@@ -6470,6 +6470,17 @@ designs</a>.
 
 [%- END -%]
 
+[% WRAPPER h4_section id = "why_not_use_cmake_for_building_websites" title = "Why don’t you use CMake for your websites’ build systems?" %]
+
+<p>
+My generated static websites' build processes assume POSIX / GNU / Perl 5 /
+GNU Make command line syntax and behaviour. Moreover, they do not build
+many libraries and executables written in C, C++, and similar languages
+which is where CMake shines.
+</p>
+
+[% END %]
+
 [% WRAPPER h4_section id = "why_is_your_uptime_so_low" title = "Why is your uptime so low?" %]
 
 <p>

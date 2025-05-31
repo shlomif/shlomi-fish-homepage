@@ -6475,8 +6475,15 @@ designs</a>.
 <p>
 My generated static websites' build processes assume POSIX / GNU / Perl 5 /
 GNU Make command line syntax and behaviour. Moreover, they do not build
-many libraries and executables written in C, C++, and similar languages
-which is where CMake shines.
+many libraries and executables written in C, C++, and similar languages,
+or search for their build dependencies, which is where CMake shines. As a
+result, I find it easier to write GNU Make code directly, or generate it
+using Perl, Python, or similar.
+</p>
+
+<p>
+Note that I use CMake to build and install some of the build
+dependencies of my sites (e.g: Quad-Pres).
 </p>
 
 [% END %]

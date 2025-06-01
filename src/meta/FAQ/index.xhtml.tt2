@@ -6476,14 +6476,14 @@ designs</a>.
 My generated static websites' build processes assume POSIX / GNU / Perl 5 /
 GNU Make command line syntax and behaviour. Moreover, they do not build
 many libraries and executables written in C, C++, and similar languages,
-or search for their build dependencies, which is where CMake shines. As a
+or search for their build dependencies, which is <a href="[% base_path %]open-source/anti/autohell/">where CMake shines</a>. As a
 result, I find it easier to write GNU Make code directly, or generate it
 using Perl, Python, or similar.
 </p>
 
 <p>
 Note that I use CMake to build and install some of the build
-dependencies of my sites (e.g: Quad-Pres).
+dependencies of my sites (e.g: <a href="[% base_path %]open-source/projects/quad-pres/">Quad-Pres</a>).
 </p>
 
 [% END %]

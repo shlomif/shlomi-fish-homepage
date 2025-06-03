@@ -197,7 +197,7 @@ my %reduced_sub_trees = (
                 },
                 subs => [
                     {
-                        text => "Curated Lists",
+                        text => "Curated Lists and Directories",
                         url  => "open-source/resources/sw-lists/",
                     },
                     {

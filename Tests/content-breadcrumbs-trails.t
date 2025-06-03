@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use utf8;
 
-use Test::More tests => 10;
+use Test::More tests => 11;
 use Path::Tiny qw/ path /;
 
 sub _test
@@ -108,6 +108,18 @@ _test(
         blurb    => 'curated lists: IDEs',
         expected => <<'EOF',
 <a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Pages related to Software (mostly Open-Source)">Software</a> → <a href="../" title="Various Software Resources Pages">Resources Pages</a> → <a href="../sw-lists/">Curated Lists and Directories</a> → <a href="./" title="Index of Text Editors and Integrated Development Environments">Editors and IDEs</a>
+EOF
+    }
+);
+
+# TEST
+_test(
+    {
+        path =>
+"lib/cache/combined/t2/open-source/resources/sw-lists/index.xhtml/breadcrumbs-trail",
+        blurb    => 'curated lists: IDEs',
+        expected => <<'EOF',
+<a href="../../../">Shlomi Fish’s Homepage</a> → <a href="../../" title="Pages related to Software (mostly Open-Source)">Software</a> → <a href="../" title="Various Software Resources Pages">Resources Pages</a> → <a href="./">Curated Lists and Directories</a>
 EOF
     }
 );

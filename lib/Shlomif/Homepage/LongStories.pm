@@ -677,7 +677,8 @@ EOF
         id      => 'He-Damsel-in-Distress-and-a-Distressing-Damsel',
         tagline =>
 "“If I cannot have 100% of his time, soul, mind, love, and knowledge…”",
-        logo_alt   => "TODO",
+        logo_alt =>
+"Captioned image photo of Sam the Eagle: “I am not a mere moral compass. I am a moral Global Positioning System!”",
         logo_class => "hedamsel",
         logo_src   => "humour/images/captioned-image--moral-gps-600.webp",
         logo_svg   => '//$SKIP',

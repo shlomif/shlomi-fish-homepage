@@ -16,7 +16,7 @@ function shlomif_load_nav(page_path: string): void {
             rel_path: page_path,
             to: "_data/n.json",
         }),
-        function (got_json_input) {
+        function (compressed_json) {
             const keys_map = {
                 b: "bool",
                 c: "capt",
@@ -30,20 +30,20 @@ function shlomif_load_nav(page_path: string): void {
                 u: "url",
                 x: "text",
             };
-            function _expand(val: any): any {
-                if (Array.isArray(val)) {
-                    return val.map(_expand);
+            function _expand(input_val: any): any {
+                if (Array.isArray(input_val)) {
+                    return input_val.map(_expand);
                 }
-                if ($.isPlainObject(val)) {
+                if ($.isPlainObject(input_val)) {
                     const ret: any = {};
-                    for (const [k, v] of Object.entries(val)) {
+                    for (const [k, v] of Object.entries(input_val)) {
                         ret[keys_map[k]] = _expand(v);
                     }
                     return ret;
                 }
-                return val;
+                return input_val;
             }
-            const json_input: any = _expand(got_json_input);
+            const json_input: any = _expand(compressed_json);
             const nav_menu = $("#nav_menu");
             const has_ls: boolean =
                 typeof localStorage !== "undefined" && localStorage !== null;

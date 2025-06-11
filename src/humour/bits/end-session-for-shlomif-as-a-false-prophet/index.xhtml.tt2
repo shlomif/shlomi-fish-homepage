@@ -1,0 +1,22 @@
+[%- SET title = "End session for Shlomi Fish as a False Prophet" -%]
+
+[%- SET apply_screenplay_style = 1 -%]
+[% main_class.addClass("limit_imgs_width", "ride_celestia") %]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "Text" %]
+
+[% path_slurp("screenplay-xml/rendered-html/end-session-for-shlomif-as-a-false-prophet.html") %]
+
+[% END %]
+
+[% WRAPPER h2_section id = "coverage" title = "Coverage" %]
+
+[% END %]
+
+[% WRAPPER screenplay_read_online__dwim basename = "end-session-for-shlomif-as-a-false-prophet" %]
+
+[%- END -%]
+
+[% END %]

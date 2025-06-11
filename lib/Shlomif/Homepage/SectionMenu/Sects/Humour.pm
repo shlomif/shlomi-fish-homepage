@@ -726,6 +726,11 @@ my $_humour_tree_contents = {
                     url  => "humour/bits/Shlomiverse-Tales-About-Commerce/",
                 },
                 {
+                    text => "End session for Shlomi Fish as a False Prophet",
+                    url  =>
+"humour/bits/end-session-for-shlomif-as-a-false-prophet/",
+                },
+                {
                     text => "True Stories / Memoirs",
                     url  => "humour/bits/true-stories/",
                     subs => scalar( $true_stories_obj->get_nav_list() ),

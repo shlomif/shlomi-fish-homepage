@@ -119,7 +119,11 @@ foreach my $ext (qw/ xhtml pdf /)
             my $dest_var = "CAPT_IMG_DEST_$idx";
             $all_deps{"\$($dest_var)"} = 1;
 qq#$bn_var := $bn\n$dest_var := \$(POST_DEST__HUMOUR_IMAGES)/\$($bn_var)\n\$($dest_var): $dn/\$($bn_var)\n${COPY}\n#;
-        } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8
+        } path("lib/Shlomif/Homepage/captioned-images.txt")->lines_utf8(
+            {
+                chomp => 1,
+            }
+        )
     );
     path("${DIR}generated/copies-generated-include.mak")->spew_utf8(
         (

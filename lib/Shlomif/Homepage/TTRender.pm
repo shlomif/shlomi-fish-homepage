@@ -15,6 +15,7 @@ use HTML::Latemp::AddToc                   ();
 use Module::Format::AsHTML                 ();
 use QuadPres::VimIface                     ();
 use Set::CSS v0.2.0                        ();
+use Shlomif::AddToc2                       ();
 use Shlomif::Homepage::ArticleIndex        ();
 use Shlomif::Homepage::FortuneCollections  ();
 use Shlomif::Homepage::LicenseBlurbs       ();
@@ -41,6 +42,7 @@ has stdout    => ( is => 'ro', required => 1 );
 
 my $LATEMP_SERVER = "t2";
 my $toc           = HTML::Latemp::AddToc->new;
+my $toc2          = Shlomif::AddToc2->new;
 
 my $DEFAULT_TOC_DIV = Shlomif::Homepage::TocDiv::toc_div();
 my $cpan            = Module::Format::AsHTML->new;
@@ -387,7 +389,15 @@ sub render
     my $html = '';
     $template->process( $INPUT, $vars, \$html, binmode => ':utf8', )
         or die $template->error();
-    $toc->add_toc( \$html );
+
+    if ( $input_tt2_page_path =~ m#\A(me/rindolf/index\.xhtml)\z#ms )
+    {
+        $toc2->add_toc( \$html );
+    }
+    else
+    {
+        $toc->add_toc( \$html );
+    }
     return ( \$html, [ $DEST, @fn, ], );
 }
 

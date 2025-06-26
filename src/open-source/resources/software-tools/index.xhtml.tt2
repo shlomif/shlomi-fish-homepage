@@ -18,7 +18,7 @@ doesn't look much worse without it, anyway.
 
 [% default_toc %]
 
-[% WRAPPER h2_section id = "build"  title = "Software Building"  %]
+[% WRAPPER h2_section id = "build" title = "Software Building" %]
 
 <ul>
 
@@ -86,7 +86,7 @@ JavaScript and Node.js.
 </li>
 </ul>
 
-[% WRAPPER h3_section id = "build_links"  title = "Links to Lists, Comparisons and Other Resources"  %]
+[% WRAPPER h3_section id = "build_links" title = "Links to Lists, Comparisons and Other Resources" %]
 
 <ul>
 
@@ -123,7 +123,7 @@ Google Spreadsheet with a Comparison of various Alternatives</a>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "configure"  title = "Software Pre-building Configuration"  %]
+[% WRAPPER h2_section id = "configure" title = "Software Pre-building Configuration" %]
 
 <ul>
 
@@ -196,7 +196,7 @@ to use CMake instead.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "package"  title = "Software Packaging"  %]
+[% WRAPPER h2_section id = "package" title = "Software Packaging" %]
 
 <ul>
 
@@ -204,17 +204,14 @@ to use CMake instead.
 <p>
 <a href="http://www.rpm.org/">RPM</a> - a package management system used on
 Red Hat Linux and other RPM-based distributions. Also look at
-<a href="http://urpmi.org/">urpmi</a>,
-<a href="http://linux.duke.edu/projects/yum/">yum</a>, yum’s fork
 <a href="https://fedoraproject.org/wiki/Dnf">DNF</a>,
-and <a href="http://apt-rpm.tuxfamily.org/">apt-rpm</a>,
-which install packages and resolve dependencies.
+which installs packages and resolves dependencies.
 </p>
 </li>
 
 <li>
 <p>
-<a href="http://freecode.com/projects/dpkg/">dpkg</a> - The Debian Package
+<a href="https://en.wikipedia.org/wiki/Dpkg">dpkg</a> - The Debian Package
 Manager, which is also used on similar distributions. Also look at
 <a href="http://www.debian.org/doc/manuals/apt-howto/index.en.html">Apt</a>
 which automatically installs packages and resolves dependencies.
@@ -315,7 +312,7 @@ useful for continuous-integration ( “CI” ).
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "scm"  title = "Version Control Systems"  %]
+[% WRAPPER h2_section id = "scm" title = "Version Control Systems" %]
 
 <ul>
 
@@ -324,7 +321,7 @@ useful for continuous-integration ( “CI” ).
 <a href="https://git-scm.com/">Git</a> - a version control system originally
 designed for the Linux kernel. Fast and 100% distributed, but has some
 user-interface idiosyncrasies, a complex command-set, and lacks good
-documentation. (GPLed) Considered the go-to solution as of 2020.
+documentation. (GPLed.) Considered the go-to solution as of 2025.
 </p>
 </li>
 
@@ -332,7 +329,7 @@ documentation. (GPLed) Considered the go-to solution as of 2020.
 <p>
 <a href="https://subversion.apache.org/">Subversion</a> - a CVS replacement
 with atomic commits, networking over HTTP, efficient handling of binary file
-and other features. Still mostly a client/server, centralised protocol,
+and other features. Still mostly a client/server, centralised, protocol,
 but much more reliable than CVS and works better. (Apache/BSD Licence).
 </p>
 </li>
@@ -358,7 +355,7 @@ Canonical, Ubuntu’s parent company. Slow and quirky from my experience.
 <p>
 <a href="http://en.wikipedia.org/wiki/Fossil_%28software%29">Fossil</a> - an
 open source distributed version control system, bug tracker and wiki program
-written in C, based on <a href="https://www.sqlite.org/index.html">SQLite</a> and by the same originator. (BSD licence)
+written in C, based on <a href="https://www.sqlite.org/index.html">SQLite</a> and by the same originator. (BSD licence).
 </p>
 </li>
 
@@ -390,7 +387,7 @@ many ways. (GPLed).
 
 </ul>
 
-[% WRAPPER h3_section id = "scm_links"  title = "Links to Lists, Comparisons, and Other Resources"  %]
+[% WRAPPER h3_section id = "scm_links" title = "Links to Lists, Comparisons, and Other Resources" %]
 
 <ul>
 
@@ -405,8 +402,8 @@ href="http://better-scm.shlomifish.org/comparison/">a comparison</a>.
 
 <li>
 <p>
-<a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Wikipedia
-Comparison of Revision Control Systems</a>
+<a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Wikipedia’s
+Comparison of Revision Control Systems</a>.
 </p>
 </li>
 
@@ -425,7 +422,7 @@ directory may also prove helpful.</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "bug_tracking"  title = "Bug Tracking"  %]
+[% WRAPPER h2_section id = "bug_tracking" title = "Bug Tracking" %]
 
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
@@ -511,7 +508,7 @@ of some relevance.
 
 </ul>
 
-[% WRAPPER h3_section id = "kanban_boards"  title = "Kanban Boards"  %]
+[% WRAPPER h3_section id = "kanban_boards" title = "Kanban Boards" %]
 
 <ul>
 
@@ -541,7 +538,7 @@ and under the freemium model.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "testing"  title = "Testing Frameworks"  %]
+[% WRAPPER h2_section id = "testing" title = "Testing Frameworks" %]
 
 <ul>
 
@@ -593,7 +590,7 @@ unit testing framework for C that can emit <a href="#TAP">TAP</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "continuous_integration_tools"  title = "Continuous Integration Tools and Services"  %]
+[% WRAPPER h2_section id = "continuous_integration_tools" title = "Continuous Integration Tools and Services" %]
 
 <ul>
 
@@ -688,21 +685,21 @@ self hosted, GitHub-like clone written in Ruby-on-Rails.
 <li>
 <p>
 <a href="https://gitea.io/en-US/">Gitea</a> - a lightweight and open source
-code hosting solution written in Go-lang.
+code hosting solution; written in Go-lang.
 </p>
 </li>
 
 <li>
 <p>
 <a href="https://gogs.io/">Gogs</a> - another lightweight and open source
-code hosting solution for git written in Go-lang.
+code hosting solution for git; written in Go-lang.
 </p>
 </li>
 
 <li>
 <p>
 <a href="https://pagure.io/pagure">Pagure</a> - An open source code
-hosting solution for git based on Python. (By Red Hat/Fedora and other
+hosting solution for git; written in Python. (By Red Hat/Fedora and other
 contributors.)
 </p>
 </li>
@@ -742,7 +739,7 @@ deployment. Written in Ruby-on-Rails and other languages.
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -764,6 +761,6 @@ best practices in the software industry.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2011",  %]
+[% PROCESS cc_by_licence_section "year" => "2011", %]
 
 [% END %]

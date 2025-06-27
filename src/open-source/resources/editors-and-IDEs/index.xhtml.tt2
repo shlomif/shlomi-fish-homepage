@@ -30,8 +30,8 @@ Development Environments), useful for programmers and other developers.
 <a href="http://www.vim.org/">Vim and gvim</a> - a cross-platform vi-derivative
 editor (with many enhancements) with a Windows-conventions-emulating
 configuration (<code>:source $VIMRUNTIME/mswin.vim</code>). Has many plugins
-available on the site, supports Unicode and encodings, syntax highlighting,
-has both console and a GUI versions. Vim licence (open-source and
+available (for example, on GitHub), supports Unicode and encodings, syntax
+highlighting, has both console and a GUI versions. Vim licence (open-source and
 GPL-compatible licence).
 </p>
 
@@ -85,6 +85,7 @@ editor written in Java, with many plugins. (Open-source, GPL 2.0).
 </p>
 </li>
 
+[% IF 0 %]
 <li>
 <p>
 <img src="Atom_icon.png" class="rfloaty" alt="Logo of the Atom Text Editor" />
@@ -94,6 +95,7 @@ browser, by GitHub. It is reportedly inspired a lot by
 <a href="#sublime-text">Sublime Text</a>. (MIT/Expat-licensed.)
 </p>
 </li>
+[% END %]
 
 <li id="komodo-edit">
 <p>

@@ -14,6 +14,13 @@ if ( -d $src_dn )
     require Path::Tiny;
     Path::Tiny::path("./bin/batch-inplace-html-minifier")
         ->edit_raw( sub { s/\n\{% (?:end)?raw %\}\n/\n/g; } );
+    my @c = Path::Tiny::path("./lib/tempsgml/")->children(qr/\.xsl\z/ms);
+    foreach my $c (@c)
+    {
+        $c->copy(
+            Path::Tiny::path('lib/sgml/shlomif-docbook/xsl-5-stylesheets/') );
+
+    }
 }
 else
 {

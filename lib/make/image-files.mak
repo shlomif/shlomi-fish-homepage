@@ -94,6 +94,7 @@ image_files: $(Linux1_webp_DEST)
 
 $(Evilphish_flipped_dest): $(Evilphish_flipped_src)
 	$(IMAGE_CONVERT) -flop $< $@
+	$(OPTIPNG) -o7 $@
 
 $(BK2HP_NEW_PNG): lib/images/back_to_my_homepage_from_inkscape.png
 	$(IMAGE_CONVERT) -matte -bordercolor none -border 5 $< $@

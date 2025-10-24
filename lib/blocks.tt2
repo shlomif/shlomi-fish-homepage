@@ -20,7 +20,8 @@
 [%- SET version = '' %]
 [%- SET xhtml1 = '' -%]
 
-[%- BLOCK webmaster_footer -%]
+[%- BLOCK webmaster_info -%]
+
 [%# patreon.svg from https://www.flaticon.com/free-icon/patreon_2111574?term=patreon&page=1&position=1&page=1&position=1&related_id=2111574&origin=tag
 %]
 <ul class="bt_nav">
@@ -57,6 +58,12 @@
 <a href="[% base_path %]me/blogs/">RSS/Atom Feeds</a>
 </li>
 </ul>
+
+[%- END -%]
+
+[%- BLOCK webmaster_footer -%]
+
+[% INCLUDE webmaster_info %]
 
 [%- IF is_forked_site -%]
 
@@ -342,6 +349,7 @@ publicly linked to. Please send comments to
 <div class="leading_path">
 [%- leading_path_string -%]
 </div>
+[% INCLUDE webmaster_info %]
 </div>
 
 <div id="faux">

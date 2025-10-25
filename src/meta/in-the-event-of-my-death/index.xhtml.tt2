@@ -15,7 +15,7 @@ long enough for them to be mirrored. As of this writing (19 September 2013)
 they consist mostly of static HTML pages with sources available in distributed
 version control systems (DVCSes) repositories online, although the sources may
 not be too easy to build due to requiring some dependencies. In any case, they
-should not be hard to mirror. One can refer to <a href="[% base_path
+should not be hard to mirror. ( See <a href="[% base_path %]meta/FAQ/#how_to_mirror">the “How can I mirror this site?” question on my FAQ</a>. ). One can refer to <a href="[% base_path
 %]meta/site-source/">the site's sources page</a> for instructions on how to
 build the site, including in pristine environments, such as Docker containers.
 </p>

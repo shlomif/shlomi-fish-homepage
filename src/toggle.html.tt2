@@ -42,7 +42,7 @@ efficiency of the algorithms.
 <p>
 First, I’ll prove some analogous statements about a one-dimensional
 toggle-squares board, i.e: conjectures that apply to the set of rows of size
-1*n and in which the presses are:
+1×n and in which the presses are:
 </p>
 
 <pre>
@@ -232,7 +232,7 @@ Now for the actual proofs:
 [% WRAPPER h3_section id = "theorem1" title = "Theorem 1: (3k+2)^2 boards are not solvable for every state." %]
 
 <p>
-2-D (3k+2) * (3k+2) boards are not solvable for every state.
+2-D (3k+2) × (3k+2) boards are not solvable for every state.
 </p>
 
 <p>
@@ -266,7 +266,7 @@ state.
 [% WRAPPER h3_section id = "theorem2" title = "Theorem 2: 3k and 3k+1 2-D boards are solvable for every state." %]
 
 <p>
-2-D boards of size 3k * 3k or (3k+1) * (3k+1) are solvable for
+2-D boards of size 3k × 3k or (3k+1) × (3k+1) are solvable for
 every state.
 </p>
 
@@ -394,7 +394,7 @@ will also be cleared.
 [% WRAPPER h3_section id = "theorem4" title = "Theorem 4: Solving 3k boards." %]
 
 <p>
-A 2-D board of size (3k) * (3k) can be solved by using the two-way
+A 2-D board of size (3k) × (3k) can be solved by using the two-way
 - two-way algorithm.
 </p>
 
@@ -510,7 +510,7 @@ afterwards cleared.
 [% WRAPPER h3_section id = "theorem5" title = "Theorem 5: Solving 3k+1 boards." %]
 
 <p>
-A 2-D board of size (3k+1)*(3k+1) can be cleared by an
+A 2-D board of size (3k+1)×(3k+1) can be cleared by an
 down-(edge)-up iteration of left-(edge)-right row clearing
 scheme.
 </p>
@@ -587,7 +587,7 @@ press those cells and it will be be moved to
 [% WRAPPER h2_section id = "dim_press_span" title = "The Dimension of the Presses Span in 3k+2 boards" %]
 
 <p>
-(3k+2)*(3k+2) boards are not solvable for every state. The solvable
+(3k+2)×(3k+2) boards are not solvable for every state. The solvable
 states form a vector field which is formed by the spanning all the
 presses. Since, in this case it does not include all the states, I
 wondered if we can calculate its dimension or characterize it somehow.
@@ -595,7 +595,7 @@ I think I know the answer.
 </p>
 
 <p>
-First in 1-D: the presses of {0,1}*(3k+2) span a field of size 3k+1
+First in 1-D: the presses of {0,1}×(3k+2) span a field of size 3k+1
 because it takes only one extra vector - 100...000, so they will form
 every possible state (Lemma 1).
 </p>
@@ -608,16 +608,16 @@ their presses are a valid basis for this linear space.
 
 <p>
 The one-way - one-way clearing algorithm which was proved in Theorem 3,
-uses only a (3k+1)*(3k+1) square of presses to solve the entire board.
+uses only a (3k+1)×(3k+1) square of presses to solve the entire board.
 Ergo, the dimension is (3k+1)^2 or less. I believe it _is_ (3k+1)^2 and
 I think I can prove it by showing that the presses of a corner
-(3k+1)*(3k+1) are linearly independent. In the boolean field the
+(3k+1)×(3k+1) are linearly independent. In the boolean field the
 meaning is that any number of them other than zero XORed together will
 not generate the clear state.
 </p>
 
 <p>
-I’ll demonstrate on a 5*5 board:
+I’ll demonstrate on a 5×5 board:
 </p>
 
 <pre>

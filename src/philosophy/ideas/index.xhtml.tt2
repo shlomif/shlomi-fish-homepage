@@ -155,7 +155,9 @@ GIMP datatypes.
 </ol>
 
 <p>
-It may be a good idea to use <a href="http://www.yaml.org/">YAML</a> and/or
+It may be a good idea to use <a href="http://www.yaml.org/">YAML</a> (
+or the newer and less bloated <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>
+) and/or
 <a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a> to implement
 Tucan.
 </p>
@@ -254,7 +256,7 @@ information.
 [% WRAPPER h3_section id = "spark-lisp" title = "Spark Lisp" %]
 
 <p>
-<a href="http://www.shlomifish.org/open-source/projects/Park-Lisp/"><b>Spark
+<a href="[% base_path %]open-source/projects/Park-Lisp/"><b>Spark
 Lisp</b></a> - a modern and usable dialect of Lisp inspired by
 <a href="http://www.paulgraham.com/arc.html">Arc</a>, Perl 5/6,
 Ruby, Smalltalk, and other languages.
@@ -289,27 +291,27 @@ Multi-line blocks
 </li>
 <li>
 <p>
-inner block conditionals using if/else/etc.
+Inner block conditionals using if/else/etc.
 </p>
 </li>
 <li>
 <p>
-for/while/foreach loops
+“for/while/foreach” loops
 </p>
 </li>
 <li>
 <p>
-blocks as arguments.
+Blocks as arguments.
 </p>
 </li>
 <li>
 <p>
-functions
+Functions
 </p>
 </li>
 <li>
 <p>
-utility built-ins
+Utility built-ins
 </p>
 </li>
 <li>

@@ -370,6 +370,7 @@ sub render
     $set->( 'leading_path_string',           "breadcrumbs-trail" );
     $set->( 'html_head_nav_links',           "html_head_nav_links" );
     $set->( 'shlomif_main_expanded_nav_bar', "shlomif_main_expanded_nav_bar" );
+    $set->( 'top_nav_buttons',               'top_nav_buttons' );
     $set->(
         'shlomif_hebrew_expanded_nav_bar',
         "shlomif_hebrew_expanded_nav_bar"

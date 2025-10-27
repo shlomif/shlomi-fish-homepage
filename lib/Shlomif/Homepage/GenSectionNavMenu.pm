@@ -97,23 +97,31 @@ sub process_batch
             return write_on_change( $urlp->child($id), $ref );
         };
 
-        my $markup = qq|<p class="bottom_nav">|;
-        if ( my $url = $nav_links_obj->{'prev'} )
+        foreach my $css_class (
+            { 'css' => 'bottom_nav', 'frag' => 'footer_nav_buttons', },
+            { 'css' => 'top_nav',    'frag' => 'top_nav_buttons', },
+            )
         {
-            $markup .=
-                  '<a class="bottom_nav previous" href="'
-                . escape_html( $url->direct_url() ) . '">'
-                . "Previous Page" . "</a>";
+            my $class  = $css_class->{'css'};
+            my $frag   = $css_class->{'frag'};
+            my $markup = qq|<p class="${class}">|;
+            if ( my $url = $nav_links_obj->{'prev'} )
+            {
+                $markup .=
+                      qq|<a class="${class} previous" href="|
+                    . escape_html( $url->direct_url() ) . '">'
+                    . "Previous Page" . "</a>";
+            }
+            if ( my $url = $nav_links_obj->{'next'} )
+            {
+                $markup .=
+                      qq|<a class="${class} next" href="|
+                    . escape_html( $url->direct_url() ) . '">'
+                    . "Next Page" . "</a>";
+            }
+            $markup .= "</p>";
+            $out->( $frag, \$markup, );
         }
-        if ( my $url = $nav_links_obj->{'next'} )
-        {
-            $markup .=
-                  '<a class="bottom_nav next" href="'
-                . escape_html( $url->direct_url() ) . '">'
-                . "Next Page" . "</a>";
-        }
-        $markup .= "</p>";
-        $out->( 'footer_nav_buttons', \$markup, );
 
         $out->( 'sect-navmenu', \( $section_nav_menu->get_html ), );
         if ( $url =~ m#/Queen-Padme.*cast\.html\z# )

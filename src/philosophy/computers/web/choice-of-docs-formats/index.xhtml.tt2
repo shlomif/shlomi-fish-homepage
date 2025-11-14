@@ -141,10 +141,9 @@ an intermediate format. POD can be translated into DocBook/XML using
 </p>
 
 <p>
-Don’t use the original module by Alligator Descartes which is the still the
-first result on <a href="http://www.cpan.org/">CPAN</a> out of being
-<a href="http://www.mail-archive.com/module-authors%40perl.org/msg00793.html">a
-Dead Camel</a>. It is old and broken and has been unmaintained for a long time.
+Don’t use the original module (= Pod::DocBook) by Alligator Descartes which is still the
+first result on <a href="http://www.cpan.org/">CPAN</a> given
+<a href="http://www.mail-archive.com/module-authors%40perl.org/msg00793.html">it was abandoned</a>. It is old and broken and has been unmaintained for a long time.
 </p>
 
 <p>
@@ -200,7 +199,7 @@ for use as a good generic markup.
 
 <p>
 There are too many <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> dialects (e.g: GitHub's, reddit's, Stack Exchange's) each one with its
-<a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">own army and navy (= fragmentation and incompatibilities</a>).
+<a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">own army and navy (= fragmentation and incompatibilities)</a>.
 Moreover, they can only be converted to XHTML.
 </p>
 

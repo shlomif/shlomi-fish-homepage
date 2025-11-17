@@ -221,6 +221,15 @@ EOF
             id   => "high-school-music-festival",
             text => "High school music festival",
         },
+        {
+            html => <<"EOF",
+<p>
+Trying to not alienate a tourist.
+</p>
+EOF
+            id   => "not-alienating-a-tourist",
+            text => "Trying to not alienate a tourist",
+        },
     )
 ];
 

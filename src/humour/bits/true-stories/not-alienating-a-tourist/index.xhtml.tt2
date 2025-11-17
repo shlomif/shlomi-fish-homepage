@@ -1,0 +1,15 @@
+[%- SET title = "Not alienating a tourist" -%]
+[%- SET desc = title -%]
+[%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
+
+[%- WRAPPER wrap_html -%]
+
+[% WRAPPER h2_section id = "text" title = "The Text" %]
+
+<p>
+I once agreed to go for a car-trip to Eilat with one of my cousins.
+</p>
+
+[% END %]
+
+[% END %]

@@ -148,7 +148,7 @@ technicalities of creating and setting up one.
 </p>
 
 <p>
-One note that is in order is that lately we’ve seen an inflation of online
+One note, which is in order, is that lately we’ve seen an inflation of online
 journals (also known as <a href="http://en.wikipedia.org/wiki/Blog">blogs or
 weblogs</a>), that many people seem to think can be used instead of a more
 organised home page. The main problem with most blogs is that finding old
@@ -163,7 +163,8 @@ give here as well.
 
 <p>
 Alternatively make sure you have a personal web site as well as a blog using a
-content management system (CMS) that is more suitable for one.
+content management system (CMS), or a static site generator ( “SSG” ) that are
+more suitable for one.
 </p>
 
 [% WRAPPER h4_section id = "why_have_one" title = "Why have a Home Site?" %]
@@ -293,7 +294,7 @@ All of these may bring some revenue from the site.
 <p>
 Once you’ve set up a home site you’ll probably find that you have more and
 more ideas on what to put there. But you first need to overcome the first
-obstacle and actually get a web-site.
+hurdle and actually set up a web-site.
 </p>
 
 [% END %]
@@ -357,33 +358,23 @@ navigation. They appear under the heading
 <ol>
 
 <li>
-<p>
 <p>A tree of items</p>
-</p>
 </li>
 
 <li>
-<p>
 <p>Next/Previous/Up links to traverse a site</p>
-</p>
 </li>
 
 <li>
-<p>
 <p>Breadcrumb trails</p>
-</p>
 </li>
 
 <li>
-<p>
 <p>hidden pages and skipped pages</p>
-</p>
 </li>
 
 <li>
-<p>
 <p>A site map</p>
-</p>
 </li>
 
 </ol>
@@ -398,7 +389,7 @@ One thing that was omitted from the article (due to being too new to be
 included) is
 <a href="http://www.google.com/webmasters/sitemaps/docs/en/protocol.html">a
 Google Sitemap</a>. This provides a list of interesting pages in the site for
-Google and other search engines. Note however, that it is only necessary if
+Google and other search engines. Note, however, that it is only necessary if
 these pages are not directly accessible from the main page, for example if
 you’re using JavaScript for navigation or to generate a common navigation
 menu, or if you’re using a content management system that manages the pages
@@ -599,7 +590,7 @@ how to appropriately section and sub-section your home site.
 [% WRAPPER h5_section id = "pres_absolute_links" title = "Absolute Links" %]
 
 <p>
-A good site shouldn’t have any links like
+A good site shouldn’t have any hyperlinks like
 <code>http://www.mysite.tld/some/place/</code> within the site, as they will break
 if the site moves to a different place. Preferably, no links that begin with
 slash, should be present, either, because they will break if more components
@@ -622,11 +613,7 @@ cater for), and often also breaks in many browsers.
 <p>
 Some people believe one should not mention his or her E-mail on the web so
 he won’t receive any spam. So let me assure you of this: spammers will
-eventually learn of your E-mail address whether you like it or not. The best
-way to battle spam is to make sure you filter it on your side using a good
-spam filter. (I’m using
-<a href="http://spamassassin.apache.org/">SpamAssassin</a> and am very happy
-with it, but there are many others).
+eventually learn of your E-mail address whether you like it or not.
 </p>
 
 <p>
@@ -723,7 +710,7 @@ web-site should have such feeds for what has changed there.
 [% WRAPPER h5_section id = "pres_site_search" title = "Site Search" %]
 
 <p>
-A search engine for your site is a wonderful enhancement for your site. You
+A search engine for your site is a wonderful enhancement for it. You
 can easily set up such a search engine using
 <a href="http://www.google.com/searchcode.html">the Google Search Code</a>
 and similar services from other online search engines.
@@ -760,12 +747,6 @@ list of such sites of general interest are:
 <li>
 <p>
 <a href="http://delicious.com/">Delicious</a>
-</p>
-</li>
-
-<li>
-<p>
-<a href="http://digg.com/">Digg</a>
 </p>
 </li>
 
@@ -885,12 +866,10 @@ alternatives:
 
 <li>
 <p>
-<a href="http://web-cpan.shlomifish.org/latemp/"><b>Latemp</b></a> - what I’m
-personally using for most of my sites. Based on
+<a href="http://web-cpan.shlomifish.org/latemp/"><b>Latemp</b></a> - what I
+personally used for most of my sites. Based on
 <a href="http://thewml.org/">Website Meta Language</a>, which has a relatively
-steep learning curve. Latemp and Website Meta Lang are very powerful and
-capable, and one can create very good sites with them, with very little
-redundant markup.
+steep learning curve. It is also slow and quirky.
 </p>
 </li>
 
@@ -1003,7 +982,7 @@ Some of the most prominent ones are:
 <li>
 <p>
 <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol"><b>FTP</b></a> -
-short for File Transfer Protocol is the oldest. It is commonly supported,
+short for “File Transfer Protocol” - is the oldest. It is commonly supported,
 but transfers passwords and data in plain-text. Many hosts are likely to
 support it, but there are already better alternatives.
 </p>
@@ -1012,7 +991,7 @@ support it, but there are already better alternatives.
 <li>
 <p>
 <a href="http://en.wikipedia.org/wiki/SSH_file_transfer_protocol"><b>SFTP</b></a>
-- short for SSH File Transfer Protocol is similar to FTP, but provides
+- short for “SSH File Transfer Protocol” - is similar to FTP, but provides
 full encryption and a secure authentication and transfer. As such it is more
 recommended.
 </p>
@@ -1067,8 +1046,8 @@ or failsafe as using a true version control system.
 <p>
 The <a href="http://better-scm.shlomifish.org/">Better SCM site</a> contains a
 lot of links and information regarding the various version control system.
-I am personally using <a href="https://subversion.apache.org/">the Subversion
-version control system</a>, which I can wholeheartedly recommend.
+I am personally using <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">Git</a>, while having used <a href="https://subversion.apache.org/">the Subversion
+version control system</a>, previously.
 </p>
 <p>
 In any case, note that you <b>must</b> eventually use a version control system,
@@ -1319,7 +1298,7 @@ excellent online book called “User Interface Design for Programmers”</a>. It
 a very recommended read and also incredibly amusing. Finally,
 <a href="http://www.goingware.com/">Michael Crawford</a>
 has written
-<a href="http://www.goingware.com/tips/search-engine-optimization/">a very
+<a href="http://www.goingware.com/tips/search-engine-optimization/">a
 good essay about White Hat Search Engine Optimisation</a>.
 </p>
 

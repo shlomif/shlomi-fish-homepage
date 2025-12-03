@@ -1,8 +1,9 @@
 [%- SET title = "Humanity - The Movie - “Buy the Fish” in Hebrew" -%]
 [%- SET desc = "Humanity - The Movie - the song “Buy the Fish” in Hebrew" -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[% long_stories.calc_common_top_elems(id => 'humanity') %]
 
 [% WRAPPER intro %]
 

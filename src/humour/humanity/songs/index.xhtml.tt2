@@ -3,6 +3,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories.calc_common_top_elems(id => 'humanity') %]
+
 [% WRAPPER intro %]
 
 <p>

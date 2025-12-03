@@ -5,6 +5,8 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% long_stories.calc_common_top_elems(id => 'humanity') %]
+
 <h2 id="text">הטקסט של התסריט</h2>
 
 [% path_slurp("screenplay-xml/rendered-html/Humanity-Movie-hebrew.html") %]

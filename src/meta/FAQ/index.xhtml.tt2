@@ -413,6 +413,12 @@ French: rusty, partial, and incomplete, knowledge.
 [% WRAPPER h3_section id = "your_job" title = "What is your day job? What do you do for a living? What is your work about?" %]
 
 <p>
+Currently (December 2025) see <a href="[% base_path %]philosophy/culture/multiverse-cosmology/indiv-nodes/see-also.xhtml">Multiverse cosmology</a>.
+</p>
+
+[%- IF 0 -%]
+
+<p>
 Currently (August 2022) I am happily unemployed, and trying to build
 esteem, success, recognition, fame, etc. as a writer/entertainer/amateur philosopher.
 My goal for now is to become the next big author — the next
@@ -432,6 +438,8 @@ easily.
 </li>
 
 </ul>
+
+[%- END -%]
 
 [%- END -%]
 

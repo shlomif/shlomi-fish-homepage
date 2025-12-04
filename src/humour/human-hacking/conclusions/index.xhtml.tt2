@@ -2,6 +2,9 @@
 
 [%- WRAPPER wrap_html -%]
 
+[% PROCESS "Inc/faq.tt2" %]
+[% PROCESS "Inc/acronyms_microsoft.tt2" %]
+
 [% default_toc %]
 
 [% WRAPPER intro %]
@@ -303,6 +306,12 @@ for revitalising the film industry”</a> (also nicknamed “The Case for
 Commercial Fanfiction”) I give a historical reflection about HHFG, and other
 works.
 </p>
+
+<blockquote cite="">
+
+[% INCLUDE hhfg_presentation_of_geeks %]
+
+</blockquote>
 
 [% END %]
 

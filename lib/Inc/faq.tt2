@@ -447,3 +447,71 @@ of Aristotle</a> and those of many other classical philosophers.
 </p>
 
 [% END %]
+
+[% BLOCK hhfg_presentation_of_geeks %]
+
+<p>
+Traditionally (as of 2021), there was an apparent
+dichotomy between geek and hacker culture and "mainstream"
+culture. Geeks were considered intelligent, but unattractive,
+shy, anti-social, unathletic, and often without "real-life" social life.
+My 2005 [% hhfg %] story
+presented male and female open source and [% opencontent %] geeks and hackers
+as competent, confident, sexually attractive, socially capable, assertive, as well as
+popular and coveted. It was written as an antithesis to Paul Graham's <a href="http://www.paulgraham.com/nerds.html">"Why Nerds are Unpopular" essay</a>
+and the <a
+href="https://www.shlomifish.org/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">Buffyesque false
+social dichotomy</a>. Some commentators claimed it was detrimental, because the
+target demographic for "open source"/etc. geeks was the social outcasts,
+"uncool" kids.
+</p>
+
+<p>
+However, by the time the first season of <a
+href="https://en.wikipedia.org/wiki/The_Big_Bang_Theory">The Big Bang
+Theory</a> aired during late 2007, it was an established observation that geeks
+and hackers were the Alphas. Moreover, I believe that its primary "anti-Geek"
+character, <a href="https://bigbangtheory.fandom.com/wiki/Penny">Penny</a>,
+despite her "hot dumb blonde girl" image, and her ignorance and laymanship, was
+a superb hacker and geek. This is because she constantly challenged and broke
+the hidden rules of the show's more stigmatic (and less attractive looking)
+geeks, and because she was passionate and enthusiastic about many of her
+endeavours. Moreover, she is often depicted as trying to emulate the
+nerdier/dorkier geeks, and successfully.
+</p>
+
+[% SET tbbt_game_addict_penny_non_broken_yt_video = 1 %]
+[% IF tbbt_game_addict_penny_non_broken_yt_video %]
+
+[%#
+   https://www.youtube.com/watch?v=CRcXQ13I3UI
+   Queen Penolepe | Penny's online gaming addiction | The Big Bang Theory - YouTube
+%]
+
+<iframe src="https://www.youtube.com/embed/CRcXQ13I3UI" allowfullscreen="allowfullscreen"></iframe>
+
+[% ELSE %]
+
+[%#
+   https://www.youtube.com/watch?v=Ufr-Y5oROyE
+   Big Bang Theory - Penny The Game Addict 2 - YouTube
+%]
+
+<iframe src="https://www.youtube.com/embed/Ufr-Y5oROyE" allowfullscreen="allowfullscreen"></iframe>
+
+[% END %]
+
+<p>
+Given <a
+href="https://github.com/shlomif/Captioned-Image-Badass-Schwarzenegger">"one
+needs to be a badass to play one on T.V."</a>, I'm pretty sure that
+<a href="https://en.wikipedia.org/wiki/Kaley_Cuoco">Kaley
+Cuoco</a>, the actress who portrayed Penny, is a hacker and a geek as well.
+</p>
+
+[% END %]
+
+[% IF 0 %]
+[% INCLUDE hhfg_presentation_of_geeks %]
+[% PROCESS hhfg_presentation_of_geeks %]
+[% END %]

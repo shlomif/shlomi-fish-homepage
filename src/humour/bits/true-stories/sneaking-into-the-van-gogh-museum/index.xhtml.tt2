@@ -1,6 +1,5 @@
 [%  SET title = "Sneaking into the van Gogh museum"  %]
 [%- SET desc = "A true story about Sneaking into the van Gogh museum in Amsterdam" -%]
-[%- SET emwatson_url = "${base_path}meta/nav-blocks/blocks/#harry_potter_nav_block" -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -17,9 +16,5 @@ there was a long queue of people for the cashiers on a separate building.
 While we felt guilty about not having paid, we lacked the time and patience
 to stand in the line, so we just walked away.
 </p>
-
-[%# sneaking-into-the-van-gogh-museum
-
-%]
 
 [% END %]

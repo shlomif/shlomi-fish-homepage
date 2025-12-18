@@ -433,7 +433,6 @@ $locale
 $setup_script_cmd
 pydeps="WebTest appdirs beautifulsoup4 bottle bs4 click cookiecutter cssselect lxml numpy pycotap rebookmaker scour soupsieve vnu_validator weasyprint webtest zenfilter"
 sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
-# cpanm -vvv IO::Async
 cpanm --notest IO::Async
 cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
 cpanm --notest HTML::T5
@@ -454,7 +453,7 @@ ls -l bin/ || true
 perl bin/my-cookiecutter.pl
 deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
 gem install asciidoctor compass compass-blueprint
-PATH="\$HOME/bin:\$PATH"
+PATH="\${HOME}/bin:\${PATH}"
 ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
 ( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
 ( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
@@ -476,7 +475,7 @@ else
 fi
 
 `which python3` -m pip install \$pydeps
-export LD_LIBRARY_PATH="/usr/local/lib:\$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/local/lib:\${LD_LIBRARY_PATH}"
 cmake_build_is_already_part_of_test_sh='true'
 if test "\$cmake_build_is_already_part_of_test_sh" != "true"
 then
@@ -507,20 +506,20 @@ else
 fi
 fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
-PATH="\$PATH:\$HOME/go/bin"
-local_dbtoepubdir="`pwd`/lib/repos/xslt10-stylesheets/xsl/epub/bin"
-local_dbtoepub="\${local_dbtoepubdir}/dbtoepub"
-if test -e "\$local_dbtoepub"
+PATH="\${PATH}:\${HOME}/go/bin"
+export myvar_dbtoepubdir="\${PWD}/lib/repos/xslt10-stylesheets/xsl/epub/bin"
+myvar_dbtoepub="\${myvar_dbtoepubdir}/dbtoepub"
+if test -e "\$myvar_dbtoepub"
 then
-    export DBTOEPUB="/usr/bin/ruby \$_local_dbtoepub"
-    PATH="\$PATH:\${local_dbtoepubdir}"
+    export DBTOEPUB="/usr/bin/ruby \$myvar_dbtoepub"
+    PATH="\${PATH}:\${myvar_dbtoepubdir}"
 elif test -x /usr/bin/dbtoepub
 then
     export DBTOEPUB="/usr/bin/ruby \$(which dbtoepub)"
 fi
 which dbtoepub
 # bash bin/rebuild
-TIDYALL_DATA_DIR="\$HOME/tidyall_d" bash -x bin/run-ci-build.bash
+TIDYALL_DATA_DIR="\${HOME}/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT
     $obj->exe_bash_code( { code => $script, } );
 

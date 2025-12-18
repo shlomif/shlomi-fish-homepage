@@ -376,9 +376,10 @@ qq#find lib -name .git | xargs dirname | perl -lnE 'system(qq[d=../temp-git/\$_ 
         }
     }
     $obj->exe_bash_code( { code => "mkdir -p /temp-git", } );
+    my $LC_ALL = "en_US.UTF-8";
     my $locale = <<"EOSCRIPTTTTTTT";
-export LC_ALL=en_US.UTF-8
-export LANG="\$LC_ALL"
+export LC_ALL="$LC_ALL"
+export LANG="$LC_ALL"
 export LANGUAGE="en_US:en"
 EOSCRIPTTTTTTT
 
@@ -507,12 +508,12 @@ fi
 fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\$PATH:\$HOME/go/bin"
-_local_dbtoepubdir="`pwd`/lib/repos/xslt10-stylesheets/xsl/epub/bin"
-_local_dbtoepub="\${_local_dbtoepubdir}/dbtoepub"
-if test -e "\$_local_dbtoepub"
+local_dbtoepubdir="`pwd`/lib/repos/xslt10-stylesheets/xsl/epub/bin"
+local_dbtoepub="\${local_dbtoepubdir}/dbtoepub"
+if test -e "\$local_dbtoepub"
 then
     export DBTOEPUB="/usr/bin/ruby \$_local_dbtoepub"
-    PATH="\$PATH:\${_local_dbtoepubdir}"
+    PATH="\$PATH:\${local_dbtoepubdir}"
 elif test -x /usr/bin/dbtoepub
 then
     export DBTOEPUB="/usr/bin/ruby \$(which dbtoepub)"
@@ -560,14 +561,23 @@ foreach my $sys (@systems_names)
     $times{$sys} = timeit(
         1,
         sub {
-            __PACKAGE__->run_config(
-                {
-                    cleanrun   => $cleanrun,
-                    cleanup    => $cleanup,
-                    force_load => $force_load,
-                    sys        => $sys,
-                }
-            );
+            eval {
+                __PACKAGE__->run_config(
+                    {
+                        cleanrun   => $cleanrun,
+                        cleanup    => $cleanup,
+                        force_load => $force_load,
+                        sys        => $sys,
+                    }
+                );
+            };
+            my $Err = $@;
+            if ($Err)
+            {
+                warn $Err;
+                die "INFO: sys = '$sys'";
+            }
+
             return;
         }
     );

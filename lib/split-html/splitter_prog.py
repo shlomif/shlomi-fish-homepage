@@ -112,7 +112,7 @@ SECTION_FORMAT__SUFFIX = '''<footer>
 Policy</a></li>
 <li><a href="{base_path}meta/FAQ/" title=
 "Frequently asked questions list">FAQ</a></li>
-<li><a href="{base_path}me/blogs/">RSS/Atom Feeds</a></li>
+<li><a href="{base_path}site-map/">Site Map</a></li>
 </ul>
 <p>Written, designed, and maintained by Shlomi Fish (a.k.a. “shlomif”
 and <a href="{base_path}me/rindolf/">“Rindolf”</a>);

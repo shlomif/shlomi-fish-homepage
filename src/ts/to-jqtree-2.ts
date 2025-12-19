@@ -2,9 +2,7 @@
 function shlomif_load_nav(page_path: string): void {
     $(() => {
         const footer = $("body > footer");
-        const old_footer_nav_links_markup: string = "";
         footer.prepend(
-            old_footer_nav_links_markup +
                 '<p class="page_source_link"><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
                 page_path +
                 (page_path === "" || /\/$/.test(page_path) ? "" : ".tt2") +

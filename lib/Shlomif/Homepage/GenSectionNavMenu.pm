@@ -98,9 +98,7 @@ sub process_batch
         };
 
         foreach my $css_class (
-            { 'css' => 'bottom_nav', 'frag' => 'footer_nav_buttons', },
-            { 'css' => 'top_nav',    'frag' => 'top_nav_buttons', },
-            )
+            { 'css' => 'top_nav', 'frag' => 'top_nav_buttons', }, )
         {
             my $class  = $css_class->{'css'};
             my $frag   = $css_class->{'frag'};

@@ -83,6 +83,7 @@ EOF
                 qw/
                     build-essential
                     cookiecutter
+                    dbtoepub
                     docbook-xsl
                     docbook-xsl-ns
                     docbook5-xml
@@ -184,7 +185,7 @@ EOF
     ),
 };
 
-my $COPY_CLONES_DIR = 0;
+my $COPY_CLONES_DIR = 1;
 
 sub run_config
 {
@@ -508,16 +509,21 @@ fi
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\${PATH}:\${HOME}/go/bin"
 export myvar_dbtoepubdir="\${PWD}/lib/repos/xslt10-stylesheets/xsl/epub/bin"
-myvar_dbtoepub="\${myvar_dbtoepubdir}/dbtoepub"
+myvar_dbtoepub="\$myvar_dbtoepubdir"
+myvar_dbtoepub+="/dbtoepub"
+usr_share_dbtoepub="/usr/share/sgml/docbook/xsl-stylesheets/epub/bin/dbtoepub"
 if test -e "\$myvar_dbtoepub"
 then
     export DBTOEPUB="/usr/bin/ruby \$myvar_dbtoepub"
-    PATH="\${PATH}:\${myvar_dbtoepubdir}"
+    PATH+=":\$myvar_dbtoepubdir"
+    which dbtoepub
 elif test -x /usr/bin/dbtoepub
 then
     export DBTOEPUB="/usr/bin/ruby \$(which dbtoepub)"
+elif test -e "\$usr_share_dbtoepub"
+then
+    export DBTOEPUB="/usr/bin/ruby \$usr_share_dbtoepub"
 fi
-which dbtoepub
 # bash bin/rebuild
 TIDYALL_DATA_DIR="\${HOME}/tidyall_d" bash -x bin/run-ci-build.bash
 EOSCRIPTTTTTTT

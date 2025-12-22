@@ -185,7 +185,7 @@ EOF
     ),
 };
 
-my $COPY_CLONES_DIR = 1;
+my $COPY_CLONES_DIR = 0;
 
 sub run_config
 {

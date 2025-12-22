@@ -127,7 +127,7 @@ EOF
             ],
         }
     ),
-    'fedora:42' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:43' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             install_bitvec              => "false",

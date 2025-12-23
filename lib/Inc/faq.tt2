@@ -511,7 +511,29 @@ Cuoco</a>, the actress who portrayed Penny, is a hacker and a geek as well.
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE hhfg_presentation_of_geeks %]
-[% PROCESS hhfg_presentation_of_geeks %]
+[% BLOCK hhfg_as_geeky_teenager_story %]
+
+<p>
+It seems the parodical 2001 film <a href="https://en.wikipedia.org/wiki/Not_Another_Teen_Movie"><i>Not Another Teen Movie</i></a>
+killed the whole Teenager Films genre. However, I've written the afforementioned
+[% hhfg %] story in 2005 (after recovering from my
+<a href="#learning_more_from_inet_forums">Technion "education", or
+relative lack of it and entertainment</a>), and it is a geeky/hackery spin
+on the teen story model. It too is partly crossover/RPF fanfic, but, despite
+that, two teenagers living in the USA (where it takes place) asked me if it was
+real.
+</p>
+
+<p>
+Moreover, its two female protagonists seemed quite farfetchedly competent back
+then, but I'd bet many younger girls (or older ones that have the right
+attitude) today can easily blow them out of the water.
+</p>
+
 [% END %]
+
+[% IF 0 %]
+[% INCLUDE hhfg_as_geeky_teenager_story %]
+[% PROCESS hhfg_as_geeky_teenager_story %]
+[% END %]
+

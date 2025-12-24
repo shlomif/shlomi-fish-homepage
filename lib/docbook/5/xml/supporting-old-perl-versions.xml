@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="docbook-css/driver.css" type="text/css"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="index" xml:lang="en">
+<info>
+<title>About Supporting Older Releases of perl5 For CPAN Distributions</title>
+<date>2025-12-24</date>
+<authorgroup>
+<author>
+<personname>
+<firstname>Shlomi</firstname>
+<surname>Fish</surname>
+</personname>
+<affiliation>
+<address>
+<email>shlomif@shlomifish.org</email>
+<uri type="homepage" xlink:href="http://www.shlomifish.org/">Shlomi Fish’s Homepage</uri>
+</address>
+</affiliation>
+</author>
+</authorgroup>
+<copyright>
+<year>2025</year>
+<holder>Shlomi Fish</holder>
+</copyright>
+<legalnotice xml:id="main_legal_notice">
+<para>
+<!--Creative Commons License-->
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</link> (or at your option any greater version of it).
+</para>
+</legalnotice>
+</info>
+
+<section xml:id="_tldr_summary">
+<info>
+<title>TL;DR Summary</title>
+</info>
+<para>Due to several reasons, I am setting a minimal version of perl5 - 5.12.0
+or even higher - for <emphasis role="strong">some</emphasis> of my <link xlink:href="https://en.wikipedia.org/wiki/CPAN">CPAN</link> [CPAN]
+distributions (not all). You should either upgrade your perl5, or
+alternatively pay me to support older releases of perl5.</para>
+</section>
+
+<section xml:id="_motivation">
+<info>
+<title>Motivation</title>
+</info>
+<para>I hesitate to lower the supported version of perl because that may increase the maintenance burden (CPAN Testers / etc.). You should upgrade to a newer version of perl because 5.10 is very old (last released in August 2009 - <link xlink:href="http://use.perl.org/use.perl.org/articles/09/08/25/0556226.shtml">reference</link> ), is unmaintained and possibly broken and there&#8217;s already perl 5.28.x . There&#8217;s some discussion of dedicating time to doing such transitions and upgrades here - <link xlink:href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">Changing the Seldon plan/</link> .</para>
+<para>If you cannot afford to upgrade the system&#8217;s perl, you can try using <link xlink:href="https://perlbrew.pl/">perlbrew</link> or similar tools. Often, using the system perl directly is not recommended anyway.</para>
+<para>I hesitate to lower the requirement to 5.10, and then to 5.8 or possibly even lower. 5.12 is already generous enough. Someone told me that <link xlink:href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</link> once said that his main responsibility as the chief maintainer of the Linux kernel project is to "Say no". This is one case where I wish to do exactly that.</para>
+<para>I added a "use 5.012;" statement so Dist::Zilla can make the Kwalitee / CPANTS (see <link xlink:href="https://cpants.cpanauthors.org/">https://cpants.cpanauthors.org/</link> ) metrics better (minimum perl version). Reducing it further would have meant that I&#8217;d have to: 1. Risk test failures for 5.8 and 5.10. 2. Risk having to support end users with these old perl versions. All this is something I don&#8217;t want to do as a precaution. Also see <link xlink:href="http://www.shlomifish.org/humour/fortunes/tinic.html#hamakor-discs-mozilla-1.1-1">the joke thread</link> . You really should upgrade to a newer perl5.</para>
+<para>To quote <link xlink:href="https://www.youtube.com/user/JennaMarbles">Jenna Marbles</link> in <link xlink:href="https://www.youtube.com/watch?v=ROZjaxT_0Hw">this video</link>, which I found really funny and has some NSFW monologue, but SFW imagery: "Fuck that!".</para>
+<section xml:id="_supporting_organisations_with_strict_policies">
+<info>
+<title>Supporting Organisations With Strict Policies</title>
+</info>
+<para><link xlink:href="https://metacpan.org/author/PWBENNETT">Paul Bennett</link>  writes in <link xlink:href="https://www.mail-archive.com/module-authors@perl.org/msg10638.html">this mailing list post</link> :</para>
+
+<blockquote>
+<para>
+I have faced this question head-on with some of my modules.
+</para>
+<para>
+My take is that there are many, many corporations version-locked to specific
+"enterprise-grade" Linux distributions, and stuck with system Perls maybe as
+old as 5.10, and potentially stuck with security policies that make solutions
+like perlbrew difficult.
+</para>
+<para>
+I try (when I can), therefore, to keep at least one version of my modules on
+CPAN that will run on 5.10 (5.8.8 sometimes), even if the default / latest CPAN
+version needs something newer for full functionality or higher performance or
+greater readability, or whatever.
+</para>
+<para>
+I may be alone in this, also, but whenever I clean up my PAUSE distributions ,
+I try to leave the $v.0 and the latest $v.$last versions of every module, for
+every major version $v of that module. This is in case anyone has a module (on
+or off CPAN) that has some kind of version locking in their dependencies.
+</para>
+</blockquote>
+
+<para>Well, I don&#8217;t have a lot of sympathy for organisations with non-productive
+policies like that, but I suppose that if they really need that, then they can
+afford to pay me for my time and trouble, or to implement any of the other
+possible solutions.</para>
+</section>
+
+<section xml:id="_paying_respect_to_the_perl5_porters">
+<info>
+<title>Paying respect to the perl5-porters</title>
+</info>
+<para>The <link xlink:href="https://lists.perl.org/list/perl5-porters.html">perl5-porters</link> actively
+work to release new versions of the perl5 runtime with bug fixes (including
+for security bugs), new features, new automated tests, new optimisations,
+and other improvements, all while breaking as little backward compatibility as
+possible and while handling the human part of the process, such as handling
+bug reports, complaints, and discussion. Since the release of perl 5.12.0, a
+new stable version of perl5 was released yearly every May or close to it.</para>
+<para>They deserve a lot of appreciation, and I hereby admit that I love them all.
+♥♥♥! Thanks!</para>
+<para>Many perl5 and CPAN contributors went to great effort to create open source
+solutions such as perlbrew or &lt;&lt; local::lib &gt;&gt; to facilitate using an up-to-date
+version of perl5, so there is little excuse to avoid updating.</para>
+<para>As a result, while you are free to make use of older perl5 releases (while
+risking suffering from many potential bugs), I think it is unfair if you
+complain that CPAN authors like me set the minimum bar higher than
+5.8.x/5.10.x. If you really need my distributions to work on your
+old perl5 releases, then please implement one of the suggestions below.</para>
+</section>
+</section>
+
+<section xml:id="_the_payment_terms">
+<info>
+<title>The payment terms</title>
+</info>
+<para>I request a payment of 100 USD per year per distribution, to make me support
+perl versions 5.8.x-or-above — not just for you — for everybody. At the end of the year,
+if I don&#8217;t get a term renewal, I may continue to support the older versions,
+or I may not.</para>
+<para>Note that you may opt to be credited as supporters of the distribution, in its
+documentation.</para>
+</section>
+
+<section xml:id="_alternative_options_to_paying">
+<info>
+<title>Alternative Options To Paying</title>
+</info>
+<itemizedlist>
+<listitem>
+<para>Use perlbrew</para>
+<para>See <link xlink:href="https://perlbrew.pl/">perlbrew</link> .</para>
+</listitem>
+<listitem>
+<para>Apply a downstream patch.</para>
+</listitem>
+<listitem>
+<para>Fork it under a different name.</para>
+</listitem>
+<listitem>
+<para>Stop using it.</para>
+</listitem>
+<listitem>
+<para>Or patch the reverse dependencies to use something else.</para>
+</listitem>
+<listitem>
+<para>Take over PAUSE maintainership.</para>
+</listitem>
+</itemizedlist>
+</section>
+
+<section xml:id="_references">
+<info>
+<title>References</title>
+</info>
+<itemizedlist>
+<listitem>
+<para>
+<link xlink:href="https://github.com/shlomif/perl-XML-SemanticDiff/issues/3">GitHub discussion</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://www.nntp.perl.org/group/perl.module-authors/2018/08/msg10944.html">module-authors discussion</link>
+</para>
+</listitem>
+<listitem>
+<para>
+<link xlink:href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">What does "if it ain&#8217;t broke, don&#8217;t fix it" really mean?</link>
+</para>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_contact">
+<info>
+<title>Contact</title>
+</info>
+<itemizedlist>
+<listitem>
+<para><link xlink:href="https://metacpan.org/author/SHLOMIF">https://metacpan.org/author/SHLOMIF</link></para>
+</listitem>
+<listitem>
+<para><link xlink:href="http://www.shlomifish.org/me/contact-me/">http://www.shlomifish.org/me/contact-me/</link></para>
+</listitem>
+<listitem>
+<para><link xlink:href="http://www.shlomifish.org/meta/donate/">http://www.shlomifish.org/meta/donate/</link></para>
+</listitem>
+</itemizedlist>
+</section>
+</article>

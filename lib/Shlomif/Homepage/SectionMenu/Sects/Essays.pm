@@ -447,6 +447,12 @@ my $_section_navmenu_tree_contents = {
                             url  => "philosophy/computers/perl/perl6-critique/",
                             title => "Critique of where Perl 6 is Heading",
                         },
+                        {
+                            text =>
+"Supporting Old Versions of the perl executable",
+                            url =>
+"philosophy/computers/perl/supporting-old-perl-versions/",
+                        },
                     ],
                 },
                 {

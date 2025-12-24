@@ -75,6 +75,7 @@ q#philosophy/computers/high-quality-software/rev2/what-makes-software-high-quali
 q#philosophy/computers/how-to-share-code-for-getting-help/how-to-share-code-online#,
 q#philosophy/computers/open-source/foss-licences-wars/foss-licences-wars#,
 q#philosophy/computers/open-source/foss-licences-wars/rev2/foss-licences-wars-rev2#,
+q#philosophy/computers/perl/supporting-old-perl-versions/supporting-old-perl-versions#,
 q#philosophy/computers/software-management/end-of-it-slavery/end-of-it-slavery#,
 q#philosophy/computers/software-management/perfect-workplace/perfect-it-workplace#,
 q#philosophy/computers/software-management/perfect-workplace/v2/perfect-it-workplace-v2#,

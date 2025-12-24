@@ -1,0 +1,15 @@
+[%- SET title = "Supporting Old Versions of the perl executable" -%]
+
+[%- WRAPPER wrap_html -%]
+
+<section class="h2">
+
+<header>
+<h2 id="itself">The Article Itself</h2>
+</header>
+
+[% path_slurp("docbook/5/rendered/supporting-old-perl-versions.xhtml") %]
+
+</section>
+
+[% END %]

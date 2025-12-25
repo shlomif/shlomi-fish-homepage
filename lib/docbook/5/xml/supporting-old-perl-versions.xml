@@ -25,7 +25,7 @@
 <legalnotice xml:id="main_legal_notice">
 <para>
 <!--Creative Commons License-->
-This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</link> (or at your option any greater version of it).
+This work is licensed under the <link xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License (CC-by)</link> (or at your option any greater version of it).
 </para>
 </legalnotice>
 </info>
@@ -35,7 +35,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 <title>TL;DR Summary</title>
 </info>
 <para>Due to several reasons, I am setting a minimal version of perl5 - 5.12.0
-or even higher - for <emphasis role="strong">some</emphasis> of my <link xlink:href="https://en.wikipedia.org/wiki/CPAN">CPAN</link> [CPAN]
+or even higher - for <emphasis role="strong">some</emphasis> of my <link xlink:href="https://en.wikipedia.org/wiki/CPAN">CPAN</link>
 distributions (not all). You should either upgrade your perl5, or
 alternatively pay me to support older releases of perl5.</para>
 </section>
@@ -44,16 +44,16 @@ alternatively pay me to support older releases of perl5.</para>
 <info>
 <title>Motivation</title>
 </info>
-<para>I hesitate to lower the supported version of perl because that may increase the maintenance burden (CPAN Testers / etc.). You should upgrade to a newer version of perl because 5.10 is very old (last released in August 2009 - <link xlink:href="http://use.perl.org/use.perl.org/articles/09/08/25/0556226.shtml">reference</link> ), is unmaintained and possibly broken and there&#8217;s already perl 5.28.x . There&#8217;s some discussion of dedicating time to doing such transitions and upgrades here - <link xlink:href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">Changing the Seldon plan/</link> .</para>
+<para>I hesitate to lower the supported version of perl because that may increase the maintenance burden (CPAN Testers / etc.). You should upgrade to a newer version of perl because 5.10 is very old (last released in August 2009 - <link xlink:href="http://use.perl.org/use.perl.org/articles/09/08/25/0556226.shtml">reference</link> ), is unmaintained and possibly broken and there&#8217;s already perl 5.28.x . There&#8217;s some discussion of dedicating time to doing such transitions and upgrades here - <link xlink:href="https://www.shlomifish.org/philosophy/psychology/changing-the-seldon-plan/">Changing the Seldon plan</link> .</para>
 <para>If you cannot afford to upgrade the system&#8217;s perl, you can try using <link xlink:href="https://perlbrew.pl/">perlbrew</link> or similar tools. Often, using the system perl directly is not recommended anyway.</para>
 <para>I hesitate to lower the requirement to 5.10, and then to 5.8 or possibly even lower. 5.12 is already generous enough. Someone told me that <link xlink:href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</link> once said that his main responsibility as the chief maintainer of the Linux kernel project is to "Say no". This is one case where I wish to do exactly that.</para>
-<para>I added a "use 5.012;" statement so Dist::Zilla can make the Kwalitee / CPANTS (see <link xlink:href="https://cpants.cpanauthors.org/">https://cpants.cpanauthors.org/</link> ) metrics better (minimum perl version). Reducing it further would have meant that I&#8217;d have to: 1. Risk test failures for 5.8 and 5.10. 2. Risk having to support end users with these old perl versions. All this is something I don&#8217;t want to do as a precaution. Also see <link xlink:href="http://www.shlomifish.org/humour/fortunes/tinic.html#hamakor-discs-mozilla-1.1-1">the joke thread</link> . You really should upgrade to a newer perl5.</para>
+<para>I added a "use 5.012;" statement so Dist::Zilla can make the Kwalitee / CPANTS (see <link xlink:href="https://cpants.cpanauthors.org/">https://cpants.cpanauthors.org/</link> ) metrics better (minimum perl version). Reducing it further would have meant that I&#8217;d have to: 1. Risk test failures for 5.8 and 5.10. 2. Risk having to support end users with these old perl versions. All this is something I don&#8217;t want to do as a precaution. Also see <link xlink:href="http://www.shlomifish.org/humour/fortunes/tinic.html#hamakor-discs-mozilla-1.1-1">the joke thread about using version 1.1 of the Mozilla browser</link>. You really should upgrade to a newer perl5.</para>
 <para>To quote <link xlink:href="https://www.youtube.com/user/JennaMarbles">Jenna Marbles</link> in <link xlink:href="https://www.youtube.com/watch?v=ROZjaxT_0Hw">this video</link>, which I found really funny and has some NSFW monologue, but SFW imagery: "Fuck that!".</para>
 <section xml:id="_supporting_organisations_with_strict_policies">
 <info>
 <title>Supporting Organisations With Strict Policies</title>
 </info>
-<para><link xlink:href="https://metacpan.org/author/PWBENNETT">Paul Bennett</link>  writes in <link xlink:href="https://www.mail-archive.com/module-authors@perl.org/msg10638.html">this mailing list post</link> :</para>
+<para><link xlink:href="https://metacpan.org/author/PWBENNETT">Paul Bennett</link> writes in <link xlink:href="https://www.mail-archive.com/module-authors@perl.org/msg10638.html">this mailing list post</link> :</para>
 
 <blockquote>
 <para>
@@ -99,7 +99,7 @@ new stable version of perl5 was released yearly every May or close to it.</para>
 <para>They deserve a lot of appreciation, and I hereby admit that I love them all.
 ♥♥♥! Thanks!</para>
 <para>Many perl5 and CPAN contributors went to great effort to create open source
-solutions such as perlbrew or &lt;&lt; local::lib &gt;&gt; to facilitate using an up-to-date
+solutions such as perlbrew or <link xlink:href="https://metacpan.org/pod/local::lib">local::lib</link> to facilitate using an up-to-date
 version of perl5, so there is little excuse to avoid updating.</para>
 <para>As a result, while you are free to make use of older perl5 releases (while
 risking suffering from many potential bugs), I think it is unfair if you

@@ -230,6 +230,15 @@ EOF
             id   => "not-alienating-a-tourist",
             text => "Trying to not alienate a tourist",
         },
+        {
+            html => <<"EOF",
+<p>
+Talking about a screenplay I had published online.
+</p>
+EOF
+            id   => "well-i-wrote-it",
+            text => "“Well, I wrote it”",
+        },
     )
 ];
 

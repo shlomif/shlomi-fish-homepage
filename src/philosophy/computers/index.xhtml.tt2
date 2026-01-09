@@ -4,6 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/foss_essays.tt2" %]
+[% PROCESS "Inc/sw_management_essays.tt2" %]
 [% PROCESS "Inc/web_essays.tt2" %]
 
 <div class="fancy_sects side_toc">
@@ -56,6 +57,8 @@ Articles about the Web, or the Internet in general.
 Software management: leading a team, designing software, working on software,
 hiring employees, growing a user base, software engineering, etc.
 </p>
+
+[% INCLUDE software_management_essays__block %]
 
 [% END %]
 

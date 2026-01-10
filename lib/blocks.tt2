@@ -63,9 +63,26 @@
 
 [%- END -%]
 
+[%- BLOCK footer__website_sections -%]
+
+<ul class="sections">
+<li>
+<a href="[% base_path %]humour/">Fiction / Humour</a>
+</li>
+<li>
+<a href="[% base_path %]philosophy/">Essays and Articles</a>
+</li>
+<li>
+<a href="[% base_path %]open-source/">Software</a>
+</li>
+</ul>
+
+[%- END -%]
+
 [%- BLOCK webmaster_footer -%]
 
 [% INCLUDE webmaster_info %]
+[% INCLUDE footer__website_sections %]
 
 [%- IF is_forked_site -%]
 

@@ -1,3 +1,5 @@
+@import "defs";
+
 @mixin horizontal_navbar_ul() {
     ul {
         margin-left: auto;
@@ -43,6 +45,21 @@ footer,
 
     p {
         clear: left;
+    }
+
+    .sections {
+        background: #008800;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        li {
+            // background: black;
+            border: black solid 3px;
+            $r: 10px;
+            border-bottom-left-radius: $r;
+            border-bottom-right-radius: $r;
+            padding: $r;
+            @include margin-lr(5px);
+        }
     }
 }
 

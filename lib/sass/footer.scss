@@ -47,10 +47,15 @@ footer,
         clear: left;
     }
 
-    .sections {
+    div.sections {
         background: #008800;
         padding-bottom: 0.5em;
         padding-top: 0.5em;
+
+        > p {
+            padding-left: 1em;
+        }
+
         li {
             // background: black;
             border: black solid 3px;

@@ -48,11 +48,12 @@ footer,
     }
 
     div.sections {
-        background: #008800;
+        // background: #008800;
         padding-bottom: 0.5em;
         padding-top: 0.5em;
 
         > p {
+            font-weight: bold;
             padding-left: 1em;
         }
 
@@ -62,6 +63,7 @@ footer,
             $r: 10px;
             border-bottom-left-radius: $r;
             border-bottom-right-radius: $r;
+            font-size: 85%;
             padding: $r;
             @include margin-lr(5px);
         }

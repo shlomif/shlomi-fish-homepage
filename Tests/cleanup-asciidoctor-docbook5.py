@@ -21,6 +21,8 @@ class MyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             fn = tmp + "/" + "out.docbook5.xml"
 
+            # Based on https://stackoverflow.com/a/16699042 ; thanks!
+
             xml_filename = "Tests/data/love-life-policy.docbook5.xml"
             xsl_filename = "bin/clean-up-asciidoctor-docbook5--take2.xslt"
 
@@ -35,6 +37,10 @@ class MyTests(unittest.TestCase):
             root.has_one("//db:info/db:title[contains(text(), 'Meeting')]")
             root.has_one(
                 "//db:listitem/db:para[contains(text(), 'call the children')]"
+            )
+            root.has_one(
+                "//db:listitem/db:para/db:link[@xlink:href="
+                "'https://en.wikipedia.org/wiki/Table_tennis']"
             )
 
 

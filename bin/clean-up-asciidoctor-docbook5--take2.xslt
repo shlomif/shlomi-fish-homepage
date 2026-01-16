@@ -13,7 +13,7 @@ xmlns:myNS="http://devedge.netscape.com/2002/de">
 </xsl:copy>
 </xsl:template>
 
-<xsl:template match="d:title">
+<xsl:template match="d:section/d:title">
 
 <d:info>
 <!--

@@ -33,6 +33,9 @@ class MyTests(unittest.TestCase):
 
             root = HtmlTestsDoc(harness=self, fn=fn, filetype='docbook5')
             root.has_one("//db:info/db:title[contains(text(), 'Meeting')]")
+            root.has_one(
+                "//db:listitem/db:para[contains(text(), 'call the children')]"
+            )
 
 
 if __name__ == '__main__':

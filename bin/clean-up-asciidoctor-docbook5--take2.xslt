@@ -26,6 +26,14 @@ xmlns:myNS="http://devedge.netscape.com/2002/de">
 
 </xsl:template>
 
+<xsl:template match="//d:simpara">
+
+<d:para>
+<xsl:apply-templates select="./node()"/>
+</d:para>
+
+</xsl:template>
+
 <xsl:template match="d:Body">
 <xsl:copy>
 <xsl:apply-templates select="@*|node()"/>

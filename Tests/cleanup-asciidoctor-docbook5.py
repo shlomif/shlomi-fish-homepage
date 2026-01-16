@@ -42,6 +42,9 @@ class MyTests(unittest.TestCase):
                 "//db:listitem/db:para/db:link[@xlink:href="
                 "'https://en.wikipedia.org/wiki/Table_tennis']"
             )
+            root.has_one(
+                "//db:section[ @xml:id = 'favourite_pastimes' ]"
+            )
 
 
 if __name__ == '__main__':

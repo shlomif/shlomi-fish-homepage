@@ -2,8 +2,10 @@
 <xsl:stylesheet version="1.0"
 xmlns:d="http://docbook.org/ns/docbook"
 xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-xmlns:myNS="http://devedge.netscape.com/2002/de">
+xmlns:myNS="http://devedge.netscape.com/2002/de"
+>
 
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
@@ -31,6 +33,22 @@ xmlns:myNS="http://devedge.netscape.com/2002/de">
 <d:para>
 <xsl:apply-templates select="./node()"/>
 </d:para>
+
+</xsl:template>
+
+<xsl:template match="//d:section[@xml:id[ starts-with( . , '_' ) ] ]">
+
+<d:section>
+
+<xsl:attribute name="xml:id">
+<xsl:value-of select="substring( @xml:id , 2 )"/>
+</xsl:attribute>
+
+<xsl:copy>
+<xsl:apply-templates select="@*|node()"/>
+</xsl:copy>
+
+</d:section>
 
 </xsl:template>
 

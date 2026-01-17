@@ -31,7 +31,8 @@ class MyTests(unittest.TestCase):
             transform = etree.XSLT(xslt)
             newdom = transform(dom)
             with open(fn, "wb") as fh:
-                fh.write(etree.tostring(newdom, pretty_print=True))
+                content = etree.tostring(newdom, pretty_print=True)
+                fh.write(content)
 
             root = HtmlTestsDoc(harness=self, fn=fn, filetype='docbook5')
             root.has_one("//db:info/db:title[contains(text(), 'Meeting')]")
@@ -44,6 +45,9 @@ class MyTests(unittest.TestCase):
             )
             root.has_one(
                 "//db:section[ @xml:id = 'favourite_pastimes' ]"
+            )
+            root.has_none(
+                "//*[ @xml:id = '_favourite_pastimes' ]"
             )
 
 

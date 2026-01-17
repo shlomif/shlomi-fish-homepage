@@ -45,7 +45,7 @@ xmlns:myNS="http://devedge.netscape.com/2002/de"
 </xsl:attribute>
 
 <xsl:copy>
-<xsl:apply-templates select="@*|node()"/>
+<xsl:apply-templates select="*"/>
 </xsl:copy>
 
 </d:section>

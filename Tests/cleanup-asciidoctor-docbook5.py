@@ -30,8 +30,8 @@ class MyTests(unittest.TestCase):
             xslt = etree.parse(xsl_filename)
             transform = etree.XSLT(xslt)
             newdom = transform(dom)
+            content = etree.tostring(newdom, pretty_print=True)
             with open(fn, "wb") as fh:
-                content = etree.tostring(newdom, pretty_print=True)
                 fh.write(content)
 
             root = HtmlTestsDoc(harness=self, fn=fn, filetype='docbook5')
@@ -48,6 +48,9 @@ class MyTests(unittest.TestCase):
             )
             root.has_none(
                 "//*[ @xml:id = '_favourite_pastimes' ]"
+            )
+            root.has_none(
+                "//db:section[ string-length( @xml:id ) = 0 ]"
             )
 
 

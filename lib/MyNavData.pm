@@ -447,10 +447,10 @@ sub generic_get_params
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Me'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Humour'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Essays'),
-            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Puzzles'),
-            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Art'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Software'),
             $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Lectures'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Art'),
+            $get_sub_tree->('Shlomif::Homepage::SectionMenu::Sects::Puzzles'),
             {
                 text   => "Work",
                 url    => "work/",

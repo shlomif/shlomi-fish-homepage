@@ -1,27 +1,27 @@
-[% BLOCK page_extra_head_elements %]
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
-[% END %]
-[% PROCESS "Inc/aphorisms_blocks.tt2" %]
-[% PROCESS "Inc/img_macros_blocks.tt2" %]
+[%- END -%]
+[%- PROCESS "Inc/aphorisms_blocks.tt2" -%]
+[%- PROCESS "Inc/img_macros_blocks.tt2" -%]
 
-[% IF lang == "eng" %]
-[% IF captioned_images_only %]
+[%- IF lang == "eng" -%]
+[%- IF captioned_images_only -%]
 [%- SET title = "Shlomi Fish’s Image Macros (a.k.a “Captioned Images” or “Memes”)" -%]
-[% ELSE %]
+[%- ELSE -%]
 [%- SET title = "Shlomi Fish’s Aphorisms and Quotes Collection" -%]
 [%- END -%]
 
-[% ELSE %]
-[%- SET title = "מקבץ אמרות השפר והציטוטים של שלומי פיש" %]
-[% SET rtl_layout = "1" %]
-[% END %]
+[%- ELSE -%]
+[%- SET title = "מקבץ אמרות השפר והציטוטים של שלומי פיש" -%]
+[%- SET rtl_layout = "1" -%]
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% SET withcensored = 1 %]
+[%- SET withcensored = 1 -%]
 
-[% IF (! captioned_images_only) %]
-[% INCLUDE lang_switch url_eng = "humour.html" url_heb = "humour-heb.html" %]
+[%- IF (! captioned_images_only) -%]
+[%- INCLUDE lang_switch url_eng = "humour.html" url_heb = "humour-heb.html" -%]
 [%- END -%]
 
 <div class="[% IF captioned_images_only %]faq [% END %]main_text side_toc">

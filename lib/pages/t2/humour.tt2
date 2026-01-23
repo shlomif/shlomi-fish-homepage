@@ -26,18 +26,18 @@
 
 <div class="[% IF captioned_images_only %]faq [% END %]main_text side_toc">
 
-[% BLOCK cartoon_img %]
+[%- BLOCK cartoon_img -%]
 <img src="[% base_path %]humour/images/1538381903--mushroom.min.svg" alt="Mushroom cartoon"/>
-[% END %]
+[%- END -%]
 
-[% BLOCK eng_intro %]
+[%- BLOCK eng_intro -%]
 
 <section class="intro">
 <header>
 <h2 id="intro">Introduction</h2>
 </header>
 <div class="img_align">
-[% INCLUDE cartoon_img %]
+[%- INCLUDE cartoon_img -%]
 <div class="text">
 <p>
 This is a growing collection of aphorisms and funny bits I came up with
@@ -54,16 +54,16 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 
 </section>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK heb_intro %]
+[%- BLOCK heb_intro -%]
 
 <section class="intro">
 <header>
 <h2 id="intro">מבוא</h2>
 </header>
 <div class="img_align">
-[% INCLUDE cartoon_img %]
+[%- INCLUDE cartoon_img -%]
 <div class="text">
 
 <p>
@@ -87,14 +87,14 @@ You can also find them and others <a href="[% base_path %]humour/fortunes/">in m
 
 [% END %]
 
-[% BLOCK captioned_images_only__intro %]
+[%- BLOCK captioned_images_only__intro -%]
 
 <section class="intro">
 <header>
 <h2 id="intro">Introduction</h2>
 </header>
 <div class="img_align">
-[% INCLUDE cartoon_img %]
+[%- INCLUDE cartoon_img -%]
 <div class="text">
 
 <p>
@@ -114,31 +114,31 @@ and quotes page</a>.
 
 </section>
 
-[% END %]
-
-[% IF lang == "heb" %]
-[% INCLUDE heb_intro  %]
-[% ELSE %]
-[% IF captioned_images_only %]
-[% INCLUDE captioned_images_only__intro %]
-[%- ELSE -%]
-[% INCLUDE eng_intro  %]
-[% END %]
 [%- END -%]
 
-[% lang == "heb" ? toc_div( "lang" => "he", ) : toc_div() %]
+[%- IF lang == "heb" -%]
+[%- INCLUDE heb_intro  -%]
+[%- ELSE -%]
+[%- IF captioned_images_only -%]
+[%- INCLUDE captioned_images_only__intro -%]
+[%- ELSE -%]
+[%- INCLUDE eng_intro  -%]
+[%- END -%]
+[%- END -%]
 
-[% BLOCK eng_list_h2 %]
-[% IF captioned_images_only %]
+[%- lang == "heb" ? toc_div( "lang" => "he", ) : toc_div() -%]
+
+[%- BLOCK eng_list_h2 -%]
+[%- IF captioned_images_only -%]
 <h2 id="list">List of Image Macros</h2>
-[% ELSE %]
+[%- ELSE -%]
 <h2 id="list">List of Aphorisms</h2>
-[% END %]
-[% END %]
+[%- END -%]
+[%- END -%]
 
-[% BLOCK heb_list_h2 %]
+[%- BLOCK heb_list_h2 -%]
 <h2 id="list">רשימת אמרות השפר</h2>
-[% END %]
+[%- END -%]
 
 <section>
 <header>

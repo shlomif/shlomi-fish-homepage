@@ -1,4 +1,4 @@
-[% BLOCK shlomif_faqs_links %]
+[%- BLOCK shlomif_faqs_links -%]
 
 <ul>
 
@@ -28,9 +28,9 @@
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK why_fan_fic__block %]
+[%- BLOCK why_fan_fic__block -%]
 
 <p>
 Lawrence Lessig gives many good reasons for remixing in
@@ -53,9 +53,9 @@ works. I don’t have a lot of control of the ideas I come up with, but I know
 I must materialise them eventually.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK why_real_person_fiction__block %]
+[%- BLOCK why_real_person_fiction__block -%]
 
 <p>
 I feature or reference several celebrities in my stories (whether past

@@ -56,7 +56,7 @@ Follow the following steps to build the homesite:
 <orderedlist numeration="arabic">
 <listitem>
 <para>
-Install git - http://git-scm.com/ .
+Install git - <link xlink:href="http://git-scm.com/">http://git-scm.com/</link> .
 </para>
 </listitem>
 <listitem>
@@ -102,8 +102,8 @@ cpanm App::Deps::Verify Task::Sites::ShlomiFish
 Install Latemp:
 </para>
 <para>
-See https://web-cpan.shlomifish.org/latemp/ and
-https://github.com/thewml/latemp .
+See <link xlink:href="https://web-cpan.shlomifish.org/latemp/">https://web-cpan.shlomifish.org/latemp/</link> and
+<link xlink:href="https://github.com/thewml/latemp">https://github.com/thewml/latemp</link> .
 </para>
 </listitem>
 <listitem>
@@ -223,6 +223,14 @@ gmake test
 The site’s pages and data files should be in
 <literal>dest/post-incs/t2/</literal> .
 </para>
+</listitem>
+<listitem>
+<para>
+An optional test is:
+</para>
+<programlisting language="bash">
+bash -x bin/link-checker-for-shlomifish.org.bash
+</programlisting>
 </listitem>
 </orderedlist>
 </section>

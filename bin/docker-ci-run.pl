@@ -54,7 +54,7 @@ my $configs = {
         {
             container                   => "shlomi_fish_homesite_debian",
             install_bitvec              => "true",
-            install_langpack            => "false",
+            install_langpack            => "0",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
             pip_options           => "--break-system-packages",
@@ -67,10 +67,9 @@ then
 fi
 # exit 5
 su -c "apt-get update"
-su -c "apt-get -y install eatmydata locales netselect-apt sudo"
+su -c "apt-get -y install eatmydata locales sudo"
 printf "%s\n%s\n" "en_US.UTF-8 UTF-8" "C.UTF-8 UTF-8" > /etc/locale.gen
 sudo dpkg-reconfigure --frontend=noninteractive locales
-# sudo netselect-apt -c israel -t 3 -a amd64 # -n buster
 sudo apt-get update -qq
 sudo eatmydata apt-get -y full-upgrade
 EOF
@@ -131,7 +130,7 @@ EOF
         {
             container                   => "shlomi_fish_homesite_fedora",
             install_bitvec              => "false",
-            install_langpack            => "true",
+            install_langpack            => "1",
             package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
 
             # pip_options                 => "--break-system-packages",
@@ -328,11 +327,9 @@ sub run_config
     my $temp_git_repo_path = "../temp-git";
     if ($from_snap)
     {
-        # body...
     }
     else
     {
-        # else...
         $obj->do_system( { cmd => [ "rm", "-fr", $temp_git_repo_path ] } );
         $obj->do_system(
             {
@@ -395,29 +392,16 @@ fi
 true || ls -lR /root
 $setup_package_manager
 cd ~/source
-if $install_langpack
+if test "$install_langpack" = "1"
 then
     $package_manager_install_cmd glibc-langpack-en glibc-locale-source
-    # localedef --verbose --force -i en_US -f UTF-8 en_US.UTF-8
-    # localedef --force -i en_US -f UTF-8 en_US.UTF-8
 fi
 $package_manager_install_cmd @deps
 sudo ln -sf /usr/bin/make /usr/bin/gmake
-if false
-then
-    git clone https://github.com/kimwalisch/primesieve
-    cd primesieve
-    cmake .
-    make -j2
-    sudo make install
-    cd ..
-    rm -fr primesieve
-fi
 EOSCRIPTTTTTTT
 
     if ($from_snap)
     {
-        # body...
     }
     else
     {
@@ -466,15 +450,8 @@ echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
 ( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
 pwd
 echo "HOME=\$HOME"
-if false
-then
-    virtualenv -p `which pypy3` /pypyenv
-    source /pypyenv/bin/activate
-else
-    virtualenv -p `which python3` /python_3_env
-    source /python_3_env/bin/activate
-fi
-
+virtualenv -p `which python3` /python_3_env
+source /python_3_env/bin/activate
 `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\${LD_LIBRARY_PATH}"
 cmake_build_is_already_part_of_test_sh='true'

@@ -6,7 +6,7 @@
 [% WRAPPER h3_section id = "png" title = "400px wide PNG" %]
 
 <p>
-<img src="[% base_path %]me/images/bizcard-400w.png" alt="Shlomi Fish’s Business Card" class="bizcard" />
+<img alt="Shlomi Fish’s Business Card" class="bizcard" src="[% base_path %]me/images/bizcard-400w.png" />
 </p>
 
 [% END %]
@@ -14,7 +14,7 @@
 [% WRAPPER h3_section id = "svg" title = "SVG (Inkscape source)" %]
 
 <p>
-<img src="[% base_path %]me/images/embedded-png-bizcard.min.svg" alt="Shlomi Fish’s Business Card" class="bizcard" style="width: 400px;" />
+<img alt="Shlomi Fish’s Business Card" class="bizcard" src="[% base_path %]me/images/embedded-png-bizcard.min.svg" style="width: 400px;" />
 </p>
 
 [% END %]
@@ -31,8 +31,16 @@ It reads:
 
 <li>
 <p>
-Shlomi Fish (“Shlomif” or “Rindolf”)
+Shlomi Fish
 </p>
+
+<ul>
+<li>
+<p>
+(“Shlomif” or “Rindolf”)
+</p>
+</li>
+</ul>
 </li>
 
 <li>
@@ -42,11 +50,23 @@ Humorist, Writer, and Software Geek
 </li>
 
 <li>
+<ul>
+<li>
 <p>
-<a href="https://www.shlomifish.org/">https://www.shlomifish.org/</a> ; <a
-href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a> ; Mobile:
-+972-54-6232377.
+<b>Website:</b> <a href="https://www.shlomifish.org/">https://www.shlomifish.org/</a>
 </p>
+</li>
+<li>
+<p>
+<b>Email:</b> <a href="mailto:shlomif@shlomifish.org">shlomif@shlomifish.org</a>
+</p>
+</li>
+<li>
+<p>
+<b>Mobile:</b> +972-54-6232377.
+</p>
+</li>
+</ul>
 </li>
 
 </ul>

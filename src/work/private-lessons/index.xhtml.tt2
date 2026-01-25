@@ -1,7 +1,6 @@
 [%- SET title = "I’m Giving Private Lessons" -%]
 [%- SET desc = "I’m giving private lessons in either High School topics (Mathematics, Computer Science, or Physics), or in computer-related topics (C/C++, Perl, WWW Programming, Unix and Linux). I live in Northern Tel-Aviv." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,18 +9,26 @@ Computer Science, or Physics), or in computer-related topics (C/C++, Perl,
 WWW Programming, Unix and Linux). I live in Northern Tel-Aviv.
 </p>
 
-<h2>My Ad in Various Formats</h2>
+[%- WRAPPER h2_section id = "ad-formats" title = "My Ad in Various Formats" -%]
 
 <ul>
 <li>
+<p>
 <a href="tutor-ad.html"><b>HTML (read online)</b></a>
+</p>
 </li>
 <li>
+<p>
 <a href="tutor-ad.pdf">PDF (Acrobat Reader)</a>
+</p>
 </li>
 <li>
+<p>
 <a href="tutor-ad.sxw">OpenOffice Writer Format</a>
+</p>
 </li>
 </ul>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

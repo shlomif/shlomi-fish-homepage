@@ -2,6 +2,15 @@
 
 [%- WRAPPER wrap_html -%]
 
+[%- WRAPPER about_sect -%]
+
+<p>
+These are navigation blocks that lump together various topical resources on
+this site.
+</p>
+
+[%- END -%]
+
 [% default_toc %]
 
 [% USE HTML %]

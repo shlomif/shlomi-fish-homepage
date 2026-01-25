@@ -1,4 +1,4 @@
-[% PROCESS "multi-lang.tt2" %]
+[%- PROCESS "multi-lang.tt2" -%]
 
-[% SET shlomif_lang = "he" %]
-[% INCLUDE "pages/t2/hire-me.tt2" %]
+[%- SET shlomif_lang = "he" -%]
+[%- INCLUDE "pages/t2/hire-me.tt2" -%]

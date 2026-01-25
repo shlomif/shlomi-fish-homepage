@@ -1,36 +1,40 @@
 [%- SET title = "Shlomi Fish - Geek for Hire!" -%]
 [%- SET desc = "Shlomi Fish - Geek for Hire!" -%]
-[% IF shlomif_lang == "he"%]
-[% SET rtl_layout = "1" %]
-[%- SET title = "שלומי פיש - שכור לך שפצר!" %]
-[%- SET desc = "שלומי פיש - שכור לך שפצר!" %]
-[% END %]
+[%- IF shlomif_lang == "he" -%]
+[%- SET rtl_layout = "1" -%]
+[%- SET title = "שלומי פיש - שכור לך שפצר!" -%]
+[%- SET desc = "שלומי פיש - שכור לך שפצר!" -%]
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE lang_switch url_eng="./" url_heb="hebrew.html" %]
+[%- INCLUDE lang_switch url_eng = "./" url_heb = "hebrew.html" -%]
 
 <div class="main_text">
 
+[%- WRAPPER en -%]
 
-[% WRAPPER en  %]
 <p>
 I’m an experienced software developer, and writer of stories, articles,
 essays, and presentations with a vast amount of diverse knowledge.
 Among the possibilities are:
 </p>
+
 [%- END -%]
 
-[% WRAPPER he  %]
+[%- WRAPPER he -%]
+
 <p>
 אני מפתח תכנה מנוסה ומחבר של סיפורים, מאמרים, מסות, ומצגות בעל כמות גדולה של ידע מגוון.
 בין הדברים שאני יכול לעשות הם:
 </p>
+
 [%- END -%]
 
-[% toc_div('lang'=>shlomif_lang) %]
+[%- toc_div('lang'=>shlomif_lang) -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <h2 id="consultant">Work as a Consultant or Contractor</h2>
 
 <p>
@@ -43,10 +47,11 @@ the past. I can also learn new things in the course of my work.
 <p>
 The hourly consultant pay is negotiable.
 </p>
+
 [%- END -%]
 
+[%- WRAPPER he -%]
 
-[% WRAPPER he  %]
 <h2 id="consultant">לעבוד כיועץ או קבלן</h2>
 
 <p>
@@ -60,9 +65,11 @@ The hourly consultant pay is negotiable.
 <p>
 שכר הייעוץ שלי הוא בר-מיקוח.
 </p>
+
 [%- END -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <p>
 Some <b>tasks I’m good at</b> and enjoy:
 </p>
@@ -86,9 +93,11 @@ Fixing bugs in an existing codebase.
 Adding features to an existing codebase.
 </li>
 </ol>
+
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
+
 <p>
 מספר <b>משימות שאני טוב בהן</b> ונהנה לבצע:
 </p>
@@ -113,9 +122,11 @@ Adding features to an existing codebase.
 הוספת תכונות חדשות לבסיס קוד קיים.
 </li>
 </ol>
+
 [%- END -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <h2 id="hired_employee">As a Hired Employee</h2>
 
 <p>
@@ -123,10 +134,10 @@ You can also hire me as a full-time or half-time employee. I prefer to get
 a flat salary, and/or work in an office. I have a very good average output,
 and produce code of good quality.
 </p>
+
 [%- END -%]
 
-[% WRAPPER he  %]
-
+[% WRAPPER he %]
 
 <h2 id="hired_employee">כעובד שכיר</h2>
 
@@ -135,9 +146,11 @@ and produce code of good quality.
 משכורת גלובלית, ו/או לעבוד במשרד. יש לי תפוקה ממוצעת טובה מאוד, ואני מייצר קוד
 באיכות טובה.
 </p>
+
 [%- END -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <h2 id="website_construction">Web-Site Construction and Maintenance</h2>
 
 <p>
@@ -153,9 +166,11 @@ a site. I may require the assistance of professional CSS or graphics
 designers. (Unless you do not require the page to be very visually
 appealing.)
 </p>
+
 [%- END -%]
 
-[% WRAPPER he  %]
+[%- WRAPPER he -%]
+
 <h2 id="website_construction">בניית ותחזוקת אתרי ווב</h2>
 
 <p>
@@ -168,18 +183,21 @@ appealing.)
 ולגורמים חשובים אחרים בבניית אתר. אני עשוי להצטרך את עזרתם של מעצבים מקצועיים של CSS או גרפיקה.
 (אלא אם כן, ללקוח לא חשוב שהדף ייראה מאוד מושך ויזאולית.)
 </p>
+
 [%- END -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <h2 id="private_lessons">Private Lessons</h2>
 
 <p>
 I am able to <a href="[% base_path %]work/private-lessons/">give private
 lessons</a> in Computer-related topics.
 </p>
+
 [%- END -%]
 
-[% WRAPPER he  %]
+[%- WRAPPER he -%]
 
 <h2 id="private_lessons">שיעורים פרטיים</h2>
 
@@ -188,9 +206,11 @@ lessons</a> in Computer-related topics.
 <a href="[% base_path %]work/private-lessons/">לתת שיעורים פרטיים</a>
 בנושאים הקשורים למחשבים.
 </p>
+
 [%- END -%]
 
-[% WRAPPER en  %]
+[%- WRAPPER en -%]
+
 <h2 id="training">Training</h2>
 
 <p>
@@ -205,7 +225,8 @@ for giving effective presentations.
 
 [%- END -%]
 
-[% WRAPPER he  %]
+[%- WRAPPER he -%]
+
 <h2 id="training">הדרכה</h2>
 
 <p>
@@ -220,4 +241,4 @@ HTML
 
 </div>
 
-[% END %]
+[%- END -%]

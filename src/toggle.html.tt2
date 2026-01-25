@@ -2,7 +2,7 @@
 [%- SET desc = "Mathematical Analysis of the Toggle Squares Game" -%]
 [%- SET more_keywords = "Shlomi Fish, Toggle Squares, Ken Housley, Linear Algebra, Mathematics" -%]
 
-[% main_class.addClass("math_pre") %]
+[%- main_class.addClass("math_pre") -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -35,9 +35,9 @@ efficiency of the algorithms.
 
 [%- END -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section id = "One_Dimensional_Board" title = "Analysis of a 1-D Toggle-board" %]
+[%- WRAPPER h2_section id = "One_Dimensional_Board" title = "Analysis of a 1-D Toggle-board" -%]
 
 <p>
 First, I’ll prove some analogous statements about a one-dimensional
@@ -65,7 +65,7 @@ space (or vector field) {0,1}^n where the operations in the set {0,1} are
 <a href="https://en.wikipedia.org/wiki/Logical_conjunction">AND</a> for ‘*’.
 </p>
 
-[% WRAPPER h3_section id = "lemma1" title = "Lemma 1: 1D is always solvable if the vector 100..00 can be formed." %]
+[%- WRAPPER h3_section id = "lemma1" title = "Lemma 1: 1D is always solvable if the vector 100..00 can be formed." -%]
 
 <p>
 A 1-D toggle field is solvable for every state if (and only if)
@@ -98,7 +98,7 @@ is solvable. (i.e contained in Sp{Presses} )
 
 [% END %]
 
-[% WRAPPER h3_section id = "lemma2" title = "Lemma 2: 1D is always solvable only for N = 3k and 3k+1" %]
+[%- WRAPPER h3_section id = "lemma2" title = "Lemma 2: 1D is always solvable only for N = 3k and 3k+1" -%]
 
 <p>
 A 1-D toggle field of size N is solvable for every state if N = 3k
@@ -223,13 +223,13 @@ included in it, and is solvable.
 
 [% END %]
 
-[% WRAPPER h2_section id = "Two-Dimensional-Board" title = "Analysis of 2-D Boards" %]
+[%- WRAPPER h2_section id = "Two-Dimensional-Board" title = "Analysis of 2-D Boards" -%]
 
 <p>
 Now for the actual proofs:
 </p>
 
-[% WRAPPER h3_section id = "theorem1" title = "Theorem 1: (3k+2)^2 boards are not solvable for every state." %]
+[%- WRAPPER h3_section id = "theorem1" title = "Theorem 1: (3k+2)^2 boards are not solvable for every state." -%]
 
 <p>
 2-D (3k+2) × (3k+2) boards are not solvable for every state.
@@ -261,9 +261,9 @@ presses on the block, much less the entire board can be solved for every
 state.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id = "theorem2" title = "Theorem 2: 3k and 3k+1 2-D boards are solvable for every state." %]
+[%- WRAPPER h3_section id = "theorem2" title = "Theorem 2: 3k and 3k+1 2-D boards are solvable for every state." -%]
 
 <p>
 2-D boards of size 3k × 3k or (3k+1) × (3k+1) are solvable for
@@ -360,7 +360,7 @@ Diagram:
 
 [% END %]
 
-[% WRAPPER h3_section id = "theorem3" title = "Theorem 3: Solvable 3k+2 boards can be solved by the one way algorithm." %]
+[%- WRAPPER h3_section id = "theorem3" title = "Theorem 3: Solvable 3k+2 boards can be solved by the one way algorithm." -%]
 
 <p>
 Solvable states of 3k+2 boards can be solved by the one-way
@@ -389,9 +389,9 @@ filled because it’s a column-wise contradiction of Lemma 1. Therefore, it
 will also be cleared.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id = "theorem4" title = "Theorem 4: Solving 3k boards." %]
+[%- WRAPPER h3_section id = "theorem4" title = "Theorem 4: Solving 3k boards." -%]
 
 <p>
 A 2-D board of size (3k) × (3k) can be solved by using the two-way
@@ -505,9 +505,9 @@ of the leftmost filled square, one gets to the 0...11 state, which is
 afterwards cleared.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id = "theorem5" title = "Theorem 5: Solving 3k+1 boards." %]
+[%- WRAPPER h3_section id = "theorem5" title = "Theorem 5: Solving 3k+1 boards." -%]
 
 <p>
 A 2-D board of size (3k+1)×(3k+1) can be cleared by an
@@ -580,11 +580,11 @@ press those cells and it will be be moved to
 
 </ol>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "dim_press_span" title = "The Dimension of the Presses Span in 3k+2 boards" %]
+[%- WRAPPER h2_section id = "dim_press_span" title = "The Dimension of the Presses Span in 3k+2 boards" -%]
 
 <p>
 (3k+2)×(3k+2) boards are not solvable for every state. The solvable
@@ -648,9 +648,9 @@ vectors. In conclusion, there cannot be less than (3k+1)^2 vectors that
 span the space of the solvable states of (3k+2) boards.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "efficiency" title = "A Note about Efficiency" %]
+[%- WRAPPER h2_section id = "efficiency" title = "A Note about Efficiency" -%]
 
 <p>
 I believe the previous section showed that the 1w-1w algorithm for
@@ -672,6 +672,6 @@ However, I believe it is agreeable that it is the simplest algorithm
 advantage that it can be utilized without the aid of a computer.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

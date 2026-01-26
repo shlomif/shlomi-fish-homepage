@@ -34,6 +34,7 @@ while ( my $fn = <$LISTER> )
             push @$bad_results,
                 +{
                 basefn            => $mfn,
+                fn                => $fn,
                 content           => $content,
                 pre_incs_filename => $destfn,
                 };
@@ -47,5 +48,8 @@ TODO:
     local $TODO = "there are still problem pages";
 
     # TEST
-    eq_or_diff( $bad_results, [], "Leading whitespace in pre-incs", );
+    eq_or_diff(
+        [ map { $_->{fn} } @{$bad_results} ],
+        [], "Leading whitespace in pre-incs",
+    );
 }

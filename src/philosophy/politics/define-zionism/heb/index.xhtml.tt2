@@ -1,11 +1,10 @@
-[% SET rtl_layout = "1" %]
+[%- SET rtl_layout = "1" -%]
 [%- SET title = "הגדר \"ציונות\"!" -%]
 [%- SET desc = "מדוע יש יותר מהגדרה אחת של ציונות, ומדוע זה לא אתי שבמדינת ישראל תהיה אפליה חוקתית." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% INCLUDE "pages/t2/philosophy/define-zionism.tt2" %]
+[%- INCLUDE "pages/t2/philosophy/define-zionism.tt2" -%]
 
 <a href="http://www.ozyandmillie.net/2000/om20001229.html"
    title="Define &quot;Cynical&quot;. from Ozy and Millie by D.C. Simpson"
@@ -15,9 +14,9 @@
     class="max_width"
     /></a>
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section id = "intro"  title = "מבוא"  %]
+[%- WRAPPER h2_section id = "intro" title = "מבוא" -%]
 
 <p>
 לפני שבועות אחדים דיברתי עם יהודי אמריקאי אתאיסט ברשת הצ'אט Freenode. הוא לבסוף דיבר איתי
@@ -40,7 +39,7 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "judaism_clarification"  title = "הבהרה בנוגע ליהדות"  %]
+[%- WRAPPER h2_section id = "judaism_clarification" title = "הבהרה בנוגע ליהדות" -%]
 
 <p>
 העובדה הראשונה שצריך ללבן היא שיהדות אינה דת, אלא למעשה עמיות ("peopleship"), ושהיהודים הם עם.
@@ -57,7 +56,7 @@
 <p>
 אכן, היהודים נחשבו לעם במשך רובו המוחלט של התנ"ך. אפילו עצם שמם - יהודים - נגזר
 מ-
-<a href="http://he.wikipedia.org/wiki/%D7%99%D7%94%D7%95%D7%93%D7%94_(%D7%93%D7%9E%D7%95%D7%AA_%D7%AA%D7%A0%22%D7%9B%D7%99%D7%AA)">יהודה,  בנו של יעקב</a>
+<a href="http://he.wikipedia.org/wiki/%D7%99%D7%94%D7%95%D7%93%D7%94_(%D7%93%D7%9E%D7%95%D7%AA_%D7%AA%D7%A0%22%D7%9B%D7%99%D7%AA)">יהודה, בנו של יעקב</a>
 שנחשב לאביהם הקדמון.
 </p>
 
@@ -84,7 +83,7 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "zionism_defs"  title = "ההגדרות השונות של הציונות"  %]
+[%- WRAPPER h2_section id = "zionism_defs" title = "ההגדרות השונות של הציונות" -%]
 
 <p>
 אני רואה מספר הגדרות אפשריות לציונות כיום:
@@ -124,7 +123,7 @@
 כעת בוא ננסה לנתח את המוסריות של הגדרה מס' 3.
 </p>
 
-[% WRAPPER h3_section id = "constitutional_discrimination"  title = "מדוע אסור שתהיה אפליה חוקתית בישראל"  %]
+[%- WRAPPER h3_section id = "constitutional_discrimination" title = "מדוע אסור שתהיה אפליה חוקתית בישראל" -%]
 
 <p>
 <a href="http://groups.yahoo.com/group/philosophy-il/message/81">לאנשים פרטיים יש זכות
@@ -160,7 +159,7 @@
 שהחוקים שלה ישקפו זאת.
 </p>
 
-[% WRAPPER h4_section id = "biblical_right"  title = "בנוגע ל\"זכות האבות\" של היהודים" %]
+[%- WRAPPER h4_section id = "biblical_right" title = "בנוגע ל\"זכות האבות\" של היהודים" -%]
 
 <p>
 פעמים רבות תשמע שאנשים התומכים באפליה טוענים שליהודים יש זכות על ארץ ישראל מכיוון שזה
@@ -193,7 +192,7 @@
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "zionism_defs_concluded"  title = "הגדרות הציונות - מסקנה"  %]
+[%- WRAPPER h3_section id = "zionism_defs_concluded" title = "הגדרות הציונות - מסקנה" -%]
 
 <p>
 הבאתי מספר הגדרות עכשוויות של הציונות, אבל ייתכן שפספסתי מספר אחרות. אף שיש בהן מן המשותף,
@@ -205,7 +204,7 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "anti_pro"  title = "אנטי/פרו-ישראלי, אנטישמי, אנטי-ציוני וכו"  %]
+[%- WRAPPER h2_section id = "anti_pro" title = "אנטי/פרו-ישראלי, אנטישמי, אנטי-ציוני וכו" -%]
 
 <p>
 באפריל 2006, מישהו כתב הודעה ל
@@ -234,7 +233,7 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "conclusion"  title = "סיכום"  %]
+[%- WRAPPER h2_section id = "conclusion" title = "סיכום" -%]
 
 <p>
 חלק ניכר מהרגישות של ישראלים ופרו-ישראלים נובע בשל טרמינולוגיה שנויה במחלוקת. חלק
@@ -243,9 +242,9 @@
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "licence"  title = "רישיון"  %]
+[%- WRAPPER h2_section id = "licence" title = "רישיון" -%]
 
-[% license_obj.by_hebrew_blurb( year=>"2006") %]
+[%- license_obj.by_hebrew_blurb( year => "2006" ) -%]
 
 <p>
 שימו לב שהתמונה למעלה לקוחה מרצועת הקומיקס
@@ -257,5 +256,4 @@
 
 [%- END -%]
 
-
-[% END %]
+[%- END -%]

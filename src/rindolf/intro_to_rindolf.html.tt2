@@ -1,6 +1,4 @@
 [%- SET title = "An Introduction to Rindolf" -%]
-[%- SET desc = "An Introduction to Rindolf" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -280,4 +278,4 @@ idiosyncrasies: atomic key-value pairs, non-ambiguous <code>x</code> operator,
 our to be an exact replacement for <code>use vars qw( )</code>, etc.
 </p>
 
-[% END %]
+[%- END -%]

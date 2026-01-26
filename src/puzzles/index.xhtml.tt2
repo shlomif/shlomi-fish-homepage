@@ -1,5 +1,4 @@
 [%- SET title = "Puzzles, Riddles and Brain-teasers" -%]
-[%- SET desc = "Puzzles, Riddles and Brain-teasers" -%]
 [%- SET more_keywords = "puzzles, riddles, maths, math, mathematics, logic, problems, brain teasers, original" -%]
 
 [%- WRAPPER wrap_html -%]
@@ -9,7 +8,7 @@ This section of my homepage contains various puzzles, riddles and
 brain-teasers I came up with.
 </p>
 
-[% WRAPPER h2_section href = "${base_path}MathVentures/" id = "MathVentures" title = "Math-Ventures" %]
+[%- WRAPPER h2_section href = "${base_path}MathVentures/" id = "MathVentures" title = "Math-Ventures" -%]
 
 <p>
 Mathematical problems I encountered or got interested in and was able to
@@ -18,7 +17,7 @@ tackle. Solutions are provided.
 
 [%- END -%]
 
-[% WRAPPER h2_section href = "logic/" id = "logic_puzzles" title = "Logic Puzzles" %]
+[%- WRAPPER h2_section href = "logic/" id = "logic_puzzles" title = "Logic Puzzles" -%]
 
 <p>
 Various Logic Puzzles.
@@ -26,7 +25,7 @@ Various Logic Puzzles.
 
 [%- END -%]
 
-[% WRAPPER h2_section href = "situation/" id = "situation_puzzles" title = "Situation Puzzles" %]
+[%- WRAPPER h2_section href = "situation/" id = "situation_puzzles" title = "Situation Puzzles" -%]
 
 <p>
 Situation puzzles are interactive puzzles in which an unusual situation is
@@ -37,9 +36,9 @@ This section features some original situation puzzles I came up with.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "cs_amusements" title = "Computer Science Amusements" %]
+[%- WRAPPER h2_section id = "cs_amusements" title = "Computer Science Amusements" -%]
 
-[% WRAPPER h3_section href = "cs/lotg/" id = "cs_lotg" title = "The “Lotg” Code" %]
+[%- WRAPPER h3_section href = "cs/lotg/" id = "cs_lotg" title = "The “Lotg” Code" -%]
 
 <p>
 A minimalistic pseudocode I designed.
@@ -49,4 +48,4 @@ A minimalistic pseudocode I designed.
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

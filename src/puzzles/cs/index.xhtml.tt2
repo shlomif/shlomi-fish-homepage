@@ -1,13 +1,13 @@
 [%- SET title = "Computer Science Amusements" -%]
-[%- SET desc = "Computer Science Amusements by Shlomi Fish" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="lotg/">The “Lotg” Code</a></h2>
+[%- WRAPPER h2_section href = "lotg/" id = "lotg-code" title = "The “Lotg” Code" -%]
 
 <p>
 A minimalistic pseudocode I designed.
 </p>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

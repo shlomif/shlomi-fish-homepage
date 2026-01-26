@@ -1,6 +1,4 @@
 [%- SET title = "Rindolf Specification" -%]
-[%- SET desc = "Rindolf Specification" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -18,14 +16,20 @@ This SPEC, however, is kept here for posterity.
 
 <ul>
 <li>
+<p>
 <a href="rindolf-spec/">HTML (viewable online)</a>
+</p>
 </li>
 <li>
+<p>
 <a href="rindolf-spec.pdf">Acrobat Reader (PDF)</a>
+</p>
 </li>
 <li>
+<p>
 <a href="rindolf-spec.xml">The DocBook/XML Source</a>
+</p>
 </li>
 </ul>
 
-[% END %]
+[%- END -%]

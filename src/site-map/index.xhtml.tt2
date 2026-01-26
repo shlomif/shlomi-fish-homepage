@@ -1,11 +1,10 @@
 [%- SET title = "Site Map" -%]
 [%- SET desc = "Site map for Shlomi Fish’s web site (www.shlomifish.org)" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="sitemap">
-[% shlomif_main_expanded_nav_bar %]
+[%- shlomif_main_expanded_nav_bar -%]
 </div>
 
 <p>
@@ -13,4 +12,4 @@
 source, for easy retrieval.
 </p>
 
-[% END %]
+[%- END -%]

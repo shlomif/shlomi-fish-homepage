@@ -1,7 +1,6 @@
 [%- SET title = "About the Location Change" -%]
 [%- SET desc = "About the Location Change" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -35,4 +34,4 @@ so I have
 to find the best solution.
 </p>
 
-[% END %]
+[%- END -%]

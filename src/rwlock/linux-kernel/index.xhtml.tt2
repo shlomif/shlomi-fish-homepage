@@ -1,7 +1,6 @@
 [%- SET title = "Linux Kernel FCFS fcntl/flock Locks" -%]
 [%- SET desc = "Linux Kernel patch to implement a first-come first-served (FCFS)-locking semantics for the flock()/fcntl() system calls." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <h2><a href="linux-fcfs-rwlock.patch">Download the Patch</a></h2>
@@ -21,4 +20,4 @@ test program</a> can demonstrate the two behaviours (try running it as
 <code>test_flock 20 2</code>).
 </p>
 
-[% END %]
+[%- END -%]

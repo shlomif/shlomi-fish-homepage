@@ -1,10 +1,9 @@
 [%- SET title = "Ravensborg’s Guild - A Logic Puzzle" -%]
-[%- SET desc = "Ravensborg’s Guild - A Logic Puzzle" -%]
-[% BLOCK page_extra_head_elements %]
+
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-[% END %]
-
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -159,4 +158,4 @@ To sum up the results:
 </tr>
 </table>
 
-[% END %]
+[%- END -%]

@@ -1,6 +1,4 @@
 [%- SET title = "Situation Puzzle: A Book under a Rock" -%]
-[%- SET desc = "Situation Puzzle: A Book under a Rock" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -17,7 +15,7 @@ I came up with. You are welcome to tell it to your friends for amusement.
 There’s a book under a rock in the middle of the wilderness.
 </p>
 
-[% longblank %]
+[%- longblank -%]
 
 <h2>Answer</h2>
 
@@ -45,4 +43,4 @@ knew he left it there, and placed a rock above it so his friend will not find
 it. He indeed did not find the dictionary and they cancelled the gamble.
 </p>
 
-[% END %]
+[%- END -%]

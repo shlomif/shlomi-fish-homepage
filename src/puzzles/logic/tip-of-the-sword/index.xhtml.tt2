@@ -1,14 +1,14 @@
 [%- SET title = "On the Tip of the Sword - A Logic Puzzle" -%]
-[%- SET desc = "On the Tip of the Sword - A Logic Puzzle" -%]
-[% BLOCK page_extra_head_elements %]
+
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-[% END %]
-
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
 <div class="logic">
+
 <h2>Introduction</h2>
 
 <p>
@@ -466,4 +466,4 @@ So, to summarise the results, the solution is:
 
 </div>
 
-[% END %]
+[%- END -%]

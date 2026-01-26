@@ -1,6 +1,4 @@
 [%- SET title = "Situation Puzzles" -%]
-[%- SET desc = "Situation Puzzles" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -11,8 +9,10 @@ puzzles</a> (also known as Lateral Thinking Puzzles), I came up with.
 
 <ol>
 <li>
-<a href="book-under-rock.html">A Book under a Rock</a>
+<p>
+<a href="[% base_path %]puzzles/situation/book-under-rock.html">A Book under a Rock</a>
+</p>
 </li>
 </ol>
 
-[% END %]
+[%- END -%]

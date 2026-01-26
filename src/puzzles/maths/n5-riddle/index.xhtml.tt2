@@ -1,10 +1,10 @@
 [%- SET title = "Solution to the modulo 5^n riddle" -%]
 [%- SET desc = "Solution to the modulo 5^n riddle as asked by Orna Agmon Ben-Yehuda on her blog." -%]
-[% BLOCK page_extra_head_elements %]
+
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]images/css/puzzles.css"
 media="screen" title="Normal" />
-[% END %]
-
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 [%- PROCESS "Inc/mathjax.tt2" %]
@@ -41,7 +41,7 @@ back in 1 December, 2009</a>. Here is my solution to it.
 
 </div>
 
-[% longblank %]
+[%- longblank -%]
 
 <h2>Solution:</h2>
 
@@ -128,4 +128,4 @@ $5^{n+1}$ as well.
 Q.E.D.
 </p>
 
-[% END %]
+[%- END -%]

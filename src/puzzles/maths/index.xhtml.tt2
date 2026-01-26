@@ -1,13 +1,13 @@
 [%- SET title = "Maths Puzzles" -%]
-[%- SET desc = "Maths Puzzles" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
 <ol>
 <li>
+<p>
 <a href="n5-riddle/">Modulo n^5 Riddle</a>
+</p>
 </li>
 </ol>
 
-[% END %]
+[%- END -%]

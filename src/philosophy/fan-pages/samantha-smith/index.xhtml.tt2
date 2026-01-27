@@ -1,18 +1,18 @@
 [%- SET title = "Fan page for Samantha Smith" -%]
 [%- SET desc = "Fan page for Samantha Smith -- TODO: ADD MORE" -%]
 
-[% main_class.addClass("limit_imgs_width", "my_rpf", ) %]
+[%- main_class.addClass("limit_imgs_width", "my_rpf", ) -%]
 
-[% BLOCK page_extra_head_elements %]
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
-[% END %]
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% SET lang = "eng" %]
-[% PROCESS "Inc/aphorisms_blocks.tt2" %]
+[%- SET lang = "eng" -%]
+[%- PROCESS "Inc/aphorisms_blocks.tt2" -%]
 
-[% WRAPPER h2_section id = "about-sam-smith" title = "About" %]
+[%- WRAPPER h2_section id = "about-sam-smith" title = "About" -%]
 
 <p>
 <img alt="Photo of Samantha Smith" class="rfloaty" src="images/667702-AP830426033.webp" style="float: right; margin: 1em; max-width: 40%;" />
@@ -38,11 +38,11 @@
 </li>
 </ol>
 
-[% END %]
+[%- END -%]
 
 <hr />
 
-[% WRAPPER h2_section id = "sam-smith-is-alive" title = "Samantha Smith is Alive" %]
+[%- WRAPPER h2_section id = "sam-smith-is-alive" title = "Samantha Smith is Alive" -%]
 
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 
@@ -50,19 +50,19 @@
 I had a similar moment as well.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "the-story" title = "The Story" %]
+[%- WRAPPER h2_section id = "the-story" title = "The Story" -%]
 
-[% path_slurp("docbook/5/rendered/samsmith.xhtml") %]
+[%- path_slurp("docbook/5/rendered/samsmith.xhtml") -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER see_also  %]
+[%- WRAPPER see_also  -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER credits_sect %]
+[%- WRAPPER credits_sect -%]
 
 <ul>
 
@@ -76,4 +76,4 @@ I had a similar moment as well.
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

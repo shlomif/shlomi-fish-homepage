@@ -58,7 +58,7 @@ TODO:
         if ( @{$bad_results} )
         {
             system( "gvim", "-p",
-                [ map { $_->{fn} } @{$bad_results}[ -$LAST .. -1 ] ],
+                ( map { $_->{fn} } @{$bad_results}[ -$LAST .. -1 ] ),
             );
         }
     }

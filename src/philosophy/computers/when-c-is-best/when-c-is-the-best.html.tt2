@@ -2,10 +2,9 @@
 [%- SET desc = "Gives some reasons why the C language still has its place and explains when it should be used instead of other alternatives" -%]
 [%- SET more_keywords = "C,best,tool for the job,java,perl,ANSI C,C++,high level,low level,programming,languages" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
 <h2 id="meta">Document Information</h2>
 
@@ -34,19 +33,29 @@ Last Updated:
 
 <ul>
 <li>
+<p>
 “Java and/or .NET are better than C in every way.”.
+</p>
 </li>
 <li>
+<p>
 “Perl/Python/PHP/Ruby/Tcl are better than C.”
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.paulgraham.com/avg.html">“LISP is better than C”</a>.
+</p>
 </li>
 <li>
+<p>
 “If you need speed, use OCaml or Haskell - don’t bother with C.”
+</p>
 </li>
 <li>
+<p>
 “C is for kernels.”
+</p>
 </li>
 </ul>
 
@@ -295,8 +304,8 @@ has its place.
 
 <h2 id="licence">Licence</h2>
 
-[% license_obj.by_british_blurb( "year" => "2007",) %]
+[%- license_obj.by_british_blurb( "year" => "2007",) -%]
 
 <hr />
 
-[% END %]
+[%- END -%]

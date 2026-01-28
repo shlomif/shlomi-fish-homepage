@@ -52,7 +52,7 @@ TODO:
         [ map { $_->{fn} } @{$bad_results} ],
         [], "Leading whitespace in pre-incs",
     );
-    my $LAST = $ENV{'L'};
+    my $LAST = ( $ENV{'L'} // "" );
     if ( $LAST =~ /\A[0-9]+\z/ms )
     {
         if ( @{$bad_results} )

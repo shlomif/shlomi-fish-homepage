@@ -1,19 +1,21 @@
 [%- SET title = "A Solution to the Israeli-Palestinian Conflict" -%]
-[%- SET desc = "A Solution to the Israeli-Palestinian Conflict" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
 <ul>
 <li>
+<p>
 <a href="isr-pales-conflict-solution/"><b>HTML Format</b></a>. (read online)
+</p>
 </li>
 <li>
+<p>
 <a href="isr-pales-conflict-solution.xml">Original DocBook/XML</a>.
+</p>
 </li>
 </ul>
 
-<h2>Discussion and Errata</h2>
+[% WRAPPER h2_section id = "discussion" title = "Discussion and Errata" %]
 
 <p>
 See <a href="http://groups.yahoo.com/group/philosophy-il/message/128">some
@@ -24,4 +26,6 @@ outline why they were a logical consequence of the ethical principles I
 mentioned, but it may not be an adequate replacement for this.
 </p>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

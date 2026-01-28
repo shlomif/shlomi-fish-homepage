@@ -1,15 +1,13 @@
 [%- SET title = "Why I will continue to write my real person fan fiction (fanfic)" -%]
-[%- SET desc = "Why I will continue to write my real person fan fiction (fanfic)" -%]
-[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism" -%]
-
+[%- SET more_keywords = "psychology, Taylor Swift, amateur, money, Technion, Project Euler, actors, actresses, professionalism, geeks, geekdom" -%]
 
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects limit_imgs_width my_rpf">
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER note  %]
+[%- WRAPPER note -%]
 
 <header>
 <h2 id="note">Note ( 2021-01-12 )</h2>
@@ -19,11 +17,11 @@
 There is <a href="../case-for-commercial-fan-fiction/">an update here</a>.
 </p>
 
-[% END %]
+[%- END -%]
 
 <h2 id="content">Content</h2>
 
-[% path_slurp("docbook/5/rendered/my-real-person-fiction.xhtml") %]
+[%- path_slurp("docbook/5/rendered/my-real-person-fiction.xhtml") -%]
 
 [%- WRAPPER links_sect -%]
 
@@ -37,11 +35,10 @@ There is <a href="../case-for-commercial-fan-fiction/">an update here</a>.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction",  %]
+[%- PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "my-real-person-fiction" -%]
 
 </div>
 
-
-[% END %]
+[%- END -%]

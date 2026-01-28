@@ -1,8 +1,6 @@
-[% SET rtl_layout = "1" %]
-[% SET shlomif_lang = "he" %]
+[%- SET rtl_layout = "1" -%]
+[%- SET shlomif_lang = "he" -%]
 [%- SET title = "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" -%]
-[%- SET desc = "תיקון טעויות דקדוקיות ותחביריות נפוצות בעברית" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -176,4 +174,4 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </li>
 </ul>
 
-[% END %]
+[%- END -%]

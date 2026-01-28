@@ -1,19 +1,19 @@
 [%- SET title = "Fan page for Chris Grimmie" -%]
 [%- SET desc = "Fan page for Chris Grimmie -- a New Jersey-born singer, songwriter, musician, and creator, whom I destined to be the new Hacker Monarch (= “Messiah”)." -%]
 
-[% main_class.addClass("limit_imgs_width", "my_rpf", ) %]
+[%- main_class.addClass("limit_imgs_width", "my_rpf", ) -%]
 
-[% BLOCK page_extra_head_elements %]
+[%- BLOCK page_extra_head_elements -%]
 <link rel="stylesheet" href="[% base_path %]slash-humour.css" media="screen" title="Normal"/>
-[% END %]
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% SET lang = "eng" %]
-[% PROCESS "Inc/aphorisms_blocks.tt2" %]
-[% PROCESS "Inc/faq.tt2" %]
+[%- SET lang = "eng" -%]
+[%- PROCESS "Inc/aphorisms_blocks.tt2" -%]
+[%- PROCESS "Inc/faq.tt2" -%]
 
-[% WRAPPER h2_section id = "about-grimmie" title = "About" %]
+[%- WRAPPER h2_section id = "about-grimmie" title = "About" -%]
 
 <p>
 <img alt="Photo of Christina Grimmie" class="rfloaty" src="images/christina-grimmie--529031666-r.webp" style="float: right; margin: 1em;" />
@@ -30,9 +30,9 @@ new Hacker Monarch (= "Messiah")</a>.
 Hail Christina Grimmie, hacker monarch, spiritual leader of the NSA, a free and open leadership of The Neo-Tech Conspiracy for Establishing Shemitic Cultures!
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "favourites" title = "Favourite Works" %]
+[%- WRAPPER h2_section id = "favourites" title = "Favourite Works" -%]
 
 <ol>
 
@@ -74,17 +74,17 @@ with Sam Tsui.
 
 <iframe src="https://www.youtube.com/embed/LAL-2TZZRpI" allowfullscreen="allowfullscreen"></iframe>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" %]
+[%- WRAPPER h2_section id = "memes" title = "Captioned Images (“Memes”)" -%]
 
-[% PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" %]
+[%- PROCESS "Inc/chris_grimmie.tt2" img_style = "float:none;" -%]
 
-[% END %]
+[%- END -%]
 
 <hr />
 
-[% WRAPPER h2_section id = "grimmie-is-alive" title = "Chris Grimmie is Alive" %]
+[%- WRAPPER h2_section id = "grimmie-is-alive" title = "Chris Grimmie is Alive" -%]
 
 <iframe src="https://www.youtube.com/embed/mjYGB4uYgWw" allowfullscreen="allowfullscreen"></iframe>
 
@@ -92,9 +92,9 @@ with Sam Tsui.
 I had a similar moment as well.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "chris-story" title = "The Story" %]
+[%- WRAPPER h2_section id = "chris-story" title = "The Story" -%]
 
 <p>
 "Christina Victoria Grimmie" seemed like a fairly unremarkable name for me.
@@ -217,7 +217,7 @@ also think Kurt Hugo Schneider (KHS) seemed more likely to would have been
 my top choice.
 </p>
 
-[% WRAPPER h3_section id = "name-etymology" title = "Name Etymology" %]
+[%- WRAPPER h3_section id = "name-etymology" title = "Name Etymology" -%]
 
 <p>
 "Christ" is a Greek translation of the Hebrew word "Messiah", which literally
@@ -245,7 +245,7 @@ Having “ri” in your name indicates “having clean, creative, often procrast
 
 [% END %]
 
-[% WRAPPER h2_section id = "what-i-learned" title = "What I taught (and learned from) Internet/social media creators (on YouTube and other Internet outlets)" %]
+[%- WRAPPER h2_section id = "what-i-learned" title = "What I taught (and learned from) Internet/social media creators (on YouTube and other Internet outlets)" -%]
 
 <ol>
 
@@ -347,7 +347,7 @@ is usually a waste of time, energy, and love. Most violators are giving you free
 <ol>
 
 <li>
-[% INCLUDE piracy_vs_obscurity %]
+[%- INCLUDE piracy_vs_obscurity -%]
 </li>
 
 </ol>
@@ -362,7 +362,7 @@ is usually a waste of time, energy, and love. Most violators are giving you free
 
 <blockquote cite="">
 
-[% INCLUDE avoiding_non_helpful_criticism %]
+[%- INCLUDE avoiding_non_helpful_criticism -%]
 
 </blockquote>
 
@@ -424,9 +424,9 @@ any “IQ” myths.
 
 </ol>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "photos" title = "Photos' Gallery" %]
+[%- WRAPPER h2_section id = "photos" title = "Photos' Gallery" -%]
 
 <p>
 <img alt="'Everytime we touch' still" src="images/chris-grimmie-everytime-we-touch.webp" />
@@ -438,9 +438,9 @@ video</a> with her contemporary trademark hair style. Former video games' gamer
 she-dork or not, Christina looked really gorgeous and cute.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER see_also  %]
+[%- WRAPPER see_also  -%]
 
 <ul>
 
@@ -454,9 +454,9 @@ now.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER credits_sect %]
+[%- WRAPPER credits_sect -%]
 
 <ul>
 
@@ -471,4 +471,4 @@ Photo taken from
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

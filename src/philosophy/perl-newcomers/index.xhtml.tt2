@@ -1,6 +1,4 @@
 [%- SET title = "“Usability” of the Perl Online World for Newcomers" -%]
-[%- SET desc = "“Usability” of the Perl Online World for Newcomers" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -12,15 +10,21 @@ Can they quickly learn the language? Will they feel at home?
 
 <ul>
 <li>
+<p>
 <a href="v1/">The Original Article</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://advogato.org/article/649.html">An Executive Summary</a> with
 some discussion on Advogato.org.
+</p>
 </li>
 <li>
+<p>
 <a href="http://fc-solve.shlomifish.org/perl-att-newbies/year-after/perl-att-newbies-year-later.html">A Year (and some) Later Conclusions and Corrections</a>
+</p>
 </li>
 </ul>
 
-[% END %]
+[%- END -%]

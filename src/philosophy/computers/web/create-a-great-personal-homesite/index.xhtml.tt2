@@ -2,7 +2,6 @@
 [%- SET desc = "How to create a Great Personal Homesite" -%]
 [%- SET more_keywords = "Shlomi Fish, Shlomi, Fish, HTML, Homesite, Homepage, Home, Page, Site, Perl, PHP, Python, JavaScript, Content, Presentations" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="limit_imgs_width lim_width wrap-me">
@@ -115,7 +114,7 @@ moderately famous</a> and am very far from being a millionaire.
 
 </div>
 
-[% default_toc %]
+[%- default_toc -%]
 
 <h2 id="meta">Document Information</h2>
 
@@ -1015,4 +1014,4 @@ Joel on Software forum</a>
 
 </div>
 
-[% END %]
+[%- END -%]

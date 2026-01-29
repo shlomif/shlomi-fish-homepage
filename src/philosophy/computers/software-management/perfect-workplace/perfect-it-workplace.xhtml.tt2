@@ -1,14 +1,12 @@
 [%- SET title = "The Perfect IT Workplace - Revision 1" -%]
-[%- SET desc = "The Perfect IT Workplace - Revision 1" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width wrap-me side_toc fancy_sects">
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 This is the text of first revision of the my essay “The Perfect IT Workplace”.
@@ -22,13 +20,13 @@ now which will be better publicised.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
+[%- WRAPPER h2_section id = "itself" title = "The Article Itself" -%]
 
-[% path_slurp("docbook/5/rendered/perfect-it-workplace.xhtml") %]
+[%- path_slurp("docbook/5/rendered/perfect-it-workplace.xhtml") -%]
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "other_formats" title = "Other Formats" %]
+[%- WRAPPER h2_section id = "other_formats" title = "Other Formats" -%]
 
 <ul>
 
@@ -50,4 +48,4 @@ now which will be better publicised.
 
 </div>
 
-[% END %]
+[%- END -%]

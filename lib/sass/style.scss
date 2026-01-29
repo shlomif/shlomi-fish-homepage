@@ -113,8 +113,9 @@ body {
     margin-bottom: 1.5em;
 
     a {
-        text-decoration: underline;
         font-weight: bold;
+        line-height: 180%;
+        text-decoration: underline;
 
         &:link {
             color: white;

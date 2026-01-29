@@ -64,6 +64,7 @@ footer,
             border-bottom-left-radius: $r;
             border-bottom-right-radius: $r;
             font-size: 85%;
+            margin-top: 0.5em;
             padding: $r;
             @include margin-lr(5px);
         }

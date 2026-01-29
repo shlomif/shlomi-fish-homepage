@@ -1,14 +1,13 @@
 [%- SET title = "FOSS Licences Wars" -%]
 [%- SET desc = "This article gives an overview of the various options in picking up a licence for one’s Free and Open Source Software (FOSS) project, and tries to give some guidelines for choosing one." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER note  %]
+[%- WRAPPER note -%]
 
 <header>
 <h2 id="note">Note ( 2021-08-25 )</h2>
@@ -19,9 +18,9 @@ There is <a href="rev2/">a new revision of this essay</a> with many
 corrections and enhancements.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "main_intro" title = "Introduction" %]
+[%- WRAPPER h2_section id = "main_intro" title = "Introduction" -%]
 
 <p>
 This article gives an overview of the various options in picking up a licence
@@ -29,13 +28,13 @@ for one’s Free and Open Source Software (FOSS) project, and tries to give
 some guidelines for choosing one.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "foss-licences-wars",  %]
+[%- PROCESS docbook_formats_w_base h2_id = "other_formats", h2_text = "Other Formats", base = "foss-licences-wars", -%]
 
-[% path_slurp("docbook/5/rendered/foss-licences-wars.xhtml") %]
+[%- path_slurp("docbook/5/rendered/foss-licences-wars.xhtml") -%]
 
-[% WRAPPER h2_section id = "thanks" title = "Thanks" %]
+[%- WRAPPER h2_section id = "thanks" title = "Thanks" -%]
 
 <p>
 I’d like to thank <a href="http://nadav.harel.org.il/">Nadav Har’El</a> ,
@@ -45,9 +44,9 @@ I’ve forgotten for reviewing early drafts of this essay and providing useful
 commentary.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "coverage" title = "Coverage and Comments" %]
+[%- WRAPPER h2_section id = "coverage" title = "Coverage and Comments" -%]
 
 <ul>
 
@@ -94,8 +93,8 @@ License Minefield”</a> - thanks to
 
 </ul>
 
-[% END %]
+[%- END -%]
 
 </div>
 
-[% END %]
+[%- END -%]

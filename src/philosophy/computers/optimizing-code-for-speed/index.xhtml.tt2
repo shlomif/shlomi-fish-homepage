@@ -2,11 +2,11 @@
 [%- SET desc = "An overview of why and how one can optimize code for speed" -%]
 [%- SET more_keywords = "optimization,optimisation,optimize,optimise,code,c,freecell solver,perl,speed,memory,software quality,snappiness,moore’s law" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="fancy_sects side_toc">
-[% default_toc %]
+
+[%- default_toc -%]
 
 <section class="h2">
 
@@ -35,7 +35,7 @@ Last Updated:
 
 </section>
 
-[% INSERT "htmls/from-mediawiki/processed/Optimizing_Code_For_Speed-rev1.html" %]
+[%- INSERT "htmls/from-mediawiki/processed/Optimizing_Code_For_Speed-rev1.html" -%]
 
 <section class="h2">
 
@@ -57,28 +57,42 @@ section</a>).
 
 <ol>
 <li>
+<p>
 <a href="http://osnews.com/story/20973/Optimizing_Code_for_Speed">On
 OSNews.com</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://community.livejournal.com/shlomif_tech/21633.html">On my
 Technical Blog</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://pda-rss.livejournal.com/6014659.html">On pda_rss’s blog</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://digg.com/programming/Optimizing_Code_for_Speed">On Digg.com</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6270">On whatsup.org.il (in Hebrew)</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://discuss.joelonsoftware.com/default.asp?joel.3.734301.8">On the
 Joel on Software forum</a>
+</p>
 </li>
 <li>
+<p>
 <a href="http://www.reddit.com/r/programming/comments/7xdeo/optimizing_code_for_speed/">On Reddit.com</a>
+</p>
 </li>
 </ol>
 
@@ -86,4 +100,4 @@ Joel on Software forum</a>
 
 </div>
 
-[% END %]
+[%- END -%]

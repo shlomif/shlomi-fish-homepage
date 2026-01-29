@@ -1,10 +1,9 @@
 [%- SET title = "The Linus Torvalds Bus Factor" -%]
-[%- SET desc = "The Value of Multiple Committers and of &quot;Hitting the Benevolent Dictator with a Bus&quot;" -%]
-
+[%- SET desc = "The Value of Multiple Committers and of “Hitting the Benevolent Dictator with a Bus”" -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "about" title = "About this Document" %]
+[%- WRAPPER h2_section id = "about" title = "About this Document" -%]
 
 <p>
 This is an email exchange, that was converted into a web page. While
@@ -14,11 +13,11 @@ more general, and illustrates a good point about open source software
 development.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section id = "meta" title = "Document Information" %]
+[%- WRAPPER h2_section id = "meta" title = "Document Information" -%]
 
 <dl class="meta">
 <dt>
@@ -41,17 +40,17 @@ TODO : 8-April-2007
 </dd>
 </dl>
 
-[% WRAPPER h3_section id = "licence" title = "Licence" %]
+[%- WRAPPER h3_section id = "licence" title = "Licence" -%]
 
-[% license_obj.by_british_blurb( "year" => "2006", ) %]
+[%- license_obj.by_british_blurb( "year" => "2006", ) -%]
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "itself" title = "The Article Itself" %]
+[%- WRAPPER h2_section id = "itself" title = "The Article Itself" -%]
 
-[% WRAPPER h3_section id = "intro" title = "First Email" %]
+[%- WRAPPER h3_section id = "intro" title = "First Email" -%]
 
 <p>
 The purpose of this email is two-fold:
@@ -254,9 +253,9 @@ version control repository.
 Let the flames begin!
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id = "david_miller_response" title = "David Miller’s Response" %]
+[%- WRAPPER h3_section id = "david_miller_response" title = "David Miller’s Response" -%]
 
 <p>
 David Miller made a
@@ -271,9 +270,9 @@ the start as it’s nothing but flame fodder.
 </p>
 </blockquote>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id = "my_response_to_DM" title = "My Response to David Miller" %]
+[%- WRAPPER h3_section id = "my_response_to_DM" title = "My Response to David Miller" -%]
 
 <p>
 <i>I sent the following response to David Miller after a while. It never
@@ -383,7 +382,7 @@ I wrote this message in the course of about two hours, and then consulted
 people on the IRC on it. I cited several URLs and references. I have made a
 lot of <a href="[% base_path %]">contribution to free software in the past</a>, but
 even if I did not, I believe my suggestion should have been dealt with by
-explaining to me why what I suggested was a  bad idea, in your opinion.
+explaining to me why what I suggested was a bad idea, in your opinion.
 </p>
 
 <p>
@@ -391,15 +390,15 @@ Best regards,
 </p>
 
 <p>
--- Shlomi Fish (who happens to have a natural obsession with Applied Logic.
+— Shlomi Fish (who happens to have a natural obsession with Applied Logic.
 It’s a curse, but often is also a blessing)
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "coverage" title = "Coverage and Comments" %]
+[%- WRAPPER h2_section id = "coverage" title = "Coverage and Comments" -%]
 
 <ul>
 
@@ -433,6 +432,6 @@ topics was similar to preventing rape by killing all the women.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

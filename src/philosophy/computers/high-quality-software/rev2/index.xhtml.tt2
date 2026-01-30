@@ -1,12 +1,11 @@
 [%- SET title = "What Makes Software High-Quality? (Revision 2)" -%]
 [%- SET desc = "Which parameters make software applications high-quality? And which parameters or methods, while desirable, are not directly “quality”? This article, inspired by a post of someone else on a mailing list I started for one of my projects aims to answer this question." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<div class="lim_width wrap-me side_toc fancy_sects">
+<div class="fancy_sects lim_width side_toc wrap-me">
 
-[% default_toc %]
+[%- default_toc -%]
 
 <section class="h2">
 
@@ -29,7 +28,7 @@ with many corrections and additions.
 
 <h2 id="itself">The Article Itself - 2nd Revision</h2>
 
-[% path_slurp("docbook/5/rendered/what-makes-software-high-quality-rev2.xhtml") %]
+[%- path_slurp("docbook/5/rendered/what-makes-software-high-quality-rev2.xhtml") -%]
 
 </section>
 
@@ -101,7 +100,6 @@ fc-solve-discuss mailing list</a>.
 
 </section>
 
-
 <section class="h3">
 
 <h3 id="coverage-2nd">2nd Edition</h3>
@@ -121,4 +119,4 @@ fc-solve-discuss mailing list</a>.
 </section>
 </div>
 
-[% END %]
+[%- END -%]

@@ -1,13 +1,14 @@
 [%- SET title = "What Makes Software High-Quality?" -%]
 [%- SET desc = "Which parameters make software applications high-quality? And which parameters or methods, while desirable, are not directly “quality”? This article, inspired by a post of someone else on a mailing list I started for one of my projects aims to answer this question." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<div class="lim_width wrap-me side_toc fancy_sects">
-[% default_toc %]
+<div class="fancy_sects lim_width side_toc wrap-me">
 
-[% WRAPPER note  %]
+[%- default_toc -%]
+
+[%- WRAPPER note -%]
+
 <h2 id="note">Note (24-May-2008)</h2>
 
 <p>
@@ -35,7 +36,7 @@ projects aims to answer this question.
 
 <h2 id="itself">The Article Itself</h2>
 
-[% path_slurp("docbook/5/rendered/what-makes-software-high-quality.xhtml") %]
+[%- path_slurp("docbook/5/rendered/what-makes-software-high-quality.xhtml") -%]
 
 </section>
 
@@ -112,4 +113,4 @@ fc-solve-discuss mailing list</a>.
 
 </div>
 
-[% END %]
+[%- END -%]

@@ -728,7 +728,7 @@ EOF
 Facts about <a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>,
 a 1989-born American singer-songwriter, who is known for her narrative songs,
 her extravagant music videos, her philanthropy, and the rich culture of
-YouTubers who cover, parody, and remix her songs.
+YouTubers who cover, parody, and remix, her songs.
 </p>
 EOF
             id_base         => "taylor_swift_facts",

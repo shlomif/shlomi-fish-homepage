@@ -61,7 +61,7 @@ my $_humour_tree_contents = {
                             text  => "TOW The Fountainhead",
                             url   => "humour/TOneW-the-Fountainhead/",
                             title =>
-"A Parody on “The Fountainhead” by Ayn Rand",
+"A Parody of “The Fountainhead” by Ayn Rand",
                             subs => [
                                 {
                                     text => "Part 1",
@@ -79,7 +79,7 @@ my $_humour_tree_contents = {
                             text  => "Humanity",
                             url   => "humour/humanity/",
                             title =>
-"A Parody about Humanity and Modern Life in Particular",
+"A Parody of Humanity and Modern Life in Particular",
                             subs => [
                                 {
                                     text => "Ongoing Text",

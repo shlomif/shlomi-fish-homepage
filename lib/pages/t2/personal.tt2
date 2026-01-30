@@ -3,9 +3,9 @@
 
 [% IF shlomif_lang == "he"%]
 
-    [% SET rtl_layout = "1" %]
-    [%- SET title = "על אודותיי (שלומי פיש)" %]
-    [%- SET desc = "הביוגרפיה של שלומי פיש - לימודים, עבודה, כתיבה, מיזמי קוד פתוח ותוכן פתוח, פילוסופיה וחיבורים." %]
+      [% SET rtl_layout = "1" %]
+      [%- SET title = "על אודותיי (שלומי פיש)" %]
+      [%- SET desc = "הביוגרפיה של שלומי פיש - לימודים, עבודה, כתיבה, מיזמי קוד פתוח ותוכן פתוח, פילוסופיה וחיבורים." %]
 
 [% END %]
 
@@ -18,17 +18,17 @@
 
 <div class="main_text">
 
-[% WRAPPER en  %]
-[% INCLUDE picture_tag alt = "Picture of Shlomi Fish", class = "eng", title = "Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr",  %]
+[% WRAPPER en %]
+[% INCLUDE picture_tag alt = "Picture of Shlomi Fish", class = "eng", title = "Shlomi Fish wearing his “Summer Glau Schools the NSA” shirt - click for the image on Flickr", %]
 [%- END -%]
 
-[% WRAPPER he  %]
-[% INCLUDE picture_tag alt = "תמונה של שלומי פיש", class = "heb", title = "שלומי פיש לובש את חולצת ה-”סאמרסקול ב-NSA“ שלו - לחצו על התמונה לתמונה גדולה יותר בפליקר",  %]
+[% WRAPPER he %]
+[% INCLUDE picture_tag alt = "תמונה של שלומי פיש", class = "heb", title = "שלומי פיש לובש את חולצת ה-”סאמרסקול ב-NSA“ שלו - לחצו על התמונה לתמונה גדולה יותר בפליקר", %]
 [%- END -%]
 
 [% WRAPPER h2_section id = "history" title = ((shlomif_lang == "en") ? "History" : "היסטוריה") %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <p>
 My name is Shlomi Fish, I’m a guy, and I was born on 5 May, 1977 in Israel. I
@@ -38,7 +38,7 @@ trips to Europe or North America. I have two younger sisters.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 שמי הוא שלומי פיש ונולדתי בחמישה במאי, 1977 בישראל. חייתי רוב הזמן בישראל מלבד בין הגילאים
@@ -47,7 +47,7 @@ trips to Europe or North America. I have two younger sisters.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 After graduating from high-school, and being exempt from the
 <a href="https://en.wikipedia.org/wiki/Israel_Defense_Forces">Israeli
@@ -60,7 +60,7 @@ industry. In October 97’ I began studying Electrical Engineering in the
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 אחרי שסיימתי את התיכון, ועקב היותי פטור משירות צבאי, ביליתי זמן מה בעבודה
 כמתכנת וכמפתח תוכנה, עבור מספר חברות. כך קניתי ידע וניסיון רבים, ופגשתי
@@ -69,7 +69,7 @@ industry. In October 97’ I began studying Electrical Engineering in the
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 I enjoyed my studies to a large extent, but also found them frustrating many
 times. I feel that I deepened my understanding of computers and electronics
@@ -84,7 +84,7 @@ a little more, but I still have many bad memories from it.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 נהניתי מהלימודים האקדמיים שלי במידה רבה, אבל גם מצאתי אותם מתסכלים מאוד פעמים רבות. אני
 מרגיש שהעמקתי את ההבנה שלי של מחשבים ואלקטרוניקה בעקבותיהם. הטכניון מספק רמה גבוהה של לימודים, אבל הבעיה העיקרית שלי איתו הייתה שהמבחנים שם הם לפעמים לגמרי לא תואמים את החומר שנלמד, יותר מדי ארוכים, ו/או יותר מדי קשים, וכך התלמידים מקבלים ציונים נמוכים ונעשים מצוברחים. זה מתסכל בייחוד בהתחשב בכך שהלימודים שם דורשים <b>עבודה רבה</b>. אני זוכר שהייתה תקופה שהסיבה היחידה שלא פרשתי מהלימודים הייתה כדי לקבל את התואר
@@ -96,7 +96,7 @@ a little more, but I still have many bad memories from it.
 [% SET employers_picky_url = "http://mail.perl.org.il/pipermail/perl/2006-June/007954.html" %]
 [% SET emma_watson_tech_interview = "${base_path}humour/bits/Emma-Watson-applying-for-a-software-dev-job/" %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 I graduated from the Technion in July 2004. I’ve been searching for a job
 since, and despite the fact that there’s a shortage in Israel for programmers
@@ -145,7 +145,7 @@ for some of the things that are wrong in the software industry today.)
 [% END %]
 
 [% WRAPPER h2_section id = "interests" title = ((shlomif_lang == "en") ? "Interests" : "תחומי עניין") %]
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <p>
 I am particularly interested in writing, blogging, and online and offline
@@ -175,7 +175,7 @@ and very fun and can recommend it to anyone.
 
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 אני מתעניין במיוחד במתמטיקה, מחשבים, פילוסופיה וכתיבה. אני מתכנת מאז היותי בן 10, אבל
@@ -191,7 +191,7 @@ and very fun and can recommend it to anyone.
 
 [% WRAPPER h3_section id = "stories" title = ((shlomif_lang == "en") ? "Stories and Humour" : "סיפורים והומור") %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <p>
 Aside from all that, there are my literary works. I wrote
@@ -201,7 +201,7 @@ translated it to English.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 מלבד כל זאת, כתבתי מספר סיפורים שפרסמתי באינטרנט. כתבתי
@@ -210,7 +210,7 @@ translated it to English.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 There’s also <a href="[% base_path %]humour/TOneW-the-Fountainhead/">“The One with the
 Fountainhead”</a>, which is an episode of the T.V. Show <i>Friends</i>
@@ -221,7 +221,7 @@ it on my site.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 בנוסף יש את
 <a href="[% base_path %]humour/TOneW-the-Fountainhead/">הפרק ההוא עם „כמעיין המתגבר“</a>,
@@ -231,7 +231,7 @@ it on my site.
 
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 <a href="[% base_path %]humour/human-hacking/"><i>The Human Hacking Field Guide</i></a>
 is a complete story that I wrote in English. It tells the story of teenage
@@ -240,7 +240,7 @@ in 2005 Los Angeles.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 <a href="[% base_path %]humour/human-hacking/">„מדריך השדה לשפצור אנשים“</a>
 הוא סיפור מלא שכתבתי באנגלית ותרגמתי לעברית. הוא מספר את סיפורם של
@@ -248,9 +248,9 @@ in 2005 Los Angeles.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
-<a href="[% base_path %]humour/humanity/">Humanity</a> is a parody about Humanity
+<a href="[% base_path %]humour/humanity/">Humanity</a> is a parody of humanity
 and modern life in particular that describes a day in the life of a Semitic
 city circa 500 B.C. <a href="[% base_path %]humour/Star-Trek/We-the-Living-Dead/">Star Trek: “We, the
 Living Dead”</a> is an episode of <i>Star Trek: Deep Space Nine</i> with many
@@ -258,7 +258,7 @@ funny and far-fetched elements, written in English.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 <a href="[% base_path %]humour/humanity/">Humanity</a> הנה פרודיה
 על האנושות ועל החיים המודרניים בפרט המתארת יום בחיי עיר שמית
@@ -269,7 +269,7 @@ funny and far-fetched elements, written in English.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 <a href="[% base_path %]humour/Selina-Mandrake/"><i>Selina Mandrake -
 The Slayer</i></a> is a parody and modernisation of the show
@@ -284,7 +284,7 @@ only relatively limited resources.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 התסריט
 <a href="[% base_path %]humour/Selina-Mandrake/">סלינה מנדרייק - הקוטלת</a>
@@ -298,7 +298,7 @@ only relatively limited resources.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 There are other exploits like that in
 the <a href="[% base_path %]humour/">humour section</a>, including <a href="[% base_path %]humour.html">some aphorisms</a>, collections of <a href="[% base_path %]humour/fortunes/">quotes</a> in XML, HTML and UNIX
@@ -308,7 +308,7 @@ fortune formats, some short stories (“bits”) and
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 ישנן יצירות אחרות כאלו
 <a href="[% base_path %]humour/">במדור ההומור של אתר זה</a>,
@@ -324,7 +324,7 @@ fortune formats, some short stories (“bits”) and
 
 [% WRAPPER h3_section id = "foss_contributions" title = ((shlomif_lang == "en") ? "Open-Source Contributions" : "תרומות קוד פתוח") %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <a href="http://www.catb.org/hacker-emblem/"><img src="personal-page--images/glider.svg" style="height:60px;" class="rfloaty" alt="The FOSS Enthusiasts Emblem"/></a>
 
@@ -344,7 +344,7 @@ section.</a>.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <a href="http://www.catb.org/hacker-emblem/"><img src="personal-page--images/glider.svg" style="height:60px;" class="rfloaty" alt="סמל חובבי הקוד הפתוח"/></a>
 <p>
@@ -365,7 +365,7 @@ section.</a>.
 </p>
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 I have contributed some more patches to GIMP; some cleanups and
 functionality extensions to the
@@ -380,7 +380,7 @@ either those that I have originated, or those that I have adopted.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 לאחרונה, תרמתי טלאים נוספים לגימפ, מספר תיקוני באגים והרחבות פונקציונליות עבור
@@ -397,7 +397,7 @@ either those that I have originated, or those that I have adopted.
 
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 Eric Raymond notes in
 <a href="http://catb.org/~esr/writings/cathedral-bazaar/">the Cathedral and the
@@ -418,7 +418,7 @@ of "fortune cookies"</a> led to me adopting
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 <p>
 <b>TODO : FILL IN</b>
 </p>
@@ -426,9 +426,9 @@ of "fortune cookies"</a> led to me adopting
 
 [% END %]
 
-[% WRAPPER h3_section id = "essays" title = ((shlomif_lang == "en") ? "Essays and Philosophy" : "מסות, מאמרים ופילוסופיה")  %]
+[% WRAPPER h3_section id = "essays" title = ((shlomif_lang == "en") ? "Essays and Philosophy" : "מסות, מאמרים ופילוסופיה") %]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 
 <p>
 Being interested in philosophy and being a capable writer, I started writing
@@ -444,7 +444,7 @@ thoughts (among else)</a>.
 </p>
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 בשל העניין שלי בפילוסופיה ומכיוון שאני מסוגל לכתוב בצורה טובה,
@@ -455,12 +455,12 @@ thoughts (among else)</a>.
 <a href="http://better-scm.shlomifish.org/">באתר „Better SCM“</a>,
 <a href="http://groups.yahoo.com/group/hackers-il/">ברשימת הדיוור של Hackers-IL</a>,
 <a href="http://www.advogato.org/">ובאדבוגטו</a>.
-יש לי גם  <a href="[% base_path %]me/blogs/">מספר בלוגים שבהם אני כותב לפעמים.</a>.
+יש לי גם <a href="[% base_path %]me/blogs/">מספר בלוגים שבהם אני כותב לפעמים.</a>.
 </p>
 
 [%- END -%]
 
-[% WRAPPER en  %]
+[% WRAPPER en %]
 <p>
 I am a pluralist and spiritual agnostic, who constantly
 <a href="http://www.shlomifish.org/humour/fortunes/show.cgi?id=larry-wall-all-truth-is-gods-truh">derives
@@ -471,7 +471,7 @@ personal, dynamic, philosophy.
 [%- END -%]
 
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 
@@ -533,7 +533,7 @@ about myself, such as my mental condition .)
 
 [%- END -%]
 
-[% WRAPPER he  %]
+[% WRAPPER he %]
 
 <p>
 סבלתי בעבר

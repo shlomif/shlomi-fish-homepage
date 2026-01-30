@@ -124,7 +124,7 @@ EOF
         abstract   => <<'EOF',
 <p class="humanity abstract">
 <i>Humanity</i> is a screenplay for a movie
-that aims to be a parody about humanity and modern life in particular. It
+that aims to be a parody of humanity and modern life in particular. It
 tells the story of a day in the life of a <a href="http://en.wikipedia.org/wiki/Semitic">Semitic</a> city in
 <a href="http://en.wikipedia.org/wiki/Canaan">Canaan</a> circa the year
 500 B.C. Each scene is dedicated to one of the city’s elements: The Cathedral
@@ -218,7 +218,7 @@ EOF
 Selina Mandrake ( <a href="$(ROOT)/humour/bits/facts/Emma-Watson/">Emma Watson</a> )
 was a geeky Anglo-American girl in her high school senior year in 2011
 California, who thought that the show $(BtVS) was fictional.
-However, one day she was approached by a mysterious goth man calling himself "The Guide"
+However, one day she was approached by a mysterious goth man calling himself “The Guide”
 ( <a href="https://en.wikipedia.org/wiki/Wil_Wheaton">Wil Wheaton</a> )
 who told her that she was none other than Buffy Mageia, <b>The Slayer</b>,
 a legendary heroine who was destined to slay many notable vampires and demons,

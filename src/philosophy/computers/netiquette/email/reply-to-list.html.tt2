@@ -1,7 +1,6 @@
 [%- SET title = "E-mail Netiquette: Reply to List" -%]
 [%- SET desc = "Please reply to the list on mailing lists’s posts" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -18,6 +17,6 @@ still decided to make an exception, then make sure to explicitly state
 that this is a private response.
 </p>
 
-[% PROCESS cc_by_licence_section year = "2013", %]
+[%- PROCESS cc_by_licence_section year = "2013", -%]
 
-[% END %]
+[%- END -%]

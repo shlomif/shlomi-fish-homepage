@@ -1,6 +1,4 @@
 [%- SET title = "Mini-Review: the Gtk+ 2.4.x File Chooser" -%]
-[%- SET desc = "Mini-Review: the Gtk+ 2.4.x File Chooser" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -42,35 +40,49 @@ Now here are the problems I encountered with it:
 
 <ol>
 <li>
+<p>
 After entering the home directory, the upper components (“home” and
 “shlomi”) are deleted and there’s no way to go up except for selecting
 the “Filesystem” bookmark. (which leads you straight to “/”).
+</p>
 </li>
 <li>
+<p>
 There is no up button. You need to press the last component at the top,
 to go up.
+</p>
 </li>
 <li>
+<p>
 There is no entry for filename. You can’t <b>type the filename</b> for
 goodness’ sake. Furthermore, even pressing the letter keys in the listbox
 does nothing. The keyboard can be used with tab, shift-tab, up, down, etc,
 but I want more.
+</p>
 </li>
 <li>
+<p>
 You cannot rename the bookmarks. You are left with the last component of
 the directories to which they point.
+</p>
 </li>
 <li>
+<p>
 The right mouse button does absolutely nothing anywhere within the dialogue.
+</p>
 </li>
 <li>
+<p>
 The files filter only has descriptions and no extensions. This may be a
 GIMP-specific problem.
+</p>
 </li>
 <li>
+<p>
 There are no columns in the files list-view except “Name” and “Modified”,
 and there’s no way to add more. You can’t even tell if a file is a file
 or a directory!
+</p>
 </li>
 </ol>
 
@@ -94,4 +106,4 @@ GNOME, one needs to issue an obscure gconf command to disable it. (where in
 Windows 95, it was somewhere clear in the options dialogue box).
 </p>
 
-[% END %]
+[%- END -%]

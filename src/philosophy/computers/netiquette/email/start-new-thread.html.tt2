@@ -1,7 +1,6 @@
 [%- SET title = "E-mail Netiquette: How to Start a New Thread" -%]
 [%- SET desc = "How to Properly Start a New Thread in E-mail, while making standard-compliant threaded mailers happy." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -39,6 +38,6 @@ Fill in the subject line and the body.
 
 </ol>
 
-[% PROCESS cc_by_licence_section year = "2013", %]
+[%- PROCESS cc_by_licence_section year = "2013", -%]
 
-[% END %]
+[%- END -%]

@@ -2,23 +2,23 @@
 [%- SET desc = "Lists of software construction and management tools: building, configuring, software packaging, testing frameworks, bug trackers, etc." -%]
 [%- SET more_keywords = "bug trackers, software, git, vcs, version control, CVS, subversion, GitLab, GitHub, scons, autoconf, rpm, deb, dpkg, apt, CMake, SourceForge, open source, make, unix, packaging" -%]
 
-[% main_class.addClass("software_build") %]
+[%- main_class.addClass("software_build") -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% IF 0 %]
+[%- IF 0 -%]
 [%#
 Removed due to a firefox bug with the CSS in the sb.css. The page
 doesn't look much worse without it, anyway.
 %]
-[% BLOCK _removed______page_extra_head_elements %]
+[%- BLOCK _removed______page_extra_head_elements -%]
 <link rel="stylesheet" href="sb.css" media="screen" title="Normal" />
-[% END %]
-[% END %]
+[%- END -%]
+[%- END -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section id = "build" title = "Software Building" %]
+[%- WRAPPER h2_section id = "build" title = "Software Building" -%]
 
 <ul>
 
@@ -84,9 +84,10 @@ JavaScript and Node.js.
 <a href="https://gruntjs.com/">Grunt</a> - another node.js based build system.
 </p>
 </li>
+
 </ul>
 
-[% WRAPPER h3_section id = "build_links" title = "Links to Lists, Comparisons and Other Resources" %]
+[%- WRAPPER h3_section id = "build_links" title = "Links to Lists, Comparisons and Other Resources" -%]
 
 <ul>
 
@@ -123,7 +124,7 @@ Google Spreadsheet with a Comparison of various Alternatives</a>
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "configure" title = "Software Pre-building Configuration" %]
+[%- WRAPPER h2_section id = "configure" title = "Software Pre-building Configuration" -%]
 
 <ul>
 
@@ -196,7 +197,7 @@ to use CMake instead.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "package" title = "Software Packaging" %]
+[%- WRAPPER h2_section id = "package" title = "Software Packaging" -%]
 
 <ul>
 
@@ -285,9 +286,10 @@ effort to port and package open source software for macOS .
 <a href="https://en.wikipedia.org/wiki/Package_manager">“Package manager” on the Wikipedia</a> - also see the navigation block at the bottom.
 </p>
 </li>
+
 </ul>
 
-[% WRAPPER h3_section id = "self-contained-package" title = "Self-contained Packagers" %]
+[%- WRAPPER h3_section id = "self-contained-package" title = "Self-contained Packagers" -%]
 
 <ul>
 
@@ -308,7 +310,7 @@ useful for continuous-integration ( “CI” ).
 
 </ul>
 
-[% END %]
+[%- END -%]
 
 [%- END -%]
 
@@ -384,10 +386,9 @@ many ways. (GPLed).
 </p>
 </li>
 
-
 </ul>
 
-[% WRAPPER h3_section id = "scm_links" title = "Links to Lists, Comparisons, and Other Resources" %]
+[%- WRAPPER h3_section id = "scm_links" title = "Links to Lists, Comparisons, and Other Resources" -%]
 
 <ul>
 
@@ -422,7 +423,7 @@ directory may also prove helpful.</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "bug_tracking" title = "Bug Tracking" %]
+[%- WRAPPER h2_section id = "bug_tracking" title = "Bug Tracking" -%]
 
 <p>
 <b>Note:</b> Due to the large number of such systems, I decided to link only
@@ -431,6 +432,7 @@ lists can be found.
 </p>
 
 <ul>
+
 <li>
 <p>
 <a href="http://www.mozilla.org/projects/bugzilla/">Bugzilla</a> - a
@@ -453,7 +455,6 @@ has several front-ends.
 PHP/MySQL web-based bug tracking system.
 </p>
 </li>
-
 
 <li>
 <p>
@@ -508,7 +509,7 @@ of some relevance.
 
 </ul>
 
-[% WRAPPER h3_section id = "kanban_boards" title = "Kanban Boards" %]
+[%- WRAPPER h3_section id = "kanban_boards" title = "Kanban Boards" -%]
 
 <ul>
 
@@ -538,7 +539,7 @@ and under the freemium model.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "testing" title = "Testing Frameworks" %]
+[%- WRAPPER h2_section id = "testing" title = "Testing Frameworks" -%]
 
 <ul>
 
@@ -590,7 +591,7 @@ unit testing framework for C that can emit <a href="#TAP">TAP</a>.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "continuous_integration_tools" title = "Continuous Integration Tools and Services" %]
+[%- WRAPPER h2_section id = "continuous_integration_tools" title = "Continuous Integration Tools and Services" -%]
 
 <ul>
 
@@ -645,7 +646,7 @@ offered by GitHub for projects hosted there.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "all_in_one_proj_mgmt" title = "All-in-One Project Management Programs" %]
+[%- WRAPPER h2_section id = "all_in_one_proj_mgmt" title = "All-in-One Project Management Programs" -%]
 
 <ul>
 
@@ -739,7 +740,7 @@ deployment. Written in Ruby-on-Rails and other languages.
 
 [%- END -%]
 
-[% WRAPPER links_sect %]
+[%- WRAPPER links_sect -%]
 
 <ul>
 
@@ -761,6 +762,6 @@ best practices in the software industry.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2011", %]
+[%- PROCESS cc_by_licence_section "year" => "2011" -%]
 
-[% END %]
+[%- END -%]

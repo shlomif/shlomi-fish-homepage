@@ -1,7 +1,6 @@
 [%- SET title = "How to Contribute to My Projects" -%]
 [%- SET desc = "How to Contribute to Shlomi Fish’s Projects: guidelines and documentation" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -14,12 +13,11 @@ to reduce maintenance burden on me as the maintainer.
 
 <h2>Documents</h2>
 
-<h3><a href="HACKING.html">HACKING.html - how
-to get your patch accepted.</a></h3>
+<h3><a href="HACKING.html">HACKING.html - how to get your patch accepted.</a></h3>
 
 <p>
 This document explains code and style issues that are common to all or most of
 my projects. Here is <a href="HACKING.txt">the AsciiDoc original</a>.
 </p>
 
-[% END %]
+[%- END -%]

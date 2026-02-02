@@ -2,14 +2,13 @@
 [%- SET desc = "List of Text Editors and IDEs: cross-platform, platform-specific, open source, non-open source." -%]
 [%- SET more_keywords = "editors, text, IDEs, vim, vi, emacs, open source, software, hex, debuggers, gui, user interface, linux, windows, kde, programmers, developers" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="lim_width">
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 This is a small, hand-maintained, list of text editors and IDEs (Integrated
@@ -18,9 +17,9 @@ Development Environments), useful for programmers and other developers.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "open-source" title = "Open Source Text Editors and IDEs" %]
+[%- WRAPPER h2_section id = "open-source" title = "Open Source Text Editors and IDEs" -%]
 
-[% WRAPPER h3_section id = "cross-platform-open-editors" title = "Cross-Platform Open Source Editors" %]
+[%- WRAPPER h3_section id = "cross-platform-open-editors" title = "Cross-Platform Open Source Editors" -%]
 
 <ul>
 
@@ -85,7 +84,7 @@ editor written in Java, with many plugins. (Open-source, GPL 2.0).
 </p>
 </li>
 
-[% IF 0 %]
+[%- IF 0 -%]
 <li>
 <p>
 <img src="Atom_icon.png" class="rfloaty" alt="Logo of the Atom Text Editor" />
@@ -95,7 +94,7 @@ browser, by GitHub. It is reportedly inspired a lot by
 <a href="#sublime-text">Sublime Text</a>. (MIT/Expat-licensed.)
 </p>
 </li>
-[% END %]
+[%- END -%]
 
 <li id="komodo-edit">
 <p>
@@ -182,7 +181,7 @@ its philosophy.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "cross-platform-open-IDEs" title = "Cross-Platform Open Source IDEs" %]
+[%- WRAPPER h3_section id = "cross-platform-open-IDEs" title = "Cross-Platform Open Source IDEs" -%]
 
 <ul>
 
@@ -284,7 +283,7 @@ and a music and video player. (MIT licence).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "platform-specific-open-editors" title = "Platform-specific Open Source Editors" %]
+[%- WRAPPER h3_section id = "platform-specific-open-editors" title = "Platform-specific Open Source Editors" -%]
 
 <ul>
 
@@ -337,7 +336,7 @@ systems.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-GUI-designers" title = "Open Source GUI Designers" %]
+[%- WRAPPER h3_section id = "open-GUI-designers" title = "Open Source GUI Designers" -%]
 
 <ul>
 
@@ -359,7 +358,7 @@ wxWidgets. (MIT/Expat-licensed).
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-hex-editors" title = "Open Source Hex Editors" %]
+[%- WRAPPER h3_section id = "open-hex-editors" title = "Open Source Hex Editors" -%]
 
 <ul>
 
@@ -424,7 +423,7 @@ the binary, and can be used in conjunction with a text editor such as Vim.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "open-debugger-GUIs" title = "Open Source Debugger GUIs" %]
+[%- WRAPPER h3_section id = "open-debugger-GUIs" title = "Open Source Debugger GUIs" -%]
 
 <ul>
 
@@ -471,9 +470,9 @@ open source (GPL) GUI for gdb.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "non-foss" title = "Non-Open-Source Text Editors and IDEs" %]
+[%- WRAPPER h2_section id = "non-foss" title = "Non-Open-Source Text Editors and IDEs" -%]
 
-[% WRAPPER h3_section id = "non-foss-editors" title = "Non Open-source (and probably platform-specific) Editors" %]
+[%- WRAPPER h3_section id = "non-foss-editors" title = "Non Open-source (and probably platform-specific) Editors" -%]
 
 <ul>
 
@@ -518,7 +517,7 @@ editor for Windows, x86 Linux and Mac OS X.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "non-foss-IDEs" title = "Non Open-source (and probably platform-specific) IDEs" %]
+[%- WRAPPER h3_section id = "non-foss-IDEs" title = "Non Open-source (and probably platform-specific) IDEs" -%]
 
 <ul>
 
@@ -589,7 +588,7 @@ OS X and iOS. Runs only on Mac OS X.
 
 [%- END -%]
 
-[% WRAPPER see_also %]
+[%- WRAPPER see_also -%]
 
 <ul>
 
@@ -609,9 +608,9 @@ Software Build and Management Tools</a>
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER links_sect %]
+[%- WRAPPER links_sect -%]
 
 <ul>
 
@@ -652,7 +651,7 @@ mentions many alternatives and discusses their merits.
 
 </ul>
 
-[% WRAPPER h3_section id = "fun-links" title = "Fun Links" %]
+[%- WRAPPER h3_section id = "fun-links" title = "Fun Links" -%]
 
 <ul>
 
@@ -731,7 +730,7 @@ is Emacs for the 21st Century”</a>.
 
 [%- END -%]
 
-[% WRAPPER credits_sect %]
+[%- WRAPPER credits_sect -%]
 
 <ul>
 
@@ -774,8 +773,8 @@ owned by the Eclipse Foundation, under “Fair Use”.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2011" %]
+[%- PROCESS cc_by_licence_section "year" => "2011" -%]
 
 </div>
 
-[% END %]
+[%- END -%]

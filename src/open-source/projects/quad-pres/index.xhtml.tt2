@@ -1,7 +1,6 @@
 [%- SET title = "Quad-Pres - a tool for writing HTML presentations" -%]
 [%- SET desc = "Quad-Pres - a tool for writing HTML presentations" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,4 +9,4 @@ HTML presentations. It is based on <a href="[% base_path %]open-source/projects/
 Language</a> and <a href="http://www.perl.org/">perl</a>.
 </p>
 
-[% END %]
+[%- END -%]

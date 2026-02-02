@@ -2,12 +2,11 @@
 [%- SET desc = "List of Databases’ Implementations: key/value stores, SQL databases, Distributed databases, etc." -%]
 [%- SET more_keywords = "software, databases, SQL, mysql, berkeley db, oracle, postgres, postgresql, nosql, mongo db, open source, unix" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 This is a small, hand-maintained, list of various database implementations.
@@ -15,7 +14,7 @@ This is a small, hand-maintained, list of various database implementations.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "key-val-DBs" title = "Filesystem-based Key/Value Databases" %]
+[%- WRAPPER h2_section id = "key-val-DBs" title = "Filesystem-based Key/Value Databases" -%]
 
 <ul>
 
@@ -57,7 +56,7 @@ key-value storage” under the open source and permissive 2-clause BSD licence.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "other-FS-based" title = "Other Filesystem-based Databases" %]
+[%- WRAPPER h2_section id = "other-FS-based" title = "Other Filesystem-based Databases" -%]
 
 <ul>
 
@@ -83,7 +82,7 @@ with, the UNIX Operating System. ”
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "FS-based-SQL" title = "Filesystem Based SQL databases" %]
+[%- WRAPPER h2_section id = "FS-based-SQL" title = "Filesystem Based SQL databases" -%]
 
 <ul>
 
@@ -114,7 +113,7 @@ or filesystem-based SQL-database. Proprietary.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "networked-SQL" title = "Networked (Client/Server) SQL Databases" %]
+[%- WRAPPER h2_section id = "networked-SQL" title = "Networked (Client/Server) SQL Databases" -%]
 
 <ul>
 
@@ -219,7 +218,7 @@ available as open source software for some years.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "xml-DBs" title = "XML Databases" %]
+[%- WRAPPER h2_section id = "xml-DBs" title = "XML Databases" -%]
 
 <ul>
 
@@ -243,7 +242,7 @@ and other technologies.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "object-DBs" title = "Object Databases" %]
+[%- WRAPPER h2_section id = "object-DBs" title = "Object Databases" -%]
 
 <ul>
 
@@ -265,7 +264,7 @@ and cross-platform object database written in Java.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "distributed-DBs-NoSQL" title = "Distributed Databases (so-called “NoSQL”)" %]
+[%- WRAPPER h2_section id = "distributed-DBs-NoSQL" title = "Distributed Databases (so-called “NoSQL”)" -%]
 
 <ul>
 
@@ -276,7 +275,6 @@ and cross-platform object database written in Java.
 </p>
 
 <ul>
-
 <li>
 <p>
 <a href="http://www.scylladb.com/">Scylla DB</a> - a rewrite
@@ -285,6 +283,7 @@ the AGPLv3, and which is claimed to be more performant.
 </p>
 </li>
 </ul>
+
 </li>
 
 <li>
@@ -361,7 +360,7 @@ To add:
     - LibreOffice Base.
 -->
 
-[% WRAPPER see_also %]
+[%- WRAPPER see_also -%]
 
 <ul>
 
@@ -374,9 +373,9 @@ Text Processing Tools</a>.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER links_sect %]
+[%- WRAPPER links_sect -%]
 
 <ul>
 
@@ -389,7 +388,7 @@ Text Processing Tools</a>.
 
 </ul>
 
-[% WRAPPER h3_section id = "fun-links" title = "Fun Links" %]
+[%- WRAPPER h3_section id = "fun-links" title = "Fun Links" -%]
 
 <ul>
 
@@ -405,6 +404,6 @@ ongoing play on a theme.
 
 [%- END -%]
 
-[% PROCESS cc_by_licence_section "year" => "2015" %]
+[%- PROCESS cc_by_licence_section "year" => "2015" -%]
 
-[% END %]
+[%- END -%]

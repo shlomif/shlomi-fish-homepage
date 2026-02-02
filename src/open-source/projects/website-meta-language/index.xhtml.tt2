@@ -1,7 +1,6 @@
 [%- SET title = "Website META Language" -%]
 [%- SET desc = "Website META Language - an HTML preprocessor" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -46,4 +45,4 @@ contains online documentation and some information, but needs to be updated.
 
 </ul>
 
-[% END %]
+[%- END -%]

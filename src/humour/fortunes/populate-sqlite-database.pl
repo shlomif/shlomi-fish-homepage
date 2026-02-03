@@ -52,13 +52,13 @@ $dbh->do(
 );
 
 $dbh->do(
-"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), title TEXT, text TEXT, info_text TEXT, collection_id INTEGER, desc TEXT, date TEXT)"
+"CREATE TABLE fortune_cookies (id INTEGER PRIMARY KEY ASC, str_id VARCHAR(255), prev_str_id VARCHAR(255), next_str_id VARCHAR(255), title TEXT, text TEXT, info_text TEXT, collection_id INTEGER, desc TEXT, date TEXT)"
 );
 
 $dbh->do("CREATE UNIQUE INDEX fortune_strings ON fortune_cookies ( str_id )");
 
 my $insert_sth = $dbh->prepare(
-"INSERT INTO fortune_cookies (collection_id, str_id, title, text, info_text, desc, date) VALUES(?, ?, ?, ?, ?, ?, ?)"
+"INSERT INTO fortune_cookies (collection_id, str_id, prev_str_id, next_str_id, title, text, info_text, desc, date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)"
 );
 
 my $collections_aref =
@@ -133,10 +133,26 @@ foreach my $basename (@file_bases)
 
     my $nodes_list   = $tree->findnodes(q{//div[@class = "fortune"]});
     my $plaintext_fn = "dest/pre-incs/t2/humour/fortunes/$basename";
+
+    my @ids_array;
+    foreach my $node (@$nodes_list)
+    {
+        my $h3_node = _find_h3($node);
+        my $id      = $h3_node->id;
+
+        if ( !$id )
+        {
+            die "No ID in file '$basename' in " . $node->as_XML . "!";
+        }
+        push @ids_array, "$id";
+    }
+
     open my $plaintext_fh, '<:encoding(utf8)', $plaintext_fn;
 
     # my $count = @$nodes_list;
     # my $idx = 0;
+
+    my $node_pos = 0;
 
     foreach my $node (@$nodes_list)
     {
@@ -165,9 +181,40 @@ foreach my $basename (@file_bases)
         $$desc =~ s#(?:\A|\S)\K\s*\S+\z##ms;
         my $date = $file_yaml->{$id}->{'date'}
             or Carp::confess("no date for id = $id ; basename = $basename .");
-        $insert_sth->execute( $collection_id, $id, $title, $body,
-            scalar( $info->as_XML() ),
+        my $prev_str_id =
+            ( ( $node_pos == 0 ) ? "" : $ids_array[ $node_pos - 1 ] );
+        my $next_str_id =
+            ( ( $node_pos == $#ids_array ) ? "" : $ids_array[ $node_pos + 1 ] );
+        my $nav_info = "";
+        my @navs;
+        my $push_nav = sub {
+            my ($args) = @_;
+            my $key    = $args->{'key'};
+            my $label  = $args->{'label'};
+            my $val    = $args->{'val'};
+            if ( $val =~ /\S/ms )
+            {
+                my $fragment =
+"<li class=\"$key\"><p><a class=\"$key\" href=\"show.cgi?id=${val}\">${label}</a></p></li>";
+                push @navs, $fragment;
+            }
+            return;
+        };
+        $push_nav->(
+            +{ key => "prev", label => "Previous", val => $prev_str_id, }, );
+        $push_nav->( +{ key => "next", label => "Next", val => $next_str_id, },
+        );
+        if (@navs)
+        {
+            $nav_info .= "<ul>" . join( "", @navs ) . "</ul>";
+        }
+        $insert_sth->execute( $collection_id, $id, $prev_str_id, $next_str_id,
+            $title, $body, ( scalar( $info->as_XML() ) . $nav_info ),
             $$desc, $date, );
+    }
+    continue
+    {
+        ++$node_pos;
     }
 
 =begin removed

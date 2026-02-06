@@ -1,7 +1,6 @@
 [%- SET title = "Solver for binarypuzzle.com" -%]
 [%- SET desc = "A solver for binarypuzzle.com, the Binary Puzzle" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -10,7 +9,7 @@ This is an incomplete solver for the so-called
 featured on binarypuzzle.com. Also see <a href="https://en.wikipedia.org/wiki/Takuzu">the Wikipedia entry</a>.
 </p>
 
-[% WRAPPER h2_section id = "project-links"  title = "Project Links"  %]
+[%- WRAPPER h2_section id = "project-links" title = "Project Links" -%]
 
 <ul>
 
@@ -47,7 +46,7 @@ using backtracking, but does not display the reasoning.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "publicity"  title = "Publicity"  %]
+[%- WRAPPER h2_section id = "publicity" title = "Publicity" -%]
 
 <ul>
 
@@ -63,6 +62,6 @@ enthusiasts mailing list about it.
 
 [%- END -%]
 
-[% PROCESS x11_licence name = "The Binary Puzzle Solver", plural=""  %]
+[%- PROCESS x11_licence name = "The Binary Puzzle Solver" plural="" -%]
 
-[% END %]
+[%- END -%]

@@ -1,6 +1,4 @@
 [%- SET title = "MikMod - playback library and player for module files." -%]
-[%- SET desc = "MikMod - playback library and player for module files." -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -20,7 +18,7 @@ which is a port of an old version of MikMod to the Java programming language
 and the JVM.
 </p>
 
-<h2 id="links">Links</h2>
+[%- WRAPPER links_sect -%]
 
 <ul>
 
@@ -32,4 +30,6 @@ and the JVM.
 
 </ul>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

@@ -1,12 +1,11 @@
 [%- SET title = "Topics for the Command Line Presentation for Newbies" -%]
-[%- SET desc = "Topics for the Command Line Presentation for Newbies" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
 <h2>Part 1: Command Line</h2>
 
 <ol>
+
 <li>
 <p>
 Opening a terminal. (The Terminal Icon on KDE)
@@ -39,7 +38,8 @@ pwd
 
 <li>
 <p>
-ls<br />
+ls
+</p>
 <ul>
 <li>
 <p>
@@ -47,7 +47,6 @@ Flags: -l -a -R
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
@@ -58,7 +57,8 @@ mkdir
 
 <li>
 <p>
-cp<br />
+cp
+</p>
 <ul>
 <li>
 <p>
@@ -66,12 +66,12 @@ Flags: -r -i -f
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
 <p>
-mv<br />
+mv
+</p>
 <ul>
 <li>
 <p>
@@ -79,12 +79,12 @@ Flags: -i -f
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
 <p>
-rm<br />
+rm
+</p>
 <ul>
 <li>
 <p>
@@ -92,7 +92,6 @@ Flags: -r -i -f
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
@@ -103,7 +102,8 @@ wildcards and their use (*, ?, [ ])
 
 <li>
 <p>
-less/more<br />
+less/more
+</p>
 <ol>
 <li>
 <p>
@@ -151,7 +151,6 @@ Searching with / (forward) and ? (backward)
 </p>
 </li>
 </ol>
-</p>
 </li>
 
 <li>
@@ -180,7 +179,8 @@ The “--help” and “-h” switches.
 
 <li>
 <p>
-find<br />
+find
+</p>
 <ul>
 <li>
 <p>
@@ -188,12 +188,12 @@ Flags: -name
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
 <p>
-Piping:<br />
+Piping:
+</p>
 <ul>
 <li>
 <p>
@@ -209,11 +209,12 @@ Piping:<br />
 </p>
 </li>
 </ul>
-</p>
 </li>
 
 <li>
-<p> Shell Goodies:<br />
+<p>
+Shell Goodies:
+</p>
 <ul>
 <li>
 <p>

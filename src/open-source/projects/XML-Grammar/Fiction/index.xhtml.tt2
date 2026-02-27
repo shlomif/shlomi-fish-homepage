@@ -247,6 +247,7 @@ crossover.).
 </li>
 
 <li>
+
 <p>
 <a href="https://www.shlomifish.org/philosophy/culture/case-for-commercial-fan-fiction/indiv-nodes/hollywood_screenplay_format.xhtml">Commercial Real Person Fan Fiction (RPFs), crossovers and parodies as 2021 geeky/hackery imperatives for revitalising the film industry - "Ditching Hollywood's Screenplay Format"</a>
 </p>
@@ -258,6 +259,7 @@ crossover.).
 <a href="https://twitter.com/Lady_Aleena/status/1506102979132538886">Twitter Coverage</a>
 </p>
 </li>
+
 </ul>
 
 </li>
@@ -287,6 +289,8 @@ Then after converting it to XML and then to XHTML we get this:
 <div class="fiction_xml">
 [% xml_fiction_slurp.my_calc(
     fn => 'lib/docbook/5/rendered/fiction-text-example-for-X-G-Fiction-demo.xhtml',
+    h_delta => (1),
+    h1_delta => (3),
     index_id => 'fiction_text_index',
 ) %]
 </div>
@@ -315,6 +319,8 @@ Then after converting it to XML and then to XHTML we get this:
 
 [% xml_fiction_slurp.my_calc(
     fn =>'lib/screenplay-xml/rendered-html/humanity-excerpt-for-X-G-Screenplay-demo.html',
+    h_delta => 1,
+    h1_delta => 1,
     index_id => 'screenplay_text_index',
     )
 %]

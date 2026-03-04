@@ -5592,7 +5592,7 @@ of Windows-like copy/paste keyboard bindings.
 
 [%- END -%]
 
-[% WRAPPER h3_section id = "choice_of_window_managers" title = "What are your preferred desktop environments or window managers?" %]
+[% WRAPPER h3_section id = "choice_of_window_managers" title = "What are your preferred desktop environments (“DEs”) or window managers (“WMs”)?" %]
 
 <p>
 <a href="[% base_path %]open-source/favourite/#xfce">Xfce</a>. I find the
@@ -5602,7 +5602,16 @@ version that ships with Fedora fairly functional, lightweight, and fast.
 <p>
 I also like <a href="[% base_path %]open-source/favourite/#icewm">IceWM</a>
 and appreciate the historical role it played in being usable and functional
-out of the box, at least for people coming from DOS and Windows.
+out of the box, at least for people coming from DOS and Windows. This is
+while <a href="https://en.wikipedia.org/wiki/FVWM">FVWM</a> had previously
+required extensive customisations.
+</p>
+
+<p>
+I dislike the user interface of the GNOME 2.x desktop, and find GNOME 3.x
+and above much worse. I used to love KDE (“Plasma”) in versions 2.x and 3.x.
+Subsequent versions of KDE Plasma made use of background services ( “daemons” ),
+were more quirky, and consumed more RAM.
 </p>
 
 [%- END -%]

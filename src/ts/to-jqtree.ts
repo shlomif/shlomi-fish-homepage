@@ -72,7 +72,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json(
     let _recurse;
 
     _recurse = function (sub_tree: any): ShlomifJQtreeRet | ShlomifJQtreeRet[] {
-        if ($.isArray(sub_tree)) {
+        if (Array.isArray(sub_tree)) {
             return sub_tree.map(_recurse);
         }
 

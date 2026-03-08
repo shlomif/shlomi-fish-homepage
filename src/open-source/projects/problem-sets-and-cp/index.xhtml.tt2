@@ -1,7 +1,6 @@
 [%- SET title = "Problem Sets and Competitive Programming Sites" -%]
 [%- SET desc = "Shlomi Fish’s activity on Problem Sets and Competitive Programming Sites" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
@@ -12,4 +11,4 @@ See <a href="https://github.com/EbookFoundation/free-programming-books/blob/mast
 
 <h2 id="euler"><a href="project-euler/">Project Euler</a></h2>
 
-[% END %]
+[%- END -%]

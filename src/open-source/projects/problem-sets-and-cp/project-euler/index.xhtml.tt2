@@ -1,7 +1,6 @@
 [%- SET title = "Project Euler Solutions" -%]
 [%- SET desc = "Project Euler Solutions by Shlomi Fish" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -17,10 +16,10 @@ Parts of it may still be available upon inquiry, and I provide
 (which should comply with the policy).
 </p>
 
-[% WRAPPER h2_section id="progress" title="Progress"%]
+[%- WRAPPER h2_section id = "progress" title = "Progress" -%]
 
-[% PROCESS project_euler_progress  %]
+[%- PROCESS project_euler_progress -%]
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

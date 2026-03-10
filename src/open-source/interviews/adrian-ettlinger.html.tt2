@@ -1,9 +1,8 @@
 [%- SET title = "Interview with Adrian Ettlinger" -%]
-[%- SET desc = "Interview with Adrian Ettlinger" -%]
-
+[%- SET desc = "Interview with Adrian Ettlinger, an electrical engineer and software developer known for video editing work, AniMap, and Freecell-related contributions" -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% path_slurp("screenplay-xml/rendered-html/ae-interview.html") %]
+[%- path_slurp("screenplay-xml/rendered-html/ae-interview.html") -%]
 
-[% END %]
+[%- END -%]

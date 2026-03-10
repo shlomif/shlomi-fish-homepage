@@ -1,7 +1,7 @@
 [%- SET title = "Favourite Free and Open Source Software (FOSS) of Mine" -%]
-[%- SET desc = "Shlomi Fish’s Favourite Free and Open Source Software (FOSS) of Mine" -%]
+[%- SET desc = "Shlomi Fish’s Favourite Free and Open Source Software (FOSS) packages: operating systems, desktops, GUI, software development…" -%]
 
-[% main_class.addClass("lim_width") %]
+[%- main_class.addClass("lim_width") -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -11,9 +11,9 @@ This page documents my favourite pieces of
 out, and see if they are useful to you as well.
 </p>
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section href = "http://www.linux.org/" id = "linux" title = "Linux" %]
+[%- WRAPPER h2_section href = "http://www.linux.org/" id = "linux" title = "Linux" -%]
 
 <img src="[% base_path %]art/images/linux1-scaled.png" alt="Linux slogan" class="rfloaty" />
 
@@ -759,27 +759,27 @@ background where they won’t be interrupted, but it allows for much more.
 
 [% END %]
 
-[% WRAPPER h3_section href = "http://htop.sourceforge.net/" id = "htop" title = "htop" %]
+[%- WRAPPER h3_section href = "http://htop.sourceforge.net/" id = "htop" title = "htop" -%]
 
 <p>
 An improved top-like process viewer for Linux with better usability.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section href = "http://www.gnu.org/software/parallel/" id = "gnu_parallel" title = "GNU Parallel" %]
+[%- WRAPPER h3_section href = "http://www.gnu.org/software/parallel/" id = "gnu_parallel" title = "GNU Parallel" -%]
 
 <p>
 Easy command-line parallelisation.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "security" title = "Security" %]
+[%- WRAPPER h2_section id = "security" title = "Security" -%]
 
-[% WRAPPER h3_section href = "http://gringotts.shlomifish.org/" id = "gringotts" title = "Gringotts" %]
+[%- WRAPPER h3_section href = "http://gringotts.shlomifish.org/" id = "gringotts" title = "Gringotts" -%]
 
 <p>
 Gringotts allows one to keep password and other sensitive information
@@ -787,11 +787,11 @@ encrypted. It has a Gtk+ interface. Note: while it was originated by Germano
 Rizzo, I am Gringotts’ current maintainer.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "other_lists" title = "Other Lists" %]
+[%- WRAPPER h2_section id = "other_lists" title = "Other Lists" -%]
 
 <p>
 Here are some other high-quality lists of open-source software on the Web:
@@ -841,6 +841,6 @@ Awesome (But Lesser-Known) Open-Source Applications for Windows”</a> - on
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

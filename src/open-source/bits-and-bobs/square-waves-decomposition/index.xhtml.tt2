@@ -1,6 +1,4 @@
 [%- SET title = "Square Waves Decomposition of a Sine Wave" -%]
-[%- SET desc = "Square Waves Decomposition of a Sine Wave" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -26,14 +24,18 @@ more analytic method of doing the Sine-into-Square-Waves decomposition</a>.
 about it</a>).
 </p>
 
-<h2 id="download">Downloads</h2>
+[%- WRAPPER h2_section id = "download" title = "Downloads" -%]
 
 <ul>
 <li>
+<p>
 <a href="square-waves-decompose-0.1.0.pl">Perl program version 0.1.0</a>
+</p>
 </li>
 <li>
+<p>
 <a href="square-waves-decompose-0.1.0.c">C program version 0.1.0</a>
+</p>
 </li>
 </ul>
 
@@ -42,4 +44,6 @@ The C version is faster, but both produce identical results. The Perl version
 requires <a href="http://pdl.perl.org">PDL - the Perl Data Language</a>.
 </p>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

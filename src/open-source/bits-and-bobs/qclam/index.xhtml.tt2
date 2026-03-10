@@ -1,5 +1,4 @@
 [%- SET title = "The QClam-Shlomif Modified QClam" -%]
-[%- SET desc = "The QClam-Shlomif Modified QClam" -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -17,4 +16,4 @@ utility, that converted the code from C++ to C, fixed some bugs, and made
 the makefile more modular.
 </p>
 
-[% END %]
+[%- END -%]

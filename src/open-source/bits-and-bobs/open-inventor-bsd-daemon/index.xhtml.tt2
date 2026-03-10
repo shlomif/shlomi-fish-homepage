@@ -1,6 +1,4 @@
 [%- SET title = "Open Inventor BSD Daemon" -%]
-[%- SET desc = "Open Inventor BSD Daemon" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -22,4 +20,4 @@ for it to follow.
 You’ll need the OpenInventor support libraries to compile it.
 </p>
 
-[% END %]
+[%- END -%]

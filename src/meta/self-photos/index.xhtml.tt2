@@ -1,77 +1,77 @@
 [%- SET title = "Photos of Shlomi Fish" -%]
 
-[% main_class.addClass("limit_imgs_width") %]
+[%- main_class.addClass("limit_imgs_width") -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% SET full_image_link = '' %]
-[% SET link_img_ext = '' %]
-[% SET img_ext = '' %]
+[%- SET full_image_link = '' -%]
+[%- SET link_img_ext = '' -%]
+[%- SET img_ext = '' -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
 <div class="self_photos">
 
-[% BLOCK photo %]
+[%- BLOCK photo -%]
 
-[% SET h_title = alt %]
+[%- SET h_title = alt -%]
 
-[% IF not id %]
-[% THROW "no id" %]
-[% END %]
+[%- IF not id -%]
+[%- THROW "no id" -%]
+[%- END -%]
 
-[% WRAPPER h2_section id = id title = h_title %]
+[%- WRAPPER h2_section id = id title = h_title -%]
 
 <p>
-[% SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" %]
+[%- SET tag = "<img alt=\"${alt}\" src=\"${img}${img_ext}\" title=\"${alt}\" />" -%]
 <a href="[% full_image_link || (img _ link_img_ext) %]">[% tag %]</a>
 </p>
 
 [% content %]
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER photo alt = "Wearing the #SummerNSA shirt in the field north of my neighbourhood" id = "SummerNSA-shirt-field-2022" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" %]
+[%- WRAPPER photo alt = "Wearing the #SummerNSA shirt in the field north of my neighbourhood" id = "SummerNSA-shirt-field-2022" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-field-IMG-1703.jpg" img_ext = "-400px.webp" -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER photo alt = "Wearing a red E.T. shirt" id = "red-ET-shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" %]
+[%- WRAPPER photo alt = "Wearing a red E.T. shirt" id = "red-ET-shirt" img = "${base_path}images/shlomi-fish-in-a-red-ET-shirt--IMG_20201218_190912--200w.png" -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER photo alt = "Wearing a Cutethulhu shirt" id = "Cutethulhu-shirt" img = "${base_path}images/shlomif-cutethulhu" img_ext = "-small.webp" link_img_ext = ".webp" %]
+[%- WRAPPER photo alt = "Wearing a Cutethulhu shirt" id = "Cutethulhu-shirt" img = "${base_path}images/shlomif-cutethulhu" img_ext = "-small.webp" link_img_ext = ".webp" -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER photo alt = "Wearing a My Little Pony shirt" id = "MLP-FiM-shirt-2014" img = "${base_path}meta/self-photos/images/shlomif-mlp-fim-shirt-img_2781.jpg" img_ext = "-400px.webp" %]
+[%- WRAPPER photo alt = "Wearing a My Little Pony shirt" id = "MLP-FiM-shirt-2014" img = "${base_path}meta/self-photos/images/shlomif-mlp-fim-shirt-img_2781.jpg" img_ext = "-400px.webp" -%]
 
 <p>
 <a href="https://www.flickr.com/photos/shlomif/albums/72157646708777940">From a trip to England</a>
 for <a href="https://nineworlds.co.uk/">Nine Worlds Convention</a>.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% SET sea_photo_link = "https://www.flickr.com/photos/shlomif/8541049401/" %]
+[%- SET sea_photo_link = "https://www.flickr.com/photos/shlomif/8541049401/" -%]
 
-[% WRAPPER photo alt = "Photo of me close to the sea (near Shefayim) on 9 March 2013" full_image_link = sea_photo_link id = "near-the-sea-2013-03-09" img = "${base_path}meta/self-photos/images/shlomif-near-the-sea-2013-03-09" img_ext = "-800h.webp" %]
+[%- WRAPPER photo alt = "Photo of me close to the sea (near Shefayim) on 9 March 2013" full_image_link = sea_photo_link id = "near-the-sea-2013-03-09" img = "${base_path}meta/self-photos/images/shlomif-near-the-sea-2013-03-09" img_ext = "-800h.webp" -%]
 
 <p>
 <a href="[% sea_photo_link %]">Larger version available on Flickr.</a>
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER photo alt = "Wearing the #SummerNSA shirt at a kiosk shop" id = "SummerNSA-shirt-kiosk-2014" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-kiosk-2014.webp" img_ext = "-400px.webp" %]
+[%- WRAPPER photo alt = "Wearing the #SummerNSA shirt at a kiosk shop" id = "SummerNSA-shirt-kiosk-2014" img = "${base_path}meta/self-photos/images/shlomif-w-sglau-shirt-at-the-kiosk-2014.webp" img_ext = "-400px.webp" -%]
 
 <p>
 <a href="https://www.flickr.com/photos/shlomif/14537790923/in/photostream/">Larger version available on Flickr.</a>
 </p>
 
-[% END %]
+[%- END -%]
 
 </div>
 
-[% END %]
+[%- END -%]

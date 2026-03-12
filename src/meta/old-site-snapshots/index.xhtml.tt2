@@ -1,10 +1,9 @@
 [%- SET title = "Old Snapshots of My Site" -%]
-[%- SET desc = "This page links to old snapshots of my site, to see how it progressed in time." -%]
-
+[%- SET desc = "This page links to old snapshots of my site, to see how it has progressed in time." -%]
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 This page links to old snapshots of my site, so you can witness its old
@@ -16,7 +15,7 @@ versions. This is similar to the
 
 [% default_toc %]
 
-[% WRAPPER h2_section id = "old1998"  title = "1998 Site" href="https://old-1998-site.shlomifish.org/" %]
+[%- WRAPPER h2_section id = "old1998"  title = "1998 Site" href="https://old-1998-site.shlomifish.org/" -%]
 
 <p>
 My site at its infancy, around 1998, complete with an animated GIF of the
@@ -27,7 +26,7 @@ HTML</a>, and a Spartan design.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "old2005"  title = "2005 Site" href="https://old-2005-site-t2.shlomifish.org/" %]
+[%- WRAPPER h2_section id = "old2005"  title = "2005 Site" href="https://old-2005-site-t2.shlomifish.org/" -%]
 
 <p>
 My site around 2005.
@@ -35,7 +34,7 @@ My site around 2005.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "old2009"  title = "2009 Site" href="https://www.shlomifish.org/Files/files/dirs/old-site-2009/t2-homepage/" %]
+[%- WRAPPER h2_section id = "old2009"  title = "2009 Site" href="https://www.shlomifish.org/Files/files/dirs/old-site-2009/t2-homepage/" -%]
 
 <p>
 My site around 2009.
@@ -43,7 +42,7 @@ My site around 2009.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "old2012"  title = "My site at 2012" href="https://old-2012-site.shlomifish.org/" %]
+[%- WRAPPER h2_section id = "old2012"  title = "My site at 2012" href="https://old-2012-site.shlomifish.org/" -%]
 
 <p>
 Xena was the only female subject of <a href="[% base_path
@@ -54,4 +53,4 @@ Mandrake</a> “Selena”.
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

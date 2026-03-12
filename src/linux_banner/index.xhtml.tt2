@@ -1,11 +1,11 @@
 [%- SET title = "Linux Installation Party (Technion, Winter 97/98) Banner" -%]
-[%- SET desc = "Linux Installation Party (Technion, Winter 97/98) Banner" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-<img src="linux3.gif"
-alt="Linux - Because Software Problems Should Not Cost Money" />
+<img
+alt="Linux - Because Software Problems Should Not Cost Money"
+src="linux3.gif"
+/>
 <br />
 <br />
 
@@ -25,4 +25,4 @@ are based on a concept by Dr. Falk Fish (my father), and were designed with his
 mental assistance. Feel free to distribute them or modify them as you please.
 </p>
 
-[% END %]
+[%- END -%]

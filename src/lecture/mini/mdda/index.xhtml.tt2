@@ -1,6 +1,4 @@
 [%- SET title = "Lightning Talk about Meta-Data Database Access" -%]
-[%- SET desc = "Lightning Talk about Meta-Data Database Access" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -10,7 +8,7 @@ so if the database schema changes, the changes will be relatively minimal.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

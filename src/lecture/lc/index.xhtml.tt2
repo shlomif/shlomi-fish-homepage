@@ -1,6 +1,4 @@
 [%- SET title = "Talk about Scheme and Lambda Calculus" -%]
-[%- SET desc = "Talk about Scheme and Lambda Calculus" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -13,4 +11,4 @@ Turing-complete environment with only two primitives, but one that is still
 quite usable.
 </p>
 
-[% END %]
+[%- END -%]

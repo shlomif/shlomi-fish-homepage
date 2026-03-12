@@ -1,6 +1,4 @@
 [%- SET title = "Advogato - The first blurb on my user-page." -%]
-[%- SET desc = "Shlomi Fish’s Advogato intro." -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -23,4 +21,4 @@ contributed to some other projects and hacks. </p>
 href="http://www.technion.ac.il/">the Technion</a>, and am now looking for a
 good job in IT. </p>
 
-[% END %]
+[%- END -%]

@@ -1,10 +1,9 @@
 [%- SET title = "Links against TIOBE - The Test Index of Programming Languages’ Popularity" -%]
 [%- SET desc = "Shlomi Fish’s List of Links against TIOBE - the Test Index of Programming Languages’s Popularity" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "note" title = "Note" %]
+[%- WRAPPER h2_section id = "note" title = "Note" -%]
 
 <p>
 This is a page of links against
@@ -14,9 +13,9 @@ popularity of programming languages. It is maintained here in order to
 educate people about why they should not assign any meaningful value to it.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "list" title = "The List of Links" %]
+[%- WRAPPER h2_section id = "list" title = "The List of Links" -%]
 
 <ol>
 
@@ -73,6 +72,6 @@ Bunce: “TIOBE or not TIOBE – An Update”</a>
 
 </ol>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

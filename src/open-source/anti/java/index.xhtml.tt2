@@ -1,10 +1,8 @@
 [%- SET title = "Links against Java" -%]
-[%- SET desc = "Links against Java" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "note" title = "Note" %]
+[%- WRAPPER h2_section id = "note" title = "Note" -%]
 
 <p>
 This is a page of links against Java. I do not mean to imply that Java is
@@ -12,9 +10,9 @@ wrong for all purposes (although that may actually be close to be true),
 just link to pages criticising it.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "links" title = "The Links" %]
+[%- WRAPPER h2_section id = "links" title = "The Links" -%]
 
 <ul>
 
@@ -59,9 +57,9 @@ harmful.cat-v.org</a> - with many links.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "jokes" title = "Jokes" %]
+[%- WRAPPER h2_section id = "jokes" title = "Jokes" -%]
 
 <ul>
 
@@ -73,6 +71,6 @@ harmful.cat-v.org</a> - with many links.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

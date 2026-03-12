@@ -1,7 +1,6 @@
 [%- SET title = "Pages against Various Software" -%]
 [%- SET desc = "Pages against Various Software: Internet Explorer, C-Shell, qmail, Apple Inc., MySQL, PHP, GNU Autotools, Java, SOAP" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -68,4 +67,4 @@ world of the Flash Player plugin.
 
 </ul>
 
-[% END %]
+[%- END -%]

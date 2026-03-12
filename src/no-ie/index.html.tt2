@@ -2,7 +2,6 @@
 [%- SET desc = "Why you should stop using Microsoft Internet Explorer and use a better browser." -%]
 [%- SET more_keywords = "ie,msie,internet explorer,explorer,microsoft,windows,firefox,mozilla,web,standards,security,safety" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [%- WRAPPER note -%]
@@ -102,9 +101,9 @@ browser to browse my sites, trust me - you’ll like it. Theoretically, these
 pages should have looked OK, but if they don’t - blame Microsoft not me.
 </p>
 
-[% WRAPPER h2_section id="the-links" title="Links"%]
+[%- WRAPPER h2_section id = "the-links" title = "Links" -%]
 
-[% WRAPPER h3_section id="other-anti-msie-resources" title="Other Anti-MSIE Resources"%]
+[%- WRAPPER h3_section id = "other-anti-msie-resources" title = "Other Anti-MSIE Resources" -%]
 
 <ul>
 <li>
@@ -622,9 +621,9 @@ Israel</i> blog in Hebrew ; 24-November-2013) - about Microsoft
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section id="alternatives" title="Alternative Browsers"%]
+[%- WRAPPER h3_section id = "alternatives" title = "Alternative Browsers" -%]
 
 <ul>
 <li>
@@ -662,11 +661,11 @@ default.
 </li>
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id="jokes" title="Jokes"%]
+[%- WRAPPER h2_section id = "jokes" title = "Jokes" -%]
 
 <ul>
 
@@ -700,20 +699,20 @@ NOT SPELL GOOGLE WRONG</a> - video on YouTube.
 </li>
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id="version_control_id" title="Version Control ID"%]
+[%- WRAPPER h2_section id = "version_control_id" title = "Version Control ID" -%]
 
 <p>
 <i class="vercon">$Id$</i>
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id="licence" title="Licence"%]
+[%- WRAPPER h2_section id = "licence" title = "Licence" -%]
 
-[% license_obj.by_british_blurb( "year" => "2012", ) %]
+[%- license_obj.by_british_blurb( "year" => "2012", ) -%]
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

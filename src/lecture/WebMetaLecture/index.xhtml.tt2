@@ -1,6 +1,4 @@
 [%- SET title = "WebMetaLecture - a lecture about Website Meta Language" -%]
-[%- SET desc = "WebMetaLecture - a lecture about Website Meta Language" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -18,7 +16,7 @@ usage.
 
 <ul>
 
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 
 <li>
 <p>
@@ -35,4 +33,4 @@ examples</a>
 
 </ul>
 
-[% END %]
+[%- END -%]

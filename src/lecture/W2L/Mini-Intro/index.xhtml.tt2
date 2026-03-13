@@ -1,17 +1,16 @@
 [%- SET title = "Welcome to Linux - Mini-Intro" -%]
 [%- SET desc = "This is the so-called “Mini-Intro” lecture which serves as an introduction to Linux in Hebrew, and was compiled as the good parts from the “Blitz” presentation." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
 This is the so-called “Mini-Intro” lecture which serves as an introduction
 to Linux in Hebrew, and was compiled as the good parts from the
-<a href="../Blitz/">“Blitz” presentation</a>.
+<a href="[% "${base_path}lecture/W2L/Blitz/" %]">“Blitz” presentation</a>.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

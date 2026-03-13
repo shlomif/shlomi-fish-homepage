@@ -1,7 +1,5 @@
 [%- SET title = "Welcome to Linux - Networking in Linux" -%]
-[%- SET desc = "The “Welcome to Linux” Presentation that explains networking in Linux and how to set it up. It was originally authored by Shachar Reindel.
-" -%]
-
+[%- SET desc = "The “Welcome to Linux” Presentation that explains networking in Linux and how to set it up. It was originally authored by Shachar Reindel." -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -12,7 +10,7 @@ originally authored by Shachar Reindel.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

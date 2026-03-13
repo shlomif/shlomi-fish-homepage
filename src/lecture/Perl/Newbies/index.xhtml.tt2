@@ -1,10 +1,9 @@
 [%- SET title = "Perl for Perl Newbies" -%]
 [%- SET desc = "Tutorials aiming to give a good introduction to the basic and most important elements of Perl programming. Knowledge of another programming language is recommended, but is not necessary." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER about_sect  %]
+[%- WRAPPER about_sect -%]
 
 <p>
 <a href="http://perl-begin.org/">Perl</a> is a useful language for working on
@@ -28,7 +27,7 @@ If you have any other questions or comments regarding this series, then
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "material" title = "Available Material" %]
+[%- WRAPPER h2_section id = "material" title = "Available Material" -%]
 
 <div class="visible">
 <table>
@@ -48,11 +47,11 @@ If you have any other questions or comments regarding this series, then
 </tr>
 [% END %]
 
-[% INCLUDE part idx="1" desc="the basics" %]
-[% INCLUDE part idx="2" desc="more advanced topics" %]
-[% INCLUDE part idx="3" desc="modules and objects" %]
-[% INCLUDE part idx="4" desc="CPAN, sprintf, system functions, exceptions" %]
-[% INCLUDE part idx="5" desc="good programming practices" %]
+[%- INCLUDE part idx = "1" desc = "the basics" -%]
+[%- INCLUDE part idx = "2" desc = "more advanced topics" -%]
+[%- INCLUDE part idx = "3" desc = "modules and objects" -%]
+[%- INCLUDE part idx = "4" desc = "CPAN, sprintf, system functions, exceptions" -%]
+[%- INCLUDE part idx = "5" desc = "good programming practices" -%]
 
 </tbody>
 </table>
@@ -79,7 +78,7 @@ material on the slides. (<a href="lecture5-heb-notes.html">HTML format</a>.)
 </li>
 </ul>
 
-[% WRAPPER h3_section id = "external-material" title = "From External Sources" %]
+[%- WRAPPER h3_section id = "external-material" title = "From External Sources" -%]
 
 <ul>
 <li>
@@ -89,11 +88,11 @@ material on the slides. (<a href="lecture5-heb-notes.html">HTML format</a>.)
 </li>
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER links_sect  %]
+[%- WRAPPER links_sect -%]
 
 <ul>
 <li>
@@ -135,7 +134,7 @@ the Perl world.
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "other-tuts"  title = "Other Introductory Perl Tutorials"  %]
+[%- WRAPPER h2_section id = "other-tuts" title = "Other Introductory Perl Tutorials" -%]
 
 <ul>
 <li>
@@ -160,4 +159,4 @@ Introduction to Perl</a> - a Perl.com resource.
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

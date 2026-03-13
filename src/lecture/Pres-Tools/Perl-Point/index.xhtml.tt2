@@ -1,6 +1,4 @@
 [%- SET title = "PerlPoint Lecture" -%]
-[%- SET desc = "PerlPoint Lecture" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -27,4 +25,4 @@ WRAPPER cpan_dist d = "Spork" -%]Ingy’s Spork[%- END -%].
 
 </ul>
 
-[% END %]
+[%- END -%]

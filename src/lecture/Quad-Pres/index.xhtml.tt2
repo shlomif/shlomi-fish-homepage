@@ -1,6 +1,4 @@
 [%- SET title = "Lecture about QuaD-Pres" -%]
-[%- SET desc = "Lecture about QuaD-Pres" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -13,8 +11,8 @@ here and a self-contained source package that was used to generate it.
 
 <ul>
 
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 
 </ul>
 
-[% END %]
+[%- END -%]

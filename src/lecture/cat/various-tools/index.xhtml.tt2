@@ -1,7 +1,6 @@
 [%- SET title = "Presentations Category - Various Tools" -%]
 [%- SET desc = "Technical talks about tools: Vim, GIMP, Lex and Yacc, the GNU Autotools, and Website Meta Language" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -71,4 +70,4 @@ Presentations</a></h2>
 Some meta-presentations about presentation tools.
 </p>
 
-[% END %]
+[%- END -%]

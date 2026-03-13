@@ -1,43 +1,43 @@
 [%- SET title = "Presentations given by Shlomi Fish" -%]
 [%- SET desc = "Slides and material for technical presentations given by Shlomi Fish. Linux, Perl, Web publishing, software management, software development." -%]
 
-[% main_class.addClass("side_toc") %]
+[%- main_class.addClass("side_toc") -%]
 
 [%- WRAPPER wrap_html -%]
-[% PROCESS "Inc/lectures.tt2" %]
+[%- PROCESS "Inc/lectures.tt2" -%]
 
-[% default_toc %]
+[%- default_toc -%]
 
-[% WRAPPER h2_section href = "Perl/Newbies/" id = "perl-for-newbies" title = "Perl for Perl Newbies" %]
+[%- WRAPPER h2_section href = "${base_path}lecture/Perl/Newbies/" id = "perl-for-newbies" title = "Perl for Perl Newbies" -%]
 
 <p>
 A series of talks that teach Perl for Perl beginners. No knowledge of
 any other programming language is required, but it will be helpful.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section href = "HTML-Tutorial/" id = "html-tutorial" title = "HTML Tutorial (for Standards Compliance)" %]
+[%- WRAPPER h2_section href = "${base_path}lecture/HTML-Tutorial/" id = "html-tutorial" title = "HTML Tutorial (for Standards Compliance)" -%]
 
 <p>
 A Public-Domain HTML Tutorial (currently available only in Hebrew) for
 how to write standard and semantic HTML.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section href = "LAMP/" id = "web-publishing-using-lamp" title = "Web Publishing Using LAMP" %]
+[%- WRAPPER h2_section href = "${base_path}lecture/LAMP/" id = "web-publishing-using-lamp" title = "Web Publishing Using LAMP" -%]
 
 <p>
 A presentation about web publishing using the popular LAMP - Linux, Apache,
 MySQL and Perl/PHP/Python platform.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "soft_mgmt" title = "Software Management" %]
+[%- WRAPPER h2_section id = "soft_mgmt" title = "Software Management" -%]
 
-[% WRAPPER h3_section href = "CatB/" id = "catb" title = "The Cathedral and the Bazaar - an Overview" %]
+[%- WRAPPER h3_section href = "${base_path}lecture/CatB/" id = "catb" title = "The Cathedral and the Bazaar - an Overview" -%]
 
 <div class="indent">
 <p>
@@ -46,9 +46,9 @@ is considered one of the most important works on the Open Source world.
 </p>
 </div>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h3_section href = "joel-test/" id = "joel-test" title = "The Joel Test" %]
+[%- WRAPPER h3_section href = "${base_path}lecture/joel-test/" id = "joel-test" title = "The Joel Test" -%]
 
 <div class="indent">
 <p>
@@ -59,9 +59,9 @@ development team.
 </p>
 </div>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]
 
 [% WRAPPER h2_section id = "programming-languages" title = "Programming Languages" %]
 
@@ -247,4 +247,4 @@ for triggering allergies.
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

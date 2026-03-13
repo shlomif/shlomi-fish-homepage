@@ -1,7 +1,6 @@
 [%- SET title = "Welcome to Linux - Basic Use" -%]
 [%- SET desc = "A “Welcome to Linux” Presentation for teaching the basic use of Linux. It was later superseded by the Blitz presentation (written in the Hebrew language), but this presentation may still be of interest." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -13,8 +12,8 @@ in the Hebrew language), but this presentation may still be of interest.
 
 <ul>
 
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 
 </ul>
 
-[% END %]
+[%- END -%]

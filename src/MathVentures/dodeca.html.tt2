@@ -19,11 +19,11 @@ is the volume of such a body.
 What is the volume of a dodecahedron with an edge-length of
 a?
 </p>
-</tr>
+</li>
 </ul>
 
 <p>
- The solution can be found some space below:
+The solution can be found some space below:
 </p>
 
 [% longblank %]
@@ -126,12 +126,11 @@ pyramid is the area of its base multiplied by its height (OD)
 divided by 3 and so it is equal to:
 </p>
 
-
 <p>
 \[
 \frac{5}{4} \cdot \tan{54°} \cdot {\bf a}^2 \cdot \\*
 \frac{1}{2} \cdot tan{54°} \cdot [% mytan %] \cdot {\bf a} \cdot \frac{1}{3} = \\*
-\frac{5}{24} \cdot \tan^2{54°} \cdot [% mytan %]  \cdot {\bf a}^3
+\frac{5}{24} \cdot \tan^2{54°} \cdot [% mytan %] \cdot {\bf a}^3
 \]
 </p>
 
@@ -146,4 +145,4 @@ volume of a dodecahedron is:</p>
 \]
 </p>
 
-[% END %]
+[%- END -%]

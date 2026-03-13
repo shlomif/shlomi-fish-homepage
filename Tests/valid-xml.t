@@ -38,8 +38,7 @@ Test::HTML::Tidy::Recursive::XML->new(
             my $fn = shift;
             return
                 not( exists $whitelist{$fn}
-                or $fn =~
-                m#\A \Q$POST_DEST\E /? (?: MathVentures | js/jquery-ui/ ) #x, );
+                or $fn =~ m#\A \Q$POST_DEST\E /? (?: js/jquery-ui/ ) #x, );
         },
         targets => [$POST_DEST],
     }

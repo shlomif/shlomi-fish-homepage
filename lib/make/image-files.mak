@@ -187,8 +187,51 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 
 else
 
+SVG_PRECISION = 3
+SVG_PRECISION = 5
+
+ifeq ("1", "1")
+
 $(SRC_SVGS__MIN): %.min.svg: %.svg
-	minify -q --svg-precision 5 -o $@ $<
+	svgo --multipass -p $(SVG_PRECISION) --output $@ --input $<
+
+else
+
+# SRC_SVGS__svgo := $(SRC_SVGS__BASE:%.svg=%.o.svg)
+# SRC_SVGS__mino := $(SRC_SVGS__BASE:%.svg=%.mino.svg)
+# SRC_SVGS__minomin := $(SRC_SVGS__BASE:%.svg=%.minomin.svg)
+# SRC_SVGS__omin := $(SRC_SVGS__BASE:%.svg=%.omin.svg)
+# SRC_SVGS__omino := $(SRC_SVGS__BASE:%.svg=%.omino.svg)
+
+$(SRC_SVGS__MIN): %.min.svg: %.svg
+	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
+
+$(SRC_SVGS__mino): %.mino.svg: %.min.svg
+	svgo -p $(SVG_PRECISION) --output $@ --input $<
+
+$(SRC_SVGS__minomin): %.minomin.svg: %.mino.svg
+	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
+
+$(SRC_SVGS__omin): %.omin.svg: %.o.svg
+	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
+
+$(SRC_SVGS__omino): %.omino.svg: %.omin.svg
+	svgo -p $(SVG_PRECISION) --output $@ --input $<
+
+$(SRC_SVGS__svgo): %.o.svg: %.svg
+	svgo --multipass -p $(SVG_PRECISION) --output $@ --input $<
+
+all: $(SRC_SVGS__mino)
+
+all: $(SRC_SVGS__minomin)
+
+all: $(SRC_SVGS__omin)
+
+all: $(SRC_SVGS__omino)
+
+all: $(SRC_SVGS__svgo)
+
+endif
 
 endif
 

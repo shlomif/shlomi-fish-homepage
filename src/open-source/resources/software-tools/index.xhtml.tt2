@@ -42,7 +42,7 @@ file checksums, and other powerful features.
 <li>
 <p>
 <a href="http://www.dsmit.com/cons/">CONS</a> - a make replacement written
-in Perl with file checksums and other features.
+in Perl. Supports using file checksums and other features.
 <a href="#scons">SCons</a> is a Python version, that has been
 more actively maintained recently.
 </p>
@@ -81,7 +81,7 @@ JavaScript and Node.js.
 
 <li>
 <p>
-<a href="https://gruntjs.com/">Grunt</a> - another node.js based build system.
+<a href="https://gruntjs.com/">Grunt</a> - another Node.js based build system.
 </p>
 </li>
 
@@ -114,7 +114,7 @@ Wikipedia’s List of build automation software</a>.
 <li>
 <p>
 <a href="http://spreadsheets.google.com/pub?key=prEdSidtHryEXastzzgO5DQ">A
-Google Spreadsheet with a Comparison of various Alternatives</a>
+Google spreadsheet with a comparison of various alternatives</a>
 </p>
 </li>
 
@@ -179,7 +179,7 @@ and Windows NT platforms. Proprietary.
 <p>
 <a href="http://www.scons.org/">SCons</a> can be used for writing such
 configuration tasks as well. It’s written in Python, does not distinguish
-between the configuration phase and the build phase and tends to be slow.
+between the configuration phase and the build phase, and tends to be slow.
 (open source, MIT/Expat License).
 </p>
 </li>
@@ -187,7 +187,7 @@ between the configuration phase and the build phase and tends to be slow.
 <li>
 <p>
 <a href="http://code.google.com/p/waf/">Waf</a> - an open-source (modified
-BSD) tool based on SCons, CMake and other tools, and also written in Python.
+BSD) tool inspired by SCons, CMake, and other tools, and also written in Python.
 Created for <a href="https://en.wikipedia.org/wiki/KDE_Software_Compilation_4">KDE 4</a> as an enhanced version of SCons, but they eventually decided
 to use CMake instead.
 </p>
@@ -232,7 +232,7 @@ based on Python.
 <a href="http://en.wikipedia.org/wiki/Nix_package_manager">The Nix Package
 Manager</a> - a package manager based on a lazy purely-functional configuration
 language. There is also <a href="http://en.wikipedia.org/wiki/GNU_Guix">GNU
-Guix</a> which is based on it.
+Guix</a> which is modelled after it.
 </p>
 </li>
 
@@ -269,7 +269,7 @@ package manager for OS X”. Open Source.
 <p>
 <a href="http://www.macports.org/">MacPorts</a> - “an open-source community
 initiative to design an easy-to-use system for compiling, installing,
-and upgrading either command-line, X11 or Aqua based open-source software
+and upgrading either command-line, X11, or Aqua based open-source software
 on the Mac OS X operating system”.
 </p>
 </li>
@@ -330,7 +330,7 @@ documentation. (GPLed.) Considered the go-to solution as of 2025.
 <li>
 <p>
 <a href="https://subversion.apache.org/">Subversion</a> - a CVS replacement
-with atomic commits, networking over HTTP, efficient handling of binary file
+with atomic commits, networking over HTTP, efficient handling of binary files,
 and other features. Still mostly a client/server, centralised, protocol,
 but much more reliable than CVS and works better. (Apache/BSD Licence).
 </p>
@@ -528,7 +528,7 @@ opensource.com, with some discussion.
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/Trello">Trello</a> - a hosted web-based Kanban board, without source availability
+<a href="https://en.wikipedia.org/wiki/Trello">Trello</a> - a hosted web-based Kanban board, without source availability,
 and under the freemium model.
 </p>
 </li>
@@ -599,7 +599,7 @@ unit testing framework for C that can emit <a href="#TAP">TAP</a>.
 <p>
 <a href="https://jenkins.io/index.html">Jenkins</a> - an open source
 continuous integration and continuous delivery solution written in Java that
-runs on Windows, Mac OS X, Linux and other Unix-like systems. It was
+runs on Windows, Mac OS X, Linux, and other Unix-like systems. It was
 originally forked from
 <a href="http://en.wikipedia.org/wiki/Hudson_%28software%29">Hudson</a> after
 a dispute with Oracle.

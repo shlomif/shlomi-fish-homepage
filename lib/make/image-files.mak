@@ -193,7 +193,7 @@ SVG_PRECISION = 5
 ifeq ("1", "1")
 
 $(SRC_SVGS__MIN): %.min.svg: %.svg
-	svgo --multipass -p $(SVG_PRECISION) --output $@ --input $<
+	svgo --multipass -p $(SVG_PRECISION) -q --output $@ --input $<
 
 else
 
@@ -207,7 +207,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
 
 $(SRC_SVGS__mino): %.mino.svg: %.min.svg
-	svgo -p $(SVG_PRECISION) --output $@ --input $<
+	svgo -p $(SVG_PRECISION) -q --output $@ --input $<
 
 $(SRC_SVGS__minomin): %.minomin.svg: %.mino.svg
 	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
@@ -216,10 +216,10 @@ $(SRC_SVGS__omin): %.omin.svg: %.o.svg
 	minify -q --svg-precision $(SVG_PRECISION) -o $@ $<
 
 $(SRC_SVGS__omino): %.omino.svg: %.omin.svg
-	svgo -p $(SVG_PRECISION) --output $@ --input $<
+	svgo -p $(SVG_PRECISION) -q --output $@ --input $<
 
 $(SRC_SVGS__svgo): %.o.svg: %.svg
-	svgo --multipass -p $(SVG_PRECISION) --output $@ --input $<
+	svgo --multipass -p $(SVG_PRECISION) -q --output $@ --input $<
 
 all: $(SRC_SVGS__mino)
 
@@ -237,7 +237,6 @@ endif
 
 $(SRC_SVGS__svgz): %.svgz: %.min.svg
 	gzip --best -n < $< > $@
-
 
 BIZCARD_SVG_INPUT_BN := bizcard.svg
 BIZCARD_SVG_OUTPUT_BN := embedded-png-bizcard.svg

@@ -164,3 +164,14 @@ table.fav_color {
         }
     }
 }
+
+/* based on
+ * https://stackoverflow.com/questions/34691470/responsive-pre-tag
+ * - thanks!
+ */
+pre {
+    direction: ltr;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    text-align: justify;
+}

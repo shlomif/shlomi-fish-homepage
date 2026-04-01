@@ -27,17 +27,6 @@
     overflow-wrap: normal;
 }
 
-/* based on
- * https://stackoverflow.com/questions/34691470/responsive-pre-tag
- * - thanks!
- */
-pre {
-    overflow-wrap: break-word;
-    text-align: justify;
-    direction: ltr;
-    overflow: auto;
-}
-
 body {
     @include bottom_bg;
     padding: 1em;

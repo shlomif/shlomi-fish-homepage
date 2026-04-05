@@ -188,7 +188,7 @@ $(SRC_SVGS__MIN): %.min.svg: %.svg
 else
 
 SVG_PRECISION = 3
-SVG_PRECISION = 5
+# SVG_PRECISION = 5
 
 ifeq ("1", "1")
 

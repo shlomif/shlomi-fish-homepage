@@ -188,10 +188,11 @@ my $_section_navmenu_tree_contents = {
                     title => "Objectivism and Open Source",
                     subs  => [
                         {
+                            skip  => 1,
                             text  => "Revision 2",
-                            url   => "philosophy/obj-oss/rev2/",
                             title =>
 "Revision 2 of the Objectivism and Open Source Article",
+                            url => "philosophy/obj-oss/rev2/",
                         },
                     ],
                 },

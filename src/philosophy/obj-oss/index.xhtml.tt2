@@ -3,12 +3,20 @@
 
 [%- WRAPPER wrap_html -%]
 
+<div class="fancy_sects side_toc">
+
+[% default_toc %]
+
 <p>
 Here you can find an essay I wrote titled “Objectivism and Open Source”
 that aims to explain why the two are compatible.
 </p>
 
-<h2 id="revision-2"><a href="rev2/">Revision 2</a></h2>
+[% WRAPPER h3_section id = "itself3" title = "Article" %]
+
+[% path_slurp("docbook/5/rendered/objectivism-and-open-source.xhtml") %]
+
+[%- END -%]
 
 [% BLOCK shlomif_docbook_doc_text %]
 
@@ -47,4 +55,6 @@ that aims to explain why the two are compatible.
 
 [% INCLUDE shlomif_docbook_doc_text doc = "objectivism-and-open-source" %]
 
-[% END %]
+</div>
+
+[%- END -%]

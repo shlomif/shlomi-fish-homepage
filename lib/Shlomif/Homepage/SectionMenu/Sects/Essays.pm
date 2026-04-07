@@ -272,6 +272,7 @@ my $_section_navmenu_tree_contents = {
 "An essay that explains when the C language should be used instead of other languages",
                     subs => [
                         {
+                            skip => 1,
                             text => "The Text Itself",
                             url  =>
 "philosophy/computers/when-c-is-best/when-c-is-the-best.html",

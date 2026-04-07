@@ -3,7 +3,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="when-c-is-the-best.html">The Essay Itself</a></h2>
+<h2><a href="#meta">The Essay Itself</a></h2>
 
 <p>
 This is an essay I wrote that tries to explain why the C language is still
@@ -19,9 +19,17 @@ why it will also <b>feel wrong</b> in Java.
 
 <ul>
 <li>
+<p>
 <a href="http://osnews.com/comment.php?news_id=12189">News Item about
 this article in OSNews</a>
+</p>
 </li>
 </ul>
+
+[%- default_toc -%]
+
+[% PROCESS "pages/t2/when-c-is-the-best.html.tt2" %]
+
+[% INCLUDE when_c_best_html %]
 
 [%- END -%]

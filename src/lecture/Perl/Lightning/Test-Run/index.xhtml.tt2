@@ -1,6 +1,4 @@
 [%- SET title = "Perl Lightning Talk - Test::Run" -%]
-[%- SET desc = "Perl Lightning Talk - Test::Run" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -23,4 +21,4 @@ harness for <a href="http://www.perl.org/">Perl</a>.
 </li>
 </ol>
 
-[% END %]
+[%- END -%]

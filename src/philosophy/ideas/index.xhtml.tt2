@@ -1,6 +1,7 @@
 [% SET title = "Shlomi Fish’s Random Ideas" %]
 
 [%- WRAPPER wrap_html -%]
+
 <!--
 TODO:
 * Add cups/glasses with identifying marks.
@@ -180,6 +181,11 @@ post-modern typesetting system to provide a saner alternative to TeX and
 LaTeX (and other typesetting systems).
 </p>
 
+<p>
+<b>Note:</b> it may be worthwhile to use or contribute to
+<a href="[% base_path %]philosophy/computers/web/choice-of-docs-formats/#typst">typst</a>.
+</p>
+
 [%- END -%]
 
 [% WRAPPER h3_section id = "eatline-idea" title = "libeatline" %]
@@ -215,7 +221,6 @@ Database backend. See (<a href="[% base_path %]open-source/resources/databases-l
 </p>
 </li>
 </ol>
-</li>
 
 [%- END -%]
 
@@ -326,7 +331,7 @@ Objects/structs/records / <a href="https://en.wikipedia.org/wiki/Associative_arr
 [% WRAPPER h3_section id = "more-expressive-cmake-script-lang" title = "A more expressive scripting language for CMake (and its data-model)" %]
 
 <p>
-I like <a href="https://cmake.org/">CMake</a> and find its scripting
+I like <a href="https://cmake.org/">CMake</a>, and find its scripting
 language usable for the kind of tasks for which I need to use it. However,
 a more expressive language with capabilities closer to Python 3 or Perl 5
 will still likely improve the user-experience.

@@ -195,6 +195,9 @@ ifeq ("1", "1")
 $(SRC_SVGS__MIN): %.min.svg: %.svg
 	svgo --multipass -p $(SVG_PRECISION) -q --output $@ --input $<
 
+all_svgs: $(SRC_SVGS__BASE)
+	svgo --multipass -p $(SVG_PRECISION) -q $(patsubst %,-o %,$(SRC_SVGS__MIN)) $(patsubst %,-i %,$(SRC_SVGS__BASE))
+
 else
 
 # SRC_SVGS__svgo := $(SRC_SVGS__BASE:%.svg=%.o.svg)

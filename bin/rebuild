@@ -57,6 +57,7 @@ rebuild()
             _gmake_target copy_fortunes
         fi
 
+        _gmake_target all_svgs
         _gmake_target fastrender
 
         if test "$LATEMP_PROFILE" = '1'

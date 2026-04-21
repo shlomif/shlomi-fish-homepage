@@ -1,6 +1,4 @@
-[%- SET title = "Google Announced It Will Discontinue Its Web Search, Gmail And Google Docs Services" -%]
-[%- SET desc = "Google Announced It Will Discontinue Its Web Search, Gmail And Google Docs Services" -%]
-
+[%- SET title = "Google Announced It Will Discontinue Its Web Search, Gmail, And Google Docs, Services" -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -42,9 +40,9 @@ The same Google spokesman also noted that Google is considering to discontinue
 AdWords, because they too are proving to undermine its profitability.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id="license" title="Copyright and Licence"%]
+[% WRAPPER h2_section id = "license" title = "Copyright and Licence" %]
 
 <p>
 This document is Copyright by Shlomi Fish, 2014, and is available
@@ -67,6 +65,6 @@ The homepage screenshot was adapted from the Google homepage,
 with the <a href="Google_homepage_files.tar.xz">sources</a> available.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

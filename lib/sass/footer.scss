@@ -58,7 +58,12 @@ footer,
         }
 
         li {
+            a {
+                color: blue;
+            }
             // background: black;
+            background: white;
+            background: linear-gradient(black, 10%, white);
             border: black solid 3px;
             $r: 10px;
             border-bottom-left-radius: $r;

@@ -49,6 +49,9 @@ footer,
 
     nav.sections {
         // background: #008800;
+        $navb: 3px #4e9d5b solid;
+        border-bottom: $navb;
+        border-top: $navb;
         padding-bottom: 0.5em;
         padding-top: 0.5em;
 

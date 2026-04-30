@@ -4,8 +4,7 @@
 
 [% FOREACH storyrec IN true_stories_obj.get_list() %]
 
-[%# WRAPPER h3_section id = storyrec.id , href = (base_path _ storyrec.url) , title = (storyrec.title || storyrec.text) %]
-[% WRAPPER h3_section id = storyrec.id , href = (base_path _ storyrec.url) , title = ( storyrec.text ) %]
+[% WRAPPER h3_section href = (base_path _ storyrec.url) , id = storyrec.id , title = ( storyrec.text ) %]
 
 [% storyrec.html %]
 

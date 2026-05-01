@@ -15,3 +15,21 @@
 [% SET section_element = "section" %]
 
 [% END %]
+
+[% BLOCK humour_bits__true_stories__intro %]
+
+<p>
+They say that <q>Truth is stranger than fiction, because fiction needs to make sense</q>.
+</p>
+
+<ol>
+
+<li>
+<p>
+<a href="[% base_path %]prog-evolution/">Shlomi Fish’s evolution as a programmer</a>
+</p>
+</li>
+
+</ol>
+
+[% END %]

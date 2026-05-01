@@ -332,6 +332,8 @@ Wishful thinking? A self-fulfilling prophecy?
 
 [% WRAPPER h3_section href = "${base_path}humour/bits/true-stories/" id = "true-stories" title = "True Stories" %]
 
+[%- INCLUDE humour_bits__true_stories__intro -%]
+
 [% INCLUDE humour_bits__true_stories %]
 
 [% END %]

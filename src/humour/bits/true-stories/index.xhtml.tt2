@@ -6,6 +6,8 @@
 <div class="bits_stories_list">
 
 [% PROCESS "Inc/true_stories.tt2" %]
+
+[%- INCLUDE humour_bits__true_stories__intro -%]
 [% INCLUDE humour_bits__true_stories %]
 
 </div>

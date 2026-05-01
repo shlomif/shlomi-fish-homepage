@@ -20,7 +20,7 @@ All <a href="https://en.wikipedia.org/wiki/Programming_language">programming lan
 of the world suck. If you require people to declare variables
 (like in <a href="https://en.wikipedia.org/wiki/Pascal_%28programming_language%29">Pascal</a>,
 <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a
-    href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
+href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29">Scheme</a>
 or Perl 5 with <a href="http://perldoc.perl.org/strict.html">strict</a>), then
 some people will be inconvenienced by the need to declare, and will tell you
 they like variables to spring up upon first use. Without
@@ -35,17 +35,17 @@ have <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">so
 <p>
 Rob Pike and Paul Graham hated <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming (OOP)</a> and so they
 didn't introduce it in their <a
-    href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">"Go"</a>
+href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">"Go"</a>
 and <a
-    href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">"Arc"</a>
+href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">"Arc"</a>
 languages, well after OOP has become mainstream. And guess what? Many people,
 including me, think that OOP is still a good thing (and no, in my opinion, C++
 did not do OOP very well) and so gave up on Arc quickly and did not look
 closely at Go. Many people who oppose OOP claim that it mashes together many
-separate features, such as typing, capability of being instantiated,
-and polymorphism which belong as separate features in the language, but
-naturally it <b>is</b> convenient to have them integrated as one, because
-they are often useful together.
+separate features, such as typing, capability of being instantiated, and
+polymorphism, which belong as separate features in the language. However, it
+naturally <b>is</b> convenient to have them integrated as one, because they are
+often useful together.
 </p>
 
 <p>
@@ -104,17 +104,19 @@ Finally, while most modern languages use lexical <a href="https://en.wikipedia.o
 I have found dynamic scoping to be somewhat advantageous when writing <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash / Zsh</a> and Perl 5 code (which also has lexically scoped variables).
 </p>
 
-<p><b>You are damned either way</b>, whatever you do.</p>
+<p>
+<b>You are damned either way</b>, whatever you do.
+</p>
 
 <p>
-I could have gone
-on, but I think I got my message across. The point is, when designing a programming
-language, you need to make a lot of design decisions - what to include, what to
-exclude, etc. However, many of these design decisions are not 100% advantages
-or 100% disadvantages, but in fact trade-offs, and many people will question
-them and be unhappy. You can never please all the people. So make a design
-decision, and stick with it, and realise that <b>your programming language must
-suck</b>, but that it may suck less for some tasks, or for some people.
+I could have gone on, but I think I got my message across. The point is, when
+designing a programming language, you need to make a lot of design decisions -
+what to include, what to exclude, etc. However, many of these design decisions
+are not 100% advantages or 100% disadvantages, but in fact trade-offs, and many
+people will question them and be unhappy. You can never please all the people.
+So make a design decision, and stick with it, and realise that <b>your
+programming language must suck</b>, but that it may suck less for some tasks,
+or for some people.
 </p>
 
 <p>
@@ -126,13 +128,13 @@ Things Considered: Why There Is No Perfect Design</i></a>, which I have
 not read, but I've concluded it holds for programming language design.
 Moreover, even when writing code, we run into many trade-offs. For example, if
 our methods or functions are very short, then they are easier to over-ride and
-re-use, but, in that case, the code would be harder to follow and will perform
-worse than code with longer methods.
+re-use. However, in that case, the code would be harder to follow, and will
+perform worse than code with longer methods.
 </p>
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -180,7 +182,7 @@ list of links and quotations on my wiki, about the more general, non-programming
 
 </ul>
 
-[% WRAPPER h3_section id = "especially-bad-langs"  title = "Some especially bad languages"  %]
+[% WRAPPER h3_section id = "especially-bad-langs" title = "Some especially bad languages" %]
 
 <ul>
 
@@ -228,7 +230,7 @@ So they may suck less…
 Paul Graham:
 <a href="http://www.paulgraham.com/popular.html">Being Popular</a>,
 <a href="http://www.paulgraham.com/power.html">Succinctness is Power</a>,
-<a href="http://www.paulgraham.com/hundred.html">The Hundred-Year Language</a>
+<a href="http://www.paulgraham.com/hundred.html">The Hundred-Year Language</a>,
 and <a href="http://www.paulgraham.com/javacover.html">Java's Cover</a>.
 </p>
 </li>

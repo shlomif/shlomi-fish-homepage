@@ -4,7 +4,7 @@
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/general_philosophy.tt2" %]
-[% PROCESS "lib/Inc/essays_psychology.tt2" %]
+[% PROCESS "Inc/essays_psychology.tt2" %]
 
 [% WRAPPER h2_section id = "intro" title = "Introduction" %]
 

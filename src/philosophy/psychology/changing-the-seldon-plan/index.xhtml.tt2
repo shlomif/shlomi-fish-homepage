@@ -1,5 +1,5 @@
 [%- SET title = "Changing the Seldon Plan" -%]
-[%- SET desc = "Why it is important to not be afraid to modernise, improve, or fix one's works, rather than letting them linger in their current and suboptimal state." -%]
+[%- SET desc = "Why it is important to not be afraid to modernise, improve, or fix, one's works, rather than letting them linger in their current and suboptimal state." -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -10,8 +10,8 @@
 [% WRAPPER intro %]
 
 <p>
-Why one should dedicate time to implement
-suggestions for refactoring, fixing, and modernising one's work.
+Why one should dedicate time to implement suggestions for refactoring, fixing,
+and modernising, one's work.
 </p>
 
 [% END %]
@@ -24,7 +24,7 @@ Asimov's book "Second Foundation"</a>, the second foundation are in charge
 of <a href="http://en.wikipedia.org/wiki/Seldon_Plan">the Seldon Plan</a>,
 the grand "psychohistory" plan for the advancement of the galaxy.
 Moreover, one fact that is mentioned there is that it should by no means be
-considered holy and that changing it according to the circumstances is
+considered holy, and that changing it according to the circumstances is
 expected and even necessary. This mentality has an effect on us as open-source
 programmers, who should do our best to remedy bad open-source code as we
 find it.
@@ -182,7 +182,7 @@ First of all, I should note that szabgab responded below and <a href="http://sza
 </p>
 
 <p>
-Otherwise, note that ESR does not mention "If it ain't broke, don't fix it." in his summary of the hacker's ethos ( <a href="[% hacker_ethos_url %]">link</a> ). That put aside, it is my belief that if you can invest enough time, you should make sure your code (in whatever programming language or technology that you are using) will follow the best practices. Naturally, and I didn't mention that, you likely need to juggle some other priorities, and cannot spend 100% of your time refactoring and modernising. However, you should invest time doing that because, like Martin Fowler says in his <a href="http://www.refactoring.com/">"Refactoring" book</a>, refactoring is a practice that programmers have been doing because it allows them to write code faster and save time in the long run. Without refactoring, the code deteriorates into a very ugly mess, that is hard to maintain, harder to salvage and often becomes non-functional and buggy.
+Otherwise, note that ESR does not mention "If it ain't broke, don't fix it." in his summary of the hacker's ethos ( <a href="[% hacker_ethos_url %]">link</a> ). That put aside, it is my belief that if you can invest enough time, you should make sure your code (in whatever programming language or technology that you are using) will follow the best practices. Naturally, and I didn't mention that, you likely need to juggle some other priorities, and cannot spend 100% of your time refactoring and modernising. However, you should invest time doing that because, like Martin Fowler says in his <a href="http://www.refactoring.com/">"Refactoring" book</a>, refactoring is a practice that programmers have been doing because it allows them to write code faster and save time in the long run. Without refactoring, the code deteriorates into a very ugly mess, that is hard to maintain, harder to salvage, and often becomes non-functional and buggy.
 </p>
 
 <p>

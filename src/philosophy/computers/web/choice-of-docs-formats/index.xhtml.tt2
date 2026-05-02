@@ -1,5 +1,4 @@
 [%- SET title = "Choice of Document Formats" -%]
-[%- SET desc = "Choice of Document Formats" -%]
 [%- SET more_keywords = "HTML, DocBook/XML, POD, TeX, LaTeX, documents, formats, document formats, perl, wiki, MediaWiki, markdown, AsciiDoc" -%]
 
 [%- WRAPPER wrap_html -%]
@@ -36,7 +35,7 @@ Finish Date:
 Last Updated:
 </dt>
 <dd>
-24-March-2022
+02-May-2026
 </dd>
 </dl>
 
@@ -129,10 +128,10 @@ want to try to do with it are not possible. It is not the only generic format
 available, however. One option is naturally
 <a href="https://docbook.org/">DocBook/XML</a>, which can be
 translated into <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> (
-both XHTML 1.x as well as XHTML 5 and HTML 5)
+both XHTML 1.x as well as XHTML 5 and HTML 5),
 as well as <a href="https://en.wikipedia.org/wiki/PDF">PDF</a>,
 Microsoft Word, <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
-<a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> and other
+<a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a>, and other
 formats. It can be directly translated to plain text, either
 using <a href="#docbookrx">docbookrx</a>,
 or through
@@ -164,7 +163,7 @@ and incompatibilities</a>).
 </p>
 
 <p>
-They all can be converted to HTML and some of them to DocBook too. One Wiki or
+They all can be converted to HTML, and some of them also to DocBook. One Wiki or
 another is also an option, but note that they tend to have incompatible
 formats, and some may not have an ability to export as DocBook. I used to
 like the
@@ -183,11 +182,12 @@ do that, but I have not found the time for this yet.
 </p>
 
 <p>
-One recent note is that I grew to like the concept of <a href="https://en.wikipedia.org/wiki/Ikiwiki">ikiwiki</a>
-and similar wikis which keep pages along with their history inside
-a standard <a href="https://en.wikipedia.org/wiki/Version_control">version control
-systems</a> for better reliability than MediaWiki's SQL-based storage or
-the ad-hoc versioning systems of older wikis.
+One recent note is that I grew to like the concept of <a
+href="https://en.wikipedia.org/wiki/Ikiwiki">ikiwiki</a> and similar wikis,
+which keep pages along with their history inside a standard <a
+href="https://en.wikipedia.org/wiki/Version_control">version control
+systems</a>. This is more reliable than MediaWiki's SQL-based storage or the
+ad-hoc versioning systems of older wikis.
 </p>
 
 <p>
@@ -273,7 +273,7 @@ that the order of tags are incorrect, which takes me much less time to solve.
 </p>
 
 <p>
-One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https://en.wikipedia.org/wiki/TeX4ht">TeX4ht</a> which works reasonably well,
+One option to convert simple LaTeX to DocBook 5/XML or XHTML is <a href="https://en.wikipedia.org/wiki/TeX4ht">TeX4ht</a>, which works reasonably well,
 and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 </p>
 
@@ -297,8 +297,8 @@ provide the XML-based standards of <a href="https://en.wikipedia.org/wiki/OpenDo
 and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">.docx</a>.
 However, part of the problem with them
 is that their conversion to output formats tends to be non-semantic if not completely
-<a href="[% base_path %]philosophy/computers/web/validate-your-html/">non-valid</a>, and at least
-in the case of MS Word, have a huge problem with maintaining compatibility of documents
+<a href="[% base_path %]philosophy/computers/web/validate-your-html/">non-valid</a>. Moreover,
+MS Word, has a huge problem with maintaining compatibility of documents
 created with newer or older versions. As I
 <a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
 in a Reddit comment</a>, word processors are the kind of programs that are created by smart
@@ -310,8 +310,8 @@ use text editors and markup languages. I have written a <a href="[% base_path %]
 Note that in the past,
 I preferred using <a href="https://en.wikipedia.org/wiki/WordPerfect">WordPerfect</a>,
 as a word processor,
-over Microsoft Word (and later LibreOffice Writer) due to its "reveal codes" feature
-(but WordPerfect was not ported to Microsoft Windows in time for it to be usable).
+over Microsoft Word (and later LibreOffice Writer), due to its "reveal codes" feature.
+(However, WordPerfect was not ported to Microsoft Windows in time for it to be usable).
 That put aside, I found <a href="https://en.wikipedia.org/wiki/Microsoft_Excel">Excel</a>,
 <a href="https://en.wikipedia.org/wiki/Microsoft_Visio">Visio</a>,
 and to a lesser extent <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">PowerPoint</a>,
@@ -369,7 +369,7 @@ line tool to translate DocBook/XML to its end formats.
 <li>
 <p>
 <a href="https://weasyprint.org/">weasyprint</a> - a solution for converting
-HTML pages to PDFs, which does not require a headless browser engine and
+HTML pages to PDFs, which does not require a headless browser engine, and
 implements a subset of CSS.
 </p>
 </li>

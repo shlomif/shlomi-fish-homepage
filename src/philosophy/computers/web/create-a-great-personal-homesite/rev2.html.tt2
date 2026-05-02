@@ -101,7 +101,7 @@ be better received.
 <p>
 This edition of this essay features many corrections, updates, additions,
 and general love. Like its predecessor, it is made available under the
-Creative Commons Attribution licence (“CC-by”) for almost free
+Creative Commons Attribution licence (“CC-by”) - for almost free
 re-distribution, re-use, quoting and mixing. This time there are comments
 on this page (JavaScript-based and powered by
 <a href="http://disqus.com/overview/">Disqus</a>, as I’d rather keep the
@@ -571,7 +571,7 @@ good site is served on the root, and uses nice URLs with slashes. Something
 like <code>http://www.myhost.tld/about/personal/bio/</code>. Assuming you’re using
 a server-side scripting technology, you can easily implement it using the
 <code>PATH_INFO</code> environment variable. (You should avoid using Apache’s
-mod_rewrite and friends for that, because they cause a lot of trouble for
+<a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> and friends for that, because they cause a lot of trouble for
 such things).
 </p>
 
@@ -611,7 +611,7 @@ cater for), and often also breaks in many browsers.
 </p>
 
 <p>
-Some people believe one should not mention his or her E-mail on the web so
+Some people believe one should not mention his or her E-mail on the web, so
 he won’t receive any spam. So let me assure you of this: spammers will
 eventually learn of your E-mail address whether you like it or not.
 </p>
@@ -642,7 +642,7 @@ thread that I started on the <i>Joel on Software</i> forum</a> about
 [% WRAPPER h5_section id = "pres_usability" title = "Usability, Accessibility and Portability" %]
 
 <p>
-Usability, accessibility and portability are related topics that are all
+Usability, accessibility, and portability, are related topics that are all
 very important aspects of a good web-site. There are several
 aspects of them:
 </p>
@@ -843,15 +843,18 @@ completely new to programming and web-design.
 </p>
 
 <ol>
+
 <li id="how_to__learn_html">
 <p>
 <b>Learn HTML According to the Standard</b>. The first thing you need to do
 is learn standard XHTML (an XML-based dialect of HTML, which is cleaner
 and more powerful than standard HTML). I recommend the
 <a href="http://www.htmldog.com/">HTML Dog HTML and CSS Tutorials</a>, which
-are very good.
+are very good. <a href="https://developer.mozilla.org/en-US/">MDN</a> is
+also an esteemed resource.
 </p>
 </li>
+
 <li id="how_to__web_site_gen">
 <p>
 <b>Learn to Use a Web Site Generation System</b> - complex and <i>good</i>
@@ -863,15 +866,6 @@ alternatives:
 </p>
 
 <ul>
-
-<li>
-<p>
-<a href="http://web-cpan.shlomifish.org/latemp/"><b>Latemp</b></a> - what I
-personally used for most of my sites. Based on
-<a href="http://thewml.org/">Website Meta Language</a>, which has a relatively
-steep learning curve. It is also slow and quirky.
-</p>
-</li>
 
 <li>
 <p>
@@ -944,8 +938,19 @@ optimal results.
 </p>
 </li>
 
-</ul>
+<li>
+<p>
+<a href="http://web-cpan.shlomifish.org/latemp/"><b>Latemp</b></a> - what I
+personally used for most of my sites. Based on
+<a href="http://thewml.org/">Website Meta Language</a>, which has a relatively
+steep learning curve. It is also slow and quirky.
+</p>
 </li>
+
+</ul>
+
+</li>
+
 <li id="how_to__write">
 <p>
 <b>Write the Code</b> - now comes the fun part: write the markup. You can
@@ -963,6 +968,7 @@ Linux or Mac OS X system assuming you are using one of them. If you’re using
 Windows you can always install it separately - it’s open-source and gratis.
 </p>
 </li>
+
 <li id="how_to__set_up_hosting">
 <p>
 <b>Set up a Good Hosting for your Site</b> - once you have a basic site ready,
@@ -972,6 +978,7 @@ display any ads or pop-ups, and allows one to have an unlimited bandwidth
 (possibly while paying for more bandwidth as it is generated). It will also
 probably cost you money, but not too much.
 </p>
+
 <p>
 One can use various mechanisms to update the remote copy from your local copy.
 Some of the most prominent ones are:
@@ -1021,6 +1028,7 @@ changed some text, it will only transfer the modifications. It is also smart
 enough to avoid transferring files that haven’t changed since the last
 time again and again.
 </p>
+
 <p>
 rsync is especially useful for incrementally uploading data on top of a home
 connection with a limited upstream bandwidth.
@@ -1038,17 +1046,20 @@ your site and revise it, it is possible you’ll break something. A version
 control system, allows you to keep the entire history of the pages, view the
 difference between two versions, and easily perform rollbacks.
 </p>
+
 <p>
 The various ad-hoc ways of version control like keeping <code>.bak</code>,
 <code>.bak2</code>, etc. files or keeping periodic archives, are not as robust,
 or failsafe as using a true version control system.
 </p>
+
 <p>
 The <a href="http://better-scm.shlomifish.org/">Better SCM site</a> contains a
 lot of links and information regarding the various version control system.
 I am personally using <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">Git</a>, while having used <a href="https://subversion.apache.org/">the Subversion
 version control system</a>, previously.
 </p>
+
 <p>
 In any case, note that you <b>must</b> eventually use a version control system,
 because otherwise the integrity of your work would be at risk.
@@ -1075,6 +1086,7 @@ domain.
 </p>
 
 </li>
+
 </ol>
 
 <div class="center">
@@ -1125,7 +1137,7 @@ you end up at <a href="[% INCLUDE pg_url u="zero" %]">this page</a>, called
 “zero.html”,
 what page does it belong to? Even <a href="http://www.google.com/search?sourceid=mozclient&amp;q=link:http%3A//www.paulgraham.com/zero.html">the Google
 back-links feature is no help today</a>. (The spoiler is that it belongs
-to <a href="http://www.paulgraham.com/saynotes.html">this page</a>).
+to <a href="http://www.paulgraham.com/saynotes.html">this page</a>.)
 </p>
 
 <p>
@@ -1185,7 +1197,7 @@ a lot of software Raymond has written, documents he wrote, and some
 information. Most of the pages on the site validate as XHTML 1.0. Most of the
 pages contain a rudimentary navigation menu to the left, but it remains static,
 and doesn’t change from page page. The pages are quite plain looking and
-boring from this  regard. The site contains
+boring from this regard. The site contains
 <a href="http://www.catb.org/~esr/sitemap.html">a
 site map</a> which is a good thing.
 </p>
@@ -1219,7 +1231,7 @@ aids.
 <p>
 <a href="http://www.shlomifish.org/">My home site</a> has a common look and
 feel, a navigation menu, a breadcrumbs trail, and a site map.
-Most of the pages there validate as XHTML 1.1, It has a news feed that mentions
+Most of the pages there validate as XHTML5, It has a news feed that mentions
 what has been updated in the site, and
 <a href="http://www.shlomifish.org/old-news.html">old News items are
 preserved in their page</a>.
@@ -1227,7 +1239,7 @@ preserved in their page</a>.
 
 <p>
 The old style of the site was a bit “Web 1.0”-esque, with some plain colours
-and boring (it’s still for reference as an alternate stylesheet).
+and boring (it’s still preserved for reference as an alternate stylesheet).
 A few months ago, I switched the style to a style based on
 <a href="http://wordpress.org/extend/themes/smoked">the
 “Smoked” WordPress theme</a>, and then heard several complaints that the text was too narrow.
@@ -1239,7 +1251,6 @@ images to make them wider.
 Some of the sections of the homepage, contain their own navigation menus,
 in order to make the main navigation menu less crowded.
 </p>
-
 
 <p>
 The layout of the site is mostly hierarchical, but often there are

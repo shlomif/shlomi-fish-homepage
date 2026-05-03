@@ -59,8 +59,6 @@
 </li>
 </ul>
 
-[% top_nav_buttons %]
-
 [%- END -%]
 
 [%- BLOCK footer__website_sections -%]
@@ -94,6 +92,7 @@ Website’s sections:
 
 [%- BLOCK webmaster_footer -%]
 
+[%- top_nav_buttons -%]
 [% INCLUDE webmaster_info %]
 [% INCLUDE footer__website_sections %]
 
@@ -374,6 +373,7 @@ publicly linked to. Please send comments to
 [%- leading_path_string -%]
 </div>
 [% INCLUDE webmaster_info %]
+[%- top_nav_buttons -%]
 </div>
 
 <div id="faux">

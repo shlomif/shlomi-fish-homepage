@@ -1,8 +1,8 @@
 "use strict";
 function shlomif_load_nav(page_path: string): void {
     $(() => {
-        const footer = $("body > footer");
-        footer.prepend(
+        const nav_el = $("body > footer > p.top_nav");
+        nav_el.after(
                 '<p class="page_source_link"><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
                 page_path +
                 (page_path === "" || /\/$/.test(page_path) ? "" : ".tt2") +

@@ -50,7 +50,7 @@ use File::Basename qw/ basename /;
 my $NOSYNC  = "LD_PRELOAD=/usr/lib64/nosync/nosync.so";
 my $EN      = "export $NOSYNC";
 my $configs = {
-    'debian:14' => Docker::CLI::Wrapper::Container::Config->new(
+    'debian:13' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_debian",
             install_bitvec              => "true",
@@ -99,7 +99,6 @@ EOF
                     libhunspell-dev
                     libncurses-dev
                     libpcre2-dev
-                    libpcre3-dev
                     libperl-dev
                     libprimesieve-dev
                     libpython3-dev

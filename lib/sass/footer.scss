@@ -32,6 +32,12 @@ footer,
 
     @include horizontal_navbar_ul;
 
+    > .bt_nav {
+        $navb: 3px #4e9d5b solid;
+        border-top: $navb;
+        padding-top: 0.5em;
+    }
+
     a {
         color: #ff8800;
         text-decoration: underline;

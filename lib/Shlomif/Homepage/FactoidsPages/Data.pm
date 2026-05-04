@@ -61,6 +61,12 @@ with thousands of factoids.
 
 <li>
 <p>
+<a href="https://www.youtube.com/watch?v=feZB6eWSk_w">“Chuck Norris scene in The Expendables 2”</a> - video on YouTube.
+</p>
+</li>
+
+<li>
+<p>
 <a href="http://www.neobytesolutions.com/chuck-norris-programmer-facts-part-1/">Chuck Norris Programmer Facts - part 1</a>
 </p>
 </li>

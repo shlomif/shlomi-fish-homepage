@@ -6,6 +6,5 @@ module-starter --distro=MyMath::Ops \
     --module=MyMath::Ops::Subtract \
     --module=MyMath::Ops::Divide \
     --mb \
-    --author="Perl Newbie" \
-    --email='perl-newbie@perl-begin.org' \
+    --author="Perl Newbie <perl-newbie@perl-begin.org>" \
     --verbose

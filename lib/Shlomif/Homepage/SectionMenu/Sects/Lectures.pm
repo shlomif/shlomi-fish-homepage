@@ -22,9 +22,10 @@ my $_section_navmenu_tree_contents = {
             title => "Perl for Perl Newbies - Introducing Perl for Beginners",
         },
         {
+            skip  => 1,
             text  => "HTML Tutorial",
-            url   => "lecture/HTML-Tutorial/",
             title => "The Hebrew Tutorial for Standard HTML",
+            url   => "lecture/HTML-Tutorial/",
         },
         {
             text  => "Web Publishing with LAMP",

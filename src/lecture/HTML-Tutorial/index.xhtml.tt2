@@ -1,8 +1,9 @@
 [%- SET title = "The Hebrew Tutorial for Standard HTML" -%]
 [%- SET desc = "This is a tutorial I’ve started to write that teaches how to write (and read) HTML in compliance to web standards, and is written in Hebrew. For a recommended English tutorial see the HTML Dog site which provided some inspiration for this tutorial." -%]
 
-
 [%- WRAPPER wrap_html -%]
+
+[%- IF 0 -%]
 
 <div class="hebrew">
 <p>
@@ -38,6 +39,8 @@
 
 <hr/>
 
+[%- END -%]
+
 <p>
 This is a tutorial I’ve started to write that teaches how to write (and read)
 HTML in compliance to web standards, and is written in Hebrew. For a
@@ -69,4 +72,4 @@ requests will be appreciated).
 
 </ul>
 
-[% END %]
+[%- END -%]

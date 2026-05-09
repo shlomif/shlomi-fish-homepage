@@ -1,7 +1,6 @@
+[%- BLOCK when_c_best_html -%]
 
-[% BLOCK when_c_best_html %]
-
-<h2 id="meta">Document Information</h2>
+[%- WRAPPER h2_section id = "meta" title = "Document Information" -%]
 
 <dl class="meta">
 <dt>
@@ -24,7 +23,9 @@ Last Updated:
 </dd>
 </dl>
 
-<h2 id="intro">Introduction</h2>
+[%- END -%]
+
+[%- WRAPPER h2_section id = "intro" title = "Introduction" -%]
 
 <ul>
 <li>
@@ -75,9 +76,11 @@ extensions) or C99 or C++ with many C primitives used. The so-called Standard
 C++ is entirely different.
 </p>
 
-<h2 id="reasons">Reasons for Wanting to Prefer C</h2>
+[%- END -%]
 
-<h3 id="portability">Portability</h3>
+[%- WRAPPER h2_section id = "reasons" title = "Reasons for Wanting to Prefer C" -%]
+
+[%- WRAPPER h3_section id = "portability" title = "Portability" -%]
 
 <p>
 C is portable for every architecture there’s a gcc backend or any other
@@ -87,7 +90,9 @@ a gcc back-end), but nonetheless, C is still more portable than anything
 written using it.
 </p>
 
-<h3 id="open_source">Open-Source Considerations</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "open_source" title = "Open-Source Considerations" -%]
 
 <p>
 <a href="http://gcc.gnu.org/">gcc</a> is a full-featured and robust compiler
@@ -96,7 +101,9 @@ problematic license. It’s not distributed as part of most Linux distributions
 due to this.
 </p>
 
-<h3 id="low_level">Low-levelness</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "low_level" title = "Low-levelness" -%]
 
 <p>
 You cannot effectively duplicate a struct containing other structs in Java or
@@ -110,14 +117,18 @@ memory-management routines.
 Many problem domains call for C.
 </p>
 
-<h3 id="self_contained">Writing self-contained code</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "self_contained" title = "Writing self-contained code" -%]
 
 <p>
 You can compile a C library and distribute it as is. With Java or Perl one
 often needs a substantial run-time.
 </p>
 
-<h3 id="unixisms">Making use of UNIXisms</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "unixisms" title = "Making use of UNIXisms" -%]
 
 <p>
 There’s no fork() in Java, and not many other UNIX system calls. You need to
@@ -131,7 +142,9 @@ some of the system calls and APIs are not available in the Java distribution
 by Sun.
 </p>
 
-<h3 id="integrability">Integrability</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "integrability" title = "Integrability" -%]
 
 <p>
 A C library can be used by Perl code, Python code, Tcl code, Ruby code, to a
@@ -139,7 +152,9 @@ lesser extent Java code, etc. Code written in a high-level language is mostly
 usable only in that language.
 </p>
 
-<h3 id="speed_and_memory">Speed and Memory Consumption</h3>
+[%- END -%]
+
+[%- WRAPPER h3_section id = "speed_and_memory" title = "Speed and Memory Consumption" -%]
 
 <p>
 And naturally there’s speed and memory consumption. Often when speed or low
@@ -152,7 +167,11 @@ various APIs, virtual machines, simulations, graphics, audio, video and 3-D
 programs, etc.
 </p>
 
-<h2 id="case_study_fcs">Case Study: Freecell Solver</h2>
+[%- END -%]
+
+[%- END -%]
+
+[%- WRAPPER h2_section id = "case_study_fcs" title = "Case Study: Freecell Solver" -%]
 
 <p>
 <a href="http://fc-solve.shlomifish.org/">Freecell Solver</a> is a C library
@@ -195,7 +214,7 @@ Luckily, I have written
 that covers the main data structures and algorithms used.
 </p>
 
-<h3 id="why_fcs_in_c">Why Freecell Solver should be written in C?</h3>
+[%- WRAPPER h3_section id = "why_fcs_in_c" title = "Why Freecell Solver should be written in C?" -%]
 
 <p>
 The best way to realize why C is the ideal language for Freecell Solver is
@@ -285,7 +304,11 @@ probably be much slower and more memory hungry. All of these things add up
 to a lot. C is the best language for writing a Freecell solver in.
 </p>
 
-<h2 id="conclusion">Conclusion</h2>
+[%- END -%]
+
+[%- END -%]
+
+[%- WRAPPER h2_section id = "conclusion" title = "Conclusion" -%]
 
 <p>
 Despite the fact that computers have become much faster, and that there are now
@@ -297,13 +320,12 @@ choice. It is insightful to know, and often proves very useful. And it still
 has its place.
 </p>
 
-<h2 id="licence">Licence</h2>
+[%- END -%]
+
+[% WRAPPER h2_section id = "licence" title = "Licence" %]
 
 [%- license_obj.by_british_blurb( "year" => "2007",) -%]
 
 [% END %]
 
-[% IF 0 %]
-[% INCLUDE when_c_best_html %]
-[% PROCESS when_c_best_html %]
 [% END %]

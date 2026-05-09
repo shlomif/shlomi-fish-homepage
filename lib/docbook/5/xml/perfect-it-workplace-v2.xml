@@ -48,7 +48,7 @@
             examples for conditions I disliked from previous workplaces,
             instead of positive elements I would have liked to see or
             have seen. As much as I like liquidating negatives, I agree
-            that I should also mention some good things that a workplace
+            that I should also mention some good practices that a workplace
             needs to adopt.
         </para>
 
@@ -258,6 +258,7 @@
                 APIs to be used by competing sites.
             </para>
         </section>
+
         <section xml:id="great-working-conditions">
             <info>
                 <title>Great Working Conditions</title>
@@ -300,6 +301,7 @@
                     also comfortable to work there.
                 </para>
             </section>
+
             <section xml:id="conditions--best-tools">
                 <info>
                     <title>The Best Tools That Money Can Buy</title>
@@ -374,6 +376,7 @@
                     books on-line.
                 </para>
             </section>
+
             <section xml:id="conditions--sane-working-hours">
                 <info>
                     <title>Sane Working Hours</title>
@@ -401,7 +404,7 @@
                     was published in the site <emphasis>AlterNet</emphasis>,
                     and also <link xlink:href="http://developers.slashdot.org/story/12/03/16/1252220/bring-back-the-40-hour-work-week?sdsrc=popbyskid">featured
                     on Slashdot (with many comments)</link>.
-            </para>
+                </para>
 
                 <para>
                     This cannot be stressed enough. The more people work, the
@@ -481,6 +484,10 @@
                             to discuss problems and share solutions
                             interactively with their peers, or just to
                             take a break from work and chat.
+                        </para>
+
+                        <para>
+                        ( Also see <link xlink:href="https://www.shlomifish.org/meta/FAQ/do_people_still_use_irc.xhtml">my sentiments about IRC being advantageous</link>. )
                         </para>
 
                     </listitem>
@@ -664,6 +671,7 @@
                     Technion</link> and can highly recommend it.
             </para>
         </section>
+
         <section xml:id="give-employees-freedom">
             <info>
                 <title>Give Your Employees the Freedom to Do What They Want</title>
@@ -860,7 +868,7 @@
             </para>
             <para>
                 Another tip I can offer to look for employees is to use
-                specialised job boards like the <link xlink:href="http://jobs.joelonsoftware.com/">the
+                specialised job boards like <link xlink:href="http://jobs.joelonsoftware.com/">the
                     Joel on Software job-board</link>,
                 and <link xlink:href="http://jobs.perl.org/">jobs.perl.org</link>,
                 <link xlink:href="http://jobs.thedailywtf.com/1001/browse.aspx">the
@@ -869,6 +877,7 @@
                 to phrase your ad in a non-boring way, as I noted earlier.
             </para>
         </section>
+
         <section xml:id="read-software-management-material">
             <info>
                 <title>Read a Lot of Software Management Material</title>
@@ -896,6 +905,7 @@
                 are, but that has often been the case for me and others.
             </para>
         </section>
+
         <section xml:id="listen-to-your-devs">
             <info>
                 <title>Listen to Your Developers</title>
@@ -910,10 +920,12 @@
                 depression</link>.
             </para>
         </section>
+
         <section xml:id="software-engineering">
             <info>
                 <title>Software Engineering Best Practices</title>
             </info>
+
             <section xml:id="functional-specs">
                 <info>
                     <title>Functional Specs</title>
@@ -960,6 +972,7 @@
                     </listitem>
                 </orderedlist>
             </section>
+
             <section xml:id="automated-tests">
                 <info>
                     <title>Automated Tests</title>
@@ -1037,6 +1050,7 @@
                     operation.
                 </para>
             </section>
+
             <section xml:id="design-and-planning">
                 <info>
                     <title>Design and Planning</title>
@@ -1057,6 +1071,7 @@
                     be a disadvantage to a project’s success.
                 </para>
             </section>
+
             <section xml:id="refactoring">
                 <info>
                     <title>Refactoring</title>
@@ -1088,10 +1103,11 @@
                     (refactoring enough to achieve a certain task), etc.
                 </para>
                 <para>
-                    But refactoring is important, makes development faster
-                    in the long run (and even in the short-run), and can
-                    prevent the code from deteriorating into an ugly,
-                    non-functional mess that would be hard to salvage.
+                    But refactoring <emphasis role="bold">is</emphasis>
+                    important, makes development faster in the long run (and
+                    even in the short-run), and can prevent the code from
+                    deteriorating into an ugly, non-functional mess that would
+                    be hard to salvage.
                 </para>
                 <para>
                     You can also refer to my essay, and subsequent comments on it
@@ -1115,6 +1131,7 @@
                 </para>
                 </blockquote>
             </section>
+
             <section xml:id="soft-eng-methods-to-avoid">
                 <info>
                     <title>Software Engineering Methods to Avoid</title>
@@ -1212,6 +1229,7 @@ function create_employee(params)
                     forward-planning is good.
                 </para>
             </section>
+
             <section xml:id="maintaining-two-codebases">
                 <info>
                     <title>Maintaining Two Codebases</title>
@@ -1243,6 +1261,7 @@ function create_employee(params)
                 </para>
             </section>
         </section>
+
         <section xml:id="specialisation">
             <info>
                 <title>Don’t Over-Specialise</title>
@@ -1285,6 +1304,7 @@ function create_employee(params)
                 as many aspects of your development.
             </para>
         </section>
+
         <section xml:id="listen-to-your-customers">
             <info>
                 <title>Listen to Your Customers or Users</title>
@@ -1296,7 +1316,7 @@ function create_employee(params)
                 what your customers (or users) say. Don’t dismiss them.
                 Don’t give them annoying canned responses. Open your
                 bug-tracker to the world as a web-service. There are many
-                web-based, and gratis bug-trackers, such as
+                web-based, and gratis <link xlink:href="https://www.shlomifish.org/open-source/resources/software-tools/#bug_tracking">bug-trackers</link>, such as
                 <link xlink:href="http://www.bugzilla.org/">Bugzilla</link>,
                 and you should use one of them for better interaction with
                 your customers.
@@ -1323,6 +1343,7 @@ function create_employee(params)
                 to a small ISV’s success</link>.
             </para>
         </section>
+
         <section xml:id="great-poets-steal">
             <info>
                 <title>“Good Poets Borrow. Great Poets Steal.”</title>
@@ -1391,6 +1412,7 @@ function create_employee(params)
                 </footnote>
             </para>
         </section>
+
         <section xml:id="study-psychology">
             <info>
                 <title>Study Psychology</title>
@@ -1419,7 +1441,7 @@ function create_employee(params)
                             Good: The New Mood Therapy</link> -
                         the best book I’ve read about Psychology. A self-help
                         book of <link xlink:href="http://en.wikipedia.org/wiki/Cognitive_behavioral_therapy">Cognitive-behavioural
-                            therapy</link>, this books explains what
+                            therapy</link>, this book explains what
                         causes Clinical depressions, and other negative
                         mood swings, and why people behave the way they do.
                     </para>
@@ -1501,6 +1523,7 @@ function create_employee(params)
                 which in turn made me under-productive.
             </para>
         </section>
+
         <section xml:id="success-and-failure-stories">
             <info>
                 <title>Read Success and Failure Stories</title>
@@ -1525,6 +1548,7 @@ function create_employee(params)
                 forums.
             </para>
         </section>
+
         <section xml:id="essential-software">
             <info>
                 <title>Essential Organisational Software to Have</title>
@@ -1697,6 +1721,7 @@ function create_employee(params)
 
         </section>
     </section>
+
     <section xml:id="which-technology">
         <info>
             <title>Choose Your Technology Carefully</title>
@@ -1770,6 +1795,7 @@ function create_employee(params)
                     developer.
                 </para>
             </section>
+
             <section xml:id="tech-power">
                 <info>
                     <title>The Technology’s Power</title>
@@ -1802,6 +1828,7 @@ function create_employee(params)
                     case.
                 </para>
             </section>
+
             <section xml:id="tech-habits">
                 <info>
                     <title>Habits</title>
@@ -1839,6 +1866,7 @@ function create_employee(params)
                     for which you expect to find the most “experts”.
                 </para>
             </section>
+
             <section xml:id="tech-reliability-and-reputation">
                 <info>
                     <title>Reliability and Reputation</title>
@@ -1913,10 +1941,9 @@ function create_employee(params)
                 <para>
                     That wasn’t all. They also decided against using <link
                         xlink:href="http://www.postfix.org/">Postfix</link>,
-                    which is a modern, high-performance and open-source
-                    SMTP server, and instead preferred the old
-                    Sendmail SMTP server which has a far worse reputation,
-                    and an arcane configuration system.
+                    which is a modern, high-performance, and open-source, SMTP
+                    server. Instead, they preferred Sendmail, which has a far
+                    worse reputation, and an arcane configuration system.
                 </para>
                 <para>
                     Furthermore, they also decided to use MySQL instead of
@@ -2079,6 +2106,7 @@ function create_employee(params)
             run into and see how you can solve them.
         </para>
     </section>
+
     <section xml:id="conclusion">
         <info>
             <title>Conclusion</title>
@@ -2102,11 +2130,11 @@ function create_employee(params)
             a top environment and very good conditions.
         </para>
         <para>
-            I don’t intend this document to be dogma, but rather to provoke
-            clear thinking of the matter. A lot of bright programmers I’ve
-            talked with about the vision of a perfect workplace, have claimed
-            that this is an non-achievable fantasy, and that all
-            employers are much more clueless than that. However, while
+            I don’t intend this document to be taken as gospel or dogma, but
+            rather to provoke clear thinking of the matter. A lot of bright
+            programmers I’ve talked with about the vision of a perfect
+            workplace, have claimed that this is a non-achievable fantasy, and
+            that all employers are much more clueless than that. However, while
             perfection can never be achieved, I’ve seen my share of good
             workplaces, and benevolent and clueful employers, and I think many
             of them are enlightened enough to improve according to my
@@ -2120,6 +2148,7 @@ function create_employee(params)
         </para>
 
     </section>
+
     <section xml:id="thanks">
 
         <info>
@@ -2133,4 +2162,5 @@ function create_employee(params)
         </para>
 
     </section>
+
 </article>    <!-- End of the article -->

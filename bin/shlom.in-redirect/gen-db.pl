@@ -73,7 +73,7 @@ my @urls = (
     {
         id   => "oss-fs",
         url  => "http://www.shlomifish.org/philosophy/foss-other-beasts/",
-        desc => qq{Open Source, Free Software and Other Beasts},
+        desc => qq{Open Source, Free Software, and Other Beasts},
     },
     {
         id   => "def-zionism",

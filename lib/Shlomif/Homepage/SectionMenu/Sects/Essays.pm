@@ -287,7 +287,7 @@ my $_section_navmenu_tree_contents = {
                             text  => "What is Open Source?",
                             url   => "philosophy/foss-other-beasts/",
                             title =>
-                                "Open Source, Free Software and Other Beasts",
+                                "Open Source, Free Software, and Other Beasts",
                         },
                         {
                             text => "How to Contribute to Open Source",

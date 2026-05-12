@@ -18,6 +18,19 @@ sub run
 
     my $base_url = $self->base_url();
 
+    subtest 'check show.cgi' => sub {
+        plan tests => 2;
+
+        my $showcgi_url = $base_url . "humour/fortunes/show.cgi";
+        my $cookie_url =
+            $showcgi_url . "?id=i-thought-using-loops-was-cheating";
+        pass("This is a subtest");
+        my $mech = WWW::Mechanize->new();
+
+        $mech->get($cookie_url);
+        is( $mech->status(), 200, "show.cgi OK", );
+    };
+
     return;
 }
 

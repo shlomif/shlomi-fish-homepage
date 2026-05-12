@@ -1,9 +1,9 @@
 [%- SET title = "A First-Come First-Served Readers/Writers Lock" -%]
-[%- SET desc = "A First-Come First-Served Readers/Writers Lock" -%]
 
 [%- WRAPPER wrap_html -%]
 
 <ul>
+
 <li>
 <p>
 <a href="pthread_rwlock_fcfs-0.8.0.tar.bz2"><b>Download the latest (0.8.0) stable version source code.</b></a>
@@ -12,7 +12,7 @@
 
 <li>
 <p>
-<a href="linux-kernel/">FCFS flock for the Linux Kernel</a>
+<a href="[% base_path %]rwlock/linux-kernel/">FCFS flock for the Linux Kernel</a>
 </p>
 </li>
 
@@ -25,7 +25,7 @@ so I believe it can also serve as a reference implementation for those
 who wish to implement such a mechanism for other platforms.
 </p>
 
-[% WRAPPER licence_sect  %]
+[%- WRAPPER licence_sect -%]
 
 <p>
 You may use this code under your choice of:
@@ -52,7 +52,7 @@ This work is published from
 
 [%- END -%]
 
-[% WRAPPER links_sect  %]
+[% WRAPPER links_sect %]
 
 <ul>
 
@@ -69,15 +69,24 @@ This work is published from
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "todo"  title = "Todo List"  %]
+[%- WRAPPER h2_section id = "todo" title = "Todo List" -%]
 
 <ul>
-<li>Make an RPM SPEC/Debian Package etc.</li>
-<li>Port to Win32, ZThreads, etc.</li>
+<li>
+<p>
+Make an RPM SPEC/Debian Package etc.
+</p>
+</li>
+<li>
+<p>
+Port to Win32, ZThreads, etc.
+</p>
+</li>
 </ul>
+
 [%- END -%]
 
-[% WRAPPER h2_section id = "q_and_a"  title = "Questions and Answers"  %]
+[%- WRAPPER h2_section id = "q_and_a" title = "Questions and Answers" -%]
 
 <h3>What is a Readers/Writers Lock?</h3>
 
@@ -126,24 +135,30 @@ variables. The new scheme for it (which is a bit more complex) can be found
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "old_versions"  title = "Older Versions"  %]
+[%- WRAPPER h2_section id = "old_versions" title = "Older Versions" -%]
 
 <ul>
 
 <li>
+<p>
 <a href="pthread_rwlock_fcfs-0.6.0.tar.bz2">Version 0.6.0</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="pthread_rwlock_fcfs-0.4.0.tar.gz">Version 0.4.0</a>
+</p>
 </li>
 
 <li>
+<p>
 <a href="pthread_rwlock_fcfs-0.2.0.tar.gz">Version 0.2.0</a>
+</p>
 </li>
 
 </ul>
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

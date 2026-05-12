@@ -9,7 +9,12 @@ then
 fi
 if ! gmake docbook_extended
 then
-    "gmake docbook_extended failed"
+    echo "gmake docbook_extended failed"
+    exit 1
+fi
+if ! BASE_URL="${base}" prove Tests/wire-tests/*.t
+then
+    echo "Shlomif::FortunesWireTests failed"
     exit 1
 fi
 perl -I lib -MWWW::LinkChecker::Internal::App -e 'WWW::LinkChecker::Internal::App->run()' -- check --base="${base}" $args \

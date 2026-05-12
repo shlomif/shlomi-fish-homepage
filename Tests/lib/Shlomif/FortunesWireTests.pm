@@ -29,6 +29,8 @@ sub run
 
         $mech->get($cookie_url);
         is( $mech->status(), 200, "show.cgi OK", );
+
+        return;
     };
 
     return;

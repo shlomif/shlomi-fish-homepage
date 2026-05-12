@@ -19,7 +19,7 @@ sub run
     my $base_url = $self->base_url();
 
     subtest 'check show.cgi' => sub {
-        plan tests => 2;
+        plan tests => 3;
 
         my $showcgi_url = $base_url . "humour/fortunes/show.cgi";
         my $cookie_url =
@@ -29,6 +29,8 @@ sub run
 
         $mech->get($cookie_url);
         is( $mech->status(), 200, "show.cgi OK", );
+        my $link = $mech->find_link( text_regex => qr#Electronic dance#ms );
+        ok( $link, "success" );
 
         return;
     };

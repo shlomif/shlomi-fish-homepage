@@ -49,7 +49,11 @@ my $id = $cgi->param('id');
 if ( $id !~ m#\A${id_re}\z#ms )
 {
     print
-"Status: 404\r\nContent-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
+"Status: 404\r\nContent-Type: application/xhtml+xml; charset=utf-8\r\n\r\n",
+        <<'EOF';
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>Dangerous / Invalid ID</title><meta charset="utf-8"/></head><body></body></html>
+EOF
+
     exit(0);
 
     # die "dangerous ID";

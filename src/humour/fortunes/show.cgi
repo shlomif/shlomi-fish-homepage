@@ -48,7 +48,11 @@ if ( $mode eq "random" )
 my $id = $cgi->param('id');
 if ( $id !~ m#\A${id_re}\z#ms )
 {
-    die "dangerous ID";
+    print
+"Status: 404\r\nContent-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
+    exit(0);
+
+    # die "dangerous ID";
 }
 my $HEADER = "Content-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
 print $HEADER;

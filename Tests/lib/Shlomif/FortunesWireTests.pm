@@ -19,19 +19,34 @@ sub run
     my $base_url = $self->base_url();
 
     subtest 'check show.cgi' => sub {
-        plan tests => 3;
+        plan tests => 4;
 
         my $showcgi_url = $base_url . "humour/fortunes/show.cgi";
-        my $cookie_url =
-            $showcgi_url . "?id=i-thought-using-loops-was-cheating";
-        pass("This is a subtest");
-        my $mech = WWW::Mechanize->new();
+        my $mech        = WWW::Mechanize->new();
+        {
+            my $cookie_url =
+                $showcgi_url . "?id=i-thought-using-loops-was-cheating";
+            pass("This is a subtest");
 
-        $mech->get($cookie_url);
-        is( $mech->status(), 200, "show.cgi OK", );
-        my $link = $mech->find_link( text_regex => qr#Electronic dance#ms );
-        ok( $link, "success" );
+            $mech->get($cookie_url);
+            is( $mech->status(), 200, "show.cgi OK", );
+            my $link = $mech->find_link( text_regex => qr#Electronic dance#ms );
+            ok( $link, "success" );
+        }
+        {
+            my $cookie_url = $showcgi_url . "?id=foo[]";
 
+            $mech->autocheck(0);
+            $mech->get($cookie_url);
+            is( $mech->status(), 404, "show.cgi service error", );
+            if (0)
+            {
+                my $link =
+                    $mech->find_link( text_regex => qr#Electronic dance#ms );
+                ok( $link, "success" );
+            }
+            $mech->autocheck(1);
+        }
         return;
     };
 

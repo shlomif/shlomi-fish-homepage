@@ -2,50 +2,59 @@
 [% base_path %]lecture/Perl/Lightning/[% url %]/
 [% END %]
 
-[% BLOCK lightning_talks_list %]
+[%- BLOCK lightning_talks_list -%]
 
 <ul>
+
 <li>
 <p>
 <a href="[% base_path %]lecture/mini/mdda/">Meta-Data Database Access</a>
 </p>
 </li>
+
 <li>
 <p>
 <a href="[% base_path %]lecture/Perl/Graham-Function/">Presentation about Finding the
 Graham Function</a>
 </p>
 </li>
+
 <li>
 <p>
 <a href="[% base_path %]lecture/Perl/Template-Toolkit/">Template Toolkit - a Powerful
 Templating System for Perl</a>
 </p>
 </li>
+
 <li>
 <p>
 <a href="[% PROCESS t2_lect url = "Opt-Multi-Task-in-PDL" %]">Optimising Multitasking in
 PDL</a>
 </p>
 </li>
+
 <li>
 <p>
 <a href="[% PROCESS t2_lect url = "Test-Run" %]">Test::Run - a New and Improved Test Harness</a>
 </p>
 </li>
+
 <li>
 <p>
-<a href="[% PROCESS t2_lect url = "Too-Many-Ways" %]">There are too Many Ways to Do it</a>
+<a href="[% PROCESS t2_lect url = "Too-Many-Ways" %]">“There are too Many Ways to Do it”</a> - a certain text-processing task, and some of the many Perl implementations of it.
 </p>
 </li>
+
 <li>
 <p>
 <a href="[% PROCESS t2_lect url = "Mojolicious" %]">Mojolicious and Mojolicious::Lite</a> -
 a presentation about the web-development frameworks.
 </p>
 </li>
+
 </ul>
-[% END %]
+
+[%- END -%]
 
 [% BLOCK w2l_talks_list %]
 <ul>

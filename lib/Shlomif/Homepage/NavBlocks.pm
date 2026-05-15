@@ -106,7 +106,8 @@ sub _gen__queen_padme_tales__tr
     my $regex = $args->{path_regex};
 
     return _tr(
-        title => "Queen Padmé Tales",
+        title =>
+"Queen Padmé Tales ( Star Wars / Star Trek / real Life / etc. crossover )",
         items => [
             _fp( path => "humour/Queen-Padme-Tales/", ),
             (

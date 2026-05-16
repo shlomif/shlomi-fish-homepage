@@ -69,6 +69,10 @@ footer,
         li {
             a {
                 color: blue;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
             // background: black;
             background: white;
@@ -81,6 +85,10 @@ footer,
             margin-top: 0.5em;
             padding: $r;
             @include margin-lr(5px);
+
+            &:has(a:hover) {
+                background: linear-gradient(green, 20%, white);
+            }
         }
     }
 }

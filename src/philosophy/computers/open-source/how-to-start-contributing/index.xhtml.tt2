@@ -1,13 +1,16 @@
 [%- SET title = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
-[%- SET desc = "How Can I Start Contributing to Free and Open Source Software (FOSS)" -%]
 
 [%- WRAPPER wrap_html -%]
 
 [% PROCESS "Inc/start-foss-image.tt2" %]
 
-[% INCLUDE start_foss_image %]
+[%- INCLUDE start_foss_image -%]
 
+[%- WRAPPER note -%]
+
+<header>
 <h2 id="note">Note</h2>
+</header>
 
 <p>
 The document
@@ -20,7 +23,9 @@ in progress. Nevertheless, you may wish to read this page as well, or
 beforehand, because it’s not very long.
 </p>
 
-<h2 id="intro">Introduction</h2>
+[%- END -%]
+
+[%- WRAPPER h2_section id = "intro" title = "Introduction" -%]
 
 <p>
 We’re often getting asked “I’d like to contribute to free and
@@ -91,6 +96,8 @@ able to consult in case you encounter difficulties.
 and you should be able to find others who will be willing to guide you.
 </p>
 
-[% INCLUDE start_foss_image_attribution %]
+[%- END -%]
 
-[% END %]
+[%- INCLUDE start_foss_image_attribution -%]
+
+[%- END -%]

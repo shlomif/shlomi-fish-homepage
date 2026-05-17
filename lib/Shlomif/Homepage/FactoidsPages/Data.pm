@@ -846,6 +846,12 @@ Log.
 </li>
 
 <li>
+<p>
+<a href="[% base_path %]meta/FAQ/why_not_mswindows.xhtml">Shlomi Fish’s Frequently Asked Questions (FAQ) List - “Why do you try to avoid using Microsoft Windows as a desktop operating system, and recommend against that?”</a>
+</p>
+</li>
+
+<li>
 
 <p>
 <a href="[% base_path %]philosophy/culture/case-for-commercial-fan-fiction/#starved_of_employees">“Businesses Being Starved of Competent Employees”</a>:

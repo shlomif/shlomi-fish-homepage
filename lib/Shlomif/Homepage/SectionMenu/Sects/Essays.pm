@@ -304,11 +304,11 @@ my $_section_navmenu_tree_contents = {
                             ],
                         },
                         {
-                            text => "GPL, BSD and Suckerism",
+                            text => "GPL, BSD, and Suckerism",
                             url  =>
 "philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                             title =>
-                                "The GPL, The BSD Licence and Being a Sucker",
+                                "The GPL, The BSD Licence, and Being a Sucker",
                         },
                         {
                             text => "The Linus Bus Factor",

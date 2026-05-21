@@ -2,7 +2,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "text" title = "The Text" %]
+[%- WRAPPER h2_section id = "text" title = "The Text" -%]
 
 <p>
 At about year 2000, I placed <a href="[% base_path
@@ -21,12 +21,15 @@ wrote it</q>.
 </p>
 
 <p>
-She admitted that she had neither watched <i>Friends</i> nor read
-the book <i>The Fountainhead</i>. Later on, she went to read many of
-Ayn Rand’s books, and admitted she read my story “The Enemy” several times
-looking for hidden meanings.
+She admitted that she had neither watched <i>Friends</i> nor read the book
+<i>The Fountainhead</i>. Later on, she went to read many of Ayn Rand’s books,
+and admitted she read my story <a href="[% base_path %]humour/TheEnemy/">“The
+Enemy and How I Helped to Fight it”</a> several times, looking for hidden
+meanings. I wrote the Enemy before “The One with the Fountainhead”, but given
+it was mostly original, I had some hopes of capitalising from it, and so would
+share it on my website later.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

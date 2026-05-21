@@ -1,15 +1,14 @@
 [%- SET title = "The Road to Heaven is Paved with Bad Intentions" -%]
 [%- SET desc = "The Story “The Road to Heaven is Paved with Bad Intentions” - a proposed sequel to “The Enemy and How I Helped to Fight it”. The ex-Member of the Organisation returns back in time in order to prevent World War II." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
-This is an abandoned and inactive sequel to <a href="../TheEnemy/">The Enemy and How I Helped
+This is an abandoned and shelved sequel to <a href="../TheEnemy/">The Enemy and How I Helped
 to Fight it</a>. Read the abstract to find more.
 </p>
 
-[% WRAPPER h2_section id="abstract" title="Abstract" %]
+[%- WRAPPER h2_section id = "abstract" title = "Abstract" -%]
 
 <ul>
 
@@ -19,6 +18,6 @@ to Fight it</a>. Read the abstract to find more.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

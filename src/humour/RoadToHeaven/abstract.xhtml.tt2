@@ -14,21 +14,10 @@
 [% IF shlomif_lang == "en"%]<li><p>[%content%]</p></li>[% END %]
 [% END %]
 
-[% BLOCK en_he_tabs %]
-
-[% SET en_id="${id_base}_en" %]
-[% SET he_id="${id_base}_he" %]
-
-<div class="jqueryui_tabs">
-
-<ul>
-<li><a href="#[% en_id %]">English</a></li>
-<li><a href="#[% he_id %]">Hebrew (עברית)</a></li>
-</ul>
-
-[% FOREACH shlomif_lang IN ["en", "he"] %]
+[% BLOCK road2heaven__en_he_tabs_lang_process %]
 
 [% SET multi_shlomif_lang = "${shlomif_lang}" %]
+
 [% WRAPPER en %]
 
 <div id="[% en_id %]" class="tab">
@@ -246,6 +235,24 @@ suggest Mr. Hitler to think even more forward than that. etc. etc. END.
 [% common_suffix %]
 
 </div>
+
+[% END  # road2heaven__en_he_tabs_lang_process %]
+
+[% BLOCK en_he_tabs %]
+
+[% SET en_id="${id_base}_en" %]
+[% SET he_id="${id_base}_he" %]
+
+<div class="jqueryui_tabs">
+
+<ul>
+<li><a href="#[% en_id %]">English</a></li>
+<li><a href="#[% he_id %]">Hebrew (עברית)</a></li>
+</ul>
+
+[% FOREACH shlomif_lang IN ["en", "he"] %]
+
+[%- INCLUDE road2heaven__en_he_tabs_lang_process shlomif_lang = "${shlomif_lang}" -%]
 
 [% END # en_he_tabs %]
 

@@ -7,11 +7,11 @@
 [% PROCESS "multi-lang.tt2" %]
 
 [% BLOCK li_he %]
-[% IF shlomif_lang == "he"%]<li>[%content%]</li>[% END %]
+[% IF shlomif_lang == "he"%]<li><p>[%content%]</p></li>[% END %]
 [% END %]
 
 [% BLOCK li_en %]
-[% IF shlomif_lang == "en"%]<li>[%content%]</li>[% END %]
+[% IF shlomif_lang == "en"%]<li><p>[%content%]</p></li>[% END %]
 [% END %]
 
 [% BLOCK en_he_tabs %]

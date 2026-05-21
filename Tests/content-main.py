@@ -211,7 +211,7 @@ class MyTests(html_unit_test.TestCase):
     def test_road2heaven(self):
         input_fn = './dest/post-incs/t2/humour/RoadToHeaven/abstract.xhtml'
         self.doc(input_fn).has_one(
-            ".//li[contains(" +
+            ".//li/p[contains(" +
             "text(),'החבר לשעבר מחליט שקבוצה מייצגת של חברים לשעבר')]"
         )
 

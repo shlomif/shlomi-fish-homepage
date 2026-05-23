@@ -280,7 +280,7 @@ and there is also <a href="https://en.wikipedia.org/wiki/MathJax">MathJax</a>.
 [% WRAPPER h4_section id = "typst" title = "typst" %]
 
 <p>
-<a href="https://github.com/typst/typst">typst</a> is a <q>A new markup-based typesetting system that is powerful and easy to learn.</q> It is also FOSS (Apache-2.0), and received over 30,000 GitHub stars. However, I have no first-hand experience with it.
+<a href="https://github.com/typst/typst">typst</a> is described as a <q>A new markup-based typesetting system that is powerful and easy to learn.</q> It is also FOSS (Apache-2.0), and received over 30,000 GitHub stars. However, I have no first-hand experience with it.
 </p>
 
 [% END %]
@@ -299,11 +299,15 @@ However, part of the problem with them
 is that their conversion to output formats tends to be non-semantic if not completely
 <a href="[% base_path %]philosophy/computers/web/validate-your-html/">non-valid</a>. Moreover,
 MS Word, has a huge problem with maintaining compatibility of documents
-created with newer or older versions. As I
+created with newer or older versions of itself. As I
 <a href="https://www.reddit.com/r/linux/comments/9lwqc4/goodbye_dual_boot_system/e7dwqct/">noted
 in a Reddit comment</a>, word processors are the kind of programs that are created by smart
 people for people who are less smart than them, because smart programmers can
 use text editors and markup languages. I have written a <a href="[% base_path %]philosophy/philosophy/putting-cards-on-the-table-2019-2020/indiv-nodes/selling-for-stupider-ppl.xhtml">mini-essay about “Selling for people stupider than you”</a>.
+</p>
+
+<p>
+( The same logic applies to WYSIWYG rich text editing components. )
 </p>
 
 <p>
@@ -369,8 +373,8 @@ line tool to translate DocBook/XML to its end formats.
 <li>
 <p>
 <a href="https://weasyprint.org/">weasyprint</a> - a solution for converting
-HTML pages to PDFs, which does not require a headless browser engine, and
-implements a subset of CSS.
+HTML/XHTML5 pages to PDFs, which does not require a headless browser engine,
+and implements a subset of CSS.
 </p>
 </li>
 

@@ -231,7 +231,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             sockets, graphics primitives, or Graphical User Interfaces (GUIs).
             Moreover, the core language is limited and most
             practical code tends to become very verbose in it. For example,
-            whereas in Perl one would write <literal>$myarray[$i]++</literal>
+            whereas in Perl one would write <literal>++$myarray[$i]</literal>
             to increment an array element by one, in Scheme it would be:
             <literal>(vector-set! myarray i (1+ (vector-ref myarray
                 i)))</literal>.
@@ -293,7 +293,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         <para>
             All this work to do something that in high level, garbage
             collected, languages is as simple as
-            <literal>$result = $object1 OP $object2;</literal>. From my
+            <literal>my $result = $object1 OP $object2;</literal>. From my
             experience with Technion students, they often get so bogged up
             in the technicalities of working with C instead of getting quick,
             dirty, and useful, code running.
@@ -304,7 +304,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             a lot of useful code quickly, and not slow you down with many
             low-level constraints. Beginning programmers have a hard enough
             time learning how to translate their thoughts and intentions into
-            working code, and solving bugs and the last thing they need is to
+            working code, and solving bugs. The last thing they need is to
             deal with too many idiosyncrasies of the language only because it
             is too low-level.
         </para>
@@ -551,7 +551,7 @@ right for the job.
 
         <para>
         Some people believe that the first language a UNIX user should learn
-        is a good shell (such as
+        s a good shell (such as
         <link xlink:href="http://www.gnu.org/software/bash/">GNU Bash</link> or
         <link xlink:href="http://www.zsh.org/">zsh</link>). However, Shell has some
         issues. The first is that the mentality of the UNIX Shell
@@ -631,7 +631,7 @@ right for the job.
             ways.
         </para>
         <para>
-            Different people I talked to, agreed with me that
+            ifferent people I talked to, agreed with me that
             “You cannot do anything with Scheme”. Compare it to languages such
             as C and C++,
             Perl/Python/Tcl/Ruby/PHP, Java/C#, etc. that feel very

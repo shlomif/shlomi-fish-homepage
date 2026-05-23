@@ -29,6 +29,7 @@ footer,
     }
 
     padding: 1em;
+    @include padding-vert(2em);
 
     @include horizontal_navbar_ul;
 

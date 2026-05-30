@@ -58,8 +58,6 @@ EOF
 
     # die "dangerous ID";
 }
-my $HEADER = "Content-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
-print $HEADER;
 my $body = _utf8_slurp(
     (
         ( $mode eq 'raw' )
@@ -68,6 +66,8 @@ my $body = _utf8_slurp(
     )
     . "/${id}.xhtml"
 );
+my $HEADER = "Content-Type: application/xhtml+xml; charset=utf-8\r\n\r\n";
+print $HEADER;
 binmode STDOUT, ':encoding(utf8)';
 
 print $body;
@@ -75,9 +75,17 @@ print $body;
 sub _utf8_slurp
 {
     my $filename = shift;
+    my $in;
+    if ( not( open $in, '<:encoding(utf8)', $filename ) )
+    {
+        print
+"Status: 404\r\nContent-Type: application/xhtml+xml; charset=utf-8\r\n\r\n",
+            <<'EOF';
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>Unknown ID</title><meta charset="utf-8"/></head><body><h1>Unknown / non existing ID</h1></body></html>
+EOF
 
-    open my $in, '<:encoding(utf8)', $filename
-        or die "Cannot open '$filename' for slurping - $!";
+        exit(0);
+    }
 
     local $/;
     my $contents = <$in>;

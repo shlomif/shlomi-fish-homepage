@@ -19,7 +19,7 @@ sub run
     my $base_url = $self->base_url();
 
     subtest 'check show.cgi' => sub {
-        plan tests => 4;
+        plan tests => 5;
 
         my $showcgi_url = $base_url . "humour/fortunes/show.cgi";
         my $mech        = WWW::Mechanize->new();
@@ -45,6 +45,14 @@ sub run
                     $mech->find_link( text_regex => qr#Electronic dance#ms );
                 ok( $link, "success" );
             }
+            $mech->autocheck(1);
+        }
+        {
+            my $cookie_url = $showcgi_url . "?id=thisiddoestnotexistttt";
+
+            $mech->autocheck(0);
+            $mech->get($cookie_url);
+            is( $mech->status(), 404, "show.cgi service error", );
             $mech->autocheck(1);
         }
         return;

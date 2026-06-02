@@ -7,6 +7,7 @@ our $VERSION = '0.0.1';
 use Moo;
 
 use Test::More;
+use Test::Differences qw/ eq_or_diff /;
 
 use WWW::Mechanize ();
 
@@ -19,7 +20,7 @@ sub run
     my $base_url = $self->base_url();
 
     subtest 'check show.cgi' => sub {
-        plan tests => 5;
+        plan tests => 7;
 
         my $showcgi_url = $base_url . "humour/fortunes/show.cgi";
         my $mech        = WWW::Mechanize->new();
@@ -53,6 +54,20 @@ sub run
             $mech->autocheck(0);
             $mech->get($cookie_url);
             is( $mech->status(), 404, "show.cgi service error", );
+            $mech->autocheck(1);
+        }
+        {
+            my $cookie_url = $showcgi_url . "?mode=random";
+
+            $mech->autocheck(0);
+            $mech->get($cookie_url);
+            is( $mech->status(), 200, "show.cgi random mode redirect status", );
+            my $id_re = qr#[A-Za-z][A-Za-z0-9_\-]*#ms;
+            like(
+                $mech->response()->request()->uri(),
+                qr#/show\.cgi\?id=${id_re}\z#ms,
+                "show.cgi random mode",
+            );
             $mech->autocheck(1);
         }
         return;

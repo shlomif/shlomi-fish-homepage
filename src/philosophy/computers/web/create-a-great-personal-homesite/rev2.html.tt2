@@ -303,7 +303,7 @@ hurdle and actually set up a web-site.
 
 <p>
 Now for the second aspect of a great site: a good presentation. This involves
-a very large number of different elements. The list below aims to be as
+a large number of different elements. The list below aims to be as
 encompassing as possible, but it is possible some points are missing or some
 will need to be added in the future.
 </p>
@@ -348,9 +348,9 @@ deploying your own CMS on a normal hosting account.
 [% WRAPPER h5_section id = "pres_navigation" title = "Navigation Aids" %]
 
 <p>
-In my previous article
+In my previous article,
 <a href="http://www.perl.com/pub/a/2005/07/07/navwidgets.html">“Building
-Navigation Menus”</a> I gave a list of common patterns in web-site
+Navigation Menus”</a>, I gave a list of common patterns in web-site
 navigation. They appear under the heading
 “Common Patterns in Navigation Menus and Site Flow” in the article. Here is a list of them without too much explanation:
 </p>
@@ -648,6 +648,7 @@ aspects of them:
 </p>
 
 <ul>
+
 <li>
 <p>
 <b>Accessibility for People with Disabilities</b> - not everyone can view
@@ -658,6 +659,7 @@ semantic markup that accommodates for all of them, and enables viewing the
 web-site in any medium.
 </p>
 </li>
+
 <li>
 <p>
 <b>Portability to Different Browsers and Platforms</b> -
@@ -676,6 +678,7 @@ A site should be compatible with as many browsers as possible. This should be
 done by adhering to web standards, and using portable markup.
 </p>
 </li>
+
 <li>
 <p>
 <b>User Interface Usability</b> - a web site should have a familiar
@@ -683,6 +686,7 @@ and intuitive user interface, which people would be able to know their
 way around very easily.
 </p>
 </li>
+
 </ul>
 
 [% END %]
@@ -724,8 +728,9 @@ and similar services from other online search engines.
 
 <a href="http://www.flickr.com/photos/shlomif/2691616941/"
 title="Photo of a Nerium Oleander by Shlomi Fish. Public Domain"><img
-src="harduf-by-shlomif-1-300w.jpg" alt="Nerium Oleander Flowers in Tel Aviv"
+alt="Nerium Oleander Flowers in Tel Aviv"
 class="rfloaty"
+src="harduf-by-shlomif-1-300w.jpg"
 /></a>
 
 <p>
@@ -780,7 +785,7 @@ One thing to note is that if a page on your site is featured highly on
 one of these sites, then you are likely to receive an increase in traffic.
 You should make sure that your site can handle such a load so it won’t suffer
 from the so-called <a
-href="http://en.wikipedia.org/wiki/Slashdot_effect">Slasdhot effect</a>.
+href="http://en.wikipedia.org/wiki/Slashdot_effect">Slashdot effect</a>.
 </p>
 
 [% WRAPPER h5_section id = "publicity_SEO" title = "Search Engine Optimisation" %]
@@ -881,6 +886,9 @@ further.
 <a href="http://www.clearsilver.net/">Clearsilver</a> is a cross-language
 templating system, that can be used from several common languages, and combine
 code from any of them.
+</p>
+<p>
+I maintain <a href="[% base_path %]open-source/resources/text-processing-tools/">a list of other text-processing tools</a>.
 </p>
 </li>
 
@@ -1128,7 +1136,9 @@ http://www.paulgraham.com/[% u %].html
 [%- END -%]
 
 <p>
-<a href="http://www.paulgraham.com/">Paul Graham’s site</a> is beautifully designed, and contains a lot of interesting
+<a href="http://www.paulgraham.com/">Paul Graham’s site</a> used to be
+beautifully designed, but its style did not age well, and was not updated.
+It contains a lot of interesting
 essays and articles. It has a navigation menu to the left, made out of images,
 but it does not expand or change from page to page. What’s worse is that all
 the pages are present on the same top directory - [% INCLUDE pg_link1 u="arc" %],
@@ -1203,7 +1213,7 @@ site map</a> which is a good thing.
 </p>
 
 <p>
-The pages in the site are arranged hierarchically. So for example
+The pages in the site are arranged hierarchically. So, for example,
 <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">the essay
 “The Cathedral and the Bazaar”</a> is below
 <a href="http://www.catb.org/~esr/writings/">the Writings directory</a>. This
@@ -1254,14 +1264,14 @@ in order to make the main navigation menu less crowded.
 
 <p>
 The layout of the site is mostly hierarchical, but often there are
-pages or categories outside their containing categories (for
+pages or categories outside their containing categories. For
 example <a href="http://www.shlomifish.org/MathVentures/">my MathVentures
 section is at /MathVentures/</a> and is contained in
-<a href="http://www.shlomifish.org.org/puzzles/"> /puzzles/ </a>, due to
-the fact pages were originally placed at certain places, and I’d rather not
-move them, so they won’t break in the results’ pages of search engines.
-The breadcrumbs trail and the section navigation menus compensate for part
-of that, but it’s still a problem.
+<a href="http://www.shlomifish.org.org/puzzles/"> /puzzles/ </a>. This
+is due to the fact pages were originally placed at certain places, and I’d
+rather not move them, so they won’t break in the results’ pages of search
+engines. The breadcrumbs trail and the section navigation menus compensate for
+part of that, but it’s still a problem.
 </p>
 
 [% END %]
@@ -1274,7 +1284,7 @@ of that, but it’s still a problem.
 Having a good web-site is a lot of hard work, but it’s also very fun and
 rewarding. It is my hope that this article explained how to get on your
 way in creating a wonderful web-site. Alternatively, if you already have a
-home site, then this essay may have given you many ideas on how to perfect it.
+home site, then this essay may have given you some ideas on how to improve it.
 </p>
 
 <p>

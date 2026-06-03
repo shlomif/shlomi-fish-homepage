@@ -1,5 +1,6 @@
 @import "common-body";
 @import "mixins";
+@import "prev_and_next_links";
 
 a:hover {
     background-color: palegreen;
@@ -127,6 +128,14 @@ h1 {
 
 body {
     padding: 3vw;
+}
+
+a.next {
+    @include next_link;
+}
+
+a.prev {
+    @include previous_link;
 }
 
 @include styled_blockquote;

@@ -1,0 +1,19 @@
+@mixin next_link {
+    &:after {
+        content: " 🠪  ]";
+    }
+    &:before {
+        content: "[ ";
+    }
+    padding: 0.3em;
+}
+
+@mixin previous_link {
+    &:after {
+        content: " ]";
+    }
+    &:before {
+        content: "[ 🠨 ";
+    }
+    padding: 0.3em;
+}

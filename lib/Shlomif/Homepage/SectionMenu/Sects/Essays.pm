@@ -463,14 +463,16 @@ my $_section_navmenu_tree_contents = {
                     title => "Web-related Articles",
                     subs  => [
                         {
-                            text => "Create a Homesite",
-                            url  =>
-"philosophy/computers/web/create-a-great-personal-homesite/",
+                            text  => "Create a Homesite",
+                            skip  => 1,
                             title => "Create a Great Personal Homesite",
-                            subs  => [
+                            url   =>
+"philosophy/computers/web/create-a-great-personal-homesite/",
+                            subs => [
                                 {
-                                    text => "Revision 2",
-                                    url  =>
+                                    text  => "Create a Homesite (Revision 2)",
+                                    title => "Create a Great Personal Homesite",
+                                    url   =>
 "philosophy/computers/web/create-a-great-personal-homesite/rev2.html",
                                 },
                             ],

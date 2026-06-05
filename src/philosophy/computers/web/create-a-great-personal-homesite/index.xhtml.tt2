@@ -4,7 +4,7 @@
 
 [%- WRAPPER wrap_html -%]
 
-<div class="limit_imgs_width lim_width wrap-me">
+<div class="fancy_sects limit_imgs_width lim_width wrap-me">
 
 <h2 id="about">About this Document</h2>
 
@@ -13,9 +13,11 @@ This document explains why and how to create a great personal homesite. The
 text can be found below.
 </p>
 
-<div class="note">
+<section class="note">
 
+<header>
 <h2 id="note_to_readers">Note to Readers</h2>
+</header>
 
 <p>
 <b>Date:</b> 28-Jun-2006
@@ -109,7 +111,7 @@ now
 moderately famous</a> and am very far from being a millionaire.
 </p>
 
-</div>
+</section>
 
 [%- default_toc -%]
 

@@ -247,7 +247,7 @@ $ss_margin: 2em;
 @mixin styled_blockquote {
     blockquote {
         border: grey thin solid;
-        padding: 0.5em;
+        padding: 1em;
         // font-style: italic;
         margin-left: 0.5em;
         overflow: auto;

@@ -38,13 +38,13 @@ test suite when ran using a configuration that breaks it.
 </p>
 
 <p>
-After some break, I
-<a href="https://subversion.apache.org/issues/show_bug.cgi?id=1846">worked
-on the get_locations() patch</a> which enabled tracing the past locations
-of nodes in the Subversion repository. (which is useful for performing some
-operations). This patch took a lot of research, a lot work, and I received a
-lot of help from different people. Eventually, a reworked version of the
-Patch, was applied by Peter N. Lundblad.
+After some break, I <a
+href="https://subversion.apache.org/issues/show_bug.cgi?id=1846">worked on the
+get_locations() patch</a> which enabled tracing the past locations of nodes in
+the Subversion repository. (which is useful for performing some operations).
+This patch took a lot of research, a lot of work, and I received a lot of help
+from different people. Eventually, a reworked version of the Patch, was applied
+by Peter N. Lundblad.
 </p>
 
 [% END %]
@@ -54,7 +54,7 @@ Patch, was applied by Peter N. Lundblad.
 <p>
 I contributed some patches to
 <a href="http://www.perldoc.com/perl5.8.4/pod.html">the perl 5 core
-documentation</a> to make it clearer and easier to understand. Later on, I
+documentation</a> - to make it clearer and easier to understand. Later on, I
 improved the default perl debugger (what gets invoked with
 “perl -d myprog.pl”) by adding new features, adding new automated test code,
 and by refactoring and clean ups.
@@ -242,6 +242,7 @@ version 0.6.
 [% END %]
 
 [% WRAPPER h2_section href = "http://loggedfs.sourceforge.net/" id = "loggedfs" title = "LoggedFS - Filesystem Monitoring with Fuse" %]
+
 <p>
 I fixed some incompatibilities that made loggedfs unusable to wrap
 the KDE configuration directory, and ported it to the new version of FUSE. My
@@ -287,7 +288,7 @@ FAQ answer</a> for the reasons.
 </p>
 
 <p>
-I have been co-maintaining some Fedora packages, as well as doing quality-assurance work, and trying to help on freenode.
+I have been co-maintaining some Fedora packages, as well as doing quality-assurance work, and trying to help fellow users on freenode.
 </p>
 
 [% END %]

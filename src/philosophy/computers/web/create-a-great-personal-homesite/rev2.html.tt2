@@ -466,7 +466,7 @@ from the main page layout somehow.
 
 <p>
 I admit that I am not an expert in this area, and some of my designs are
-bad in this regard. Someone once pointed me to several problems with one
+lacking in this regard. Someone once pointed me to several problems with one
 of my designs, which he and I thought were relatively OK. I must say, what
 he said simply made a lot of sense, and was perfectly obvious, yet I thought
 the design was OK beforehand.
@@ -532,9 +532,9 @@ generate your pages from templates, either off-line or on the fly.
 <li>
 <p>
 Most JavaScript is incredibly annoying and often useless. It also many times
-makes the site much less portable across different browsers and accessible.
-It is often added either because people want to demonstrate their JavaScript
-skills, or because broken site-generation programs insert it there.
+makes the site much less portable across different browsers and less
+accessible. It is often added either because people want to demonstrate their
+JavaScript skills, or because broken site-generation programs insert it there.
 </p>
 </li>
 <li>
@@ -641,7 +641,7 @@ thread that I started on the <i>Joel on Software</i> forum</a> about
 
 [% END %]
 
-[% WRAPPER h5_section id = "pres_usability" title = "Usability, Accessibility and Portability" %]
+[% WRAPPER h5_section id = "pres_usability" title = "Usability, Accessibility, and Portability" %]
 
 <p>
 Usability, accessibility, and portability, are related topics that are all
@@ -864,7 +864,7 @@ also an esteemed resource.
 
 <li id="how_to__web_site_gen">
 <p>
-<b>Learn to Use a Web Site Generation System</b> - complex and <i>good</i>
+<b>Learn to Use a Web Site Generation System</b> - complex and good
 sites are impossible to maintain by editing a large number of separate HTML
 pages. For example, you want all the page to have a navigation menu and a
 common layout and you’d better maintain it all in one place without
@@ -1109,11 +1109,12 @@ style="margin: 1em;"
 </div>
 
 <p>
-Now you should remember that your homepage is a process. Make sure you add more
-content as time goes by, <a href="http://www.refactoring.com/">refactor</a>
-it, adapt it for more modern styles, fix problems, and in general give it some
-love. The more you care for your home site, the more popular it will become,
-the more visitors it will attract and the more fun you’ll have.
+Now you should remember that maintaining your homepage is an ongoing process.
+Make sure you add more content as time goes by, <a
+href="http://www.refactoring.com/">refactor</a> it, adapt it for more modern
+styles, fix problems, and in general give it some love. The more you care for
+your home site, the more popular it will become, the more visitors it will
+attract, and the more fun you’ll have.
 </p>
 
 [% END %]

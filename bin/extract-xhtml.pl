@@ -24,8 +24,8 @@ my $filename = shift(@ARGV)
 my $xml       = XML::LibXML->new;
 my $root_node = (
     ( $filename eq "-" )
-    ? $xml->parse_file($filename)
-    : $xml->parse_fh(*STDIN)
+    ? $xml->parse_fh(*STDIN)
+    : $xml->parse_file($filename)
 );
 my $xpc = XML::LibXML::XPathContext->new($root_node);
 $xpc->registerNs( "xhtml", "http://www.w3.org/1999/xhtml" );

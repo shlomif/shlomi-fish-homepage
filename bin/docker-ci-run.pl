@@ -125,7 +125,7 @@ EOF
             ],
         }
     ),
-    'fedora:44' => Docker::CLI::Wrapper::Container::Config->new(
+    'fedora:45' => Docker::CLI::Wrapper::Container::Config->new(
         {
             container                   => "shlomi_fish_homesite_fedora",
             install_bitvec              => "false",
@@ -154,7 +154,7 @@ EOF
                     libxslt
                     libxslt-devel
                     ncurses-devel
-                    pcre-devel
+                    pcre2-devel
                     perl-Bit-Vector
                     perl-DBD-SQLite
                     perl-Inline-Python

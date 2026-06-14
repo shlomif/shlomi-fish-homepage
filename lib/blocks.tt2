@@ -454,8 +454,11 @@ in general.
 
 <p class="sep">
 It is easy to reach Shlomi using a large number of
-<a href="[% base_path %]me/contact-me/">online means</a>, including
+<a href="[% base_path %]me/contact-me/">online means</a>.
+[%- IF 0 -%]
+, including
 <a href="mailto:shlomif@shlomifish.org">E-mail</a>.
+[%- END -%]
 </p>
 
 </div>

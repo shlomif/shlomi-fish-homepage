@@ -39,7 +39,6 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             </para>
         </legalnotice>
 
-
         <revhistory>
             <revision>
                 <revnumber>1675</revnumber>
@@ -136,8 +135,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </revhistory>
     </info>
 
-<section xml:id="introduction"><info><title>Introduction</title></info>
+<section xml:id="introduction">
 
+<info><title>Introduction</title></info>
 
     <para>
         Why is high quality in software important? Low-quality software
@@ -170,8 +170,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         In this essay we’ll look at what quality metrics apply to software.
     </para>
 
-    <section xml:id="motivation"><info><title>Motivation</title></info>
+<section xml:id="motivation">
 
+<info>
+<title>Motivation</title>
+</info>
 
         <para>
             How did it occur to me to ponder this question? I am active in the
@@ -186,7 +189,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             a lowercase “c” and an uppercase “S”), an open-source solver,
             which has proven to be quite popular. However, the mailing list
             was not restricted to discussing it exclusively, and was joined
-            by many other Freecell solving experts, researchers and enthusiasts.
+            by many other Freecell solving experts, researchers,
+            and enthusiasts.
         </para>
         <para>
             Recently, Gary Campbell wrote
@@ -200,7 +204,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 solutions. No human wants to follow the several hundred steps that
                 usually result in order to get at what’s really required to solve a
                 given layout. If someone wants a solution that can be understood,
-                they want one that is under 100 steps.  This is a major
+                they want one that is under 100 steps. This is a major
                 contribution and it should be stated. There are a lot of
                 <emphasis role="bold">“toy”</emphasis>
                 solvers and only a very few of <emphasis role="bold">“industrial strength.”</emphasis>
@@ -217,9 +221,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             try to define high quality here, and try to show when a program
             is high quality.
         </para>
-    </section>
-    <section xml:id="organisation"><info><title>Organisation of this Document</title></info>
 
+</section>
+
+<section xml:id="organisation">
+
+<info><title>Organisation of this Document</title></info>
 
         <para>
             I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
@@ -244,9 +251,14 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             open-source and pseudo-open-source software. However, a lot of
             what I say is more universal.
         </para>
-    </section>
+
 </section>
-<section xml:id="parameters-of-quality"><info><title>Parameters of Quality</title></info>
+
+</section>
+
+<section xml:id="parameters-of-quality">
+
+<info><title>Parameters of Quality</title></info>
 
     <para>
         This section will cover the parameters that make software high
@@ -254,7 +266,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         include such non-essential things as having good, modular code
         <footnote xml:id="good_code" label="having_good_code">
             <para>
-                What? Shouldn’t high quality software have a good codebase.
+                What? Shouldn’t high quality software have a good codebase?
                 Surprisingly no. What would you prefer: having a very modular
                 codebase that does something pretty useless like outputting
                 the string “Hello World” <emphasis role="bold">or</emphasis>
@@ -275,7 +287,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         competition may do better in this respect.
     </para>
     <para>
-        One note that is in order is that these are <emphasis role="bold">many parameters in a generic
+        One note that is in order, is that these are <emphasis role="bold">many parameters in a generic
             “weight function”</emphasis>, and not a list of requirements which
         must all be satisfied. <footnote xml:id="parameters-not-foss" label="Licence">
             <para>
@@ -285,8 +297,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     “Free and Open Source Software”</link> or even binary-only
                 applications are high-quality too. But, the use of such
                 software is still more limited than an open-source one, so it
-                would be of lesser quality than an identical software that is
-                open-source.
+                would be of lesser quality than an identical software
+                application that is open-source.
             </para>
             <para>
                 Similarly, libraries or programs that are distributed
@@ -299,7 +311,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             </para>
         </footnote>
     </para>
-    <section xml:id="software_is_available"><info><title>The Program is Available for Downloading or Buying</title></info>
+
+<section xml:id="software_is_available">
+
+<info>
+<title>The Program is Available for Downloading or Buying</title>
+</info>
 
         <para>
             That may seem like a silly thing to say, but you’ll be surprised
@@ -345,24 +362,32 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             they were very limited if not downright hideous, but now they are
             often among the best of breed.
         </para>
-    </section>
-    <section xml:id="version_number_indicated"><info><title>The Version Number is Clearly Indicated</title></info>
+
+</section>
+
+<section xml:id="version_number_indicated">
+
+<info>
+<title>The Version Number is Clearly Indicated</title>
+</info>
 
         <para>
-            Which version of your software are you using? How can you tell?
+            Which version of your software package are you using? How can you tell?
             It’s not unusual to come to a page where the link to the archive
             does not contain a version number, nor is it clearly indicated
             anywhere. What happens if this number was bumped to indicate a
             bug fix. How do you indicate it then?
         </para>
         <para>
-            A good software always indicates its version number in the
+            A good software application always indicates its version number in the
             archive file name, the opening directory file name, has a
             <literal>--version</literal> command-line flag,
             and the version mentioned in the about dialogue if there is
             one.
         </para>
-    </section>
+
+</section>
+
     <section xml:id="source_is_available"><info><title>The Source is Available, Preferably under a Usable
             Licence</title></info>
 

@@ -76,13 +76,13 @@ Website’s sections:
 <a href="[% base_path %]philosophy/" title="Geeky/“amateur” philosophy">Essays and Articles</a>
 </li>
 <li>
-<a href="[% base_path %]open-source/" title="open-source projects, and pages with links and other resources">Software</a>
+<a href="[% base_path %]open-source/" title="Open-source projects, and pages with links and other resources">Software</a>
 </li>
 <li>
 <a href="[% base_path %]lecture/">Presentations and Tutorials</a>
 </li>
 <li>
-<a href="[% base_path %]art/" title="non-professional logos, graphics">Digital Art</a>
+<a href="[% base_path %]art/" title="Non-professional logos, graphics">Digital Art</a>
 </li>
 </ul>
 
@@ -387,7 +387,7 @@ publicly linked to. Please send comments to
 <button id="show_navbar" class="on">Hide NavBar ⬈</button>
 [% IF apply_screenplay_style %][% main_class.addClass("screenplay_style") %][% END %]
 <main[% main_class.as_html() %] id="main">
-[%sect_nav_menu_html%]
+[% sect_nav_menu_html %]
 [%- IF rtl_layout -%]
 <div class="hebrew" xml:lang="he-IL">
 [%- END -%]
@@ -443,8 +443,9 @@ shlomif_load_nav("[% raw_fn_path %]");
 
 <p>
 <a href="[% base_path %]#about_site">Shlomi Fish</a>
-(שלומי פיש), also known as <a href="[% base_path %]me/rindolf/">“Rindolf”</a>,
-is an Israeli humorist, writer, and software geek.
+(שלומי פיש), also known as “shlomif” and <a href="[% base_path
+%]me/rindolf/">“Rindolf”</a>, is an Israeli humorist, writer, and software
+geek.
 </p>
 
 <p>
@@ -475,17 +476,17 @@ Wiki</a></li>
 "The Perl Beginners' Site" class="bless"><img alt="The Perl Beginners' Site" class="bless" src="[% base_path %]images/perl-begin.png"/></a></p>
 
 [%- IF xhtml1 %]
-<p><a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!" class="bless">
-<img class="highlight bless" src="[% base_path %]images/xh11-btn.png" alt="Valid XHTML 1.1!"/></a></p>
+<p><a class="bless" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.1!">
+<img alt="Valid XHTML 1.1!" class="highlight bless" src="[% base_path %]images/xh11-btn.png"/></a></p>
 [%- ELSE -%]
-<p><a href="http://validator.w3.org/check/referer" title=
-"Valid XHTML5!" class="bless"><img class="highlight bless" src=
-"[% base_path %]images/xh11-btn.png" alt="Valid XHTML5!"/></a></p>
+<p><a class="bless" href="http://validator.w3.org/check/referer"
+title="Valid XHTML5!"><img alt="Valid XHTML5!" class="highlight bless"
+src="[% base_path %]images/xh11-btn.png"/></a></p>
 [%- END -%]
 
-<p><a href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
-class="bless"><img class="highlight bless" src="[% base_path %]images/css-btn.png"
-alt="Valid CSS!"/></a></p>
+<p><a class="bless" href="http://jigsaw.w3.org/css-validator/" title="Valid CSS!"
+><img alt="Valid CSS!" class="bless highlight" src="[% base_path %]images/css-btn.png"
+/></a></p>
 
 [%- TRY %]
 [%- INCLUDE page_blog_roll -%]

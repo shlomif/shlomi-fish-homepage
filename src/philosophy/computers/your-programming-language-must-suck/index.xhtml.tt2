@@ -8,7 +8,8 @@
 
 <p>
 This is an essay that enumerates some trade-offs in the design of programming
-languages, and why some people who have to learn or use the language will always be unhappy.
+languages, and why for every choice, there will be some people who have to
+learn or use the language, who will be unhappy.
 </p>
 
 [%- END -%]
@@ -33,19 +34,19 @@ have <a href="http://shlomifishswiki.branchable.com/Indentation_for_Scoping/">so
 </p>
 
 <p>
-Rob Pike and Paul Graham hated <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming (OOP)</a> and so they
-didn't introduce it in their <a
-href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">"Go"</a>
-and <a
-href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">"Arc"</a>
+Rob Pike and Paul Graham hated <a
+href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented
+programming (OOP)</a> and so they didn't introduce it in their <a
+href="http://en.wikipedia.org/wiki/Go_%28programming_language%29">"Go"</a> and
+<a href="http://en.wikipedia.org/wiki/Arc_%28programming_language%29">"Arc"</a>
 languages, well after OOP has become mainstream. And guess what? Many people,
-including me, think that OOP is still a good thing (and no, in my opinion, C++
-did not do OOP very well) and so gave up on Arc quickly and did not look
-closely at Go. Many people who oppose OOP claim that it mashes together many
-separate features, such as typing, capability of being instantiated, and
-polymorphism, which belong as separate features in the language. However, it
-naturally <b>is</b> convenient to have them integrated as one, because they are
-often useful together.
+including me, think that OOP is still a good thing, and so gave up on Arc
+quickly and did not look closely at Go. Note that in my opinion, C++'s approach
+to OOP is worse than those of Perl 5 and Python 3. Many people who oppose OOP
+claim that it mashes together many separate features, such as typing,
+capability of being instantiated, and polymorphism, which belong as separate
+features in the language. However, it naturally <b>is</b> convenient to have
+them integrated as one, because they are often useful together.
 </p>
 
 <p>
@@ -120,6 +121,10 @@ or for some people.
 </p>
 
 <p>
+Moreover, I suggest software developers to be relatively lenient and flexible with the choices of languages and other technologies that the projects they contribute to, have made. ( Re: <a href="https://shlomifish.livejournal.com/1747.html">The Stoic Road to Peace of Mind</a> and the classic <a href="https://www.youtube.com/watch?v=ftxnr28LDXc">Spoon Full of Sugar scene</a> from Disney’s Mary Poppins.)
+</p>
+
+<p>
 Joel on Software <a
 href="http://www.joelonsoftware.com/items/2003/10/15.html">refers</a> to
 the book <a
@@ -188,8 +193,8 @@ list of links and quotations on my wiki, about the more general, non-programming
 
 <li>
 <p>
-<a href="https://github.com/jloughry/BANCStar">BANCStar</a> - "The worst programming environment in the world?" -
-not a joke.
+<a href="https://github.com/jloughry/BANCStar">BANCStar</a> - "The worst
+programming environment in the world?" - not a joke.
 </p>
 </li>
 
@@ -201,8 +206,9 @@ not a joke.
 
 <li>
 <p>
-<a href="https://en.wikipedia.org/wiki/INTERCAL_programming_language">INTERCAL</a> - the original
-esoteric programming language.
+<a
+href="https://en.wikipedia.org/wiki/INTERCAL_programming_language">INTERCAL</a>
+- the original esoteric programming language.
 </p>
 </li>
 

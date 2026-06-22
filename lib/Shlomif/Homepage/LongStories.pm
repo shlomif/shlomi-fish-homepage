@@ -136,7 +136,8 @@ The original <a href="http://humanity.shlomifish.org/">Humanity project</a>, bac
 href="$(ROOT)/me/resumes/Shlomi-Fish-Resume-as-Writer-Entertainer.html">the
 open content / Web 2.0 revolution</a> aiming to be a "bazaar-style"
 collaborative project for writing a screenplay. It failed due to the
-clunky <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> UI, but nowadays collaboratively written screenplays are
+clunky <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>
+user-interface, but nowadays collaboratively written screenplays are
 common - only using <a href="https://en.wikipedia.org/wiki/List_of_wiki_software">wiki
 software</a>
 or <a href="https://better-scm.shlomifish.org/docs/this-site-is-irrelevant/">git DVCS</a>
@@ -724,7 +725,7 @@ Pope to be particularly notable for her, but boy was she wrong!
 
 <p class="pope_died_on_sunday abstract">
 From meeting a guy she really liked, to her best friend almost ruining a date
-with him, to her family coming to visit, to helping organise a “fashion-play”,
+with him, to her family coming to visit, to helping to organise a “fashion-play”,
 to pondering the answer to the question of Life, the Universe, and
 Everything — Rachel’s week proved to be one of the most hectic in her life.
 </p>
@@ -756,7 +757,7 @@ non-player characters, their players, and… the Game Master! (Muahahahahaha).
 </p>
 
 <p>
-Included here are the beginning of the screenplay of the first part and some
+Included here are the beginning of the screenplay of the first part, and some
 disorganised ideas for the continuation.
 </p>
 EOF
@@ -823,7 +824,7 @@ Screenplays for an (incomplete) series of sitcoms about a web-development shop.
 </p>
 
 <p>
-Included here are the beginning of the screenplay of the first part and some
+Included here are the beginning of the screenplay of the first part, and some
 disorganised ideas for the continuation.
 </p>
 EOF
@@ -844,7 +845,10 @@ EOF
 <p>
 A parody of my <a href="\$(ROOT)/humour/Selina-Mandrake/"><i>Selina Mandrake - The Slayer</i></a>,
 which is itself a parody of \$(BtVS); starring Cookie Monster and Emma Watson.
-Shelved for now given I am wilfully ignorant of baking and cooking in general.
+</p>
+
+<p>
+Shelved for now — given I am wilfully ignorant of baking and cooking in general.
 </p>
 EOF
     },

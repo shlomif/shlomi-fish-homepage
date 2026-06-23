@@ -65,7 +65,7 @@ sub run
             my $id_re = qr#[A-Za-z][A-Za-z0-9_\-]*#ms;
             like(
                 $mech->response()->request()->uri(),
-                qr#/show\.cgi\?id=${id_re}\z#ms,
+                qr#\A\Q$showcgi_url\E\?id=${id_re}\z#ms,
                 "show.cgi random mode",
             );
             $mech->autocheck(1);

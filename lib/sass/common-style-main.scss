@@ -621,13 +621,19 @@ section {
 .story_logo,
 .screenplay_image {
     @include logo_image;
-    float: right;
+    @if false {
+        float: right;
+    }
     max-width: 80%;
 
     &.buffy_few_good,
     &.terminator_liberation {
         width: 200px;
     }
+}
+
+.story_logo {
+    float: right;
 }
 
 .facts_logo {

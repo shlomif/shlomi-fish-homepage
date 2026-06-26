@@ -1,12 +1,13 @@
 [%- SET title = "Lightning Talk - the Mojolicious::Lite Web Micro-framework" -%]
 [%- SET desc = "A lightning talk about the Mojolicious::Lite web-development framework that was originally given in a web “knowledge sharing meeting” about web-development micro-frameworks in the Metacafe offices in Tel-Aviv." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-<h2><a href="mojolicious-slides.html">The Slides</a></h2>
+[%- WRAPPER h2_section href = "mojolicious-slides.html" id = "slides" title = "The Slides" -%]
 
-<h2>Introduction</h2>
+[%- END -%]
+
+[%- WRAPPER h2_section id = "intro" title = "Introduction" -%]
 
 <p>
 A lightning talk about <a href="http://mojolicious.org/">the Mojolicious::Lite
@@ -15,7 +16,9 @@ sharing meeting” about web-development micro-frameworks in
 the <a href="http://www.metacafe.com/">Metacafe</a> offices in Tel-Aviv.
 </p>
 
-<h2>Sources</h2>
+[%- END -%]
+
+[%- WRAPPER h2_section id = "sources" title = "Sources" -%]
 
 <ul>
 <li>
@@ -25,4 +28,6 @@ the <a href="http://www.metacafe.com/">Metacafe</a> offices in Tel-Aviv.
 </li>
 </ul>
 
-[% END %]
+[%- END -%]
+
+[%- END -%]

@@ -12,7 +12,7 @@ jobs:
                 cpanminus libperl-dev libxml2-dev libxslt1-dev perl xz-utils zip
         -   run: sudo cpanm --verbose Carp Carp::Always Docker::CLI::Wrapper::Container
                 Moo Path::Tiny
-        -   run: perl bin/docker-ci-run.pl --regex-filter='fedora'
+        -   run: perl bin/docker-ci-run.pl --cleanrun --regex-filter='fedora'
         timeout-minutes: 60
 name: test-docker-ci-run
 'on':

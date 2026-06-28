@@ -165,6 +165,7 @@ EOF
                     primesieve-devel
                     python3
                     python3-devel
+                    python3-inkex
                     python3-libsass
                     ruby-devel
                     rubygem-nokogiri

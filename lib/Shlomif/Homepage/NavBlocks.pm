@@ -738,7 +738,7 @@ my %tr_s = (
         title => "The Enemy and How I Helped to Fight it",
         items => [
             _fp( path => "humour/TheEnemy/", ),
-            _ontext( path => "humour/TheEnemy/The-Enemy-English-v7.html", ),
+            _ontext( path => "humour/TheEnemy/The-Enemy-English-v8.html", ),
             _github( url => 'http://github.com/shlomif/the-enemy', ),
         ],
     ),

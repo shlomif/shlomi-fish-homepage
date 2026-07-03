@@ -16,10 +16,13 @@ m()
     "$@"
 }
 
+if false
+then
 (
     set -e
     cd .. && git clone https://github.com/shlomif/shlomi-fish-sites--fonts.git fffFFF && cd fffFFF && perl install.pl --local && cd .. && rm -fr fffFFF
 ) || exit -1
+fi
 
 # For inkscape: job no. 1
 xserver_for_inkscape()

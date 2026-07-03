@@ -424,7 +424,7 @@ sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options
 # For wml
 if test "$install_bitvec" = "true"
 then
-    # cpanm --notest Bit::Vector
+    true # cpanm --notest Bit::Vector
 fi
 # cpanm --notest Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp

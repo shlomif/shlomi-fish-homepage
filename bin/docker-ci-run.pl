@@ -474,6 +474,7 @@ then
     make install
     cd "\$a"
 elif false
+then
     gourl="github.com/tdewolff/minify/cmd/minify"
     # go mod init
     go mod init shlomifish.org/golang/m

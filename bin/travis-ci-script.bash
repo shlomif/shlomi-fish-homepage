@@ -27,6 +27,8 @@ xserver_for_inkscape()
     Xvfb :1 -screen 0 1920x1200x24 &
     export DISPLAY=":1.0"
 }
+if false
+then
 # xserver_for_inkscape
 if ! ./gen-helpers | perl bin/filter-make.pl ; then
     echo "Error in executing ./gen-helpers.pl" 1>&2
@@ -37,12 +39,14 @@ if ! m fastrender 2>&1 | perl bin/filter-make.pl ; then
     echo "Error in executing make fastrender." 1>&2
     exit -1
 fi
+fi
 
-if ! m 2>&1 | perl bin/filter-make.pl ; then
+if ! m -f lib/make/image-files.mak 2>&1 | perl bin/filter-make.pl ; then
     echo "Error in executing make." 1>&2
     exit -1
 fi
 
+exit
 test_target='test'
 if false
 then

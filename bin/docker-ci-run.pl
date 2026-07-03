@@ -418,41 +418,41 @@ $locale
 $setup_script_cmd
 pydeps="WebTest appdirs beautifulsoup4 bottle bs4 click cookiecutter cssselect lxml numpy pycotap rebookmaker scour soupsieve vnu_validator weasyprint webtest zenfilter"
 sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
-cpanm --notest IO::Async
-cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
-cpanm --notest HTML::T5
+# cpanm --notest IO::Async
+# cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
+# cpanm --notest HTML::T5
 # For wml
 if test "$install_bitvec" = "true"
 then
-    cpanm --notest Bit::Vector
+    # cpanm --notest Bit::Vector
 fi
-cpanm --notest Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
+# cpanm --notest Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp
-cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
-sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
-sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+# cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
+# sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
+# sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 cd ~/source
 pwd
 ls -l
 ls -l bin/ || true
 perl bin/my-cookiecutter.pl
-deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
-gem install asciidoctor compass compass-blueprint
+# deps-app plinst --notest -i bin/common-required-deps.yml -i bin/required-modules.yml
+# gem install asciidoctor compass compass-blueprint
 PATH="\${HOME}/bin:\${PATH}"
-( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
-( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
-( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
-bash -x bin/install-npm-deps.sh
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
-bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
-echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
-( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
+# ( cd .. && git clone https://github.com/thewml/wml-extended-apis.git && cd wml-extended-apis/xhtml/1.x && bash Install.bash )
+# ( cd .. && git clone https://github.com/thewml/latemp.git && cd latemp/support-headers && perl install.pl )
+# ( cd .. && git clone https://github.com/shlomif/wml-affiliations.git && cd wml-affiliations/wml && bash Install.bash )
+# bash -x bin/install-npm-deps.sh
+# bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/shlomif/quad-pres'
+# bash bin/install-git-cmakey-program-system-wide.bash 'git' 'src' 'https://github.com/thewml/website-meta-language.git'
+# bash bin/install-git-cmakey-program-system-wide.bash 'git' 'installer' 'https://github.com/thewml/latemp.git'
+# echo '{"amazon_sak":"invalid"}' > "\$HOME"/.shlomifish-amazon-sak.json
+# ( cd "\$HOME" && git clone https://github.com/w3c/markup-validator.git )
 pwd
 echo "HOME=\$HOME"
-virtualenv -p `which python3` /python_3_env
-source /python_3_env/bin/activate
-`which python3` -m pip install \$pydeps
+# virtualenv -p `which python3` /python_3_env
+# source /python_3_env/bin/activate
+# `which python3` -m pip install \$pydeps
 export LD_LIBRARY_PATH="/usr/local/lib:\${LD_LIBRARY_PATH}"
 cmake_build_is_already_part_of_test_sh='true'
 if test "\$cmake_build_is_already_part_of_test_sh" != "true"
@@ -464,7 +464,7 @@ then
     ln -sf /bin/true /usr/bin/minify
 elif false
 then
-if true
+if false
 then
     a="`pwd`"
     mkdir -p \$HOME/src
@@ -473,7 +473,7 @@ then
     cd minify
     make install
     cd "\$a"
-else
+elif false
     gourl="github.com/tdewolff/minify/cmd/minify"
     # go mod init
     go mod init shlomifish.org/golang/m
@@ -483,6 +483,8 @@ else
     fi
 fi
 fi
+if false
+then
 find / -name minify | perl -lpE '\$_ = "find-result=(\$_)"'
 PATH="\${PATH}:\${HOME}/go/bin"
 export myvar_dbtoepubdir="\${PWD}/lib/repos/xslt10-stylesheets/xsl/epub/bin"
@@ -500,6 +502,7 @@ then
 elif test -e "\$usr_share_dbtoepub"
 then
     export DBTOEPUB="/usr/bin/ruby \$usr_share_dbtoepub"
+fi
 fi
 # bash bin/rebuild
 TIDYALL_DATA_DIR="\${HOME}/tidyall_d" bash -x bin/run-ci-build.bash

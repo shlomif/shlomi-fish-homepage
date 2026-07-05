@@ -229,9 +229,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 <info><title>Organisation of this Document</title></info>
 
         <para>
-            I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software
-            that I considered to be of exceptional high-quality, but I decided
-            against it.
+            I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software packages,
+            that I considered to be of exceptional high-quality. However, I
+            decided against it.
         </para>
 
         <para>
@@ -248,8 +248,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             This article is written from my point-of-view as a developer
             of <link xlink:href="http://en.wikipedia.org/wiki/Free_and_open_source_software">“Free
                 and Open Source Software”</link>, and will focus on
-            open-source and pseudo-open-source software. However, a lot of
-            what I say is more universal.
+            open-source and pseudo-open-source software packages. However, a
+            lot of what I say has more universal applicability.
         </para>
 
 </section>
@@ -268,7 +268,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             <para>
                 What? Shouldn’t high quality software have a good codebase?
                 Surprisingly no. What would you prefer: having a very modular
-                codebase that does something pretty useless like outputting
+                codebase that does something pretty trivial like outputting
                 the string “Hello World” <emphasis role="bold">or</emphasis>
                 having a large codebase of relatively low quality with a
                 large amount of useful functionality and relatively few bugs?
@@ -344,6 +344,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             Otherwise it’s just in-house software or at most a service, that
             is not adequate for most needs.
         </para>
+
         <para>
             In the “Cathedral and the Bazaar”, Eric Raymond recommends
             <link xlink:href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s04.html">to
@@ -352,6 +353,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             take your project and work on it yourself for too long, people
             will give up.
         </para>
+
         <para>
             If you have a new idea for a program, make sure you implement some
             basic but adequate functionality, and then release it so people
@@ -410,9 +412,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             most distributions of Linux, the BSD operating systems, etc.
         </para>
         <para>
-            If you just say that your software
+            If you just say that your software package
             “is copyright by John Doe. All Rights Reserved”, then it may
-            arguably induce an inability
+            arguably imply an inability
             to study its internals (including to fix bugs or add features)
             without being restricted by a non-compete clause, or even that
             its use or re-distribution is restricted. Some software ship
@@ -468,6 +470,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             licences are doubly-important for freely-distributed UNIX software.
         </para>
     </section>
+
     <section xml:id="just_works"><info><title>It “Just Works”</title></info>
 
         <para>
@@ -504,8 +507,8 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     Mercurial and GNU Arch a no-starter for many uses.
                 </para>
                 <para>
-                    <link xlink:href="http://www.tendra.org/">Tendra</link> is the
-                    most prominent alternative C and C++ compiler to GCC, but
+                    <link xlink:href="http://www.tendra.org/">Tendra</link> was the
+                    most prominent alternative C and C++ compiler to GCC (before LLVM and clang came along), but
                     it’s hardly as advanced as GCC is, does not have
                     all of GCC’s features and extensions, and is not usable
                     as a replacement for GCC for most needs. As such, it is
@@ -516,7 +519,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 <para>
                     A “just works” software also has <emphasis role="bold">good
                         usability</emphasis>. What it means is that it behaves
-                    like people expect it to. The Emacs-based editors, which
+                    like people expect it to. The Emacs-based text editors, which
                     are an alternative to Vim, do not invoke the menus upon
                     pressing “Alt+F”, “Alt+E”, etc. which is the Windows
                     convention to them.
@@ -547,7 +550,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             </listitem>
         </orderedlist>
     </section>
-    <section xml:id="homepage"><info><title>The Program has a Homepage</title></info>
+
+    <section xml:id="homepage">
+
+    <info><title>The Program has a Homepage</title></info>
 
         <para>
             Most software applications and libraries of high-quality have a
@@ -562,7 +568,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
     <section xml:id="easy_to_compile_and_install"><info><title>The Program is Easy to Compile, Deploy and Install</title></info>
 
         <para>
-            A high-quality program is easy to compile, deploy and install.
+            A high-quality program is easy to compile, deploy, and install.
             It builds out of the box with minimal hassles. There are several
             common standard building procedures for such software:
         </para>
@@ -660,7 +666,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
     </section>
-    <section xml:id="has_packages"><info><title>The Program Has Packages for Most Common Distributions</title></info>
+
+    <section xml:id="has_packages">
+
+    <info><title>The Program Has Packages for Most Common Distributions</title></info>
 
         <para>
             A good program has packages for most common distributions, or such
@@ -688,7 +697,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             to its lack of maintenance.
         </para>
     </section>
-    <section xml:id="documentation"><info><title>The Program Has Good, Extensive and Usable Documentation</title></info>
+
+    <section xml:id="documentation">
+
+    <info><title>The Program Has Good, Extensive and Usable Documentation</title></info>
 
         <para>
             If your GUI program is simple and well-designed, then you normally
@@ -737,7 +749,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             conventions expect.
         </para>
     </section>
-    <section xml:id="portability"><info><title>Portability</title></info>
+
+    <section xml:id="portability">
+
+    <info><title>Portability</title></info>
 
         <para>
             It is tempting to believe that by writing a program for one
@@ -749,7 +764,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             Solaris (now also OpenSolaris), and more obscure (but still
             popular)  Unix-clones like AIX, HP-UX, IRIX, SCO UNIX, Tru64
             (formerly Digital Unix), etc. And to say nothing of more exotic,
-            non-UNIX, non-Microsoft operating systems like Novell Netware,
+            non-UNIX, and non-Microsoft, operating systems like Novell Netware,
             Digital Corp.s’s VMS or OpenVMS, IBM’s VM/CMS or OS/390 (MVS),
             BeOS, AmigaOS, Mac OS 9 or earlier, PalmOS, VxWorks, etc. etc.
         </para>
@@ -779,13 +794,13 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                     UNIX-based OSes very well, so there’s not a big problem
                     there.
                 </para>
-            </footnote>Most good
-            programs are portable to at least Windows and most UNIXes and
-            potentially portable to other platforms.
+            </footnote>
+            Most good programs are portable to at least Windows and most UNIXes
+            and potentially portable to other platforms.
         </para>
         <para>
             For example, Subversion has made it a high priority to work
-            properly on Windows. On the other hand many of its early
+            properly on Windows. On the other hand, many of its early
             alternatives, especially GNU Arch, could not work there due to
             their architectures. As a result, many mixed shops, Windows-only
             shops, or companies where some developers wanted to use Windows
@@ -808,8 +823,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             relatively recent version of itself to compile itself. So you need
             to bootstrap several intermediate compilers to build it.
         </para>
+
     </section>
-    <section xml:id="security"><info><title>Security</title></info>
+
+    <section xml:id="security">
+
+    <info><title>Security</title></info>
 
         <para>
             A high-quality program is secure. It has a relatively small
@@ -839,8 +858,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             exciting features from being added, or cause the development
             to stagnate.
         </para>
+
     </section>
-    <section xml:id="backwards_compatiblity"><info><title>Backwards Compatibility</title></info>
+
+    <section xml:id="backwards_compatiblity">
+
+    <info><title>Backwards Compatibility</title></info>
 
         <para>
             A high-quality program maintains as much <link xlink:href="http://en.wikipedia.org/wiki/Backward_compatibility">backward
@@ -852,7 +875,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             their programs to just continue to work.
         </para>
         <para>
-            A bad example for software that does not maintain backwards
+            A bad example for a software platform that does not maintain backwards
             compatibility is <link xlink:href="http://www.php.net/">PHP</link>,
             where every primary digit breaks the compatibility with the older
             one: PHP 4 was not compatible with PHP 3 and PHP 5 was not
@@ -875,7 +898,10 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
 
     </section>
-    <section xml:id="good_ways_to_provide_support"><info><title>Good Ways to Provide Support</title></info>
+
+    <section xml:id="good_ways_to_provide_support">
+
+    <info><title>Good Ways to Provide Support</title></info>
 
         <para>
             A piece of high-quality software has good ways for its users to
@@ -917,6 +943,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             how to give good support.
         </para>
     </section>
+
     <section xml:id="speed-and-good-performance"><info><title>Speed and High Performance</title></info>
 
         <para>

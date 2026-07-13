@@ -137,7 +137,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
 <section xml:id="introduction">
 
-<info><title>Introduction</title></info>
+<info>
+<title>Introduction</title>
+</info>
 
     <para>
         Why is high quality in software important? Low-quality software
@@ -226,7 +228,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
 <section xml:id="organisation">
 
-<info><title>Organisation of this Document</title></info>
+<info>
+<title>Organisation of this Document</title>
+</info>
 
         <para>
             I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software packages,
@@ -258,7 +262,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
 <section xml:id="parameters-of-quality">
 
-<info><title>Parameters of Quality</title></info>
+<info>
+<title>Parameters of Quality</title>
+</info>
 
     <para>
         This section will cover the parameters that make software high
@@ -471,7 +477,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
     </section>
 
-    <section xml:id="just_works"><info><title>It “Just Works”</title></info>
+    <section xml:id="just_works">
+
+    <info>
+    <title>It “Just Works”</title>
+    </info>
 
         <para>
             This is a meta-parameter for quality. When people say that
@@ -553,7 +563,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="homepage">
 
-    <info><title>The Program has a Homepage</title></info>
+    <info>
+    <title>The Program has a Homepage</title>
+    </info>
 
         <para>
             Most software applications and libraries of high-quality have a
@@ -565,7 +577,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             leaves a bad impression.
         </para>
     </section>
-    <section xml:id="easy_to_compile_and_install"><info><title>The Program is Easy to Compile, Deploy and Install</title></info>
+    <section xml:id="easy_to_compile_and_install">
+
+    <info>
+    <title>The Program is Easy to Compile, Deploy and Install</title>
+    </info>
 
         <para>
             A high-quality program is easy to compile, deploy, and install.
@@ -669,7 +685,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="has_packages">
 
-    <info><title>The Program Has Packages for Most Common Distributions</title></info>
+    <info>
+    <title>The Program Has Packages for Most Common Distributions</title>
+    </info>
 
         <para>
             A good program has packages for most common distributions, or such
@@ -700,7 +718,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="documentation">
 
-    <info><title>The Program Has Good, Extensive and Usable Documentation</title></info>
+    <info>
+    <title>The Program Has Good, Extensive and Usable Documentation</title>
+    </info>
 
         <para>
             If your GUI program is simple and well-designed, then you normally
@@ -752,7 +772,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="portability">
 
-    <info><title>Portability</title></info>
+    <info>
+    <title>Portability</title>
+    </info>
 
         <para>
             It is tempting to believe that by writing a program for one
@@ -828,7 +850,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="security">
 
-    <info><title>Security</title></info>
+    <info>
+    <title>Security</title>
+    </info>
 
         <para>
             A high-quality program is secure. It has a relatively small
@@ -863,7 +887,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="backwards_compatiblity">
 
-    <info><title>Backwards Compatibility</title></info>
+    <info>
+    <title>Backwards Compatibility</title>
+    </info>
 
         <para>
             A high-quality program maintains as much <link xlink:href="http://en.wikipedia.org/wiki/Backward_compatibility">backward
@@ -901,7 +927,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
     <section xml:id="good_ways_to_provide_support">
 
-    <info><title>Good Ways to Provide Support</title></info>
+    <info>
+    <title>Good Ways to Provide Support</title>
+    </info>
 
         <para>
             A piece of high-quality software has good ways for its users to
@@ -942,9 +970,14 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 “Seven Steps to Remarkable Customer Service”</link> for more information on
             how to give good support.
         </para>
+
     </section>
 
-    <section xml:id="speed-and-good-performance"><info><title>Speed and High Performance</title></info>
+    <section xml:id="speed-and-good-performance">
+
+    <info>
+    <title>Speed and High Performance</title>
+    </info>
 
         <para>
             The reason I mentioned this quality parameter so late is because it
@@ -997,7 +1030,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             and quick.
         </para>
     </section>
-    <section xml:id="aesthetics"><info><title>Aesthetics</title></info>
+
+    <section xml:id="aesthetics">
+
+    <info>
+    <title>Aesthetics</title>
+    </info>
 
         <para>
             A good program (or web site) or other resource is aesthetically
@@ -1084,7 +1122,12 @@ No package named this-does-not-exist
             after seeing them.
         </para>
     </section>
-    <section xml:id="quality-parameters-conclusion"><info><title>Conclusion</title></info>
+
+    <section xml:id="quality-parameters-conclusion">
+
+    <info>
+    <title>Conclusion</title>
+    </info>
 
         <para>
             There are probably several parameters for software quality
@@ -1123,9 +1166,16 @@ No package named this-does-not-exist
             by many parameters. If you’re a software developer, you should
             aim to get as many of the parameters I mentioned right.
         </para>
+
     </section>
+
 </section>
-<section xml:id="ways-to-achieve-quality"><info><title>Ways to Achieve Quality</title></info>
+
+<section xml:id="ways-to-achieve-quality">
+
+<info>
+<title>Ways to Achieve Quality</title>
+</info>
 
     <para>
         Now that we’ve covered the elements that make programs high-quality
@@ -1144,7 +1194,12 @@ No package named this-does-not-exist
         The aim of this section is to briefly cover as many measures for
         achieving good quality as possible.
     </para>
-    <section xml:id="modular-code"><info><title>Having Modular, Well-Written Code</title></info>
+
+    <section xml:id="modular-code">
+
+    <info>
+    <title>Having Modular, Well-Written Code</title>
+    </info>
 
         <para>
             The more modular a project’s code is, the easier it is to
@@ -1190,8 +1245,14 @@ No package named this-does-not-exist
             and my <link xlink:href="http://www.shlomifish.org/links.html#software_gurus">software
                 “gurus” links</link> on my home-site’s links’ list.
         </para>
+
     </section>
-    <section xml:id="automated-tests"><info><title>Automated Tests</title></info>
+
+    <section xml:id="automated-tests">
+
+    <info>
+    <title>Automated Tests</title>
+    </info>
 
         <para>
             Automated tests aim to test the behaviour of code
@@ -1217,8 +1278,14 @@ No package named this-does-not-exist
             high-quality code, and facilitates refactoring
             and makes it safer.
         </para>
+
     </section>
-    <section xml:id="beta-testers"><info><title>Beta Testers</title></info>
+
+    <section xml:id="beta-testers">
+
+    <info>
+    <title>Beta Testers</title>
+    </info>
 
         <para>
             If you have beta testers for the code, or publish development
@@ -1227,8 +1294,14 @@ No package named this-does-not-exist
             on. These beta-testers can run the automated tests and also
             use the beta-code for their own testing or even production.
         </para>
+
     </section>
-    <section xml:id="frequent-releases"><info><title>Frequency of Releases</title></info>
+
+    <section xml:id="frequent-releases">
+
+    <info>
+    <title>Frequency of Releases</title>
+    </info>
 
         <para>
             The more frequent your releases are, the more people can test your
@@ -1243,8 +1316,14 @@ No package named this-does-not-exist
             methodology, but such a decision should be taken into
             consideration.
         </para>
+
     </section>
-    <section xml:id="good-software-management"><info><title>Good Software Management</title></info>
+
+    <section xml:id="good-software-management">
+
+    <info>
+    <title>Good Software Management</title>
+    </info>
 
         <para>
             There are several sources, online and offline, explaining good
@@ -1284,8 +1363,14 @@ No package named this-does-not-exist
                 </para>
             </listitem>
         </orderedlist>
+
     </section>
-    <section xml:id="tactfullness"><info><title>Good Social Engineering Skills</title></info>
+
+    <section xml:id="tactfullness">
+
+    <info>
+    <title>Good Social Engineering Skills</title>
+    </info>
 
         <para>
             It certainly helps for the project’s communities to have good
@@ -1314,10 +1399,14 @@ No package named this-does-not-exist
             had, or even still have, bad social engineering. But adopting a
             good software engineering policy can certainly help a lot.
         </para>
+
     </section>
 
-    <section xml:id="bad-politics"><info><title>No Bad Politics</title></info>
+    <section xml:id="bad-politics">
 
+    <info>
+    <title>No Bad Politics</title>
+    </info>
 
         <para>
             Bad politics in a software project is a lot like
@@ -1344,20 +1433,29 @@ No package named this-does-not-exist
 
     </section>
 
-    <section xml:id="good-communication-skills"><info><title>Good Communication Skills</title></info>
+    <section xml:id="good-communication-skills">
+
+    <info>
+    <title>Good Communication Skills</title>
+    </info>
 
         <para>
             A project leader and other participants should have good
-            communication skills: very good English; pleasantness and tact;
-            good phrasing, proper
-            grammar, syntax, phrasing and capitalisation; clear writing;
-            patience and tolerance; etc. If they don’t, then the project may
-            encounter problems as people will find the project’s developers
-            hard to understand or tolerate, and, thus, hard to work with.
+            communication skills: functional English; pleasantness and tact;
+            good phrasing, proper grammar, syntax, phrasing and capitalisation;
+            clear writing; patience and tolerance; etc. If they don’t, then the
+            project may encounter problems as people will find the project’s
+            developers hard to understand or tolerate, and, thus, hard to work
+            with.
         </para>
+
     </section>
 
-    <section xml:id="hype"><info><title>Hype</title></info>
+    <section xml:id="hype">
+
+    <info>
+    <title>Hype</title>
+    </info>
 
         <para>
             Despite common belief I believe that the less hype and general
@@ -1407,14 +1505,20 @@ No package named this-does-not-exist
             voicing too much hype against each other or for them, and this
             is a better indication that they are all healthy.
         </para>
+
     </section>
-    <section xml:id="good-name"><info><title>A Good Name</title></info>
+
+    <section xml:id="good-name">
+
+    <info>
+    <title>A Good Name</title>
+    </info>
 
         <para>
             Finally, a project should have a good name. One example for
             a project with an awful name is
             <link xlink:href="http://www.march-hare.com/cvspro/">CVSNT</link>.
-            There are two problems with the name:
+            There are two problems with this name:
         </para>
         <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
@@ -1457,8 +1561,14 @@ No package named this-does-not-exist
                 away a lot of people just because it sounds too technical.
             </para>
         </blockquote>
+
     </section>
-    <section xml:id="measures-conclusion"><info><title>Conclusion</title></info>
+
+    <section xml:id="measures-conclusion">
+
+    <info>
+    <title>Conclusion</title>
+    </info>
 
         <para>
             Entire books (and web-sites) were filled with the various
@@ -1469,11 +1579,22 @@ No package named this-does-not-exist
             the success of a project, but the more are implemented the easier,
             faster, and more enjoying working on the project will be.
         </para>
-    </section>
-</section>
-<section xml:id="freecell-solvers-quality"><info><title>Analysis of the Quality of the Various Freecell Solvers</title></info>
 
-    <section xml:id="freecell-solvers-quality--intro"><info><title>Introduction</title></info>
+    </section>
+
+</section>
+
+<section xml:id="freecell-solvers-quality">
+
+<info>
+<title>Analysis of the Quality of the Various Freecell Solvers</title>
+</info>
+
+    <section xml:id="freecell-solvers-quality--intro">
+
+    <info>
+    <title>Introduction</title>
+    </info>
 
         <para>
             As you recall, Gary Campbell’s comment provided the motivation for
@@ -1532,8 +1653,14 @@ No package named this-does-not-exist
                 </orderedlist>
             </footnote>
         </para>
+
     </section>
-    <section xml:id="freecell-solvers-quality--analysis"><info><title>The Analysis Itself</title></info>
+
+    <section xml:id="freecell-solvers-quality--analysis">
+
+    <info>
+    <title>The Analysis Itself</title>
+    </info>
 
         <para xml:id="quality-analysis--availability">
             As is not uncommon in many software niches, some Freecell
@@ -1772,7 +1899,12 @@ make: *** [param.h] Error 127
         </para>
 
     </section>
-    <section xml:id="freecell-solvers-quality--conclusion"><info><title>Conclusion</title></info>
+
+    <section xml:id="freecell-solvers-quality--conclusion">
+
+    <info>
+    <title>Conclusion</title>
+    </info>
 
         <para>
             All things considered, I still feel that Freecell Solver is
@@ -1805,11 +1937,22 @@ make: *** [param.h] Error 127
         <para>
             Happy Hacking!
         </para>
-    </section>
-</section>
-<section xml:id="about"><info><title>About This Document</title></info>
 
-    <section xml:id="about_copyrights"><info><title>Copyrights</title></info>
+    </section>
+
+</section>
+
+<section xml:id="about">
+
+<info>
+<title>About This Document</title>
+</info>
+
+    <section xml:id="about_copyrights">
+
+    <info>
+    <title>Copyrights</title>
+    </info>
 
         <para>
         This work is licensed under the
@@ -1823,8 +1966,14 @@ make: *** [param.h] Error 127
             It was written by <link xlink:href="http://www.shlomifish.org/">Shlomi
                 Fish</link> who also holds the copyrights.
         </para>
+
     </section>
-    <section xml:id="about_author"><info><title>About the Author</title></info>
+
+    <section xml:id="about_author">
+
+    <info>
+    <title>About the Author</title>
+    </info>
 
         <para>
             Shlomi Fish was born in Israel in 1977, and has lived there most of
@@ -1850,8 +1999,14 @@ make: *** [param.h] Error 127
             describe his unique views as a developer of mostly
             portable software.
         </para>
+
     </section>
-    <section xml:id="about_acknowledgements"><info><title>Acknowledgements</title></info>
+
+    <section xml:id="about_acknowledgements">
+
+    <info>
+    <title>Acknowledgements</title>
+    </info>
 
         <para>
             Thanks to Mr. Gary Campbell, the author of “FCELL.COM” whose
@@ -1871,6 +2026,10 @@ make: *** [param.h] Error 127
             me with Freecell Solver, and with the rest of my Free and
             Open Source Software (FOSS) endeavours.
         </para>
+
     </section>
+
 </section>
+
 </article>
+

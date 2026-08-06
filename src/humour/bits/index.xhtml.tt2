@@ -34,6 +34,14 @@ the project “What you See is What you Think” (WYSIWYT).
 
 [% END %]
 
+[% WRAPPER h3_section href = "${base_path}wonderous.html" id = "wonderous_ways_of_ms" title = "Wonderous are the Ways of Microsoft" %]
+
+<p>
+How compatible are Windows 3.11, Windows 95 and Windows NT 4.0?
+</p>
+
+[% END %]
+
 [% WRAPPER h3_section id="spam_for_everyone" href="Spam-for-Everyone/" title="“Spam for Everyone” - the International Campaign for Accessible Spam" %]
 
 <p>
@@ -66,14 +74,6 @@ Announcement of a tool to facilitate communication with
 <a href="http://www.stallman.org/">Richard M. Stallman</a>. See also
 <a href="http://slashdot.org/article.pl?sid=04/04/01/1344214">the
 Slashdot discussion</a>.
-</p>
-
-[% END %]
-
-[% WRAPPER h3_section id="wonderous_ways_of_ms" href="${base_path}wonderous.html" title="Wonderous are the Ways of Microsoft" %]
-
-<p>
-How compatible are Windows 3.11, Windows 95 and Windows NT 4.0?
 </p>
 
 [% END %]

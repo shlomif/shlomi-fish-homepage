@@ -6,17 +6,17 @@
 
 function fortunes_addlinks({ clearMarkup }: { clearMarkup: boolean }): void {
     const fortunes = $(".fortunes_list > div.fortune");
-    const fort = (idx) => {
+    const fort = (idx: number) => {
         return fortunes.slice(idx, idx + 1);
     };
-    const getid = (idx) => {
+    const getid = (idx: number) => {
         return fort(idx).find("> .head > h3").attr("id");
     };
     const container_class: string = "fortunes_addlinks";
-    const getcontainer = (idx) => {
+    const getcontainer = (idx: number) => {
         return fort(idx).find("> .head > h3 > span." + container_class);
     };
-    const addlink = (idx, cls, label) => {
+    const addlink = (idx: number, cls: string, label: string) => {
         const link_end_id = getid(idx);
         const ret =
             ' <a class="' +

@@ -39,10 +39,10 @@ function get_relative_path(args: any): string {
 }
 
 function shlomif_get_relative_path_callback(
-    rel_path: string,
-): (string) => string {
+    rel_path: string
+): (arg0: string) => string {
     const prefix = get_base_relative_path({ rel_path: rel_path });
-    return function (to) {
+    return function (to: string): string {
         return prefix + to;
     };
 }
@@ -69,7 +69,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json(
     const rel_path = args.rel_path;
     const _get_rel = shlomif_get_relative_path_callback(rel_path);
 
-    let _recurse;
+    let _recurse: any = null;
 
     _recurse = function (sub_tree: any): ShlomifJQtreeRet | ShlomifJQtreeRet[] {
         if (Array.isArray(sub_tree)) {

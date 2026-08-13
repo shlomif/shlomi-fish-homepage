@@ -28,7 +28,7 @@ function build_toggler(args: TogglerParams): void {
 
     const has_ls: boolean = !_is_null(localStorage);
     const toggled_type: string =
-        "toggled_type" in args ? args["toggled_type"] : "class";
+        args.toggled_type ?? "class";
     const is_class: boolean = toggled_type == "class";
     const _key_name: string = args["ls_key"];
     const toggler_selector: string = args["toggler_selector"];
@@ -37,7 +37,7 @@ function build_toggler(args: TogglerParams): void {
     const hide_text: string = args["hide_text"];
     const show_text: string = args["show_text"];
     const default_state: boolean =
-        "default_state" in args ? args["default_state"] : true;
+        args.default_state ?? true;
 
     const _calc_elem = () => {
         return $(toggler_selector);
@@ -65,7 +65,7 @@ function build_toggler(args: TogglerParams): void {
 
     const toggled_attr = "open";
 
-    function _calc__is_on_now(elem): boolean {
+    function _calc__is_on_now(elem: JQuery): boolean {
         const was_off: boolean = !elem.attr(toggled_attr);
         const was_on: boolean = !was_off;
         // NOTE THE DIFFERENCE FROM toggle_sect_menu!!!
@@ -112,7 +112,7 @@ function build_toggler(args: TogglerParams): void {
         if (!has_ls) {
             return;
         }
-        const in_storage_s: string = localStorage.getItem(_key_name);
+        const in_storage_s: string | null = localStorage.getItem(_key_name);
 
         const in_storage: boolean = _is_null(in_storage_s)
             ? default_state

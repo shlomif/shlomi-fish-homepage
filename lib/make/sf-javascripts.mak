@@ -65,7 +65,7 @@ tsc_www:
 tsc_cmdline:
 	$(call run_tsc,cmdline)
 
-serial_run: tsc_non_min_www tsc_www tsc_cmdline
+serial_run: tsc_non_min_www tsc_www # tsc_cmdline
 
 $(PRE_DEST)/site-map/index.xhtml: $(ALL_SUBSECTS_DEPS)
 

@@ -15,7 +15,7 @@ function shlomif_load_nav(page_path: string): void {
             to: "_data/n.json",
         }),
         function (compressed_json) {
-            const keys_map = {
+            const keys_map: {[key: string]: string} = {
                 b: "bool",
                 c: "capt",
                 e: "expand",

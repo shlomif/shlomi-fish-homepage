@@ -69,7 +69,7 @@ function calc_jqtree_data_from_html_w_nav_menu_json(
     const rel_path = args.rel_path;
     const _get_rel = shlomif_get_relative_path_callback(rel_path);
 
-    let _recurse:any = null;
+    let _recurse: any = null;
 
     _recurse = function (sub_tree: any): ShlomifJQtreeRet | ShlomifJQtreeRet[] {
         if (Array.isArray(sub_tree)) {

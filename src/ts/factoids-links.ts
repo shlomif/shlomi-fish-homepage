@@ -6,18 +6,18 @@
 
 function factoids_addlinks({ clearMarkup }: { clearMarkup: boolean }): void {
     const fortunes = $(".main_facts_list > ul > li.fact");
-    const fort = (idx) => {
+    const fort = (idx: number) => {
         return fortunes.slice(idx, idx + 1);
     };
-    const getid = (idx) => {
+    const getid = (idx: number) => {
         return "shlomif-fact-chuck-" + (idx + 1);
         return fort(idx).find("> .head > h3").attr("id");
     };
     const container_class: string = "factoids_addlinks";
-    const getcontainer = (idx) => {
+    const getcontainer = (idx: number) => {
         return fort(idx).find("> blockquote > span." + container_class);
     };
-    const addlink = (idx, cls, label) => {
+    const addlink = (idx: number, cls: string, label: string) => {
         const link_end_id = getid(idx);
         const link_end = "/humour/fortunes/show.cgi?id=" + link_end_id;
         const ret =

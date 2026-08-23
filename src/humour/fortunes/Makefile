@@ -4,8 +4,8 @@ T2_FORTUNES_DIR = .
 PERL = perl
 FORTUNES_PERL := perl -I. -MShlomifFortunesMake -e
 perlfunc = $(shell $(FORTUNES_PERL) 'print ShlomifFortunesMake->$1();')
-VERSION_FILE := $(perlfunc version_file)
-:
+VERSION_FILE := $(call perlfunc,version_file)
+
 VER := $(call perlfunc,ver)
 
 DIST_BASE := $(call perlfunc,dist_base)
@@ -27,12 +27,11 @@ XMLS := $(addsuffix .xml,$(FILES))
 
 XHTMLS := $(patsubst %.xml,%.xhtml,$(XMLS))
 
-
 .PHONY: all test html distdir upload
 
 all: test gen_htaccess
 
-$(DATS):: %.dat : %
+$(DATS): %.dat : %
 	PATH="$$PATH:/usr/sbin" strfile -s $<
 
 dats: $(DATS)

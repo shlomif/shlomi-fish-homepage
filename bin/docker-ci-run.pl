@@ -57,7 +57,7 @@ my $configs = {
             install_langpack            => "0",
             package_manager_install_cmd =>
                 "sudo eatmydata apt-get --no-install-recommends install -y",
-            pip_options           => "--break-system-packages",
+            pip_options => "--break-system-packages --ignore-installed",
             setup_package_manager => <<'EOF',
 if false
 then

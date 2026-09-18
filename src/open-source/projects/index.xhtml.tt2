@@ -1,5 +1,4 @@
 [%- SET title = "Shlomi Fish’s Open Source Projects" -%]
-[%- SET desc = "Shlomi Fish’s Open Source Projects" -%]
 
 [%- WRAPPER wrap_html -%]
 [% PROCESS "Inc/open_source.tt2" %]
@@ -116,8 +115,8 @@ preparing HTML presentations. Based on
 
 <p>
 A project that maintains several XML grammars for various tasks, including
-translators to HTML or other formats, plaintext formats that translate into
-them, etc.
+translators to HTML or other formats, and plaintext formats that translate into
+them.
 </p>
 
 [% END %]
@@ -297,6 +296,10 @@ A port of the well-known MOD player
 (that was originally written in C) to Java.
 </p>
 
+<p>
+( <b>Note:</b> largely made obsolete by <a href="https://emscripten.org/">Emscripten</a>. )
+</p>
+
 [% END %]
 
 [% END %]
@@ -352,3 +355,4 @@ into GIMP 2.2.x and above and its functionality is built-in there.
 [% END %]
 
 [% END %]
+

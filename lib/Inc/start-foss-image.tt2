@@ -6,12 +6,14 @@
 
 [% BLOCK start_foss_image_attribution %]
 
-<h2 id="image-attrib">Image Attribution</h2>
+[%- WRAPPER h2_section id = "image-attrib" title = "Image Attribution" -%]
 
 <p>
 <a href="https://freesvg.org/online-girl-vector-image">"Online girl" image</a>
 from freesvg.org by an unknown artist.
 </p>
+
+[% END %]
 
 [% END %]
 

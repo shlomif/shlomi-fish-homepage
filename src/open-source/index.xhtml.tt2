@@ -6,17 +6,17 @@
 [% PROCESS "Inc/open_source.tt2" %]
 
 <p>
-I love computers, and I also like to program for fun, profit and ideals. I’ve
+I love computers, and I also like to program for fun, profit, and ideals. I’ve
 been programming since I was 10 years old (back in 1987 for the PC XT ROM
 BASIC). Now in my free time I’m using a Linux machine for development, and
 am working on <a href="http://www.opensource.org/">Open Source
 Software</a>. I also maintain some software-related resources, and also have
-some <a href="[% base_path %]philosophy/computers/">essays about computing</a>.
+written some <a href="[% base_path %]philosophy/computers/">essays about computing</a>.
 </p>
 
 [% WRAPPER h2_section href = "projects/" id = "projects" title = "Open Source Projects" %]
 
-[% PROCESS home_pages_on_forges  %]
+[%- PROCESS home_pages_on_forges -%]
 
 [% END %]
 

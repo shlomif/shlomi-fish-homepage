@@ -72,12 +72,12 @@ my %reduced_sub_trees = (
                         subs => [
                             {
                                 text  => "The Enemy",
-                                url   => "humour/TheEnemy/",
                                 title =>
                                     "The Enemy and How I Helped to Fight It",
+                                url => "humour/TheEnemy/",
                             },
                             {
-                                text  => "TOW The Fountainhead",
+                                text  => "The One with the Fountainhead",
                                 url   => "humour/TOneW-the-Fountainhead/",
                                 title => "The One with the Fountainhead",
                             },
@@ -92,9 +92,9 @@ my %reduced_sub_trees = (
                             },
                             {
                                 text  => "Humanity - The Movie",
-                                url   => "humour/humanity/",
                                 title =>
 "Parody of Humanity and Modern Life in Particular",
+                                url => "humour/humanity/",
                             },
                         ],
 
@@ -130,44 +130,44 @@ my %reduced_sub_trees = (
                 ],
             },
             {
-                text   => "Small Scale",
-                url    => "humour/bits/",
                 expand => { re => "^humour/bits/(?!facts/)", },
+                text   => "Small Scale",
                 title  => "Small Scale Funny Works of Mine",
+                url    => "humour/bits/",
             },
             {
-                text   => "By Others",
-                url    => "humour/by-others/",
                 expand => { re => "^humour/(?:by-others|GNU-Visual-Basic)/", },
+                text   => "By Others",
                 title  => "Humorous Works by Other People",
+                url    => "humour/by-others/",
             },
         ],
     },
     'Shlomif::Homepage::SectionMenu::Sects::Puzzles' => {
-        text   => "Puzzles",
-        url    => "puzzles/",
         expand => { re => q{^(?:MathVentures/|puzzles/|(?:toggle\.html$))}, },
+        text   => "Puzzles",
         title  => "Puzzles, Riddles and Brain-teasers",
+        url    => "puzzles/",
         subs   => [
             {
-                text   => "Math-Ventures",
-                url    => "MathVentures/",
                 expand => { re => "^MathVentures/", },
+                text   => "Math-Ventures",
                 title  => "Mathematical Riddles and their Solutions",
+                url    => "MathVentures/",
             },
             {
+                expand => { re => "^puzzles/logic/", },
                 text   => "Logic Puzzles",
                 url    => "puzzles/logic/",
-                expand => { re => "^puzzles/logic/", },
             },
         ],
     },
 
     'Shlomif::Homepage::SectionMenu::Sects::Software' => {
-        text   => "Software",
-        url    => "open-source/",
         expand => { re => "^(?:no-ie/|open-source/|rindolf/)", },
+        text   => "Software",
         title  => "Pages related to Software (mostly Open-Source)",
+        url    => "open-source/",
         subs   => [
             {
                 text   => "Projects",
@@ -182,8 +182,8 @@ my %reduced_sub_trees = (
                     },
                     {
                         text  => "PySol FC",
-                        url   => "open-source/projects/pysol/",
                         title => "A suite of Solitaire games",
+                        url   => "open-source/projects/pysol/",
                     },
                 ],
             },
@@ -237,40 +237,39 @@ my %reduced_sub_trees = (
             },
             {
                 text  => "Web Publishing using LAMP",
-                url   => "lecture/LAMP/",
-                host  => "t2",
                 title =>
 "Web Publishing using Linux, Apache, MySQL, and Perl/PHP/Python (or equivalents)",
+                url => "lecture/LAMP/",
             },
             {
                 text => "The Cathedral and the Bazaar",
                 url  => "lecture/CatB/",
             },
             {
-                text  => "Prog. Languages",
-                url   => "lecture/cat/programming-languages/",
+                text  => "Programming Languages",
                 title => "Presentations about Programming Languages",
+                url   => "lecture/cat/programming-languages/",
             },
             {
                 text  => "Various Tools",
-                url   => "lecture/cat/various-tools/",
                 title => "Presentations about Various Tools",
+                url   => "lecture/cat/various-tools/",
             },
             {
                 text  => "Welcome to Linux",
-                url   => "lecture/W2L/",
                 title =>
                     "Presentations for the Israeli series for Linux Newcomers",
+                url => "lecture/W2L/",
             },
             {
                 text  => "About My Projects",
-                url   => "lecture/cat/projects/",
                 title => "Presentations about my Open Source Projects",
+                url   => "lecture/cat/projects/",
             },
             {
                 text  => "Lightning Talks",
-                url   => "lecture/cat/lightning-talks/",
                 title => "Short (5-15 minutes) Presentations",
+                url   => "lecture/cat/lightning-talks/",
             },
         ],
     },
@@ -283,20 +282,20 @@ my %reduced_sub_trees = (
 "Various Essays and Articles about Technology and Philosophy in General",
         subs => [
             {
-                text   => "General Philosophy",
-                url    => "philosophy/philosophy/",
                 expand => {
                     re =>
 "^philosophy/(?:(?:philosophy/(?!SummerNSA))|the-eternal-jew/)"
                 },
+                text => "General Philosophy",
+                url  => "philosophy/philosophy/",
             },
             {
-                text   => "Computing",
-                url    => "philosophy/computers/",
-                title  => "Computing-related Essays and Articles",
                 expand =>
                     { re => "^(?:philosophy/computers|prog-evolution)/", },
-                subs => [
+                text  => "Computing",
+                title => "Computing-related Essays and Articles",
+                url   => "philosophy/computers/",
+                subs  => [
                     {
                         text  => "Open Source",
                         url   => "philosophy/computers/open-source/",
@@ -362,12 +361,12 @@ my %reduced_sub_trees = (
             {
                 url   => "meta/site-source/",
                 text  => "Site’s Source",
-                title => "The source code used to generate this site",
+                title => "The source code used to generate this website",
             },
             {
                 url   => "meta/how-to-help/",
                 text  => "How to Help",
-                title => "How you can help promote this site",
+                title => "How you can help this website",
                 subs  => [
                     {
                         url  => "meta/donate/",
@@ -378,12 +377,12 @@ my %reduced_sub_trees = (
             {
                 url   => "meta/hosting/",
                 text  => "Hosting",
-                title => "About this site’s hosting provider.",
+                title => "About this website’s hosting provider.",
             },
             {
                 text  => "Old Site Snapshots (Nostalgia)",
                 url   => "meta/old-site-snapshots/",
-                title => "The site as it looked like many years ago.",
+                title => "The website as it was years ago.",
             },
         ],
     },

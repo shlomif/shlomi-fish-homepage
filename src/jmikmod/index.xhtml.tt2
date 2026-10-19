@@ -1,6 +1,4 @@
 [%- SET title = "MikMod for Java" -%]
-[%- SET desc = "MikMod for Java" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -79,4 +77,4 @@ You can E-mail me at [% PROCESS main_email_mailto
 Enjoy!
 </p>
 
-[% END %]
+[%- END -%]

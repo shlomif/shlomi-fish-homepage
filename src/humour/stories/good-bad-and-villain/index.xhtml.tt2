@@ -1,16 +1,14 @@
 [%- SET title = "The Good, the Bad, and the Villain" -%]
-[%- SET desc = "Humorous large-scope stories and screenplays by Shlomi Fish: about Objectivism, Judaism, love/sex/romance and relationships, friendship, pleasure and pain, perfection by imperfection, strength and beauty" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro %]
+[%- WRAPPER intro -%]
 
 <p>
 TODO: write.
 </p>
 
-[% END %]
+[%- END -%]
 
 <h2 id="the-table">The Table</h2>
 
@@ -31,4 +29,4 @@ TODO: write.
 
 </table>
 
-[% END %]
+[%- END -%]

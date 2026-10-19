@@ -1,10 +1,8 @@
 [%- SET title = "#!/usr/bin/perl - Ongoing Text" -%]
-[%- SET desc = title -%]
 [%- SET apply_screenplay_style = 1 -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-[% path_slurp("screenplay-xml/rendered-html/usr-bin-perl--total.html") %]
+[%- path_slurp("screenplay-xml/rendered-html/usr-bin-perl--total.html") -%]
 
-[% END %]
+[%- END -%]

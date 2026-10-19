@@ -2,7 +2,7 @@
 [%- SET title = "Shlomi Fish’s Homepage: humour, articles and essays, puzzles and riddles, art, software and many links" -%]
 [%- SET desc = "Shlomi Fish’s Homepage: humour, articles and essays, puzzles and riddles, art, software and many links" -%]
 
-[% BLOCK page_blog_roll %]
+[%- BLOCK page_blog_roll -%]
 
 <div class="blog_roll">
 
@@ -78,20 +78,20 @@ open source, web culture, Internet freedom, etc. from the author of
 
 </div>
 
-[% END %]
+[%- END -%]
 
-[% BLOCK page_extra_head_elements %]
+[%- BLOCK page_extra_head_elements -%]
 [%#
 OpenID-enabling http://www.shlomifish.org/ - see:
 http://blog.woobling.org/2009/05/your-openid-sucks.html
 %]
-[% SET openid = "http://shlomif.livejournal.com/" %]
+[%- SET openid = "http://shlomif.livejournal.com/" -%]
 <meta http-equiv="X-XRDS-Location" content="http://shlomif.livejournal.com/data/yadis" />
 <link rel="openid2.provider" href="http://www.livejournal.com/openid/server.bml" />
 <link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
-<link rel="openid.delegate" href="[% openid %]" />
-<link rel="openid2.local_id" href="[% openid %]" />
-[% END %]
+<link rel="openid.delegate" href="[%- openid -%]" />
+<link rel="openid2.local_id" href="[%- openid -%]" />
+[%- END -%]
 
 [%- WRAPPER wrap_html -%]
 
@@ -113,7 +113,7 @@ a necessary means to the end of writing, blogging, and online and offline
 entertainment).
 </p>
 
-[% IF 0 %]
+[%- IF 0 -%]
 
 <p>
 I love <a href="https://www.shlomifish.org/humour/bits/facts/Emma-Watson/">Emma Watson</a>
@@ -135,7 +135,7 @@ and its minions:
 please cave, stay, keep, and die!
 </pre>
 
-[% END %]
+[%- END -%]
 
 <p>
 You can explore the site using the <a href="#navbar"><b>navigation bar</b></a>
@@ -294,7 +294,7 @@ You can also browse my warez on:
 </p>
 </li>
 
-[% IF 0 %]
+[%- IF 0 -%]
 
 <li>
 <p>
@@ -302,11 +302,11 @@ Tiffany (Tiff?) Alvord - this is your brother in effect, Shlomi Fish. The exorci
 </p>
 </li>
 
-[% END %]
+[%- END -%]
 
 </ol>
 
-[% END %]
+[%- END -%]
 
 </div>
 
@@ -318,10 +318,10 @@ Tiffany (Tiff?) Alvord - this is your brother in effect, Shlomi Fish. The exorci
 <h2 id="news">News</h2>
 </header>
 
-[% news_obj.render_front_page() %]
+[%- news_obj.render_front_page() -%]
 
 <h3 class="newsitem"><a href="old-news.html">Old News Items</a></h3>
 
 </section>
 
-[% END %]
+[%- END -%]

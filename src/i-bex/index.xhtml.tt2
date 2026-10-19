@@ -1,6 +1,4 @@
 [%- SET title = "“I, Bex!” - A StoneAge Clone for Perl/SDL" -%]
-[%- SET desc = "“I, Bex!” - A StoneAge Clone for Perl/SDL" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -46,4 +44,4 @@ More Levels. (very important!)
 </li>
 </ul>
 
-[% END %]
+[%- END -%]

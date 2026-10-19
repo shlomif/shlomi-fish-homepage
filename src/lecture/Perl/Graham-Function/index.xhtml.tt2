@@ -1,7 +1,6 @@
 [%- SET title = "Graham’s Function Talk" -%]
 [%- SET desc = "A presentation about finding the Graham’s function using Perl code, as a conclusion to a Perl Quiz-of-the-Week that was done about it." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -31,7 +30,7 @@ which is a CPAN module, that is derived from the original code.
 </li>
 </ul>
 
-[% WRAPPER h2_section id = "code-in-other-langs" title = "The Code in Other Languages" %]
+[%- WRAPPER h2_section id = "code-in-other-langs" title = "The Code in Other Languages" -%]
 
 <ul>
 
@@ -57,6 +56,6 @@ original code to Perl 6</a>
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

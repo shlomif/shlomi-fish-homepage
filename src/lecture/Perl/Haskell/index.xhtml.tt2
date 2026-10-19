@@ -1,7 +1,6 @@
 [%- SET title = "Haskell for Perl Programmers" -%]
 [%- SET desc = "A presentation that introduces The Haskell Programming Language to Perl programmers." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <h2 id="intro">Introduction</h2>
@@ -13,7 +12,7 @@ to Perl programmers.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

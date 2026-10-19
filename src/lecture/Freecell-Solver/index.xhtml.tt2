@@ -1,7 +1,6 @@
 [%- SET title = "Freecell Solver - Evolution of a C Program" -%]
 [%- SET desc = "This presentation covers the evolution of Freecell Solver, a C library for solving some types of Solitaire games. It covers the algorithms, data structures and decisions that were implemented there." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -13,7 +12,7 @@ algorithms, data structures and decisions that were implemented there.
 
 <ul>
 
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 
 <li>
 <p>
@@ -36,4 +35,4 @@ the program for download.</a>
 
 </ul>
 
-[% END %]
+[%- END -%]

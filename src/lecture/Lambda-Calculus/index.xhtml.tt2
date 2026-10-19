@@ -1,10 +1,9 @@
 [%- SET title = "Talk about Scheme and Lambda Calculus" -%]
 [%- SET desc = "Slides for a talk that introduces Scheme, a minimal dialect of Lisp, and then uses it to introduce Lambda Calculus, a minimal but usable model for computation, invented by Alonzo Church." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER intro  %]
+[%- WRAPPER intro  -%]
 
 <p>
 This is a presentation that introduces
@@ -20,4 +19,4 @@ two primitives and yet is still quite usable and fun.
 
 <h2><a href="slides/">The Slides</a></h2>
 
-[% END %]
+[%- END -%]

@@ -1,7 +1,6 @@
 [%- SET title = "Freecell Solver - Project Introduction" -%]
 [%- SET desc = "A small presentation that introduces the Freecell Solver project to people who may be interested in contributing to it." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -11,7 +10,7 @@ to people who may be interested in contributing to it.
 
 <ul>
 
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 
 <li>
 <p>
@@ -21,4 +20,4 @@ to people who may be interested in contributing to it.
 
 </ul>
 
-[% END %]
+[%- END -%]

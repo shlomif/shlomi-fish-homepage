@@ -1,7 +1,6 @@
 [%- SET title = "The Cathedral and the Bazaar Series - an Overview" -%]
 [%- SET desc = "Overview of the Cathedral and the Bazaar series by Eric S. Raymond: “The Cathedral and the Bazaar”, “Homesteading the Noosphere”, and “The Magic Cauldron”" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -16,7 +15,7 @@ reader or hearer a taste of what can be found there.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

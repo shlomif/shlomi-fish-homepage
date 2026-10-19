@@ -1,17 +1,16 @@
 [%- SET title = "Freecell Solver - The Next Presentation" -%]
 [%- SET desc = "The sequel to the previous presentation about Freecell Solver where Shlomi Fish explores more recent developments to the program." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
-The sequel to <a href="../">the previous presentation</a> where I explore
+The sequel to <a href="[%- base_path -%]lecture/Freecell-Solver/">the previous presentation</a> where I explore
 more recent developments to <a href="http://fc-solve.shlomifish.org/">Freecell
 Solver</a>.
 </p>
 
 <ul>
-[% PROCESS eng_qp_lect %]
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

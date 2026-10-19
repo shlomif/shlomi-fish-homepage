@@ -1,6 +1,4 @@
 [%- SET title = "Lecture about the BASH Shell (upcoming lecture)" -%]
-[%- SET desc = "Lecture about the BASH Shell (upcoming lecture)" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -17,4 +15,4 @@
 </li>
 </ul>
 
-[% END %]
+[%- END -%]

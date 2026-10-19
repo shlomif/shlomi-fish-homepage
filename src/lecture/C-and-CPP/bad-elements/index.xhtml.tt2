@@ -1,7 +1,6 @@
 [%- SET title = "C and C++ Elements to Avoid" -%]
 [%- SET desc = "Coding Elements and anti-patterns that should be avoided in C and C++" -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 [% default_toc %]
@@ -12,9 +11,9 @@
 
 [% path_slurp("docbook/5/rendered/c-and-cpp-elements-to-avoid.xhtml") %]
 
-[% PROCESS docbook_formats_w_base h2_id = "formats", h2_text = "Formats", base = "c-and-cpp-elements-to-avoid",  %]
+[%- PROCESS docbook_formats_w_base base = "c-and-cpp-elements-to-avoid" h2_id = "formats" h2_text = "Formats" -%]
 
-[% WRAPPER h2_section id = "vcs"  title = "Version Control Repository"  %]
+[%- WRAPPER h2_section id = "vcs" title = "Version Control Repository" -%]
 
 <p>
 This document is maintained in a
@@ -27,7 +26,7 @@ Attribution 4.0-and-above (CC-by) licence</a>. Enjoy!
 
 [%- END -%]
 
-[% WRAPPER h2_section id = "coverage"  title = "Coverage"  %]
+[%- WRAPPER h2_section id = "coverage" title = "Coverage" -%]
 
 <p>
 <b>TODO:</b> fill in.
@@ -37,4 +36,4 @@ Attribution 4.0-and-above (CC-by) licence</a>. Enjoy!
 
 </div>
 
-[% END %]
+[%- END -%]

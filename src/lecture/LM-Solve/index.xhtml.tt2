@@ -1,7 +1,6 @@
 [%- SET title = "Presentation about LM-Solve - A Puzzle Solver" -%]
 [%- SET desc = "A presentation about LM-Solve, that is a solver for a large number of simple-minded Logic mazes and puzzles written in Perl." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <p>
@@ -11,11 +10,8 @@ a solver for a large number of simple-minded Logic mazes and puzzles written
 in Perl.
 </p>
 
-
 <ul>
-
-[% PROCESS eng_qp_lect %]
-
+[%- PROCESS eng_qp_lect -%]
 </ul>
 
-[% END %]
+[%- END -%]

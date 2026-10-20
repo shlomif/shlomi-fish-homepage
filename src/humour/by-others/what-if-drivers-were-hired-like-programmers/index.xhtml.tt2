@@ -1,7 +1,6 @@
 [%- SET title = "What If Drivers Were Hired Like Programmers?" -%]
 [%- SET desc = "Satirical piece about software developers hiring practices." -%]
 
-
 [%- WRAPPER wrap_html -%]
 
 <div class="bit humor">
@@ -47,7 +46,7 @@ The applicants must have certificates by BMW, General Motors and Bosch, but not 
 
 </div>
 
-[% WRAPPER credits_sect %]
+[%- WRAPPER credits_sect -%]
 
 <p>
 This bit was taken from
@@ -57,6 +56,6 @@ programmers’ forum, but was unable to locate the original.”. I originally
 ran into it in a Facebook post where it was given as an image.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

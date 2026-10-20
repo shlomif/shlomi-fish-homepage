@@ -1,6 +1,4 @@
 [%- SET title = "Media Recommendations by Shlomi Fish" -%]
-[%- SET desc = "Media Recommendations by Shlomi Fish" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -10,4 +8,4 @@
 Recommendations of films.
 </p>
 
-[% END %]
+[%- END -%]

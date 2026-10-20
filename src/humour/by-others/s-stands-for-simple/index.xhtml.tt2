@@ -1,20 +1,18 @@
 [%- SET title = "SOAP - The S stands for Simple" -%]
-[%- SET desc = "SOAP - The S stands for Simple" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id = "note" title = "Note" %]
+[%- WRAPPER h2_section id = "note" title = "Note" -%]
 
 <p>
 This bit appeared on Pete Lacey's blog and is mirrored from
 <a href="http://harmful.cat-v.org/software/xml/soap/simple">the cat -v
-    harmful stuff page</a>.
+harmful stuff page</a>.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "text" title = "The S stands for Simple" %]
+[%- WRAPPER h2_section id = "text" title = "The S stands for Simple" -%]
 
 <p><em>By Pete Lacey.</em></p>
 
@@ -179,6 +177,6 @@ simple. That’s what the ‘S’ stood for.”</p>
 
 <p><strong>SG</strong>: Let me tell you about UDDI.</p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

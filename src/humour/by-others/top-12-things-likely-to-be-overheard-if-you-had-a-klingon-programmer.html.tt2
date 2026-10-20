@@ -1,10 +1,8 @@
 [%- SET title = "Top 12 things likely to be overheard if you had a Klingon Programmer" -%]
-[%- SET desc = "Top 12 things likely to be overheard if you had a Klingon Programmer" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
-[% WRAPPER h2_section id="note" title="Note"%]
+[%- WRAPPER h2_section id = "note" title = "Note" -%]
 
 <p>
 I was originally forwarded an E-mail containing this joke, which was sent by
@@ -18,9 +16,9 @@ different list of 20 things a Klingon programmer would say</a> on gradha's
 site.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id="content" title="Top 12 things likely to be overheard if you had a Klingon Programmer"%]
+[%- WRAPPER h2_section id = "content" title = "Top 12 things likely to be overheard if you had a Klingon Programmer" -%]
 
 <p>
 12) "Specifications are for the weak and timid!"
@@ -41,8 +39,8 @@ original Klingon."
 </p>
 
 <p>
-8) "What is this talk of 'release'?  Klingons do not make software
-'releases'.  Our software 'escapes' leaving a bloody trail of designers and
+8) "What is this talk of 'release'? Klingons do not make software
+'releases'. Our software 'escapes' leaving a bloody trail of designers and
 quality assurance people in its wake."
 </p>
 
@@ -80,6 +78,6 @@ stand!"
 and let them flee like the dogs they are!"
 </p>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

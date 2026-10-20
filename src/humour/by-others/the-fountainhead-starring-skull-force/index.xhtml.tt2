@@ -1,6 +1,4 @@
 [%- SET title = "The Fountainhead - Starring Skull Force (A Parody)" -%]
-[%- SET desc = "The Fountainhead - Starring Skull Force (A Parody)" -%]
-
 
 [%- WRAPPER wrap_html -%]
 
@@ -17,19 +15,19 @@ whose original link has disappeared, and is hereby restored here
 from <a href="http://blank.org/memory/funny/fountainhead/">a mirror</a>.
 </p>
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER h2_section id = "page" title = "The Parody Page" href = "fh_parody.html" %]
+[%- WRAPPER h2_section id = "page" title = "The Parody Page" href = "fh_parody.html" -%]
 
-[% END %]
+[%- END -%]
 
-[% WRAPPER see_also %]
+[%- WRAPPER see_also -%]
 
 <ul>
 
 <li>
 <p>
-<a href="[% base_path %]humour/TOneW-the-Fountainhead/">“The One With The Fountainhead”</a> - my own
+<a href="[%- base_path -%]humour/TOneW-the-Fountainhead/">“The One With The Fountainhead”</a> - my own
 parody of the Fountainhead, modelled around a two-part episode of the
 Television show <i>Friends</i>.
 </p>
@@ -44,6 +42,6 @@ and Humor about Objectivism</a> - in the Objectivism Reference Center.
 
 </ul>
 
-[% END %]
+[%- END -%]
 
-[% END %]
+[%- END -%]

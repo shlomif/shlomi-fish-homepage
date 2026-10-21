@@ -1,14 +1,14 @@
-[% SET img_class = "" %]
-[% SET img_style = "" %]
-[% SET isa_captioned_image = "" %]
-[% SET joke_wrapper_class = "" %]
+[%- SET img_class = "" -%]
+[%- SET img_style = "" -%]
+[%- SET isa_captioned_image = "" -%]
+[%- SET joke_wrapper_class = "" -%]
 
-[% BLOCK joke %]
-[% content %]
-[% END %]
+[%- BLOCK joke -%]
+[%- content -%]
+[%- END -%]
 
-[% BLOCK header_joke %]
-[% WRAPPER joke  %]
+[%- BLOCK header_joke -%]
+[%- WRAPPER joke -%]
 
 <article[% IF joke_wrapper_class %] class="[% joke_wrapper_class %]" [% END %]>
 
@@ -16,36 +16,36 @@
 <h3 id="[% id %]">[% header %]</h3>
 </header>
 
-[% content %]
+[%- content -%]
 
 </article>
 
 [%- END -%]
-[% END %]
+[%- END -%]
 
-[% BLOCK eng_header_joke %]
+[%- BLOCK eng_header_joke -%]
 [% IF ( lang == "eng" and (isa_captioned_image or !captioned_images_only)) %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
-[% END %]
+[%- END -%]
 
-[% BLOCK heb_header_joke %]
+[%- BLOCK heb_header_joke -%]
 [% IF lang == "heb" %][% WRAPPER header_joke %][% content %][%- END -%][% END %]
-[% END %]
+[%- END -%]
 
-[% BLOCK quote %]
+[%- BLOCK quote -%]
 <blockquote>
-[% content %]
+[%- content -%]
 </blockquote>
-[% END %]
+[%- END -%]
 
-[% BLOCK comment %]
+[%- BLOCK comment -%]
 <div class="comment">
-[% content %]
+[%- content -%]
 </div>
-[% END %]
+[%- END -%]
 
-[% BLOCK github_captioned_image_joke %]
+[%- BLOCK github_captioned_image_joke -%]
 
-[% WRAPPER eng_header_joke id=id isa_captioned_image="1" header=header %]
+[%- WRAPPER eng_header_joke header = header id = id isa_captioned_image = "1" -%]
 
 <img src="[% src %]" alt="[% alt %]" [% IF img_class %] class="[% img_class %]"[% END %] [% IF img_style %] style="[% img_style %]"[% END %]/><br/>
 
@@ -57,8 +57,8 @@
 </li>
 </ul>
 
-[% content %]
+[%- content -%]
 
 [%- END -%]
 
-[% END %]
+[%- END -%]

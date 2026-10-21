@@ -87,7 +87,7 @@ def generate(output_path, is_act):
         See: https://github.com/actions/runner-images/issues/6153
         '''
         steps.append({"run": ("sudo apt-get -y remove "
-                              "libgd3 libunwind-14 nginx"), })
+                              "libgd3 nginx"), })
     _libgd_workaround(steps=steps)
     steps.append({
         "run": ("sudo apt-get --no-install-recommends install -y " +
@@ -247,7 +247,6 @@ def generate_windows_yaml(plat, output_path, is_act):
                 for w in words:
                     if not w.startswith("-"):
                         dw.append(w)
-                nonlocal cpanm_step
                 cpanm_step['with'] = {"install": "\n".join(dw), }
                 continue
             if re.search("copy.*?python\\.exe", cmd):
@@ -301,8 +300,6 @@ def generate_docker_ci(output_path):
     with open("./bin/CI-testing/docker-ci-run.yml", "rt") as infh:
         data = yaml.safe_load(infh)
     _write(output_path=output_path, data=data, )
-
-
 
 
 def main():

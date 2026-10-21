@@ -96,7 +96,8 @@ def generate(output_path, is_act):
         }
     )
     pkgs = sorted(
-        data['addons']['apt']['packages'] +
+        [("libpcre2-dev" if x == "libpcre3-dev" else x)
+         for x in data['addons']['apt']['packages']] +
         [
             "golang", "libxslt1-dev", "nodejs", "npm",
             "python3-numpy",

@@ -304,11 +304,10 @@ my $_section_navmenu_tree_contents = {
                             ],
                         },
                         {
-                            text => "GPL, BSD, and Suckerism",
-                            url  =>
-"philosophy/computers/open-source/gpl-bsd-and-suckerism/",
-                            title =>
+                            text =>
                                 "The GPL, The BSD Licence, and Being a Sucker",
+                            url =>
+"philosophy/computers/open-source/gpl-bsd-and-suckerism/",
                         },
                         {
                             text => "The Linus Bus Factor",
@@ -491,7 +490,7 @@ my $_section_navmenu_tree_contents = {
                             ],
                         },
                         {
-                            text => "Choice of Doc Formats",
+                            text => "Choice of Document Formats",
                             url  =>
 "philosophy/computers/web/choice-of-docs-formats/",
                             title =>
@@ -507,10 +506,9 @@ my $_section_navmenu_tree_contents = {
                             url => "philosophy/computers/web/homepage-vs-blog/",
                         },
                         {
-                            text => "Online Communities",
+                            text => "Reflections on online communities",
                             url  =>
                                 "philosophy/computers/web/online-communities/",
-                            title => "Reflections on online communities",
                         },
                         {
                             text => "Models for Web-based Commerce",

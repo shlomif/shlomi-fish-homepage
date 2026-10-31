@@ -412,25 +412,28 @@ EOSCRIPTTTTTTT
         }
     }
 
+    my $cpan_install_cmd       = "cpanm --notest" . " --quiet";
+    my $cpan_install_setup_cmd = "export PERL_CPANM_OPT=\"--quiet\"";
     $script = <<"EOSCRIPTTTTTTT";
 set -e -x
 $locale
 $setup_script_cmd
+$cpan_install_setup_cmd
 pydeps="WebTest appdirs beautifulsoup4 bottle bs4 click cookiecutter cssselect lxml numpy pycotap rebookmaker scour soupsieve vnu_validator weasyprint webtest zenfilter"
 sudo -H bash -c "$setup_script_cmd ; `which python3` -m pip install $pip_options \$pydeps"
-cpanm --notest IO::Async
-cpanm --notest App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
-cpanm --notest HTML::T5
+$cpan_install_cmd IO::Async
+$cpan_install_cmd App::Deps::Verify App::XML::DocBook::Builder Pod::Xhtml
+$cpan_install_cmd HTML::T5
 # For wml
 if test "$install_bitvec" = "true"
 then
-    cpanm --notest Bit::Vector
+    $cpan_install_cmd Bit::Vector
 fi
-cpanm --notest Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
+$cpan_install_cmd Carp::Always Class::XSAccessor GD Getopt::Long IO::All Image::Size List::MoreUtils Path::Tiny Term::ReadKey
 # For quadp
-cpanm --notest Class::XSAccessor Config::IniFiles HTML::Links::Localize
-sudo bash -c "$setup_script_cmd ; cpanm --notest @cpan_deps"
-sudo cpanm --notest https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+$cpan_install_cmd Class::XSAccessor Config::IniFiles HTML::Links::Localize
+sudo bash -c "$setup_script_cmd ; $cpan_install_cmd @cpan_deps"
+sudo $cpan_install_cmd https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
 cd ~/source
 pwd
 ls -l

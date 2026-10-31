@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 15;
+use Test::More tests => 16;
 use lib './lib';
 use HTML::Latemp::Local::Paths ();
 
@@ -113,5 +113,14 @@ sub dest_test
     unlike(
         path("lib/make/sf-filefind-rules.mak")->slurp_raw(),
         qr/ttml/i, "No rules for unused ttml/TTML",
+    );
+}
+
+{
+    # TEST
+    unlike(
+        path("lib/make/generated/sf-homepage-docbooks-generated.mak")
+            ->slurp_utf8(),
+        qr#//#ms, "No double slashes",
     );
 }

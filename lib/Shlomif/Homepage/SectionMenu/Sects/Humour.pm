@@ -36,10 +36,9 @@ my $_humour_tree_contents = {
                     url  => "humour/stories/usable/",
                     subs => [
                         {
-                            text  => "The Enemy",
-                            url   => "humour/TheEnemy/",
-                            title => "The Enemy and How I Helped to Fight it",
-                            subs  => [
+                            text => "The Enemy and How I Helped to Fight it",
+                            url  => "humour/TheEnemy/",
+                            subs => [
                                 {
                                     lang => +{ "he" => 1, },
                                     text => "Text in Hebrew",
@@ -58,7 +57,7 @@ my $_humour_tree_contents = {
                             ],
                         },
                         {
-                            text  => "TOW The Fountainhead",
+                            text  => "The One With The Fountainhead",
                             url   => "humour/TOneW-the-Fountainhead/",
                             title =>
 "A Parody of “The Fountainhead” by Ayn Rand",
@@ -176,7 +175,7 @@ my $_humour_tree_contents = {
                             text  => "Summerschool at the NSA",
                             url   => "humour/Summerschool-at-the-NSA/",
                             title =>
-"Sarah Michelle Gellar and Summer Glau conspire to take the the NSA out of the equation",
+"Sarah Michelle Gellar and Summer Glau conspire to vanquish the NSA",
                             subs => [
                                 {
                                     text => "Ongoing Text",
@@ -224,11 +223,10 @@ my $_humour_tree_contents = {
 "Harry, and Hermione, are battling “He who must not be named Two”, a.k.a “The Amazing Mumford”",
                                 },
                                 {
-                                    text => "Summer Glau and Chuck Norris",
-                                    url  =>
+                                    text =>
+"Summer Glau and Chuck Norris as Grammar Nazis",
+                                    url =>
 "humour/Muppets-Show-TNI/Summer-Glau-and-Chuck-Norris.html",
-                                    title =>
-"Summer Glau &amp; Chuck Norris as Grammar Nazis",
                                 },
                                 {
                                     text => "Jennifer Lawrence",
@@ -313,7 +311,7 @@ my $_humour_tree_contents = {
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Planting-Trees.html",
                                         },
                                         {
-                                            text => "Take It Over",
+                                            text => "Let’s Take It Over With",
                                             url  =>
 "humour/Queen-Padme-Tales/Queen-Padme-Tales--Take-It-Over.html",
                                         },
@@ -674,17 +672,14 @@ my $_humour_tree_contents = {
                     url  => "humour/bits/Google-Discontinues-Services/",
                 },
                 {
-                    text => "Emma Watson Getting Interviewed for a Tech Job",
-                    url  =>
-"humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
-                    title =>
+                    text =>
 "Emma Watson Getting Interviewed for a Software Developer Job",
+                    url =>
+"humour/bits/Emma-Watson-applying-for-a-software-dev-job/",
                 },
                 {
                     text => "Emma Watson’s Visit to Israel and Gaza",
                     url  => "humour/bits/Emma-Watson-Visit-to-Israel-and-Gaza/",
-                    title =>
-"Emma Watson visiting the Gaza envelope and the Gaza strip",
                 },
                 {
                     text => "The Song “Wide Awake” by Katy Perry is Evil!",

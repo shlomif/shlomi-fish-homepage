@@ -27,8 +27,7 @@ function build_toggler(args: TogglerParams): void {
     }
 
     const has_ls: boolean = !_is_null(localStorage);
-    const toggled_type: string =
-        args.toggled_type ?? "class";
+    const toggled_type: string = args.toggled_type ?? "class";
     const is_class: boolean = toggled_type == "class";
     const _key_name: string = args["ls_key"];
     const toggler_selector: string = args["toggler_selector"];
@@ -36,8 +35,7 @@ function build_toggler(args: TogglerParams): void {
     const toggled_class: string = args["toggled_class"];
     const hide_text: string = args["hide_text"];
     const show_text: string = args["show_text"];
-    const default_state: boolean =
-        args.default_state ?? true;
+    const default_state: boolean = args.default_state ?? true;
 
     const _calc_elem = () => {
         return $(toggler_selector);

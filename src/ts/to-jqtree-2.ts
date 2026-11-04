@@ -3,7 +3,7 @@ function shlomif_load_nav(page_path: string): void {
     $(() => {
         const nav_el = $("body > footer > p.top_nav");
         nav_el.after(
-                '<p class="page_source_link"><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
+            '<p class="page_source_link"><a href="https://github.com/shlomif/shlomi-fish-homepage/tree/master/src/' +
                 page_path +
                 (page_path === "" || /\/$/.test(page_path) ? "" : ".tt2") +
                 '">Page source</a></p>',
@@ -15,7 +15,7 @@ function shlomif_load_nav(page_path: string): void {
             to: "_data/n.json",
         }),
         function (compressed_json) {
-            const keys_map: {[key: string]: string} = {
+            const keys_map: { [key: string]: string } = {
                 b: "bool",
                 c: "capt",
                 e: "expand",

@@ -39,7 +39,7 @@ function get_relative_path(args: any): string {
 }
 
 function shlomif_get_relative_path_callback(
-    rel_path: string
+    rel_path: string,
 ): (arg0: string) => string {
     const prefix = get_base_relative_path({ rel_path: rel_path });
     return function (to: string): string {

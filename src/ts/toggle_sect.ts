@@ -24,11 +24,13 @@ function build_main_nav_menu_toggler() {
         hide_text: "Hide NavBar ⬈",
         ls_key: toggle_main_key,
         show_text:
-            '<img src="' +
-            (s ? s : "/") +
-            'images/evilphish.png" alt="EvilPHish by Illiad" class="logo" /> Show NavBar ⬋',
+            (false
+                ? '<img src="' +
+                  (s ? s : "/") +
+                  'images/evilphish.png" alt="EvilPHish by Illiad" class="logo" /> '
+                : "") + "Show NavBar ⬋",
         toggled_class: "novis",
-        toggled_selector: "#navbar , #main",
+        toggled_selector: "#navbar , #main , div.wrap_site_icon",
         toggler_selector: "#show_navbar",
     });
 }

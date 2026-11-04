@@ -34,14 +34,16 @@ body {
     #container-all {
         display: grid;
         grid-template-columns: repeat(5, 3fr);
+        grid-template-rows: 150px 150px auto;
         position: relative;
     }
     #main {
         grid-column: 2 / 6;
-        grid-row: 2;
+        grid-row: 1 / 4;
 
         &.novis {
             grid-column: 1 / 6;
+            grid-row: 2 / 4;
         }
     }
 
@@ -49,11 +51,12 @@ body {
         * {
             vertical-align: middle;
         }
-        grid-column: 1 / 6;
+        grid-column: 2 / 6;
         grid-row: 1;
 
         &.on {
-            grid-column: 1;
+            grid-column: 1 / 2;
+            grid-row: 2;
         }
 
         .logo {
@@ -62,11 +65,17 @@ body {
         }
     }
     #navbar {
-        grid-row: 2;
+        grid-row: 3 / 4;
         grid-column: 1;
         &.novis {
             display: none;
         }
+    }
+    div.wrap_site_icon {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 1em;
+        text-align: center;
     }
 
     #navbar,
@@ -76,17 +85,6 @@ body {
         &.novis {
             width: 0%;
             padding: 0;
-        }
-    }
-
-    #main {
-        &.novis {
-            // grid-column: 1 / 6;
-        }
-
-        .news *,
-        .wrap-me * {
-            // @include wrap;
         }
     }
 }

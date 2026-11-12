@@ -130,12 +130,13 @@ EOF
             container                   => "shlomi_fish_homesite_fedora",
             install_bitvec              => "false",
             install_langpack            => "1",
-            package_manager_install_cmd => "$NOSYNC sudo dnf -y install",
+            package_manager_install_cmd =>
+                "$NOSYNC sudo dnf -y --quiet install",
 
             # pip_options                 => "--break-system-packages",
             pip_options           => "",
             setup_package_manager =>
-"sudo dnf -y install nosync ; $EN ; sudo dnf -y upgrade --refresh ; ",
+"sudo dnf -y install nosync ; $EN ; sudo dnf -y --quiet upgrade --refresh ; ",
             setup_script_cmd    => "$EN",
             snapshot_names_base => "shlomif/hpage_fedora",
             sys_deps            => [

@@ -56,7 +56,7 @@ my $configs = {
             install_bitvec              => "true",
             install_langpack            => "0",
             package_manager_install_cmd =>
-                "sudo eatmydata apt-get --no-install-recommends install -y",
+"sudo eatmydata apt-get --no-install-recommends -q=2 install -y",
             pip_options => "--break-system-packages --ignore-installed",
             setup_package_manager => <<'EOF',
 if false
@@ -66,12 +66,12 @@ then
     cat /etc/apt/sources.list
 fi
 # exit 5
-su -c "apt-get update"
-su -c "apt-get -y install eatmydata locales sudo"
+su -c "apt-get -q=2 update"
+su -c "apt-get -q=2 -y install eatmydata locales sudo"
 printf "%s\n%s\n" "en_US.UTF-8 UTF-8" "C.UTF-8 UTF-8" > /etc/locale.gen
 sudo dpkg-reconfigure --frontend=noninteractive locales
-sudo apt-get update -qq
-sudo eatmydata apt-get -y full-upgrade
+sudo apt-get -q=2 update -qq
+sudo eatmydata apt-get -q=2 -y full-upgrade
 EOF
             setup_script_cmd    => "true",
             snapshot_names_base => "shlomif/hpage_debian",

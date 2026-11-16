@@ -4,8 +4,8 @@
 <style>
 td > p:first-child
 {
-    margin-top: 0;
-    padding-top: 0;
+margin-top: 0;
+padding-top: 0;
 }
 </style>
 [% END %]
@@ -23,12 +23,12 @@ Phone Number: 03-6424668<br/>
 Cell Phone: 054-6232377<br/>
 Fax Number: 03-6414319<br/>
 E-mail Address: [% PROCESS main_email_mailto %]<br/>
-Home Page: [% INCLUDE url_body_link href = "http://www.shlomifish.org/",  %]<br/>
+Home Page: [% INCLUDE url_body_link href = "http://www.shlomifish.org/", %]<br/>
 Instant Messaging: XMPP/Jabber/Google Chat - ShlomiFish@jabber.org ;
 ICQ - #207733823<br/>
 </p>
 
-[% WRAPPER h2_section id = "objective" title = "Objective"  %]
+[% WRAPPER h2_section id = "objective" title = "Objective" %]
 
 <p>
 I am a professional software developer, specialising in writing
@@ -181,11 +181,11 @@ Programmer and Tester
 </p>
 <p>
 Testing a software-based modem (Modio), Windows 95 Programming. Manual testing
-of a soft-modem. Writing test procedures.  Programming various utilities in
+of a soft-modem. Writing test procedures. Programming various utilities in
 Visual C++, MFC, and Perl.
 </p>
 
-[% WRAPPER detailed  %]
+[% WRAPPER detailed %]
 <p>
 I began working at SmartLink as a tester for their software-based modem
 which was based on a soundcard and implemented the connection logic and the DSP
@@ -216,14 +216,14 @@ Programmer, WWW Site Maintainer, Limited UNIX Maintenance
 <p>
 HTML composition, CGI programming, TCP/IP client/server programs.
 </p>
-[% WRAPPER undetailed  %]
+[% WRAPPER undetailed %]
 <p>
 Worked with Perl 5, various UNIX flavours (FreeBSD, IRIX, SunOS 4.1.3),
 and several Windows 95 workstations. Did web development using HTML, Perl
 and UNIX.
 </p>
 [%- END -%]
-[% WRAPPER detailed  %]
+[% WRAPPER detailed %]
 <p>
 I worked at Cortext as a web-designer and CGI programmer. I worked with HTML,
 Apache, Perl, various UNIX flavours (FreeBSD, SunOS 4.1.3, IRIX) and Windows
@@ -250,18 +250,18 @@ Databases, client/server programs (with NetDDE), English/Hebrew
 MS-Windows GUI
 </p>
 
-[% WRAPPER undetailed  %]
+[% WRAPPER undetailed %]
 <p>
 Programmed using C and C++ on Windows 3.11. Experienced with networking,
 SQL, databases, ODBC, NetDDE, Borland C++ 4.5 and MSDN.
 </p>
 [%- END -%]
 
-[% WRAPPER detailed  %]
+[% WRAPPER detailed %]
 
 <p>
 Elpas developed a network of sensors that was installed in each room of a
-building (say a hospital), and received input from infra-red badges.  That made
+building (say a hospital), and received input from infra-red badges. That made
 it possible to determine where each person or piece of equipment was located. I
 maintained the software that ran on a centralised computer, received the raw
 input from the sensors and processed it. My main issue was to replace an SCO
@@ -380,12 +380,12 @@ Autoconf/Automake/Libtool, CVS, Subversion, Vim, CMake, git, Mercurial (hg).
 </tr>
 
 <tr>
-    <td>
-    2007
-    </td>
-    <td>
-    XML::RSS
-    </td>
+<td>
+2007
+</td>
+<td>
+XML::RSS
+</td>
 </tr>
 <tr>
 <td></td>
@@ -398,12 +398,12 @@ was done as part of a grant from The Perl Foundation.
 
 
 <tr>
-    <td>
-    2004
-    </td>
-    <td>
-    HTML-Widgets-NavMenu
-    </td>
+<td>
+2004
+</td>
+<td>
+HTML-Widgets-NavMenu
+</td>
 </tr>
 <tr>
 <td></td>
@@ -411,22 +411,22 @@ was done as part of a grant from The Perl Foundation.
 </tr>
 
 <tr>
-    <td>
-    2003
-    </td>
-    <td>
-    The Better SCM Site - [% INCLUDE url_body_link href = "http://better-scm.shlomifish.org/",  %]
-    </td>
+<td>
+2003
+</td>
+<td>
+The Better SCM Site - [% INCLUDE url_body_link href = "http://better-scm.shlomifish.org/",  %]
+</td>
 </tr>
 <tr>
-    <td>
-    </td>
-    <td>
-    A web-site for information and advocacy of version control systems and
-    Source Configuration Management (SCM).
-    Includes articles, links and a multiple-item multiple-system
-    comparison of 16 different implementations.
-    </td>
+<td>
+</td>
+<td>
+A web-site for information and advocacy of version control systems and
+Source Configuration Management (SCM).
+Includes articles, links and a multiple-item multiple-system
+comparison of 16 different implementations.
+</td>
 </tr>
 
 <tr>
@@ -450,38 +450,38 @@ documentation and external modules to the Perl programming language.
 </tr>
 
 <tr>
-    <td>
-    2002
-    </td>
-    <td>
-    <p>
-    The Perl Beginners Site - [% INCLUDE url_body_link href = "http://perl-begin.org/",  %]
-    </p>
+<td>
+2002
+</td>
+<td>
+<p>
+The Perl Beginners Site - [% INCLUDE url_body_link href = "http://perl-begin.org/",  %]
+</p>
 
-    <p>
-    A web-site which aims to concentrate and refer to the most
-    recommended resources for Perl beginners on the Net. Contains
-    links, original content, and mirror pages.
-    </p>
-    </td>
+<p>
+A web-site which aims to concentrate and refer to the most
+recommended resources for Perl beginners on the Net. Contains
+links, original content, and mirror pages.
+</p>
+</td>
 </tr>
 
 
 <tr>
-    <td>
-    2001 - Present
-    </td>
-    <td>
-    Latemp - a static site generator
-    </td>
+<td>
+2001 - Present
+</td>
+<td>
+Latemp - a static site generator
+</td>
 </tr>
 <tr>
-    <td>
-    </td>
-    <td>
-    A static website generator based on Website Meta Language and many Perl
-    CPAN modules.
-    </td>
+<td>
+</td>
+<td>
+A static website generator based on Website Meta Language and many Perl
+CPAN modules.
+</td>
 </tr>
 <tr>
 <td>
@@ -554,11 +554,11 @@ to the Java style.
 </tr>
 
 <tr>
-    <td>
-    2001 - Present
-    </td>
-    <td>
-[% WRAPPER undetailed  %]
+<td>
+2001 - Present
+</td>
+<td>
+[% WRAPPER undetailed %]
 <p>
 The Israeli Group of Linux Users Server<br/>
 Co-Administrator
@@ -568,7 +568,7 @@ Administrating a 100% uptime server carrying FTP, SMTP and numerous
 WWW-services.
 </p>
 [%- END -%]
-[% WRAPPER detailed  %]
+[% WRAPPER detailed %]
 <p>
 An Administrator for the iglu.org.il site.
 </p>
@@ -579,26 +579,26 @@ Perl, rsync, qmail and other programs. Created several online pieces
 of content using these tools.
 </p>
 [%- END -%]
-    </td>
+</td>
 </tr>
-[% WRAPPER detailed  %]
+[% WRAPPER detailed %]
 <tr>
-    <td>
-        1999-Present
-    </td>
-    <td>
-        <p>
-        Maintaining a private Linux workstation
-        </p>
-        <p>
-        Maintained several home systems and one at the Computer Networks
-        Laboratory of the EE Department of the Technion. Experience with
-        package maintenance, system configuration, installing software,
-        fixing glitches, and daily use. Used Red Hat Linux (versions 5.x, 6.x),
-        Mandrake/Mandriva Linux (versions 7.x and above) and
-        Mageia Linux (versions 1 and above).
-        </p>
-    </td>
+<td>
+1999-Present
+</td>
+<td>
+<p>
+Maintaining a private Linux workstation
+</p>
+<p>
+Maintained several home systems and one at the Computer Networks
+Laboratory of the EE Department of the Technion. Experience with
+package maintenance, system configuration, installing software,
+fixing glitches, and daily use. Used Red Hat Linux (versions 5.x, 6.x),
+Mandrake/Mandriva Linux (versions 7.x and above) and
+Mageia Linux (versions 1 and above).
+</p>
+</td>
 </tr>
 [%- END -%]
 

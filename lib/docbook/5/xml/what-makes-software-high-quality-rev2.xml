@@ -142,7 +142,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 </info>
 
     <para>
-        Why is high quality in software important? Low-quality software
+        Why is quality in software important? Low-quality software
         applications will require the users or end-developers to work
         around their bugs and limitations, write a lot of extra functionality
         themselves, and as a result, duplicate a lot of effort and
@@ -179,7 +179,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 </info>
 
         <para>
-            How did it occur to me to ponder this question? I am active in the
+            How did it occur to me to think about this question? I am active in the
             <link xlink:href="http://tech.groups.yahoo.com/group/fc-solve-discuss/">fc-solve-discuss
                 mailing list</link>,
             which is dedicated to computerised techniques for solving
@@ -234,7 +234,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
         <para>
             I initially <emphasis role="bold">wanted to give some examples</emphasis> for open-source software packages,
-            that I considered to be of exceptional high-quality. However, I
+            that I considered to be of exceptionally high-quality. However, I
             decided against it.
         </para>
 
@@ -433,11 +433,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             is not 100%
             <link xlink:href="http://www.gnu.org/philosophy/free-sw.html">Free
                 and Open Source Software</link> - unacceptable. To be truly
-            useful the application also needs be
+            useful the application also needs to be
             <link xlink:href="http://www.dwheeler.com/essays/gpl-compatible.html">GPL
-                compatible</link>, and naturally usable public-domain licences
+                compatible</link>, and naturally usable permissive licences
             such as the modified BSD licence, the MIT X11 licence, or even
-            pure Public Domain source code<footnote xml:id="public-domain-source" label="public-domain">
+            pure Public Domain source code<footnote xml:id="public-domain-source" label="Permissive Licences">
 
                 <para>
                     Using a pure-public-domain licensing terms for your
@@ -450,14 +450,16 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
 
                 <para>
                     While <link xlink:href="http://freshmeat.net/browse/197/">quite
-                        a lot of important programs has been released under
+                        a lot of important programs have been released under
                         the public domain</link>, and they are doing quite
                     fine, they may have some problematic legal implications.
                 </para>
+
                 <para>
                     For these reasons, I now prefer the MIT X11 Licence for
                     software that I originated instead of the “public domain”.
                 </para>
+
             </footnote>, are even better for their
             ability to be sub-licensed and re-used. This is while licenses that
             allow incorporation but not sub-licensing, like the Lesser General
@@ -468,11 +470,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             under non-optimal licences, many Linux distributions pride
             themselves that the core system consists of “100% free software”.
             Most software that became non-open-source, was eventually forked
-            or got into disuse, or else suffered from a lot of bad publicity.
+            or went into disuse, or else suffered from a lot of bad publicity.
         </para>
         <para>
-            As a result, a high-quality software has a licence that is the
-            most usable in the context of its common use cases. These
+            As a result, a high-quality software package has a licence that is
+            the most usable in the context of its common use cases. These
             licences are doubly-important for freely-distributed UNIX software.
         </para>
     </section>
@@ -576,7 +578,9 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             a different software hub - is much more sub-optimal than that, and
             leaves a bad impression.
         </para>
+
     </section>
+
     <section xml:id="easy_to_compile_and_install">
 
     <info>
@@ -667,11 +671,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
         <para>
             Popular programs like GCC, perl 5, Vim, Subversion and Emacs have
-            very few dependencies and
-            they are normally included in the package, if necessary to build
-            the system. They are all written in very portable C and POSIX
-            and have been successfully deployed on all modern UNIX-flavours,
-            on Microsoft Windows and on many other more obscure systems.
+            very few dependencies and they are normally included in the
+            package, if necessary to build the system. They are all written in
+            very portable C and POSIX-compliant code, and have been
+            successfully deployed on all modern UNIX-flavours, on Microsoft
+            Windows and on many other more obscure systems.
         </para>
         <para>
             While reducing the number of dependencies often means re-inventing
@@ -714,6 +718,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             limitations that qmail had, or accumulated over the years due
             to its lack of maintenance.
         </para>
+
     </section>
 
     <section xml:id="documentation">
@@ -751,11 +756,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
         </para>
         <para>
             Vim has an excellent internal documentation system. It’s the first
-            thing you are directed see when invoking it. It has a comprehensive
-            tutorial, a full manual, and the ability to search for many
-            keywords, with a lot of redundancy. As a result, one can easily
-            become better and better with vim or gvim, albeit many people can
-            happily use it with only the bare essentials.
+            thing the user is referred to, when invoking it. It has a
+            comprehensive tutorial, a full manual, and the ability to search
+            for many keywords, with a lot of redundancy. As a result, one can
+            easily become better and better with vim or gvim, albeit many
+            people can happily use it with only the bare essentials.
         </para>
         <para>
             Emacs’ help on the other hand is confusing, dis-organised, lacking
@@ -827,7 +832,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             their architectures. As a result, many mixed shops, Windows-only
             shops, or companies where some developers wanted to use Windows
             as their desktop OS, could not use Arch. So Arch has seen a very
-            small penetration.
+            small market penetration.
         </para>
         <para>
             The bootstrapping C compiler of gcc for example, is written in
@@ -859,6 +864,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             number of security issues, and bugs are fixed there as soon as
             possible.
         </para>
+
         <para>
             Some people believe that security is the most important aspect
             of software, but it’s only one factor that affects its quality.
@@ -900,6 +906,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             But users would like to upgrade the software and expect all of
             their programs to just continue to work.
         </para>
+
         <para>
             A bad example for a software platform that does not maintain backwards
             compatibility is <link xlink:href="http://www.php.net/">PHP</link>,
@@ -935,6 +942,7 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
             A piece of high-quality software has good ways for its users to
             receive support. Some examples for ways to do that are:
         </para>
+
         <orderedlist inheritnum="ignore" continuation="restarts">
             <listitem>
                 <para>
@@ -963,11 +971,12 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 </para>
             </listitem>
         </orderedlist>
+
         <para>
             Without good ways to receive support, users will be unnecessarily
             frustrated when they encounter a problem, which cannot be answered
             by the documentation. Refer to <link xlink:href="http://www.joelonsoftware.com/articles/customerservice.html">Joel Spolsky’s
-                “Seven Steps to Remarkable Customer Service”</link> for more information on
+                “Seven Steps to Remarkable Customer Service”</link>, for more guuidelines on
             how to give good support.
         </para>
 
@@ -1055,10 +1064,11 @@ This work is licensed under the <link xlink:href="http://creativecommons.org/lic
                 the “Silence is Golden” principle of designing UNIX
                 command-line interfaces</link>.
             Basically, a command line program should output as little as
-            possible. Now observe the behaviour of aptitude (a unified
+            possible. Now observe the behaviour of “aptitude” (a unified
             interface for package management) on Ubuntu Gutsy Gibbon, when
             trying to install a non-existing package name:
         </para>
+
         <programlisting>
 
 root@shlomif-desktop:/home/shlomif# aptitude install this-does-not-exist
@@ -1102,10 +1112,11 @@ No package named this-does-not-exist
         </programlisting>
 
         <para>
-            Exactly one line and it’s informative. While aptitude certainly
+            Exactly one line, and it’s informative. While aptitude certainly
             has its merits, its verbosity still makes it much more painful
             to use than urpmi, when I have to work on Ubuntu.
         </para>
+
         <para>
             Back to more visual aesthetics, one of the reasons that made me
             want to use Linux more than Windows 95’ or 98’ was the fact that
@@ -1121,6 +1132,7 @@ No package named this-does-not-exist
             have convinced some people to install Linux on their computer
             after seeing them.
         </para>
+
     </section>
 
     <section xml:id="quality-parameters-conclusion">
@@ -1133,7 +1145,7 @@ No package named this-does-not-exist
             There are probably several parameters for software quality
             that I’m missing. However, the point is that one should evaluate
             the general quality of the software based on many parameters
-            and not exclusively “security” or “speed” or whatever.
+            and not exclusively based on “security” or “speed” or whatever.
         </para>
         <para>
             For example, many proponents of BSD operating systems claim that
@@ -1144,7 +1156,7 @@ No package named this-does-not-exist
             advantages like being more popular (and so one can get support
             more easily), or like the fact that its kernel supports much
             more hardware, or that it has better vendor acceptance, and
-            because more software is guaranteed to run with less problems
+            because more software is guaranteed to run with fewer problems
             on Linux than on the BSDs.
             <footnote xml:id="software-only-on-linux" label="linux-bsd-soft">
                 <para>
@@ -1178,7 +1190,7 @@ No package named this-does-not-exist
 </info>
 
     <para>
-        Now that we’ve covered the elements that make programs high-quality
+        Now that we’ve covered the elements that make programs high-quality,
         here’s a non-exhaustive list of ways to actually achieve it. None of
         them are absolutely necessary for achieving the quality, but they
         certainly help a lot.
@@ -1218,7 +1230,7 @@ No package named this-does-not-exist
         </para>
         <para>
             A reviewer of an early version of this article told me about
-            an early and relatively large PHP code of her that was badly
+            an early and relatively large PHP code of hers that was badly
             written, relatively buggy and yet proved to be popular among
             some of her clients, who have deployed it on many hosts and won’t
             effectively upgrade it. So she still has to maintain it, even
@@ -1362,6 +1374,13 @@ No package named this-does-not-exist
                     Programming</link>
                 </para>
             </listitem>
+
+            <listitem>
+            <para>
+            <link xlink:href="https://github.com/shlomif/Freenode-programming-channel-FAQ/blob/master/FAQ_with_ToC__generated.md#what-are-some-best-practices-in-programming-that-i-should-adopt">What are some best practices in programming that I should adopt?</link>
+            </para>
+            </listitem>
+
         </orderedlist>
 
     </section>
@@ -1491,7 +1510,7 @@ No package named this-does-not-exist
             Similar criticism has been voiced against
             <link xlink:href="https://subversion.apache.org/">the
                 Subversion version control system</link>,
-            Linux, etc. One thing one can notice about such highly-criticised
+            or Linux. One thing one can notice about such highly-criticised
             projects is that they tend not to be bothered by it too much.
             Rather, what they say is that “If you want to use a competing
             project, I won’t stop you. It probably is good. It may be
@@ -1606,7 +1625,7 @@ No package named this-does-not-exist
             techniques for solving Solitaire, I’d like to conclude this essay
             by analysing the various solvers according to the parameters I
             described. The natural caveat is that I may be somewhat biased
-            due to the fact that I authored a solver of my own.
+            due to the fact that I authored such a solver of my own.
         </para>
         <para>
             I was not so sure including this section is a good idea, but I
@@ -1812,8 +1831,8 @@ make: *** [param.h] Error 127
                 </para>
                 <para>
                     I’m also considering relicensing Freecell Solver and
-                    other older software of mine under the MIT X11 licence,
-                    or possibly having a dual-Public Domain and MIT X11
+                    other older software of mine under the MIT licence,
+                    or possibly having a dual-Public Domain and MIT
                     licensing terms (which seems somewhat silly, but
                     may be a good idea.)
                 </para>
@@ -1825,7 +1844,7 @@ make: *** [param.h] Error 127
             considerably more restrictive than Public Domain, or BSD-style
             licences. This is also the case for
             <link xlink:href="http://kevin.atkinson.dhs.org/freecell/">this
-                Common Lisp solver</link> by Kevin Atkinson and Shari
+                Common Lisp-based solver</link> by Kevin Atkinson and Shari
             Holstege. Many other solvers, including
             Campbell’s are binary-only, “All Rights Reserved”, which makes
             them a complete no-starter for most open-source applications
@@ -1866,8 +1885,8 @@ make: *** [param.h] Error 127
         <para xml:id="quality-analysis--solution-length">
             In his original message, Mr. Campbell claimed that the
             <link xlink:href="http://www.rrhistorical.com/rrdata/Fcpro65/">Freecell
-                Pro</link> solvers (Freecell Solver, Patsolve and the solver
-            that originated from Don Woods) generated long and unusable
+                Pro</link> solvers (Freecell Solver, Patsolve, and the solver
+            that originated from Don Woods’ solver) generated long and unusable
             solutions. That has not been my experience with Freecell Solver
             in some of its (practically infinite) configurations. Using
             the so-called “good-intentions” configuration I typically get
@@ -1930,9 +1949,9 @@ make: *** [param.h] Error 127
             and feel that it is good enough as it is.
         </para>
         <para>
-            I hope this document, and similar resources it referenced will
+            I hope this document, and similar resources it referenced, will
             help you in working on your software, and improving its quality
-            for the benefit of your users and you.
+            - for the benefit of your users and yourselves.
         </para>
         <para>
             Happy Hacking!
@@ -1957,7 +1976,7 @@ make: *** [param.h] Error 127
         <para>
         This work is licensed under the
         <link xlink:href="http://creativecommons.org/licenses/by/2.5/">Creative
-            Commons Attribution 2.5 License</link> (or at your option a
+            Commons Attribution 2.5 License (CC-by)</link> (or at your option a
         greater version of it). The CC-Attribution is almost
         Public Domain except for a requirement to make an attribution to the
         original author.
@@ -1977,7 +1996,7 @@ make: *** [param.h] Error 127
 
         <para>
             Shlomi Fish was born in Israel in 1977, and has lived there most of
-            his life. He is a user, developer, advocate and activist of
+            his life. He is a user, developer, advocate, and activist of
             Open Source Software. His single greatest contribution so far in
             this area has been <link xlink:href="http://fc-solve.shlomifish.org/">Freecell
                 Solver</link>, a Public Domain Library for solving games
@@ -1986,7 +2005,7 @@ make: *** [param.h] Error 127
                some other projects</link> and
             <link xlink:href="http://www.shlomifish.org/open-source/contributions/">made
                 important contributions to projects he did not initiate</link>
-            some of them very large scale. Recently, most of his contribution
+            some of them large scale. Recently, most of his contribution
             were
             <link xlink:href="http://cpan.uwinnipeg.ca/~shlomif">perl distributions
                 he uploaded to CPAN</link> under his username.
@@ -1996,7 +2015,7 @@ make: *** [param.h] Error 127
             and the fact he is interested in many software management
             techniques has led him to write <link xlink:href="http://www.shlomifish.org/philosophy/">a
                 large number of articles</link>, and weblog entries which
-            describe his unique views as a developer of mostly
+            describe his views as a developer of mostly
             portable software.
         </para>
 
@@ -2032,4 +2051,3 @@ make: *** [param.h] Error 127
 </section>
 
 </article>
-
